@@ -1,7 +1,7 @@
 #!/bin/bash
 
 KEYBOARD_HOME="$(pwd)"
-QMK_HOME="$KEYBOARD_HOME/qmk_firmware"
+export QMK_HOME="$KEYBOARD_HOME/qmk_firmware"
 USER_SPACE="$QMK_HOME/users"
 BM40="keyboards/kprepublic/bm40hsrgb/keymaps"
 XD75="keyboards/xiudi/xd75/keymaps"
