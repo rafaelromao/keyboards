@@ -57,6 +57,7 @@ The Capitalize key is a custom key that works both as Shift and Caps Lock.
 - Caps Lock is also available in the [functions layer](functions.md), but its behavior is not what we usually see. No matter how it was activated, Caps Lock will be automatically deactivated after 4 seconds of inactivity
     - The caps lock timer feature is implemented by starting a timer when the caps lock is activated and deactivating it in the matrix scan, in case the timer has expired.
     - The caps lock timer is restarted when a valid key is pressed.
+    - The caps lock timer is stopped and caps lock deactivated when Esc is pressed.
     - Source code: [capslock_timer.c](../qmk/users/rafaelromao/features/capslock_timer.c)
 
 ##

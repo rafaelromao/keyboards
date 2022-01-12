@@ -91,6 +91,13 @@ process_record_result_t process_capslock_timer_extension(uint16_t keycode, keyre
             case KC_END:
                 start_capslock_timer();
         }
+        // Deactivate capslock
+        switch (keycode) {
+            case KC_ESC:
+                clear_capslock_timer();
+                disable_capslock(host_keyboard_led_state().caps_lock);
+                break;
+        }
     }
 
     return PROCESS_RECORD_CONTINUE;
