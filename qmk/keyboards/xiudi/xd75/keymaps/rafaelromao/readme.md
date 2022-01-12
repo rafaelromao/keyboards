@@ -14,10 +14,10 @@ The keyboard in the picture below is a XD75, used to test this layout.
 
 ## Keymap
 
-This keymap extends [my userspace](../../../../../users/rafaelromao/readme.md) definitions. You can find a detailed explanation for this keymap layout [there](../../../../../users/rafaelromao/readme.md).
+This keymap extends [my userspace](../../../../../users/rafaelromao/readme.md) definitions.
 
 ## Resources
 
-- [My userspace](../../../../../users/rafaelromao/readme.md)
+- [Home](../../../../../../readme.md)
 - [QMK Docs](https://docs.qmk.fm)
 - [Keyboard Tester](https://config.qmk.fm/#/test)

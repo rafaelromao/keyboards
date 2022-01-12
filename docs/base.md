@@ -17,7 +17,7 @@
 ## Persistent Base Layers
 - The base layer can be either qwerty or colemak dhm.
 - It is possible to change the base layer in the maintenance layer and this change is persistent.
-- Source Code: [persistent_layers.c](../features/persistent_layers.c)
+- Source Code: [persistent_layers.c](../qmk/users/rafaelromao/features/persistent_layers.c)
 
 ## Double Dot for New Sentences
 - A double tap in the dot key outputs dot followed by space, and activates oneshot shift. This will make it easier to enter a new sentence.
