@@ -6,7 +6,7 @@
 - After running the init script, [qmk cli](https://docs.qmk.fm/#/cli) should work just fine to compile and flash my keyboards.
 
 ## Userspace
-- In [my userspace](qmk/users/rafaelromao/readme.md), you can see the code shared between my keyboards and a complete documentation about how they work.
+- In [my userspace](qmk/users/rafaelromao), you can see the code shared between my keyboards and a complete documentation about how they work.
 
 ## References
 - [Weilbith](https://github.com/weilbith/keyboard_firmware)
