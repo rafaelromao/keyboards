@@ -9,7 +9,7 @@ XD75="keyboards/xiudi/xd75/keymaps"
 if [[ ! -d "$QMK_HOME" ]]
 then
     echo "Add git sub-modules..."
-    git submodule add -f https://github.com/rafaelromao/qmk_firmware
+    git submodule add -f https://github.com/qmk/qmk_firmware
 fi
 echo "Update git sub-modules..."
 git submodule sync --recursive

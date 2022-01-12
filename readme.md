@@ -18,9 +18,8 @@ A 34 keys split keyboard layout, optimized for programmers.
 ### About this repo
 
 - This repository contains the files that are used to customize my keyboards.
-- The script [init.sh](init.sh) will clone [my fork](https://github.com/rafaelromao/qmk_firmware) of the qmk_firmware and symlink these files on it.
-  - The script references my fork, which is qmk version 0.14.9, to ensure new versions will not make the firmware size too large.
-- After running the init script, [qmk cli](https://docs.qmk.fm/#/cli) should work just fine to compile and flash my keyboards.
+- The script [init.sh](init.sh) will clone [the QMK firmware](https://github.com/qmk/qmk_firmware) and symlink these files on it.
+- After [installing QMK](https://docs.qmk.fm/#/newbs_getting_started) and running the init script with `source init.sh`, [qmk cli](https://docs.qmk.fm/#/cli) should work just fine to compile and flash.
 
 ### My keyboards
 
