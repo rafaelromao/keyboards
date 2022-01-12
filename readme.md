@@ -9,4 +9,4 @@
 - In [my userspace](users/rafaelromao/readme.md), you can see the code shared between my keyboards and a complete documentation about how they work.
 
 ## References
-- [Weilbith repo](https://github.com/weilbith/keyboard_firmware)
+- [Weilbith](https://github.com/weilbith/keyboard_firmware)
