@@ -33,7 +33,7 @@ A 34 keys split keyboard layout, optimized for programmers.
 - [Thomas Baart](https://thomasbaart.nl/category/mechanical-keyboards/firmware/qmk)
 - [Ben Vallack](https://youtube.com/c/BenVallack)
 
-### Resouces:
+### Resouces
 
 - [KLE](http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739)
 - [QMK Docs](https://docs.qmk.fm)
