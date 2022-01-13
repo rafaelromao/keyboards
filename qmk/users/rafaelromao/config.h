@@ -32,6 +32,8 @@
 #define ONESHOT_TIMEOUT 2000
 #define TAPPING_TOGGLE 1
 #define TAPPING_TERM 175
+
+// Configure leader key
 #define LEADER_TIMEOUT 1000
 #define LEADER_PER_KEY_TIMER
 #define LEADER_NO_TIMEOUT

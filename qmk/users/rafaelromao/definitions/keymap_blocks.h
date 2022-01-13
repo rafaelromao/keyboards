@@ -84,13 +84,13 @@
 #define ___________________FUNCTIONS_L3________________ XXXXXXX , XXXXXXX , XXXXXXX , KC_LGUI , XXXXXXX
 #define ____FUNCTIONS_L4_                                                             TD_IJLE , KC_BSPC
 
-#define ___________________FUNCTIONS_R1________________ KC_F15  , KC_F7   , KC_F8   , KC_F9   , KC_F12
-#define ___________________FUNCTIONS_R2________________ KC_F14  , KC_F4   , KC_F5   , KC_F6   , KC_F11
+#define ___________________FUNCTIONS_R1________________ KC_F14  , KC_F7   , KC_F8   , KC_F9   , KC_F12
+#define ___________________FUNCTIONS_R2________________ KC_LEAD , KC_F4   , KC_F5   , KC_F6   , KC_F11
 #define ___________________FUNCTIONS_R3________________ KC_F13  , KC_F1   , KC_F2   , KC_F3   , KC_F10
 #define ____FUNCTIONS_R4_                               KC_SPC  , TD_IJRI
 
 #define ___________________MEDIA_L1____________________ RGB_TOG , RGB_HUD , RGB_HUI , RGB_MOD , XXXXXXX
-#define ___________________MEDIA_L2____________________ XXXXXXX , RGB_VAD , RGB_VAI , XXXXXXX , XXXXXXX
+#define ___________________MEDIA_L2____________________ XXXXXXX , RGB_VAD , RGB_VAI , XXXXXXX , KC_LEAD
 #define ___________________MEDIA_L3____________________ XXXXXXX , RGB_SAD , RGB_SAI , XXXXXXX , XXXXXXX
 #define ____MEDIA_L4_____                                                             TD_IJLE , KC_BSPC
 
