@@ -28,6 +28,30 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
 
     switch (keycode) {
 
+        // Shift+Backspace for Delete (when not one-shot)
+
+        case KC_BSPC:
+        case RAI_BSP:
+            if (record->event.pressed) {
+                if (isShifted && !isOneShotShift) {
+                    tap_code(KC_DEL);
+                    return PROCESS_RECORD_RETURN_FALSE;
+                }
+            }
+            return PROCESS_RECORD_RETURN_TRUE;
+
+        // Ignore space for one-shot shift
+        case LOW_SPC:
+        case KC_SPC:
+            if (record->event.pressed) {
+                if (isOneShotShift) {
+                    tap_code(KC_SPC);
+                    add_oneshot_mods(MOD_LSFT);
+                    return PROCESS_RECORD_RETURN_FALSE;
+                }
+            }
+            return PROCESS_RECORD_CONTINUE;
+
         // Standalone accent characters
 
         case SS_BTIC:
@@ -55,6 +79,11 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
                 SEND_STRING("~ ");
             }
             return PROCESS_RECORD_RETURN_FALSE;
+        case SS_SPCQ:
+            if (record->event.pressed) {
+                SEND_STRING(" q"); // Fix space followed by q, which a common source of misfires of Space (held) + q.
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
 
         // Zoom shortcuts
 
@@ -76,18 +105,6 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
                 }
             }
             return PROCESS_RECORD_RETURN_FALSE;
-
-        // Shift+Backspace for Delete (when not one-shot)
-
-        case KC_BSPC:
-        case RAI_BSP:
-            if (record->event.pressed) {
-                if (isShifted && !isOneShotShift) {
-                    tap_code(KC_DEL);
-                    return PROCESS_RECORD_RETURN_FALSE;
-                }
-            }
-            return PROCESS_RECORD_RETURN_TRUE;
 
         // Fix layer-tap using Underscore
         case UND_MED:

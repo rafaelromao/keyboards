@@ -43,8 +43,8 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
     // Extend capslock timer
     process_capslock_timer_extension(keycode, record);
 
-    // Process combos
-    switch (process_combos(keycode, record)) {
+    // Process macros
+    switch (process_macros(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:
@@ -53,8 +53,8 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
             break;
     };
 
-    // Process macros
-    switch (process_macros(keycode, record)) {
+    // Process combos
+    switch (process_combos(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:

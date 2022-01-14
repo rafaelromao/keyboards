@@ -16,6 +16,7 @@ One-Shot Modifiers are modifier keys that, when tapped, remain active until the 
 - These modifiers will be automatically deactivated after 2 seconds. 
 - They can also be activated in sticky mode, with a double tap, and remain active until manually deactivated by tapping the Default Mod thumb key.
 - One-shot modifiers are available on the left side of the navigation and mouse layers.
+- One-shot shift will ignore the space key, being applied to the next key pressed.
 
 ## Standard Modifiers
 
