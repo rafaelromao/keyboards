@@ -24,7 +24,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case RAI_BSP:
         case TD_DOTC:
         case TD_DOTD:
-            return 140;
+            return TAPPING_TERM - 40;
         default:
             return TAPPING_TERM;
     }
