@@ -39,7 +39,7 @@
 #define ___________________COLEMAK_R3__________________ KC_K    , RGUIT_H , KC_COMM , TD_DOTD , TD_SCLE
 #define ____COLEMAK_R4___                               RAI_BSP , MOU_CAP
 
-#define ___________________LOWER_L1____________________ KC_ESC  , TD_PARB , KC_RPRN , KC_BSLS , SS_TILD
+#define ___________________LOWER_L1____________________ XXXXXXX , TD_PARB , KC_RPRN , KC_BSLS , SS_TILD
 #define ___________________LOWER_L2____________________ SS_BTIC , SS_DQUO , SS_SQUO , KC_AMPR , KC_PIPE
 #define ___________________LOWER_L3____________________ KC_AT   , TD_SQRB , KC_RBRC , KC_QUES , KC_HASH
 #define ____LOWER_L4_____                                                             _______ , XXXXXXX
@@ -49,7 +49,7 @@
 #define ___________________LOWER_R3____________________ XXXXXXX , KC_1    , KC_2    , KC_3    , XXXXXXX
 #define ____LOWER_R4_____                               _______ , MOU_0
 
-#define ___________________RAISE_L1____________________ KC_ESC  , XXXXXXX , _______ , KC_DQUO , XXXXXXX
+#define ___________________RAISE_L1____________________ XXXXXXX , XXXXXXX , _______ , KC_DQUO , XXXXXXX
 #define ___________________RAISE_L2____________________ _______ , KC_CIRC , KC_TILD , KC_QUOT , XXXXXXX
 #define ___________________RAISE_L3____________________ XXXXXXX , XXXXXXX , _______ , KC_GRV  , XXXXXXX
 #define ____RAISE_L4_____                                                             _______ , _______
