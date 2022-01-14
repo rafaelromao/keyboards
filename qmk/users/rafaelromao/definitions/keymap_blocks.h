@@ -54,7 +54,7 @@
 #define ___________________RAISE_L3____________________ XXXXXXX , XXXXXXX , _______ , KC_GRV  , XXXXXXX
 #define ____RAISE_L4_____                                                             _______ , _______
 
-#define ___________________RAISE_R1____________________ SS_CIRC , KC_DLR  , TD_CURB , KC_RCBR , KC_ENT
+#define ___________________RAISE_R1____________________ SS_CIRC , KC_DLR  , TD_CURB , KC_RCBR , XXXXXXX
 #define ___________________RAISE_R2____________________ KC_PLUS , KC_MINS , KC_EQL  , KC_EXLM , KC_PERC
 #define ___________________RAISE_R3____________________ KC_ASTR , KC_SLSH , TD_ANGB , KC_GT   , KC_COLN
 #define ____RAISE_R4_____                               XXXXXXX , _______
