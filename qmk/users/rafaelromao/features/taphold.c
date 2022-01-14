@@ -22,6 +22,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case LOW_SPC:
         case RAI_BSP:
+            return TAPPING_TERM + 40;
         case TD_DOTC:
         case TD_DOTD:
             return TAPPING_TERM - 40;
@@ -30,17 +31,6 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     }
 }
 
-bool get_hold_on_other_key_press_result(uint16_t keycode) {
-    switch (keycode) {
-        case LOW_SPC:
-        case RAI_BSP:
-            // Immediately select the hold action when another key is pressed.
-            return true;
-        default:
-            // Do not select the hold action when another key is pressed.
-            return false;
-    }
-}
 bool get_tapping_force_hold_result(uint16_t keycode) {
     switch (keycode) {
         case KCA_FUN:
