@@ -20,7 +20,7 @@
 - Source Code: [persistent_layers.c](../qmk/users/rafaelromao/features/persistent_layers.c)
 
 ## Double Dot for New Sentences
-- A double tap in the dot key outputs dot followed by space, and activates oneshot shift. This will make it easier to enter a new sentence.
+- A double tap in the dot key outputs dot followed by space, and activates one-shot shift. This will make it easier to enter a new sentence.
 - Holding the dot key will insert it in the end of the current line.
 
 ## Base Layer Combos
