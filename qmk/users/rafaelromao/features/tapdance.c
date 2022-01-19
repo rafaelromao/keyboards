@@ -41,27 +41,6 @@ __attribute__ ((weak)) td_state_t dance_state(qk_tap_dance_state_t *state) {
     return TD_SINGLE_TAP;
 }
 
-// Decimal Separators
-
-void td_dot_com_finished(qk_tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP: register_code(KC_DOT); break;
-        case TD_DOUBLE_TAP: register_code(KC_COMM); break;
-        case TD_SINGLE_HOLD: layer_on(_MEDIA);
-        default: break;
-    }
-}
-
-void td_dot_com_reset(qk_tap_dance_state_t *state, void *user_data) {
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP: unregister_code(KC_DOT); break;
-        case TD_DOUBLE_TAP: unregister_code(KC_COMM); break;
-        case TD_SINGLE_HOLD: layer_off(_MEDIA);
-        default: break;
-    }
-}
-
 // Mouse buttons
 
 void td_mou_b13_finished(qk_tap_dance_state_t *state, void *user_data) {
@@ -242,7 +221,6 @@ void td_dot_dot(qk_tap_dance_state_t *state, void *user_data) {
 // Tap dance declarations
 
 qk_tap_dance_action_t tap_dance_actions[] = {
-    [DOT_COM] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_dot_com_finished, td_dot_com_reset),
     [MOU_B13] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_mou_b13_finished, td_mou_b13_reset),
     [MOU_B24] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_mou_b24_finished, td_mou_b24_reset),
     [INJ_LEF] = ACTION_TAP_DANCE_FN(td_inj_lef),

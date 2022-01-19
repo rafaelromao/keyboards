@@ -23,7 +23,6 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case LOW_SPC:
         case RAI_BSP:
             return TAPPING_TERM + 40;
-        case TD_DOTC:
         case TD_DOTD:
             return TAPPING_TERM - 40;
         default:
@@ -46,8 +45,11 @@ bool get_hold_on_other_key_press_result(uint16_t keycode) {
 bool get_tapping_force_hold_result(uint16_t keycode) {
     switch (keycode) {
         case KCA_FUN:
+        case KCW_FUN:
         case KCO_MED:
+        case KCY_MED:
         case UND_MED:
+        case DOT_MED:
         case LSFTT_S:
         case LCTLT_D:
         case LALTT_F:

@@ -23,7 +23,6 @@
 #include "default_mod_key.h"
 
 enum {
-    DOT_COM,
     MOU_B13,
     MOU_B24,
     INJ_LEF,
@@ -36,7 +35,6 @@ enum {
     DOT_DOT
 };
 
-#define TD_DOTC TD(DOT_COM)
 #define TD_MB13 TD(MOU_B13)
 #define TD_MB24 TD(MOU_B24)
 #define TD_IJLE TD(INJ_LEF)

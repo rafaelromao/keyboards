@@ -19,6 +19,16 @@
 #include QMK_KEYBOARD_H
 #include "keycodes.h"
 
+#define ___________________ROMAK_L1____________________ KC_Q    , KC_A    , KC_F    , KC_P    , KC_B
+#define ___________________ROMAK_L2____________________ KCW_FUN , LSFTT_R , LCTLT_S , LALTT_T , KC_G
+#define ___________________ROMAK_L3____________________ KC_Z    , KC_X    , KC_C    , LGUIT_D , KC_V
+#define ____ROMAK_L4_____                                                             NAV_MOD , LOW_SPC
+
+#define ___________________ROMAK_R1____________________ KC_J    , KC_U    , KC_L    , KC_O    , TD_SCLE
+#define ___________________ROMAK_R2____________________ KC_M    , RALTT_N , RCTLT_E , RSFTT_I , KCY_MED
+#define ___________________ROMAK_R3____________________ KC_K    , RGUIT_H , KC_COMM , TD_DOTD , KC_UNDS
+#define ____ROMAK_R4_____                               RAI_BSP , MOU_CAP
+
 #define ___________________QWERTY_L1___________________ KC_Q    , KC_W    , KC_E    , KC_R    , KC_T
 #define ___________________QWERTY_L2___________________ KCA_FUN , LSFTT_S , LCTLT_D , LALTT_F , KC_G
 #define ___________________QWERTY_L3___________________ KC_Z    , KC_X    , KC_C    , LGUIT_V , KC_B
@@ -34,9 +44,9 @@
 #define ___________________COLEMAK_L3__________________ KC_Z    , KC_X    , KC_C    , LGUIT_D , KC_V
 #define ____COLEMAK_L4___                                                             NAV_MOD , LOW_SPC
 
-#define ___________________COLEMAK_R1__________________ KC_J    , KC_L    , KC_U    , KC_Y    , KC_UNDS
+#define ___________________COLEMAK_R1__________________ KC_J    , KC_L    , KC_U    , KC_Y    , TD_SCLE
 #define ___________________COLEMAK_R2__________________ KC_M    , RALTT_N , RCTLT_E , RSFTT_I , KCO_MED
-#define ___________________COLEMAK_R3__________________ KC_K    , RGUIT_H , KC_COMM , TD_DOTD , TD_SCLE
+#define ___________________COLEMAK_R3__________________ KC_K    , RGUIT_H , KC_COMM , TD_DOTD , KC_UNDS
 #define ____COLEMAK_R4___                               RAI_BSP , MOU_CAP
 
 #define ___________________LOWER_L1____________________ SS_SPCQ , TD_PARB , KC_RPRN , KC_BSLS , SS_TILD
@@ -45,7 +55,7 @@
 #define ____LOWER_L4_____                                                             _______ , XXXXXXX
 
 #define ___________________LOWER_R1____________________ XXXXXXX , KC_7    , KC_8    , KC_9    , KC_ENT
-#define ___________________LOWER_R2____________________ XXXXXXX , KC_4    , KC_5    , KC_6    , TD_DOTC
+#define ___________________LOWER_R2____________________ KC_DOT  , KC_4    , KC_5    , KC_6    , DOT_MED
 #define ___________________LOWER_R3____________________ XXXXXXX , KC_1    , KC_2    , KC_3    , XXXXXXX
 #define ____LOWER_R4_____                               _______ , MOU_0
 
@@ -54,7 +64,7 @@
 #define ___________________RAISE_L3____________________ XXXXXXX , XXXXXXX , _______ , KC_GRV  , XXXXXXX
 #define ____RAISE_L4_____                                                             _______ , _______
 
-#define ___________________RAISE_R1____________________ SS_CIRC , KC_DLR  , TD_CURB , KC_RCBR , XXXXXXX
+#define ___________________RAISE_R1____________________ SS_CIRC , KC_DLR  , TD_CURB , KC_RCBR , KC_COLN
 #define ___________________RAISE_R2____________________ KC_PLUS , KC_MINS , KC_EQL  , KC_EXLM , KC_PERC
 #define ___________________RAISE_R3____________________ KC_ASTR , KC_SLSH , TD_ANGB , KC_GT   , KC_COLN
 #define ____RAISE_R4_____                               XXXXXXX , _______
@@ -89,8 +99,8 @@
 #define ___________________FUNCTIONS_R3________________ KC_F13  , KC_F1   , KC_F2   , KC_F3   , KC_F10
 #define ____FUNCTIONS_R4_                               KC_SPC  , TD_IJRI
 
-#define ___________________MEDIA_L1____________________ RGB_TOG , RGB_HUD , RGB_HUI , RGB_MOD , XXXXXXX
-#define ___________________MEDIA_L2____________________ XXXXXXX , RGB_VAD , RGB_VAI , XXXXXXX , KC_LEAD
+#define ___________________MEDIA_L1____________________ KC_CAPS , RGB_HUD , RGB_HUI , RGB_MOD , XXXXXXX
+#define ___________________MEDIA_L2____________________ XXXXXXX , RGB_VAD , RGB_VAI , RGB_TOG , KC_LEAD
 #define ___________________MEDIA_L3____________________ XXXXXXX , RGB_SAD , RGB_SAI , XXXXXXX , XXXXXXX
 #define ____MEDIA_L4_____                                                             TD_IJLE , KC_BSPC
 
@@ -100,11 +110,11 @@
 #define ____MEDIA_R4_____                               KC_SPC  , TD_IJRI
 
 #define ___________________MAINTENANCE_L1______________ XXXXXXX , XXXXXXX , KC_PWR  , XXXXXXX , EEP_RST
-#define ___________________MAINTENANCE_L2______________ XXXXXXX , XXXXXXX , TG_M_ON , TG_M_OF , XXXXXXX
-#define ___________________MAINTENANCE_L3______________ TO_FUN  , XXXXXXX , DF_QWE  , TO_NAV  , TO_LOW
+#define ___________________MAINTENANCE_L2______________ XXXXXXX , DF_ROM  , DF_COL  , DF_QWE  , XXXXXXX
+#define ___________________MAINTENANCE_L3______________ TO_FUN  , XXXXXXX , XXXXXXX , TO_NAV  , TO_LOW
 #define __MAINTENANCE_L4_                                                             _______ , XXXXXXX
 
 #define ___________________MAINTENANCE_R1______________ RESET   , XXXXXXX , KC_SLEP , XXXXXXX , XXXXXXX
 #define ___________________MAINTENANCE_R2______________ XXXXXXX , TG_MAC  , TG_WIN  , TG_LIN  , XXXXXXX
-#define ___________________MAINTENANCE_R3______________ TO_RAI  , TO_MOU  , DF_COL  , XXXXXXX , TO_MED
+#define ___________________MAINTENANCE_R3______________ TO_RAI  , TO_MOU  , TG_M_ON , TG_M_OF , TO_MED
 #define __MAINTENANCE_R4_                               XXXXXXX , _______

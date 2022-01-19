@@ -48,7 +48,12 @@ const uint16_t PROGMEM r_qwe_pas_combo[] = {RAI_BSP, RALTT_J, RCTLT_K, COMBO_END
 const uint16_t PROGMEM r_qwe_cop_combo[] = {RAI_BSP, RGUIT_M, KC_COMM, COMBO_END};
 
 const uint16_t PROGMEM l_bas_und_combo[] = {LOW_SPC, KC_Z, KC_X, COMBO_END};
-const uint16_t PROGMEM r_bas_und_combo[] = {RAI_BSP, TD_DOTD, TD_SCLE, COMBO_END};
+const uint16_t PROGMEM r_bas_und_combo[] = {RAI_BSP, TD_DOTD, KC_UNDS, COMBO_END};
+
+const uint16_t PROGMEM l_rom_esc_combo[] = {LOW_SPC, KC_A, KC_F, COMBO_END};
+const uint16_t PROGMEM l_rom_sal_combo[] = {LOW_SPC, KCW_FUN, LSFTT_R, COMBO_END};
+const uint16_t PROGMEM r_rom_tab_combo[] = {RAI_BSP, KC_L, KC_O, COMBO_END};
+const uint16_t PROGMEM r_rom_sal_combo[] = {RAI_BSP, RSFTT_I, KCY_MED, COMBO_END};
 
 const uint16_t PROGMEM l_col_esc_combo[] = {LOW_SPC, KC_W, KC_F, COMBO_END};
 const uint16_t PROGMEM l_col_sav_combo[] = {LOW_SPC, LSFTT_R, LCTLT_S, COMBO_END};
@@ -65,7 +70,7 @@ const uint16_t PROGMEM r_col_cop_combo[] = {RAI_BSP, RGUIT_H, KC_COMM, COMBO_END
 
 const uint16_t PROGMEM l_bas_rai_combo[] = {LOW_SPC, KC_X, KC_C, COMBO_END};
 const uint16_t PROGMEM r_bas_lo1_combo[] = {RAI_BSP, KC_COMM, TD_DOTD, COMBO_END};
-const uint16_t PROGMEM r_bas_lo2_combo[] = {RAI_BSP, TD_SCLE, COMBO_END};
+const uint16_t PROGMEM r_bas_lo2_combo[] = {RAI_BSP, KC_UNDS, COMBO_END};
 const uint16_t PROGMEM r_low_fun_combo[] = {RAI_BSP, KC_2, KC_3, COMBO_END};
 const uint16_t PROGMEM r_mou_nav_combo[] = {KC_HOME, KC_END, COMBO_END};
 
@@ -77,7 +82,8 @@ const uint16_t PROGMEM r_low_tog_combo[] = {RAI_BSP, KC_5, KC_6, COMBO_END};
 const uint16_t PROGMEM r_fun_tog_combo[] = {KC_SPC, KC_F5, KC_F6, COMBO_END};
 const uint16_t PROGMEM r_med_tog_combo[] = {KC_SPC, KC_VOLD, KC_VOLU, COMBO_END};
 
-const uint16_t PROGMEM reset_combo[] = {KC_Q, KC_P, KC_Z, TD_SCLE, COMBO_END};
+const uint16_t PROGMEM qwe_reset_combo[] = {KC_Q, KC_P, KC_Z, TD_SCLE, COMBO_END};
+const uint16_t PROGMEM col_reset_combo[] = {KC_Q, TD_SCLE, KC_Z, KC_UNDS, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
   COMBO(l_low_esc_combo, KC_ESC),
@@ -95,6 +101,11 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(l_rai_und_combo, CB_UNDO),
   COMBO(l_rai_low_combo, TT_LOW),
   COMBO(l_rai_cop_combo, CB_COPY),
+
+  COMBO(l_rom_esc_combo, KC_ESC),
+  COMBO(l_rom_sal_combo, CB_SELC),
+  COMBO(r_rom_tab_combo, KC_TAB),
+  COMBO(r_rom_sal_combo, CB_SELC),
 
   COMBO(l_qwe_esc_combo, KC_ESC),
   COMBO(l_qwe_sav_combo, CB_SAVE),
@@ -139,7 +150,8 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(r_med_tog_combo, TG_MED),
   COMBO(l_med_tog_combo, OS_MED),
 
-  COMBO(reset_combo, RESET),
+  COMBO(qwe_reset_combo, RESET),
+  COMBO(col_reset_combo, RESET),
 };
 
 extern os_t os;

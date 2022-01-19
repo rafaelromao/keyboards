@@ -80,9 +80,14 @@ enum {
 #define KCA_FUN LT(_FUNCTIONS, KC_A)
 #define UND_MED LT(_MEDIA, KC_UNDS)
 #define KCO_MED LT(_MEDIA, KC_O)
+#define DOT_MED LT(_MEDIA, KC_DOT)
+
+#define KCW_FUN LT(_FUNCTIONS, KC_W)
+#define KCY_MED LT(_MEDIA, KC_Y)
 
 // Layer transitions
 
+#define DF_ROM DF(_ROMAK)
 #define DF_QWE DF(_QWERTY)
 #define DF_COL DF(_COLEMAK)
 #define TO_RAI TO(_RAISE)
