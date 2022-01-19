@@ -21,7 +21,6 @@
 - There is a commented out transition path from Qwerty to Romak in the [keymap_blocks.h](../qmk/users/rafaelromao/definitions/keymap_blocks.h), similar to Tarmak, but moving P instead of J.
 
 ## Persistent Base Layers
-- The base layer can be either qwerty or colemak dhm.
 - It is possible to change the base layer in the maintenance layer and this change is persistent.
 - Source Code: [persistent_layers.c](../qmk/users/rafaelromao/features/persistent_layers.c)
 
