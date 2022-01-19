@@ -1,7 +1,6 @@
 # rafaelromao's keyboard layout
 
 ## Layout Overview
-![img](https://i.imgur.com/ZqZWJej.png)
 - This is a 34 keys split layout, 3x5+2, optimized for programmers.
 - This layout works well with the OS configured for the US International keyboard.
 - This layout was designed mostly for coding and typing in English and Portuguese (but will probably work well for other latin languages).
