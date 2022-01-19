@@ -181,6 +181,7 @@ keymap_data_t keymap_data = {
 
 void set_rgblight_by_layer(uint32_t layer) {
     switch (layer) {
+        case _ROMAK:
         case _QWERTY:
         case _COLEMAK:
             rgblight_setrgb(RGB_BLUE);
