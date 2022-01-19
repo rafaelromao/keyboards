@@ -7,12 +7,6 @@
 - This layout considers the right hand as the dominant hand.
 - The base layer can be changed to either qwerty or colemak dhm, but the default one is [Romak](base.md#romak).
 
-## Thumb Keys
-- The four thumb keys control layer transitions, when held (navigation, lower, raise and mouse).
-- The two outer thumb keys act as [modifiers](modifiers.md) or [shortcuts](functions.md), when tapped.
-- The two inner thumb keys act as space or backspace, when tapped.
-- Holding both outer thumb keys will activate the maintenance layer.
-
 ## Romak
 - Romak is the layout used in the default base layer. It is a Colemak-DHm variant, improved to remove load from pinkies.
 - Romak also restores the Qwerty U position inverting it with the Colemak L key, to make it easier to type L in ortholinear keyboards.
@@ -23,6 +17,12 @@
 ## Persistent Base Layers
 - It is possible to change the base layer in the maintenance layer and this change is persistent.
 - Source Code: [persistent_layers.c](../qmk/users/rafaelromao/features/persistent_layers.c)
+
+## Thumb Keys
+- The four thumb keys control layer transitions, when held (navigation, lower, raise and mouse).
+- The two outer thumb keys act as [modifiers](modifiers.md) or [shortcuts](functions.md), when tapped.
+- The two inner thumb keys act as space or backspace, when tapped.
+- Holding both outer thumb keys will activate the maintenance layer.
 
 ## Double Dot for New Sentences
 - A double tap in the dot key outputs dot followed by space, and activates one-shot shift. This will make it easier to enter a new sentence.
