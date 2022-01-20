@@ -4,7 +4,7 @@ A 34 keys split keyboard layout, optimized for programmers.
 
 ### Overview
 
-![img](https://i.imgur.com/ruBsZUX.png)
+![img](https://i.imgur.com/b4BOkjT.png)
 
 ### How this layout works?
 

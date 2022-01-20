@@ -9,8 +9,7 @@
 
 ## Romak
 - Romak is the layout used in the default base layer. It is a Colemak-DHm variant, improved to remove load from pinkies.
-- Romak also restores the Qwerty U position inverting it with the Colemak L key, to make it easier to type L in ortholinear keyboards.
-- Compared to Colemak-DHm, Romak inverts A with W, U with L and cycle Y, J and O.
+- Compared to Colemak-DHm, Romak cycle A, W and S, and inverts Y with O.
 - Compared with Qwerty, it also changes the position of the symbols _ and ; the same way the Colemak-DHm layer does.
 - There is a commented out transition path from Qwerty to Romak in the [keymap_blocks.h](../qmk/users/rafaelromao/definitions/keymap_blocks.h), similar to Tarmak, but moving P instead of J.
 
