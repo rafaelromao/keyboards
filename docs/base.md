@@ -5,13 +5,7 @@
 - This layout works well with the OS configured for the US International keyboard.
 - This layout was designed mostly for coding and typing in English and Portuguese (but will probably work well for other latin languages).
 - This layout considers the right hand as the dominant hand.
-- The base layer can be changed to either qwerty or colemak dhm, but the default one is [Romak](base.md#romak).
-
-## Romak
-- Romak is the layout used in the default base layer. It is a Colemak-DHm variant, improved to remove load from pinkies.
-- Compared to Colemak-DHm, Romak cycle A, W and S, and inverts Y with O.
-- Compared with Qwerty, it also changes the position of the symbols _ and ; the same way the Colemak-DHm layer does.
-- There is a commented out transition path from Qwerty to Romak in the [keymap_blocks.h](../qmk/users/rafaelromao/definitions/keymap_blocks.h), similar to Tarmak, but moving P instead of J.
+- The base layer can be changed to either qwerty or colemak dhm, but the default one is [Romak](romak.md).
 
 ## Persistent Base Layers
 - It is possible to change the base layer in the maintenance layer and this change is persistent.
