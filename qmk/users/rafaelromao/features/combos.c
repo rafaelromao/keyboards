@@ -50,9 +50,10 @@ const uint16_t PROGMEM r_qwe_cop_combo[] = {RAI_BSP, RGUIT_M, KC_COMM, COMBO_END
 const uint16_t PROGMEM l_bas_und_combo[] = {LOW_SPC, KC_Z, KC_X, COMBO_END};
 const uint16_t PROGMEM r_bas_und_combo[] = {RAI_BSP, TD_DOTD, KC_UNDS, COMBO_END};
 
-const uint16_t PROGMEM l_rom_esc_combo[] = {LOW_SPC, KC_A, KC_F, COMBO_END};
+const uint16_t PROGMEM l_rom_esc_combo[] = {LOW_SPC, KC_S, KC_F, COMBO_END};
 const uint16_t PROGMEM l_rom_sal_combo[] = {LOW_SPC, KCW_FUN, LSFTT_R, COMBO_END};
-const uint16_t PROGMEM r_rom_tab_combo[] = {RAI_BSP, KC_L, KC_O, COMBO_END};
+const uint16_t PROGMEM l_rom_sav_combo[] = {LOW_SPC, LSFTT_R, LCTLT_A, COMBO_END};
+const uint16_t PROGMEM r_rom_tab_combo[] = {RAI_BSP, KC_U, KC_O, COMBO_END};
 const uint16_t PROGMEM r_rom_sal_combo[] = {RAI_BSP, RSFTT_I, KCY_MED, COMBO_END};
 
 const uint16_t PROGMEM l_col_esc_combo[] = {LOW_SPC, KC_W, KC_F, COMBO_END};
@@ -104,6 +105,7 @@ combo_t key_combos[COMBO_COUNT] = {
 
   COMBO(l_rom_esc_combo, KC_ESC),
   COMBO(l_rom_sal_combo, CB_SELC),
+  COMBO(l_rom_sav_combo, CB_SAVE),
   COMBO(r_rom_tab_combo, KC_TAB),
   COMBO(r_rom_sal_combo, CB_SELC),
 
