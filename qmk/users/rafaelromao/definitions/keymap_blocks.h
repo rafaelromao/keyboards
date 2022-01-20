@@ -75,7 +75,7 @@
 #define ____ROMAK_L4_____                                                             NAV_MOD , LOW_SPC
                                                         
 #define ___________________ROMAK_R1____________________ KC_J    , KC_U    , KC_I    , KC_O    , KC_P
-#define ___________________ROMAK_R2____________________ KC_H    , RALTT_N , RCTLT_K , RSFTT_L , KC_Y
+#define ___________________ROMAK_R2____________________ KC_H    , RALTT_N , RCTLT_K , RSFTT_L , KCY_MED
 #define ___________________ROMAK_R3____________________ KC_UNDS , RGUIT_M , KC_COMM , TD_DOTD , TD_SCLE
 #define ____ROMAK_R4_____                               RAI_BSP , MOU_CAP
 
