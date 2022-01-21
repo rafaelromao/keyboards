@@ -4,7 +4,7 @@
 
 ![img](https://i.imgur.com/8XH5KAC.png)
 
-- Romak is the layout used in the default base layer. It is a Colemak-DHm variant, improved to remove load from pinkies.
+- Romak is the layout used in the default base layer. It is a Colemak-DHm variant, improved to remove load from pinkies and for prose in Portuguese.
 - Romak has a higher SFB rate than Colemak-DHm, close to Workman, but most of this load goes to the stronger fingers.
 - Compared to Colemak-DHm, Romak cycle A, W and S, and inverts Y with O.
 - Compared with Qwerty, it also changes the position of the symbols _ and ; the same way the Colemak-DHm layer does.
@@ -13,6 +13,27 @@
 ### From Qwerty to Romak in 5 steps
 
 ![img](https://i.imgur.com/hr0FNfV.png)
+
+## Colemak-DH vs Romak
+[Stevep99's Layout Analyzer Tool](https://stevep99.github.io/keyboard-layout-analyzer) was used to compare Colemak-DH and Romak, with [Portuguese](corpus.pt.txt) and [English](corpus.en.txt) text corpus.
+### Heatmaps
+#### Portuguese
+<p float="left">
+  <img src="https://i.imgur.com/dUjJmcb.png" width="450" />
+  <img src="https://i.imgur.com/xwk3u82.png" width="450" /> 
+</p>
+
+#### English
+<p float="left">
+  <img src="https://i.imgur.com/D7eHgBZ.png" width="450" />
+  <img src="https://i.imgur.com/nj8fayg.png" width="450" /> 
+</p>
+
+### Finger Usage
+#### Portuguese
+![img](https://i.imgur.com/F1uxjrE.png)
+#### English
+![img](https://i.imgur.com/q1kJ6iz.png)
 
 ##
 [Home](../readme.md) | 
