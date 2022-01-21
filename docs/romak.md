@@ -20,17 +20,13 @@
 <p float="left">
   <img src="https://i.imgur.com/6pSuDpp.png" width="450" />
   <img src="https://i.imgur.com/pWt4Puy.png" width="450" /> 
+  <img src="https://i.imgur.com/VdLPAD8.png" width="450" /> 
 </p>
 
 #### English
 <p float="left">
   <img src="https://i.imgur.com/dp2j709.png" width="450" />
-  <img src="https://i.imgur.com/QakkqZi.png" width="450" /> 
-</p>
-
-#### Qwerty heatmaps, for reference. Portuguese vs English
-<p float="left">
-  <img src="https://i.imgur.com/VdLPAD8.png" width="450" />
+  <img src="https://i.imgur.com/QakkqZi.png" width="450" />   
   <img src="https://i.imgur.com/cC0OvUS.png" width="450" /> 
 </p>
 
