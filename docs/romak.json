@@ -261,8 +261,8 @@
             "shiftAltGr": -1
         },
         {
-            "primary": 109,
-            "shift": 77,
+            "primary": 104,
+            "shift": 72,
             "finger": 7,
             "id": 30,
             "altGr": -1,
@@ -365,10 +365,10 @@
             "shiftAltGr": -1
         },
         {
-            "primary": 104,
+            "primary": 109,
             "finger": 7,
             "id": 43,
-            "shift": 72,
+            "shift": 77,
             "altGr": -1,
             "shiftAltGr": -1
         },
