@@ -36,9 +36,12 @@
 </p>
 
 ### Finger Usage
+Pinkies will get less load in Romak, by design. This load will go to the ring and middle fingers.
 #### Portuguese
+In Portuguese, Romak shows a much better finger distribution than Colemak-DH.
 ![img](https://i.imgur.com/F1uxjrE.png)
 #### English
+In English, the finger distribution is quite similar between Romak and Colemak-DH, considering the lesser load in the pinkies.
 ![img](https://i.imgur.com/q1kJ6iz.png)
 
 ##
