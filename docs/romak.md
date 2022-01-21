@@ -9,7 +9,7 @@
 - Compared to Colemak-DH, Romak changes A, W, R, S, F and C, on the left side, and I, O, Y, H and M, on the right side.
 - There is a commented out transition path from Qwerty to Romak in the [keymap_blocks.h](../qmk/users/rafaelromao/definitions/keymap_blocks.h), similar to Tarmak, but moving _ instead of J.
 
-### From Qwerty to Romak in 5 steps
+### From Qwerty to Romak in 6 steps
 
 ![img](https://i.imgur.com/HDrdggd.png)
 
