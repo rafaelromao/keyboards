@@ -44,6 +44,13 @@ In Portuguese, Romak shows a much better finger distribution than Colemak-DH.
 In English, the finger distribution is quite similar between Romak and Colemak-DH, considering the lesser load in the pinkies.
 ![img](https://i.imgur.com/OYoF1rj.png)
 
+### Detailed Finger Analysis
+The [Colemak mod-DH analysis tool](https://colemakmods.github.io/mod-dh/analyze.html) was also used to compare the Romak against Colemak-DH.
+<p float="left">
+  <img src="https://i.imgur.com/Gm0WWTU.png" width="450" />
+  <img src="https://i.imgur.com/rF0jHEE.png" width="450" /> 
+</p>
+
 ##
 [Home](../readme.md) | 
 Base |
