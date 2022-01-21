@@ -29,6 +29,12 @@
   <img src="https://i.imgur.com/nj8fayg.png" width="450" /> 
 </p>
 
+#### Qwerty heatmaps, for reference. Portuguese vs English
+<p float="left">
+  <img src="https://i.imgur.com/VdLPAD8.png" width="450" />
+  <img src="https://i.imgur.com/cC0OvUS.png" width="450" /> 
+</p>
+
 ### Finger Usage
 #### Portuguese
 ![img](https://i.imgur.com/F1uxjrE.png)
