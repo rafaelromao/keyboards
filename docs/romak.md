@@ -14,7 +14,7 @@
 
 ![img](https://i.imgur.com/hr0FNfV.png)
 
-## Colemak-DH vs Romak
+## Romak vs Colemak-DH
 [Stevep99's Layout Analyzer Tool](https://stevep99.github.io/keyboard-layout-analyzer) was used to compare Colemak-DH and Romak, with [Portuguese](corpus.pt.txt) and [English](corpus.en.txt) text corpus.
 ### Heatmaps
 #### Portuguese
