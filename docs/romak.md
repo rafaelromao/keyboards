@@ -2,6 +2,8 @@
 
 ## Romak
 
+![img](https://i.imgur.com/8XH5KAC.png)
+
 - Romak is the layout used in the default base layer. It is a Colemak-DHm variant, improved to remove load from pinkies.
 - Romak has a higher SFB rate than Colemak-DHm, close to Workman, but most of this load goes to the stronger fingers.
 - Compared to Colemak-DHm, Romak cycle A, W and S, and inverts Y with O.
@@ -10,7 +12,7 @@
 
 ### From Qwerty to Romak in 5 steps
 
-![img](https://i.imgur.com/PZgdUrN.png)
+![img](https://i.imgur.com/hr0FNfV.png)
 
 ##
 [Home](../readme.md) | 
