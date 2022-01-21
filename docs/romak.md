@@ -3,6 +3,7 @@
 ## Romak
 
 - Romak is the layout used in the default base layer. It is a Colemak-DHm variant, improved to remove load from pinkies.
+- Romak has a higher SFB rate than Colemak-DHm, close to Workman, but most of this load goes to the stronger fingers.
 - Compared to Colemak-DHm, Romak cycle A, W and S, and inverts Y with O.
 - Compared with Qwerty, it also changes the position of the symbols _ and ; the same way the Colemak-DHm layer does.
 - There is a commented out transition path from Qwerty to Romak in the [keymap_blocks.h](../qmk/users/rafaelromao/definitions/keymap_blocks.h), similar to Tarmak, but moving P instead of J.
