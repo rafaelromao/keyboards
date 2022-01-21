@@ -52,6 +52,7 @@ enum {
 #define LGUIT_D LGUI_T(KC_D)
 
 #define RSFTT_L RSFT_T(KC_L)
+#define RSFTT_O RSFT_T(KC_O)
 #define RCTLT_K RCTL_T(KC_K)
 #define RALTT_J RALT_T(KC_J)
 #define RGUIT_M RGUI_T(KC_M)
