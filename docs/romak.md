@@ -11,7 +11,7 @@
 
 ### From Qwerty to Romak in 6 steps
 
-![img](https://i.imgur.com/HDrdggd.png)
+![img](https://i.imgur.com/x4ptxc0.png)
 
 ## Romak vs Colemak-DH
 [Stevep99's Layout Analyzer Tool](https://stevep99.github.io/keyboard-layout-analyzer) was used to compare Colemak-DH and Romak, with [Portuguese](corpus.pt.txt) and [English](corpus.en.txt) text corpus.

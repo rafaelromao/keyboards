@@ -46,6 +46,9 @@ enum {
 #define LALTT_F LALT_T(KC_F)
 #define LGUIT_V LGUI_T(KC_V)
 
+#define LC_UNDS LCTL_T(KC_UNDS)
+#define LA_UNDS LALT_T(KC_UNDS)
+
 #define LSFTT_R LSFT_T(KC_R)
 #define LCTLT_S LCTL_T(KC_S)
 #define LALTT_T LALT_T(KC_T)

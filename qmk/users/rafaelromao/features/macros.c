@@ -108,6 +108,8 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
 
         // Fix layer-tap using Underscore
         case UND_MED:
+        case LA_UNDS:
+        case LC_UNDS:
             if (record->event.pressed) {
                 if (record->tap.count > 0) {
                     tap_code16(KC_UNDS);
