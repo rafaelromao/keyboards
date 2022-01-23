@@ -79,12 +79,7 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
                 SEND_STRING("~ ");
             }
             return PROCESS_RECORD_RETURN_FALSE;
-        case SS_SPCQ:
-            if (record->event.pressed) {
-                SEND_STRING(" q"); // Fix space followed by q, which a common source of misfires of Space (held) + q.
-            }
-            return PROCESS_RECORD_RETURN_FALSE;
-
+            
         // Zoom shortcuts
 
         case SS_MODP:
