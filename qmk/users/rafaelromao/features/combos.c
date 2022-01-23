@@ -18,6 +18,8 @@
 
 #include "combos.h"
 
+// Lower
+
 const uint16_t PROGMEM l_low_esc_combo[] = {TD_PARB, KC_RPRN, COMBO_END};
 const uint16_t PROGMEM l_low_sal_combo[] = {SS_BTIC, SS_DQUO, COMBO_END};
 const uint16_t PROGMEM l_low_sav_combo[] = {SS_DQUO, SS_SQUO, COMBO_END};
@@ -25,6 +27,9 @@ const uint16_t PROGMEM l_low_pas_combo[] = {SS_SQUO, KC_AMPR, COMBO_END};
 const uint16_t PROGMEM l_low_und_combo[] = {KC_AT, KC_LBRC, COMBO_END};
 const uint16_t PROGMEM l_low_rai_combo[] = {TD_SQRB, KC_RBRC, COMBO_END};
 const uint16_t PROGMEM l_low_cop_combo[] = {KC_RBRC, KC_QUES, COMBO_END};
+const uint16_t PROGMEM r_low_fun_combo[] = {RAI_BSP, KC_2, KC_3, COMBO_END};
+
+// Raise
 
 const uint16_t PROGMEM l_rai_tab_combo[] = {TD_CURB, KC_RCBR, COMBO_END};
 const uint16_t PROGMEM l_rai_sal_combo[] = {KC_EXLM, KC_PERC, COMBO_END};
@@ -33,6 +38,8 @@ const uint16_t PROGMEM l_rai_pas_combo[] = {KC_MINS, KC_EQL, COMBO_END};
 const uint16_t PROGMEM l_rai_und_combo[] = {KC_GT, KC_COLN, COMBO_END};
 const uint16_t PROGMEM l_rai_low_combo[] = {TD_ANGB, KC_GT, COMBO_END};
 const uint16_t PROGMEM l_rai_cop_combo[] = {KC_SLSH, KC_LT, COMBO_END};
+
+// Qwerty
 
 const uint16_t PROGMEM l_qwe_esc_combo[] = {LOW_SPC, KC_W, KC_E, COMBO_END};
 const uint16_t PROGMEM l_qwe_sav_combo[] = {LOW_SPC, LSFTT_S, LCTLT_D, COMBO_END};
@@ -47,14 +54,20 @@ const uint16_t PROGMEM r_qwe_sal_combo[] = {RAI_BSP, RSFTT_L, UND_MED, COMBO_END
 const uint16_t PROGMEM r_qwe_pas_combo[] = {RAI_BSP, RALTT_J, RCTLT_K, COMBO_END};
 const uint16_t PROGMEM r_qwe_cop_combo[] = {RAI_BSP, RGUIT_M, KC_COMM, COMBO_END};
 
+// Common in base layers
+
 const uint16_t PROGMEM l_bas_und_combo[] = {LOW_SPC, KC_Z, KC_X, COMBO_END};
 const uint16_t PROGMEM r_bas_und_combo[] = {RAI_BSP, TD_DOTD, KC_UNDS, COMBO_END};
 
-const uint16_t PROGMEM l_rom_esc_combo[] = {LOW_SPC, KC_S, KC_F, COMBO_END};
-const uint16_t PROGMEM l_rom_sal_combo[] = {LOW_SPC, KCW_FUN, LSFTT_R, COMBO_END};
-const uint16_t PROGMEM l_rom_sav_combo[] = {LOW_SPC, LSFTT_R, LCTLT_A, COMBO_END};
-const uint16_t PROGMEM r_rom_tab_combo[] = {RAI_BSP, KC_U, KC_O, COMBO_END};
-const uint16_t PROGMEM r_rom_sal_combo[] = {RAI_BSP, RSFTT_I, KCY_MED, COMBO_END};
+// Romak
+
+const uint16_t PROGMEM l_rom_esc_combo[] = {LOW_SPC, KC_R, KC_C, COMBO_END};
+const uint16_t PROGMEM l_rom_sal_combo[] = {LOW_SPC, KCW_FUN, LSFTT_S, COMBO_END};
+const uint16_t PROGMEM l_rom_sav_combo[] = {LOW_SPC, LSFTT_S, LCTLT_A, COMBO_END};
+const uint16_t PROGMEM r_rom_tab_combo[] = {RAI_BSP, KC_U, KC_I, COMBO_END};
+const uint16_t PROGMEM r_rom_sal_combo[] = {RAI_BSP, RSFTT_O, KCY_MED, COMBO_END};
+
+// Colemak-DH
 
 const uint16_t PROGMEM l_col_esc_combo[] = {LOW_SPC, KC_W, KC_F, COMBO_END};
 const uint16_t PROGMEM l_col_sav_combo[] = {LOW_SPC, LSFTT_R, LCTLT_S, COMBO_END};
@@ -69,10 +82,11 @@ const uint16_t PROGMEM r_col_sal_combo[] = {RAI_BSP, RSFTT_I, KCO_MED, COMBO_END
 const uint16_t PROGMEM r_col_pas_combo[] = {RAI_BSP, RALTT_N, RCTLT_E, COMBO_END};
 const uint16_t PROGMEM r_col_cop_combo[] = {RAI_BSP, RGUIT_H, KC_COMM, COMBO_END};
 
+// Layer toggle
+
 const uint16_t PROGMEM l_bas_rai_combo[] = {LOW_SPC, KC_X, KC_C, COMBO_END};
 const uint16_t PROGMEM r_bas_lo1_combo[] = {RAI_BSP, KC_COMM, TD_DOTD, COMBO_END};
 const uint16_t PROGMEM r_bas_lo2_combo[] = {RAI_BSP, KC_UNDS, COMBO_END};
-const uint16_t PROGMEM r_low_fun_combo[] = {RAI_BSP, KC_2, KC_3, COMBO_END};
 const uint16_t PROGMEM r_mou_nav_combo[] = {KC_HOME, KC_END, COMBO_END};
 
 const uint16_t PROGMEM l_rai_tog_combo[] = {LOW_SPC, KC_CIRC, KC_TILD, COMBO_END};
@@ -82,6 +96,8 @@ const uint16_t PROGMEM r_mou_tog_combo[] = {RAI_BSP, KC_MS_D, KC_MS_U, COMBO_END
 const uint16_t PROGMEM r_low_tog_combo[] = {RAI_BSP, KC_5, KC_6, COMBO_END};
 const uint16_t PROGMEM r_fun_tog_combo[] = {KC_SPC, KC_F5, KC_F6, COMBO_END};
 const uint16_t PROGMEM r_med_tog_combo[] = {KC_SPC, KC_VOLD, KC_VOLU, COMBO_END};
+
+// Reset
 
 const uint16_t PROGMEM qwe_reset_combo[] = {KC_Q, KC_P, KC_Z, TD_SCLE, COMBO_END};
 const uint16_t PROGMEM col_reset_combo[] = {KC_Q, TD_SCLE, KC_Z, KC_UNDS, COMBO_END};
