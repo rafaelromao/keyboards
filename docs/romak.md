@@ -17,16 +17,16 @@
 ### Heatmaps
 #### Portuguese
 <p float="left">
-  <img src="https://i.imgur.com/gV8s78l.png" width="450" />
-  <img src="https://i.imgur.com/pWt4Puy.png" width="450" /> 
-  <img src="https://i.imgur.com/omWHlId.png" width="450" /> 
+  <img src="https://i.imgur.com/awOSUOG.png" width="450" />
+  <img src="https://i.imgur.com/GTgPbSz.png" width="450" /> 
+  <img src="https://i.imgur.com/KfhH7Dj.png" width="450" /> 
 </p>
 
 #### English
 <p float="left">
-  <img src="https://i.imgur.com/nObScEm.png" width="450" />
-  <img src="https://i.imgur.com/QakkqZi.png" width="450" />   
-  <img src="https://i.imgur.com/8R6yb5O.png" width="450" /> 
+  <img src="https://i.imgur.com/yK80axf.png" width="450" />
+  <img src="https://i.imgur.com/lsvsHTZ.png" width="450" />   
+  <img src="https://i.imgur.com/IbrEzXv.png" width="450" /> 
 </p>
 
 ### Finger Usage
