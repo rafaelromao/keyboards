@@ -39,7 +39,7 @@ In English, the finger distribution is quite similar between Romak and Colemak-D
 ![img](https://i.imgur.com/PEoPAA5.png)
 
 ### Detailed Finger Analysis
-The [Colemak mod-DH analysis tool](https://colemakmods.github.io/mod-dh/analyze.html) was also used to compare Romak against Colemak-DH, Colemak and Workman.
+The [Colemak mod-DH analysis tool](https://colemakmods.github.io/mod-dh/analyze.html) was also used to compare Romak against Colemak-DH, Colemak and Workman (English text corpus only).
 <p float="left">
   <img src="https://i.imgur.com/d3HPTNK.png" width="450" />
   <img src="https://i.imgur.com/3t4tMKo.png" width="450" /> 
