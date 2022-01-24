@@ -2,7 +2,7 @@
 
 ## Romak
 
-![img](https://i.imgur.com/RmwCN8Y.png)
+![img](https://i.imgur.com/B6WTpsH.png)
 
 - Romak is the layout used in the default base layer. It is Colemak inspired, improved to remove load from pinkies and for typing in Portuguese.
 - Romak has a higher SFB rate than Colemak, close to Workman, but most of this load goes to the stronger fingers.
@@ -10,7 +10,7 @@
 
 ### From Qwerty to Romak in 6 steps
 
-![img](https://i.imgur.com/RS4W0jw.png)
+![img](https://i.imgur.com/CQKsnxN.png)
 
 ## Romak vs Colemak-DH
 [Stevep99's Layout Analyzer Tool](https://stevep99.github.io/keyboard-layout-analyzer) was used to compare Romak with Colemak-DH and Qwerty, with [Portuguese](corpus.pt.txt) and [English](corpus.en.txt) text corpus.

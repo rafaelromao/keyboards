@@ -45,9 +45,6 @@ enum {
 #define LALTT_F LALT_T(KC_F)
 #define LGUIT_V LGUI_T(KC_V)
 
-#define LC_UNDS LCTL_T(KC_UNDS)
-#define LA_UNDS LALT_T(KC_UNDS)
-
 #define LSFTT_R LSFT_T(KC_R)
 #define LCTLT_S LCTL_T(KC_S)
 #define LALTT_T LALT_T(KC_T)
@@ -74,7 +71,7 @@ enum {
 // Layer-taps
 
 #define MOU_CAP LT(_MOUSE, SP_CAP)
-#define MOU_0  LT(_MOUSE, KC_0)
+#define MOU_0   LT(_MOUSE, KC_0)
 
 #define NAV_MOD LT(_NAVIGATION, SP_MOD)
 
@@ -82,12 +79,13 @@ enum {
 #define RAI_BSP LT(_RAISE, KC_BSPC)
 
 #define KCA_FUN LT(_FUNCTIONS, KC_A)
-#define UND_MED LT(_MEDIA, KC_UNDS)
-#define KCO_MED LT(_MEDIA, KC_O)
-#define DOT_MED LT(_MEDIA, KC_DOT)
-
 #define KCW_FUN LT(_FUNCTIONS, KC_W)
+#define UND_FUN LT(_FUNCTIONS, KC_W)
+
+#define KCO_MED LT(_MEDIA, KC_O)
 #define KCY_MED LT(_MEDIA, KC_Y)
+#define UND_MED LT(_MEDIA, KC_UNDS)
+#define DOT_MED LT(_MEDIA, KC_DOT)
 
 // Layer transitions
 
