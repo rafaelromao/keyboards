@@ -4,7 +4,7 @@
 
 ![img](https://i.imgur.com/B6WTpsH.png)
 
-- Romak is the layout used in the default base layer. It is Colemak inspired, improved to remove load from pinkies and for typing in Portuguese.
+- Romak is the layout used in the default base layer. It is inspired in Colemak and BEAKL, improved to remove load from pinkies and for typing in Portuguese.
 - Romak has a higher SFB rate than Colemak, close to Workman, but most of this load goes to the stronger fingers.
 - There is a commented out transition path from Qwerty to Romak in the [keymap_blocks.h](../qmk/users/rafaelromao/definitions/keymap_blocks.h), similar to Tarmak, but moving _ instead of J.
 
