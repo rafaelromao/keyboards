@@ -19,19 +19,19 @@
 #include QMK_KEYBOARD_H
 #include "keycodes.h"
 
-// Romak 6 - WEP;_
+// Romak 6 - WRP;_
 
 
-// Romak 5 - DVA_
+// Romak 5 - ADV_
 
 
-// Romak 4 - LUOI
+// Romak 4 - LUIO
 
 
 // Romak 3 - CFT_
 
 
-// Romak 2 - KEQX_
+// Romak 2 - QXKE_
 
 
 // Romak 1 - NJY_
