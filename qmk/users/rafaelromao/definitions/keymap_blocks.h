@@ -117,7 +117,7 @@
 #define ____LOWER_L4_____                                                             _______ , XXXXXXX
 
 #define ___________________LOWER_R1____________________ XXXXXXX , KC_7    , KC_8    , KC_9    , KC_ENT
-#define ___________________LOWER_R2____________________ KC_DOT  , KC_4    , KC_5    , KC_6    , DOT_MED
+#define ___________________LOWER_R2____________________ KC_COMM , KC_4    , KC_5    , KC_6    , DOT_MED
 #define ___________________LOWER_R3____________________ XXXXXXX , KC_1    , KC_2    , KC_3    , XXXXXXX
 #define ____LOWER_R4_____                               _______ , MOU_0
 

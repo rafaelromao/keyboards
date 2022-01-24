@@ -111,13 +111,13 @@ const uint16_t PROGMEM r_col_cop_combo[] = {RAI_BSP, RGUIT_H, KC_COMM, COMBO_END
 
 // Layer toggle
 
-const uint16_t PROGMEM l_bas_rai_combo[] = {LOW_SPC, KC_X, KC_C, COMBO_END};
-const uint16_t PROGMEM r_bas_lo1_combo[] = {RAI_BSP, KC_COMM, TD_DOTD, COMBO_END};
-const uint16_t PROGMEM r_bas_lo2_combo[] = {RAI_BSP, KC_UNDS, COMBO_END};
-const uint16_t PROGMEM r_mou_nav_combo[] = {KC_HOME, KC_END, COMBO_END};
-
+const uint16_t PROGMEM l_qwe_rai_combo[] = {LOW_SPC, KC_X, KC_C, COMBO_END};
 const uint16_t PROGMEM l_rai_tog_combo[] = {LOW_SPC, KC_CIRC, KC_TILD, COMBO_END};
 const uint16_t PROGMEM l_med_tog_combo[] = {LOW_SPC, KC_Z, COMBO_END};
+const uint16_t PROGMEM r_qwe_lo1_combo[] = {RAI_BSP, KC_COMM, TD_DOTD, COMBO_END};
+const uint16_t PROGMEM r_qwe_lo2_combo[] = {RAI_BSP, TD_SCLE, COMBO_END};
+const uint16_t PROGMEM r_col_low_combo[] = {RAI_BSP, KC_UNDS, COMBO_END};
+const uint16_t PROGMEM r_mou_nav_combo[] = {KC_HOME, KC_END, COMBO_END};
 const uint16_t PROGMEM r_nav_tog_combo[] = {RAI_BSP, KC_DOWN, KC_UP, COMBO_END};
 const uint16_t PROGMEM r_mou_tog_combo[] = {RAI_BSP, KC_MS_D, KC_MS_U, COMBO_END};
 const uint16_t PROGMEM r_low_tog_combo[] = {RAI_BSP, KC_5, KC_6, COMBO_END};
@@ -196,9 +196,10 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(r_col_pas_combo, CB_PAST),
   COMBO(r_col_cop_combo, CB_COPY),
 
-  COMBO(l_bas_rai_combo, TT_RAI),
-  COMBO(r_bas_lo1_combo, TT_LOW),
-  COMBO(r_bas_lo2_combo, OS_LOW),
+  COMBO(l_qwe_rai_combo, TT_RAI),
+  COMBO(r_qwe_lo1_combo, TT_LOW),
+  COMBO(r_qwe_lo2_combo, OS_LOW),
+  COMBO(r_col_low_combo, OS_LOW),
   COMBO(r_low_fun_combo, TG_FUN),
   COMBO(r_mou_nav_combo, TO_NAV),
 
