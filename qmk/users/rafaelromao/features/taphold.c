@@ -34,38 +34,22 @@ bool get_hold_on_other_key_press_result(uint16_t keycode) {
     switch (keycode) {
         case LOW_SPC:
         case RAI_BSP:
-            // Immediately select the hold action when another key is pressed.
             return true;
         default:
-            // Do not select the hold action when another key is pressed.
             return false;
     }
 }
 
 bool get_tapping_force_hold_result(uint16_t keycode) {
     switch (keycode) {
-        case KCA_FUN:
-        case KCW_FUN:
-        case KCO_MED:
-        case KCY_MED:
-        case UND_MED:
-        case DOT_MED:
-        case LSFTT_S:
-        case LCTLT_D:
-        case LALTT_F:
-        case LGUIT_V:
-        case LSFTT_R:
-        case LCTLT_S:
-        case LALTT_T:
-        case LGUIT_D:
-        case RSFTT_L:
-        case RCTLT_K:
-        case RALTT_J:
-        case RGUIT_M:
-        case RSFTT_I:
-        case RCTLT_E:
-        case RALTT_N:
-        case RGUIT_H:
+        case LOW_SPC:
+        case RAI_BSP:
+            return false;
+    }
+    switch (keycode) {
+        case QK_MOD_TAP...QK_MOD_TAP_MAX:
+        case QK_LAYER_TAP...QK_LAYER_TAP_MAX:
+        case QK_MOMENTARY...QK_MOMENTARY_MAX:
             return true;
         default:
             return false;
