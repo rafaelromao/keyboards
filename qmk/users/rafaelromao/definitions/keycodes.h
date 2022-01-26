@@ -49,12 +49,14 @@ enum {
 #define LCTLT_E LCTL_T(KC_E)
 #define LCTLT_A LCTL_T(KC_A)
 #define LCTLT_S LCTL_T(KC_S)
+#define LC_UNDS LCTL_T(KC_UNDS)
 #define RCTLT_K RCTL_T(KC_K)
 #define RCTLT_A RCTL_T(KC_A)
 #define RCTLT_E RCTL_T(KC_E)
 
 #define LALTT_F LALT_T(KC_F)
 #define LALTT_T LALT_T(KC_T)
+#define LA_UNDS LALT_T(KC_UNDS)
 #define RALTT_J RALT_T(KC_J)
 #define RALTT_N RALT_T(KC_N)
 
@@ -82,11 +84,12 @@ enum {
 #define RAI_BSP LT(_RAISE, KC_BSPC)
 
 #define KCA_FUN LT(_FUNCTIONS, KC_A)
+#define KCF_FUN LT(_FUNCTIONS, KC_F)
 #define KCW_FUN LT(_FUNCTIONS, KC_W)
 #define UND_FUN LT(_FUNCTIONS, KC_UNDS)
 
 #define KCO_MED LT(_MEDIA, KC_O)
-#define KCY_MED LT(_MEDIA, KC_Y)
+#define KCC_MED LT(_MEDIA, KC_C)
 #define UND_MED LT(_MEDIA, KC_UNDS)
 #define DOT_MED LT(_MEDIA, KC_DOT)
 

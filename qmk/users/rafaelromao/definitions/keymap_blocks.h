@@ -19,77 +19,77 @@
 #include QMK_KEYBOARD_H
 #include "keycodes.h"
 
-// // Romak 6 - DEQ_
+// // Romak 6 - PRW;
 
 // #define ___________________ROMAK_L1____________________ KC_UNDS , KC_R    , KC_Q    , KC_P    , KC_V
-// #define ___________________ROMAK_L2____________________ KCW_FUN , LSFTT_S , LCTLT_E , LALTT_T , KC_G
-// #define ___________________ROMAK_L3____________________ KC_Z    , KC_F    , KC_C    , LGUIT_D , KC_B
+// #define ___________________ROMAK_L2____________________ KCF_FUN , LSFTT_S , KC_E    , LCTLT_T , KC_G
+// #define ___________________ROMAK_L3____________________ KC_B    , KC_X    , KC_Y    , LGUIT_D , KC_Z
 // #define ____ROMAK_L4_____                                                             NAV_MOD , LOW_SPC
                                                         
 // #define ___________________ROMAK_R1____________________ KC_K    , KC_L    , KC_U    , KC_I    , TD_SCLE
-// #define ___________________ROMAK_R2____________________ KC_H    , RALTT_N , RCTLT_A , RSFTT_O , KCY_MED
-// #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , KC_COMM , TD_DOTD , KC_X
+// #define ___________________ROMAK_R2____________________ KC_H    , RALTT_N , RCTLT_A , RSFTT_O , KCC_MED
+// #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , KC_COMM , TD_DOTD , KC_W
 // #define ____ROMAK_R4_____                               RAI_BSP , MOU_CAP
 
-// // Romak 5 - FTV_
+// // Romak 5 - LUIO
 
-// #define ___________________ROMAK_L1____________________ KC_Q    , KC_R    , KC_E    , KC_P    , KC_V
-// #define ___________________ROMAK_L2____________________ KCW_FUN , LSFTT_S , LCTLT_D , LALTT_T , KC_G
-// #define ___________________ROMAK_L3____________________ KC_Z    , KC_F    , KC_C    , LG_UNDS , KC_B
+// #define ___________________ROMAK_L1____________________ KC_UNDS , KC_W    , KC_Q    , KC_R    , KC_V
+// #define ___________________ROMAK_L2____________________ KCF_FUN , LSFTT_S , KC_E    , LCTLT_T , KC_G
+// #define ___________________ROMAK_L3____________________ KC_B    , KC_X    , KC_Y    , LGUIT_D , KC_Z
 // #define ____ROMAK_L4_____                                                             NAV_MOD , LOW_SPC
                                                         
-// #define ___________________ROMAK_R1____________________ KC_K    , KC_L    , KC_U    , KC_I    , TD_SCLE
-// #define ___________________ROMAK_R2____________________ KC_H    , RALTT_N , RCTLT_A , RSFTT_O , KCY_MED
-// #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , KC_COMM , TD_DOTD , KC_X
-// #define ____ROMAK_R4_____                               RAI_BSP , MOU_CAP
-
-// // Romak 4 - LUIO
-
-// #define ___________________ROMAK_L1____________________ KC_Q    , KC_R    , KC_E    , KC_P    , KC_T
-// #define ___________________ROMAK_L2____________________ KCW_FUN , LSFTT_S , LCTLT_D , LALTT_F , KC_G
-// #define ___________________ROMAK_L3____________________ KC_Z    , KC_UNDS , KC_C    , LGUIT_V , KC_B
-// #define ____ROMAK_L4_____                                                             NAV_MOD , LOW_SPC
-                                                        
-// #define ___________________ROMAK_R1____________________ KC_K    , KC_L    , KC_U    , KC_I    , TD_SCLE
-// #define ___________________ROMAK_R2____________________ KC_H    , RALTT_N , RCTLT_A , RSFTT_O , KCY_MED
-// #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , KC_COMM , TD_DOTD , KC_X
-// #define ____ROMAK_R4_____                               RAI_BSP , MOU_CAP
-
-// // Romak 3- RPX;_
-
-// #define ___________________ROMAK_L1____________________ KC_Q    , KC_R    , KC_E    , KC_P    , KC_T
-// #define ___________________ROMAK_L2____________________ KCW_FUN , LSFTT_S , LCTLT_D , LALTT_F , KC_G
-// #define ___________________ROMAK_L3____________________ KC_Z    , KC_UNDS , KC_C    , LGUIT_V , KC_B
-// #define ____ROMAK_L4_____                                                             NAV_MOD , LOW_SPC
-                                                        
-// #define ___________________ROMAK_R1____________________ KC_K    , KC_U    , KC_I    , KC_O    , TD_SCLE
-// #define ___________________ROMAK_R2____________________ KC_H    , RALTT_N , RCTLT_A , RSFTT_L , KCY_MED
-// #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , KC_COMM , TD_DOTD , KC_X
-// #define ____ROMAK_R4_____                               RAI_BSP , MOU_CAP
-
-// Romak 2- AKW_
-
-#define ___________________ROMAK_L1____________________ KC_Q    , KC_UNDS , KC_E    , KC_R    , KC_T
-#define ___________________ROMAK_L2____________________ KCW_FUN , LSFTT_S , LCTLT_D , LALTT_F , KC_G
-#define ___________________ROMAK_L3____________________ KC_Z    , KC_X    , KC_C    , LGUIT_V , KC_B
-#define ____ROMAK_L4_____                                                             NAV_MOD , LOW_SPC
-                                                        
-#define ___________________ROMAK_R1____________________ KC_K    , KC_U    , KC_I    , KC_O    , KC_P
-#define ___________________ROMAK_R2____________________ KC_H    , RALTT_N , RCTLT_A , RSFTT_L , KCY_MED
-#define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , KC_COMM , TD_DOTD , TD_SCLE
-#define ____ROMAK_R4_____                               RAI_BSP , MOU_CAP
-
-// // Romak 1 - NJY_
-
-// #define ___________________ROMAK_L1____________________ KC_Q    , KC_W    , KC_E    , KC_R    , KC_T
-// #define ___________________ROMAK_L2____________________ KCA_FUN , LSFTT_S , LCTLT_D , LALTT_F , KC_G
-// #define ___________________ROMAK_L3____________________ KC_Z    , KC_X    , KC_C    , LGUIT_V , KC_B
-// #define ____ROMAK_L4_____                                                             NAV_MOD , LOW_SPC
-                                                        
-// #define ___________________ROMAK_R1____________________ KC_UNDS , KC_U    , KC_I    , KC_O    , KC_P
-// #define ___________________ROMAK_R2____________________ KC_H    , RALTT_N , RCTLT_K , RSFTT_L , KCY_MED
+// #define ___________________ROMAK_R1____________________ KC_K    , KC_L    , KC_U    , KC_I    , KC_P
+// #define ___________________ROMAK_R2____________________ KC_H    , RALTT_N , RCTLT_A , RSFTT_O , KCC_MED
 // #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , KC_COMM , TD_DOTD , TD_SCLE
 // #define ____ROMAK_R4_____                               RAI_BSP , MOU_CAP
+
+// // Romak 4 - EQZB_
+
+// #define ___________________ROMAK_L1____________________ KC_UNDS , KC_W    , KC_Q    , KC_R    , KC_V
+// #define ___________________ROMAK_L2____________________ KCF_FUN , LSFTT_S , KC_E    , LCTLT_T , KC_G
+// #define ___________________ROMAK_L3____________________ KC_B    , KC_X    , KC_Y    , LGUIT_D , KC_Z
+// #define ____ROMAK_L4_____                                                             NAV_MOD , LOW_SPC
+                                                        
+// #define ___________________ROMAK_R1____________________ KC_K    , KC_U    , KC_I    , KC_O    , KC_P
+// #define ___________________ROMAK_R2____________________ KC_H    , RALTT_N , RCTLT_A , RSFTT_L , KCC_MED
+// #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , KC_COMM , TD_DOTD , TD_SCLE
+// #define ____ROMAK_R4_____                               RAI_BSP , MOU_CAP
+
+// // Romak 3 - DVT_
+
+// #define ___________________ROMAK_L1____________________ KC_Q    , KC_W    , KC_E    , KC_R    , KC_V
+// #define ___________________ROMAK_L2____________________ KCF_FUN , LSFTT_S , KC_UNDS , LCTLT_T , KC_G
+// #define ___________________ROMAK_L3____________________ KC_Z    , KC_X    , KC_Y    , LGUIT_D , KC_B
+// #define ____ROMAK_L4_____                                                             NAV_MOD , LOW_SPC
+                                                        
+// #define ___________________ROMAK_R1____________________ KC_K    , KC_U    , KC_I    , KC_O    , KC_P
+// #define ___________________ROMAK_R2____________________ KC_H    , RALTT_N , RCTLT_A , RSFTT_L , KCC_MED
+// #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , KC_COMM , TD_DOTD , TD_SCLE
+// #define ____ROMAK_R4_____                               RAI_BSP , MOU_CAP
+
+// // Romak 2 - KFA_
+
+// #define ___________________ROMAK_L1____________________ KC_Q    , KC_W    , KC_E    , KC_R    , KC_T
+// #define ___________________ROMAK_L2____________________ KCF_FUN , LSFTT_S , LCTLT_D , LA_UNDS , KC_G
+// #define ___________________ROMAK_L3____________________ KC_Z    , KC_X    , KC_Y    , LGUIT_V , KC_B
+// #define ____ROMAK_L4_____                                                             NAV_MOD , LOW_SPC
+                                                        
+// #define ___________________ROMAK_R1____________________ KC_K    , KC_U    , KC_I    , KC_O    , KC_P
+// #define ___________________ROMAK_R2____________________ KC_H    , RALTT_N , RCTLT_A , RSFTT_L , KCC_MED
+// #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , KC_COMM , TD_DOTD , TD_SCLE
+// #define ____ROMAK_R4_____                               RAI_BSP , MOU_CAP
+
+// Romak 1 - NJYC_
+
+#define ___________________ROMAK_L1____________________ KC_Q    , KC_W    , KC_E    , KC_R    , KC_T
+#define ___________________ROMAK_L2____________________ KCA_FUN , LSFTT_S , LCTLT_D , LALTT_F , KC_G
+#define ___________________ROMAK_L3____________________ KC_Z    , KC_X    , KC_Y    , LGUIT_V , KC_B
+#define ____ROMAK_L4_____                                                             NAV_MOD , LOW_SPC
+                                                        
+#define ___________________ROMAK_R1____________________ KC_UNDS , KC_U    , KC_I    , KC_O    , KC_P
+#define ___________________ROMAK_R2____________________ KC_H    , RALTT_N , RCTLT_K , RSFTT_L , KCC_MED
+#define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , KC_COMM , TD_DOTD , TD_SCLE
+#define ____ROMAK_R4_____                               RAI_BSP , MOU_CAP
 
 #define ___________________QWERTY_L1___________________ KC_Q    , KC_W    , KC_E    , KC_R    , KC_T
 #define ___________________QWERTY_L2___________________ KCA_FUN , LSFTT_S , LCTLT_D , LALTT_F , KC_G
@@ -101,27 +101,15 @@
 #define ___________________QWERTY_R3___________________ KC_N    , RGUIT_M , KC_COMM , TD_DOTD , TD_SCLE
 #define ____QWERTY_R4____                               RAI_BSP , MOU_CAP
 
-// #define ___________________COLEMAK_L1__________________ KC_Q    , KC_W    , KC_F    , KC_P    , KC_B
-// #define ___________________COLEMAK_L2__________________ KCA_FUN , LSFTT_R , LCTLT_S , LALTT_T , KC_G
-// #define ___________________COLEMAK_L3__________________ KC_Z    , KC_X    , KC_C    , LGUIT_D , KC_V
-// #define ____COLEMAK_L4___                                                             NAV_MOD , LOW_SPC
-
-// #define ___________________COLEMAK_R1__________________ KC_J    , KC_L    , KC_U    , KC_Y    , TD_SCLE
-// #define ___________________COLEMAK_R2__________________ KC_M    , RALTT_N , RCTLT_E , RSFTT_I , KCO_MED
-// #define ___________________COLEMAK_R3__________________ KC_K    , RGUIT_H , KC_COMM , TD_DOTD , KC_UNDS
-// #define ____COLEMAK_R4___                               RAI_BSP , MOU_CAP
-
-// Temp Romak as Cokemak START
-#define ___________________COLEMAK_L1__________________ KC_UNDS , KC_R    , KC_Q    , KC_P    , KC_V
-#define ___________________COLEMAK_L2__________________ KCW_FUN , LSFTT_S , LCTLT_E , LALTT_T , KC_G
-#define ___________________COLEMAK_L3__________________ KC_Z    , KC_F    , KC_C    , LGUIT_D , KC_B
+#define ___________________COLEMAK_L1__________________ KC_Q    , KC_W    , KC_F    , KC_P    , KC_B
+#define ___________________COLEMAK_L2__________________ KCA_FUN , LSFTT_R , LCTLT_S , LALTT_T , KC_G
+#define ___________________COLEMAK_L3__________________ KC_Z    , KC_X    , KC_C    , LGUIT_D , KC_V
 #define ____COLEMAK_L4___                                                             NAV_MOD , LOW_SPC
-                                                        
-#define ___________________COLEMAK_R1__________________ KC_K    , KC_L    , KC_U    , KC_I    , TD_SCLE
-#define ___________________COLEMAK_R2__________________ KC_H    , RALTT_N , RCTLT_A , RSFTT_O , KCY_MED
-#define ___________________COLEMAK_R3__________________ KC_J    , RGUIT_M , KC_COMM , TD_DOTD , KC_X
+
+#define ___________________COLEMAK_R1__________________ KC_J    , KC_L    , KC_U    , KC_Y    , TD_SCLE
+#define ___________________COLEMAK_R2__________________ KC_M    , RALTT_N , RCTLT_E , RSFTT_I , KCO_MED
+#define ___________________COLEMAK_R3__________________ KC_K    , RGUIT_H , KC_COMM , TD_DOTD , KC_UNDS
 #define ____COLEMAK_R4___                               RAI_BSP , MOU_CAP
-// Temp Romak as Cokemak END
 
 #define ___________________LOWER_L1____________________ XXXXXXX , TD_PARB , KC_RPRN , KC_BSLS , SS_TILD
 #define ___________________LOWER_L2____________________ SS_BTIC , SS_DQUO , SS_SQUO , KC_AMPR , KC_PIPE
