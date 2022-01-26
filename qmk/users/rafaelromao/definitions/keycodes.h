@@ -83,7 +83,7 @@ enum {
 
 #define KCA_FUN LT(_FUNCTIONS, KC_A)
 #define KCW_FUN LT(_FUNCTIONS, KC_W)
-#define UND_FUN LT(_FUNCTIONS, KC_W)
+#define UND_FUN LT(_FUNCTIONS, KC_UNDS)
 
 #define KCO_MED LT(_MEDIA, KC_O)
 #define KCY_MED LT(_MEDIA, KC_Y)
