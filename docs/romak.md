@@ -24,7 +24,7 @@
 
 #### English
 <p float="left">
-  <img src="https://i.imgur.com/hnqnbO6.png" width="450" />
+  <img src="https://i.imgur.com/PpZRwta.png" width="450" />
   <img src="https://i.imgur.com/lsvsHTZ.png" width="450" />   
   <img src="https://i.imgur.com/zoc13dC.png" width="450" /> 
 </p>
