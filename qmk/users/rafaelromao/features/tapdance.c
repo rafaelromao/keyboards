@@ -337,7 +337,6 @@ void tap_accent_double_tap_key(uint32_t keycode) {
             tap_code(KC_I);
             break;
         case TD_GV_E:
-        case TD_TL_A:
         case TD_SQ_E:
         case TD_CR_E:
             tap_code(KC_O);
@@ -345,7 +344,7 @@ void tap_accent_double_tap_key(uint32_t keycode) {
         case TD_DQ_U:
             tap_code(KC_E);
             break;
-        case TD_TL_O:
+        case TD_TL_A:
             tap_code(KC_N);
             break;
     }
@@ -358,9 +357,6 @@ void tap_accent_triple_tap_key(uint32_t keycode) {
         case TD_SQ_E:
             tap_code(KC_U);
             break;
-        case TD_TL_A:
-            tap_code(KC_N);
-            break;
         case TD_DQ_S:
             tap_code(KC_O);
             break;
@@ -368,26 +364,15 @@ void tap_accent_triple_tap_key(uint32_t keycode) {
         case TD_DQ_U:
             tap_code(KC_I);
             break;
-        case TD_TL_O:
-        case TD_CR_E:
-            tap_code(KC_A);
-            break;
     }
 }
 
 void td_accents(qk_tap_dance_state_t *state, uint32_t keycode) {
     tap_state.state = dance_state(state);
 
-    uint8_t oneshot_locked_mods = get_oneshot_locked_mods();
-    uint8_t oneshot_mods = get_oneshot_mods();
-    uint8_t mods = get_mods();
-    bool isOneShotShift = oneshot_mods & MOD_MASK_SHIFT || oneshot_locked_mods & MOD_MASK_SHIFT;
-    bool isShifted = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
+    bool isShifted = get_oneshot_mods() & MOD_MASK_SHIFT;
     clear_locked_and_oneshot_mods();
-    if (isShifted) {
-        unregister_mods(MOD_MASK_SHIFT);
-    }
-
+    
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
             if (keycode != TD_DQ_S) {
@@ -398,7 +383,7 @@ void td_accents(qk_tap_dance_state_t *state, uint32_t keycode) {
             }
             tap_accent_tap_key(keycode);
             if (isShifted) {
-                register_mods(MOD_LSFT);
+                unregister_mods(MOD_LSFT);
             }
             break;
         case TD_DOUBLE_TAP:
@@ -408,7 +393,7 @@ void td_accents(qk_tap_dance_state_t *state, uint32_t keycode) {
             }
             tap_accent_double_tap_key(keycode);
             if (isShifted) {
-                register_mods(MOD_LSFT);
+                unregister_mods(MOD_LSFT);
             }
             break;
         case TD_SINGLE_HOLD:
@@ -419,14 +404,11 @@ void td_accents(qk_tap_dance_state_t *state, uint32_t keycode) {
             }
             tap_accent_triple_tap_key(keycode);
             if (isShifted) {
-                register_mods(MOD_LSFT);
+                unregister_mods(MOD_LSFT);
             }
             break;
         default: break;
     }
-
-    set_oneshot_locked_mods(oneshot_locked_mods);
-    register_mods(mods);
 }
 
 void td_gv_e(qk_tap_dance_state_t *state, void *user_data) {
