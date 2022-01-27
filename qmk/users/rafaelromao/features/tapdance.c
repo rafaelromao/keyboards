@@ -243,6 +243,10 @@ void td_question_mark(qk_tap_dance_state_t *state, void *user_data) {
         case TD_DOUBLE_TAP:
             tap_code16(RALT(KC_QUES));
             break;
+        case TD_SINGLE_HOLD:
+            tap_code16(KC_END);
+            tap_code16(KC_QUES);
+            break;
         default: break;
     }
 }
@@ -259,6 +263,10 @@ void td_exclamation(qk_tap_dance_state_t *state, void *user_data) {
             break;
         case TD_DOUBLE_TAP:
             tap_code16(RALT(KC_1));
+            break;
+        case TD_SINGLE_HOLD:
+            tap_code16(KC_END);
+            tap_code16(KC_EXLM);
             break;
         default: break;
     }
