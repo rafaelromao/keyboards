@@ -329,7 +329,6 @@ void tap_accent_tap_key(uint32_t keycode) {
 void tap_accent_double_tap_key(uint32_t keycode) {
     switch (keycode) {
         case TD_SQ_C:
-        case TD_CR_E:
         case TD_DQ_S:
             tap_code(KC_A);
             break;
@@ -340,6 +339,7 @@ void tap_accent_double_tap_key(uint32_t keycode) {
         case TD_GV_E:
         case TD_TL_A:
         case TD_SQ_E:
+        case TD_CR_E:
             tap_code(KC_O);
             break;
         case TD_DQ_U:
@@ -362,7 +362,6 @@ void tap_accent_triple_tap_key(uint32_t keycode) {
             tap_code(KC_N);
             break;
         case TD_DQ_S:
-        case TD_CR_E:
             tap_code(KC_O);
             break;
         case TD_SQ_C:
@@ -370,6 +369,7 @@ void tap_accent_triple_tap_key(uint32_t keycode) {
             tap_code(KC_I);
             break;
         case TD_TL_O:
+        case TD_CR_E:
             tap_code(KC_A);
             break;
     }

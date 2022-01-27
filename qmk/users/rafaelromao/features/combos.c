@@ -112,7 +112,8 @@ const uint16_t PROGMEM r_col_cop_combo[] = {RAI_BSP, RGUIT_H, KC_COMM, COMBO_END
 
 const uint16_t PROGMEM l_qwe_rai_combo[] = {LOW_SPC, KC_X, KC_C, COMBO_END};
 const uint16_t PROGMEM l_rai_tog_combo[] = {LOW_SPC, KC_CIRC, KC_TILD, COMBO_END};
-const uint16_t PROGMEM l_med_tog_combo[] = {LOW_SPC, KC_Z, COMBO_END};
+const uint16_t PROGMEM l_me1_tog_combo[] = {LOW_SPC, KC_Z, COMBO_END};
+const uint16_t PROGMEM l_me2_tog_combo[] = {LOW_SPC, KC_B, COMBO_END};
 const uint16_t PROGMEM r_qwe_lo1_combo[] = {RAI_BSP, KC_COMM, TD_DOTD, COMBO_END};
 const uint16_t PROGMEM r_qwe_lo2_combo[] = {RAI_BSP, TD_SCLE, COMBO_END};
 const uint16_t PROGMEM r_col_low_combo[] = {RAI_BSP, KC_UNDS, COMBO_END};
@@ -214,7 +215,8 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(r_low_tog_combo, TG_LOW),
   COMBO(r_fun_tog_combo, TG_FUN),
   COMBO(r_med_tog_combo, TG_MED),
-  COMBO(l_med_tog_combo, OS_MED),
+  COMBO(l_me1_tog_combo, OS_MED),
+  COMBO(l_me2_tog_combo, OS_MED),
 
   COMBO(qwe_reset_combo, RESET),
   COMBO(col_reset_combo, RESET),
