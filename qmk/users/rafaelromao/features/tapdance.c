@@ -26,19 +26,25 @@ static td_tap_t tap_state = {
 
 __attribute__ ((weak)) td_state_t dance_state(qk_tap_dance_state_t *state) {
     if (state->count == 1) {
-        if (state->interrupted || !state->pressed)
-            return TD_SINGLE_TAP;
-         else
-            return TD_SINGLE_HOLD;
-    } else if (state->count > 1) {
-        if (state->interrupted)
-            return TD_SINGLE_TAP;
-        if (state->pressed)
-            return TD_DOUBLE_HOLD;
-        else
-            return TD_DOUBLE_TAP;
+        if (state->interrupted || !state->pressed) return TD_SINGLE_TAP;
+        // Key has not been interrupted, but the key is still held. Means you want to send a 'HOLD'.
+        else return TD_SINGLE_HOLD;
+    } else if (state->count == 2) {
+        // TD_DOUBLE_SINGLE_TAP is to distinguish between typing "pepper", and actually wanting a double tap
+        // action when hitting 'pp'. Suggested use case for this return value is when you want to send two
+        // keystrokes of the key, and not the 'double tap' action/macro.
+        if (state->interrupted) return TD_DOUBLE_SINGLE_TAP;
+        else if (state->pressed) return TD_DOUBLE_HOLD;
+        else return TD_DOUBLE_TAP;
     }
-    return TD_SINGLE_TAP;
+
+    // Assumes no one is trying to type the same letter three times (at least not quickly).
+    // If your tap dance key is 'KC_W', and you want to type "www." quickly - then you will need to add
+    // an exception here to return a 'TD_TRIPLE_SINGLE_TAP', and define that enum just like 'TD_DOUBLE_SINGLE_TAP'
+    if (state->count == 3) {
+        if (state->interrupted || !state->pressed) return TD_TRIPLE_TAP;
+        else return TD_TRIPLE_HOLD;
+    } else return TD_UNKNOWN;
 }
 
 // Mouse buttons
@@ -205,6 +211,10 @@ void td_dot_dot(qk_tap_dance_state_t *state, void *user_data) {
         case TD_SINGLE_TAP:
             tap_code(KC_DOT);
             break;
+        case TD_DOUBLE_SINGLE_TAP:
+            tap_code(KC_DOT);
+            tap_code(KC_DOT);
+            break;
         case TD_DOUBLE_TAP:
             tap_code(KC_DOT);
             tap_code(KC_SPC);
@@ -216,6 +226,203 @@ void td_dot_dot(qk_tap_dance_state_t *state, void *user_data) {
             break;
         default: break;
     }
+}
+
+// Accents
+
+void tap_accent_dead_key(uint16_t keycode) {
+    switch (keycode) {
+        case TD_SQ_C:
+        case TD_SQ_E:
+            tap_code(KC_QUOT);
+            break;
+        case TD_CR_A:
+        case TD_CR_E:
+            tap_code16(KC_CIRC);
+            break;
+        case TD_TL_A:
+        case TD_TL_O:
+            tap_code16(KC_TILD);
+            break;
+        case TD_GV_A:
+        case TD_GV_E:
+            tap_code16(KC_GRV);
+            break;
+        case TD_DQ_U:
+        case TD_DQ_S:
+            tap_code16(KC_DQUO);
+            break;
+    }
+}
+
+void tap_accent_tap_key(uint32_t keycode) {
+    switch (keycode) {
+        case TD_SQ_C:
+            tap_code(KC_C);
+            break;
+        case TD_SQ_E:
+        case TD_CR_E:
+        case TD_GV_E:
+            tap_code(KC_E);
+            break;
+        case TD_CR_A:
+        case TD_TL_A:
+        case TD_GV_A:
+            tap_code(KC_A);
+            break;
+        case TD_TL_O:
+            tap_code(KC_O);
+            break;
+        case TD_DQ_U:
+            tap_code(KC_U);
+            break;
+        case TD_DQ_S:
+            tap_code16(RALT(KC_S));
+            break;
+    }
+}
+
+void tap_accent_double_tap_key(uint32_t keycode) {
+    switch (keycode) {
+        case TD_SQ_C:
+        case TD_CR_E:
+        case TD_DQ_S:
+            tap_code(KC_A);
+            break;
+        case TD_GV_A:
+        case TD_CR_A:
+            tap_code(KC_I);
+            break;
+        case TD_GV_E:
+        case TD_TL_A:
+        case TD_SQ_E:
+            tap_code(KC_O);
+            break;
+        case TD_DQ_U:
+            tap_code(KC_E);
+            break;
+        case TD_TL_O:
+            tap_code(KC_N);
+            break;
+    }
+}
+
+void tap_accent_triple_tap_key(uint32_t keycode) {
+    switch (keycode) {
+        case TD_GV_A:
+        case TD_CR_A:
+        case TD_SQ_E:
+            tap_code(KC_U);
+            break;
+        case TD_TL_A:
+            tap_code(KC_N);
+            break;
+        case TD_DQ_S:
+        case TD_CR_E:
+            tap_code(KC_O);
+            break;
+        case TD_SQ_C:
+        case TD_DQ_U:
+            tap_code(KC_I);
+            break;
+        case TD_TL_O:
+            tap_code(KC_A);
+            break;
+    }
+}
+
+void td_accents(qk_tap_dance_state_t *state, uint32_t keycode) {
+    tap_state.state = dance_state(state);
+
+    uint8_t oneshot_locked_mods = get_oneshot_locked_mods();
+    uint8_t oneshot_mods = get_oneshot_mods();
+    uint8_t mods = get_mods();
+    bool isOneShotShift = oneshot_mods & MOD_MASK_SHIFT || oneshot_locked_mods & MOD_MASK_SHIFT;
+    bool isShifted = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
+    clear_locked_and_oneshot_mods();
+    if (isShifted) {
+        unregister_mods(MOD_MASK_SHIFT);
+    }
+
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            if (keycode != TD_DQ_S) {
+                tap_accent_dead_key(keycode);
+            }
+            if (isShifted) {
+                register_mods(MOD_LSFT);
+            }
+            tap_accent_tap_key(keycode);
+            if (isShifted) {
+                register_mods(MOD_LSFT);
+            }
+            break;
+        case TD_DOUBLE_TAP:
+            tap_accent_dead_key(keycode);
+            if (isShifted) {
+                register_mods(MOD_LSFT);
+            }
+            tap_accent_double_tap_key(keycode);
+            if (isShifted) {
+                register_mods(MOD_LSFT);
+            }
+            break;
+        case TD_SINGLE_HOLD:
+        case TD_TRIPLE_TAP:
+            tap_accent_dead_key(keycode);
+            if (isShifted) {
+                register_mods(MOD_LSFT);
+            }
+            tap_accent_triple_tap_key(keycode);
+            if (isShifted) {
+                register_mods(MOD_LSFT);
+            }
+            break;
+        default: break;
+    }
+
+    set_oneshot_locked_mods(oneshot_locked_mods);
+    register_mods(mods);
+}
+
+void td_gv_e(qk_tap_dance_state_t *state, void *user_data) {
+    td_accents(state, TD_GV_E);
+}
+
+void td_gv_a(qk_tap_dance_state_t *state, void *user_data) {
+    td_accents(state, TD_GV_A);
+}
+
+void td_cr_e(qk_tap_dance_state_t *state, void *user_data) {
+    td_accents(state, TD_CR_E);
+}
+
+void td_cr_a(qk_tap_dance_state_t *state, void *user_data) {
+    td_accents(state, TD_CR_A);
+}
+
+void td_tl_a(qk_tap_dance_state_t *state, void *user_data) {
+    td_accents(state, TD_TL_A);
+}
+
+void td_tl_o(qk_tap_dance_state_t *state, void *user_data) {
+    td_accents(state, TD_TL_O);
+}
+
+void td_sq_e(qk_tap_dance_state_t *state, void *user_data) {
+    td_accents(state, TD_SQ_E);
+}
+
+void td_sq_c(qk_tap_dance_state_t *state, void *user_data) {
+    td_accents(state, TD_SQ_C);
+}
+
+void td_dq_u(qk_tap_dance_state_t *state, void *user_data) {
+    td_accents(state, TD_DQ_U);
+}
+
+void td_dq_s(qk_tap_dance_state_t *state, void *user_data) {
+    td_accents(state, TD_DQ_S);
 }
 
 // Tap dance declarations
@@ -230,5 +437,15 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [BRT_SQR] = ACTION_TAP_DANCE_FN(td_square_brackets),
     [BRT_PAR] = ACTION_TAP_DANCE_FN(td_parentesis),
     [BRT_ANG] = ACTION_TAP_DANCE_FN(td_angle_brackets),
-    [DOT_DOT] = ACTION_TAP_DANCE_FN(td_dot_dot)
+    [DOT_DOT] = ACTION_TAP_DANCE_FN(td_dot_dot),
+    [GRV_E] = ACTION_TAP_DANCE_FN(td_gv_e),
+    [GRV_A] = ACTION_TAP_DANCE_FN(td_gv_a),
+    [CIR_E] = ACTION_TAP_DANCE_FN(td_cr_e),
+    [CIR_A] = ACTION_TAP_DANCE_FN(td_cr_a),
+    [TIL_A] = ACTION_TAP_DANCE_FN(td_tl_a),
+    [TIL_O] = ACTION_TAP_DANCE_FN(td_tl_o),
+    [SQU_E] = ACTION_TAP_DANCE_FN(td_sq_e),
+    [SQU_C] = ACTION_TAP_DANCE_FN(td_sq_c),
+    [DQU_U] = ACTION_TAP_DANCE_FN(td_dq_u),
+    [DQU_S] = ACTION_TAP_DANCE_FN(td_dq_s)
 };

@@ -121,9 +121,9 @@
 #define ___________________LOWER_R3____________________ XXXXXXX , KC_1    , KC_2    , KC_3    , XXXXXXX
 #define ____LOWER_R4_____                               _______ , MOU_0
 
-#define ___________________RAISE_L1____________________ XXXXXXX , XXXXXXX , _______ , KC_DQUO , XXXXXXX
-#define ___________________RAISE_L2____________________ _______ , KC_CIRC , KC_TILD , KC_QUOT , XXXXXXX
-#define ___________________RAISE_L3____________________ XXXXXXX , XXXXXXX , _______ , KC_GRV  , XXXXXXX
+#define ___________________RAISE_L1____________________ TD_GV_E , TD_CR_E , TD_TL_A , TD_SQ_E , TD_DQ_U
+#define ___________________RAISE_L2____________________ KC_GRV  , KC_CIRC , KC_TILD , KC_QUOT , KC_DQUO
+#define ___________________RAISE_L3____________________ TD_GV_A , TD_CR_A , TD_TL_O , TD_SQ_C , TD_DQ_S
 #define ____RAISE_L4_____                                                             _______ , _______
 
 #define ___________________RAISE_R1____________________ SS_CIRC , KC_DLR  , TD_CURB , KC_RCBR , KC_COLN

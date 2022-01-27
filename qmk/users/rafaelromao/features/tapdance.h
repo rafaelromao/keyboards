@@ -32,7 +32,17 @@ enum {
     BRT_SQR,
     BRT_PAR,
     BRT_ANG,
-    DOT_DOT
+    DOT_DOT,
+    GRV_E,
+    GRV_A,
+    CIR_E,
+    CIR_A,
+    TIL_A,
+    TIL_O,
+    SQU_E,
+    SQU_C,
+    DQU_U,
+    DQU_S
 };
 
 #define TD_MB13 TD(MOU_B13)
@@ -46,12 +56,27 @@ enum {
 #define TD_ANGB TD(BRT_ANG)
 #define TD_DOTD TD(DOT_DOT)
 
+#define TD_GV_E TD(GRV_E)
+#define TD_GV_A TD(GRV_A)
+#define TD_CR_E TD(CIR_E)
+#define TD_CR_A TD(CIR_A)
+#define TD_TL_A TD(TIL_A)
+#define TD_TL_O TD(TIL_O)
+#define TD_SQ_E TD(SQU_E)
+#define TD_SQ_C TD(SQU_C)
+#define TD_DQ_U TD(DQU_U)
+#define TD_DQ_S TD(DQU_S)
+
 typedef enum {
     TD_NONE,
+    TD_UNKNOWN,
     TD_SINGLE_TAP,
     TD_SINGLE_HOLD,
     TD_DOUBLE_TAP,
-    TD_DOUBLE_HOLD
+    TD_DOUBLE_HOLD,
+    TD_DOUBLE_SINGLE_TAP, // Send two single taps
+    TD_TRIPLE_TAP,
+    TD_TRIPLE_HOLD
 } td_state_t;
 
 typedef struct {
