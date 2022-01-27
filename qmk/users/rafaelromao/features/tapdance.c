@@ -228,6 +228,42 @@ void td_dot_dot(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
+// Question Mark and Exclamation
+
+void td_question_mark(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code16(KC_QUES);
+            break;
+        case TD_DOUBLE_SINGLE_TAP:
+            tap_code16(KC_QUES);
+            tap_code16(KC_QUES);
+            break;
+        case TD_DOUBLE_TAP:
+            tap_code16(RALT(KC_QUES));
+            break;
+        default: break;
+    }
+}
+
+void td_exclamation(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code16(KC_EXLM);
+            break;
+        case TD_DOUBLE_SINGLE_TAP:
+            tap_code16(KC_EXLM);
+            tap_code16(KC_EXLM);
+            break;
+        case TD_DOUBLE_TAP:
+            tap_code16(RALT(KC_1));
+            break;
+        default: break;
+    }
+}
+
 // Accents
 
 void tap_accent_dead_key(uint16_t keycode) {
@@ -447,5 +483,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [SQU_E] = ACTION_TAP_DANCE_FN(td_sq_e),
     [SQU_C] = ACTION_TAP_DANCE_FN(td_sq_c),
     [DQU_U] = ACTION_TAP_DANCE_FN(td_dq_u),
-    [DQU_S] = ACTION_TAP_DANCE_FN(td_dq_s)
+    [DQU_S] = ACTION_TAP_DANCE_FN(td_dq_s),
+    [EXL_INV] = ACTION_TAP_DANCE_FN(td_exclamation),
+    [QUE_INV] = ACTION_TAP_DANCE_FN(td_question_mark)
 };
