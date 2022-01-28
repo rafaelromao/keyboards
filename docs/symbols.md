@@ -28,6 +28,7 @@ Symbols and Numbers are available in the two classic Lower and Raise layers, act
 ### Accents in the Raise layer (left side)
 - Accents are available in the left side of the Raise layer, while non-accent versions of these symbols are available in the left side of the Lower layer and in the right side of the Raise layer.
 - For example, activating the Lower layer (holding space) + tapping ' (left middle finger) + releasing space + tapping c, gives me 'c, while activating the Raise layer (holding backspace) + tapping ' (left index finger) + tapping c, gives me ç.
+- There are also dedicated keys for accentuated characters, but those keys cover only the most common accents in Portuguese.
 
 ### Dancing Brackets
 - Although closing brackets are available in dedicated keys, it is also possible to type them by double tapping the open bracket keys. It works for parenthesis, curly braces, square brackets and angle brackets.

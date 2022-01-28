@@ -101,16 +101,6 @@
 #define ___________________QWERTY_R3___________________ KC_N    , RGUIT_M , KC_COMM , TD_DOTD , TD_SCLE
 #define ____QWERTY_R4____                               RAI_BSP , MOU_CAP
 
-#define ___________________COLEMAK_L1__________________ KC_Q    , KC_W    , KC_F    , KC_P    , KC_B
-#define ___________________COLEMAK_L2__________________ KCA_FUN , LSFTT_R , LCTLT_S , LALTT_T , KC_G
-#define ___________________COLEMAK_L3__________________ KC_Z    , KC_X    , KC_C    , LGUIT_D , KC_V
-#define ____COLEMAK_L4___                                                             NAV_MOD , LOW_SPC
-
-#define ___________________COLEMAK_R1__________________ KC_J    , KC_L    , KC_U    , KC_Y    , TD_SCLE
-#define ___________________COLEMAK_R2__________________ KC_M    , RALTT_N , RCTLT_E , RSFTT_I , KCO_MED
-#define ___________________COLEMAK_R3__________________ KC_K    , RGUIT_H , KC_COMM , TD_DOTD , KC_UNDS
-#define ____COLEMAK_R4___                               RAI_BSP , MOU_CAP
-
 #define ___________________LOWER_L1____________________ XXXXXXX , TD_PARB , KC_RPRN , KC_BSLS , SS_TILD
 #define ___________________LOWER_L2____________________ SS_BTIC , SS_DQUO , SS_SQUO , KC_AMPR , KC_PIPE
 #define ___________________LOWER_L3____________________ KC_AT   , TD_SQRB , KC_RBRC , KC_QUES , KC_HASH
@@ -172,7 +162,7 @@
 #define ____MEDIA_R4_____                               KC_SPC  , TD_IJRI
 
 #define ___________________MAINTENANCE_L1______________ XXXXXXX , XXXXXXX , KC_PWR  , XXXXXXX , EEP_RST
-#define ___________________MAINTENANCE_L2______________ XXXXXXX , DF_ROM  , DF_COL  , DF_QWE  , XXXXXXX
+#define ___________________MAINTENANCE_L2______________ XXXXXXX , XXXXXXX , DF_ROM  , DF_QWE  , XXXXXXX
 #define ___________________MAINTENANCE_L3______________ TO_FUN  , XXXXXXX , XXXXXXX , TO_NAV  , TO_LOW
 #define __MAINTENANCE_L4_                                                             _______ , XXXXXXX
 

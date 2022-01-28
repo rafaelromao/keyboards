@@ -11,7 +11,7 @@ The Maintenance layer is activated by holding both outer thumb keys.
     - Source code: [os_toggle.c](../qmk/users/rafaelromao/features/os_toggle.c)
   - Disable or enable the [Mouse layer](navigation.md). 
   - Toogle any layer on. 
-  - Chaging the [Base layer](layout.md) to either Qwerty or Colemak. 
+  - Chaging the [Base layer](layout.md) to either Qwerty or Romak. 
 - A combo with the four extreme corner keys puts the keyboard in bootloader mode. This combo is a base layer alternative for the Reset key, in the Maintenance layer, in case some unintended layer lock prevents access to it.
 
 ##

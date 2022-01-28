@@ -93,21 +93,6 @@ const uint16_t PROGMEM r_rom_sal_combo[] = {RAI_BSP, RSFTT_O, KCC_MED, COMBO_END
 const uint16_t PROGMEM l_rom_esc_combo[] = {LOW_SPC, KC_R, KC_Q, COMBO_END};
 const uint16_t PROGMEM r_rom_und_combo[] = {LOW_SPC, TD_DOTD, KC_W, COMBO_END};
 
-// Colemak-DH
-
-const uint16_t PROGMEM l_col_esc_combo[] = {LOW_SPC, KC_W, KC_F, COMBO_END};
-const uint16_t PROGMEM l_col_sav_combo[] = {LOW_SPC, LSFTT_R, LCTLT_S, COMBO_END};
-const uint16_t PROGMEM r_col_tab_combo[] = {RAI_BSP, KC_U, KC_Y, COMBO_END};
-const uint16_t PROGMEM r_col_ent_combo[] = {RAI_BSP, RCTLT_E, RSFTT_I, COMBO_END};
-
-const uint16_t PROGMEM l_col_sal_combo[] = {LOW_SPC, KCA_FUN, LSFTT_R, COMBO_END};
-const uint16_t PROGMEM l_col_pas_combo[] = {LOW_SPC, LCTLT_S, LALTT_T, COMBO_END};
-const uint16_t PROGMEM l_col_cop_combo[] = {LOW_SPC, KC_C, LGUIT_D, COMBO_END};
-
-const uint16_t PROGMEM r_col_sal_combo[] = {RAI_BSP, RSFTT_I, KCO_MED, COMBO_END};
-const uint16_t PROGMEM r_col_pas_combo[] = {RAI_BSP, RALTT_N, RCTLT_E, COMBO_END};
-const uint16_t PROGMEM r_col_cop_combo[] = {RAI_BSP, RGUIT_H, KC_COMM, COMBO_END};
-
 // Layer toggle
 
 const uint16_t PROGMEM l_qwe_rai_combo[] = {LOW_SPC, KC_X, KC_C, COMBO_END};
@@ -116,7 +101,6 @@ const uint16_t PROGMEM l_me1_tog_combo[] = {LOW_SPC, KC_Z, COMBO_END};
 const uint16_t PROGMEM l_me2_tog_combo[] = {LOW_SPC, KC_B, COMBO_END};
 const uint16_t PROGMEM r_qwe_lo1_combo[] = {RAI_BSP, KC_COMM, TD_DOTD, COMBO_END};
 const uint16_t PROGMEM r_qwe_lo2_combo[] = {RAI_BSP, TD_SCLE, COMBO_END};
-const uint16_t PROGMEM r_col_low_combo[] = {RAI_BSP, KC_UNDS, COMBO_END};
 const uint16_t PROGMEM r_rom_low_combo[] = {RAI_BSP, KC_W, COMBO_END};
 const uint16_t PROGMEM r_mou_nav_combo[] = {KC_HOME, KC_END, COMBO_END};
 const uint16_t PROGMEM r_nav_tog_combo[] = {RAI_BSP, KC_DOWN, KC_UP, COMBO_END};
@@ -128,7 +112,6 @@ const uint16_t PROGMEM r_med_tog_combo[] = {KC_SPC, KC_VOLD, KC_VOLU, COMBO_END}
 // Reset
 
 const uint16_t PROGMEM qwe_reset_combo[] = {KC_Q, KC_P, KC_Z, TD_SCLE, COMBO_END};
-const uint16_t PROGMEM col_reset_combo[] = {KC_Q, TD_SCLE, KC_Z, KC_UNDS, COMBO_END};
 const uint16_t PROGMEM rom_reset_combo[] = {KC_UNDS, KC_B, KC_W, TD_SCLE, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
@@ -189,26 +172,11 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(l_rom_esc_combo, KC_ESC),
   COMBO(r_rom_und_combo, CB_UNDO),
 
-  COMBO(l_col_esc_combo, KC_ESC),
-  COMBO(l_col_sav_combo, CB_SAVE),
-  COMBO(r_col_tab_combo, KC_TAB),
-  COMBO(r_col_ent_combo, KC_ENT),
-
-  COMBO(l_col_sal_combo, CB_SELC),
-  COMBO(l_col_pas_combo, CB_PAST),
-  COMBO(l_col_cop_combo, CB_COPY),
-
-  COMBO(r_col_sal_combo, CB_SELC),
-  COMBO(r_col_pas_combo, CB_PAST),
-  COMBO(r_col_cop_combo, CB_COPY),
-
   COMBO(l_qwe_rai_combo, TT_RAI),
   COMBO(r_qwe_lo1_combo, TT_LOW),
   COMBO(r_qwe_lo2_combo, OS_LOW),
-  COMBO(r_col_low_combo, OS_LOW),
   COMBO(r_rom_low_combo, OS_LOW),
   COMBO(r_mou_nav_combo, TO_NAV),
-
   COMBO(l_rai_tog_combo, TG_RAI),
   COMBO(r_nav_tog_combo, TG_NAV),
   COMBO(r_mou_tog_combo, TG_MOU),
@@ -219,7 +187,6 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(l_me2_tog_combo, OS_MED),
 
   COMBO(qwe_reset_combo, RESET),
-  COMBO(col_reset_combo, RESET),
   COMBO(rom_reset_combo, RESET),
 };
 

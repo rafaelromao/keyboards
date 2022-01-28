@@ -52,19 +52,14 @@ enum {
 // Mod-taps
 
 #define LSFTT_S LSFT_T(KC_S)
-#define LSFTT_R LSFT_T(KC_R)
-#define RSFTT_I RSFT_T(KC_I)
 #define RSFTT_L RSFT_T(KC_L)
 #define RSFTT_O RSFT_T(KC_O)
 
 #define LCTLT_D LCTL_T(KC_D)
 #define LCTLT_E LCTL_T(KC_E)
-#define LCTLT_A LCTL_T(KC_A)
-#define LCTLT_S LCTL_T(KC_S)
 #define LC_UNDS LCTL_T(KC_UNDS)
 #define RCTLT_K RCTL_T(KC_K)
 #define RCTLT_A RCTL_T(KC_A)
-#define RCTLT_E RCTL_T(KC_E)
 
 #define LALTT_F LALT_T(KC_F)
 #define LALTT_T LALT_T(KC_T)
@@ -76,7 +71,6 @@ enum {
 #define LGUIT_D LGUI_T(KC_D)
 #define LG_UNDS LGUI_T(KC_UNDS)
 #define RGUIT_M RGUI_T(KC_M)
-#define RGUIT_H RGUI_T(KC_H)
 
 // One-shot mods
 
@@ -110,7 +104,6 @@ enum {
 
 #define DF_ROM DF(_ROMAK)
 #define DF_QWE DF(_QWERTY)
-#define DF_COL DF(_COLEMAK)
 #define TO_RAI TO(_RAISE)
 #define TG_RAI TG(_RAISE)
 #define TT_RAI TT(_RAISE)

@@ -17,7 +17,7 @@ The Navigation and Mouse layer can be activated holding the outer left and right
         vnoremap k <nop>
         vnoremap l <nop>
         ```
-    - This trade-off turns the navigation easier and ubiquitous and makes even more sense when using Colemak.
+    - This trade-off turns the navigation easier and ubiquitous and makes even more sense when using other layout than qwerty.
 - Once in the Navigation layer, it is still possible to toggle the layer on, using a combo. It is possible using a clone of the original Navigation layer.
 - Another combo can be used to toggle the Navigation layer off.
 

@@ -5,7 +5,7 @@
 - This layout works well with the OS configured for the US International keyboard.
 - This layout was designed mostly for coding and typing in English and Portuguese (but will probably work well for other latin languages).
 - This layout considers the right hand as the dominant hand.
-- The base layer can be changed to either qwerty or colemak dhm, but the default one is [Romak](romak.md).
+- The base layer can be changed to qwerty, but the default one is [Romak](romak.md).
 
 ## Persistent Base Layers
 - It is possible to change the base layer in the maintenance layer and this change is persistent.
