@@ -113,7 +113,7 @@
 
 #define ___________________LOWER_L1____________________ XXXXXXX , TD_PARB , KC_RPRN , KC_BSLS , SS_TILD
 #define ___________________LOWER_L2____________________ SS_BTIC , SS_DQUO , SS_SQUO , KC_AMPR , KC_PIPE
-#define ___________________LOWER_L3____________________ KC_AT   , TD_SQRB , KC_RBRC , TD_QUES , KC_HASH
+#define ___________________LOWER_L3____________________ KC_AT   , TD_SQRB , KC_RBRC , KC_QUES , KC_HASH
 #define ____LOWER_L4_____                                                             _______ , XXXXXXX
 
 #define ___________________LOWER_R1____________________ XXXXXXX , KC_7    , KC_8    , KC_9    , KC_ENT
@@ -121,13 +121,13 @@
 #define ___________________LOWER_R3____________________ XXXXXXX , KC_1    , KC_2    , KC_3    , XXXXXXX
 #define ____LOWER_R4_____                               _______ , MOU_0
 
-#define ___________________RAISE_L1____________________ TD_GV_E , TD_CR_E , TD_TL_A , TD_SQ_E , TD_DQ_U
-#define ___________________RAISE_L2____________________ KC_GRV  , KC_CIRC , KC_TILD , KC_QUOT , KC_DQUO
-#define ___________________RAISE_L3____________________ TD_GV_A , TD_CR_A , TD_TL_O , TD_SQ_C , TD_DQ_S
+#define ___________________RAISE_L1____________________ SS_GV_A , SS_CR_A , SS_TL_A , SS_SQ_A , SS_SQ_U
+#define ___________________RAISE_L2____________________ SS_CR_O , KC_CIRC , KC_TILD , TD_QUOT , SS_SQ_O
+#define ___________________RAISE_L3____________________ SS_SQ_I , SS_CR_E , SS_TL_O , SS_SQ_C , SS_SQ_E
 #define ____RAISE_L4_____                                                             _______ , _______
 
 #define ___________________RAISE_R1____________________ SS_CIRC , TD_DLR  , TD_CURB , KC_RCBR , KC_COLN
-#define ___________________RAISE_R2____________________ KC_PLUS , KC_MINS , KC_EQL  , TD_EXLM , KC_PERC
+#define ___________________RAISE_R2____________________ KC_PLUS , KC_MINS , KC_EQL  , KC_EXLM , KC_PERC
 #define ___________________RAISE_R3____________________ KC_ASTR , KC_SLSH , TD_ANGB , KC_GT   , KC_COLN
 #define ____RAISE_R4_____                               XXXXXXX , _______
 

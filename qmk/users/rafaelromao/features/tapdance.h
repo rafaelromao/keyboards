@@ -33,18 +33,7 @@ enum {
     BRT_PAR,
     BRT_ANG,
     DOT_DOT,
-    GRV_E,
-    GRV_A,
-    CIR_E,
-    CIR_A,
-    TIL_A,
-    TIL_O,
-    SQU_E,
-    SQU_C,
-    DQU_U,
-    DQU_S,
-    EXL_INV,
-    QUE_INV,
+    SDB_QUO,
     DLR_CUR
 };
 
@@ -59,19 +48,7 @@ enum {
 #define TD_ANGB TD(BRT_ANG)
 #define TD_DOTD TD(DOT_DOT)
 
-#define TD_GV_E TD(GRV_E)
-#define TD_GV_A TD(GRV_A)
-#define TD_CR_E TD(CIR_E)
-#define TD_CR_A TD(CIR_A)
-#define TD_TL_A TD(TIL_A)
-#define TD_TL_O TD(TIL_O)
-#define TD_SQ_E TD(SQU_E)
-#define TD_SQ_C TD(SQU_C)
-#define TD_DQ_U TD(DQU_U)
-#define TD_DQ_S TD(DQU_S)
-
-#define TD_EXLM TD(EXL_INV)
-#define TD_QUES TD(QUE_INV)
+#define TD_QUOT TD(SDB_QUO)
 #define TD_DLR TD(DLR_CUR)
 
 typedef enum {

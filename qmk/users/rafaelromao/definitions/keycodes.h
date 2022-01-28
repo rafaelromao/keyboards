@@ -34,7 +34,19 @@ enum {
     SP_CAP,
     SP_MOD,
     SS_MODP,
-    SS_MODM
+    SS_MODM,
+    SS_GV_A,
+    SS_CR_A,
+    SS_TL_A,
+    SS_SQ_A,
+    SS_SQ_U,   
+    SS_CR_O,
+    SS_SQ_O,
+    SS_SQ_I,
+    SS_CR_E,
+    SS_TL_O,
+    SS_SQ_C,
+    SS_SQ_E  
 };
 
 // Mod-taps

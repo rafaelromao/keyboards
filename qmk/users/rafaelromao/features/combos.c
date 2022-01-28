@@ -26,14 +26,14 @@ const uint16_t PROGMEM l_low_sav_combo[] = {SS_DQUO, SS_SQUO, COMBO_END};
 const uint16_t PROGMEM l_low_pas_combo[] = {SS_SQUO, KC_AMPR, COMBO_END};
 const uint16_t PROGMEM l_low_und_combo[] = {KC_AT, KC_LBRC, COMBO_END};
 const uint16_t PROGMEM l_low_rai_combo[] = {TD_SQRB, KC_RBRC, COMBO_END};
-const uint16_t PROGMEM l_low_cop_combo[] = {KC_RBRC, TD_QUES, COMBO_END};
+const uint16_t PROGMEM l_low_cop_combo[] = {KC_RBRC, KC_QUES, COMBO_END};
 const uint16_t PROGMEM r_low_fun_combo[] = {RAI_BSP, KC_2, KC_3, COMBO_END};
 
 // Raise
 
 const uint16_t PROGMEM l_rai_tab_combo[] = {TD_CURB, KC_RCBR, COMBO_END};
-const uint16_t PROGMEM l_rai_sal_combo[] = {TD_EXLM, KC_PERC, COMBO_END};
-const uint16_t PROGMEM l_rai_ent_combo[] = {KC_EQL, TD_EXLM, COMBO_END};
+const uint16_t PROGMEM l_rai_sal_combo[] = {KC_EXLM, KC_PERC, COMBO_END};
+const uint16_t PROGMEM l_rai_ent_combo[] = {KC_EQL, KC_EXLM, COMBO_END};
 const uint16_t PROGMEM l_rai_pas_combo[] = {KC_MINS, KC_EQL, COMBO_END};
 const uint16_t PROGMEM l_rai_und_combo[] = {KC_GT, KC_COLN, COMBO_END};
 const uint16_t PROGMEM l_rai_low_combo[] = {TD_ANGB, KC_GT, COMBO_END};
