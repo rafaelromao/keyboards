@@ -126,7 +126,7 @@
 #define ___________________RAISE_L3____________________ TD_GV_A , TD_CR_A , TD_TL_O , TD_SQ_C , TD_DQ_S
 #define ____RAISE_L4_____                                                             _______ , _______
 
-#define ___________________RAISE_R1____________________ SS_CIRC , KC_DLR  , TD_CURB , KC_RCBR , KC_COLN
+#define ___________________RAISE_R1____________________ SS_CIRC , TD_DLR  , TD_CURB , KC_RCBR , KC_COLN
 #define ___________________RAISE_R2____________________ KC_PLUS , KC_MINS , KC_EQL  , TD_EXLM , KC_PERC
 #define ___________________RAISE_R3____________________ KC_ASTR , KC_SLSH , TD_ANGB , KC_GT   , KC_COLN
 #define ____RAISE_R4_____                               XXXXXXX , _______

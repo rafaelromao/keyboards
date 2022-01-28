@@ -228,7 +228,7 @@ void td_dot_dot(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-// Question Mark and Exclamation
+// Question Mark, Exclamation and Currencies
 
 void td_question_mark(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
@@ -267,6 +267,23 @@ void td_exclamation(qk_tap_dance_state_t *state, void *user_data) {
         case TD_SINGLE_HOLD:
             tap_code16(KC_END);
             tap_code16(KC_EXLM);
+            break;
+        default: break;
+    }
+}
+
+void td_currencies(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code16(KC_DLR);
+            break;
+        case TD_DOUBLE_TAP:
+            tap_code16(LSFT(RALT(KC_2)));
+            break;
+        case TD_SINGLE_HOLD:
+        case TD_TRIPLE_TAP:
+            tap_code16(RALT(KC_3));
             break;
         default: break;
     }
@@ -475,5 +492,6 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [DQU_U] = ACTION_TAP_DANCE_FN(td_dq_u),
     [DQU_S] = ACTION_TAP_DANCE_FN(td_dq_s),
     [EXL_INV] = ACTION_TAP_DANCE_FN(td_exclamation),
-    [QUE_INV] = ACTION_TAP_DANCE_FN(td_question_mark)
+    [QUE_INV] = ACTION_TAP_DANCE_FN(td_question_mark),
+    [DLR_CUR] = ACTION_TAP_DANCE_FN(td_currencies)
 };

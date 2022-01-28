@@ -44,7 +44,8 @@ enum {
     DQU_U,
     DQU_S,
     EXL_INV,
-    QUE_INV
+    QUE_INV,
+    DLR_CUR
 };
 
 #define TD_MB13 TD(MOU_B13)
@@ -71,6 +72,7 @@ enum {
 
 #define TD_EXLM TD(EXL_INV)
 #define TD_QUES TD(QUE_INV)
+#define TD_DLR TD(DLR_CUR)
 
 typedef enum {
     TD_NONE,
