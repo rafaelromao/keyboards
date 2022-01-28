@@ -239,7 +239,6 @@ void td_currencies(qk_tap_dance_state_t *state, void *user_data) {
         case TD_DOUBLE_TAP:
             tap_code16(LSFT(RALT(KC_2)));
             break;
-        case TD_SINGLE_HOLD:
         case TD_TRIPLE_TAP:
             tap_code16(RALT(KC_3));
             break;
