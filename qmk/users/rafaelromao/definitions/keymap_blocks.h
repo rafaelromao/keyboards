@@ -112,8 +112,8 @@
 #define ____LOWER_R4_____                               _______ , MOU_0
 
 #define ___________________RAISE_L1____________________ SS_GV_A , SS_CR_A , SS_TL_A , SS_SQ_A , SS_SQ_U
-#define ___________________RAISE_L2____________________ SS_CR_O , KC_CIRC , KC_TILD , TD_QUOT , SS_SQ_O
-#define ___________________RAISE_L3____________________ SS_SQ_I , SS_CR_E , SS_TL_O , SS_SQ_C , SS_SQ_E
+#define ___________________RAISE_L2____________________ SS_SQ_C , KC_CIRC , KC_TILD , TD_QUOT , SS_SQ_I
+#define ___________________RAISE_L3____________________ SS_CR_O , SS_CR_E , SS_TL_O , SS_SQ_E , SS_SQ_O
 #define ____RAISE_L4_____                                                             _______ , _______
 
 #define ___________________RAISE_R1____________________ SS_CIRC , TD_DLR  , TD_CURB , KC_RCBR , KC_COLN
