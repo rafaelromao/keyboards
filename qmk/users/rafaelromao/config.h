@@ -46,6 +46,9 @@
 #define COMBO_HOLD_TERM 175
 #define COMBO_MUST_TAP_PER_COMBO
 
+// Dynamic macros
+#define DYNAMIC_MACRO_NO_NESTING
+
 // Mouse key speed and acceleration.
 #define MOUSEKEY_DELAY 100
 #define MOUSEKEY_INTERVAL 10

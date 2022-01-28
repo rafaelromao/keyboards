@@ -11,15 +11,18 @@ SRC += features/os_toggle.c
 SRC += features/macros.c
 SRC += features/combos.c
 SRC += features/leader.c
-BOOTMAGIC_ENABLE = no
-BACKLIGHT_ENABLE = no
+
 LTO_ENABLE = yes
-MOUSEKEY_ENABLE = yes # Mouse keys
+MOUSEKEY_ENABLE = yes
 EXTRAKEY_ENABLE = yes # Audio control and System control
 TAP_DANCE_ENABLE = yes
 COMBO_ENABLE = yes
 NKRO_ENABLE = yes
 LEADER_ENABLE = yes
+DYNAMIC_MACRO_ENABLE = yes
+
+BOOTMAGIC_ENABLE = no
+BACKLIGHT_ENABLE = no
 SWAP_HANDS_ENABLE = no
 KEY_LOCK_ENABLE = no
 CONSOLE_ENABLED = no

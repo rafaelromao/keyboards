@@ -125,3 +125,17 @@ __attribute__ ((weak)) bool get_hold_on_other_key_press(uint16_t keycode, keyrec
 __attribute__ ((weak)) bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
     return get_tapping_force_hold_result(keycode);
 }
+
+// Dynamic macros
+
+void dynamic_macro_record_start_user(void) {
+}
+
+void dynamic_macro_play_user(int8_t direction) {
+}
+
+void dynamic_macro_record_key_user(int8_t direction, keyrecord_t *record) {
+}
+
+void dynamic_macro_record_end_user(int8_t direction) {
+}

@@ -112,7 +112,7 @@ const uint16_t PROGMEM r_med_tog_combo[] = {KC_SPC, KC_VOLD, KC_VOLU, COMBO_END}
 // Reset
 
 const uint16_t PROGMEM qwe_reset_combo[] = {KC_Q, KC_P, KC_Z, TD_SCLE, COMBO_END};
-const uint16_t PROGMEM rom_reset_combo[] = {KC_UNDS, KC_B, KC_W, TD_SCLE, COMBO_END};
+const uint16_t PROGMEM rom_reset_combo[] = {TD_UNDS, KC_B, KC_W, TD_SCLE, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
   COMBO(l_low_esc_combo, KC_ESC),

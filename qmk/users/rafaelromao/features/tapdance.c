@@ -21,7 +21,8 @@
 extern os_t os;
 
 static td_tap_t tap_state = {
-    .state = TD_NONE
+    .state = TD_NONE,
+    .recording = false
 };
 
 __attribute__ ((weak)) td_state_t dance_state(qk_tap_dance_state_t *state) {
@@ -264,6 +265,43 @@ void td_quotes(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
+// Dynamic Macro on Underscore
+
+void td_unds_macro(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    keyrecord_t kr;
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code16(KC_UNDS);
+            break;
+        case TD_DOUBLE_SINGLE_TAP:
+            tap_code16(KC_UNDS);
+            tap_code16(KC_UNDS);
+            break;
+        case TD_DOUBLE_TAP:
+            if (tap_state.recording) {
+                kr.event.pressed = true;
+                tap_state.recording = false;
+                process_dynamic_macro(DYN_REC_STOP, &kr);
+            }
+            kr.event.pressed = false;
+            process_dynamic_macro(DYN_MACRO_PLAY1, &kr);
+            break;
+        case TD_SINGLE_HOLD:
+            if (tap_state.recording) {
+                kr.event.pressed = true;
+                tap_state.recording = false;
+                process_dynamic_macro(DYN_REC_STOP, &kr);
+            } else {
+                kr.event.pressed = false;
+                tap_state.recording = true;
+                process_dynamic_macro(DYN_REC_START1, &kr);
+            }
+            break;
+        default: break;
+    }
+}
+
 // Tap dance declarations
 
 qk_tap_dance_action_t tap_dance_actions[] = {
@@ -278,5 +316,6 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [BRT_ANG] = ACTION_TAP_DANCE_FN(td_angle_brackets),
     [DOT_DOT] = ACTION_TAP_DANCE_FN(td_dot_dot),
     [SDB_QUO] = ACTION_TAP_DANCE_FN(td_quotes),
-    [DLR_CUR] = ACTION_TAP_DANCE_FN(td_currencies)
+    [DLR_CUR] = ACTION_TAP_DANCE_FN(td_currencies),
+    [UND_REC] = ACTION_TAP_DANCE_FN(td_unds_macro)
 };

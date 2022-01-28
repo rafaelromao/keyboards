@@ -34,7 +34,8 @@ enum {
     BRT_ANG,
     DOT_DOT,
     SDB_QUO,
-    DLR_CUR
+    DLR_CUR,
+    UND_REC
 };
 
 #define TD_MB13 TD(MOU_B13)
@@ -51,6 +52,8 @@ enum {
 #define TD_QUOT TD(SDB_QUO)
 #define TD_DLR TD(DLR_CUR)
 
+#define TD_UNDS TD(UND_REC)
+
 typedef enum {
     TD_NONE,
     TD_UNKNOWN,
@@ -65,6 +68,7 @@ typedef enum {
 
 typedef struct {
     td_state_t state;
+    bool recording;
 } td_tap_t;
 
 td_state_t dance_state(qk_tap_dance_state_t *state);

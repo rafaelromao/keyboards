@@ -31,6 +31,9 @@ void clear_locked_and_oneshot_mods(void) {
     }
     unregister_mods(oneshot_locked_mods);
     unregister_mods(oneshot_mods);
+    keyrecord_t kr;
+    kr.event.pressed = true;
+    process_dynamic_macro(DYN_REC_STOP, &kr);
 }
 
 bool should_send_ctrl(bool isWindowsOrLinux, bool isOneShotShift) {

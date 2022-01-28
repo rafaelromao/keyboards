@@ -27,6 +27,12 @@
 - One-shot shift can be used to invert the [default modifier](modifiers.md) used in the combos.
 - If shift, or any other modifier, is held, it will be included in the combo. So hold Shift and tap Z+X+Space will send Redo instead of Undo.
 
+## Dynamic Macros
+- Holding _ will start or stop recording a dynamic macro.
+- Double tapping _ will play the current macro.
+- Tapping _ works as usual.
+- Using the [Default Mod Key](modifiers.md#default-mod-key) to deactivate one-shot modifiers (or tapping it twice) will stop recording the current macro.
+
 ##
 [Home](../readme.md) | 
 Base |
