@@ -123,9 +123,15 @@ static bool swapping = false;
 
 process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
 
+    bool isWindowsOrLinux = os.type == WINDOWS || os.type == LINUX;
+
     if (swapping && keycode != SS_SWIN) {
         swapping = false;
-        unregister_mods(MOD_LGUI);
+        if (isWindowsOrLinux) {
+            unregister_mods(MOD_LALT);
+        } else {
+            unregister_mods(MOD_LGUI);
+        }
     }
 
     switch (process_accentuated_characters(keycode, record)) {
@@ -137,7 +143,6 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
             break;
     };
 
-    bool isWindowsOrLinux = os.type == WINDOWS || os.type == LINUX;
     bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     bool isShifted = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
 
@@ -221,7 +226,11 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
             if (record->event.pressed) {
                 if (!swapping) {
                     swapping = true;
-                    register_mods(MOD_LGUI);
+                    if (isWindowsOrLinux) {
+                        register_mods(MOD_LALT);
+                    } else {
+                        register_mods(MOD_LGUI);
+                    }
                 }
                 tap_code(KC_TAB);
             }

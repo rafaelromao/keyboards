@@ -176,6 +176,10 @@ void td_comma_lead(qk_tap_dance_state_t *state, void *user_data) {
         case TD_SINGLE_TAP:
             tap_code(KC_COMM);
             break;
+        case TD_DOUBLE_SINGLE_TAP:
+            tap_code(KC_COMM);
+            tap_code(KC_COMM);
+            break;
         case TD_DOUBLE_TAP:
             qk_leader_start();
             break;
