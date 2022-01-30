@@ -23,8 +23,8 @@
 #include "default_mod_key.h"
 
 enum {
-    MOU_B13,
-    MOU_B24,
+    COM_DOT,
+    COM_LEA,
     INJ_LEF,
     INJ_RIG,
     SCL_END,
@@ -38,8 +38,8 @@ enum {
     UND_REC
 };
 
-#define TD_MB13 TD(MOU_B13)
-#define TD_MB24 TD(MOU_B24)
+#define TD_COMD TD(COM_DOT)
+#define TD_COML TD(COM_LEA)
 #define TD_IJLE TD(INJ_LEF)
 #define TD_IJRI TD(INJ_RIG)
 #define TD_SCLE TD(SCL_END)
@@ -48,10 +48,8 @@ enum {
 #define TD_PARB TD(BRT_PAR)
 #define TD_ANGB TD(BRT_ANG)
 #define TD_DOTD TD(DOT_DOT)
-
 #define TD_QUOT TD(SDB_QUO)
 #define TD_DLR TD(DLR_CUR)
-
 #define TD_UNDS TD(UND_REC)
 
 typedef enum {

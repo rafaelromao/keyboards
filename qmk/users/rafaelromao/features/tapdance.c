@@ -48,42 +48,6 @@ __attribute__ ((weak)) td_state_t dance_state(qk_tap_dance_state_t *state) {
     } else return TD_UNKNOWN;
 }
 
-// Mouse buttons
-
-void td_mou_b13_finished(qk_tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP: register_code(KC_BTN1); break;
-        case TD_DOUBLE_TAP: register_code(KC_BTN3); break;
-        default: break;
-    }
-}
-
-void td_mou_b13_reset(qk_tap_dance_state_t *state, void *user_data) {
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP: unregister_code(KC_BTN1); break;
-        case TD_DOUBLE_TAP: unregister_code(KC_BTN3); break;
-        default: break;
-    }
-}
-
-void td_mou_b24_finished(qk_tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP: register_code(KC_BTN2); break;
-        case TD_DOUBLE_TAP: register_code(KC_BTN4); break;
-        default: break;
-    }
-}
-
-void td_mou_b24_reset(qk_tap_dance_state_t *state, void *user_data) {
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP: unregister_code(KC_BTN2); break;
-        case TD_DOUBLE_TAP: unregister_code(KC_BTN4); break;
-        default: break;
-    }
-}
-
 // IntelliJ Most Common Shortcuts
 
 void td_inj_lef(qk_tap_dance_state_t *state, void *user_data) {
@@ -204,6 +168,45 @@ void td_semicolon(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
+// Comma leader
+
+void td_comma_leader(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code(KC_COMM);
+            break;
+        case TD_DOUBLE_SINGLE_TAP:
+            tap_code(KC_COMM);
+            tap_code(KC_COMM);
+            break;
+        case TD_DOUBLE_TAP:
+            qk_leader_start();
+            break;
+        case TD_SINGLE_HOLD:
+            tap_code16(KC_END);
+            tap_code(KC_COMM);
+            break;
+        default: break;
+    }
+}
+
+// Comma dot
+
+void td_comma_dot(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code(KC_COMM);
+            break;
+        case TD_DOUBLE_TAP:
+            tap_code(KC_DOT);
+            break;
+        default: break;
+    }
+}
+
+
 // Dot dot new sentence
 
 void td_dot_dot(qk_tap_dance_state_t *state, void *user_data) {
@@ -315,8 +318,8 @@ void td_unds_macro(qk_tap_dance_state_t *state, void *user_data) {
 // Tap dance declarations
 
 qk_tap_dance_action_t tap_dance_actions[] = {
-    [MOU_B13] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_mou_b13_finished, td_mou_b13_reset),
-    [MOU_B24] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_mou_b24_finished, td_mou_b24_reset),
+    [COM_DOT] = ACTION_TAP_DANCE_FN(td_comma_dot),
+    [COM_LEA] = ACTION_TAP_DANCE_FN(td_comma_lead),
     [INJ_LEF] = ACTION_TAP_DANCE_FN(td_inj_lef),
     [INJ_RIG] = ACTION_TAP_DANCE_FN(td_inj_rig),
     [SCL_END] = ACTION_TAP_DANCE_FN(td_semicolon),
