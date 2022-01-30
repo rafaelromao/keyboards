@@ -176,10 +176,6 @@ void td_comma_lead(qk_tap_dance_state_t *state, void *user_data) {
         case TD_SINGLE_TAP:
             tap_code(KC_COMM);
             break;
-        case TD_DOUBLE_SINGLE_TAP:
-            tap_code(KC_COMM);
-            tap_code(KC_COMM);
-            break;
         case TD_DOUBLE_TAP:
             qk_leader_start();
             break;
@@ -245,7 +241,7 @@ void td_currencies(qk_tap_dance_state_t *state, void *user_data) {
                 case MACOS:
                     tap_code16(LSFT(RALT(KC_2)));
                 default:
-                    tap_code16(LSFT(RALT(KC_4)));
+                    tap_code16(LCTL(LALT(KC_5)));
             }
             break;
         case TD_TRIPLE_TAP:
@@ -253,7 +249,7 @@ void td_currencies(qk_tap_dance_state_t *state, void *user_data) {
                 case MACOS:
                     tap_code16(RALT(KC_3));
                 default:
-                    tap_code16(LCTL(LALT(KC_5)));
+                    tap_code16(LSFT(RALT(KC_4)));
             }
             break;
         default: break;

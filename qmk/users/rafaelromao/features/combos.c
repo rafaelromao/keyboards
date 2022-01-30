@@ -18,6 +18,10 @@
 
 #include "combos.h"
 
+// Esc
+
+const uint16_t PROGMEM l_esc_esc_combo[] = {KC_ESC, KC_ESC, COMBO_END};
+
 // Lower
 
 const uint16_t PROGMEM l_low_esc_combo[] = {TD_PARB, KC_RPRN, COMBO_END};
@@ -115,6 +119,8 @@ const uint16_t PROGMEM qwe_reset_combo[] = {KC_Q, KC_P, KC_Z, TD_SCLE, COMBO_END
 const uint16_t PROGMEM rom_reset_combo[] = {TD_UNDS, KC_B, KC_W, TD_SCLE, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
+  COMBO(l_esc_esc_combo, KC_ESC),
+
   COMBO(l_low_esc_combo, KC_ESC),
   COMBO(l_low_sal_combo, CB_SELC),
   COMBO(l_low_sav_combo, CB_SAVE),

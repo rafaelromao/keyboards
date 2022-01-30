@@ -126,7 +126,7 @@
 #define ___________________NAVIGATION_L3_______________ XXXXXXX , XXXXXXX , XXXXXXX , OS_LGUI , XXXXXXX
 #define __NAVIGATION_L4__                                                             MO_MAI  , _______
 
-#define ___________________NAVIGATION_R1_______________ XXXXXXX , XXXXXXX , KC_PGDN , KC_PGUP , KC_ENT
+#define ___________________NAVIGATION_R1_______________ SS_SELW , XXXXXXX , KC_PGDN , KC_PGUP , KC_ENT
 #define ___________________NAVIGATION_R2_______________ XXXXXXX , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT
 #define ___________________NAVIGATION_R3_______________ XXXXXXX , KC_INS  , KC_HOME , KC_END  , KC_DEL
 #define __NAVIGATION_R4__                               _______ , MO_MAI
@@ -136,7 +136,7 @@
 #define ___________________MOUSE_L3____________________ XXXXXXX , XXXXXXX , XXXXXXX , OS_LGUI , KC_BTN2
 #define ____MOUSE_L4_____                                                             MO_MAI  , _______
 
-#define ___________________MOUSE_R1____________________ XXXXXXX , XXXXXXX , KC_WH_D , KC_WH_U , KC_ENT
+#define ___________________MOUSE_R1____________________ SS_SELW , XXXXXXX , KC_WH_D , KC_WH_U , KC_ENT
 #define ___________________MOUSE_R2____________________ KC_BTN1 , KC_MS_L , KC_MS_D , KC_MS_U , KC_MS_R
 #define ___________________MOUSE_R3____________________ KC_BTN2 , KC_INS  , KC_HOME , KC_END  , KC_DEL
 #define ____MOUSE_R4_____                               _______ , MO_MAI

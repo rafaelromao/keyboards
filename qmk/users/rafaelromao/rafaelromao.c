@@ -43,6 +43,11 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
     // Extend capslock timer
     process_capslock_timer_extension(keycode, record);
 
+    // Process select word
+    if (!process_select_word(keycode, record, SS_SELW)) { 
+        return PROCESS_RECORD_RETURN_FALSE;
+    }
+
     // Process macros
     switch (process_macros(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:

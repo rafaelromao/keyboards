@@ -30,5 +30,6 @@
 #include "features/leader.h"
 #include "features/default_mod_key.h"
 #include "features/capitalize_key.h"
+#include "features/select_word.h"
 
 void matrix_scan_keymap(void);
