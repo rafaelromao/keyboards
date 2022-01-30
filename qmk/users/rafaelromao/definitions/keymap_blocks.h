@@ -122,7 +122,7 @@
 #define ____RAISE_R4_____                               XXXXXXX , _______
 
 #define ___________________NAVIGATION_L1_______________ KC_TAB  , KC_ESC  , KC_ESC  , OS_RALT , SS_SELW
-#define ___________________NAVIGATION_L2_______________ WIN_SWP , OS_LSFT , OS_LCTL , OS_LALT , XXXXXXX
+#define ___________________NAVIGATION_L2_______________ SS_SWIN , OS_LSFT , OS_LCTL , OS_LALT , XXXXXXX
 #define ___________________NAVIGATION_L3_______________ XXXXXXX , XXXXXXX , XXXXXXX , OS_LGUI , XXXXXXX
 #define __NAVIGATION_L4__                                                             MO_MAI  , _______
 
@@ -132,7 +132,7 @@
 #define __NAVIGATION_R4__                               _______ , MO_MAI
 
 #define ___________________MOUSE_L1____________________ KC_TAB  , KC_ESC  , KC_ESC  , OS_RALT , SS_SELW
-#define ___________________MOUSE_L2____________________ WIN_SWP , OS_LSFT , OS_LCTL , OS_LALT , KC_BTN1
+#define ___________________MOUSE_L2____________________ SS_SWIN , OS_LSFT , OS_LCTL , OS_LALT , KC_BTN1
 #define ___________________MOUSE_L3____________________ XXXXXXX , XXXXXXX , XXXXXXX , OS_LGUI , KC_BTN2
 #define ____MOUSE_L4_____                                                             MO_MAI  , _______
 

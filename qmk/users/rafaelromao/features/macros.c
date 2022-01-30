@@ -119,7 +119,14 @@ process_record_result_t process_accentuated_characters(uint16_t keycode, keyreco
     return PROCESS_RECORD_RETURN_FALSE;
 }
 
+static bool swapping = false;
+
 process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
+
+    if (swapping && keycode != SS_SWIN) {
+        swapping = false;
+        unregister_mods(MOD_LGUI);
+    }
 
     switch (process_accentuated_characters(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
@@ -206,6 +213,17 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
                 } else {
                     SEND_STRING(SS_LGUI("-"));
                 }
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+        // Swap Windows
+        case SS_SWIN:
+            if (record->event.pressed) {
+                if (!swapping) {
+                    swapping = true;
+                    register_mods(MOD_LGUI);
+                }
+                tap_code(KC_TAB);
             }
             return PROCESS_RECORD_RETURN_FALSE;
 

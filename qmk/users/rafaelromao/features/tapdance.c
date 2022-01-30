@@ -170,7 +170,7 @@ void td_semicolon(qk_tap_dance_state_t *state, void *user_data) {
 
 // Comma leader
 
-void td_comma_leader(qk_tap_dance_state_t *state, void *user_data) {
+void td_comma_lead(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
