@@ -101,7 +101,7 @@
 #define ___________________QWERTY_R3___________________ KC_N    , RGUIT_M , KC_COMM , TD_DOTD , TD_SCLE
 #define ____QWERTY_R4____                               RAI_BSP , MOU_CAP
 
-#define ___________________LOWER_L1____________________ XXXXXXX , TD_PARB , KC_RPRN , KC_BSLS , SS_TILD
+#define ___________________LOWER_L1____________________ KC_TAB  , TD_PARB , KC_RPRN , KC_BSLS , SS_TILD
 #define ___________________LOWER_L2____________________ SS_BTIC , SS_DQUO , SS_SQUO , KC_AMPR , KC_PIPE
 #define ___________________LOWER_L3____________________ KC_AT   , TD_SQRB , KC_RBRC , KC_QUES , KC_HASH
 #define ____LOWER_L4_____                                                             _______ , XXXXXXX
@@ -121,8 +121,8 @@
 #define ___________________RAISE_R3____________________ KC_ASTR , KC_SLSH , TD_ANGB , KC_GT   , KC_COLN
 #define ____RAISE_R4_____                               XXXXXXX , _______
 
-#define ___________________NAVIGATION_L1_______________ KC_ESC  , XXXXXXX , KC_TAB  , OS_RALT , XXXXXXX
-#define ___________________NAVIGATION_L2_______________ XXXXXXX , OS_LSFT , OS_LCTL , OS_LALT , XXXXXXX
+#define ___________________NAVIGATION_L1_______________ KC_TAB  , KC_ESC  , KC_ESC  , OS_RALT , SS_SELW
+#define ___________________NAVIGATION_L2_______________ WIN_SWP , OS_LSFT , OS_LCTL , OS_LALT , XXXXXXX
 #define ___________________NAVIGATION_L3_______________ XXXXXXX , XXXXXXX , XXXXXXX , OS_LGUI , XXXXXXX
 #define __NAVIGATION_L4__                                                             MO_MAI  , _______
 
@@ -131,8 +131,8 @@
 #define ___________________NAVIGATION_R3_______________ XXXXXXX , KC_INS  , KC_HOME , KC_END  , KC_DEL
 #define __NAVIGATION_R4__                               _______ , MO_MAI
 
-#define ___________________MOUSE_L1____________________ KC_ESC  , XXXXXXX , KC_TAB  , OS_RALT , XXXXXXX
-#define ___________________MOUSE_L2____________________ XXXXXXX , OS_LSFT , OS_LCTL , OS_LALT , KC_BTN1
+#define ___________________MOUSE_L1____________________ KC_TAB  , KC_ESC  , KC_ESC  , OS_RALT , SS_SELW
+#define ___________________MOUSE_L2____________________ WIN_SWP , OS_LSFT , OS_LCTL , OS_LALT , KC_BTN1
 #define ___________________MOUSE_L3____________________ XXXXXXX , XXXXXXX , XXXXXXX , OS_LGUI , KC_BTN2
 #define ____MOUSE_L4_____                                                             MO_MAI  , _______
 

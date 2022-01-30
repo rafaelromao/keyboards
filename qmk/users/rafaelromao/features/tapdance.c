@@ -238,10 +238,20 @@ void td_currencies(qk_tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_DLR);
             break;
         case TD_DOUBLE_TAP:
-            tap_code16(LSFT(RALT(KC_2)));
+            switch (os.type) {
+                case MACOS:
+                    tap_code16(LSFT(RALT(KC_2)));
+                default:
+                    tap_code16(LSFT(RALT(KC_4)));
+            }
             break;
         case TD_TRIPLE_TAP:
-            tap_code16(RALT(KC_3));
+            switch (os.type) {
+                case MACOS:
+                    tap_code16(RALT(KC_3));
+                default:
+                    tap_code16(LCTL(LALT(KC_5)));
+            }
             break;
         default: break;
     }

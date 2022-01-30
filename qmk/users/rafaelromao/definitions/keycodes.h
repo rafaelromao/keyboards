@@ -46,7 +46,8 @@ enum {
     SS_CR_E,
     SS_TL_O,
     SS_SQ_C,
-    SS_SQ_E  
+    SS_SQ_E,
+    SS_SELW  
 };
 
 // Mod-taps
@@ -71,6 +72,10 @@ enum {
 #define LGUIT_D LGUI_T(KC_D)
 #define LG_UNDS LGUI_T(KC_UNDS)
 #define RGUIT_M RGUI_T(KC_M)
+
+// Shortcuts
+
+#define WIN_SWP LGUI(KC_TAB)
 
 // One-shot mods
 
