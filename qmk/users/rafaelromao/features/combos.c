@@ -18,9 +18,10 @@
 
 #include "combos.h"
 
-// Esc
+// Nav
 
-const uint16_t PROGMEM l_esc_esc_combo[] = {KC_ESC, KC_ESC, COMBO_END};
+const uint16_t PROGMEM l_nav_sel_combo[] = {KC_PGDN, KC_PGUP, COMBO_END};
+const uint16_t PROGMEM l_mou_sel_combo[] = {KC_WH_D, KC_WH_U, COMBO_END};
 
 // Lower
 
@@ -119,7 +120,8 @@ const uint16_t PROGMEM qwe_reset_combo[] = {KC_Q, KC_P, KC_Z, TD_SCLE, COMBO_END
 const uint16_t PROGMEM rom_reset_combo[] = {TD_UNDS, KC_B, KC_W, TD_SCLE, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
-  COMBO(l_esc_esc_combo, KC_ESC),
+  COMBO(l_nav_sel_combo, SS_SELW),
+  COMBO(l_mou_sel_combo, SS_SELW),
 
   COMBO(l_low_esc_combo, KC_ESC),
   COMBO(l_low_sal_combo, CB_SELC),
