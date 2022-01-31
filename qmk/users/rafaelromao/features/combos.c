@@ -102,8 +102,8 @@ const uint16_t PROGMEM r_rom_und_combo[] = {LOW_SPC, TD_DOTD, KC_W, COMBO_END};
 
 const uint16_t PROGMEM l_qwe_rai_combo[] = {LOW_SPC, KC_X, KC_C, COMBO_END};
 const uint16_t PROGMEM l_rai_tog_combo[] = {LOW_SPC, KC_CIRC, KC_TILD, COMBO_END};
-const uint16_t PROGMEM l_me1_tog_combo[] = {LOW_SPC, KCA_FUN, COMBO_END};
-const uint16_t PROGMEM l_me2_tog_combo[] = {LOW_SPC, KCF_FUN, COMBO_END};
+const uint16_t PROGMEM l_me1_tog_combo[] = {LOW_SPC, KC_Z, COMBO_END};
+const uint16_t PROGMEM l_me2_tog_combo[] = {LOW_SPC, KC_B, COMBO_END};
 const uint16_t PROGMEM r_qwe_lo1_combo[] = {RAI_BSP, TD_COML, TD_DOTD, COMBO_END};
 const uint16_t PROGMEM r_qwe_lo2_combo[] = {RAI_BSP, TD_SCLE, COMBO_END};
 const uint16_t PROGMEM r_rom_low_combo[] = {RAI_BSP, KC_W, COMBO_END};
