@@ -191,22 +191,6 @@ void td_comma_lead(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-// Comma dot
-
-void td_comma_dot(qk_tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            tap_code(KC_COMM);
-            break;
-        case TD_DOUBLE_TAP:
-            tap_code(KC_DOT);
-            break;
-        default: break;
-    }
-}
-
-
 // Dot dot new sentence
 
 void td_dot_dot(qk_tap_dance_state_t *state, void *user_data) {
@@ -318,7 +302,6 @@ void td_unds_macro(qk_tap_dance_state_t *state, void *user_data) {
 // Tap dance declarations
 
 qk_tap_dance_action_t tap_dance_actions[] = {
-    [COM_DOT] = ACTION_TAP_DANCE_FN(td_comma_dot),
     [COM_LEA] = ACTION_TAP_DANCE_FN(td_comma_lead),
     [INJ_LEF] = ACTION_TAP_DANCE_FN(td_inj_lef),
     [INJ_RIG] = ACTION_TAP_DANCE_FN(td_inj_rig),

@@ -23,7 +23,6 @@
 #include "default_mod_key.h"
 
 enum {
-    COM_DOT,
     COM_LEA,
     INJ_LEF,
     INJ_RIG,
@@ -38,7 +37,6 @@ enum {
     UND_REC
 };
 
-#define TD_COMD TD(COM_DOT)
 #define TD_COML TD(COM_LEA)
 #define TD_IJLE TD(INJ_LEF)
 #define TD_IJRI TD(INJ_RIG)
