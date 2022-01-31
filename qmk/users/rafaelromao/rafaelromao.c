@@ -43,6 +43,11 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
     // Extend capslock timer
     process_capslock_timer_extension(keycode, record);
 
+    // Process select word
+    if (!process_select_word(keycode, record, SS_SELW)) { 
+        return PROCESS_RECORD_RETURN_FALSE;
+    }
+
     // Process macros
     switch (process_macros(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
@@ -124,4 +129,18 @@ __attribute__ ((weak)) bool get_hold_on_other_key_press(uint16_t keycode, keyrec
 
 __attribute__ ((weak)) bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
     return get_tapping_force_hold_result(keycode);
+}
+
+// Dynamic macros
+
+void dynamic_macro_record_start_user(void) {
+}
+
+void dynamic_macro_play_user(int8_t direction) {
+}
+
+void dynamic_macro_record_key_user(int8_t direction, keyrecord_t *record) {
+}
+
+void dynamic_macro_record_end_user(int8_t direction) {
 }

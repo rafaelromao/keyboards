@@ -21,81 +21,31 @@
 extern os_t os;
 
 static td_tap_t tap_state = {
-    .state = TD_NONE
+    .state = TD_NONE,
+    .recording = false
 };
 
 __attribute__ ((weak)) td_state_t dance_state(qk_tap_dance_state_t *state) {
     if (state->count == 1) {
-        if (state->interrupted || !state->pressed)
-            return TD_SINGLE_TAP;
-         else
-            return TD_SINGLE_HOLD;
-    } else if (state->count > 1) {
-        if (state->interrupted)
-            return TD_SINGLE_TAP;
-        if (state->pressed)
-            return TD_DOUBLE_HOLD;
-        else
-            return TD_DOUBLE_TAP;
+        if (state->interrupted || !state->pressed) return TD_SINGLE_TAP;
+        // Key has not been interrupted, but the key is still held. Means you want to send a 'HOLD'.
+        else return TD_SINGLE_HOLD;
+    } else if (state->count == 2) {
+        // TD_DOUBLE_SINGLE_TAP is to distinguish between typing "pepper", and actually wanting a double tap
+        // action when hitting 'pp'. Suggested use case for this return value is when you want to send two
+        // keystrokes of the key, and not the 'double tap' action/macro.
+        if (state->interrupted) return TD_DOUBLE_SINGLE_TAP;
+        else if (state->pressed) return TD_DOUBLE_HOLD;
+        else return TD_DOUBLE_TAP;
     }
-    return TD_SINGLE_TAP;
-}
 
-// Decimal Separators
-
-void td_dot_com_finished(qk_tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP: register_code(KC_DOT); break;
-        case TD_DOUBLE_TAP: register_code(KC_COMM); break;
-        case TD_SINGLE_HOLD: layer_on(_MEDIA);
-        default: break;
-    }
-}
-
-void td_dot_com_reset(qk_tap_dance_state_t *state, void *user_data) {
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP: unregister_code(KC_DOT); break;
-        case TD_DOUBLE_TAP: unregister_code(KC_COMM); break;
-        case TD_SINGLE_HOLD: layer_off(_MEDIA);
-        default: break;
-    }
-}
-
-// Mouse buttons
-
-void td_mou_b13_finished(qk_tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP: register_code(KC_BTN1); break;
-        case TD_DOUBLE_TAP: register_code(KC_BTN3); break;
-        default: break;
-    }
-}
-
-void td_mou_b13_reset(qk_tap_dance_state_t *state, void *user_data) {
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP: unregister_code(KC_BTN1); break;
-        case TD_DOUBLE_TAP: unregister_code(KC_BTN3); break;
-        default: break;
-    }
-}
-
-void td_mou_b24_finished(qk_tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP: register_code(KC_BTN2); break;
-        case TD_DOUBLE_TAP: register_code(KC_BTN4); break;
-        default: break;
-    }
-}
-
-void td_mou_b24_reset(qk_tap_dance_state_t *state, void *user_data) {
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP: unregister_code(KC_BTN2); break;
-        case TD_DOUBLE_TAP: unregister_code(KC_BTN4); break;
-        default: break;
-    }
+    // Assumes no one is trying to type the same letter three times (at least not quickly).
+    // If your tap dance key is 'KC_W', and you want to type "www." quickly - then you will need to add
+    // an exception here to return a 'TD_TRIPLE_SINGLE_TAP', and define that enum just like 'TD_DOUBLE_SINGLE_TAP'
+    if (state->count == 3) {
+        if (state->interrupted || !state->pressed) return TD_TRIPLE_TAP;
+        else return TD_TRIPLE_HOLD;
+    } else return TD_UNKNOWN;
 }
 
 // IntelliJ Most Common Shortcuts
@@ -218,12 +168,39 @@ void td_semicolon(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
+// Comma leader
+
+void td_comma_lead(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code(KC_COMM);
+            break;
+        case TD_DOUBLE_SINGLE_TAP:
+            tap_code(KC_COMM);
+            tap_code(KC_COMM);
+            break;
+        case TD_DOUBLE_TAP:
+            qk_leader_start();
+            break;
+        case TD_SINGLE_HOLD:
+            tap_code16(KC_END);
+            tap_code(KC_COMM);
+            break;
+        default: break;
+    }
+}
+
 // Dot dot new sentence
 
 void td_dot_dot(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
+            tap_code(KC_DOT);
+            break;
+        case TD_DOUBLE_SINGLE_TAP:
+            tap_code(KC_DOT);
             tap_code(KC_DOT);
             break;
         case TD_DOUBLE_TAP:
@@ -239,12 +216,97 @@ void td_dot_dot(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
+// Currencies
+
+void td_currencies(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code16(KC_DLR);
+            break;
+        case TD_DOUBLE_TAP:
+            switch (os.type) {
+                case MACOS:
+                    tap_code16(LSFT(RALT(KC_2)));
+                    break;
+                default:
+                    tap_code16(LCTL(LALT(KC_5)));
+                    break;
+            }
+            break;
+        case TD_TRIPLE_TAP:
+            switch (os.type) {
+                case MACOS:
+                    tap_code16(RALT(KC_3));
+                    break;
+                default:
+                    tap_code16(LSFT(RALT(KC_4)));
+                    break;
+            }
+            break;
+        default: break;
+    }
+}
+
+// Quotes
+
+void td_quotes(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code16(KC_QUOT);
+            break;
+        case TD_DOUBLE_TAP:
+            tap_code16(KC_GRV);
+            break;
+        case TD_TRIPLE_TAP:
+            tap_code16(KC_DQUO);
+            break;
+        default: break;
+    }
+}
+
+// Dynamic Macro on Underscore
+
+void td_unds_macro(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    keyrecord_t kr;
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code16(KC_UNDS);
+            break;
+        case TD_DOUBLE_SINGLE_TAP:
+            tap_code16(KC_UNDS);
+            tap_code16(KC_UNDS);
+            break;
+        case TD_DOUBLE_TAP:
+            if (tap_state.recording) {
+                kr.event.pressed = true;
+                tap_state.recording = false;
+                process_dynamic_macro(DYN_REC_STOP, &kr);
+            }
+            kr.event.pressed = false;
+            process_dynamic_macro(DYN_MACRO_PLAY1, &kr);
+            break;
+        case TD_SINGLE_HOLD:
+            if (tap_state.recording) {
+                kr.event.pressed = true;
+                tap_state.recording = false;
+                process_dynamic_macro(DYN_REC_STOP, &kr);
+            } else {
+                kr.event.pressed = false;
+                tap_state.recording = true;
+                process_dynamic_macro(DYN_REC_START1, &kr);
+            }
+            break;
+        default: break;
+    }
+}
+
 // Tap dance declarations
 
 qk_tap_dance_action_t tap_dance_actions[] = {
-    [DOT_COM] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_dot_com_finished, td_dot_com_reset),
-    [MOU_B13] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_mou_b13_finished, td_mou_b13_reset),
-    [MOU_B24] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_mou_b24_finished, td_mou_b24_reset),
+    [COM_LEA] = ACTION_TAP_DANCE_FN(td_comma_lead),
     [INJ_LEF] = ACTION_TAP_DANCE_FN(td_inj_lef),
     [INJ_RIG] = ACTION_TAP_DANCE_FN(td_inj_rig),
     [SCL_END] = ACTION_TAP_DANCE_FN(td_semicolon),
@@ -252,5 +314,8 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [BRT_SQR] = ACTION_TAP_DANCE_FN(td_square_brackets),
     [BRT_PAR] = ACTION_TAP_DANCE_FN(td_parentesis),
     [BRT_ANG] = ACTION_TAP_DANCE_FN(td_angle_brackets),
-    [DOT_DOT] = ACTION_TAP_DANCE_FN(td_dot_dot)
+    [DOT_DOT] = ACTION_TAP_DANCE_FN(td_dot_dot),
+    [SDB_QUO] = ACTION_TAP_DANCE_FN(td_quotes),
+    [DLR_CUR] = ACTION_TAP_DANCE_FN(td_currencies),
+    [UND_REC] = ACTION_TAP_DANCE_FN(td_unds_macro)
 };

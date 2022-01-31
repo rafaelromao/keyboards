@@ -17,8 +17,8 @@
 #pragma once
 
 typedef enum {
+  _ROMAK,
   _QWERTY,
-  _COLEMAK,
   _LOWER,
   _RAISE,
   _NAVIGATION,

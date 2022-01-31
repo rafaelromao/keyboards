@@ -21,16 +21,19 @@
 extern os_t os;
 
 void clear_locked_and_oneshot_mods(void) {
-    uint8_t locked_oneshot_mods = 0;
+    uint8_t oneshot_locked_mods = 0;
     uint8_t oneshot_mods = 0;
-    if ((locked_oneshot_mods = get_oneshot_locked_mods())) {
+    if ((oneshot_locked_mods = get_oneshot_locked_mods())) {
         clear_oneshot_locked_mods();
     }
     if ((oneshot_mods = get_oneshot_mods())) {
         clear_oneshot_mods();
     }
-    unregister_mods(locked_oneshot_mods);
+    unregister_mods(oneshot_locked_mods);
     unregister_mods(oneshot_mods);
+    keyrecord_t kr;
+    kr.event.pressed = true;
+    process_dynamic_macro(DYN_REC_STOP, &kr);
 }
 
 bool should_send_ctrl(bool isWindowsOrLinux, bool isOneShotShift) {
@@ -41,8 +44,8 @@ process_record_result_t process_default_mod_key(uint16_t keycode, keyrecord_t *r
 
     bool isWindowsOrLinux = os.type == WINDOWS || os.type == LINUX;
     bool isOneShotDefaultMod = (!isWindowsOrLinux && (get_oneshot_mods() & MOD_MASK_GUI)) || (isWindowsOrLinux && (get_oneshot_mods() & MOD_MASK_CTRL)) ;
-    bool isLockedOneShotShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
-    bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT || isLockedOneShotShift;
+    bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
+    bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT || isOneShotLockedShift;
     bool isOneShotCtrl = get_oneshot_mods() & MOD_MASK_CTRL || get_oneshot_locked_mods() & MOD_MASK_CTRL;
     bool isOneShotAlt = get_oneshot_mods() & MOD_MASK_ALT || get_oneshot_locked_mods() & MOD_MASK_ALT;
     bool isOneShotGui = get_oneshot_mods() & MOD_MASK_GUI || get_oneshot_locked_mods() & MOD_MASK_GUI;
@@ -53,7 +56,7 @@ process_record_result_t process_default_mod_key(uint16_t keycode, keyrecord_t *r
         case NAV_MOD:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
-                    if (isAnyOneShotButShift || isLockedOneShotShift) {
+                    if (isAnyOneShotButShift || isOneShotLockedShift) {
                         clear_locked_and_oneshot_mods();
                     } else if (!isOneShotDefaultMod) {
                         if (isOneShotShift) {
