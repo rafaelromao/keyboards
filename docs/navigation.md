@@ -40,6 +40,9 @@ The Navigation and Mouse layer can be activated holding the outer left and right
 - This macro is also OS aware and works the same way on Windows, Linux and MacOS.
 - There is a dedicated key for this macro, in the right side of the Navigation and Mouse layers, but a combo with the middle and ring fingers in the top row on the right side will trigger this macro.
 
+### Window Swapper
+- Window Swapper is a macro that performs Alt-Tab on Windows/Linux and Cmd+Tab on MacOS, holding the modifier between keypresses.
+
 ##
 [Home](../readme.md) | 
 [Base](base.md) |
