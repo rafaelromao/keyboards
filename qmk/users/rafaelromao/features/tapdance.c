@@ -228,16 +228,20 @@ void td_currencies(qk_tap_dance_state_t *state, void *user_data) {
             switch (os.type) {
                 case MACOS:
                     tap_code16(LSFT(RALT(KC_2)));
+                    break;
                 default:
                     tap_code16(LCTL(LALT(KC_5)));
+                    break;
             }
             break;
         case TD_TRIPLE_TAP:
             switch (os.type) {
                 case MACOS:
                     tap_code16(RALT(KC_3));
+                    break;
                 default:
                     tap_code16(LSFT(RALT(KC_4)));
+                    break;
             }
             break;
         default: break;
