@@ -39,11 +39,10 @@ Pinkies will get less load in Romak, by design. This load will go to the ring an
 ![img](https://i.imgur.com/Tn3zcK8.png)
 
 ### Detailed Finger Analysis
-The [Colemak mod-DH analysis tool](https://colemakmods.github.io/mod-dh/analyze.html) was also used to compare Romak against Colemak-DH, Colemak and Workman (English text corpus only).
+The [Colemak mod-DH analysis tool](https://colemakmods.github.io/mod-dh/analyze.html) was also used to compare Romak against Colemak-DH and Workman (English text corpus only).
 <p float="left">
   <img src="https://i.imgur.com/H7z27AZ.png" width="450" />
   <img src="https://i.imgur.com/3t4tMKo.png" width="450" /> 
-  <img src="https://i.imgur.com/X820AXP.png" width="450" /> 
   <img src="https://i.imgur.com/saVyUQU.png" width="450" /> 
 </p>
 
