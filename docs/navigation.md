@@ -32,14 +32,14 @@ The Navigation and Mouse layer can be activated holding the outer left and right
 - The mouse layer can be disabled, using the [Maintenance](maintenance.md) layer. In this case, the navigation layer will be activated in its place.
 - Source code: [mouselayer_toggle.c](../qmk/users/rafaelromao/features/mouselayer_toggle.c)
 
-### Select Word
+## Select Word
 - Select Word is a macro that selects the current word in the first press and extend the selection to the next word in consecutive presses.
 - If shift is held, this macro will select the line instead, and extend the seletion to the next line in consecutive presses.
 - This macro is also OS aware and works the same way on Windows, Linux and MacOS.
 - There is a dedicated key for this macro, in the right side of the Navigation and Mouse layers, but a combo with the middle and ring fingers in the top row on the right side will trigger this macro.
 - Source Code: [select_word.c](../qmk/users/rafaelromao/features/select_word.c)
 
-### Window Swapper
+## Window Swapper
 - Window Swapper is a macro that performs Alt-Tab on Windows/Linux and Cmd+Tab on MacOS, holding the modifier between keypresses.
 - Source Code: [window_swapper.c](../qmk/users/rafaelromao/features/window_swapper.c)
 
