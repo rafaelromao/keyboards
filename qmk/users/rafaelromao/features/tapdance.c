@@ -281,8 +281,8 @@ void td_unds_macro(qk_tap_dance_state_t *state, void *user_data) {
             break;
         case TD_DOUBLE_TAP:
             if (tap_state.recording) {
-                kr.event.pressed = true;
                 tap_state.recording = false;
+                kr.event.pressed = true;
                 process_dynamic_macro(DYN_REC_STOP, &kr);
             }
             kr.event.pressed = false;
@@ -290,12 +290,12 @@ void td_unds_macro(qk_tap_dance_state_t *state, void *user_data) {
             break;
         case TD_SINGLE_HOLD:
             if (tap_state.recording) {
-                kr.event.pressed = true;
                 tap_state.recording = false;
+                kr.event.pressed = true;
                 process_dynamic_macro(DYN_REC_STOP, &kr);
             } else {
-                kr.event.pressed = false;
                 tap_state.recording = true;
+                kr.event.pressed = false;
                 process_dynamic_macro(DYN_REC_START1, &kr);
             }
             break;

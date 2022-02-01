@@ -31,7 +31,7 @@
 - Holding _ will start or stop recording a dynamic macro.
 - Double tapping _ will play the current macro.
 - Tapping _ works as usual.
-- Using the [Default Mod Key](modifiers.md#default-mod-key) to deactivate one-shot modifiers (or tapping it twice) will stop recording the current macro.
+- Using the [Default Mod Key](modifiers.md#default-mod-key) to deactivate one-shot modifiers (tapping it twice) will stop recording and clear the current macro.
 
 ##
 [Home](../readme.md) | 
