@@ -15,6 +15,7 @@ SRC += features/select_word.c
 SRC += features/dynamic_macro.c
 SRC += features/accentuation.c
 SRC += features/window_swapper.c
+SRC += features/custom_shortcuts.c
 
 LTO_ENABLE = yes
 MOUSEKEY_ENABLE = yes

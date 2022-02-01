@@ -34,5 +34,6 @@
 #include "features/dynamic_macro.h"
 #include "features/accentuation.h"
 #include "features/window_swapper.h"
+#include "features/custom_shortcuts.h"
 
 void matrix_scan_keymap(void);
