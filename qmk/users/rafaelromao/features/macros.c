@@ -20,21 +20,9 @@
 
 extern os_t os;
 
-static bool swapping = false;
-
 process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
 
     bool isWindowsOrLinux = os.type == WINDOWS || os.type == LINUX;
-
-    if (swapping && keycode != SS_SWIN) {
-        swapping = false;
-        if (isWindowsOrLinux) {
-            unregister_mods(MOD_LALT);
-        } else {
-            unregister_mods(MOD_LGUI);
-        }
-    }
-
     bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     bool isShifted = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
 
@@ -110,21 +98,6 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
                 } else {
                     SEND_STRING(SS_LGUI("-"));
                 }
-            }
-            return PROCESS_RECORD_RETURN_FALSE;
-
-        // Swap Windows
-        case SS_SWIN:
-            if (record->event.pressed) {
-                if (!swapping) {
-                    swapping = true;
-                    if (isWindowsOrLinux) {
-                        register_mods(MOD_LALT);
-                    } else {
-                        register_mods(MOD_LGUI);
-                    }
-                }
-                tap_code(KC_TAB);
             }
             return PROCESS_RECORD_RETURN_FALSE;
 

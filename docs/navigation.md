@@ -39,9 +39,11 @@ The Navigation and Mouse layer can be activated holding the outer left and right
 - If shift is held, this macro will select the line instead, and extend the seletion to the next line in consecutive presses.
 - This macro is also OS aware and works the same way on Windows, Linux and MacOS.
 - There is a dedicated key for this macro, in the right side of the Navigation and Mouse layers, but a combo with the middle and ring fingers in the top row on the right side will trigger this macro.
+- Source Code: [select_word.c](../qmk/users/rafaelromao/features/select_word.c)
 
 ### Window Swapper
 - Window Swapper is a macro that performs Alt-Tab on Windows/Linux and Cmd+Tab on MacOS, holding the modifier between keypresses.
+- Source Code: [window_swapper.c](../qmk/users/rafaelromao/features/window_swapper.c)
 
 ##
 [Home](../readme.md) | 
