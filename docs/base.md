@@ -31,7 +31,8 @@
 - Holding _ will start or stop recording a dynamic macro.
 - Double tapping _ will play the current macro.
 - Tapping _ works as usual.
-- Using the [Default Mod Key](modifiers.md#default-mod-key) to deactivate one-shot modifiers (tapping it twice) will stop recording and clear the current macro.
+- If there is a macro being recorded, using the [Default Mod Key](modifiers.md#default-mod-key) to deactivate one-shot modifiers (tapping it twice) will stop recording and clear the current macro.
+- Source Code: [dynamic_macro.c](../qmk/users/rafaelromao/features/dynamic_macro.c)
 
 ##
 [Home](../readme.md) | 

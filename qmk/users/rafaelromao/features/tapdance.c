@@ -19,10 +19,10 @@
 #include "tapdance.h"
 
 extern os_t os;
+extern dyn_macro_t dyn_macro;
 
 static td_tap_t tap_state = {
-    .state = TD_NONE,
-    .recording = false
+    .state = TD_NONE
 };
 
 __attribute__ ((weak)) td_state_t dance_state(qk_tap_dance_state_t *state) {
@@ -270,7 +270,6 @@ void td_quotes(qk_tap_dance_state_t *state, void *user_data) {
 
 void td_unds_macro(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
-    keyrecord_t kr;
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
             tap_code16(KC_UNDS);
@@ -280,24 +279,10 @@ void td_unds_macro(qk_tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_UNDS);
             break;
         case TD_DOUBLE_TAP:
-            if (tap_state.recording) {
-                tap_state.recording = false;
-                kr.event.pressed = true;
-                process_dynamic_macro(DYN_REC_STOP, &kr);
-            }
-            kr.event.pressed = false;
-            process_dynamic_macro(DYN_MACRO_PLAY1, &kr);
+            dyn_macro_play();
             break;
         case TD_SINGLE_HOLD:
-            if (tap_state.recording) {
-                tap_state.recording = false;
-                kr.event.pressed = true;
-                process_dynamic_macro(DYN_REC_STOP, &kr);
-            } else {
-                tap_state.recording = true;
-                kr.event.pressed = false;
-                process_dynamic_macro(DYN_REC_START1, &kr);
-            }
+            dyn_macro_toggle();
             break;
         default: break;
     }

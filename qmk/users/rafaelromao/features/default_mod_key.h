@@ -21,6 +21,7 @@
 #include "../definitions/keycodes.h"
 #include "process_record_result.h"
 #include "os_toggle.h"
+#include "dynamic_macro.h"
 
 void clear_locked_and_oneshot_mods(void);
 bool should_send_ctrl(bool isWindowsOrLinux, bool isOneShotShift);
