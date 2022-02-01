@@ -32,8 +32,6 @@ The Navigation and Mouse layer can be activated holding the outer left and right
 - The mouse layer can be disabled, using the [Maintenance](maintenance.md) layer. In this case, the navigation layer will be activated in its place.
 - Source code: [mouselayer_toggle.c](../qmk/users/rafaelromao/features/mouselayer_toggle.c)
 
-## Macros
-
 ### Select Word
 - Select Word is a macro that selects the current word in the first press and extend the selection to the next word in consecutive presses.
 - If shift is held, this macro will select the line instead, and extend the seletion to the next line in consecutive presses.
