@@ -48,6 +48,16 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
         return PROCESS_RECORD_RETURN_FALSE;
     }
 
+    // Process accentuation
+    switch (process_accentuated_characters(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
+
     // Process macros
     switch (process_macros(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
