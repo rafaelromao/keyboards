@@ -8,7 +8,7 @@ A 34 keys split keyboard layout, optimized for programmers.
 
 ### How this layout works?
 
-The following pages explain how this keymap works and which features were implemented.
+The following pages explain how this layout works and which features were implemented.
 
 - [Base](docs/base.md)
 - [Modifiers](docs/modifiers.md)
@@ -25,7 +25,7 @@ The following pages explain how this keymap works and which features were implem
 
 ### Compatibility
 
-This keymap was tested with the keyboards listed below, but can be easily adapted to any QMK keyboard with at least 34 keys, with 2 of them on each thumb.
+This layout was tested with the keyboards listed below, but can be easily adapted to any QMK keyboard with at least 34 keys, with 2 of them on each thumb.
 
 - [kprepublic/bm40hsrgb](qmk/keyboards/kprepublic/bm40hsrgb/keymaps/rafaelromao/readme.md)
 - [xiudi/xd75](qmk/keyboards/xiudi/xd75/keymaps/rafaelromao/readme.md)
