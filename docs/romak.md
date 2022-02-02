@@ -31,7 +31,7 @@ Romak is a new keyboard layout, inspired by [Colemak](https://colemak.org) and [
   <img src="https://i.imgur.com/zoc13dC.png" width="450" /> 
 </p>
 
-Romak is more balanced to Portuguese than English, so if English is your primary language, it is recommended to swap H and M.
+Romak is more balanced to Portuguese than English, so if English is your primary language, it is recommended to swap H with M.
 
 ### Finger Usage
 Pinkies will get less load in Romak, by design. This load will go to the ring and middle fingers.
