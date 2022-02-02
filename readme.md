@@ -8,6 +8,8 @@ A 34 keys split keyboard layout, optimized for programmers.
 
 ### How this layout works?
 
+The following pages explain how this keymap works and which features were implemented.
+
 - [Base](docs/base.md)
 - [Modifiers](docs/modifiers.md)
 - [Symbols and Numbers](docs/symbols.md)
@@ -21,12 +23,16 @@ A 34 keys split keyboard layout, optimized for programmers.
 - The script [init.sh](init.sh) will clone [the QMK firmware](https://github.com/qmk/qmk_firmware) and symlink these files on it.
 - After [installing QMK](https://docs.qmk.fm/#/newbs_getting_started) and running the init script with `source init.sh`, [qmk cli](https://docs.qmk.fm/#/cli) should work just fine to compile and flash.
 
-### My keyboards
+### Compatibility
+
+This keymap was tested with the keyboards listed below, but can be easily adapted to any QMK keyboard with at least 34 keys, with 2 of them on each thumb.
 
 - [kprepublic/bm40hsrgb](qmk/keyboards/kprepublic/bm40hsrgb/keymaps/rafaelromao/readme.md)
 - [xiudi/xd75](qmk/keyboards/xiudi/xd75/keymaps/rafaelromao/readme.md)
 
 ### References
+
+Most of the features implemented here were based on the work referenced below.
 
 - [Miryoku](https://github.com/manna-harbour/miryoku)
 - [Seniply](https://stevep99.github.io/seniply)
