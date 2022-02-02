@@ -2,7 +2,7 @@
 
 ## Romak
 
-Romak is a new keyboard layout. It is inspired by [Colemak](https://colemak.org) and [BEAKL](https://ieants.cc/beakl), improved to remove load from pinkies and for Portuguese.
+Romak is a new keyboard layout, inspired by [Colemak](https://colemak.org) and [BEAKL](https://ieants.cc/beakl), improved to remove load from pinkies and for typing in Portuguese and English, and for coding.
 
 ![img](https://i.imgur.com/LoRnoUM.png)
 
