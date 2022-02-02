@@ -36,7 +36,7 @@ The Navigation and Mouse layer can be activated holding the outer left and right
 - Select Word is a macro that selects the current word in the first press and extend the selection to the next word in consecutive presses.
 - If shift is held, this macro will select the line instead, and extend the seletion to the next line in consecutive presses.
 - This macro is also OS aware and works the same way on Windows, Linux and MacOS.
-- There is a dedicated key for this macro, in the left side of the Navigation and Mouse layers, but a combo with the middle and ring fingers in the top row on the right side will trigger this macro.
+- There is a dedicated key for this macro, in the left side of the Navigation and Mouse layers, but a combo with the middle and ring fingers in the top row on the right side will also trigger this macro.
 - Source Code: [select_word.c](../qmk/users/rafaelromao/features/select_word.c)
 
 ## Window Swapper
