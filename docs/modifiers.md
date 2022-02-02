@@ -37,7 +37,7 @@ The Default Mod key is a custom key that works as either one-shot Cmd or one-sho
 - Its alias in the keymap diagram is _Mod_.
 - The Default Mod key is implemented using a custom keycode and a layer-tap.
     - The hold behavior is kept as is, but the tap behavior is intercepted and customized.
-    - Source code: [default-mod-key.c](../qmk/users/rafaelromao/features/default_mod_key.c)
+    - Source code: [default_mod_key.c](../qmk/users/rafaelromao/features/default_mod_key.c)
 
 ## Capitalize Key 
 
@@ -51,7 +51,7 @@ The Capitalize key is a custom key that works both as Shift and Caps Lock.
 - Its alias in the keymap diagram is _Cap_.
 - The Capitalize key is implemented using a custom keycode and a layer-tap.
     - The hold behavior is kept as is, but the tap behavior is intercepted and customized.
-    - Source code: [capitalize-key.c](../qmk/users/rafaelromao/features/capitalize_key.c)
+    - Source code: [capitalize_key.c](../qmk/users/rafaelromao/features/capitalize_key.c)
 
 ## Caps Lock
 
