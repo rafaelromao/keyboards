@@ -48,7 +48,7 @@ The [Colemak mod-DH analysis tool](https://colemakmods.github.io/mod-dh/analyze.
   <img src="https://i.imgur.com/saVyUQU.png" width="450" /> 
 </p>
 
-Despite the higher SFB rate, total finger effort is lesser in Romak than in Colemak, Colemak-DH or Workman.
+Despite the higher SFB rate, total finger effort is lesser in Romak than in Colemak-DH or Workman.
 
 ##
 [Home](../readme.md) | 
