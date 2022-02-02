@@ -32,7 +32,7 @@ This layout was tested with the keyboards listed below, but can be easily adapte
 
 ### References
 
-Most of the features implemented here were based on the work referenced below.
+Most features implemented here were based on the work referenced below.
 
 - [Miryoku](https://github.com/manna-harbour/miryoku)
 - [Seniply](https://stevep99.github.io/seniply)
