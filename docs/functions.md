@@ -23,17 +23,20 @@ The Functions and Media layers are activated holding the left or right pinky key
 - The Leader Key is used to give easy access to some useful shortcuts and macros, like typing an internet domain or recurring terminal commands.
 - Source code: [leader.c](../qmk/users/rafaelromao/features/leader.c)
 
-## IntelliJ Shortcuts
-- Also in the Functions and Media layers, which means, when holding any of the home row pinky keys, the outer thumb keys can be used to tap dance through some of the most common IntelliJ Shortcuts:
+## IDE Dancing
+- Also in the Functions and Media layers, which means, when holding any of the home row pinky keys, the outer thumb keys can be used to tap dance through some of the most common IDE shortcuts, using keybindings from IntelliJ IDEA.
 - Left Side:
-    - Tap = Focus the Project Window
-    - Double Tap = Run Everything
-    - Hold = Find Usages
+    - Tap = Build (Cmd+F9/Ctrl+F9)
+    - Double Tap = Run Everything (Ctrl+Ctrl)
+    - Triple Tap = Find Usages (Alt+F7)
+    - Hold = Complete Statement (Shift+Cmd+Enter/Shift+Ctrl+Enter)
 - Right Side:
-    - Tap = Quick Actions
-    - Double Tap = Search Everywhere
-    - Hold = Next Error/Warning
+    - Tap = Quick Actions (Alt+Enter)
+    - Double Tap = Search Everywhere (Shift+Shift)
+    - Triple Tap = Go To Project Window (Cmd+1/Ctrl+1)
+    - Hold = Refactor This (Shift+Cmd+Alt+T/Shift+Ctrl+Alt+T)
 - Source code: [tapdance.c](../qmk/users/rafaelromao/features/tapdance.c)
+- Two other extremely helpful shortcuts are Ctrl+Space (Show Autocomplete Options) and F2 (Go To Next Error), but they are easy to type and don't need to be included in the dancing.
 
 ##
 [Home](../readme.md) | 

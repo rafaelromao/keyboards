@@ -59,9 +59,9 @@ void td_inj_lef(qk_tap_dance_state_t *state, void *user_data) {
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
             if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
-                SEND_STRING(SS_LCTL("1"));
+                SEND_STRING(SS_LCTL(SS_TAP(X_F9)));
             } else {
-                SEND_STRING(SS_LGUI("1"));
+                SEND_STRING(SS_LGUI(SS_TAP(X_F9)));
                 break;
             }
             break;
@@ -69,15 +69,27 @@ void td_inj_lef(qk_tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_LCTL);
             tap_code16(KC_LCTL);
             break;
-        case TD_SINGLE_HOLD:
+        case TD_TRIPLE_TAP:
             SEND_STRING(SS_LALT(SS_TAP(X_F7)));
+            break;
+        case TD_SINGLE_HOLD:
+            if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
+                SEND_STRING(SS_LSFT(SS_LCTL(SS_TAP(X_ENT))));
+            } else {
+                SEND_STRING(SS_LSFT(SS_LGUI(SS_TAP(X_ENT))));
+                break;
+            }
             break;
         default: break;
     }
 }
 
 void td_inj_rig(qk_tap_dance_state_t *state, void *user_data) {
+
     tap_state.state = dance_state(state);
+    bool isWindowsOrLinux = os.type == WINDOWS || os.type == LINUX;
+    bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
+
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
             SEND_STRING(SS_LALT(SS_TAP(X_ENT)));
@@ -86,8 +98,21 @@ void td_inj_rig(qk_tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_LSFT);
             tap_code16(KC_LSFT);
             break;
+        case TD_TRIPLE_TAP:
+            if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
+                SEND_STRING(SS_LCTL("1"));
+            } else {
+                SEND_STRING(SS_LGUI("1"));
+                break;
+            }
+            break;
         case TD_SINGLE_HOLD:
-            SEND_STRING(SS_TAP(X_F2));
+            if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
+                SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT(SS_TAP(X_T)))));
+            } else {
+                SEND_STRING(SS_LSFT(SS_LGUI(SS_LALT(SS_TAP(X_T)))));
+                break;
+            }
             break;
         default: break;
     }
