@@ -1,3 +1,6 @@
 [submodule "qmk_firmware"]
 	path = qmk_firmware
 	url = https://github.com/qmk/qmk_firmware
+[submodule "kmonad"]
+	path = kmonad
+	url = https://github.com/kmonad/kmonad
