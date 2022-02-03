@@ -26,6 +26,7 @@ enum {
     SS_SQUO,
     SS_CIRC,
     SS_TILD,
+    SS_DEG,
     TG_MAC,
     TG_WIN,
     TG_LIN,

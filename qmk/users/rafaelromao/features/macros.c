@@ -18,6 +18,8 @@
 
 #include "macros.h"
 
+extern os_t os;
+
 process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
 
     switch (keycode) {
@@ -47,6 +49,15 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
         case SS_TILD:
             if (record->event.pressed) {
                 SEND_STRING("~ ");
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+        case SS_DEG:
+            if (record->event.pressed) {
+                if (os.type == MACOS) {
+                    tap_code16(LSFT(RALT(KC_8)));
+                } else {
+                    tap_code16(LSFT(LCTL(KC_2)));
+                }
             }
             return PROCESS_RECORD_RETURN_FALSE;
             

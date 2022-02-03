@@ -108,7 +108,7 @@
 
 #define ___________________LOWER_R1____________________ XXXXXXX , KC_7    , KC_8    , KC_9    , KC_ENT
 #define ___________________LOWER_R2____________________ KC_COMM , KC_4    , KC_5    , KC_6    , DOT_MED
-#define ___________________LOWER_R3____________________ XXXXXXX , KC_1    , KC_2    , KC_3    , XXXXXXX
+#define ___________________LOWER_R3____________________ SS_DEG  , KC_1    , KC_2    , KC_3    , XXXXXXX
 #define ____LOWER_R4_____                               _______ , MOU_0
 
 #define ___________________RAISE_L1____________________ SS_GV_A , SS_CR_A , SS_TL_A , SS_SQ_A , SS_SQ_U
