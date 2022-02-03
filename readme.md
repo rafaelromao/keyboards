@@ -27,8 +27,8 @@ The following pages explain how this layout works and which features were implem
 
 This layout was tested with the keyboards listed below, but can be easily adapted to any ortholinear or column staggered QMK keyboard with at least 34 keys, with 2 of them on each thumb.
 
-- [kprepublic/bm40hsrgb](qmk/keyboards/kprepublic/bm40hsrgb/keymaps/rafaelromao/readme.md)
-- [xiudi/xd75](qmk/keyboards/xiudi/xd75/keymaps/rafaelromao/readme.md)
+- [kprepublic/bm40hsrgb](src/qmk/keyboards/kprepublic/bm40hsrgb/keymaps/rafaelromao/readme.md)
+- [xiudi/xd75](src/qmk/keyboards/xiudi/xd75/keymaps/rafaelromao/readme.md)
 
 ### References
 

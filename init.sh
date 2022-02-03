@@ -18,15 +18,15 @@ git submodule update --init --recursive --progress
 if [[ ! -d "$USER_SPACE/rafaelromao" ]]
 then
     echo "Creating userspace symbolic link..."
-    ln -s "$KEYBOARD_HOME/qmk/users/rafaelromao" "$USER_SPACE"
+    ln -s "$KEYBOARD_HOME/src/qmk/users/rafaelromao" "$USER_SPACE"
 fi
 if [[ ! -d "$QMK_HOME/$BM40/rafaelromao" ]]
 then
     echo "Creating BM40 symbolic link..."
-    ln -s "$KEYBOARD_HOME/qmk/$BM40/rafaelromao" "$QMK_HOME/$BM40"
+    ln -s "$KEYBOARD_HOME/src/qmk/$BM40/rafaelromao" "$QMK_HOME/$BM40"
 fi
 if [[ ! -d "$QMK_HOME/$XD75/rafaelromao" ]]
 then
     echo "Creating XD75 symbolic link..."
-    ln -s "$KEYBOARD_HOME/qmk/$XD75/rafaelromao" "$QMK_HOME/$XD75"
+    ln -s "$KEYBOARD_HOME/src/qmk/$XD75/rafaelromao" "$QMK_HOME/$XD75"
 fi

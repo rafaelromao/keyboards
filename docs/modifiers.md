@@ -37,7 +37,7 @@ The Default Mod key is a custom key that works as either one-shot Cmd or one-sho
 - Its alias in the keymap diagram is _Mod_.
 - The Default Mod key is implemented using a custom keycode and a layer-tap.
     - The hold behavior is kept as is, but the tap behavior is intercepted and customized.
-    - Source code: [default_mod_key.c](../qmk/users/rafaelromao/features/default_mod_key.c)
+    - Source code: [default_mod_key.c](../src/qmk/users/rafaelromao/features/default_mod_key.c)
 
 ## Capitalize Key 
 
@@ -51,7 +51,7 @@ The Capitalize key is a custom key that works both as Shift and Caps Lock.
 - Its alias in the keymap diagram is _Cap_.
 - The Capitalize key is implemented using a custom keycode and a layer-tap.
     - The hold behavior is kept as is, but the tap behavior is intercepted and customized.
-    - Source code: [capitalize_key.c](../qmk/users/rafaelromao/features/capitalize_key.c)
+    - Source code: [capitalize_key.c](../src/qmk/users/rafaelromao/features/capitalize_key.c)
 
 ## Caps Lock
 
@@ -59,7 +59,7 @@ The Capitalize key is a custom key that works both as Shift and Caps Lock.
     - The caps lock timer feature is implemented by starting a timer when the caps lock is activated and deactivating it in the matrix scan, in case the timer has expired.
     - The caps lock timer is restarted when a valid key is pressed.
     - The caps lock timer is stopped and caps lock deactivated when Esc is pressed.
-    - Source code: [capslock_timer.c](../qmk/users/rafaelromao/features/capslock_timer.c)
+    - Source code: [capslock_timer.c](../src/qmk/users/rafaelromao/features/capslock_timer.c)
 
 ##
 [Home](../readme.md) | 

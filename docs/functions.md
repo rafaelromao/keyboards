@@ -8,7 +8,7 @@ The Functions and Media layers are activated holding the left or right pinky key
 - On the right side, the F keys are available in the same positions as their respective numbers, so F5 and 5 are under the same key, making it easier to assimilate. F10 to F12 goes bottom up in the pinky column, while F13 and F14 are available in the inner index column and can be mapped to custom actions or macros in the operating system level.
 - The Functions layer can be toggle on using a combo with the right hand, in the [Lower](symbols.md) layer.
 - Another combo can be used to toggle the layer off.
-- Source code: [combos.c](../qmk/users/rafaelromao/features/combos.c)
+- Source code: [combos.c](../src/qmk/users/rafaelromao/features/combos.c)
 
 ## Media
 - In the left side of the Media layer, you can find the RGB control keys, while the media keys are placed in the right side.
@@ -21,7 +21,7 @@ The Functions and Media layers are activated holding the left or right pinky key
 ## Leader Key
 - The Leader Key is available in the left side of the Functions layer, but a double tap in the comma will also activate it.
 - The Leader Key is used to give easy access to some useful shortcuts and macros, like typing an internet domain or recurring terminal commands.
-- Source code: [leader.c](../qmk/users/rafaelromao/features/leader.c)
+- Source code: [leader.c](../src/qmk/users/rafaelromao/features/leader.c)
 
 ## IDE Dancing
 - Also in the Functions and Media layers, which means, when holding any of the home row pinky keys, the outer thumb keys can be used to tap dance through some of the most common IDE shortcuts, using keybindings from IntelliJ IDEA.
@@ -35,7 +35,7 @@ The Functions and Media layers are activated holding the left or right pinky key
     - Double Tap = Search Everywhere (Shift+Shift)
     - Triple Tap = Go To Project Window (Cmd+1/Ctrl+1)
     - Hold = Refactor This (Shift+Cmd+Alt+T/Shift+Ctrl+Alt+T)
-- Source code: [tapdance.c](../qmk/users/rafaelromao/features/tapdance.c)
+- Source code: [tapdance.c](../src/qmk/users/rafaelromao/features/tapdance.c)
 - Two other extremely helpful shortcuts are Ctrl+Space (Show Autocomplete Options) and F2 (Go To Next Error), but they are easy to type and don't need to be included in the dancing.
 
 ##

@@ -9,7 +9,7 @@
 
 ## Persistent Base Layers
 - It is possible to change the base layer in the maintenance layer and this change is persistent.
-- Source Code: [persistent_layers.c](../qmk/users/rafaelromao/features/persistent_layers.c)
+- Source Code: [persistent_layers.c](../src/qmk/users/rafaelromao/features/persistent_layers.c)
 
 ## Thumb Keys
 - The four thumb keys control layer transitions, when held (navigation, lower, raise and mouse).
@@ -32,7 +32,7 @@
 - Double tapping _ will play the current macro.
 - Tapping _ works as usual.
 - If there is a macro being recorded, using the [Default Mod Key](modifiers.md#default-mod-key) to deactivate one-shot modifiers (tapping it twice) will stop recording and clear the current macro.
-- Source Code: [dynamic_macro.c](../qmk/users/rafaelromao/features/dynamic_macro.c)
+- Source Code: [dynamic_macro.c](../src/qmk/users/rafaelromao/features/dynamic_macro.c)
 
 ##
 [Home](../readme.md) | 
