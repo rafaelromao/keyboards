@@ -8,7 +8,7 @@ The Maintenance layer is activated by holding both outer thumb keys.
   - Clear the eeprom. 
   - Put the host computer in sleep mode, or power it off.
   - Change the operating system used in keys that are OS aware, like the [Default Mod key](modifiers.md).
-    - Source code: [os_toggle.c](../qmk/users/rafaelromao/features/os_toggle.c)
+    - Source code: [os_toggle.c](../src/qmk/users/rafaelromao/features/os_toggle.c)
   - Disable or enable the [Mouse layer](navigation.md). 
   - Toogle any layer on. 
   - Chaging the [Base layer](layout.md) to either Qwerty or Romak. 

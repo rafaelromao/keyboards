@@ -7,11 +7,11 @@ Symbols and Numbers are available in the two classic Lower and Raise layers, act
 - Number are available in the right side of the Lower layer, also requiring two hands, but that can be mitigated using a combo to toggle the layer on, using only the right hand.
 - The Lower and Raise layers can be activated also by tapping or holding a combo with the right or left hands, respectively.
 - Another combo can be used to toggle these layers off.
-- Source code: [combos.c](../qmk/users/rafaelromao/features/combos.c)
+- Source code: [combos.c](../src/qmk/users/rafaelromao/features/combos.c)
 
 ### Symbols in the Lower layer (left side)
 - String delimiters, conditional operators, parenthesis and square brackets, among others, are found in the left side of the Lower layer.
-- Source code: [macros.c](../qmk/users/rafaelromao/features/macros.c)
+- Source code: [macros.c](../src/qmk/users/rafaelromao/features/macros.c)
 
 ### Symbols in the Raise layer (right side)
 - Symbols that are commonly used in VIM are placed in the right side of the Raise layer, making them easily accessible using only the right hand.
@@ -27,7 +27,7 @@ Symbols and Numbers are available in the two classic Lower and Raise layers, act
 - Accents are available in the left side of the Raise layer, while non-accent versions of these symbols are available in the left side of the Lower layer and in the right side of the Raise layer.
 - For example, activating the Lower layer (holding space) + tapping ' (left middle finger) + releasing space + tapping c, gives me 'c, while activating the Raise layer (holding backspace) + tapping ' (left index finger) + tapping c, gives me ç.
 - There are also dedicated keys for accentuated characters, but those keys cover only the most common accents in Portuguese.
-- Source code: [accentuation.c](../qmk/users/rafaelromao/features/accentuation.c)
+- Source code: [accentuation.c](../src/qmk/users/rafaelromao/features/accentuation.c)
 
 ### Dancing Brackets
 - Although closing brackets are available in dedicated keys, it is also possible to type them by double tapping the open bracket keys. It works for parenthesis, curly braces, square brackets and angle brackets.
