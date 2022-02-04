@@ -101,7 +101,7 @@
 #define ___________________QWERTY_R3___________________ KC_N    , RGUIT_M , TD_COML , TD_DOTD , TD_SCLE
 #define ____QWERTY_R4____                               RAI_BSP , MOU_CAP
 
-#define ___________________LOWER_L1____________________ KC_TAB  , TD_PARB , KC_RPRN , KC_BSLS , SS_TILD
+#define ___________________LOWER_L1____________________ XXXXXXX , TD_PARB , KC_RPRN , KC_BSLS , SS_TILD
 #define ___________________LOWER_L2____________________ SS_BTIC , SS_DQUO , SS_SQUO , KC_AMPR , KC_PIPE
 #define ___________________LOWER_L3____________________ KC_AT   , TD_SQRB , KC_RBRC , KC_QUES , KC_HASH
 #define ____LOWER_L4_____                                                             _______ , XXXXXXX
