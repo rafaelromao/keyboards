@@ -19,7 +19,6 @@
 #include "tapdance.h"
 
 extern os_t os;
-// extern dyn_macro_t dyn_macro;
 
 static td_tap_t tap_state = {
     .state = TD_NONE
