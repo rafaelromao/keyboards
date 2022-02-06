@@ -104,7 +104,7 @@
 #define ___________________LOWER_L1____________________ TD_UNDS , TD_PARB , KC_RPRN , KC_BSLS , SS_TILD
 #define ___________________LOWER_L2____________________ SS_BTIC , SS_DQUO , SS_SQUO , KC_AMPR , KC_PIPE
 #define ___________________LOWER_L3____________________ KC_AT   , TD_SQRB , KC_RBRC , KC_QUES , KC_HASH
-#define ____LOWER_L4_____                                                             _______ , XXXXXXX
+#define ____LOWER_L4_____                                                             _______ , _______
 
 #define ___________________LOWER_R1____________________ XXXXXXX , KC_7    , KC_8    , KC_9    , KC_ENT
 #define ___________________LOWER_R2____________________ KC_COMM , KC_4    , KC_5    , KC_6    , DOT_MED
@@ -119,7 +119,7 @@
 #define ___________________RAISE_R1____________________ SS_CIRC , TD_DLR  , TD_CURB , KC_RCBR , KC_COLN
 #define ___________________RAISE_R2____________________ KC_PLUS , KC_MINS , KC_EQL  , KC_EXLM , KC_PERC
 #define ___________________RAISE_R3____________________ KC_ASTR , KC_SLSH , TD_ANGB , KC_GT   , KC_COLN
-#define ____RAISE_R4_____                               XXXXXXX , _______
+#define ____RAISE_R4_____                               _______ , _______
 
 #define ___________________NAVIGATION_L1_______________ KC_TAB  , KC_ESC  , SS_SELW , OS_RALT , XXXXXXX
 #define ___________________NAVIGATION_L2_______________ SS_SWIN , OS_LSFT , OS_LCTL , OS_LALT , XXXXXXX
@@ -142,7 +142,7 @@
 #define ____MOUSE_R4_____                               _______ , MO_MAI
 
 #define ___________________FUNCTIONS_L1________________ KC_CAPS , KC_LEAD , KC_APP  , KC_RALT , KC_SCRL
-#define ___________________FUNCTIONS_L2________________ XXXXXXX , KC_LSFT , KC_LCTL , KC_LALT , KC_PSCR
+#define ___________________FUNCTIONS_L2________________ _______ , KC_LSFT , KC_LCTL , KC_LALT , KC_PSCR
 #define ___________________FUNCTIONS_L3________________ XXXXXXX , XXXXXXX , XXXXXXX , KC_LGUI , KC_PAUS
 #define ____FUNCTIONS_L4_                                                             TD_IJLE , KC_BSPC
 
@@ -157,7 +157,7 @@
 #define ____MEDIA_L4_____                                                             TD_IJLE , KC_BSPC
 
 #define ___________________MEDIA_R1____________________ XXXXXXX , KC_MPLY , KC_MPRV , KC_MNXT , KC_MSTP
-#define ___________________MEDIA_R2____________________ XXXXXXX , KC_MUTE , KC_VOLD , KC_VOLU , XXXXXXX
+#define ___________________MEDIA_R2____________________ XXXXXXX , KC_MUTE , KC_VOLD , KC_VOLU , _______
 #define ___________________MEDIA_R3____________________ HYPR_V  , HYPR_A  , SS_MODM , SS_MODP , XXXXXXX
 #define ____MEDIA_R4_____                               KC_SPC  , TD_IJRI
 

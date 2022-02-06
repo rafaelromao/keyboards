@@ -25,24 +25,7 @@ const uint16_t PROGMEM l_mou_sel_combo[] = {KC_WH_D, KC_WH_U, COMBO_END};
 
 // Lower
 
-const uint16_t PROGMEM l_low_esc_combo[] = {TD_PARB, KC_RPRN, COMBO_END};
-const uint16_t PROGMEM l_low_sal_combo[] = {SS_BTIC, SS_DQUO, COMBO_END};
-const uint16_t PROGMEM l_low_sav_combo[] = {SS_DQUO, SS_SQUO, COMBO_END};
-const uint16_t PROGMEM l_low_pas_combo[] = {SS_SQUO, KC_AMPR, COMBO_END};
-const uint16_t PROGMEM l_low_und_combo[] = {KC_AT, KC_LBRC, COMBO_END};
-const uint16_t PROGMEM l_low_rai_combo[] = {TD_SQRB, KC_RBRC, COMBO_END};
-const uint16_t PROGMEM l_low_cop_combo[] = {KC_RBRC, KC_QUES, COMBO_END};
 const uint16_t PROGMEM r_low_fun_combo[] = {RAI_BSP, KC_2, KC_3, COMBO_END};
-
-// Raise
-
-const uint16_t PROGMEM l_rai_tab_combo[] = {TD_CURB, KC_RCBR, COMBO_END};
-const uint16_t PROGMEM l_rai_sal_combo[] = {KC_EXLM, KC_PERC, COMBO_END};
-const uint16_t PROGMEM l_rai_ent_combo[] = {KC_EQL, KC_EXLM, COMBO_END};
-const uint16_t PROGMEM l_rai_pas_combo[] = {KC_MINS, KC_EQL, COMBO_END};
-const uint16_t PROGMEM l_rai_und_combo[] = {KC_GT, KC_COLN, COMBO_END};
-const uint16_t PROGMEM l_rai_low_combo[] = {TD_ANGB, KC_GT, COMBO_END};
-const uint16_t PROGMEM l_rai_cop_combo[] = {KC_SLSH, KC_LT, COMBO_END};
 
 // Qwerty
 
@@ -101,9 +84,9 @@ const uint16_t PROGMEM r_rom_und_combo[] = {LOW_SPC, TD_DOTD, KC_W, COMBO_END};
 // Layer toggle
 
 const uint16_t PROGMEM l_qwe_rai_combo[] = {LOW_SPC, KC_X, KC_C, COMBO_END};
-const uint16_t PROGMEM l_rai_tog_combo[] = {LOW_SPC, KC_CIRC, KC_TILD, COMBO_END};
 const uint16_t PROGMEM l_me1_tog_combo[] = {LOW_SPC, KC_Z, COMBO_END};
 const uint16_t PROGMEM l_me2_tog_combo[] = {LOW_SPC, KC_B, COMBO_END};
+const uint16_t PROGMEM l_rai_tog_combo[] = {RAI_BSP, KC_EQL, KC_EXLM, COMBO_END};
 const uint16_t PROGMEM r_qwe_lo1_combo[] = {RAI_BSP, TD_COML, TD_DOTD, COMBO_END};
 const uint16_t PROGMEM r_qwe_lo2_combo[] = {RAI_BSP, TD_SCLE, COMBO_END};
 const uint16_t PROGMEM r_rom_low_combo[] = {RAI_BSP, KC_W, COMBO_END};
@@ -123,22 +106,7 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(l_nav_sel_combo, SS_SELW),
   COMBO(l_mou_sel_combo, SS_SELW),
 
-  COMBO(l_low_esc_combo, KC_ESC),
-  COMBO(l_low_sal_combo, CB_SELC),
-  COMBO(l_low_sav_combo, CB_SAVE),
-  COMBO(l_low_pas_combo, CB_PAST),
-  COMBO(l_low_und_combo, CB_UNDO),
-  COMBO(l_low_rai_combo, TT_RAI),
-  COMBO(l_low_cop_combo, CB_COPY),
   COMBO(r_low_fun_combo, TG_FUN),
-
-  COMBO(l_rai_tab_combo, KC_TAB),
-  COMBO(l_rai_sal_combo, CB_SELC),
-  COMBO(l_rai_ent_combo, KC_ENT),
-  COMBO(l_rai_pas_combo, CB_PAST),
-  COMBO(l_rai_und_combo, CB_UNDO),
-  COMBO(l_rai_low_combo, TT_LOW),
-  COMBO(l_rai_cop_combo, CB_COPY),
 
   COMBO(l_qwe_esc_combo, KC_ESC),
   COMBO(l_qwe_sav_combo, CB_SAVE),
