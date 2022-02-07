@@ -29,6 +29,7 @@ void clear_locked_and_oneshot_mods(void) {
         unregister_mods(MOD_LSFT);
         unregister_mods(MOD_LCTL);
         unregister_mods(MOD_LALT);
+        unregister_mods(MOD_RALT);
         unregister_mods(MOD_LGUI);
     }
     dyn_macro_reset();
