@@ -22,14 +22,13 @@ extern os_t os;
 
 process_record_result_t process_capitalize_key(uint16_t keycode, keyrecord_t *record) {
 
-    bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
-    bool isCapsLocked = host_keyboard_led_state().caps_lock;
-
     switch (keycode) {
 
         case MOU_CAP:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
+                    bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
+                    bool isCapsLocked = host_keyboard_led_state().caps_lock;
                     if (isCapsLocked) {
                         tap_code(KC_CAPS); // Disable capslock
                     } else {
@@ -44,7 +43,6 @@ process_record_result_t process_capitalize_key(uint16_t keycode, keyrecord_t *re
                 }
                 return PROCESS_RECORD_RETURN_FALSE;
             }
-
     }
 
     return PROCESS_RECORD_CONTINUE;

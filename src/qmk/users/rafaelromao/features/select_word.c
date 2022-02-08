@@ -14,7 +14,7 @@
 // limitations under the License.
 //
 //
-// For full documentation, see
+// This implementation was adapted from:
 // https://getreuer.info/posts/keyboards/select-word
 
 #include "select_word.h"
@@ -28,10 +28,24 @@ static uint8_t state = STATE_NONE;
 bool process_select_word(uint16_t keycode, keyrecord_t* record, uint16_t sel_keycode) {
 
     if (keycode == KC_LSFT || keycode == KC_RSFT) { return true; }
+
+    bool isShifted = get_mods() & MOD_MASK_SHIFT || get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     
     if (keycode == sel_keycode && record->event.pressed) {
-        const uint8_t mods = get_mods();
-        if ((mods & MOD_MASK_SHIFT) == 0) {
+        if (isShifted) {
+            // Select Line
+            if (state == STATE_NONE) {
+                const uint8_t mods = get_mods();
+                clear_mods();
+                clear_locked_and_oneshot_mods();
+                SEND_STRING(SS_TAP(X_HOME) SS_LSFT(SS_TAP(X_END)));
+                set_mods(mods);
+                state = STATE_FIRST_LINE;
+            } else {
+                register_code(KC_DOWN);
+                state = STATE_LINE;
+            }
+        } else {
             // Select Word
             if (os.type == MACOS) {
                 register_code(KC_LALT);
@@ -44,17 +58,6 @@ bool process_select_word(uint16_t keycode, keyrecord_t* record, uint16_t sel_key
             register_code(KC_LSFT);
             register_code(KC_RGHT);
             state = STATE_WORD;
-        } else {
-            // Select Line
-            if (state == STATE_NONE) {
-                clear_mods();
-                SEND_STRING(SS_TAP(X_HOME) SS_LSFT(SS_TAP(X_END)));
-                set_mods(mods);
-                state = STATE_FIRST_LINE;
-            } else {
-                register_code(KC_DOWN);
-                state = STATE_LINE;
-            }
         }
         return false;
     }
