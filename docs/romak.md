@@ -12,7 +12,7 @@ Romak is a new keyboard layout, inspired by [Colemak](https://colemak.org) and [
 
 ### From Qwerty to Romak in 6 steps
 
-![img](https://i.imgur.com/xsjGpff.png)
+![img](https://i.imgur.com/ryJM5q0.png)
 
 ## Romak vs Colemak-DH
 [Stevep99's Layout Analyzer Tool](https://stevep99.github.io/keyboard-layout-analyzer) was used to compare Romak with Colemak-DH and Qwerty, with [Portuguese](analysis/corpus.pt.txt) and [English](analysis/corpus.en.txt) text corpus.
