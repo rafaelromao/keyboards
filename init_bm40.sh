@@ -2,13 +2,19 @@
 
 KEYBOARD_HOME="$(pwd)"
 export QMK_HOME="$KEYBOARD_HOME/qmk_firmware"
+export KMONAD_HOME="$KEYBOARD_HOME/kmonad"
 USER_SPACE="$QMK_HOME/users"
 BM40="keyboards/kprepublic/bm40hsrgb/keymaps"
 
 if [[ ! -d "$QMK_HOME" ]]
 then
-    echo "Add git sub-modules..."
+    echo "Add git QMK sub-module..."
     git submodule add -f https://github.com/qmk/qmk_firmware
+fi
+if [[ ! -d "$KMONAD_HOME" ]]
+then
+    echo "Add git KMONAD sub-module..."
+    git submodule add -f https://github.com/kmonad/kmonad
 fi
 echo "Update git sub-modules..."
 git submodule sync --recursive
