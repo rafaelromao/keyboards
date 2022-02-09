@@ -38,8 +38,12 @@ The following pages explain how this layout works and which features are impleme
 ## About this repo
 
 - This repository contains the files that are used to customize my keyboards.
-- The scripts [init_bm40.sh](init_bm40.sh) and [init_xd75.sh](init_xd75.sh) will clone [the QMK firmware](https://github.com/qmk/qmk_firmware) and symlink these keyboard files on it.
+- In MacOS, the scripts *init_\*.sh*, when executed using the command `source init_*.sh`, will:
+  - Clone [the QMK firmware](https://github.com/qmk/qmk_firmware) and symlink this keymap on it.
+  - Clone [the KMonad software](https://github.com/kmonad/kmonad) and symlink this keymap on it.
 - After [installing QMK](https://docs.qmk.fm/#/newbs_getting_started) and running the init script with `source init_bm40.sh` or `source init_xd75.sh`, [qmk cli](https://docs.qmk.fm/#/cli) should work just fine to compile and flash.
+- After [installing KMonad](https://github.com/kmonad/kmonad/blob/master/doc/installation.md#installing-kmonad) and running the init script, [giving KMonad the right permissions](https://github.com/kmonad/kmonad/blob/master/doc/installation.md#giving-kmonad-additional-permissions) and [enabling KMonad]() should work just fine to compile and emulate it.
+
 
 ## Compatibility
 
