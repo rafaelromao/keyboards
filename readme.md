@@ -38,14 +38,19 @@ The following pages explain how this layout works and which features are impleme
 ## About this repo
 
 - This repository contains the files that are used to customize my keyboards.
-- In MacOS, the scripts *init_\*.sh*, when executed using the command `source init_*.sh`, will:
-  - Clone [the QMK firmware](https://github.com/qmk/qmk_firmware) and symlink this keymap on it.
-  - Clone [the KMonad software](https://github.com/kmonad/kmonad) and symlink this keymap on it.
+- The script files `init_*.sh` will clone the implementation repo (QMK or KMonad), symlink my keymap files on it, and let it ready for build or use.
 - After [installing QMK](https://docs.qmk.fm/#/newbs_getting_started) and running the init script with `source init_bm40.sh` or `source init_xd75.sh`, [qmk cli](https://docs.qmk.fm/#/cli) should work just fine to compile and flash.
 - After [installing KMonad](https://github.com/kmonad/kmonad/blob/master/doc/installation.md#installing-kmonad) and running the init script, [giving KMonad the right permissions](https://github.com/kmonad/kmonad/blob/master/doc/installation.md#giving-kmonad-additional-permissions) and [enabling KMonad]() should work just fine to compile and emulate it.
 
+## Setup QMK
 
-## Compatibility
+### Initializing QMK
+
+This are the steps to initialize QMK and make it ready to build and flash the keymap:
+- [Installing QMK](https://docs.qmk.fm/#/newbs_getting_started)
+- Running the init script: `source init_qmk.sh`
+
+### QMK Compatibility
 
 This layout was tested with the keyboards listed below, but can be easily adapted to any ortholinear or column staggered QMK keyboard with at least 32 keys, with 2 of them on each thumb.
 
@@ -53,6 +58,22 @@ This layout was tested with the keyboards listed below, but can be easily adapte
 - [xiudi/xd75](src/qmk/keyboards/xiudi/xd75/keymaps/rafaelromao/readme.md)
 
 Some features are not available on all keyboards though. For instance, the BM40 does not support Dynamic Macros, while the XD75 doesn't have per key RGB.
+
+## Setup KMonad
+
+### Initializing KMonad
+
+This are the steps to initialize KMonads:
+- [Installing KMonad](https://github.com/kmonad/kmonad/blob/master/doc/installation.md#installing-kmonad)
+- [Installing Karabiner Elements](https://karabiner-elements.pqrs.org/)
+- [Giving KMonad the right permissions](https://github.com/kmonad/kmonad/blob/master/doc/installation.md#giving-kmonad-additional-permissions)
+- Running the init script: `source init_kmonad.sh`
+- [Enabling KMonad]()
+
+### KMonad Compatibility
+
+The KMonad implemantation supports the follwing keyboards:
+- [Apple Macbook Pro 13 2019 Keyboard](src/kmonad/keymap/user/rafaelromao/apple.kbd)
 
 ## References
 
