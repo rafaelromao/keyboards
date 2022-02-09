@@ -59,6 +59,11 @@ void process_leader_dictionary(void) {
             SEND_STRING("git checkout -b ");
         }
 
+        // Git - New branch
+        SEQ_TWO_KEYS(KC_G, KC_O) {
+            SEND_STRING("git checkout ");
+        }
+
         // Git - Reset
         SEQ_TWO_KEYS(KC_G, KC_R) {
             SEND_STRING("git reset --hard HEAD~ 1");
