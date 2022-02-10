@@ -3,6 +3,8 @@
 KEYBOARD_HOME="$(pwd)"
 export KMONAD_HOME="$KEYBOARD_HOME/kmonad"
 KMONAD_USER_SPACE="$KMONAD_HOME/keymap/user"
+export PATH=$PATH:"$KMONAD_HOME/.stack-work/install/x86_64-osx/f330fe7099647d32bfed19f5c6310f7213f09c37320656c17d5929e9db589014/8.10.4/bin"
+KEYMAP="keymap/user/rafaelromao"
 
 # Prepare KMONAD home
 
@@ -23,5 +25,8 @@ git submodule update --init --recursive --progress
 if [[ ! -d "$KMONAD_USER_SPACE/rafaelromao" ]]
 then
     echo "Creating KMONAD userspace symbolic link..."
-    ln -s "$KEYBOARD_HOME/src/kmonad/keymap/user/rafaelromao" "$KMONAD_USER_SPACE"
+    ln -s "$KEYBOARD_HOME/src/kmonad/$KEYMAP" "$KMONAD_USER_SPACE"
 fi
+
+# Run KMonad
+kmonad "$KMONAD_HOME/$KEYMAP/apple.kbd"
