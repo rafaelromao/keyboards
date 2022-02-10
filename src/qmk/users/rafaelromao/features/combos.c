@@ -136,7 +136,7 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(r_qwe_lo1_combo, TT_LOW),
   COMBO(r_qwe_lo2_combo, OS_LOW),
   COMBO(r_rom_low_combo, OS_LOW),
-  COMBO(r_mou_nav_combo, TO_NAV),
+  COMBO(r_mou_nav_combo, MOU_TG),
   COMBO(l_rai_tog_combo, TG_RAI),
   COMBO(r_nav_tog_combo, TG_NAV),
   COMBO(r_mou_tog_combo, TG_MOU),

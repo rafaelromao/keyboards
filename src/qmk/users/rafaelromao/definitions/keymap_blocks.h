@@ -152,5 +152,5 @@
 
 #define ___________________MAINTENANCE_R1______________ RESET   , XXXXXXX , KC_SLEP , XXXXXXX , XXXXXXX
 #define ___________________MAINTENANCE_R2______________ XXXXXXX , TG_MAC  , TG_WIN  , TG_LIN  , XXXXXXX
-#define ___________________MAINTENANCE_R3______________ TO_RAI  , TO_MOU  , TG_M_ON , TG_M_OF , TO_MED
+#define ___________________MAINTENANCE_R3______________ TO_RAI  , TO_MOU  , MOU_ON  , MOU_OFF , TO_MED
 #define __MAINTENANCE_R4_                               XXXXXXX , _______

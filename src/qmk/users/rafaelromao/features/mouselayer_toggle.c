@@ -12,7 +12,15 @@ process_record_result_t process_mouselayer(uint16_t keycode, keyrecord_t *record
 
         // Enable/Disable the Mouse Layer
 
-        case TG_M_ON:
+        case MOU_TG:
+            if (record->event.pressed) {
+                mouselayer.enabled = !mouselayer.enabled;
+                layer_off(_MOUSE);
+                layer_off(_NAVIGATION);
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+        case MOU_ON:
             if (record->event.pressed) {
                 mouselayer.enabled = true;
                 layer_off(_MOUSE);
@@ -20,7 +28,7 @@ process_record_result_t process_mouselayer(uint16_t keycode, keyrecord_t *record
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
-        case TG_M_OF:
+        case MOU_OFF:
             if (record->event.pressed) {
                 mouselayer.enabled = false;
                 layer_off(_MOUSE);
