@@ -4,5 +4,6 @@
 
 #include "os_toggle.h"
 #include "default_mod_key.h"
+#include "process_record_result.h"
 
-bool process_select_word(uint16_t keycode, keyrecord_t* record, uint16_t sel_keycode);
+process_record_result_t process_select_word(uint16_t keycode, keyrecord_t* record);

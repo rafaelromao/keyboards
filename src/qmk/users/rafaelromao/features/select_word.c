@@ -2,27 +2,25 @@
 
 extern os_t os;
 
-enum { STATE_NONE, STATE_SELECTED, STATE_WORD, STATE_FIRST_LINE, STATE_LINE };
+enum { STATE_NONE, STATE_LINE_SELECTED, STATE_WORD_SELECTED, STATE_WORD, STATE_FIRST_LINE, STATE_LINE };
 
 static uint8_t state = STATE_NONE;
 
-bool process_select_word(uint16_t keycode, keyrecord_t* record, uint16_t sel_keycode) {
+process_record_result_t process_select_word(uint16_t keycode, keyrecord_t* record) {
 
-    if (keycode == KC_LSFT || keycode == KC_RSFT) { return true; }
-
-    bool isShifted = get_mods() & MOD_MASK_SHIFT || get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
-    
-    if (keycode == sel_keycode && record->event.pressed) {
-        if (isShifted) {
+    if (keycode == SS_SELW && record->event.pressed) {
+        bool isShifted = get_mods() & MOD_MASK_SHIFT || get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
+        if (isShifted || state == STATE_LINE_SELECTED) {
             // Select Line
+            clear_mods();
+            clear_locked_and_oneshot_mods();
             if (state == STATE_NONE) {
-                const uint8_t mods = get_mods();
-                clear_mods();
-                clear_locked_and_oneshot_mods();
-                SEND_STRING(SS_TAP(X_HOME) SS_LSFT(SS_TAP(X_END)));
-                set_mods(mods);
+                tap_code(KC_HOME);
+                register_mods(MOD_LSFT);
+                tap_code(KC_END);
                 state = STATE_FIRST_LINE;
             } else {
+                register_mods(MOD_LSFT);
                 register_code(KC_DOWN);
                 state = STATE_LINE;
             }
@@ -34,45 +32,50 @@ bool process_select_word(uint16_t keycode, keyrecord_t* record, uint16_t sel_key
                 register_code(KC_LCTL);
             }
             if (state == STATE_NONE) {
-                SEND_STRING(SS_TAP(X_RGHT) SS_TAP(X_LEFT));
+                tap_code(KC_RIGHT);
+                tap_code(KC_LEFT);
             }
-            register_code(KC_LSFT);
+            register_mods(MOD_LSFT);
             register_code(KC_RGHT);
             state = STATE_WORD;
         }
-        return false;
+        return PROCESS_RECORD_RETURN_FALSE;
     }
 
     switch (state) {
         case STATE_WORD:
             unregister_code(KC_RGHT);
-            unregister_code(KC_LSFT);
+            unregister_mods(MOD_LSFT);
             if (os.type == MACOS) {
                 unregister_code(KC_LALT);
             } else {
                 unregister_code(KC_LCTL);
             }
-            state = STATE_SELECTED;
+            state = STATE_WORD_SELECTED;
             break;
 
         case STATE_FIRST_LINE:
-            state = STATE_SELECTED;
+            unregister_mods(MOD_LSFT);
+            state = STATE_LINE_SELECTED;
             break;
 
         case STATE_LINE:
+            unregister_mods(MOD_LSFT);
             unregister_code(KC_DOWN);
-            state = STATE_SELECTED;
+            state = STATE_LINE_SELECTED;
             break;
 
-        case STATE_SELECTED:
-            if (keycode == KC_ESC) {
+        case STATE_WORD_SELECTED:
+        case STATE_LINE_SELECTED:
+            if (keycode != SS_SELW && record->event.pressed) {
+                unregister_mods(MOD_LSFT);
                 tap_code(KC_RGHT);
                 state = STATE_NONE;
-                return false;
+                return PROCESS_RECORD_CONTINUE;
             }
         default:
             state = STATE_NONE;
     }
 
-    return true;
+    return PROCESS_RECORD_CONTINUE;
 }

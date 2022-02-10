@@ -38,9 +38,14 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
     process_capslock_timer_extension(keycode, record);
 
     // Process select word
-    if (!process_select_word(keycode, record, SS_SELW)) { 
-        return PROCESS_RECORD_RETURN_FALSE;
-    }
+    switch (process_select_word(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
 
     // Process taphold
     switch (process_taphold(keycode, record)) {
