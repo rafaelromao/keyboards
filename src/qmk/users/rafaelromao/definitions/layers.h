@@ -7,7 +7,6 @@ typedef enum {
   _RAISE,
   _NAVIGATION,
   _MOUSE,
-  _NAVIGATION_CLONE,
   _FUNCTIONS,
   _MEDIA,
   _MAINTENANCE

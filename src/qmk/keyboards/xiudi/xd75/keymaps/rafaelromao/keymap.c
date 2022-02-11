@@ -101,19 +101,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXXXXX , XXXXXXX , XXXXXXX , ____MOUSE_L4_____ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ____MOUSE_R4_____ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
-     [_NAVIGATION_CLONE] = LAYOUT_wrapper(
- // |_____________________________________________________________________________________________________________________________________________________|
-      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      ___________________NAVIGATION_L1_______________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ___________________NAVIGATION_R1_______________ ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      ___________________NAVIGATION_L2_______________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ___________________NAVIGATION_R2_______________ ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      ___________________NAVIGATION_L3_______________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ___________________NAVIGATION_R3_______________ ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , __NAVIGATION_L4__ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , __NAVIGATION_R4__ , XXXXXXX , XXXXXXX , XXXXXXX),
- // |_____________________________________________________________________________________________________________________________________________________|
-
      [_FUNCTIONS] = LAYOUT_wrapper(
  // |_____________________________________________________________________________________________________________________________________________________|
       XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
@@ -176,7 +163,6 @@ void set_rgblight_by_layer(uint32_t layer) {
         case _RAISE:
         case _FUNCTIONS:
         case _NAVIGATION:
-        case _NAVIGATION_CLONE:
         case _MOUSE:
         case _MEDIA:
             rgblight_setrgb(RGB_TURQUOISE);
