@@ -90,7 +90,7 @@
 #define ___________________LOWER_L3____________________ KC_AT   , TD_SQRB , KC_RBRC , KC_QUES , KC_HASH
 #define ____LOWER_L4_____                                                             _______ , _______
 
-#define ___________________LOWER_R1____________________ XXXXXXX , KC_7    , KC_8    , KC_9    , KC_ENT
+#define ___________________LOWER_R1____________________ XXXXXXX , KC_7    , KC_8    , KC_9    , XXXXXXX
 #define ___________________LOWER_R2____________________ KC_COMM , KC_4    , KC_5    , KC_6    , DOT_MED
 #define ___________________LOWER_R3____________________ SS_DEG  , KC_1    , KC_2    , KC_3    , XXXXXXX
 #define ____LOWER_R4_____                               _______ , MOU_0
