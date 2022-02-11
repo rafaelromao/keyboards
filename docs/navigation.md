@@ -18,12 +18,9 @@ The Navigation and Mouse layer can be activated holding the outer left and right
         vnoremap l <nop>
         ```
     - This trade-off turns the navigation easier and ubiquitous and makes even more sense when using other layout than qwerty.
-- Once in the Navigation layer, it is still possible to toggle the layer on, using a combo. It is possible using a clone of the original Navigation layer.
-- Another combo can be used to toggle the Navigation layer off.
 
 ## Mouse
 - The Mouse layer is similar to the navigation layer, but replaces the arrows and page navigation by mouse and wheel navigation.
-- From the Mouse layer, it is also possible to toggle the Navigation layer on with a combo, which allows single hand access to it.
 
 ### Mouse Buttons
 - The first and second mouse buttons are mirrored in both sides of the mouse layer, in the inner columns.
