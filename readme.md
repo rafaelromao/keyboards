@@ -24,7 +24,7 @@ The following pages explain how this layout works and which features are impleme
 - [One Shot Mods](docs/modifiers.md#one-shot-modifiers)
 - [Combos](docs/base.md#base-layer-combos)
 - [Macros](docs/symbols.md#symbols-in-the-lower-layer-left-side)
-- [Dynamic Macro](docs/symbols.md#dynamic-macros)
+- [Dynamic Macro](docs/navigation.md#dynamic-macros)
 - [Tap Dance](src/qmk/users/rafaelromao/features/tapdance.c)
 - [Leader Key](docs/functions.md#leader-key)
 - [Default Modifier (Cmd vs Ctrl)](docs/modifiers.md#default-mod-key)
