@@ -12,7 +12,7 @@ The following pages explain how this layout works and which features are impleme
 
 ### Layers
 
-- [Base](docs/base.md)
+- [Base](docs/base.md) and [Modifiers](docs/modifiers.md)
 - [Symbols and Numbers](docs/symbols.md)
 - [Functions and Media](docs/functions.md)
 - [Navigation and Mouse](docs/navigation.md)
