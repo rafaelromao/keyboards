@@ -37,8 +37,8 @@ The Functions and Media layers are activated holding the left or right pinky key
     - Double Tap = Search Everywhere (Shift+Shift)
     - Triple Tap = Go To Project Window (Cmd+1/Ctrl+1)
     - Hold = Refactor This (Shift+Cmd+Alt+T/Shift+Ctrl+Alt+T)
-- Source code: [tapdance.c](../src/qmk/users/rafaelromao/features/tapdance.c)
 - Two other extremely helpful shortcuts are Ctrl+Space (Show Autocomplete Options) and F2 (Go To Next Error), but they are easy to type and don't need to be included in the dancing.
+- Source code: [tapdance.c](../src/qmk/users/rafaelromao/features/tapdance.c)
 
 ##
 [Home](../readme.md) | 
