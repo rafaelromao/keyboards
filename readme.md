@@ -17,6 +17,27 @@ The following pages explain how this layout works and which features were implem
 - [Navigation and Mouse](docs/navigation.md)
 - [Maintenance](docs/maintenance.md)
 
+### Feature List
+
+- [Home Block Mods](docs/modifiers.md#home-block-modifiers)
+- [One Shot Mods](docs/modifiers.md#one-shot-modifiers)
+- [Combos](docs/base.md#base-layer-combos)
+- [Macros](src/qmk/users/rafaelromao/features/macros.c)
+- [Dynamic Macro](docs/base.md#dynamic-macros)
+- [Tap Dance](src/qmk/users/rafaelromao/features/tapdance.c)
+- [Leader Key](docs/functions.md#leader-key)
+- [Default Modifier (Cmd vs Ctrl)](docs/modifiers.md#default-mod-key)
+- [Capitalize Key](docs/modifiers.md#capitalize-key)
+- [Caps Lock Timer](docs/modifiers.md#caps-lock)
+- [Dancing Brackets](docs/symbols.md#dancing-brackets)
+- [Accentuation Keys](docs/symbols.md#accents-in-the-raise-layer-left-side)
+- [Custom Shortcuts](src/qmk/users/rafaelromao/features/custom_shortcuts.c)
+- [Custom Tap Hold](src/qmk/users/rafaelromao/features/taphold.c)
+- [IDE Dancing](docs/functions.md#ide-dancing)
+- [Window Swapper](docs/navigation.md#window-swapper)
+- [Select Word](docs/navigation.md#select-word)
+- [Persistent Base Layers](docs/base.md#persistent-base-layers)
+
 ### About this repo
 
 - This repository contains the files that are used to customize my keyboards.
