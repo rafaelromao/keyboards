@@ -144,6 +144,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // RGB Indicators
 
 extern leader_t leader;
+extern select_word_t select_word;
+extern dyn_macro_t dyn_macro;
 
 void set_rgblight_by_layer(uint32_t layer) {
     switch (layer) {
@@ -188,7 +190,7 @@ void set_mod_indicators(void) {
 
     bool isCapsLocked = host_keyboard_led_state().caps_lock;
 
-    if (leader.isLeading) {
+    if (leader.isLeading || select_word.state != STATE_NONE || dyn_macro.recording != 0) {
         rgblight_setrgb(RGB_GREEN);
     } else if (isCapsLocked) {
         rgblight_setrgb(RGB_YELLOW);

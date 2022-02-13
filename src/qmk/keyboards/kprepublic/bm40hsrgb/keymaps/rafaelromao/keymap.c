@@ -127,6 +127,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // RGB Indicators
 
 extern leader_t leader;
+extern select_word_t select_word;
 
 void rgb_matrix_indicators_user(void) {
 
@@ -158,6 +159,10 @@ void rgb_matrix_indicators_user(void) {
 
     if (leader.isLeading) {
         rgb_matrix_set_color(1, RGB_WHITE);
+    }
+
+    if (select_word.state != STATE_NONE) {
+        rgb_matrix_set_color(2, RGB_WHITE);
     }
 
     switch(get_highest_layer(layer_state|default_layer_state)) {
