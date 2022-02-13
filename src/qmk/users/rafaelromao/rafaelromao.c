@@ -24,6 +24,9 @@ __attribute__ ((weak)) void matrix_scan_user(void) {
 
 __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
+    // Extend capslock timer
+    process_capslock_timer_extension(keycode, record);
+
     // Process window swapper
     switch (process_window_swapper(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
@@ -34,8 +37,35 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
             break;
     };
 
-    // Extend capslock timer
-    process_capslock_timer_extension(keycode, record);
+    // Process custom_shotcuts
+    switch (process_custom_shortcuts(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
+    
+    // Process combos
+    switch (process_combos(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
+
+    // Process macros
+    switch (process_macros(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
 
     // Process select word
     switch (process_select_word(keycode, record)) {
@@ -59,36 +89,6 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
 
     // Process accentuation
     switch (process_accentuated_characters(keycode, record)) {
-        case PROCESS_RECORD_RETURN_TRUE:
-            return true;
-        case PROCESS_RECORD_RETURN_FALSE:
-            return false;
-        default:
-            break;
-    };
-
-    // Process custom_shotcuts
-    switch (process_custom_shortcuts(keycode, record)) {
-        case PROCESS_RECORD_RETURN_TRUE:
-            return true;
-        case PROCESS_RECORD_RETURN_FALSE:
-            return false;
-        default:
-            break;
-    };
-
-    // Process macros
-    switch (process_macros(keycode, record)) {
-        case PROCESS_RECORD_RETURN_TRUE:
-            return true;
-        case PROCESS_RECORD_RETURN_FALSE:
-            return false;
-        default:
-            break;
-    };
-
-    // Process combos
-    switch (process_combos(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:

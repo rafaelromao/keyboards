@@ -126,6 +126,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 // RGB Indicators
 
+extern leader_t leader;
+
 void rgb_matrix_indicators_user(void) {
 
     if (host_keyboard_led_state().caps_lock) {
@@ -152,6 +154,10 @@ void rgb_matrix_indicators_user(void) {
     }
     if (isGui) {
         rgb_matrix_set_color(27, RGB_WHITE);
+    }
+
+    if (leader.isLeading) {
+        rgb_matrix_set_color(1, RGB_WHITE);
     }
 
     switch(get_highest_layer(layer_state|default_layer_state)) {

@@ -2,6 +2,10 @@
 
 #include "leader.h"
 
+leader_t leader = {
+    .isLeading = false
+};
+
 LEADER_EXTERNS();
 
 void process_leader_dictionary(void) {
@@ -64,12 +68,9 @@ void process_leader_dictionary(void) {
 }
 
 void leader_start(void) {
-    leader_start_keymap();
+    leader.isLeading = true;
 }
 
 void leader_end(void) {
-    leader_end_keymap();
+    leader.isLeading = false;
 }
-
-__attribute__ ((weak)) void leader_start_keymap(void) {}
-__attribute__ ((weak)) void leader_end_keymap(void) {}

@@ -141,17 +141,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |_____________________________________________________________________________________________________________________________________________________|
 };
 
-// Keymap data
-
-typedef struct {
-    bool isLeading;
-} keymap_data_t;
-
-keymap_data_t keymap_data = {
-    .isLeading = false
-};
-
 // RGB Indicators
+
+extern leader_t leader;
 
 void set_rgblight_by_layer(uint32_t layer) {
     switch (layer) {
@@ -180,26 +172,25 @@ void set_current_layer_rgb(void) {
 }
 
 uint32_t layer_state_set_user(uint32_t state) {
-    if (keymap_data.isLeading) {
-        return state;
-    }
-
     set_rgblight_by_layer(biton32(state));
     return state;
 }
 
 void set_mod_indicators(void) {
-    if (keymap_data.isLeading) {
-        return;
-    }
+    uint8_t mods = get_mods();
+    uint8_t oneshot_mods = get_oneshot_mods();
+    uint8_t oneshot_locked_mods = get_oneshot_locked_mods();
 
-    bool isShift = get_mods() & MOD_MASK_SHIFT || get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
-    bool isCtrl = get_mods() & MOD_MASK_CTRL || get_oneshot_mods() & MOD_MASK_CTRL || get_oneshot_locked_mods() & MOD_MASK_CTRL;
-    bool isAlt = get_mods() & MOD_MASK_ALT || get_oneshot_mods() & MOD_MASK_ALT || get_oneshot_locked_mods() & MOD_MASK_ALT;
-    bool isGui = get_mods() & MOD_MASK_GUI || get_oneshot_mods() & MOD_MASK_GUI || get_oneshot_locked_mods() & MOD_MASK_GUI;
+    bool isShift = mods & MOD_MASK_SHIFT || oneshot_mods & MOD_MASK_SHIFT || oneshot_locked_mods & MOD_MASK_SHIFT;
+    bool isCtrl = mods & MOD_MASK_CTRL || oneshot_mods & MOD_MASK_CTRL || oneshot_locked_mods & MOD_MASK_CTRL;
+    bool isAlt = mods & MOD_MASK_ALT || oneshot_mods & MOD_MASK_ALT || oneshot_locked_mods & MOD_MASK_ALT;
+    bool isGui = mods & MOD_MASK_GUI || oneshot_mods & MOD_MASK_GUI || oneshot_locked_mods & MOD_MASK_GUI;
+
     bool isCapsLocked = host_keyboard_led_state().caps_lock;
 
-    if (isCapsLocked) {
+    if (leader.isLeading) {
+        rgblight_setrgb(RGB_GREEN);
+    } else if (isCapsLocked) {
         rgblight_setrgb(RGB_YELLOW);
     } else if (isShift) {
         rgblight_setrgb(RGB_TURQUOISE);
@@ -212,14 +203,4 @@ void set_mod_indicators(void) {
 
 void matrix_scan_keymap(void) {
     set_mod_indicators();
-}
-
-void leader_start_keymap(void) {
-    keymap_data.isLeading = true;
-    rgblight_setrgb(RGB_ORANGE);
-}
-
-void leader_end_keymap(void) {
-    keymap_data.isLeading = false;
-    set_current_layer_rgb();
 }

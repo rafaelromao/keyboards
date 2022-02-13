@@ -5,6 +5,8 @@
 #include "../definitions/keycodes.h"
 #include "secret.h"
 
+typedef struct {
+    bool isLeading;
+} leader_t;
+
 void process_leader_dictionary(void);
-void leader_start_keymap(void);
-void leader_end_keymap(void);
