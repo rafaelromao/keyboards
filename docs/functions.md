@@ -15,7 +15,7 @@ The Functions and Media layers are activated holding the left or right pinky key
 - The Media layer can also be activated using the left hand, holding (or tapping, for one-shot) the space thumb key plus the botton row pinky key. 
 
 ## Zoom
-- Also in the right side, there are keys to control Zoom, which can be either Cmd+ and Cmd- or Ctrl+ and Ctrl-, according to the operating system that is selected in the [Maintenance](maintenance.md) layer.
+- In the right side of the Media layer, there are keys to control Zoom, which can be either Cmd+ and Cmd- or Ctrl+ and Ctrl-, according to the operating system that is selected in the [Maintenance](maintenance.md) layer.
 
 ## Space and Backspace
 - The space and backspace thumb keys are inverted in the Functions and Media layers, which allow single hand access to both of them.
