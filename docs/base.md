@@ -17,6 +17,9 @@
 - The two inner thumb keys act as space or backspace, when tapped.
 - Holding both outer thumb keys will activate the maintenance layer.
 
+## Shift + Backspace fro Delete.
+- Delete is available in the Navigation and Mouse layers, but tapping Backspace while holding Shift will also send Delete.
+
 ## Double Dot for New Sentences
 - A double tap in the dot key outputs dot followed by space, and activates one-shot shift. This will make it easier to enter a new sentence.
 - Holding the dot key will insert it in the end of the current line.
