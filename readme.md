@@ -2,16 +2,17 @@
 
 A 34 keys split keyboard layout, optimized for programmers.
 
-### Overview
+## Overview
 
 ![img](https://i.imgur.com/S4Ukvjn.png)
 
-### How this layout works?
+## How this layout works?
 
 The following pages explain how this layout works and which features are implemented.
 
+### Layers
+
 - [Base](docs/base.md)
-- [Modifiers](docs/modifiers.md)
 - [Symbols and Numbers](docs/symbols.md)
 - [Functions and Media](docs/functions.md)
 - [Navigation and Mouse](docs/navigation.md)
@@ -38,13 +39,13 @@ The following pages explain how this layout works and which features are impleme
 - [Select Word](docs/navigation.md#select-word)
 - [Persistent Base Layers](docs/base.md#persistent-base-layers)
 
-### About this repo
+## About this repo
 
 - This repository contains the files that are used to customize my keyboards.
 - The script [init.sh](init.sh) will clone [the QMK firmware](https://github.com/qmk/qmk_firmware) and symlink these files on it.
 - After [installing QMK](https://docs.qmk.fm/#/newbs_getting_started) and running the init script with `source init.sh`, [qmk cli](https://docs.qmk.fm/#/cli) should work just fine to compile and flash.
 
-### Compatibility
+## Compatibility
 
 This layout was tested with the keyboards listed below, but can be easily adapted to any ortholinear or column staggered QMK keyboard with at least 34 keys, with 2 of them on each thumb.
 
@@ -53,7 +54,7 @@ This layout was tested with the keyboards listed below, but can be easily adapte
 
 Some features are not available on all keyboards though. For instance, the BM40 does not support Dynamic Macros, while the XD75 doesn't have per key RGB.
 
-### References
+## References
 
 Most features implemented here were based on the work referenced below.
 
@@ -68,7 +69,7 @@ Most features implemented here were based on the work referenced below.
 - [Thomas Baart](https://thomasbaart.nl/category/mechanical-keyboards/firmware/qmk)
 - [Ben Vallack](https://youtube.com/c/BenVallack)
 
-### Resouces
+## Resouces
 
 - [KLE](http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739)
 - [QMK Docs](https://docs.qmk.fm)
