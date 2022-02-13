@@ -5,7 +5,7 @@
 
 // // Romak 6 - PRW;
 
-// #define ___________________ROMAK_L1____________________ TD_UNDS , KC_R    , KC_Q    , KC_P    , KC_V
+// #define ___________________ROMAK_L1____________________ KC_UNDS , KC_R    , KC_Q    , KC_P    , KC_V
 // #define ___________________ROMAK_L2____________________ KCF_FUN , LSFTT_S , KC_E    , LCTLT_T , KC_G
 // #define ___________________ROMAK_L3____________________ KC_B    , KC_X    , KC_Y    , LGUIT_D , KC_Z
 // #define ____ROMAK_L4_____                                                             NAV_MOD , LOW_SPC
@@ -17,7 +17,7 @@
 
 // // Romak 5 - LUIO
 
-// #define ___________________ROMAK_L1____________________ TD_UNDS , KC_W    , KC_Q    , KC_R    , KC_V
+// #define ___________________ROMAK_L1____________________ KC_UNDS , KC_W    , KC_Q    , KC_R    , KC_V
 // #define ___________________ROMAK_L2____________________ KCF_FUN , LSFTT_S , KC_E    , LCTLT_T , KC_G
 // #define ___________________ROMAK_L3____________________ KC_B    , KC_X    , KC_Y    , LGUIT_D , KC_Z
 // #define ____ROMAK_L4_____                                                             NAV_MOD , LOW_SPC
@@ -29,7 +29,7 @@
 
 // // Romak 4 - EQZB_
 
-// #define ___________________ROMAK_L1____________________ TD_UNDS , KC_W    , KC_Q    , KC_R    , KC_V
+// #define ___________________ROMAK_L1____________________ KC_UNDS , KC_W    , KC_Q    , KC_R    , KC_V
 // #define ___________________ROMAK_L2____________________ KCF_FUN , LSFTT_S , KC_E    , LCTLT_T , KC_G
 // #define ___________________ROMAK_L3____________________ KC_B    , KC_X    , KC_Y    , LGUIT_D , KC_Z
 // #define ____ROMAK_L4_____                                                             NAV_MOD , LOW_SPC
@@ -42,7 +42,7 @@
 // // Romak 3 - DVT_
 
 // #define ___________________ROMAK_L1____________________ KC_Q    , KC_W    , KC_E    , KC_R    , KC_V
-// #define ___________________ROMAK_L2____________________ KCF_FUN , LSFTT_S , TD_UNDS , LCTLT_T , KC_G
+// #define ___________________ROMAK_L2____________________ KCF_FUN , LSFTT_S , KC_UNDS , LCTLT_T , KC_G
 // #define ___________________ROMAK_L3____________________ KC_Z    , KC_X    , KC_Y    , LGUIT_D , KC_B
 // #define ____ROMAK_L4_____                                                             NAV_MOD , LOW_SPC
                                                         
@@ -70,7 +70,7 @@
 // #define ___________________ROMAK_L3____________________ KC_Z    , KC_X    , KC_Y    , LGUIT_V , KC_B
 // #define ____ROMAK_L4_____                                                             NAV_MOD , LOW_SPC
                                                         
-// #define ___________________ROMAK_R1____________________ TD_UNDS , KC_U    , KC_I    , KC_O    , KC_P
+// #define ___________________ROMAK_R1____________________ KC_UNDS , KC_U    , KC_I    , KC_O    , KC_P
 // #define ___________________ROMAK_R2____________________ KC_H    , RALTT_N , RCTLT_K , RSFTT_L , KCC_MED
 // #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , TD_COML , TD_DOTD , TD_SCLE
 // #define ____ROMAK_R4_____                               RAI_BSP , MOU_CAP
@@ -85,7 +85,7 @@
 #define ___________________QWERTY_R3___________________ KC_N    , RGUIT_M , TD_COML , TD_DOTD , TD_SCLE
 #define ____QWERTY_R4____                               RAI_BSP , MOU_CAP
 
-#define ___________________LOWER_L1____________________ TD_UNDS , TD_PARB , KC_RPRN , KC_BSLS , SS_TILD
+#define ___________________LOWER_L1____________________ XXXXXXX , TD_PARB , KC_RPRN , KC_BSLS , SS_TILD
 #define ___________________LOWER_L2____________________ SS_BTIC , SS_DQUO , SS_SQUO , KC_AMPR , KC_PIPE
 #define ___________________LOWER_L3____________________ KC_AT   , TD_SQRB , KC_RBRC , KC_QUES , KC_HASH
 #define ____LOWER_L4_____                                                             _______ , _______
@@ -105,9 +105,9 @@
 #define ___________________RAISE_R3____________________ KC_ASTR , KC_SLSH , TD_ANGB , KC_GT   , KC_COLN
 #define ____RAISE_R4_____                               _______ , _______
 
-#define ___________________NAVIGATION_L1_______________ KC_TAB  , KC_ESC  , SS_SELW , OS_RALT , XXXXXXX
+#define ___________________NAVIGATION_L1_______________ KC_ESC  , XXXXXXX , SS_SELW , OS_RALT , XXXXXXX
 #define ___________________NAVIGATION_L2_______________ SS_SWIN , OS_LSFT , OS_LCTL , OS_LALT , XXXXXXX
-#define ___________________NAVIGATION_L3_______________ XXXXXXX , XXXXXXX , XXXXXXX , OS_LGUI , XXXXXXX
+#define ___________________NAVIGATION_L3_______________ KC_TAB  , XXXXXXX , TD_MACR , OS_LGUI , XXXXXXX
 #define __NAVIGATION_L4__                                                             MO_MAI  , _______
 
 #define ___________________NAVIGATION_R1_______________ XXXXXXX , XXXXXXX , KC_PGDN , KC_PGUP , KC_ENT
@@ -115,9 +115,9 @@
 #define ___________________NAVIGATION_R3_______________ XXXXXXX , KC_INS  , KC_HOME , KC_END  , KC_DEL
 #define __NAVIGATION_R4__                               _______ , MO_MAI
 
-#define ___________________MOUSE_L1____________________ KC_TAB  , KC_ESC  , SS_SELW , OS_RALT , XXXXXXX
+#define ___________________MOUSE_L1____________________ KC_ESC  , XXXXXXX , SS_SELW , OS_RALT , XXXXXXX
 #define ___________________MOUSE_L2____________________ SS_SWIN , OS_LSFT , OS_LCTL , OS_LALT , KC_BTN1
-#define ___________________MOUSE_L3____________________ XXXXXXX , XXXXXXX , XXXXXXX , OS_LGUI , KC_BTN2
+#define ___________________MOUSE_L3____________________ KC_TAB  , XXXXXXX , TD_MACR , OS_LGUI , KC_BTN2
 #define ____MOUSE_L4_____                                                             MO_MAI  , _______
 
 #define ___________________MOUSE_R1____________________ XXXXXXX , XXXXXXX , KC_WH_D , KC_WH_U , KC_ENT

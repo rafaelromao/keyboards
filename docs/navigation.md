@@ -42,6 +42,12 @@ Repeating the same combo toggle the mouse layer back on.
 - Window Swapper is a macro that performs Alt-Tab on Windows/Linux and Cmd+Tab on MacOS, holding the modifier between keypresses.
 - Source Code: [window_swapper.c](../src/qmk/users/rafaelromao/features/window_swapper.c)
 
+## Dynamic Macros
+- Double or triple tapping will start or stop recording the dynamic macro 1 or 2, respectively.
+- Tapping or holding will play the dynamic macro 1 or 2, respectively.
+- If there is a macro being recorded, using the [Default Mod Key](modifiers.md#default-mod-key) to deactivate one-shot modifiers (tapping it twice) will stop recording and clear the current macro.
+- Source Code: [dynamic_macro.c](../src/qmk/users/rafaelromao/features/dynamic_macro.c)
+
 ##
 [Home](../readme.md) | 
 [Base](base.md) |

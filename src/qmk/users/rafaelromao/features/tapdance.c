@@ -276,21 +276,20 @@ void td_quotes(qk_tap_dance_state_t *state, void *user_data) {
 
 // Dynamic Macro on Underscore
 
-void td_unds_macro(qk_tap_dance_state_t *state, void *user_data) {
+void td_macro(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            tap_code16(KC_UNDS);
-            break;
-        case TD_DOUBLE_SINGLE_TAP:
-            tap_code16(KC_UNDS);
-            tap_code16(KC_UNDS);
-            break;
         case TD_DOUBLE_TAP:
-            dyn_macro_play();
+            dyn_macro_toggle(DYN_REC_START1);
+            break;
+        case TD_TRIPLE_TAP:
+            dyn_macro_toggle(DYN_REC_START2);
+            break;
+        case TD_SINGLE_TAP:
+            dyn_macro_play(DYN_MACRO_PLAY1);
             break;
         case TD_SINGLE_HOLD:
-            dyn_macro_toggle();
+            dyn_macro_play(DYN_MACRO_PLAY2);
             break;
         default: break;
     }
@@ -310,5 +309,5 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [DOT_DOT] = ACTION_TAP_DANCE_FN(td_dot_dot),
     [SDB_QUO] = ACTION_TAP_DANCE_FN(td_quotes),
     [DLR_CUR] = ACTION_TAP_DANCE_FN(td_currencies),
-    [UND_REC] = ACTION_TAP_DANCE_FN(td_unds_macro)
+    [REC_MAC] = ACTION_TAP_DANCE_FN(td_macro)
 };

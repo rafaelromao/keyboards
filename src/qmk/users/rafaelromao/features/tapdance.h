@@ -19,7 +19,7 @@ enum {
     DOT_DOT,
     SDB_QUO,
     DLR_CUR,
-    UND_REC
+    REC_MAC
 };
 
 #define TD_COML TD(COM_LEA)
@@ -33,7 +33,7 @@ enum {
 #define TD_DOTD TD(DOT_DOT)
 #define TD_QUOT TD(SDB_QUO)
 #define TD_DLR TD(DLR_CUR)
-#define TD_UNDS TD(UND_REC)
+#define TD_MACR TD(REC_MAC)
 
 typedef enum {
     TD_NONE,

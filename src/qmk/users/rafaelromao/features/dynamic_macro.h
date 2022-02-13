@@ -6,9 +6,9 @@
 #include "process_record_result.h"
 
 typedef struct {
-    bool recording;
+    uint16_t recording;
 } dyn_macro_t;
 
-void dyn_macro_play(void);
-void dyn_macro_toggle(void);
+void dyn_macro_play(uint16_t keycode);
+void dyn_macro_toggle(uint16_t keycode);
 void dyn_macro_reset(void);
