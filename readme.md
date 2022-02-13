@@ -25,7 +25,7 @@ The following pages explain how this layout works and which features are impleme
 - [One Shot Mods](docs/modifiers.md#one-shot-modifiers)
 - [Combos](docs/base.md#base-layer-combos)
 - [Macros](docs/symbols.md#symbols-in-the-lower-layer-left-side)
-- [Dynamic Macro](docs/navigation.md#dynamic-macros)
+- [Dynamic Macros](docs/navigation.md#dynamic-macros)
 - [Leader Key](docs/functions.md#leader-key)
 - [Default Modifier (Cmd vs Ctrl)](docs/modifiers.md#default-mod-key)
 - [Capitalize Key](docs/modifiers.md#capitalize-key)
