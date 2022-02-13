@@ -20,6 +20,7 @@ The following pages explain how this layout works and which features are impleme
 
 ### Feature List
 
+- [Persistent Base Layers](docs/base.md#persistent-base-layers)
 - [Home Block Mods](docs/modifiers.md#home-block-modifiers)
 - [One Shot Mods](docs/modifiers.md#one-shot-modifiers)
 - [Combos](docs/base.md#base-layer-combos)
@@ -34,10 +35,9 @@ The following pages explain how this layout works and which features are impleme
 - [Accentuation Keys](docs/symbols.md#accents-in-the-raise-layer-left-side)
 - [Custom Shortcuts](src/qmk/users/rafaelromao/features/custom_shortcuts.c)
 - [Custom Tap Hold](src/qmk/users/rafaelromao/features/taphold.c)
-- [IDE Dancing](docs/functions.md#ide-dancing)
 - [Window Swapper](docs/navigation.md#window-swapper)
 - [Select Word](docs/navigation.md#select-word)
-- [Persistent Base Layers](docs/base.md#persistent-base-layers)
+- [IDE Dancing](docs/functions.md#ide-dancing)
 
 ## About this repo
 
