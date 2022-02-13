@@ -32,16 +32,6 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     }
 }
 
-bool get_hold_on_other_key_press_result(uint16_t keycode) {
-    switch (keycode) {
-        case LOW_SPC:
-        case RAI_BSP:
-            return true;
-        default:
-            return false;
-    }
-}
-
 bool get_tapping_force_hold_result(uint16_t keycode) {
     switch (keycode) {
         case LOW_SPC:
