@@ -17,7 +17,7 @@
 - The two inner thumb keys act as space or backspace, when tapped.
 - Holding both outer thumb keys will activate the maintenance layer.
 
-## Shift + Backspace fro Delete.
+## Shift + Backspace for Delete.
 - Delete is available in the Navigation and Mouse layers, but tapping Backspace while holding Shift will also send Delete.
 
 ## Double Dot for New Sentences
