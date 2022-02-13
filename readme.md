@@ -1,6 +1,6 @@
 # rafaelromao's keyboard layout
 
-A 34 keys split keyboard layout, optimized for programmers.
+A 34 keys split keyboard layout, optimized for Portuguese, English and software programming.
 
 ## Overview
 
