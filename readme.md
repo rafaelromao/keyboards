@@ -22,7 +22,7 @@ The following pages explain how this layout works and which features were implem
 - [Home Block Mods](docs/modifiers.md#home-block-modifiers)
 - [One Shot Mods](docs/modifiers.md#one-shot-modifiers)
 - [Combos](docs/base.md#base-layer-combos)
-- [Macros](src/qmk/users/rafaelromao/features/macros.c)
+- [Macros](docs/symbols.md#symbols-in-the-lower-layer-left-side)
 - [Dynamic Macro](docs/base.md#dynamic-macros)
 - [Tap Dance](src/qmk/users/rafaelromao/features/tapdance.c)
 - [Leader Key](docs/functions.md#leader-key)
