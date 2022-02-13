@@ -26,18 +26,17 @@ The following pages explain how this layout works and which features are impleme
 - [Combos](docs/base.md#base-layer-combos)
 - [Macros](docs/symbols.md#symbols-in-the-lower-layer-left-side)
 - [Dynamic Macro](docs/navigation.md#dynamic-macros)
-- [Tap Dance](src/qmk/users/rafaelromao/features/tapdance.c)
 - [Leader Key](docs/functions.md#leader-key)
 - [Default Modifier (Cmd vs Ctrl)](docs/modifiers.md#default-mod-key)
 - [Capitalize Key](docs/modifiers.md#capitalize-key)
 - [Caps Lock Timer](docs/modifiers.md#caps-lock)
 - [Dancing Brackets](docs/symbols.md#dancing-brackets)
 - [Accentuation Keys](docs/symbols.md#accents-in-the-raise-layer-left-side)
-- [Custom Shortcuts](src/qmk/users/rafaelromao/features/custom_shortcuts.c)
-- [Custom Tap Hold](src/qmk/users/rafaelromao/features/taphold.c)
 - [Window Swapper](docs/navigation.md#window-swapper)
 - [Select Word](docs/navigation.md#select-word)
 - [IDE Dancing](docs/functions.md#ide-dancing)
+- [Custom Shortcuts](src/qmk/users/rafaelromao/features/custom_shortcuts.c)
+- [Custom Tap Hold](src/qmk/users/rafaelromao/features/taphold.c)
 
 ## About this repo
 
