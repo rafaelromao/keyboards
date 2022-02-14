@@ -27,6 +27,16 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
     // Extend capslock timer
     process_capslock_timer_extension(keycode, record);
 
+    // Process secrets
+    switch (process_secrets(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
+
     // Process window swapper
     switch (process_window_swapper(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:

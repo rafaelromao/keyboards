@@ -5,7 +5,10 @@
 // Custom keycodes
 
 enum {
-    SS_BTIC = SAFE_RANGE,
+    SS_SECRET_1 = SAFE_RANGE,
+    SS_SECRET_2,
+    SS_SECRET_3,
+    SS_BTIC,
     SS_DQUO,
     SS_SQUO,
     SS_CIRC,

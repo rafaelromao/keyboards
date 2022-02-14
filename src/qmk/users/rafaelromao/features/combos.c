@@ -86,7 +86,17 @@ const uint16_t PROGMEM r_med_tog_combo[] = {KC_SPC, KC_VOLD, KC_VOLU, COMBO_END}
 const uint16_t PROGMEM qwe_reset_combo[] = {KC_Q, KC_P, KC_Z, TD_SCLE, COMBO_END};
 const uint16_t PROGMEM rom_reset_combo[] = {KC_UNDS, KC_B, KC_W, TD_SCLE, COMBO_END};
 
+// Secret
+
+const uint16_t PROGMEM secret_1_combo[] = {SEC_1, SEC_2, SEC_3, SEC_4, COMBO_END};
+const uint16_t PROGMEM secret_2_combo[] = {SEC_1, SEC_2, SEC_7, SEC_4, COMBO_END};
+const uint16_t PROGMEM secret_3_combo[] = {SEC_1, SEC_2, SEC_5, SEC_6, COMBO_END};
+
 combo_t key_combos[COMBO_COUNT] = {
+  COMBO(secret_1_combo, SS_SECRET_1),
+  COMBO(secret_2_combo, SS_SECRET_2),
+  COMBO(secret_3_combo, SS_SECRET_3),
+
   COMBO(l_nav_sel_combo, SS_SELW),
   COMBO(l_mou_sel_combo, SS_SELW),
 
