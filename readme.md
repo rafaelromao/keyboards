@@ -18,7 +18,7 @@ The following pages explain how this layout works and which features are impleme
 - [Navigation and Mouse](docs/navigation.md)
 - [Maintenance](docs/maintenance.md)
 
-### Feature List
+### Features
 
 - [Persistent Base Layers](docs/base.md#persistent-base-layers)
 - [Home Block Mods](docs/modifiers.md#home-block-modifiers)
