@@ -6,7 +6,7 @@
 // // Romak 6 - PRW;
 
 // #define ___________________ROMAK_L1____________________ KC_UNDS , KC_R    , KC_Q    , KC_P    , KC_V
-// #define ___________________ROMAK_L2____________________ KCF_FUN , LSFTT_S , KC_E    , LCTLT_T , KC_G
+// #define ___________________ROMAK_L2____________________ KCF_FUN , LSFTT_S , LCTLT_E , LALTT_T , KC_G
 // #define ___________________ROMAK_L3____________________ KC_B    , KC_X    , KC_Y    , LGUIT_D , KC_Z
 // #define ____ROMAK_L4_____                                                             NAV_MOD , LOW_SPC
                                                         
@@ -18,7 +18,7 @@
 // // Romak 5 - LUIO
 
 // #define ___________________ROMAK_L1____________________ KC_UNDS , KC_W    , KC_Q    , KC_R    , KC_V
-// #define ___________________ROMAK_L2____________________ KCF_FUN , LSFTT_S , KC_E    , LCTLT_T , KC_G
+// #define ___________________ROMAK_L2____________________ KCF_FUN , LSFTT_S , LCTLT_E , LALTT_T , KC_G
 // #define ___________________ROMAK_L3____________________ KC_B    , KC_X    , KC_Y    , LGUIT_D , KC_Z
 // #define ____ROMAK_L4_____                                                             NAV_MOD , LOW_SPC
                                                         
@@ -30,7 +30,7 @@
 // // Romak 4 - EQZB_
 
 // #define ___________________ROMAK_L1____________________ KC_UNDS , KC_W    , KC_Q    , KC_R    , KC_V
-// #define ___________________ROMAK_L2____________________ KCF_FUN , LSFTT_S , KC_E    , LCTLT_T , KC_G
+// #define ___________________ROMAK_L2____________________ KCF_FUN , LSFTT_S , LCTLT_E , LALTT_T , KC_G
 // #define ___________________ROMAK_L3____________________ KC_B    , KC_X    , KC_Y    , LGUIT_D , KC_Z
 // #define ____ROMAK_L4_____                                                             NAV_MOD , LOW_SPC
                                                         
@@ -42,7 +42,7 @@
 // // Romak 3 - DVT_
 
 // #define ___________________ROMAK_L1____________________ KC_Q    , KC_W    , KC_E    , KC_R    , KC_V
-// #define ___________________ROMAK_L2____________________ KCF_FUN , LSFTT_S , KC_UNDS , LCTLT_T , KC_G
+// #define ___________________ROMAK_L2____________________ KCF_FUN , LSFTT_S , LC_UNDS , LALTT_T , KC_G
 // #define ___________________ROMAK_L3____________________ KC_Z    , KC_X    , KC_Y    , LGUIT_D , KC_B
 // #define ____ROMAK_L4_____                                                             NAV_MOD , LOW_SPC
                                                         

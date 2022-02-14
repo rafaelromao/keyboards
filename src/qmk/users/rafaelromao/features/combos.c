@@ -45,6 +45,7 @@ const uint16_t PROGMEM r_rom_pas_combo[] = {RAI_BSP, RALTT_N, RCTLT_A, COMBO_END
 // Romak 3
 
 const uint16_t PROGMEM l_ro3_pas_combo[] = {LOW_SPC, LC_UNDS, LALTT_T, COMBO_END};
+const uint16_t PROGMEM l_ro3_sav_combo[] = {LOW_SPC, LSFTT_S, LC_UNDS, COMBO_END};
 const uint16_t PROGMEM l_rom_cop_combo[] = {LOW_SPC, KC_Y, LGUIT_D, COMBO_END};
 
 // Romak 4
@@ -128,6 +129,7 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(r_rom_pas_combo, CB_PAST),
 
   COMBO(l_ro3_pas_combo, CB_PAST),
+  COMBO(l_ro3_sav_combo, CB_SAVE),
   COMBO(l_rom_cop_combo, CB_COPY),
 
   COMBO(l_ro4_esc_combo, KC_ESC),
