@@ -1,8 +1,8 @@
 # rafaelromao's keyboard layout
+ 
+## Overview
 
 A 34 keys split keyboard layout, optimized for Portuguese, English and software programming.
-
-## Overview
 
 ![img](https://i.imgur.com/S4Ukvjn.png)
 
