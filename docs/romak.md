@@ -33,7 +33,7 @@ Romak is a new keyboard layout, inspired by [Colemak](https://colemak.org) and [
 #### English
 <p float="left">
   <img src="https://i.imgur.com/zFWXHLy.png" width="450" />
-  <img src="https://i.imgur.com/lsvsHTZ.png" width="450" />   
+  <img src="https://i.imgur.com/9trwGNv.png" width="450" />   
   <img src="https://i.imgur.com/zoc13dC.png" width="450" /> 
 </p>
 
