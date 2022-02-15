@@ -43,24 +43,23 @@ enum {
 // Mod-taps
 
 #define LSFTT_S LSFT_T(KC_S)
+#define LSFTT_E LSFT_T(KC_E)
 #define RSFTT_L RSFT_T(KC_L)
 #define RSFTT_O RSFT_T(KC_O)
 
 #define LCTLT_D LCTL_T(KC_D)
-#define LCTLT_E LCTL_T(KC_E)
-#define LC_UNDS LCTL_T(KC_UNDS)
+#define LCTLT_S LCTL_T(KC_S)
 #define RCTLT_K RCTL_T(KC_K)
 #define RCTLT_A RCTL_T(KC_A)
 
 #define LALTT_F LALT_T(KC_F)
-#define LALTT_T LALT_T(KC_T)
-#define LA_UNDS LALT_T(KC_UNDS)
+#define LALTT_D LALT_T(KC_D)
 #define RALTT_J RALT_T(KC_J)
 #define RALTT_N RALT_T(KC_N)
+#define LA_UNDS LALT_T(KC_UNDS)
 
 #define LGUIT_V LGUI_T(KC_V)
-#define LGUIT_D LGUI_T(KC_D)
-#define LG_UNDS LGUI_T(KC_UNDS)
+#define LGUIT_T LGUI_T(KC_T)
 #define RGUIT_M RGUI_T(KC_M)
 
 // One-shot mods

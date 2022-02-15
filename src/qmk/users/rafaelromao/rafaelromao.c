@@ -4,7 +4,7 @@ extern os_t os;
 
 // Led update
 
-__attribute__ ((weak)) bool led_update_user(led_t led_state) {
+bool led_update_user(led_t led_state) {
     check_start_capslock_timer(led_state.caps_lock);
     return true;
 }
@@ -14,7 +14,7 @@ __attribute__ ((weak)) bool led_update_user(led_t led_state) {
 __attribute__ ((weak)) void matrix_scan_keymap(void) {
 }
 
-__attribute__ ((weak)) void matrix_scan_user(void) {
+void matrix_scan_user(void) {
     check_disable_capslock();
     process_leader_dictionary();
     matrix_scan_keymap();
@@ -22,7 +22,7 @@ __attribute__ ((weak)) void matrix_scan_user(void) {
 
 // Process record
 
-__attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     // Extend capslock timer
     process_capslock_timer_extension(keycode, record);
@@ -162,13 +162,18 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
 
 // Tap-hold configuration
 
-__attribute__ ((weak)) bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
+bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
     return get_hold_on_other_key_press_result(keycode);
 }
 
-__attribute__ ((weak)) bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
+bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
     return get_tapping_force_hold_result(keycode);
 }
+
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    return get_tapping_term_result(keycode);
+}
+
 
 // Dynamic macros
 

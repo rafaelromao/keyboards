@@ -3,14 +3,11 @@
 #include "taphold.h"
 
 process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
-
     switch (keycode) {
         // Fix layer-tap using Underscore
         case UND_MED:
         case UND_FUN:
-        case LG_UNDS:
         case LA_UNDS:
-        case LC_UNDS:
             if (record->event.pressed) {
                 if (record->tap.count > 0) {
                     tap_code16(KC_UNDS);
@@ -18,11 +15,10 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
                 }
             }
     }
-
     return PROCESS_RECORD_CONTINUE;
 }
 
-uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+uint16_t get_tapping_term_result(uint16_t keycode) {
     switch (keycode) {
         case LOW_SPC:
         case RAI_BSP:
@@ -48,7 +44,7 @@ bool get_tapping_force_hold_result(uint16_t keycode) {
     }
 }
 
-bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
+bool get_hold_on_other_key_press_result(uint16_t keycode) {
     switch (keycode) {
         case RAI_BSP:
             return true;

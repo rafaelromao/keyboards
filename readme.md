@@ -4,7 +4,7 @@
 
 A 34 keys split keyboard layout, optimized for Portuguese, English and software programming.
 
-![img](https://i.imgur.com/S4Ukvjn.png)
+![img](https://i.imgur.com/iYDbU6T.png)
 
 ## How this layout works?
 
