@@ -174,7 +174,6 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     return get_tapping_term_result(keycode);
 }
 
-
 // Dynamic macros
 
 void dynamic_macro_record_start_user(void) {
