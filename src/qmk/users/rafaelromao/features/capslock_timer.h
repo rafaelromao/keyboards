@@ -2,6 +2,7 @@
 
 #include QMK_KEYBOARD_H
 #include "process_record_result.h"
+#include "../definitions/keycodes.h"
 
 typedef struct {
     uint16_t timer;

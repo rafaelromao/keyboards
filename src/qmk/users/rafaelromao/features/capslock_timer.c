@@ -59,7 +59,7 @@ process_record_result_t process_capslock_timer_extension(uint16_t keycode, keyre
                 return PROCESS_RECORD_CONTINUE;
             }
             // Get the base tapping keycode of a mod- or layer-tap key.
-            keycode &= 0xff;
+            keycode = extract_base_tapping_keycode(keycode);
         }
         // Extend capslock timer
         switch (keycode) {

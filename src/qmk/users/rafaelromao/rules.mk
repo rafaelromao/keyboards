@@ -1,5 +1,6 @@
 SRC += secret.c
 SRC += rafaelromao.c
+SRC += definitions/keycodes.c
 SRC += features/taphold.c
 SRC += features/persistent_layers.c
 SRC += features/default_mod_key.c
