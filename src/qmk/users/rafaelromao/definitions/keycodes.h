@@ -43,12 +43,11 @@ enum {
 // Mod-taps
 
 #define LSFTT_S LSFT_T(KC_S)
-#define LSFTT_E LSFT_T(KC_E)
 #define RSFTT_L RSFT_T(KC_L)
 #define RSFTT_O RSFT_T(KC_O)
 
 #define LCTLT_D LCTL_T(KC_D)
-#define LCTLT_S LCTL_T(KC_S)
+#define LCTLT_E LCTL_T(KC_E)
 #define RCTLT_K RCTL_T(KC_K)
 #define RCTLT_A RCTL_T(KC_A)
 
