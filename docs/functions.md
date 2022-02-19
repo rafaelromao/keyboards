@@ -6,7 +6,7 @@ The Functions and Media layers are activated holding the left or right pinky key
 ## Functions
 - On the left side of the Functions layer, there are standard modifier keys, also forming a home block, along with Caps Lock and a Menu key.
 - On the right side, the F keys are available in the same positions as their respective numbers, so F5 and 5 are under the same key, making it easier to assimilate. F10 to F12 goes bottom up in the pinky column, while F13 to F15 are available in the inner index column and can be mapped to custom actions or macros in the operating system level.
-- The Functions layer can be toggle on using a combo with the right hand, in the [Numpad](functions.md#numpad) layer.
+- The Functions layer can be toggle on using a combo with the right hand, in the [Numpad](symbols.md#numpad) layer.
 - Another combo can be used to toggle the layer off.
 - Source code: [combos.c](../src/qmk/users/rafaelromao/features/combos.c)
 
@@ -33,10 +33,6 @@ The Functions and Media layers are activated holding the left or right pinky key
     - Hold = Refactor This (Shift+Cmd+Alt+T/Shift+Ctrl+Alt+T)
 - Two other extremely helpful shortcuts are Ctrl+Space (Show Autocomplete Options) and F2 (Go To Next Error), but they are easy to type and don't need to be included in the dancing.
 - Source code: [tapdance.c](../src/qmk/users/rafaelromao/features/tapdance.c)
-
-## Numpad
-- A numpad layer can be activated holding the backspace or space keys, in the Functions or Media layers.
-- This numpad can also be activated using a combo in the base layers.
 
 ##
 [Home](../readme.md) | 
