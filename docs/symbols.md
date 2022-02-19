@@ -20,7 +20,7 @@ Symbols and Numbers are available in the two classic Lower and Raise layers, act
 
 ### Numbers in the Lower layer (right side)
 - In the right side of the Lower layer, there is a set of number keys, arranged as a numpad, but using number row keycodes.
-- The Raise layer can be activated on top of the Lower layer, holding the backspace thumb key, which makes it easier to access math operators when working with the numpad.
+- The Raise layer can be activated on top of the Lower layer, holding the backspace thumb key, which makes it easier to access math operators when working with numbers.
 
  ## Numpad
 - A dedicated numpad layer can be activated holding the backspace or space keys, in the Functions or Media layers.
