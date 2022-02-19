@@ -22,6 +22,10 @@ Symbols and Numbers are available in the two classic Lower and Raise layers, act
 - In the right side of the Lower layer, there is a set of number keys, arranged as a numpad, but using number row keycodes.
 - The Raise layer can be activated on top of the Lower layer, holding the backspace thumb key, which makes it easier to access math operators when working with the numpad.
 
+ ## Numpad
+- A dedicated numpad layer can be activated holding the backspace or space keys, in the Functions or Media layers.
+- This numpad can also be activated using a combo in the base layers.
+
 ### Accents in the Raise layer (left side)
 - Accents are available in the left side of the Raise layer, while non-accent versions of these symbols are available in the left side of the Lower layer and in the right side of the Raise layer.
 - For example, activating the Lower layer (holding space) + tapping ' (left middle finger) + releasing space + tapping c, gives me 'c, while activating the Raise layer (holding backspace) + tapping ' (left index finger) + tapping c, gives me ç.
