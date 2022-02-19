@@ -73,11 +73,15 @@ enum {
 
 #define MOU_CAP LT(_MOUSE, SP_CAP)
 #define MOU_0   LT(_MOUSE, KC_0)
+#define MOU_P0  LT(_MOUSE, KC_P0)
 
 #define NAV_MOD LT(_NAVIGATION, SP_MOD)
 
 #define LOW_SPC LT(_LOWER, KC_SPC)
 #define RAI_BSP LT(_RAISE, KC_BSPC)
+
+#define NUM_SPC LT(_NUMPAD, KC_SPC)
+#define NUM_BSP LT(_NUMPAD, KC_BSPC)
 
 #define KCA_FUN LT(_FUNCTIONS, KC_A)
 #define KCF_FUN LT(_FUNCTIONS, KC_F)
@@ -93,27 +97,35 @@ enum {
 
 #define DF_ROM DF(_ROMAK)
 #define DF_QWE DF(_QWERTY)
-#define TO_RAI TO(_RAISE)
-#define TG_RAI TG(_RAISE)
-#define TT_RAI TT(_RAISE)
-#define OS_LOW OSL(_LOWER)
+
+#define TT_NUM TT(_NUMPAD)
+#define TO_NUM TO(_NUMPAD)
+#define TG_NUM TG(_NUMPAD)
+
 #define TO_LOW TO(_LOWER)
 #define TG_LOW TG(_LOWER)
-#define TT_LOW TT(_LOWER)
+
+#define TO_RAI TO(_RAISE)
+#define TG_RAI TG(_RAISE)
+
 #define MO_NAV MO(_NAVIGATION)
 #define TO_NAV TO(_NAVIGATION)
 #define TG_NAV TG(_NAVIGATION)
+
 #define MO_MOU MO(_MOUSE)
 #define TO_MOU TO(_MOUSE)
 #define TG_MOU TG(_MOUSE)
-#define MO_MAI MO(_MAINTENANCE)
-#define TO_MAI TO(_MAINTENANCE)
+
 #define TO_MED TO(_MEDIA)
+#define TT_MED TT(_MEDIA)
 #define TG_MED TG(_MEDIA)
-#define OS_MED OSL(_MEDIA)
+
 #define MO_FUN MO(_FUNCTIONS)
 #define TO_FUN TO(_FUNCTIONS)
 #define TG_FUN TG(_FUNCTIONS)
+
+#define MO_MAI MO(_MAINTENANCE)
+#define TO_MAI TO(_MAINTENANCE)
 
 // Custom Shortcuts
 

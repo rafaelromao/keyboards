@@ -3,6 +3,7 @@
 typedef enum {
   _ROMAK,
   _QWERTY,
+  _NUMPAD,
   _LOWER,
   _RAISE,
   _NAVIGATION,

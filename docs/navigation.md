@@ -31,6 +31,11 @@ In this case, the navigation layer will be activated in its place.
 Repeating the same combo toggle the mouse layer back on.
 - Source code: [mouselayer_toggle.c](../src/qmk/users/rafaelromao/features/mouselayer_toggle.c)
 
+## Leader Key
+- The Leader Key is available in the left side of the Functions layer, but a double tap in the comma will also activate it.
+- The Leader Key is used to give easy access to some useful shortcuts and macros, like typing an internet domain or recurring terminal commands.
+- Source code: [leader.c](../src/qmk/users/rafaelromao/features/leader.c)
+
 ## Select Word
 - Select Word is a macro that selects the current word in the first press and extend the selection to the next word in consecutive presses.
 - If shift is held (or in one-shot mode), this macro will select the line instead, and extend the seletion to the next line in consecutive presses.

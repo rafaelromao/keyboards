@@ -49,6 +49,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXXXXX , XXXXXXX , XXXXXXX , ____QWERTY_L4____ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ____QWERTY_R4____ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_____________________________________________________________________________________________________________________________________________________|
 
+     [_NUMPAD] = LAYOUT_wrapper(
+ // |_____________________________________________________________________________________________________________________________________________________|
+      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      ___________________NUMPAD_L1___________________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ___________________NUMPAD_R1___________________ ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      ___________________NUMPAD_L2___________________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ___________________NUMPAD_R2___________________ ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      ___________________NUMPAD_L3___________________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ___________________NUMPAD_R3___________________ ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      XXXXXXX , XXXXXXX , XXXXXXX , ____NUMPAD_L4____ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ____NUMPAD_R4____ , XXXXXXX , XXXXXXX , XXXXXXX),
+ // |_____________________________________________________________________________________________________________________________________________________|
+
      [_LOWER] = LAYOUT_wrapper(
  // |_____________________________________________________________________________________________________________________________________________________|
       XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
@@ -163,6 +176,9 @@ void set_rgblight_by_layer(uint32_t layer) {
             break;
         case _MAINTENANCE:
             rgblight_setrgb(RGB_RED);
+            break;
+        case _NUMPAD:
+            rgblight_setrgb(RGB_CYAN);
             break;
         default:
             break;
