@@ -16,6 +16,7 @@ process_record_result_t process_custom_shortcuts(uint16_t keycode, keyrecord_t *
 
         case KC_BSPC:
         case RAI_BSP:
+        case NUM_BSP:
             if (record->event.pressed) {
                 if (isShifted && !isOneShotShift) {
                     tap_code(KC_DEL);
@@ -26,8 +27,9 @@ process_record_result_t process_custom_shortcuts(uint16_t keycode, keyrecord_t *
 
         // Ignore space for one-shot shift
 
-        case LOW_SPC:
         case KC_SPC:
+        case LOW_SPC:
+        case NUM_SPC:
             if (record->event.pressed) {
                 if (isOneShotShift) {
                     tap_code(KC_SPC);
