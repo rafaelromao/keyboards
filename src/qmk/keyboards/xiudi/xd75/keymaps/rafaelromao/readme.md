@@ -18,6 +18,6 @@ This keymap extends [my userspace](../../../../../users/rafaelromao/readme.md) d
 
 ## Resources
 
-- [Home](../../../../../../readme.md)
+- [Home](https://github.com/rafaelromao/keyboards)
 - [QMK Docs](https://docs.qmk.fm)
 - [Keyboard Tester](https://config.qmk.fm/#/test)
