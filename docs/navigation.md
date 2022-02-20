@@ -32,7 +32,7 @@ Repeating the same combo toggle the mouse layer back on.
 - Source code: [mouselayer_toggle.c](../src/qmk/users/rafaelromao/features/mouselayer_toggle.c)
 
 ## Leader Key
-- The Leader Key is available in the left side of the Functions layer, but a double tap in the comma will also activate it.
+- The Leader Key is available in the left side of the Navigation and Mouse layer, but a double tap in the comma will also activate it.
 - The Leader Key is used to give easy access to some useful shortcuts and macros, like typing an internet domain or recurring terminal commands.
 - Source code: [leader.c](../src/qmk/users/rafaelromao/features/leader.c)
 
