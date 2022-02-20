@@ -22,6 +22,7 @@ Symbols and Numbers are primarily available in the two classic Lower and Raise l
 
  ## Numpad
 - A dedicated Numpad layer can be activated holding the backspace or space keys, in the [Functions or Media](functions.md) layers.
+- Unlike the numbers in the Lower layer, the numbers in the Numpad layer use numpad keycodes, instead of numrow keycodes.
 - This Numpad layer can also be activated using a combo in the base layers.
 
 ### Accents in the Raise layer (left side)
