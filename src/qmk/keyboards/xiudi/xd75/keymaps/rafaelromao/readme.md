@@ -2,7 +2,7 @@
 ### A 34 keys split keyboard layout, optimized for programmers.
 
 The keyboard in the picture below is a XD75, used to test this layout.
-![img](https://i.imgur.com/Cmk4DBd.jpg)
+![img](https://i.imgur.com/MRmP9zL.jpg)
 
 ### Compile
 
