@@ -92,6 +92,7 @@ enum {
 #define KCC_MED LT(_MEDIA, KC_C)
 #define UND_MED LT(_MEDIA, KC_UNDS)
 #define DOT_MED LT(_MEDIA, KC_DOT)
+#define PDO_MED LT(_MEDIA, KC_PDOT)
 
 // Layer transitions
 

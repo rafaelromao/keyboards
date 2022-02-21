@@ -91,7 +91,7 @@
 #define ____NUMPAD_L4____                                                             _______ , LOW_SPC
 
 #define ___________________NUMPAD_R1___________________ KC_TAB  , KC_P7   , KC_P8   , KC_P9   , KC_ENT
-#define ___________________NUMPAD_R2___________________ KC_COMM , KC_P4   , KC_P5   , KC_P6   , DOT_MED
+#define ___________________NUMPAD_R2___________________ KC_COMM , KC_P4   , KC_P5   , KC_P6   , PDO_MED
 #define ___________________NUMPAD_R3___________________ SS_DEG  , KC_P1   , KC_P2   , KC_P3   , KC_COLN
 #define ____NUMPAD_R4____                               RAI_BSP , MOU_P0
 

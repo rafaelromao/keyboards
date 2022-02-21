@@ -38,6 +38,7 @@ The following pages explain how this layout works and which features are impleme
 - [IDE Dancing](docs/functions.md#ide-dancing)
 - [Custom Shortcuts](src/qmk/users/rafaelromao/features/custom_shortcuts.c)
 - [Custom Tap Hold](src/qmk/users/rafaelromao/features/taphold.c)
+- [Custom Shift](src/qmk/users/rafaelromao/features/custom_shift.c)
 
 ## About this repo
 
