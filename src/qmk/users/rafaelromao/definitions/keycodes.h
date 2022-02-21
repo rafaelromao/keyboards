@@ -37,7 +37,8 @@ enum {
     SS_SQ_C,
     SS_SQ_E,
     SS_SELW,
-    SS_SWIN  
+    SS_SWIN,
+    SS_CAPS 
 };
 
 // Mod-taps

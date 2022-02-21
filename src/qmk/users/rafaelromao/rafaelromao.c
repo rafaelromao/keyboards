@@ -25,7 +25,14 @@ void matrix_scan_user(void) {
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     // Extend capslock timer
-    process_capslock_timer_extension(keycode, record);
+    switch (process_capslock_timer_extension(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
 
     // Process secrets
     switch (process_secrets(keycode, record)) {

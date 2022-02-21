@@ -43,11 +43,18 @@ void check_start_capslock_timer(bool isCapsLocked) {
 
 void check_disable_capslock(void) {
     // Disable capslock if autodisable timer expired
-    bool isCapsLocked = host_keyboard_led_state().caps_lock;
-    disable_capslock_when_timeout(isCapsLocked);
+    disable_capslock_when_timeout(host_keyboard_led_state().caps_lock);
 }
 
 process_record_result_t process_capslock_timer_extension(uint16_t keycode, keyrecord_t *record) {
+    if (keycode == SS_CAPS) {
+        if (record->event.pressed) {
+            clear_capslock_timer();
+            tap_code(KC_CAPS);
+        }
+        return PROCESS_RECORD_RETURN_FALSE;
+    }
+
     // Extend autodisable capslock timer
     bool isCapsLocked = host_keyboard_led_state().caps_lock;
     if (isCapsLocked) {
@@ -73,7 +80,6 @@ process_record_result_t process_capslock_timer_extension(uint16_t keycode, keyre
             case KC_RIGHT:
             case KC_HOME:
             case KC_END:
-            case KC_CAPS:
                 start_capslock_timer();
         }
         // Deactivate capslock

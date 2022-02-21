@@ -140,7 +140,7 @@
 #define ___________________FUNCTIONS_L3________________ XXXXXXX , XXXXXXX , XXXXXXX , KC_LGUI , KC_PAUS
 #define ____FUNCTIONS_L4_                                                             TD_IJLE , NUM_BSP
 
-#define ___________________FUNCTIONS_R1________________ KC_F12  , KC_F7   , KC_F8   , KC_F9   , KC_CAPS
+#define ___________________FUNCTIONS_R1________________ KC_F12  , KC_F7   , KC_F8   , KC_F9   , SS_CAPS
 #define ___________________FUNCTIONS_R2________________ KC_F11  , KC_F4   , KC_F5   , KC_F6   , KC_F15
 #define ___________________FUNCTIONS_R3________________ KC_F10  , KC_F1   , KC_F2   , KC_F3   , KC_F14
 #define ____FUNCTIONS_R4_                               NUM_SPC  , TD_IJRI
