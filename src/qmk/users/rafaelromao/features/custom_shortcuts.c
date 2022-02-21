@@ -8,36 +8,8 @@ process_record_result_t process_custom_shortcuts(uint16_t keycode, keyrecord_t *
 
     bool isWindowsOrLinux = os.type == WINDOWS || os.type == LINUX;
     bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
-    bool isShifted = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
 
     switch (keycode) {
-
-        // Shift+Backspace for Delete (when not one-shot)
-
-        case KC_BSPC:
-        case RAI_BSP:
-        case NUM_BSP:
-            if (record->event.pressed) {
-                if (isShifted && !isOneShotShift) {
-                    tap_code(KC_DEL);
-                    return PROCESS_RECORD_RETURN_FALSE;
-                }
-            }
-            return PROCESS_RECORD_RETURN_TRUE;
-
-        // Ignore space for one-shot shift
-
-        case KC_SPC:
-        case LOW_SPC:
-        case NUM_SPC:
-            if (record->event.pressed) {
-                if (isOneShotShift) {
-                    tap_code(KC_SPC);
-                    add_oneshot_mods(MOD_LSFT);
-                    return PROCESS_RECORD_RETURN_FALSE;
-                }
-            }
-            return PROCESS_RECORD_CONTINUE;
 
         // Zoom shortcuts
 

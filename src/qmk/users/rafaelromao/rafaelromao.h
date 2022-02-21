@@ -19,5 +19,6 @@
 #include "features/accentuation.h"
 #include "features/window_swapper.h"
 #include "features/custom_shortcuts.h"
+#include "features/custom_shift.h"
 
 void matrix_scan_keymap(void);
