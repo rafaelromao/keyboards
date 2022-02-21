@@ -90,7 +90,7 @@
 #define ___________________NUMPAD_L3___________________ XXXXXXX , XXXXXXX , XXXXXXX , KC_LGUI , XXXXXXX
 #define ____NUMPAD_L4____                                                             _______ , LOW_SPC
 
-#define ___________________NUMPAD_R1___________________ XXXXXXX , KC_P7   , KC_P8   , KC_P9   , KC_COLN
+#define ___________________NUMPAD_R1___________________ KC_TAB  , KC_P7   , KC_P8   , KC_P9   , KC_ENT
 #define ___________________NUMPAD_R2___________________ KC_COMM , KC_P4   , KC_P5   , KC_P6   , DOT_MED
 #define ___________________NUMPAD_R3___________________ SS_DEG  , KC_P1   , KC_P2   , KC_P3   , KC_COLN
 #define ____NUMPAD_R4____                               RAI_BSP , MOU_P0
@@ -100,7 +100,7 @@
 #define ___________________LOWER_L3____________________ KC_AT   , TD_SQRB , KC_RBRC , KC_QUES , KC_HASH
 #define ____LOWER_L4_____                                                             _______ , _______
 
-#define ___________________LOWER_R1____________________ XXXXXXX , KC_7    , KC_8    , KC_9    , KC_COLN
+#define ___________________LOWER_R1____________________ KC_TAB  , KC_7    , KC_8    , KC_9    , KC_ENT
 #define ___________________LOWER_R2____________________ KC_COMM , KC_4    , KC_5    , KC_6    , DOT_MED
 #define ___________________LOWER_R3____________________ SS_DEG  , KC_1    , KC_2    , KC_3    , KC_COLN
 #define ____LOWER_R4_____                               _______ , MOU_0
@@ -110,7 +110,7 @@
 #define ___________________RAISE_L3____________________ SS_CR_O , SS_CR_E , SS_TL_O , SS_SQ_E , SS_SQ_O
 #define ____RAISE_L4_____                                                             _______ , _______
 
-#define ___________________RAISE_R1____________________ SS_CIRC , TD_DLR  , TD_CURB , KC_RCBR , KC_COLN
+#define ___________________RAISE_R1____________________ SS_CIRC , TD_DLR  , TD_CURB , KC_RCBR , XXXXXXX
 #define ___________________RAISE_R2____________________ KC_PLUS , KC_MINS , KC_EQL  , KC_EXLM , KC_PERC
 #define ___________________RAISE_R3____________________ KC_ASTR , KC_SLSH , TD_ANGB , KC_GT   , KC_COLN
 #define ____RAISE_R4_____                               _______ , _______
@@ -150,7 +150,7 @@
 #define ___________________MEDIA_L3____________________ XXXXXXX , RGB_SAD , RGB_SAI , XXXXXXX , XXXXXXX
 #define ____MEDIA_L4_____                                                             TD_IJLE , NUM_BSP
 
-#define ___________________MEDIA_R1____________________ XXXXXXX , KC_MPLY , KC_MPRV , KC_MNXT , KC_MSTP
+#define ___________________MEDIA_R1____________________ KC_MSTP , KC_MPLY , KC_MPRV , KC_MNXT , XXXXXXX
 #define ___________________MEDIA_R2____________________ XXXXXXX , KC_MUTE , KC_VOLD , KC_VOLU , _______
 #define ___________________MEDIA_R3____________________ HYPR_V  , HYPR_A  , SS_MODM , SS_MODP , XXXXXXX
 #define ____MEDIA_R4_____                               NUM_SPC  , TD_IJRI
