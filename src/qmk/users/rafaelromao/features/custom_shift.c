@@ -12,33 +12,9 @@ process_record_result_t process_custom_shift(uint16_t keycode, keyrecord_t *reco
     bool isShifted = custom_shifting || isOneShotShift || get_mods() & MOD_MASK_SHIFT;
     uint16_t key = extract_base_tapping_keycode(keycode);
 
+    // Numpad Custom Shifts (make it work even on MacOS)
+
     switch (key) {
-
-        // Ignore space for one-shot shift
-
-        case KC_SPC:
-            if (record->event.pressed) {
-                if (isOneShotShift) {
-                    tap_code(KC_SPC);
-                    add_oneshot_mods(MOD_LSFT);
-                    return PROCESS_RECORD_RETURN_FALSE;
-                }
-            }
-            return PROCESS_RECORD_CONTINUE;
-
-        // Shift+Backspace for Delete (when not one-shot)
-
-        case KC_BSPC:
-            if (record->event.pressed) {
-                if (isShifted && !isOneShotShift) {
-                    tap_code(KC_DEL);
-                    return PROCESS_RECORD_RETURN_FALSE;
-                }
-            }
-            return PROCESS_RECORD_RETURN_TRUE;
-
-        // Numpad Custom Shifts (make it work even on MacOS)
-
         case KC_P1:
         case KC_P2:
         case KC_P3:
@@ -50,6 +26,7 @@ process_record_result_t process_custom_shift(uint16_t keycode, keyrecord_t *reco
         case KC_P0:
         case KC_PDOT:
             if (isShifted) {
+                clear_locked_and_oneshot_mods();
                 if (record->event.pressed) {
                     custom_shifting = true;
                     unregister_mods(MOD_MASK_SHIFT);
@@ -93,14 +70,40 @@ process_record_result_t process_custom_shift(uint16_t keycode, keyrecord_t *reco
             }
             return PROCESS_RECORD_RETURN_TRUE;
 
+        default:
+            // Clear custom shift state
+            if (custom_shifting) {
+                unregister_mods(MOD_MASK_SHIFT);
+                custom_shifting = false;
+            }
     }
 
-    // Clear custom shift state
-    if (custom_shifting) {
-        if (!isOneShotLockedShift) {
-            unregister_mods(MOD_MASK_SHIFT);
-        }
-        custom_shifting = false;
+    switch (key) {
+
+        // Ignore space for one-shot shift
+
+        case KC_SPC:
+            if (record->event.pressed) {
+                if (isOneShotShift) {
+                    tap_code(KC_SPC);
+                    add_oneshot_mods(MOD_LSFT);
+                    return PROCESS_RECORD_RETURN_FALSE;
+                }
+            }
+            return PROCESS_RECORD_CONTINUE;
+
+        // Shift+Backspace for Delete (when not one-shot)
+
+        case KC_BSPC:
+            if (record->event.pressed) {
+                if (isShifted && !isOneShotShift) {
+                    tap_code(KC_DEL);
+                    return PROCESS_RECORD_RETURN_FALSE;
+                }
+            }
+            return PROCESS_RECORD_RETURN_TRUE;
+
     }
+
     return PROCESS_RECORD_CONTINUE;
 }
