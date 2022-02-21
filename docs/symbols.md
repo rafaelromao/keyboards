@@ -23,6 +23,7 @@ Symbols and Numbers are primarily available in the two classic Lower and Raise l
  ## Numpad
 - A dedicated Numpad layer can be activated holding the backspace or space keys, in the [Functions or Media](functions.md) layers.
 - Unlike numbers in the Lower layer, numbers in the Numpad layer use numpad keycodes, instead of numrow keycodes.
+- Numpad navigation, using shift, which usually does not work on MacOS, is implemented using [Custom Shift](../src/qmk/users/rafaelromao/features/custom_shift.c).
 - This Numpad layer can also be activated using a combo in the base layers.
 
 ### Accents in the Raise layer (left side)
