@@ -73,6 +73,7 @@ process_record_result_t process_capslock_timer_extension(uint16_t keycode, keyre
             case KC_RIGHT:
             case KC_HOME:
             case KC_END:
+            case KC_CAPS:
                 start_capslock_timer();
         }
         // Deactivate capslock

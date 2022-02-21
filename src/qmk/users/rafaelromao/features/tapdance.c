@@ -180,6 +180,9 @@ void td_semicolon(qk_tap_dance_state_t *state, void *user_data) {
 
 void td_comma_lead(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
+    bool isShifted = get_mods() & MOD_MASK_SHIFT || 
+            get_oneshot_mods() & MOD_MASK_SHIFT || 
+            get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
             tap_code(KC_COMM);
@@ -189,7 +192,11 @@ void td_comma_lead(qk_tap_dance_state_t *state, void *user_data) {
             tap_code(KC_COMM);
             break;
         case TD_DOUBLE_TAP:
-            qk_leader_start();
+            if (!isShifted) {
+                qk_leader_start();
+            } else {
+                tap_code(KC_COMM);
+            }
             break;
         case TD_SINGLE_HOLD:
             tap_code16(KC_END);

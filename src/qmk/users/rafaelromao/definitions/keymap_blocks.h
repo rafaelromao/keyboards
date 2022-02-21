@@ -135,14 +135,14 @@
 #define ___________________MOUSE_R3____________________ KC_BTN2 , KC_INS  , KC_HOME , KC_END  , KC_DEL
 #define ____MOUSE_R4_____                               KC_BSPC , MO_MAI
 
-#define ___________________FUNCTIONS_L1________________ KC_CAPS , XXXXXXX , XXXXXXX , KC_RALT , KC_SCRL
+#define ___________________FUNCTIONS_L1________________ XXXXXXX , XXXXXXX , XXXXXXX , KC_RALT , KC_SCRL
 #define ___________________FUNCTIONS_L2________________ _______ , KC_LSFT , KC_LCTL , KC_LALT , KC_PSCR
 #define ___________________FUNCTIONS_L3________________ XXXXXXX , XXXXXXX , XXXXXXX , KC_LGUI , KC_PAUS
 #define ____FUNCTIONS_L4_                                                             TD_IJLE , NUM_BSP
 
-#define ___________________FUNCTIONS_R1________________ KC_F15  , KC_F7   , KC_F8   , KC_F9   , KC_F12
-#define ___________________FUNCTIONS_R2________________ KC_F14  , KC_F4   , KC_F5   , KC_F6   , KC_F11
-#define ___________________FUNCTIONS_R3________________ KC_F13  , KC_F1   , KC_F2   , KC_F3   , KC_F10
+#define ___________________FUNCTIONS_R1________________ KC_F12  , KC_F7   , KC_F8   , KC_F9   , KC_CAPS
+#define ___________________FUNCTIONS_R2________________ KC_F11  , KC_F4   , KC_F5   , KC_F6   , KC_F15
+#define ___________________FUNCTIONS_R3________________ KC_F10  , KC_F1   , KC_F2   , KC_F3   , KC_F14
 #define ____FUNCTIONS_R4_                               NUM_SPC  , TD_IJRI
 
 #define ___________________MEDIA_L1____________________ XXXXXXX , RGB_HUD , RGB_HUI , RGB_MOD , XXXXXXX
@@ -150,7 +150,7 @@
 #define ___________________MEDIA_L3____________________ XXXXXXX , RGB_SAD , RGB_SAI , XXXXXXX , XXXXXXX
 #define ____MEDIA_L4_____                                                             TD_IJLE , NUM_BSP
 
-#define ___________________MEDIA_R1____________________ KC_MSTP , KC_MPLY , KC_MPRV , KC_MNXT , XXXXXXX
+#define ___________________MEDIA_R1____________________ XXXXXXX , KC_MPLY , KC_MPRV , KC_MNXT , XXXXXXX
 #define ___________________MEDIA_R2____________________ XXXXXXX , KC_MUTE , KC_VOLD , KC_VOLU , _______
 #define ___________________MEDIA_R3____________________ HYPR_V  , HYPR_A  , SS_MODM , SS_MODP , XXXXXXX
 #define ____MEDIA_R4_____                               NUM_SPC  , TD_IJRI

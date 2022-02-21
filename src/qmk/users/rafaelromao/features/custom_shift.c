@@ -7,7 +7,8 @@ static bool custom_shifting = false;
 
 process_record_result_t process_custom_shift(uint16_t keycode, keyrecord_t *record) {
 
-    bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
+    bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
+    bool isOneShotShift = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
     bool isShifted = custom_shifting || isOneShotShift || get_mods() & MOD_MASK_SHIFT;
     uint16_t key = extract_base_tapping_keycode(keycode);
 
@@ -96,7 +97,9 @@ process_record_result_t process_custom_shift(uint16_t keycode, keyrecord_t *reco
 
     // Clear custom shift state
     if (custom_shifting) {
-        unregister_mods(MOD_MASK_SHIFT);
+        if (!isOneShotLockedShift) {
+            unregister_mods(MOD_MASK_SHIFT);
+        }
         custom_shifting = false;
     }
     return PROCESS_RECORD_CONTINUE;
