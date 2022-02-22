@@ -64,10 +64,8 @@ Some features are not available on all keyboards though. For instance, the BM40 
 ### Initializing KMonad
 
 This are the steps to initialize KMonads:
-- [Installing Karabiner Elements](https://karabiner-elements.pqrs.org/)
-- [Installing KMonad](https://github.com/kmonad/kmonad/blob/master/doc/installation.md#installing-kmonad)
-- [Giving KMonad the right permissions](https://github.com/kmonad/kmonad/blob/master/doc/installation.md#giving-kmonad-additional-permissions)
 - Running the init script: `source init_kmonad.sh`
+- [Giving KMonad the right permissions, if necessary](https://github.com/kmonad/kmonad/blob/master/doc/installation.md#giving-kmonad-additional-permissions)
 
 ### KMonad Compatibility
 
