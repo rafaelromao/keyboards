@@ -71,7 +71,7 @@ This are the steps to initialize KMonads:
 
 ### KMonad Compatibility
 
-The KMonad implemantation supports the follwing keyboards:
+The KMonad implementation supports the following keyboards:
 - [Apple Macbook Pro 13 2019 Keyboard](src/kmonad/keymap/user/rafaelromao/apple.kbd)
 
 ## References
