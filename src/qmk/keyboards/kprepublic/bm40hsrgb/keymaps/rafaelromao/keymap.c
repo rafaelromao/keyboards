@@ -178,7 +178,7 @@ void rgb_matrix_indicators_user(void) {
 
     switch(get_highest_layer(layer_state|default_layer_state)) {
         case _NUMPAD:
-            rgb_matrix_set_color(11, RGB_CYAN);
+            rgb_matrix_set_color(0, RGB_CYAN);
             break;
         case _LOWER:
             rgb_matrix_set_color(40, RGB_WHITE);

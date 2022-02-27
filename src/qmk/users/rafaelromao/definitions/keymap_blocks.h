@@ -85,7 +85,7 @@
 #define ___________________QWERTY_R3___________________ KC_N    , RGUIT_M , TD_COML , TD_DOTD , TD_SCLE
 #define ____QWERTY_R4____                               RAI_BSP , MOU_CAP
 
-#define ___________________NUMPAD_L1___________________ XXXXXXX , XXXXXXX , XXXXXXX , KC_RALT , XXXXXXX
+#define ___________________NUMPAD_L1___________________ KC_NUM  , XXXXXXX , XXXXXXX , KC_RALT , XXXXXXX
 #define ___________________NUMPAD_L2___________________ XXXXXXX , KC_LSFT , KC_LCTL , KC_LALT , XXXXXXX
 #define ___________________NUMPAD_L3___________________ XXXXXXX , XXXXXXX , XXXXXXX , KC_LGUI , XXXXXXX
 #define ____NUMPAD_L4____                                                             _______ , LOW_SPC

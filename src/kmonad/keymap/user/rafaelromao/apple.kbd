@@ -1,0 +1,89 @@
+(defcfg
+  input (iokit-name "Apple Internal Keyboard / Trackpad")
+  output (kext)
+  fallthrough false
+  allow-cmd false
+)
+
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft up
+  fn   lctl lalt lmet           spc            rmet ralt left down rght
+)
+
+(defalias sfs (tap-hold 200 s lsft))
+(defalias sfo (tap-hold 200 o rsft))
+(defalias cte (tap-hold 200 e lctl))
+(defalias cta (tap-hold 200 a rctl))
+(defalias ald (tap-hold 200 d lalt))
+(defalias aln (tap-hold 200 n ralt))
+(defalias met (tap-hold 200 t lmet))
+(defalias mem (tap-hold 200 m rmet))
+(defalias lsp (tap-hold 150 spc (layer-toggle lower)))
+(defalias rbs (tap-hold 150 bspc (layer-toggle raise)))
+(defalias fuf (tap-hold 150 f (layer-toggle functions)))
+(defalias mec (tap-hold 150 c (layer-toggle media)))
+(defalias nvm (tap-hold 150 (sticky-key 500 lmet) (layer-toggle nav)))
+(defalias nvs (tap-hold 150 (sticky-key 500 lsft) (layer-toggle nav)))
+(defalias zd M-min)
+(defalias zu M-+)
+(defalias acu A-e)
+(defalias cir A-i)
+(defalias til A-n)
+(defalias c A-c)
+(defalias C A-S-c)
+(defalias osf (sticky-key 500 lsft))
+(defalias oct (sticky-key 500 lctl))
+(defalias oal (sticky-key 500 lalt))
+(defalias ora (sticky-key 500 ralt))
+(defalias ome (sticky-key 500 lmet))
+
+(deflayer default
+  _    \_   r    q    p    v   _ _   k    l    u    i    ;    _
+  _    @fuf @sfs @cte @ald g   _ _   h    @aln @cta @sfo @mec _
+  _    b    x    y    @met z   _ _   j    @mem ,    .    w
+  _    _    _    _    @lsp     _ _   @rbs _    _    _    _    _
+  _    _    _    _              _         _    _    _    _    _
+)
+
+(deflayer lower
+  _    _    \(   \)   _    ~   _ _   tab  7    8    9    ret  _
+  _    `    "    '    &    |   _ _   ,    4    5    6    .    _ 
+  _    @    [    ]    ?    #   _ _   °    1    2    3    :
+  _    _    _    @nvm spc      _ _   bspc 0    _    _    _    _
+  _    _    _    _              _         _    _    _    _    _
+)
+
+(deflayer raise
+  _    à    â    ã    á    ú   _ _   ^    $    {    }    _    _
+  _    @c   @cir @til @acu í   _ _   +    -    =    !    %    _ 
+  _    ô    ê    õ    é    ó   _ _   *    /    <    >    :
+  _    _    _    @nvm spc      _ _   bspc @nvs _    _    _    _
+  _    _    _    _              _         _    _    _    _    _
+)
+
+(deflayer functions
+  _    _    _    _    ralt _   _ _   F12  F7   F8   F9   _    _
+  _    _    lsft lctl lalt _   _ _   F11  F4   F5   F6   F15  _
+  _    _    _    _    lmet _   _ _   F10  F1   F2   F3   F14
+  _    _    _    @nvm bspc     _ _   @lsp @nvs _    _    _    _
+  _    _    _    _              _         _    _    _    _    _
+)
+
+(deflayer media
+  _    À    Â    Ã    Á    Ú   _ _   _    pp   prev next _    _
+  _    @C   @cir @til @acu Í   _ _   _    _    vold volu _    _
+  _    Ô    Ê    Õ    É    Ó   _ _   _    _    @zd  @zu  _
+  _    _    _    @nvm bspc     _ _   @lsp @nvs _    _    _    _
+  _    _    _    _              _         _    _    _    _    _
+)
+
+(deflayer nav
+  _    esc  _    _    _    _   _ _   _    _    pgdn pgup ent  _
+  _    _    @osf @oct @oal _   _ _   _    lft  down up   rght _
+  _    _    _    _    @ome _   _ _   _    ins  home end  del
+  _    tab  _    @nvm spc      _ _   bspc @nvs _    _    _    _
+  _    _    _    _              _         _    _    _    _    _
+)

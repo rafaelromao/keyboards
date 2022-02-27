@@ -7,6 +7,10 @@ static bool custom_shifting = false;
 
 process_record_result_t process_custom_shift(uint16_t keycode, keyrecord_t *record) {
 
+    bool isWindowsOrLinux = os.type == WINDOWS || os.type == LINUX;
+    if (isWindowsOrLinux) {
+        return PROCESS_RECORD_CONTINUE;
+    }
     bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     bool isOneShotShift = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
     bool isShifted = custom_shifting || isOneShotShift || get_mods() & MOD_MASK_SHIFT;
