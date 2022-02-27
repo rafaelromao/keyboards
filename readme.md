@@ -2,7 +2,7 @@
  
 ## Overview
 
-A 34 keys split keyboard layout, optimized for Portuguese, English and software programming.
+A 34 keys split keyboard layout, optimized for Portuguese, English, working with numbers and software programming with VIM plugins.
 
 ![img](https://i.imgur.com/c7JLX3k.png)
 
