@@ -97,11 +97,11 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
             case SS_NH:
                 SEND_STRING("nh");
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_AO:
-                SEND_STRING("ão");
+            case SS_ING:
+                SEND_STRING("ing");
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_OES:
-                SEND_STRING("ões");
+            case SS_NDO:
+                SEND_STRING("ndo");
                 return PROCESS_RECORD_RETURN_FALSE;
             case SS_CH:
                 SEND_STRING("ch");

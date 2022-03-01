@@ -29,7 +29,7 @@ enum {
     SS_IF,  SS_SH,  SS_ER,  SS_AND, SS_GH,
     SS_OF,  SS_TO,  SS_THE, SS_TH,  SS_AT,
     SS_SI,  SS_LH,  SS_IN,  SS_ON,  SS_TI,
-    SS_HE,  SS_NH,  SS_AO,  SS_OES, SS_CH,
+    SS_HE,  SS_NH,  SS_ING,  SS_NDO, SS_CH,
     SS_SPP, SS_TAR, SS_FAR, SS_DDS, SS_WH
 };
 

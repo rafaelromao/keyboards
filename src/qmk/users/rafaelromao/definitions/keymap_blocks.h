@@ -93,7 +93,7 @@
 #define ____NGRAMS_L4____                                                             _______ , LOW_SPC
 
 #define ___________________NGRAMS_R1___________________ SS_SI   , SS_LH   , SS_IN   , SS_ON   , SS_TI
-#define ___________________NGRAMS_R2___________________ SS_HE   , SS_NH   , SS_AO   , SS_OES  , SS_CH
+#define ___________________NGRAMS_R2___________________ SS_HE   , SS_NH   , SS_ING  , SS_NDO  , SS_CH
 #define ___________________NGRAMS_R3___________________ SS_SPP  , SS_TAR  , SS_FAR  , SS_DDS  , SS_WH
 #define ____NGRAMS_R4____                               RAI_BSP , MOU_P0
 
