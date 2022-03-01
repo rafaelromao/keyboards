@@ -57,6 +57,6 @@ Repeating the same combo toggle the mouse layer back on.
 [Home](../readme.md) | 
 [Base](base.md) |
 [Modifiers](modifiers.md) |
-[Symbols and Numbers](docs/symbols.md)
+[Symbols and Numbers](symbols.md)
 Navigation and Mouse |
-[Functions and Maintenance](docs/functions.md)
+[Functions and Maintenance](functions.md)
