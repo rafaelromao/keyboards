@@ -54,6 +54,11 @@ enum {
 #define LGUIT_T LGUI_T(KC_T)
 #define RGUIT_M RGUI_T(KC_M)
 
+#define KCE_NGR LT(_NGRAMS, KC_E)
+#define KCI_NGR LT(_NGRAMS, KC_I)
+#define KCQ_NGR LT(_NGRAMS, KC_Q)
+#define KCU_NGR LT(_NGRAMS, KC_U)
+
 // One-shot mods
 
 #define OS_LSFT OSM(MOD_LSFT)

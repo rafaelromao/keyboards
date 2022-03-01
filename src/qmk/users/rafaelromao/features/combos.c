@@ -22,10 +22,10 @@ const uint16_t PROGMEM r_fun_tog_combo[] = {NUM_SPC, KC_F5, KC_F6, COMBO_END};
 
 // Romak 0 = Qwerty
 
-const uint16_t PROGMEM l_ro0_esc_combo[] = {LOW_SPC, KC_W, KC_E, COMBO_END};
+const uint16_t PROGMEM l_ro0_esc_combo[] = {LOW_SPC, KC_W, KCE_NGR, COMBO_END};
 const uint16_t PROGMEM l_ro0_sav_combo[] = {LOW_SPC, LSFTT_S, LCTLT_D, COMBO_END};
 const uint16_t PROGMEM l_ro0_und_combo[] = {LOW_SPC, KC_Z, KC_X, COMBO_END};
-const uint16_t PROGMEM r_ro0_tab_combo[] = {RAI_BSP, KC_I, KC_O, COMBO_END};
+const uint16_t PROGMEM r_ro0_tab_combo[] = {RAI_BSP, KCI_NGR, KC_O, COMBO_END};
 const uint16_t PROGMEM r_ro0_ent_combo[] = {RAI_BSP, RCTLT_K, RSFTT_L, COMBO_END};
 
 const uint16_t PROGMEM l_ro0_sal_combo[] = {LOW_SPC, KCA_FUN, LSFTT_S, COMBO_END};
@@ -56,20 +56,20 @@ const uint16_t PROGMEM r_rom_pas_combo[] = {RAI_BSP, RALTT_N, RCTLT_A, COMBO_END
 
 // Romak 3
 
-const uint16_t PROGMEM l_ro3_esc_combo[] = {LOW_SPC, KC_W, KC_Q, COMBO_END};
+const uint16_t PROGMEM l_ro3_esc_combo[] = {LOW_SPC, KC_W, KCQ_NGR, COMBO_END};
 const uint16_t PROGMEM l_rom_sal_combo[] = {LOW_SPC, KCF_FUN, LSFTT_S, COMBO_END};
 const uint16_t PROGMEM l_rom_sav_combo[] = {LOW_SPC, LSFTT_S, LCTLT_E, COMBO_END};
 const uint16_t PROGMEM l_rom_pas_combo[] = {LOW_SPC, LCTLT_E, LALTT_D, COMBO_END};
 
 // Romak 4
 
-const uint16_t PROGMEM r_rom_tab_combo[] = {RAI_BSP, KC_U, KC_I, COMBO_END};
+const uint16_t PROGMEM r_rom_tab_combo[] = {RAI_BSP, KCU_NGR, KC_I, COMBO_END};
 const uint16_t PROGMEM r_rom_ent_combo[] = {RAI_BSP, RCTLT_A, RSFTT_O, COMBO_END};
 const uint16_t PROGMEM r_rom_sal_combo[] = {RAI_BSP, RSFTT_O, KCC_MAI, COMBO_END};
 
 // Romak 5
 
-const uint16_t PROGMEM l_rom_esc_combo[] = {LOW_SPC, KC_R, KC_Q, COMBO_END};
+const uint16_t PROGMEM l_rom_esc_combo[] = {LOW_SPC, KC_R, KCQ_NGR, COMBO_END};
 const uint16_t PROGMEM r_rom_und_combo[] = {LOW_SPC, TD_DOTD, KC_W, COMBO_END};
 
 // Romak 6 = Romak
