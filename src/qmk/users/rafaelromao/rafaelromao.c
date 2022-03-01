@@ -144,16 +144,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
     };
 
-    // Process persistent layers
-    switch (process_persistent_layers(keycode, record)) {
-        case PROCESS_RECORD_RETURN_TRUE:
-            return true;
-        case PROCESS_RECORD_RETURN_FALSE:
-            return false;
-        default:
-            break;
-    };
-
     // Process mouse layer
     switch (process_mouselayer(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:

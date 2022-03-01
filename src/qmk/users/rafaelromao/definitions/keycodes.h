@@ -97,9 +97,6 @@ enum {
 
 // Layer transitions
 
-#define DF_ROM DF(_ROMAK)
-#define DF_QWE DF(_QWERTY)
-
 #define TT_NUM TT(_NUMPAD)
 #define TG_NUM TG(_NUMPAD)
 

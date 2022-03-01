@@ -20,7 +20,6 @@ The following pages explain how this layout works and which features are impleme
 
 ### Features
 
-- [Persistent Base Layers](docs/base.md#persistent-base-layers)
 - [Home Block Mods](docs/modifiers.md#home-block-modifiers)
 - [One Shot Mods](docs/modifiers.md#one-shot-modifiers)
 - [Combos](docs/base.md#base-layer-combos)

@@ -5,11 +5,7 @@
 - This layout works well with the OS configured for the US International keyboard.
 - This layout was designed mostly for coding and typing in English and Portuguese (but will probably work well for other latin languages).
 - This layout considers the right hand as the dominant hand.
-- The base layer can be changed to qwerty, but the default one is [Romak](romak.md).
-
-## Persistent Base Layers
-- It is possible to change the base layer in the maintenance layer and this change is persistent.
-- Source Code: [persistent_layers.c](../src/qmk/users/rafaelromao/features/persistent_layers.c)
+- The base layer is [Romak](romak.md), a new keyboard layout, inspired by [Colemak](https://colemak.org) and [BEAKL](https://ieants.cc/beakl).
 
 ## Thumb Keys
 - The four thumb keys control layer transitions, when held (navigation, lower, raise and mouse).

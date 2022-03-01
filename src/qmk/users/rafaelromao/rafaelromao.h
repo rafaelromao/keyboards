@@ -4,7 +4,6 @@
 #include "definitions/keycodes.h"
 #include "definitions/keymap_blocks.h"
 #include "features/taphold.h"
-#include "features/persistent_layers.h"
 #include "features/tapdance.h"
 #include "features/capslock_timer.h"
 #include "features/mouselayer_toggle.h"
