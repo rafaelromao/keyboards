@@ -11,7 +11,7 @@ The Functions and Media layers are activated holding the left or right pinky key
 - Source code: [combos.c](../src/qmk/users/rafaelromao/features/combos.c)
 
 ## Media
-- In the left side of the Media layer, you can find the RGB control keys, while the media keys are placed in the right side.
+- In the Media layer, media keys are mirrored in the both sides, as well as zoom keys.
 
 ## Zoom
 - In the right side of the Media layer, there are keys to control Zoom, which can be either Cmd+ and Cmd- or Ctrl+ and Ctrl-, according to the operating system that is selected in the [Maintenance](maintenance.md) layer.

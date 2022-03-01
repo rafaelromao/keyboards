@@ -143,24 +143,24 @@
 #define ___________________FUNCTIONS_R1________________ KC_F12  , KC_F7   , KC_F8   , KC_F9   , SS_CAPS
 #define ___________________FUNCTIONS_R2________________ KC_F11  , KC_F4   , KC_F5   , KC_F6   , KC_F15
 #define ___________________FUNCTIONS_R3________________ KC_F10  , KC_F1   , KC_F2   , KC_F3   , KC_F14
-#define ____FUNCTIONS_R4_                               NUM_SPC  , TD_IJRI
+#define ____FUNCTIONS_R4_                               NUM_SPC , TD_IJRI
 
-#define ___________________MEDIA_L1____________________ XXXXXXX , RGB_HUD , RGB_HUI , RGB_MOD , XXXXXXX
-#define ___________________MEDIA_L2____________________ XXXXXXX , RGB_VAD , RGB_VAI , RGB_TOG , XXXXXXX 
-#define ___________________MEDIA_L3____________________ XXXXXXX , RGB_SAD , RGB_SAI , XXXXXXX , XXXXXXX
+#define ___________________MEDIA_L1____________________ XXXXXXX , KC_MPRV , KC_MNXT , KC_MPLY , XXXXXXX
+#define ___________________MEDIA_L2____________________ XXXXXXX , KC_VOLD , KC_VOLU , KC_MUTE , XXXXXXX 
+#define ___________________MEDIA_L3____________________ XXXXXXX , SS_MODM , SS_MODP , HYPR_A  , HYPR_V 
 #define ____MEDIA_L4_____                                                             TD_IJLE , NUM_BSP
 
 #define ___________________MEDIA_R1____________________ XXXXXXX , KC_MPLY , KC_MPRV , KC_MNXT , XXXXXXX
 #define ___________________MEDIA_R2____________________ XXXXXXX , KC_MUTE , KC_VOLD , KC_VOLU , _______
 #define ___________________MEDIA_R3____________________ HYPR_V  , HYPR_A  , SS_MODM , SS_MODP , XXXXXXX
-#define ____MEDIA_R4_____                               NUM_SPC  , TD_IJRI
+#define ____MEDIA_R4_____                               NUM_SPC , TD_IJRI
 
-#define ___________________MAINTENANCE_L1______________ XXXXXXX , XXXXXXX , KC_PWR  , XXXXXXX , EEP_RST
-#define ___________________MAINTENANCE_L2______________ XXXXXXX , XXXXXXX , DF_ROM  , DF_QWE  , TO_NUM
-#define ___________________MAINTENANCE_L3______________ TO_FUN  , XXXXXXX , XXXXXXX , TO_NAV  , TO_LOW
+#define ___________________MAINTENANCE_L1______________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX 
+#define ___________________MAINTENANCE_L2______________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
+#define ___________________MAINTENANCE_L3______________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
 #define __MAINTENANCE_L4_                                                             _______ , XXXXXXX
 
-#define ___________________MAINTENANCE_R1______________ RESET   , XXXXXXX , KC_SLEP , XXXXXXX , XXXXXXX
-#define ___________________MAINTENANCE_R2______________ XXXXXXX , TG_MAC  , TG_WIN  , TG_LIN  , XXXXXXX
-#define ___________________MAINTENANCE_R3______________ TO_RAI  , TO_MOU  , MOU_ON  , MOU_OFF , TO_MED
+#define ___________________MAINTENANCE_R1______________ RESET   , XXXXXXX , KC_SLEP , XXXXXXX , KC_PWR
+#define ___________________MAINTENANCE_R2______________ EEP_RST , TG_MAC  , TG_WIN  , TG_LIN  , RGB_TOG
+#define ___________________MAINTENANCE_R3______________ TO_ROM  , XXXXXXX , MOU_ON  , MOU_OFF , XXXXXXX
 #define __MAINTENANCE_R4_                               XXXXXXX , _______

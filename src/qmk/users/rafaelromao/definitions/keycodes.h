@@ -38,7 +38,7 @@ enum {
     SS_SQ_E,
     SS_SELW,
     SS_SWIN,
-    SS_CAPS 
+    SS_CAPS
 };
 
 // Mod-taps
@@ -101,33 +101,26 @@ enum {
 #define DF_QWE DF(_QWERTY)
 
 #define TT_NUM TT(_NUMPAD)
-#define TO_NUM TO(_NUMPAD)
 #define TG_NUM TG(_NUMPAD)
 
-#define TO_LOW TO(_LOWER)
 #define TG_LOW TG(_LOWER)
 
-#define TO_RAI TO(_RAISE)
 #define TG_RAI TG(_RAISE)
 
 #define MO_NAV MO(_NAVIGATION)
-#define TO_NAV TO(_NAVIGATION)
 #define TG_NAV TG(_NAVIGATION)
 
 #define MO_MOU MO(_MOUSE)
-#define TO_MOU TO(_MOUSE)
 #define TG_MOU TG(_MOUSE)
 
-#define TO_MED TO(_MEDIA)
 #define TT_MED TT(_MEDIA)
 #define TG_MED TG(_MEDIA)
 
 #define MO_FUN MO(_FUNCTIONS)
-#define TO_FUN TO(_FUNCTIONS)
 #define TG_FUN TG(_FUNCTIONS)
 
 #define MO_MAI MO(_MAINTENANCE)
-#define TO_MAI TO(_MAINTENANCE)
+#define TO_ROM TO(_ROMAK)
 
 // Custom Shortcuts
 
