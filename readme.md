@@ -14,8 +14,8 @@ The following pages explain how this layout works and which features are impleme
 
 - [Base](docs/base.md) and [Modifiers](docs/modifiers.md)
 - [Symbols and Numbers](docs/symbols.md)
-- [Functions and Maintenance](docs/functions.md)
 - [Navigation and Mouse](docs/navigation.md)
+- [Functions and Maintenance](docs/functions.md)
 
 ### Features
 
