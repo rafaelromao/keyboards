@@ -35,4 +35,4 @@ Base |
 [Modifiers](modifiers.md) |
 [Symbols and Numbers](symbols.md) |
 [Navigation and Mouse](navigation.md) |
-[Functions and Maintenance](docs/functions.md)
+[Functions and Maintenance](functions.md)
