@@ -22,6 +22,7 @@ The following pages explain how this layout works and which features are impleme
 - [Home Block Mods](docs/modifiers.md#home-block-modifiers)
 - [One Shot Mods](docs/modifiers.md#one-shot-modifiers)
 - [Combos](docs/base.md#base-layer-combos)
+- [N-Grams](docs/base.md#n-grams)
 - [Macros](docs/symbols.md#symbols-in-the-lower-layer-left-side)
 - [Dynamic Macros](docs/navigation.md#dynamic-macros)
 - [Double Dot for New Sentence](docs/base.md#double-dot-for-new-sentences)

@@ -26,6 +26,9 @@
 - One-shot shift can be used to invert the [default modifier](modifiers.md) used in the combos.
 - If shift, or any other modifier, is held, it will be included in the combo. So hold Shift and tap Z+X+Space will send Redo instead of Undo.
 
+## N-Grams
+- The n-grams layer, activating holding any of the middle fingers in the top row, will give fast access to some of the most common n-grams in English, Portuguese and software programming.
+
 ##
 [Home](../readme.md) | 
 Base |
