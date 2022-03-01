@@ -75,15 +75,17 @@
 // #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , TD_COML , TD_DOTD , TD_SCLE
 // #define ____ROMAK_R4_____                               RAI_BSP , MOU_CAP
 
-#define ___________________QWERTY_L1___________________ KC_Q    , KC_W    , KC_E    , KC_R    , KC_T
-#define ___________________QWERTY_L2___________________ KCA_FUN , LSFTT_S , LCTLT_D , LALTT_F , KC_G
-#define ___________________QWERTY_L3___________________ KC_Z    , KC_X    , KC_C    , LGUIT_V , KC_B
-#define ____QWERTY_L4____                                                             NAV_MOD , LOW_SPC
+// Romak 0 = QWERTY
 
-#define ___________________QWERTY_R1___________________ KC_Y    , KC_U    , KC_I    , KC_O    , KC_P
-#define ___________________QWERTY_R2___________________ KC_H    , RALTT_J , RCTLT_K , RSFTT_L , UND_MED
-#define ___________________QWERTY_R3___________________ KC_N    , RGUIT_M , TD_COML , TD_DOTD , TD_SCLE
-#define ____QWERTY_R4____                               RAI_BSP , MOU_CAP
+// #define ___________________ROMAK_L1___________________ KC_Q    , KC_W    , KC_E    , KC_R    , KC_T
+// #define ___________________ROMAK_L2___________________ KCA_FUN , LSFTT_S , LCTLT_D , LALTT_F , KC_G
+// #define ___________________ROMAK_L3___________________ KC_Z    , KC_X    , KC_C    , LGUIT_V , KC_B
+// #define ____ROMAK_L4____                                                             NAV_MOD , LOW_SPC
+
+// #define ___________________ROMAK_R1___________________ KC_Y    , KC_U    , KC_I    , KC_O    , KC_P
+// #define ___________________ROMAK_R2___________________ KC_H    , RALTT_J , RCTLT_K , RSFTT_L , UND_MED
+// #define ___________________ROMAK_R3___________________ KC_N    , RGUIT_M , TD_COML , TD_DOTD , TD_SCLE
+// #define ____ROMAK_R4____                               RAI_BSP , MOU_CAP
 
 #define ___________________NUMPAD_L1___________________ KC_NUM  , XXXXXXX , XXXXXXX , KC_RALT , XXXXXXX
 #define ___________________NUMPAD_L2___________________ XXXXXXX , KC_LSFT , KC_LCTL , KC_LALT , XXXXXXX

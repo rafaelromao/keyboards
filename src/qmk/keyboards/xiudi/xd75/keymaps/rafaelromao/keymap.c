@@ -36,19 +36,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXXXXX , XXXXXXX , XXXXXXX , ____ROMAK_L4_____ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ____ROMAK_R4_____ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_____________________________________________________________________________________________________________________________________________________|
 
-     [_QWERTY] = LAYOUT_wrapper(
- // |_____________________________________________________________________________________________________________________________________________________|
-      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      ___________________QWERTY_L1___________________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ___________________QWERTY_R1___________________ ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      ___________________QWERTY_L2___________________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ___________________QWERTY_R2___________________ ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      ___________________QWERTY_L3___________________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ___________________QWERTY_R3___________________ ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , ____QWERTY_L4____ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ____QWERTY_R4____ , XXXXXXX , XXXXXXX , XXXXXXX),
- // |_____________________________________________________________________________________________________________________________________________________|
-
      [_NUMPAD] = LAYOUT_wrapper(
  // |_____________________________________________________________________________________________________________________________________________________|
       XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
@@ -163,7 +150,6 @@ extern dyn_macro_t dyn_macro;
 void set_rgblight_by_layer(uint32_t layer) {
     switch (layer) {
         case _ROMAK:
-        case _QWERTY:
             rgblight_setrgb(RGB_BLUE);
             break;
         case _LOWER:
