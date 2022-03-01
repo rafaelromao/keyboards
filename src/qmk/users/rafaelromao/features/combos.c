@@ -5,30 +5,16 @@
 // Nav
 
 const uint16_t PROGMEM l_nav_sel_combo[] = {KC_PGDN, KC_PGUP, COMBO_END};
-const uint16_t PROGMEM r_nav_tog_combo[] = {RAI_BSP, KC_DOWN, KC_UP, COMBO_END};
 
 // Mouse
 
 const uint16_t PROGMEM l_mou_sel_combo[] = {KC_WH_D, KC_WH_U, COMBO_END};
 const uint16_t PROGMEM r_mou_nav_combo[] = {KC_HOME, KC_END, COMBO_END};
-const uint16_t PROGMEM r_mou_tog_combo[] = {RAI_BSP, KC_MS_D, KC_MS_U, COMBO_END};
 
 // Numpad
 
 const uint16_t PROGMEM r_num_tog_combo[] = {RAI_BSP, KC_P5, KC_P6, COMBO_END};
 const uint16_t PROGMEM r_num_fun_combo[] = {RAI_BSP, KC_P2, KC_P3, COMBO_END};
-
-// Lower
-
-const uint16_t PROGMEM r_low_tog_combo[] = {RAI_BSP, KC_5, KC_6, COMBO_END};
-
-// Raise
-
-const uint16_t PROGMEM l_rai_tog_combo[] = {RAI_BSP, KC_EQL, KC_EXLM, COMBO_END};
-
-// Media
-
-const uint16_t PROGMEM r_mai_tog_combo[] = {NUM_SPC, KC_VOLD, KC_VOLU, COMBO_END};
 
 // Fun
 
@@ -108,22 +94,14 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(secret_3_combo, SS_SECRET_3),
 
   COMBO(l_nav_sel_combo, SS_SELW),
-  COMBO(r_nav_tog_combo, TG_NAV),
 
   COMBO(l_mou_sel_combo, SS_SELW),
   COMBO(r_mou_nav_combo, MOU_TG),
-  COMBO(r_mou_tog_combo, TG_MOU),
 
   COMBO(r_num_tog_combo, TG_NUM),
   COMBO(r_num_fun_combo, TG_FUN),
 
-  COMBO(r_low_tog_combo, TG_LOW),
-
-  COMBO(l_rai_tog_combo, TG_RAI),
-
   COMBO(r_fun_tog_combo, TG_FUN),
-
-  COMBO(r_mai_tog_combo, TG_MAI),
 
   COMBO(l_ro0_esc_combo, KC_ESC),
   COMBO(l_ro0_sav_combo, CB_SAVE),

@@ -90,26 +90,14 @@ enum {
 
 // Layer transitions
 
+#define TO_ROM TO(_ROMAK)
 #define TT_NUM TT(_NUMPAD)
 #define TG_NUM TG(_NUMPAD)
-
-#define TG_LOW TG(_LOWER)
-
-#define TG_RAI TG(_RAISE)
-
-#define MO_NAV MO(_NAVIGATION)
-#define TG_NAV TG(_NAVIGATION)
-
-#define MO_MOU MO(_MOUSE)
-#define TG_MOU TG(_MOUSE)
-
-#define MO_MAI MO(_MAINTENANCE)
-#define TG_MAI TG(_MAINTENANCE)
-
-#define MO_FUN MO(_FUNCTIONS)
 #define TG_FUN TG(_FUNCTIONS)
-
-#define TO_ROM TO(_ROMAK)
+#define MO_NAV MO(_NAVIGATION)
+#define MO_MOU MO(_MOUSE)
+#define MO_MAI MO(_MAINTENANCE)
+#define MO_FUN MO(_FUNCTIONS)
 
 // Custom Shortcuts
 
