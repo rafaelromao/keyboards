@@ -81,12 +81,12 @@ enum {
 #define KCW_FUN LT(_FUNCTIONS, KC_W)
 #define UND_FUN LT(_FUNCTIONS, KC_UNDS)
 
-#define KCO_MED LT(_MEDIA, KC_O)
-#define KCC_MED LT(_MEDIA, KC_C)
-#define UND_MED LT(_MEDIA, KC_UNDS)
-#define DOT_MED LT(_MEDIA, KC_DOT)
-#define PDO_MED LT(_MEDIA, KC_PDOT)
-#define F15_MED LT(_MEDIA, KC_F15)
+#define KCO_MAI LT(_MAINTENANCE, KC_O)
+#define KCC_MAI LT(_MAINTENANCE, KC_C)
+#define UND_MAI LT(_MAINTENANCE, KC_UNDS)
+#define DOT_MAI LT(_MAINTENANCE, KC_DOT)
+#define PDO_MAI LT(_MAINTENANCE, KC_PDOT)
+#define F15_MAI LT(_MAINTENANCE, KC_F15)
 
 // Layer transitions
 
@@ -103,13 +103,12 @@ enum {
 #define MO_MOU MO(_MOUSE)
 #define TG_MOU TG(_MOUSE)
 
-#define TT_MED TT(_MEDIA)
-#define TG_MED TG(_MEDIA)
+#define MO_MAI MO(_MAINTENANCE)
+#define TG_MAI TG(_MAINTENANCE)
 
 #define MO_FUN MO(_FUNCTIONS)
 #define TG_FUN TG(_FUNCTIONS)
 
-#define MO_MAI MO(_MAINTENANCE)
 #define TO_ROM TO(_ROMAK)
 
 // Custom Shortcuts

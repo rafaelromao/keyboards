@@ -28,7 +28,7 @@ const uint16_t PROGMEM l_rai_tog_combo[] = {RAI_BSP, KC_EQL, KC_EXLM, COMBO_END}
 
 // Media
 
-const uint16_t PROGMEM r_med_tog_combo[] = {NUM_SPC, KC_VOLD, KC_VOLU, COMBO_END};
+const uint16_t PROGMEM r_mai_tog_combo[] = {NUM_SPC, KC_VOLD, KC_VOLU, COMBO_END};
 
 // Fun
 
@@ -46,19 +46,19 @@ const uint16_t PROGMEM l_ro0_sal_combo[] = {LOW_SPC, KCA_FUN, LSFTT_S, COMBO_END
 const uint16_t PROGMEM l_ro0_pas_combo[] = {LOW_SPC, LCTLT_D, LALTT_F, COMBO_END};
 const uint16_t PROGMEM l_ro0_cop_combo[] = {LOW_SPC, KC_C, LGUIT_V, COMBO_END};
 
-const uint16_t PROGMEM r_ro0_sal_combo[] = {RAI_BSP, RSFTT_L, UND_MED, COMBO_END};
+const uint16_t PROGMEM r_ro0_sal_combo[] = {RAI_BSP, RSFTT_L, UND_MAI, COMBO_END};
 const uint16_t PROGMEM r_ro0_pas_combo[] = {RAI_BSP, RALTT_J, RCTLT_K, COMBO_END};
 const uint16_t PROGMEM r_ro0_cop_combo[] = {RAI_BSP, RGUIT_M, TD_COML, COMBO_END};
 const uint16_t PROGMEM r_ro0_und_combo[] = {RAI_BSP, TD_DOTD, KC_UNDS, COMBO_END};
 
-const uint16_t PROGMEM l_ro0_med_combo[] = {LOW_SPC, KC_X, KC_C, COMBO_END};
+const uint16_t PROGMEM l_ro0_mai_combo[] = {LOW_SPC, KC_X, KC_C, COMBO_END};
 const uint16_t PROGMEM r_ro0_num_combo[] = {RAI_BSP, TD_COML, TD_DOTD, COMBO_END};
 
 // Romak 1
 
 const uint16_t PROGMEM l_ro1_cop_combo[] = {LOW_SPC, KC_Y, LGUIT_V, COMBO_END};
-const uint16_t PROGMEM l_rom_med_combo[] = {LOW_SPC, KC_X, KC_Y, COMBO_END};
-const uint16_t PROGMEM r_ro1_sal_combo[] = {RAI_BSP, RSFTT_L, KCC_MED, COMBO_END};
+const uint16_t PROGMEM l_rom_mai_combo[] = {LOW_SPC, KC_X, KC_Y, COMBO_END};
+const uint16_t PROGMEM r_ro1_sal_combo[] = {RAI_BSP, RSFTT_L, KCC_MAI, COMBO_END};
 const uint16_t PROGMEM r_ro1_pas_combo[] = {RAI_BSP, RALTT_N, RCTLT_K, COMBO_END};
 
 // Romak 2
@@ -79,7 +79,7 @@ const uint16_t PROGMEM l_rom_pas_combo[] = {LOW_SPC, LCTLT_E, LALTT_D, COMBO_END
 
 const uint16_t PROGMEM r_rom_tab_combo[] = {RAI_BSP, KC_U, KC_I, COMBO_END};
 const uint16_t PROGMEM r_rom_ent_combo[] = {RAI_BSP, RCTLT_A, RSFTT_O, COMBO_END};
-const uint16_t PROGMEM r_rom_sal_combo[] = {RAI_BSP, RSFTT_O, KCC_MED, COMBO_END};
+const uint16_t PROGMEM r_rom_sal_combo[] = {RAI_BSP, RSFTT_O, KCC_MAI, COMBO_END};
 
 // Romak 5
 
@@ -123,7 +123,7 @@ combo_t key_combos[COMBO_COUNT] = {
 
   COMBO(r_fun_tog_combo, TG_FUN),
 
-  COMBO(r_med_tog_combo, TG_MED),
+  COMBO(r_mai_tog_combo, TG_MAI),
 
   COMBO(l_ro0_esc_combo, KC_ESC),
   COMBO(l_ro0_sav_combo, CB_SAVE),
@@ -140,11 +140,11 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(r_ro0_cop_combo, CB_COPY),
   COMBO(r_ro0_und_combo, CB_UNDO),
 
-  COMBO(l_ro0_med_combo, TT_MED),
+  COMBO(l_ro0_mai_combo, MO_MAI),
   COMBO(r_ro0_num_combo, TT_NUM),
 
   COMBO(l_ro1_cop_combo, CB_COPY),
-  COMBO(l_rom_med_combo, TT_MED),
+  COMBO(l_rom_mai_combo, MO_MAI),
   COMBO(r_ro1_sal_combo, CB_SELC),
   COMBO(r_ro1_pas_combo, CB_PAST),
 

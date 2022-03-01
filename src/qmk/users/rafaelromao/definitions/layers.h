@@ -9,6 +9,5 @@ typedef enum {
   _NAVIGATION,
   _MOUSE,
   _FUNCTIONS,
-  _MEDIA,
   _MAINTENANCE
 } layers_t;

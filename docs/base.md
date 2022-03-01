@@ -31,6 +31,5 @@
 Base |
 [Modifiers](modifiers.md) |
 [Symbols and Numbers](symbols.md) |
-[Functions and Media](functions.md) | 
 [Navigation and Mouse](navigation.md) |
-[Maintenance](maintenance.md) |
+[Functions and Maintenance](docs/functions.md)

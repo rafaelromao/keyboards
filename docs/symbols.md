@@ -41,6 +41,5 @@ Symbols and Numbers are primarily available in the two classic Lower and Raise l
 [Base](base.md) |
 [Modifiers](modifiers.md) |
 Symbols and Numbers |
-[Functions and Media](functions.md) | 
 [Navigation and Mouse](navigation.md) |
-[Maintenance](maintenance.md) |
+[Functions and Maintenance](docs/functions.md)

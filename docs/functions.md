@@ -1,7 +1,7 @@
 # rafaelromao's keyboard layout
 
-## Functions and Media
-The Functions and Media layers are activated holding the left or right pinky keys in the home row, respectively.
+## Functions and Maintenance
+- The Functions and Maintenance layers are activated holding the left or right pinky keys in the home row, respectively.
 
 ## Functions
 - On the left side of the Functions layer, there are standard modifier keys, also forming a home block, along with Caps Lock and a Menu key.
@@ -10,17 +10,29 @@ The Functions and Media layers are activated holding the left or right pinky key
 - Another combo can be used to toggle the layer off.
 - Source code: [combos.c](../src/qmk/users/rafaelromao/features/combos.c)
 
-## Media
-- In the Media layer, media keys are mirrored in the both sides, as well as zoom keys.
+## Maintenance
+The left side of the Maintenance layer, we have options like:
+- Put the keyboard in bootloader mode (reset). 
+- Clear the eeprom.
+- Toggle RGB.
+- Deactivate all layers and return to the base. 
+- Put the host computer in sleep mode, or power it off.
+- Change the operating system used in keys that are OS aware, like the [Default Mod key](modifiers.md).
+- Source code: [os_toggle.c](../src/qmk/users/rafaelromao/features/os_toggle.c)
+- Disable or enable the [Mouse layer](navigation.md). 
+- A combo with the four extreme corner keys puts the keyboard in bootloader mode. This combo is a base layer alternative for the Reset key, in the Maintenance layer, in case some unintended layer lock prevents access to it.
 
-## Zoom
-- In the right side of the Media layer, there are keys to control Zoom, which can be either Cmd+ and Cmd- or Ctrl+ and Ctrl-, according to the operating system that is selected in the [Maintenance](maintenance.md) layer.
+### Media Controls
+- In the right side of Maintenance layer we can find media keys and zoom keys.
+
+### Zoom Controls
+- In the right side of the Maintenance layer, there are keys to control Zoom, which can be either Cmd+ and Cmd- or Ctrl+ and Ctrl-, according to the operating system that is selected.
 
 ## Space and Backspace
-- The space and backspace thumb keys are inverted in the Functions and Media layers, which allow single hand access to both of them.
+- The space and backspace thumb keys are inverted in the Functions and Maintenance layers, which allow single hand access to both of them.
 
 ## IDE Dancing
-- Also in the Functions and Media layers, which means, when holding any of the home row pinky keys, the outer thumb keys can be used to tap dance through some of the most common IDE shortcuts, using keybindings from IntelliJ IDEA.
+- Also in the Functions and Maintenance layers, which means, when holding any of the home row pinky keys, the outer thumb keys can be used to tap dance through some of the most common IDE shortcuts, using keybindings from IntelliJ IDEA.
 - Left Side:
     - Tap = Build (Cmd+F9/Ctrl+F9)
     - Double Tap = Run Everything (Ctrl+Ctrl)
@@ -39,6 +51,5 @@ The Functions and Media layers are activated holding the left or right pinky key
 [Base](base.md) |
 [Modifiers](modifiers.md) |
 [Symbols and Numbers](symbols.md) |
-Functions and Media |
 [Navigation and Mouse](navigation.md) |
-[Maintenance](maintenance.md) |
+Functions and Maintenance

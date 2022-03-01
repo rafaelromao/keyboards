@@ -112,17 +112,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXXXXX , XXXXXXX , XXXXXXX , ____FUNCTIONS_L4_ ,      XXXXXXX      , ____FUNCTIONS_R4_ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
-     [_MEDIA] = LAYOUT_wrapper(
- // |_______________________________________________________________________________________________________________________|
-      ___________________MEDIA_L1____________________ , XXXXXXX , XXXXXXX , ___________________MEDIA_R1____________________ ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      ___________________MEDIA_L2____________________ , XXXXXXX , XXXXXXX , ___________________MEDIA_R2____________________ ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      ___________________MEDIA_L3____________________ , XXXXXXX , XXXXXXX , ___________________MEDIA_R3____________________ ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , ____MEDIA_L4_____ ,      XXXXXXX      , ____MEDIA_R4_____ , XXXXXXX , XXXXXXX , XXXXXXX),
- // |_______________________________________________________________________________________________________________________|
-
      [_MAINTENANCE] = LAYOUT_wrapper(
  // |_______________________________________________________________________________________________________________________|
       ___________________MAINTENANCE_L1______________ , XXXXXXX , XXXXXXX , ___________________MAINTENANCE_R1______________ ,
@@ -195,16 +184,11 @@ void rgb_matrix_indicators_user(void) {
         case _MOUSE:
             rgb_matrix_set_color(43, RGB_WHITE);
             break;
-        case _MEDIA:
-            rgb_matrix_set_color(23, RGB_WHITE);
-            break;
         case _MAINTENANCE:
-            rgb_matrix_set_color(39, RGB_WHITE);
-            rgb_matrix_set_color(43, RGB_WHITE);
-            rgb_matrix_set_color(4, RGB_WHITE);
+            rgb_matrix_set_color(23, RGB_WHITE);
+            rgb_matrix_set_color(0, RGB_WHITE);
             rgb_matrix_set_color(2, RGB_WHITE);
-            rgb_matrix_set_color(9, RGB_WHITE);
-            rgb_matrix_set_color(7, RGB_RED);
+            rgb_matrix_set_color(4, RGB_RED);
             break;
         default:
             break;

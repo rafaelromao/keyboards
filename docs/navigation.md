@@ -26,7 +26,7 @@ The Navigation and Mouse layer can be activated holding the outer left and right
 - The first and second mouse buttons are mirrored in both sides of the mouse layer, in the inner columns.
 
 ### Mouse Layer Toggle
-- The mouse layer can be disabled, using the [Maintenance](maintenance.md) layer or a combo with the keys Home and End.
+- The mouse layer can be disabled, using the [Maintenance](functions.md#Maintenance) layer or a combo with the keys Home and End.
 In this case, the navigation layer will be activated in its place.
 Repeating the same combo toggle the mouse layer back on.
 - Source code: [mouselayer_toggle.c](../src/qmk/users/rafaelromao/features/mouselayer_toggle.c)
@@ -57,7 +57,6 @@ Repeating the same combo toggle the mouse layer back on.
 [Home](../readme.md) | 
 [Base](base.md) |
 [Modifiers](modifiers.md) |
-[Symbols and Numbers](symbols.md) |
-[Functions and Media](functions.md) | 
+[Symbols and Numbers](docs/symbols.md)
 Navigation and Mouse |
-[Maintenance](maintenance.md) |
+[Functions and Maintenance](docs/functions.md)
