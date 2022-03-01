@@ -23,7 +23,7 @@ The left side of the Maintenance layer, we have options like:
 - A combo with the four extreme corner keys puts the keyboard in bootloader mode. This combo is a base layer alternative for the Reset key, in the Maintenance layer, in case some unintended layer lock prevents access to it.
 
 ### Media Controls
-- In the right side of Maintenance layer we can find media keys and zoom keys.
+- In the right side of Maintenance layer, we can find media keys.
 
 ### Zoom Controls
 - In the right side of the Maintenance layer, there are keys to control Zoom, which can be either Cmd+ and Cmd- or Ctrl+ and Ctrl-, according to the operating system that is selected.
