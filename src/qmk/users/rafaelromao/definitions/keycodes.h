@@ -6,39 +6,31 @@
 
 enum {
     SS_SECRET_1 = SAFE_RANGE,
-    SS_SECRET_2,
-    SS_SECRET_3,
-    SS_BTIC,
-    SS_DQUO,
-    SS_SQUO,
-    SS_CIRC,
-    SS_TILD,
-    SS_DEG,
-    TG_MAC,
-    TG_WIN,
-    TG_LIN,
-    MOU_TG,
-    MOU_ON,
-    MOU_OFF,
-    SP_CAP,
-    SP_MOD,
-    SS_MODP,
-    SS_MODM,
-    SS_GV_A,
-    SS_CR_A,
-    SS_TL_A,
-    SS_SQ_A,
-    SS_SQ_U,   
-    SS_CR_O,
-    SS_SQ_O,
-    SS_SQ_I,
-    SS_CR_E,
-    SS_TL_O,
-    SS_SQ_C,
-    SS_SQ_E,
-    SS_SELW,
-    SS_SWIN,
-    SS_CAPS
+    SS_SECRET_2, SS_SECRET_3,
+
+    SS_BTIC, SS_DQUO, SS_SQUO,
+    SS_CIRC, SS_TILD, SS_DEG,
+
+    TG_MAC, TG_WIN, TG_LIN,
+
+    MOU_TG, MOU_ON, MOU_OFF,
+
+    SP_CAP, SP_MOD,
+
+    SS_MODP, SS_MODM,
+
+    SS_GV_A, SS_CR_A, SS_TL_A, SS_SQ_A,
+    SS_SQ_U, SS_CR_O, SS_SQ_O, SS_SQ_I,
+    SS_CR_E, SS_TL_O, SS_SQ_C, SS_SQ_E,
+
+    SS_SELW, SS_SWIN, SS_CAPS,
+
+    SS_IT,  SS_FOR, SS_QU,  SS_PH,  SS_IS,
+    SS_IF,  SS_SH,  SS_ER,  SS_AND, SS_GH,
+    SS_OF,  SS_TO,  SS_THE, SS_TH,  SS_AT,
+    SS_SI,  SS_LH,  SS_IN,  SS_ON,  SS_TI,
+    SS_HE,  SS_NH,  SS_AO,  SS_OES, SS_CH,
+    SS_SPP, SS_TAR, SS_FAR, SS_DDS, SS_WH
 };
 
 // Mod-taps
@@ -94,6 +86,7 @@ enum {
 #define UND_MED LT(_MEDIA, KC_UNDS)
 #define DOT_MED LT(_MEDIA, KC_DOT)
 #define PDO_MED LT(_MEDIA, KC_PDOT)
+#define F15_MED LT(_MEDIA, KC_F15)
 
 // Layer transitions
 

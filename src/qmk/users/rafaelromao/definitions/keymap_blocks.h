@@ -87,6 +87,16 @@
 // #define ___________________ROMAK_R3___________________ KC_N    , RGUIT_M , TD_COML , TD_DOTD , TD_SCLE
 // #define ____ROMAK_R4____                               RAI_BSP , MOU_CAP
 
+#define ___________________NGRAMS_L1___________________ SS_IT   , SS_FOR  , SS_QU   , SS_PH   , SS_IS
+#define ___________________NGRAMS_L2___________________ SS_IF   , SS_SH   , SS_ER   , SS_AND  , SS_GH
+#define ___________________NGRAMS_L3___________________ SS_OF   , SS_TO   , SS_THE  , SS_TH   , SS_AT
+#define ____NGRAMS_L4____                                                             _______ , LOW_SPC
+
+#define ___________________NGRAMS_R1___________________ SS_SI   , SS_LH   , SS_IN   , SS_ON   , SS_TI
+#define ___________________NGRAMS_R2___________________ SS_HE   , SS_NH   , SS_AO   , SS_OES  , SS_CH
+#define ___________________NGRAMS_R3___________________ SS_SPP  , SS_TAR  , SS_FAR  , SS_DDS  , SS_WH
+#define ____NGRAMS_R4____                               RAI_BSP , MOU_P0
+
 #define ___________________NUMPAD_L1___________________ KC_NUM  , XXXXXXX , XXXXXXX , KC_RALT , XXXXXXX
 #define ___________________NUMPAD_L2___________________ XXXXXXX , KC_LSFT , KC_LCTL , KC_LALT , XXXXXXX
 #define ___________________NUMPAD_L3___________________ XXXXXXX , XXXXXXX , XXXXXXX , KC_LGUI , XXXXXXX
@@ -143,7 +153,7 @@
 #define ____FUNCTIONS_L4_                                                             TD_IJLE , NUM_BSP
 
 #define ___________________FUNCTIONS_R1________________ KC_F12  , KC_F7   , KC_F8   , KC_F9   , SS_CAPS
-#define ___________________FUNCTIONS_R2________________ KC_F11  , KC_F4   , KC_F5   , KC_F6   , KC_F15
+#define ___________________FUNCTIONS_R2________________ KC_F11  , KC_F4   , KC_F5   , KC_F6   , F15_MED
 #define ___________________FUNCTIONS_R3________________ KC_F10  , KC_F1   , KC_F2   , KC_F3   , KC_F14
 #define ____FUNCTIONS_R4_                               NUM_SPC , TD_IJRI
 
