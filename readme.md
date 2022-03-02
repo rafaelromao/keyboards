@@ -62,6 +62,7 @@ Most features implemented here were based on the work referenced below.
 - [Miryoku](https://github.com/manna-harbour/miryoku)
 - [Seniply](https://stevep99.github.io/seniply)
 - [Hands Down](https://sites.google.com/alanreiser.com/handsdown/home)
+- [BEAKL](https://ieants.cc/beakl)
 - [Precondition](https://github.com/precondition/dactyl-manuform-keymap)
 - [Pascal Getreuer](https://github.com/getreuer/qmk-keymap)
 - [Drashna](https://github.com/qmk/qmk_firmware/tree/master/users/drashna)
