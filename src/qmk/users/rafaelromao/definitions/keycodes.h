@@ -25,12 +25,9 @@ enum {
 
     SS_SELW, SS_SWIN, SS_CAPS,
 
-    SS_IT,  SS_FOR, SS_QU,  SS_PH,  SS_IS,
-    SS_IF,  SS_SH,  SS_ER,  SS_AND, SS_GH,
-    SS_OF,  SS_TO,  SS_THE, SS_TH,  SS_AT,
-    SS_SI,  SS_LH,  SS_IN,  SS_ON,  SS_TI,
-    SS_HE,  SS_NH,  SS_ING,  SS_NDO, SS_CH,
-    SS_SPP, SS_TAR, SS_FAR, SS_DDS, SS_WH
+    SS_RS,  SS_RE,  SS_PH,  SS_LH,  SS_ING, SS_IO,
+    SS_GU,  SS_SH,  SS_HE,  SS_TH,  SS_NH,  SS_CH,  SS_WH,  SS_NDO,
+    SS_SR,  SS_ER,  SS_GH,  SS_TAR, SS_FAR, SS_DDS
 };
 
 // Mod-taps

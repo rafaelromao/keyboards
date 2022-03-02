@@ -87,14 +87,14 @@
 // #define ___________________ROMAK_R3___________________ KC_N    , RGUIT_M , TD_COML , TD_DOTD , TD_SCLE
 // #define ____ROMAK_R4____                               RAI_BSP , MOU_CAP
 
-#define ___________________NGRAMS_L1___________________ SS_IT   , SS_FOR  , SS_QU   , SS_PH   , SS_IS
-#define ___________________NGRAMS_L2___________________ SS_IF   , SS_SH   , SS_ER   , SS_AND  , SS_GH
-#define ___________________NGRAMS_L3___________________ SS_OF   , SS_TO   , SS_THE  , SS_TH   , SS_AT
+#define ___________________NGRAMS_L1___________________ XXXXXXX , SS_RS   , SS_RE   , SS_PH   , XXXXXXX
+#define ___________________NGRAMS_L2___________________ SS_GU   , SS_SH   , SS_HE   , SS_TH   , XXXXXXX
+#define ___________________NGRAMS_L3___________________ XXXXXXX , SS_SR   , SS_ER   , SS_GH   , XXXXXXX
 #define ____NGRAMS_L4____                                                             _______ , _______
 
-#define ___________________NGRAMS_R1___________________ SS_SI   , SS_LH   , SS_IN   , SS_ON   , SS_TI
-#define ___________________NGRAMS_R2___________________ SS_HE   , SS_NH   , SS_ING  , SS_NDO  , SS_CH
-#define ___________________NGRAMS_R3___________________ SS_SPP  , SS_TAR  , SS_FAR  , SS_DDS  , SS_WH
+#define ___________________NGRAMS_R1___________________ XXXXXXX , SS_LH   , SS_ING  , SS_IO   , XXXXXXX
+#define ___________________NGRAMS_R2___________________ XXXXXXX , SS_NH   , SS_CH   , SS_WH   , SS_NDO
+#define ___________________NGRAMS_R3___________________ XXXXXXX , SS_TAR  , SS_FAR  , SS_DDS  , XXXXXXX
 #define ____NGRAMS_R4____                               _______ , _______
 
 #define ___________________NUMPAD_L1___________________ KC_NUM  , XXXXXXX , XXXXXXX , KC_RALT , XXXXXXX
