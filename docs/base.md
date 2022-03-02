@@ -28,6 +28,7 @@
 
 ## N-Grams
 - The n-grams layer, activated holding any of the middle fingers in the top row, will give fast access to some of the most common n-grams in English, Portuguese and software programming.
+- [This reddit post](https://www.reddit.com/r/KeyboardLayouts/comments/t3i523/ri%C3%BEinquing_h_digra%CF%86s/) was the main reference for the implementation of this feature.
 
 ##
 [Home](../readme.md) | 
