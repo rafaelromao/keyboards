@@ -89,12 +89,12 @@
 
 #define ___________________NGRAMS_L1___________________ XXXXXXX , SS_RS   , SS_RE   , SS_PH   , XXXXXXX
 #define ___________________NGRAMS_L2___________________ SS_GU   , SS_SH   , SS_HE   , SS_TH   , XXXXXXX
-#define ___________________NGRAMS_L3___________________ XXXXXXX , SS_SR   , SS_ER   , SS_GH   , XXXXXXX
+#define ___________________NGRAMS_L3___________________ SS_QU   , SS_SR   , SS_ER   , SS_GH   , XXXXXXX
 #define ____NGRAMS_L4____                                                             _______ , _______
 
 #define ___________________NGRAMS_R1___________________ XXXXXXX , SS_LH   , SS_ING  , SS_IO   , XXXXXXX
 #define ___________________NGRAMS_R2___________________ XXXXXXX , SS_NH   , SS_CH   , SS_WH   , SS_NDO
-#define ___________________NGRAMS_R3___________________ XXXXXXX , SS_TAR  , SS_FAR  , SS_DDS  , XXXXXXX
+#define ___________________NGRAMS_R3___________________ XXXXXXX , SS_TAR  , SS_FAR  , SS_DDS  , SS_CK
 #define ____NGRAMS_R4____                               _______ , _______
 
 #define ___________________NUMPAD_L1___________________ KC_NUM  , XXXXXXX , XXXXXXX , KC_RALT , XXXXXXX

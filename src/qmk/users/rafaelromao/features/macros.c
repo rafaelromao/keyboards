@@ -91,6 +91,9 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
                 SEND_STRING("ndo");
                 return PROCESS_RECORD_RETURN_FALSE;
 
+            case SS_QU:
+                SEND_STRING("qu");
+                return PROCESS_RECORD_RETURN_FALSE;
             case SS_SR:
                 SEND_STRING("sr");
                 return PROCESS_RECORD_RETURN_FALSE;
@@ -109,6 +112,9 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
                 return PROCESS_RECORD_RETURN_FALSE;
             case SS_DDS:
                 SEND_STRING("../");
+                return PROCESS_RECORD_RETURN_FALSE;
+            case SS_CK:
+                SEND_STRING("ck");
                 return PROCESS_RECORD_RETURN_FALSE;
 
         }
