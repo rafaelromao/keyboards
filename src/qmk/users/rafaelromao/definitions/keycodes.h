@@ -61,11 +61,11 @@ enum {
 
 // Layer-taps
 
-#define MOU_CAP LT(_MOUSE, SP_CAP)
-#define MOU_0   LT(_MOUSE, KC_0)
-#define MOU_P0  LT(_MOUSE, KC_P0)
+#define MED_CAP LT(_MEDIA, SP_CAP)
+#define MED_0   LT(_MEDIA, KC_0)
+#define MED_P0  LT(_MEDIA, KC_P0)
 
-#define NAV_NG LT(_NAVIGATION, SP_NG)
+#define NAV_NG  LT(_NAVIGATION, SP_NG)
 #define MAI_MOD LT(_MAINTENANCE, SP_MOD)
 
 #define LOW_SPC LT(_LOWER, KC_SPC)
@@ -74,23 +74,22 @@ enum {
 #define NUM_SPC LT(_NUMPAD, KC_SPC)
 #define NUM_BSP LT(_NUMPAD, KC_BSPC)
 
-#define KCA_MAI LT(_MAINTENANCE, KC_A)
-#define KCF_MAI LT(_MAINTENANCE, KC_F)
-#define KCC_MAI LT(_MAINTENANCE, KC_C)
-#define UND_MAI LT(_MAINTENANCE, KC_UNDS)
-#define DOT_MAI LT(_MAINTENANCE, KC_DOT)
-#define PDO_MAI LT(_MAINTENANCE, KC_PDOT)
+#define KCA_MAC LT(_MACROS, KC_A)
+#define KCF_MAC LT(_MACROS, KC_F)
+#define KCC_MAC LT(_MACROS, KC_C)
+#define UND_MAC LT(_MACROS, KC_UNDS)
+#define DOT_MAC LT(_MACROS, KC_DOT)
+#define PDO_MAC LT(_MACROS, KC_PDOT)
 
 // Layer transitions
 
 #define TO_ROM TO(_ROMAK)
 #define TT_NUM TT(_NUMPAD)
 #define TG_NUM TG(_NUMPAD)
-#define TG_FUN TG(_FUNCTIONS)
-#define MO_NAV MO(_NAVIGATION)
-#define MO_MOU MO(_MOUSE)
-#define MO_MAI MO(_MAINTENANCE)
-#define MO_FUN MO(_FUNCTIONS)
+#define TT_NAV TT(_NAVIGATION)
+#define TG_NAV TG(_NAVIGATION)
+#define TT_MOU TT(_MAINTENANCE)
+#define TG_MOU TG(_MAINTENANCE)
 
 // Custom Shortcuts
 

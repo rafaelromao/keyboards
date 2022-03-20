@@ -7,7 +7,6 @@ SRC += features/default_mod_key.c
 SRC += features/capitalize_key.c
 SRC += features/tapdance.c
 SRC += features/capslock_timer.c
-SRC += features/mouselayer_toggle.c
 SRC += features/os_toggle.c
 SRC += features/macros.c
 SRC += features/combos.c

@@ -5,7 +5,7 @@
 process_record_result_t process_custom_taphold(uint16_t keycode, keyrecord_t *record) {
     // Fix layer-tap using Underscore
     switch (keycode) {
-        case UND_MAI:
+        case UND_MAC:
         case LA_UNDS:
             if (record->event.pressed) {
                 if (record->tap.count > 0) {
