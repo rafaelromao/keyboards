@@ -23,11 +23,7 @@ enum {
     SS_SQ_U, SS_CR_O, SS_SQ_O, SS_SQ_I,
     SS_CR_E, SS_TL_O, SS_SQ_C, SS_SQ_E,
 
-    SS_SELW, SS_SWIN, SS_CAPS,
-
-    SS_RS,  SS_RE,  SS_PH,  SS_LH,  SS_ING, SS_IO,
-    SS_GU,  SS_SH,  SS_HE,  SS_TH,  SS_NH,  SS_CH,  SS_WH,  SS_NDO,
-    SS_QU,  SS_SR,  SS_ER,  SS_GH,  SS_TAR, SS_FAR, SS_DDS, SS_CK
+    SS_SELW, SS_SWIN, SS_CAPS
 };
 
 // Mod-taps
@@ -50,11 +46,6 @@ enum {
 #define LGUIT_V LGUI_T(KC_V)
 #define LGUIT_T LGUI_T(KC_T)
 #define RGUIT_M RGUI_T(KC_M)
-
-#define KCE_NGR LT(_NGRAMS, KC_E)
-#define KCI_NGR LT(_NGRAMS, KC_I)
-#define KCQ_NGR LT(_NGRAMS, KC_Q)
-#define KCU_NGR LT(_NGRAMS, KC_U)
 
 // One-shot mods
 

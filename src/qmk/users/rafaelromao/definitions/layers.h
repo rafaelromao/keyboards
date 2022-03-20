@@ -2,7 +2,6 @@
 
 typedef enum {
   _ROMAK,
-  _NGRAMS,
   _NUMPAD,
   _LOWER,
   _RAISE,
