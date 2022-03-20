@@ -13,12 +13,13 @@ const uint16_t PROGMEM r_mou_nav_combo[] = {KC_HOME, KC_END, COMBO_END};
 
 // Numpad
 
-const uint16_t PROGMEM r_num_tog_combo[] = {RAI_BSP, KC_P5, KC_P6, COMBO_END};
-const uint16_t PROGMEM r_num_fun_combo[] = {RAI_BSP, KC_P2, KC_P3, COMBO_END};
+const uint16_t PROGMEM r_num_tab_combo[] = {RAI_BSP, KC_P8, KC_P9, COMBO_END};
+const uint16_t PROGMEM r_num_ent_combo[] = {RAI_BSP, KC_P5, KC_P6, COMBO_END};
 
-// Fun
+// Lower
 
-const uint16_t PROGMEM r_fun_tog_combo[] = {NUM_SPC, KC_F5, KC_F6, COMBO_END};
+const uint16_t PROGMEM r_low_tab_combo[] = {RAI_BSP, KC_8, KC_9, COMBO_END};
+const uint16_t PROGMEM r_low_ent_combo[] = {RAI_BSP, KC_5, KC_6, COMBO_END};
 
 // Romak 0 = Qwerty
 
@@ -97,10 +98,11 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(l_mou_sel_combo, SS_SELW),
   COMBO(r_mou_nav_combo, MOU_TG),
 
-  COMBO(r_num_tog_combo, TG_NUM),
-  COMBO(r_num_fun_combo, TG_FUN),
+  COMBO(r_num_tab_combo, KC_TAB),
+  COMBO(r_num_ent_combo, KC_ENT),
 
-  COMBO(r_fun_tog_combo, TG_FUN),
+  COMBO(r_low_tab_combo, KC_TAB),
+  COMBO(r_low_ent_combo, KC_ENT),
 
   COMBO(l_ro0_esc_combo, KC_ESC),
   COMBO(l_ro0_sav_combo, CB_SAVE),

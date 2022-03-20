@@ -19,6 +19,11 @@ void clear_locked_and_oneshot_mods(void) {
     dyn_macro_reset();
 }
 
+void clear_shift(void) {
+    del_oneshot_mods(MOD_LSFT);
+    unregister_mods(MOD_LSFT);
+}
+
 bool should_send_ctrl(bool isWindowsOrLinux, bool isOneShotShift) {
     return (isWindowsOrLinux && !isOneShotShift) || (!isWindowsOrLinux && isOneShotShift);
 }
@@ -46,9 +51,9 @@ process_record_result_t process_default_mod_key(uint16_t keycode, keyrecord_t *r
                             clear_locked_and_oneshot_mods();
                         }
                         if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
-                            add_oneshot_mods(MOD_BIT(KC_LCTL));
+                            add_oneshot_mods(MOD_LCTL);
                         } else {
-                            add_oneshot_mods(MOD_BIT(KC_LGUI));
+                            add_oneshot_mods(MOD_LGUI);
                         }
                     }
                 }

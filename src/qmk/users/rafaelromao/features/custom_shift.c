@@ -80,18 +80,6 @@ process_record_result_t process_custom_shift(uint16_t keycode, keyrecord_t *reco
 
     switch (key) {
 
-        // Ignore space for one-shot shift
-
-        case KC_SPC:
-            if (record->event.pressed) {
-                if (isOneShotShift) {
-                    tap_code(KC_SPC);
-                    add_oneshot_mods(MOD_LSFT);
-                    return PROCESS_RECORD_RETURN_FALSE;
-                }
-            }
-            return PROCESS_RECORD_CONTINUE;
-
         // Shift+Backspace for Delete (when not one-shot)
 
         case KC_BSPC:
