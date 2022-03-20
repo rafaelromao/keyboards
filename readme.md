@@ -4,7 +4,7 @@
 
 A 34 keys split keyboard layout, optimized for Portuguese, English, working with numbers and software programming with VIM plugins.
 
-![img](https://i.imgur.com/uAtdnMh.png)
+![img](https://i.imgur.com/BXXanTF.png)
 
 ## How this layout works?
 
