@@ -11,6 +11,7 @@
 #include "features/macros.h"
 #include "features/combos.h"
 #include "features/leader.h"
+#include "features/ngrams_key.h"
 #include "features/default_mod_key.h"
 #include "features/capitalize_key.h"
 #include "features/select_word.h"

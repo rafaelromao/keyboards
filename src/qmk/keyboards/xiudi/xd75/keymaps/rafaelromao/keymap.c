@@ -20,6 +20,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXXXXX , XXXXXXX , XXXXXXX , ____ROMAK_L4_____ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ____ROMAK_R4_____ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_____________________________________________________________________________________________________________________________________________________|
 
+     [_NGRAMS] = LAYOUT_wrapper(
+ // |_____________________________________________________________________________________________________________________________________________________|
+      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      ___________________NGRAMS_L1___________________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ___________________NGRAMS_R1___________________ ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      ___________________NGRAMS_L2___________________ , XXXXXXX , XXXXXXX , SS_CAPS , XXXXXXX , XXXXXXX , ___________________NGRAMS_R2___________________ ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      ___________________NGRAMS_L3___________________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ___________________NGRAMS_R3___________________ ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      XXXXXXX , XXXXXXX , XXXXXXX , ____NGRAMS_L4____ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ____NGRAMS_R4____ , XXXXXXX , XXXXXXX , XXXXXXX),
+ // |_____________________________________________________________________________________________________________________________________________________|
+
      [_NUMPAD] = LAYOUT_wrapper(
  // |_____________________________________________________________________________________________________________________________________________________|
       XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
@@ -85,19 +98,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXXXXX , XXXXXXX , XXXXXXX , ____MOUSE_L4_____ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ____MOUSE_R4_____ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
-     [_FUNCTIONS] = LAYOUT_wrapper(
- // |_____________________________________________________________________________________________________________________________________________________|
-      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      ___________________FUNCTIONS_L1________________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ___________________FUNCTIONS_R1________________ ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      ___________________FUNCTIONS_L2________________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ___________________FUNCTIONS_R2________________ ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      ___________________FUNCTIONS_L3________________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ___________________FUNCTIONS_R3________________ ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , ____FUNCTIONS_L4_ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ____FUNCTIONS_R4_ , XXXXXXX , XXXXXXX , XXXXXXX),
- // |_____________________________________________________________________________________________________________________________________________________|
-
      [_MAINTENANCE] = LAYOUT_wrapper(
  // |_____________________________________________________________________________________________________________________________________________________|
       XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
@@ -123,16 +123,18 @@ void set_rgblight_by_layer(uint32_t layer) {
         case _ROMAK:
             rgblight_setrgb(RGB_BLUE);
             break;
+        case _NGRAMS:
         case _LOWER:
         case _RAISE:
-        case _FUNCTIONS:
         case _NAVIGATION:
         case _MOUSE:
-        case _MAINTENANCE:
             rgblight_setrgb(RGB_TURQUOISE);
             break;
         case _NUMPAD:
             rgblight_setrgb(RGB_CYAN);
+            break;
+        case _MAINTENANCE:
+            rgblight_setrgb(RGB_RED);
             break;
         default:
             break;

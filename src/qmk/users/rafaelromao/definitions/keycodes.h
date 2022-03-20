@@ -15,7 +15,7 @@ enum {
 
     MOU_TG, MOU_ON, MOU_OFF,
 
-    SP_CAP, SP_MOD,
+    SP_CAP, SP_MOD, SP_NG,
 
     SS_MODP, SS_MODM,
 
@@ -23,7 +23,11 @@ enum {
     SS_SQ_U, SS_CR_O, SS_SQ_O, SS_SQ_I,
     SS_CR_E, SS_TL_O, SS_SQ_C, SS_SQ_E,
 
-    SS_SELW, SS_SWIN, SS_CAPS
+    SS_SELW, SS_SWIN, SS_CAPS,
+
+    SS_RS,  SS_RE,  SS_PH,  SS_LH,  SS_CK,
+    SS_CH,  SS_SH,  SS_HE,  SS_NH,  SS_GH,
+    SS_WH,  SS_SR,  SS_ER,  SS_TH,  SS_ING, SS_IO
 };
 
 // Mod-taps
@@ -61,7 +65,8 @@ enum {
 #define MOU_0   LT(_MOUSE, KC_0)
 #define MOU_P0  LT(_MOUSE, KC_P0)
 
-#define NAV_MOD LT(_NAVIGATION, SP_MOD)
+#define NAV_NG LT(_NAVIGATION, SP_NG)
+#define MAI_MOD LT(_MAINTENANCE, SP_MOD)
 
 #define LOW_SPC LT(_LOWER, KC_SPC)
 #define RAI_BSP LT(_RAISE, KC_BSPC)
@@ -69,17 +74,12 @@ enum {
 #define NUM_SPC LT(_NUMPAD, KC_SPC)
 #define NUM_BSP LT(_NUMPAD, KC_BSPC)
 
-#define KCA_FUN LT(_FUNCTIONS, KC_A)
-#define KCF_FUN LT(_FUNCTIONS, KC_F)
-#define KCW_FUN LT(_FUNCTIONS, KC_W)
-#define UND_FUN LT(_FUNCTIONS, KC_UNDS)
-
-#define KCO_MAI LT(_MAINTENANCE, KC_O)
+#define KCA_MAI LT(_MAINTENANCE, KC_A)
+#define KCF_MAI LT(_MAINTENANCE, KC_F)
 #define KCC_MAI LT(_MAINTENANCE, KC_C)
 #define UND_MAI LT(_MAINTENANCE, KC_UNDS)
 #define DOT_MAI LT(_MAINTENANCE, KC_DOT)
 #define PDO_MAI LT(_MAINTENANCE, KC_PDOT)
-#define F15_MAI LT(_MAINTENANCE, KC_F15)
 
 // Layer transitions
 

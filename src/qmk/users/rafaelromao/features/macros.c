@@ -61,6 +61,59 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
                 }
                 return PROCESS_RECORD_RETURN_FALSE;
                 
+            // N-Grams
+
+            case SS_RS:
+                SEND_STRING("rs");
+                return PROCESS_RECORD_RETURN_FALSE;
+            case SS_RE:
+                SEND_STRING("re");
+                return PROCESS_RECORD_RETURN_FALSE;
+            case SS_PH:
+                SEND_STRING("ph");
+                return PROCESS_RECORD_RETURN_FALSE;
+            case SS_LH:
+                SEND_STRING("lh");
+                return PROCESS_RECORD_RETURN_FALSE;
+            case SS_CK:
+                SEND_STRING("ck");
+                return PROCESS_RECORD_RETURN_FALSE;
+
+            case SS_CH:
+                SEND_STRING("ch");
+                return PROCESS_RECORD_RETURN_FALSE;
+            case SS_SH:
+                SEND_STRING("sh");
+                return PROCESS_RECORD_RETURN_FALSE;
+            case SS_HE:
+                SEND_STRING("he");
+                return PROCESS_RECORD_RETURN_FALSE;
+            case SS_NH:
+                SEND_STRING("nh");
+                return PROCESS_RECORD_RETURN_FALSE;
+            case SS_GH:
+                SEND_STRING("gh");
+                return PROCESS_RECORD_RETURN_FALSE;
+
+            case SS_WH:
+                SEND_STRING("wh");
+                return PROCESS_RECORD_RETURN_FALSE;
+            case SS_SR:
+                SEND_STRING("sr");
+                return PROCESS_RECORD_RETURN_FALSE;
+            case SS_ER:
+                SEND_STRING("er");
+                return PROCESS_RECORD_RETURN_FALSE;
+            case SS_TH:
+                SEND_STRING("th");
+                return PROCESS_RECORD_RETURN_FALSE;
+            case SS_ING:
+                SEND_STRING("ing");
+                return PROCESS_RECORD_RETURN_FALSE;
+            case SS_IO:
+                SEND_STRING("io");
+                return PROCESS_RECORD_RETURN_FALSE;
+
         }
     }
 

@@ -24,6 +24,16 @@ void matrix_scan_user(void) {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
+    // Process Ngrams
+    switch (process_ngrams_key(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
+
     // Extend capslock timer
     switch (process_capslock_timer_extension(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
