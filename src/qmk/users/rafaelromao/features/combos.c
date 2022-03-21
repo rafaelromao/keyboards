@@ -6,10 +6,9 @@
 
 const uint16_t PROGMEM l_nav_sel_combo[] = {KC_PGDN, KC_PGUP, COMBO_END};
 
-// Mouse
+// Media
 
 const uint16_t PROGMEM l_mou_sel_combo[] = {KC_WH_D, KC_WH_U, COMBO_END};
-const uint16_t PROGMEM r_mou_nav_combo[] = {KC_HOME, KC_END, COMBO_END};
 
 // Numpad
 
@@ -94,7 +93,6 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(l_nav_sel_combo, SS_SELW),
 
   COMBO(l_mou_sel_combo, SS_SELW),
-  COMBO(r_mou_nav_combo, MOU_TG),
 
   COMBO(r_num_tab_combo, KC_TAB),
   COMBO(r_num_ent_combo, KC_ENT),
