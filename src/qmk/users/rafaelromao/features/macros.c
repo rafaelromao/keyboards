@@ -114,6 +114,53 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
                 SEND_STRING("io");
                 return PROCESS_RECORD_RETURN_FALSE;
 
+            // Macro layer macros
+
+            case SS_SPA:
+                SEND_STRING(" (");
+                return PROCESS_RECORD_RETURN_FALSE;
+            case SS_OCP:
+                SEND_STRING("()");
+                tap_code(KC_LEFT);
+                return PROCESS_RECORD_RETURN_FALSE;
+            case SS_SCU:
+                SEND_STRING(" {");
+                return PROCESS_RECORD_RETURN_FALSE;
+            case SS_OCC:
+                SEND_STRING("{}");
+                tap_code(KC_LEFT);
+                return PROCESS_RECORD_RETURN_FALSE;
+            case SS_SSQ:
+                SEND_STRING(" [");
+                return PROCESS_RECORD_RETURN_FALSE;
+            case SS_OCS:
+                SEND_STRING("[]");
+                tap_code(KC_LEFT);
+                return PROCESS_RECORD_RETURN_FALSE;
+
+            case SS_SAR:
+                SEND_STRING("-> ");
+                return PROCESS_RECORD_RETURN_FALSE;
+            case SS_DAR:
+                SEND_STRING("=> ");
+                return PROCESS_RECORD_RETURN_FALSE;
+            case SS_DDS:
+                SEND_STRING("../");
+                return PROCESS_RECORD_RETURN_FALSE;
+            case SS_IIF:
+                SEND_STRING("?:");
+                tap_code(KC_LEFT);
+                return PROCESS_RECORD_RETURN_FALSE;
+
+            case SS_CWQ:
+                SEND_STRING(":wq");
+                return PROCESS_RECORD_RETURN_FALSE;
+            case SS_CQB:
+                SEND_STRING(":q!");
+                return PROCESS_RECORD_RETURN_FALSE;
+            case SS_CPS:
+                SEND_STRING(":%s/");
+                return PROCESS_RECORD_RETURN_FALSE;
         }
     }
 

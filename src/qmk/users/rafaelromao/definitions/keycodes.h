@@ -27,7 +27,12 @@ enum {
 
     SS_RS,  SS_RE,  SS_PH,  SS_LH,  SS_CK,
     SS_CH,  SS_SH,  SS_HE,  SS_NH,  SS_GH,
-    SS_WH,  SS_SR,  SS_ER,  SS_TH,  SS_ING, SS_IO
+    SS_WH,  SS_SR,  SS_ER,  SS_TH,  SS_ING, SS_IO,
+
+    SS_SPA, SS_OCP, SS_SCU, SS_OCC,
+    SS_SSQ, SS_OCS,
+    SS_SAR, SS_DAR, SS_DDS, SS_IIF,
+    SS_CWQ, SS_CQB, SS_CPS
 };
 
 // Mod-taps
