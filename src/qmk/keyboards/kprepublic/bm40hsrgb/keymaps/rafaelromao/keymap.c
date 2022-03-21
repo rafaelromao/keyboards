@@ -165,7 +165,7 @@ void rgb_matrix_indicators_user(void) {
         case _NAVIGATION:
             rgb_matrix_set_color(39, RGB_WHITE);
             break;
-        case _MOUSE:
+        case _MEDIA:
             rgb_matrix_set_color(43, RGB_WHITE);
             break;
         case _MAINTENANCE:
