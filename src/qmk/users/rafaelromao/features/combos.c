@@ -20,6 +20,13 @@ const uint16_t PROGMEM r_num_ent_combo[] = {RAI_BSP, KC_P5, KC_P6, COMBO_END};
 const uint16_t PROGMEM r_low_tab_combo[] = {RAI_BSP, KC_8, KC_9, COMBO_END};
 const uint16_t PROGMEM r_low_ent_combo[] = {RAI_BSP, KC_5, KC_6, COMBO_END};
 
+// N-Grams
+
+const uint16_t PROGMEM r_ng_ao_combo[] = {SS_TL_A, SS_TL_O, COMBO_END};
+const uint16_t PROGMEM r_ng_cao_combo[] = {SS_SQ_A, SS_TL_A, SS_TL_O, COMBO_END};
+const uint16_t PROGMEM r_ng_oes_combo[] = {SS_CR_E, SS_SQ_O, COMBO_END};
+const uint16_t PROGMEM r_ng_coes_combo[] = {SS_SQ_E, SS_CR_E, SS_SQ_O, COMBO_END};
+
 // Romak 0 = Qwerty
 
 const uint16_t PROGMEM l_ro0_esc_combo[] = {LOW_SPC, KC_W, KC_E, COMBO_END};
@@ -99,6 +106,11 @@ combo_t key_combos[COMBO_COUNT] = {
 
   COMBO(r_low_tab_combo, KC_TAB),
   COMBO(r_low_ent_combo, KC_ENT),
+
+  COMBO(r_ng_ao_combo, SS_AO),
+  COMBO(r_ng_cao_combo, SS_CAO),
+  COMBO(r_ng_oes_combo, SS_OES),
+  COMBO(r_ng_coes_combo, SS_COES),
 
   COMBO(l_ro0_esc_combo, KC_ESC),
   COMBO(l_ro0_sav_combo, CB_SAVE),
