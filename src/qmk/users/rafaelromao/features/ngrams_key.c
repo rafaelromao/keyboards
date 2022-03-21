@@ -6,7 +6,7 @@ extern os_t os;
 
 process_record_result_t process_ngrams_key(uint16_t keycode, keyrecord_t *record) {
 
-    if (!record->event.pressed && keycode != NAV_NG) {
+    if (!record->event.pressed && keycode != NAV_NG && keycode != MED_CAP) {
         clear_oneshot_layer_state(ONESHOT_PRESSED);
     }
 
