@@ -16,6 +16,7 @@ __attribute__ ((weak)) void matrix_scan_keymap(void) {
 
 void matrix_scan_user(void) {
     check_disable_capslock();
+    check_ngrams_timeout();
     process_leader_dictionary();
     matrix_scan_keymap();
 }
