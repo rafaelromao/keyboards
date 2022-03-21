@@ -31,8 +31,7 @@ enum {
 
     SS_SPA, SS_OCP, SS_SCU, SS_OCC,
     SS_SSQ, SS_OCS,
-    SS_SAR, SS_DAR, SS_DDS, SS_IIF,
-    SS_CWQ, SS_CQB, SS_CPS,
+    SS_SAR, SS_DAR, SS_DDS, 
 
     SS_AO, SS_CAO, SS_OES, SS_COES
 };

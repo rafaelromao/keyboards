@@ -147,20 +147,6 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
             case SS_DDS:
                 SEND_STRING("../");
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_IIF:
-                SEND_STRING("?:");
-                tap_code(KC_LEFT);
-                return PROCESS_RECORD_RETURN_FALSE;
-
-            case SS_CWQ:
-                SEND_STRING(":wq");
-                return PROCESS_RECORD_RETURN_FALSE;
-            case SS_CQB:
-                SEND_STRING(":q!");
-                return PROCESS_RECORD_RETURN_FALSE;
-            case SS_CPS:
-                SEND_STRING(":%s/");
-                return PROCESS_RECORD_RETURN_FALSE;
 
             case SS_AO:
                 clear_shift();
