@@ -38,4 +38,4 @@ Symbols and Numbers are primarily available in the two classic Lower and Raise l
 [N-Grams and Macros](macros.md) |
 Symbols and Numbers |
 [Navigation and Media](navigation.md) |
-[Maintenance](maitenance.md)
+[Maintenance](maintenance.md)
