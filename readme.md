@@ -28,12 +28,12 @@ The following pages explain how this layout works and which features are impleme
 - [N-Grams Layer](docs/macros.md)
 - [Accentuation Keys](docs/macros.md)
 - [Macros Layer](docs/macros.md)
-- [Dynamic Macros](docs/navigation.md#dynamic-macros)
-- [Leader Key](docs/navigation.md#leader-key)
+- [Dynamic Macros](docs/macros.md#dynamic-macros)
+- [Leader Key](docs/macros.md#leader-key)
 - [Caps Lock Timer](docs/modifiers.md#caps-lock)
-- [Window Swapper](docs/navigation.md#window-swapper)
-- [Select Word](docs/navigation.md#select-word)
+- [Select Word](docs/macros.md#select-word)
 - [IDE Dancing](docs/macros.md#ide-dancing)
+- [Window Swapper](docs/navigation.md#window-swapper)
 
 ## About this repo
 
