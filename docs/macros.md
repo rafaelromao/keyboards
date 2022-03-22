@@ -52,6 +52,6 @@
 [Base](base.md) |
 [Modifiers](modifiers.md) |
 N-Grams and Macros |
-Symbols and Numbers |
+[Symbols and Numbers](symbols.md) |
 [Navigation and Media](navigation.md) |
-[Maintenance](maitenance.md)
+[Maintenance](maintenance.md)
