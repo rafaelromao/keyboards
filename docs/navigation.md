@@ -33,4 +33,4 @@ The Navigation and Media layer can be activated holding the outer left and right
 [Modifiers](modifiers.md) |
 [Symbols and Numbers](symbols.md) |
 Navigation and Media |
-[Functions and Maintenance](functions.md)
+[Maintenance](maitenance.md)
