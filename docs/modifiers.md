@@ -16,7 +16,7 @@ One-Shot Modifiers are modifier keys that, when tapped, remain active until the 
 
 ## Standard Modifiers
 
-- Stantard modifiers (Shift, Ctrl, Alt, AltGr, Gui) are available on the left side of the [Numpad](symbols.md#numpad) layer. These standard modifiers do not have one-shot behavior, so they can be used in situations were a tap or multi tap in a modifier key is required.
+- Stantard modifiers (Shift, Ctrl, Alt, AltGr, Gui) are available on the left side of the [Numpad](symbols.md#numpad) layer. These standard modifiers do not have one-shot behavior, so they can be used in situations which a tap or multi tap in a modifier key is required.
 
 ## Capitalize Key 
 
