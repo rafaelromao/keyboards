@@ -155,7 +155,7 @@
 #define ___________________NAVIGATION_R1_______________ XXXXXXX , KC_TAB  , KC_PGDN , KC_PGUP , KC_ENT
 #define ___________________NAVIGATION_R2_______________ TG_NAV  , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT
 #define ___________________NAVIGATION_R3_______________ XXXXXXX , KC_INS  , KC_HOME , KC_END  , KC_DEL
-#define __NAVIGATION_R4__                               KC_BSPC , MAI_MOD
+#define __NAVIGATION_R4__                               KC_BSPC , MAI_ALT
 
 #define ___________________MAINTENANCE_L1______________ XXXXXXX , XXXXXXX , KC_PWR  , XXXXXXX , EEP_RST    
 #define ___________________MAINTENANCE_L2______________ RGB_TOG , XXXXXXX , XXXXXXX , TO_ROM  , XXXXXXX 

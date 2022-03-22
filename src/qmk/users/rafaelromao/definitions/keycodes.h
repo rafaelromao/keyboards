@@ -13,7 +13,7 @@ enum {
 
     TG_MAC, TG_WIN, TG_LIN,
 
-    SP_CAP, SP_MOD, SP_NG,
+    SP_CAP, SP_MOD, SP_NG, SP_ALT,
 
     SS_MODP, SS_MODM,
 
@@ -71,6 +71,7 @@ enum {
 
 #define NAV_NG  LT(_NAVIGATION, SP_NG)
 #define MAI_MOD LT(_MAINTENANCE, SP_MOD)
+#define MAI_ALT LT(_MAINTENANCE, SP_ALT)
 
 #define LOW_SPC LT(_LOWER, KC_SPC)
 #define RAI_BSP LT(_RAISE, KC_BSPC)
