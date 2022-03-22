@@ -18,22 +18,19 @@ The following pages explain how this layout works and which features are impleme
 - [Navigation and Media](docs/navigation.md)
 - [Maintenance](docs/maintenance.md)
 
-### Features
+### Main Features
 
 - [Smart Thumb Keys](docs/base.md#smart-thumb-keys)
 - [Home Block Mods](docs/modifiers.md#home-block-modifiers)
 - [One Shot Mods](docs/modifiers.md#one-shot-modifiers)
 - [Combos](docs/base.md#base-layer-combos)
-- [Numpad layer](docs/symbols.md#numpad)
-- [Macros](docs/macros.md)
+- [Numpad Layer](docs/symbols.md#numpad)
+- [N-Grams Layer](docs/macros.md)
+- [Accentuation Keys](docs/macros.md)
+- [Macros Layer](docs/macros.md)
 - [Dynamic Macros](docs/navigation.md#dynamic-macros)
-- [Double Dot for New Sentence](docs/base.md#double-dot-for-new-sentences)
 - [Leader Key](docs/navigation.md#leader-key)
-- [Default Modifier (Cmd vs Ctrl)](docs/modifiers.md#default-mod-key)
-- [Capitalize Key](docs/modifiers.md#capitalize-key)
 - [Caps Lock Timer](docs/modifiers.md#caps-lock)
-- [Dancing Brackets](docs/symbols.md#dancing-brackets)
-- [Accentuation Keys](docs/symbols.md#accents-in-the-raise-layer-left-side)
 - [Window Swapper](docs/navigation.md#window-swapper)
 - [Select Word](docs/navigation.md#select-word)
 - [IDE Dancing](docs/macros.md#ide-dancing)
