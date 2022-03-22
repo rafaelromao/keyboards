@@ -51,7 +51,7 @@
 [Home](../readme.md) | 
 [Base](base.md) |
 [Modifiers](modifiers.md) |
-[N-Grams and Macros](macros.md) |
+N-Grams and Macros |
 Symbols and Numbers |
 [Navigation and Media](navigation.md) |
 [Maintenance](maitenance.md)
