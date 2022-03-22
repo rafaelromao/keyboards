@@ -13,17 +13,19 @@ The following pages explain how this layout works and which features are impleme
 ### Layers
 
 - [Base](docs/base.md) and [Modifiers](docs/modifiers.md)
+- [N-Grams and Macros](docs/macros.md)
 - [Symbols and Numbers](docs/symbols.md)
-- [Navigation and Mouse](docs/navigation.md)
-- [Functions and Maintenance](docs/functions.md)
+- [Navigation and Media](docs/navigation.md)
+- [Maintenance](docs/maintenance.md)
 
 ### Features
 
+- [Smart Thumb Keys](docs/base.md#smart-thumb-keys)
 - [Home Block Mods](docs/modifiers.md#home-block-modifiers)
 - [One Shot Mods](docs/modifiers.md#one-shot-modifiers)
 - [Combos](docs/base.md#base-layer-combos)
 - [Numpad layer](docs/symbols.md#numpad)
-- [Macros](docs/symbols.md#symbols-in-the-lower-layer-left-side)
+- [Macros](docs/macros.md)
 - [Dynamic Macros](docs/navigation.md#dynamic-macros)
 - [Double Dot for New Sentence](docs/base.md#double-dot-for-new-sentences)
 - [Leader Key](docs/navigation.md#leader-key)
@@ -34,10 +36,7 @@ The following pages explain how this layout works and which features are impleme
 - [Accentuation Keys](docs/symbols.md#accents-in-the-raise-layer-left-side)
 - [Window Swapper](docs/navigation.md#window-swapper)
 - [Select Word](docs/navigation.md#select-word)
-- [IDE Dancing](docs/functions.md#ide-dancing)
-- [Custom Shortcuts](src/qmk/users/rafaelromao/features/custom_shortcuts.c)
-- [Custom Tap Hold](src/qmk/users/rafaelromao/features/taphold.c)
-- [Custom Shift](src/qmk/users/rafaelromao/features/custom_shift.c)
+- [IDE Dancing](docs/macros.md#ide-dancing)
 
 ## About this repo
 
