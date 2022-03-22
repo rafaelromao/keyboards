@@ -127,6 +127,16 @@
 #define ___________________RAISE_R3____________________ KC_ASTR , KC_SLSH , TD_ANGB , KC_GT   , KC_COLN
 #define ____RAISE_R4_____                               _______ , _______
 
+#define ___________________MACROS_L1___________________ XXXXXXX , SS_SPA  , SS_OCP  , XXXXXXX , XXXXXXX
+#define ___________________MACROS_L2___________________ XXXXXXX , KC_LEAD , SS_SELW , TD_MACR , XXXXXXX
+#define ___________________MACROS_L3___________________ XXXXXXX , SS_SSQ  , SS_OCS  , XXXXXXX , XXXXXXX
+#define ____MACROS_L4____                                                             TD_IJLE , KC_BSPC
+
+#define ___________________MACROS_R1___________________ XXXXXXX , XXXXXXX , SS_SCU  , SS_OCC  , XXXXXXX
+#define ___________________MACROS_R2___________________ XXXXXXX , XXXXXXX , SS_MODM , SS_MODP , XXXXXXX
+#define ___________________MACROS_R3___________________ XXXXXXX , SS_SAR  , SS_DAR  , SS_DDS  , XXXXXXX
+#define ____MACROS_R4____                               KC_SPC  , TD_IJRI
+
 #define ___________________MEDIA_L1____________________ KC_ESC  , XXXXXXX , XXXXXXX , OS_RALT , XXXXXXX
 #define ___________________MEDIA_L2____________________ SS_SWIN , OS_LSFT , OS_LCTL , OS_LALT , XXXXXXX
 #define ___________________MEDIA_L3____________________ XXXXXXX , XXXXXXX , XXXXXXX , OS_LGUI , XXXXXXX
@@ -146,16 +156,6 @@
 #define ___________________NAVIGATION_R2_______________ TG_NAV  , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT
 #define ___________________NAVIGATION_R3_______________ XXXXXXX , KC_INS  , KC_HOME , KC_END  , KC_DEL
 #define __NAVIGATION_R4__                               KC_BSPC , MAI_MOD
-
-#define ___________________MACROS_L1___________________ XXXXXXX , SS_SPA  , SS_OCP  , XXXXXXX , XXXXXXX
-#define ___________________MACROS_L2___________________ XXXXXXX , KC_LEAD , SS_SELW , TD_MACR , XXXXXXX
-#define ___________________MACROS_L3___________________ XXXXXXX , SS_SSQ  , SS_OCS  , XXXXXXX , XXXXXXX
-#define ____MACROS_L4____                                                             TD_IJLE , KC_BSPC
-
-#define ___________________MACROS_R1___________________ XXXXXXX , XXXXXXX , SS_SCU  , SS_OCC  , XXXXXXX
-#define ___________________MACROS_R2___________________ XXXXXXX , XXXXXXX , SS_MODM , SS_MODP , XXXXXXX
-#define ___________________MACROS_R3___________________ XXXXXXX , SS_SAR  , SS_DAR  , SS_DDS  , XXXXXXX
-#define ____MACROS_R4____                               KC_SPC  , TD_IJRI
 
 #define ___________________MAINTENANCE_L1______________ XXXXXXX , XXXXXXX , KC_PWR  , XXXXXXX , EEP_RST    
 #define ___________________MAINTENANCE_L2______________ RGB_TOG , XXXXXXX , XXXXXXX , TO_ROM  , XXXXXXX 

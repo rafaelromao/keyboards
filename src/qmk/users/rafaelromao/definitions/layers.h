@@ -6,8 +6,8 @@ typedef enum {
   _NUMPAD,
   _LOWER,
   _RAISE,
+  _MACROS,
   _MEDIA,
   _NAVIGATION,
-  _MACROS,
   _MAINTENANCE
 } layers_t;
