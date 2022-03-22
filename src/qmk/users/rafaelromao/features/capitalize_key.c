@@ -8,7 +8,7 @@ process_record_result_t process_capitalize_key(uint16_t keycode, keyrecord_t *re
 
     switch (keycode) {
 
-        case MOU_CAP:
+        case MED_CAP:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
                     bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;

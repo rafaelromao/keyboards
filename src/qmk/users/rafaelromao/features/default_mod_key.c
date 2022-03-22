@@ -19,6 +19,11 @@ void clear_locked_and_oneshot_mods(void) {
     dyn_macro_reset();
 }
 
+void clear_shift(void) {
+    del_oneshot_mods(MOD_LSFT);
+    unregister_mods(MOD_LSFT);
+}
+
 bool should_send_ctrl(bool isWindowsOrLinux, bool isOneShotShift) {
     return (isWindowsOrLinux && !isOneShotShift) || (!isWindowsOrLinux && isOneShotShift);
 }
@@ -36,7 +41,23 @@ process_record_result_t process_default_mod_key(uint16_t keycode, keyrecord_t *r
 
     switch (keycode) {
 
-        case NAV_MOD:
+        case MAI_ALT:
+            if (record->tap.count > 0) {
+                if (record->event.pressed) {
+                    if (isAnyOneShotButShift || isOneShotLockedShift) {
+                        clear_locked_and_oneshot_mods();
+                    } else if (!isOneShotAlt) {
+                        if (isOneShotShift) {
+                            clear_locked_and_oneshot_mods();
+                        }
+                        add_oneshot_mods(MOD_LALT);
+                    }
+                }
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+            return PROCESS_RECORD_RETURN_TRUE;
+
+        case MAI_MOD:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
                     if (isAnyOneShotButShift || isOneShotLockedShift) {
@@ -46,9 +67,9 @@ process_record_result_t process_default_mod_key(uint16_t keycode, keyrecord_t *r
                             clear_locked_and_oneshot_mods();
                         }
                         if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
-                            add_oneshot_mods(MOD_BIT(KC_LCTL));
+                            add_oneshot_mods(MOD_LCTL);
                         } else {
-                            add_oneshot_mods(MOD_BIT(KC_LGUI));
+                            add_oneshot_mods(MOD_LGUI);
                         }
                     }
                 }

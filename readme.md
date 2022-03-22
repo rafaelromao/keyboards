@@ -4,7 +4,7 @@
 
 A 34 keys split keyboard layout, optimized for Portuguese, English, working with numbers and software programming with VIM plugins.
 
-![img](https://i.imgur.com/uAtdnMh.png)
+![img](https://i.imgur.com/dNXEiqf.png)
 
 ## How this layout works?
 
@@ -13,31 +13,27 @@ The following pages explain how this layout works and which features are impleme
 ### Layers
 
 - [Base](docs/base.md) and [Modifiers](docs/modifiers.md)
+- [N-Grams and Macros](docs/macros.md)
 - [Symbols and Numbers](docs/symbols.md)
-- [Navigation and Mouse](docs/navigation.md)
-- [Functions and Maintenance](docs/functions.md)
+- [Navigation and Media](docs/navigation.md)
+- [Maintenance](docs/maintenance.md)
 
-### Features
+### Main Features
 
+- [Smart Thumb Keys](docs/base.md#smart-thumb-keys)
 - [Home Block Mods](docs/modifiers.md#home-block-modifiers)
 - [One Shot Mods](docs/modifiers.md#one-shot-modifiers)
-- [Combos](docs/base.md#base-layer-combos)
-- [Numpad layer](docs/symbols.md#numpad)
-- [Macros](docs/symbols.md#symbols-in-the-lower-layer-left-side)
-- [Dynamic Macros](docs/navigation.md#dynamic-macros)
-- [Double Dot for New Sentence](docs/base.md#double-dot-for-new-sentences)
-- [Leader Key](docs/navigation.md#leader-key)
-- [Default Modifier (Cmd vs Ctrl)](docs/modifiers.md#default-mod-key)
-- [Capitalize Key](docs/modifiers.md#capitalize-key)
+- [Shortcut Combos](docs/base.md#base-layer-combos)
+- [Numpad Layer](docs/symbols.md#numpad)
+- [N-Grams Layer](docs/macros.md)
+- [Accentuation Keys](docs/macros.md#n-grams-and-accents)
+- [Macros Layer](docs/macros.md)
+- [Dynamic Macros](docs/macros.md#dynamic-macros)
+- [Leader Key](docs/macros.md#leader-key)
 - [Caps Lock Timer](docs/modifiers.md#caps-lock)
-- [Dancing Brackets](docs/symbols.md#dancing-brackets)
-- [Accentuation Keys](docs/symbols.md#accents-in-the-raise-layer-left-side)
+- [Select Word](docs/macros.md#select-word)
+- [IDE Dancing](docs/macros.md#ide-dancing)
 - [Window Swapper](docs/navigation.md#window-swapper)
-- [Select Word](docs/navigation.md#select-word)
-- [IDE Dancing](docs/functions.md#ide-dancing)
-- [Custom Shortcuts](src/qmk/users/rafaelromao/features/custom_shortcuts.c)
-- [Custom Tap Hold](src/qmk/users/rafaelromao/features/taphold.c)
-- [Custom Shift](src/qmk/users/rafaelromao/features/custom_shift.c)
 
 ## About this repo
 

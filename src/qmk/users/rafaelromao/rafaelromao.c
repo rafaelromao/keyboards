@@ -16,6 +16,7 @@ __attribute__ ((weak)) void matrix_scan_keymap(void) {
 
 void matrix_scan_user(void) {
     check_disable_capslock();
+    check_ngrams_timeout();
     process_leader_dictionary();
     matrix_scan_keymap();
 }
@@ -23,6 +24,16 @@ void matrix_scan_user(void) {
 // Process record
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+
+    // Process Ngrams
+    switch (process_ngrams_key(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
 
     // Extend capslock timer
     switch (process_capslock_timer_extension(keycode, record)) {
@@ -136,16 +147,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     // Process capitalize key
     switch (process_capitalize_key(keycode, record)) {
-        case PROCESS_RECORD_RETURN_TRUE:
-            return true;
-        case PROCESS_RECORD_RETURN_FALSE:
-            return false;
-        default:
-            break;
-    };
-
-    // Process mouse layer
-    switch (process_mouselayer(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:
