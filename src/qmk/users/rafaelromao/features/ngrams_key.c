@@ -8,10 +8,15 @@ static ngrams_timer_t ngrams_timer = {
     .timer = 0
 };
 
+void disable_ngrams_layer(void) {
+    clear_oneshot_layer_state(ONESHOT_PRESSED);
+    ngrams_timer.timer = 0;
+}
+
 process_record_result_t process_ngrams_key(uint16_t keycode, keyrecord_t *record) {
 
     if (!record->event.pressed && keycode != NAV_NG && keycode != MED_CAP) {
-        clear_oneshot_layer_state(ONESHOT_PRESSED);
+        disable_ngrams_layer();
     }
 
     switch (keycode) {
@@ -39,6 +44,6 @@ bool ngrams_timer_expired(void) {
 
 void check_ngrams_timeout(void) {
     if (ngrams_timer_expired()) {
-        clear_oneshot_layer_state(ONESHOT_PRESSED);
+        disable_ngrams_layer();
     }
 }
