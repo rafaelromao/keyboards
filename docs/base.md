@@ -43,4 +43,4 @@ Base |
 [N-Grams and Macros](macros.md) |
 [Symbols and Numbers](symbols.md) |
 [Navigation and Media](navigation.md) |
-[Maintenance](maitenance.md)
+[Maintenance](maintenance.md)
