@@ -47,7 +47,7 @@ The Default Mod and Alt thumb keys are placed in the outer left and right thumb 
 - For the left side,
     - This key allows using the same key combinations for shortcuts like Cmd/Ctrl+S, Cmd/Ctrl+C and Cmd/Ctrl+V.
     - This key will activate the modifier for the current operating system, which can be selected in the maintenace layer.
-        - When Mac OS is selected, the left key activates Cmd, otherwise it activates Ctrl.
+        - When Mac OS is selected, the default modifier will be Cmd, otherwise it will be Ctrl.
         - If one-shot Shift is active, the default modifier will be inverted (Cmd vs Ctrl).
 
 ## Caps Lock
