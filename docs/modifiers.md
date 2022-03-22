@@ -43,7 +43,7 @@ The Default Mod and Alt thumb keys are placed in the outer left and right thumb 
 - They are implemented using a custom keycode and a layer-tap.
     - The hold behavior is kept as is, but the tap behavior is intercepted and customized.
     - Source code: [default_mod_key.c](../src/qmk/users/rafaelromao/features/default_mod_key.c)
-- For the right side, this key will always activate Act, when tapped.
+- For the right side, this key will always activate Alt, when tapped.
 - For the left side,
     - This key allows using the same key combinations for shortcuts like Cmd/Ctrl+S, Cmd/Ctrl+C and Cmd/Ctrl+V.
     - This key will activate the modifier for the current operating system, which can be selected in the maintenace layer.
