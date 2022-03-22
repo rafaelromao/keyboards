@@ -19,11 +19,11 @@ SRC += features/custom_shortcuts.c
 SRC += features/custom_shift.c
 
 LTO_ENABLE = yes
-MOUSEKEY_ENABLE = yes
 EXTRAKEY_ENABLE = yes # Audio control and System control
 TAP_DANCE_ENABLE = yes
 COMBO_ENABLE = yes
 LEADER_ENABLE = yes
+MOUSEKEY_ENABLE = no
 NKRO_ENABLE = no
 BOOTMAGIC_ENABLE = no
 BACKLIGHT_ENABLE = no

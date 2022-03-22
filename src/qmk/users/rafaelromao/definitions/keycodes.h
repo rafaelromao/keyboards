@@ -13,8 +13,6 @@ enum {
 
     TG_MAC, TG_WIN, TG_LIN,
 
-    MOU_TG, MOU_ON, MOU_OFF,
-
     SP_CAP, SP_MOD, SP_NG,
 
     SS_MODP, SS_MODM,
@@ -94,8 +92,6 @@ enum {
 #define TG_NUM TG(_NUMPAD)
 #define TT_NAV TT(_NAVIGATION)
 #define TG_NAV TG(_NAVIGATION)
-#define TT_MOU TT(_MAINTENANCE)
-#define TG_MOU TG(_MAINTENANCE)
 
 // Custom Shortcuts
 

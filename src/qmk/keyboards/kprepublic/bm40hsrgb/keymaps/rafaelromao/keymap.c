@@ -169,10 +169,10 @@ void rgb_matrix_indicators_user(void) {
             rgb_matrix_set_color(43, RGB_WHITE);
             break;
         case _MAINTENANCE:
-            rgb_matrix_set_color(23, RGB_WHITE);
-            rgb_matrix_set_color(0, RGB_WHITE);
             rgb_matrix_set_color(2, RGB_WHITE);
-            rgb_matrix_set_color(4, RGB_RED);
+            rgb_matrix_set_color(4, RGB_WHITE);
+            rgb_matrix_set_color(7, RGB_RED);
+            rgb_matrix_set_color(9, RGB_WHITE);
             break;
         default:
             break;

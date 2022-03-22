@@ -134,7 +134,7 @@
 
 #define ___________________MEDIA_R1____________________ XXXXXXX , KC_APP  , HYPR_A  , HYPR_V  , KC_ENT 
 #define ___________________MEDIA_R2____________________ TT_NAV  , KC_MUTE , KC_VOLD , KC_VOLU , XXXXXXX 
-#define ___________________MEDIA_R3____________________ TT_MOU  , KC_MPLY , KC_MPRV , KC_MNXT , XXXXXXX
+#define ___________________MEDIA_R3____________________ XXXXXXX , KC_MPLY , KC_MPRV , KC_MNXT , XXXXXXX
 #define ____MEDIA_R4_____                               KC_BSPC , _______
 
 #define ___________________NAVIGATION_L1_______________ KC_ESC  , XXXXXXX , XXXXXXX , OS_RALT , XXXXXXX
@@ -157,12 +157,12 @@
 #define ___________________MACROS_R3___________________ XXXXXXX , SS_SAR  , SS_DAR  , SS_DDS  , XXXXXXX
 #define ____MACROS_R4____                               KC_SPC  , TD_IJRI
 
-#define ___________________MAINTENANCE_L1______________ XXXXXXX , XXXXXXX , KC_SLEP , XXXXXXX , RESET    
-#define ___________________MAINTENANCE_L2______________ RGB_TOG , TG_LIN  , TG_WIN  , TG_MAC  , EEP_RST 
-#define ___________________MAINTENANCE_L3______________ XXXXXXX , XXXXXXX , KC_PWR  , XXXXXXX , TO_ROM  
+#define ___________________MAINTENANCE_L1______________ XXXXXXX , XXXXXXX , KC_PWR  , XXXXXXX , EEP_RST    
+#define ___________________MAINTENANCE_L2______________ RGB_TOG , XXXXXXX , XXXXXXX , TO_ROM  , XXXXXXX 
+#define ___________________MAINTENANCE_L3______________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX 
 #define __MAINTENANCE_L4_                                                             _______ , _______
 
-#define ___________________MAINTENANCE_R1______________ XXXXXXX , XXXXXXX , KC_WH_D , KC_WH_U , XXXXXXX 
-#define ___________________MAINTENANCE_R2______________ XXXXXXX , KC_MS_L , KC_MS_D , KC_MS_U , KC_MS_R 
-#define ___________________MAINTENANCE_R3______________ TG_MOU  , XXXXXXX , KC_BTN1 , KC_BTN2 , XXXXXXX 
+#define ___________________MAINTENANCE_R1______________ RESET   , XXXXXXX , KC_SLEP , XXXXXXX , XXXXXXX 
+#define ___________________MAINTENANCE_R2______________ XXXXXXX , TG_MAC  , TG_WIN  , TG_LIN  , XXXXXXX 
+#define ___________________MAINTENANCE_R3______________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX 
 #define __MAINTENANCE_R4_                               _______ , _______
