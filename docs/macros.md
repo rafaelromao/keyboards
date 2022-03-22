@@ -4,7 +4,7 @@
 - The N-Grams and Macros layers complement the base layer and are easy to access.
 
 ### N-Grams and Accents
-- The N-Grams and Accents layer has common English and Portuguese n-grams and accentuated letters readly available on a single tap of the left outer thumb key, making them as easy to type as a shifted alpha (which is availabls on a single tap of the right outer thumb key).
+- The N-Grams and Accents layer has common English and Portuguese n-grams and accentuated letters readly available on a single tap of the left outer thumb key, making them as easy to type as a shifted alpha (which is available on a single tap of the right outer thumb key).
 
 ## Macros
 - A Macros layer can be activated holding any of the home row pinky keys.
