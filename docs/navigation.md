@@ -31,6 +31,7 @@ The Navigation and Media layer can be activated holding the outer left and right
 [Home](../readme.md) | 
 [Base](base.md) |
 [Modifiers](modifiers.md) |
+[N-Grams and Macros](macros.md) |
 [Symbols and Numbers](symbols.md) |
 Navigation and Media |
 [Maintenance](maitenance.md)
