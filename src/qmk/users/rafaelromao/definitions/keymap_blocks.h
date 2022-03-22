@@ -128,12 +128,12 @@
 #define ____RAISE_R4_____                               _______ , _______
 
 #define ___________________MACROS_L1___________________ XXXXXXX , SS_SPA  , SS_OCP  , XXXXXXX , XXXXXXX
-#define ___________________MACROS_L2___________________ XXXXXXX , KC_LEAD , SS_SELW , TD_MACR , XXXXXXX
+#define ___________________MACROS_L2___________________ XXXXXXX , KC_LEAD , SS_SELW , TD_MAC1 , XXXXXXX
 #define ___________________MACROS_L3___________________ XXXXXXX , SS_SSQ  , SS_OCS  , XXXXXXX , XXXXXXX
 #define ____MACROS_L4____                                                             TD_IJLE , KC_BSPC
 
 #define ___________________MACROS_R1___________________ XXXXXXX , XXXXXXX , SS_SCU  , SS_OCC  , XXXXXXX
-#define ___________________MACROS_R2___________________ XXXXXXX , XXXXXXX , SS_MODM , SS_MODP , XXXXXXX
+#define ___________________MACROS_R2___________________ XXXXXXX , TD_MAC2 , SS_MODM , SS_MODP , XXXXXXX
 #define ___________________MACROS_R3___________________ XXXXXXX , SS_SAR  , SS_DAR  , SS_DDS  , XXXXXXX
 #define ____MACROS_R4____                               KC_SPC  , TD_IJRI
 
