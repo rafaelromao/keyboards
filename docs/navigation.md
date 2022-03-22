@@ -4,7 +4,7 @@
 The Navigation and Media layer can be activated holding the outer left and right thumb keys, respectively.
 
 ## Navigation
-- The Navigation layer gives access to [one-shot mods](modifiers.md#one-shot-modifiers), along with enter, tab and esc, and VIM style navigation, along with page navigation, insert, delete, home, end.
+- The Navigation layer gives access to [one-shot mods](modifiers.md#one-shot-modifiers), along with Enter, Tab and Esc, Insert, Delete, Home, End, Page Up, Page Down and VIM style navigation.
 - In VIM, navigation with hjkl should be ignored in favor of the navigation with the fingers in the home position, using the navigation layer.
     - For that to work better, hjkl should be disabled in normal and visual modes:
         ```vim
