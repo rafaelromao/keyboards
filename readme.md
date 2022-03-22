@@ -26,7 +26,7 @@ The following pages explain how this layout works and which features are impleme
 - [Shortcut Combos](docs/base.md#base-layer-combos)
 - [Numpad Layer](docs/symbols.md#numpad)
 - [N-Grams Layer](docs/macros.md)
-- [Accentuation Keys](docs/macros.md)
+- [Accentuation Keys](docs/macros.md#n-grams-and-accents)
 - [Macros Layer](docs/macros.md)
 - [Dynamic Macros](docs/macros.md#dynamic-macros)
 - [Leader Key](docs/macros.md#leader-key)
