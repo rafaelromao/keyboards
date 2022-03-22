@@ -26,7 +26,6 @@ The Capitalize key is a custom key that works both as Shift and Caps Lock.
     - If Shift is active or locked in one-shot mode, it activates Caps Lock.
     - If Shift is not active in one-shot mode, it activates Shift for one-shot.
 - The hold behavior of this thumb key is used to activate the Mouse layer.
-- Its alias in the keymap diagram is _Cap_.
 - The Capitalize key is implemented using a custom keycode and a layer-tap.
     - The hold behavior is kept as is, but the tap behavior is intercepted and customized.
     - Source code: [capitalize_key.c](../src/qmk/users/rafaelromao/features/capitalize_key.c)
