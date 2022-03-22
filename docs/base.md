@@ -11,7 +11,7 @@
 - The Smart Thumb keys in this layout change behavior according to the context (active layer and active modifiers).
 - The four thumb keys control layer transitions, when held (navigation, lower, raise and media).
 - The two outer thumb keys act as [modifiers](modifiers.md), when tapped.
-- The two inner thumb keys act as space or backspace, when tapped (which is inverted in the [Macros](macros.md) layer).
+- The two inner thumb keys act as space or backspace, when tapped (which is inverted in the [Macros](macros.md#macros) layer).
 - Holding both outer thumb keys will activate the maintenance layer.
 
 ## Base Layer Combos
