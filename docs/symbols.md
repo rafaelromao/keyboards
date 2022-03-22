@@ -14,7 +14,7 @@ Symbols and Numbers are primarily available in the two classic Lower and Raise l
 - In the right side of the Lower layer, there is a set of number keys, arranged as a numpad, but using number row keycodes.
 - The Raise layer can be activated on top of the Lower layer, holding the backspace thumb key, which makes it easier to access math operators when working with numbers.
 
-## Functions in the Raise layer (left side)
+### Functions in the Raise layer (left side)
 - On the left side of the Raise layer, the F keys are available in the mirrored positions as their respective numbers, making it easier to assimilate. F10 and F12 are available in the inner index column, while F14 to F15 goes bottom up in the pinky column and can be mapped to custom actions or macros in the operating system level, or used to control brightness in MacOS.
 
 ### Symbols in the Raise layer (right side)
