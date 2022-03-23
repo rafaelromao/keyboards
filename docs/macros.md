@@ -4,7 +4,7 @@
 - The N-Grams and Macros layers complement the base layer and are easy to access.
 
 ### N-Grams and Accents
-- The N-Grams and Accents layer has common English and Portuguese n-grams and accentuated letters, readly available on a single tap of the left outer thumb key, making them as easy to type as a shifted alpha (which is available on a single tap of the right outer thumb key).
+- The N-Grams and Accents layer has common English and Portuguese n-grams and accentuated letters, readly available on a single tap of the left outer thumb key, making them as easy to type as a shifted key (which is available on a single tap of the right outer thumb key).
 - There are dedicated accentuation keys for à á ã â é ê õ ó ô ú í and ç, which is all that is needed for Portuguese. These keys are positioned below or close to their corresponding vowel, making them easy to assimilate.
 - It is also possible to accentuate using dead keys, like usually done with the US International layout. To get a dead version of ' " ^ ~ or ` to accentuate a letter, just press shift before the keys that output these symbols, than type the letter you want to accentuates. I.e.: Shift " u produces ü. 
 
