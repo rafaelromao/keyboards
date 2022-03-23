@@ -5,6 +5,11 @@
 
 ### N-Grams and Accents
 - The N-Grams and Accents layer has common English and Portuguese n-grams and accentuated letters, readily available on a single tap of the left outer thumb key, making them as easy to type as a shifted key (which is available on a single tap of the right outer thumb key).
+
+#### N-Grams
+- N-grams that involve h, like th, ch, wh, are available in this layer, below or close to the letter that start them, along with bigrams that can be used to avoid common SFBs, lih ke RS and SR.
+
+#### Accentuation
 - There are dedicated accentuation keys for à á ã â é ê õ ó ô ú í and ç, which is all that is needed for Portuguese. These keys are positioned below or close to their corresponding vowel, making them easy to assimilate.
 - It is also possible to accentuate using dead keys, like usually done with the US International layout. To get a dead version of ' " ^ ~ or ` to accentuate a letter, just press shift before the keys that output these symbols, than type the letter you want to accentuates. I.e.: Shift " u produces ü. 
 
