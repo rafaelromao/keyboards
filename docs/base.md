@@ -15,7 +15,7 @@
 - Holding both outer thumb keys will activate the maintenance layer.
 
 ## Base Layer Combos
-- Combos are available in the base and [Numpad](symbols.md#numpad-layer) layers to send ENTER, ESC, TAB, common shortcuts.
+- Combos are available in the base and [Numpad](symbols.md#numpad-layer) layers to send ENTER, ESC, TAB, common shortcuts like copy, paste, save, select all and undo.
 - Most combos include the home thumb key, the one in the same side, to avoid misfires.
 - One-shot shift can be used to invert the [Default Modifier](modifiers.md#default-mod-and-alt-thumb-keys) used in the combos.
 - If shift, or any other modifier, is held, it will be included in the combo. So hold Shift and tap Z+X+Space will send Redo instead of Undo.
