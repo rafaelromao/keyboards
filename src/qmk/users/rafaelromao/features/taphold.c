@@ -34,7 +34,7 @@ uint16_t get_tapping_term_result(uint16_t keycode) {
     switch (keycode) {
         case LOW_SPC:
         case RAI_BSP:
-            return TAPPING_TERM + 40;
+            return TAPPING_TERM - 40;
         default:
             return TAPPING_TERM;
     }
@@ -58,8 +58,6 @@ bool get_tapping_force_hold_result(uint16_t keycode) {
 
 bool get_hold_on_other_key_press_result(uint16_t keycode) {
     switch (keycode) {
-        case RAI_BSP:
-            return true;
         default:
             return false;
     }
