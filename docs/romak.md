@@ -58,7 +58,9 @@ Despite the higher SFB rate, total finger effort is lesser in Romak than in Cole
 
 ## Extentions
 
-- The [N-Grams and Accents](macros.md) layer extend the Romak base layer to give easy access to common English and Portuguese n-grams and Portuguese accentuated characters. Getting used to this layer can compensate some common SFBs and uncomfortable h bigrams.
+- The [N-Grams and Accents](macros.md#n-grams-and-accents) layer extend the Romak base layer to give easy access to common English and Portuguese n-grams and Portuguese accentuated characters. Getting used to this layer can compensate some common SFBs and uncomfortable h bigrams.
+- The [Lower and Raise](symbols.md) layers give access to function keys, symbols and numbers from the number row. The symbols are arranged to make them easy to use in software programming, with VIM, and math operations.
+- The [Macros](macros.md) layer gives access to common programming macros and other useful macro related features.
 
 
 ##
