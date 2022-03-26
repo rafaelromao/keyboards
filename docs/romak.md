@@ -58,7 +58,7 @@ Despite the higher SFB rate, total finger effort is lesser in Romak than in Cole
 
 ## Extentions
 
-- The [N-Grams and Accents](macros.md) layer extend the Romak base layer to give easy access to common English and Portuguese n-grams and Portuguese accentuated characters.
+- The [N-Grams and Accents](macros.md) layer extend the Romak base layer to give easy access to common English and Portuguese n-grams and Portuguese accentuated characters. Getting used to this layer can compensate some common SFBs and uncomfortable h bigrams.
 
 
 ##
