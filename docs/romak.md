@@ -56,11 +56,16 @@ The [Colemak mod-DH analysis tool](https://colemakmods.github.io/mod-dh/analyze.
 
 Despite the higher SFB rate, total finger effort is lesser in Romak than in Colemak-DH or Workman.
 
+## Extentions
+
+- The [N-Grams and Accents](macros.md) layer extend the Romak base layer to give easy access to common English and Portuguese n-grams and Portuguese accentuated characters.
+
+
 ##
 [Home](../readme.md) | 
 Base |
 [Modifiers](modifiers.md) |
+[N-Grams and Macros](macros.md) |
 [Symbols and Numbers](symbols.md) |
-[Functions and Media](functions.md) | 
-[Navigation and Mouse](navigation.md) |
-[Maintenance](maintenance.md) |
+[Navigation and Media](navigation.md) |
+[Maintenance](maintenance.md)
