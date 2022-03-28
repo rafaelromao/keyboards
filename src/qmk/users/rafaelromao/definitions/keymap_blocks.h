@@ -112,7 +112,7 @@
 #define ___________________LOWER_L3____________________ KC_AT   , TD_SQRB , KC_RBRC , KC_QUES , KC_HASH
 #define ____LOWER_L4_____                                                             _______ , _______
 
-#define ___________________LOWER_R1____________________ XXXXXXX , KC_7    , KC_8    , KC_9    , TT_NUM
+#define ___________________LOWER_R1____________________ XXXXXXX , KC_7    , KC_8    , KC_9    , TG_NUM
 #define ___________________LOWER_R2____________________ KC_COMM , KC_4    , KC_5    , KC_6    , DOT_MAC
 #define ___________________LOWER_R3____________________ SS_DEG  , KC_1    , KC_2    , KC_3    , KC_COLN
 #define ____LOWER_R4_____                               _______ , MED_0
@@ -122,7 +122,7 @@
 #define ___________________RAISE_L3____________________ KC_F14  , KC_F3   , KC_F2   , KC_F1   , KC_F10
 #define ____RAISE_L4_____                                                             _______ , _______
 
-#define ___________________RAISE_R1____________________ SS_CIRC , TD_DLR  , TD_CURB , KC_RCBR , TT_NUM
+#define ___________________RAISE_R1____________________ SS_CIRC , TD_DLR  , TD_CURB , KC_RCBR , TG_NUM
 #define ___________________RAISE_R2____________________ KC_PLUS , KC_MINS , KC_EQL  , KC_EXLM , KC_PERC
 #define ___________________RAISE_R3____________________ KC_ASTR , KC_SLSH , TD_ANGB , KC_GT   , KC_COLN
 #define ____RAISE_R4_____                               _______ , _______
@@ -143,7 +143,7 @@
 #define ____MEDIA_L4_____                                                             MAI_MOD , KC_SPC
 
 #define ___________________MEDIA_R1____________________ XXXXXXX , KC_APP  , HYPR_A  , HYPR_V  , KC_ENT 
-#define ___________________MEDIA_R2____________________ TT_NAV  , KC_MUTE , KC_VOLD , KC_VOLU , XXXXXXX 
+#define ___________________MEDIA_R2____________________ TG_NAV  , KC_MUTE , KC_VOLD , KC_VOLU , XXXXXXX 
 #define ___________________MEDIA_R3____________________ XXXXXXX , KC_MPLY , KC_MPRV , KC_MNXT , XXXXXXX
 #define ____MEDIA_R4_____                               KC_BSPC , _______
 
@@ -163,6 +163,6 @@
 #define __MAINTENANCE_L4_                                                             _______ , _______
 
 #define ___________________MAINTENANCE_R1______________ RESET   , XXXXXXX , KC_SLEP , XXXXXXX , XXXXXXX 
-#define ___________________MAINTENANCE_R2______________ XXXXXXX , TG_MAC  , TG_WIN  , TG_LIN  , XXXXXXX 
+#define ___________________MAINTENANCE_R2______________ TG_NAV  , TG_MAC  , TG_WIN  , TG_LIN  , XXXXXXX 
 #define ___________________MAINTENANCE_R3______________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX 
 #define __MAINTENANCE_R4_                               _______ , _______

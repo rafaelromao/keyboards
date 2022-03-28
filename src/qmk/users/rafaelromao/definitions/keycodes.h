@@ -89,9 +89,7 @@ enum {
 // Layer transitions
 
 #define TO_ROM TO(_ROMAK)
-#define TT_NUM TT(_NUMPAD)
 #define TG_NUM TG(_NUMPAD)
-#define TT_NAV TT(_NAVIGATION)
 #define TG_NAV TG(_NAVIGATION)
 
 // Custom Shortcuts
