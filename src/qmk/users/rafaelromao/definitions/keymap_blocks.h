@@ -108,7 +108,7 @@
 #define ____NUMPAD_R4____                               RAI_BSP , MED_P0
 
 #define ___________________LOWER_L1____________________ XXXXXXX , TD_PARB , KC_RPRN , KC_BSLS , SS_TILD
-#define ___________________LOWER_L2____________________ SS_BTIC , SS_DQUO , SS_SQUO , KC_AMPR , KC_PIPE
+#define ___________________LOWER_L2____________________ SS_BTIC , SS_DQUO , SS_SQUO , SS_DAND , SS_DPIP
 #define ___________________LOWER_L3____________________ KC_AT   , TD_SQRB , KC_RBRC , KC_QUES , KC_HASH
 #define ____LOWER_L4_____                                                             _______ , _______
 
@@ -128,7 +128,7 @@
 #define ____RAISE_R4_____                               _______ , _______
 
 #define ___________________MACROS_L1___________________ XXXXXXX , SS_SPA  , SS_OCP  , XXXXXXX , XXXXXXX
-#define ___________________MACROS_L2___________________ XXXXXXX , KC_LEAD , SS_SELW , SS_DAND , SS_DPIP
+#define ___________________MACROS_L2___________________ XXXXXXX , KC_LEAD , SS_SELW , XXXXXXX , XXXXXXX
 #define ___________________MACROS_L3___________________ XXXXXXX , SS_SSQ  , SS_OCS  , XXXXXXX , XXXXXXX
 #define ____MACROS_L4____                                                             TD_IJLE , KC_BSPC
 

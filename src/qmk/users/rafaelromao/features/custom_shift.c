@@ -3,13 +3,13 @@
 #include "custom_shift.h"
 
 extern os_t os;
-static bool custom_shifting = false;
+static bool navigating = false;
 
 process_record_result_t process_custom_shift(uint16_t keycode, keyrecord_t *record) {
 
     bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     bool isOneShotShift = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
-    bool isShifted = custom_shifting || isOneShotShift || get_mods() & MOD_MASK_SHIFT;
+    bool isShifted = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
     uint16_t key = extract_base_tapping_keycode(keycode);
 
     // Numpad Custom Shifts (make it work even on MacOS)
@@ -25,10 +25,10 @@ process_record_result_t process_custom_shift(uint16_t keycode, keyrecord_t *reco
         case KC_P9:
         case KC_P0:
         case KC_PDOT:
-            if (isShifted) {
+            if (isShifted || navigating) {
                 clear_locked_and_oneshot_mods();
                 if (record->event.pressed) {
-                    custom_shifting = true;
+                    navigating = true;
                     unregister_mods(MOD_MASK_SHIFT);
                     switch (key) {
                         case KC_P1:
@@ -71,10 +71,10 @@ process_record_result_t process_custom_shift(uint16_t keycode, keyrecord_t *reco
             return PROCESS_RECORD_RETURN_TRUE;
 
         default:
-            // Clear custom shift state
-            if (custom_shifting) {
+            // Clear navigating state
+            if (navigating) {
                 unregister_mods(MOD_MASK_SHIFT);
-                custom_shifting = false;
+                navigating = false;
             }
     }
 
@@ -90,6 +90,29 @@ process_record_result_t process_custom_shift(uint16_t keycode, keyrecord_t *reco
                 }
             }
             return PROCESS_RECORD_RETURN_TRUE;
+    }
+
+    switch (keycode) {
+
+        // Simple And and Or
+
+        case SS_DAND:
+            if (record->event.pressed) {
+                if (isShifted) {
+                    tap_code16(KC_AMPR);
+                    return PROCESS_RECORD_RETURN_FALSE;
+                }
+            }
+            return PROCESS_RECORD_CONTINUE;
+
+        case SS_DPIP:
+            if (record->event.pressed) {
+                if (isShifted) {
+                    tap_code16(KC_PIPE);
+                    return PROCESS_RECORD_RETURN_FALSE;
+                }
+            }
+            return PROCESS_RECORD_CONTINUE;
 
     }
 
