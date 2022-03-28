@@ -34,7 +34,7 @@ uint16_t get_tapping_term_result(uint16_t keycode) {
     switch (keycode) {
         case LOW_SPC:
         case RAI_BSP:
-            return TAPPING_TERM - 40;
+            return TAPPING_TERM;
         default:
             return TAPPING_TERM;
     }
