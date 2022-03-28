@@ -137,7 +137,7 @@
 #define ___________________MACROS_R3___________________ XXXXXXX , SS_SAR  , SS_DAR  , SS_DDS  , XXXXXXX
 #define ____MACROS_R4____                               KC_SPC  , TD_IJRI
 
-#define ___________________MEDIA_L1____________________ KC_ESC  , XXXXXXX , XXXXXXX , OS_RALT , XXXXXXX
+#define ___________________MEDIA_L1____________________ KC_ESC  , XXXXXXX , KC_TAB  , OS_RALT , XXXXXXX
 #define ___________________MEDIA_L2____________________ SS_SWIN , OS_LSFT , OS_LCTL , OS_LALT , XXXXXXX
 #define ___________________MEDIA_L3____________________ XXXXXXX , XXXXXXX , XXXXXXX , OS_LGUI , XXXXXXX
 #define ____MEDIA_L4_____                                                             MAI_MOD , KC_SPC
@@ -147,12 +147,12 @@
 #define ___________________MEDIA_R3____________________ XXXXXXX , KC_MPLY , KC_MPRV , KC_MNXT , XXXXXXX
 #define ____MEDIA_R4_____                               KC_BSPC , _______
 
-#define ___________________NAVIGATION_L1_______________ KC_ESC  , XXXXXXX , XXXXXXX , OS_RALT , XXXXXXX
+#define ___________________NAVIGATION_L1_______________ KC_ESC  , XXXXXXX , KC_TAB  , OS_RALT , XXXXXXX
 #define ___________________NAVIGATION_L2_______________ SS_SWIN , OS_LSFT , OS_LCTL , OS_LALT , XXXXXXX
 #define ___________________NAVIGATION_L3_______________ XXXXXXX , XXXXXXX , XXXXXXX , OS_LGUI , XXXXXXX
 #define __NAVIGATION_L4__                                                             _______ , KC_SPC
 
-#define ___________________NAVIGATION_R1_______________ XXXXXXX , KC_TAB  , KC_PGDN , KC_PGUP , KC_ENT
+#define ___________________NAVIGATION_R1_______________ XXXXXXX , KC_APP  , KC_PGDN , KC_PGUP , KC_ENT
 #define ___________________NAVIGATION_R2_______________ TG_NAV  , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT
 #define ___________________NAVIGATION_R3_______________ XXXXXXX , KC_INS  , KC_HOME , KC_END  , KC_DEL
 #define __NAVIGATION_R4__                               KC_BSPC , MAI_ALT

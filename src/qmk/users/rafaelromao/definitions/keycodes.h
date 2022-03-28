@@ -104,5 +104,6 @@ enum {
 #define CB_UNDO LGUI(KC_Z)
 #define CB_COPY LGUI(KC_C)
 #define CB_PAST LGUI(KC_V)
+#define CB_LOCK LGUI(KC_L)
 
 uint16_t extract_base_tapping_keycode(uint16_t keycode);
