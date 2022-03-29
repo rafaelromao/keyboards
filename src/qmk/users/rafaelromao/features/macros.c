@@ -116,20 +116,6 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
 
             // Macro layer macros
 
-            case SS_SPA:
-                SEND_STRING(" (");
-                return PROCESS_RECORD_RETURN_FALSE;
-            case SS_OCP:
-                SEND_STRING("()");
-                tap_code(KC_LEFT);
-                return PROCESS_RECORD_RETURN_FALSE;
-            case SS_SCU:
-                SEND_STRING(" {");
-                return PROCESS_RECORD_RETURN_FALSE;
-            case SS_OCC:
-                SEND_STRING("{}");
-                tap_code(KC_LEFT);
-                return PROCESS_RECORD_RETURN_FALSE;
             case SS_DAND:
                 SEND_STRING("&&");
                 return PROCESS_RECORD_RETURN_FALSE;
@@ -151,13 +137,6 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
                 if (isShifted) {
                     tap_code(KC_EQL);
                 }
-                return PROCESS_RECORD_RETURN_FALSE;
-            case SS_SSQ:
-                SEND_STRING(" [");
-                return PROCESS_RECORD_RETURN_FALSE;
-            case SS_OCS:
-                SEND_STRING("[]");
-                tap_code(KC_LEFT);
                 return PROCESS_RECORD_RETURN_FALSE;
 
             case SS_ARR:

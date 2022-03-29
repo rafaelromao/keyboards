@@ -18,7 +18,7 @@
 - The Macros layer not only gives access to some common programming macros but also a Leader key, a Select Word macro, Zoom controls and the ability to record and play Dynamic Macros, as well as the inverted space and backspace keys and the IDE Dancing feature.
 
 ### Leader Key
-- The Leader Key is available in the left side of the Macros layer, but a double tap in the comma will also activate it.
+- The Leader Key is available in the right side of the Macros layer, but a double tap in the comma will also activate it.
 - The Leader Key is used to give easy access to some useful shortcuts and macros, like typing an internet domain or recurring terminal commands.
 - Source code: [leader.c](../src/qmk/users/rafaelromao/features/leader.c)
 
@@ -26,11 +26,11 @@
 - Select Word is a macro that selects the current word in the first press and extend the selection to the next word in consecutive presses.
 - If shift is held (or in one-shot mode), this macro will select the line instead, and extend the seletion to the next line in consecutive presses.
 - This macro is also OS aware and works the same way on Windows, Linux and MacOS.
-- There is a dedicated key for this macro, in the left side of the Macros layer, but a combo with the middle and ring fingers in the top row on the right side of the Navigation and Media layers will also trigger it.
+- There is a dedicated key for this macro, in the right side of the Macros layer.
 - Source Code: [select_word.c](../src/qmk/users/rafaelromao/features/select_word.c)
 
 ### Dynamic Macros
-- There are two independent macro recording keys in the right side of the Macros layer.
+- There are two independent macro recording keys in the left side of the Macros layer.
 - Double tapping them will start or stop recording a dynamic macro.
 - Tapping them will play the dynamic macro.
 - If there is a macro being recorded, using the [Default Mod Key](modifiers.md#default-mod-and-alt-thumb-keys) to deactivate one-shot modifiers (tapping it twice) will stop recording and clear the current macro.

@@ -2,14 +2,6 @@
 
 #include "combos.h"
 
-// Nav
-
-const uint16_t PROGMEM l_nav_sel_combo[] = {KC_PGDN, KC_PGUP, COMBO_END};
-
-// Media
-
-const uint16_t PROGMEM l_mou_sel_combo[] = {SS_MODM, SS_MODP, COMBO_END};
-
 // Numpad
 
 const uint16_t PROGMEM r_num_tab_combo[] = {RAI_BSP, KC_P8, KC_P9, COMBO_END};
@@ -95,10 +87,6 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(secret_1_combo, SS_SECRET_1),
   COMBO(secret_2_combo, SS_SECRET_2),
   COMBO(secret_3_combo, SS_SECRET_3),
-
-  COMBO(l_nav_sel_combo, SS_SELW),
-
-  COMBO(l_mou_sel_combo, SS_SELW),
 
   COMBO(r_num_tab_combo, KC_TAB),
   COMBO(r_num_ent_combo, KC_ENT),

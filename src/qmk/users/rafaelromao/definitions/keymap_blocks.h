@@ -127,14 +127,14 @@
 #define ___________________RAISE_R3____________________ KC_ASTR , KC_SLSH , TD_ANGB , KC_GT   , KC_COLN
 #define ____RAISE_R4_____                               _______ , _______
 
-#define ___________________MACROS_L1___________________ XXXXXXX , SS_SPA  , SS_OCP  , XXXXXXX , XXXXXXX
-#define ___________________MACROS_L2___________________ XXXXXXX , KC_LEAD , SS_SELW , SS_DAND , SS_DPIP
-#define ___________________MACROS_L3___________________ XXXXXXX , SS_SSQ  , SS_OCS  , XXXXXXX , XXXXXXX
+#define ___________________MACROS_L1___________________ XXXXXXX , XXXXXXX , TD_MAC2 , XXXXXXX , XXXXXXX
+#define ___________________MACROS_L2___________________ XXXXXXX , XXXXXXX , XXXXXXX , SS_DAND , SS_DPIP
+#define ___________________MACROS_L3___________________ XXXXXXX , XXXXXXX , TD_MAC1 , XXXXXXX , XXXXXXX
 #define ____MACROS_L4____                                                             TD_IJLE , KC_BSPC
 
-#define ___________________MACROS_R1___________________ XXXXXXX , XXXXXXX , SS_SCU  , SS_OCC  , XXXXXXX
+#define ___________________MACROS_R1___________________ XXXXXXX , XXXXXXX , SS_SELW , XXXXXXX , XXXXXXX
 #define ___________________MACROS_R2___________________ XXXXXXX , SS_ARR  , SS_EQU  , SS_NEQ  , XXXXXXX
-#define ___________________MACROS_R3___________________ XXXXXXX , TD_MAC2 , TD_MAC1 , SS_DDS  , XXXXXXX
+#define ___________________MACROS_R3___________________ XXXXXXX , XXXXXXX , KC_LEAD , SS_DDS  , XXXXXXX
 #define ____MACROS_R4____                               KC_SPC  , TD_IJRI
 
 #define ___________________MEDIA_L1____________________ KC_ESC  , XXXXXXX , KC_TAB  , OS_RALT , XXXXXXX
