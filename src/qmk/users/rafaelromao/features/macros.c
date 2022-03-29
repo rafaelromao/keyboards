@@ -142,9 +142,9 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
             case SS_ARR:
                 if (isShifted) {
                     clear_shift();
-                    SEND_STRING("=> ");
+                    SEND_STRING("=>");
                 } else {
-                    SEND_STRING("-> ");
+                    SEND_STRING("->");
                 }
                 return PROCESS_RECORD_RETURN_FALSE;
             case SS_DDS:
