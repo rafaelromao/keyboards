@@ -10,7 +10,7 @@
 - N-grams that involve h, like th, ch, wh, are available in this layer, below or close to the letter that start them, along with bigrams that can be used to avoid common SFBs, like RS and SR.
 
 #### Accentuation
-- There are dedicated accentuation keys for à á ã â é ê õ ó ô ú í and ç, which is all that is needed for Portuguese. These keys are positioned below or close to their corresponding vowel, making them easy to assimilate.
+- There are dedicated accentuation keys for à á ã â é ê õ ó ô ú í and ç, which is all that is needed for Portuguese. These keys are positioned below or close to their corresponding vowels, making them easy to assimilate.
 - It is also possible to accentuate using dead keys, like usually done with the US International layout. To get a dead version of ' " ^ ~ or ` to accentuate a letter, just press shift before the keys that output these symbols, then type the letter you want to accentuate. I.e.: Shift " u produces ü. 
 
 ## Macros
