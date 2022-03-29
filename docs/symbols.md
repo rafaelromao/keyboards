@@ -2,7 +2,7 @@
 
 ## Symbols and Numbers
 Symbols and Numbers are primarily available in the two classic Lower and Raise layers, activated holding the space and backspace thumb keys, respectively.
-- Symbols ae available in the left side of the Lower layer and in the right side of the Raise layers, making them easier to reach with a single hand.
+- Symbols are available in the left side of the Lower layer and in the right side of the Raise layers, making them easier to reach with a single hand.
 - Function keys are available in the left side of the Raise layer, so they require two hands.
 - Numbers are available in the right side of the Lower layer and in a dedicated [Numpad](symbols.md#numpad) layer, which can be toggled on with a dedicated key in the Lower and Raise layers.
 
