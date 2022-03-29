@@ -3,7 +3,7 @@
 ## Navigation and Media
 The Navigation and Media layer can be activated holding the outer left and right thumb keys, respectively.
 
-## Navigation
+### Navigation
 - The Navigation layer gives access to [One-Shot Modifiers](modifiers.md#one-shot-modifiers), Enter, Tab, Esc, Insert, Delete, Home, End, Page Up, Page Down and VIM style navigation.
 - In VIM, navigation with hjkl should be ignored in favor of the navigation with the fingers in the home position, using the navigation layer.
     - For that to work better, hjkl should be disabled in normal and visual modes:
@@ -26,7 +26,7 @@ The Navigation and Media layer can be activated holding the outer left and right
 ### Zoom Controls
 - In the right side of the Media layer, there are keys to control Zoom, which can be either Cmd+ and Cmd- or Ctrl+ and Ctrl-, according to the operating system that is selected.
 
-## Window Swapper
+### Window Swapper
 - Window Swapper is a macro that performs Alt-Tab on Windows/Linux and Cmd+Tab on MacOS, holding the modifier between keypresses. It is available in both Navigation and Media layer.
 - Source Code: [window_swapper.c](../src/qmk/users/rafaelromao/features/window_swapper.c)
 
