@@ -10,7 +10,7 @@
 ## One-Shot Modifiers
 
 One-Shot Modifiers are modifier keys that, when tapped, remain active until the next key is pressed or a timeout expires. 
-- They are available in the Navigation and Media layers and act as standard mofiders when held.
+- They are available in the Navigation and Media layers and act as standard modifers when held.
 - These modifiers will be automatically deactivated after 2 seconds. 
 - They can also be activated in sticky mode, with a double tap, and remain active until manually deactivated by tapping the Default Mod thumb key.
 
