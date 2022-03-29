@@ -23,6 +23,9 @@ The Navigation and Media layer can be activated holding the outer left and right
 - The left side of the Media layer equals the left side of the Navigation layer and enter can also be found in the same position.
 - The right side of this layer gives access to media keys, a Menu key, and a shortcut to toggle the Navigation layer on.
 
+### Zoom Controls
+- In the right side of the Media layer, there are keys to control Zoom, which can be either Cmd+ and Cmd- or Ctrl+ and Ctrl-, according to the operating system that is selected.
+
 ## Window Swapper
 - Window Swapper is a macro that performs Alt-Tab on Windows/Linux and Cmd+Tab on MacOS, holding the modifier between keypresses. It is available in both Navigation and Media layer.
 - Source Code: [window_swapper.c](../src/qmk/users/rafaelromao/features/window_swapper.c)
