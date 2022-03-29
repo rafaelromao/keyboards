@@ -92,29 +92,5 @@ process_record_result_t process_custom_shift(uint16_t keycode, keyrecord_t *reco
             return PROCESS_RECORD_RETURN_TRUE;
     }
 
-    switch (keycode) {
-
-        // Simple And and Or
-
-        case SS_DAND:
-            if (record->event.pressed) {
-                if (isShifted) {
-                    tap_code16(KC_AMPR);
-                    return PROCESS_RECORD_RETURN_FALSE;
-                }
-            }
-            return PROCESS_RECORD_CONTINUE;
-
-        case SS_DPIP:
-            if (record->event.pressed) {
-                if (isShifted) {
-                    tap_code16(KC_PIPE);
-                    return PROCESS_RECORD_RETURN_FALSE;
-                }
-            }
-            return PROCESS_RECORD_CONTINUE;
-
-    }
-
     return PROCESS_RECORD_CONTINUE;
 }

@@ -136,6 +136,22 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
             case SS_DPIP:
                 SEND_STRING("||");
                 return PROCESS_RECORD_RETURN_FALSE;
+            case SS_EQU:
+                clear_shift();
+                tap_code(KC_EQL);
+                tap_code(KC_EQL);
+                if (isShifted) {
+                    tap_code(KC_EQL);
+                }
+                return PROCESS_RECORD_RETURN_FALSE;
+            case SS_NEQ:
+                clear_shift();
+                tap_code16(KC_EXLM);
+                tap_code(KC_EQL);
+                if (isShifted) {
+                    tap_code(KC_EQL);
+                }
+                return PROCESS_RECORD_RETURN_FALSE;
             case SS_SSQ:
                 SEND_STRING(" [");
                 return PROCESS_RECORD_RETURN_FALSE;
@@ -144,11 +160,13 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
                 tap_code(KC_LEFT);
                 return PROCESS_RECORD_RETURN_FALSE;
 
-            case SS_SAR:
-                SEND_STRING("-> ");
-                return PROCESS_RECORD_RETURN_FALSE;
-            case SS_DAR:
-                SEND_STRING("=> ");
+            case SS_ARR:
+                if (isShifted) {
+                    clear_shift();
+                    SEND_STRING("=> ");
+                } else {
+                    SEND_STRING("-> ");
+                }
                 return PROCESS_RECORD_RETURN_FALSE;
             case SS_DDS:
                 SEND_STRING("../");

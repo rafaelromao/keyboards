@@ -28,8 +28,8 @@ enum {
     SS_WH,  SS_SR,  SS_ER,  SS_TH,  SS_ING, SS_IO,
 
     SS_SPA, SS_OCP, SS_SCU, SS_OCC,
-    SS_SSQ, SS_OCS, SS_DAND, SS_DPIP,
-    SS_SAR, SS_DAR, SS_DDS, 
+    SS_SSQ, SS_OCS, SS_DAND, SS_DPIP, 
+    SS_EQU, SS_NEQ, SS_ARR, SS_DDS, 
 
     SS_AO, SS_CAO, SS_OES, SS_COES
 };

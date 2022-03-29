@@ -8,7 +8,7 @@ const uint16_t PROGMEM l_nav_sel_combo[] = {KC_PGDN, KC_PGUP, COMBO_END};
 
 // Media
 
-const uint16_t PROGMEM l_mou_sel_combo[] = {HYPR_A, HYPR_V, COMBO_END};
+const uint16_t PROGMEM l_mou_sel_combo[] = {SS_MODM, SS_MODP, COMBO_END};
 
 // Numpad
 

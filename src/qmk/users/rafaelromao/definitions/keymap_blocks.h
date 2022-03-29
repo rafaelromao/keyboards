@@ -108,7 +108,7 @@
 #define ____NUMPAD_R4____                               RAI_BSP , MED_P0
 
 #define ___________________LOWER_L1____________________ XXXXXXX , TD_PARB , KC_RPRN , KC_BSLS , SS_TILD
-#define ___________________LOWER_L2____________________ SS_BTIC , SS_DQUO , SS_SQUO , SS_DAND , SS_DPIP
+#define ___________________LOWER_L2____________________ SS_BTIC , SS_DQUO , SS_SQUO , KC_AMPR , KC_PIPE
 #define ___________________LOWER_L3____________________ KC_AT   , TD_SQRB , KC_RBRC , KC_QUES , KC_HASH
 #define ____LOWER_L4_____                                                             _______ , _______
 
@@ -128,13 +128,13 @@
 #define ____RAISE_R4_____                               _______ , _______
 
 #define ___________________MACROS_L1___________________ XXXXXXX , SS_SPA  , SS_OCP  , XXXXXXX , XXXXXXX
-#define ___________________MACROS_L2___________________ XXXXXXX , KC_LEAD , SS_SELW , XXXXXXX , XXXXXXX
+#define ___________________MACROS_L2___________________ XXXXXXX , KC_LEAD , SS_SELW , SS_DAND , SS_DPIP
 #define ___________________MACROS_L3___________________ XXXXXXX , SS_SSQ  , SS_OCS  , XXXXXXX , XXXXXXX
 #define ____MACROS_L4____                                                             TD_IJLE , KC_BSPC
 
 #define ___________________MACROS_R1___________________ XXXXXXX , XXXXXXX , SS_SCU  , SS_OCC  , XXXXXXX
-#define ___________________MACROS_R2___________________ TD_MAC2 , TD_MAC1 , SS_MODM , SS_MODP , XXXXXXX
-#define ___________________MACROS_R3___________________ XXXXXXX , SS_SAR  , SS_DAR  , SS_DDS  , XXXXXXX
+#define ___________________MACROS_R2___________________ XXXXXXX , SS_ARR  , SS_EQU  , SS_NEQ  , XXXXXXX
+#define ___________________MACROS_R3___________________ XXXXXXX , TD_MAC2 , TD_MAC1 , SS_DDS  , XXXXXXX
 #define ____MACROS_R4____                               KC_SPC  , TD_IJRI
 
 #define ___________________MEDIA_L1____________________ KC_ESC  , XXXXXXX , KC_TAB  , OS_RALT , XXXXXXX
@@ -142,9 +142,9 @@
 #define ___________________MEDIA_L3____________________ XXXXXXX , XXXXXXX , XXXXXXX , OS_LGUI , XXXXXXX
 #define ____MEDIA_L4_____                                                             MAI_MOD , KC_SPC
 
-#define ___________________MEDIA_R1____________________ XXXXXXX , KC_APP  , HYPR_A  , HYPR_V  , KC_ENT 
-#define ___________________MEDIA_R2____________________ TG_NAV  , KC_MUTE , KC_VOLD , KC_VOLU , XXXXXXX 
-#define ___________________MEDIA_R3____________________ XXXXXXX , KC_MPLY , KC_MPRV , KC_MNXT , XXXXXXX
+#define ___________________MEDIA_R1____________________ XXXXXXX , KC_APP  , SS_MODM , SS_MODP , KC_ENT 
+#define ___________________MEDIA_R2____________________ TG_NAV  , KC_MUTE , KC_VOLD , KC_VOLU , HYPR_A 
+#define ___________________MEDIA_R3____________________ XXXXXXX , KC_MPLY , KC_MPRV , KC_MNXT , HYPR_V
 #define ____MEDIA_R4_____                               KC_BSPC , _______
 
 #define ___________________NAVIGATION_L1_______________ KC_ESC  , XXXXXXX , KC_TAB  , OS_RALT , XXXXXXX
