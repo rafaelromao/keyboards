@@ -30,6 +30,7 @@ Symbols and Numbers are primarily available in the two classic Lower and Raise l
 - A dedicated Numpad layer can be activated from the Lower or Raise layers, or holding the inner thumb keys in the [N-Grams](macros.md) layer.
 - Unlike numbers in the Lower layer, numbers in the Numpad layer use numpad keycodes, instead of numrow keycodes.
 - Numpad navigation, using shift, which usually does not work on MacOS, is implemented using [Custom Shift](../src/qmk/users/rafaelromao/features/custom_shift.c).
+- The left side of the Numpad layer also contains function keys.
 
 ##
 [Home](../readme.md) | 

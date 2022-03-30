@@ -10,13 +10,14 @@
 ## One-Shot Modifiers
 
 One-Shot Modifiers are modifier keys that, when tapped, remain active until the next key is pressed or a timeout expires. 
-- They are available in the Navigation and Media layers and act as standard modifers when held.
+- They are available in the [Navigation](navigation.md#navigation) layer and act as standard modifers when held.
 - These modifiers will be automatically deactivated after 2 seconds. 
 - They can also be activated in sticky mode, with a double tap, and remain active until manually deactivated by tapping the Default Mod thumb key.
 
 ## Standard Modifiers
 
-- Stantard modifiers (Shift, Ctrl, Alt, AltGr, Gui) are available on the left side of the [Numpad](symbols.md#numpad-layer) layer. These standard modifiers do not have one-shot behavior, so they can be used in situations which a tap or multi tap in a modifier key is required.
+- Stantard modifiers are available in the [Media](navigation.md#media) layer.
+- These modifiers do not have one-shot behavior, so they can be used in situations which a tap or multi tap in a modifier key is required.
 
 ## Capitalize Key 
 

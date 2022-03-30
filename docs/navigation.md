@@ -20,7 +20,7 @@ The Navigation and Media layer can be activated holding the outer left and right
     - This trade-off turns the navigation easier and ubiquitous and makes even more sense when using other layout than qwerty.
 
 ### Media
-- The left side of the Media layer equals the left side of the Navigation layer and enter can also be found in the same position.
+- The Media layer gives access to [Standare Modifiers](modifiers.md#standard-modifiers), Enter, Tab and Esc.
 - The right side of this layer gives access to media keys, a Menu key, and a shortcut to toggle the Navigation layer on.
 
 ### Zoom Controls

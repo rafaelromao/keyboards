@@ -97,9 +97,9 @@
 #define ___________________NGRAMS_R3___________________ SS_IO   , SS_SQ_E , SS_CR_E , SS_SQ_O , SS_CR_O
 #define ____NGRAMS_R4____                               NUM_BSP , _______
 
-#define ___________________NUMPAD_L1___________________ KC_NUM  , XXXXXXX , XXXXXXX , KC_RALT , XXXXXXX
-#define ___________________NUMPAD_L2___________________ XXXXXXX , KC_LSFT , KC_LCTL , KC_LALT , XXXXXXX
-#define ___________________NUMPAD_L3___________________ XXXXXXX , XXXXXXX , XXXXXXX , KC_LGUI , XXXXXXX
+#define ___________________NUMPAD_L1___________________ KC_NUM  , KC_F9   , KC_F8   , KC_F7   , KC_F12
+#define ___________________NUMPAD_L2___________________ KC_F15  , KC_F6   , KC_F5   , KC_F4   , KC_F11
+#define ___________________NUMPAD_L3___________________ KC_F14  , KC_F3   , KC_F2   , KC_F1   , KC_F10
 #define ____NUMPAD_L4____                                                             _______ , LOW_SPC
 
 #define ___________________NUMPAD_R1___________________ XXXXXXX , KC_P7   , KC_P8   , KC_P9   , TG_NUM
@@ -137,9 +137,9 @@
 #define ___________________MACROS_R3___________________ XXXXXXX , XXXXXXX , KC_LEAD , SS_DDS  , XXXXXXX
 #define ____MACROS_R4____                               KC_SPC  , TD_IJRI
 
-#define ___________________MEDIA_L1____________________ KC_ESC  , XXXXXXX , KC_TAB  , OS_RALT , XXXXXXX
-#define ___________________MEDIA_L2____________________ SS_SWIN , OS_LSFT , OS_LCTL , OS_LALT , XXXXXXX
-#define ___________________MEDIA_L3____________________ XXXXXXX , XXXXXXX , XXXXXXX , OS_LGUI , XXXXXXX
+#define ___________________MEDIA_L1____________________ KC_ESC  , XXXXXXX , KC_TAB  , KC_RALT , XXXXXXX
+#define ___________________MEDIA_L2____________________ SS_SWIN , KC_LSFT , KC_LCTL , KC_LALT , XXXXXXX
+#define ___________________MEDIA_L3____________________ XXXXXXX , XXXXXXX , XXXXXXX , KC_LGUI , XXXXXXX
 #define ____MEDIA_L4_____                                                             MAI_MOD , KC_SPC
 
 #define ___________________MEDIA_R1____________________ XXXXXXX , KC_APP  , SS_MODM , SS_MODP , KC_ENT 
