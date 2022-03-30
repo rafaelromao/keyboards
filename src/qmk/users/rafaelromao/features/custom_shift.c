@@ -78,19 +78,5 @@ process_record_result_t process_custom_shift(uint16_t keycode, keyrecord_t *reco
             }
     }
 
-    switch (key) {
-
-        // Shift+Backspace for Delete (when not one-shot)
-
-        case KC_BSPC:
-            if (record->event.pressed) {
-                if (isShifted && !isOneShotShift) {
-                    tap_code(KC_DEL);
-                    return PROCESS_RECORD_RETURN_FALSE;
-                }
-            }
-            return PROCESS_RECORD_RETURN_TRUE;
-    }
-
     return PROCESS_RECORD_CONTINUE;
 }

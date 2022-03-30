@@ -23,9 +23,6 @@
 ## Base Layer Macros
 - Some macros are available directly from the base layer.
 
-### Shift + Backspace for Delete.
-- Delete is available in the Navigation layer, but tapping Backspace while holding Shift will also send Delete.
-
 ### Double Comma for Leader Key
 - The Leader Key can be accessed double tapping the comma key. This allow really fast access to leader sequences.
 
