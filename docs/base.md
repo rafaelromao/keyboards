@@ -31,7 +31,6 @@
 
 ### Double Dot for New Sentences
 - A double tap in the dot key outputs dot followed by space, and activates one-shot shift. This will make it easier to enter a new sentence.
-- Holding the dot key will insert it in the end of the current line.
 
 ### Pontuation Hold
 - Holding a pontuation key (dot, comma or semicollon) will add it to the end of the current line.
