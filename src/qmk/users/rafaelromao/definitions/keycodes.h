@@ -39,28 +39,35 @@ enum {
 #define LSFTT_S LSFT_T(KC_S)
 #define RSFTT_L RSFT_T(KC_L)
 #define RSFTT_O RSFT_T(KC_O)
+#define SF_F6 LSFT_T(KC_F6)
+#define SF_P6 RSFT_T(KC_P6)
 
 #define LCTLT_D LCTL_T(KC_D)
 #define LCTLT_E LCTL_T(KC_E)
 #define RCTLT_K RCTL_T(KC_K)
 #define RCTLT_A RCTL_T(KC_A)
+#define CT_F5 LCTL_T(KC_F5)
+#define CT_P5 RCTL_T(KC_P5)
 
 #define LALTT_F LALT_T(KC_F)
 #define LALTT_D LALT_T(KC_D)
 #define RALTT_J RALT_T(KC_J)
 #define RALTT_N RALT_T(KC_N)
+#define AL_F4 LALT_T(KC_F4)
+#define AL_P4 RALT_T(KC_P4)
 #define LA_UNDS LALT_T(KC_UNDS)
 
 #define LGUIT_V LGUI_T(KC_V)
 #define LGUIT_T LGUI_T(KC_T)
 #define RGUIT_M RGUI_T(KC_M)
+#define GU_F1 LGUI_T(KC_F1)
+#define GU_P1 RGUI_T(KC_P1)
 
 // One-shot mods
 
 #define OS_LSFT OSM(MOD_LSFT)
 #define OS_LCTL OSM(MOD_LCTL)
 #define OS_LALT OSM(MOD_LALT)
-#define OS_RALT OSM(MOD_RALT)
 #define OS_LGUI OSM(MOD_LGUI)
 
 // Layer-taps
