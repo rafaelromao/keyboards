@@ -41,12 +41,12 @@
 - Left Side:
     - Tap = Build (Cmd+F9/Ctrl+F9)
     - Double Tap = Run Everything (Ctrl+Ctrl)
-    - Triple Tap = Find Usages (Alt+F7)
+    - Triple Tap = Go To Project Window (Cmd+1/Ctrl+1)
     - Hold = Complete Statement (Shift+Cmd+Enter/Shift+Ctrl+Enter)
 - Right Side:
     - Tap = Quick Actions (Alt+Enter)
     - Double Tap = Search Everywhere (Shift+Shift)
-    - Triple Tap = Go To Project Window (Cmd+1/Ctrl+1)
+    - Triple Tap = Find Usages (Alt+F7)
     - Hold = Refactor This (Shift+Cmd+Alt+T/Shift+Ctrl+Alt+T)
 - Two other extremely helpful shortcuts are Ctrl+Space (Show Autocomplete Options) and F2 (Go To Next Error), but they are easy to type and don't need to be included in the dancing.
 - Source code: [tapdance.c](../src/qmk/users/rafaelromao/features/tapdance.c)

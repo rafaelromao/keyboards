@@ -53,7 +53,12 @@ void td_inj_lef(qk_tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_LCTL);
             break;
         case TD_TRIPLE_TAP:
-            SEND_STRING(SS_LALT(SS_TAP(X_F7)));
+            if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
+                SEND_STRING(SS_LCTL("1"));
+            } else {
+                SEND_STRING(SS_LGUI("1"));
+                break;
+            }
             break;
         case TD_SINGLE_HOLD:
             if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
@@ -82,12 +87,7 @@ void td_inj_rig(qk_tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_LSFT);
             break;
         case TD_TRIPLE_TAP:
-            if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
-                SEND_STRING(SS_LCTL("1"));
-            } else {
-                SEND_STRING(SS_LGUI("1"));
-                break;
-            }
+            SEND_STRING(SS_LALT(SS_TAP(X_F7)));
             break;
         case TD_SINGLE_HOLD:
             if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
