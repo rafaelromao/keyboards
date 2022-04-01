@@ -30,16 +30,6 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
     return PROCESS_RECORD_CONTINUE;
 }
 
-uint16_t get_tapping_term_result(uint16_t keycode) {
-    switch (keycode) {
-        case LOW_SPC:
-        case RAI_BSP:
-            return TAPPING_TERM;
-        default:
-            return TAPPING_TERM;
-    }
-}
-
 bool get_tapping_force_hold_result(uint16_t keycode) {
     switch (keycode) {
         case LOW_SPC:
@@ -51,13 +41,6 @@ bool get_tapping_force_hold_result(uint16_t keycode) {
         case QK_LAYER_TAP...QK_LAYER_TAP_MAX:
         case QK_MOMENTARY...QK_MOMENTARY_MAX:
             return true;
-        default:
-            return false;
-    }
-}
-
-bool get_hold_on_other_key_press_result(uint16_t keycode) {
-    switch (keycode) {
         default:
             return false;
     }

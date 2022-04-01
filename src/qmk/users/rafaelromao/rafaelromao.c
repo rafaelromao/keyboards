@@ -180,16 +180,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 // Tap-hold configuration
 
-bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
-    return get_hold_on_other_key_press_result(keycode);
-}
-
 bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
     return get_tapping_force_hold_result(keycode);
-}
-
-uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
-    return get_tapping_term_result(keycode);
 }
 
 // Dynamic macros
