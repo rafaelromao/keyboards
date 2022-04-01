@@ -5,6 +5,7 @@
 #include "../definitions/keycodes.h"
 #include "process_record_result.h"
 #include "os_toggle.h"
+#include "default_mod_key.h"
 
 typedef struct {
     uint16_t timer;

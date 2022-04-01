@@ -59,37 +59,6 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
             case SS_DDS:
                 SEND_STRING("../");
                 return PROCESS_RECORD_RETURN_FALSE;
-
-            case SS_AO:
-                clear_shift();
-                tap_code16(KC_TILD);
-                tap_code(KC_A);
-                tap_code(KC_O);
-                return PROCESS_RECORD_RETURN_FALSE;
-            case SS_CAO:
-                clear_shift();
-                tap_code16(KC_QUOT);
-                tap_code(KC_C);
-                tap_code16(KC_TILD);
-                tap_code(KC_A);
-                tap_code(KC_O);
-                return PROCESS_RECORD_RETURN_FALSE;
-            case SS_OES:
-                clear_shift();
-                tap_code16(KC_TILD);
-                tap_code(KC_O);
-                tap_code(KC_E);
-                tap_code(KC_S);
-                return PROCESS_RECORD_RETURN_FALSE;
-            case SS_COES:
-                clear_shift();
-                tap_code16(KC_QUOT);
-                tap_code(KC_C);
-                tap_code16(KC_TILD);
-                tap_code(KC_O);
-                tap_code(KC_E);
-                tap_code(KC_S);
-                return PROCESS_RECORD_RETURN_FALSE;
         }
     }
 
