@@ -13,44 +13,6 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
     if (record->event.pressed) {
         switch (keycode) {
 
-            // Accent characters
-
-            case SS_BTIC:
-                clear_shift();
-                tap_code(KC_GRV);
-                if (!isShifted) {
-                    tap_code(KC_SPC);
-                }
-                return PROCESS_RECORD_RETURN_FALSE;
-            case SS_DQUO:
-                clear_shift();
-                tap_code16(KC_DQUO);
-                if (!isShifted) {
-                    tap_code(KC_SPC);
-                }
-                return PROCESS_RECORD_RETURN_FALSE;
-            case SS_SQUO:
-                clear_shift();
-                tap_code(KC_QUOT);
-                if (!isShifted) {
-                    tap_code(KC_SPC);
-                }
-                return PROCESS_RECORD_RETURN_FALSE;
-            case SS_CIRC:
-                clear_shift();
-                tap_code16(KC_CIRC);
-                if (!isShifted) {
-                    tap_code(KC_SPC);
-                }
-                return PROCESS_RECORD_RETURN_FALSE;
-            case SS_TILD:
-                clear_shift();
-                tap_code16(KC_TILD);
-                if (!isShifted) {
-                    tap_code(KC_SPC);
-                }
-                return PROCESS_RECORD_RETURN_FALSE;
-
             // Degree symbol
 
             case SS_DEG:

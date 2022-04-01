@@ -81,11 +81,56 @@ process_record_result_t process_accentuated_characters(uint16_t keycode, keyreco
         return PROCESS_RECORD_CONTINUE;
     }
 
+    bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
+    bool isOneShotShift = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
+    bool isShifted = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
+
+    // Standalone Accent characters
+
+    switch (keycode) {
+
+        case SS_BTIC:
+            clear_shift();
+            tap_code(KC_GRV);
+            if (!isShifted) {
+                tap_code(KC_SPC);
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+        case SS_DQUO:
+            clear_shift();
+            tap_code16(KC_DQUO);
+            if (!isShifted) {
+                tap_code(KC_SPC);
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+        case SS_SQUO:
+            clear_shift();
+            tap_code(KC_QUOT);
+            if (!isShifted) {
+                tap_code(KC_SPC);
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+        case SS_CIRC:
+            clear_shift();
+            tap_code16(KC_CIRC);
+            if (!isShifted) {
+                tap_code(KC_SPC);
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+        case SS_TILD:
+            clear_shift();
+            tap_code16(KC_TILD);
+            if (!isShifted) {
+                tap_code(KC_SPC);
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+    }
+
+    // Accentuated characters
+
     if (!is_accentuated_keycode(keycode)) {
         return PROCESS_RECORD_CONTINUE;
     }
-
-    bool isShifted = get_oneshot_mods() & MOD_MASK_SHIFT;
 
     clear_locked_and_oneshot_mods();
 
