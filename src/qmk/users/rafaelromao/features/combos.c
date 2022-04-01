@@ -75,6 +75,9 @@ const uint16_t PROGMEM l_rom_cop_combo[] = {LOW_SPC, KC_Y, LGUIT_T, COMBO_END};
 
 // Reset
 
+const uint16_t PROGMEM ro0_reset_combo[] = {KC_Q, KC_Z, KC_P, TD_SCLE, COMBO_END};
+const uint16_t PROGMEM ro3_reset_combo[] = {KC_UNDS, KC_Z, KC_P, TD_SCLE, COMBO_END};
+const uint16_t PROGMEM ro5_reset_combo[] = {KC_UNDS, KC_Z, KC_W, TD_SCLE, COMBO_END};
 const uint16_t PROGMEM rom_reset_combo[] = {KC_UNDS, KC_B, KC_W, TD_SCLE, COMBO_END};
 
 // Secret
@@ -140,6 +143,9 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(r_rom_sal_combo, CB_SELC),
 
   COMBO(rom_reset_combo, RESET),
+  COMBO(ro0_reset_combo, RESET),
+  COMBO(ro3_reset_combo, RESET),
+  COMBO(ro5_reset_combo, RESET),
 };
 
 extern os_t os;
