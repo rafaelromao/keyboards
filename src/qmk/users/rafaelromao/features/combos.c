@@ -5,7 +5,7 @@
 // Numpad
 
 const uint16_t PROGMEM r_num_tab_combo[] = {RAI_BSP, KC_P8, KC_P9, COMBO_END};
-const uint16_t PROGMEM r_num_ent_combo[] = {RAI_BSP, KC_P5, KC_P6, COMBO_END};
+const uint16_t PROGMEM r_num_ent_combo[] = {RAI_BSP, CT_P5, SF_P6, COMBO_END};
 
 // Lower
 
