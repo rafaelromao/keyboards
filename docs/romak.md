@@ -10,9 +10,9 @@ Romak is a new keyboard layout, inspired by [Colemak](https://colemak.org) and [
 - Romak has a higher SFB rate than Colemak, but lower than Workman, and most of this load goes to the stronger fingers.
 - There is a commented out transition path from Qwerty to Romak in the [keymap_blocks.h](../src/qmk/users/rafaelromao/definitions/keymap_blocks.h), similar to Tarmak, but moving _ instead of J.
 
-### From Qwerty to Romak in 6 steps
+### From Qwerty to Romak in 7 steps
 
-![img](https://i.imgur.com/9TxUFbp.png)
+![img](https://i.imgur.com/QNHBPKs.png)
 
 ## Romak vs Colemak-DH
 [Stevep99's Layout Analyzer Tool](https://stevep99.github.io/keyboard-layout-analyzer) was used to compare Romak with Colemak-DH and some other layouts, using the Magna Carta as text corpus, in [Portuguese](analysis/corpus.pt.txt) and [English](analysis/corpus.en.txt).

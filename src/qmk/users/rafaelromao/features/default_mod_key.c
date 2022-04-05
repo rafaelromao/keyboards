@@ -50,7 +50,7 @@ process_record_result_t process_default_mod_key(uint16_t keycode, keyrecord_t *r
                         if (isOneShotShift) {
                             clear_locked_and_oneshot_mods();
                         }
-                        add_oneshot_mods(MOD_LALT);
+                        add_oneshot_mods(MOD_RALT);
                     }
                 }
                 return PROCESS_RECORD_RETURN_FALSE;

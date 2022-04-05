@@ -104,11 +104,13 @@ enum {
 #define HYPR_A HYPR(KC_A)
 #define HYPR_V HYPR(KC_V)
 
-#define CB_SELC LGUI(KC_A)
-#define CB_SAVE LGUI(KC_S)
-#define CB_UNDO LGUI(KC_Z)
-#define CB_COPY LGUI(KC_C)
-#define CB_PAST LGUI(KC_V)
-#define CB_LOCK LGUI(KC_L)
+#define SC_SELC LGUI(KC_A)
+#define SC_SAVE LGUI(KC_S)
+#define SC_UNDO LGUI(KC_Z)
+#define SC_COPY LGUI(KC_C)
+#define SC_PAST LGUI(KC_V)
+#define SC_LOCK LGUI(LCTL(KC_Q))
+#define SC_FULL LGUI(LCTL(KC_F))
+#define SC_FIND LGUI(KC_F)
 
 uint16_t extract_base_tapping_keycode(uint16_t keycode);

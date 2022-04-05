@@ -85,16 +85,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
     };
     
-    // Process combos
-    switch (process_combos(keycode, record)) {
-        case PROCESS_RECORD_RETURN_TRUE:
-            return true;
-        case PROCESS_RECORD_RETURN_FALSE:
-            return false;
-        default:
-            break;
-    };
-
     // Process ngrams
     switch (process_ngrams(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
