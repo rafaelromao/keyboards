@@ -89,6 +89,7 @@ enum {
 #define KCA_MAC LT(_MACROS, KC_A)
 #define KCF_MAC LT(_MACROS, KC_F)
 #define KCC_MAC LT(_MACROS, KC_C)
+#define SCL_MAC LT(_MACROS, KC_SCLN)
 #define UND_MAC LT(_MACROS, KC_UNDS)
 #define DOT_MAC LT(_MACROS, KC_DOT)
 #define PDO_MAC LT(_MACROS, KC_PDOT)

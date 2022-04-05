@@ -75,7 +75,7 @@
 // #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , TD_COML , TD_DOTD , TD_SCLE
 // #define ____ROMAK_R4_____                               RAI_BSP , MED_CAP
 
-// Romak 0 = QWERTY
+// Romak 0
 
 // #define ___________________ROMAK_L1___________________ KC_Q    , KC_W    , KC_E    , KC_R    , KC_T
 // #define ___________________ROMAK_L2___________________ KCA_MAC , LSFTT_S , LCTLT_D , LALTT_F , KC_G
@@ -85,6 +85,18 @@
 // #define ___________________ROMAK_R1___________________ KC_Y    , KC_U    , KC_I    , KC_O    , KC_P
 // #define ___________________ROMAK_R2___________________ KC_H    , RALTT_J , RCTLT_K , RSFTT_L , UND_MAI
 // #define ___________________ROMAK_R3___________________ KC_N    , RGUIT_M , TD_COML , TD_DOTD , TD_SCLE
+// #define ____ROMAK_R4____                               RAI_BSP , MED_CAP
+
+// QWERTY
+
+// #define ___________________ROMAK_L1___________________ KC_Q    , KC_W    , KC_E    , KC_R    , KC_T
+// #define ___________________ROMAK_L2___________________ KCA_MAC , LSFTT_S , LCTLT_D , LALTT_F , KC_G
+// #define ___________________ROMAK_L3___________________ KC_Z    , KC_X    , KC_C    , LGUIT_V , KC_B
+// #define ____ROMAK_L4____                                                             NAV_NG  , LOW_SPC
+
+// #define ___________________ROMAK_R1___________________ KC_Y    , KC_U    , KC_I    , KC_O    , KC_P
+// #define ___________________ROMAK_R2___________________ KC_H    , RALTT_J , RCTLT_K , RSFTT_L , SCL_MAC
+// #define ___________________ROMAK_R3___________________ KC_N    , RGUIT_M , TD_COML , TD_DOTD , KC_BSLS
 // #define ____ROMAK_R4____                               RAI_BSP , MED_CAP
 
 #define ___________________NGRAMS_L1___________________ XXXXXXX , SS_RS   , SS_RE   , SS_PH   , SS_IO

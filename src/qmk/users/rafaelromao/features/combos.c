@@ -21,7 +21,7 @@ const uint16_t PROGMEM r_ng_coes_combo[] = {SS_SQ_E, SS_CR_E, SS_SQ_O, COMBO_END
 
 // Qwerty
 
-const uint16_t PROGMEM r_qwe_ful_combo[] = {RAI_BSP, RSFTT_L, TD_SCLE, COMBO_END};
+const uint16_t PROGMEM r_qwe_ful_combo[] = {RAI_BSP, RSFTT_L, SCL_MAC, COMBO_END};
 const uint16_t PROGMEM r_qwe_fin_combo[] = {RAI_BSP, TD_DOTD, KC_BSLS, COMBO_END};
 
 // Romak 0
