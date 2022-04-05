@@ -14,10 +14,10 @@ const uint16_t PROGMEM r_low_ent_combo[] = {RAI_BSP, KC_5, KC_6, COMBO_END};
 
 // N-Grams
 
-const uint16_t PROGMEM r_ng_ao_combo[] = {SS_TL_A, SS_TL_O, COMBO_END};
-const uint16_t PROGMEM r_ng_cao_combo[] = {SS_SQ_A, SS_TL_A, SS_TL_O, COMBO_END};
-const uint16_t PROGMEM r_ng_oes_combo[] = {SS_CR_E, SS_SQ_O, COMBO_END};
-const uint16_t PROGMEM r_ng_coes_combo[] = {SS_SQ_E, SS_CR_E, SS_SQ_O, COMBO_END};
+const uint16_t PROGMEM r_ng_ao_combo[] = {NUM_BSP, SS_TL_A, SS_TL_O, COMBO_END};
+const uint16_t PROGMEM r_ng_cao_combo[] = {NUM_BSP, SS_SQ_A, SS_TL_A, SS_TL_O, COMBO_END};
+const uint16_t PROGMEM r_ng_oes_combo[] = {NUM_BSP, SS_CR_E, SS_SQ_O, COMBO_END};
+const uint16_t PROGMEM r_ng_coes_combo[] = {NUM_BSP, SS_SQ_E, SS_CR_E, SS_SQ_O, COMBO_END};
 
 // Qwerty
 
@@ -82,6 +82,7 @@ const uint16_t PROGMEM l_rom_cop_combo[] = {LOW_SPC, KC_Y, LGUIT_T, COMBO_END};
 
 // Reset
 
+const uint16_t PROGMEM qwe_reset_combo[] = {KC_Q, KC_Z, KC_P, KC_BSLS, COMBO_END};
 const uint16_t PROGMEM ro0_reset_combo[] = {KC_Q, KC_Z, KC_P, TD_SCLE, COMBO_END};
 const uint16_t PROGMEM ro3_reset_combo[] = {KC_UNDS, KC_Z, KC_P, TD_SCLE, COMBO_END};
 const uint16_t PROGMEM ro5_reset_combo[] = {KC_UNDS, KC_Z, KC_W, TD_SCLE, COMBO_END};
@@ -154,6 +155,7 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(r_rom_ent_combo, KC_ENT),
   COMBO(r_rom_ful_combo, SC_FULL),
 
+  COMBO(qwe_reset_combo, RESET),
   COMBO(rom_reset_combo, RESET),
   COMBO(ro0_reset_combo, RESET),
   COMBO(ro3_reset_combo, RESET),
