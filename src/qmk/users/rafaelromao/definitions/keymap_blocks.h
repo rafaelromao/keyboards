@@ -87,14 +87,14 @@
 // #define ___________________ROMAK_R3___________________ KC_N    , RGUIT_M , TD_COML , TD_DOTD , TD_SCLE
 // #define ____ROMAK_R4____                               RAI_BSP , MED_CAP
 
-#define ___________________NGRAMS_L1___________________ XXXXXXX , SS_RS   , SS_RE   , SS_PH   , SS_LH
+#define ___________________NGRAMS_L1___________________ XXXXXXX , SS_RS   , SS_RE   , SS_PH   , SS_IO
 #define ___________________NGRAMS_L2___________________ SS_CH   , SS_SH   , SS_HE   , SS_NH   , SS_GH
 #define ___________________NGRAMS_L3___________________ SS_WH   , SS_SR   , SS_ER   , SS_TH   , SS_ING
 #define ____NGRAMS_L4____                                                             _______ , NUM_SPC
                                                         
 #define ___________________NGRAMS_R1___________________ SS_CK   , SS_CR_A , SS_SQ_U , SS_SQ_I , XXXXXXX
 #define ___________________NGRAMS_R2___________________ SS_GV_A , SS_SQ_A , SS_TL_A , SS_TL_O , SS_SQ_C
-#define ___________________NGRAMS_R3___________________ SS_IO   , SS_SQ_E , SS_CR_E , SS_SQ_O , SS_CR_O
+#define ___________________NGRAMS_R3___________________ SS_LH   , SS_SQ_E , SS_CR_E , SS_SQ_O , SS_CR_O
 #define ____NGRAMS_R4____                               NUM_BSP , _______
 
 #define ___________________NUMPAD_L1___________________ KC_NUM  , KC_F9   , KC_F8   , KC_F7   , KC_F12
