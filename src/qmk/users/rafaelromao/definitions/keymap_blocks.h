@@ -174,7 +174,7 @@
 #define ___________________MAINTENANCE_L3______________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX 
 #define __MAINTENANCE_L4_                                                             _______ , _______
 
-#define ___________________MAINTENANCE_R1______________ RESET   , KC_PWR  , KC_SLEP , SC_LOCK , RGB_TOG 
+#define ___________________MAINTENANCE_R1______________ RESET   , KC_PWR  , KC_SLEP , SC_LOCK , XXXXXXX 
 #define ___________________MAINTENANCE_R2______________ TG_NAV  , TG_MAC  , TG_WIN  , TG_LIN  , TO_ROM 
-#define ___________________MAINTENANCE_R3______________ EEP_RST , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX 
+#define ___________________MAINTENANCE_R3______________ EEP_RST , KC_SCRL , KC_CAPS , KC_NUM  , RGB_TOG 
 #define __MAINTENANCE_R4_                               _______ , _______
