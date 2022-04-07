@@ -119,7 +119,7 @@
 #define ___________________NUMPAD_R3___________________ SS_DEG  , GU_P1   , KC_P2   , KC_P3   , KC_COLN
 #define ____NUMPAD_R4____                               RAI_BSP , MED_P0
 
-#define ___________________LOWER_L1____________________ XXXXXXX , TD_PARB , KC_RPRN , KC_BSLS , SS_TILD
+#define ___________________LOWER_L1____________________ XXXXXXX , TD_PARB , KC_RPRN , SS_TILD , KC_BSLS
 #define ___________________LOWER_L2____________________ SS_BTIC , SS_DQUO , SS_SQUO , KC_AMPR , KC_PIPE
 #define ___________________LOWER_L3____________________ KC_AT   , TD_SQRB , KC_RBRC , KC_QUES , KC_HASH
 #define ____LOWER_L4_____                                                             _______ , _______
