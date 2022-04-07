@@ -168,6 +168,7 @@
 #define ___________________NAVIGATION_R2_______________ TG_NAV  , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT
 #define ___________________NAVIGATION_R3_______________ XXXXXXX , KC_INS  , KC_HOME , KC_END  , KC_DEL
 #define __NAVIGATION_R4__                               KC_BSPC , MAI_ALT
+#define __FIXED_NAV__R4__                               KC_BSPC , MED_ALT
 
 #define ___________________MAINTENANCE_L1______________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX    
 #define ___________________MAINTENANCE_L2______________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX 
@@ -175,6 +176,6 @@
 #define __MAINTENANCE_L4_                                                             _______ , _______
 
 #define ___________________MAINTENANCE_R1______________ RESET   , KC_PWR  , KC_SLEP , SC_LOCK , XXXXXXX 
-#define ___________________MAINTENANCE_R2______________ TG_NAV  , TG_MAC  , TG_WIN  , TG_LIN  , TO_ROM 
+#define ___________________MAINTENANCE_R2______________ XXXXXXX , TG_MAC  , TG_WIN  , TG_LIN  , TO_ROM 
 #define ___________________MAINTENANCE_R3______________ EEP_RST , KC_SCRL , KC_CAPS , KC_NUM  , RGB_TOG 
 #define __MAINTENANCE_R4_                               _______ , _______

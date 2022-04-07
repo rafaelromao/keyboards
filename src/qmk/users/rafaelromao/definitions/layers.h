@@ -7,6 +7,7 @@ typedef enum {
   _LOWER,
   _RAISE,
   _MACROS,
+  _FIXED_NAV,
   _MEDIA,
   _NAVIGATION,
   _MAINTENANCE

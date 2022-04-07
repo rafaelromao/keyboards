@@ -79,6 +79,7 @@ enum {
 #define NAV_NG  LT(_NAVIGATION, SP_NG)
 #define MAI_MOD LT(_MAINTENANCE, SP_MOD)
 #define MAI_ALT LT(_MAINTENANCE, SP_ALT)
+#define MED_ALT LT(_MEDIA, SP_ALT)
 
 #define LOW_SPC LT(_LOWER, KC_SPC)
 #define RAI_BSP LT(_RAISE, KC_BSPC)
@@ -98,7 +99,7 @@ enum {
 
 #define TO_ROM TO(_ROMAK)
 #define TG_NUM TG(_NUMPAD)
-#define TG_NAV TG(_NAVIGATION)
+#define TG_NAV TG(_FIXED_NAV)
 
 // Custom Shortcuts
 

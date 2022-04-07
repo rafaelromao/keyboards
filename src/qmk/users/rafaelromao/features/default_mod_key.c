@@ -42,6 +42,7 @@ process_record_result_t process_default_mod_key(uint16_t keycode, keyrecord_t *r
     switch (keycode) {
 
         case MAI_ALT:
+        case MED_ALT:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
                     if (isAnyOneShotButShift || isOneShotLockedShift) {
