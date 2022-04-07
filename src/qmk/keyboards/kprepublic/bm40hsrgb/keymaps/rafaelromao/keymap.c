@@ -113,12 +113,40 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 extern leader_t leader;
 extern select_word_t select_word;
 
-void rgb_matrix_indicators_user(void) {
-
-    if (host_keyboard_led_state().caps_lock) {
-        rgb_matrix_set_color(0, RGB_ORANGE);
+void set_rgblight_by_layer(uint32_t layer) {
+    switch (layer) {
+        case _ROMAK:
+            rgb_matrix_set_color_all(RGB_BLUE);
+            break;
+        case _NGRAMS:
+        case _LOWER:
+        case _RAISE:
+        case _MEDIA:
+        case _NAVIGATION:
+        case _MACROS:
+            rgb_matrix_set_color_all(RGB_TEAL);
+            break;
+        case _NUMPAD:
+            rgb_matrix_set_color_all(RGB_SPRINGGREEN);
+            break;
+        case _MAINTENANCE:
+            rgb_matrix_set_color_all(RGB_RED);
+            break;
+        default:
+            break;
     }
+}
 
+void set_current_layer_rgb(void) {
+    set_rgblight_by_layer(get_highest_layer(layer_state|default_layer_state));
+}
+
+uint32_t layer_state_set_user(uint32_t state) {
+    set_rgblight_by_layer(biton32(state));
+    return state;
+}
+
+void rgb_matrix_indicators_user(void) {
     uint8_t mods = get_mods();
     uint8_t oneshot_mods = get_oneshot_mods();
     uint8_t oneshot_locked_mods = get_oneshot_locked_mods();
@@ -128,53 +156,17 @@ void rgb_matrix_indicators_user(void) {
     bool isAlt = mods & MOD_MASK_ALT || oneshot_mods & MOD_MASK_ALT || oneshot_locked_mods & MOD_MASK_ALT;
     bool isGui = mods & MOD_MASK_GUI || oneshot_mods & MOD_MASK_GUI || oneshot_locked_mods & MOD_MASK_GUI;
 
-    if (isShift) {
-        rgb_matrix_set_color(13, RGB_WHITE);
-    }
-    if (isCtrl) {
-        rgb_matrix_set_color(14, RGB_WHITE);
-    }
-    if (isAlt) {
-        rgb_matrix_set_color(15, RGB_WHITE);
-    }
-    if (isGui) {
-        rgb_matrix_set_color(27, RGB_WHITE);
-    }
+    bool isCapsLocked = host_keyboard_led_state().caps_lock;
 
-    if (leader.isLeading) {
-        rgb_matrix_set_color(1, RGB_WHITE);
-    }
-
-    if (select_word.state != STATE_NONE) {
-        rgb_matrix_set_color(2, RGB_WHITE);
-    }
-
-    switch(get_highest_layer(layer_state|default_layer_state)) {
-        case _NUMPAD:
-            rgb_matrix_set_color(0, RGB_CYAN);
-            break;
-        case _LOWER:
-            rgb_matrix_set_color(40, RGB_WHITE);
-            break;
-        case _RAISE:
-            rgb_matrix_set_color(42, RGB_WHITE);
-            break;
-        case _NGRAMS:
-            rgb_matrix_set_color(39, RGB_CYAN);
-            break;
-        case _NAVIGATION:
-            rgb_matrix_set_color(39, RGB_WHITE);
-            break;
-        case _MEDIA:
-            rgb_matrix_set_color(43, RGB_WHITE);
-            break;
-        case _MAINTENANCE:
-            rgb_matrix_set_color(7, RGB_RED);
-            rgb_matrix_set_color(8, RGB_WHITE);
-            rgb_matrix_set_color(9, RGB_WHITE);
-            rgb_matrix_set_color(31, RGB_WHITE);
-            break;
-        default:
-            break;
+    if (leader.isLeading || select_word.state != STATE_NONE) {
+        rgb_matrix_set_color_all(RGB_GREEN);
+    } else if (isCapsLocked) {
+        rgb_matrix_set_color_all(RGB_YELLOW);
+    } else if (isShift) {
+        rgb_matrix_set_color_all(RGB_TEAL);
+    } else if (isCtrl || isAlt || isGui) {
+        rgb_matrix_set_color_all(RGB_WHITE);
+    } else {
+        set_current_layer_rgb();
     }
 }
