@@ -1,6 +1,6 @@
 #include QMK_KEYBOARD_H
 
-#include "ngrams_key.h"
+#include "ngrams.h"
 
 extern os_t os;
 
@@ -56,17 +56,17 @@ process_record_result_t process_ngrams(uint16_t keycode, keyrecord_t *record) {
             case SS_RS:
                 SEND_STRING("rs");
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_RE:
-                SEND_STRING("re");
+            case SS_EY:
+                SEND_STRING("ey");
                 return PROCESS_RECORD_RETURN_FALSE;
             case SS_PH:
                 SEND_STRING("ph");
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_LH:
-                SEND_STRING("lh");
-                return PROCESS_RECORD_RETURN_FALSE;
             case SS_CK:
                 SEND_STRING("ck");
+                return PROCESS_RECORD_RETURN_FALSE;
+            case SS_AU:
+                SEND_STRING("au");
                 return PROCESS_RECORD_RETURN_FALSE;
 
             case SS_CH:
@@ -88,11 +88,11 @@ process_record_result_t process_ngrams(uint16_t keycode, keyrecord_t *record) {
             case SS_WH:
                 SEND_STRING("wh");
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_SR:
-                SEND_STRING("sr");
+            case SS_IO:
+                SEND_STRING("io");
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_ER:
-                SEND_STRING("er");
+            case SS_YE:
+                SEND_STRING("ye");
                 return PROCESS_RECORD_RETURN_FALSE;
             case SS_TH:
                 SEND_STRING("th");
@@ -100,8 +100,8 @@ process_record_result_t process_ngrams(uint16_t keycode, keyrecord_t *record) {
             case SS_ING:
                 SEND_STRING("ing");
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_IO:
-                SEND_STRING("io");
+            case SS_LH:
+                SEND_STRING("lh");
                 return PROCESS_RECORD_RETURN_FALSE;
 
             case SS_AO:

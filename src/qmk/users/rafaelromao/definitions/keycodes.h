@@ -23,9 +23,9 @@ enum {
 
     SS_SELW, SS_SWIN, SS_CAPS,
 
-    SS_RS,  SS_RE,  SS_PH,  SS_LH,  SS_CK,
+    SS_RS,  SS_EY,  SS_PH,  SS_CK,  SS_AU,  
     SS_CH,  SS_SH,  SS_HE,  SS_NH,  SS_GH,
-    SS_WH,  SS_SR,  SS_ER,  SS_TH,  SS_ING, SS_IO,
+    SS_WH,  SS_IO,  SS_YE,  SS_TH,  SS_ING, SS_LH,
 
     SS_DAND, SS_DPIP, 
     SS_EQU, SS_NEQ, 

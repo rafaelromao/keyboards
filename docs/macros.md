@@ -8,10 +8,12 @@
 
 #### N-Grams
 - N-grams that involve h, like th, ch, wh, are available in this layer, below or close to the letter that start them, along with bigrams that can be used to avoid common SFBs, like RS and SR.
+- Source code: [ngrams.c](../src/qmk/users/rafaelromao/features/ngrams.c)
 
 #### Accentuation
 - There are dedicated accentuation keys for à á ã â é ê õ ó ô ú í and ç, which is all that is needed for Portuguese. These keys are positioned below or close to their corresponding vowels, making them easy to assimilate.
 - It is also possible to accentuate using dead keys, like usually done with the US International layout. To get a dead version of ' " ^ ~ or ` to accentuate a letter, just press shift before the keys that output these symbols, then type the letter you want to accentuate. I.e.: Shift " u produces ü. 
+- Source code: [accentuation.c](../src/qmk/users/rafaelromao/features/accentuation.c)
 
 ## Macros
 - A Macros layer can be activated holding any of the home row pinky keys.
