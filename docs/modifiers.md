@@ -37,13 +37,13 @@ The Capitalize key is a custom key that works both as Shift and Caps Lock.
 
 ## Default Mod and Alt Thumb Keys
 
-The Default Mod and Alt thumb keys are placed in the outer left and right thumb keys respectively, in the Navigation and Media layers, and will give access to one-shot versions of the Cmd/Ctrl or Alt keys.
+The Default Mod (Cmd or Ctrl) and Alt thumb keys are placed in the outer left and right thumb keys respectively, in the Navigation and Media layers, and will give access to one-shot versions of the Cmd/Ctrl or Alt keys.
 - They behaves as follows, when tapped:
     - If any modifier is active or locked in one-shot mode, all these modifiers will be deactivated.
     - If no modifier is active or locked in one-shot mode, it activates the modifier in one-shot mode.
 - They are implemented using a custom keycode and a layer-tap.
     - The hold behavior is kept as is, but the tap behavior is intercepted and customized.
-    - Source code: [default_mod_key.c](../src/qmk/users/rafaelromao/features/default_mod_key.c)
+    - Source code: [smart_thumb_keys.c](../src/qmk/users/rafaelromao/features/smart_thumb_keys.c)
 - For the right side, this key will always activate Alt, when tapped.
 - For the left side,
     - This key allows using the same key combinations for shortcuts like Cmd/Ctrl+S, Cmd/Ctrl+C and Cmd/Ctrl+V.

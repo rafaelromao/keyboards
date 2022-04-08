@@ -1,6 +1,6 @@
 #include QMK_KEYBOARD_H
 
-#include "default_mod_key.h"
+#include "smart_thumb_keys.h"
 
 extern os_t os;
 
@@ -8,7 +8,7 @@ bool should_send_ctrl(bool isWindowsOrLinux, bool isOneShotShift) {
     return (isWindowsOrLinux && !isOneShotShift) || (!isWindowsOrLinux && isOneShotShift);
 }
 
-process_record_result_t process_default_mod_key(uint16_t keycode, keyrecord_t *record) {
+process_record_result_t process_smart_thumb_keys(uint16_t keycode, keyrecord_t *record) {
 
     bool isWindowsOrLinux = os.type == WINDOWS || os.type == LINUX;
     bool isOneShotDefaultMod = (!isWindowsOrLinux && (get_oneshot_mods() & MOD_MASK_GUI)) || (isWindowsOrLinux && (get_oneshot_mods() & MOD_MASK_CTRL)) ;

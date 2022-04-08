@@ -4,5 +4,5 @@
 #include "../definitions/keycodes.h"
 #include "tapdance.h"
 #include "process_record_result.h"
-#include "default_mod_key.h"
+#include "smart_thumb_keys.h"
 #include "secret.h"

@@ -75,7 +75,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         default:
             break;
     };
-    
+
     // Process custom_shotcuts
     switch (process_custom_shortcuts(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
@@ -85,7 +85,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         default:
             break;
     };
-    
+
     // Process ngrams
     switch (process_ngrams(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
@@ -136,8 +136,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
     };
 
-    // Process default modifier key
-    switch (process_default_mod_key(keycode, record)) {
+    // Process smart thumb keys
+    switch (process_smart_thumb_keys(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:
