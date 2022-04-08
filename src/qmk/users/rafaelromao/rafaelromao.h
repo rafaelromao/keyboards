@@ -12,6 +12,7 @@
 #include "features/leader.h"
 #include "features/ngrams.h"
 #include "features/default_mod_key.h"
+#include "features/custom_oneshot_mods.h"
 #include "features/capitalize_key.h"
 #include "features/select_word.h"
 #include "features/dynamic_macro.h"

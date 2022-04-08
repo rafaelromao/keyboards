@@ -3,6 +3,7 @@ SRC += rafaelromao.c
 SRC += definitions/keycodes.c
 SRC += features/taphold.c
 SRC += features/ngrams.c
+SRC += features/custom_oneshot_mods.c
 SRC += features/default_mod_key.c
 SRC += features/capitalize_key.c
 SRC += features/tapdance.c
