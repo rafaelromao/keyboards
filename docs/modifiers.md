@@ -44,13 +44,13 @@ The Default Mod (Cmd or Ctrl) and Alt thumb keys are placed in the outer left an
     - If no modifier is active or locked in one-shot mode, it activates the modifier in one-shot mode.
 - They are implemented using a custom keycode and a layer-tap.
     - The hold behavior is kept as is, but the tap behavior is intercepted and customized.
-    - Source code: [smart_thumb_keys.c](../src/qmk/users/rafaelromao/features/smart_thumb_keys.c)
 - For the right side, this key will always activate Alt, when tapped.
 - For the left side,
     - This key allows using the same key combinations for shortcuts like Cmd/Ctrl+S, Cmd/Ctrl+C and Cmd/Ctrl+V.
     - This key will activate the modifier for the current operating system, which can be selected in the maintenace layer.
         - If Mac OS is selected, the default modifier will be Cmd, otherwise it will be Ctrl.
         - If one-shot Shift is active, the default modifier will be inverted (Cmd vs Ctrl).
+- Source code: [smart_thumb_keys.c](../src/qmk/users/rafaelromao/features/smart_thumb_keys.c)
 
 ## Caps Lock
 
