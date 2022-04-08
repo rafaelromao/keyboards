@@ -8,7 +8,7 @@ static oneshot_mods_timer_t oneshot_mods_timer = {
     .timer = 0
 };
 
-void clear_oneshot_mods_expired(void) {
+void clear_expired_oneshot_mods(void) {
     uint8_t oneshot_locked_mods = get_oneshot_locked_mods();
     uint8_t oneshot_mods = get_oneshot_mods();
     if (!(oneshot_locked_mods & MOD_LSFT) && (oneshot_mods & MOD_LSFT)) {
@@ -33,8 +33,8 @@ void clear_oneshot_mods_expired(void) {
     }
 }
 
-void disable_oneshot_mods_expired(void) {
-    clear_oneshot_mods_expired();
+void disable_expired_oneshot_mods(void) {
+    clear_expired_oneshot_mods();
     oneshot_mods_timer.timer = 0;
 }
 
@@ -44,14 +44,15 @@ bool oneshot_mods_timer_expired(void) {
 
 void check_oneshot_mods_timeout(void) {
     if (oneshot_mods_timer_expired()) {
-        disable_oneshot_mods_expired();
+        disable_expired_oneshot_mods();
     }
 }
 
 void oneshot_mods_changed_user(uint8_t mods) {
   if (mods) {
       oneshot_mods_timer.timer = timer_read();
-      set_oneshot_mods(mods);
+  } else {
+      oneshot_mods_timer.timer = 0;
   }
 }
 
