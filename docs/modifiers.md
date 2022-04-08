@@ -13,6 +13,7 @@ One-Shot Modifiers are modifier keys that, when tapped, remain active until the 
 - They are available in the [Navigation](navigation.md#navigation) layer and act as standard modifers when held.
 - These modifiers will be automatically deactivated after 2 seconds. 
 - They can also be activated in sticky mode, with a double tap, and remain active until manually deactivated by tapping the Default Mod thumb key.
+    - Source code: [custom_oneshot_mods.c](../src/qmk/users/rafaelromao/features/custom_oneshot_mods.c)
 
 ## Standard Modifiers
 
@@ -33,7 +34,7 @@ The Capitalize key is a custom key that works both as Shift and Caps Lock.
 
 ## N-Grams Key
 - The N-Grams key is available in the left outer thumb key and will toggle the N-Grams layer in one-shot mode, acting like a special shift key.
-    - Source code: [ngrams_key.c](../src/qmk/users/rafaelromao/features/ngrams_key.c)
+    - Source code: [ngrams.c](../src/qmk/users/rafaelromao/features/ngrams.c)
 
 ## Default Mod and Alt Thumb Keys
 
