@@ -39,7 +39,7 @@ process_record_result_t process_ngrams_key(uint16_t keycode, keyrecord_t *record
 }
 
 bool ngrams_timer_expired(void) {
-    return ngrams_timer.timer > 0 && (timer_elapsed(ngrams_timer.timer) > 5 * CUSTOM_ONESHOT_TIMEOUT);
+    return ngrams_timer.timer > 0 && (timer_elapsed(ngrams_timer.timer) > CUSTOM_ONESHOT_TIMEOUT);
 }
 
 void check_ngrams_timeout(void) {
