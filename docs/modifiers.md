@@ -13,7 +13,7 @@ One-Shot Modifiers are modifier keys that, when tapped, remain active until the 
 - They are available in the [Navigation](navigation.md#navigation) layer and act as standard modifers when held.
 - These modifiers will be automatically deactivated after 2 seconds. 
 - They can also be activated in sticky mode, with a double tap, and remain active until manually deactivated by tapping the Default Mod thumb key.
-    - Source code: [custom_oneshot_mods.c](../src/qmk/users/rafaelromao/features/custom_oneshot_mods.c)
+- Source code: [custom_oneshot_mods.c](../src/qmk/users/rafaelromao/features/custom_oneshot_mods.c)
 
 ## Standard Modifiers
 
@@ -30,11 +30,11 @@ The Capitalize key is a custom key that works both as Shift and Caps Lock.
 - The hold behavior of this thumb key is used to activate the Mouse layer.
 - The Capitalize key is implemented using a custom keycode and a layer-tap.
     - The hold behavior is kept as is, but the tap behavior is intercepted and customized.
-    - Source code: [capitalize_key.c](../src/qmk/users/rafaelromao/features/capitalize_key.c)
+- Source code: [capitalize_key.c](../src/qmk/users/rafaelromao/features/capitalize_key.c)
 
 ## N-Grams Key
 - The N-Grams key is available in the left outer thumb key and will toggle the N-Grams layer in one-shot mode, acting like a special shift key.
-    - Source code: [ngrams.c](../src/qmk/users/rafaelromao/features/ngrams.c)
+- Source code: [ngrams.c](../src/qmk/users/rafaelromao/features/ngrams.c)
 
 ## Default Mod and Alt Thumb Keys
 
@@ -58,7 +58,7 @@ The Default Mod (Cmd or Ctrl) and Alt thumb keys are placed in the outer left an
     - The caps lock timer feature is implemented by starting a timer when the caps lock is activated and deactivating it in the matrix scan, in case the timer has expired.
     - The caps lock timer is restarted when a valid key is pressed.
     - The caps lock timer is stopped and caps lock deactivated when Esc is pressed.
-    - Source code: [capslock_timer.c](../src/qmk/users/rafaelromao/features/capslock_timer.c)
+- Source code: [capslock_timer.c](../src/qmk/users/rafaelromao/features/capslock_timer.c)
 
 ##
 [Home](../readme.md) | 
