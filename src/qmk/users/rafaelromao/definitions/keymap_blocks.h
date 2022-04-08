@@ -139,9 +139,9 @@
 #define ___________________RAISE_R3____________________ KC_ASTR , KC_SLSH , TD_ANGB , KC_GT   , KC_COLN
 #define ____RAISE_R4_____                               _______ , _______
 
-#define ___________________MACROS_L1___________________ XXXXXXX , XXXXXXX , TD_MAC2 , XXXXXXX , XXXXXXX
-#define ___________________MACROS_L2___________________ XXXXXXX , XXXXXXX , XXXXXXX , SS_DAND , SS_DPIP
-#define ___________________MACROS_L3___________________ XXXXXXX , XXXXXXX , TD_MAC1 , XXXXXXX , XXXXXXX
+#define ___________________MACROS_L1___________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
+#define ___________________MACROS_L2___________________ XXXXXXX , TD_MAC2 , TD_MAC1 , SS_DAND , SS_DPIP
+#define ___________________MACROS_L3___________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
 #define ____MACROS_L4____                                                             TD_IJLE , KC_BSPC
 
 #define ___________________MACROS_R1___________________ XXXXXXX , XXXXXXX , SS_SELW , XXXXXXX , XXXXXXX
