@@ -7,7 +7,7 @@ static capslock_timer_t capslock_timer = {
 };
 
 bool capslock_timer_expired(void) {
-    return capslock_timer.timer > 0 && (timer_elapsed(capslock_timer.timer) > 5 * ONESHOT_TIMEOUT);
+    return capslock_timer.timer > 0 && (timer_elapsed(capslock_timer.timer) > 5 * CUSTOM_ONESHOT_TIMEOUT);
 }
 
 void start_capslock_timer(void) {
