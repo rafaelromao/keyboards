@@ -31,7 +31,7 @@ The Navigation and Media layer can be activated holding the outer left and right
 - Source Code: [window_swapper.c](../src/qmk/users/rafaelromao/features/window_swapper.c)
 
 ### Navigation Layer Toggle
-- A clone of the Navigation layer can be toggled on permanently using the Media layers.
+- A clone of the Navigation layer can be toggled on permanently using the Media layer.
 - This clone works the same way as the original Navigation layer, but the outer right thumb key will activate the Media layer instead of the Maintenance layer.
 
 ##
