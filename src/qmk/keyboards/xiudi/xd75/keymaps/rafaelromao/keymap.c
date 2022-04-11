@@ -149,14 +149,6 @@ void set_rgblight_by_layer(uint32_t layer) {
         case _ROMAK:
             rgblight_setrgb(RGB_BLUE);
             break;
-        case _NGRAMS:
-        case _LOWER:
-        case _RAISE:
-        case _MEDIA:
-        case _NAVIGATION:
-        case _MACROS:
-            rgblight_setrgb(RGB_TURQUOISE);
-            break;
         case _NUMPAD:
             rgblight_setrgb(RGB_CYAN);
             break;
@@ -164,6 +156,7 @@ void set_rgblight_by_layer(uint32_t layer) {
             rgblight_setrgb(RGB_RED);
             break;
         default:
+            rgblight_setrgb(RGB_TURQUOISE);
             break;
     }
 }

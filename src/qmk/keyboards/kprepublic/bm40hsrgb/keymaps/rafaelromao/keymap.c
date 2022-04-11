@@ -127,23 +127,18 @@ extern select_word_t select_word;
 void set_rgblight_by_layer(uint32_t layer) {
     switch (layer) {
         case _ROMAK:
-            rgb_matrix_set_color_all(RGB_BLUE);
-            break;
-        case _NGRAMS:
-        case _LOWER:
-        case _RAISE:
-        case _MEDIA:
-        case _NAVIGATION:
-        case _MACROS:
-            rgb_matrix_set_color_all(RGB_TEAL);
             break;
         case _NUMPAD:
-            rgb_matrix_set_color_all(RGB_SPRINGGREEN);
+            rgb_matrix_set_color(4, RGB_SPRINGGREEN);
+            rgb_matrix_set_color(7, RGB_SPRINGGREEN);
             break;
         case _MAINTENANCE:
-            rgb_matrix_set_color_all(RGB_RED);
+            rgb_matrix_set_color(4, RGB_RED);
+            rgb_matrix_set_color(7, RGB_RED);
             break;
         default:
+            rgb_matrix_set_color(4, RGB_CYAN);
+            rgb_matrix_set_color(7, RGB_CYAN);
             break;
     }
 }
@@ -170,13 +165,17 @@ void rgb_matrix_indicators_user(void) {
     bool isCapsLocked = host_keyboard_led_state().caps_lock;
 
     if (leader.isLeading || select_word.state != STATE_NONE) {
-        rgb_matrix_set_color_all(RGB_GREEN);
+        rgb_matrix_set_color(4, RGB_GREEN);
+        rgb_matrix_set_color(7, RGB_GREEN);
     } else if (isCapsLocked) {
-        rgb_matrix_set_color_all(RGB_YELLOW);
+        rgb_matrix_set_color(4, RGB_YELLOW);
+        rgb_matrix_set_color(7, RGB_YELLOW);
     } else if (isShift) {
-        rgb_matrix_set_color_all(RGB_TEAL);
+        rgb_matrix_set_color(4, RGB_CYAN);
+        rgb_matrix_set_color(7, RGB_CYAN);
     } else if (isCtrl || isAlt || isGui) {
-        rgb_matrix_set_color_all(RGB_WHITE);
+        rgb_matrix_set_color(4, RGB_WHITE);
+        rgb_matrix_set_color(7, RGB_WHITE);
     } else {
         set_current_layer_rgb();
     }
