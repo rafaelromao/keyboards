@@ -3,13 +3,35 @@
 #include "taphold.h"
 
 process_record_result_t process_custom_taphold(uint16_t keycode, keyrecord_t *record) {
-    // Fix layer-tap using Underscore
+
+    bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
+    bool isOneShotShift = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
+    bool isShifted = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
+
     switch (keycode) {
         case UND_MAC:
         case LA_UNDS:
             if (record->event.pressed) {
                 if (record->tap.count > 0) {
                     tap_code16(KC_UNDS);
+                    return PROCESS_RECORD_RETURN_FALSE;
+                }
+            }
+        case PER_LOW:
+            if (record->event.pressed) {
+                if (record->tap.count > 0) {
+                    tap_code16(KC_PERC);
+                    return PROCESS_RECORD_RETURN_FALSE;
+                }
+            }
+        case BTI_RAI:
+            if (record->event.pressed) {
+                if (record->tap.count > 0) {
+                    clear_shift();
+                    tap_code(KC_GRV);
+                    if (!isShifted) {
+                        tap_code(KC_SPC);
+                    }
                     return PROCESS_RECORD_RETURN_FALSE;
                 }
             }

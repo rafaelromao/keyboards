@@ -119,8 +119,18 @@
 #define ___________________NUMPAD_R3___________________ SS_DEG  , GU_P1   , KC_P2   , KC_P3   , KC_COLN
 #define ____NUMPAD_R4____                               RAI_BSP , MED_P0
 
+#define ___________________MACROS_L1___________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
+#define ___________________MACROS_L2___________________ XXXXXXX , TD_MAC2 , TD_MAC1 , SS_DAND , SS_DPIP
+#define ___________________MACROS_L3___________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
+#define ____MACROS_L4____                                                             TD_IJLE , RAI_BSP
+
+#define ___________________MACROS_R1___________________ XXXXXXX , XXXXXXX , SS_SELW , XXXXXXX , XXXXXXX
+#define ___________________MACROS_R2___________________ XXXXXXX , SS_ARR  , SS_EQU  , SS_NEQ  , XXXXXXX
+#define ___________________MACROS_R3___________________ XXXXXXX , XXXXXXX , KC_LEAD , SS_DDS  , XXXXXXX
+#define ____MACROS_R4____                               LOW_SPC , TD_IJRI
+
 #define ___________________LOWER_L1____________________ XXXXXXX , TD_PARB , KC_RPRN , SS_TILD , KC_BSLS
-#define ___________________LOWER_L2____________________ SS_BTIC , SS_DQUO , SS_SQUO , KC_AMPR , KC_PIPE
+#define ___________________LOWER_L2____________________ BTI_RAI , SS_DQUO , SS_SQUO , KC_AMPR , KC_PIPE
 #define ___________________LOWER_L3____________________ KC_AT   , TD_SQRB , KC_RBRC , KC_QUES , KC_HASH
 #define ____LOWER_L4_____                                                             _______ , _______
 
@@ -135,19 +145,9 @@
 #define ____RAISE_L4_____                                                             _______ , _______
 
 #define ___________________RAISE_R1____________________ SS_CIRC , TD_DLR  , TD_CURB , KC_RCBR , TG_NUM
-#define ___________________RAISE_R2____________________ KC_PLUS , KC_MINS , KC_EQL  , KC_EXLM , KC_PERC
+#define ___________________RAISE_R2____________________ KC_PLUS , KC_MINS , KC_EQL  , KC_EXLM , PER_LOW
 #define ___________________RAISE_R3____________________ KC_ASTR , KC_SLSH , TD_ANGB , KC_GT   , KC_COLN
 #define ____RAISE_R4_____                               _______ , _______
-
-#define ___________________MACROS_L1___________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
-#define ___________________MACROS_L2___________________ XXXXXXX , TD_MAC2 , TD_MAC1 , SS_DAND , SS_DPIP
-#define ___________________MACROS_L3___________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
-#define ____MACROS_L4____                                                             TD_IJLE , KC_BSPC
-
-#define ___________________MACROS_R1___________________ XXXXXXX , XXXXXXX , SS_SELW , XXXXXXX , XXXXXXX
-#define ___________________MACROS_R2___________________ XXXXXXX , SS_ARR  , SS_EQU  , SS_NEQ  , XXXXXXX
-#define ___________________MACROS_R3___________________ XXXXXXX , XXXXXXX , KC_LEAD , SS_DDS  , XXXXXXX
-#define ____MACROS_R4____                               KC_SPC  , TD_IJRI
 
 #define ___________________MEDIA_L1____________________ KC_ESC  , XXXXXXX , KC_TAB  , XXXXXXX , XXXXXXX
 #define ___________________MEDIA_L2____________________ SS_SWIN , KC_LSFT , KC_LCTL , KC_LALT , XXXXXXX

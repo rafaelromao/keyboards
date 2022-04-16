@@ -46,6 +46,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXXXXX , XXXXXXX , XXXXXXX , ____NUMPAD_L4____ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ____NUMPAD_R4____ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_____________________________________________________________________________________________________________________________________________________|
 
+     [_MACROS] = LAYOUT_wrapper(
+ // |_____________________________________________________________________________________________________________________________________________________|
+      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      ___________________MACROS_L1___________________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ___________________MACROS_R1___________________ ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      ___________________MACROS_L2___________________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ___________________MACROS_R2___________________ ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      ___________________MACROS_L3___________________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ___________________MACROS_R3___________________ ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      XXXXXXX , XXXXXXX , XXXXXXX , ____MACROS_L4____ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ____MACROS_R4____ , XXXXXXX , XXXXXXX , XXXXXXX),
+ // |_______________________________________________________________________________________________________________________|
+
      [_LOWER] = LAYOUT_wrapper(
  // |_____________________________________________________________________________________________________________________________________________________|
       XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
@@ -72,18 +85,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXXXXX , XXXXXXX , XXXXXXX , ____RAISE_L4_____ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ____RAISE_R4_____ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_____________________________________________________________________________________________________________________________________________________|
 
-     [_MACROS] = LAYOUT_wrapper(
+     [_LOWER_CLONE] = LAYOUT_wrapper(
  // |_____________________________________________________________________________________________________________________________________________________|
       XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      ___________________MACROS_L1___________________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ___________________MACROS_R1___________________ ,
+      ___________________LOWER_L1____________________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ___________________LOWER_R1____________________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      ___________________MACROS_L2___________________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ___________________MACROS_R2___________________ ,
+      ___________________LOWER_L2____________________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ___________________LOWER_R2____________________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      ___________________MACROS_L3___________________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ___________________MACROS_R3___________________ ,
+      ___________________LOWER_L3____________________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ___________________LOWER_R3____________________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , ____MACROS_L4____ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ____MACROS_R4____ , XXXXXXX , XXXXXXX , XXXXXXX),
- // |_______________________________________________________________________________________________________________________|
+      XXXXXXX , XXXXXXX , XXXXXXX , ____LOWER_L4_____ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ____LOWER_R4_____ , XXXXXXX , XXXXXXX , XXXXXXX),
+ // |_____________________________________________________________________________________________________________________________________________________|
 
      [_FIXED_NAV] = LAYOUT_wrapper(
  // |_____________________________________________________________________________________________________________________________________________________|
@@ -150,13 +163,13 @@ void set_rgblight_by_layer(uint32_t layer) {
             rgblight_setrgb(RGB_BLUE);
             break;
         case _NUMPAD:
-            rgblight_setrgb(RGB_CYAN);
+            rgblight_setrgb(RGB_PURPLE);
             break;
         case _MAINTENANCE:
             rgblight_setrgb(RGB_RED);
             break;
         default:
-            rgblight_setrgb(RGB_TURQUOISE);
+            rgblight_setrgb(RGB_SPRINGGREEN);
             break;
     }
 }
@@ -187,7 +200,7 @@ void set_mod_indicators(void) {
     } else if (isCapsLocked) {
         rgblight_setrgb(RGB_YELLOW);
     } else if (isShift) {
-        rgblight_setrgb(RGB_TURQUOISE);
+        rgblight_setrgb(RGB_SPRINGGREEN);
     } else if (isCtrl || isAlt || isGui) {
         rgblight_setrgb(RGB_WHITE);
     } else {

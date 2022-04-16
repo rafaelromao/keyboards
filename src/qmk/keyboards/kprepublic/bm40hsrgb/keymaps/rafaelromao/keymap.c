@@ -41,6 +41,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXXXXX , XXXXXXX , XXXXXXX , ____NUMPAD_L4____ ,      XXXXXXX      , ____NUMPAD_R4____ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
+     [_MACROS] = LAYOUT_wrapper(
+ // |_______________________________________________________________________________________________________________________|
+      ___________________MACROS_L1___________________ , XXXXXXX , XXXXXXX , ___________________MACROS_R1___________________ ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      ___________________MACROS_L2___________________ , XXXXXXX , XXXXXXX , ___________________MACROS_R2___________________ ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      ___________________MACROS_L3___________________ , XXXXXXX , XXXXXXX , ___________________MACROS_R3___________________ ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      XXXXXXX , XXXXXXX , XXXXXXX , ____MACROS_L4____ ,      XXXXXXX      , ____MACROS_R4____ , XXXXXXX , XXXXXXX , XXXXXXX),
+ // |_______________________________________________________________________________________________________________________|
+
      [_LOWER] = LAYOUT_wrapper(
  // |_______________________________________________________________________________________________________________________|
       ___________________LOWER_L1____________________ , XXXXXXX , XXXXXXX , ___________________LOWER_R1____________________ ,
@@ -63,15 +74,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXXXXX , XXXXXXX , XXXXXXX , ____RAISE_L4_____ ,      XXXXXXX      , ____RAISE_R4_____ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
-     [_MACROS] = LAYOUT_wrapper(
+     [_LOWER_CLONE] = LAYOUT_wrapper(
  // |_______________________________________________________________________________________________________________________|
-      ___________________MACROS_L1___________________ , XXXXXXX , XXXXXXX , ___________________MACROS_R1___________________ ,
+      ___________________LOWER_L1____________________ , XXXXXXX , XXXXXXX , ___________________LOWER_R1____________________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      ___________________MACROS_L2___________________ , XXXXXXX , XXXXXXX , ___________________MACROS_R2___________________ ,
+      ___________________LOWER_L2____________________ , XXXXXXX , XXXXXXX , ___________________LOWER_R2____________________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      ___________________MACROS_L3___________________ , XXXXXXX , XXXXXXX , ___________________MACROS_R3___________________ ,
+      ___________________LOWER_L3____________________ , XXXXXXX , XXXXXXX , ___________________LOWER_R3____________________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , ____MACROS_L4____ ,      XXXXXXX      , ____MACROS_R4____ , XXXXXXX , XXXXXXX , XXXXXXX),
+      XXXXXXX , XXXXXXX , XXXXXXX , ____LOWER_L4_____ ,      XXXXXXX      , ____LOWER_R4_____ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
      [_FIXED_NAV] = LAYOUT_wrapper(
@@ -129,16 +140,16 @@ void set_rgblight_by_layer(uint32_t layer) {
         case _ROMAK:
             break;
         case _NUMPAD:
-            rgb_matrix_set_color(4, RGB_SPRINGGREEN);
-            rgb_matrix_set_color(7, RGB_SPRINGGREEN);
+            rgb_matrix_set_color(4, RGB_PURPLE);
+            rgb_matrix_set_color(7, RGB_PURPLE);
             break;
         case _MAINTENANCE:
             rgb_matrix_set_color(4, RGB_RED);
             rgb_matrix_set_color(7, RGB_RED);
             break;
         default:
-            rgb_matrix_set_color(4, RGB_CYAN);
-            rgb_matrix_set_color(7, RGB_CYAN);
+            rgb_matrix_set_color(4, RGB_SPRINGGREEN);
+            rgb_matrix_set_color(7, RGB_SPRINGGREEN);
             break;
     }
 }
@@ -171,8 +182,8 @@ void rgb_matrix_indicators_user(void) {
         rgb_matrix_set_color(4, RGB_YELLOW);
         rgb_matrix_set_color(7, RGB_YELLOW);
     } else if (isShift) {
-        rgb_matrix_set_color(4, RGB_CYAN);
-        rgb_matrix_set_color(7, RGB_CYAN);
+        rgb_matrix_set_color(4, RGB_SPRINGGREEN);
+        rgb_matrix_set_color(7, RGB_SPRINGGREEN);
     } else if (isCtrl || isAlt || isGui) {
         rgb_matrix_set_color(4, RGB_WHITE);
         rgb_matrix_set_color(7, RGB_WHITE);

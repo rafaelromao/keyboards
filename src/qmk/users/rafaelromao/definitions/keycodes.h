@@ -95,6 +95,9 @@ enum {
 #define DOT_MAC LT(_MACROS, KC_DOT)
 #define PDO_MAC LT(_MACROS, KC_PDOT)
 
+#define PER_LOW LT(_LOWER_CLONE, KC_PERC)
+#define BTI_RAI LT(_RAISE, SS_BTIC)
+
 // Layer transitions
 
 #define TO_ROM TO(_ROMAK)
