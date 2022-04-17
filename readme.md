@@ -63,6 +63,7 @@ Most features implemented here were based on the work referenced below.
 - [Pascal Getreuer](https://github.com/getreuer/qmk-keymap)
 - [Drashna](https://github.com/qmk/qmk_firmware/tree/master/users/drashna)
 - [Callum Oakley](https://github.com/callum-oakley/qmk_firmware/tree/master/users/callum)
+- [Andrew Rae](https://github.com/andrewjrae/kyria-keymap)
 - [Weilbith](https://github.com/weilbith/keyboard_firmware)
 - [DreymaR](https://dreymar.colemak.org)
 - [Thomas Baart](https://thomasbaart.nl/category/mechanical-keyboards/firmware/qmk)
