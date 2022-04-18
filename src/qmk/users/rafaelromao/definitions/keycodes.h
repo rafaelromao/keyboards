@@ -23,13 +23,13 @@ enum {
 
     SS_SELW, SS_SWIN, SS_CAPS,
 
-    SS_RS,  SS_EY,  SS_PH,  SS_CK,  SS_AU,  
+    SS_RS,  SS_EY,  SS_PH,  SS_CK,  SS_AU,
     SS_CH,  SS_SH,  SS_HE,  SS_NH,  SS_GH,
     SS_WH,  SS_IO,  SS_YE,  SS_TH,  SS_ING, SS_LH,
 
-    SS_DAND, SS_DPIP, 
-    SS_EQU, SS_NEQ, 
-    SS_ARR, SS_DDS, 
+    SS_DAND, SS_DPIP,
+    SS_EQU, SS_NEQ,
+    SS_ARR, SS_DDS,
     SS_CPR,
 
     SS_AO, SS_CAO, SS_OES, SS_COES
@@ -73,7 +73,7 @@ enum {
 
 // Layer-taps
 
-#define MED_CAP LT(_MEDIA, SP_CAP)
+#define MED_SFT LT(_MEDIA, SP_CAP)
 #define MED_0   LT(_MEDIA, KC_0)
 #define MED_P0  LT(_MEDIA, KC_P0)
 

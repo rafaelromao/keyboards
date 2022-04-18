@@ -35,7 +35,7 @@ process_record_result_t process_smart_thumb_keys(uint16_t keycode, keyrecord_t *
                 return PROCESS_RECORD_RETURN_FALSE;
             }
 
-        case MED_CAP:
+        case MED_SFT:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
                     bool isCapsLocked = host_keyboard_led_state().caps_lock;
@@ -47,7 +47,6 @@ process_record_result_t process_smart_thumb_keys(uint16_t keycode, keyrecord_t *
                         } else {
                             del_oneshot_mods(MOD_BIT(KC_LSFT));
                             unregister_mods(MOD_BIT(KC_LSFT));
-                            tap_code(KC_CAPS); // Enable capslock
                         }
                     }
                 }

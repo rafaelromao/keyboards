@@ -25,7 +25,7 @@ void check_ngrams_timeout(void) {
 
 process_record_result_t process_ngrams(uint16_t keycode, keyrecord_t *record) {
 
-    if (!record->event.pressed && keycode != NAV_NG && keycode != MED_CAP) {
+    if (!record->event.pressed && keycode != NAV_NG && keycode != MED_SFT) {
         disable_ngrams_layer();
     }
 

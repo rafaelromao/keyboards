@@ -97,13 +97,9 @@ const uint16_t PROGMEM rom_reset_combo[] = {KCF_MAC, KC_B, KCC_MAC, KC_W, COMBO_
 // Secret
 
 const uint16_t PROGMEM secret_1_combo[] = {SEC_1, SEC_2, SEC_3, SEC_4, COMBO_END};
-const uint16_t PROGMEM secret_2_combo[] = {SEC_1, SEC_2, SEC_7, SEC_4, COMBO_END};
-const uint16_t PROGMEM secret_3_combo[] = {SEC_1, SEC_2, SEC_5, SEC_6, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
   COMBO(secret_1_combo, SS_SECRET_1),
-  COMBO(secret_2_combo, SS_SECRET_2),
-  COMBO(secret_3_combo, SS_SECRET_3),
 
   COMBO(l_num_esc_combo, KC_ESC),
   COMBO(l_num_sav_combo, SC_SAVE),
