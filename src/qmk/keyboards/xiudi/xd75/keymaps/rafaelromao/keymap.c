@@ -160,13 +160,11 @@ extern dyn_macro_t dyn_macro;
 void set_rgblight_by_layer(uint32_t layer) {
     switch (layer) {
         case _ROMAK:
-            rgblight_setrgb(RGB_BLUE);
+        case _MAINTENANCE:
+            rgblight_reload_from_eeprom();
             break;
         case _NUMPAD:
             rgblight_setrgb(RGB_PURPLE);
-            break;
-        case _MAINTENANCE:
-            rgblight_setrgb(RGB_RED);
             break;
         default:
             rgblight_setrgb(RGB_SPRINGGREEN);
