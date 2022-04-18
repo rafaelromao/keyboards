@@ -13,6 +13,9 @@ process_record_result_t process_custom_shift(uint16_t keycode, keyrecord_t *reco
     uint16_t key = extract_base_tapping_keycode(keycode);
 
     switch (keycode) {
+        
+        // Inverted colon and semicolon
+        
         case KC_COLN:
             if (isShifted) {
                 if (record->event.pressed) {
@@ -22,6 +25,7 @@ process_record_result_t process_custom_shift(uint16_t keycode, keyrecord_t *reco
                 }
             }
             return PROCESS_RECORD_RETURN_TRUE;
+        
     }
 
     // Numpad Custom Shifts (make it work even on MacOS)
