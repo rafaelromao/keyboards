@@ -58,7 +58,7 @@ The Default Mod (Cmd or Ctrl) and Alt thumb keys are placed in the outer left an
     - The caps lock timer feature is implemented by starting a timer when the caps lock is activated and deactivating it in the matrix scan, in case the timer has expired.
     - The caps lock timer is restarted when a valid key is pressed.
     - The caps lock timer is stopped and caps lock deactivated when Esc is pressed.
-- Source code: [capslock_timer.c](../src/qmk/users/rafaelromao/features/capslock_timer.c)
+- Source code: [smart_case.c](../src/qmk/users/rafaelromao/features/smart_case.c)
 
 ##
 [Home](../readme.md) | 

@@ -5,7 +5,7 @@
 #include "definitions/keymap_blocks.h"
 #include "features/taphold.h"
 #include "features/tapdance.h"
-#include "features/capslock_timer.h"
+#include "features/smart_case.h"
 #include "features/os_toggle.h"
 #include "features/macros.h"
 #include "features/combos.h"

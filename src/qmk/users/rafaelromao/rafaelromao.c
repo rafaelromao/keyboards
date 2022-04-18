@@ -5,7 +5,7 @@ extern os_t os;
 // Led update
 
 bool led_update_user(led_t led_state) {
-    check_start_capslock_timer(led_state.caps_lock);
+    check_start_smart_case_timer(led_state.caps_lock);
     return true;
 }
 
@@ -15,7 +15,7 @@ __attribute__ ((weak)) void matrix_scan_keymap(void) {
 }
 
 void matrix_scan_user(void) {
-    check_disable_capslock();
+    check_disable_smart_case();
     check_ngrams_timeout();
     check_oneshot_mods_timeout();
     process_leader_dictionary();
@@ -36,8 +36,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
     };
 
-    // Extend capslock timer
-    switch (process_capslock_timer_extension(keycode, record)) {
+    // Extend smart_case timer
+    switch (process_smart_case_timer_extension(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:

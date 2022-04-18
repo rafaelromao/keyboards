@@ -1,55 +1,55 @@
 #include QMK_KEYBOARD_H
 
-#include "capslock_timer.h"
+#include "smart_case.h"
 
-static capslock_timer_t capslock_timer = {
+static smart_case_t smart_case = {
     .timer = 0
 };
 
-bool capslock_timer_expired(void) {
-    return capslock_timer.timer > 0 && (timer_elapsed(capslock_timer.timer) > 5 * CUSTOM_ONESHOT_TIMEOUT);
+bool smart_case_timer_expired(void) {
+    return smart_case.timer > 0 && (timer_elapsed(smart_case.timer) > 5 * CUSTOM_ONESHOT_TIMEOUT);
 }
 
-void start_capslock_timer(void) {
-    capslock_timer.timer = timer_read();
+void start_smart_case_timer(void) {
+    smart_case.timer = timer_read();
 }
 
-void clear_capslock_timer(void) {
-    capslock_timer.timer = 0;
+void clear_smart_case_timer(void) {
+    smart_case.timer = 0;
 }
 
-void disable_capslock(bool isCapsLocked) {
+void disable_smart_case(bool isCapsLocked) {
     if (isCapsLocked) {
         tap_code(KC_CAPS);
     }
 }
 
-void disable_capslock_when_timeout(bool isCapsLocked) {
+void disable_smart_case_when_timeout(bool isCapsLocked) {
     // Disable capslock if timer expired
-    if (capslock_timer_expired()) {
-        clear_capslock_timer();
-        disable_capslock(isCapsLocked);
+    if (smart_case_timer_expired()) {
+        clear_smart_case_timer();
+        disable_smart_case(isCapsLocked);
     }
 }
 
-void check_start_capslock_timer(bool isCapsLocked) {
+void check_start_smart_case_timer(bool isCapsLocked) {
     // Start timer to automatically disable capslock
     if (isCapsLocked) {
-        start_capslock_timer();
+        start_smart_case_timer();
     } else {
-        clear_capslock_timer();
+        clear_smart_case_timer();
     }
 }
 
-void check_disable_capslock(void) {
-    // Disable capslock if autodisable timer expired
-    disable_capslock_when_timeout(host_keyboard_led_state().caps_lock);
+void check_disable_smart_case(void) {
+    // Disable smart_case if autodisable timer expired
+    disable_smart_case_when_timeout(host_keyboard_led_state().caps_lock);
 }
 
-process_record_result_t process_capslock_timer_extension(uint16_t keycode, keyrecord_t *record) {
+process_record_result_t process_smart_case_timer_extension(uint16_t keycode, keyrecord_t *record) {
     if (keycode == SS_CAPS) {
         if (record->event.pressed) {
-            clear_capslock_timer();
+            clear_smart_case_timer();
             tap_code(KC_CAPS);
         }
         return PROCESS_RECORD_RETURN_FALSE;
@@ -80,13 +80,13 @@ process_record_result_t process_capslock_timer_extension(uint16_t keycode, keyre
             case KC_RIGHT:
             case KC_HOME:
             case KC_END:
-                start_capslock_timer();
+                start_smart_case_timer();
         }
         // Deactivate capslock
         switch (keycode) {
             case KC_ESC:
-                clear_capslock_timer();
-                disable_capslock(host_keyboard_led_state().caps_lock);
+                clear_smart_case_timer();
+                disable_smart_case(host_keyboard_led_state().caps_lock);
                 break;
         }
     }
