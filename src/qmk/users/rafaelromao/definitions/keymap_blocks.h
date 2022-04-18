@@ -126,7 +126,7 @@
 
 #define ___________________MACROS_R1___________________ XXXXXXX , XXXXXXX , SS_MODM , SS_MODP , XXXXXXX
 #define ___________________MACROS_R2___________________ TD_MAC1 , SS_ARR  , SS_EQU  , SS_NEQ  , XXXXXXX
-#define ___________________MACROS_R3___________________ XXXXXXX , SS_SELW , KC_LEAD , SS_DDS  , XXXXXXX
+#define ___________________MACROS_R3___________________ XXXXXXX , SS_SELW , KC_LEAD , SS_DDS  , SS_CPR
 #define ____MACROS_R4____                               LOW_SPC , TD_IJRI
 
 #define ___________________LOWER_L1____________________ XXXXXXX , TD_PARB , KC_RPRN , SS_TILD , KC_BSLS
