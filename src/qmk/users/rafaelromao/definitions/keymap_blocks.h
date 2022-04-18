@@ -102,12 +102,12 @@
 #define ___________________NGRAMS_L1___________________ XXXXXXX , SS_RS   , SS_EY   , SS_PH   , SS_CK
 #define ___________________NGRAMS_L2___________________ SS_CH   , SS_SH   , SS_HE   , SS_NH   , SS_GH
 #define ___________________NGRAMS_L3___________________ SS_WH   , SS_IO   , SS_YE   , SS_TH   , SS_ING
-#define ____NGRAMS_L4____                                                             _______ , NUM_SPC
+#define ____NGRAMS_L4____                                                             _______ , KC_SPC
                                                         
 #define ___________________NGRAMS_R1___________________ SS_AU   , SS_CR_A , SS_SQ_U , SS_SQ_I , XXXXXXX
 #define ___________________NGRAMS_R2___________________ SS_GV_A , SS_SQ_A , SS_TL_A , SS_TL_O , SS_SQ_C
 #define ___________________NGRAMS_R3___________________ SS_LH   , SS_SQ_E , SS_CR_E , SS_SQ_O , SS_CR_O
-#define ____NGRAMS_R4____                               NUM_BSP , _______
+#define ____NGRAMS_R4____                               KC_BSPC , _______
 
 #define ___________________NUMPAD_L1___________________ KC_NUM  , KC_F9   , KC_F8   , KC_F7   , KC_F12
 #define ___________________NUMPAD_L2___________________ KC_F15  , SF_F6   , CT_F5   , AL_F4   , KC_F11

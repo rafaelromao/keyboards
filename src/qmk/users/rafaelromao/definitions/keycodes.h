@@ -84,9 +84,6 @@ enum {
 #define LOW_SPC LT(_LOWER, KC_SPC)
 #define RAI_BSP LT(_RAISE, KC_BSPC)
 
-#define NUM_SPC LT(_NUMPAD, KC_SPC)
-#define NUM_BSP LT(_NUMPAD, KC_BSPC)
-
 #define KCA_MAC LT(_MACROS, KC_A)
 #define KCF_MAC LT(_MACROS, KC_F)
 #define KCC_MAC LT(_MACROS, KC_C)
@@ -95,7 +92,7 @@ enum {
 #define DOT_MAC LT(_MACROS, KC_DOT)
 #define PDO_MAC LT(_MACROS, KC_PDOT)
 
-#define PER_LOW LT(_LOWER_CLONE, KC_PERC)
+#define PER_LOW LT(_LOWER_OVER, KC_PERC)
 #define BTI_RAI LT(_RAISE, SS_BTIC)
 
 // Layer transitions
