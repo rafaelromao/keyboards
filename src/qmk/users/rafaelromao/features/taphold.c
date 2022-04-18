@@ -9,14 +9,6 @@ process_record_result_t process_custom_taphold(uint16_t keycode, keyrecord_t *re
     bool isShifted = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
 
     switch (keycode) {
-        case UND_MAC:
-        case LA_UNDS:
-            if (record->event.pressed) {
-                if (record->tap.count > 0) {
-                    tap_code16(KC_UNDS);
-                    return PROCESS_RECORD_RETURN_FALSE;
-                }
-            }
         case PER_LOW:
             if (record->event.pressed) {
                 if (record->tap.count > 0) {

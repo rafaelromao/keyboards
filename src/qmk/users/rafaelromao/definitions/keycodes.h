@@ -56,7 +56,7 @@ enum {
 #define RALTT_N RALT_T(KC_N)
 #define AL_F4 LALT_T(KC_F4)
 #define AL_P4 RALT_T(KC_P4)
-#define LA_UNDS LALT_T(KC_UNDS)
+#define LA_BSLS LALT_T(KC_BSLS)
 
 #define LGUIT_V LGUI_T(KC_V)
 #define LGUIT_T LGUI_T(KC_T)
@@ -89,7 +89,7 @@ enum {
 #define KCF_MAC LT(_MACROS, KC_F)
 #define KCC_MAC LT(_MACROS, KC_C)
 #define SCL_MAC LT(_MACROS, KC_SCLN)
-#define UND_MAC LT(_MACROS, KC_UNDS)
+#define BSL_MAC LT(_MACROS, KC_UNDS)
 #define DOT_MAC LT(_MACROS, KC_DOT)
 #define PDO_MAC LT(_MACROS, KC_PDOT)
 

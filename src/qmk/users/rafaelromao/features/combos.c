@@ -43,7 +43,7 @@ const uint16_t PROGMEM l_ro0_pas_combo[] = {LOW_SPC, LCTLT_D, LALTT_F, COMBO_END
 const uint16_t PROGMEM l_ro0_cop_combo[] = {LOW_SPC, KC_C, LGUIT_V, COMBO_END};
 const uint16_t PROGMEM l_ro0_usc_combo[] = {KC_X, KC_C, COMBO_END};
 
-const uint16_t PROGMEM r_ro0_ful_combo[] = {RAI_BSP, RSFTT_L, UND_MAC, COMBO_END};
+const uint16_t PROGMEM r_ro0_ful_combo[] = {RAI_BSP, RSFTT_L, BSL_MAC, COMBO_END};
 const uint16_t PROGMEM r_ro0_pas_combo[] = {RAI_BSP, RALTT_J, RCTLT_K, COMBO_END};
 const uint16_t PROGMEM r_ro0_cop_combo[] = {RAI_BSP, RGUIT_M, TD_COML, COMBO_END};
 const uint16_t PROGMEM r_ro0_fin_combo[] = {RAI_BSP, TD_DOTD, TD_SCLE, COMBO_END};
@@ -58,7 +58,7 @@ const uint16_t PROGMEM l_rom_usc_combo[] = {KC_X, KC_Y, COMBO_END};
 
 // Romak 2
 
-const uint16_t PROGMEM l_ro2_pas_combo[] = {LOW_SPC, LCTLT_D, LA_UNDS, COMBO_END};
+const uint16_t PROGMEM l_ro2_pas_combo[] = {LOW_SPC, LCTLT_D, LA_BSLS, COMBO_END};
 const uint16_t PROGMEM l_ro2_sal_combo[] = {LOW_SPC, KCF_MAC, LSFTT_S, COMBO_END};
 const uint16_t PROGMEM r_ro2_ent_combo[] = {RAI_BSP, RCTLT_A, RSFTT_L, COMBO_END};
 const uint16_t PROGMEM r_rom_pas_combo[] = {RAI_BSP, RALTT_N, RCTLT_A, COMBO_END};
