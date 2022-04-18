@@ -23,14 +23,23 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
                 }
                 return PROCESS_RECORD_RETURN_FALSE;
                 
-            // Macro layer
+            // Conditional operators
 
             case SS_DAND:
-                SEND_STRING("&&");
+                tap_code16(KC_AMPR);
+                if (!isShifted) {
+                    tap_code16(KC_AMPR);
+                }
                 return PROCESS_RECORD_RETURN_FALSE;
             case SS_DPIP:
-                SEND_STRING("||");
+                tap_code16(KC_PIPE);
+                if (!isShifted) {
+                    tap_code16(KC_PIPE);
+                }
                 return PROCESS_RECORD_RETURN_FALSE;
+
+            // Equalities
+
             case SS_EQU:
                 clear_shift();
                 tap_code(KC_EQL);
@@ -48,6 +57,8 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
                 }
                 return PROCESS_RECORD_RETURN_FALSE;
 
+            // Arrows
+
             case SS_ARR:
                 if (isShifted) {
                     clear_shift();
@@ -56,9 +67,19 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
                     SEND_STRING("->");
                 }
                 return PROCESS_RECORD_RETURN_FALSE;
+
+            // Directory up
+
             case SS_DDS:
                 SEND_STRING("../");
                 return PROCESS_RECORD_RETURN_FALSE;
+
+            // Vim global command
+
+            case SS_CPR:
+                SEND_STRING(":%");
+                return PROCESS_RECORD_RETURN_FALSE;
+
         }
     }
 

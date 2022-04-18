@@ -30,6 +30,7 @@ enum {
     SS_DAND, SS_DPIP, 
     SS_EQU, SS_NEQ, 
     SS_ARR, SS_DDS, 
+    SS_CPR,
 
     SS_AO, SS_CAO, SS_OES, SS_COES
 };
