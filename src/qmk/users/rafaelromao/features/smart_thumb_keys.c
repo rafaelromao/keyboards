@@ -21,6 +21,25 @@ process_record_result_t process_smart_thumb_keys(uint16_t keycode, keyrecord_t *
 
     switch (keycode) {
 
+        case MED_CAP:
+            if (record->tap.count > 0) {
+                if (record->event.pressed) {
+                    bool isCapsLocked = host_keyboard_led_state().caps_lock;
+                    if (isCapsLocked) {
+                        tap_code(KC_CAPS); // Disable capslock
+                    } else {
+                        if (!isOneShotShift) {
+                            add_oneshot_mods(MOD_BIT(KC_LSFT));
+                        } else {
+                            del_oneshot_mods(MOD_BIT(KC_LSFT));
+                            unregister_mods(MOD_BIT(KC_LSFT));
+                            tap_code(KC_CAPS); // Enable capslock
+                        }
+                    }
+                }
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+
         case MAI_ALT:
         case MED_ALT:
             if (record->tap.count > 0) {

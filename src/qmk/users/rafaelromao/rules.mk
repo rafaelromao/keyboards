@@ -5,7 +5,6 @@ SRC += features/taphold.c
 SRC += features/ngrams.c
 SRC += features/custom_oneshot_mods.c
 SRC += features/smart_thumb_keys.c
-SRC += features/capitalize_key.c
 SRC += features/tapdance.c
 SRC += features/smart_case.c
 SRC += features/os_toggle.c

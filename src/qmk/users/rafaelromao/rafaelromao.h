@@ -13,7 +13,6 @@
 #include "features/ngrams.h"
 #include "features/smart_thumb_keys.h"
 #include "features/custom_oneshot_mods.h"
-#include "features/capitalize_key.h"
 #include "features/select_word.h"
 #include "features/dynamic_macro.h"
 #include "features/accentuation.h"

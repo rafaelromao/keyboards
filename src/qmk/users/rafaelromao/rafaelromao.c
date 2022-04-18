@@ -146,16 +146,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
     };
 
-    // Process capitalize key
-    switch (process_capitalize_key(keycode, record)) {
-        case PROCESS_RECORD_RETURN_TRUE:
-            return true;
-        case PROCESS_RECORD_RETURN_FALSE:
-            return false;
-        default:
-            break;
-    };
-
     // Process OS toggle
     switch (process_os_toggle(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
