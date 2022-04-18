@@ -12,6 +12,18 @@ process_record_result_t process_custom_shift(uint16_t keycode, keyrecord_t *reco
     bool isShifted = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
     uint16_t key = extract_base_tapping_keycode(keycode);
 
+    switch (keycode) {
+        case KC_COLN:
+            if (isShifted) {
+                if (record->event.pressed) {
+                    clear_shift();
+                    tap_code(KC_SCLN);
+                    return PROCESS_RECORD_RETURN_FALSE;
+                }
+            }
+            return PROCESS_RECORD_RETURN_TRUE;
+    }
+
     // Numpad Custom Shifts (make it work even on MacOS)
 
     switch (key) {
