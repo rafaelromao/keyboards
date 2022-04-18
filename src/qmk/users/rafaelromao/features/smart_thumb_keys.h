@@ -5,6 +5,7 @@
 #include "../definitions/keycodes.h"
 #include "process_record_result.h"
 #include "os_toggle.h"
+#include "ngrams.h"
 #include "dynamic_macro.h"
 #include "custom_oneshot_mods.h"
 
