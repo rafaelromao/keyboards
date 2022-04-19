@@ -3,7 +3,8 @@
 #include "smart_case.h"
 
 static smart_case_t smart_case = {
-    .timer = 0
+    .timer = 0,
+    .type = NO_CASE
 };
 
 bool smart_case_timer_expired(void) {
@@ -18,23 +19,23 @@ void clear_smart_case_timer(void) {
     smart_case.timer = 0;
 }
 
-void disable_smart_case(bool isCapsLocked) {
-    if (isCapsLocked) {
+void disable_smart_case(void) {
+    if (host_keyboard_led_state().caps_lock) {
         tap_code(KC_CAPS);
     }
 }
 
-void disable_smart_case_when_timeout(bool isCapsLocked) {
+void disable_smart_case_when_timeout(void) {
     // Disable capslock if timer expired
     if (smart_case_timer_expired()) {
         clear_smart_case_timer();
-        disable_smart_case(isCapsLocked);
+        disable_smart_case();
     }
 }
 
-void check_start_smart_case_timer(bool isCapsLocked) {
+void check_start_smart_case_timer(void) {
     // Start timer to automatically disable capslock
-    if (isCapsLocked) {
+    if (host_keyboard_led_state().caps_lock) {
         start_smart_case_timer();
     } else {
         clear_smart_case_timer();
@@ -43,14 +44,14 @@ void check_start_smart_case_timer(bool isCapsLocked) {
 
 void check_disable_smart_case(void) {
     // Disable smart_case if autodisable timer expired
-    disable_smart_case_when_timeout(host_keyboard_led_state().caps_lock);
+    disable_smart_case_when_timeout();
 }
 
 process_record_result_t process_smart_case_timer_extension(uint16_t keycode, keyrecord_t *record) {
     if (keycode == SS_CAPS) {
         if (record->event.pressed) {
             clear_smart_case_timer();
-            tap_code(KC_CAPS);
+            set_smart_case(CAPS_LOCK);
         }
         return PROCESS_RECORD_RETURN_FALSE;
     }
@@ -86,7 +87,7 @@ process_record_result_t process_smart_case_timer_extension(uint16_t keycode, key
         switch (keycode) {
             case KC_ESC:
                 clear_smart_case_timer();
-                disable_smart_case(host_keyboard_led_state().caps_lock);
+                disable_smart_case();
                 break;
         }
     }
@@ -94,3 +95,20 @@ process_record_result_t process_smart_case_timer_extension(uint16_t keycode, key
     return PROCESS_RECORD_CONTINUE;
 }
 
+void set_smart_case(smart_case_type_t smart_case_types) {
+    if (smart_case_types & NO_CASE)  {
+        smart_case.type = NO_CASE;
+        disable_smart_case();
+        return;
+    }
+    if (smart_case_types & CAPS_LOCK) {
+        smart_case.type = CAPS_LOCK;
+        tap_code(KC_CAPS);
+        return;
+    }
+    smart_case.type = smart_case.type | smart_case_types;
+}
+
+bool has_smart_case(smart_case_type_t smart_case_types) {
+    return smart_case.type & smart_case_types;
+}

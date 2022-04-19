@@ -5,7 +5,7 @@ extern os_t os;
 // Led update
 
 bool led_update_user(led_t led_state) {
-    check_start_smart_case_timer(led_state.caps_lock);
+    check_start_smart_case_timer();
     return true;
 }
 
