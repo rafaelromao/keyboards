@@ -38,9 +38,8 @@ process_record_result_t process_smart_thumb_keys(uint16_t keycode, keyrecord_t *
         case MED_SFT:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
-                    bool isCapsLocked = host_keyboard_led_state().caps_lock;
-                    if (isCapsLocked) {
-                        tap_code(KC_CAPS); // Disable capslock
+                    if (has_any_smart_case()) {
+                        set_smart_case(NO_CASE);
                     } else {
                         if (!isOneShotShift) {
                             add_oneshot_mods(MOD_BIT(KC_LSFT));

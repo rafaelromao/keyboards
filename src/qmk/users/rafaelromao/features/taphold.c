@@ -2,8 +2,7 @@
 
 #include "taphold.h"
 
-process_record_result_t process_custom_taphold(uint16_t keycode, keyrecord_t *record) {
-
+process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
     bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     bool isOneShotShift = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
     bool isShifted = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
@@ -28,19 +27,6 @@ process_record_result_t process_custom_taphold(uint16_t keycode, keyrecord_t *re
                 }
             }
     }
-    return PROCESS_RECORD_CONTINUE;
-}
-
-process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
-    switch (process_custom_taphold(keycode, record)) {
-        case PROCESS_RECORD_RETURN_TRUE:
-            return PROCESS_RECORD_RETURN_TRUE;
-        case PROCESS_RECORD_RETURN_FALSE:
-            return PROCESS_RECORD_RETURN_FALSE;
-        default:
-            break;
-    };
-
     return PROCESS_RECORD_CONTINUE;
 }
 

@@ -5,7 +5,9 @@ extern os_t os;
 // Led update
 
 bool led_update_user(led_t led_state) {
-    check_start_smart_case_timer();
+    if (led_state.caps_lock != has_smart_case(CAPS_LOCK)) {
+       toggle_capslock_smart_case(led_state.caps_lock);
+    }
     return true;
 }
 
@@ -26,6 +28,36 @@ void matrix_scan_user(void) {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
+    // Process window swapper
+    switch (process_window_swapper(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
+
+    // Process smart case
+    switch (process_smart_case(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
+
+    // Process smart thumb keys
+    switch (process_smart_thumb_keys(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
+
     // Process ngrams
     switch (process_ngrams(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
@@ -36,8 +68,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
     };
 
-    // Extend smart_case timer
-    switch (process_smart_case_timer_extension(keycode, record)) {
+    // Process taphold
+    switch (process_taphold(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:
@@ -46,18 +78,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
     };
 
-    // Process secrets
-    switch (process_secrets(keycode, record)) {
-        case PROCESS_RECORD_RETURN_TRUE:
-            return true;
-        case PROCESS_RECORD_RETURN_FALSE:
-            return false;
-        default:
-            break;
-    };
-
-    // Process window swapper
-    switch (process_window_swapper(keycode, record)) {
+    // Process accentuation
+    switch (process_accentuated_characters(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:
@@ -96,38 +118,18 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
     };
 
+    // Process secrets
+    switch (process_secrets(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
+
     // Process select word
     switch (process_select_word(keycode, record)) {
-        case PROCESS_RECORD_RETURN_TRUE:
-            return true;
-        case PROCESS_RECORD_RETURN_FALSE:
-            return false;
-        default:
-            break;
-    };
-
-    // Process taphold
-    switch (process_taphold(keycode, record)) {
-        case PROCESS_RECORD_RETURN_TRUE:
-            return true;
-        case PROCESS_RECORD_RETURN_FALSE:
-            return false;
-        default:
-            break;
-    };
-
-    // Process accentuation
-    switch (process_accentuated_characters(keycode, record)) {
-        case PROCESS_RECORD_RETURN_TRUE:
-            return true;
-        case PROCESS_RECORD_RETURN_FALSE:
-            return false;
-        default:
-            break;
-    };
-
-    // Process smart thumb keys
-    switch (process_smart_thumb_keys(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:

@@ -20,38 +20,60 @@ void clear_smart_case_timer(void) {
 }
 
 void disable_smart_case(void) {
+    smart_case.type = NO_CASE;
+    clear_smart_case_timer();
     if (host_keyboard_led_state().caps_lock) {
         tap_code(KC_CAPS);
     }
 }
 
-void disable_smart_case_when_timeout(void) {
-    // Disable capslock if timer expired
+void check_disable_smart_case(void) {
     if (smart_case_timer_expired()) {
-        clear_smart_case_timer();
         disable_smart_case();
     }
 }
 
-void check_start_smart_case_timer(void) {
-    // Start timer to automatically disable capslock
-    if (host_keyboard_led_state().caps_lock) {
-        start_smart_case_timer();
+void toggle_capslock_smart_case(bool capslock) {
+    if (capslock) {
+        set_smart_case(CAPS_LOCK);
     } else {
-        clear_smart_case_timer();
+        set_smart_case(NO_CASE);
     }
 }
 
-void check_disable_smart_case(void) {
-    // Disable smart_case if autodisable timer expired
-    disable_smart_case_when_timeout();
+void enable_capslock(void) {
+    smart_case.type = CAPS_LOCK;
+    start_smart_case_timer();
+    if (!host_keyboard_led_state().caps_lock) {
+        tap_code(KC_CAPS);
+    }
 }
 
-process_record_result_t process_smart_case_timer_extension(uint16_t keycode, keyrecord_t *record) {
+void set_smart_case(smart_case_type_t smart_case_types) {
+    if (smart_case_types & NO_CASE)  {
+        disable_smart_case();
+        return;
+    }
+    if (smart_case_types & CAPS_LOCK) {
+        enable_capslock();
+        return;
+    }
+    smart_case.type = smart_case.type | smart_case_types;
+    start_smart_case_timer();
+}
+
+bool has_smart_case(smart_case_type_t smart_case_types) {
+    return smart_case.type & smart_case_types;
+}
+
+bool has_any_smart_case(void) {
+    return smart_case.type > 1;
+}
+
+process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record) {
     if (keycode == SS_CAPS) {
         if (record->event.pressed) {
-            clear_smart_case_timer();
-            set_smart_case(CAPS_LOCK);
+            toggle_capslock_smart_case(!host_keyboard_led_state().caps_lock);
         }
         return PROCESS_RECORD_RETURN_FALSE;
     }
@@ -86,29 +108,10 @@ process_record_result_t process_smart_case_timer_extension(uint16_t keycode, key
         // Deactivate capslock
         switch (keycode) {
             case KC_ESC:
-                clear_smart_case_timer();
                 disable_smart_case();
                 break;
         }
     }
 
     return PROCESS_RECORD_CONTINUE;
-}
-
-void set_smart_case(smart_case_type_t smart_case_types) {
-    if (smart_case_types & NO_CASE)  {
-        smart_case.type = NO_CASE;
-        disable_smart_case();
-        return;
-    }
-    if (smart_case_types & CAPS_LOCK) {
-        smart_case.type = CAPS_LOCK;
-        tap_code(KC_CAPS);
-        return;
-    }
-    smart_case.type = smart_case.type | smart_case_types;
-}
-
-bool has_smart_case(smart_case_type_t smart_case_types) {
-    return smart_case.type & smart_case_types;
 }

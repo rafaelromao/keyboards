@@ -39,7 +39,7 @@
 #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , TD_COML , TD_DOTD , TD_SCLE
 #define ____ROMAK_R4_____                               RAI_BSP , MED_SFT
 
-// // Romak 3 - EDQ_
+// // Romak 3 - EDQ/
 
 // #define ___________________ROMAK_L1____________________ XXXXXXX , KC_W    , KC_Q    , KC_R    , KC_T
 // #define ___________________ROMAK_L2____________________ KCF_MAC , LSFTT_S , LCTLT_E , LALTT_D , KC_G
@@ -51,7 +51,7 @@
 // #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , TD_COML , TD_DOTD , TD_SCLE
 // #define ____ROMAK_R4_____                               RAI_BSP , MED_SFT
 
-// // Romak 2 - KFA_
+// // Romak 2 - KFA/
 
 // #define ___________________ROMAK_L1____________________ KC_Q    , KC_W    , KC_E    , KC_R    , KC_T
 // #define ___________________ROMAK_L2____________________ KCF_MAC , LSFTT_S , LCTLT_D , LA_BSLS , KC_G
@@ -63,7 +63,7 @@
 // #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , TD_COML , TD_DOTD , TD_SCLE
 // #define ____ROMAK_R4_____                               RAI_BSP , MED_SFT
 
-// Romak 1 - NJYC_
+// Romak 1 - NJYC/
 
 // #define ___________________ROMAK_L1____________________ KC_Q    , KC_W    , KC_E , KC_R    , KC_T
 // #define ___________________ROMAK_L2____________________ KCA_MAC , LSFTT_S , LCTLT_D , LALTT_F , KC_G

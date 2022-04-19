@@ -176,5 +176,5 @@ process_record_result_t process_accentuated_characters(uint16_t keycode, keyreco
         unregister_mods(MOD_LSFT);
     }
 
-    return PROCESS_RECORD_RETURN_FALSE;
+    return PROCESS_RECORD_CONTINUE;
 }
