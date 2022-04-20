@@ -70,6 +70,9 @@ bool has_any_smart_case(void) {
 
 void toggle_capslock_smart_case(bool capslock) {
     if (capslock) {
+        if (!has_smart_case(CAPS_WORD)) {
+            set_smart_case(NO_CASE);
+        }
         set_smart_case(CAPS_LOCK);
     } else {
         set_smart_case(NO_CASE);
@@ -147,6 +150,16 @@ process_record_result_t process_smart_case_chars(uint16_t keycode, keyrecord_t *
                 }
                 if (has_smart_case(SNAKE_CASE)) {
                     tap_code16(KC_UNDS);
+                    start_smart_case_timer();
+                    return PROCESS_RECORD_RETURN_FALSE;
+                }
+                if (has_smart_case(KEBAB_CASE)) {
+                    tap_code16(KC_MINS);
+                    start_smart_case_timer();
+                    return PROCESS_RECORD_RETURN_FALSE;
+                }
+                if (has_smart_case(CAMEL_CASE)) {
+                    add_oneshot_mods(MOD_BIT(KC_LSFT));
                     start_smart_case_timer();
                     return PROCESS_RECORD_RETURN_FALSE;
                 }
