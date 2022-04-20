@@ -46,6 +46,7 @@ process_record_result_t process_smart_thumb_keys(uint16_t keycode, keyrecord_t *
                         } else {
                             del_oneshot_mods(MOD_BIT(KC_LSFT));
                             unregister_mods(MOD_BIT(KC_LSFT));
+                            set_smart_case(CAPS_LOCK);
                         }
                     }
                 }
