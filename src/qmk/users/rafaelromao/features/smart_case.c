@@ -34,7 +34,9 @@ void check_disable_smart_case(void) {
 }
 
 void enable_capslock(void) {
-    smart_case.type = CAPS_LOCK;
+    if (!has_smart_case(CAPS_WORD)) {
+        smart_case.type = CAPS_LOCK;
+    }
     start_smart_case_timer();
     if (!host_keyboard_led_state().caps_lock) {
         tap_code(KC_CAPS);
@@ -95,13 +97,10 @@ process_record_result_t process_smart_case_options(uint16_t keycode, keyrecord_t
     return PROCESS_RECORD_CONTINUE;
 }
 
-void set_smart_case_for_mods(void, keyrecord_t *record) {
+void set_smart_case_for_mods(keyrecord_t *record) {
     set_smart_case(NO_CASE);
     int8_t mods = get_mods();
-    if (mods == 0) {
-        process_smart_case_options(SS_CAPS, record);
-    }
-    if (mods & MOD_MASK_CTRL) {
+    if (mods == 0 || mods & MOD_MASK_CTRL) {
         process_smart_case_options(SS_WORD, record);
     }
     if (mods & MOD_MASK_SHIFT) {
@@ -135,21 +134,25 @@ process_record_result_t process_smart_case_extention(uint16_t keycode, keyrecord
             // Get the base tapping keycode of a mod- or layer-tap key.
             keycode = extract_base_tapping_keycode(keycode);
         }
-        // Extend capslock timer
+        // Extend case timer break caps word
         switch (keycode) {
+            case KC_SPC:
+                if (has_smart_case(CAPS_WORD)) {
+                    disable_smart_case();
+                    break;
+                }
             case KC_A ... KC_Z:
             case KC_1 ... KC_0:
             case KC_BSPC:
             case KC_MINS:
             case KC_UNDS:
-            case KC_SPC:
             case KC_LEFT:
             case KC_RIGHT:
             case KC_HOME:
             case KC_END:
                 start_smart_case_timer();
         }
-        // Deactivate capslock
+        // Deactivate case
         switch (keycode) {
             case KC_ESC:
                 disable_smart_case();
