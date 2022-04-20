@@ -70,15 +70,21 @@ bool has_any_smart_case(void) {
     return smart_case.type > 1;
 }
 
-process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record) {
+process_record_result_t process_smart_case_options(uint16_t keycode, keyrecord_t *record) {
     if (keycode == SS_CAPS) {
         if (record->event.pressed) {
             toggle_capslock_smart_case(!host_keyboard_led_state().caps_lock);
         }
         return PROCESS_RECORD_RETURN_FALSE;
     }
+    return PROCESS_RECORD_CONTINUE;
+}
 
-    // Extend autodisable capslock timer
+process_record_result_t process_smart_case_chars(uint16_t keycode, keyrecord_t *record) {
+    return PROCESS_RECORD_CONTINUE;
+}
+
+process_record_result_t process_smart_case_extention(uint16_t keycode, keyrecord_t *record) {
     bool isCapsLocked = host_keyboard_led_state().caps_lock;
     if (isCapsLocked) {
         switch (keycode) {
@@ -112,6 +118,37 @@ process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record
                 break;
         }
     }
+    return PROCESS_RECORD_CONTINUE;
+}
+
+process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record) {
+
+    switch (process_smart_case_extention(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
+
+    switch (process_smart_case_chars(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
+
+    switch (process_smart_case_options(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
 
     return PROCESS_RECORD_CONTINUE;
 }
