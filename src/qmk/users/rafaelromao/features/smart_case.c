@@ -95,6 +95,29 @@ process_record_result_t process_smart_case_options(uint16_t keycode, keyrecord_t
     return PROCESS_RECORD_CONTINUE;
 }
 
+void set_smart_case_for_mods(void, keyrecord_t *record) {
+    set_smart_case(NO_CASE);
+    int8_t mods = get_mods();
+    if (mods == 0) {
+        process_smart_case_options(SS_CAPS, record);
+    }
+    if (mods & MOD_MASK_CTRL) {
+        process_smart_case_options(SS_WORD, record);
+    }
+    if (mods & MOD_MASK_SHIFT) {
+        process_smart_case_options(SS_SNAK, record);
+        return;
+    }
+    if (mods & MOD_MASK_ALT) {
+        process_smart_case_options(SS_KBAB, record);
+        return;
+    }
+    if (mods & MOD_MASK_GUI) {
+        process_smart_case_options(SS_CAML, record);
+        return;
+    }
+}
+
 process_record_result_t process_smart_case_chars(uint16_t keycode, keyrecord_t *record) {
     return PROCESS_RECORD_CONTINUE;
 }

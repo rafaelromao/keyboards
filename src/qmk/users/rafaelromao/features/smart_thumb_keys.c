@@ -41,12 +41,12 @@ process_record_result_t process_smart_thumb_keys(uint16_t keycode, keyrecord_t *
                     if (has_any_smart_case()) {
                         set_smart_case(NO_CASE);
                     } else {
-                        if (!isOneShotShift) {
+                        if (!isOneShotShift && get_mods() == 0) {
                             add_oneshot_mods(MOD_BIT(KC_LSFT));
                         } else {
+                            set_smart_case_for_mods(record);
                             del_oneshot_mods(MOD_BIT(KC_LSFT));
                             unregister_mods(MOD_BIT(KC_LSFT));
-                            set_smart_case(CAPS_LOCK);
                         }
                     }
                 }
