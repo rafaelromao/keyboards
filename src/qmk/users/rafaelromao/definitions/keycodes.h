@@ -21,7 +21,7 @@ enum {
     SS_SQ_U, SS_CR_O, SS_SQ_O, SS_SQ_I,
     SS_CR_E, SS_TL_O, SS_SQ_C, SS_SQ_E,
 
-    SS_SELW, SS_SWIN, SS_CAPS,
+    SS_SELW, SS_SWIN, SS_CAPS, SS_WORD, SS_CAML, SS_SNAK, SS_KBAB,
 
     SS_RS,  SS_EY,  SS_PH,  SS_CK,  SS_AU,
     SS_CH,  SS_SH,  SS_HE,  SS_NH,  SS_GH,
@@ -36,6 +36,8 @@ enum {
 };
 
 // Mod-taps
+
+#define SFT_SNK LSFT_T(SS_SNAK)
 
 #define LSFTT_S LSFT_T(KC_S)
 #define RSFTT_L RSFT_T(KC_L)

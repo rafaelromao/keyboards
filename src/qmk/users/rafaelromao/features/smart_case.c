@@ -33,20 +33,17 @@ void check_disable_smart_case(void) {
     }
 }
 
-void toggle_capslock_smart_case(bool capslock) {
-    if (capslock) {
-        set_smart_case(CAPS_LOCK);
-    } else {
-        set_smart_case(NO_CASE);
-    }
-}
-
 void enable_capslock(void) {
     smart_case.type = CAPS_LOCK;
     start_smart_case_timer();
     if (!host_keyboard_led_state().caps_lock) {
         tap_code(KC_CAPS);
     }
+}
+
+void enable_smartcase(smart_case_type_t smart_case_types) {
+    smart_case.type = smart_case.type | smart_case_types;
+    start_smart_case_timer();
 }
 
 void set_smart_case(smart_case_type_t smart_case_types) {
@@ -58,8 +55,7 @@ void set_smart_case(smart_case_type_t smart_case_types) {
         enable_capslock();
         return;
     }
-    smart_case.type = smart_case.type | smart_case_types;
-    start_smart_case_timer();
+    enable_smartcase(smart_case_types);
 }
 
 bool has_smart_case(smart_case_type_t smart_case_types) {
@@ -70,12 +66,31 @@ bool has_any_smart_case(void) {
     return smart_case.type > 1;
 }
 
+void toggle_capslock_smart_case(bool capslock) {
+    if (capslock) {
+        set_smart_case(CAPS_LOCK);
+    } else {
+        set_smart_case(NO_CASE);
+    }
+}
+
+void toggle_smart_case(smart_case_type_t smart_case_types) {
+    if (has_smart_case(smart_case_types)) {
+        set_smart_case(NO_CASE);
+    } else {
+        set_smart_case(smart_case_types);
+    }
+}
+
 process_record_result_t process_smart_case_options(uint16_t keycode, keyrecord_t *record) {
-    if (keycode == SS_CAPS) {
-        if (record->event.pressed) {
-            toggle_capslock_smart_case(!host_keyboard_led_state().caps_lock);
+    if (record->event.pressed) {
+        switch (keycode) {
+            case SS_WORD:
+                toggle_smart_case(CAPS_WORD);
+            case SS_CAPS:
+                toggle_capslock_smart_case(!host_keyboard_led_state().caps_lock);
+                return PROCESS_RECORD_RETURN_FALSE;
         }
-        return PROCESS_RECORD_RETURN_FALSE;
     }
     return PROCESS_RECORD_CONTINUE;
 }
