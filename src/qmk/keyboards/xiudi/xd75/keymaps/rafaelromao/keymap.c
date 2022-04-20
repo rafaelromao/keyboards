@@ -191,11 +191,9 @@ void set_mod_indicators(void) {
     bool isAlt = mods & MOD_MASK_ALT || oneshot_mods & MOD_MASK_ALT || oneshot_locked_mods & MOD_MASK_ALT;
     bool isGui = mods & MOD_MASK_GUI || oneshot_mods & MOD_MASK_GUI || oneshot_locked_mods & MOD_MASK_GUI;
 
-    bool isCapsLocked = host_keyboard_led_state().caps_lock;
-
     if (leader.isLeading || select_word.state != STATE_NONE || dyn_macro.recording != 0) {
         rgblight_setrgb(RGB_GREEN);
-    } else if (isCapsLocked) {
+    } else if (has_any_smart_case()) {
         rgblight_setrgb(RGB_YELLOW);
     } else if (isShift) {
         rgblight_setrgb(RGB_SPRINGGREEN);

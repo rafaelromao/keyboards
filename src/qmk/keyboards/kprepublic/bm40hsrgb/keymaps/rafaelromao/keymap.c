@@ -173,12 +173,10 @@ void rgb_matrix_indicators_user(void) {
     bool isAlt = mods & MOD_MASK_ALT || oneshot_mods & MOD_MASK_ALT || oneshot_locked_mods & MOD_MASK_ALT;
     bool isGui = mods & MOD_MASK_GUI || oneshot_mods & MOD_MASK_GUI || oneshot_locked_mods & MOD_MASK_GUI;
 
-    bool isCapsLocked = host_keyboard_led_state().caps_lock;
-
     if (leader.isLeading || select_word.state != STATE_NONE) {
         rgb_matrix_set_color(4, RGB_GREEN);
         rgb_matrix_set_color(7, RGB_GREEN);
-    } else if (isCapsLocked) {
+    } else if (has_any_smart_case()) {
         rgb_matrix_set_color(4, RGB_YELLOW);
         rgb_matrix_set_color(7, RGB_YELLOW);
     } else if (isShift) {

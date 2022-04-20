@@ -92,6 +92,15 @@ process_record_result_t process_smart_case_options(uint16_t keycode, keyrecord_t
             case SS_CAPS:
                 toggle_capslock_smart_case(!host_keyboard_led_state().caps_lock);
                 return PROCESS_RECORD_RETURN_FALSE;
+            case SS_SNAK:
+                toggle_smart_case(SNAKE_CASE);
+                return PROCESS_RECORD_RETURN_FALSE;
+            case SS_KBAB:
+                toggle_smart_case(KEBAB_CASE);
+                return PROCESS_RECORD_RETURN_FALSE;
+            case SS_CAML:
+                toggle_smart_case(CAMEL_CASE);
+                return PROCESS_RECORD_RETURN_FALSE;
         }
     }
     return PROCESS_RECORD_CONTINUE;
@@ -118,12 +127,7 @@ void set_smart_case_for_mods(keyrecord_t *record) {
 }
 
 process_record_result_t process_smart_case_chars(uint16_t keycode, keyrecord_t *record) {
-    return PROCESS_RECORD_CONTINUE;
-}
-
-process_record_result_t process_smart_case_extention(uint16_t keycode, keyrecord_t *record) {
-    bool isCapsLocked = host_keyboard_led_state().caps_lock;
-    if (isCapsLocked) {
+    if (has_any_smart_case() && record->event.pressed) {
         switch (keycode) {
             case QK_MOD_TAP ... QK_MOD_TAP_MAX:
             case QK_LAYER_TAP ... QK_LAYER_TAP_MAX:
@@ -134,12 +138,17 @@ process_record_result_t process_smart_case_extention(uint16_t keycode, keyrecord
             // Get the base tapping keycode of a mod- or layer-tap key.
             keycode = extract_base_tapping_keycode(keycode);
         }
-        // Extend case timer break caps word
+        // Extend, process or break case
         switch (keycode) {
             case KC_SPC:
                 if (has_smart_case(CAPS_WORD)) {
                     disable_smart_case();
-                    break;
+                    return PROCESS_RECORD_CONTINUE;
+                }
+                if (has_smart_case(SNAKE_CASE)) {
+                    tap_code16(KC_UNDS);
+                    start_smart_case_timer();
+                    return PROCESS_RECORD_RETURN_FALSE;
                 }
             case KC_A ... KC_Z:
             case KC_1 ... KC_0:
@@ -151,6 +160,12 @@ process_record_result_t process_smart_case_extention(uint16_t keycode, keyrecord
             case KC_HOME:
             case KC_END:
                 start_smart_case_timer();
+                break;
+            default:
+                if (!has_smart_case(CAPS_LOCK)) {
+                    disable_smart_case();
+                    return PROCESS_RECORD_CONTINUE;
+                }
         }
         // Deactivate case
         switch (keycode) {
@@ -164,29 +179,20 @@ process_record_result_t process_smart_case_extention(uint16_t keycode, keyrecord
 
 process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record) {
 
-    switch (process_smart_case_extention(keycode, record)) {
-        case PROCESS_RECORD_RETURN_TRUE:
-            return true;
-        case PROCESS_RECORD_RETURN_FALSE:
-            return false;
-        default:
-            break;
-    };
-
     switch (process_smart_case_chars(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
-            return true;
+            return PROCESS_RECORD_RETURN_TRUE;
         case PROCESS_RECORD_RETURN_FALSE:
-            return false;
+            return PROCESS_RECORD_RETURN_FALSE;
         default:
             break;
     };
 
     switch (process_smart_case_options(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
-            return true;
+            return PROCESS_RECORD_RETURN_TRUE;
         case PROCESS_RECORD_RETURN_FALSE:
-            return false;
+            return PROCESS_RECORD_RETURN_FALSE;
         default:
             break;
     };
