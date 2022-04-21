@@ -5,39 +5,39 @@
 // Custom keycodes
 
 enum {
-    SS_SECRET_1 = SAFE_RANGE,
-    SS_SECRET_2, SS_SECRET_3,
+    MC_SECRET_1 = SAFE_RANGE,
+    MC_SECRET_2, MC_SECRET_3,
 
-    SS_BTIC, SS_DQUO, SS_SQUO,
-    SS_CIRC, SS_TILD, SS_DEG,
+    MC_BTIC, MC_DQUO, MC_SQUO,
+    MC_CIRC, MC_TILD, MC_DEG,
 
     TG_MAC, TG_WIN, TG_LIN,
 
     SP_CAP, SP_MOD, SP_NG, SP_ALT,
 
-    SS_MODP, SS_MODM,
+    MC_MODP, MC_MODM,
 
-    SS_GV_A, SS_CR_A, SS_TL_A, SS_SQ_A,
-    SS_SQ_U, SS_CR_O, SS_SQ_O, SS_SQ_I,
-    SS_CR_E, SS_TL_O, SS_SQ_C, SS_SQ_E,
+    MC_GV_A, MC_CR_A, MC_TL_A, MC_SQ_A,
+    MC_SQ_U, MC_CR_O, MC_SQ_O, MC_SQ_I,
+    MC_CR_E, MC_TL_O, MC_SQ_C, MC_SQ_E,
 
-    SS_SELW, SS_SWIN, SS_CAPS, SS_WORD, SS_CAML, SS_SNAK, SS_KBAB,
+    MC_SELW, MC_SWIN, MC_CAPS, MC_WORD, MC_CAML, MC_SNAK, MC_KBAB,
 
-            SS_RS,  SS_EY,  SS_PH,          SS_CK,        SS_IO,
-    SS_CH,  SS_SH,  SS_HE,  SS_THE, SS_GH,         SS_NH,
-    SS_WH,  SS_SR,  SS_YE,  SS_TH,          SS_LH,
+            MC_RS,  MC_EY,  MC_PH,          MC_CK,        MC_IO,
+    MC_CH,  MC_SH,  MC_HE,  MC_THE, MC_GH,         MC_NH,
+    MC_WH,  MC_SR,  MC_YE,  MC_TH,          MC_LH,
 
-    SS_DAND, SS_DPIP,
-    SS_EQU, SS_NEQ,
-    SS_ARR, SS_DDS,
-    SS_CPR,
+    MC_DAND, MC_DPIP,
+    MC_EQU, MC_NEQ,
+    MC_ARR, MC_DDS,
+    MC_CPR,
 
-    SS_AO, SS_CAO, SS_OES, SS_COES
+    MC_AO, MC_CAO, MC_OES, MC_COES
 };
 
 // Mod-taps
 
-#define SFT_SNK LSFT_T(SS_SNAK)
+#define SFT_SNK LSFT_T(MC_SNAK)
 
 #define LSFTT_S LSFT_T(KC_S)
 #define RSFTT_L RSFT_T(KC_L)
@@ -96,7 +96,7 @@ enum {
 #define PDO_MAC LT(_MACROS, KC_PDOT)
 
 #define PER_LOW LT(_LOWER_OVER, KC_PERC)
-#define BTI_RAI LT(_RAISE, SS_BTIC)
+#define BTI_RAI LT(_RAISE, MC_BTIC)
 
 #define KT_2 LT(_ROMAK, KC_2)
 #define KT_P2 LT(_ROMAK, KC_P2)
@@ -114,13 +114,13 @@ enum {
 #define HYPR_A HYPR(KC_A)
 #define HYPR_V HYPR(KC_V)
 
-#define SC_SELC LGUI(KC_A)
-#define SC_SAVE LGUI(KC_S)
-#define SC_UNDO LGUI(KC_Z)
-#define SC_COPY LGUI(KC_C)
-#define SC_PAST LGUI(KC_V)
-#define SC_LOCK LGUI(LCTL(KC_Q))
-#define SC_FULL LGUI(LCTL(KC_F))
-#define SC_FIND LGUI(KC_F)
+#define MC_SELC LGUI(KC_A)
+#define MC_SAVE LGUI(KC_S)
+#define MC_UNDO LGUI(KC_Z)
+#define MC_COPY LGUI(KC_C)
+#define MC_PAST LGUI(KC_V)
+#define MC_LOCK LGUI(LCTL(KC_Q))
+#define MC_FULL LGUI(LCTL(KC_F))
+#define MC_FIND LGUI(KC_F)
 
 uint16_t extract_base_tapping_keycode(uint16_t keycode);

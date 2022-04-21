@@ -10,7 +10,7 @@ process_record_result_t process_window_swapper(uint16_t keycode, keyrecord_t *re
 
     bool isWindowsOrLinux = os.type == WINDOWS || os.type == LINUX;
 
-    if (swapping && keycode != SS_SWIN) {
+    if (swapping && keycode != MC_SWIN) {
         swapping = false;
         if (isWindowsOrLinux) {
             unregister_mods(MOD_LALT);
@@ -22,7 +22,7 @@ process_record_result_t process_window_swapper(uint16_t keycode, keyrecord_t *re
     switch (keycode) {
 
         // Swap Windows
-        case SS_SWIN:
+        case MC_SWIN:
             if (record->event.pressed) {
                 if (!swapping) {
                     swapping = true;

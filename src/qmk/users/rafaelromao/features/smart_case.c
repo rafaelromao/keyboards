@@ -90,18 +90,18 @@ void toggle_smart_case(smart_case_type_t smart_case_types) {
 process_record_result_t process_smart_case_options(uint16_t keycode, keyrecord_t *record) {
     if (record->event.pressed) {
         switch (keycode) {
-            case SS_WORD:
+            case MC_WORD:
                 toggle_smart_case(CAPS_WORD);
-            case SS_CAPS:
+            case MC_CAPS:
                 toggle_capslock_smart_case(!host_keyboard_led_state().caps_lock);
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_SNAK:
+            case MC_SNAK:
                 toggle_smart_case(SNAKE_CASE);
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_KBAB:
+            case MC_KBAB:
                 toggle_smart_case(KEBAB_CASE);
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_CAML:
+            case MC_CAML:
                 toggle_smart_case(CAMEL_CASE);
                 return PROCESS_RECORD_RETURN_FALSE;
         }
@@ -113,18 +113,18 @@ void set_smart_case_for_mods(keyrecord_t *record) {
     set_smart_case(NO_CASE);
     int8_t mods = get_mods();
     if (mods == 0 || mods & MOD_MASK_CTRL) {
-        process_smart_case_options(SS_WORD, record);
+        process_smart_case_options(MC_WORD, record);
     }
     if (mods & MOD_MASK_SHIFT) {
-        process_smart_case_options(SS_SNAK, record);
+        process_smart_case_options(MC_SNAK, record);
         return;
     }
     if (mods & MOD_MASK_ALT) {
-        process_smart_case_options(SS_KBAB, record);
+        process_smart_case_options(MC_KBAB, record);
         return;
     }
     if (mods & MOD_MASK_GUI) {
-        process_smart_case_options(SS_CAML, record);
+        process_smart_case_options(MC_CAML, record);
         return;
     }
 }

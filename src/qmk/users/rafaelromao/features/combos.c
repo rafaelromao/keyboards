@@ -20,12 +20,12 @@ const uint16_t PROGMEM r_rai_num_combo[] = {TD_CURB, KC_RCBR, COMBO_END};
 
 // N-Grams
 
-const uint16_t PROGMEM r_ng_io_combo[] = {SS_SQ_U, SS_SQ_I, COMBO_END};
-const uint16_t PROGMEM r_ng_nh_combo[] = {SS_SQ_A, SS_TL_A, COMBO_END};
-const uint16_t PROGMEM r_ng_ao_combo[] = {SS_TL_A, SS_TL_O, COMBO_END};
-const uint16_t PROGMEM r_ng_cao_combo[] = {SS_SQ_A, SS_TL_A, SS_TL_O, COMBO_END};
-const uint16_t PROGMEM r_ng_oes_combo[] = {SS_CR_E, SS_SQ_O, COMBO_END};
-const uint16_t PROGMEM r_ng_coes_combo[] = {SS_SQ_E, SS_CR_E, SS_SQ_O, COMBO_END};
+const uint16_t PROGMEM r_ng_io_combo[] = {MC_SQ_U, MC_SQ_I, COMBO_END};
+const uint16_t PROGMEM r_ng_nh_combo[] = {MC_SQ_A, MC_TL_A, COMBO_END};
+const uint16_t PROGMEM r_ng_ao_combo[] = {MC_TL_A, MC_TL_O, COMBO_END};
+const uint16_t PROGMEM r_ng_cao_combo[] = {MC_SQ_A, MC_TL_A, MC_TL_O, COMBO_END};
+const uint16_t PROGMEM r_ng_oes_combo[] = {MC_CR_E, MC_SQ_O, COMBO_END};
+const uint16_t PROGMEM r_ng_coes_combo[] = {MC_SQ_E, MC_CR_E, MC_SQ_O, COMBO_END};
 
 // Qwerty
 
@@ -100,10 +100,10 @@ const uint16_t PROGMEM rom_reset_combo[] = {KCF_MAC, KC_B, KCC_MAC, KC_W, COMBO_
 const uint16_t PROGMEM secret_1_combo[] = {SEC_1, SEC_2, SEC_3, SEC_4, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
-  COMBO(secret_1_combo, SS_SECRET_1),
+  COMBO(secret_1_combo, MC_SECRET_1),
 
   COMBO(l_num_esc_combo, KC_ESC),
-  COMBO(l_num_sav_combo, SC_SAVE),
+  COMBO(l_num_sav_combo, MC_SAVE),
   
   COMBO(r_num_tab_combo, KC_TAB),
   COMBO(r_num_ent_combo, KC_ENT),
@@ -113,56 +113,56 @@ combo_t key_combos[COMBO_COUNT] = {
   
   COMBO(r_rai_num_combo, TG_NUM),
 
-  COMBO(r_ng_io_combo, SS_IO),
-  COMBO(r_ng_nh_combo, SS_NH),
-  COMBO(r_ng_ao_combo, SS_AO),
-  COMBO(r_ng_cao_combo, SS_CAO),
-  COMBO(r_ng_oes_combo, SS_OES),
-  COMBO(r_ng_coes_combo, SS_COES),
+  COMBO(r_ng_io_combo, MC_IO),
+  COMBO(r_ng_nh_combo, MC_NH),
+  COMBO(r_ng_ao_combo, MC_AO),
+  COMBO(r_ng_cao_combo, MC_CAO),
+  COMBO(r_ng_oes_combo, MC_OES),
+  COMBO(r_ng_coes_combo, MC_COES),
 
-//   COMBO(r_qwe_ful_combo, SC_FULL),
-//   COMBO(r_qwe_fin_combo, SC_FIND),
+//   COMBO(r_qwe_ful_combo, MC_FULL),
+//   COMBO(r_qwe_fin_combo, MC_FIND),
 
 //   COMBO(l_ro0_esc_combo, KC_ESC),
-//   COMBO(l_ro0_sav_combo, SC_SAVE),
-  COMBO(l_ro0_und_combo, SC_UNDO),
+//   COMBO(l_ro0_sav_combo, MC_SAVE),
+  COMBO(l_ro0_und_combo, MC_UNDO),
 //   COMBO(r_ro0_tab_combo, KC_TAB),
 //   COMBO(r_ro0_ent_combo, KC_ENT),
 
-//   COMBO(l_ro0_sal_combo, SC_SELC),
-//   COMBO(l_ro0_pas_combo, SC_PAST),
-//   COMBO(l_ro0_cop_combo, SC_COPY),
+//   COMBO(l_ro0_sal_combo, MC_SELC),
+//   COMBO(l_ro0_pas_combo, MC_PAST),
+//   COMBO(l_ro0_cop_combo, MC_COPY),
 //   COMBO(l_ro0_usc_combo, KC_UNDS),
 
-//   COMBO(r_ro0_ful_combo, SC_FULL),
-//   COMBO(r_ro0_pas_combo, SC_PAST),
-  COMBO(r_rom_cop_combo, SC_COPY),
-//   COMBO(r_ro0_fin_combo, SC_FIND),
+//   COMBO(r_ro0_ful_combo, MC_FULL),
+//   COMBO(r_ro0_pas_combo, MC_PAST),
+  COMBO(r_rom_cop_combo, MC_COPY),
+//   COMBO(r_ro0_fin_combo, MC_FIND),
   COMBO(r_rom_sco_combo, TD_SCLE),
 
-  COMBO(l_ro1_cop_combo, SC_COPY),
-//   COMBO(r_ro1_ful_combo, SC_FULL),
-//   COMBO(r_ro1_pas_combo, SC_PAST),
+  COMBO(l_ro1_cop_combo, MC_COPY),
+//   COMBO(r_ro1_ful_combo, MC_FULL),
+//   COMBO(r_ro1_pas_combo, MC_PAST),
   COMBO(l_rom_usc_combo, KC_UNDS),
 
-//   COMBO(l_ro2_pas_combo, SC_PAST),
-  COMBO(l_rom_sal_combo, SC_SELC),
+//   COMBO(l_ro2_pas_combo, MC_PAST),
+  COMBO(l_rom_sal_combo, MC_SELC),
 //   COMBO(r_ro2_ent_combo, KC_ENT),
-  COMBO(r_rom_pas_combo, SC_PAST),
+  COMBO(r_rom_pas_combo, MC_PAST),
 
   COMBO(l_ro3_esc_combo, KC_ESC),
-  COMBO(l_rom_sav_combo, SC_SAVE),
-  COMBO(l_rom_pas_combo, SC_PAST),
+  COMBO(l_rom_sav_combo, MC_SAVE),
+  COMBO(l_rom_pas_combo, MC_PAST),
 
   COMBO(l_rom_esc_combo, KC_ESC),
-  COMBO(r_rom_fin_combo, SC_FIND),
+  COMBO(r_rom_fin_combo, MC_FIND),
 
-  COMBO(l_rom_und_combo, SC_UNDO),
-  COMBO(l_rom_cop_combo, SC_COPY),
+  COMBO(l_rom_und_combo, MC_UNDO),
+  COMBO(l_rom_cop_combo, MC_COPY),
 
   COMBO(r_rom_tab_combo, KC_TAB),
   COMBO(r_rom_ent_combo, KC_ENT),
-  COMBO(r_rom_ful_combo, SC_FULL),
+  COMBO(r_rom_ful_combo, MC_FULL),
 
 //   COMBO(qwe_reset_combo, RESET),
 //   COMBO(ro1_reset_combo, RESET),

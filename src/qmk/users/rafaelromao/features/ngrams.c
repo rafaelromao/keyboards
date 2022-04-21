@@ -32,54 +32,54 @@ process_record_result_t process_ngrams(uint16_t keycode, keyrecord_t *record) {
     if (record->event.pressed) {
         switch (keycode) {
 
-            case SS_RS:
+            case MC_RS:
                 SEND_STRING("rs");
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_EY:
+            case MC_EY:
                 SEND_STRING("ey");
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_PH:
+            case MC_PH:
                 SEND_STRING("ph");
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_CK:
+            case MC_CK:
                 SEND_STRING("ck");
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_IO:
+            case MC_IO:
                 SEND_STRING("io");
                 return PROCESS_RECORD_RETURN_FALSE;
 
-            case SS_CH:
+            case MC_CH:
                 SEND_STRING("ch");
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_SH:
+            case MC_SH:
                 SEND_STRING("sh");
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_HE:
+            case MC_HE:
                 SEND_STRING("he");
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_THE:
+            case MC_THE:
                 SEND_STRING("the");
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_GH:
+            case MC_GH:
                 SEND_STRING("gh");
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_NH:
+            case MC_NH:
                 SEND_STRING("nh");
                 return PROCESS_RECORD_RETURN_FALSE;
 
-            case SS_WH:
+            case MC_WH:
                 SEND_STRING("wh");
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_SR:
+            case MC_SR:
                 SEND_STRING("sr");
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_YE:
+            case MC_YE:
                 SEND_STRING("ye");
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_TH:
+            case MC_TH:
                 SEND_STRING("th");
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_LH:
+            case MC_LH:
                 SEND_STRING("lh");
                 return PROCESS_RECORD_RETURN_FALSE;
         }

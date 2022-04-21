@@ -11,7 +11,7 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
         if (record->tap.count > 0) {
             switch (keycode) {
                 case SFT_SNK:
-                    return process_smart_case(SS_SNAK, record);
+                    return process_smart_case(MC_SNAK, record);
                 case PER_LOW:
                     tap_code16(KC_PERC);
                     return PROCESS_RECORD_RETURN_FALSE;
