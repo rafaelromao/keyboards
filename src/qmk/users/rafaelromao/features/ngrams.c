@@ -44,8 +44,8 @@ process_record_result_t process_ngrams(uint16_t keycode, keyrecord_t *record) {
             case SS_CK:
                 SEND_STRING("ck");
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_AU:
-                SEND_STRING("au");
+            case SS_IO:
+                SEND_STRING("io");
                 return PROCESS_RECORD_RETURN_FALSE;
 
             case SS_CH:
@@ -57,27 +57,27 @@ process_record_result_t process_ngrams(uint16_t keycode, keyrecord_t *record) {
             case SS_HE:
                 SEND_STRING("he");
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_NH:
-                SEND_STRING("nh");
+            case SS_THE:
+                SEND_STRING("the");
                 return PROCESS_RECORD_RETURN_FALSE;
             case SS_GH:
                 SEND_STRING("gh");
+                return PROCESS_RECORD_RETURN_FALSE;
+            case SS_NH:
+                SEND_STRING("nh");
                 return PROCESS_RECORD_RETURN_FALSE;
 
             case SS_WH:
                 SEND_STRING("wh");
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_IO:
-                SEND_STRING("io");
+            case SS_SR:
+                SEND_STRING("sr");
                 return PROCESS_RECORD_RETURN_FALSE;
             case SS_YE:
                 SEND_STRING("ye");
                 return PROCESS_RECORD_RETURN_FALSE;
             case SS_TH:
                 SEND_STRING("th");
-                return PROCESS_RECORD_RETURN_FALSE;
-            case SS_ING:
-                SEND_STRING("ing");
                 return PROCESS_RECORD_RETURN_FALSE;
             case SS_LH:
                 SEND_STRING("lh");
