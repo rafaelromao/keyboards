@@ -19,6 +19,9 @@
 - A Macros layer can be activated holding any of the home row pinky keys.
 - The Macros layer not only gives access to some common programming macros but also a Leader key, a Select Word macro and the ability to record and play Dynamic Macros, as well as the inverted space and backspace keys and the IDE Dancing feature.
 
+### Zoom Controls
+- In the right side of the Macros layer, there are keys to control Zoom, which can be either Cmd+ and Cmd- or Ctrl+ and Ctrl-, according to the operating system that is selected.
+
 ### Leader Key
 - The Leader Key is available in the right side of the Macros layer, but a double tap in the comma will also activate it.
 - The Leader Key is used to give easy access to some useful shortcuts and macros, like typing an internet domain or recurring terminal commands.
