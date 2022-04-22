@@ -10,19 +10,19 @@
 ## One-Shot Modifiers
 
 One-Shot Modifiers are modifier keys that, when tapped, remain active until the next key is pressed or a timeout expires. 
-- They are available in the [Navigation](navigation.md#navigation) layer and act as standard modifers when held.
+- They are available in the [Media](navigation.md#media) layer and act as standard modifers when held.
 - These modifiers will be automatically deactivated after 2 seconds. 
 - They can also be activated in sticky mode, with a double tap, and remain active until manually deactivated by tapping the Default Mod thumb key.
 - Source code: [custom_oneshot_mods.c](../src/qmk/users/rafaelromao/features/custom_oneshot_mods.c)
 
 ## Standard Modifiers
 
-- Stantard modifiers are available in the [Media](navigation.md#media) layer.
+- Stantard modifiers are available in the [Navigation](navigation.md#navigation) layer.
 - These modifiers do not have one-shot behavior, so they can be used in situations which a tap or multi tap in a modifier key is required.
 
-## Capitalize Key 
+## Smart Case Key 
 
-The Capitalize key is a custom key that works both as Shift and Caps Lock.
+The Smart Case key is a custom key that works as Shift, Caps Word and other special case modes, according to the modifier that is held when it is pressed.
 - It is placed in the right outer thumb key and behaves as follows, when tapped:
     - If Caps Lock is active, it deactivates Caps Lock.
     - If Shift is active or locked in one-shot mode, it activates Caps Lock.
