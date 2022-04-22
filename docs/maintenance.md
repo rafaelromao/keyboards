@@ -4,7 +4,7 @@
 The Maintenance layer is activated holding both outer thumb keys and we have options like:
 - Put the keyboard in bootloader mode (reset). 
 - Clear the eeprom.
-- Toggle RGB.
+- Configure RGB.
 - Deactivate all layers and return to the base. 
 - Put the host computer in sleep mode, or power it off.
 - Change the operating system used in keys that are OS aware, like the [Default Mod key](modifiers.md).
