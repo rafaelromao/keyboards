@@ -7,6 +7,7 @@ Romak is a new keyboard layout, inspired by [Colemak](https://colemak.org) and [
 ![img](https://i.imgur.com/AKJBO7W.png)
 
 - Romak is the layout used in the base layer of my keyboards.
+- The name Romak is a composition of my last name, **Rom**ão, and Dvor**ak**'s name.
 - Romak has a higher SFB rate than Colemak, but lower than Workman, and most of this load goes to the stronger fingers.
 - There is a commented out transition path from Qwerty to Romak in the [keymap_blocks.h](../src/qmk/users/rafaelromao/definitions/keymap_blocks.h), similar to Tarmak, but moving _ instead of J.
 
