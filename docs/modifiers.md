@@ -22,11 +22,15 @@ One-Shot Modifiers are modifier keys that, when tapped, remain active until the 
 
 ## Smart Case Key 
 
-The Smart Case key is a custom key that works as Shift, Caps Word and other special case modes, according to the modifier that is held when it is pressed.
+The Smart Case key is a custom key that works as Shift, Caps Word and other Smart Case modes, according to the modifier that is held when it is pressed.
 - It is placed in the right outer thumb key and behaves as follows, when tapped:
-    - If Caps Lock is active, it deactivates Caps Lock.
-    - If Shift is active or locked in one-shot mode, it activates Caps Lock.
-    - If Shift is not active in one-shot mode, it activates Shift for one-shot.
+    - If any Smart Case is active, it deactivates the Smart Case.
+    - If Shift is active or locked in one-shot mode, and no modifier is held, it activates Caps Word.
+    - If Shift is not active in one-shot mode, and no modifier is held, it activates Shift for one-shot.
+        - If Control is held, it activates **CAPSWORD**. 
+        - If Shift is held, it activates **snake_case**.
+        - If Alt is held, it activates **kebab-case**.
+        - If Gui is held, it activates **camelCase**.
 - The hold behavior of this thumb key is used to activate the Mouse layer.
 - The Capitalize key is implemented using a custom keycode and a layer-tap.
     - The hold behavior is kept as is, but the tap behavior is intercepted and customized.
