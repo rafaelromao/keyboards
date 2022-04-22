@@ -32,7 +32,6 @@ The Smart Case key is a custom key that works as Shift, Caps Word and other Smar
         - If Alt is held, it activates **kebab-case**: Space is replaced by -.
         - If Gui is held, it activates **camelCase**: Space is replaced by OSM(Shift).
         - Caps Word can be combined with either Snake Case or Kebab Case.
-- The hold behavior of this thumb key is used to activate the Mouse layer.
 - All Smart Case options are also available as independent keys in the Macros layer.
 - Caps Lock is also available in the [Macros](macros.md) layer, but its behavior is not what we usually see. No matter how it was activated, Caps Lock, or any Smart Case option, will be automatically deactivated after 10 seconds of inactivity.
 - The Smart Case key is implemented using a custom keycode and a layer-tap.
