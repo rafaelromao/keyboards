@@ -3,6 +3,7 @@
 #include "smart_thumb_keys.h"
 
 extern os_t os;
+extern ngrams_timer_t ngrams_timer;
 
 bool should_send_ctrl(bool isWindowsOrLinux, bool isOneShotShift) {
     return (isWindowsOrLinux && !isOneShotShift) || (!isWindowsOrLinux && isOneShotShift);
@@ -20,6 +21,37 @@ process_record_result_t process_smart_thumb_keys(uint16_t keycode, keyrecord_t *
     bool isAnyOneShotButShift = isOneShotCtrl || isOneShotAlt || isOneShotGui;
 
     switch (keycode) {
+
+        case NAV_NG:
+            if (record->tap.count > 0) {
+                if (record->event.pressed) {
+                    if (IS_LAYER_ON(_NGRAMS)) {
+                        clear_oneshot_layer_state(ONESHOT_PRESSED);
+                    } else {
+                        set_oneshot_layer(_NGRAMS, ONESHOT_START);
+                        ngrams_timer.timer = timer_read();
+                    }
+                }
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+
+        case MED_SFT:
+            if (record->tap.count > 0) {
+                if (record->event.pressed) {
+                    if (has_any_smart_case()) {
+                        set_smart_case(NO_CASE);
+                    } else {
+                        if (!isOneShotShift && get_mods() == 0) {
+                            add_oneshot_mods(MOD_BIT(KC_LSFT));
+                        } else {
+                            set_smart_case_for_mods(record);
+                            del_oneshot_mods(MOD_BIT(KC_LSFT));
+                            unregister_mods(MOD_BIT(KC_LSFT));
+                        }
+                    }
+                }
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
 
         case MAI_ALT:
         case MED_ALT:

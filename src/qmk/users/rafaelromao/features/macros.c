@@ -15,7 +15,7 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
 
             // Degree symbol
 
-            case SS_DEG:
+            case MC_DEG:
                 if (os.type == MACOS) {
                     tap_code16(LSFT(RALT(KC_8)));
                 } else {
@@ -23,15 +23,24 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
                 }
                 return PROCESS_RECORD_RETURN_FALSE;
                 
-            // Macro layer
+            // Conditional operators
 
-            case SS_DAND:
-                SEND_STRING("&&");
+            case MC_DAND:
+                tap_code16(KC_AMPR);
+                if (!isShifted) {
+                    tap_code16(KC_AMPR);
+                }
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_DPIP:
-                SEND_STRING("||");
+            case MC_DPIP:
+                tap_code16(KC_PIPE);
+                if (!isShifted) {
+                    tap_code16(KC_PIPE);
+                }
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_EQU:
+
+            // Equalities
+
+            case MC_EQU:
                 clear_shift();
                 tap_code(KC_EQL);
                 tap_code(KC_EQL);
@@ -39,7 +48,7 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
                     tap_code(KC_EQL);
                 }
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_NEQ:
+            case MC_NEQ:
                 clear_shift();
                 tap_code16(KC_EXLM);
                 tap_code(KC_EQL);
@@ -48,7 +57,9 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
                 }
                 return PROCESS_RECORD_RETURN_FALSE;
 
-            case SS_ARR:
+            // Arrows
+
+            case MC_ARR:
                 if (isShifted) {
                     clear_shift();
                     SEND_STRING("=>");
@@ -56,9 +67,19 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
                     SEND_STRING("->");
                 }
                 return PROCESS_RECORD_RETURN_FALSE;
-            case SS_DDS:
+
+            // Directory up
+
+            case MC_DDS:
                 SEND_STRING("../");
                 return PROCESS_RECORD_RETURN_FALSE;
+
+            // Vim global command
+
+            case MC_CPR:
+                SEND_STRING(":%");
+                return PROCESS_RECORD_RETURN_FALSE;
+
         }
     }
 

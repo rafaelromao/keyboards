@@ -13,24 +13,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       ___________________ROMAK_L1____________________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ___________________ROMAK_R1____________________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      ___________________ROMAK_L2____________________ , XXXXXXX , XXXXXXX , SS_CAPS , XXXXXXX , XXXXXXX , ___________________ROMAK_R2____________________ ,
+      ___________________ROMAK_L2____________________ , XXXXXXX , XXXXXXX , MC_CAPS , XXXXXXX , XXXXXXX , ___________________ROMAK_R2____________________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       ___________________ROMAK_L3____________________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ___________________ROMAK_R3____________________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , ____ROMAK_L4_____ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ____ROMAK_R4_____ , XXXXXXX , XXXXXXX , XXXXXXX),
- // |_____________________________________________________________________________________________________________________________________________________|
-
-     [_NGRAMS] = LAYOUT_wrapper(
- // |_____________________________________________________________________________________________________________________________________________________|
-      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      ___________________NGRAMS_L1___________________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ___________________NGRAMS_R1___________________ ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      ___________________NGRAMS_L2___________________ , XXXXXXX , XXXXXXX , SS_CAPS , XXXXXXX , XXXXXXX , ___________________NGRAMS_R2___________________ ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      ___________________NGRAMS_L3___________________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ___________________NGRAMS_R3___________________ ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , ____NGRAMS_L4____ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ____NGRAMS_R4____ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_____________________________________________________________________________________________________________________________________________________|
 
      [_NUMPAD] = LAYOUT_wrapper(
@@ -44,6 +31,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       ___________________NUMPAD_L3___________________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ___________________NUMPAD_R3___________________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , ____NUMPAD_L4____ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ____NUMPAD_R4____ , XXXXXXX , XXXXXXX , XXXXXXX),
+ // |_____________________________________________________________________________________________________________________________________________________|
+
+     [_NGRAMS] = LAYOUT_wrapper(
+ // |_____________________________________________________________________________________________________________________________________________________|
+      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      ___________________NGRAMS_L1___________________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ___________________NGRAMS_R1___________________ ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      ___________________NGRAMS_L2___________________ , XXXXXXX , XXXXXXX , MC_CAPS , XXXXXXX , XXXXXXX , ___________________NGRAMS_R2___________________ ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      ___________________NGRAMS_L3___________________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ___________________NGRAMS_R3___________________ ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      XXXXXXX , XXXXXXX , XXXXXXX , ____NGRAMS_L4____ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ____NGRAMS_R4____ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_____________________________________________________________________________________________________________________________________________________|
 
      [_MACROS] = LAYOUT_wrapper(
@@ -85,7 +85,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXXXXX , XXXXXXX , XXXXXXX , ____RAISE_L4_____ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , ____RAISE_R4_____ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_____________________________________________________________________________________________________________________________________________________|
 
-     [_LOWER_CLONE] = LAYOUT_wrapper(
+     [_LOWER_OVER] = LAYOUT_wrapper(
  // |_____________________________________________________________________________________________________________________________________________________|
       XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
@@ -160,13 +160,11 @@ extern dyn_macro_t dyn_macro;
 void set_rgblight_by_layer(uint32_t layer) {
     switch (layer) {
         case _ROMAK:
-            rgblight_setrgb(RGB_BLUE);
+        case _MAINTENANCE:
+            rgblight_reload_from_eeprom();
             break;
         case _NUMPAD:
             rgblight_setrgb(RGB_PURPLE);
-            break;
-        case _MAINTENANCE:
-            rgblight_setrgb(RGB_RED);
             break;
         default:
             rgblight_setrgb(RGB_SPRINGGREEN);
@@ -193,11 +191,9 @@ void set_mod_indicators(void) {
     bool isAlt = mods & MOD_MASK_ALT || oneshot_mods & MOD_MASK_ALT || oneshot_locked_mods & MOD_MASK_ALT;
     bool isGui = mods & MOD_MASK_GUI || oneshot_mods & MOD_MASK_GUI || oneshot_locked_mods & MOD_MASK_GUI;
 
-    bool isCapsLocked = host_keyboard_led_state().caps_lock;
-
     if (leader.isLeading || select_word.state != STATE_NONE || dyn_macro.recording != 0) {
         rgblight_setrgb(RGB_GREEN);
-    } else if (isCapsLocked) {
+    } else if (has_any_smart_case()) {
         rgblight_setrgb(RGB_YELLOW);
     } else if (isShift) {
         rgblight_setrgb(RGB_SPRINGGREEN);

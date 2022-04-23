@@ -2,12 +2,12 @@
 
 typedef enum {
   _ROMAK,
-  _NGRAMS,
   _NUMPAD,
+  _NGRAMS,
   _MACROS,
   _LOWER,
   _RAISE,
-  _LOWER_CLONE,
+  _LOWER_OVER,
   _FIXED_NAV,
   _MEDIA,
   _NAVIGATION,

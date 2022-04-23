@@ -2,9 +2,9 @@
  
 ## Overview
 
-A 34 keys split keyboard layout, optimized for Portuguese, English, working with numbers and software programming with VIM plugins.
+A 32 keys split keyboard layout, optimized for Portuguese, English, working with numbers and software programming with VIM plugins.
 
-![img](https://i.imgur.com/MDqTQEL.png)
+![img](https://i.imgur.com/jEyCXgq.png)
 
 ## How this layout works?
 
@@ -20,9 +20,10 @@ The following pages explain how this layout works and which features are impleme
 
 ### Main Features
 
-- [Smart Thumb Keys](docs/base.md#smart-thumb-keys)
 - [Home Block Mods](docs/modifiers.md#home-block-modifiers)
 - [One Shot Mods](docs/modifiers.md#one-shot-modifiers)
+- [Smart Thumb Keys](docs/base.md#smart-thumb-keys)
+- [Smart Case](docs/modifiers.md#smart-case-key)
 - [Shortcut Combos](docs/base.md#base-layer-combos)
 - [Numpad Layer](docs/symbols.md#numpad)
 - [N-Grams Layer](docs/macros.md)
@@ -30,7 +31,6 @@ The following pages explain how this layout works and which features are impleme
 - [Macros Layer](docs/macros.md)
 - [Dynamic Macros](docs/macros.md#dynamic-macros)
 - [Leader Key](docs/macros.md#leader-key)
-- [Caps Lock Timer](docs/modifiers.md#caps-lock)
 - [Select Word](docs/macros.md#select-word)
 - [IDE Dancing](docs/macros.md#ide-dancing)
 - [Window Swapper](docs/navigation.md#window-swapper)

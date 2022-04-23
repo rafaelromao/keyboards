@@ -8,7 +8,7 @@ select_word_t select_word = {
 
 process_record_result_t process_select_word(uint16_t keycode, keyrecord_t* record) {
 
-    if (keycode == SS_SELW && record->event.pressed) {
+    if (keycode == MC_SELW && record->event.pressed) {
         bool isShifted = get_mods() & MOD_MASK_SHIFT ||
                          get_oneshot_mods() & MOD_MASK_SHIFT || 
                          get_oneshot_locked_mods() & MOD_MASK_SHIFT;
@@ -69,7 +69,7 @@ process_record_result_t process_select_word(uint16_t keycode, keyrecord_t* recor
 
         case STATE_WORD_SELECTED:
         case STATE_LINE_SELECTED:
-            if (keycode != SS_SELW && record->event.pressed) {
+            if (keycode != MC_SELW && record->event.pressed) {
                 unregister_mods(MOD_LSFT);
                 tap_code(KC_RGHT);
                 select_word.state = STATE_NONE;

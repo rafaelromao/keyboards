@@ -1,10 +1,10 @@
 # rafaelromao's keyboard layout
 
 ## Layout Overview
-- This is a 34 keys split layout, 3x5+2, optimized for programmers.
+- This is a 32 keys split layout, 3x5+2, optimized for programmers.
 - This layout works well with the OS configured for the US International keyboard.
-- This layout was designed mostly for coding and typing in English and Portuguese.
-- This layout considers the right hand as the dominant hand.
+- This layout was designed mostly for coding and typing in Portuguese and English.
+- This layout reduces the load on pinkies and considers the right hand as the dominant hand.
 - The base layer is [Romak](romak.md), a new keyboard layout, inspired by [Colemak](https://colemak.org) and [BEAKL](https://ieants.cc/beakl).
 
 ## Smart Thumb Keys

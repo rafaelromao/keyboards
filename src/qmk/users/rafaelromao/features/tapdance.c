@@ -144,6 +144,7 @@ void td_parentesis(qk_tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_RPRN);
             break;
         case TD_SINGLE_HOLD:
+            tap_code16(KC_END);
             tap_code16(KC_LPRN);
             tap_code16(KC_RPRN);
             tap_code(KC_SCLN);

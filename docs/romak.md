@@ -4,15 +4,16 @@
 
 Romak is a new keyboard layout, inspired by [Colemak](https://colemak.org) and [BEAKL](https://ieants.cc/beakl), improved to remove load from pinkies and for typing in Portuguese and English, and for coding.
 
-![img](https://i.imgur.com/BvpA5vs.png)
+![img](https://i.imgur.com/AKJBO7W.png)
 
 - Romak is the layout used in the base layer of my keyboards.
+- The name Romak is a combination of my last name, **Rom**ão, and Dvor**ak**'s name.
 - Romak has a higher SFB rate than Colemak, but lower than Workman, and most of this load goes to the stronger fingers.
 - There is a commented out transition path from Qwerty to Romak in the [keymap_blocks.h](../src/qmk/users/rafaelromao/definitions/keymap_blocks.h), similar to Tarmak, but moving _ instead of J.
 
 ### From Qwerty to Romak in 7 steps
 
-![img](https://i.imgur.com/QNHBPKs.png)
+![img](https://i.imgur.com/lpM73yJ.png)
 
 ## Romak vs Colemak-DH
 [Stevep99's Layout Analyzer Tool](https://stevep99.github.io/keyboard-layout-analyzer) was used to compare Romak with Colemak-DH and some other layouts, using the Magna Carta as text corpus, in [Portuguese](analysis/corpus.pt.txt) and [English](analysis/corpus.en.txt).

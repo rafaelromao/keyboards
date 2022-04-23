@@ -3,8 +3,8 @@
 ## Symbols and Numbers
 Symbols and Numbers are primarily available in the two classic Lower and Raise layers, activated holding the space and backspace thumb keys, respectively.
 - Symbols are available in the left side of the Lower layer and in the right side of the Raise layer, making them easier to reach with a single hand.
-- Holding both the homing thumb and pinky keys on the same side will activate the layer that is actinated when holding only the opposite homing thumb key, which allow easy cross activation of the Lower and Raise layers.
-- Numbers are available in the right side of the Lower layer and in a dedicated [Numpad](symbols.md#numpad) layer, which can be toggled on with a dedicated key in the Lower and Raise layers, or using a combo.
+- Holding both the homing thumb and pinky keys on the same side will activate the layer that is activated when holding only the opposite homing thumb key, which allow easy cross activation of the Lower and Raise layers.
+- Numbers are available in the right side of the Lower layer and in a dedicated [Numpad](symbols.md#numpad) layer, which can be toggled on with a dedicated key in the Lower layer, or using a combo in the Raise layer.
 - Function keys are available in the left side of the Raise layer and in a the left side of the dedicated [Numpad](symbols.md#numpad) layer.
 
 ### Symbols in the Lower layer (left side)
@@ -28,7 +28,7 @@ Symbols and Numbers are primarily available in the two classic Lower and Raise l
 - Holding the open curly braces key will insert it in the end of the line, after a space. It is usefull when coding, particularly when using VIM plugins. A similar behavior is also implemented for the semicolon key, but without the extra space.
 
  ### Numpad Layer
-- A dedicated Numpad layer can be activated from the Lower or Raise layers, or holding the inner thumb keys in the [N-Grams](macros.md) layer.
+- A dedicated Numpad layer can be activated from the Lower or Raise layers.
 - Unlike numbers in the Lower layer, numbers in the Numpad layer use numpad keycodes, instead of numrow keycodes.
 - Numpad navigation, using shift, which usually does not work on MacOS, is implemented using [Custom Shift](../src/qmk/users/rafaelromao/features/custom_shift.c).
 - The left side of the Numpad layer also contains function keys.

@@ -13,7 +13,7 @@ process_record_result_t process_custom_shortcuts(uint16_t keycode, keyrecord_t *
 
         // Zoom shortcuts
 
-        case SS_MODP:
+        case MC_MODP:
             if (record->event.pressed) {
                 if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
                     SEND_STRING(SS_LCTL("+"));
@@ -22,7 +22,7 @@ process_record_result_t process_custom_shortcuts(uint16_t keycode, keyrecord_t *
                 }
             }
             return PROCESS_RECORD_RETURN_FALSE;
-        case SS_MODM:
+        case MC_MODM:
             if (record->event.pressed) {
                 if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
                     SEND_STRING(SS_LCTL("-"));
@@ -32,7 +32,7 @@ process_record_result_t process_custom_shortcuts(uint16_t keycode, keyrecord_t *
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
-        case SC_SELC:
+        case MC_SELC:
             if (record->event.pressed) {
                 clear_locked_and_oneshot_mods();
                 if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
@@ -42,7 +42,7 @@ process_record_result_t process_custom_shortcuts(uint16_t keycode, keyrecord_t *
             }
             break;
 
-        case SC_SAVE:
+        case MC_SAVE:
             if (record->event.pressed) {
                 clear_locked_and_oneshot_mods();
                 if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
@@ -52,7 +52,7 @@ process_record_result_t process_custom_shortcuts(uint16_t keycode, keyrecord_t *
             }
             break;
 
-        case SC_UNDO:
+        case MC_UNDO:
             if (record->event.pressed) {
                 clear_locked_and_oneshot_mods();
                 if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
@@ -62,7 +62,7 @@ process_record_result_t process_custom_shortcuts(uint16_t keycode, keyrecord_t *
             }
             break;
 
-        case SC_COPY:
+        case MC_COPY:
             if (record->event.pressed) {
                 clear_locked_and_oneshot_mods();
                 if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
@@ -72,7 +72,7 @@ process_record_result_t process_custom_shortcuts(uint16_t keycode, keyrecord_t *
             }
             break;
 
-        case SC_PAST:
+        case MC_PAST:
             if (record->event.pressed) {
                 clear_locked_and_oneshot_mods();
                 if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
@@ -82,7 +82,7 @@ process_record_result_t process_custom_shortcuts(uint16_t keycode, keyrecord_t *
             }
             break;
 
-        case SC_LOCK:
+        case MC_LOCK:
             if (record->event.pressed) {
                 clear_locked_and_oneshot_mods();
                 if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
@@ -92,7 +92,7 @@ process_record_result_t process_custom_shortcuts(uint16_t keycode, keyrecord_t *
             }
             break;
 
-        case SC_FULL:
+        case MC_FULL:
             if (record->event.pressed) {
                 clear_locked_and_oneshot_mods();
                 if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
@@ -102,7 +102,7 @@ process_record_result_t process_custom_shortcuts(uint16_t keycode, keyrecord_t *
             }
             break;
 
-        case SC_FIND:
+        case MC_FIND:
             if (record->event.pressed) {
                 clear_locked_and_oneshot_mods();
                 if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
