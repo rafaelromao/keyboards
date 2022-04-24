@@ -44,7 +44,7 @@ The Smart Case key is a custom key that works as Shift, Caps Word and other Smar
 
 ## Default Mod and Alt Thumb Keys
 
-The Default Mod (Cmd or Ctrl) and Alt thumb keys are placed in the outer left and right thumb keys respectively, in the Navigation and Media layers, and will give access to one-shot versions of the Cmd/Ctrl or Alt keys.
+The Default Mod (Cmd or Ctrl) and Alt thumb keys are placed in the outer left and right thumb keys respectively, in the Media and Navigation layers, and will give access to one-shot versions of the Cmd/Ctrl or Alt keys.
 - They behaves as follows, when tapped:
     - If any modifier is active or locked in one-shot mode, all these modifiers will be deactivated.
     - If no modifier is active or locked in one-shot mode, it activates the modifier in one-shot mode.
