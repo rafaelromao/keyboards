@@ -23,7 +23,7 @@ The following pages explain how this layout works and which features are impleme
 - [Home Block Mods](docs/modifiers.md#home-block-modifiers)
 - [One Shot Mods](docs/modifiers.md#one-shot-modifiers)
 - [Smart Thumb Keys](docs/base.md#smart-thumb-keys)
-- [Smart Case](docs/modifiers.md#smart-case-key)
+- [Smart Case Key](docs/modifiers.md#smart-case-key)
 - [Shortcut Combos](docs/base.md#base-layer-combos)
 - [Numpad Layer](docs/symbols.md#numpad)
 - [N-Grams Layer](docs/macros.md)
