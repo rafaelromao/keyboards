@@ -202,6 +202,7 @@ void td_comma_lead(qk_tap_dance_state_t *state, void *user_data) {
                 qk_leader_start();
             } else {
                 tap_code(KC_COMM);
+                tap_code(KC_COMM);
             }
             break;
         case TD_SINGLE_HOLD:
@@ -216,6 +217,9 @@ void td_comma_lead(qk_tap_dance_state_t *state, void *user_data) {
 
 void td_dot_dot(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
+    bool isShifted = get_mods() & MOD_MASK_SHIFT || 
+            get_oneshot_mods() & MOD_MASK_SHIFT || 
+            get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
             tap_code(KC_DOT);
@@ -225,9 +229,14 @@ void td_dot_dot(qk_tap_dance_state_t *state, void *user_data) {
             tap_code(KC_DOT);
             break;
         case TD_DOUBLE_TAP:
-            tap_code(KC_DOT);
-            tap_code(KC_SPC);
-            add_oneshot_mods(MOD_LSFT);
+            if (!isShifted) {
+                tap_code(KC_DOT);
+                tap_code(KC_SPC);
+                add_oneshot_mods(MOD_LSFT);
+            } else {
+                tap_code(KC_DOT);
+                tap_code(KC_DOT);
+            }
             break;
         case TD_SINGLE_HOLD:
             tap_code16(KC_END);

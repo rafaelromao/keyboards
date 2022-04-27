@@ -2,7 +2,7 @@
 
 #include "smart_case.h"
 
-static smart_case_t smart_case = {
+smart_case_t smart_case = {
     .timer = 0,
     .type = NO_CASE
 };
@@ -33,26 +33,23 @@ void check_disable_smart_case(void) {
     }
 }
 
-void enable_capslock(void) {
-    if (!has_smart_case(CAPS_WORD)) {
-        smart_case.type = CAPS_LOCK;
+void enable_smartcase(smart_case_type_t smart_case_types) {
+    if (smart_case.type == NO_CASE) {
+        smart_case.type = smart_case_types;
+    } else {
+        smart_case.type = smart_case.type | smart_case_types;
     }
     start_smart_case_timer();
+}
+
+void enable_capslock(void) {
+    enable_smartcase(CAPS_LOCK);
     if (!host_keyboard_led_state().caps_lock) {
         tap_code(KC_CAPS);
     }
 }
 
-void enable_smartcase(smart_case_type_t smart_case_types) {
-    smart_case.type = smart_case.type | smart_case_types;
-    start_smart_case_timer();
-}
-
 void set_smart_case(smart_case_type_t smart_case_types) {
-    if (smart_case_types & NO_CASE)  {
-        disable_smart_case();
-        return;
-    }
     if (smart_case_types & CAPS_LOCK) {
         enable_capslock();
         return;
@@ -65,23 +62,36 @@ bool has_smart_case(smart_case_type_t smart_case_types) {
 }
 
 bool has_any_smart_case(void) {
-    return smart_case.type > 1;
+    return smart_case.type != NO_CASE;
 }
 
 void toggle_capslock_smart_case(bool capslock) {
     if (capslock) {
-        if (!has_smart_case(CAPS_WORD)) {
-            set_smart_case(NO_CASE);
-        }
         set_smart_case(CAPS_LOCK);
     } else {
-        set_smart_case(NO_CASE);
+        disable_smart_case();
     }
 }
 
 void toggle_smart_case(smart_case_type_t smart_case_types) {
+    // switch (smart_case.type & smart_case_types) {
+    //     case true:
+    //         tap_code(KC_T);
+    //         break;
+    //     default:
+    //         tap_code(KC_F);
+    //         break;
+    // }
+    // switch (smart_case.type) {
+    //     case KEBAB_CASE:
+    //         tap_code(KC_1);
+    //         break;
+    //     default:
+    //         tap_code(KC_0);
+    //         break;
+    // }
     if (has_smart_case(smart_case_types)) {
-        set_smart_case(NO_CASE);
+        disable_smart_case();
     } else {
         set_smart_case(smart_case_types);
     }
@@ -91,7 +101,7 @@ process_record_result_t process_smart_case_options(uint16_t keycode, keyrecord_t
     if (record->event.pressed) {
         switch (keycode) {
             case MC_WORD:
-                toggle_smart_case(CAPS_WORD);
+                toggle_smart_case(WORD_CASE);
             case MC_CAPS:
                 toggle_capslock_smart_case(!host_keyboard_led_state().caps_lock);
                 return PROCESS_RECORD_RETURN_FALSE;
@@ -110,7 +120,7 @@ process_record_result_t process_smart_case_options(uint16_t keycode, keyrecord_t
 }
 
 void set_smart_case_for_mods(keyrecord_t *record) {
-    set_smart_case(NO_CASE);
+    disable_smart_case();
     int8_t mods = get_mods();
     if (mods == 0 || mods & MOD_MASK_CTRL) {
         process_smart_case_options(MC_WORD, record);
@@ -144,7 +154,7 @@ process_record_result_t process_smart_case_chars(uint16_t keycode, keyrecord_t *
         // Extend, process or break case
         switch (keycode) {
             case KC_SPC:
-                if (has_smart_case(CAPS_WORD) &&
+                if (has_smart_case(WORD_CASE) &&
                     !(has_smart_case(SNAKE_CASE)) &&
                     !(has_smart_case(KEBAB_CASE)) &&
                     !(has_smart_case(CAMEL_CASE))) {
@@ -178,14 +188,13 @@ process_record_result_t process_smart_case_chars(uint16_t keycode, keyrecord_t *
                 start_smart_case_timer();
                 break;
             default:
-                if (!has_smart_case(CAPS_LOCK)) {
-                    disable_smart_case();
-                    return PROCESS_RECORD_CONTINUE;
-                }
+                break;
         }
         // Deactivate case
         switch (keycode) {
             case KC_ESC:
+            case KC_TAB:
+            case KC_ENT:
                 disable_smart_case();
                 break;
         }

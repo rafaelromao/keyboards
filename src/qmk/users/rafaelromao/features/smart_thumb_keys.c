@@ -39,14 +39,16 @@ process_record_result_t process_smart_thumb_keys(uint16_t keycode, keyrecord_t *
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
                     if (has_any_smart_case()) {
-                        set_smart_case(NO_CASE);
+                        disable_smart_case();
+                        clear_shift();
                     } else {
-                        if (!isOneShotShift && get_mods() == 0) {
+                        if (isAnyOneShotButShift || isOneShotLockedShift) {
+                            clear_locked_and_oneshot_mods();
+                        } else if (!isOneShotShift && get_mods() == 0) {
                             add_oneshot_mods(MOD_BIT(KC_LSFT));
                         } else {
                             set_smart_case_for_mods(record);
-                            del_oneshot_mods(MOD_BIT(KC_LSFT));
-                            unregister_mods(MOD_BIT(KC_LSFT));
+                            clear_shift();
                         }
                     }
                 }
