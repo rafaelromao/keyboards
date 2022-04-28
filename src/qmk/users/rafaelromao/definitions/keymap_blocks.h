@@ -120,8 +120,8 @@
 #define ____NUMPAD_R4____                               RAI_BSP , MED_P0
 
 #define ___________________MACROS_L1___________________ XXXXXXX , KC_NUM  , MC_CAPS , KC_SCRL , XXXXXXX
-#define ___________________MACROS_L2___________________ XXXXXXX , SFT_SNK , MC_WORD , MC_KBAB , TD_MAC2
-#define ___________________MACROS_L3___________________ XXXXXXX , XXXXXXX , XXXXXXX , MC_CAML , XXXXXXX
+#define ___________________MACROS_L2___________________ XXXXXXX , SFT_CML , MC_WORD , MC_SNAK , TD_MAC2
+#define ___________________MACROS_L3___________________ XXXXXXX , XXXXXXX , XXXXXXX , MC_KBAB , XXXXXXX
 #define ____MACROS_L4____                                                             TD_IJLE , RAI_BSP
 
 #define ___________________MACROS_R1___________________ XXXXXXX , XXXXXXX , MC_MODM , MC_MODP , XXXXXXX

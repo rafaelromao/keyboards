@@ -74,22 +74,6 @@ void toggle_capslock_smart_case(bool capslock) {
 }
 
 void toggle_smart_case(smart_case_type_t smart_case_types) {
-    // switch (smart_case.type & smart_case_types) {
-    //     case true:
-    //         tap_code(KC_T);
-    //         break;
-    //     default:
-    //         tap_code(KC_F);
-    //         break;
-    // }
-    // switch (smart_case.type) {
-    //     case KEBAB_CASE:
-    //         tap_code(KC_1);
-    //         break;
-    //     default:
-    //         tap_code(KC_0);
-    //         break;
-    // }
     if (has_smart_case(smart_case_types)) {
         disable_smart_case();
     } else {
@@ -126,15 +110,15 @@ void set_smart_case_for_mods(keyrecord_t *record) {
         process_smart_case_options(MC_WORD, record);
     }
     if (mods & MOD_MASK_SHIFT) {
-        process_smart_case_options(MC_SNAK, record);
+        process_smart_case_options(MC_CAML, record);
         return;
     }
     if (mods & MOD_MASK_ALT) {
-        process_smart_case_options(MC_KBAB, record);
+        process_smart_case_options(MC_SNAK, record);
         return;
     }
     if (mods & MOD_MASK_GUI) {
-        process_smart_case_options(MC_CAML, record);
+        process_smart_case_options(MC_KBAB, record);
         return;
     }
 }
