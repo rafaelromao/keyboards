@@ -2,6 +2,8 @@
 
 #include "layers.h"
 
+// clang-format off
+
 // Custom keycodes
 
 enum {
@@ -126,3 +128,5 @@ enum {
 #define MC_FIND LGUI(KC_F)
 
 uint16_t extract_base_tapping_keycode(uint16_t keycode);
+
+// clang-format on

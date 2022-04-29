@@ -2,9 +2,7 @@
 
 #include "leader.h"
 
-leader_t leader = {
-    .isLeading = false
-};
+leader_t leader = {.isLeading = false};
 
 LEADER_EXTERNS();
 

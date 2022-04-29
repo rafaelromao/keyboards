@@ -6,15 +6,14 @@ extern os_t os;
 
 bool led_update_user(led_t led_state) {
     if (led_state.caps_lock != has_smart_case(CAPS_LOCK)) {
-       toggle_capslock(led_state.caps_lock);
+        toggle_capslock(led_state.caps_lock);
     }
     return true;
 }
 
 // Matrix scan
 
-__attribute__ ((weak)) void matrix_scan_keymap(void) {
-}
+__attribute__((weak)) void matrix_scan_keymap(void) {}
 
 void matrix_scan_user(void) {
     check_disable_smart_case();
@@ -27,7 +26,6 @@ void matrix_scan_user(void) {
 // Process record
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-
     // Process window swapper
     switch (process_window_swapper(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
@@ -159,14 +157,10 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
 
 // Dynamic macros
 
-void dynamic_macro_record_start_user(void) {
-}
+void dynamic_macro_record_start_user(void) {}
 
-void dynamic_macro_play_user(int8_t direction) {
-}
+void dynamic_macro_play_user(int8_t direction) {}
 
-void dynamic_macro_record_key_user(int8_t direction, keyrecord_t *record) {
-}
+void dynamic_macro_record_key_user(int8_t direction, keyrecord_t *record) {}
 
-void dynamic_macro_record_end_user(int8_t direction) {
-}
+void dynamic_macro_record_end_user(int8_t direction) {}

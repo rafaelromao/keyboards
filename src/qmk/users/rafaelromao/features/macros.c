@@ -5,16 +5,14 @@
 extern os_t os;
 
 process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
-
     bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
-    bool isOneShotShift = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
-    bool isShifted = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
-    bool isWindowsOrLinux = os.type == WINDOWS || os.type == LINUX;
+    bool isOneShotShift       = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
+    bool isShifted            = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
+    bool isWindowsOrLinux     = os.type == WINDOWS || os.type == LINUX;
 
     if (record->event.pressed) {
         switch (keycode) {
-
-            // Degree symbol
+                // Degree symbol
 
             case MC_DEG:
                 if (os.type == MACOS) {
@@ -23,8 +21,8 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
                     tap_code16(LSFT(LCTL(KC_2)));
                 }
                 return PROCESS_RECORD_RETURN_FALSE;
-                
-            // Conditional operators
+
+                // Conditional operators
 
             case MC_DAND:
                 tap_code16(KC_AMPR);
@@ -39,7 +37,7 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
                 }
                 return PROCESS_RECORD_RETURN_FALSE;
 
-            // Equalities
+                // Equalities
 
             case MC_EQU:
                 clear_shift();
@@ -58,7 +56,7 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
                 }
                 return PROCESS_RECORD_RETURN_FALSE;
 
-            // Arrows
+                // Arrows
 
             case MC_ARR:
                 if (isShifted) {
@@ -69,7 +67,7 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
                 }
                 return PROCESS_RECORD_RETURN_FALSE;
 
-            // Join Lines
+                // Join Lines
 
             case MC_JOIN:
                 tap_code(KC_END);
@@ -79,24 +77,23 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
                 tap_code(KC_LEFT);
                 if (isWindowsOrLinux) {
                     SEND_STRING(SS_DELAY(200) SS_LSFT(SS_LCTL(SS_TAP(X_RGHT) SS_TAP(X_LEFT))));
-                } else  {
+                } else {
                     SEND_STRING(SS_DELAY(200) SS_LSFT(SS_LALT(SS_TAP(X_RGHT) SS_TAP(X_LEFT))));
                 }
                 tap_code(KC_BSPC);
                 return PROCESS_RECORD_RETURN_FALSE;
 
-            // Directory up
+                // Directory up
 
             case MC_DDS:
                 SEND_STRING("../");
                 return PROCESS_RECORD_RETURN_FALSE;
 
-            // Vim global command
+                // Vim global command
 
             case MC_CPR:
                 SEND_STRING(":%");
                 return PROCESS_RECORD_RETURN_FALSE;
-
         }
     }
 

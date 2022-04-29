@@ -7,7 +7,6 @@ extern os_t os;
 static bool swapping = false;
 
 process_record_result_t process_window_swapper(uint16_t keycode, keyrecord_t *record) {
-
     bool isWindowsOrLinux = os.type == WINDOWS || os.type == LINUX;
 
     if (swapping && keycode != MC_SWIN) {
@@ -20,7 +19,6 @@ process_record_result_t process_window_swapper(uint16_t keycode, keyrecord_t *re
     }
 
     switch (keycode) {
-
         // Swap Windows
         case MC_SWIN:
             if (record->event.pressed) {
@@ -35,7 +33,6 @@ process_record_result_t process_window_swapper(uint16_t keycode, keyrecord_t *re
                 tap_code(KC_TAB);
             }
             return PROCESS_RECORD_RETURN_FALSE;
-
     }
 
     return PROCESS_RECORD_CONTINUE;

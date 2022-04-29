@@ -11,4 +11,4 @@ typedef struct {
 } ngrams_timer_t;
 
 process_record_result_t process_ngrams(uint16_t keycode, keyrecord_t *record);
-void check_ngrams_timeout(void);
+void                    check_ngrams_timeout(void);

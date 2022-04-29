@@ -6,16 +6,14 @@ extern os_t os;
 static bool navigating = false;
 
 process_record_result_t process_custom_shift(uint16_t keycode, keyrecord_t *record) {
-
-    bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
-    bool isOneShotShift = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
-    bool isShifted = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
-    uint16_t key = extract_base_tapping_keycode(keycode);
+    bool     isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
+    bool     isOneShotShift       = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
+    bool     isShifted            = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
+    uint16_t key                  = extract_base_tapping_keycode(keycode);
 
     switch (keycode) {
-        
-        // Inverted colon and semicolon
-        
+            // Inverted colon and semicolon
+
         case KC_COLN:
             if (isShifted) {
                 if (record->event.pressed) {
@@ -25,7 +23,6 @@ process_record_result_t process_custom_shift(uint16_t keycode, keyrecord_t *reco
                 }
             }
             return PROCESS_RECORD_RETURN_TRUE;
-        
     }
 
     // Numpad Custom Shifts (make it work even on MacOS)

@@ -4,9 +4,7 @@
 
 extern os_t os;
 
-ngrams_timer_t ngrams_timer = {
-    .timer = 0
-};
+ngrams_timer_t ngrams_timer = {.timer = 0};
 
 void disable_ngrams_layer(void) {
     clear_oneshot_layer_state(ONESHOT_PRESSED);
@@ -24,14 +22,12 @@ void check_ngrams_timeout(void) {
 }
 
 process_record_result_t process_ngrams(uint16_t keycode, keyrecord_t *record) {
-
     if (!record->event.pressed && keycode != NAV_NG && keycode != MED_SFT) {
         disable_ngrams_layer();
     }
 
     if (record->event.pressed) {
         switch (keycode) {
-
             case MC_RS:
                 SEND_STRING("rs");
                 return PROCESS_RECORD_RETURN_FALSE;

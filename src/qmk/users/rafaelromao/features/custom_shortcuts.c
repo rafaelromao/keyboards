@@ -5,13 +5,11 @@
 extern os_t os;
 
 process_record_result_t process_custom_shortcuts(uint16_t keycode, keyrecord_t *record) {
-
     bool isWindowsOrLinux = os.type == WINDOWS || os.type == LINUX;
-    bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
+    bool isOneShotShift   = get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
 
     switch (keycode) {
-
-        // Zoom shortcuts
+            // Zoom shortcuts
 
         case MC_MODP:
             if (record->event.pressed) {

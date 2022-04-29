@@ -7,4 +7,4 @@
 #include "smart_thumb_keys.h"
 
 process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record);
-bool get_tapping_force_hold_result(uint16_t keycode);
+bool                    get_tapping_force_hold_result(uint16_t keycode);

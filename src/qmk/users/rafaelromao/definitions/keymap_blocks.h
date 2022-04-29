@@ -3,6 +3,8 @@
 #include QMK_KEYBOARD_H
 #include "keycodes.h"
 
+// clang-format off
+
 // // Romak 6 = Romak - VTBZ
 
 // #define ___________________ROMAK_L1____________________ XXXXXXX , KC_R    , KC_Q    , KC_P    , KC_Z
@@ -179,3 +181,5 @@
 #define ___________________MAINTENANCE_R2______________ TO_ROM  , TG_MAC  , TG_WIN  , TG_LIN  , XXXXXXX
 #define ___________________MAINTENANCE_R3______________ EEP_RST , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
 #define __MAINTENANCE_R4_                               _______ , _______
+
+// clang-format on

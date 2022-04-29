@@ -4,6 +4,8 @@
 
 #define LAYOUT_wrapper(...) LAYOUT_planck_mit(__VA_ARGS__)
 
+// clang-format off
+
 // Keymap
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -130,9 +132,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |_______________________________________________________________________________________________________________________|
 };
 
+// clang-format on
+
 // RGB Indicators
 
-extern leader_t leader;
+extern leader_t      leader;
 extern select_word_t select_word;
 
 void set_rgblight_by_layer(uint32_t layer) {
@@ -155,7 +159,7 @@ void set_rgblight_by_layer(uint32_t layer) {
 }
 
 void set_current_layer_rgb(void) {
-    set_rgblight_by_layer(get_highest_layer(layer_state|default_layer_state));
+    set_rgblight_by_layer(get_highest_layer(layer_state | default_layer_state));
 }
 
 uint32_t layer_state_set_user(uint32_t state) {
@@ -164,14 +168,14 @@ uint32_t layer_state_set_user(uint32_t state) {
 }
 
 void rgb_matrix_indicators_user(void) {
-    uint8_t mods = get_mods();
-    uint8_t oneshot_mods = get_oneshot_mods();
+    uint8_t mods                = get_mods();
+    uint8_t oneshot_mods        = get_oneshot_mods();
     uint8_t oneshot_locked_mods = get_oneshot_locked_mods();
 
     bool isShift = mods & MOD_MASK_SHIFT || oneshot_mods & MOD_MASK_SHIFT || oneshot_locked_mods & MOD_MASK_SHIFT;
-    bool isCtrl = mods & MOD_MASK_CTRL || oneshot_mods & MOD_MASK_CTRL || oneshot_locked_mods & MOD_MASK_CTRL;
-    bool isAlt = mods & MOD_MASK_ALT || oneshot_mods & MOD_MASK_ALT || oneshot_locked_mods & MOD_MASK_ALT;
-    bool isGui = mods & MOD_MASK_GUI || oneshot_mods & MOD_MASK_GUI || oneshot_locked_mods & MOD_MASK_GUI;
+    bool isCtrl  = mods & MOD_MASK_CTRL || oneshot_mods & MOD_MASK_CTRL || oneshot_locked_mods & MOD_MASK_CTRL;
+    bool isAlt   = mods & MOD_MASK_ALT || oneshot_mods & MOD_MASK_ALT || oneshot_locked_mods & MOD_MASK_ALT;
+    bool isGui   = mods & MOD_MASK_GUI || oneshot_mods & MOD_MASK_GUI || oneshot_locked_mods & MOD_MASK_GUI;
 
     if (leader.isLeading || select_word.state != STATE_NONE) {
         rgb_matrix_set_color(4, RGB_GREEN);

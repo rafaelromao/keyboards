@@ -6,14 +6,7 @@
 #include "smart_thumb_keys.h"
 #include "process_record_result.h"
 
-typedef enum {
-    STATE_NONE,
-    STATE_LINE_SELECTED,
-    STATE_WORD_SELECTED,
-    STATE_WORD,
-    STATE_FIRST_LINE,
-    STATE_LINE
-} select_word_state_t;
+typedef enum { STATE_NONE, STATE_LINE_SELECTED, STATE_WORD_SELECTED, STATE_WORD, STATE_FIRST_LINE, STATE_LINE } select_word_state_t;
 
 typedef struct {
     select_word_state_t state;

@@ -2,10 +2,7 @@
 
 #include "smart_case.h"
 
-smart_case_t smart_case = {
-    .timer = 0,
-    .type = NO_CASE
-};
+smart_case_t smart_case = {.timer = 0, .type = NO_CASE};
 
 bool smart_case_timer_expired(void) {
     return smart_case.timer > 0 && (timer_elapsed(smart_case.timer) > 5 * CUSTOM_ONESHOT_TIMEOUT);
@@ -147,20 +144,17 @@ process_record_result_t process_smart_case_chars(uint16_t keycode, keyrecord_t *
         switch (keycode) {
             case QK_MOD_TAP ... QK_MOD_TAP_MAX:
             case QK_LAYER_TAP ... QK_LAYER_TAP_MAX:
-            // Earlier return if this has not been considered tapped yet.
-            if (record->tap.count == 0) {
-                return PROCESS_RECORD_CONTINUE;
-            }
-            // Get the base tapping keycode of a mod- or layer-tap key.
-            keycode = extract_base_tapping_keycode(keycode);
+                // Earlier return if this has not been considered tapped yet.
+                if (record->tap.count == 0) {
+                    return PROCESS_RECORD_CONTINUE;
+                }
+                // Get the base tapping keycode of a mod- or layer-tap key.
+                keycode = extract_base_tapping_keycode(keycode);
         }
         // Extend, process or break case
         switch (keycode) {
             case KC_SPC:
-                if (has_smart_case(WORD_CASE) &&
-                    !(has_smart_case(SNAKE_CASE)) &&
-                    !(has_smart_case(KEBAB_CASE)) &&
-                    !(has_smart_case(CAMEL_CASE))) {
+                if (has_smart_case(WORD_CASE) && !(has_smart_case(SNAKE_CASE)) && !(has_smart_case(KEBAB_CASE)) && !(has_smart_case(CAMEL_CASE))) {
                     disable_smart_case();
                     return PROCESS_RECORD_CONTINUE;
                 }
@@ -206,7 +200,6 @@ process_record_result_t process_smart_case_chars(uint16_t keycode, keyrecord_t *
 }
 
 process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record) {
-
     switch (process_smart_case_chars(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return PROCESS_RECORD_RETURN_TRUE;

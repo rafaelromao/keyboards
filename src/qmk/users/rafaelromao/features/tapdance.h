@@ -7,21 +7,7 @@
 #include "smart_thumb_keys.h"
 #include "dynamic_macro.h"
 
-enum {
-    COM_LEA,
-    INJ_LEF,
-    INJ_RIG,
-    SCL_END,
-    BRT_CUR,
-    BRT_SQR,
-    BRT_PAR,
-    BRT_ANG,
-    DOT_DOT,
-    SDB_QUO,
-    DLR_CUR,
-    REC_MA1,
-    REC_MA2
-};
+enum { COM_LEA, INJ_LEF, INJ_RIG, SCL_END, BRT_CUR, BRT_SQR, BRT_PAR, BRT_ANG, DOT_DOT, SDB_QUO, DLR_CUR, REC_MA1, REC_MA2 };
 
 #define TD_COML TD(COM_LEA)
 #define TD_IJLE TD(INJ_LEF)
@@ -51,7 +37,7 @@ typedef enum {
 
 typedef struct {
     td_state_t state;
-    bool recording;
+    bool       recording;
 } td_tap_t;
 
 td_state_t dance_state(qk_tap_dance_state_t *state);
