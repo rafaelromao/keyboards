@@ -21,7 +21,9 @@ enum {
     MC_SQ_U, MC_CR_O, MC_SQ_O, MC_SQ_I,
     MC_CR_E, MC_TL_O, MC_SQ_C, MC_SQ_E,
 
-    MC_SELW, MC_SWIN, MC_CAPS, MC_WORD, MC_CAML, MC_SNAK, MC_KBAB,
+    MC_JOIN, MC_SELW, MC_SWIN, 
+
+    MC_CAPS, MC_WORD, MC_CAML, MC_SNAK, MC_KBAB,
 
             MC_RS,  MC_EY,  MC_PH,          MC_CK,        MC_IO,
     MC_CH,  MC_SH,  MC_HE,  MC_THE, MC_GH,         MC_NH,

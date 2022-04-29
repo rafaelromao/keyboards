@@ -34,6 +34,10 @@
 - There is a dedicated key for this macro, in the right side of the Macros layer.
 - Source Code: [select_word.c](../src/qmk/users/rafaelromao/features/select_word.c)
 
+### Join Lines
+- This macro joins the current line with the line bellow it.
+- Source Code: [macros.c](../src/qmk/users/rafaelromao/features/macros.c)
+
 ### Dynamic Macros
 - There are two independent macro recording keys in the Macros layer.
 - Double tapping them will start or stop recording a dynamic macro.

@@ -9,6 +9,7 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
     bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     bool isOneShotShift = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
     bool isShifted = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
+    bool isWindowsOrLinux = os.type == WINDOWS || os.type == LINUX;
 
     if (record->event.pressed) {
         switch (keycode) {
@@ -66,6 +67,22 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
                 } else {
                     SEND_STRING("->");
                 }
+                return PROCESS_RECORD_RETURN_FALSE;
+
+            // Join Lines
+
+            case MC_JOIN:
+                tap_code(KC_END);
+                tap_code(KC_DEL);
+                tap_code(KC_SPC);
+                tap_code(KC_SPC);
+                tap_code(KC_LEFT);
+                if (isWindowsOrLinux) {
+                    SEND_STRING(SS_DELAY(200) SS_LSFT(SS_LCTL(SS_TAP(X_RGHT) SS_TAP(X_LEFT))));
+                } else  {
+                    SEND_STRING(SS_DELAY(200) SS_LSFT(SS_LALT(SS_TAP(X_RGHT) SS_TAP(X_LEFT))));
+                }
+                tap_code(KC_BSPC);
                 return PROCESS_RECORD_RETURN_FALSE;
 
             // Directory up
