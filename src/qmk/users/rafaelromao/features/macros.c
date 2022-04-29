@@ -73,14 +73,13 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
                 tap_code(KC_END);
                 tap_code(KC_DEL);
                 tap_code(KC_SPC);
-                tap_code(KC_SPC);
                 tap_code(KC_LEFT);
                 if (isWindowsOrLinux) {
                     SEND_STRING(SS_DELAY(200) SS_LSFT(SS_LCTL(SS_TAP(X_RGHT) SS_TAP(X_LEFT))));
                 } else {
                     SEND_STRING(SS_DELAY(200) SS_LSFT(SS_LALT(SS_TAP(X_RGHT) SS_TAP(X_LEFT))));
                 }
-                tap_code(KC_BSPC);
+                tap_code(KC_SPC);
                 return PROCESS_RECORD_RETURN_FALSE;
 
                 // Directory up
