@@ -24,14 +24,17 @@ One-Shot Modifiers are modifier keys that, when tapped, remain active until the 
 
 The Smart Case key is a custom key that works as Shift, Caps Word and other Smart Case modes, according to the modifier that is held when it is pressed.
 - It is placed in the right outer thumb key and behaves as follows, when tapped:
+    - If any modifier is active or locked in one-shot mode, all these modifiers will be deactivated.
     - If any Smart Case is active, it deactivates the Smart Case.
     - If Shift is active or locked in one-shot mode, and no modifier is held, it activates Caps Word.
     - If Shift is not active in one-shot mode, and no modifier is held, it activates Shift for one-shot.
-        - If Control is held, it activates **CAPSWORD**: Caps Lock remains active until a word break char is typed.
-        - If Shift is held, it activates **snake_case**: Space is replaced by _.
-        - If Alt is held, it activates **kebab-case**: Space is replaced by -.
-        - If Gui is held, it activates **camelCase**: Space is replaced by OSM(Shift).
-- Caps Word can be combined with either SNAKE_CASE or KEBAB-CASE.
+        - If Shift is held, it activates **camelCase**: Space is replaced by OSM(Shift), excluding first char.
+        - If Control is held, it activates **CAPSWORD**: Caps Lock remains active until space, tab, enter or esc is typed.
+        - If Shift + Control is held, it activates **PascalCase**: Space is replaced by OSM(Shift), including first char.
+        - If Alt is held, it activates **snake_case**: Space is replaced by _.
+        - If Alt + Control is held, it activates **STRONG_SNAKE_CASE**.
+        - If Gui is held, it activates **kebab-case**: Space is replaced by -.
+        - If Gui + Control is held, it activates **STRONG-KEBAB-CASE**: Space is replaced by -.
 - All Smart Case options are also available as independent keys in the [Macros](macros.md) layer.
 - Caps Lock is also available in the [Macros](macros.md) layer, but its behavior is not what we usually see. No matter how it was activated, Caps Lock, or any Smart Case option, will be automatically deactivated after 10 seconds of inactivity.
 - The Smart Case key is implemented using a custom keycode and a layer-tap.
