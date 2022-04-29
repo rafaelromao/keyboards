@@ -6,7 +6,7 @@ extern os_t os;
 
 bool led_update_user(led_t led_state) {
     if (led_state.caps_lock != has_smart_case(CAPS_LOCK)) {
-       toggle_capslock_smart_case(led_state.caps_lock);
+       toggle_capslock(led_state.caps_lock);
     }
     return true;
 }

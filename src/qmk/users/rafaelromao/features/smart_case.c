@@ -22,6 +22,7 @@ void clear_smart_case_timer(void) {
 void disable_smart_case(void) {
     smart_case.type = NO_CASE;
     clear_smart_case_timer();
+    clear_shift();
     if (host_keyboard_led_state().caps_lock) {
         tap_code(KC_CAPS);
     }
@@ -54,6 +55,23 @@ void set_smart_case(smart_case_type_t smart_case_types) {
         enable_capslock();
         return;
     }
+    if (smart_case_types & WORD_CASE) {
+        // Setting CamelCase with CapsWord already set, makes Pascal Case
+        if (has_smart_case(CAMEL_CASE)) {
+            add_oneshot_mods(MOD_LSFT);
+            return;
+        }
+        if (!host_keyboard_led_state().caps_lock) {
+            tap_code(KC_CAPS);
+        }
+    }
+    if (smart_case_types & CAMEL_CASE) {
+        // Setting CapsWord with CamelCase already set, makes Pascal Case
+        if (has_smart_case(WORD_CASE)) {
+            disable_smart_case();
+            add_oneshot_mods(MOD_LSFT);
+        }
+    }
     enable_smartcase(smart_case_types);
 }
 
@@ -65,7 +83,7 @@ bool has_any_smart_case(void) {
     return smart_case.type != NO_CASE;
 }
 
-void toggle_capslock_smart_case(bool capslock) {
+void toggle_capslock(bool capslock) {
     if (capslock) {
         set_smart_case(CAPS_LOCK);
     } else {
@@ -86,8 +104,9 @@ process_record_result_t process_smart_case_options(uint16_t keycode, keyrecord_t
         switch (keycode) {
             case MC_WORD:
                 toggle_smart_case(WORD_CASE);
+                return PROCESS_RECORD_RETURN_FALSE;
             case MC_CAPS:
-                toggle_capslock_smart_case(!host_keyboard_led_state().caps_lock);
+                toggle_capslock(!host_keyboard_led_state().caps_lock);
                 return PROCESS_RECORD_RETURN_FALSE;
             case MC_SNAK:
                 toggle_smart_case(SNAKE_CASE);
@@ -104,8 +123,8 @@ process_record_result_t process_smart_case_options(uint16_t keycode, keyrecord_t
 }
 
 void set_smart_case_for_mods(keyrecord_t *record) {
-    disable_smart_case();
     int8_t mods = get_mods();
+    disable_smart_case();
     if (mods == 0 || mods & MOD_MASK_CTRL) {
         process_smart_case_options(MC_WORD, record);
     }

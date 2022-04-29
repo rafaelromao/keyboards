@@ -48,7 +48,6 @@ process_record_result_t process_smart_thumb_keys(uint16_t keycode, keyrecord_t *
                             add_oneshot_mods(MOD_BIT(KC_LSFT));
                         } else {
                             set_smart_case_for_mods(record);
-                            clear_shift();
                         }
                     }
                 }

@@ -3,6 +3,7 @@
 #include QMK_KEYBOARD_H
 #include "process_record_result.h"
 #include "../definitions/keycodes.h"
+#include "custom_oneshot_mods.h"
 
 typedef enum {
     NO_CASE = 1 << 0,
@@ -18,7 +19,7 @@ typedef struct {
     uint16_t timer;
 } smart_case_t;
 
-void toggle_capslock_smart_case(bool capslock);
+void toggle_capslock(bool capslock);
 void check_disable_smart_case(void);
 process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record);
 
