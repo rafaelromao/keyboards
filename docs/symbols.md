@@ -13,6 +13,7 @@ Symbols and Numbers are primarily available in the two classic Lower and Raise l
 
 ### Numbers in the Lower layer (right side)
 - In the right side of the Lower layer, there is a set of number keys, arranged as a numpad, but using number row keycodes.
+  - If shift is active, these number keys will output numpad keys instead.
 - The Raise layer can be activated on top of the Lower layer, holding the backspace thumb key, which makes it easier to access math operators when working with numbers.
 
 ### Functions in the Raise layer (left side)
@@ -29,9 +30,8 @@ Symbols and Numbers are primarily available in the two classic Lower and Raise l
 
  ### Numpad Layer
 - A dedicated Numpad layer can be activated from the Lower or Raise layers.
-- Unlike numbers in the Lower layer, numbers in the Numpad layer use numpad keycodes, instead of numrow keycodes.
-- Numpad navigation, using shift, which usually does not work on MacOS, is implemented using [Custom Shift](../src/qmk/users/rafaelromao/features/custom_shift.c).
-- The left side of the Numpad layer also contains function keys.
+- The left side of the Numpad layer contains function keys.
+- The right side of the Numpad layer contains number keys.
 
 ##
 [Home](../readme.md) | 

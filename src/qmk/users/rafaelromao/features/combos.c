@@ -6,8 +6,7 @@
 
 const uint16_t PROGMEM l_num_esc_combo[] = {LOW_SPC, KC_F9, KC_F8, COMBO_END};
 const uint16_t PROGMEM l_num_sav_combo[] = {LOW_SPC, SF_F6, CT_F5, COMBO_END};
-const uint16_t PROGMEM r_num_tab_combo[] = {RAI_BSP, KC_P8, KC_P9, COMBO_END};
-const uint16_t PROGMEM r_num_ent_combo[] = {RAI_BSP, CT_P5, SF_P6, COMBO_END};
+const uint16_t PROGMEM r_num_ent_combo[] = {RAI_BSP, CT_5, SF_6, COMBO_END};
 
 // Lower
 
@@ -105,7 +104,6 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(l_num_esc_combo, KC_ESC),
     COMBO(l_num_sav_combo, MC_SAVE),
 
-    COMBO(r_num_tab_combo, KC_TAB),
     COMBO(r_num_ent_combo, KC_ENT),
 
     COMBO(r_low_tab_combo, KC_TAB),

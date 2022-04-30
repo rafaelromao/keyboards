@@ -116,10 +116,10 @@
 #define ___________________NUMPAD_L3___________________ KC_F14  , KC_F3   , KC_F2   , GU_F1   , KC_F10
 #define ____NUMPAD_L4____                                                             _______ , LOW_SPC
 
-#define ___________________NUMPAD_R1___________________ TG_NUM  , KC_P7   , KC_P8   , KC_P9   , XXXXXXX
-#define ___________________NUMPAD_R2___________________ KC_COMM , AL_P4   , CT_P5   , SF_P6   , PDO_MAC
-#define ___________________NUMPAD_R3___________________ MC_DEG  , GU_P1   , KT_P2   , KT_P3   , KC_COLN
-#define ____NUMPAD_R4____                               RAI_BSP , MED_P0
+#define ___________________NUMPAD_R1___________________ TG_NUM  , KC_7    , KC_8    , KC_9    , XXXXXXX
+#define ___________________NUMPAD_R2___________________ KC_COMM , AL_4    , CT_5    , SF_6    , DOT_MAC
+#define ___________________NUMPAD_R3___________________ MC_DEG  , GU_1    , KT_2    , KT_3    , KC_COLN
+#define ____NUMPAD_R4____                               RAI_BSP , MED_0
 
 #define ___________________MACROS_L1___________________ XXXXXXX , KC_NUM  , MC_CAPS , KC_SCRL , XXXXXXX
 #define ___________________MACROS_L2___________________ XXXXXXX , SFT_CML , MC_WORD , MC_SNAK , TD_MAC2

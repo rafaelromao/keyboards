@@ -33,8 +33,7 @@ enum {
 
     MC_DAND, MC_DPIP,
     MC_EQU, MC_NEQ,
-    MC_ARR, MC_DDS,
-    MC_CPR,
+    MC_ARR, MC_DDS, MC_CPR,
 
     MC_AO, MC_CAO, MC_OES, MC_COES
 };
@@ -47,28 +46,28 @@ enum {
 #define RSFTT_L RSFT_T(KC_L)
 #define RSFTT_O RSFT_T(KC_O)
 #define SF_F6 LSFT_T(KC_F6)
-#define SF_P6 RSFT_T(KC_P6)
+#define SF_6 RSFT_T(KC_6)
 
 #define LCTLT_D LCTL_T(KC_D)
 #define LCTLT_E LCTL_T(KC_E)
 #define RCTLT_K RCTL_T(KC_K)
 #define RCTLT_A RCTL_T(KC_A)
 #define CT_F5 LCTL_T(KC_F5)
-#define CT_P5 RCTL_T(KC_P5)
+#define CT_5 RCTL_T(KC_5)
 
 #define LALTT_F LALT_T(KC_F)
 #define LALTT_D LALT_T(KC_D)
 #define RALTT_J RALT_T(KC_J)
 #define RALTT_N RALT_T(KC_N)
 #define AL_F4 LALT_T(KC_F4)
-#define AL_P4 RALT_T(KC_P4)
+#define AL_4 RALT_T(KC_4)
 #define LA_BSLS LALT_T(KC_BSLS)
 
 #define LGUIT_V LGUI_T(KC_V)
 #define LGUIT_T LGUI_T(KC_T)
 #define RGUIT_M RGUI_T(KC_M)
 #define GU_F1 LGUI_T(KC_F1)
-#define GU_P1 RGUI_T(KC_P1)
+#define GU_1 RGUI_T(KC_1)
 
 // One-shot mods
 
@@ -81,7 +80,6 @@ enum {
 
 #define MED_SFT LT(_MEDIA, SP_CAP)
 #define MED_0   LT(_MEDIA, KC_0)
-#define MED_P0  LT(_MEDIA, KC_P0)
 
 #define NAV_NG  LT(_NAVIGATION, SP_NG)
 #define MAI_MOD LT(_MAINTENANCE, SP_MOD)
