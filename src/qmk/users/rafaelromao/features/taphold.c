@@ -10,8 +10,6 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
     if (record->event.pressed) {
         if (record->tap.count > 0) {
             switch (keycode) {
-                case SFT_CML:
-                    return process_smart_case(MC_CAML, record);
                 case PER_LOW:
                     tap_code16(KC_PERC);
                     return PROCESS_RECORD_RETURN_FALSE;

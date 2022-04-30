@@ -35,8 +35,7 @@ The Smart Case key is a custom key that works as Shift, Caps Word and other Smar
         - If Alt + Control is held, it activates **STRONG_SNAKE_CASE**.
         - If Gui is held, it activates **kebab-case**: Space is replaced by -.
         - If Gui + Control is held, it activates **STRONG-KEBAB-CASE**: Space is replaced by -.
-- All Smart Case options are also available as independent keys in the [Macros](macros.md) layer.
-- Caps Lock is also available in the [Macros](macros.md) layer, but its behavior is not what we usually see. No matter how it was activated, Caps Lock, or any Smart Case option, will be automatically deactivated after 10 seconds of inactivity.
+- Caps Lock is available in the [Macros](macros.md) layer, but its behavior is not what we usually see. No matter how it was activated, Caps Lock, or any Smart Case option, will be automatically deactivated after 10 seconds of inactivity.
 - The Smart Case key is implemented using a custom keycode and a layer-tap.
     - The hold behavior is kept as is, but the tap behavior is intercepted and customized.
 - Source code: [smart_case.c](../src/qmk/users/rafaelromao/features/smart_case.c)

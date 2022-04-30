@@ -121,9 +121,9 @@
 #define ___________________NUMPAD_R3___________________ MC_DEG  , GU_1    , KT_2    , KT_3    , KC_COLN
 #define ____NUMPAD_R4____                               RAI_BSP , MED_0
 
-#define ___________________MACROS_L1___________________ XXXXXXX , KC_NUM  , MC_CAPS , KC_SCRL , XXXXXXX
-#define ___________________MACROS_L2___________________ XXXXXXX , SFT_CML , MC_WORD , MC_SNAK , TD_MAC2
-#define ___________________MACROS_L3___________________ XXXXXXX , XXXXXXX , XXXXXXX , MC_KBAB , XXXXXXX
+#define ___________________MACROS_L1___________________ XXXXXXX , KC_NUM  , MC_CAPS , XXXXXXX , XXXXXXX
+#define ___________________MACROS_L2___________________ XXXXXXX , KC_LSFT , XXXXXXX , XXXXXXX , TD_MAC2
+#define ___________________MACROS_L3___________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
 #define ____MACROS_L4____                                                             TD_IJLE , RAI_BSP
 
 #define ___________________MACROS_R1___________________ XXXXXXX , XXXXXXX , MC_MODM , MC_MODP , XXXXXXX

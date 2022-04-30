@@ -185,14 +185,9 @@ process_record_result_t process_smart_case_chars(uint16_t keycode, keyrecord_t *
                 start_smart_case_timer();
                 break;
             default:
-                break;
-        }
-        // Deactivate case
-        switch (keycode) {
-            case KC_ESC:
-            case KC_TAB:
-            case KC_ENT:
-                disable_smart_case();
+                if (is_key_on_tap(keycode)) {
+                    disable_smart_case();
+                }
                 break;
         }
     }
