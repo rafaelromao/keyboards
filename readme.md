@@ -65,6 +65,7 @@ Most features implemented here were based on the work referenced below.
 - [Callum Oakley](https://github.com/callum-oakley/qmk_firmware/tree/master/users/callum)
 - [Andrew Rae](https://github.com/andrewjrae/kyria-keymap)
 - [Weilbith](https://github.com/weilbith/keyboard_firmware)
+- [Treeman](https://github.com/treeman/qmk_firmware/tree/master/keyboards/ferris/keymaps/treeman)
 - [DreymaR](https://dreymar.colemak.org)
 - [Thomas Baart](https://thomasbaart.nl/category/mechanical-keyboards/firmware/qmk)
 - [Ben Vallack](https://youtube.com/c/BenVallack)
