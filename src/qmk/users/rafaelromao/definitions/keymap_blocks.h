@@ -121,7 +121,7 @@
 #define ___________________NUMPAD_R3___________________ MC_DEG  , GU_1    , KT_2    , KT_3    , KC_COLN
 #define ____NUMPAD_R4____                               RAI_BSP , MED_0
 
-#define ___________________MACROS_L1___________________ XXXXXXX , KC_NUM  , MC_CAPS , XXXXXXX , XXXXXXX
+#define ___________________MACROS_L1___________________ XXXXXXX , MC_SWLE , MC_SWRI , XXXXXXX , XXXXXXX
 #define ___________________MACROS_L2___________________ XXXXXXX , KC_LSFT , XXXXXXX , XXXXXXX , TD_MAC2
 #define ___________________MACROS_L3___________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
 #define ____MACROS_L4____                                                             TD_IJLE , RAI_BSP
@@ -162,7 +162,7 @@
 #define ____MEDIA_R4_____                               KC_BSPC , _______
 
 #define ___________________NAVIGATION_L1_______________ XXXXXXX , KC_TAB  , KC_ESC  , XXXXXXX , XXXXXXX
-#define ___________________NAVIGATION_L2_______________ MC_SWIN , KC_LSFT , KC_LCTL , KC_LALT , XXXXXXX
+#define ___________________NAVIGATION_L2_______________ XXXXXXX , KC_LSFT , KC_LCTL , KC_LALT , XXXXXXX
 #define ___________________NAVIGATION_L3_______________ XXXXXXX , XXXXXXX , XXXXXXX , KC_LGUI , XXXXXXX
 #define __NAVIGATION_L4__                                                             _______ , KC_SPC
 
@@ -173,12 +173,12 @@
 #define __FIXED_NAV__R4__                               KC_BSPC , MED_ALT
 
 #define ___________________MAINTENANCE_L1______________ XXXXXXX , RGB_VAD , RGB_VAI , XXXXXXX , XXXXXXX
-#define ___________________MAINTENANCE_L2______________ XXXXXXX , RGB_HUD , RGB_HUI, RGB_TOG , XXXXXXX
+#define ___________________MAINTENANCE_L2______________ XXXXXXX , RGB_HUD , RGB_HUI , RGB_TOG , XXXXXXX
 #define ___________________MAINTENANCE_L3______________ XXXXXXX , RGB_SAD , RGB_SAI , XXXXXXX , XXXXXXX
 #define __MAINTENANCE_L4_                                                             _______ , _______
 
 #define ___________________MAINTENANCE_R1______________ RESET   , KC_PWR  , KC_SLEP , MC_LOCK , XXXXXXX
-#define ___________________MAINTENANCE_R2______________ TO_ROM  , TG_MAC  , TG_WIN  , TG_LIN  , XXXXXXX
+#define ___________________MAINTENANCE_R2______________ TO_ROM  , TG_MAC  , TG_WIN  , TG_LIN  , KC_NUM
 #define ___________________MAINTENANCE_R3______________ EEP_RST , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
 #define __MAINTENANCE_R4_                               _______ , _______
 

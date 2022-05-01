@@ -122,6 +122,10 @@ process_record_result_t process_smart_case_options(uint16_t keycode, keyrecord_t
 void set_smart_case_for_mods(keyrecord_t *record) {
     int8_t mods = get_mods();
     disable_smart_case();
+    if ((mods & MOD_MASK_CTRL) && (mods & MOD_MASK_SHIFT) && (mods & MOD_MASK_ALT)) {
+        process_smart_case_options(MC_CAPS, record);
+        return;
+    }
     if (mods == 0 || mods & MOD_MASK_CTRL) {
         process_smart_case_options(MC_WORD, record);
     }
@@ -185,7 +189,7 @@ process_record_result_t process_smart_case_chars(uint16_t keycode, keyrecord_t *
                 start_smart_case_timer();
                 break;
             default:
-                if (is_key_on_tap(keycode)) {
+                if (is_key_on_tap(keycode) && !has_smart_case(CAPS_LOCK)) {
                     disable_smart_case();
                 }
                 break;

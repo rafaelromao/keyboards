@@ -23,10 +23,6 @@ The Navigation and Media layer can be activated holding the outer left and right
 - The Media layer gives access to [One-Shot Modifiers](modifiers.md#one-shot-modifiers), Enter and Tab.
 - The right side of this layer gives access to media keys and a shortcut to toggle the Navigation layer on.
 
-### Window Swapper
-- Window Swapper is a macro that performs Alt-Tab on Windows/Linux and Cmd+Tab on MacOS, holding the modifier between keypresses. It is available in the Navigation layer.
-- Source Code: [window_swapper.c](../src/qmk/users/rafaelromao/features/window_swapper.c)
-
 ### Navigation Layer Toggle
 - A clone of the Navigation layer can be toggled on permanently using the Media layer.
 - This clone works the same way as the original Navigation layer, but the outer right thumb key will activate the Media layer instead of the Maintenance layer.

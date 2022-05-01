@@ -27,6 +27,11 @@
 - The Leader Key is used to give easy access to some useful shortcuts and macros, like typing an internet domain or recurring terminal commands.
 - Source code: [leader.c](../src/qmk/users/rafaelromao/features/leader.c)
 
+### Window Swapper
+- Window Swapper is a macro that performs Alt-Tab on Windows/Linux and Cmd+Tab on MacOS, holding the modifier between keypresses. 
+- There are dedicated keys to swap windows back and forth.
+- Source Code: [window_swapper.c](../src/qmk/users/rafaelromao/features/window_swapper.c)
+
 ### Select Word
 - Select Word is a macro that selects the current word in the first press and extend the selection to the next word in consecutive presses.
 - If shift is held (or in one-shot mode), this macro will select the line instead, and extend the seletion to the next line in consecutive presses.
