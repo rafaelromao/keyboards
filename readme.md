@@ -32,8 +32,8 @@ The following pages explain how this layout works and which features are impleme
 - [Dynamic Macros](docs/macros.md#dynamic-macros)
 - [Leader Key](docs/macros.md#leader-key)
 - [Select Word](docs/macros.md#select-word)
+- [Window Swapper](docs/macros.md#window-swapper)
 - [IDE Dancing](docs/macros.md#ide-dancing)
-- [Window Swapper](docs/navigation.md#window-swapper)
 
 ## About this repo
 
