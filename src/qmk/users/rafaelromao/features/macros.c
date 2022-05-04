@@ -10,8 +10,6 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
     bool isShifted            = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
 
     switch (keycode) {
-            // Regular . is ../ when shifted
-
         case MC_DDS:
             if (!isShifted) {
                 if (record->event.pressed) {
@@ -90,7 +88,7 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
 
             case MC_DDS:
                 if (isShifted) {
-                    unregister_mods(MOD_LSFT);
+                    clear_shift();
                     SEND_STRING("../");
                     if (!isOneShotShift || isOneShotLockedShift) {
                         register_mods(MOD_LSFT);
