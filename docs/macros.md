@@ -44,9 +44,10 @@
 - Source Code: [macros.c](../src/qmk/users/rafaelromao/features/macros.c)
 
 ### Dynamic Macros
-- There are two independent macro recording keys in the Macros layer.
+- There is a independent dynamic macro recording key in the Macros layer.
 - Double tapping them will start or stop recording a dynamic macro.
 - Tapping them will play the dynamic macro.
+- If shift is active, it will consider the macro slot 2, otherwise it will consider the macro slot 1.
 - If there is a macro being recorded, using the [Default Mod Key](modifiers.md#default-mod-and-alt-thumb-keys) to deactivate one-shot modifiers (tapping it twice) will stop recording and clear the current macro.
 - Source Code: [dynamic_macro.c](../src/qmk/users/rafaelromao/features/dynamic_macro.c)
 

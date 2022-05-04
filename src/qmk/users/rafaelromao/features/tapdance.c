@@ -192,36 +192,6 @@ void td_semicolon(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-// Comma leader
-
-void td_comma_lead(qk_tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    bool isShifted  = get_mods() & MOD_MASK_SHIFT || get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            tap_code(KC_COMM);
-            break;
-        case TD_DOUBLE_SINGLE_TAP:
-            tap_code(KC_COMM);
-            tap_code(KC_COMM);
-            break;
-        case TD_DOUBLE_TAP:
-            if (!isShifted) {
-                qk_leader_start();
-            } else {
-                tap_code(KC_COMM);
-                tap_code(KC_COMM);
-            }
-            break;
-        case TD_SINGLE_HOLD:
-            tap_code16(KC_END);
-            tap_code(KC_COMM);
-            break;
-        default:
-            break;
-    }
-}
-
 // Dot dot new sentence
 
 void td_dot_dot(qk_tap_dance_state_t *state, void *user_data) {
@@ -308,34 +278,65 @@ void td_quotes(qk_tap_dance_state_t *state, void *user_data) {
 
 // Dynamic Macro
 
-void td_macro_1(qk_tap_dance_state_t *state, void *user_data) {
+void td_macro(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
+    bool isShifted  = get_mods() & MOD_MASK_SHIFT || get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     switch (tap_state.state) {
         case TD_DOUBLE_TAP:
-            dyn_macro_toggle(DYN_REC_START1);
+            dyn_macro_toggle(isShifted ? DYN_REC_START2 : DYN_REC_START1);
             break;
         case TD_SINGLE_TAP:
-            dyn_macro_play(DYN_MACRO_PLAY1);
+            dyn_macro_play(isShifted ? DYN_MACRO_PLAY2 : DYN_MACRO_PLAY1);
             break;
         default:
             break;
     }
 }
 
-void td_macro_2(qk_tap_dance_state_t *state, void *user_data) {
+void td_comm_macro(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
+    bool isShifted  = get_mods() & MOD_MASK_SHIFT || get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     switch (tap_state.state) {
-        case TD_DOUBLE_TAP:
-            dyn_macro_toggle(DYN_REC_START2);
-            break;
         case TD_SINGLE_TAP:
-            dyn_macro_play(DYN_MACRO_PLAY2);
+            tap_code(KC_COMM);
+            break;
+        case TD_DOUBLE_SINGLE_TAP:
+            tap_code(KC_COMM);
+            tap_code(KC_COMM);
+            break;
+        case TD_DOUBLE_TAP:
+            if (!isShifted) {
+                qk_leader_start();
+            } else {
+                tap_code(KC_COMM);
+                tap_code(KC_COMM);
+            }
+            break;
+        case TD_SINGLE_HOLD:
+            tap_code16(KC_END);
+            tap_code(KC_COMM);
             break;
         default:
             break;
     }
 }
+
+// clang-format off
 
 // Tap dance declarations
 
-qk_tap_dance_action_t tap_dance_actions[] = {[COM_LEA] = ACTION_TAP_DANCE_FN(td_comma_lead), [INJ_LEF] = ACTION_TAP_DANCE_FN(td_inj_lef), [INJ_RIG] = ACTION_TAP_DANCE_FN(td_inj_rig), [SCL_END] = ACTION_TAP_DANCE_FN(td_semicolon), [BRT_CUR] = ACTION_TAP_DANCE_FN(td_curly_braces), [BRT_SQR] = ACTION_TAP_DANCE_FN(td_square_brackets), [BRT_PAR] = ACTION_TAP_DANCE_FN(td_parentesis), [BRT_ANG] = ACTION_TAP_DANCE_FN(td_angle_brackets), [DOT_DOT] = ACTION_TAP_DANCE_FN(td_dot_dot), [SDB_QUO] = ACTION_TAP_DANCE_FN(td_quotes), [DLR_CUR] = ACTION_TAP_DANCE_FN(td_currencies), [REC_MA1] = ACTION_TAP_DANCE_FN(td_macro_1), [REC_MA2] = ACTION_TAP_DANCE_FN(td_macro_2)};
+qk_tap_dance_action_t tap_dance_actions[] = {
+    [INJ_LEF] = ACTION_TAP_DANCE_FN(td_inj_lef),
+    [INJ_RIG] = ACTION_TAP_DANCE_FN(td_inj_rig),
+    [SCL_END] = ACTION_TAP_DANCE_FN(td_semicolon),
+    [BRT_CUR] = ACTION_TAP_DANCE_FN(td_curly_braces),
+    [BRT_SQR] = ACTION_TAP_DANCE_FN(td_square_brackets),
+    [BRT_PAR] = ACTION_TAP_DANCE_FN(td_parentesis),
+    [BRT_ANG] = ACTION_TAP_DANCE_FN(td_angle_brackets),
+    [REC_MAC] = ACTION_TAP_DANCE_FN(td_macro),
+    [COM_MAC] = ACTION_TAP_DANCE_FN(td_comm_macro),
+    [DOT_DOT] = ACTION_TAP_DANCE_FN(td_dot_dot),
+    [SDB_QUO] = ACTION_TAP_DANCE_FN(td_quotes),
+    [DLR_CUR] = ACTION_TAP_DANCE_FN(td_currencies)};
+
+// clang-format on

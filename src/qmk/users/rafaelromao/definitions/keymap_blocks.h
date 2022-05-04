@@ -14,7 +14,7 @@
 
 // #define ___________________ROMAK_R1____________________ KC_K    , KC_L    , KC_U    , KC_I    , XXXXXXX
 // #define ___________________ROMAK_R2____________________ KC_H    , RALTT_N , RCTLT_A , RSFTT_O , KCC_MAC
-// #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , TD_COML , TD_DOTD , KC_W
+// #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , TD_COMM , TD_DOTD , KC_W
 // #define ____ROMAK_R4_____                               RAI_BSP , MED_SFT
 
 // Romak 5 - PWR;
@@ -26,7 +26,7 @@
 
 #define ___________________ROMAK_R1____________________ KC_K    , KC_L    , KC_U    , KC_I    , XXXXXXX
 #define ___________________ROMAK_R2____________________ KC_H    , RALTT_N , RCTLT_A , RSFTT_O , KCC_MAC
-#define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , TD_COML , TD_DOTD , KC_W
+#define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , TD_COMM , TD_DOTD , KC_W
 #define ____ROMAK_R4_____                               RAI_BSP , MED_SFT
 
 // // Romak 4 - LUIO
@@ -38,7 +38,7 @@
 
 // #define ___________________ROMAK_R1____________________ KC_K    , KC_L    , KC_U    , KC_I    , KC_P
 // #define ___________________ROMAK_R2____________________ KC_H    , RALTT_N , RCTLT_A , RSFTT_O , KCC_MAC
-// #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , TD_COML , TD_DOTD , TD_SCLE
+// #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , TD_COMM , TD_DOTD , TD_SCLE
 // #define ____ROMAK_R4_____                               RAI_BSP , MED_SFT
 
 // // Romak 3 - EDQ/
@@ -50,7 +50,7 @@
 
 // #define ___________________ROMAK_R1____________________ KC_K    , KC_U    , KC_I    , KC_O    , KC_P
 // #define ___________________ROMAK_R2____________________ KC_H    , RALTT_N , RCTLT_A , RSFTT_L , KCC_MAC
-// #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , TD_COML , TD_DOTD , TD_SCLE
+// #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , TD_COMM , TD_DOTD , TD_SCLE
 // #define ____ROMAK_R4_____                               RAI_BSP , MED_SFT
 
 // // Romak 2 - KFA/
@@ -62,7 +62,7 @@
 
 // #define ___________________ROMAK_R1____________________ KC_K    , KC_U    , KC_I    , KC_O    , KC_P
 // #define ___________________ROMAK_R2____________________ KC_H    , RALTT_N , RCTLT_A , RSFTT_L , KCC_MAC
-// #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , TD_COML , TD_DOTD , TD_SCLE
+// #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , TD_COMM , TD_DOTD , TD_SCLE
 // #define ____ROMAK_R4_____                               RAI_BSP , MED_SFT
 
 // Romak 1 - NJYC/
@@ -74,7 +74,7 @@
 
 // #define ___________________ROMAK_R1____________________ KC_BSLS , KC_U    , KC_I    , KC_O    , KC_P
 // #define ___________________ROMAK_R2____________________ KC_H    , RALTT_N , RCTLT_K , RSFTT_L , KCC_MAC
-// #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , TD_COML , TD_DOTD , TD_SCLE
+// #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , TD_COMM , TD_DOTD , TD_SCLE
 // #define ____ROMAK_R4_____                               RAI_BSP , MED_SFT
 
 // Romak 0
@@ -122,13 +122,13 @@
 #define ____NUMPAD_R4____                               RAI_BSP , MED_0
 
 #define ___________________MACROS_L1___________________ XXXXXXX , MC_SWLE , MC_SWRI , XXXXXXX , XXXXXXX
-#define ___________________MACROS_L2___________________ XXXXXXX , KC_LSFT , XXXXXXX , XXXXXXX , TD_MAC2
+#define ___________________MACROS_L2___________________ XXXXXXX , KC_LSFT , XXXXXXX , XXXXXXX , XXXXXXX
 #define ___________________MACROS_L3___________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
 #define ____MACROS_L4____                                                             TD_IJLE , RAI_BSP
 
 #define ___________________MACROS_R1___________________ XXXXXXX , XXXXXXX , MC_MODM , MC_MODP , XXXXXXX
-#define ___________________MACROS_R2___________________ TD_MAC1 , MC_ARR  , MC_EQU  , MC_NEQ  , XXXXXXX
-#define ___________________MACROS_R3___________________ MC_JOIN , MC_SELW , KC_LEAD , MC_DDS  , MC_CPR
+#define ___________________MACROS_R2___________________ XXXXXXX , MC_ARR  , MC_EQU  , MC_NEQ  , XXXXXXX
+#define ___________________MACROS_R3___________________ MC_JOIN , MC_SELW , TD_MACR , MC_DDS  , MC_CPR
 #define ____MACROS_R4____                               LOW_SPC , TD_IJRI
 
 #define ___________________LOWER_L1____________________ XXXXXXX , TD_PARB , KC_RPRN , MC_TILD , KC_BSLS

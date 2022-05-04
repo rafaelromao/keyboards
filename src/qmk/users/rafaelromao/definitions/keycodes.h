@@ -8,7 +8,6 @@
 
 enum { 
     TD_CODE_START, 
-    COM_LEA, 
     INJ_LEF, 
     INJ_RIG, 
     SCL_END, 
@@ -16,17 +15,17 @@ enum {
     BRT_SQR, 
     BRT_PAR, 
     BRT_ANG, 
+    KCU_LEA, 
+    REC_MAC, 
+    COM_MAC, 
     DOT_DOT, 
     SDB_QUO, 
     DLR_CUR, 
-    REC_MA1, 
-    REC_MA2, 
     TD_CODE_END 
 };
 
 // Tap dance keycodes
 
-#define TD_COML TD(COM_LEA)
 #define TD_IJLE TD(INJ_LEF)
 #define TD_IJRI TD(INJ_RIG)
 #define TD_SCLE TD(SCL_END)
@@ -34,11 +33,12 @@ enum {
 #define TD_SQRB TD(BRT_SQR)
 #define TD_PARB TD(BRT_PAR)
 #define TD_ANGB TD(BRT_ANG)
+#define TD_ULEA TD(KCU_LEA)
+#define TD_MACR TD(REC_MAC)
+#define TD_COMM TD(COM_MAC)
 #define TD_DOTD TD(DOT_DOT)
 #define TD_QUOT TD(SDB_QUO)
 #define TD_DLR TD(DLR_CUR)
-#define TD_MAC1 TD(REC_MA1)
-#define TD_MAC2 TD(REC_MA2)
 
 // Custom keycodes
 enum {

@@ -10,6 +10,20 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
     bool isShifted            = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
     bool isWindowsOrLinux     = os.type == WINDOWS || os.type == LINUX;
 
+    switch (keycode) {
+            // Regular . is ../ when shifted
+
+        case MC_DDS:
+            if (!isShifted) {
+                if (record->event.pressed) {
+                    register_code(KC_DOT);
+                } else {
+                    unregister_code(KC_DOT);
+                }
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+    }
+
     if (record->event.pressed) {
         switch (keycode) {
                 // Degree symbol
@@ -85,9 +99,14 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
                 // Directory up
 
             case MC_DDS:
-                SEND_STRING("../");
-                return PROCESS_RECORD_RETURN_FALSE;
-
+                if (isShifted) {
+                    unregister_mods(MOD_LSFT);
+                    SEND_STRING("../");
+                    if (!isOneShotShift || isOneShotLockedShift) {
+                        register_mods(MOD_LSFT);
+                    }
+                    return PROCESS_RECORD_RETURN_FALSE;
+                }
                 // Vim global command
 
             case MC_CPR:

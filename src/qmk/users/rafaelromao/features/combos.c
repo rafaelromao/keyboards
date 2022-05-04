@@ -46,9 +46,9 @@ const uint16_t PROGMEM l_ro0_und_combo[] = {LOW_SPC, KC_Z, KC_X, COMBO_END};
 
 // const uint16_t PROGMEM r_ro0_ful_combo[] = {RAI_BSP, RSFTT_L, BSL_MAC, COMBO_END};
 // const uint16_t PROGMEM r_ro0_pas_combo[] = {RAI_BSP, RALTT_J, RCTLT_K, COMBO_END};
-const uint16_t PROGMEM r_rom_cop_combo[] = {RAI_BSP, RGUIT_M, TD_COML, COMBO_END};
+const uint16_t PROGMEM r_rom_cop_combo[] = {RAI_BSP, RGUIT_M, TD_COMM, COMBO_END};
 // const uint16_t PROGMEM r_ro0_fin_combo[] = {RAI_BSP, TD_DOTD, TD_SCLE, COMBO_END};
-const uint16_t PROGMEM r_rom_sco_combo[] = {TD_COML, TD_DOTD, COMBO_END};
+const uint16_t PROGMEM r_rom_sco_combo[] = {TD_COMM, TD_DOTD, COMBO_END};
 
 // Romak 1
 
