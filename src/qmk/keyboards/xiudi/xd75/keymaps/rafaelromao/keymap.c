@@ -172,7 +172,6 @@ void suspend_power_down_kb(void) {
 
 void set_rgblight_by_layer(uint32_t layer) {
     if (is_suspended) {
-        rgblight_setrgb(RGB_OFF);
         return;
     }
     switch (layer) {
