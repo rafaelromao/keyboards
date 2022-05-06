@@ -160,8 +160,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 extern leader_t      leader;
 extern select_word_t select_word;
 extern dyn_macro_t   dyn_macro;
+static bool          is_suspended;
+
+void suspend_wakeup_init_kb(void) {
+    is_suspended = false;
+}
+
+void suspend_power_down_kb(void) {
+    is_suspended = true;
+}
 
 void set_rgblight_by_layer(uint32_t layer) {
+    if (is_suspended) {
+        rgblight_setrgb(RGB_OFF);
+        return;
+    }
     switch (layer) {
         case _ROMAK:
         case _MAINTENANCE:

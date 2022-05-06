@@ -26,8 +26,8 @@ void matrix_scan_user(void) {
 // Process record
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    // Process window swapper
-    switch (process_window_swapper(keycode, record)) {
+    // Process smart case
+    switch (process_smart_case(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:
@@ -36,8 +36,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
     };
 
-    // Process smart case
-    switch (process_smart_case(keycode, record)) {
+    // Process window swapper
+    switch (process_window_swapper(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:
