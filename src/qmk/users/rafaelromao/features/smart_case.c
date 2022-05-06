@@ -189,7 +189,7 @@ process_record_result_t process_smart_case_chars(uint16_t keycode, keyrecord_t *
                 start_smart_case_timer();
                 break;
             default:
-                if (is_key_on_tap(keycode) && !has_smart_case(CAPS_LOCK)) {
+                if (is_key_on_tap(keycode) && (has_smart_case(WORD_CASE) || !has_smart_case(CAPS_LOCK))) {
                     disable_smart_case();
                 }
                 break;
