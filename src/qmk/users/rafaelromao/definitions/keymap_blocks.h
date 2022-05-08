@@ -122,13 +122,13 @@
 #define ____NUMPAD_R4____                               RAI_BSP , MED_0
 
 #define ___________________MACROS_L1___________________ XXXXXXX , MC_SWLE , MC_SWRI , XXXXXXX , XXXXXXX
-#define ___________________MACROS_L2___________________ XXXXXXX , KC_LSFT , XXXXXXX , XXXXXXX , XXXXXXX
+#define ___________________MACROS_L2___________________ XXXXXXX , KC_LSFT , XXXXXXX , MC_SELW , XXXXXXX
 #define ___________________MACROS_L3___________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
 #define ____MACROS_L4____                                                             TD_IJLE , RAI_BSP
 
 #define ___________________MACROS_R1___________________ XXXXXXX , XXXXXXX , MC_MODM , MC_MODP , XXXXXXX
 #define ___________________MACROS_R2___________________ XXXXXXX , MC_ARR  , MC_EQU  , MC_NEQ  , XXXXXXX
-#define ___________________MACROS_R3___________________ MC_JOIN , MC_SELW , TD_MACR , MC_DDS  , MC_CPR
+#define ___________________MACROS_R3___________________ MC_JOIN , MC_COMT , TD_MACR , MC_DDS  , MC_CPR
 #define ____MACROS_R4____                               LOW_SPC , TD_IJRI
 
 #define ___________________LOWER_L1____________________ XXXXXXX , TD_PARB , KC_RPRN , MC_TILD , KC_BSLS

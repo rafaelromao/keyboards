@@ -8,6 +8,7 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
     bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     bool isOneShotShift       = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
     bool isShifted            = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
+    bool isWindowsOrLinux     = os.type == WINDOWS || os.type == LINUX;
 
     switch (keycode) {
             // .
@@ -95,6 +96,16 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
 
             case MC_JOIN:
                 SEND_STRING(SS_TAP(X_END) SS_TAP(X_DEL));
+                return PROCESS_RECORD_RETURN_FALSE;
+
+                // Comment
+
+            case MC_COMT:
+                if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
+                    SEND_STRING(SS_LCTL("/"));
+                } else {
+                    SEND_STRING(SS_LGUI("/"));
+                }
                 return PROCESS_RECORD_RETURN_FALSE;
 
                 // Vim global command

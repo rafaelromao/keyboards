@@ -36,8 +36,12 @@
 - Select Word is a macro that selects the current word in the first press and extend the selection to the next word in consecutive presses.
 - If shift is held (or in one-shot mode), this macro will select the line instead, and extend the seletion to the next line in consecutive presses.
 - This macro is also OS aware and works the same way on Windows, Linux and MacOS.
-- There is a dedicated key for this macro, in the right side of the Macros layer.
+- There is a dedicated key for this macro, in the Macros layer.
 - Source Code: [select_word.c](../src/qmk/users/rafaelromao/features/select_word.c)
+
+### Comment
+- This macro comments/uncomments the current line or block.
+- Source Code: [macros.c](../src/qmk/users/rafaelromao/features/macros.c)
 
 ### Join Lines
 - This macro joins the current line with the line bellow it.
