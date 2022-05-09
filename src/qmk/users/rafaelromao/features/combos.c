@@ -19,8 +19,10 @@ const uint16_t PROGMEM r_rai_num_combo[] = {TD_CURB, KC_RCBR, COMBO_END};
 
 // N-Grams
 
+const uint16_t PROGMEM r_ng_lh_combo[]   = {MC_CR_A, MC_SQ_U, COMBO_END};
 const uint16_t PROGMEM r_ng_io_combo[]   = {MC_SQ_U, MC_SQ_I, COMBO_END};
 const uint16_t PROGMEM r_ng_nh_combo[]   = {MC_SQ_A, MC_TL_A, COMBO_END};
+const uint16_t PROGMEM r_ng_ck_combo[]   = {MC_SQ_E, MC_CR_E, COMBO_END};
 const uint16_t PROGMEM r_ng_ao_combo[]   = {MC_TL_A, MC_TL_O, COMBO_END};
 const uint16_t PROGMEM r_ng_cao_combo[]  = {MC_SQ_A, MC_TL_A, MC_TL_O, COMBO_END};
 const uint16_t PROGMEM r_ng_oes_combo[]  = {MC_CR_E, MC_SQ_O, COMBO_END};
@@ -111,8 +113,10 @@ combo_t key_combos[COMBO_COUNT] = {
 
     COMBO(r_rai_num_combo, TG_NUM),
 
+    COMBO(r_ng_lh_combo, MC_LH),
     COMBO(r_ng_io_combo, MC_IO),
-    COMBO(r_ng_nh_combo, MC_NH),
+    COMBO(r_ng_ck_combo, MC_CK),
+    COMBO(r_ng_io_combo, MC_IO),
     COMBO(r_ng_ao_combo, MC_AO),
     COMBO(r_ng_cao_combo, MC_CAO),
     COMBO(r_ng_oes_combo, MC_OES),
