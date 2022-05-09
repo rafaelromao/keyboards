@@ -19,7 +19,7 @@
 - Combos are available in the base and [Numpad](symbols.md#numpad-layer) layers to send ENTER, ESC, TAB and common shortcuts like copy, paste, save, select all and undo.
 - Most combos include the home thumb key, the one in the same side, to avoid misfires.
 - One-shot shift can be used to invert the [Default Modifier](modifiers.md#default-mod-and-alt-thumb-keys) used in the combos.
-- If shift, or any other modifier, is held, it will be included in the combo. So hold Shift and tap the Undo commbo will send Redo instead.
+- If shift, or any other modifier, is held, it will be included in the combo. So hold Shift and tap the Undo combo will send Redo instead.
     - Source code: [combos.c](../src/qmk/users/rafaelromao/features/combos.c)
 
 ## Base Layer Macros
