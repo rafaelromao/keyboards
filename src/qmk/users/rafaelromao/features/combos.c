@@ -13,10 +13,6 @@ const uint16_t PROGMEM r_num_ent_combo[] = {RAI_BSP, CT_5, SF_6, COMBO_END};
 const uint16_t PROGMEM r_low_tab_combo[] = {RAI_BSP, KC_8, KC_9, COMBO_END};
 const uint16_t PROGMEM r_low_ent_combo[] = {RAI_BSP, KC_5, KC_6, COMBO_END};
 
-// Raise
-
-const uint16_t PROGMEM r_rai_num_combo[] = {TD_CURB, KC_RCBR, COMBO_END};
-
 // N-Grams
 
 const uint16_t PROGMEM r_ng_lh_combo[]   = {MC_CR_A, MC_SQ_U, COMBO_END};
@@ -110,8 +106,6 @@ combo_t key_combos[COMBO_COUNT] = {
 
     COMBO(r_low_tab_combo, KC_TAB),
     COMBO(r_low_ent_combo, KC_ENT),
-
-    COMBO(r_rai_num_combo, TG_NUM),
 
     COMBO(r_ng_lh_combo, MC_LH),
     COMBO(r_ng_io_combo, MC_IO),
