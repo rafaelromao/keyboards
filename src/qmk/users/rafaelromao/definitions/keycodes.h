@@ -62,9 +62,9 @@ enum {
     MC_JOIN, MC_SELW, MC_SWLE, MC_SWRI, MC_COMT,
     MC_CAPS, MC_WORD, MC_CAML, MC_SNAK, MC_KBAB,
 
-            MC_RS,  MC_EY,  MC_PH,          MC_CK,        MC_IO,
-    MC_CH,  MC_SH,  MC_HE,  MC_THE, MC_GH,         MC_NH,
-    MC_WH,  MC_SR,  MC_YE,  MC_TH,          MC_LH,
+    MC_CK,  MC_LH,  MC_PH,        
+    MC_SH,  MC_THE, MC_GH,         
+    MC_WH,  MC_CH,  MC_TH,          
 
     MC_DAND, MC_DPIP,
     MC_EQU, MC_NEQ,

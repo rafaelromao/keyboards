@@ -101,14 +101,14 @@
 // #define ___________________ROMAK_R3___________________ KC_N    , RGUIT_M , TD_COML , TD_DOTD , KC_BSLS
 // #define ____ROMAK_R4____                               RAI_BSP , MED_SFT
 
-#define ___________________NGRAMS_L1___________________ XXXXXXX , MC_RS   , MC_EY   , MC_PH   , XXXXXXX
-#define ___________________NGRAMS_L2___________________ MC_CH   , MC_SH   , MC_HE   , MC_THE  , MC_GH
-#define ___________________NGRAMS_L3___________________ MC_WH   , MC_SR   , MC_YE   , MC_TH   , XXXXXXX
+#define ___________________NGRAMS_L1___________________ XXXXXXX , MC_CK   , MC_LH   , MC_PH   , XXXXXXX
+#define ___________________NGRAMS_L2___________________ XXXXXXX , MC_SH   , MC_THE  , MC_GH   , XXXXXXX
+#define ___________________NGRAMS_L3___________________ XXXXXXX , MC_WH   , MC_CH   , MC_TH   , XXXXXXX
 #define ____NGRAMS_L4____                                                             _______ , KC_SPC
 
-#define ___________________NGRAMS_R1___________________ MC_CK   , MC_CR_A , MC_SQ_U , MC_SQ_I , XXXXXXX
+#define ___________________NGRAMS_R1___________________ XXXXXXX , MC_CR_A , MC_SQ_U , MC_SQ_I , XXXXXXX
 #define ___________________NGRAMS_R2___________________ MC_GV_A , MC_SQ_A , MC_TL_A , MC_TL_O , MC_SQ_C
-#define ___________________NGRAMS_R3___________________ MC_LH   , MC_SQ_E , MC_CR_E , MC_SQ_O , MC_CR_O
+#define ___________________NGRAMS_R3___________________ XXXXXXX , MC_SQ_E , MC_CR_E , MC_SQ_O , MC_CR_O
 #define ____NGRAMS_R4____                               KC_BSPC , _______
 
 #define ___________________NUMPAD_L1___________________ XXXXXXX , KC_F9   , KC_F8   , KC_F7   , KC_F12

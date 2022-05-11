@@ -107,10 +107,6 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(r_low_tab_combo, KC_TAB),
     COMBO(r_low_ent_combo, KC_ENT),
 
-    COMBO(r_ng_lh_combo, MC_LH),
-    COMBO(r_ng_io_combo, MC_IO),
-    COMBO(r_ng_ck_combo, MC_CK),
-    COMBO(r_ng_io_combo, MC_IO),
     COMBO(r_ng_ao_combo, MC_AO),
     COMBO(r_ng_cao_combo, MC_CAO),
     COMBO(r_ng_oes_combo, MC_OES),
