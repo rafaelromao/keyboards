@@ -39,8 +39,8 @@
 - There is a dedicated key for this macro, in the Macros layer.
 - Source Code: [select_word.c](../src/qmk/users/rafaelromao/features/select_word.c)
 
-### Comment
-- This macro comments/uncomments the current line or block.
+### Comment Lines
+- This macro comments/uncomments the current line or selected block.
 - Source Code: [macros.c](../src/qmk/users/rafaelromao/features/macros.c)
 
 ### Join Lines
