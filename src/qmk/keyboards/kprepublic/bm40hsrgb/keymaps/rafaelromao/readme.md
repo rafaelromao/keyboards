@@ -1,8 +1,12 @@
 ## bm40hsrgb/rafaelromao
-### A 34 keys split keyboard layout, optimized for programmers.
+### A 32 keys split keyboard layout, optimized for programmers.
 
 The keyboard in the picture below is a BM40, used to design and test this layout.
 ![img](https://imgur.com/ok7bv31.jpeg)
+
+### QMK
+
+The qmk version recomended for this keyboard is 0.15.4, with dynamic macros disabled.
 
 ### Compile
 
