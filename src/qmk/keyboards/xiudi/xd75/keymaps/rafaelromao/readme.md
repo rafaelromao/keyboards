@@ -1,8 +1,12 @@
 ## xd75/rafaelromao
-### A 34 keys split keyboard layout, optimized for programmers.
+### A 32 keys split keyboard layout, optimized for programmers.
 
 The keyboard in the picture below is a XD75, used to design and test this layout.
 ![img](https://i.imgur.com/MRmP9zL.jpg)
+
+### QMK
+
+The qmk version recommended for this keyboard is 0.16.9.
 
 ### Compile
 
