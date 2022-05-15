@@ -36,6 +36,5 @@ fi
 
 echo "Checking out qmk v0.17.0..."
 cd $QMK_HOME
-<<<<<<< HEAD
 git checkout 0.17.0
 cd ..

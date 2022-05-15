@@ -2,22 +2,30 @@
 
 KEYBOARD_HOME="$(pwd)"
 export QMK_HOME="$KEYBOARD_HOME/qmk_firmware"
-USER_SPACE="$QMK_HOME/users"
+QMK_USER_SPACE="$QMK_HOME/users"
+
 XD75="keyboards/xiudi/xd75/keymaps"
+
+# Prepare QMK home
 
 if [[ ! -d "$QMK_HOME" ]]
 then
-    echo "Add git sub-modules..."
+    echo "Add git QMK sub-module..."
     git submodule add -f https://github.com/qmk/qmk_firmware
 fi
+
+# Update sub-modules
+
 echo "Update git sub-modules..."
 git submodule sync --recursive
 git submodule update --init --recursive --progress
 
-if [[ ! -d "$USER_SPACE/rafaelromao" ]]
+# Symlink QMK custom code
+
+if [[ ! -d "$QMK_USER_SPACE/rafaelromao" ]]
 then
-    echo "Creating userspace symbolic link..."
-    ln -s "$KEYBOARD_HOME/src/qmk/users/rafaelromao" "$USER_SPACE"
+    echo "Creating QMK userspace symbolic link..."
+    ln -s "$KEYBOARD_HOME/src/qmk/users/rafaelromao" "$QMK_USER_SPACE"
 fi
 if [[ ! -d "$QMK_HOME/$XD75/rafaelromao" ]]
 then
