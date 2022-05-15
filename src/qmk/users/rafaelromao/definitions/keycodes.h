@@ -53,8 +53,6 @@ enum {
 
     SP_CAP, SP_MOD, SP_NG, SP_ALT,
 
-    MC_MODP, MC_MODM,
-
     MC_GV_A, MC_CR_A, MC_TL_A, MC_SQ_A,
     MC_SQ_U, MC_CR_O, MC_SQ_O, MC_SQ_I,
     MC_CR_E, MC_TL_O, MC_SQ_C, MC_SQ_E,
@@ -151,6 +149,8 @@ enum {
 #define HYPR_A HYPR(KC_A)
 #define HYPR_V HYPR(KC_V)
 
+#define MC_MODP LGUI(KC_PLUS)
+#define MC_MODM LGUI(KC_MINS)
 #define MC_SELC LGUI(KC_A)
 #define MC_SAVE LGUI(KC_S)
 #define MC_UNDO LGUI(KC_Z)

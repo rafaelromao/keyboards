@@ -73,7 +73,7 @@ const uint16_t PROGMEM r_rom_ful_combo[] = {RAI_BSP, RSFTT_O, KCC_MAC, COMBO_END
 // Romak 5
 
 const uint16_t PROGMEM l_rom_esc_combo[] = {LOW_SPC, KC_R, KC_Q, COMBO_END};
-const uint16_t PROGMEM r_rom_fin_combo[] = {LOW_SPC, TD_DOTD, KC_W, COMBO_END};
+const uint16_t PROGMEM r_rom_fin_combo[] = {RAI_BSP, TD_DOTD, KC_W, COMBO_END};
 
 // Romak 6 = Romak
 
