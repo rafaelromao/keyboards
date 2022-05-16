@@ -23,7 +23,7 @@
 - In the right side of the Macros layer, there are keys to control Zoom, which can be either Cmd+ and Cmd- or Ctrl+ and Ctrl-, according to the operating system that is selected.
 
 ### Leader Key
-- The Leader Key is available in a double tap in the comma.
+- The Leader Key is available through a double tap in the comma.
 - The Leader Key is used to give easy access to some useful shortcuts and macros, like typing an internet domain or recurring terminal commands.
 - Source code: [leader.c](../src/qmk/users/rafaelromao/features/leader.c)
 
