@@ -7,7 +7,8 @@
 - The N-Grams and Accents layer has common English and Portuguese n-grams and accentuated letters, readily available on a single tap of the left outer thumb key, making them as easy to type as a shifted key (which is available on a single tap of the right outer thumb key).
 
 #### N-Grams
-- N-grams that involve h, like th, ch, wh, are available in this layer, below or close to the letter that start them, along with bigrams that can be used to avoid common SFBs, like RS and SR.
+- N-grams that involve h, like th, ch, wh, are available in this layer.
+- The inspiration for this layer came from [this post](https://www.reddit.com/r/KeyboardLayouts/comments/t3i523/ri%C3%BEinquing_h_digra%CF%86s/).
 - Source code: [ngrams.c](../src/qmk/users/rafaelromao/features/ngrams.c)
 
 #### Accentuation
