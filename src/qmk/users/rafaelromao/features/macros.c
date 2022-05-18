@@ -108,10 +108,11 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
                 }
                 return PROCESS_RECORD_RETURN_FALSE;
 
-                // Vim global command
+                // Vim replace
 
             case MC_CPR:
-                SEND_STRING(":%");
+                SEND_STRING(":%s//g");
+                SEND_STRING(SS_TAP(X_LEFT) SS_TAP(X_LEFT));
                 return PROCESS_RECORD_RETURN_FALSE;
         }
     }

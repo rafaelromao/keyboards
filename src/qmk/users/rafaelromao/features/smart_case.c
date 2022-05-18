@@ -186,6 +186,7 @@ process_record_result_t process_smart_case_chars(uint16_t keycode, keyrecord_t *
             case KC_RIGHT:
             case KC_HOME:
             case KC_END:
+            case NAV_NG:
                 start_smart_case_timer();
                 break;
             default:

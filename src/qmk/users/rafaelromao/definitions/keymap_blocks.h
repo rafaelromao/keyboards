@@ -101,9 +101,9 @@
 // #define ___________________ROMAK_R3___________________ KC_N    , RGUIT_M , TD_COML , TD_DOTD , KC_BSLS
 // #define ____ROMAK_R4____                               RAI_BSP , MED_SFT
 
-#define ___________________NGRAMS_L1___________________ XXXXXXX , MC_CK   , MC_LH   , MC_PH   , XXXXXXX
-#define ___________________NGRAMS_L2___________________ XXXXXXX , MC_SH   , MC_THE  , MC_GH   , XXXXXXX
-#define ___________________NGRAMS_L3___________________ XXXXXXX , MC_WH   , MC_CH   , MC_TH   , XXXXXXX
+#define ___________________NGRAMS_L1___________________ XXXXXXX , MC_GH   , MC_LH   , MC_PH   , XXXXXXX
+#define ___________________NGRAMS_L2___________________ XXXXXXX , MC_TH   , MC_CH   , MC_WH   , XXXXXXX
+#define ___________________NGRAMS_L3___________________ XXXXXXX , MC_CK   , MC_NH   , MC_SH   , XXXXXXX
 #define ____NGRAMS_L4____                                                             _______ , KC_SPC
 
 #define ___________________NGRAMS_R1___________________ XXXXXXX , MC_CR_A , MC_SQ_U , MC_SQ_I , XXXXXXX
@@ -158,7 +158,7 @@
 
 #define ___________________MEDIA_R1____________________ TG_NUM  , XXXXXXX , KC_ENT  , KC_TAB  , XXXXXXX
 #define ___________________MEDIA_R2____________________ TG_NAV  , KC_MUTE , KC_VOLD , KC_VOLU , HYPR_A
-#define ___________________MEDIA_R3____________________ XXXXXXX , KC_MPLY , KC_MPRV , KC_MNXT , HYPR_V
+#define ___________________MEDIA_R3____________________ TO_ROM  , KC_MPLY , KC_MPRV , KC_MNXT , HYPR_V
 #define ____MEDIA_R4_____                               KC_BSPC , _______
 
 #define ___________________NAVIGATION_L1_______________ XXXXXXX , KC_TAB  , KC_ESC  , XXXXXXX , XXXXXXX
@@ -166,20 +166,20 @@
 #define ___________________NAVIGATION_L3_______________ XXXXXXX , XXXXXXX , XXXXXXX , KC_LGUI , XXXXXXX
 #define __NAVIGATION_L4__                                                             _______ , KC_SPC
 
-#define ___________________NAVIGATION_R1_______________ TG_NUM  , KC_APP  , KC_PGDN , KC_PGUP , XXXXXXX
+#define ___________________NAVIGATION_R1_______________ XXXXXXX , KC_APP  , KC_PGDN , KC_PGUP , XXXXXXX
 #define ___________________NAVIGATION_R2_______________ TG_NAV  , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT
 #define ___________________NAVIGATION_R3_______________ XXXXXXX , KC_DEL  , KC_HOME , KC_END  , KC_INS
 #define __NAVIGATION_R4__                               KC_BSPC , MAI_ALT
 #define __FIXED_NAV__R4__                               KC_BSPC , MED_ALT
 
-#define ___________________MAINTENANCE_L1______________ XXXXXXX , RGB_VAD , RGB_VAI , XXXXXXX , XXXXXXX
-#define ___________________MAINTENANCE_L2______________ XXXXXXX , RGB_HUD , RGB_HUI , RGB_TOG , XXXXXXX
+#define ___________________MAINTENANCE_L1______________ XXXXXXX , RGB_VAD , RGB_VAI , XXXXXXX , EEP_RST
+#define ___________________MAINTENANCE_L2______________ RGB_TOG , RGB_HUD , RGB_HUI , XXXXXXX , XXXXXXX
 #define ___________________MAINTENANCE_L3______________ XXXXXXX , RGB_SAD , RGB_SAI , XXXXXXX , XXXXXXX
 #define __MAINTENANCE_L4_                                                             _______ , _______
 
 #define ___________________MAINTENANCE_R1______________ RESET   , KC_PWR  , KC_SLEP , MC_LOCK , XXXXXXX
-#define ___________________MAINTENANCE_R2______________ TO_ROM  , TG_MAC  , TG_WIN  , TG_LIN  , KC_NUM
-#define ___________________MAINTENANCE_R3______________ EEP_RST , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
+#define ___________________MAINTENANCE_R2______________ XXXXXXX , TG_MAC  , TG_WIN  , TG_LIN  , KC_NUM
+#define ___________________MAINTENANCE_R3______________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
 #define __MAINTENANCE_R4_                               _______ , _______
 
 // clang-format on
