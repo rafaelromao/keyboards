@@ -177,6 +177,7 @@ process_record_result_t process_smart_case_chars(uint16_t keycode, keyrecord_t *
                     start_smart_case_timer();
                     return PROCESS_RECORD_RETURN_FALSE;
                 }
+            case STR_MACRO_START ... STR_MACRO_END:
             case KC_A ... KC_Z:
             case KC_1 ... KC_0:
             case KC_BSPC:
@@ -186,7 +187,6 @@ process_record_result_t process_smart_case_chars(uint16_t keycode, keyrecord_t *
             case KC_RIGHT:
             case KC_HOME:
             case KC_END:
-            case NAV_NG:
                 start_smart_case_timer();
                 break;
             default:
