@@ -3,7 +3,7 @@
 #include QMK_KEYBOARD_H
 
 #include "../definitions/keycodes.h"
-#include "process_record_result.h"
+#include "process_record.h"
 
 typedef struct {
     uint16_t recording;
