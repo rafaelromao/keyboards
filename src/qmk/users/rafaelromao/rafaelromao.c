@@ -56,8 +56,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
     };
 
-    // Process ngrams
-    switch (process_ngrams(keycode, record)) {
+    // Process macros
+    switch (process_macros(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:
@@ -68,26 +68,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     // Process taphold
     switch (process_taphold(keycode, record)) {
-        case PROCESS_RECORD_RETURN_TRUE:
-            return true;
-        case PROCESS_RECORD_RETURN_FALSE:
-            return false;
-        default:
-            break;
-    };
-
-    // Process accentuation
-    switch (process_accentuated_characters(keycode, record)) {
-        case PROCESS_RECORD_RETURN_TRUE:
-            return true;
-        case PROCESS_RECORD_RETURN_FALSE:
-            return false;
-        default:
-            break;
-    };
-
-    // Process macros
-    switch (process_macros(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:

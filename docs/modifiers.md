@@ -43,7 +43,7 @@ The Smart Case key is a custom key that works as Shift, Caps Word and other Smar
 
 ## N-Grams Key
 - The N-Grams key is available in the left outer thumb key and will toggle the N-Grams layer in one-shot mode, acting like a special shift key.
-- Source code: [ngrams.c](../src/qmk/users/rafaelromao/features/ngrams.c)
+- Source code: [macros.c](../src/qmk/users/rafaelromao/features/macros.c)
 
 ## Default Mod and Alt Thumb Keys
 
