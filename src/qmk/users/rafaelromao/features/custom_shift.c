@@ -2,8 +2,6 @@
 
 #include "custom_shift.h"
 
-extern os_t os;
-
 process_record_result_t process_custom_shift(uint16_t keycode, keyrecord_t *record) {
     if (!record->event.pressed) {
         return PROCESS_RECORD_CONTINUE;

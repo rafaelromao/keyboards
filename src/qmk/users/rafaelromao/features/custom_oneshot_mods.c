@@ -2,8 +2,6 @@
 
 #include "custom_oneshot_mods.h"
 
-extern os_t os;
-
 static oneshot_mods_timer_t oneshot_mods_timer = {.timer = 0};
 
 void clear_expired_oneshot_mods(void) {

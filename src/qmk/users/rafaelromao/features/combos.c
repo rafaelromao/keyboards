@@ -163,8 +163,6 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(rom_reset_combo, RESET),
 };
 
-extern os_t os;
-
 bool get_combo_must_tap(uint16_t index, combo_t *combo) {
     uint16_t key;
     uint8_t  idx            = 0;
