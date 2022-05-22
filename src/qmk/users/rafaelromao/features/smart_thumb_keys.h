@@ -3,7 +3,7 @@
 #include QMK_KEYBOARD_H
 
 #include "../definitions/keycodes.h"
-#include "process_record.h"
+#include "../definitions/process_record.h"
 #include "os_toggle.h"
 #include "ngrams.h"
 #include "smart_case.h"

@@ -196,7 +196,8 @@ void td_semicolon(qk_tap_dance_state_t *state, void *user_data) {
 
 void td_dot_dot(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
-    bool isShifted  = get_mods() & MOD_MASK_SHIFT || get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
+    bool isShifted  = get_mods() & MOD_MASK_SHIFT || get_oneshot_mods() & MOD_MASK_SHIFT ||
+                     get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
             tap_code(KC_DOT);
@@ -280,7 +281,8 @@ void td_quotes(qk_tap_dance_state_t *state, void *user_data) {
 
 void td_macro(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
-    bool isShifted  = get_mods() & MOD_MASK_SHIFT || get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
+    bool isShifted  = get_mods() & MOD_MASK_SHIFT || get_oneshot_mods() & MOD_MASK_SHIFT ||
+                     get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     switch (tap_state.state) {
         case TD_DOUBLE_TAP:
             dyn_macro_toggle(isShifted ? DYN_REC_START2 : DYN_REC_START1);
@@ -295,7 +297,8 @@ void td_macro(qk_tap_dance_state_t *state, void *user_data) {
 
 void td_comm_macro(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
-    bool isShifted  = get_mods() & MOD_MASK_SHIFT || get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
+    bool isShifted  = get_mods() & MOD_MASK_SHIFT || get_oneshot_mods() & MOD_MASK_SHIFT ||
+                     get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
             tap_code(KC_COMM);

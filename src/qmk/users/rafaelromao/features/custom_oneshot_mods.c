@@ -36,7 +36,9 @@ void disable_expired_oneshot_mods(void) {
     oneshot_mods_timer.timer = 0;
 }
 
-bool oneshot_mods_timer_expired(void) { return oneshot_mods_timer.timer > 0 && (timer_elapsed(oneshot_mods_timer.timer) > CUSTOM_ONESHOT_TIMEOUT); }
+bool oneshot_mods_timer_expired(void) {
+    return oneshot_mods_timer.timer > 0 && (timer_elapsed(oneshot_mods_timer.timer) > CUSTOM_ONESHOT_TIMEOUT);
+}
 
 void check_oneshot_mods_timeout(void) {
     if (oneshot_mods_timer_expired()) {

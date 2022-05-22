@@ -6,7 +6,8 @@ select_word_t select_word = {.state = STATE_NONE};
 
 process_record_result_t process_select_word(uint16_t keycode, keyrecord_t* record) {
     if (keycode == MC_SELW && record->event.pressed) {
-        bool isShifted = get_mods() & MOD_MASK_SHIFT || get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
+        bool isShifted = get_mods() & MOD_MASK_SHIFT || get_oneshot_mods() & MOD_MASK_SHIFT ||
+                         get_oneshot_locked_mods() & MOD_MASK_SHIFT;
         if (isShifted || select_word.state == STATE_LINE_SELECTED) {
             // Select Line
             clear_mods();

@@ -3,7 +3,7 @@
 #include QMK_KEYBOARD_H
 
 #include "../definitions/keycodes.h"
-#include "process_record.h"
+#include "../definitions/process_record.h"
 
 typedef enum { MACOS, WINDOWS, LINUX } os_type_t;
 

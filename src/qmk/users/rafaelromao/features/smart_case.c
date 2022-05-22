@@ -158,7 +158,8 @@ process_record_result_t process_smart_case_chars(uint16_t keycode, keyrecord_t *
         // Extend, process or break case
         switch (keycode) {
             case KC_SPC:
-                if (has_smart_case(WORD_CASE) && !(has_smart_case(SNAKE_CASE)) && !(has_smart_case(KEBAB_CASE)) && !(has_smart_case(CAMEL_CASE))) {
+                if (has_smart_case(WORD_CASE) && !(has_smart_case(SNAKE_CASE)) && !(has_smart_case(KEBAB_CASE)) &&
+                    !(has_smart_case(CAMEL_CASE))) {
                     disable_smart_case();
                     return PROCESS_RECORD_CONTINUE;
                 }

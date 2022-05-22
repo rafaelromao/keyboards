@@ -1,8 +1,8 @@
 #pragma once
 
 #include QMK_KEYBOARD_H
-#include "process_record.h"
 #include "../definitions/keycodes.h"
+#include "../definitions/process_record.h"
 #include "custom_oneshot_mods.h"
 
 typedef enum {

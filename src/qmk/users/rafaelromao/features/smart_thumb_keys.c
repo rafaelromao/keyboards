@@ -10,8 +10,9 @@ bool should_send_ctrl(bool isWindowsOrLinux, bool isOneShotShift) {
 }
 
 process_record_result_t process_smart_thumb_keys(uint16_t keycode, keyrecord_t *record) {
-    bool isWindowsOrLinux     = os.type == WINDOWS || os.type == LINUX;
-    bool isOneShotDefaultMod  = (!isWindowsOrLinux && (get_oneshot_mods() & MOD_MASK_GUI)) || (isWindowsOrLinux && (get_oneshot_mods() & MOD_MASK_CTRL));
+    bool isWindowsOrLinux    = os.type == WINDOWS || os.type == LINUX;
+    bool isOneShotDefaultMod = (!isWindowsOrLinux && (get_oneshot_mods() & MOD_MASK_GUI)) ||
+                               (isWindowsOrLinux && (get_oneshot_mods() & MOD_MASK_CTRL));
     bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     bool isOneShotShift       = get_oneshot_mods() & MOD_MASK_SHIFT || isOneShotLockedShift;
     bool isOneShotCtrl        = get_oneshot_mods() & MOD_MASK_CTRL || get_oneshot_locked_mods() & MOD_MASK_CTRL;
