@@ -62,9 +62,9 @@ enum {
     MC_SQ_U, MC_CR_O, MC_SQ_O, MC_SQ_I,
     MC_CR_E, MC_TL_O, MC_SQ_C, MC_SQ_E,
 
-    MC_GH,  MC_LH,  MC_PH,        
+    MC_QU,  MC_LH,  MC_PH,        
     MC_TH,  MC_CH,  MC_WH,  MC_THE,        
-    MC_CK,  MC_NH,  MC_SH,  MC_ION,      
+    MC_GH,  MC_NH,  MC_SH,  MC_ION,      
 
     MC_DAND, MC_DPIP,
     MC_EQU, MC_NEQ,

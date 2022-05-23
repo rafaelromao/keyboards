@@ -19,7 +19,7 @@
 
 // // Romak 5 - PWR;
 
-// #define ___________________ROMAK_L1____________________ XXXXXXX , KC_R    , KC_Q    , KC_P    , KC_T
+// #define ___________________ROMAK_L1____________________ XXXXXXX , KC_R    , KC_Q   , KC_P    , KC_T
 // #define ___________________ROMAK_L2____________________ KCF_MAC , LSFTT_S , LCTLT_E , LALTT_D , KC_G
 // #define ___________________ROMAK_L3____________________ KC_Z    , KC_X    , KC_Y    , LGUIT_V , KC_B
 // #define ____ROMAK_L4_____                                                             NAV_NG  , LOW_SPC
@@ -101,9 +101,9 @@
 // #define ___________________ROMAK_R3___________________ KC_N    , RGUIT_M , TD_COML , TD_DOTD , KC_BSLS
 // #define ____ROMAK_R4____                               RAI_BSP , MED_SFT
 
-#define ___________________NGRAMS_L1___________________ XXXXXXX , MC_GH   , MC_LH   , MC_PH   , XXXXXXX
+#define ___________________NGRAMS_L1___________________ XXXXXXX , MC_QU   , MC_LH   , MC_PH   , XXXXXXX
 #define ___________________NGRAMS_L2___________________ XXXXXXX , MC_TH   , MC_CH   , MC_WH   , XXXXXXX
-#define ___________________NGRAMS_L3___________________ XXXXXXX , MC_CK   , MC_NH   , MC_SH   , XXXXXXX
+#define ___________________NGRAMS_L3___________________ XXXXXXX , MC_GH   , MC_NH   , MC_SH   , XXXXXXX
 #define ____NGRAMS_L4____                                                             _______ , KC_SPC
 
 #define ___________________NGRAMS_R1___________________ XXXXXXX , MC_CR_A , MC_SQ_U , MC_SQ_I , XXXXXXX

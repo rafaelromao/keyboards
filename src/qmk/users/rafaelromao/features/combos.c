@@ -16,7 +16,7 @@ const uint16_t PROGMEM r_low_ent_combo[] = {RAI_BSP, KC_5, KC_6, COMBO_END};
 // N-Grams
 
 const uint16_t PROGMEM r_ng_the_combo[]  = {MC_TH, MC_CH, COMBO_END};
-const uint16_t PROGMEM r_ng_ion_combo[]  = {MC_CK, MC_NH, COMBO_END};
+const uint16_t PROGMEM r_ng_ion_combo[]  = {MC_GH, MC_NH, COMBO_END};
 const uint16_t PROGMEM r_ng_ao_combo[]   = {MC_TL_A, MC_TL_O, COMBO_END};
 const uint16_t PROGMEM r_ng_cao_combo[]  = {MC_SQ_A, MC_TL_A, MC_TL_O, COMBO_END};
 const uint16_t PROGMEM r_ng_oes_combo[]  = {MC_CR_E, MC_SQ_O, COMBO_END};
