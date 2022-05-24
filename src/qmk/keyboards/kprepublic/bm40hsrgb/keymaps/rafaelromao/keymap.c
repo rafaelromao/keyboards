@@ -138,23 +138,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 extern leader_t      leader;
 extern select_word_t select_word;
+int                  leds[] = {0, 5, 6, 11, 17, 18, 29, 30, 36, 37, 38, 41, 44, 45, 46};
 
 void set_rgblight_by_layer(uint32_t layer) {
-    switch (layer) {
-        case _ROMAK:
-            break;
-        case _NUMPAD:
-            rgb_matrix_set_color(4, RGB_PURPLE);
-            rgb_matrix_set_color(7, RGB_PURPLE);
-            break;
-        case _MAINTENANCE:
-            rgb_matrix_set_color(4, RGB_RED);
-            rgb_matrix_set_color(7, RGB_RED);
-            break;
-        default:
-            rgb_matrix_set_color(4, RGB_SPRINGGREEN);
-            rgb_matrix_set_color(7, RGB_SPRINGGREEN);
-            break;
+    for (int i = 0; i < 15; i++) {
+        switch (layer) {
+            case _ROMAK:
+                break;
+            case _NUMPAD:
+                rgb_matrix_set_color(leds[i], RGB_PURPLE);
+                break;
+            case _MAINTENANCE:
+                rgb_matrix_set_color(leds[i], RGB_RED);
+                break;
+            default:
+                rgb_matrix_set_color(leds[i], RGB_SPRINGGREEN);
+                break;
+        }
     }
 }
 
@@ -177,19 +177,17 @@ void rgb_matrix_indicators_user(void) {
     bool isAlt   = mods & MOD_MASK_ALT || oneshot_mods & MOD_MASK_ALT || oneshot_locked_mods & MOD_MASK_ALT;
     bool isGui   = mods & MOD_MASK_GUI || oneshot_mods & MOD_MASK_GUI || oneshot_locked_mods & MOD_MASK_GUI;
 
-    if (leader.isLeading || select_word.state != STATE_NONE) {
-        rgb_matrix_set_color(4, RGB_GREEN);
-        rgb_matrix_set_color(7, RGB_GREEN);
-    } else if (has_any_smart_case()) {
-        rgb_matrix_set_color(4, RGB_YELLOW);
-        rgb_matrix_set_color(7, RGB_YELLOW);
-    } else if (isShift) {
-        rgb_matrix_set_color(4, RGB_SPRINGGREEN);
-        rgb_matrix_set_color(7, RGB_SPRINGGREEN);
-    } else if (isCtrl || isAlt || isGui) {
-        rgb_matrix_set_color(4, RGB_WHITE);
-        rgb_matrix_set_color(7, RGB_WHITE);
-    } else {
-        set_current_layer_rgb();
+    for (int i = 0; i < 15; i++) {
+        if (leader.isLeading || select_word.state != STATE_NONE) {
+            rgb_matrix_set_color(leds[i], RGB_GREEN);
+        } else if (has_any_smart_case()) {
+            rgb_matrix_set_color(leds[i], RGB_YELLOW);
+        } else if (isShift) {
+            rgb_matrix_set_color(leds[i], RGB_SPRINGGREEN);
+        } else if (isCtrl || isAlt || isGui) {
+            rgb_matrix_set_color(leds[i], RGB_WHITE);
+        } else {
+            set_current_layer_rgb();
+        }
     }
 }
