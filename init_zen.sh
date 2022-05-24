@@ -15,9 +15,10 @@ git submodule update --init --recursive --progress
 if [[ ! -d "$KEYBOARD_HOME/.github/workflows" ]]
 then
     echo "Creating workflow symbolic link..."
+    mkdir "$KEYBOARD_HOME/.github/"
     ln -s "$ZMK_HOME/.github/workflows" "$KEYBOARD_HOME/.github"
     echo "Removing default config..."
-    rm -rf "$ZMK_HOME/config"
+    rm "$ZMK_HOME/config/corne-ish_zen.keymap"
     echo "Creating config symbolic link..."
-    ln -s "$KEYBOARD_HOME/src/zmk/config" "$ZMK_HOME/config"
+    ln -s "$KEYBOARD_HOME/src/zmk/config/rafaelromao.keymap" "$ZMK_HOME/config/corne-ish_zen.keymap"
 fi
