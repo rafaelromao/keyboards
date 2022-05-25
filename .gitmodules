@@ -1,6 +1,3 @@
 [submodule "qmk_firmware"]
 	path = qmk_firmware
 	url = https://github.com/qmk/qmk_firmware
-[submodule "zmk-config-Corne-ish-Zen"]
-	path = zmk-config-Corne-ish-Zen
-	url = https://github.com/LOWPROKB/zmk-config-Corne-ish-Zen
