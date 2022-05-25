@@ -16,7 +16,8 @@ if [[ ! -d "$KEYBOARD_HOME/.github/workflows" ]]
 then
     echo "Creating workflow symbolic link..."
     mkdir "$KEYBOARD_HOME/.github/"
-    ln -s "$ZMK_HOME/.github/workflows" "$KEYBOARD_HOME/.github"
+    mkdir "$KEYBOARD_HOME/.github/workflows"
+    ln -s "$ZMK_HOME/.github/workflows/build.yml" "$KEYBOARD_HOME/.github/workflows"
     echo "Removing default config..."
     rm "$ZMK_HOME/config/corne-ish_zen.keymap"
     echo "Creating config symbolic link..."
