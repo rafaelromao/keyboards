@@ -35,11 +35,11 @@ The following pages explain how this layout works and which features are impleme
 
 ## About this repo
 
-- This repository contains the files that are used to customize my keyboards.
-- The scripts [init_bm40.sh](init_bm40.sh) and [init_xd75.sh](init_xd75.sh) will clone [the QMK firmware](https://github.com/qmk/qmk_firmware) and symlink these keyboard files on it.
-- After [installing QMK](https://docs.qmk.fm/#/newbs_getting_started) and running the init script with `source init_bm40.sh` or `source init_xd75.sh`, [qmk cli](https://docs.qmk.fm/#/cli) should work just fine to compile and flash.
+This repository contains the keymap files that are used to customize my keyboards. The firmware files are included as submodules or external references and symlinks are used to make them see the keymap files.
 
 ## Compatibility
+
+### QMK
 
 This layout was tested with the keyboards listed below, but can be easily adapted to any ortholinear or column staggered QMK keyboard with at least 32 keys, with 2 of them on each thumb.
 
@@ -48,7 +48,20 @@ This layout was tested with the keyboards listed below, but can be easily adapte
 
 Some features are not available on all keyboards though. For instance, the BM40 does not support Dynamic Macros, while the XD75 doesn't have per key RGB.
 
-_There is a port of this keymap to ZMK, to be released soon._
+### ZMK
+
+For ZMK, only the [Corne-ish Zen](http://lowprokb.ca) is supported.
+
+## Building
+
+### QMK
+
+The scripts [init_bm40.sh](init_bm40.sh) and [init_xd75.sh](init_xd75.sh) will clone [the QMK firmware](https://github.com/qmk/qmk_firmware) and symlink these keyboard files on it.
+After [installing QMK](https://docs.qmk.fm/#/newbs_getting_started) and running the init script with `source init_bm40.sh` or `source init_xd75.sh`, [qmk cli](https://docs.qmk.fm/#/cli) should work just fine to compile and flash.
+
+### ZMK
+
+For ZMK, the recommended way to build is using GitHub Actions according to [these instructions](https://github.com/LOWPROKB/zmk-config-Corne-ish-Zen#instructions).
 
 ## References
 
