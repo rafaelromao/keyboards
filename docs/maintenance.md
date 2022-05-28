@@ -5,7 +5,6 @@ The Maintenance layer is activated holding both outer thumb keys and we have opt
 - Put the keyboard in bootloader mode (reset). 
 - Clear the eeprom.
 - Configure RGB.
-- Deactivate all layers and return to the base. 
 - Put the host computer in sleep mode, lock it or power it off.
 - Change the operating system used in keys that are OS aware, like the [Default Mod key](modifiers.md).
   - Source code: [os_toggle.c](../src/qmk/users/rafaelromao/features/os_toggle.c)
