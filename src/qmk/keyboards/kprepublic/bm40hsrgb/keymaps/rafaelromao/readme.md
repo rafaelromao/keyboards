@@ -6,7 +6,7 @@ The keyboard in the picture below is a BM40, used to design and test this layout
 
 ### QMK
 
-The qmk version recommended for this keyboard is 0.15.4, with dynamic macros disabled.
+The qmk version recommended for this keyboard is 0.17.0, with dynamic macros disabled.
 
 ### Compile
 

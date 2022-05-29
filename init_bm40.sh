@@ -24,7 +24,7 @@ then
     echo "Creating BM40 symbolic link..."
     ln -s "$KEYBOARD_HOME/src/qmk/$BM40/rafaelromao" "$QMK_HOME/$BM40"
 fi
-echo "Checking out qmk v0.15.4..."
+echo "Checking out qmk v0.17.0..."
 cd $QMK_HOME
-git checkout 0.15.4
+git checkout 0.17.0
 cd ..

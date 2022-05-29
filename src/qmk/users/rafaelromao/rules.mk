@@ -2,7 +2,6 @@ SRC += secret.c
 SRC += rafaelromao.c
 SRC += definitions/keycodes.c
 SRC += features/taphold.c
-SRC += features/custom_oneshot_mods.c
 SRC += features/smart_thumb_keys.c
 SRC += features/tapdance.c
 SRC += features/smart_case.c

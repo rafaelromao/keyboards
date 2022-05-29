@@ -6,7 +6,7 @@ The keyboard in the picture below is a XD75, used to design and test this layout
 
 ### QMK
 
-The qmk version recommended for this keyboard is 0.16.9.
+The qmk version recommended for this keyboard is 0.17.0.
 
 ### Compile
 
