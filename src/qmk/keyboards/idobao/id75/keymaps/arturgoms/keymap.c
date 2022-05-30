@@ -153,24 +153,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |_____________________________________________________________________________________________________________________________________________________|
 };
 
-// clang-format on
-
-// RGB Indicators
-
 extern leader_t      leader;
 extern select_word_t select_word;
-extern dyn_macro_t   dyn_macro;
-static bool          is_suspended;
 const int            led_count = 15;
 int                  leds[]    = {0, 5, 6, 11, 17, 18, 29, 30, 36, 37, 38, 41, 44, 45, 46};
-
-void suspend_wakeup_init_kb(void) {
-    is_suspended = false;
-}
-
-void suspend_power_down_kb(void) {
-    is_suspended = true;
-}
 
 void set_rgblight_by_layer(uint32_t layer) {
     for (int i = 0; i < led_count; i++) {
