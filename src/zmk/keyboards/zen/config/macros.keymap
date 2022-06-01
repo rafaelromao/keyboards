@@ -1,0 +1,141 @@
+/*
+*
+* Copyright (c) 2022 Rafael Romão
+* SPDX-License-Identifier: MIT
+*
+*/
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+/ {
+    ngrams {
+        ng_qu: ng_qu {
+            label = "qu";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp Q &kp U>;
+        };
+        ng_lh: ng_lh {
+            label = "lh";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp L &kp H>;
+        };
+        ng_ph: ng_ph {
+            label = "ph";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp P &kp H>;
+        };
+        ng_th: ng_th {
+            label = "th";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp T &kp H>;
+        };
+        ng_ch: ng_ch {
+            label = "ch";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp C &kp H>;
+        };
+        ng_wh: ng_wh {
+            label = "wh";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp W &kp H>;
+        };
+        ng_gh: ng_gh {
+            label = "gh";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp G &kp H>;
+        };
+        ng_nh: ng_nh {
+            label = "nh";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp N &kp H>;
+        };
+        ng_sh: ng_sh {
+            label = "sh";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp S &kp H>;
+        };
+        ac_agrv: ac_agrv {
+            label = "à";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp GRAVE &kp A>;
+        };
+        ac_acir: ac_acir {
+            label = "â";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp CARET &kp A>;
+        };
+        ac_aacu: ac_aacu {
+            label = "á";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp SINGLE_QUOTE &kp A>;
+        };
+        ac_atil: ac_atil {
+            label = "ã";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp TILDE &kp A>;
+        };
+        ac_eacu: ac_eacu {
+            label = "é";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp SINGLE_QUOTE &kp E>;
+        };
+        ac_ecir: ac_ecir {
+            label = "ê";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp CARET &kp E>;
+        };
+        ac_oacu: ac_oacu {
+            label = "ó";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp SINGLE_QUOTE &kp O>;
+        };
+        ac_ocir: ac_ocir {
+            label = "ô";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp CARET &kp O>;
+        };
+        ac_otil: ac_otil {
+            label = "õ";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp TILDE &kp O>;
+        };
+        ac_uacu: ac_uacu {
+            label = "ú";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp SINGLE_QUOTE &kp U>;
+        };
+        ac_iacu: ac_iacu {
+            label = "à";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp SINGLE_QUOTE &kp I>;
+        };
+        ac_accdi: ac_ccdi {
+            label = "ç";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp SINGLE_QUOTE &kp C>;
+        };
+    };
+};

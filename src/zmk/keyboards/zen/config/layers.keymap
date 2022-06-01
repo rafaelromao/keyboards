@@ -1,0 +1,22 @@
+/*
+*
+* Copyright (c) 2022 Rafael Romão
+* SPDX-License-Identifier: MIT
+*
+*/
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+#define ROMAK 0
+#define NUMPAD 1
+#define NGRAMS 2
+#define MACROS 3
+#define LOWER 4
+#define RAISE 5
+#define LOWER_O 6
+#define NAV_F 7
+#define MED 8
+#define NAV 9
+#define MAINT 10
