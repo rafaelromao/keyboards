@@ -1,6 +1,6 @@
 /*
 *
-* Copyright (c) 2021 Darryl deHaan
+* Copyright (c) 2022 Rafael Romão
 * SPDX-License-Identifier: MIT
 *
 */
@@ -8,52 +8,48 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <layers.dtsi>
+#include <hold-taps.dtsi>
+#include <ngrams.dtsi>
+#include <macros.dtsi>
 
 / {
         keymap {
                 compatible = "zmk,keymap";
-
                 default_layer {
-                        label = "QWERTY";
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+                        label = "ROMAK";
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+   &none           &kp R           &kp Q           &kp P           &kp Z           &kp K           &kp L           &kp U           &kp I           &none    
+   &lt MACROS F    &mt LSHFT S     &mt LCTRL E     &mt LALT D      &kp G           &kp H           &mt RALT N      &mt RCTRL A     &mt RSHFT O     &lt MACROS C 
+   &kp B           &kp X           &kp Y           &mt LGUI T      &kp V           &kp J           &mt RGUI M      &kp COMMA       &kp DOT         &kp W
+                                   &none           &msl NAV NGRAMS &lt LOWER SPACE &lt RAISE BSPC  &msk MED LSHFT  &none
                         >;
                 };
-                lower_layer {
-                        label = "NUMBER";
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+                numpad_layer {
+                        label = "NUMPAD";
                         bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                          	        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+   &none           &kp F9          &kp F8          &kp F7          &kp F12         &tog NUMPAD     &kp N7          &kp N8          &kp N9          &none    
+   &kp F15         &mt LSHFT F6    &mt LCTRL F5    &mt LALT F4     &kp F11         &kp COMMA       &mt RALT N4     &mt RCTRL N5    &mt RSHFT N6    &lt MACROS DOT 
+   &kp F14         &kp F3          &kp F2          &mt F1          &kp LGUI F10    &none           &mt RGUI N1     &kp N2          &kp N3          &kp SEMICOLON
+                                   &none           &msl NAV NGRAMS &lt LOWER SPACE &lt RAISE BSPC  &msk MED N0     &none
                         >;
                 };
-
-                raise_layer {
-                        label = "SYMBOL";
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+                ngrams_layer {
+                        label = "NGRAMS";
                         bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                    	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+   &none           &ng_qu          &ng_lh          &ng_ph          &none           &none           &ac_acir        &ac_uacu        &ac_iacu        &none    
+   &none           &ng_th          &ng_ch          &ng_wh          &none           &ac_agrv        &ac_aacu        &ac_atil        &ac_otil        &ac_ccdi 
+   &none           &ng_gh          &ng_nh          &ng_sh          &none           &none           &ac_eacu        &ac_ecir        &ac_oacu        &ac_ccir
+                                   &none           &msl NAV NGRAMS &lt LOWER SPACE &lt RAISE BSPC  &msk MED LSHFT     &none
+                        >;
+                };
+                macros_layer {
+                        label = "MACROS";
+                        bindings = <
+   &none           &kp G(S(TAB))   &kp G(TAB)      &none           &none           &none           &none         &kp G(MINUS)    &kp G(PLUS)     &none    
+   &none           &kp LSHFT       &none           &none           &none           &none           &none         &none           &none         &none  
+   &none           &none           &none           &none           &none           &none           &none         &none           &none         &none 
+                                   &none           &msl NAV NGRAMS &lt RAISE BSPC  &lt LOWER SPACE &msk MED LSHFT  &none
                         >;
                 };
         };
