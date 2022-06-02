@@ -13,7 +13,8 @@ enum {
     SCL_END, 
     BRT_CUR, 
     BRT_SQR, 
-    BRT_PAR, 
+    BRT_OPA, 
+    BRT_CPA, 
     BRT_ANG, 
     KCU_LEA, 
     REC_MAC, 
@@ -31,7 +32,8 @@ enum {
 #define TD_SCLE TD(SCL_END)
 #define TD_CURB TD(BRT_CUR)
 #define TD_SQRB TD(BRT_SQR)
-#define TD_PARB TD(BRT_PAR)
+#define TD_OPAR TD(BRT_OPA)
+#define TD_CPAR TD(BRT_CPA)
 #define TD_ANGB TD(BRT_ANG)
 #define TD_ULEA TD(KCU_LEA)
 #define TD_MACR TD(REC_MAC)
@@ -67,7 +69,7 @@ enum {
     MC_GH,  MC_NH,  MC_SH,  MC_ION,      
 
     MC_DAND, MC_DPIP,
-    MC_EQU, MC_NEQ,
+    MC_EQU, MC_NEQ, MC_PAR,
     MC_ARR, MC_DDS, MC_CPR,
 
     MC_AO, MC_CAO, MC_OES, MC_COES,

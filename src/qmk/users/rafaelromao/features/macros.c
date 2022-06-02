@@ -320,6 +320,12 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
             SEND_STRING(":%s//g");
             SEND_STRING(SS_TAP(X_LEFT) SS_TAP(X_LEFT));
             return PROCESS_RECORD_RETURN_FALSE;
+
+            // End ();
+
+        case MC_PAR:
+            SEND_STRING(SS_TAP(X_END) "();");
+            return PROCESS_RECORD_RETURN_FALSE;
     }
 
     // Accentuated characters

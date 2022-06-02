@@ -131,7 +131,7 @@
 #define ___________________MACROS_R3___________________ MC_JOIN , MC_COMT , TD_MACR , MC_DDS  , MC_CPR
 #define ____MACROS_R4____                               LOW_SPC , TD_IJRI
 
-#define ___________________LOWER_L1____________________ XXXXXXX , TD_PARB , KC_RPRN , MC_TILD , KC_BSLS
+#define ___________________LOWER_L1____________________ XXXXXXX , TD_OPAR , TD_CPAR , MC_TILD , KC_BSLS
 #define ___________________LOWER_L2____________________ BTI_RAI , MC_DQUO , MC_SQUO , MC_DAND , MC_DPIP
 #define ___________________LOWER_L3____________________ KC_AT   , TD_SQRB , KC_RBRC , KC_QUES , KC_HASH
 #define ____LOWER_L4_____                                                             _______ , _______
