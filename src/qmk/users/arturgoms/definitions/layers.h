@@ -1,7 +1,7 @@
 #pragma once
 
 typedef enum {
-  _ROMAK,
+  _COLEMAK,
   _NUMPAD,
   _NGRAMS,
   _MACROS,
