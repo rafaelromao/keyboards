@@ -163,10 +163,28 @@ void td_close_parentesis(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
-            tap_code16(KC_LPRN);
+            tap_code16(KC_RPRN);
             break;
         case TD_SINGLE_HOLD:
             tap_code16(KC_END);
+            tap_code16(KC_RPRN);
+            tap_code(KC_SCLN);
+            break;
+        default:
+            break;
+    }
+}
+
+void td_parentesis(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code16(KC_LPRN);
+            tap_code16(KC_RPRN);
+            break;
+        case TD_SINGLE_HOLD:
+            tap_code16(KC_END);
+            tap_code16(KC_LPRN);
             tap_code16(KC_RPRN);
             tap_code(KC_SCLN);
             break;
@@ -350,6 +368,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [BRT_SQR] = ACTION_TAP_DANCE_FN(td_square_brackets),
     [BRT_OPA] = ACTION_TAP_DANCE_FN(td_open_parentesis),
     [BRT_CPA] = ACTION_TAP_DANCE_FN(td_close_parentesis),
+    [BRT_PAR] = ACTION_TAP_DANCE_FN(td_parentesis),
     [BRT_ANG] = ACTION_TAP_DANCE_FN(td_angle_brackets),
     [REC_MAC] = ACTION_TAP_DANCE_FN(td_macro),
     [COM_MAC] = ACTION_TAP_DANCE_FN(td_comm_macro),
