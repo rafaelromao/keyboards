@@ -128,12 +128,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     return true;
 }
 
-// Tap-hold configuration
-
-bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
-    return get_tapping_force_hold_result(keycode);
-}
-
 // Dynamic macros
 
 void dynamic_macro_record_start_user(void) {}

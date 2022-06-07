@@ -10,13 +10,14 @@
 // Make it easier to work with tap hold
 #define IGNORE_MOD_TAP_INTERRUPT
 #define TAPPING_FORCE_HOLD_PER_KEY
+#define TAPPING_TERM_PER_KEY
 #define ONESHOT_TAP_TOGGLE 2
 #define ONESHOT_TIMEOUT 2000
 #define TAPPING_TOGGLE 1
-#define TAPPING_TERM 175
+#define TAPPING_TERM 300
 
 // Configure leader key
-#define LEADER_TIMEOUT 500
+#define LEADER_TIMEOUT 300
 #define LEADER_PER_KEY_TIMING
 #define LEADER_NO_TIMEOUT
 

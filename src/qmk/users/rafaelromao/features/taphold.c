@@ -26,7 +26,7 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
     return PROCESS_RECORD_CONTINUE;
 }
 
-bool get_tapping_force_hold_result(uint16_t keycode) {
+bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case LOW_SPC:
         case RAI_BSP:
@@ -39,5 +39,15 @@ bool get_tapping_force_hold_result(uint16_t keycode) {
             return true;
         default:
             return false;
+    }
+}
+
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case LOW_SPC:
+        case RAI_BSP:
+            return 175;
+        default:
+            return TAPPING_TERM;
     }
 }
