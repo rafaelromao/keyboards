@@ -12,6 +12,12 @@
 #define _________________LAYOUT_L3________________ KC_Z , KC_X , KC_C , KC_D , KC_V
 #define ____LAYOUT_L4_____                                                KC_LGUI, LSFT_T(KC_DEL),LT(_RAISE, KC_BSPC)
 
+#define ________LAYOUT_M0________                                KC_F6, KC_F7, KC_F8
+#define ________LAYOUT_M1________                                 KC_F6, KC_F7, KC_F8
+#define ________LAYOUT_M2________                                KC_LBRC, KC_QUOT, KC_RBRC
+#define ________LAYOUT_M3________                                KC_EQL, RGB_TOG, KC_MINS
+#define ________LAYOUT_M4________                                KC_VOLD, KC_MPLY, KC_VOLU
+
 #define ________________LAYOUT_R0________________ KC_6  , KC_7 , KC_8        , KC_9       , KC_0
 #define ________________LAYOUT_R1________________ KC_J  , KC_L  , KC_U         , KC_Y       , KC_SCLN
 #define ________________LAYOUT_R2________________ KC_M, KC_N ,  KC_E ,          KC_I ,        KC_O
