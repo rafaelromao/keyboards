@@ -27,11 +27,13 @@ then
     echo "Creating QMK userspace symbolic link..."
     ln -s "$KEYBOARD_HOME/src/qmk/users/rafaelromao" "$QMK_USER_SPACE"
 fi
+
 if [[ ! -d "$QMK_HOME/$XD75/rafaelromao" ]]
 then
     echo "Creating XD75 symbolic link..."
     ln -s "$KEYBOARD_HOME/src/qmk/$XD75/rafaelromao" "$QMK_HOME/$XD75"
 fi
+
 echo "Checking out qmk v0.17.0..."
 cd $QMK_HOME
 git checkout 0.17.0
