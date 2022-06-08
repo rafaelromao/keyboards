@@ -12,7 +12,7 @@ void disable_ngrams_layer(void) {
 }
 
 bool ngrams_timer_expired(void) {
-    return ngrams_timer.timer > 0 && (timer_elapsed(ngrams_timer.timer) > ONESHOT_TIMEOUT);
+    return ngrams_timer.timer > 0 && (timer_elapsed(ngrams_timer.timer) > CUSTOM_ONESHOT_TIMEOUT);
 }
 
 void check_ngrams_timeout(void) {

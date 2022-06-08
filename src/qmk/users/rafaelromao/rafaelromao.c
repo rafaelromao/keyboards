@@ -17,6 +17,7 @@ __attribute__((weak)) void matrix_scan_keymap(void) {}
 
 void matrix_scan_user(void) {
     check_disable_smart_case();
+    check_oneshot_mods_timeout();
     check_ngrams_timeout();
     process_leader_dictionary();
     matrix_scan_keymap();
