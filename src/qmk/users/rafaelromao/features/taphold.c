@@ -30,6 +30,10 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case LOW_SPC:
         case RAI_BSP:
+        case NAV_NG:
+        case MED_SFT:
+        case MED_ALT:
+        case MED_0:
             return false;
     }
     switch (keycode) {
@@ -46,6 +50,10 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case LOW_SPC:
         case RAI_BSP:
+        case NAV_NG:
+        case MED_SFT:
+        case MED_ALT:
+        case MED_0:
             return 175;
         default:
             return TAPPING_TERM;
