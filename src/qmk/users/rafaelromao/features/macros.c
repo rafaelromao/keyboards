@@ -192,6 +192,12 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
             tap_code(KC_E);
             tap_code(KC_S);
             return PROCESS_RECORD_RETURN_FALSE;
+        case MC_EM:
+            clear_shift();
+            tap_code16(KC_QUOT);
+            tap_code(KC_E);
+            tap_code(KC_M);
+            return PROCESS_RECORD_RETURN_FALSE;
 
             // N-Grams
 

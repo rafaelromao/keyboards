@@ -22,6 +22,7 @@ const uint16_t PROGMEM r_ng_ao_combo[]   = {MC_TL_A, MC_TL_O, COMBO_END};
 const uint16_t PROGMEM r_ng_cao_combo[]  = {MC_SQ_A, MC_TL_A, MC_TL_O, COMBO_END};
 const uint16_t PROGMEM r_ng_oes_combo[]  = {MC_CR_E, MC_SQ_O, COMBO_END};
 const uint16_t PROGMEM r_ng_coes_combo[] = {MC_SQ_E, MC_CR_E, MC_SQ_O, COMBO_END};
+const uint16_t PROGMEM r_ng_em_combo[]   = {MC_SQ_E, MC_CR_E, COMBO_END};
 
 // Qwerty
 
@@ -113,6 +114,7 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(r_ng_cao_combo, MC_CAO),
     COMBO(r_ng_oes_combo, MC_OES),
     COMBO(r_ng_coes_combo, MC_COES),
+    COMBO(r_ng_em_combo, MC_EM),
 
     // COMBO(r_qwe_ful_combo, MC_FULL),
     // COMBO(r_qwe_fin_combo, MC_FIND),
