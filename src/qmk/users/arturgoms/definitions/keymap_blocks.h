@@ -6,64 +6,64 @@
 // clang-format off
 // Layout 9 = Colemak DH 
 
-#define _________________LAYOUT_L0________________ KC_1  , KC_2 , KC_3 , KC_4 , KC_5
+#define _________________LAYOUT_L0________________ KC_1 , KC_2 , KC_3 , KC_4 , KC_5
 #define _________________LAYOUT_L1________________ KC_Q , KC_W , KC_F , KC_P , KC_B
 #define _________________LAYOUT_L2________________ KC_A , KC_R , KC_S , KC_T , KC_G
 #define _________________LAYOUT_L3________________ KC_Z , KC_X , KC_C , KC_D , KC_V
-#define ____LAYOUT_L4_____                                                KC_LGUI, LSFT_T(KC_DEL),LT(_RAISE, KC_BSPC)
+#define ____LAYOUT_L4_____                         KC_LGUI, LSFT_T(KC_DEL),LT(_RAISE, KC_BSPC)
 
-#define ________LAYOUT_M0________                                KC_F6, KC_F7, KC_F8
-#define ________LAYOUT_M1________                                 KC_F6, KC_F7, KC_F8
-#define ________LAYOUT_M2________                                KC_LBRC, KC_QUOT, KC_RBRC
-#define ________LAYOUT_M3________                                KC_EQL, RGB_TOG, KC_MINS
-#define ________LAYOUT_M4________                                KC_VOLD, KC_MPLY, KC_VOLU
+#define ________LAYOUT_M0________                 KC_MUTE, KC_VOLD, KC_VOLU
+#define ________LAYOUT_M1________                 RGB_VAD, RGB_VAI, XXXXXXX
+#define ________LAYOUT_M2________                 KC_MRWD, KC_MPLY, KC_MFFD
+#define ________LAYOUT_M3________                 KC_EQL, RGB_TOG, KC_MINS
+#define ________LAYOUT_M4________                 KC_LBRC, KC_RBRC, KC_QUOT
 
-#define ________________LAYOUT_R0________________ KC_6  , KC_7 , KC_8        , KC_9       , KC_0
-#define ________________LAYOUT_R1________________ KC_J  , KC_L  , KC_U         , KC_Y       , KC_SCLN
-#define ________________LAYOUT_R2________________ KC_M, KC_N ,  KC_E ,          KC_I ,        KC_O
-#define ________________LAYOUT_R3________________ KC_K , KC_H , KC_COMM , KC_DOT , KC_SLSH
-#define ______LAYOUT_R4______                                        LT(_LOWER, KC_SPC) , LT(_MAINTENANCE, KC_ENT), KC_RGUI
+#define ________________LAYOUT_R0________________ KC_6  , KC_7 , KC_8    , KC_9   , KC_0
+#define ________________LAYOUT_R1________________ KC_J  , KC_L , KC_U    , KC_Y   , KC_SCLN
+#define ________________LAYOUT_R2________________ KC_M  , KC_N , KC_E    , KC_I   , KC_O
+#define ________________LAYOUT_R3________________ KC_K  , KC_H , KC_COMM , KC_DOT , KC_SLSH
+#define ______LAYOUT_R4______                     LT(_LOWER, KC_SPC) , LT(_MAINTENANCE, KC_ENT), KC_RGUI
  // |_______________________________________________________________________________________________________________________________|
 
 #define __________________LOWER_L0________________ KC_F1, KC_F2, KC_F3, KC_F4, KC_F5
-#define __________________LOWER_L1________________ RESET, LSFT(KC_LEFT), LCTL(KC_LEFT), LCTL(KC_RGHT), LSFT(KC_RGHT)
-#define __________________LOWER_L2________________ KC_NO, KC_LEFT, KC_HOME, KC_END, KC_RGHT
-#define __________________LOWER_L3________________ KC_NO, KC_NO, KC_BSLS, KC_QUOT, KC_EQL
-#define _____LOWER_L4_____                                                                              KC_LGUI,  _______ , MED_0
+#define __________________LOWER_L1________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define __________________LOWER_L2________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define __________________LOWER_L3________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define _____LOWER_L4_____                         KC_LGUI,  _______ , MED_0
 
 #define ________LOWER_M0_________                                KC_F6, KC_F7, KC_F8
 
 #define _________________LOWER_R0________________ KC_F9, KC_F10, KC_F11, KC_F12, RGB_TOG
-#define _________________LOWER_R1________________  LSFT(KC_LEFT), LCTL(KC_LEFT), LCTL(KC_RGHT), LSFT(KC_RGHT), KC_NO
-#define _________________LOWER_R2________________ KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_NO
-#define _________________LOWER_R3________________ KC_LBRC, KC_COLN, KC_RBRC, KC_NO, KC_NO
-#define _______LOWER_R4______                                        _______ , _______ , KC_RGUI
+#define _________________LOWER_R1________________ LSFT(KC_LEFT), LCTL(KC_LEFT), LCTL(KC_RGHT), LSFT(KC_RGHT), XXXXXXX
+#define _________________LOWER_R2________________ KC_LEFT,       KC_DOWN,       KC_UP,         KC_RGHT,       XXXXXXX
+#define _________________LOWER_R3________________ LSFT(KC_MINS), KC_COLN,       KC_EQL,        KC_BSLS,       XXXXXXX
+#define _______LOWER_R4______                     _______ , _______ , KC_RGUI
  // |_______________________________________________________________________________________________________________________________|
 
-#define _________________RAISE_L0___________________ XXXXXXX , KC_F9   , KC_F8   , KC_F7   , KC_F12
-#define _________________RAISE_L1___________________ XXXXXXX , KC_F9   , KC_F8   , KC_F7   , KC_F12
-#define _________________RAISE_L2___________________ KC_F15  , KC_F6   , KC_F5   , KC_F4   , KC_F11
-#define _________________RAISE_L3___________________ KC_F14  , KC_F3   , KC_F2   , KC_F1   , KC_F10
-#define _____RAISE_L4_______                                                                             KC_LGUI,  _______ , _______
+#define _________________RAISE_L0___________________ KC_F1, KC_F2, KC_F3, KC_F4, KC_F5
+#define _________________RAISE_L1___________________ XXXXXXX, LSFT(KC_LBRC), KC_HOME, KC_END, LSFT(KC_RBRC)
+#define _________________RAISE_L2___________________ XXXXXXX, KC_LBRC, KC_LPRN, KC_RPRN, KC_RBRC
+#define _________________RAISE_L3___________________ XXXXXXX, KC_SLSH, LSFT(KC_EQL), KC_SCLN, KC_MINS
+#define _____RAISE_L4_______                                           KC_LGUI, _______ , _______
 
-#define _________________RAISE_R0_________________ MC_CIRC , TD_DLR  , TD_CURB , KC_RCBR , XXXXXXX
-#define _________________RAISE_R1_________________ MC_CIRC , TD_DLR  , TD_CURB , KC_RCBR , XXXXXXX
-#define _________________RAISE_R2_________________ KC_PLUS , KC_MINS , KC_EQL  , KC_EXLM , PER_LOW
-#define _________________RAISE_R3_________________ KC_ASTR , KC_SLSH , TD_ANGB , KC_GT   , KC_COLN
+#define _________________RAISE_R0_________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
+#define _________________RAISE_R1_________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
+#define _________________RAISE_R2_________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
+#define _________________RAISE_R3_________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
 #define _______RAISE_R4_______                                        _______ , _______, KC_RGUI
  // |_______________________________________________________________________________________________________________________________|
 
 #define ______________MAINTENANCE_L0_____________ XXXXXXX , RGB_VAD , RGB_VAI , RGB_RMOD , EEP_RST
-#define ______________MAINTENANCE_L1_____________ XXXXXXX , RGB_VAD , RGB_VAI , RGB_MOD , EEP_RST
-#define ______________MAINTENANCE_L2_____________ RGB_TOG , RGB_HUD , RGB_HUI , XXXXXXX , XXXXXXX
-#define ______________MAINTENANCE_L3_____________ XXXXXXX , RGB_SAD , RGB_SAI , XXXXXXX , XXXXXXX
-#define __MAINTENANCE_L4_                                                                                             KC_LGUI,  _______ , _______
+#define ______________MAINTENANCE_L1_____________ RESET ,   RGB_VAD , RGB_VAI , RGB_MOD  , EEP_RST
+#define ______________MAINTENANCE_L2_____________ RGB_TOG , RGB_HUD , RGB_HUI , XXXXXXX  , XXXXXXX
+#define ______________MAINTENANCE_L3_____________ XXXXXXX , RGB_SAD , RGB_SAI , XXXXXXX  , XXXXXXX
+#define __MAINTENANCE_L4_                                             KC_LGUI,  _______ , _______
 
-#define ______________MAINTENANCE_R0____________ RESET   , KC_PWR  , KC_SLEP , MC_LOCK , XXXXXXX
-#define ______________MAINTENANCE_R1____________ RESET   , KC_PWR  , KC_SLEP , MC_LOCK , XXXXXXX
-#define ______________MAINTENANCE_R2____________ XXXXXXX , TG_MAC  , TG_WIN  , TG_LIN  , KC_NUM
-#define ______________MAINTENANCE_R3____________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
-#define ___MAINTENANCE_R4___                                       _______ , _______, KC_RGUI
+#define ______________MAINTENANCE_R0____________ LCTL(KC_K) , LCTL(KC_H)  , LCTL(KC_L) , LCTL(KC_J) , XXXXXXX
+#define ______________MAINTENANCE_R1____________ XXXXXXX    , LSFT(KC_L)  , LSFT(KC_U) , XXXXXXX    , XXXXXXX
+#define ______________MAINTENANCE_R2____________ XXXXXXX    , XXXXXXX     , XXXXXXX    , XXXXXXX    , XXXXXXX
+#define ______________MAINTENANCE_R3____________ XXXXXXX    , XXXXXXX     , XXXXXXX    , XXXXXXX    , XXXXXXX
+#define ___MAINTENANCE_R4___                     _______ , _______, KC_RGUI
 
  // |_______________________________________________________________________________________________________________________________|
 
