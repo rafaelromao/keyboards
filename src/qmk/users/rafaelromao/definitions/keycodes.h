@@ -74,7 +74,7 @@ enum {
     MC_EQU, MC_NEQ, 
     MC_ARR, MC_DDS, MC_CPR,
 
-    MC_AO, MC_CAO, MC_OES, MC_COES, MC_EM,      
+    MC_AO, MC_CAO, MC_OES, MC_COES, MC_EM, MC_CHE,     
     
     STR_MACRO_END,
 

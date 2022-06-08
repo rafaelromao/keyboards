@@ -234,6 +234,9 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
         case MC_THE:
             SEND_STRING("the");
             return PROCESS_RECORD_RETURN_FALSE;
+        case MC_CHE:
+            SEND_STRING("che");
+            return PROCESS_RECORD_RETURN_FALSE;
         case MC_ION:
             SEND_STRING("ion");
             return PROCESS_RECORD_RETURN_FALSE;
