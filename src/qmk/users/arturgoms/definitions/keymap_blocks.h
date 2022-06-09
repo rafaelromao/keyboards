@@ -27,7 +27,7 @@
 
 #define __________________LOWER_L0________________ KC_F1, KC_F2, KC_F3, KC_F4, KC_F5
 #define __________________LOWER_L1________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
-#define __________________LOWER_L2________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define __________________LOWER_L2________________ XXXXXXX, MC_CPR, MC_SAVE, LCTL(KC_BSLS), MC_COMMENT
 #define __________________LOWER_L3________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 #define _____LOWER_L4_____                         KC_LGUI,  _______ , MED_0
 
@@ -60,8 +60,8 @@
 #define __MAINTENANCE_L4_                                             KC_LGUI,  _______ , _______
 
 #define ______________MAINTENANCE_R0____________ XXXXXXX,  XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
-#define ______________MAINTENANCE_R1____________ LCTL(KC_K) , LCTL(KC_H)  , LCTL(KC_L) , LCTL(KC_J) , XXXXXXX
-#define ______________MAINTENANCE_R2____________ XXXXXXX    , LSFT(KC_L)  , LSFT(KC_U) , XXXXXXX    , XXXXXXX
+#define ______________MAINTENANCE_R1____________ LCTL(KC_K) , LCTL(KC_H)  , LCTL(KC_L) , LCTL(KC_J) ,  LCTL(KC_U)
+#define ______________MAINTENANCE_R2____________ MC_COMMENT , LSFT(KC_L)  , LSFT(KC_U) , XXXXXXX    ,  LCTL(KC_D)
 #define ______________MAINTENANCE_R3____________ XXXXXXX    , XXXXXXX     , XXXXXXX    , XXXXXXX    , XXXXXXX
 #define ___MAINTENANCE_R4___                     _______ , _______, KC_RGUI
 

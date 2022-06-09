@@ -314,12 +314,22 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Vim replace
+            // Vim
 
         case MC_CPR:
-            SEND_STRING(":%s//g");
-            SEND_STRING(SS_TAP(X_LEFT) SS_TAP(X_LEFT));
+            SEND_STRING(":%s///g");
+            SEND_STRING(SS_TAP(X_LEFT) SS_TAP(X_LEFT) SS_TAP(X_LEFT));
             return PROCESS_RECORD_RETURN_FALSE;
+
+        case MC_COMMENT:
+            SEND_STRING(" /");
+            return PROCESS_RECORD_RETURN_FALSE;
+
+        case MC_SAVE:
+            SEND_STRING(":w");
+            tap_code(KC_ENT);
+            return PROCESS_RECORD_RETURN_FALSE;
+
     }
 
     // Accentuated characters

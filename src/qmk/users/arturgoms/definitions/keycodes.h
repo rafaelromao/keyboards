@@ -74,7 +74,9 @@ enum {
     
     STR_MACRO_END,
 
-    CUSTOM_KEYCODE_END
+    CUSTOM_KEYCODE_END,
+
+    MC_COMMENT, MC_SAVE
 };
 
 // Mod-taps
