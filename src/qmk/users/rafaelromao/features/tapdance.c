@@ -119,7 +119,6 @@ void td_curly_braces(qk_tap_dance_state_t *state, void *user_data) {
             break;
         case TD_SINGLE_HOLD:
             tap_code16(KC_END);
-            tap_code(KC_SPC);
             tap_code16(KC_LCBR);
             break;
         default:
