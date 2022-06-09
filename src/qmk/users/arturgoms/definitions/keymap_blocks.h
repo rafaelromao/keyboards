@@ -41,16 +41,16 @@
  // |_______________________________________________________________________________________________________________________________|
 
 #define _________________RAISE_L0___________________ KC_F1, KC_F2, KC_F3, KC_F4, KC_F5
-#define _________________RAISE_L1___________________ XXXXXXX, LSFT(KC_LBRC), KC_HOME, KC_END, LSFT(KC_RBRC)
-#define _________________RAISE_L2___________________ XXXXXXX, KC_LBRC, KC_LPRN, KC_RPRN, KC_RBRC
-#define _________________RAISE_L3___________________ XXXXXXX, KC_SLSH, LSFT(KC_EQL), KC_SCLN, KC_MINS
+#define _________________RAISE_L1___________________ XXXXXXX, LSFT(KC_LBRC), KC_HOME,      KC_END,  LSFT(KC_RBRC)
+#define _________________RAISE_L2___________________ XXXXXXX, KC_LBRC,       KC_LPRN,      KC_RPRN, KC_RBRC
+#define _________________RAISE_L3___________________ XXXXXXX, KC_SLSH,       LSFT(KC_EQL), KC_SCLN, KC_MINS
 #define _____RAISE_L4_______                                           KC_LGUI, _______ , _______
 
 #define _________________RAISE_R0_________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
 #define _________________RAISE_R1_________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
 #define _________________RAISE_R2_________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
 #define _________________RAISE_R3_________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
-#define _______RAISE_R4_______                                        _______ , _______, KC_RGUI
+#define _______RAISE_R4_______                     _______ , _______, KC_RGUI
  // |_______________________________________________________________________________________________________________________________|
 
 #define ______________MAINTENANCE_L0_____________ XXXXXXX , RGB_VAD , RGB_VAI , RGB_RMOD , EEP_RST
@@ -59,9 +59,9 @@
 #define ______________MAINTENANCE_L3_____________ XXXXXXX , RGB_SAD , RGB_SAI , XXXXXXX  , XXXXXXX
 #define __MAINTENANCE_L4_                                             KC_LGUI,  _______ , _______
 
-#define ______________MAINTENANCE_R0____________ LCTL(KC_K) , LCTL(KC_H)  , LCTL(KC_L) , LCTL(KC_J) , XXXXXXX
-#define ______________MAINTENANCE_R1____________ XXXXXXX    , LSFT(KC_L)  , LSFT(KC_U) , XXXXXXX    , XXXXXXX
-#define ______________MAINTENANCE_R2____________ XXXXXXX    , XXXXXXX     , XXXXXXX    , XXXXXXX    , XXXXXXX
+#define ______________MAINTENANCE_R0____________ XXXXXXX,  XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
+#define ______________MAINTENANCE_R1____________ LCTL(KC_K) , LCTL(KC_H)  , LCTL(KC_L) , LCTL(KC_J) , XXXXXXX
+#define ______________MAINTENANCE_R2____________ XXXXXXX    , LSFT(KC_L)  , LSFT(KC_U) , XXXXXXX    , XXXXXXX
 #define ______________MAINTENANCE_R3____________ XXXXXXX    , XXXXXXX     , XXXXXXX    , XXXXXXX    , XXXXXXX
 #define ___MAINTENANCE_R4___                     _______ , _______, KC_RGUI
 
