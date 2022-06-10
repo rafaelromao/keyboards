@@ -54,6 +54,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case MED_SFT:
         case MED_ALT:
         case MED_0:
+        case TD_COMM:
             return 175;
         default:
             return TAPPING_TERM;
