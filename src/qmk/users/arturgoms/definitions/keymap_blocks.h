@@ -26,9 +26,9 @@
  // |_______________________________________________________________________________________________________________________________|
 
 #define __________________LOWER_L0________________ KC_F1, KC_F2, KC_F3, KC_F4, KC_F5
-#define __________________LOWER_L1________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
-#define __________________LOWER_L2________________ XXXXXXX, MC_CPR, MC_SAVE, LCTL(KC_BSLS), MC_COMMENT
-#define __________________LOWER_L3________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define __________________LOWER_L1________________ XXXXXXX, XXXXXXX, KC_RBRC, KC_RPRN, LSFT(KC_RBRC)
+#define __________________LOWER_L2________________ XXXXXXX, KC_PIPE, KC_LBRC, KC_LPRN, LSFT(KC_LBRC)
+#define __________________LOWER_L3________________ XXXXXXX, KC_SLSH, LSFT(KC_EQL), KC_SCLN, KC_MINS
 #define _____LOWER_L4_____                         KC_LGUI,  _______ , MED_0
 
 #define ________LOWER_M0_________                                KC_F6, KC_F7, KC_F8
@@ -41,14 +41,14 @@
  // |_______________________________________________________________________________________________________________________________|
 
 #define _________________RAISE_L0___________________ KC_F1, KC_F2, KC_F3, KC_F4, KC_F5
-#define _________________RAISE_L1___________________ XXXXXXX, LSFT(KC_LBRC), KC_HOME,      KC_END,  LSFT(KC_RBRC)
-#define _________________RAISE_L2___________________ XXXXXXX, KC_LBRC,       KC_LPRN,      KC_RPRN, KC_RBRC
-#define _________________RAISE_L3___________________ XXXXXXX, KC_SLSH,       LSFT(KC_EQL), KC_SCLN, KC_MINS
+#define _________________RAISE_L1___________________ XXXXXXX, LCTL(KC_K), LCTL(KC_H), LCTL(KC_L), LCTL(KC_J)
+#define _________________RAISE_L2___________________ XXXXXXX, XXXXXXX,    LSFT(KC_L), LSFT(KC_U), LCTL(KC_BSLS)
+#define _________________RAISE_L3___________________ XXXXXXX, XXXXXXX,    MC_CPR,     MC_SAVE,    MC_COMMENT
 #define _____RAISE_L4_______                                           KC_LGUI, _______ , _______
 
 #define _________________RAISE_R0_________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
-#define _________________RAISE_R1_________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
-#define _________________RAISE_R2_________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
+#define _________________RAISE_R1_________________ LCTL(KC_U) , KC_HOME , KC_END , XXXXXXX , XXXXXXX
+#define _________________RAISE_R2_________________ LCTL(KC_D) , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
 #define _________________RAISE_R3_________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
 #define _______RAISE_R4_______                     _______ , _______, KC_RGUI
  // |_______________________________________________________________________________________________________________________________|
@@ -59,10 +59,10 @@
 #define ______________MAINTENANCE_L3_____________ XXXXXXX , RGB_SAD , RGB_SAI , XXXXXXX  , XXXXXXX
 #define __MAINTENANCE_L4_                                             KC_LGUI,  _______ , _______
 
-#define ______________MAINTENANCE_R0____________ XXXXXXX,  XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
-#define ______________MAINTENANCE_R1____________ LCTL(KC_K) , LCTL(KC_H)  , LCTL(KC_L) , LCTL(KC_J) ,  LCTL(KC_U)
-#define ______________MAINTENANCE_R2____________ MC_COMMENT , LSFT(KC_L)  , LSFT(KC_U) , XXXXXXX    ,  LCTL(KC_D)
-#define ______________MAINTENANCE_R3____________ XXXXXXX    , XXXXXXX     , XXXXXXX    , XXXXXXX    , XXXXXXX
+#define ______________MAINTENANCE_R0____________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
+#define ______________MAINTENANCE_R1____________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
+#define ______________MAINTENANCE_R2____________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
+#define ______________MAINTENANCE_R3____________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
 #define ___MAINTENANCE_R4___                     _______ , _______, KC_RGUI
 
  // |_______________________________________________________________________________________________________________________________|
