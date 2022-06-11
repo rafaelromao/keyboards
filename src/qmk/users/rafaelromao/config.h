@@ -13,8 +13,7 @@
 #define TAPPING_TERM_PER_KEY
 #define ONESHOT_TAP_TOGGLE 2
 #define TAPPING_TOGGLE 1
-#define TAPPING_TERM 300
-
+#define TAPPING_TERM 175
 #define CUSTOM_ONESHOT_TIMEOUT 2000
 
 // Configure leader key

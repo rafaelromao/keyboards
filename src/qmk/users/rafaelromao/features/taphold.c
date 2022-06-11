@@ -48,14 +48,8 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case LOW_SPC:
-        case RAI_BSP:
-        case NAV_NG:
-        case MED_SFT:
-        case MED_ALT:
-        case MED_0:
-        case TD_COMM:
-            return 175;
+        case QK_MOD_TAP ... QK_MOD_TAP_MAX:
+            return 300;
         default:
             return TAPPING_TERM;
     }
