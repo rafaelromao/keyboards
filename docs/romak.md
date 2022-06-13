@@ -21,7 +21,7 @@ Romak is a new keyboard layout, inspired by [Colemak](https://colemak.org) and [
 #### Portuguese
 ![img](../img/perf_pt.png)
 #### English
-![img](../img/perf_pt.png)
+![img](../img/perf_en.png)
 
 ### Heatmaps
 #### Portuguese
