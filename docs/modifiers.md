@@ -16,7 +16,7 @@ One-Shot Modifiers are modifier keys that, when tapped, remain active until the 
 
 ## Standard Modifiers
 
-- Stantard modifiers are available in the [Navigation](navigation.md#navigation) layer.
+- Standard modifiers are available in the [Navigation](navigation.md#navigation) layer.
 - These modifiers do not have one-shot behavior, so they can be used in situations which a tap or multi tap in a modifier key is required.
 
 ## Smart Case Key 
