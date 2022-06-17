@@ -21,7 +21,7 @@ The Navigation and Media layer can be activated holding the outer left and right
 
 ### Media
 - The Media layer gives access to [One-Shot Modifiers](modifiers.md#one-shot-modifiers), Enter and Tab.
-- The right side of this layer gives access to media keys and a shortcut to toggle the Navigation layer on.
+- The right side of this layer gives access to media keys and shortcuts to toggle the Navigation or Numpad layers on or off.
 
 ### Navigation Layer Toggle
 - A clone of the Navigation layer can be toggled on permanently using the Media layer.

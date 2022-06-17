@@ -12,11 +12,11 @@
 One-Shot Modifiers are modifier keys that, when tapped, remain active until the next key is pressed or a timeout expires. 
 - They are available in the [Media](navigation.md#media) layer and act as standard modifers when held.
 - These modifiers will be automatically deactivated after 2 seconds. 
-- They can also be activated in sticky mode, with a double tap, and remain active until manually deactivated by tapping the Default Mod thumb key.
+- They can also be activated in sticky mode, with a double tap, and remain active until manually deactivated by tapping the Dafault Mod or Smart Case thumb keys.
 
 ## Standard Modifiers
 
-- Stantard modifiers are available in the [Navigation](navigation.md#navigation) layer.
+- Standard modifiers are available in the [Navigation](navigation.md#navigation) layer.
 - These modifiers do not have one-shot behavior, so they can be used in situations which a tap or multi tap in a modifier key is required.
 
 ## Smart Case Key 
@@ -36,8 +36,6 @@ The Smart Case key is a custom key that works as Shift, Caps Word and other Smar
         - If Gui + Control is held, it activates **STRONG-KEBAB-CASE**.
         - If Shift + Control + Alt is held, it activates Caps Lock.
 - Any Smart Case option, including Caps Lock, will be automatically deactivated after 10 seconds of inactivity.
-- The Smart Case key is implemented using a custom keycode and a layer-tap.
-    - The hold behavior is kept as is, but the tap behavior is intercepted and customized.
 - Source code: [smart_case.c](../src/qmk/users/rafaelromao/features/smart_case.c)
 
 ## N-Grams Key
@@ -50,8 +48,6 @@ The Default Mod (Cmd or Ctrl) and Alt thumb keys are placed in the outer left an
 - They behaves as follows, when tapped:
     - If any modifier is active or locked in one-shot mode, all these modifiers will be deactivated.
     - If no modifier is active or locked in one-shot mode, it activates the modifier in one-shot mode.
-- They are implemented using a custom keycode and a layer-tap.
-    - The hold behavior is kept as is, but the tap behavior is intercepted and customized.
 - For the right side, this key will always activate Alt, when tapped.
 - For the left side,
     - This key allows using the same key combinations for shortcuts like Cmd/Ctrl+S, Cmd/Ctrl+C and Cmd/Ctrl+V.
