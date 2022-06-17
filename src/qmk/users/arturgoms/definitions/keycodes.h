@@ -78,7 +78,9 @@ enum {
     
     STR_MACRO_END,
 
-    CUSTOM_KEYCODE_END
+    CUSTOM_KEYCODE_END,
+
+    MC_COMMENT, MC_SAVE
 };
 
 // Mod-taps
@@ -141,14 +143,14 @@ enum {
 #define PER_LOW LT(_LOWER_OVER, KC_PERC)
 #define BTI_RAI LT(_RAISE, MC_BTIC)
 
-#define KT_2 LT(_ROMAK, KC_2)
-#define KT_P2 LT(_ROMAK, KC_P2)
-#define KT_3 LT(_ROMAK, KC_3)
-#define KT_P3 LT(_ROMAK, KC_P3)
+#define KT_2 LT(_COLEMAK, KC_2)
+#define KT_P2 LT(_COLEMAK, KC_P2)
+#define KT_3 LT(_COLEMAK, KC_3)
+#define KT_P3 LT(_COLEMAK, KC_P3)
 
 // Layer transitions
 
-#define TO_ROM TO(_ROMAK)
+#define TO_ROM TO(_COLEMAK)
 #define TG_NUM TG(_NUMPAD)
 #define TG_NAV TG(_FIXED_NAV)
 

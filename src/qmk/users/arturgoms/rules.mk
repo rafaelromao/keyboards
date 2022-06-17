@@ -1,5 +1,5 @@
 SRC += secret.c
-SRC += rafaelromao.c
+SRC += arturgoms.c
 SRC += definitions/keycodes.c
 SRC += features/taphold.c
 SRC += features/smart_thumb_keys.c

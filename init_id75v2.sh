@@ -3,7 +3,7 @@
 KEYBOARD_HOME="$(pwd)"
 export QMK_HOME="$KEYBOARD_HOME/qmk_firmware"
 USER_SPACE="$QMK_HOME/users"
-BM40="keyboards/kprepublic/bm40hsrgb/keymaps"
+ID75="keyboards/idobao/id75/keymaps"
 
 if [[ ! -d "$QMK_HOME" ]]
 then
@@ -14,15 +14,15 @@ echo "Update git sub-modules..."
 git submodule sync --recursive
 git submodule update --init --recursive --progress
 
-if [[ ! -d "$USER_SPACE/rafaelromao" ]]
+if [[ ! -d "$USER_SPACE/arturgoms" ]]
 then
     echo "Creating userspace symbolic link..."
-    ln -s "$KEYBOARD_HOME/src/qmk/users/rafaelromao" "$USER_SPACE"
+    ln -s "$KEYBOARD_HOME/src/qmk/users/arturgoms" "$USER_SPACE"
 fi
-if [[ ! -d "$QMK_HOME/$BM40/rafaelromao" ]]
+if [[ ! -d "$QMK_HOME/$ID75/arturgoms" ]]
 then
-    echo "Creating BM40 symbolic link..."
-    ln -s "$KEYBOARD_HOME/src/qmk/$BM40/rafaelromao" "$QMK_HOME/$BM40"
+    echo "Creating ID75 symbolic link..."
+    ln -s "$KEYBOARD_HOME/src/qmk/$ID75/arturgoms" "$QMK_HOME/$ID75"
 fi
 echo "Checking out qmk v0.17.0..."
 cd $QMK_HOME
