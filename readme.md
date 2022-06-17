@@ -4,7 +4,7 @@
 
 A 75 keys keyboard layout, optimized for Portuguese, English, working with numbers and software programming with VIM plugins.
 
-![img](img/overview.jpg)
+![img](img/calemak-dh.jpg)
 
 ## How this layout works?
 
