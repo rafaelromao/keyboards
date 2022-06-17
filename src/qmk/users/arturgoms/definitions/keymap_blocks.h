@@ -13,10 +13,10 @@
 #define ____LAYOUT_L4_____                         KC_LGUI, LSFT_T(KC_DEL),LT(_RAISE, KC_BSPC)
 
 #define ________LAYOUT_M0________                 KC_MUTE, KC_VOLD, KC_VOLU
-#define ________LAYOUT_M1________                 RGB_VAD, RGB_VAI, XXXXXXX
+#define ________LAYOUT_M1________                 RGB_VAD, RGB_VAI, RGB_TOG
 #define ________LAYOUT_M2________                 KC_MRWD, KC_MPLY, KC_MFFD
-#define ________LAYOUT_M3________                 KC_EQL, RGB_TOG, KC_MINS
-#define ________LAYOUT_M4________                 KC_LBRC, KC_RBRC, KC_QUOT
+#define ________LAYOUT_M3________                 KC_LBRC, KC_UP, KC_RBRC
+#define ________LAYOUT_M4________                 KC_LEFT, KC_DOWN, KC_RGHT
 
 #define ________________LAYOUT_R0________________ KC_6  , KC_7 , KC_8    , KC_9   , KC_0
 #define ________________LAYOUT_R1________________ KC_J  , KC_L , KC_U    , KC_Y   , KC_SCLN
@@ -31,10 +31,10 @@
 #define __________________LOWER_L3________________ XXXXXXX, KC_SLSH, LSFT(KC_EQL), KC_SCLN, KC_MINS
 #define _____LOWER_L4_____                         KC_LGUI,  _______ , MED_0
 
-#define ________LOWER_M0_________                                KC_F6, KC_F7, KC_F8
+#define ________LOWER_M0_________                 KC_F6, KC_F7, KC_F8
 
 #define _________________LOWER_R0________________ KC_F9, KC_F10, KC_F11, KC_F12, RGB_TOG
-#define _________________LOWER_R1________________ LSFT(KC_LEFT), LCTL(KC_LEFT), LCTL(KC_RGHT), LSFT(KC_RGHT), XXXXXXX
+#define _________________LOWER_R1________________ KC_DQUO, LCTL(KC_LEFT), LCTL(KC_RGHT), KC_QUOT, XXXXXXX
 #define _________________LOWER_R2________________ KC_LEFT,       KC_DOWN,       KC_UP,         KC_RGHT,       XXXXXXX
 #define _________________LOWER_R3________________ LSFT(KC_MINS), KC_COLN,       KC_EQL,        KC_BSLS,       XXXXXXX
 #define _______LOWER_R4______                     _______ , _______ , KC_RGUI
@@ -48,7 +48,7 @@
 
 #define _________________RAISE_R0_________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
 #define _________________RAISE_R1_________________ LCTL(KC_U) , KC_HOME , KC_END , XXXXXXX , XXXXXXX
-#define _________________RAISE_R2_________________ LCTL(KC_D) , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
+#define _________________RAISE_R2_________________ LCTL(KC_D) , LSFT(KC_LEFT) , LSFT(KC_RGHT) , XXXXXXX , XXXXXXX
 #define _________________RAISE_R3_________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
 #define _______RAISE_R4_______                     _______ , _______, KC_RGUI
  // |_______________________________________________________________________________________________________________________________|
