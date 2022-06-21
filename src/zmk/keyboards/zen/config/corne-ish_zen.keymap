@@ -40,16 +40,16 @@
    &none           &ng_qu          &ng_lh          &ng_ph          &none           &none           &ac_acir        &ac_uacu        &ac_iacu        &none    
    &none           &ng_th          &ng_ch          &ng_wh          &none           &ac_agrv        &ac_aacu        &ac_atil        &ac_otil        &ac_ccdi 
    &none           &ng_gh          &ng_nh          &ng_sh          &none           &none           &ac_eacu        &ac_ecir        &ac_oacu        &ac_ccir
-                                   &none           &msl NAV NGRAMS &lt LOWER SPACE &lt RAISE BSPC  &msk MED LSHFT     &none
+                                   &none           &trans          &kp SPACE       &kp BSPC        &trans          &none
                         >;
                 };
                 macros_layer {
                         label = "MACROS";
                         bindings = <
-   &none           &kp G(S(TAB))   &kp G(TAB)      &none           &none           &none           &none         &kp G(MINUS)    &kp G(PLUS)     &none    
+   &none           &none            &none           &none           &none           &none           &none         &kp G(MINUS)    &kp G(PLUS)     &none    
    &none           &kp LSHFT       &none           &none           &none           &none           &none         &none           &none         &none  
    &none           &none           &none           &none           &none           &none           &none         &none           &none         &none 
-                                   &none           &msl NAV NGRAMS &lt RAISE BSPC  &lt LOWER SPACE &msk MED LSHFT  &none
+                                   &none           &trans          &lt RAISE BSPC  &lt LOWER SPACE &trans        &none
                         >;
                 };
         };
