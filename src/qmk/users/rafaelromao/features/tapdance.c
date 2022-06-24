@@ -36,6 +36,24 @@ __attribute__((weak)) td_state_t dance_state(qk_tap_dance_state_t *state) {
         return TD_UNKNOWN;
 }
 
+// Enter end
+
+void td_enter_end(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code16(KC_END);
+            tap_code(KC_ENT);
+            break;
+        case TD_DOUBLE_TAP:
+        case TD_SINGLE_HOLD:
+            SEND_STRING(SS_TAP(X_DOWN) SS_DELAY(100) SS_TAP(X_END));
+            break;
+        default:
+            break;
+    }
+}
+
 // Dancing brackets
 
 void td_curly_braces(qk_tap_dance_state_t *state, void *user_data) {
@@ -279,6 +297,7 @@ void td_comm_macro(qk_tap_dance_state_t *state, void *user_data) {
 // Tap dance declarations
 
 qk_tap_dance_action_t tap_dance_actions[] = {
+    [ENT_END] = ACTION_TAP_DANCE_FN(td_enter_end),
     [SCL_END] = ACTION_TAP_DANCE_FN(td_semicolon),
     [BRT_CUR] = ACTION_TAP_DANCE_FN(td_curly_braces),
     [BRT_SQR] = ACTION_TAP_DANCE_FN(td_square_brackets),

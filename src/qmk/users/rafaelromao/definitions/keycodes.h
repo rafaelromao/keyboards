@@ -8,6 +8,7 @@
 
 enum { 
     TD_CODE_START, 
+    ENT_END, 
     SCL_END, 
     BRT_CUR, 
     BRT_SQR, 
@@ -26,6 +27,7 @@ enum {
 
 // Tap dance keycodes
 
+#define TD_EENT TD(ENT_END)
 #define TD_SCLE TD(SCL_END)
 #define TD_CURB TD(BRT_CUR)
 #define TD_SQRB TD(BRT_SQR)
@@ -51,7 +53,7 @@ enum {
     MC_SEEV, MC_RUAN, MC_BUID, MC_COMP,
     MC_AUCO, MC_NEER, MC_FIUS,
     MC_SELW, MC_SWLE, MC_SWRI, 
-    MC_SELL,
+    MC_SELL, 
     MC_JOIN, MC_COMT, MC_VIMR,
     
     MC_CAPS, MC_WORD, MC_CAML, MC_SNAK, MC_KBAB,

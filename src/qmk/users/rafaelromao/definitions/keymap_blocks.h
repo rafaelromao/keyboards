@@ -177,7 +177,7 @@
 #define ___________________MAINTENANCE_L3______________ XXXXXXX , RGB_SAD , RGB_SAI , XXXXXXX , XXXXXXX
 #define __MAINTENANCE_L4_                                                             _______ , _______
 
-#define ___________________MAINTENANCE_R1______________ RESET   , KC_PWR  , KC_SLEP , MC_LOCK , XXXXXXX
+#define ___________________MAINTENANCE_R1______________ QK_BOOT , KC_PWR  , KC_SLEP , MC_LOCK , XXXXXXX
 #define ___________________MAINTENANCE_R2______________ XXXXXXX , TG_MAC  , TG_WIN  , TG_LIN  , KC_NUM
 #define ___________________MAINTENANCE_R3______________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
 #define __MAINTENANCE_R4_                               _______ , _______
