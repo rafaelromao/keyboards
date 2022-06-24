@@ -137,9 +137,7 @@ enum {
 #define PDO_MAC LT(_MACROS, KC_PDOT)
 
 #define KT_2 LT(_ROMAK, KC_2)
-#define KT_P2 LT(_ROMAK, KC_P2)
 #define KT_3 LT(_ROMAK, KC_3)
-#define KT_P3 LT(_ROMAK, KC_P3)
 
 // Layer transitions
 #define MO_LOW MO(_LOWER)

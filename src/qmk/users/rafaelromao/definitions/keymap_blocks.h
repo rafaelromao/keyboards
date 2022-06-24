@@ -118,7 +118,7 @@
 
 #define ___________________NUMPAD_R1___________________ TG_NUM  , KC_7    , KC_8    , KC_9    , XXXXXXX
 #define ___________________NUMPAD_R2___________________ KC_COMM , AL_4    , CT_5    , SF_6    , DOT_MAC
-#define ___________________NUMPAD_R3___________________ MC_DEG  , GU_1    , KT_2    , KT_3    , KC_COLN
+#define ___________________NUMPAD_R3___________________ MC_DEG  , GU_1    , KC_2    , KC_3    , KC_COLN
 #define ____NUMPAD_R4____                               RAI_BSP , MED_0
 
 #define ___________________MACROS_L1___________________ XXXXXXX , MC_REFC , MC_QUIK , MC_PROJ , XXXXXXX
@@ -138,7 +138,7 @@
 
 #define ___________________LOWER_R1____________________ XXXXXXX , KC_7    , KC_8    , KC_9    , XXXXXXX
 #define ___________________LOWER_R2____________________ KC_COMM , KC_4    , KC_5    , KC_6    , DOT_MAC
-#define ___________________LOWER_R3____________________ MC_DEG  , KC_1    , KT_2    , KT_3    , KC_COLN
+#define ___________________LOWER_R3____________________ MC_DEG  , KC_1    , KC_2    , KC_3    , KC_COLN
 #define ____LOWER_R4_____                               _______ , MED_0
 
 #define ___________________RAISE_L1____________________ XXXXXXX , KC_F9   , KC_F8   , KC_F7   , KC_F12
