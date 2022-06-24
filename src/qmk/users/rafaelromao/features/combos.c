@@ -66,12 +66,14 @@ const uint16_t PROGMEM r_rom_pas_combo[] = {RAI_BSP, RALTT_N, RCTLT_A, COMBO_END
 // Romak 3
 
 // const uint16_t PROGMEM l_ro3_esc_combo[] = {LOW_SPC, KC_W, KC_Q, COMBO_END};
+const uint16_t PROGMEM l_rom_rai_combo[] = {LOW_SPC, LSFTT_S, COMBO_END};
 const uint16_t PROGMEM l_rom_sav_combo[] = {LOW_SPC, LSFTT_S, LCTLT_E, COMBO_END};
 const uint16_t PROGMEM l_rom_pas_combo[] = {LOW_SPC, LCTLT_E, LALTT_D, COMBO_END};
 
 // Romak 4
 
 const uint16_t PROGMEM r_rom_tab_combo[] = {RAI_BSP, KC_U, KC_I, COMBO_END};
+const uint16_t PROGMEM r_rom_low_combo[] = {RAI_BSP, RSFTT_O, COMBO_END};
 const uint16_t PROGMEM r_rom_ent_combo[] = {RAI_BSP, RCTLT_A, RSFTT_O, COMBO_END};
 const uint16_t PROGMEM r_rom_ful_combo[] = {RAI_BSP, RSFTT_O, KCC_MAC, COMBO_END};
 
@@ -149,6 +151,7 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(r_rom_pas_combo, MC_PAST),
 
     // COMBO(l_ro3_esc_combo, KC_ESC),
+    COMBO(l_rom_rai_combo, MO_RAI),
     COMBO(l_rom_sav_combo, MC_SAVE),
     COMBO(l_rom_pas_combo, MC_PAST),
 
@@ -159,6 +162,7 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(l_rom_cop_combo, MC_COPY),
 
     COMBO(r_rom_tab_combo, KC_TAB),
+    COMBO(r_rom_low_combo, MO_LOW),
     COMBO(r_rom_ent_combo, KC_ENT),
     COMBO(r_rom_ful_combo, MC_FULL),
 
@@ -168,26 +172,3 @@ combo_t key_combos[COMBO_COUNT] = {
     // COMBO(ro5_reset_combo, RESET),
     COMBO(rom_reset_combo, RESET),
 };
-
-bool get_combo_must_tap(uint16_t index, combo_t *combo) {
-    uint16_t key;
-    uint8_t  idx            = 0;
-    bool     combo_must_tap = false;
-    while ((key = pgm_read_word(&combo->keys[idx])) != COMBO_END) {
-        switch (key) {
-            case QK_MOD_TAP ... QK_MOD_TAP_MAX:
-            case QK_LAYER_TAP ... QK_LAYER_TAP_MAX:
-            case QK_MOMENTARY ... QK_MOMENTARY_MAX:
-                combo_must_tap = true;
-                break;
-            default:
-                combo_must_tap = false;
-                break;
-        }
-        if (!combo_must_tap) {
-            return false;
-        }
-        idx += 1;
-    }
-    return combo_must_tap;
-}

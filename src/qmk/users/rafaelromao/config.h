@@ -17,17 +17,16 @@
 #define CUSTOM_ONESHOT_TIMEOUT 2000
 
 // Configure leader key
-#define LEADER_TIMEOUT 300
+#define LEADER_TIMEOUT 500
 #define LEADER_PER_KEY_TIMING
 #define LEADER_NO_TIMEOUT
 
 // Configure combos
-#define COMBO_COUNT 30
+#define COMBO_COUNT 32
 #define COMBO_TERM 30
 #define EXTRA_SHORT_COMBOS
 #define COMBO_STRICT_TIMER
 #define COMBO_HOLD_TERM 175
-#define COMBO_MUST_TAP_PER_COMBO
 
 // Dynamic macros
 #define DYNAMIC_MACRO_NO_NESTING

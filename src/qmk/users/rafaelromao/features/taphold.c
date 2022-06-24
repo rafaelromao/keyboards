@@ -2,30 +2,6 @@
 
 #include "taphold.h"
 
-process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
-    bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
-    bool isOneShotShift       = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
-    bool isShifted            = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
-
-    if (record->event.pressed) {
-        if (record->tap.count > 0) {
-            switch (keycode) {
-                case PER_LOW:
-                    tap_code16(KC_PERC);
-                    return PROCESS_RECORD_RETURN_FALSE;
-                case BTI_RAI:
-                    clear_shift();
-                    tap_code(KC_GRV);
-                    if (!isShifted) {
-                        tap_code(KC_SPC);
-                    }
-                    return PROCESS_RECORD_RETURN_FALSE;
-            }
-        }
-    }
-    return PROCESS_RECORD_CONTINUE;
-}
-
 bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case LOW_SPC:

@@ -138,16 +138,14 @@ enum {
 #define DOT_MAC LT(_MACROS, KC_DOT)
 #define PDO_MAC LT(_MACROS, KC_PDOT)
 
-#define PER_LOW LT(_LOWER_OVER, KC_PERC)
-#define BTI_RAI LT(_RAISE, MC_BTIC)
-
 #define KT_2 LT(_ROMAK, KC_2)
 #define KT_P2 LT(_ROMAK, KC_P2)
 #define KT_3 LT(_ROMAK, KC_3)
 #define KT_P3 LT(_ROMAK, KC_P3)
 
 // Layer transitions
-
+#define MO_LOW MO(_LOWER)
+#define MO_RAI MO(_RAISE)
 #define TO_ROM TO(_ROMAK)
 #define TG_NUM TG(_NUMPAD)
 #define TG_NAV TG(_FIXED_NAV)

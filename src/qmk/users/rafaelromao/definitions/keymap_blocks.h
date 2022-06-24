@@ -132,7 +132,7 @@
 #define ____MACROS_R4____                               LOW_SPC , TD_IJRI
 
 #define ___________________LOWER_L1____________________ XXXXXXX , TD_OPAR , TD_CPAR , MC_TILD , KC_BSLS
-#define ___________________LOWER_L2____________________ BTI_RAI , MC_DQUO , MC_SQUO , MC_DAND , MC_DPIP
+#define ___________________LOWER_L2____________________ MC_BTIC , MC_DQUO , MC_SQUO , MC_DAND , MC_DPIP
 #define ___________________LOWER_L3____________________ KC_AT   , TD_SQRB , KC_RBRC , KC_QUES , KC_HASH
 #define ____LOWER_L4_____                                                             _______ , _______
 
@@ -147,7 +147,7 @@
 #define ____RAISE_L4_____                                                             _______ , _______
 
 #define ___________________RAISE_R1____________________ MC_CIRC , TD_DLR  , TD_CURB , KC_RCBR , XXXXXXX
-#define ___________________RAISE_R2____________________ KC_PLUS , KC_MINS , KC_EQL  , KC_EXLM , PER_LOW
+#define ___________________RAISE_R2____________________ KC_PLUS , KC_MINS , KC_EQL  , KC_EXLM , KC_PERC
 #define ___________________RAISE_R3____________________ KC_ASTR , KC_SLSH , TD_ANGB , KC_GT   , KC_COLN
 #define ____RAISE_R4_____                               _______ , _______
 
@@ -161,7 +161,7 @@
 #define ___________________MEDIA_R3____________________ TO_ROM  , KC_MPLY , KC_MPRV , KC_MNXT , HYPR_V
 #define ____MEDIA_R4_____                               KC_BSPC , _______
 
-#define ___________________NAVIGATION_L1_______________ XXXXXXX , KC_TAB  , KC_ESC  , XXXXXXX , XXXXXXX
+#define ___________________NAVIGATION_L1_______________ XXXXXXX , KC_ESC  , MC_SAVE , XXXXXXX , XXXXXXX
 #define ___________________NAVIGATION_L2_______________ XXXXXXX , KC_LSFT , KC_LCTL , KC_LALT , XXXXXXX
 #define ___________________NAVIGATION_L3_______________ XXXXXXX , XXXXXXX , XXXXXXX , KC_LGUI , XXXXXXX
 #define __NAVIGATION_L4__                                                             _______ , KC_SPC
