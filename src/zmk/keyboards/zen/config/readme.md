@@ -6,7 +6,7 @@ This folder contains the port of my keymap to ZMK.
 
 ### Supported Features
 
-The following checklist indicate the supported features, per layer:
+The following checklist indicates the supported features, per layer:
 
 - [ ] Base Layer
     - [x] MacOS Support
@@ -19,7 +19,7 @@ The following checklist indicate the supported features, per layer:
     - [x] Raise Layer Toggle
     - [x] Media Layer Toggle
     - [ ] Combos
-        - [ ] _ ; Esc Enter Tab
+        - [ ] Underscore, Semicolon, Esc, Enter, Tab
         - [ ] Copy, Paste, Save, Select All, Undo, Find, Full Screen
         - [ ] Reset
     - [ ] Smart Case Key
