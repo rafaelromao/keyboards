@@ -38,7 +38,7 @@
 - Select Word is a macro that selects the current word in the first press and extend the selection to the next word in consecutive presses.
 - If shift is held (or in one-shot mode), this macro will select the line instead, and extend the seletion to the next line in consecutive presses.
 - This macro is also OS aware and works the same way on Windows, Linux and MacOS.
-- There is a dedicated key for this macro, in the Macros layer.
+- There are dedicated keys for this macro, in the Macros layer.
 - Source Code: [select_word.c](../src/qmk/users/rafaelromao/features/select_word.c)
 
 #### Comment Lines
@@ -57,20 +57,18 @@
 - If there is a macro being recorded, using the [Default Mod Key](modifiers.md#default-mod-and-alt-thumb-keys) to deactivate one-shot modifiers (tapping it twice) will stop recording and clear the current macro.
 - Source Code: [dynamic_macro.c](../src/qmk/users/rafaelromao/features/dynamic_macro.c)
 
-#### IDE Dancing
-- Also in the Macros layers, which means, when holding any of the home row pinky keys, the outer thumb keys can be used to tap dance through some of the most common IDE shortcuts, using keybindings from IntelliJ IDEA.
-- Left Side:
-    - Tap = Build (Cmd+F9/Ctrl+F9)
-    - Double Tap = Run Everything (Ctrl+Ctrl)
-    - Triple Tap = Go To Project Window (Cmd+1/Ctrl+1)
-    - Hold = Complete Statement (Shift+Cmd+Enter/Shift+Ctrl+Enter)
-- Right Side:
-    - Tap = Quick Actions (Alt+Enter)
-    - Double Tap = Search Everywhere (Shift+Shift)
-    - Triple Tap = Find Usages (Alt+F7)
-    - Hold = Refactor This (Shift+Cmd+Alt+T/Shift+Ctrl+Alt+T)
-- Two other extremely helpful shortcuts are Ctrl+Space (Show Autocomplete Options) and F2 (Go To Next Error), but they are easy to type and don't need to be included in the dancing.
-- Source code: [tapdance.c](../src/qmk/users/rafaelromao/features/tapdance.c)
+#### IDE Macros
+- In the left side os the Macros layers, there are macros for the most common IDE shortcuts:
+    - Build (Cmd+F9/Ctrl+F9)
+    - Run Everything (Ctrl+Ctrl)
+    - Go To Project Window (Cmd+1/Ctrl+1)
+    - Complete Statement (Shift+Cmd+Enter/Shift+Ctrl+Enter)
+    - Quick Actions (Alt+Enter)
+    - Search Everywhere (Shift+Shift)
+    - Find Usages (Alt+F7)
+    - Refactor This (Shift+Cmd+Alt+T/Shift+Ctrl+Alt+T)
+    - Show Autocomplete Options (Ctrl+Space)
+    - Go To Next Error (F2)
 
 ##
 [Home](../readme.md) | 

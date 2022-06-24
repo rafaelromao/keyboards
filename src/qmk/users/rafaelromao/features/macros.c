@@ -240,15 +240,24 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
             // Conditional operators
 
         case MC_DAND:
+            if (!isShifted) {
+                tap_code(KC_SPC);
+            }
             tap_code16(KC_AMPR);
             if (!isShifted) {
                 tap_code16(KC_AMPR);
+                tap_code(KC_SPC);
             }
             return PROCESS_RECORD_RETURN_FALSE;
+
         case MC_DPIP:
+            if (!isShifted) {
+                tap_code(KC_SPC);
+            }
             tap_code16(KC_PIPE);
             if (!isShifted) {
                 tap_code16(KC_PIPE);
+                tap_code(KC_SPC);
             }
             return PROCESS_RECORD_RETURN_FALSE;
 

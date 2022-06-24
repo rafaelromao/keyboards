@@ -33,7 +33,7 @@ The following pages explain how this layout works and which features are impleme
 - [Leader Key](docs/macros.md#leader-key)
 - [Select Word](docs/macros.md#select-word)
 - [Window Swapper](docs/macros.md#window-swapper)
-- [IDE Dancing](docs/macros.md#ide-dancing)
+- [IDE Macros](docs/macros.md#ide-macros)
 
 ## About this repo
 

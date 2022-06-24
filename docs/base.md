@@ -29,9 +29,6 @@
 ### Double Comma for Leader Key
 - The Leader Key can be accessed double tapping the comma key. This allow really fast access to leader sequences.
 
-### Double Dot for New Sentences
-- A double tap in the dot key outputs dot followed by space, and activates one-shot shift. This will make it easier to enter a new sentence.
-
 ### Pontuation Hold
 - Holding a pontuation key (dot, comma or semicollon) will add it to the end of the current line.
 
