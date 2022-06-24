@@ -121,22 +121,22 @@
 #define ___________________NUMPAD_R3___________________ MC_DEG  , GU_1    , KT_2    , KT_3    , KC_COLN
 #define ____NUMPAD_R4____                               RAI_BSP , MED_0
 
-#define ___________________MACROS_L1___________________ XXXXXXX , MC_SWLE , MC_SWRI , XXXXXXX , XXXXXXX
-#define ___________________MACROS_L2___________________ XXXXXXX , KC_LSFT , XXXXXXX , MC_SELW , XXXXXXX
-#define ___________________MACROS_L3___________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
-#define ____MACROS_L4____                                                             TD_IJLE , RAI_BSP
+#define ___________________MACROS_L1___________________ XXXXXXX , MC_REFC , MC_QUIK , MC_PROJ , XXXXXXX
+#define ___________________MACROS_L2___________________ XXXXXXX , MC_SEEV , MC_RUAN , MC_BUID , XXXXXXX
+#define ___________________MACROS_L3___________________ XXXXXXX , MC_AUCO , MC_NEER , MC_FIUS , XXXXXXX
+#define ____MACROS_L4____                                                             MO_MED  , KC_BSPC
 
-#define ___________________MACROS_R1___________________ XXXXXXX , XXXXXXX , MC_MODM , MC_MODP , XXXXXXX
-#define ___________________MACROS_R2___________________ XXXXXXX , MC_ARR  , MC_EQU  , MC_NEQ  , XXXXXXX
-#define ___________________MACROS_R3___________________ MC_JOIN , MC_COMT , TD_MACR , MC_DDS  , MC_CPR
-#define ____MACROS_R4____                               LOW_SPC , TD_IJRI
+#define ___________________MACROS_R1___________________ TG_NUM  , MC_SELW , MC_SWLE , MC_SWRI , XXXXXXX
+#define ___________________MACROS_R2___________________ XXXXXXX , MC_SELL , MC_MODM , MC_MODP , XXXXXXX
+#define ___________________MACROS_R3___________________ MC_JOIN , MC_COMT , TD_MACR , MC_VIMR , XXXXXXX
+#define ____MACROS_R4____                               KC_SPC  , MO_NAV
 
 #define ___________________LOWER_L1____________________ XXXXXXX , TD_OPAR , TD_CPAR , MC_TILD , KC_BSLS
 #define ___________________LOWER_L2____________________ MC_BTIC , MC_DQUO , MC_SQUO , MC_DAND , MC_DPIP
 #define ___________________LOWER_L3____________________ KC_AT   , TD_SQRB , KC_RBRC , KC_QUES , KC_HASH
 #define ____LOWER_L4_____                                                             _______ , _______
 
-#define ___________________LOWER_R1____________________ TG_NUM  , KC_7    , KC_8    , KC_9    , XXXXXXX
+#define ___________________LOWER_R1____________________ XXXXXXX , KC_7    , KC_8    , KC_9    , XXXXXXX
 #define ___________________LOWER_R2____________________ KC_COMM , KC_4    , KC_5    , KC_6    , DOT_MAC
 #define ___________________LOWER_R3____________________ MC_DEG  , KC_1    , KT_2    , KT_3    , KC_COLN
 #define ____LOWER_R4_____                               _______ , MED_0

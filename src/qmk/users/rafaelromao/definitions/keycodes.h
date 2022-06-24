@@ -8,8 +8,6 @@
 
 enum { 
     TD_CODE_START, 
-    INJ_LEF, 
-    INJ_RIG, 
     SCL_END, 
     BRT_CUR, 
     BRT_SQR, 
@@ -28,8 +26,6 @@ enum {
 
 // Tap dance keycodes
 
-#define TD_IJLE TD(INJ_LEF)
-#define TD_IJRI TD(INJ_RIG)
 #define TD_SCLE TD(SCL_END)
 #define TD_CURB TD(BRT_CUR)
 #define TD_SQRB TD(BRT_SQR)
@@ -45,22 +41,28 @@ enum {
 #define TD_DLR TD(DLR_CUR)
 
 // Custom keycodes
+
 enum {
     CUSTOM_KEYCODE_START = SAFE_RANGE,
 
-    MC_SECRET_1, MC_SECRET_2, MC_SECRET_3,
+    MC_SECRET_1, 
 
-    MC_JOIN, MC_SELW, MC_SWLE, MC_SWRI, MC_COMT,
+    MC_REFC, MC_QUIK, MC_PROJ, 
+    MC_SEEV, MC_RUAN, MC_BUID, MC_COMP,
+    MC_AUCO, MC_NEER, MC_FIUS,
+    MC_SELW, MC_SWLE, MC_SWRI, 
+    MC_SELL,
+    MC_JOIN, MC_COMT, MC_VIMR,
+    
     MC_CAPS, MC_WORD, MC_CAML, MC_SNAK, MC_KBAB,
 
     TG_MAC, TG_WIN, TG_LIN,
-
     SP_CAP, SP_MOD, SP_NG, SP_ALT,
 
     STR_MACRO_START,
 
     MC_BTIC, MC_DQUO, MC_SQUO,
-    MC_CIRC, MC_TILD, MC_DEG,
+    MC_CIRC, MC_TILD, MC_DEG, MC_DAND, MC_DPIP,
 
     MC_GV_A, MC_CR_A, MC_TL_A, MC_SQ_A,
     MC_SQ_U, MC_CR_O, MC_SQ_O, MC_SQ_I,
@@ -69,10 +71,6 @@ enum {
     MC_QU,  MC_LH,  MC_PH,  
     MC_TH,  MC_CH,  MC_WH,  MC_THE,        
     MC_GH,  MC_NH,  MC_SH,  MC_ION,      
-
-    MC_DAND, MC_DPIP,
-    MC_EQU, MC_NEQ, 
-    MC_ARR, MC_DDS, MC_CPR,
 
     MC_AO, MC_CAO, MC_OES, MC_COES, MC_EM, MC_CHE,     
     
@@ -146,6 +144,8 @@ enum {
 // Layer transitions
 #define MO_LOW MO(_LOWER)
 #define MO_RAI MO(_RAISE)
+#define MO_NAV MO(_NAVIGATION)
+#define MO_MED MO(_MEDIA)
 #define TO_ROM TO(_ROMAK)
 #define TG_NUM TG(_NUMPAD)
 #define TG_NAV TG(_FIXED_NAV)
