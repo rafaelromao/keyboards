@@ -121,10 +121,10 @@
 #define ___________________NUMPAD_R3___________________ MC_DEG  , GU_1    , KC_2    , KC_3    , KC_COLN
 #define ____NUMPAD_R4____                               RAI_BSP , MED_0
 
-#define ___________________MACROS_L1___________________ XXXXXXX , MC_REFC , MC_QUIK , MC_PROJ , XXXXXXX
-#define ___________________MACROS_L2___________________ XXXXXXX , MC_SEEV , MC_RUAN , MC_BUID , XXXXXXX
-#define ___________________MACROS_L3___________________ XXXXXXX , MC_AUCO , MC_NEER , MC_FIUS , XXXXXXX
-#define ____MACROS_L4____                                                             MO_MED  , KC_BSPC
+#define ___________________MACROS_L1___________________ XXXXXXX , KC_ESC  , MC_BUID , MC_AUCO , MC_NEER
+#define ___________________MACROS_L2___________________ XXXXXXX , MC_SEEV , MC_RUAN , MC_QUIK , MC_COMP
+#define ___________________MACROS_L3___________________ XXXXXXX , MC_PROJ , MC_REFI , MC_FIUS , MC_REFC
+#define ____MACROS_L4____                                                             MO_NAV  , KC_BSPC
 
 #define ___________________MACROS_R1___________________ TG_NUM  , MC_SELW , MC_SWLE , MC_SWRI , XXXXXXX
 #define ___________________MACROS_R2___________________ XXXXXXX , MC_SELL , MC_MODM , MC_MODP , XXXXXXX

@@ -253,6 +253,17 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
+            // Recent Files
+
+        case MC_REFI:
+            if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
+                SEND_STRING(SS_LCTL(SS_TAP(X_E)));
+            } else {
+                SEND_STRING(SS_LGUI(SS_TAP(X_E)));
+                break;
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
             // Refactor This
 
         case MC_REFC:
@@ -326,7 +337,7 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
             // Next Error
 
         case MC_NEER:
-            tap_code(KC_F2);
+            SEND_STRING(SS_LSFT(SS_TAP(X_F2)));
             return PROCESS_RECORD_RETURN_FALSE;
 
             // Find Usages
