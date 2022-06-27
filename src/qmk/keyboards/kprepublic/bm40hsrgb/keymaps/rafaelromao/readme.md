@@ -2,7 +2,7 @@
 ### A 32 keys split keyboard layout, optimized for programmers.
 
 The keyboard in the picture below is a BM40, used to design and test this layout.
-![img](https://i.imgur.com/CyNjLVz.jpeg)
+![img](../../../../../../../img/bm40.jpg)
 
 ### QMK
 
