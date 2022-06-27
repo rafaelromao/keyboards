@@ -72,9 +72,9 @@ enum {
 
     MC_QU,  MC_LH,  MC_PH,  
     MC_TH,  MC_CH,  MC_WH,  MC_THE,        
-    MC_GH,  MC_NH,  MC_SH,  MC_ION,      
+    MC_GH,  MC_NH,  MC_SH,  MC_ION, MC_IM,    
 
-    MC_AO, MC_CAO, MC_OES, MC_COES, MC_EM, MC_CHE,     
+    MC_AO, MC_CAO, MC_OES, MC_COES, MC_EM, 
     
     STR_MACRO_END,
 

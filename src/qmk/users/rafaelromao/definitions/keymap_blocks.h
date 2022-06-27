@@ -16,7 +16,7 @@
 #define ____ROMAK_R4_____                               RAI_BSP , MED_SFT
 
 #define ___________________NGRAMS_L1___________________ XXXXXXX , MC_QU   , MC_LH   , MC_PH   , XXXXXXX
-#define ___________________NGRAMS_L2___________________ XXXXXXX , MC_TH   , MC_CH   , MC_WH   , XXXXXXX
+#define ___________________NGRAMS_L2___________________ MC_CH   , MC_TH   , MC_SQUO , MC_WH   , XXXXXXX
 #define ___________________NGRAMS_L3___________________ XXXXXXX , MC_GH   , MC_NH   , MC_SH   , XXXXXXX
 #define ____NGRAMS_L4____                                                             _______ , KC_SPC
 
