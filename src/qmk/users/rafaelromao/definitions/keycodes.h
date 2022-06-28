@@ -71,8 +71,9 @@ enum {
     MC_CR_E, MC_TL_O, MC_SQ_C, MC_SQ_E,
 
     MC_QU,  MC_LH,  MC_PH,  
-    MC_TH,  MC_CH,  MC_WH,  MC_THE,        
-    MC_GH,  MC_NH,  MC_SH,  MC_ION, MC_I,    
+    MC_CH,  MC_TH,  MC_WH,  
+    MC_GH,  MC_NH,  MC_SH,  
+    MC_I,   MC_NT,  MC_THE, MC_ION,  
 
     MC_AO, MC_CAO, MC_OES, MC_COES, MC_EM, 
     

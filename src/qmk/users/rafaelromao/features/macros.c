@@ -223,6 +223,9 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
         case MC_I:
             SEND_STRING("I' ");
             return PROCESS_RECORD_RETURN_FALSE;
+        case MC_NT:
+            SEND_STRING("n't");
+            return PROCESS_RECORD_RETURN_FALSE;
         case MC_ION:
             SEND_STRING("ion");
             return PROCESS_RECORD_RETURN_FALSE;
