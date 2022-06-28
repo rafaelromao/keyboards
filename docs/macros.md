@@ -62,13 +62,14 @@
     - Build (Cmd+F9/Ctrl+F9)
     - Run Everything (Ctrl+Ctrl)
     - Go To Project Window (Cmd+1/Ctrl+1)
+    - Recent Files (Cmd+E / Ctrl+E)
     - Complete Statement (Shift+Cmd+Enter/Shift+Ctrl+Enter)
     - Quick Actions (Alt+Enter)
     - Search Everywhere (Shift+Shift)
     - Find Usages (Alt+F7)
     - Refactor This (Shift+Cmd+Alt+T/Shift+Ctrl+Alt+T)
     - Show Autocomplete Options (Ctrl+Space)
-    - Go To Next Error (F2)
+    - Go To Next Error (Shift+F2)
 
 ##
 [Home](../readme.md) | 
