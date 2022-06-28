@@ -59,15 +59,15 @@
 
 #### IDE Macros
 - In the left side os the Macros layers, there are macros for the most common IDE shortcuts:
-    - Build (Cmd+F9/Ctrl+F9)
+    - Build (Cmd+F9 / Ctrl+F9)
     - Run Everything (Ctrl+Ctrl)
-    - Go To Project Window (Cmd+1/Ctrl+1)
+    - Go To Project Window (Cmd+1 / Ctrl+1)
     - Recent Files (Cmd+E / Ctrl+E)
-    - Complete Statement (Shift+Cmd+Enter/Shift+Ctrl+Enter)
+    - Complete Statement (Shift+Cmd+Enter / Shift+Ctrl+Enter)
     - Quick Actions (Alt+Enter)
     - Search Everywhere (Shift+Shift)
     - Find Usages (Alt+F7)
-    - Refactor This (Shift+Cmd+Alt+T/Shift+Ctrl+Alt+T)
+    - Refactor This (Shift+Cmd+Alt+T / Shift+Ctrl+Alt+T)
     - Show Autocomplete Options (Ctrl+Space)
     - Go To Next Error (Shift+F2)
 
