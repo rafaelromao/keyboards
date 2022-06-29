@@ -184,6 +184,11 @@ void td_dot(qk_tap_dance_state_t *state, void *user_data) {
             tap_code(KC_DOT);
             tap_code(KC_DOT);
             break;
+        case TD_TRIPLE_TAP:
+            tap_code(KC_DOT);
+            tap_code(KC_DOT);
+            tap_code(KC_DOT);
+            break;
         case TD_SINGLE_HOLD:
             tap_code16(KC_END);
             tap_code(KC_DOT);
