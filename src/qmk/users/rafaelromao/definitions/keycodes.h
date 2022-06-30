@@ -130,6 +130,8 @@ enum {
 
 #define LOW_SPC LT(_LOWER, KC_SPC)
 #define RAI_BSP LT(_RAISE, KC_BSPC)
+#define LOW_BSP LT(_LOWER, KC_BSPC)
+#define RAI_SPC LT(_RAISE, KC_SPC)
 
 #define KCA_MAC LT(_MACROS, KC_A)
 #define KCF_MAC LT(_MACROS, KC_F)

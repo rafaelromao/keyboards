@@ -171,33 +171,6 @@ void td_semicolon(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-// Dot
-
-void td_dot(qk_tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            tap_code(KC_DOT);
-            break;
-        case TD_DOUBLE_SINGLE_TAP:
-        case TD_DOUBLE_TAP:
-            tap_code(KC_DOT);
-            tap_code(KC_DOT);
-            break;
-        case TD_TRIPLE_TAP:
-            tap_code(KC_DOT);
-            tap_code(KC_DOT);
-            tap_code(KC_DOT);
-            break;
-        case TD_SINGLE_HOLD:
-            tap_code16(KC_END);
-            tap_code(KC_DOT);
-            break;
-        default:
-            break;
-    }
-}
-
 // Currencies
 
 void td_currencies(qk_tap_dance_state_t *state, void *user_data) {
@@ -297,6 +270,60 @@ void td_comm_macro(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
+// Dot
+
+void td_dot_finished(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+        case TD_DOUBLE_HOLD:
+            register_code(KC_DOT);
+            break;
+        case TD_DOUBLE_SINGLE_TAP:
+        case TD_DOUBLE_TAP:
+            register_code(KC_DOT);
+            register_code(KC_DOT);
+            break;
+        case TD_TRIPLE_TAP:
+            register_code(KC_DOT);
+            register_code(KC_DOT);
+            register_code(KC_DOT);
+            break;
+        case TD_SINGLE_HOLD:
+            register_code16(KC_END);
+            register_code(KC_DOT);
+            break;
+        default:
+            break;
+    }
+}
+
+void td_dot_reset(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+        case TD_DOUBLE_HOLD:
+            unregister_code(KC_DOT);
+            break;
+        case TD_DOUBLE_SINGLE_TAP:
+        case TD_DOUBLE_TAP:
+            unregister_code(KC_DOT);
+            unregister_code(KC_DOT);
+            break;
+        case TD_TRIPLE_TAP:
+            unregister_code(KC_DOT);
+            unregister_code(KC_DOT);
+            unregister_code(KC_DOT);
+            break;
+        case TD_SINGLE_HOLD:
+            unregister_code16(KC_END);
+            unregister_code(KC_DOT);
+            break;
+        default:
+            break;
+    }
+}
+
 // clang-format off
 
 // Tap dance declarations
@@ -312,8 +339,8 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [BRT_ANG] = ACTION_TAP_DANCE_FN(td_angle_brackets),
     [REC_MAC] = ACTION_TAP_DANCE_FN(td_macro),
     [COM_MAC] = ACTION_TAP_DANCE_FN(td_comm_macro),
-    [DOT_DOT] = ACTION_TAP_DANCE_FN(td_dot),
     [SDB_QUO] = ACTION_TAP_DANCE_FN(td_quotes),
-    [DLR_CUR] = ACTION_TAP_DANCE_FN(td_currencies)};
+    [DLR_CUR] = ACTION_TAP_DANCE_FN(td_currencies),
+    [DOT_DOT] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_dot_finished, td_dot_reset)};
 
 // clang-format on

@@ -38,12 +38,12 @@
 #define ___________________MACROS_L1___________________ XXXXXXX , KC_ESC  , MC_BUID , MC_AUCO , MC_NEER
 #define ___________________MACROS_L2___________________ XXXXXXX , MC_SEEV , MC_RUAN , MC_QUIK , MC_COMP
 #define ___________________MACROS_L3___________________ XXXXXXX , MC_PROJ , MC_REFI , MC_FIUS , MC_REFC
-#define ____MACROS_L4____                                                             MO_NAV  , KC_BSPC
+#define ____MACROS_L4____                                                             MO_NAV  , LOW_BSP
 
 #define ___________________MACROS_R1___________________ TG_NUM  , MC_SELW , KC_ENT  , KC_TAB  , XXXXXXX
 #define ___________________MACROS_R2___________________ TD_MACR , MC_SELL , MC_MODM , MC_MODP , XXXXXXX
 #define ___________________MACROS_R3___________________ MC_JOIN , MC_COMT , MC_SWLE , MC_SWRI , MC_VIMR
-#define ____MACROS_R4____                               KC_SPC  , MO_NAV
+#define ____MACROS_R4____                               RAI_SPC , MO_NAV
 
 #define ___________________LOWER_L1____________________ XXXXXXX , TD_OPAR , TD_CPAR , MC_TILD , KC_BSLS
 #define ___________________LOWER_L2____________________ MC_BTIC , MC_DQUO , MC_SQUO , MC_DAND , MC_DPIP
