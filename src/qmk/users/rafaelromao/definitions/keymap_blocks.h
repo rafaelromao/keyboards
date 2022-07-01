@@ -15,14 +15,14 @@
 #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , TD_COMM , TD_DOTD , KC_W
 #define ____ROMAK_R4_____                               RAI_BSP , MED_SFT
 
-#define ___________________NGRAMS_L1___________________ XXXXXXX , MC_QU   , MC_LH   , MC_PH   , XXXXXXX
-#define ___________________NGRAMS_L2___________________ MC_CH   , MC_TH   , MC_SQUO , MC_WH   , XXXXXXX
-#define ___________________NGRAMS_L3___________________ XXXXXXX , MC_GH   , MC_NH   , MC_SH   , XXXXXXX
+#define ___________________NGRAMS_L1___________________ XXXXXXX , MC_QU   , MC_LH   , MC_PH   , MC_IE
+#define ___________________NGRAMS_L2___________________ MC_GH   , MC_TH   , MC_SQUO , MC_WH   , MC_EI
+#define ___________________NGRAMS_L3___________________ MC_UI   , MC_CH   , MC_NH   , MC_SH   , MC_IU
 #define ____NGRAMS_L4____                                                             _______ , KC_SPC
 
-#define ___________________NGRAMS_R1___________________ XXXXXXX , MC_CR_A , MC_SQ_U , MC_SQ_I , XXXXXXX
-#define ___________________NGRAMS_R2___________________ MC_GV_A , MC_SQ_A , MC_TL_A , MC_TL_O , MC_SQ_C
-#define ___________________NGRAMS_R3___________________ XXXXXXX , MC_CR_E , MC_SQ_E , MC_SQ_O , MC_CR_O
+#define ___________________NGRAMS_R1___________________ XXXXXXX , MC_CR_O , MC_SQ_O , MC_TL_O , XXXXXXX
+#define ___________________NGRAMS_R2___________________ MC_GV_A , MC_CR_A , MC_SQ_A , MC_TL_A , MC_SQ_C
+#define ___________________NGRAMS_R3___________________ XXXXXXX , MC_CR_E , MC_SQ_E , MC_SQ_I , MC_SQ_U
 #define ____NGRAMS_R4____                               KC_BSPC , _______
 
 #define ___________________NUMPAD_L1___________________ XXXXXXX , KC_F9   , KC_F8   , KC_F7   , KC_F12

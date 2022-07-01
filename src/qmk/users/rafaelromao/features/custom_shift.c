@@ -2,19 +2,38 @@
 
 #include "custom_shift.h"
 
+static bool isBackspacing = false;
+
 process_record_result_t process_custom_shift(uint16_t keycode, keyrecord_t *record) {
+    bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
+    bool isOneShotShift       = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
+    bool isShifted            = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
+
+    switch (keycode) {
+            // Repeat backspace if hold RAI_BSP when shifted
+
+        case RAI_BSP:
+            if (isShifted || isBackspacing) {
+                if (record->event.pressed) {
+                    register_code(KC_BSPC);
+                    isBackspacing = true;
+                    return PROCESS_RECORD_RETURN_FALSE;
+                } else {
+                    unregister_code(KC_BSPC);
+                    isBackspacing = false;
+                    return PROCESS_RECORD_RETURN_FALSE;
+                }
+            }
+    }
+
     if (!record->event.pressed) {
         return PROCESS_RECORD_CONTINUE;
     }
 
-    bool     isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
-    bool     isOneShotShift       = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
-    bool     isShifted            = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
-    uint16_t key                  = extract_base_tapping_keycode(keycode);
+    uint16_t key = extract_base_tapping_keycode(keycode);
 
     switch (keycode) {
             // Inverted colon and semicolon
-
         case KC_COLN:
             if (isShifted) {
                 clear_shift();

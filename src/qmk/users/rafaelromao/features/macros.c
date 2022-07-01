@@ -196,19 +196,28 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
         case MC_PH:
             SEND_STRING("ph");
             return PROCESS_RECORD_RETURN_FALSE;
+        case MC_IE:
+            SEND_STRING("ie");
+            return PROCESS_RECORD_RETURN_FALSE;
 
+        case MC_UI:
+            SEND_STRING("ui");
+            return PROCESS_RECORD_RETURN_FALSE;
+        case MC_GH:
+            SEND_STRING("gh");
+            return PROCESS_RECORD_RETURN_FALSE;
         case MC_TH:
             SEND_STRING("th");
-            return PROCESS_RECORD_RETURN_FALSE;
-        case MC_CH:
-            SEND_STRING("ch");
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_WH:
             SEND_STRING("wh");
             return PROCESS_RECORD_RETURN_FALSE;
+        case MC_EI:
+            SEND_STRING("ei");
+            return PROCESS_RECORD_RETURN_FALSE;
 
-        case MC_GH:
-            SEND_STRING("gh");
+        case MC_CH:
+            SEND_STRING("ch");
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_NH:
             SEND_STRING("nh");
@@ -216,18 +225,21 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
         case MC_SH:
             SEND_STRING("sh");
             return PROCESS_RECORD_RETURN_FALSE;
-
-        case MC_THE:
-            SEND_STRING("the");
+        case MC_IU:
+            SEND_STRING("iu");
             return PROCESS_RECORD_RETURN_FALSE;
+
         case MC_I:
             SEND_STRING("I' ");
             return PROCESS_RECORD_RETURN_FALSE;
+        case MC_THE:
+            SEND_STRING("the");
+            return PROCESS_RECORD_RETURN_FALSE;
+        case MC_EU:
+            SEND_STRING("eu");
+            return PROCESS_RECORD_RETURN_FALSE;
         case MC_NT:
             SEND_STRING("n't");
-            return PROCESS_RECORD_RETURN_FALSE;
-        case MC_ION:
-            SEND_STRING("ion");
             return PROCESS_RECORD_RETURN_FALSE;
 
             // Degree symbol

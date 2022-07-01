@@ -10,7 +10,7 @@ Romak is a new keyboard layout, inspired by [Colemak](https://colemak.org) and [
 - The name Romak is a combination of my last name, **Rom**ão, and Dvor**ak**'s name.
 - Romak has a higher SFB rate than Colemak, but lower than Workman, and most of this load goes to the stronger fingers.
 
-### From Qwerty to Romak in 7 steps
+### From Qwerty to Romak in 6 steps
 
 ![img](../img/romak_transition.png)
 

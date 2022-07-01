@@ -70,10 +70,10 @@ enum {
     MC_SQ_U, MC_CR_O, MC_SQ_O, MC_SQ_I,
     MC_CR_E, MC_TL_O, MC_SQ_C, MC_SQ_E,
 
-    MC_QU,  MC_LH,  MC_PH,  
-    MC_CH,  MC_TH,  MC_WH,  
-    MC_GH,  MC_NH,  MC_SH,  
-    MC_I,   MC_NT,  MC_THE, MC_ION,  
+    MC_QU,  MC_LH,  MC_PH,  MC_IE,
+    MC_CH,  MC_TH,  MC_WH,  MC_EI,
+    MC_GH,  MC_NH,  MC_SH,  MC_UI, MC_IU,
+    MC_I,   MC_NT,  MC_THE, MC_EU,  
 
     MC_AO, MC_CAO, MC_OES, MC_COES, MC_EM, 
     
