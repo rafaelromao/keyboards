@@ -12,7 +12,7 @@
 - Source code: [macros.c](../src/qmk/users/rafaelromao/features/macros.c)
 
 #### Accentuation
-- There are dedicated accentuation keys for à á ã â é ê õ ó ô ú í and ç, which is all that is needed for Portuguese. These keys are positioned below or close to their corresponding vowels, making them easy to assimilate.
+- There are dedicated accentuation keys for à á ã â é ê õ ó ô ú í and ç, which is all that is needed for Portuguese.
 - It is also possible to accentuate using dead keys, like usually done with the US International layout. To get a dead version of ' " ^ ~ or ` to accentuate a letter, just press shift before the keys that output these symbols, then type the letter you want to accentuate. I.e.: Shift " u produces ü. 
 - Source code: [macros.c](../src/qmk/users/rafaelromao/features/macros.c)
 
