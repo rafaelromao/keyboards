@@ -5,8 +5,8 @@
 
 // clang-format off
 
-#define ___________________ROMAK_L1____________________ XXXXXXX , KC_Q    , KC_U    , KC_P    , KC_Z
-#define ___________________ROMAK_L2____________________ KCF_MAC , LSFTT_S , LCTLT_E , LALTT_D , KC_G
+#define ___________________ROMAK_L1____________________ XXXXXXX , KC_Q    , KC_U    , KC_F    , KC_Z
+#define ___________________ROMAK_L2____________________ KCP_MAC , LSFTT_S , LCTLT_E , LALTT_D , KC_G
 #define ___________________ROMAK_L3____________________ KC_B    , KC_X    , KC_Y    , LGUIT_T , KC_V
 #define ____ROMAK_L4_____                                                             NAV_NG  , LOW_SPC
 

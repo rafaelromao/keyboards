@@ -134,7 +134,7 @@ enum {
 #define RAI_SPC LT(_RAISE, KC_SPC)
 
 #define KCA_MAC LT(_MACROS, KC_A)
-#define KCF_MAC LT(_MACROS, KC_F)
+#define KCP_MAC LT(_MACROS, KC_P)
 #define KCC_MAC LT(_MACROS, KC_C)
 #define SCL_MAC LT(_MACROS, KC_SCLN)
 #define BSL_MAC LT(_MACROS, KC_UNDS)

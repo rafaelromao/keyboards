@@ -44,7 +44,7 @@ const uint16_t PROGMEM r_ng_coes_combo[] = {MC_CR_E, MC_SQ_E, MC_SQ_I, COMBO_END
 // Base
 
 const uint16_t PROGMEM l_rom_esc_combo[] = {LOW_SPC, KC_Q, KC_U, COMBO_END};
-const uint16_t PROGMEM l_rom_sal_combo[] = {LOW_SPC, KCF_MAC, LSFTT_S, COMBO_END};
+const uint16_t PROGMEM l_rom_sal_combo[] = {LOW_SPC, KCP_MAC, LSFTT_S, COMBO_END};
 const uint16_t PROGMEM l_rom_rai_combo[] = {LOW_SPC, LSFTT_S, COMBO_END};
 const uint16_t PROGMEM l_rom_sav_combo[] = {LOW_SPC, LSFTT_S, LCTLT_E, COMBO_END};
 const uint16_t PROGMEM l_rom_usc_combo[] = {KC_X, KC_Y, COMBO_END};
@@ -63,7 +63,7 @@ const uint16_t PROGMEM r_rom_fin_combo[] = {RAI_BSP, TD_DOTD, KC_W, COMBO_END};
 
 // Reset
 
-const uint16_t PROGMEM rom_reset_combo[] = {KCF_MAC, KC_B, KCC_MAC, KC_W, COMBO_END};
+const uint16_t PROGMEM rom_reset_combo[] = {KCP_MAC, KC_B, KCC_MAC, KC_W, COMBO_END};
 
 // Secret
 
