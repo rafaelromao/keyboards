@@ -86,7 +86,7 @@ enum {
 
 #define LSFTT_S LSFT_T(KC_S)
 #define RSFTT_L RSFT_T(KC_L)
-#define RSFTT_O RSFT_T(KC_O)
+#define RSFTT_R RSFT_T(KC_R)
 #define SF_F6 LSFT_T(KC_F6)
 #define SF_6 RSFT_T(KC_6)
 

@@ -133,8 +133,8 @@
             "shiftAltGr": -1
         },
         {
-            "primary": 105,
-            "shift": 73,
+            "primary": 117,
+            "shift": 85,
             "finger": 3,
             "id": 14,
             "altGr": -1,
@@ -325,10 +325,10 @@
             "shiftAltGr": -1
         },
         {
-            "primary": 117,
+            "primary": 105,
             "finger": 3,
             "id": 38,
-            "shift": 85,
+            "shift": 73,
             "altGr": -1,
             "shiftAltGr": -1
         },
