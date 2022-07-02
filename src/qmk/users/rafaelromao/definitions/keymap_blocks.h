@@ -20,9 +20,9 @@
 #define ___________________NGRAMS_L3___________________ MC_UI   , MC_CH   , MC_NH   , MC_SH   , MC_IU
 #define ____NGRAMS_L4____                                                             _______ , KC_SPC
 
-#define ___________________NGRAMS_R1___________________ XXXXXXX , MC_CR_O , MC_SQ_O , MC_TL_O , XXXXXXX
+#define ___________________NGRAMS_R1___________________ MC_OA   , MC_CR_O , MC_SQ_O , MC_TL_O , XXXXXXX
 #define ___________________NGRAMS_R2___________________ MC_GV_A , MC_CR_A , MC_SQ_A , MC_TL_A , MC_SQ_C
-#define ___________________NGRAMS_R3___________________ XXXXXXX , MC_CR_E , MC_SQ_E , MC_SQ_I , MC_SQ_U
+#define ___________________NGRAMS_R3___________________ MC_AO   , MC_CR_E , MC_SQ_E , MC_SQ_I , MC_SQ_U
 #define ____NGRAMS_R4____                               KC_BSPC , _______
 
 #define ___________________NUMPAD_L1___________________ XXXXXXX , KC_F9   , KC_F8   , KC_F7   , KC_F12

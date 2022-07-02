@@ -148,7 +148,7 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
 
             // Tild combos
 
-        case MC_AO:
+        case MC_AOT:
             clear_shift();
             tap_code16(KC_TILD);
             tap_code(KC_A);
@@ -199,6 +199,9 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
         case MC_IE:
             SEND_STRING("ie");
             return PROCESS_RECORD_RETURN_FALSE;
+        case MC_OA:
+            SEND_STRING("oa");
+            return PROCESS_RECORD_RETURN_FALSE;
 
         case MC_UI:
             SEND_STRING("ui");
@@ -227,6 +230,9 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_IU:
             SEND_STRING("iu");
+            return PROCESS_RECORD_RETURN_FALSE;
+        case MC_AO:
+            SEND_STRING("ao");
             return PROCESS_RECORD_RETURN_FALSE;
 
         case MC_I:
