@@ -2,7 +2,7 @@
 
 #include "custom_shift.h"
 
-static bool isBackspacing = false;
+static bool isRepeating = false;
 
 process_record_result_t process_custom_shift(uint16_t keycode, keyrecord_t *record) {
     bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
@@ -13,14 +13,28 @@ process_record_result_t process_custom_shift(uint16_t keycode, keyrecord_t *reco
             // Repeat backspace if hold RAI_BSP when shifted
 
         case RAI_BSP:
-            if (isShifted || isBackspacing) {
+            if (isShifted || isRepeating) {
                 if (record->event.pressed) {
                     register_code(KC_BSPC);
-                    isBackspacing = true;
+                    isRepeating = true;
                     return PROCESS_RECORD_RETURN_FALSE;
                 } else {
                     unregister_code(KC_BSPC);
-                    isBackspacing = false;
+                    isRepeating = false;
+                    return PROCESS_RECORD_RETURN_FALSE;
+                }
+            }
+            // Repeat space if hold LOW_SPC when shifted
+
+        case LOW_SPC:
+            if (isShifted || isRepeating) {
+                if (record->event.pressed) {
+                    register_code(KC_SPC);
+                    isRepeating = true;
+                    return PROCESS_RECORD_RETURN_FALSE;
+                } else {
+                    unregister_code(KC_SPC);
+                    isRepeating = false;
                     return PROCESS_RECORD_RETURN_FALSE;
                 }
             }
