@@ -61,7 +61,7 @@ Despite the higher SFB rate, total finger effort is lesser in Romak than in Cole
 - The [N-Grams and Accents](macros.md#n-grams-and-accents) layer extend the Romak base layer to give easy access to common English and Portuguese n-grams and Portuguese accentuated characters. Getting used to this layer will avoid some uncomfortable bigrams.
 - The [Lower and Raise](symbols.md) layers give access to function keys, symbols and numbers. The symbols are arranged to make them easy to use in software programming, with VIM, and math operations.
 - The [Macros](macros.md) layer gives access to common programming macros and other useful macro related features.
-- The [Numpad](symbols.md#numpad-layer) layer gives access to function keys and numbers, in the same layer, can is toogled on/off, instead of temporarily activated.
+- The [Numpad](symbols.md#numpad-layer) layer gives access to function keys and numbers, in the same layer, and is toogled on/off instead of temporarily activated.
 
 ##
 [Home](../readme.md) | 
