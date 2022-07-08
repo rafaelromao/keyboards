@@ -19,9 +19,9 @@
                 default_layer {
                         label = "ROMAK";
                         bindings = <
-   &none           &kp R           &kp Q           &kp P           &kp Z           &kp K           &kp L           &kp U           &kp I           &none    
-   &lt MACROS F    &mt LSHFT S     &mt LCTRL E     &mt LALT D      &kp G           &kp H           &mt RALT N      &mt RCTRL A     &mt RSHFT O     &lt MACROS C 
-   &kp B           &kp X           &kp Y           &mt LGUI T      &kp V           &kp J           &mt RGUI M      &kp COMMA       &kp DOT         &kp W
+   &none           &kp Q           &kp U           &kp F           &kp Z           &kp K           &kp L           &kp O           &kp V           &none    
+   &lt MACROS P    &mt LSHFT S     &mt LCTRL E     &mt LALT D      &kp G           &kp H           &mt RALT N      &mt RCTRL A     &mt RSHFT R     &lt MACROS C 
+   &kp B           &kp Y           &kp I           &mt LGUI T      &kp X           &kp J           &mt RGUI M      &kp COMMA       &kp DOT         &kp W
                                    &none           &msl NAV NGRAMS &lt LOWER SPACE &lt RAISE BSPC  &msk MED LSHFT  &none
                         >;
                 };
@@ -37,9 +37,9 @@
                 ngrams_layer {
                         label = "NGRAMS";
                         bindings = <
-   &none           &ng_qu          &ng_lh          &ng_ph          &none           &none           &ac_acir        &ac_uacu        &ac_iacu        &none    
-   &none           &ng_th          &ng_ch          &ng_wh          &none           &ac_agrv        &ac_aacu        &ac_atil        &ac_otil        &ac_ccdi 
-   &none           &ng_gh          &ng_nh          &ng_sh          &none           &none           &ac_eacu        &ac_ecir        &ac_oacu        &ac_ccir
+   &none           &ng_qu          &ng_lh          &ng_ph          &none           &none           &ac_ocir        &ac_oacu        &ac_otil        &none    
+   &ng_gh          &ng_th          &mc_sqo         &ng_wh          &none           &ac_agrv        &ac_acir        &ac_aacu        &ac_atil        &ac_ccdi 
+   &none           &ng_ch          &ng_nh          &ng_sh          &none           &none           &ac_ecir        &ac_eacu        &ac_iacu        &ac_uacu
                                    &none           &trans          &kp SPACE       &kp BSPC        &trans          &none
                         >;
                 };
