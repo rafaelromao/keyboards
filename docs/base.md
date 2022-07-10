@@ -2,7 +2,7 @@
 
 ## Layout Overview
 - This is a 32 keys split layout, 3x5+2 keys on each side, minus the two top row pinky keys.
-- This layout works well with the OS configured for the US International keyboard.
+- This layout works well with the OS configured for US International keyboards.
 - It was designed mostly for coding and typing in Portuguese and English.
 - It reduces the usage of pinkies and considers the right hand as the dominant hand.
 - The base layer is [Romak](romak.md), a new keyboard layout, inspired by [Colemak](https://colemak.org) and [BEAKL](https://ieants.cc/beakl).
