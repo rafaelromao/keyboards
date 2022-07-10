@@ -68,8 +68,8 @@
     - Search Everywhere (Shift+Shift)
     - Find Usages (Alt+F7)
     - Refactor This (Shift+Cmd+Alt+T / Shift+Ctrl+Alt+T)
-    - Show Autocomplete Options (Ctrl+Space)
-    - Go To Next Error (Shift+F2)
+    - Smart Autocomplete Options (Ctrl+Shift+Space) - A long press will show regular Autocomplete Options (Ctrl+Space)
+    - Go To Next Error (Shift+F2) - A long press will Go To Next Warning (F2)
 
 ##
 [Home](../readme.md) | 
