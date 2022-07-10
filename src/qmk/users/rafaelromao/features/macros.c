@@ -94,6 +94,12 @@ bool is_accentuated_keycode(uint16_t keycode) {
     return false;
 }
 
+static uint16_t pressed_time = 0;
+
+bool is_long_press(void) {
+    return timer_elapsed(pressed_time) > TAPPING_TERM;
+}
+
 process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
     if (!record->event.pressed && keycode != NAV_NG && keycode != MED_SFT) {
         disable_ngrams_layer();
@@ -104,7 +110,8 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
     bool isShifted            = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
     bool isWindowsOrLinux     = os.type == WINDOWS || os.type == LINUX;
 
-    if (!record->event.pressed) {
+    if (record->event.pressed) {
+        pressed_time = timer_read();
         return PROCESS_RECORD_CONTINUE;
     }
 
@@ -328,13 +335,21 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
             // Autocomplete Options
 
         case MC_AUCO:
-            SEND_STRING(SS_LCTL(" "));
+            if (is_long_press()) {
+                SEND_STRING(SS_LCTL(" "));
+            } else {
+                SEND_STRING(SS_LCTL(SS_LSFT(" ")));
+            }
             return PROCESS_RECORD_RETURN_FALSE;
 
             // Next Error
 
         case MC_NEER:
-            SEND_STRING(SS_LSFT(SS_TAP(X_F2)));
+            if (is_long_press()) {
+                SEND_STRING(SS_TAP(X_F2));
+            } else {
+                SEND_STRING(SS_LSFT(SS_TAP(X_F2)));
+            }
             return PROCESS_RECORD_RETURN_FALSE;
 
             // Find Usages
