@@ -28,7 +28,7 @@ Symbols and Numbers are primarily available in the two classic Lower and Raise l
 - Holding the open curly braces key will insert it in the end of the line, after a space. It is usefull when coding, particularly when using VIM plugins. A similar behavior is also implemented for the semicolon key, but without the extra space.
 
  ### Numpad Layer
-- A dedicated Numpad layer can be activated from the Lower or Media layers.
+- A dedicated Numpad layer can be activated from the Macros or Media layers.
 - The left side of the Numpad layer contains function keys.
 - The right side of the Numpad layer contains number keys.
 
