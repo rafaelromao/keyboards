@@ -1,7 +1,7 @@
 # rafaelromao's keyboard layout
 
 ## Layout Overview
-- This is a 32 keys split layout, 3x5+2, optimized for programmers.
+- This is a 32 keys split layout, 3x5+2 keys on each side, minus the two top row pinky keys.
 - This layout works well with the OS configured for the US International keyboard.
 - It was designed mostly for coding and typing in Portuguese and English.
 - And reduces the load on pinkies and considers the right hand as the dominant hand.
