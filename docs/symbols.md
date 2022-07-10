@@ -31,6 +31,7 @@ Symbols and Numbers are primarily available in the two classic Lower and Raise l
 - A dedicated Numpad layer can be activated from the Macros or Media layers.
 - The left side of the Numpad layer contains function keys.
 - The right side of the Numpad layer contains number keys.
+- Home block mods are also available on both sides of the Numpad layer.
 
 ##
 [Home](../readme.md) | 
