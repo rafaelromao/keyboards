@@ -15,8 +15,7 @@
 #define MACROS 3
 #define LOWER 4
 #define RAISE 5
-#define LOWER_O 6
-#define NAV_F 7
-#define MED 8
-#define NAV 9
-#define MAINT 10
+#define NAV_F 6
+#define MED 7
+#define NAV 8
+#define MAINT 9

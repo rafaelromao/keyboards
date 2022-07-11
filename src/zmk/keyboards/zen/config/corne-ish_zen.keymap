@@ -46,10 +46,64 @@
                 macros_layer {
                         label = "MACROS";
                         bindings = <
-   &none           &none            &none           &none           &none           &none           &none         &kp G(MINUS)    &kp G(PLUS)     &none    
-   &none           &kp LSHFT       &none           &none           &none           &none           &none         &none           &none         &none  
+   &none           &none           &none           &none           &none           &none           &none         &none           &none         &none    
+   &none           &none           &none           &none           &none           &none           &none         &none           &none         &none  
    &none           &none           &none           &none           &none           &none           &none         &none           &none         &none 
                                    &none           &trans          &lt RAISE BSPC  &lt LOWER SPACE &trans        &none
+                        >;
+                };
+                lower_layer {
+                        label = "LOWER";
+                        bindings = <
+   &none           &none           &none           &none           &none           &none           &none         &none           &none         &none    
+   &none           &none           &none           &none           &none           &none           &none         &none           &none         &none  
+   &none           &none           &none           &none           &none           &none           &none         &none           &none         &none 
+                                   &none           &trans          &trans          &trans          &trans        &none
+                        >;
+                };
+                raise_layer {
+                        label = "RAISE";
+                        bindings = <
+   &none           &none           &none           &none           &none           &none           &none         &none           &none         &none    
+   &none           &none           &none           &none           &none           &none           &none         &none           &none         &none  
+   &none           &none           &none           &none           &none           &none           &none         &none           &none         &none 
+                                   &none           &trans          &trans          &trans          &trans        &none
+                        >;
+                };
+                fixed_navigation_layer {
+                        label = "NAVIGATION";
+                        bindings = <
+   &none           &none           &none           &none           &none           &none           &none         &none           &none         &none    
+   &none           &none           &none           &none           &none           &none           &none         &none           &none         &none  
+   &none           &none           &none           &none           &none           &none           &none         &none           &none         &none 
+                                   &none           &trans          &trans          &trans          &trans        &none
+                        >;
+                };
+                media_layer {
+                        label = "MEDIA";
+                        bindings = <
+   &none           &none           &none           &none           &none           &none           &none         &none           &none         &none    
+   &none           &none           &none           &none           &none           &none           &none         &none           &none         &none  
+   &none           &none           &none           &none           &none           &none           &none         &none           &none         &none 
+                                   &none           &trans          &trans          &trans          &trans        &none
+                        >;
+                };
+                navigation_layer {
+                        label = "NAVIGATION";
+                        bindings = <
+   &none           &none           &none           &none           &none           &none           &none         &none           &none         &none    
+   &none           &none           &none           &none           &none           &none           &none         &none           &none         &none  
+   &none           &none           &none           &none           &none           &none           &none         &none           &none         &none 
+                                   &none           &trans          &trans          &trans          &trans        &none
+                        >;
+                };
+                maintenance_layer {
+                        label = "MAINTENANCE";
+                        bindings = <
+   &none           &none           &none           &none           &none           &none           &none         &none           &none         &none    
+   &none           &none           &none           &none           &none           &none           &none         &none           &none         &none  
+   &none           &none           &none           &none           &none           &none           &none         &none           &none         &none 
+                                   &none           &trans          &trans          &trans          &trans        &none
                         >;
                 };
         };
