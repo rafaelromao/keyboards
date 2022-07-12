@@ -147,7 +147,6 @@ enum {
 // Layer transitions
 #define MO_LOW MO(_LOWER)
 #define MO_RAI MO(_RAISE)
-#define MO_NAV MO(_NAVIGATION)
 #define MO_MED MO(_MEDIA)
 #define TO_ROM TO(_ROMAK)
 #define TG_NUM TG(_NUMPAD)
