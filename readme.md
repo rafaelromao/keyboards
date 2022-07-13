@@ -50,6 +50,8 @@ This layout was tested with the keyboards listed below, but can be easily adapte
 
 Some features are not available on all keyboards though. For instance, the BM40 does not support Dynamic Macros, while the XD75 doesn't have per key RGB.
 
+_There is a port of this keymap to ZMK, to be released soon._
+
 ## References
 
 Most features implemented here were based on the work referenced below.
