@@ -18,7 +18,7 @@
 
 ### Macros
 - A Macros layer can be activated holding any of the home row pinky keys.
-- The Macros layer not only gives access to some common programming macros but also some complex ones, like Select Word, Window Swapper and the ability to record and play Dynamic Macros, as well as the inverted space and backspace keys and the IDE Dancing feature.
+- The Macros layer not only gives access to some common programming macros and shortcuts but also some complex ones, like Select Word, Window Swapper and the ability to record and play Dynamic Macros, as well as the inverted space and backspace keys.
 
 #### Zoom Controls
 - In the right side of the Macros layer, there are keys to control Zoom, which can be either Cmd+ and Cmd- or Ctrl+ and Ctrl-, according to the operating system that is selected.
