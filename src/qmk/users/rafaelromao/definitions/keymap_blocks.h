@@ -92,8 +92,18 @@
 #define __MAINTENANCE_L4_                                                             _______ , _______
 
 #define ___________________MAINTENANCE_R1______________ QK_BOOT , KC_PWR  , KC_SLEP , MC_LOCK , XXXXXXX
-#define ___________________MAINTENANCE_R2______________ XXXXXXX , TG_MAC  , TG_WIN  , TG_LIN  , KC_NUM
+#define ___________________MAINTENANCE_R2______________ TG_LOCK , TG_MAC  , TG_WIN  , TG_LIN  , KC_NUM
 #define ___________________MAINTENANCE_R3______________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
 #define __MAINTENANCE_R4_                               _______ , _______
+
+#define _______________________LOCK____L1______________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
+#define _______________________LOCK____L2______________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
+#define _______________________LOCK____L3______________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
+#define ______LOCK____L4_                                                             _______ , XXXXXXX
+
+#define _______________________LOCK____R1______________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
+#define _______________________LOCK____R2______________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
+#define _______________________LOCK____R3______________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
+#define ______LOCK____R4_                               XXXXXXX , _______
 
 // clang-format on

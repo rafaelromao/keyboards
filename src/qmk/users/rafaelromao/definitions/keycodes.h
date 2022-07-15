@@ -148,6 +148,7 @@ enum {
 #define TO_ROM TO(_ROMAK)
 #define TG_NUM TG(_NUMPAD)
 #define TG_NAV TG(_FIXED_NAV)
+#define TG_LOCK TG(_LOCK)
 
 // Custom Shortcuts
 
