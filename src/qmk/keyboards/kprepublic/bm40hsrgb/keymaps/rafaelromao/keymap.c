@@ -142,6 +142,11 @@ const int            led_count = 15;
 int                  leds[]    = {0, 5, 6, 11, 17, 18, 29, 30, 36, 37, 38, 41, 44, 45, 46};
 
 void set_rgblight_by_layer(uint32_t layer) {
+    if (layer == _LOCK) {
+        rgb_matrix_disable();
+    } else {
+        rgb_matrix_enable();
+    }
     for (int i = 0; i < led_count; i++) {
         switch (layer) {
             case _ROMAK:

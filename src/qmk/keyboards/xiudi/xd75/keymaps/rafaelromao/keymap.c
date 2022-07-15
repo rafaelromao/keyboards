@@ -179,6 +179,9 @@ void set_rgblight_by_layer(uint32_t layer) {
         case _MAINTENANCE:
             rgblight_reload_from_eeprom();
             break;
+        case _LOCK:
+            rgblight_setrgb(RGB_OFF);
+            break;
         case _NUMPAD:
             rgblight_setrgb(RGB_PURPLE);
             break;
