@@ -80,7 +80,8 @@ enum {
 
     CUSTOM_KEYCODE_END,
 
-    MC_COMMENT, MC_SAVE
+    MC_COMMENT, MC_SAVE, MC_DELETE_WORD, MC_QUIT,
+    MC_VISTA
 };
 
 // Mod-taps

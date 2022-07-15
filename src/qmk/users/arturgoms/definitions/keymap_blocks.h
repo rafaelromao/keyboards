@@ -41,15 +41,15 @@
  // |_______________________________________________________________________________________________________________________________|
 
 #define _________________RAISE_L0___________________ KC_F1, KC_F2, KC_F3, KC_F4, KC_F5
-#define _________________RAISE_L1___________________ XXXXXXX, LCTL(KC_K), LCTL(KC_H), LCTL(KC_L), LCTL(KC_J)
+#define _________________RAISE_L1___________________ MC_QUIT, LCTL(KC_K), LCTL(KC_H), LCTL(KC_L), LCTL(KC_J)
 #define _________________RAISE_L2___________________ XXXXXXX, XXXXXXX,    LSFT(KC_L), LSFT(KC_U), LCTL(KC_BSLS)
-#define _________________RAISE_L3___________________ XXXXXXX, XXXXXXX,    MC_CPR,     MC_SAVE,    MC_COMMENT
+#define _________________RAISE_L3___________________ XXXXXXX, XXXXXXX,    MC_CPR,     MC_DELETE_WORD,    MC_COMMENT
 #define _____RAISE_L4_______                                           KC_LGUI, _______ , _______
 
 #define _________________RAISE_R0_________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
 #define _________________RAISE_R1_________________ LCTL(KC_U) , KC_HOME , KC_END , XXXXXXX , XXXXXXX
 #define _________________RAISE_R2_________________ LCTL(KC_D) , LSFT(KC_LEFT) , LSFT(KC_RGHT) , XXXXXXX , XXXXXXX
-#define _________________RAISE_R3_________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
+#define _________________RAISE_R3_________________ MC_SAVE , MC_VISTA, XXXXXXX , XXXXXXX , XXXXXXX
 #define _______RAISE_R4_______                     _______ , _______, KC_RGUI
  // |_______________________________________________________________________________________________________________________________|
 

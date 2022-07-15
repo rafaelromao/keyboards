@@ -323,22 +323,41 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Vim
+      // Vim
 
         case MC_CPR:
+            tap_code(KC_ESCAPE);
             SEND_STRING(":%s///g");
             SEND_STRING(SS_TAP(X_LEFT) SS_TAP(X_LEFT) SS_TAP(X_LEFT));
             return PROCESS_RECORD_RETURN_FALSE;
 
         case MC_COMMENT:
+            tap_code(KC_ESCAPE);
             SEND_STRING(" /");
             return PROCESS_RECORD_RETURN_FALSE;
 
+        case MC_DELETE_WORD:
+            tap_code(KC_D);
+            tap_code(KC_W);
+            return PROCESS_RECORD_RETURN_FALSE;
+
         case MC_SAVE:
+            tap_code(KC_ESCAPE);
             SEND_STRING(":w");
             tap_code(KC_ENT);
             return PROCESS_RECORD_RETURN_FALSE;
 
+        case MC_QUIT:
+            tap_code(KC_ESCAPE);
+            SEND_STRING(":q");
+            tap_code(KC_ENT);
+            return PROCESS_RECORD_RETURN_FALSE;
+
+        case MC_VISTA:
+            tap_code(KC_ESCAPE);
+            SEND_STRING(":Vista!!");
+            tap_code(KC_ENT);
+            return PROCESS_RECORD_RETURN_FALSE;
     }
 
     // Accentuated characters
