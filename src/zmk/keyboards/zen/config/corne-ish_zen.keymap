@@ -97,6 +97,15 @@
                                    &none           &trans          &trans          &trans          &trans        &none
                         >;
                 };
+                lock_layer {
+                        label = "LOCK";
+                        bindings = <
+   &none           &none           &none           &none           &none           &none           &none         &none           &none         &none    
+   &none           &none           &none           &none           &none           &none           &none         &none           &none         &none  
+   &none           &none           &none           &none           &none           &none           &none         &none           &none         &none 
+                                   &none           &trans          &none           &none           &trans        &none
+                        >;
+                };
                 maintenance_layer {
                         label = "MAINTENANCE";
                         bindings = <
