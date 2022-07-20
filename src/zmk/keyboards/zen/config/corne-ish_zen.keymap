@@ -12,6 +12,7 @@
 #include <hold-taps.dtsi>
 #include <ngrams.dtsi>
 #include <macros.dtsi>
+#include <symbols.dtsi>
 
 / {
         keymap {
@@ -55,10 +56,10 @@
                 lower_layer {
                         label = "LOWER";
                         bindings = <
-   &none           &none           &none           &none           &none           &none           &none         &none           &none         &none    
-   &none           &none           &none           &none           &none           &none           &none         &none           &none         &none  
-   &none           &none           &none           &none           &none           &none           &none         &none           &none         &none 
-                                   &none           &trans          &trans          &trans          &trans        &none
+   &none           &kp LPAR        &kp RPAR        &kp TILD        &kp BSLH        &none           &kp N7        &kp N8          &kp N9        &none    
+   &mc_bti         &mc_dqo         &mc_squ         &mc_and         &mc_or          &kp COMMA       &kp N4        &kp N5          &kp N6        &lt MACROS DOT  
+   &kp AT          &kp LBKT        &kp RBKT        &kp QMARK       &kp HASH        &none           &kp N1        &kp N2          &kp N3        &kp SEMICOLON 
+                                   &none           &trans          &trans          &trans          &msk MED N0   &none
                         >;
                 };
                 raise_layer {
