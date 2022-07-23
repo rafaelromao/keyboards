@@ -29,6 +29,12 @@
             #binding-cells = <0>;
             bindings = <&macro_tap &kp GRAVE &kp SPACE>;
         };
+        mc_circ: mc_circ {
+            label = "^";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp CARET &kp SPACE>;
+        };
         mc_and: mc_and {
             label = "&&";
             compatible = "zmk,behavior-macro";
