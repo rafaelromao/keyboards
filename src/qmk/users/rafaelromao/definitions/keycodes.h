@@ -142,8 +142,8 @@ enum {
 #define PDO_MAC LT(_MACROS, KC_PDOT)
 
 // Layer transitions
-#define MO_LOW MO(_LOWER)
-#define MO_RAI MO(_RAISE)
+#define OS_LOW OSL(_LOWER)
+#define OS_RAI OSL(_RAISE)
 #define MO_MED MO(_MEDIA)
 #define TO_ROM TO(_ROMAK)
 #define TG_NUM TG(_NUMPAD)
