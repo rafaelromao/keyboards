@@ -65,7 +65,7 @@
                 raise_layer {
                         label = "RAISE";
                         bindings = <
-   &none           &kp F9          &kp F8          &kp F7          &kp F12         &kp CARET       &kp DOLLAR    &kp LBRC        &kp RBRC      &none    
+   &none           &kp F9          &kp F8          &kp F7          &kp F12         &mc_circ        &kp DOLLAR    &kp LBRC        &kp RBRC      &none    
    &kp F15         &kp F6          &kp F5          &kp F4          &kp F11         &kp PLUS        &kp MINUS     &kp EQUAL       &kp EXCL      &kp PERCENT  
    &kp F14         &kp F3          &kp F2          &kp F1          &kp F10         &kp STAR        &kp SLASH     &kp LT          &kp GT        &kp COLON
                                    &none           &trans          &trans          &trans          &trans        &none
