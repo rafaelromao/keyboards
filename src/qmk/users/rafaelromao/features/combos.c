@@ -32,7 +32,7 @@ const uint16_t PROGMEM r_med_ent_combo[] = {KC_ENT, KC_TAB, COMBO_END};
 // N-Grams
 
 const uint16_t PROGMEM l_ng_i_combo[]    = {MC_TH, MC_SQUO, COMBO_END};
-const uint16_t PROGMEM l_ng_nt_combo[]   = {MC_NH, MC_SH, COMBO_END};
+const uint16_t PROGMEM l_ng_nt_combo[]   = {MC_CH, MC_NH, COMBO_END};
 const uint16_t PROGMEM r_ng_ao_combo[]   = {MC_SQ_A, MC_TL_A, COMBO_END};
 const uint16_t PROGMEM r_ng_cao_combo[]  = {MC_CR_A, MC_SQ_A, MC_TL_A, COMBO_END};
 const uint16_t PROGMEM r_ng_em_combo[]   = {MC_CR_E, MC_SQ_E, COMBO_END};
