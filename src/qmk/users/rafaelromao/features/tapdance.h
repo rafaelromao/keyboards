@@ -4,7 +4,7 @@
 
 #include "../definitions/keycodes.h"
 #include "os_toggle.h"
-#include "smart_thumb_keys.h"
+#include "custom_oneshot.h"
 #include "dynamic_macro.h"
 
 typedef enum {

@@ -9,4 +9,4 @@
 #include "smart_case.h"
 
 bool                    should_send_ctrl(bool isWindowsOrLinux, bool isOneShotShift);
-process_record_result_t process_smart_thumb_keys(uint16_t keycode, keyrecord_t *record);
+process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *record);

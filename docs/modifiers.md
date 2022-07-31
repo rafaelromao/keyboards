@@ -40,7 +40,7 @@ The Smart Case key is a custom key that works as Shift, Caps Word and other Smar
 
 ## N-Grams Key
 - The N-Grams key is available in the left outer thumb key and will toggle the N-Grams layer in one-shot mode, acting like a special shift key.
-- Source code: [macros.c](../src/qmk/users/rafaelromao/features/macros.c)
+- Source code: [custom_oneshot.c](../src/qmk/users/rafaelromao/features/custom_oneshot.c)
 
 ## Default Mod and Alt Thumb Keys
 
@@ -54,7 +54,7 @@ The Default Mod (Cmd or Ctrl) and Alt thumb keys are placed in the outer left an
     - This key will activate the modifier for the current operating system, which can be selected in the maintenace layer.
         - If Mac OS is selected, the default modifier will be Cmd, otherwise it will be Ctrl.
         - If one-shot Shift is active, the default modifier will be inverted (Cmd vs Ctrl).
-- Source code: [smart_thumb_keys.c](../src/qmk/users/rafaelromao/features/smart_thumb_keys.c)
+- Source code: [custom_oneshot.c](../src/qmk/users/rafaelromao/features/custom_oneshot.c)
 
 ##
 [Home](../readme.md) | 

@@ -47,7 +47,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     };
 
     // Process smart thumb keys
-    switch (process_smart_thumb_keys(keycode, record)) {
+    switch (process_custom_oneshot(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:

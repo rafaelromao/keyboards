@@ -4,7 +4,7 @@
 #include "../definitions/keycodes.h"
 #include "../definitions/process_record.h"
 #include "os_toggle.h"
-#include "smart_thumb_keys.h"
+#include "custom_oneshot.h"
 
 typedef struct {
     uint16_t timer;

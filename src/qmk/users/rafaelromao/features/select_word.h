@@ -4,7 +4,7 @@
 
 #include "../definitions/process_record.h"
 #include "os_toggle.h"
-#include "smart_thumb_keys.h"
+#include "custom_oneshot.h"
 
 typedef enum { STATE_NONE, STATE_LINE_SELECTED, STATE_WORD_SELECTED, STATE_WORD, STATE_FIRST_LINE, STATE_LINE } select_word_state_t;
 

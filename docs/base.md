@@ -13,7 +13,7 @@
 - The two outer thumb keys act as [Modifiers](modifiers.md), when tapped.
 - The two inner thumb keys act as space or backspace, when tapped (which is inverted in the [Macros](macros.md#macros) layer).
 - Holding both outer thumb keys will activate the maintenance layer.
-- Source code: [smart_thumb_keys.c](../src/qmk/users/rafaelromao/features/smart_thumb_keys.c)
+- Source code: [custom_oneshot.c](../src/qmk/users/rafaelromao/features/custom_oneshot.c)
 
 ## Base Layer Combos
 - Combos are available in the base and [Numpad](symbols.md#numpad-layer) layers to send ENTER, ESC, TAB and common shortcuts like copy, paste, save, select all and undo.

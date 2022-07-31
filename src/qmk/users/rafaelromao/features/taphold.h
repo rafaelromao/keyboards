@@ -4,4 +4,4 @@
 #include "../definitions/keycodes.h"
 #include "tapdance.h"
 #include "smart_case.h"
-#include "smart_thumb_keys.h"
+#include "custom_oneshot.h"

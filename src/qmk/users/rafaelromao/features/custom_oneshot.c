@@ -1,6 +1,6 @@
 #include QMK_KEYBOARD_H
 
-#include "smart_thumb_keys.h"
+#include "custom_oneshot.h"
 
 extern os_t           os;
 extern ngrams_timer_t ngrams_timer;
@@ -9,7 +9,7 @@ bool should_send_ctrl(bool isWindowsOrLinux, bool isOneShotShift) {
     return (isWindowsOrLinux && !isOneShotShift) || (!isWindowsOrLinux && isOneShotShift);
 }
 
-process_record_result_t process_smart_thumb_keys(uint16_t keycode, keyrecord_t *record) {
+process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *record) {
     bool isWindowsOrLinux    = os.type == WINDOWS || os.type == LINUX;
     bool isOneShotDefaultMod = (!isWindowsOrLinux && (get_oneshot_mods() & MOD_MASK_GUI)) ||
                                (isWindowsOrLinux && (get_oneshot_mods() & MOD_MASK_CTRL));
@@ -33,6 +33,7 @@ process_record_result_t process_smart_thumb_keys(uint16_t keycode, keyrecord_t *
                 }
                 return PROCESS_RECORD_RETURN_FALSE;
             }
+
         case OS_LOW:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
@@ -45,6 +46,7 @@ process_record_result_t process_smart_thumb_keys(uint16_t keycode, keyrecord_t *
                 }
                 return PROCESS_RECORD_RETURN_FALSE;
             }
+
         case NAV_NG:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
