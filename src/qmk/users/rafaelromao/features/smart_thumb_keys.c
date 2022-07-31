@@ -21,6 +21,30 @@ process_record_result_t process_smart_thumb_keys(uint16_t keycode, keyrecord_t *
     bool isAnyOneShotButShift = isOneShotCtrl || isOneShotAlt || isOneShotGui;
 
     switch (keycode) {
+        case OS_RAI:
+            if (record->tap.count > 0) {
+                if (record->event.pressed) {
+                    if (IS_LAYER_ON(_RAISE)) {
+                        clear_oneshot_layer_state(ONESHOT_PRESSED);
+                    } else {
+                        set_oneshot_layer(_RAISE, ONESHOT_START);
+                        ngrams_timer.timer = timer_read();
+                    }
+                }
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+        case OS_LOW:
+            if (record->tap.count > 0) {
+                if (record->event.pressed) {
+                    if (IS_LAYER_ON(_LOWER)) {
+                        clear_oneshot_layer_state(ONESHOT_PRESSED);
+                    } else {
+                        set_oneshot_layer(_LOWER, ONESHOT_START);
+                        ngrams_timer.timer = timer_read();
+                    }
+                }
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
         case NAV_NG:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {

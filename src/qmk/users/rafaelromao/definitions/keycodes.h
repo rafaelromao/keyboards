@@ -58,7 +58,7 @@ enum {
     
     MC_CAPS, MC_WORD, MC_CAML, MC_SNAK, MC_KBAB,
 
-    TG_MAC, TG_WIN, TG_LIN,
+    TG_MAC, TG_WIN, TG_LIN, 
     SP_CAP, SP_MOD, SP_NG, SP_ALT,
 
     STR_MACRO_START,
