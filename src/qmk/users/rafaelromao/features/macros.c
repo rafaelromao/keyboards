@@ -84,8 +84,8 @@ bool is_long_press(void) {
 }
 
 process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
-    if (!record->event.pressed && keycode != NAV_NG && keycode != MED_SFT) {
-        disable_oneshot_layer();
+    if (!record->event.pressed) {
+        check_disable_oneshot(keycode);
     }
 
     bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;

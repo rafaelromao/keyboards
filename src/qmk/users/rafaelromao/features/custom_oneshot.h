@@ -11,16 +11,12 @@
 
 typedef struct {
     uint16_t timer;
-} oneshot_mods_timer_t;
-
-typedef struct {
-    uint16_t timer;
 } custom_oneshots_t;
 
-void disable_oneshot_layer(void);
+void disable_oneshots(void);
 void check_oneshot_timeout(void);
-void check_oneshot_mods_timeout(void);
 void clear_locked_and_oneshot_mods(void);
+void check_disable_oneshot(uint16_t keycode);
 bool should_send_ctrl(bool isWindowsOrLinux, bool isOneShotShift);
 
 process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *record);
