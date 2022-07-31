@@ -2,17 +2,16 @@
 
 #include "custom_oneshot.h"
 
-extern os_t           os;
-extern ngrams_timer_t ngrams_timer;
+extern os_t              os;
+extern custom_oneshots_t custom_oneshots;
 
 bool should_send_ctrl(bool isWindowsOrLinux, bool isOneShotShift) {
     return (isWindowsOrLinux && !isOneShotShift) || (!isWindowsOrLinux && isOneShotShift);
 }
 
 process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *record) {
-    bool isWindowsOrLinux    = os.type == WINDOWS || os.type == LINUX;
-    bool isOneShotDefaultMod = (!isWindowsOrLinux && (get_oneshot_mods() & MOD_MASK_GUI)) ||
-                               (isWindowsOrLinux && (get_oneshot_mods() & MOD_MASK_CTRL));
+    bool isWindowsOrLinux     = os.type == WINDOWS || os.type == LINUX;
+    bool isOneShotDefaultMod  = (!isWindowsOrLinux && (get_oneshot_mods() & MOD_MASK_GUI)) || (isWindowsOrLinux && (get_oneshot_mods() & MOD_MASK_CTRL));
     bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     bool isOneShotShift       = get_oneshot_mods() & MOD_MASK_SHIFT || isOneShotLockedShift;
     bool isOneShotCtrl        = get_oneshot_mods() & MOD_MASK_CTRL || get_oneshot_locked_mods() & MOD_MASK_CTRL;
@@ -28,7 +27,7 @@ process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *re
                         clear_oneshot_layer_state(ONESHOT_PRESSED);
                     } else {
                         set_oneshot_layer(_RAISE, ONESHOT_START);
-                        ngrams_timer.timer = timer_read();
+                        custom_oneshots.timer = timer_read();
                     }
                 }
                 return PROCESS_RECORD_RETURN_FALSE;
@@ -41,7 +40,7 @@ process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *re
                         clear_oneshot_layer_state(ONESHOT_PRESSED);
                     } else {
                         set_oneshot_layer(_LOWER, ONESHOT_START);
-                        ngrams_timer.timer = timer_read();
+                        custom_oneshots.timer = timer_read();
                     }
                 }
                 return PROCESS_RECORD_RETURN_FALSE;
@@ -54,7 +53,7 @@ process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *re
                         clear_oneshot_layer_state(ONESHOT_PRESSED);
                     } else {
                         set_oneshot_layer(_NGRAMS, ONESHOT_START);
-                        ngrams_timer.timer = timer_read();
+                        custom_oneshots.timer = timer_read();
                     }
                 }
                 return PROCESS_RECORD_RETURN_FALSE;

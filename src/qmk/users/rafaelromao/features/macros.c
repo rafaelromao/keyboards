@@ -4,19 +4,19 @@
 
 extern os_t os;
 
-ngrams_timer_t ngrams_timer = {.timer = 0};
+custom_oneshots_t custom_oneshots = {.timer = 0};
 
 void disable_ngrams_layer(void) {
     clear_oneshot_layer_state(ONESHOT_PRESSED);
-    ngrams_timer.timer = 0;
+    custom_oneshots.timer = 0;
 }
 
-bool ngrams_timer_expired(void) {
-    return ngrams_timer.timer > 0 && (timer_elapsed(ngrams_timer.timer) > CUSTOM_ONESHOT_TIMEOUT);
+bool custom_oneshots_expired(void) {
+    return custom_oneshots.timer > 0 && (timer_elapsed(custom_oneshots.timer) > CUSTOM_ONESHOT_TIMEOUT);
 }
 
 void check_ngrams_timeout(void) {
-    if (ngrams_timer_expired()) {
+    if (custom_oneshots_expired()) {
         disable_ngrams_layer();
     }
 }
