@@ -2,10 +2,27 @@
 
 #include "custom_oneshot.h"
 
-extern os_t              os;
-extern custom_oneshots_t custom_oneshots;
+extern os_t os;
 
+static custom_oneshots_t    custom_oneshots    = {.timer = 0};
 static oneshot_mods_timer_t oneshot_mods_timer = {.timer = 0};
+
+// Custom oneshot timeout
+
+void disable_oneshot_layer(void) {
+    clear_oneshot_layer_state(ONESHOT_PRESSED);
+    custom_oneshots.timer = 0;
+}
+
+bool custom_oneshots_expired(void) {
+    return custom_oneshots.timer > 0 && (timer_elapsed(custom_oneshots.timer) > CUSTOM_ONESHOT_TIMEOUT);
+}
+
+void check_oneshot_timeout(void) {
+    if (custom_oneshots_expired()) {
+        disable_oneshot_layer();
+    }
+}
 
 // Custom oneshot mods
 

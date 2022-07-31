@@ -4,23 +4,6 @@
 
 extern os_t os;
 
-custom_oneshots_t custom_oneshots = {.timer = 0};
-
-void disable_ngrams_layer(void) {
-    clear_oneshot_layer_state(ONESHOT_PRESSED);
-    custom_oneshots.timer = 0;
-}
-
-bool custom_oneshots_expired(void) {
-    return custom_oneshots.timer > 0 && (timer_elapsed(custom_oneshots.timer) > CUSTOM_ONESHOT_TIMEOUT);
-}
-
-void check_ngrams_timeout(void) {
-    if (custom_oneshots_expired()) {
-        disable_ngrams_layer();
-    }
-}
-
 void tap_accent_dead_key(uint16_t keycode) {
     switch (keycode) {
         case MC_GV_A:
@@ -102,7 +85,7 @@ bool is_long_press(void) {
 
 process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
     if (!record->event.pressed && keycode != NAV_NG && keycode != MED_SFT) {
-        disable_ngrams_layer();
+        disable_oneshot_layer();
     }
 
     bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
