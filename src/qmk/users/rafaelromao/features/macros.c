@@ -83,23 +83,12 @@ bool is_long_press(void) {
     return timer_elapsed(pressed_time) > TAPPING_TERM;
 }
 
-process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
-    if (!record->event.pressed) {
-        check_disable_oneshot(keycode);
-    }
-
-    bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
-    bool isOneShotShift       = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
-    bool isShifted            = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
-    bool isWindowsOrLinux     = os.type == WINDOWS || os.type == LINUX;
-
-    if (record->event.pressed) {
-        pressed_time = timer_read();
-        return PROCESS_RECORD_CONTINUE;
-    }
+process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotShift, bool isShifted) {
+    bool isWindowsOrLinux = os.type == WINDOWS || os.type == LINUX;
 
     switch (keycode) {
-        // Accents
+            // Accents
+
         case MC_BTIC:
             clear_shift();
             tap_code(KC_GRV);
@@ -365,22 +354,44 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
             return PROCESS_RECORD_RETURN_FALSE;
     }
 
-    // Accentuated characters
+    return PROCESS_RECORD_CONTINUE;
+}
 
-    if (!is_accentuated_keycode(keycode)) {
+process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
+    if (record->event.pressed) {
+        pressed_time = timer_read();
         return PROCESS_RECORD_CONTINUE;
     }
 
-    clear_locked_and_oneshot_mods();
+    bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
+    bool isOneShotShift       = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
+    bool isShifted            = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
 
-    tap_accent_dead_key(keycode);
-    if (isShifted) {
-        register_mods(MOD_LSFT);
+    // Accentuated characters
+
+    if (is_accentuated_keycode(keycode)) {
+        clear_locked_and_oneshot_mods();
+        tap_accent_dead_key(keycode);
+        if (isShifted) {
+            register_mods(MOD_LSFT);
+        }
+        tap_accent_tap_key(keycode);
+        if (isShifted) {
+            unregister_mods(MOD_LSFT);
+        }
+        check_disable_oneshot(keycode);
+        return PROCESS_RECORD_RETURN_FALSE;
     }
-    tap_accent_tap_key(keycode);
-    if (isShifted) {
-        unregister_mods(MOD_LSFT);
-    }
+
+    // Macros
+
+    switch (process_macro_keycode(keycode, isOneShotShift, isShifted)) {
+        case PROCESS_RECORD_RETURN_FALSE:
+            check_disable_oneshot(keycode);
+            return PROCESS_RECORD_RETURN_FALSE;
+        default:
+            break;
+    };
 
     return PROCESS_RECORD_CONTINUE;
 }
