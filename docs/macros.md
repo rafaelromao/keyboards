@@ -50,7 +50,7 @@
 - Source Code: [macros.c](../src/qmk/users/rafaelromao/features/macros.c)
 
 #### Dynamic Macros
-- There is a independent dynamic macro recording key in the Macros layer.
+- There is an independent dynamic macro recording key in the Macros layer.
 - Double tapping them will start or stop recording a dynamic macro.
 - Tapping them will play the dynamic macro.
 - If shift is active, it will consider the macro slot 2, otherwise it will consider the macro slot 1.
