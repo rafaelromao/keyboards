@@ -29,7 +29,6 @@ The following checklist indicates the supported features, per layer:
         - [ ] Disable Smart Cases
         - [ ] Simple Smart Cases: CAPSWORD, camelCase, snake_case, kebab-case
         - [ ] Combined Smart Cases: STRONG_SNAKE_CASE, STRONG-KEBAB-CASE, PascalCase
-    - [ ] Double Dot for New Sentence
     - [ ] Double Comma for Leader Key
 - [ ] N-Grams Layer
     - [x] N-Grams
@@ -39,25 +38,24 @@ The following checklist indicates the supported features, per layer:
     - [x] Inverted Space and Backspace
     - [ ] Window Swapper
     - [ ] Select Line / Select Word
-    - [x] Zoom In / Zoom Out
+    - [ ] Zoom In / Zoom Out
     - [ ] Join Lines
     - [ ] Comment Lines
-    - [ ] Dynamic Macros
-    - [ ] ../ .
-    - [ ] ==, ===, !=, !==, :%s//g
+    - [ ] VIM Replace
     - [ ] IDE Dancing
+    - [ ] ~~Dynamic Macros~~
 - [ ] Numpad Layer
-    - [ ] F-Keys (Left Side)
-    - [ ] Numbers (Right Side)
-    - [ ] Home Block Mods
+    - [x] F-Keys (Left Side)
+    - [x] Numbers (Right Side)
+    - [x] Home Block Mods
     - [ ] Combos
 - [ ] Lower
-    - [ ] Symbols (Left Side)
-    - [ ] Numbers (Right Side)
-        - [ ] Numpad Layer Toggle
+    - [x] Symbols (Left Side)
+    - [x] Numbers (Right Side)
+        - [x] Numpad Layer Toggle
 - [ ] Raise
-    - [ ] F-Keys (Left Side)
-    - [ ] Numbers (Right Side)
+    - [x] F-Keys (Left Side)
+    - [x] Numbers (Right Side)
 - [ ] Navigation
     - [ ] OSMs
     - [ ] Tab / Esc
@@ -73,6 +71,7 @@ The following checklist indicates the supported features, per layer:
     - [ ] Toggle Navigation Layer Clone
     - [ ] Toggle Base Layer
     - [ ] Default Modifier Key
+- [ ] Lock Layer
 - [ ] Maintenance
     - [ ] Reset to Bootloader / Eeprom Reset
     - [ ] Power / Sleep / Lock

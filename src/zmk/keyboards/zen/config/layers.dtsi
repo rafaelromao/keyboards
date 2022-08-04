@@ -18,4 +18,5 @@
 #define NAV_F 6
 #define MED 7
 #define NAV 8
-#define MAINT 9
+#define LOCK 9
+#define MAINT 10
