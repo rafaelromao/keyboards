@@ -21,7 +21,6 @@ Romak is a new keyboard layout, inspired by [Colemak](https://colemak.org) and [
 <p float="left">
   <img src="../img/heat_romak.png" width="450" />
   <img src="../img/heat_coldh.png" width="450" /> 
-  <img src="../img/heat_qwerty.png" width="450" /> 
 </p>
 
 ### Finger Usage
