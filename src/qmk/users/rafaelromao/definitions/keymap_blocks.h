@@ -15,9 +15,9 @@
 #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , TD_COMM , TD_DOTD , KC_Y
 #define ____ROMAK_R4_____                               RAI_BSP , MED_SFT
 
-#define ___________________NGRAMS_L1___________________ XXXXXXX , XXXXXXX , MC_SQUO , MC_WH   , XXXXXXX
+#define ___________________NGRAMS_L1___________________ XXXXXXX , MC_SQ_C , MC_SQUO , MC_WH   , XXXXXXX
 #define ___________________NGRAMS_L2___________________ MC_LH   , MC_NH   , MC_SH   , MC_TH   , MC_GH
-#define ___________________NGRAMS_L3___________________ MC_QU   , XXXXXXX , MC_SQ_C , MC_PH   , XXXXXXX
+#define ___________________NGRAMS_L3___________________ MC_QU   , XXXXXXX , MC_CH   , MC_PH   , XXXXXXX
 #define ____NGRAMS_L4____                                                             _______ , KC_SPC
 
 #define ___________________NGRAMS_R1___________________ XXXXXXX , MC_TL_O , MC_SQ_O , MC_SQ_U , XXXXXXX
