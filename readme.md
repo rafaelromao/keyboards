@@ -74,7 +74,7 @@ Most features implemented here were based on the work referenced below.
 
 ## Resouces
 
-- [KLE](http://www.keyboard-layout-editor.com/#/gists/12bbb9eacaae4e51032fbbb8c149e812)
+- [KLE](http://www.keyboard-layout-editor.com/#/gists/e16693788ccca41cf0b1bd44f7153)
 - [Keymap DB](https://keymapdb.com/rafaelromao/)
 - [QMK Docs](https://docs.qmk.fm)
 - [Keyboard Tester](https://config.qmk.fm/#/test)
