@@ -16,11 +16,9 @@ enum {
     BRT_OPA, 
     BRT_CPA, 
     BRT_ANG, 
-    KCU_LEA, 
     REC_MAC, 
     COM_MAC, 
     DOT_DOT, 
-    SDB_QUO, 
     DLR_CUR, 
     TD_CODE_END 
 };
@@ -35,11 +33,9 @@ enum {
 #define TD_OPAR TD(BRT_OPA)
 #define TD_CPAR TD(BRT_CPA)
 #define TD_ANGB TD(BRT_ANG)
-#define TD_ULEA TD(KCU_LEA)
 #define TD_MACR TD(REC_MAC)
 #define TD_COMM TD(COM_MAC)
 #define TD_DOTD TD(DOT_DOT)
-#define TD_QUOT TD(SDB_QUO)
 #define TD_DLR TD(DLR_CUR)
 
 // Custom keycodes
