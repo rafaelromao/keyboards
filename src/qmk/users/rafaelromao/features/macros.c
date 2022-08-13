@@ -58,7 +58,7 @@ void tap_accent_tap_key(uint32_t keycode) {
     }
 }
 
-bool is_accentuated_keycode(uint16_t keycode) {
+bool is_accented_keycode(uint16_t keycode) {
     switch (keycode) {
         case MC_GV_A:
         case MC_CR_A:
@@ -367,9 +367,9 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
     bool isOneShotShift       = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
     bool isShifted            = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
 
-    // Accentuated characters
+    // Accented characters
 
-    if (is_accentuated_keycode(keycode)) {
+    if (is_accented_keycode(keycode)) {
         clear_locked_and_oneshot_mods();
         tap_accent_dead_key(keycode);
         if (isShifted) {
