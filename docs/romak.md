@@ -6,59 +6,43 @@ Romak is a new keyboard layout, inspired by [Colemak](https://colemak.org) and [
 
 ![img](../img/romak.png)
 
-- Romak is the layout used in the base layer of my keyboards.
 - The name Romak is a combination of my last name, **Rom**ão, and Dvor**ak**'s name.
-- Romak has a higher SFB rate than Colemak, but lower than Workman, and most of this load goes to the stronger fingers.
-
-### From Qwerty to Romak in 6 steps
-
-![img](../img/romak_transition.png)
+- Romak assumes the right hand as dominant so it puts vowels, H and R in that side.
+- Romak is also designed to favor hand alternation more than rolls.
 
 ## Romak vs Colemak-DH
-[Stevep99's Layout Analyzer Tool](https://stevep99.github.io/keyboard-layout-analyzer) was used to compare Romak with Colemak-DH and some other layouts, using the Magna Carta as text corpus, in [Portuguese](analysis/corpus.pt.txt) and [English](analysis/corpus.en.txt).
+[KLA Next](https://klanext.keyboard-design.com/) was used to compare Romak with Colemak-DH and some other layouts, using the Universal Declaration of Human Rights as text corpus, combining [Portuguese and English](analysis/corpus.txt).
 ### General Performance
-#### Portuguese
-![img](../img/perf_pt.png)
-#### English
-![img](../img/perf_en.png)
+
+Romak scored as second best when compared to Colemak-DH, Dvorak, Workman and Qwerty.
+![img](../img/perf.png)
 
 ### Heatmaps
-#### Portuguese
-<p float="left">
-  <img src="../img/heat_pt_romak.png" width="450" />
-  <img src="../img/heat_pt_coldh.png" width="450" /> 
-  <img src="../img/heat_pt_qwerty.png" width="450" /> 
-</p>
 
-#### English
+Heatmaps show that Romak puts more load on middle and ring fingers and less load on index and pinky fingers, when compared to Colemak-DH.
 <p float="left">
-  <img src="../img/heat_en_romak.png" width="450" />
-  <img src="../img/heat_en_coldh.png" width="450" /> 
-  <img src="../img/heat_en_qwerty.png" width="450" /> 
+  <img src="../img/heat_romak.png" width="450" />
+  <img src="../img/heat_coldh.png" width="450" /> 
 </p>
-
-Romak is more balanced for Portuguese than English, so if English is your primary language, it is recommended to swap two key pairs, HM and DT. This could be called Romak-DH.
 
 ### Finger Usage
-Pinkies will get less load in Romak, by design. This load will go to the ring and middle fingers.
-#### Portuguese
-![img](../img/fingers_pt.png)
-#### English
-![img](../img/fingers_en.png)
+In Romak, all fingers in the left hand will take less load than the equivalent fingers in the right hand.
+
+![img](../img/fingers.png)
 
 ### Detailed Finger Analysis
-The [Colemak mod-DH analysis tool](https://colemakmods.github.io/mod-dh/analyze.html) was also used to compare Romak against Colemak-DH and Workman (English text corpus only).
+The [Colemak mod-DH analysis tool](https://colemakmods.github.io/mod-dh/analyze.html) was also used to compare Romak against Colemak-DH (English text corpus only).
+
+The overall finger usage and SFB rate look better in Romak than in Colemak.
+
 <p float="left">
   <img src="../img/sfbs_en_romak.png" width="450" />
   <img src="../img/sfbs_en_coldh.png" width="450" />
-  <img src="../img/sfbs_en_workman.png" width="450" />
 </p>
-
-Despite the higher SFB rate, total finger effort is lesser in Romak than in Colemak-DH or Workman.
 
 ## Extentions
 
-- The [N-Grams and Accents](macros.md#n-grams-and-accents) layer extend the Romak base layer to give easy access to common English and Portuguese n-grams and Portuguese accentuated characters. Getting used to this layer will avoid some uncomfortable bigrams.
+- The [N-Grams and Accents](macros.md#n-grams-and-accents) layer extend the Romak base layer to give easy access to common English and Portuguese n-grams and Portuguese accentuated characters.
 - The [Lower and Raise](symbols.md) layers give access to function keys, symbols and numbers. The symbols are arranged to make them easy to use in software programming, with VIM, and math operations.
 
 ##

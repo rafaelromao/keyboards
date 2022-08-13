@@ -2,7 +2,7 @@
 ### A 32 keys split keyboard layout, optimized for programmers.
 
 The keyboard in the picture below is a XD75, used to design and test this layout.
-![img](../../../../../../../img/xd75.jpg)
+![img](../../../../../../../img/xd75.png)
 
 ### QMK
 

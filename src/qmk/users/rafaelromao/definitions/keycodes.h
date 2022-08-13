@@ -16,11 +16,9 @@ enum {
     BRT_OPA, 
     BRT_CPA, 
     BRT_ANG, 
-    KCU_LEA, 
     REC_MAC, 
     COM_MAC, 
     DOT_DOT, 
-    SDB_QUO, 
     DLR_CUR, 
     TD_CODE_END 
 };
@@ -35,11 +33,9 @@ enum {
 #define TD_OPAR TD(BRT_OPA)
 #define TD_CPAR TD(BRT_CPA)
 #define TD_ANGB TD(BRT_ANG)
-#define TD_ULEA TD(KCU_LEA)
 #define TD_MACR TD(REC_MAC)
 #define TD_COMM TD(COM_MAC)
 #define TD_DOTD TD(DOT_DOT)
-#define TD_QUOT TD(SDB_QUO)
 #define TD_DLR TD(DLR_CUR)
 
 // Custom keycodes
@@ -84,29 +80,22 @@ enum {
 
 // Mod-taps
 
-#define LSFTT_S LSFT_T(KC_S)
-#define RSFTT_L RSFT_T(KC_L)
-#define RSFTT_R RSFT_T(KC_R)
+#define LSFTT_N LSFT_T(KC_N)
+#define RSFTT_E RSFT_T(KC_E)
 #define SF_F6 LSFT_T(KC_F6)
 #define SF_6 RSFT_T(KC_6)
 
-#define LCTLT_D LCTL_T(KC_D)
-#define LCTLT_E LCTL_T(KC_E)
-#define RCTLT_K RCTL_T(KC_K)
+#define LCTLT_S LCTL_T(KC_S)
 #define RCTLT_A RCTL_T(KC_A)
 #define CT_F5 LCTL_T(KC_F5)
 #define CT_5 RCTL_T(KC_5)
 
-#define LALTT_F LALT_T(KC_F)
-#define LALTT_D LALT_T(KC_D)
-#define RALTT_J RALT_T(KC_J)
-#define RALTT_N RALT_T(KC_N)
+#define LALTT_T LALT_T(KC_T)
+#define RALTT_R RALT_T(KC_R)
 #define AL_F4 LALT_T(KC_F4)
 #define AL_4 RALT_T(KC_4)
-#define LA_BSLS LALT_T(KC_BSLS)
 
-#define LGUIT_V LGUI_T(KC_V)
-#define LGUIT_T LGUI_T(KC_T)
+#define LGUIT_P LGUI_T(KC_P)
 #define RGUIT_M RGUI_T(KC_M)
 #define GU_F1 LGUI_T(KC_F1)
 #define GU_1 RGUI_T(KC_1)
@@ -133,13 +122,9 @@ enum {
 #define LOW_BSP LT(_LOWER, KC_BSPC)
 #define RAI_SPC LT(_RAISE, KC_SPC)
 
-#define KCA_MAC LT(_MACROS, KC_A)
-#define KCP_MAC LT(_MACROS, KC_P)
-#define KCC_MAC LT(_MACROS, KC_C)
-#define SCL_MAC LT(_MACROS, KC_SCLN)
-#define BSL_MAC LT(_MACROS, KC_UNDS)
+#define KCL_MAC LT(_MACROS, KC_L)
+#define KCI_MAC LT(_MACROS, KC_I)
 #define DOT_MAC LT(_MACROS, KC_DOT)
-#define PDO_MAC LT(_MACROS, KC_PDOT)
 
 // Layer transitions
 #define OS_LOW OSL(_LOWER)

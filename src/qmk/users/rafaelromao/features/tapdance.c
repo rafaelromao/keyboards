@@ -202,25 +202,6 @@ void td_currencies(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-// Quotes
-
-void td_quotes(qk_tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            tap_code16(KC_QUOT);
-            break;
-        case TD_DOUBLE_TAP:
-            tap_code16(KC_GRV);
-            break;
-        case TD_TRIPLE_TAP:
-            tap_code16(KC_DQUO);
-            break;
-        default:
-            break;
-    }
-}
-
 // Dynamic Macro
 
 void td_macro(qk_tap_dance_state_t *state, void *user_data) {
@@ -337,7 +318,6 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [BRT_ANG] = ACTION_TAP_DANCE_FN(td_angle_brackets),
     [REC_MAC] = ACTION_TAP_DANCE_FN(td_macro),
     [COM_MAC] = ACTION_TAP_DANCE_FN(td_comm_macro),
-    [SDB_QUO] = ACTION_TAP_DANCE_FN(td_quotes),
     [DLR_CUR] = ACTION_TAP_DANCE_FN(td_currencies),
     [DOT_DOT] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_dot_finished, td_dot_reset)};
 
