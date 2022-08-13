@@ -11,25 +11,30 @@ Romak is a new keyboard layout, inspired by [Colemak](https://colemak.org) and [
 - Romak is also designed to favor hand alternation more than rolls.
 
 ## Romak vs Colemak-DH
-[Stevep99's Layout Analyzer Tool](https://stevep99.github.io/keyboard-layout-analyzer) was used to compare Romak with Colemak-DH and some other layouts, using the Magna Carta as text corpus, combining [Portuguese](analysis/corpus.pt.txt) and [English](analysis/corpus.en.txt).
+[KLA Next](https://klanext.keyboard-design.com/) was used to compare Romak with Colemak-DH and some other layouts, using the Universal Declaration of Human Rights as text corpus, combining [Portuguese and English](analysis/corpus.txt).
 ### General Performance
-#### Portuguese + English
+
+Romak scored as second best when compared to Colemak-DH, Dvorak, Workman and Qwerty.
 ![img](../img/perf.png)
 
 ### Heatmaps
-#### Portuguese + English
+
+Heatmaps show that Romak puts more load on middle and ring fingers and less load on index and pinky fingers, when compared to Colemak-DH.
 <p float="left">
   <img src="../img/heat_romak.png" width="450" />
   <img src="../img/heat_coldh.png" width="450" /> 
 </p>
 
 ### Finger Usage
-Pinkies will get less load in Romak, by design.
-#### Portuguese + English
+In Romak, all fingers in the left hand will take less load than the equivalent fingers in the right hand.
+
 ![img](../img/fingers.png)
 
 ### Detailed Finger Analysis
 The [Colemak mod-DH analysis tool](https://colemakmods.github.io/mod-dh/analyze.html) was also used to compare Romak against Colemak-DH (English text corpus only).
+
+The overall finger usage and SFB rate look better in Romak than in Colemak.
+
 <p float="left">
   <img src="../img/sfbs_en_romak.png" width="450" />
   <img src="../img/sfbs_en_coldh.png" width="450" />

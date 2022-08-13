@@ -10,8 +10,8 @@
 #define ___________________ROMAK_L3____________________ KC_Q    , KC_B    , KC_C    , LGUIT_P , KC_K
 #define ____ROMAK_L4_____                                                             NAV_NG  , LOW_SPC
 
-#define ___________________ROMAK_R1____________________ KC_X    , KC_H    , KC_O    , KC_U    , XXXXXXX
-#define ___________________ROMAK_R2____________________ KC_V    , RALTT_R , RCTLT_A , RSFTT_E , KCI_MAC
+#define ___________________ROMAK_R1____________________ KC_X    , KC_V    , KC_O    , KC_U    , XXXXXXX
+#define ___________________ROMAK_R2____________________ KC_H    , RALTT_R , RCTLT_A , RSFTT_E , KCI_MAC
 #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , TD_COMM , TD_DOTD , KC_Y
 #define ____ROMAK_R4_____                               RAI_BSP , MED_SFT
 
