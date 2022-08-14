@@ -17,7 +17,7 @@
 
 #define ___________________NGRAMS_L1___________________ XXXXXXX , MC_SQ_C , MC_SQUO , MC_WH   , XXXXXXX
 #define ___________________NGRAMS_L2___________________ MC_LH   , MC_NH   , MC_SH   , MC_TH   , MC_GH
-#define ___________________NGRAMS_L3___________________ MC_QU   , XXXXXXX , MC_CH   , MC_PH   , XXXXXXX
+#define ___________________NGRAMS_L3___________________ MC_QU   , MC_BY   , MC_CH   , MC_PH   , MC_CK
 #define ____NGRAMS_L4____                                                             _______ , KC_SPC
 
 #define ___________________NGRAMS_R1___________________ XXXXXXX , MC_TL_O , MC_SQ_O , MC_SQ_U , XXXXXXX
@@ -86,13 +86,13 @@
 #define __NAVIGATION_R4__                               KC_BSPC , MAI_ALT
 #define __FIXED_NAV__R4__                               KC_BSPC , MED_ALT
 
-#define ___________________MAINTENANCE_L1______________ XXXXXXX , RGB_VAD , RGB_VAI , XXXXXXX , EEP_RST
-#define ___________________MAINTENANCE_L2______________ RGB_TOG , RGB_HUD , RGB_HUI , XXXXXXX , XXXXXXX
+#define ___________________MAINTENANCE_L1______________ XXXXXXX , RGB_VAD , RGB_VAI , XXXXXXX , QK_BOOT
+#define ___________________MAINTENANCE_L2______________ RGB_TOG , RGB_HUD , RGB_HUI , XXXXXXX , EEP_RST
 #define ___________________MAINTENANCE_L3______________ XXXXXXX , RGB_SAD , RGB_SAI , XXXXXXX , XXXXXXX
 #define __MAINTENANCE_L4_                                                             _______ , _______
 
 #define ___________________MAINTENANCE_R1______________ QK_BOOT , KC_PWR  , KC_SLEP , MC_LOCK , XXXXXXX
-#define ___________________MAINTENANCE_R2______________ TG_LOCK , TG_MAC  , TG_WIN  , TG_LIN  , KC_NUM
+#define ___________________MAINTENANCE_R2______________ EEP_RST , TG_MAC  , TG_WIN  , TG_LOCK , KC_NUM
 #define ___________________MAINTENANCE_R3______________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
 #define __MAINTENANCE_R4_                               _______ , _______
 

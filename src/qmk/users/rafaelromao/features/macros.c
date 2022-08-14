@@ -84,7 +84,7 @@ bool is_long_press(void) {
 }
 
 process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotShift, bool isShifted) {
-    bool isWindowsOrLinux = os.type == WINDOWS || os.type == LINUX;
+    bool isMacOS = os.type == MACOS;
 
     switch (keycode) {
             // Accents
@@ -157,12 +157,6 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             tap_code(KC_E);
             tap_code(KC_S);
             return PROCESS_RECORD_RETURN_FALSE;
-        case MC_EM:
-            clear_shift();
-            tap_code16(KC_QUOT);
-            tap_code(KC_E);
-            tap_code(KC_M);
-            return PROCESS_RECORD_RETURN_FALSE;
 
             // N-Grams
 
@@ -185,7 +179,13 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
         case MC_WH:
             SEND_STRING("wh");
             return PROCESS_RECORD_RETURN_FALSE;
+        case MC_BY:
+            SEND_STRING("by");
+            return PROCESS_RECORD_RETURN_FALSE;
 
+        case MC_CK:
+            SEND_STRING("ck");
+            return PROCESS_RECORD_RETURN_FALSE;
         case MC_CH:
             SEND_STRING("ch");
             return PROCESS_RECORD_RETURN_FALSE;
@@ -232,7 +232,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             // Recent Files
 
         case MC_REFI:
-            if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
+            if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL(SS_TAP(X_E)));
             } else {
                 SEND_STRING(SS_LGUI(SS_TAP(X_E)));
@@ -243,7 +243,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             // Refactor This
 
         case MC_REFC:
-            if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
+            if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT(SS_TAP(X_T)))));
             } else {
                 SEND_STRING(SS_LSFT(SS_LGUI(SS_LALT(SS_TAP(X_T)))));
@@ -260,7 +260,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             // Project Files
 
         case MC_PROJ:
-            if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
+            if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("1"));
             } else {
                 SEND_STRING(SS_LGUI("1"));
@@ -285,7 +285,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             // Build
 
         case MC_BUID:
-            if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
+            if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL(SS_TAP(X_F9)));
             } else {
                 SEND_STRING(SS_LGUI(SS_TAP(X_F9)));
@@ -296,7 +296,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             // Complete Statement
 
         case MC_COMP:
-            if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
+            if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LSFT(SS_LCTL(SS_TAP(X_ENT))));
             } else {
                 SEND_STRING(SS_LSFT(SS_LGUI(SS_TAP(X_ENT))));
@@ -339,7 +339,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             // Comment
 
         case MC_COMT:
-            if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
+            if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("/"));
             } else {
                 SEND_STRING(SS_LGUI("/"));

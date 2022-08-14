@@ -54,7 +54,7 @@ enum {
     
     MC_CAPS, MC_WORD, MC_CAML, MC_SNAK, MC_KBAB,
 
-    TG_MAC, TG_WIN, TG_LIN, 
+    TG_MAC, TG_WIN, 
     SP_CAP, SP_MOD, SP_NG, SP_ALT,
 
     STR_MACRO_START,
@@ -69,9 +69,10 @@ enum {
     MC_QU,  MC_LH,  MC_PH,  
     MC_CH,  MC_TH,  MC_WH, 
     MC_GH,  MC_NH,  MC_SH,
-    MC_I,   MC_NT,  
+    MC_I,   MC_NT,  MC_BY,
+    MC_CK,
 
-    MC_AO, MC_CAO, MC_OES, MC_COES, MC_EM, 
+    MC_AO, MC_CAO, MC_OES, MC_COES,
     
     STR_MACRO_END,
 

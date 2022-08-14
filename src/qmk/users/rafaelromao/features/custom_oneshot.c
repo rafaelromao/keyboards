@@ -95,13 +95,13 @@ void check_oneshot_timeout(void) {
 
 // Custom oneshot keycodes
 
-bool should_send_ctrl(bool isWindowsOrLinux, bool isOneShotShift) {
-    return (isWindowsOrLinux && !isOneShotShift) || (!isWindowsOrLinux && isOneShotShift);
+bool should_send_ctrl(bool isMacOS, bool isOneShotShift) {
+    return (!isMacOS && !isOneShotShift) || (isMacOS && isOneShotShift);
 }
 
 process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *record) {
-    bool isWindowsOrLinux     = os.type == WINDOWS || os.type == LINUX;
-    bool isOneShotDefaultMod  = (!isWindowsOrLinux && (get_oneshot_mods() & MOD_MASK_GUI)) || (isWindowsOrLinux && (get_oneshot_mods() & MOD_MASK_CTRL));
+    bool isMacOS              = os.type == MACOS;
+    bool isOneShotDefaultMod  = (isMacOS && (get_oneshot_mods() & MOD_MASK_GUI)) || (!isMacOS && (get_oneshot_mods() & MOD_MASK_CTRL));
     bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     bool isOneShotShift       = get_oneshot_mods() & MOD_MASK_SHIFT || isOneShotLockedShift;
     bool isOneShotCtrl        = get_oneshot_mods() & MOD_MASK_CTRL || get_oneshot_locked_mods() & MOD_MASK_CTRL;
@@ -194,7 +194,7 @@ process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *re
                         if (isOneShotShift) {
                             clear_locked_and_oneshot_mods();
                         }
-                        if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
+                        if (should_send_ctrl(isMacOS, isOneShotShift)) {
                             add_oneshot_mods(MOD_LCTL);
                         } else {
                             add_oneshot_mods(MOD_LGUI);

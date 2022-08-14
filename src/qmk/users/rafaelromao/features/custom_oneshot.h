@@ -17,6 +17,6 @@ void disable_oneshots(void);
 void check_oneshot_timeout(void);
 void clear_locked_and_oneshot_mods(void);
 void check_disable_oneshot(uint16_t keycode);
-bool should_send_ctrl(bool isWindowsOrLinux, bool isOneShotShift);
+bool should_send_ctrl(bool isMacOS, bool isOneShotShift);
 
 process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *record);

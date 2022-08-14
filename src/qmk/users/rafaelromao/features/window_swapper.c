@@ -7,15 +7,15 @@ extern os_t os;
 static bool swapping = false;
 
 process_record_result_t process_window_swapper(uint16_t keycode, keyrecord_t *record) {
-    bool isWindowsOrLinux = os.type == WINDOWS || os.type == LINUX;
+    bool isMacOS = os.type == MACOS;
 
     if (swapping && keycode != MC_SWLE && keycode != MC_SWRI) {
         swapping = false;
         unregister_mods(MOD_LSFT);
-        if (isWindowsOrLinux) {
-            unregister_mods(MOD_LALT);
-        } else {
+        if (isMacOS) {
             unregister_mods(MOD_LGUI);
+        } else {
+            unregister_mods(MOD_LALT);
         }
     }
 
@@ -34,10 +34,10 @@ process_record_result_t process_window_swapper(uint16_t keycode, keyrecord_t *re
             if (record->event.pressed) {
                 if (!swapping) {
                     swapping = true;
-                    if (isWindowsOrLinux) {
-                        register_mods(MOD_LALT);
-                    } else {
+                    if (isMacOS) {
                         register_mods(MOD_LGUI);
+                    } else {
+                        register_mods(MOD_LALT);
                     }
                 }
                 tap_code(KC_TAB);

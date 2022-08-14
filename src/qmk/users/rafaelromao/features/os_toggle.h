@@ -5,7 +5,7 @@
 #include "../definitions/keycodes.h"
 #include "../definitions/process_record.h"
 
-typedef enum { MACOS, WINDOWS, LINUX } os_type_t;
+typedef enum { MACOS, WINDOWS } os_type_t;
 
 typedef struct {
     os_type_t type;
