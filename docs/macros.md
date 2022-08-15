@@ -11,7 +11,7 @@
 - The inspiration for this layer came from [this post](https://www.reddit.com/r/KeyboardLayouts/comments/t3i523/ri%C3%BEinquing_h_digra%CF%86s/).
 - Source code: [macros.c](../src/qmk/users/rafaelromao/features/macros.c)
 
-#### Accent
+#### Accents
 - There are dedicated accent keys for à á ã â é ê õ ó ô ú í and ç, which is all that is needed for Portuguese.
 - It is also possible to accent using dead keys, like usually done with the US International layout. To get a dead version of ' " ^ ~ or ` to accent a letter, just press shift before the keys that output these symbols, then type the letter you want to accent. I.e.: Shift " u produces ü. 
 - Source code: [macros.c](../src/qmk/users/rafaelromao/features/macros.c)
