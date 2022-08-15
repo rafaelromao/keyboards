@@ -1,7 +1,7 @@
 # rafaelromao's keyboard layout
 
 ## Maintenance
-The Maintenance layer is activated holding both outer thumb keys and we have options like:
+The Maintenance layer is activated holding both outer thumb keys and allows us to:
 - Put the keyboard in bootloader mode. 
 - Clear the eeprom.
 - Configure RGB.
