@@ -148,6 +148,8 @@ void set_smart_case_for_mods(keyrecord_t *record) {
     }
 }
 
+static bool spacing = false;
+
 process_record_result_t process_smart_case_chars(uint16_t keycode, keyrecord_t *record) {
     if (has_any_smart_case() && record->event.pressed) {
         switch (keycode) {
@@ -160,9 +162,24 @@ process_record_result_t process_smart_case_chars(uint16_t keycode, keyrecord_t *
                 // Get the base tapping keycode of a mod- or layer-tap key.
                 keycode = extract_base_tapping_keycode(keycode);
         }
+        if (keycode != KC_SPC) {
+            spacing = false;
+        }
         // Extend, process or break case
         switch (keycode) {
             case KC_SPC:
+                if (spacing) {
+                    if (has_smart_case(CAMEL_CASE) || has_smart_case(SNAKE_CASE) || has_smart_case(KEBAB_CASE)) {
+                        if (has_smart_case(SNAKE_CASE) || has_smart_case(KEBAB_CASE)) {
+                            tap_code(KC_BSPC);
+                        }
+                        tap_code(KC_SPC);
+                        disable_smart_case();
+                        return PROCESS_RECORD_RETURN_FALSE;
+                    }
+                } else {
+                    spacing = true;
+                }
                 if (has_smart_case(WORD_CASE) && !(has_smart_case(SNAKE_CASE)) && !(has_smart_case(KEBAB_CASE)) &&
                     !(has_smart_case(CAMEL_CASE))) {
                     disable_smart_case();
