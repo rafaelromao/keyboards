@@ -50,7 +50,7 @@ void check_disable_oneshot(uint16_t keycode) {
     }
 }
 
-void clear_expired_oneshot_mods(void) {
+void clear_oneshot_mods_state(void) {
     uint8_t oneshot_locked_mods = get_oneshot_locked_mods();
     uint8_t oneshot_mods        = get_oneshot_mods();
     if (!(oneshot_locked_mods & MOD_LSFT) && (oneshot_mods & MOD_LSFT)) {
@@ -82,7 +82,7 @@ bool custom_oneshots_expired(void) {
 }
 
 void disable_oneshots(void) {
-    clear_expired_oneshot_mods();
+    clear_oneshot_mods_state();
     clear_oneshot_layer_state(ONESHOT_PRESSED);
     custom_oneshots.timer = 0;
 }
@@ -159,7 +159,7 @@ process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *re
                         if (isAnyOneShotButShift || isOneShotLockedShift) {
                             clear_locked_and_oneshot_mods();
                         } else if (!isOneShotShift && get_mods() == 0) {
-                            add_oneshot_mods(MOD_BIT(KC_LSFT));
+                            add_oneshot_mods(MOD_LSFT);
                         } else {
                             set_smart_case_for_mods(record);
                         }

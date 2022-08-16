@@ -179,7 +179,7 @@ process_record_result_t process_smart_case_chars(uint16_t keycode, keyrecord_t *
                     return PROCESS_RECORD_RETURN_FALSE;
                 }
                 if (has_smart_case(CAMEL_CASE)) {
-                    add_oneshot_mods(MOD_BIT(KC_LSFT));
+                    add_oneshot_mods(MOD_LSFT);
                     start_smart_case_timer();
                     return PROCESS_RECORD_RETURN_FALSE;
                 }
