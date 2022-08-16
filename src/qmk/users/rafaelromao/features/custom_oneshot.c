@@ -31,25 +31,6 @@ void clear_locked_and_oneshot_mods(void) {
     dyn_macro_reset();
 }
 
-void check_disable_oneshot(uint16_t keycode) {
-    switch (keycode) {
-        case NAV_NG:
-        case MED_SFT:
-        case MED_ALT:
-        case MAI_ALT:
-        case MAI_MOD:
-        case OS_LOW:
-        case OS_RAI:
-        case OS_LSFT:
-        case OS_LCTL:
-        case OS_LALT:
-        case OS_LGUI:
-            break;
-        default:
-            disable_oneshots();
-    }
-}
-
 void clear_oneshot_mods_state(void) {
     uint8_t oneshot_locked_mods = get_oneshot_locked_mods();
     uint8_t oneshot_mods        = get_oneshot_mods();
@@ -75,21 +56,45 @@ void clear_oneshot_mods_state(void) {
     }
 }
 
+void disable_oneshot_layer(void) {
+    clear_oneshot_layer_state(ONESHOT_PRESSED);
+    custom_oneshots.timer = 0;
+}
+
+void disable_oneshot_mods(void) {
+    clear_oneshot_mods_state();
+    custom_oneshots.timer = 0;
+}
+
+void check_disable_oneshot(uint16_t keycode) {
+    switch (keycode) {
+        case NAV_NG:
+        case MED_SFT:
+        case MED_ALT:
+        case MAI_ALT:
+        case MAI_MOD:
+        case OS_LOW:
+        case OS_RAI:
+        case OS_LSFT:
+        case OS_LCTL:
+        case OS_LALT:
+        case OS_LGUI:
+            break;
+        default:
+            disable_oneshot_layer();
+    }
+}
+
 // Custom oneshot timeout
 
 bool custom_oneshots_expired(void) {
     return custom_oneshots.timer > 0 && (timer_elapsed(custom_oneshots.timer) > CUSTOM_ONESHOT_TIMEOUT);
 }
 
-void disable_oneshots(void) {
-    clear_oneshot_mods_state();
-    clear_oneshot_layer_state(ONESHOT_PRESSED);
-    custom_oneshots.timer = 0;
-}
-
 void check_oneshot_timeout(void) {
     if (custom_oneshots_expired()) {
-        disable_oneshots();
+        disable_oneshot_mods();
+        disable_oneshot_layer();
     }
 }
 

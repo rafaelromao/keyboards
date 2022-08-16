@@ -13,7 +13,6 @@ typedef struct {
     uint16_t timer;
 } custom_oneshots_t;
 
-void disable_oneshots(void);
 void check_oneshot_timeout(void);
 void clear_locked_and_oneshot_mods(void);
 void check_disable_oneshot(uint16_t keycode);
