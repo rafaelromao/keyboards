@@ -394,6 +394,5 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
     };
 
     check_disable_oneshot(keycode);
-
     return PROCESS_RECORD_CONTINUE;
 }
