@@ -12,7 +12,7 @@
 
 #define ___________________ROMAK_R1____________________ KC_X    , KC_V    , KC_O    , KC_U    , XXXXXXX
 #define ___________________ROMAK_R2____________________ KC_H    , RALTT_R , RCTLT_A , RSFTT_E , KCI_MAC
-#define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , TD_COMM , TD_DOTD , KC_Y
+#define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , TD_COMM , TD_DOT  , KC_Y
 #define ____ROMAK_R4_____                               RAI_BSP , MED_SFT
 
 #define ___________________NGRAMS_L1___________________ XXXXXXX , MC_SQ_C , MC_SQUO , MC_WH   , XXXXXXX
@@ -22,7 +22,7 @@
 
 #define ___________________NGRAMS_R1___________________ XXXXXXX , MC_TL_O , MC_SQ_O , MC_SQ_U , XXXXXXX
 #define ___________________NGRAMS_R2___________________ MC_GV_A , MC_TL_A , MC_SQ_A , MC_SQ_E , MC_SQ_I
-#define ___________________NGRAMS_R3___________________ XXXXXXX , MC_CR_A , MC_CR_O , MC_CR_E , XXXXXXX
+#define ___________________NGRAMS_R3___________________ XXXXXXX , MC_CR_A , MC_CR_O , MC_CR_E , MC_ING
 #define ____NGRAMS_R4____                               KC_BSPC , _______
 
 #define ___________________NUMPAD_L1___________________ XXXXXXX , KC_F9   , KC_F8   , KC_F7   , KC_F12
@@ -46,8 +46,8 @@
 #define ____MACROS_R4____                               RAI_SPC , _______
 
 #define ___________________LOWER_L1____________________ XXXXXXX , TD_OPAR , TD_CPAR , MC_TILD , KC_BSLS
-#define ___________________LOWER_L2____________________ MC_BTIC , MC_DQUO , MC_SQUO , MC_DAND , MC_DPIP
-#define ___________________LOWER_L3____________________ KC_AT   , TD_SQRB , KC_RBRC , KC_QUES , KC_HASH
+#define ___________________LOWER_L2____________________ MC_BTIC , TD_DQUO , TD_SQUO , MC_DAND , MC_DPIP
+#define ___________________LOWER_L3____________________ KC_AT   , KC_LBRC , KC_RBRC , KC_QUES , KC_HASH
 #define ____LOWER_L4_____                                                             _______ , _______
 
 #define ___________________LOWER_R1____________________ XXXXXXX , KC_7    , KC_8    , KC_9    , XXXXXXX
@@ -62,7 +62,7 @@
 
 #define ___________________RAISE_R1____________________ MC_CIRC , TD_DLR  , TD_CURB , KC_RCBR , XXXXXXX
 #define ___________________RAISE_R2____________________ KC_PLUS , KC_MINS , KC_EQL  , KC_EXLM , KC_PERC
-#define ___________________RAISE_R3____________________ KC_ASTR , KC_SLSH , TD_ANGB , KC_GT   , KC_COLN
+#define ___________________RAISE_R3____________________ KC_ASTR , KC_SLSH , KC_LT   , KC_GT   , KC_COLN
 #define ____RAISE_R4_____                               _______ , _______
 
 #define ___________________MEDIA_L1____________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX

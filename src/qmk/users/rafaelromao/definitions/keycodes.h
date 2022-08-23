@@ -11,11 +11,11 @@ enum {
     ENT_END, 
     SCL_END, 
     BRT_CUR, 
-    BRT_SQR, 
     BRT_PAR, 
     BRT_OPA, 
     BRT_CPA, 
-    BRT_ANG, 
+    DQU_SWI, 
+    SQU_STR, 
     REC_MAC, 
     COM_MAC, 
     DOT_DOT, 
@@ -28,14 +28,14 @@ enum {
 #define TD_EENT TD(ENT_END)
 #define TD_SCLE TD(SCL_END)
 #define TD_CURB TD(BRT_CUR)
-#define TD_SQRB TD(BRT_SQR)
 #define TD_PARN TD(BRT_PAR)
 #define TD_OPAR TD(BRT_OPA)
 #define TD_CPAR TD(BRT_CPA)
-#define TD_ANGB TD(BRT_ANG)
+#define TD_DQUO TD(DQU_SWI)
+#define TD_SQUO TD(SQU_STR)
 #define TD_MACR TD(REC_MAC)
 #define TD_COMM TD(COM_MAC)
-#define TD_DOTD TD(DOT_DOT)
+#define TD_DOT TD(DOT_DOT)
 #define TD_DLR TD(DLR_CUR)
 
 // Custom keycodes
@@ -70,7 +70,7 @@ enum {
     MC_CH,  MC_TH,  MC_WH, 
     MC_GH,  MC_NH,  MC_SH,
     MC_I,   MC_NT,  MC_BY,
-    MC_CK,
+    MC_CK,  MC_ING, MC_SENT,
 
     MC_AO, MC_CAO, MC_OES, MC_COES,
     

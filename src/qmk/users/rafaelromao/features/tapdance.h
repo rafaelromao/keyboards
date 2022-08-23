@@ -6,6 +6,7 @@
 #include "os_toggle.h"
 #include "custom_oneshot.h"
 #include "dynamic_macro.h"
+#include "macros.h"
 
 typedef enum {
     TD_NONE,

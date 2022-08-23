@@ -202,6 +202,15 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
         case MC_NT:
             SEND_STRING("n't");
             return PROCESS_RECORD_RETURN_FALSE;
+        case MC_ING:
+            SEND_STRING("ing");
+            return PROCESS_RECORD_RETURN_FALSE;
+
+        case MC_SENT:
+            tap_code(KC_END);
+            tap_code(KC_SCLN);
+            tap_code(KC_ENT);
+            return PROCESS_RECORD_RETURN_FALSE;
 
             // Degree symbol
 
@@ -358,7 +367,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
 }
 
 process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
-    if (record->event.pressed) {
+    if (record != NULL && record->event.pressed) {
         pressed_time = timer_read();
         return PROCESS_RECORD_CONTINUE;
     }
