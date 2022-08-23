@@ -29,10 +29,10 @@ The following pages explain how this layout works and which features are impleme
 - [N-Grams Layer](docs/macros.md#n-grams)
 - [Accent Keys](docs/macros.md#accents)
 - [Macros Layer](docs/macros.md#macros)
-- [Dynamic Macros](docs/macros.md#dynamic-macros)
 - [Leader Key](docs/macros.md#leader-key)
-- [Select Word](docs/macros.md#select-word)
 - [Window Swapper](docs/macros.md#window-swapper)
+- [Select Word](docs/macros.md#select-word)
+- [Dynamic Macros](docs/macros.md#dynamic-macros)
 - [IDE Macros](docs/macros.md#ide-macros)
 
 ## About this repo
