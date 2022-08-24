@@ -56,7 +56,7 @@ void td_enter_end(qk_tap_dance_state_t *state, void *user_data) {
 
 // Dancing brackets
 
-void td_curly_braces(qk_tap_dance_state_t *state, void *user_data) {
+void td_open_curly_braces(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
@@ -315,7 +315,7 @@ void td_dot_reset(qk_tap_dance_state_t *state, void *user_data) {
 qk_tap_dance_action_t tap_dance_actions[] = {
     [ENT_END] = ACTION_TAP_DANCE_FN(td_enter_end),
     [SCL_END] = ACTION_TAP_DANCE_FN(td_semicolon),
-    [BRT_CUR] = ACTION_TAP_DANCE_FN(td_curly_braces),
+    [BRT_LCR] = ACTION_TAP_DANCE_FN(td_open_curly_braces),
     [BRT_OPA] = ACTION_TAP_DANCE_FN(td_open_parentesis),
     [BRT_CPA] = ACTION_TAP_DANCE_FN(td_close_parentesis),
     [BRT_PAR] = ACTION_TAP_DANCE_FN(td_parentesis),

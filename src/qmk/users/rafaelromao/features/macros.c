@@ -206,12 +206,6 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             SEND_STRING("ing");
             return PROCESS_RECORD_RETURN_FALSE;
 
-        case MC_SENT:
-            tap_code(KC_END);
-            tap_code(KC_SCLN);
-            tap_code(KC_ENT);
-            return PROCESS_RECORD_RETURN_FALSE;
-
             // Degree symbol
 
         case MC_DEG:
@@ -360,6 +354,20 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
         case MC_VIMR:
             SEND_STRING(":%s//g");
             SEND_STRING(SS_TAP(X_LEFT) SS_TAP(X_LEFT));
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // END { ENTER }
+
+        case MC_CUR:
+            SEND_STRING(SS_TAP(X_END) "{}" SS_TAP(X_LEFT) SS_TAP(X_ENT));
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // END ; ENTER
+
+        case MC_SENT:
+            tap_code(KC_END);
+            tap_code(KC_SCLN);
+            tap_code(KC_ENT);
             return PROCESS_RECORD_RETURN_FALSE;
     }
 

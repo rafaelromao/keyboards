@@ -10,7 +10,7 @@ enum {
     TD_CODE_START, 
     ENT_END, 
     SCL_END, 
-    BRT_CUR, 
+    BRT_LCR, 
     BRT_PAR, 
     BRT_OPA, 
     BRT_CPA, 
@@ -27,7 +27,7 @@ enum {
 
 #define TD_EENT TD(ENT_END)
 #define TD_SCLE TD(SCL_END)
-#define TD_CURB TD(BRT_CUR)
+#define TD_LCRB TD(BRT_LCR)
 #define TD_PARN TD(BRT_PAR)
 #define TD_OPAR TD(BRT_OPA)
 #define TD_CPAR TD(BRT_CPA)
@@ -51,6 +51,7 @@ enum {
     MC_SELW, MC_SWLE, MC_SWRI, 
     MC_SELL, MC_REFI,
     MC_JOIN, MC_COMT, MC_VIMR,
+    MC_SENT, MC_CUR,
     
     MC_CAPS, MC_WORD, MC_CAML, MC_SNAK, MC_KBAB,
 
@@ -70,7 +71,7 @@ enum {
     MC_CH,  MC_TH,  MC_WH, 
     MC_GH,  MC_NH,  MC_SH,
     MC_I,   MC_NT,  MC_BY,
-    MC_CK,  MC_ING, MC_SENT,
+    MC_CK,  MC_ING, 
 
     MC_AO, MC_CAO, MC_OES, MC_COES,
     
