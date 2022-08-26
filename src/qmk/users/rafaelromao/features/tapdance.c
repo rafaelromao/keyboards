@@ -136,6 +136,11 @@ void td_dquo_switch(qk_tap_dance_state_t *state, void *user_data) {
             process_macros(MC_DQUO, NULL);
             break;
         case TD_DOUBLE_TAP:
+            process_macros(MC_DQUO, NULL);
+            process_macros(MC_DQUO, NULL);
+            tap_code(KC_LEFT);
+            break;
+        case TD_TRIPLE_TAP:
             SEND_STRING("switch(");
             break;
         default:
@@ -150,6 +155,11 @@ void td_squo_string(qk_tap_dance_state_t *state, void *user_data) {
             process_macros(MC_SQUO, NULL);
             break;
         case TD_DOUBLE_TAP:
+            process_macros(MC_SQUO, NULL);
+            process_macros(MC_SQUO, NULL);
+            tap_code(KC_LEFT);
+            break;
+        case TD_TRIPLE_TAP:
             SEND_STRING("string ");
             break;
         default:
