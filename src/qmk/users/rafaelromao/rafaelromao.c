@@ -75,6 +75,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
     };
 
+    // Process custom taphold
+    switch (process_taphold(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
+
     // Process secrets
     switch (process_secrets(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:

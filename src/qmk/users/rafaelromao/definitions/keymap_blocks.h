@@ -36,7 +36,7 @@
 #define ____NUMPAD_R4____                               RAI_BSP , MED_0
 
 #define ___________________MACROS_L1___________________ XXXXXXX , KC_ESC  , MC_COMP , MC_AUCO , MC_NEER
-#define ___________________MACROS_L2___________________ XXXXXXX , MC_SEEV , MC_RUAN , MC_QUIK , MC_BUID
+#define ___________________MACROS_L2___________________ XXXXXXX , SF_SE  , MC_RUAN , MC_QUIK , MC_BUID
 #define ___________________MACROS_L3___________________ XXXXXXX , MC_PROJ , MC_REFI , MC_FIUS , MC_REFC
 #define ____MACROS_L4____                                                             _______ , LOW_BSP
 

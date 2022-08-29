@@ -33,3 +33,15 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return TAPPING_TERM;
     }
 }
+
+process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case SF_SE:
+            if (!record->event.pressed && record->tap.count > 0) {
+                process_macros(MC_SEEV, NULL);
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+            break;
+    }
+    return PROCESS_RECORD_CONTINUE;
+}
