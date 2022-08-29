@@ -30,8 +30,13 @@
 - Source code: [leader.c](../src/qmk/users/rafaelromao/features/leader.c)
 
 #### Window Swapper
-- Window Swapper is a macro that performs Alt-Tab on Windows/Linux and Cmd+Tab on MacOS, holding the modifier between keypresses. 
-- There are dedicated keys to swap windows back and forth.
+- Window Swapper is a macro that allows easy navigation between applications, tabs and navigation history.
+- There are dedicated keys to swap back and forth.
+- On tap, these two macros navigate back and forth between applicatios windows.
+- If shift is active in the first tap, they navigate between tabs instead.
+- A long press will navigate in the browser history.
+- These actions are executed when the key is released.
+- These macros should work for any OS selected in the Maintenance layer.
 - Source Code: [window_swapper.c](../src/qmk/users/rafaelromao/features/window_swapper.c)
 
 #### Select Word

@@ -5,6 +5,7 @@
 extern os_t os;
 
 static bool swapping = false;
+static bool tabbing  = false;
 
 process_record_result_t process_window_swapper(uint16_t keycode, keyrecord_t *record) {
     if (start_long_press(record)) {
@@ -12,9 +13,9 @@ process_record_result_t process_window_swapper(uint16_t keycode, keyrecord_t *re
     }
 
     bool isMacOS = os.type == MACOS;
-    // bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
-    // bool isOneShotShift       = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
-    // bool isShifted            = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
+    bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
+    bool isOneShotShift       = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
+    bool isShifted            = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
 
     // Back and Forth in the browser
 
@@ -37,16 +38,25 @@ process_record_result_t process_window_swapper(uint16_t keycode, keyrecord_t *re
         }
     }
 
-    // Back and Forth in the open applications
+    // Back and Forth in the open applications or tabs
 
     if (swapping && keycode != MC_SWLE && keycode != MC_SWRI) {
-        swapping = false;
         unregister_mods(MOD_LSFT);
         if (isMacOS) {
-            unregister_mods(MOD_LGUI);
+            if (tabbing) {
+                unregister_mods(MOD_LCTL);
+            } else {
+                unregister_mods(MOD_LGUI);
+            }
         } else {
-            unregister_mods(MOD_LALT);
+            if (tabbing) {
+                unregister_mods(MOD_LCTL);
+            } else {
+                unregister_mods(MOD_LALT);
+            }
         }
+        swapping = false;
+        tabbing  = false;
     }
 
     switch (keycode) {
@@ -65,9 +75,19 @@ process_record_result_t process_window_swapper(uint16_t keycode, keyrecord_t *re
                 if (!swapping) {
                     swapping = true;
                     if (isMacOS) {
-                        register_mods(MOD_LGUI);
+                        if (isShifted) {
+                            tabbing = true;
+                            register_mods(MOD_LCTL);
+                        } else {
+                            register_mods(MOD_LGUI);
+                        }
                     } else {
-                        register_mods(MOD_LALT);
+                        if (isShifted) {
+                            tabbing = true;
+                            register_mods(MOD_LCTL);
+                        } else {
+                            register_mods(MOD_LALT);
+                        }
                     }
                 }
                 tap_code(KC_TAB);
