@@ -16,7 +16,7 @@ const uint16_t PROGMEM r_low_ent_combo[] = {RAI_BSP, KC_5, KC_6, COMBO_END};
 
 // Raise
 
-const uint16_t PROGMEM r_rai_cur_combo[] = {TD_LCRB, KC_RCBR, COMBO_END};
+const uint16_t PROGMEM r_rai_cur_combo[] = {TD_LCRB, TD_RCRB, COMBO_END};
 
 // Media
 

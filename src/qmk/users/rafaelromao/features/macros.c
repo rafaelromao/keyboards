@@ -353,7 +353,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             // END { ENTER }
 
         case MC_CUR:
-            SEND_STRING(SS_TAP(X_END) "{}" SS_TAP(X_LEFT) SS_TAP(X_ENT));
+            SEND_STRING(SS_TAP(X_END) "{}" SS_DELAY(50) SS_TAP(X_LEFT) SS_TAP(X_ENT));
             return PROCESS_RECORD_RETURN_FALSE;
 
             // END ; ENTER

@@ -36,7 +36,7 @@
 #define ____NUMPAD_R4____                               RAI_BSP , MED_0
 
 #define ___________________MACROS_L1___________________ XXXXXXX , KC_ESC  , MC_COMP , MC_AUCO , MC_NEER
-#define ___________________MACROS_L2___________________ XXXXXXX , SF_SE  , MC_RUAN , MC_QUIK , MC_BUID
+#define ___________________MACROS_L2___________________ XXXXXXX , SF_SE   , MC_RUAN , MC_QUIK , MC_BUID
 #define ___________________MACROS_L3___________________ XXXXXXX , MC_PROJ , MC_REFI , MC_FIUS , MC_REFC
 #define ____MACROS_L4____                                                             _______ , LOW_BSP
 
@@ -60,7 +60,7 @@
 #define ___________________RAISE_L3____________________ KC_F14  , KC_F3   , KC_F2   , KC_F1   , KC_F10
 #define ____RAISE_L4_____                                                             _______ , _______
 
-#define ___________________RAISE_R1____________________ MC_CIRC , TD_DLR  , TD_LCRB , KC_RCBR , XXXXXXX
+#define ___________________RAISE_R1____________________ MC_CIRC , TD_DLR  , TD_LCRB , TD_RCRB , XXXXXXX
 #define ___________________RAISE_R2____________________ KC_PLUS , KC_MINS , KC_EQL  , KC_EXLM , KC_PERC
 #define ___________________RAISE_R3____________________ KC_ASTR , KC_SLSH , KC_LT   , KC_GT   , KC_COLN
 #define ____RAISE_R4_____                               _______ , _______

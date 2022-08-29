@@ -11,6 +11,7 @@ enum {
     ENT_END, 
     SCL_END, 
     BRT_LCR, 
+    BRT_RCR, 
     BRT_PAR, 
     BRT_OPA, 
     BRT_CPA, 
@@ -28,6 +29,7 @@ enum {
 #define TD_EENT TD(ENT_END)
 #define TD_SCLE TD(SCL_END)
 #define TD_LCRB TD(BRT_LCR)
+#define TD_RCRB TD(BRT_RCR)
 #define TD_PARN TD(BRT_PAR)
 #define TD_OPAR TD(BRT_OPA)
 #define TD_CPAR TD(BRT_CPA)
