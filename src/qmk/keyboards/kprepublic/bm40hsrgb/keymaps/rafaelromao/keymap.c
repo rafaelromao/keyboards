@@ -138,8 +138,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 extern leader_t      leader;
 extern select_word_t select_word;
-const int            led_count = 15;
-int                  leds[]    = {0, 5, 6, 11, 17, 18, 29, 30, 36, 37, 38, 41, 44, 45, 46};
+const int            led_count = 13;
+int                  leds[]    = {5, 6, 17, 18, 29, 30, 36, 37, 38, 41, 44, 45, 46};
 
 void set_rgblight_by_layer(uint32_t layer) {
     for (int i = 0; i < led_count; i++) {
@@ -164,7 +164,7 @@ void set_current_layer_rgb(void) {
     set_rgblight_by_layer(get_highest_layer(layer_state | default_layer_state));
 }
 
-uint32_t layer_state_set_user(uint32_t state) {
+layer_state_t layer_state_set_user(layer_state_t state) {
     set_rgblight_by_layer(biton32(state));
     return state;
 }

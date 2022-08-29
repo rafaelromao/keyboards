@@ -195,7 +195,7 @@ void set_current_layer_rgb(void) {
     set_rgblight_by_layer(get_highest_layer(layer_state | default_layer_state));
 }
 
-uint32_t layer_state_set_user(uint32_t state) {
+layer_state_t layer_state_set_user(layer_state_t state) {
     set_rgblight_by_layer(biton32(state));
     return state;
 }
