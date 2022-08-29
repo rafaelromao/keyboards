@@ -27,3 +27,17 @@ bool is_key_on_tap(uint16_t keycode) {
     }
     return false;
 }
+
+static uint16_t pressed_time = 0;
+
+bool start_long_press(keyrecord_t *record) {
+    if (record != NULL && record->event.pressed) {
+        pressed_time = timer_read();
+        return true;
+    }
+    return false;
+}
+
+bool is_long_press(void) {
+    return timer_elapsed(pressed_time) > TAPPING_TERM;
+}

@@ -156,5 +156,7 @@ enum {
 
 uint16_t extract_base_tapping_keycode(uint16_t keycode);
 bool is_key_on_tap(uint16_t keycode);
+bool start_long_press(keyrecord_t *record);
+bool is_long_press(void);
 
 // clang-format on

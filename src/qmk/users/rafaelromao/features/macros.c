@@ -77,12 +77,6 @@ bool is_accented_keycode(uint16_t keycode) {
     return false;
 }
 
-static uint16_t pressed_time = 0;
-
-bool is_long_press(void) {
-    return timer_elapsed(pressed_time) > TAPPING_TERM;
-}
-
 process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotShift, bool isShifted) {
     bool isMacOS = os.type == MACOS;
 
@@ -375,8 +369,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
 }
 
 process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
-    if (record != NULL && record->event.pressed) {
-        pressed_time = timer_read();
+    if (start_long_press(record)) {
         return PROCESS_RECORD_CONTINUE;
     }
 
