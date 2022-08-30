@@ -32,7 +32,7 @@
 #### Window Swapper
 - Window Swapper is a macro that allows easy navigation between applications, tabs and navigation history.
 - There are dedicated keys to swap back and forth.
-- On tap, these two keyss navigate back and forth between application windows.
+- On tap, these two keys navigate back and forth between application windows.
 - If shift is active in the first tap, they navigate between tabs instead.
 - A long press will navigate in the browser history.
 - These actions are executed when the key is released.
