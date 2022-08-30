@@ -36,7 +36,7 @@
 - If shift is active in the first tap, they navigate between the current application tabs instead.
 - A long press will navigate in the browser history.
 - These actions are executed when the key is released.
-- These macros should work for any OS selected in the Maintenance layer.
+- These macros will work according to the OS selected in the Maintenance layer.
 - Source Code: [window_swapper.c](../src/qmk/users/rafaelromao/features/window_swapper.c)
 
 #### Select Word
