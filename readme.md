@@ -78,3 +78,5 @@ Most features implemented here were based on the work referenced below.
 - [Keymap DB](https://keymapdb.com/rafaelromao/)
 - [QMK Docs](https://docs.qmk.fm)
 - [Keyboard Tester](https://config.qmk.fm/#/test)
+- [r/olkb](https://www.reddit.com/r/olkb)
+- [r/ErgoMechKeyboards](https://www.reddit.com/r/ErgoMechKeyboards)
