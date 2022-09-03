@@ -66,14 +66,14 @@
 - In the left side os the Macros layers, there are macros for the most common IDE shortcuts:
     - Complete Statement (Shift+Cmd+Enter / Shift+Ctrl+Enter) - A long press will show the Generate menu
     - Auto Complete (Ctrl+Shift+Space) - A long press will show regular Auto Complete Options (Ctrl+Space)
-    - Next Error (Shift+F2) - A long press will Go To Next Warning (F2)
+    - Next Error (Shift+F2) - A long press will go to Next Warning (F2)
     - Search Everywhere (Shift+Shift) - Hold will act as Shift
     - Run Everything (Ctrl+Ctrl)
     - Quick Actions (Alt+Enter)
     - Build (Cmd+F9 / Ctrl+F9)
     - Project Files (Cmd+1 / Ctrl+1)
     - Recent Files (Cmd+E / Ctrl+E)
-    - Find Usages (Alt+F7) - A long press will Go To Type Definition (Shift+Cmd+B/Shift+Ctrl+B)
+    - Find Usages (Alt+F7) - A long press will go to Type Definition (Shift+Cmd+B / Shift+Ctrl+B)
     - Refactor This (Alt+F6) - A long press will show the Refactor options (Ctrl+T / Shift+Ctrl+Alt+T)
 
 ##
