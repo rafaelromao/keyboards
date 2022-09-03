@@ -8,11 +8,248 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <layers.dtsi>
-#include <hold-taps.dtsi>
-#include <ngrams.dtsi>
-#include <macros.dtsi>
-#include <symbols.dtsi>
+
+#define ROMAK 0
+#define NUMPAD 1
+#define NGRAMS 2
+#define MACROS 3
+#define LOWER 4
+#define RAISE 5
+#define NAV_F 6
+#define MED 7
+#define NAV 8
+#define LOCK 9
+#define MAINT 10
+
+&sl {
+    release-after-ms = <2000>;
+};
+
+/ {
+    hold-taps {
+        msl: layer-tap-with-stick-layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "layer-tap-with-stick-layer";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <175>;
+            quick-tap-ms = <0>;
+            layer-tap-with-stick-layer;
+            bindings = <&mo>, <&sl>;
+        };
+        msk: layer-tap-with-stick-key {
+            compatible = "zmk,behavior-hold-tap";
+            label = "layer-tap-with-stick-key";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <175>;
+            quick-tap-ms = <0>;
+            layer-tap-with-stick-key;
+            bindings = <&mo>, <&sk>;
+        };
+    };
+};
+
+/ {
+    macros {
+        mc_sqo: mc_sqo {
+            label = "'";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp SINGLE_QUOTE &kp SPACE>;
+        };
+    };
+};
+
+/ {
+    ngrams {
+        ng_qu: ng_qu {
+            label = "qu";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp Q &kp U>;
+        };
+        ng_lh: ng_lh {
+            label = "lh";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp L &kp H>;
+        };
+        ng_ph: ng_ph {
+            label = "ph";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp P &kp H>;
+        };
+        ng_th: ng_th {
+            label = "th";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp T &kp H>;
+        };
+        ng_ch: ng_ch {
+            label = "ch";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp C &kp H>;
+        };
+        ng_wh: ng_wh {
+            label = "wh";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp W &kp H>;
+        };
+        ng_gh: ng_gh {
+            label = "gh";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp G &kp H>;
+        };
+        ng_nh: ng_nh {
+            label = "nh";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp N &kp H>;
+        };
+        ng_sh: ng_sh {
+            label = "sh";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp S &kp H>;
+        };
+        ng_by: ng_by {
+            label = "by";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp B &kp Y>;
+        };
+        ng_ing: ng_ing {
+            label = "ing";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp I &kp N &kp G>;
+        };
+        ng_ck: ng_ck {
+            label = "ck";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp C &kp K>;
+        };
+        ac_agrv: ac_agrv {
+            label = "à";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp GRAVE &kp A>;
+        };
+        ac_acir: ac_acir {
+            label = "â";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp CARET &kp A>;
+        };
+        ac_aacu: ac_aacu {
+            label = "á";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp SINGLE_QUOTE &kp A>;
+        };
+        ac_atil: ac_atil {
+            label = "ã";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp TILDE &kp A>;
+        };
+        ac_eacu: ac_eacu {
+            label = "é";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp SINGLE_QUOTE &kp E>;
+        };
+        ac_ecir: ac_ecir {
+            label = "ê";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp CARET &kp E>;
+        };
+        ac_oacu: ac_oacu {
+            label = "ó";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp SINGLE_QUOTE &kp O>;
+        };
+        ac_ocir: ac_ocir {
+            label = "ô";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp CARET &kp O>;
+        };
+        ac_otil: ac_otil {
+            label = "õ";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp TILDE &kp O>;
+        };
+        ac_uacu: ac_uacu {
+            label = "ú";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp SINGLE_QUOTE &kp U>;
+        };
+        ac_iacu: ac_iacu {
+            label = "à";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp SINGLE_QUOTE &kp I>;
+        };
+        ac_accdi: ac_ccdi {
+            label = "ç";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp SINGLE_QUOTE &kp C>;
+        };
+    };
+};
+
+/ {
+    symbols {
+        mc_bti: mc_bti {
+            label = "`";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp SQT &kp SPACE>;
+        };
+        mc_dqo: mc_dqo {
+            label = "quot";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp DQT &kp SPACE>;
+        };
+        mc_sqo: mc_sqo {
+            label = "'";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp GRAVE &kp SPACE>;
+        };
+        mc_circ: mc_circ {
+            label = "^";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp CARET &kp SPACE>;
+        };
+        mc_and: mc_and {
+            label = "&&";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp AMPS &kp AMPS>;
+        };
+        mc_or: mc_or {
+            label = "||";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp PIPE &kp PIPE>;
+        };
+    };
+};
 
 / {
         keymap {
@@ -20,9 +257,9 @@
                 default_layer {
                         label = "ROMAK";
                         bindings = <
-   &none           &kp Q           &kp U           &kp F           &kp Z           &kp K           &kp L           &kp O           &kp V           &none    
-   &lt MACROS P    &mt LSHFT S     &mt LCTRL E     &mt LALT D      &kp G           &kp H           &mt RALT N      &mt RCTRL A     &mt RSHFT R     &lt MACROS C 
-   &kp B           &kp Y           &kp I           &mt LGUI T      &kp X           &kp J           &mt RGUI M      &kp COMMA       &kp DOT         &kp W
+   &none           &kp F           &kp D           &kp W           &kp Z           &kp X           &kp V           &kp O           &kp U           &none    
+   &lt MACROS L    &mt LSHFT N     &mt LCTRL S     &mt LALT T      &kp G           &kp H           &mt RALT R      &mt RCTRL A     &mt RSHFT E     &lt MACROS I 
+   &kp Q           &kp B           &kp C           &mt LGUI P      &kp K           &kp J           &mt RGUI M      &kp COMMA       &kp DOT         &kp Y
                                    &none           &msl NAV NGRAMS &lt LOWER SPACE &lt RAISE BSPC  &msk MED LSHFT  &none
                         >;
                 };
@@ -38,10 +275,10 @@
                 ngrams_layer {
                         label = "NGRAMS";
                         bindings = <
-   &none           &ng_qu          &ng_lh          &ng_ph          &none           &none           &ac_ocir        &ac_oacu        &ac_otil        &none    
-   &ng_gh          &ng_th          &mc_sqo         &ng_wh          &none           &ac_agrv        &ac_acir        &ac_aacu        &ac_atil        &ac_ccdi 
-   &none           &ng_ch          &ng_nh          &ng_sh          &none           &none           &ac_ecir        &ac_eacu        &ac_iacu        &ac_uacu
-                                   &none           &trans          &kp SPACE       &kp BSPC        &trans          &none
+   &none           &ac_accdi       &mc_squ         &ng_wh          &none           &none           &ac_otil        &ac_oacu        &ac_uacu        &none    
+   &ng_lh          &ng_nh          &ng_sh          &ng_th          &ng_gh          &ac_agrv        &ac_atil        &ac_aacu        &ac_eacu        &ac_iacu 
+   &ng_qu          &ng_by          &ng_ch          &ng_ph          &ng_ck          &none           &ac_acir        &ac_ocir        &ac_ecir        &mc_ing
+                                   &none           &trans          &kp SPACE       &kp BSPC        &trans          &anone
                         >;
                 };
                 macros_layer {
