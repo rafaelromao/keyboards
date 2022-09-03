@@ -233,18 +233,20 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
                 SEND_STRING(SS_LCTL(SS_TAP(X_E)));
             } else {
                 SEND_STRING(SS_LGUI(SS_TAP(X_E)));
-                break;
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
             // Refactor This
 
         case MC_REFC:
-            if (should_send_ctrl(isMacOS, isOneShotShift)) {
-                SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT(SS_TAP(X_T)))));
+            if (is_long_press()) {
+                if (should_send_ctrl(isMacOS, isOneShotShift)) {
+                    SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT(SS_TAP(X_T)))));
+                } else {
+                    SEND_STRING(SS_LCTL(SS_TAP(X_T)));
+                }
             } else {
-                SEND_STRING(SS_LSFT(SS_LGUI(SS_LALT(SS_TAP(X_T)))));
-                break;
+                SEND_STRING(SS_LSFT(SS_TAP(X_F6)));
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
@@ -261,7 +263,6 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
                 SEND_STRING(SS_LCTL("1"));
             } else {
                 SEND_STRING(SS_LGUI("1"));
-                break;
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
@@ -286,18 +287,24 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
                 SEND_STRING(SS_LCTL(SS_TAP(X_F9)));
             } else {
                 SEND_STRING(SS_LGUI(SS_TAP(X_F9)));
-                break;
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
             // Complete Statement
 
         case MC_COMP:
-            if (should_send_ctrl(isMacOS, isOneShotShift)) {
-                SEND_STRING(SS_LSFT(SS_LCTL(SS_TAP(X_ENT))));
+            if (is_long_press()) {
+                if (should_send_ctrl(isMacOS, isOneShotShift)) {
+                    SEND_STRING(SS_LALT(SS_TAP(X_INS)));
+                } else {
+                    SEND_STRING(SS_LGUI(SS_TAP(X_N)));
+                }
             } else {
-                SEND_STRING(SS_LSFT(SS_LGUI(SS_TAP(X_ENT))));
-                break;
+                if (should_send_ctrl(isMacOS, isOneShotShift)) {
+                    SEND_STRING(SS_LSFT(SS_LCTL(SS_TAP(X_ENT))));
+                } else {
+                    SEND_STRING(SS_LSFT(SS_LGUI(SS_TAP(X_ENT))));
+                }
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
@@ -324,7 +331,16 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             // Find Usages
 
         case MC_FIUS:
-            SEND_STRING(SS_LALT(SS_TAP(X_F7)));
+            if (is_long_press()) {
+                if (should_send_ctrl(isMacOS, isOneShotShift)) {
+                    SEND_STRING(SS_LSFT(SS_LCTL(SS_TAP(X_B))));
+                } else {
+                    SEND_STRING(SS_LSFT(SS_LGUI(SS_TAP(X_B))));
+                    break;
+                }
+            } else {
+                SEND_STRING(SS_LALT(SS_TAP(X_F7)));
+            }
             return PROCESS_RECORD_RETURN_FALSE;
 
             // Join Lines
