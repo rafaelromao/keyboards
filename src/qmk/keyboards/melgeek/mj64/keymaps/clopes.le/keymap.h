@@ -30,4 +30,4 @@ enum { ESC_QUOT, LBRC_RBRC };
 
 // Mod taps
 
-#define SF_SLSH LSFT_T(KC_SLSH)
+#define SF_SLSH LSFT_T(BR_SLSH)
