@@ -379,6 +379,24 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             tap_code(KC_SCLN);
             tap_code(KC_ENT);
             return PROCESS_RECORD_RETURN_FALSE;
+
+            // Refresh
+
+        case MC_REF:
+            if (is_long_press()) {
+                if (should_send_ctrl(isMacOS, isOneShotShift)) {
+                    SEND_STRING(SS_LSFT(SS_TAP(X_F5)));
+                } else {
+                    SEND_STRING(SS_LGUI(SS_LSFT(SS_TAP(X_R))));
+                }
+            } else {
+                if (should_send_ctrl(isMacOS, isOneShotShift)) {
+                    tap_code(KC_F5);
+                } else {
+                    SEND_STRING(SS_LGUI(SS_TAP(X_R)));
+                }
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
     }
 
     return PROCESS_RECORD_CONTINUE;
