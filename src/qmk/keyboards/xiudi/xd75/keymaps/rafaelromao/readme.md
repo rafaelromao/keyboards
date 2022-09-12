@@ -8,11 +8,11 @@ The keyboard in the picture below is a XD75, used to design and test this layout
 
 The qmk version recommended for this keyboard is 0.18.1.
 
-### Compile
+#### Compile
 
 `qmk compile -kb xd75 -km rafaelromao`
 
-### Flash
+#### Flash
 
 `qmk flash -kb xd75 -km rafaelromao`
 

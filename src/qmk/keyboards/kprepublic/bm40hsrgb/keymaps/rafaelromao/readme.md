@@ -8,11 +8,11 @@ The keyboard in the picture below is a BM40, used to design and test this layout
 
 The qmk version recommended for this keyboard is 0.18.1, with dynamic macros disabled.
 
-### Compile
+#### Compile
 
 `qmk compile -kb bm40hsrgb -km rafaelromao`
 
-### Flash
+#### Flash
 
 `qmk flash -kb bm40hsrgb -km rafaelromao`
 
