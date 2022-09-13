@@ -36,6 +36,11 @@ __attribute__((weak)) td_state_t dance_state(qk_tap_dance_state_t *state) {
         return TD_UNKNOWN;
 }
 
+bool isShifted(void) {
+    return get_mods() & MOD_MASK_SHIFT || get_oneshot_mods() & MOD_MASK_SHIFT ||
+           get_oneshot_locked_mods() & MOD_MASK_SHIFT;
+}
+
 // Enter end
 
 void td_enter_end(qk_tap_dance_state_t *state, void *user_data) {
@@ -63,7 +68,12 @@ void td_open_curly_braces(qk_tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_LCBR);
             break;
         case TD_DOUBLE_TAP:
-            SEND_STRING("var ");
+            if (isShifted()) {
+                clear_shift();
+                SEND_STRING("let ");
+            } else {
+                SEND_STRING("var ");
+            }
             break;
         case TD_SINGLE_HOLD:
             tap_code16(KC_END);
@@ -81,7 +91,12 @@ void td_close_curly_braces(qk_tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_RCBR);
             break;
         case TD_DOUBLE_TAP:
-            SEND_STRING("else");
+            if (isShifted()) {
+                clear_shift();
+                SEND_STRING("break;" SS_TAP(X_ENT));
+            } else {
+                SEND_STRING("return ");
+            }
             break;
         case TD_SINGLE_HOLD:
             tap_code16(KC_END);
@@ -99,7 +114,12 @@ void td_open_parentesis(qk_tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_LPRN);
             break;
         case TD_DOUBLE_TAP:
-            SEND_STRING("for(");
+            if (isShifted()) {
+                clear_shift();
+                SEND_STRING("foreach(");
+            } else {
+                SEND_STRING("for(");
+            }
             break;
         case TD_SINGLE_HOLD:
             tap_code16(KC_END);
@@ -117,7 +137,12 @@ void td_close_parentesis(qk_tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_RPRN);
             break;
         case TD_DOUBLE_TAP:
-            SEND_STRING("if(");
+            if (isShifted()) {
+                clear_shift();
+                SEND_STRING("else");
+            } else {
+                SEND_STRING("if(");
+            }
             break;
         case TD_SINGLE_HOLD:
             tap_code16(KC_END);
@@ -154,12 +179,17 @@ void td_dquo_switch(qk_tap_dance_state_t *state, void *user_data) {
             process_macros(MC_DQUO, NULL);
             break;
         case TD_DOUBLE_TAP:
+            if (isShifted()) {
+                clear_shift();
+                SEND_STRING("case :" SS_TAP(X_LEFT));
+            } else {
+                SEND_STRING("switch(");
+            }
+            break;
+        case TD_SINGLE_HOLD:
             process_macros(MC_DQUO, NULL);
             process_macros(MC_DQUO, NULL);
             tap_code(KC_LEFT);
-            break;
-        case TD_TRIPLE_TAP:
-            SEND_STRING("switch(");
             break;
         default:
             break;
@@ -173,12 +203,17 @@ void td_squo_string(qk_tap_dance_state_t *state, void *user_data) {
             process_macros(MC_SQUO, NULL);
             break;
         case TD_DOUBLE_TAP:
+            if (isShifted()) {
+                clear_shift();
+                SEND_STRING("string ");
+            } else {
+                SEND_STRING("String ");
+            }
+            break;
+        case TD_SINGLE_HOLD:
             process_macros(MC_SQUO, NULL);
             process_macros(MC_SQUO, NULL);
             tap_code(KC_LEFT);
-            break;
-        case TD_TRIPLE_TAP:
-            SEND_STRING("string ");
             break;
         default:
             break;
@@ -255,8 +290,6 @@ void td_macro(qk_tap_dance_state_t *state, void *user_data) {
 
 void td_comm_macro(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
-    bool isShifted  = get_mods() & MOD_MASK_SHIFT || get_oneshot_mods() & MOD_MASK_SHIFT ||
-                     get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
             tap_code(KC_COMM);
@@ -266,7 +299,7 @@ void td_comm_macro(qk_tap_dance_state_t *state, void *user_data) {
             tap_code(KC_COMM);
             break;
         case TD_DOUBLE_TAP:
-            if (!isShifted) {
+            if (!isShifted()) {
                 qk_leader_start();
             } else {
                 tap_code(KC_COMM);
