@@ -17,7 +17,7 @@
 
 ### About the layout
 
-MJ64 comes in the ANSI layout, but Brazilian ABNT2 extend the ISO layout.
+MJ64 comes in ANSI layout, but Brazilian ABNT2 extends the ISO layout.
 
 The main differences between ANSI and ABNT2 are:
 - In ANSI, Enter is 2.75u in R3 only, there is an 1.5u extra key above it and a missing 1u key at its left.
