@@ -15,8 +15,9 @@ enum {
     BRT_PAR, 
     BRT_OPA, 
     BRT_CPA, 
-    DQU_SWI, 
+    DQU_FIN, 
     SQU_STR, 
+    CIR_SWI, 
     REC_MAC, 
     COM_MAC, 
     DOT_DOT, 
@@ -33,8 +34,9 @@ enum {
 #define TD_PARN TD(BRT_PAR)
 #define TD_OPAR TD(BRT_OPA)
 #define TD_CPAR TD(BRT_CPA)
-#define TD_DQUO TD(DQU_SWI)
+#define TD_DQUO TD(DQU_FIN)
 #define TD_SQUO TD(SQU_STR)
+#define TD_CIRC TD(CIR_SWI)
 #define TD_MACR TD(REC_MAC)
 #define TD_COMM TD(COM_MAC)
 #define TD_DOT TD(DOT_DOT)

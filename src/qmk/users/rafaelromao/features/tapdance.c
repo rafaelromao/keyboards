@@ -70,7 +70,7 @@ void td_open_curly_braces(qk_tap_dance_state_t *state, void *user_data) {
         case TD_DOUBLE_TAP:
             if (isShifted()) {
                 clear_shift();
-                SEND_STRING("let ");
+                SEND_STRING("const ");
             } else {
                 SEND_STRING("var ");
             }
@@ -116,7 +116,7 @@ void td_open_parentesis(qk_tap_dance_state_t *state, void *user_data) {
         case TD_DOUBLE_TAP:
             if (isShifted()) {
                 clear_shift();
-                SEND_STRING("foreach(");
+                SEND_STRING("while(");
             } else {
                 SEND_STRING("for(");
             }
@@ -170,9 +170,30 @@ void td_parentesis(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
+// Caret
+
+void td_caret_switch(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            process_macros(MC_CIRC, NULL);
+            break;
+        case TD_DOUBLE_TAP:
+            if (isShifted()) {
+                clear_shift();
+                SEND_STRING("case :" SS_TAP(X_LEFT));
+            } else {
+                SEND_STRING("switch(");
+            }
+            break;
+        default:
+            break;
+    }
+}
+
 // Double taps on quotes
 
-void td_dquo_switch(qk_tap_dance_state_t *state, void *user_data) {
+void td_dquo_final(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
@@ -181,9 +202,9 @@ void td_dquo_switch(qk_tap_dance_state_t *state, void *user_data) {
         case TD_DOUBLE_TAP:
             if (isShifted()) {
                 clear_shift();
-                SEND_STRING("case :" SS_TAP(X_LEFT));
+                SEND_STRING("abstract " SS_TAP(X_LEFT));
             } else {
-                SEND_STRING("switch(");
+                SEND_STRING("final ");
             }
             break;
         case TD_SINGLE_HOLD:
@@ -205,7 +226,7 @@ void td_squo_string(qk_tap_dance_state_t *state, void *user_data) {
         case TD_DOUBLE_TAP:
             if (isShifted()) {
                 clear_shift();
-                SEND_STRING("string ");
+                SEND_STRING("static ");
             } else {
                 SEND_STRING("String ");
             }
@@ -381,8 +402,9 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [BRT_OPA] = ACTION_TAP_DANCE_FN(td_open_parentesis),
     [BRT_CPA] = ACTION_TAP_DANCE_FN(td_close_parentesis),
     [BRT_PAR] = ACTION_TAP_DANCE_FN(td_parentesis),
-    [DQU_SWI] = ACTION_TAP_DANCE_FN(td_dquo_switch),
+    [DQU_FIN] = ACTION_TAP_DANCE_FN(td_dquo_final),
     [SQU_STR] = ACTION_TAP_DANCE_FN(td_squo_string),
+    [CIR_SWI] = ACTION_TAP_DANCE_FN(td_caret_switch),
     [REC_MAC] = ACTION_TAP_DANCE_FN(td_macro),
     [COM_MAC] = ACTION_TAP_DANCE_FN(td_comm_macro),
     [DLR_CUR] = ACTION_TAP_DANCE_FN(td_currencies),
