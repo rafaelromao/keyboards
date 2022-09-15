@@ -7,6 +7,7 @@
 #include "custom_oneshot.h"
 #include "dynamic_macro.h"
 #include "macros.h"
+#include "ngrams.h"
 
 typedef enum {
     TD_NONE,

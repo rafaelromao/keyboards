@@ -176,7 +176,7 @@ void td_caret_switch(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
-            process_macros(MC_CIRC, NULL);
+            process_ngrams(MC_CIRC, NULL);
             break;
         case TD_DOUBLE_TAP:
             if (isShifted()) {
@@ -197,7 +197,7 @@ void td_dquo_final(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
-            process_macros(MC_DQUO, NULL);
+            process_ngrams(MC_DQUO, NULL);
             break;
         case TD_DOUBLE_TAP:
             if (isShifted()) {
@@ -208,8 +208,8 @@ void td_dquo_final(qk_tap_dance_state_t *state, void *user_data) {
             }
             break;
         case TD_SINGLE_HOLD:
-            process_macros(MC_DQUO, NULL);
-            process_macros(MC_DQUO, NULL);
+            process_ngrams(MC_DQUO, NULL);
+            process_ngrams(MC_DQUO, NULL);
             tap_code(KC_LEFT);
             break;
         default:
@@ -221,7 +221,7 @@ void td_squo_string(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
-            process_macros(MC_SQUO, NULL);
+            process_ngrams(MC_SQUO, NULL);
             break;
         case TD_DOUBLE_TAP:
             if (isShifted()) {
@@ -232,8 +232,8 @@ void td_squo_string(qk_tap_dance_state_t *state, void *user_data) {
             }
             break;
         case TD_SINGLE_HOLD:
-            process_macros(MC_SQUO, NULL);
-            process_macros(MC_SQUO, NULL);
+            process_ngrams(MC_SQUO, NULL);
+            process_ngrams(MC_SQUO, NULL);
             tap_code(KC_LEFT);
             break;
         default:
