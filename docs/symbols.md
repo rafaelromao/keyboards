@@ -30,6 +30,10 @@ Symbols and Numbers are primarily available in the two classic Lower and Raise l
 - The right side of the Numpad layer contains number keys.
 - Home block mods are also available on both sides of the Numpad layer.
 
+### Coding Dancing
+- Coding Dancing is a set of macros available through tap dances (Double Tap and Triple Tap) in the Lower and Raise layers.
+- It allows fast typing for some of the most frequent Java keywords and code blocks.
+
 ##
 [Home](../readme.md) | 
 [Base](base.md) |
