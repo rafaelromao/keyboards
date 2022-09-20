@@ -46,7 +46,7 @@
 #define ____MACROS_R4____                               RAI_SPC , _______
 
 #define ___________________LOWER_L1____________________ XXXXXXX , TD_OPAR , TD_CPAR , MC_TILD , KC_BSLS
-#define ___________________LOWER_L2____________________ MC_BTIC , TD_DQUO , TD_SQUO , TD_AND  , TD_OR
+#define ___________________LOWER_L2____________________ MC_BTIC , TD_DQUO , TD_SQUO , TD_AND  , MC_DPIP
 #define ___________________LOWER_L3____________________ KC_AT   , TD_OBR  , TD_CBR  , KC_QUES , KC_HASH
 #define ____LOWER_L4_____                                                             _______ , _______
 
@@ -61,7 +61,7 @@
 #define ____RAISE_L4_____                                                             _______ , _______
 
 #define ___________________RAISE_R1____________________ KC_CIRC , TD_DLR  , TD_LCRB , TD_RCRB , XXXXXXX
-#define ___________________RAISE_R2____________________ KC_PLUS , KC_MINS , KC_EQL  , KC_EXLM , KC_PERC
+#define ___________________RAISE_R2____________________ KC_PLUS , KC_MINS , KC_EQL  , TD_NOT  , KC_PERC
 #define ___________________RAISE_R3____________________ KC_ASTR , KC_SLSH , KC_LT   , KC_GT   , KC_COLN
 #define ____RAISE_R4_____                               _______ , _______
 

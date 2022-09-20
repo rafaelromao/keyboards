@@ -226,14 +226,14 @@ void td_and_switch(qk_tap_dance_state_t *state, void *user_data) {
 
 // Or
 
-void td_or_switch(qk_tap_dance_state_t *state, void *user_data) {
+void td_not_switch(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
-            process_macros(MC_DPIP, NULL);
+            tap_code16(KC_EXLM);
             break;
         case TD_DOUBLE_TAP:
-            SEND_STRING("case :" SS_TAP(X_LEFT));
+            SEND_STRING("case ");
             break;
         case TD_TRIPLE_TAP:
             SEND_STRING("switch(");
@@ -454,7 +454,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [BRT_PAR] = ACTION_TAP_DANCE_FN(td_parentesis),
     [DQU_FIN] = ACTION_TAP_DANCE_FN(td_dquo_final),
     [SQU_STR] = ACTION_TAP_DANCE_FN(td_squo_string),
-    [OR_SWI] = ACTION_TAP_DANCE_FN(td_or_switch),
+    [NOT_SWI] = ACTION_TAP_DANCE_FN(td_not_switch),
     [AND_BOO] = ACTION_TAP_DANCE_FN(td_and_switch),
     [REC_MAC] = ACTION_TAP_DANCE_FN(td_macro),
     [COM_MAC] = ACTION_TAP_DANCE_FN(td_comm_macro),

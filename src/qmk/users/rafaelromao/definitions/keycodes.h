@@ -19,7 +19,7 @@ enum {
     BRT_CBR, 
     DQU_FIN, 
     SQU_STR, 
-    OR_SWI, 
+    NOT_SWI, 
     AND_BOO, 
     REC_MAC, 
     COM_MAC, 
@@ -41,7 +41,7 @@ enum {
 #define TD_CBR TD(BRT_CBR)
 #define TD_DQUO TD(DQU_FIN)
 #define TD_SQUO TD(SQU_STR)
-#define TD_OR TD(OR_SWI)
+#define TD_NOT TD(NOT_SWI)
 #define TD_AND TD(AND_BOO)
 #define TD_MACR TD(REC_MAC)
 #define TD_COMM TD(COM_MAC)
