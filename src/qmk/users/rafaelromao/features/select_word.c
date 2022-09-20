@@ -14,12 +14,14 @@ process_record_result_t process_select_word(uint16_t keycode, keyrecord_t* recor
             clear_locked_and_oneshot_mods();
             if (select_word.state == STATE_NONE) {
                 tap_code(KC_HOME);
+                wait_ms(30);
                 register_mods(MOD_LSFT);
                 tap_code(KC_END);
                 select_word.state = STATE_FIRST_LINE;
             } else {
                 register_mods(MOD_LSFT);
                 register_code(KC_DOWN);
+                register_code(KC_END);
                 select_word.state = STATE_LINE;
             }
         } else {
@@ -60,6 +62,7 @@ process_record_result_t process_select_word(uint16_t keycode, keyrecord_t* recor
         case STATE_LINE:
             unregister_mods(MOD_LSFT);
             unregister_code(KC_DOWN);
+            unregister_code(KC_END);
             select_word.state = STATE_LINE_SELECTED;
             break;
 
