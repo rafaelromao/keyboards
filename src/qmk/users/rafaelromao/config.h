@@ -9,6 +9,7 @@
 
 // Make it easier to work with tap hold
 #define IGNORE_MOD_TAP_INTERRUPT
+#define PERMISSIVE_HOLD
 #define TAPPING_FORCE_HOLD_PER_KEY
 #define TAPPING_TERM_PER_KEY
 #define ONESHOT_TAP_TOGGLE 2
