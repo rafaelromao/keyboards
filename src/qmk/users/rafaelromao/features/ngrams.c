@@ -152,9 +152,6 @@ process_record_result_t process_ngrams_keycode(uint16_t keycode, bool isShifted)
 
             // N-Grams
 
-        case MC_QU:
-            SEND_STRING("qu");
-            return PROCESS_RECORD_RETURN_FALSE;
         case MC_LH:
             SEND_STRING("lh");
             return PROCESS_RECORD_RETURN_FALSE;
@@ -171,13 +168,7 @@ process_record_result_t process_ngrams_keycode(uint16_t keycode, bool isShifted)
         case MC_WH:
             SEND_STRING("wh");
             return PROCESS_RECORD_RETURN_FALSE;
-        case MC_BY:
-            SEND_STRING("by");
-            return PROCESS_RECORD_RETURN_FALSE;
 
-        case MC_CK:
-            SEND_STRING("ck");
-            return PROCESS_RECORD_RETURN_FALSE;
         case MC_CH:
             SEND_STRING("ch");
             return PROCESS_RECORD_RETURN_FALSE;
@@ -194,8 +185,8 @@ process_record_result_t process_ngrams_keycode(uint16_t keycode, bool isShifted)
         case MC_NT:
             SEND_STRING("n't");
             return PROCESS_RECORD_RETURN_FALSE;
-        case MC_ING:
-            SEND_STRING("ing");
+        case MC_NG:
+            SEND_STRING("ng");
             return PROCESS_RECORD_RETURN_FALSE;
     }
 

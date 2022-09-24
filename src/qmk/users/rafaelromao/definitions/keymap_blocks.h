@@ -17,12 +17,12 @@
 
 #define ___________________NGRAMS_L1___________________ XXXXXXX , MC_SQ_C , MC_SQUO , MC_WH   , XXXXXXX
 #define ___________________NGRAMS_L2___________________ MC_LH   , MC_NH   , MC_SH   , MC_TH   , MC_GH
-#define ___________________NGRAMS_L3___________________ MC_QU   , MC_BY   , MC_CH   , MC_PH   , MC_CK
+#define ___________________NGRAMS_L3___________________ XXXXXXX , MC_NG   , MC_CH   , MC_PH   , KC_Z
 #define ____NGRAMS_L4____                                                             _______ , KC_SPC
 
 #define ___________________NGRAMS_R1___________________ XXXXXXX , MC_TL_O , MC_SQ_O , MC_SQ_U , XXXXXXX
 #define ___________________NGRAMS_R2___________________ MC_GV_A , MC_TL_A , MC_SQ_A , MC_SQ_E , MC_SQ_I
-#define ___________________NGRAMS_R3___________________ XXXXXXX , MC_CR_A , MC_CR_O , MC_CR_E , MC_ING
+#define ___________________NGRAMS_R3___________________ KC_X    , MC_CR_A , MC_CR_O , MC_CR_E , XXXXXXX
 #define ____NGRAMS_R4____                               KC_BSPC , _______
 
 #define ___________________NUMPAD_L1___________________ XXXXXXX , KC_F9   , KC_F8   , KC_F7   , KC_F12

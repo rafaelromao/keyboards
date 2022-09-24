@@ -70,18 +70,17 @@ enum {
 
     STR_MACRO_START,
 
-    MC_BTIC, MC_DQUO, MC_SQUO,
-    MC_CIRC, MC_TILD, MC_DEG, MC_DAND, MC_DPIP,
+    MC_BTIC, MC_DQUO, MC_SQUO, MC_DEG,
+    MC_CIRC, MC_TILD, MC_DAND, MC_DPIP,
 
     MC_GV_A, MC_CR_A, MC_TL_A, MC_SQ_A,
     MC_SQ_U, MC_CR_O, MC_SQ_O, MC_SQ_I,
     MC_CR_E, MC_TL_O, MC_SQ_C, MC_SQ_E,
 
-    MC_QU,  MC_LH,  MC_PH,  
+    MC_LH,  MC_PH,  
     MC_CH,  MC_TH,  MC_WH, 
     MC_GH,  MC_NH,  MC_SH,
-    MC_I,   MC_NT,  MC_BY,
-    MC_CK,  MC_ING, 
+    MC_I,   MC_NT,  MC_NG,
 
     MC_AO, MC_CAO, MC_OES, MC_COES,
     
