@@ -5,6 +5,7 @@
 
 ### N-Grams and Accents
 - The N-Grams and Accents layer has common English and Portuguese n-grams and accented letters, readily available on a single tap of the left outer thumb key, making them as easy to type as a shifted key (which is available on a single tap of the right outer thumb key).
+- These layer also gives access to z and x, that are not available in the base layer.
 
 #### N-Grams
 - N-grams that involve h, like th, ch, wh, are available in this layer.

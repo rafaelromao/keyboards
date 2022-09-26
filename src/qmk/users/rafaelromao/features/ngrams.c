@@ -102,21 +102,21 @@ process_record_result_t process_ngrams_keycode(uint16_t keycode, bool isShifted)
                 tap_code(KC_SPC);
             }
             return PROCESS_RECORD_RETURN_FALSE;
-        case MC_CIRC:
-            clear_shift();
-            tap_code16(KC_CIRC);
-            if (!isShifted) {
-                tap_code(KC_SPC);
-            }
-            return PROCESS_RECORD_RETURN_FALSE;
         case MC_TILD:
-            clear_shift();
-            tap_code16(KC_TILD);
-            if (!isShifted) {
-                tap_code(KC_SPC);
+            if (is_long_press()) {
+                clear_shift();
+                tap_code16(KC_CIRC);
+                if (!isShifted) {
+                    tap_code(KC_SPC);
+                }
+            } else {
+                clear_shift();
+                tap_code16(KC_TILD);
+                if (!isShifted) {
+                    tap_code(KC_SPC);
+                }
             }
             return PROCESS_RECORD_RETURN_FALSE;
-
             // Tild combos
 
         case MC_AO:

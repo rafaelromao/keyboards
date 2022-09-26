@@ -213,6 +213,9 @@ void td_and_switch(qk_tap_dance_state_t *state, void *user_data) {
         case TD_SINGLE_TAP:
             process_macros(MC_DAND, NULL);
             break;
+        case TD_SINGLE_HOLD:
+            process_macros(MC_DPIP, NULL);
+            break;
         case TD_DOUBLE_TAP:
             SEND_STRING("true");
             break;

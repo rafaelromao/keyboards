@@ -1,10 +1,10 @@
 # rafaelromao's keyboard layout
 
 ## Layout Overview
-- This is a 32 keys split layout, 3x5+2 keys on each side, minus the two top row pinky keys.
+- This is a 30 keys split layout, 3x5+2 keys on each side, minus the two top row pinky and indek keys.
 - This layout works well with the OS configured for US International keyboards.
 - It was designed mostly for coding and typing in Portuguese and English.
-- It reduces the usage of pinkies and considers the right hand as the dominant hand.
+- It reduces the usage of pinkies and indexes and considers the right hand as dominant.
 - The base layer is [Romak](romak.md), a new keyboard layout, inspired by [Colemak](https://colemak.org) and [BEAKL](https://ieants.cc/beakl).
 
 ## Smart Thumb Keys
@@ -20,6 +20,7 @@
 - Most combos include the home thumb key, the one in the same side, to avoid misfires.
 - One-shot shift can be used to invert the [Default Modifier](modifiers.md#default-mod-and-alt-thumb-keys) used in the combos.
 - If shift, or any other modifier, is held, it will be included in the combo. So hold Shift and tap the Undo combo will send Redo instead.
+- There are also combos for z and x, that are not available through dedicated keys in the base layer.
 - Source code: [combos.c](../src/qmk/users/rafaelromao/features/combos.c)
 
 ## Base Layer Macros

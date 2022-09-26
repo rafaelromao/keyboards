@@ -8,16 +8,6 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
     bool isMacOS = os.type == MACOS;
 
     switch (keycode) {
-            // Degree symbol
-
-        case MC_DEG:
-            if (isMacOS) {
-                tap_code16(LSFT(RALT(KC_8)));
-            } else {
-                tap_code16(LSFT(LCTL(KC_2)));
-            }
-            return PROCESS_RECORD_RETURN_FALSE;
-
             // Conditional operators
 
         case MC_DAND:
@@ -35,16 +25,6 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             return PROCESS_RECORD_RETURN_FALSE;
 
             // Recent Files
-
-        case MC_REFI:
-            if (isMacOS) {
-                SEND_STRING(SS_LGUI(SS_TAP(X_E)));
-            } else {
-                SEND_STRING(SS_LCTL(SS_TAP(X_E)));
-            }
-            return PROCESS_RECORD_RETURN_FALSE;
-
-            // Refactor This
 
         case MC_REFC:
             if (is_long_press()) {
@@ -64,15 +44,24 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             SEND_STRING(SS_LALT(SS_TAP(X_ENT)));
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Project Files
+            // Project Files / Recent Files
 
         case MC_PROJ:
-            if (isMacOS) {
-                SEND_STRING(SS_LGUI("1"));
+            if (is_long_press()) {
+                if (isMacOS) {
+                    SEND_STRING(SS_LGUI(SS_TAP(X_E)));
+                } else {
+                    SEND_STRING(SS_LCTL(SS_TAP(X_E)));
+                }
+                return PROCESS_RECORD_RETURN_FALSE;
             } else {
-                SEND_STRING(SS_LCTL("1"));
+                if (isMacOS) {
+                    SEND_STRING(SS_LGUI("1"));
+                } else {
+                    SEND_STRING(SS_LCTL("1"));
+                }
+                return PROCESS_RECORD_RETURN_FALSE;
             }
-            return PROCESS_RECORD_RETURN_FALSE;
 
             // Search Everything
 
@@ -165,13 +154,6 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             } else {
                 SEND_STRING(SS_LCTL("/"));
             }
-            return PROCESS_RECORD_RETURN_FALSE;
-
-            // Vim replace
-
-        case MC_VIMR:
-            SEND_STRING(":%s//g");
-            SEND_STRING(SS_TAP(X_LEFT) SS_TAP(X_LEFT));
             return PROCESS_RECORD_RETURN_FALSE;
 
             // END { ENTER }

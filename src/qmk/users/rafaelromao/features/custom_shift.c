@@ -2,27 +2,40 @@
 
 #include "custom_shift.h"
 
+extern os_t os;
+
 process_record_result_t process_custom_shift(uint16_t keycode, keyrecord_t *record) {
+    if (start_long_press(record)) {
+        return PROCESS_RECORD_CONTINUE;
+    }
+
     bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     bool isOneShotShift       = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
     bool isShifted            = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
 
-    if (!record->event.pressed) {
-        return PROCESS_RECORD_CONTINUE;
-    }
-
-    uint16_t key = extract_base_tapping_keycode(keycode);
+    bool isMacOS = os.type == MACOS;
 
     switch (keycode) {
             // Inverted colon and semicolon
-        case KC_COLN:
-            if (isShifted) {
-                clear_shift();
-                tap_code(KC_SCLN);
-                return PROCESS_RECORD_RETURN_FALSE;
+        case MC_COLN:
+            if (is_long_press()) {
+                if (isMacOS) {
+                    tap_code16(LSFT(RALT(KC_8)));
+                } else {
+                    tap_code16(LSFT(LCTL(KC_2)));
+                }
+            } else {
+                if (isShifted) {
+                    clear_shift();
+                    tap_code(KC_SCLN);
+                } else {
+                    tap_code16(KC_COLN);
+                }
             }
-            return PROCESS_RECORD_CONTINUE;
+            return PROCESS_RECORD_RETURN_FALSE;
     }
+
+    uint16_t key = extract_base_tapping_keycode(keycode);
 
     switch (key) {
             // Shifted numrow = numpad
