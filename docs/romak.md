@@ -9,12 +9,13 @@ Romak is a new keyboard layout, inspired by [Colemak](https://colemak.org) and [
 - The name Romak is a combination of my last name, **Rom**ão, and Dvor**ak**'s name.
 - Romak assumes the right hand as dominant so it puts vowels, H and R in that side.
 - Romak is also designed to favor hand alternation more than rolls.
+- Although Z and X are represented in the top row, they are actually in the bottom one, but in another layer, activated in oneshot mode when tapping one of the thumb keys.
 
 ## Romak vs Colemak-DH
 [KLA Next](https://klanext.keyboard-design.com/) was used to compare Romak with Colemak-DH and some other layouts, using the Universal Declaration of Human Rights as text corpus, combining [Portuguese and English](analysis/corpus.txt).
 ### General Performance
 
-Romak scored as second best when compared to Colemak-DH, Dvorak, Workman and Qwerty.
+Romak scores better than BEAKL27 and close to Colemak-DH and Dvorak.
 ![img](../img/perf.png)
 
 ### Heatmaps
@@ -33,7 +34,7 @@ In Romak, all fingers in the left hand will take less load than the equivalent f
 ### Detailed Finger Analysis
 The [Colemak mod-DH analysis tool](https://colemakmods.github.io/mod-dh/analyze.html) was also used to compare Romak against Colemak-DH (English text corpus only).
 
-The overall finger usage and SFB rate look better in Romak than in Colemak.
+The overall finger usage and SFB rate look better in Romak than in Colemak. And we should also consider that the actual position of Z and X are not in the top row.
 
 <p float="left">
   <img src="../img/sfbs_en_romak.png" width="450" />
