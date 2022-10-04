@@ -9,8 +9,6 @@ process_record_result_t process_custom_shortcuts(uint16_t keycode, keyrecord_t *
     bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
 
     switch (keycode) {
-            // Zoom shortcuts
-
         case MC_MODP:
             if (record->event.pressed) {
                 if (should_send_ctrl(isMacOS, isOneShotShift)) {
@@ -20,6 +18,7 @@ process_record_result_t process_custom_shortcuts(uint16_t keycode, keyrecord_t *
                 }
             }
             return PROCESS_RECORD_RETURN_FALSE;
+
         case MC_MODM:
             if (record->event.pressed) {
                 if (should_send_ctrl(isMacOS, isOneShotShift)) {

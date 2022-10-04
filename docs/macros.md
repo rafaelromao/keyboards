@@ -75,7 +75,7 @@
     - Project Files (Cmd+1 / Ctrl+1)
     - Recent Files (Cmd+E / Ctrl+E)
     - Find Usages (Alt+F7) - A long press will go to Type Definition (Shift+Cmd+B / Shift+Ctrl+B)
-    - Refactor This (Alt+F6) - A long press will show the Refactor options (Ctrl+T / Shift+Ctrl+Alt+T)
+    - Refactor (Alt+F6) - A long press will show the Refactor options (Ctrl+T / Shift+Ctrl+Alt+T)
 
 ##
 [Home](../readme.md) | 

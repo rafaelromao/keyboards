@@ -41,8 +41,6 @@ bool isShifted(void) {
            get_oneshot_locked_mods() & MOD_MASK_SHIFT;
 }
 
-// Enter end
-
 void td_enter_end(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
@@ -58,8 +56,6 @@ void td_enter_end(qk_tap_dance_state_t *state, void *user_data) {
             break;
     }
 }
-
-// Dancing brackets
 
 void td_open_curly_braces(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
@@ -162,8 +158,6 @@ void td_close_parentesis(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-// Brackets
-
 void td_open_brackets(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
@@ -205,9 +199,8 @@ void td_close_brackets(qk_tap_dance_state_t *state, void *user_data) {
             break;
     }
 }
-// And
 
-void td_and_switch(qk_tap_dance_state_t *state, void *user_data) {
+void td_and(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
@@ -227,9 +220,7 @@ void td_and_switch(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-// Or
-
-void td_not_switch(qk_tap_dance_state_t *state, void *user_data) {
+void td_not(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
@@ -246,9 +237,7 @@ void td_not_switch(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-// Double taps on quotes
-
-void td_dquo_final(qk_tap_dance_state_t *state, void *user_data) {
+void td_dquo(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
@@ -270,7 +259,7 @@ void td_dquo_final(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void td_squo_string(qk_tap_dance_state_t *state, void *user_data) {
+void td_squo(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
@@ -309,8 +298,6 @@ void td_semicolon(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-// Currencies
-
 void td_currencies(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
@@ -342,8 +329,6 @@ void td_currencies(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-// Dynamic Macro
-
 void td_macro(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     bool isShifted  = get_mods() & MOD_MASK_SHIFT || get_oneshot_mods() & MOD_MASK_SHIFT ||
@@ -360,7 +345,7 @@ void td_macro(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void td_comm_macro(qk_tap_dance_state_t *state, void *user_data) {
+void td_comm(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
@@ -386,8 +371,6 @@ void td_comm_macro(qk_tap_dance_state_t *state, void *user_data) {
             break;
     }
 }
-
-// Dot
 
 void td_dot_finished(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
@@ -455,12 +438,12 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [BRT_OBR] = ACTION_TAP_DANCE_FN(td_open_brackets),
     [BRT_CBR] = ACTION_TAP_DANCE_FN(td_close_brackets),
     [BRT_PAR] = ACTION_TAP_DANCE_FN(td_parentesis),
-    [DQU_FIN] = ACTION_TAP_DANCE_FN(td_dquo_final),
-    [SQU_STR] = ACTION_TAP_DANCE_FN(td_squo_string),
-    [NOT_SWI] = ACTION_TAP_DANCE_FN(td_not_switch),
-    [AND_BOO] = ACTION_TAP_DANCE_FN(td_and_switch),
+    [DQU_FIN] = ACTION_TAP_DANCE_FN(td_dquo),
+    [SQU_STR] = ACTION_TAP_DANCE_FN(td_squo),
+    [NOT_SWI] = ACTION_TAP_DANCE_FN(td_not),
+    [AND_BOO] = ACTION_TAP_DANCE_FN(td_and),
     [REC_MAC] = ACTION_TAP_DANCE_FN(td_macro),
-    [COM_MAC] = ACTION_TAP_DANCE_FN(td_comm_macro),
+    [COM_LEA] = ACTION_TAP_DANCE_FN(td_comm),
     [DLR_CUR] = ACTION_TAP_DANCE_FN(td_currencies),
     [DOT_DOT] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_dot_finished, td_dot_reset)};
 

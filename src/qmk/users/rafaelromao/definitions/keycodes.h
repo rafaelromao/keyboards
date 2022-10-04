@@ -22,7 +22,7 @@ enum {
     NOT_SWI, 
     AND_BOO, 
     REC_MAC, 
-    COM_MAC, 
+    COM_LEA, 
     DOT_DOT, 
     DLR_CUR, 
     TD_CODE_END 
@@ -44,7 +44,7 @@ enum {
 #define TD_NOT TD(NOT_SWI)
 #define TD_AND TD(AND_BOO)
 #define TD_MACR TD(REC_MAC)
-#define TD_COMM TD(COM_MAC)
+#define TD_COMM TD(COM_LEA)
 #define TD_DOT TD(DOT_DOT)
 #define TD_DLR TD(DLR_CUR)
 

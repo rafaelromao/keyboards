@@ -24,7 +24,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Recent Files
+            // Rename / Refactor
 
         case MC_REFC:
             if (is_long_press()) {
@@ -87,7 +87,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Complete Statement
+            // Complete Statement / Generete Code
 
         case MC_COMP:
             if (is_long_press()) {
@@ -105,7 +105,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Autocomplete Options
+            // Smart Autocompler / Regular Autocomplete
 
         case MC_AUCO:
             if (is_long_press()) {
@@ -115,7 +115,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Next Error
+            // Next Error / Next Warning
 
         case MC_NEER:
             if (is_long_press()) {
@@ -125,7 +125,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Find Usages
+            // Find Usages / Go To Definition
 
         case MC_FIUS:
             if (is_long_press()) {
@@ -170,7 +170,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             tap_code(KC_ENT);
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Refresh
+            // Refresh / Clear Cache
 
         case MC_REF:
             if (is_long_press()) {
