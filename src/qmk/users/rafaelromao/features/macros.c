@@ -105,7 +105,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Smart Autocompler / Regular Autocomplete
+            // Type-matching Auto Complete / Basic Auto Complete
 
         case MC_AUCO:
             if (is_long_press()) {
@@ -146,7 +146,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             SEND_STRING(SS_TAP(X_END) SS_TAP(X_DEL));
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Comment
+            // Comment Lines
 
         case MC_COMT:
             if (isMacOS) {
