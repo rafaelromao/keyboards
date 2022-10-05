@@ -34,9 +34,11 @@
 - Window Swapper is a macro that allows easy navigation between applications, tabs and navigation history.
 - There are dedicated keys to swap back and forth.
 - On tap, these two keys navigate back and forth between application windows.
-- If shift is active in the first tap, they navigate between the current application tabs instead.
+  - If shift is active in the first tap, they navigate between the current application tabs instead.
+  - Tapping both keys will refresh the current browser tab.
 - A long press will navigate in the browser history.
-- These actions are executed when the key is released.
+  - Holding both keys will clear cache and refresh the current browser tab.
+  - These actions are executed when the key is released.
 - These macros will work according to the OS selected in the Maintenance layer.
 - Source Code: [window_swapper.c](../src/qmk/users/rafaelromao/features/window_swapper.c)
 
