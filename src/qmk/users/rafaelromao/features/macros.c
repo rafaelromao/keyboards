@@ -187,6 +187,30 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
                 }
             }
             return PROCESS_RECORD_RETURN_FALSE;
+
+            // Esc, Close Window, Close Tab
+
+        case MC_ESC:
+            if (isShifted) {
+                clear_shift();
+                if (is_long_press()) {
+                    if (isMacOS) {
+                        SEND_STRING(SS_LGUI(SS_TAP(X_Q)));
+                    } else {
+                        SEND_STRING(SS_LALT(SS_TAP(X_F4)));
+                        break;
+                    }
+                } else {
+                    if (isMacOS) {
+                        SEND_STRING(SS_LGUI(SS_TAP(X_W)));
+                    } else {
+                        SEND_STRING(SS_LCTL(SS_TAP(X_F4)));
+                        break;
+                    }
+                }
+            }
+            tap_code(KC_ESC);
+            return PROCESS_RECORD_RETURN_FALSE;
     }
 
     return PROCESS_RECORD_CONTINUE;

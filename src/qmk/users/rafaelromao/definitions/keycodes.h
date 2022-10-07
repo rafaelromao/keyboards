@@ -62,6 +62,7 @@ enum {
     MC_SELL, MC_REF, MC_COLN,
     MC_JOIN, MC_COMT, 
     MC_SENT, MC_CUR,
+    MC_ESC,
     
     MC_CAPS, MC_WORD, MC_CAML, MC_SNAK, MC_KBAB,
 
