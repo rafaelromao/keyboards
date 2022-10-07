@@ -71,9 +71,8 @@ void check_disable_oneshot(uint16_t keycode) {
     switch (keycode) {
         case NAV_NG:
         case MED_SFT:
-        case MED_ALT:
-        case MAI_ALT:
-        case MAI_MOD:
+        case MAI_SFT:
+        case MAI_NG:
         case OS_LOW:
         case OS_RAI:
         case OS_LSFT:
@@ -108,8 +107,6 @@ bool should_send_ctrl(bool isMacOS, bool isOneShotShift) {
 }
 
 process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *record) {
-    bool isMacOS              = os.type == MACOS;
-    bool isOneShotDefaultMod  = (isMacOS && (get_oneshot_mods() & MOD_MASK_GUI)) || (!isMacOS && (get_oneshot_mods() & MOD_MASK_CTRL));
     bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     bool isOneShotShift       = get_oneshot_mods() & MOD_MASK_SHIFT || isOneShotLockedShift;
     bool isOneShotCtrl        = get_oneshot_mods() & MOD_MASK_CTRL || get_oneshot_locked_mods() & MOD_MASK_CTRL;
@@ -156,6 +153,7 @@ process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *re
             }
 
         case NAV_NG:
+        case MAI_NG:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
                     if (IS_LAYER_ON(_NGRAMS)) {
@@ -169,6 +167,7 @@ process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *re
             }
 
         case MED_SFT:
+        case MAI_SFT:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
                     if (has_any_smart_case()) {
@@ -186,43 +185,6 @@ process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *re
                 }
                 return PROCESS_RECORD_RETURN_FALSE;
             }
-
-        case MAI_ALT:
-        case MED_ALT:
-            if (record->tap.count > 0) {
-                if (record->event.pressed) {
-                    if (isAnyOneShotButShift || isOneShotLockedShift) {
-                        clear_locked_and_oneshot_mods();
-                    } else if (!isOneShotAlt) {
-                        if (isOneShotShift) {
-                            clear_locked_and_oneshot_mods();
-                        }
-                        add_oneshot_mods(MOD_RALT);
-                    }
-                }
-                return PROCESS_RECORD_RETURN_FALSE;
-            }
-            return PROCESS_RECORD_RETURN_TRUE;
-
-        case MAI_MOD:
-            if (record->tap.count > 0) {
-                if (record->event.pressed) {
-                    if (isAnyOneShotButShift || isOneShotLockedShift) {
-                        clear_locked_and_oneshot_mods();
-                    } else if (!isOneShotDefaultMod) {
-                        if (isOneShotShift) {
-                            clear_locked_and_oneshot_mods();
-                        }
-                        if (should_send_ctrl(isMacOS, isOneShotShift)) {
-                            add_oneshot_mods(MOD_LCTL);
-                        } else {
-                            add_oneshot_mods(MOD_LGUI);
-                        }
-                    }
-                }
-                return PROCESS_RECORD_RETURN_FALSE;
-            }
-            return PROCESS_RECORD_RETURN_TRUE;
     }
 
     return PROCESS_RECORD_CONTINUE;

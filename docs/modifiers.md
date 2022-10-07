@@ -42,20 +42,6 @@ The Smart Case key is a custom key that works as Shift, Caps Word and other Smar
 - The Accents key is available in the left outer thumb key and will toggle the Accents layer in one-shot mode, acting like a special shift key.
 - Source code: [custom_oneshot.c](../src/qmk/users/rafaelromao/features/custom_oneshot.c)
 
-## Default Mod and Alt Thumb Keys
-
-The Default Mod (Cmd or Ctrl) and Alt thumb keys are placed in the outer left and right thumb keys respectively, in the Media and Navigation layers, and will give access to one-shot versions of the Cmd/Ctrl or Alt keys.
-- They behaves as follows, when tapped:
-    - If any modifier is active or locked in one-shot mode, all these modifiers will be deactivated.
-    - If no modifier is active or locked in one-shot mode, it activates the modifier in one-shot mode.
-- For the right side, this key will always activate Alt, when tapped.
-- For the left side,
-    - This key allows using the same key combinations for shortcuts like Cmd/Ctrl+S, Cmd/Ctrl+C and Cmd/Ctrl+V.
-    - This key will activate the modifier for the current operating system, which can be selected in the maintenace layer.
-        - If Mac OS is selected, the default modifier will be Cmd, otherwise it will be Ctrl.
-        - If one-shot Shift is active, the default modifier will be inverted (Cmd vs Ctrl).
-- Source code: [custom_oneshot.c](../src/qmk/users/rafaelromao/features/custom_oneshot.c)
-
 ##
 [Home](../readme.md) | 
 [Base](base.md) |

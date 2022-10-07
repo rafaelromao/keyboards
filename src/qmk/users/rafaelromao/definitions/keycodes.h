@@ -66,7 +66,7 @@ enum {
     MC_CAPS, MC_WORD, MC_CAML, MC_SNAK, MC_KBAB,
 
     TG_MAC, TG_WIN, 
-    SP_CAP, SP_MOD, SP_NG, SP_ALT,
+    SP_CAP, SP_NG, 
 
     STR_MACRO_START,
 
@@ -112,6 +112,7 @@ enum {
 #define OS_LSFT OSM(MOD_LSFT)
 #define OS_LCTL OSM(MOD_LCTL)
 #define OS_LALT OSM(MOD_LALT)
+#define OS_RALT OSM(MOD_RALT)
 #define OS_LGUI OSM(MOD_LGUI)
 
 // Layer-taps
@@ -120,9 +121,8 @@ enum {
 #define MED_0   LT(_MEDIA, KC_0)
 
 #define NAV_NG  LT(_NAVIGATION, SP_NG)
-#define MAI_MOD LT(_MAINTENANCE, SP_MOD)
-#define MAI_ALT LT(_MAINTENANCE, SP_ALT)
-#define MED_ALT LT(_MEDIA, SP_ALT)
+#define MAI_NG LT(_MAINTENANCE, SP_NG)
+#define MAI_SFT LT(_MAINTENANCE, SP_CAP)
 
 #define LOW_SPC LT(_LOWER, KC_SPC)
 #define RAI_BSP LT(_RAISE, KC_BSPC)

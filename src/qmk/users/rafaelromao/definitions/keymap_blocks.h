@@ -65,17 +65,17 @@
 #define ___________________RAISE_R3____________________ KC_PERC , KC_SLSH , KC_LT   , KC_GT   , KC_ASTR
 #define ____RAISE_R4_____                               _______ , _______
 
-#define ___________________MEDIA_L1____________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
+#define ___________________MEDIA_L1____________________ XXXXXXX , XXXXXXX , XXXXXXX , OS_RALT , XXXXXXX
 #define ___________________MEDIA_L2____________________ XXXXXXX , OS_LSFT , OS_LCTL , OS_LALT , XXXXXXX
 #define ___________________MEDIA_L3____________________ XXXXXXX , XXXXXXX , XXXXXXX , OS_LGUI , XXXXXXX
-#define ____MEDIA_L4_____                                                             MAI_MOD , KC_SPC
+#define ____MEDIA_L4_____                                                             MAI_NG  , KC_SPC
 
 #define ___________________MEDIA_R1____________________ XXXXXXX , XXXXXXX , KC_ENT  , KC_TAB  , XXXXXXX
 #define ___________________MEDIA_R2____________________ TG_NAV  , KC_MUTE , KC_VOLD , KC_VOLU , HYPR_A
 #define ___________________MEDIA_R3____________________ TG_NUM  , KC_MPLY , KC_MPRV , KC_MNXT , HYPR_V
 #define ____MEDIA_R4_____                               KC_BSPC , _______
 
-#define ___________________NAVIGATION_L1_______________ XXXXXXX , KC_ESC  , MC_SAVE , XXXXXXX , XXXXXXX
+#define ___________________NAVIGATION_L1_______________ XXXXXXX , KC_ESC  , MC_SAVE , KC_RALT , XXXXXXX
 #define ___________________NAVIGATION_L2_______________ XXXXXXX , KC_LSFT , KC_LCTL , KC_LALT , XXXXXXX
 #define ___________________NAVIGATION_L3_______________ XXXXXXX , XXXXXXX , XXXXXXX , KC_LGUI , XXXXXXX
 #define __NAVIGATION_L4__                                                             _______ , KC_SPC
@@ -83,8 +83,8 @@
 #define ___________________NAVIGATION_R1_______________ XXXXXXX , KC_APP  , KC_PGDN , KC_PGUP , XXXXXXX
 #define ___________________NAVIGATION_R2_______________ TG_NAV  , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT
 #define ___________________NAVIGATION_R3_______________ XXXXXXX , KC_DEL  , KC_HOME , KC_END  , KC_INS
-#define __NAVIGATION_R4__                               KC_BSPC , MAI_ALT
-#define __FIXED_NAV__R4__                               KC_BSPC , MED_ALT
+#define __NAVIGATION_R4__                               KC_BSPC , MAI_SFT
+#define __FIXED_NAV__R4__                               KC_BSPC , MED_SFT
 
 #define ___________________MAINTENANCE_L1______________ XXXXXXX , RGB_VAD , RGB_VAI , EEP_RST , XXXXXXX
 #define ___________________MAINTENANCE_L2______________ RGB_TOG , RGB_HUD , RGB_HUI , XXXXXXX , QK_BOOT
