@@ -8,6 +8,103 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
     bool isMacOS = os.type == MACOS;
 
     switch (keycode) {
+            // Zoom
+
+        case MC_MODP:
+            if (should_send_ctrl(isMacOS, isOneShotShift)) {
+                SEND_STRING(SS_LCTL("+"));
+            } else {
+                SEND_STRING(SS_LGUI("+"));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+        case MC_MODM:
+            if (should_send_ctrl(isMacOS, isOneShotShift)) {
+                SEND_STRING(SS_LCTL("-"));
+            } else {
+                SEND_STRING(SS_LGUI("-"));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Select All
+
+        case MC_SELC:
+            clear_locked_and_oneshot_mods();
+            if (should_send_ctrl(isMacOS, isOneShotShift)) {
+                SEND_STRING(SS_LCTL("a"));
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+            break;
+
+            // Save
+
+        case MC_SAVE:
+            clear_locked_and_oneshot_mods();
+            if (should_send_ctrl(isMacOS, isOneShotShift)) {
+                SEND_STRING(SS_LCTL("s"));
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+            break;
+
+            // Undo
+
+        case MC_UNDO:
+            clear_locked_and_oneshot_mods();
+            if (should_send_ctrl(isMacOS, isOneShotShift)) {
+                SEND_STRING(SS_LCTL("z"));
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+            break;
+
+            // Copy
+
+        case MC_COPY:
+            clear_locked_and_oneshot_mods();
+            if (should_send_ctrl(isMacOS, isOneShotShift)) {
+                SEND_STRING(SS_LCTL("c"));
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+            break;
+
+            // Paste
+
+        case MC_PAST:
+            clear_locked_and_oneshot_mods();
+            if (should_send_ctrl(isMacOS, isOneShotShift)) {
+                SEND_STRING(SS_LCTL("v"));
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+            break;
+
+            // Lock
+
+        case MC_LOCK:
+            clear_locked_and_oneshot_mods();
+            if (should_send_ctrl(isMacOS, isOneShotShift)) {
+                SEND_STRING(SS_LGUI("l"));
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+            break;
+
+            // Full Screen
+
+        case MC_FULL:
+            clear_locked_and_oneshot_mods();
+            if (should_send_ctrl(isMacOS, isOneShotShift)) {
+                tap_code(KC_F11);
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+            break;
+
+            // Find
+
+        case MC_FIND:
+            clear_locked_and_oneshot_mods();
+            if (should_send_ctrl(isMacOS, isOneShotShift)) {
+                SEND_STRING(SS_LCTL("f"));
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+            break;
             // Conditional operators
 
         case MC_DAND:
@@ -210,6 +307,11 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
                 }
             }
             tap_code(KC_ESC);
+            return PROCESS_RECORD_RETURN_FALSE;
+
+        case MC_ESAV:
+            process_macro_keycode(MC_ESC, false, false);
+            process_macro_keycode(MC_SAVE, false, false);
             return PROCESS_RECORD_RETURN_FALSE;
     }
 
