@@ -77,11 +77,7 @@ enum {
     MC_SQ_U, MC_CR_O, MC_SQ_O, MC_SQ_I,
     MC_CR_E, MC_TL_O, MC_SQ_C, MC_SQ_E,
 
-    MC_LH,  MC_PH,  
-    MC_CH,  MC_TH,  MC_WH, 
-    MC_GH,  MC_NH,  MC_SH,
-    MC_I,   MC_NT,  MC_NG,
-
+    MC_I,   MC_NT,  
     MC_AO, MC_CAO, MC_OES, MC_COES,
     
     STR_MACRO_END,
@@ -103,7 +99,7 @@ enum {
 #define CT_5 RCTL_T(KC_5)
 
 #define LALTT_T LALT_T(KC_T)
-#define RALTT_R RALT_T(KC_R)
+#define RALTT_H RALT_T(KC_H)
 #define AL_F4 LALT_T(KC_F4)
 #define AL_4 RALT_T(KC_4)
 
@@ -134,7 +130,7 @@ enum {
 #define LOW_BSP LT(_LOWER, KC_BSPC)
 #define RAI_SPC LT(_RAISE, KC_SPC)
 
-#define KCL_MAC LT(_MACROS, KC_L)
+#define KCR_MAC LT(_MACROS, KC_R)
 #define KCI_MAC LT(_MACROS, KC_I)
 #define DOT_MAC LT(_MACROS, KC_DOT)
 

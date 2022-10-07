@@ -20,7 +20,7 @@ const uint16_t PROGMEM r_rai_cur_combo[] = {TD_LCRB, TD_RCRB, COMBO_END};
 
 // Media
 
-const uint16_t PROGMEM r_med_del_combo[] = {TO_ROM, KC_MPLY, COMBO_END};
+const uint16_t PROGMEM r_med_del_combo[] = {TG_NUM, KC_MPLY, COMBO_END};
 const uint16_t PROGMEM r_med_hom_combo[] = {KC_MPLY, KC_MPRV, COMBO_END};
 const uint16_t PROGMEM r_med_end_combo[] = {KC_MPRV, KC_MNXT, COMBO_END};
 const uint16_t PROGMEM r_med_ins_combo[] = {KC_MNXT, HYPR_V, COMBO_END};
@@ -43,7 +43,7 @@ const uint16_t PROGMEM r_mac_ref_combo[] = {MC_SWLE, MC_SWRI, COMBO_END};
 
 const uint16_t PROGMEM l_rom_z_combo[]   = {KC_C, LGUIT_P, COMBO_END};
 const uint16_t PROGMEM l_rom_esc_combo[] = {LOW_SPC, KC_F, KC_D, COMBO_END};
-const uint16_t PROGMEM l_rom_sal_combo[] = {LOW_SPC, KCL_MAC, LSFTT_N, COMBO_END};
+const uint16_t PROGMEM l_rom_sal_combo[] = {LOW_SPC, KCR_MAC, LSFTT_N, COMBO_END};
 const uint16_t PROGMEM l_rom_rai_combo[] = {LOW_SPC, LSFTT_N, COMBO_END};
 const uint16_t PROGMEM l_rom_low_combo[] = {LOW_SPC, LCTLT_S, COMBO_END};
 const uint16_t PROGMEM l_rom_sav_combo[] = {LOW_SPC, LSFTT_N, LCTLT_S, COMBO_END};
@@ -54,7 +54,7 @@ const uint16_t PROGMEM l_rom_cop_combo[] = {LOW_SPC, KC_C, LGUIT_P, COMBO_END};
 
 const uint16_t PROGMEM r_rom_x_combo[]   = {RGUIT_M, TD_COMM, COMBO_END};
 const uint16_t PROGMEM r_rom_tab_combo[] = {RAI_BSP, KC_O, KC_U, COMBO_END};
-const uint16_t PROGMEM r_rom_pas_combo[] = {RAI_BSP, RALTT_R, RCTLT_A, COMBO_END};
+const uint16_t PROGMEM r_rom_pas_combo[] = {RAI_BSP, RALTT_H, RCTLT_A, COMBO_END};
 const uint16_t PROGMEM r_rom_ent_combo[] = {RAI_BSP, RCTLT_A, RSFTT_E, COMBO_END};
 const uint16_t PROGMEM r_rom_rai_combo[] = {RAI_BSP, RCTLT_A, COMBO_END};
 const uint16_t PROGMEM r_rom_low_combo[] = {RAI_BSP, RSFTT_E, COMBO_END};
@@ -66,7 +66,7 @@ const uint16_t PROGMEM r_rom_sce_combo[] = {RGUIT_M, TD_COMM, TD_DOT, COMBO_END}
 
 // Reset
 
-const uint16_t PROGMEM rom_reset_combo[] = {KCL_MAC, KC_Q, KCI_MAC, KC_Y, COMBO_END};
+const uint16_t PROGMEM rom_reset_combo[] = {KCR_MAC, KC_Q, KCI_MAC, KC_Y, COMBO_END};
 
 // Secret
 

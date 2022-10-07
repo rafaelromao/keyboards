@@ -1,5 +1,5 @@
 {
-    "label": "Colemak-DH",
+    "label": "Qwerty",
     "fingerStart": {
         "1": 25,
         "2": 26,
@@ -155,73 +155,73 @@
             "shiftAltGr": -1
         },
         {
-            "primary": 102,
+            "primary": 101,
             "finger": 3,
             "id": 15,
-            "shift": 70,
+            "shift": 69,
             "altGr": -1,
             "shiftAltGr": -1,
             "numpad": -1
         },
         {
-            "primary": 112,
+            "primary": 114,
             "finger": 4,
             "id": 16,
-            "shift": 80,
+            "shift": 82,
             "altGr": -1,
             "shiftAltGr": -1,
             "numpad": -1
         },
         {
-            "primary": 98,
+            "primary": 116,
             "finger": 4,
             "id": 17,
-            "shift": 66,
-            "altGr": -1,
-            "shiftAltGr": -1,
-            "numpad": -1
-        },
-        {
-            "primary": 106,
-            "finger": 7,
-            "id": 18,
-            "shift": 74,
-            "altGr": -1,
-            "shiftAltGr": -1,
-            "numpad": -1
-        },
-        {
-            "primary": 108,
-            "finger": 7,
-            "id": 19,
-            "shift": 76,
-            "altGr": -1,
-            "shiftAltGr": -1,
-            "numpad": -1
-        },
-        {
-            "primary": 117,
-            "finger": 8,
-            "id": 20,
-            "shift": 85,
+            "shift": 84,
             "altGr": -1,
             "shiftAltGr": -1,
             "numpad": -1
         },
         {
             "primary": 121,
-            "finger": 9,
-            "id": 21,
+            "finger": 7,
+            "id": 18,
             "shift": 89,
             "altGr": -1,
             "shiftAltGr": -1,
             "numpad": -1
         },
         {
-            "primary": -1,
+            "primary": 117,
+            "finger": 7,
+            "id": 19,
+            "shift": 85,
+            "altGr": -1,
+            "shiftAltGr": -1,
+            "numpad": -1
+        },
+        {
+            "primary": 105,
+            "finger": 8,
+            "id": 20,
+            "shift": 73,
+            "altGr": -1,
+            "shiftAltGr": -1,
+            "numpad": -1
+        },
+        {
+            "primary": 111,
+            "finger": 9,
+            "id": 21,
+            "shift": 79,
+            "altGr": -1,
+            "shiftAltGr": -1,
+            "numpad": -1
+        },
+        {
+            "primary": 112,
             "finger": 10,
             "id": 22,
-            "shift": -1,
+            "shift": 80,
             "altGr": -1,
             "shiftAltGr": -1,
             "numpad": -1
@@ -254,28 +254,28 @@
             "numpad": -1
         },
         {
-            "primary": 114,
+            "primary": 115,
             "finger": 2,
             "id": 26,
-            "shift": 82,
-            "altGr": -1,
-            "shiftAltGr": -1,
-            "numpad": -1
-        },
-        {
-            "primary": 115,
-            "finger": 3,
-            "id": 27,
             "shift": 83,
             "altGr": -1,
             "shiftAltGr": -1,
             "numpad": -1
         },
         {
-            "primary": 116,
+            "primary": 100,
+            "finger": 3,
+            "id": 27,
+            "shift": 68,
+            "altGr": -1,
+            "shiftAltGr": -1,
+            "numpad": -1
+        },
+        {
+            "primary": 102,
             "finger": 4,
             "id": 28,
-            "shift": 84,
+            "shift": 70,
             "altGr": -1,
             "shiftAltGr": -1,
             "numpad": -1
@@ -290,46 +290,46 @@
             "numpad": -1
         },
         {
-            "primary": 109,
+            "primary": 104,
             "finger": 7,
             "id": 30,
-            "shift": 77,
+            "shift": 72,
             "altGr": -1,
             "shiftAltGr": -1,
             "numpad": -1
         },
         {
-            "primary": 110,
+            "primary": 106,
             "finger": 7,
             "id": 31,
-            "shift": 78,
+            "shift": 74,
             "altGr": -1,
             "shiftAltGr": -1,
             "numpad": -1
         },
         {
-            "primary": 101,
+            "primary": 107,
             "finger": 8,
             "id": 32,
-            "shift": 69,
+            "shift": 75,
             "altGr": -1,
             "shiftAltGr": -1,
             "numpad": -1
         },
         {
-            "primary": 105,
+            "primary": 108,
             "finger": 9,
             "id": 33,
-            "shift": 73,
+            "shift": 76,
             "altGr": -1,
             "shiftAltGr": -1,
             "numpad": -1
         },
         {
-            "primary": 111,
+            "primary": -1,
             "finger": 10,
             "id": 34,
-            "shift": 79,
+            "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
             "numpad": -1
@@ -380,19 +380,19 @@
             "numpad": -1
         },
         {
-            "primary": 100,
+            "primary": 118,
             "finger": 4,
             "id": 40,
-            "shift": 68,
+            "shift": 86,
             "altGr": -1,
             "shiftAltGr": -1,
             "numpad": -1
         },
         {
-            "primary": 118,
+            "primary": 98,
             "finger": 4,
             "id": 41,
-            "shift": 86,
+            "shift": 66,
             "altGr": -1,
             "shiftAltGr": -1,
             "numpad": -1
@@ -414,19 +414,19 @@
             "shiftAltGr": -1
         },
         {
-            "primary": 107,
+            "primary": 110,
             "finger": 7,
             "id": 44,
-            "shift": 75,
+            "shift": 78,
             "altGr": -1,
             "shiftAltGr": -1,
             "numpad": -1
         },
         {
-            "primary": 104,
+            "primary": 109,
             "finger": 7,
             "id": 45,
-            "shift": 72,
+            "shift": 77,
             "altGr": -1,
             "shiftAltGr": -1,
             "numpad": -1

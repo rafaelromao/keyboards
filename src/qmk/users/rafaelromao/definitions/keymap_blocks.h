@@ -6,23 +6,23 @@
 // clang-format off
 
 #define ___________________ROMAK_L1____________________ XXXXXXX , KC_F    , KC_D    , KC_W    , XXXXXXX
-#define ___________________ROMAK_L2____________________ KCL_MAC , LSFTT_N , LCTLT_S , LALTT_T , KC_G
+#define ___________________ROMAK_L2____________________ KCR_MAC , LSFTT_N , LCTLT_S , LALTT_T , KC_G
 #define ___________________ROMAK_L3____________________ KC_Q    , KC_B    , KC_C    , LGUIT_P , KC_K
 #define ____ROMAK_L4_____                                                             NAV_NG  , LOW_SPC
 
-#define ___________________ROMAK_R1____________________ XXXXXXX , KC_V    , KC_O    , KC_U    , XXXXXXX
-#define ___________________ROMAK_R2____________________ KC_H    , RALTT_R , RCTLT_A , RSFTT_E , KCI_MAC
+#define ___________________ROMAK_R1____________________ XXXXXXX , KC_L    , KC_O    , KC_U    , XXXXXXX
+#define ___________________ROMAK_R2____________________ KC_V    , RALTT_H , RCTLT_A , RSFTT_E , KCI_MAC
 #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , TD_COMM , TD_DOT  , KC_Y
 #define ____ROMAK_R4_____                               RAI_BSP , MED_SFT
 
-#define ___________________NGRAMS_L1___________________ XXXXXXX , MC_SQ_C , MC_SQUO , MC_WH   , XXXXXXX
-#define ___________________NGRAMS_L2___________________ MC_LH   , MC_NH   , MC_SH   , MC_TH   , MC_GH
-#define ___________________NGRAMS_L3___________________ KC_Z    , MC_NG   , MC_CH   , MC_PH   , XXXXXXX
+#define ___________________NGRAMS_L1___________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
+#define ___________________NGRAMS_L2___________________ XXXXXXX , KC_Z    , MC_SQUO , KC_X    , XXXXXXX
+#define ___________________NGRAMS_L3___________________ XXXXXXX , XXXXXXX , MC_SQ_C , XXXXXXX , XXXXXXX
 #define ____NGRAMS_L4____                                                             _______ , KC_SPC
 
 #define ___________________NGRAMS_R1___________________ XXXXXXX , MC_TL_O , MC_SQ_O , MC_SQ_U , XXXXXXX
 #define ___________________NGRAMS_R2___________________ MC_GV_A , MC_TL_A , MC_SQ_A , MC_SQ_E , MC_SQ_I
-#define ___________________NGRAMS_R3___________________ XXXXXXX , MC_CR_A , MC_CR_O , MC_CR_E , KC_X
+#define ___________________NGRAMS_R3___________________ XXXXXXX , MC_CR_A , MC_CR_O , MC_CR_E , XXXXXXX
 #define ____NGRAMS_R4____                               KC_BSPC , _______
 
 #define ___________________NUMPAD_L1___________________ XXXXXXX , KC_F9   , KC_F8   , KC_F7   , XXXXXXX

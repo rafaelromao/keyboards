@@ -25,7 +25,7 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case QK_MOD_TAP ... QK_MOD_TAP_MAX:
-        case KCL_MAC:
+        case KCR_MAC:
         case KCI_MAC:
         case DOT_MAC:
             return 300;

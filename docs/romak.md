@@ -34,7 +34,7 @@ In Romak, all fingers in the left hand will take less load than the equivalent f
 ### Detailed Finger Analysis
 The [Colemak mod-DH analysis tool](https://colemakmods.github.io/mod-dh/analyze.html) was also used to compare Romak against Colemak-DH (English text corpus only).
 
-The overall finger usage and SFB rate look better in Romak than in Colemak. And we should also consider that the actual position of Z and X are not in the top row.
+The overall finger usage and SFB rate look similar in Romak and Colemak.
 
 <p float="left">
   <img src="../img/sfbs_en_romak.png" width="450" />
