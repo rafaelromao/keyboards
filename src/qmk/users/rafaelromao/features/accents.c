@@ -1,6 +1,6 @@
 #include QMK_KEYBOARD_H
 
-#include "macros.h"
+#include "accents.h"
 
 extern os_t os;
 
@@ -77,7 +77,7 @@ bool is_accented_keycode(uint16_t keycode) {
     return false;
 }
 
-process_record_result_t process_ngrams_keycode(uint16_t keycode, bool isShifted) {
+process_record_result_t process_ngrams(uint16_t keycode, bool isShifted) {
     switch (keycode) {
             // Accents
 
@@ -149,51 +149,12 @@ process_record_result_t process_ngrams_keycode(uint16_t keycode, bool isShifted)
             tap_code(KC_E);
             tap_code(KC_S);
             return PROCESS_RECORD_RETURN_FALSE;
-
-            // N-Grams
-
-        case MC_LH:
-            SEND_STRING("lh");
-            return PROCESS_RECORD_RETURN_FALSE;
-        case MC_PH:
-            SEND_STRING("ph");
-            return PROCESS_RECORD_RETURN_FALSE;
-
-        case MC_GH:
-            SEND_STRING("gh");
-            return PROCESS_RECORD_RETURN_FALSE;
-        case MC_TH:
-            SEND_STRING("th");
-            return PROCESS_RECORD_RETURN_FALSE;
-        case MC_WH:
-            SEND_STRING("wh");
-            return PROCESS_RECORD_RETURN_FALSE;
-
-        case MC_CH:
-            SEND_STRING("ch");
-            return PROCESS_RECORD_RETURN_FALSE;
-        case MC_NH:
-            SEND_STRING("nh");
-            return PROCESS_RECORD_RETURN_FALSE;
-        case MC_SH:
-            SEND_STRING("sh");
-            return PROCESS_RECORD_RETURN_FALSE;
-
-        case MC_I:
-            SEND_STRING("I' ");
-            return PROCESS_RECORD_RETURN_FALSE;
-        case MC_NT:
-            SEND_STRING("n't");
-            return PROCESS_RECORD_RETURN_FALSE;
-        case MC_NG:
-            SEND_STRING("ng");
-            return PROCESS_RECORD_RETURN_FALSE;
     }
 
     return PROCESS_RECORD_CONTINUE;
 }
 
-process_record_result_t process_ngrams(uint16_t keycode, keyrecord_t *record) {
+process_record_result_t process_accents(uint16_t keycode, keyrecord_t *record) {
     if (start_long_press(record)) {
         return PROCESS_RECORD_CONTINUE;
     }
@@ -220,7 +181,7 @@ process_record_result_t process_ngrams(uint16_t keycode, keyrecord_t *record) {
 
     // Ngrams
 
-    switch (process_ngrams_keycode(keycode, isShifted)) {
+    switch (process_ngrams(keycode, isShifted)) {
         case PROCESS_RECORD_RETURN_FALSE:
             check_disable_oneshot(keycode);
             return PROCESS_RECORD_RETURN_FALSE;

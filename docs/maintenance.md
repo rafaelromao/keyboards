@@ -13,7 +13,7 @@ The Maintenance layer is activated holding both outer thumb keys and allows us t
 [Home](../readme.md) | 
 [Base](base.md) |
 [Modifiers](modifiers.md) |
-[N-Grams and Macros](macros.md) |
+[Accents and Macros](macros.md) |
 [Symbols and Numbers](symbols.md) |
 [Navigation and Media](navigation.md) |
 Maintenance

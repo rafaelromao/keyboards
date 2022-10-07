@@ -13,7 +13,7 @@ The following pages explain how this layout works and which features are impleme
 ### Layers
 
 - [Base](docs/base.md) and [Modifiers](docs/modifiers.md)
-- [N-Grams and Macros](docs/macros.md)
+- [Accents and Macros](docs/macros.md)
 - [Symbols and Numbers](docs/symbols.md)
 - [Navigation and Media](docs/navigation.md)
 - [Maintenance](docs/maintenance.md)
@@ -26,9 +26,6 @@ The following pages explain how this layout works and which features are impleme
 - [Smart Case Key](docs/modifiers.md#smart-case-key)
 - [Shortcut Combos](docs/base.md#base-layer-combos)
 - [Numpad Layer](docs/symbols.md#numpad)
-- [N-Grams Layer](docs/macros.md#n-grams)
-- [Accent Keys](docs/macros.md#accents)
-- [Macros Layer](docs/macros.md#macros)
 - [Leader Key](docs/macros.md#leader-key)
 - [Window Swapper](docs/macros.md#window-swapper)
 - [Select Word](docs/macros.md#select-word)

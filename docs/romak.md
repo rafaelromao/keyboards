@@ -43,14 +43,14 @@ The overall finger usage and SFB rate look similar in Romak and Colemak.
 
 ## Extentions
 
-- The [N-Grams and Accents](macros.md#n-grams-and-accents) layer extend the Romak base layer to give easy access to common English and Portuguese n-grams and Portuguese accented characters, along with the letters z and x.
+- The [Accents and Macros](macros.md) layer extend the Romak base layer to give easy access to common Portuguese accented characters, along with the letters z and x.
 - The [Lower and Raise](symbols.md) layers give access to function keys, symbols and numbers. The symbols are arranged to make them easy to use in software programming, with VIM, and math operations.
 
 ##
 [Home](../readme.md) | 
 Base |
 [Modifiers](modifiers.md) |
-[N-Grams and Macros](macros.md) |
+[Accents and Macros](macros.md) |
 [Symbols and Numbers](symbols.md) |
 [Navigation and Media](navigation.md) |
 [Maintenance](maintenance.md)

@@ -38,8 +38,8 @@ The Smart Case key is a custom key that works as Shift, Caps Word and other Smar
 - Any Smart Case option, including Caps Lock, will be automatically deactivated after 10 seconds of inactivity.
 - Source code: [smart_case.c](../src/qmk/users/rafaelromao/features/smart_case.c)
 
-## N-Grams Key
-- The N-Grams key is available in the left outer thumb key and will toggle the N-Grams layer in one-shot mode, acting like a special shift key.
+## Accents Key
+- The Accents key is available in the left outer thumb key and will toggle the Accents layer in one-shot mode, acting like a special shift key.
 - Source code: [custom_oneshot.c](../src/qmk/users/rafaelromao/features/custom_oneshot.c)
 
 ## Default Mod and Alt Thumb Keys
@@ -60,7 +60,7 @@ The Default Mod (Cmd or Ctrl) and Alt thumb keys are placed in the outer left an
 [Home](../readme.md) | 
 [Base](base.md) |
 Modifiers |
-[N-Grams and Macros](macros.md) |
+[Accents and Macros](macros.md) |
 [Symbols and Numbers](symbols.md) |
 [Navigation and Media](navigation.md) |
 [Maintenance](maintenance.md)

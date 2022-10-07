@@ -1,21 +1,15 @@
 # rafaelromao's keyboard layout
 
-## N-Grams and Macros
-- The N-Grams and Macros layers complement the base layer and are easy to access.
+## Accents and Macros
 
-### N-Grams and Accents
-- The N-Grams and Accents layer has common English and Portuguese n-grams and accented letters, readily available on a single tap of the left outer thumb key, making them as easy to type as a shifted key (which is available on a single tap of the right outer thumb key).
-- These layer also gives access to z and x, that are not available in the base layer.
-
-#### N-Grams
-- N-grams that involve h, like th, ch, wh, are available in this layer.
-- The inspiration for this layer came from [this post](https://www.reddit.com/r/KeyboardLayouts/comments/t3i523/ri%C3%BEinquing_h_digra%CF%86s/).
-- Source code: [ngrams.c](../src/qmk/users/rafaelromao/features/ngrams.c)
+### Accents
+- The Accents layer has common Portuguese accented letters, readily available on a single tap of the left outer thumb key, making them as easy to type as a shifted key (which is available on a single tap of the right outer thumb key).
+- These layer also gives access to z and x, that are not available in the base layer, as well as an standalone apostrophe character.
 
 #### Accents
 - There are dedicated accent keys for à á ã â é ê õ ó ô ú í and ç, which is all that is needed for Portuguese.
 - It is also possible to accent using dead keys, like usually done with the US International layout. To get a dead version of ' " ^ ~ or ` to accent a letter, just press shift before the keys that output these symbols, then type the letter you want to accent. I.e.: Shift " u produces ü. 
-- Source code: [ngrams.c](../src/qmk/users/rafaelromao/features/ngrams.c)
+- Source code: [accents.c](../src/qmk/users/rafaelromao/features/accents.c)
 
 ### Macros
 - A Macros layer can be activated holding any of the home row pinky keys.
@@ -83,7 +77,7 @@
 [Home](../readme.md) | 
 [Base](base.md) |
 [Modifiers](modifiers.md) |
-N-Grams and Macros |
+Accents and Macros |
 [Symbols and Numbers](symbols.md) |
 [Navigation and Media](navigation.md) |
 [Maintenance](maintenance.md)

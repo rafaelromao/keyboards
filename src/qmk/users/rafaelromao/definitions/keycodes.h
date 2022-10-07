@@ -77,7 +77,6 @@ enum {
     MC_SQ_U, MC_CR_O, MC_SQ_O, MC_SQ_I,
     MC_CR_E, MC_TL_O, MC_SQ_C, MC_SQ_E,
 
-    MC_I,   MC_NT,  
     MC_AO, MC_CAO, MC_OES, MC_COES,
     
     STR_MACRO_END,
