@@ -33,7 +33,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("a"));
                 return PROCESS_RECORD_RETURN_FALSE;
-            }
+            } // MacOS version is implemented as a regular keycode
             break;
 
             // Save
@@ -42,6 +42,9 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             clear_locked_and_oneshot_mods();
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("s"));
+                return PROCESS_RECORD_RETURN_FALSE;
+            } else {
+                SEND_STRING(SS_LGUI("s"));
                 return PROCESS_RECORD_RETURN_FALSE;
             }
             break;
@@ -53,7 +56,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("z"));
                 return PROCESS_RECORD_RETURN_FALSE;
-            }
+            } // MacOS version is implemented as a regular keycode
             break;
 
             // Copy
@@ -63,7 +66,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("c"));
                 return PROCESS_RECORD_RETURN_FALSE;
-            }
+            } // MacOS version is implemented as a regular keycode
             break;
 
             // Paste
@@ -73,7 +76,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("v"));
                 return PROCESS_RECORD_RETURN_FALSE;
-            }
+            } // MacOS version is implemented as a regular keycode
             break;
 
             // Lock
@@ -83,7 +86,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LGUI("l"));
                 return PROCESS_RECORD_RETURN_FALSE;
-            }
+            } // MacOS version is implemented as a regular keycode
             break;
 
             // Full Screen
@@ -93,7 +96,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 tap_code(KC_F11);
                 return PROCESS_RECORD_RETURN_FALSE;
-            }
+            } // MacOS version is implemented as a regular keycode
             break;
 
             // Find
@@ -103,8 +106,9 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("f"));
                 return PROCESS_RECORD_RETURN_FALSE;
-            }
+            } // MacOS version is implemented as a regular keycode
             break;
+
             // Conditional operators
 
         case MC_DAND:
@@ -310,8 +314,8 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             return PROCESS_RECORD_RETURN_FALSE;
 
         case MC_ESAV:
-            process_macro_keycode(MC_ESC, false, false);
             process_macro_keycode(MC_SAVE, false, false);
+            process_macro_keycode(MC_ESC, false, false);
             return PROCESS_RECORD_RETURN_FALSE;
     }
 
