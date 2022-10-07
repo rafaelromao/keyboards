@@ -66,7 +66,7 @@ enum {
     MC_CAPS, MC_WORD, MC_CAML, MC_SNAK, MC_KBAB,
 
     TG_MAC, TG_WIN, 
-    SP_CAP, SP_NG, 
+    TG_CASE, OS_ACNT, 
 
     STR_MACRO_START,
 
@@ -117,12 +117,13 @@ enum {
 
 // Layer-taps
 
-#define MED_SFT LT(_MEDIA, SP_CAP)
+#define NAV_ACT  LT(_NAVIGATION, OS_ACNT)
+
+#define MED_CAS LT(_MEDIA, TG_CASE)
 #define MED_0   LT(_MEDIA, KC_0)
 
-#define NAV_NG  LT(_NAVIGATION, SP_NG)
-#define MAI_NG LT(_MAINTENANCE, SP_NG)
-#define MAI_SFT LT(_MAINTENANCE, SP_CAP)
+#define MAI_ACT LT(_MAINTENANCE, OS_ACNT)
+#define MAI_CAS LT(_MAINTENANCE, TG_CASE)
 
 #define LOW_SPC LT(_LOWER, KC_SPC)
 #define RAI_BSP LT(_RAISE, KC_BSPC)

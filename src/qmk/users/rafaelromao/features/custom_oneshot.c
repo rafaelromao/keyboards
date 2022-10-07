@@ -69,10 +69,10 @@ void disable_oneshot_mods(void) {
 
 void check_disable_oneshot(uint16_t keycode) {
     switch (keycode) {
-        case NAV_NG:
-        case MED_SFT:
-        case MAI_SFT:
-        case MAI_NG:
+        case NAV_ACT:
+        case MED_CAS:
+        case MAI_CAS:
+        case MAI_ACT:
         case OS_LOW:
         case OS_RAI:
         case OS_LSFT:
@@ -152,22 +152,22 @@ process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *re
                 }
             }
 
-        case NAV_NG:
-        case MAI_NG:
+        case NAV_ACT:
+        case MAI_ACT:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
-                    if (IS_LAYER_ON(_NGRAMS)) {
+                    if (IS_LAYER_ON(_ACCENT)) {
                         clear_oneshot_layer_state(ONESHOT_PRESSED);
                     } else {
-                        set_oneshot_layer(_NGRAMS, ONESHOT_START);
+                        set_oneshot_layer(_ACCENT, ONESHOT_START);
                         custom_oneshots.timer = timer_read();
                     }
                 }
                 return PROCESS_RECORD_RETURN_FALSE;
             }
 
-        case MED_SFT:
-        case MAI_SFT:
+        case MED_CAS:
+        case MAI_CAS:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
                     if (has_any_smart_case()) {

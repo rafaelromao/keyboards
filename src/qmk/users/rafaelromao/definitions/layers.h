@@ -3,7 +3,7 @@
 typedef enum {
     _ROMAK,
     _NUMPAD,
-    _NGRAMS,
+    _ACCENT,
     _MACROS,
     _LOWER,
     _RAISE,

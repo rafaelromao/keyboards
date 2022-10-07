@@ -8,22 +8,22 @@
 #define ___________________ROMAK_L1____________________ XXXXXXX , KC_F    , KC_D    , KC_W    , XXXXXXX
 #define ___________________ROMAK_L2____________________ KCR_MAC , LSFTT_N , LCTLT_S , LALTT_T , KC_G
 #define ___________________ROMAK_L3____________________ KC_Q    , KC_B    , KC_C    , LGUIT_P , KC_K
-#define ____ROMAK_L4_____                                                             NAV_NG  , LOW_SPC
+#define ____ROMAK_L4_____                                                             NAV_ACT , LOW_SPC
 
 #define ___________________ROMAK_R1____________________ XXXXXXX , KC_L    , KC_O    , KC_U    , XXXXXXX
 #define ___________________ROMAK_R2____________________ KC_V    , RALTT_H , RCTLT_A , RSFTT_E , KCI_MAC
 #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , TD_COMM , TD_DOT  , KC_Y
-#define ____ROMAK_R4_____                               RAI_BSP , MED_SFT
+#define ____ROMAK_R4_____                               RAI_BSP , MED_CAS
 
-#define ___________________NGRAMS_L1___________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
-#define ___________________NGRAMS_L2___________________ XXXXXXX , KC_Z    , MC_SQUO , KC_X    , XXXXXXX
-#define ___________________NGRAMS_L3___________________ XXXXXXX , XXXXXXX , MC_SQ_C , XXXXXXX , XXXXXXX
-#define ____NGRAMS_L4____                                                             _______ , KC_SPC
+#define ___________________ACCENT_L1___________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
+#define ___________________ACCENT_L2___________________ XXXXXXX , KC_Z    , MC_SQUO , KC_X    , XXXXXXX
+#define ___________________ACCENT_L3___________________ XXXXXXX , XXXXXXX , MC_SQ_C , XXXXXXX , XXXXXXX
+#define ____ACCENT_L4____                                                             _______ , KC_SPC
 
-#define ___________________NGRAMS_R1___________________ XXXXXXX , MC_TL_O , MC_SQ_O , MC_SQ_U , XXXXXXX
-#define ___________________NGRAMS_R2___________________ MC_GV_A , MC_TL_A , MC_SQ_A , MC_SQ_E , MC_SQ_I
-#define ___________________NGRAMS_R3___________________ XXXXXXX , MC_CR_A , MC_CR_O , MC_CR_E , XXXXXXX
-#define ____NGRAMS_R4____                               KC_BSPC , _______
+#define ___________________ACCENT_R1___________________ XXXXXXX , MC_TL_O , MC_SQ_O , MC_SQ_U , XXXXXXX
+#define ___________________ACCENT_R2___________________ MC_GV_A , MC_TL_A , MC_SQ_A , MC_SQ_E , MC_SQ_I
+#define ___________________ACCENT_R3___________________ XXXXXXX , MC_CR_A , MC_CR_O , MC_CR_E , XXXXXXX
+#define ____ACCENT_R4____                               KC_BSPC , _______
 
 #define ___________________NUMPAD_L1___________________ XXXXXXX , KC_F9   , KC_F8   , KC_F7   , XXXXXXX
 #define ___________________NUMPAD_L2___________________ KC_F15  , SF_F6   , CT_F5   , AL_F4   , KC_F11
@@ -68,7 +68,7 @@
 #define ___________________MEDIA_L1____________________ XXXXXXX , XXXXXXX , XXXXXXX , OS_RALT , XXXXXXX
 #define ___________________MEDIA_L2____________________ XXXXXXX , OS_LSFT , OS_LCTL , OS_LALT , XXXXXXX
 #define ___________________MEDIA_L3____________________ XXXXXXX , XXXXXXX , XXXXXXX , OS_LGUI , XXXXXXX
-#define ____MEDIA_L4_____                                                             MAI_NG  , KC_SPC
+#define ____MEDIA_L4_____                                                             MAI_ACT , KC_SPC
 
 #define ___________________MEDIA_R1____________________ XXXXXXX , XXXXXXX , KC_ENT  , KC_TAB  , XXXXXXX
 #define ___________________MEDIA_R2____________________ TG_NAV  , KC_MUTE , KC_VOLD , KC_VOLU , HYPR_A
@@ -83,8 +83,8 @@
 #define ___________________NAVIGATION_R1_______________ XXXXXXX , KC_APP  , KC_PGDN , KC_PGUP , XXXXXXX
 #define ___________________NAVIGATION_R2_______________ TG_NAV  , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT
 #define ___________________NAVIGATION_R3_______________ XXXXXXX , KC_DEL  , KC_HOME , KC_END  , KC_INS
-#define __NAVIGATION_R4__                               KC_BSPC , MAI_SFT
-#define __FIXED_NAV__R4__                               KC_BSPC , MED_SFT
+#define __NAVIGATION_R4__                               KC_BSPC , MAI_CAS
+#define __FIXED_NAV__R4__                               KC_BSPC , MED_CAS
 
 #define ___________________MAINTENANCE_L1______________ XXXXXXX , RGB_VAD , RGB_VAI , EEP_RST , XXXXXXX
 #define ___________________MAINTENANCE_L2______________ RGB_TOG , RGB_HUD , RGB_HUI , XXXXXXX , QK_BOOT
