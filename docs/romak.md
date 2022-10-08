@@ -7,7 +7,7 @@ Romak is a new keyboard layout, inspired by [Colemak](https://colemak.org) and [
 ![img](../img/romak.png)
 
 - The name Romak is a combination of my last name, **Rom**ão, and Dvor**ak**'s name.
-- Romak assumes the right hand as dominant so it puts vowels, H and R in that side.
+- Romak assumes the right hand as dominant and puts all vowels plus H on that side.
 - Romak is also designed to favor hand alternation more than rolls.
 
 ## Romak vs Colemak-DH
