@@ -15,8 +15,8 @@
 #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , TD_COMM , TD_DOT  , KC_Y
 #define ____ROMAK_R4_____                               RAI_BSP , MED_CAS
 
-#define ___________________ACCENT_L1___________________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
-#define ___________________ACCENT_L2___________________ XXXXXXX , KC_Z    , MC_SQUO , KC_X    , XXXXXXX
+#define ___________________ACCENT_L1___________________ XXXXXXX , XXXXXXX , KC_X    , XXXXXXX , XXXXXXX
+#define ___________________ACCENT_L2___________________ XXXXXXX , KC_Z    , MC_SQUO , XXXXXXX , XXXXXXX
 #define ___________________ACCENT_L3___________________ XXXXXXX , XXXXXXX , MC_SQ_C , XXXXXXX , XXXXXXX
 #define ____ACCENT_L4____                                                             _______ , KC_SPC
 
