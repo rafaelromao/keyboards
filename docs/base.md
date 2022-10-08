@@ -18,7 +18,7 @@
 ## Base Layer Combos
 - Combos are available in the base and [Numpad](symbols.md#numpad-layer) layers to send ENTER, ESC, TAB and common shortcuts like copy, paste, save, select all and undo.
 - Most combos include the home thumb key, the one in the same side, to avoid misfires.
-- One-shot shift can be used to invert the mdifier used in the combos.
+- One-shot shift can be used to invert the modifier (Ctrl vs Cmd) used in the combos.
 - If shift, or any other modifier, is held, it will be included in the combo. So hold Shift and tap the Undo combo will send Redo instead.
 - There are also combos for z and x, that are not available through dedicated keys in the base layer.
 - Source code: [combos.c](../src/qmk/users/rafaelromao/features/combos.c)
