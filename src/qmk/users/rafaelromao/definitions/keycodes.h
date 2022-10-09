@@ -55,6 +55,10 @@ enum {
 
     MC_SECRET_1, 
 
+    MC_MODP, MC_MODM, MC_SELC, MC_SAVE,
+    MC_UNDO, MC_COPY, MC_PAST, MC_LOCK, 
+    MC_FULL, MC_FIND,
+
     MC_REFC, MC_QUIK, MC_PROJ, 
     MC_SEEV, MC_RUAN, MC_BUID, MC_COMP,
     MC_AUCO, MC_NEER, MC_FIUS,
@@ -148,17 +152,6 @@ enum {
 
 #define HYPR_A HYPR(KC_A)
 #define HYPR_V HYPR(KC_V)
-
-#define MC_MODP LGUI(KC_PLUS)
-#define MC_MODM LGUI(KC_MINS)
-#define MC_SELC LGUI(KC_A)
-#define MC_SAVE LGUI(KC_S)
-#define MC_UNDO LGUI(KC_Z)
-#define MC_COPY LGUI(KC_C)
-#define MC_PAST LGUI(KC_V)
-#define MC_LOCK LGUI(LCTL(KC_Q))
-#define MC_FULL LGUI(LCTL(KC_F))
-#define MC_FIND LGUI(KC_F)
 
 uint16_t extract_base_tapping_keycode(uint16_t keycode);
 bool is_key_on_tap(uint16_t keycode);

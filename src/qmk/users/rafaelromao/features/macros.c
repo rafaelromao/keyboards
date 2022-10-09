@@ -32,9 +32,10 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             clear_locked_and_oneshot_mods();
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("a"));
-                return PROCESS_RECORD_RETURN_FALSE;
-            } // MacOS version is implemented as a regular keycode
-            break;
+            } else {
+                SEND_STRING(SS_LGUI("a"));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
 
             // Save
 
@@ -42,12 +43,10 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             clear_locked_and_oneshot_mods();
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("s"));
-                return PROCESS_RECORD_RETURN_FALSE;
             } else {
                 SEND_STRING(SS_LGUI("s"));
-                return PROCESS_RECORD_RETURN_FALSE;
             }
-            break;
+            return PROCESS_RECORD_RETURN_FALSE;
 
             // Undo
 
@@ -55,9 +54,10 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             clear_locked_and_oneshot_mods();
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("z"));
-                return PROCESS_RECORD_RETURN_FALSE;
-            } // MacOS version is implemented as a regular keycode
-            break;
+            } else {
+                SEND_STRING(SS_LGUI("z"));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
 
             // Copy
 
@@ -65,9 +65,10 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             clear_locked_and_oneshot_mods();
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("c"));
-                return PROCESS_RECORD_RETURN_FALSE;
-            } // MacOS version is implemented as a regular keycode
-            break;
+            } else {
+                SEND_STRING(SS_LGUI("c"));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
 
             // Paste
 
@@ -75,29 +76,10 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             clear_locked_and_oneshot_mods();
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("v"));
-                return PROCESS_RECORD_RETURN_FALSE;
-            } // MacOS version is implemented as a regular keycode
-            break;
-
-            // Lock
-
-        case MC_LOCK:
-            clear_locked_and_oneshot_mods();
-            if (should_send_ctrl(isMacOS, isOneShotShift)) {
-                SEND_STRING(SS_LGUI("l"));
-                return PROCESS_RECORD_RETURN_FALSE;
-            } // MacOS version is implemented as a regular keycode
-            break;
-
-            // Full Screen
-
-        case MC_FULL:
-            clear_locked_and_oneshot_mods();
-            if (should_send_ctrl(isMacOS, isOneShotShift)) {
-                tap_code(KC_F11);
-                return PROCESS_RECORD_RETURN_FALSE;
-            } // MacOS version is implemented as a regular keycode
-            break;
+            } else {
+                SEND_STRING(SS_LGUI("v"));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
 
             // Find
 
@@ -105,9 +87,32 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             clear_locked_and_oneshot_mods();
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("f"));
-                return PROCESS_RECORD_RETURN_FALSE;
-            } // MacOS version is implemented as a regular keycode
-            break;
+            } else {
+                SEND_STRING(SS_LGUI("f"));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Lock
+
+        case MC_LOCK:
+            clear_locked_and_oneshot_mods();
+            if (should_send_ctrl(isMacOS, isOneShotShift)) {
+                SEND_STRING(SS_LGUI("l"));
+            } else {
+                SEND_STRING(SS_LGUI(SS_LCTL("q")));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Full Screen
+
+        case MC_FULL:
+            clear_locked_and_oneshot_mods();
+            if (should_send_ctrl(isMacOS, isOneShotShift)) {
+                tap_code(KC_F11);
+            } else {
+                SEND_STRING(SS_LGUI(SS_LCTL("f")));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
 
             // Conditional operators
 
