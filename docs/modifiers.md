@@ -25,7 +25,7 @@ The Smart Case key is a custom key that works as Shift, Caps Word and other Smar
 - It is placed in the right outer thumb key and behaves as follows, when tapped:
     - If any modifier is active or locked in one-shot mode, all these modifiers will be deactivated.
     - If any Smart Case is active, it deactivates the Smart Case.
-    - If Shift is locked in one-shot mode, and no modifier is held, it activates Caps Word.
+    - If Shift is in one-shot mode, and no modifier is held, it activates Caps Word.
     - If Shift is not in one-shot mode, and no modifier is held, it activates Shift for one-shot.
         - If Shift is held, it activates **camelCase**: Space is replaced by OSM(Shift), excluding first char.
         - If Control is held, it activates **CAPSWORD**: Caps Lock remains active until space or any word breaking symbol is typed.
