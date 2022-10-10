@@ -241,34 +241,6 @@ void td_not(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void td_colon(qk_tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            if (is_shifted()) {
-                clear_shift();
-                tap_code(KC_SCLN);
-            } else {
-                tap_code16(KC_COLN);
-            }
-            break;
-        case TD_DOUBLE_TAP:
-            tap_code16(KC_COLN);
-            tap_code16(KC_COLN);
-            break;
-        case TD_SINGLE_HOLD:
-            if (is_macos()) {
-                tap_code16(LSFT(RALT(KC_8)));
-            } else {
-                tap_code16(LSFT(LCTL(KC_2)));
-            }
-            break;
-        default:
-            break;
-    }
-}
-
 void td_dquo(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
@@ -313,7 +285,60 @@ void td_squo(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-// Semicolon at the end
+void td_tild(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            if (is_shifted()) {
+                clear_shift();
+                tap_code16(KC_TILD);
+            } else {
+                tap_code16(KC_TILD);
+                tap_code(KC_SPC);
+            }
+            break;
+        case TD_SINGLE_HOLD:
+            if (is_shifted()) {
+                clear_shift();
+                tap_code16(KC_CIRC);
+            } else {
+                tap_code16(KC_CIRC);
+                tap_code(KC_SPC);
+            }
+            break;
+        default:
+            break;
+    }
+}
+
+void td_colon(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            if (is_shifted()) {
+                clear_shift();
+                tap_code(KC_SCLN);
+            } else {
+                tap_code16(KC_COLN);
+            }
+            break;
+        case TD_DOUBLE_TAP:
+            tap_code16(KC_COLN);
+            tap_code16(KC_COLN);
+            break;
+        case TD_SINGLE_HOLD:
+            if (is_macos()) {
+                tap_code16(LSFT(RALT(KC_8)));
+            } else {
+                tap_code16(LSFT(LCTL(KC_2)));
+            }
+            break;
+        default:
+            break;
+    }
+}
 
 void td_semicolon(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
@@ -470,6 +495,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [COM_LEA] = ACTION_TAP_DANCE_FN(td_comm),
     [DLR_CUR] = ACTION_TAP_DANCE_FN(td_currencies),
     [COL_DEG] = ACTION_TAP_DANCE_FN(td_colon),
+    [TIL_CIR] = ACTION_TAP_DANCE_FN(td_tild),
     [DOT_DOT] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_dot_finished, td_dot_reset)};
 
 // clang-format on

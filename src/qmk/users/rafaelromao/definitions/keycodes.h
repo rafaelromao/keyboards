@@ -26,6 +26,7 @@ enum {
     DOT_DOT, 
     DLR_CUR, 
     COL_DEG,
+    TIL_CIR,
     TD_CODE_END 
 };
 
@@ -49,6 +50,7 @@ enum {
 #define TD_DOT TD(DOT_DOT)
 #define TD_DLR TD(DLR_CUR)
 #define TD_COLN TD(COL_DEG)
+#define TD_TILD TD(TIL_CIR)
 
 // Custom keycodes
 
@@ -76,7 +78,6 @@ enum {
     STR_MACRO_START,
 
     MC_BTIC, MC_DQUO, MC_SQUO, 
-    MC_TILD, 
     MC_DAND, MC_DPIP, MC_UNDS,
 
     MC_GV_A, MC_CR_A, MC_TL_A, MC_SQ_A,

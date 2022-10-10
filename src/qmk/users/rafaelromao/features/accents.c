@@ -102,21 +102,7 @@ process_record_result_t process_ngrams(uint16_t keycode, bool isShifted) {
                 tap_code(KC_SPC);
             }
             return PROCESS_RECORD_RETURN_FALSE;
-        case MC_TILD:
-            if (is_long_press()) {
-                clear_shift();
-                tap_code16(KC_CIRC);
-                if (!isShifted) {
-                    tap_code(KC_SPC);
-                }
-            } else {
-                clear_shift();
-                tap_code16(KC_TILD);
-                if (!isShifted) {
-                    tap_code(KC_SPC);
-                }
-            }
-            return PROCESS_RECORD_RETURN_FALSE;
+
             // Tild combos
 
         case MC_AO:
@@ -155,7 +141,7 @@ process_record_result_t process_ngrams(uint16_t keycode, bool isShifted) {
 }
 
 process_record_result_t process_accents(uint16_t keycode, keyrecord_t *record) {
-    if (start_long_press(record)) {
+    if (record != NULL && record->event.pressed) {
         return PROCESS_RECORD_CONTINUE;
     }
 
