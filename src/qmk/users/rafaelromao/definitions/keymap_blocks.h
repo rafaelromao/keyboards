@@ -31,7 +31,7 @@
 #define ____NUMPAD_L4____                                                             KC_F12  , LOW_SPC
 
 #define ___________________NUMPAD_R1___________________ XXXXXXX , KC_7    , KC_8    , KC_9    , XXXXXXX
-#define ___________________NUMPAD_R2___________________ MC_COLN , AL_4    , CT_5    , SF_6    , DOT_MAC
+#define ___________________NUMPAD_R2___________________ TD_COLN , AL_4    , CT_5    , SF_6    , DOT_MAC
 #define ___________________NUMPAD_R3___________________ TG_NUM  , GU_1    , KC_2    , KC_3    , KC_COMM
 #define ____NUMPAD_R4____                               RAI_BSP , MED_0
 
@@ -51,7 +51,7 @@
 #define ____LOWER_L4_____                                                             _______ , _______
 
 #define ___________________LOWER_R1____________________ XXXXXXX , KC_7    , KC_8    , KC_9    , XXXXXXX
-#define ___________________LOWER_R2____________________ MC_COLN , KC_4    , KC_5    , KC_6    , DOT_MAC
+#define ___________________LOWER_R2____________________ TD_COLN , KC_4    , KC_5    , KC_6    , DOT_MAC
 #define ___________________LOWER_R3____________________ TG_NUM  , KC_1    , KC_2    , KC_3    , KC_COMM
 #define ____LOWER_R4_____                               _______ , MED_0
 
@@ -61,7 +61,7 @@
 #define ____RAISE_L4_____                                                             KC_F12  , _______
 
 #define ___________________RAISE_R1____________________ KC_CIRC , TD_DLR  , TD_LCRB , TD_RCRB , XXXXXXX
-#define ___________________RAISE_R2____________________ MC_COLN , KC_MINS , KC_EQL  , TD_NOT  , KC_PLUS
+#define ___________________RAISE_R2____________________ TD_COLN , KC_MINS , KC_EQL  , TD_NOT  , KC_PLUS
 #define ___________________RAISE_R3____________________ KC_PERC , KC_SLSH , KC_LT   , KC_GT   , KC_ASTR
 #define ____RAISE_R4_____                               _______ , _______
 

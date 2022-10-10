@@ -36,9 +36,13 @@ __attribute__((weak)) td_state_t dance_state(qk_tap_dance_state_t *state) {
         return TD_UNKNOWN;
 }
 
-bool isShifted(void) {
+bool is_shifted(void) {
     return get_mods() & MOD_MASK_SHIFT || get_oneshot_mods() & MOD_MASK_SHIFT ||
            get_oneshot_locked_mods() & MOD_MASK_SHIFT;
+}
+
+bool is_macos(void) {
+    return os.type == MACOS;
 }
 
 void td_enter_end(qk_tap_dance_state_t *state, void *user_data) {
@@ -237,6 +241,34 @@ void td_not(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
+void td_colon(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            if (is_shifted()) {
+                clear_shift();
+                tap_code(KC_SCLN);
+            } else {
+                tap_code16(KC_COLN);
+            }
+            break;
+        case TD_DOUBLE_TAP:
+            tap_code16(KC_COLN);
+            tap_code16(KC_COLN);
+            break;
+        case TD_SINGLE_HOLD:
+            if (is_macos()) {
+                tap_code16(LSFT(RALT(KC_8)));
+            } else {
+                tap_code16(LSFT(LCTL(KC_2)));
+            }
+            break;
+        default:
+            break;
+    }
+}
+
 void td_dquo(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
@@ -305,23 +337,17 @@ void td_currencies(qk_tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_DLR);
             break;
         case TD_DOUBLE_TAP:
-            switch (os.type) {
-                case MACOS:
-                    tap_code16(LSFT(RALT(KC_2)));
-                    break;
-                default:
-                    tap_code16(LCTL(LALT(KC_5)));
-                    break;
+            if (is_macos()) {
+                tap_code16(LSFT(RALT(KC_2)));
+            } else {
+                tap_code16(LCTL(LALT(KC_5)));
             }
             break;
         case TD_TRIPLE_TAP:
-            switch (os.type) {
-                case MACOS:
-                    tap_code16(RALT(KC_3));
-                    break;
-                default:
-                    tap_code16(LSFT(RALT(KC_4)));
-                    break;
+            if (is_macos()) {
+                tap_code16(RALT(KC_3));
+            } else {
+                tap_code16(LSFT(RALT(KC_4)));
             }
             break;
         default:
@@ -331,14 +357,12 @@ void td_currencies(qk_tap_dance_state_t *state, void *user_data) {
 
 void td_macro(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
-    bool isShifted  = get_mods() & MOD_MASK_SHIFT || get_oneshot_mods() & MOD_MASK_SHIFT ||
-                     get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     switch (tap_state.state) {
         case TD_DOUBLE_TAP:
-            dyn_macro_toggle(isShifted ? DYN_REC_START2 : DYN_REC_START1);
+            dyn_macro_toggle(is_shifted() ? DYN_REC_START2 : DYN_REC_START1);
             break;
         case TD_SINGLE_TAP:
-            dyn_macro_play(isShifted ? DYN_MACRO_PLAY2 : DYN_MACRO_PLAY1);
+            dyn_macro_play(is_shifted() ? DYN_MACRO_PLAY2 : DYN_MACRO_PLAY1);
             break;
         default:
             break;
@@ -356,7 +380,7 @@ void td_comm(qk_tap_dance_state_t *state, void *user_data) {
             tap_code(KC_COMM);
             break;
         case TD_DOUBLE_TAP:
-            if (!isShifted()) {
+            if (!is_shifted()) {
                 qk_leader_start();
             } else {
                 tap_code(KC_COMM);
@@ -445,6 +469,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [REC_MAC] = ACTION_TAP_DANCE_FN(td_macro),
     [COM_LEA] = ACTION_TAP_DANCE_FN(td_comm),
     [DLR_CUR] = ACTION_TAP_DANCE_FN(td_currencies),
+    [COL_DEG] = ACTION_TAP_DANCE_FN(td_colon),
     [DOT_DOT] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_dot_finished, td_dot_reset)};
 
 // clang-format on

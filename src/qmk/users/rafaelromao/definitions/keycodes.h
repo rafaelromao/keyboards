@@ -25,6 +25,7 @@ enum {
     COM_LEA, 
     DOT_DOT, 
     DLR_CUR, 
+    COL_DEG,
     TD_CODE_END 
 };
 
@@ -47,6 +48,7 @@ enum {
 #define TD_COMM TD(COM_LEA)
 #define TD_DOT TD(DOT_DOT)
 #define TD_DLR TD(DLR_CUR)
+#define TD_COLN TD(COL_DEG)
 
 // Custom keycodes
 
@@ -63,7 +65,7 @@ enum {
     MC_SEEV, MC_RUAN, MC_BUID, MC_COMP,
     MC_AUCO, MC_NEER, MC_FIUS,
     MC_SELW, MC_SWLE, MC_SWRI, 
-    MC_SELL, MC_REF, MC_COLN,
+    MC_SELL, MC_REF,
     MC_JOIN, MC_COMT, 
     MC_SENT, MC_CUR,
     MC_ESC, MC_ESAV,
@@ -73,8 +75,9 @@ enum {
 
     STR_MACRO_START,
 
-    MC_BTIC, MC_DQUO, MC_SQUO, MC_DEG,
-    MC_TILD, MC_DAND, MC_DPIP, MC_UNDS,
+    MC_BTIC, MC_DQUO, MC_SQUO, 
+    MC_TILD, 
+    MC_DAND, MC_DPIP, MC_UNDS,
 
     MC_GV_A, MC_CR_A, MC_TL_A, MC_SQ_A,
     MC_SQ_U, MC_CR_O, MC_SQ_O, MC_SQ_I,

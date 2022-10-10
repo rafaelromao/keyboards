@@ -8,6 +8,17 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
     bool isMacOS = os.type == MACOS;
 
     switch (keycode) {
+            // Inverted underscore and minus
+
+        case MC_UNDS:
+            if (isShifted) {
+                clear_shift();
+                tap_code(KC_MINS);
+            } else {
+                tap_code16(KC_UNDS);
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
             // Zoom
 
         case MC_MODP:
