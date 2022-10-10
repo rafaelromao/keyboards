@@ -27,13 +27,13 @@ The Smart Case key is a custom key that works as Shift, Caps Word and other Smar
     - If any Smart Case is active, it deactivates the Smart Case.
     - If Shift is in one-shot mode, and no modifier is held, it activates Caps Word.
     - If Shift is not in one-shot mode, and no modifier is held, it activates Shift for one-shot.
+    - If modifiers are held, it behaves as follows:
         - If Shift is held, it activates **camelCase**: Space is replaced by OSM(Shift), excluding first char.
         - If Control is held, it activates **CAPSWORD**: Caps Lock remains active until space or any word breaking symbol is typed.
         - If Shift + Control is held, it activates **PascalCase**: Space is replaced by OSM(Shift), including first char.
         - If Alt is held, it activates **snake_case**: Space is replaced by _.
-        - If Alt + Control is held, it activates **STRONG_SNAKE_CASE**.
+        - If Alt + Control is held, it activates **CONSTANT_CASE**.
         - If Gui is held, it activates **kebab-case**: Space is replaced by -.
-        - If Gui + Control is held, it activates **STRONG-KEBAB-CASE**.
         - If Shift + Control + Alt is held, it activates Caps Lock.
 - Any Smart Case option, including Caps Lock, will be automatically deactivated after 10 seconds of inactivity.
 - Source code: [smart_case.c](../src/qmk/users/rafaelromao/features/smart_case.c)
