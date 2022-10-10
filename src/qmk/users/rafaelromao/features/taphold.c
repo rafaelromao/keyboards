@@ -41,6 +41,12 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
                 return PROCESS_RECORD_RETURN_FALSE;
             }
             break;
+        case SF_ZP:
+            if (!record->event.pressed && record->tap.count > 0) {
+                process_macros(MC_MODP, NULL);
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+            break;
     }
     return PROCESS_RECORD_CONTINUE;
 }

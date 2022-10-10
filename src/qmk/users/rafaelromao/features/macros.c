@@ -126,7 +126,8 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             // Rename / Refactor
 
         case MC_REFC:
-            if (is_long_press()) {
+            if (isShifted) {
+                clear_shift();
                 if (isMacOS) {
                     SEND_STRING(SS_LCTL(SS_TAP(X_T)));
                 } else {
@@ -146,7 +147,8 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             // Project Files / Recent Files
 
         case MC_PROJ:
-            if (is_long_press()) {
+            if (isShifted) {
+                clear_shift();
                 if (isMacOS) {
                     SEND_STRING(SS_LGUI(SS_TAP(X_E)));
                 } else {
@@ -189,7 +191,8 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             // Complete Statement / Generete Code
 
         case MC_COMP:
-            if (is_long_press()) {
+            if (isShifted) {
+                clear_shift();
                 if (isMacOS) {
                     SEND_STRING(SS_LGUI(SS_TAP(X_N)));
                 } else {
@@ -207,7 +210,8 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             // Type-matching Auto Complete / Basic Auto Complete
 
         case MC_AUCO:
-            if (is_long_press()) {
+            if (isShifted) {
+                clear_shift();
                 SEND_STRING(SS_LCTL(" "));
             } else {
                 SEND_STRING(SS_LCTL(SS_LSFT(" ")));
@@ -217,7 +221,8 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             // Next Error / Next Warning
 
         case MC_NEER:
-            if (is_long_press()) {
+            if (isShifted) {
+                clear_shift();
                 SEND_STRING(SS_TAP(X_F2));
             } else {
                 SEND_STRING(SS_LSFT(SS_TAP(X_F2)));
@@ -227,7 +232,8 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             // Find Usages / Go To Definition
 
         case MC_FIUS:
-            if (is_long_press()) {
+            if (isShifted) {
+                clear_shift();
                 if (isMacOS) {
                     SEND_STRING(SS_LSFT(SS_LGUI(SS_TAP(X_B))));
                 } else {
@@ -272,7 +278,8 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             // Refresh / Clear Cache
 
         case MC_REF:
-            if (is_long_press()) {
+            if (isShifted) {
+                clear_shift();
                 if (isMacOS) {
                     SEND_STRING(SS_LGUI(SS_LSFT(SS_TAP(X_R))));
                 } else {
@@ -292,23 +299,15 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
         case MC_ESC:
             if (isShifted) {
                 clear_shift();
-                if (is_long_press()) {
-                    if (isMacOS) {
-                        SEND_STRING(SS_LGUI(SS_TAP(X_Q)));
-                    } else {
-                        SEND_STRING(SS_LALT(SS_TAP(X_F4)));
-                        break;
-                    }
+                if (isMacOS) {
+                    SEND_STRING(SS_LGUI(SS_TAP(X_W)));
                 } else {
-                    if (isMacOS) {
-                        SEND_STRING(SS_LGUI(SS_TAP(X_W)));
-                    } else {
-                        SEND_STRING(SS_LCTL(SS_TAP(X_F4)));
-                        break;
-                    }
+                    SEND_STRING(SS_LCTL(SS_TAP(X_F4)));
+                    break;
                 }
+            } else {
+                tap_code(KC_ESC);
             }
-            tap_code(KC_ESC);
             return PROCESS_RECORD_RETURN_FALSE;
 
         case MC_ESAV:
@@ -321,10 +320,6 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
 }
 
 process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
-    if (start_long_press(record)) {
-        return PROCESS_RECORD_CONTINUE;
-    }
-
     bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     bool isOneShotShift       = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
     bool isShifted            = isOneShotShift || get_mods() & MOD_MASK_SHIFT;

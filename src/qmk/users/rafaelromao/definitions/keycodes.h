@@ -96,6 +96,7 @@ enum {
 #define LSFTT_N LSFT_T(KC_N)
 #define RSFTT_E RSFT_T(KC_E)
 #define SF_SE LSFT_T(MC_SEEV)
+#define SF_ZP LSFT_T(MC_MODP)
 #define SF_F6 LSFT_T(KC_F6)
 #define SF_6 RSFT_T(KC_6)
 
@@ -157,7 +158,5 @@ enum {
 
 uint16_t extract_base_tapping_keycode(uint16_t keycode);
 bool is_key_on_tap(uint16_t keycode);
-bool start_long_press(keyrecord_t *record);
-bool is_long_press(void);
 
 // clang-format on

@@ -41,7 +41,7 @@
 #define ____MACROS_L4____                                                             _______ , LOW_BSP
 
 #define ___________________MACROS_R1___________________ XXXXXXX , MC_SELW , KC_ENT  , KC_TAB  , XXXXXXX
-#define ___________________MACROS_R2___________________ TD_MACR , MC_SELL , MC_MODM , MC_MODP , XXXXXXX
+#define ___________________MACROS_R2___________________ TD_MACR , MC_SELL , MC_MODM , SF_ZP   , XXXXXXX
 #define ___________________MACROS_R3___________________ MC_JOIN , MC_COMT , MC_SWLE , MC_SWRI , XXXXXXX
 #define ____MACROS_R4____                               RAI_SPC , _______
 
