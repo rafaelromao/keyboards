@@ -11,6 +11,7 @@ typedef enum {
     SNAKE_CASE = 1 << 3,
     KEBAB_CASE = 1 << 4,
     CAMEL_CASE = 1 << 5,
+    SLASH_CASE = 1 << 6
 } smart_case_type_t;
 
 typedef struct {

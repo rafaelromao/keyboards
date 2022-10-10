@@ -101,56 +101,37 @@ void toggle_smart_case(smart_case_type_t smart_case_types) {
     }
 }
 
-process_record_result_t process_smart_case_options(uint16_t keycode, keyrecord_t *record) {
-    if (record->event.pressed) {
-        switch (keycode) {
-            case MC_WORD:
-                toggle_smart_case(WORD_CASE);
-                return PROCESS_RECORD_RETURN_FALSE;
-            case MC_CAPS:
-                toggle_capslock(!host_keyboard_led_state().caps_lock);
-                return PROCESS_RECORD_RETURN_FALSE;
-            case MC_SNAK:
-                toggle_smart_case(SNAKE_CASE);
-                return PROCESS_RECORD_RETURN_FALSE;
-            case MC_KBAB:
-                toggle_smart_case(KEBAB_CASE);
-                return PROCESS_RECORD_RETURN_FALSE;
-            case MC_CAML:
-                toggle_smart_case(CAMEL_CASE);
-                return PROCESS_RECORD_RETURN_FALSE;
-        }
-    }
-    return PROCESS_RECORD_CONTINUE;
-}
-
 void set_smart_case_for_mods(keyrecord_t *record) {
     int8_t mods = get_mods();
     disable_smart_case();
     if ((mods & MOD_MASK_CTRL) && (mods & MOD_MASK_SHIFT) && (mods & MOD_MASK_ALT)) {
-        process_smart_case_options(MC_CAPS, record);
+        toggle_capslock(!host_keyboard_led_state().caps_lock);
+        return;
+    }
+    if ((mods & MOD_MASK_SHIFT) && (mods & MOD_MASK_GUI)) {
+        toggle_smart_case(SLASH_CASE);
         return;
     }
     if (mods == 0 || mods & MOD_MASK_CTRL) {
-        process_smart_case_options(MC_WORD, record);
+        toggle_smart_case(WORD_CASE);
     }
     if (mods & MOD_MASK_SHIFT) {
-        process_smart_case_options(MC_CAML, record);
+        toggle_smart_case(CAMEL_CASE);
         return;
     }
     if (mods & MOD_MASK_ALT) {
-        process_smart_case_options(MC_SNAK, record);
+        toggle_smart_case(SNAKE_CASE);
         return;
     }
     if (mods & MOD_MASK_GUI) {
-        process_smart_case_options(MC_KBAB, record);
+        toggle_smart_case(KEBAB_CASE);
         return;
     }
 }
 
 static bool spacing = false;
 
-process_record_result_t process_smart_case_chars(uint16_t keycode, keyrecord_t *record) {
+process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record) {
     if (has_any_smart_case() && record->event.pressed) {
         switch (keycode) {
             case QK_MOD_TAP ... QK_MOD_TAP_MAX:
@@ -169,8 +150,9 @@ process_record_result_t process_smart_case_chars(uint16_t keycode, keyrecord_t *
         switch (keycode) {
             case KC_SPC:
                 if (spacing) {
-                    if (has_smart_case(CAMEL_CASE) || has_smart_case(SNAKE_CASE) || has_smart_case(KEBAB_CASE)) {
-                        if (has_smart_case(SNAKE_CASE) || has_smart_case(KEBAB_CASE)) {
+                    if (has_smart_case(CAMEL_CASE) || has_smart_case(SNAKE_CASE) || has_smart_case(KEBAB_CASE) ||
+                        has_smart_case(SLASH_CASE)) {
+                        if (has_smart_case(SNAKE_CASE) || has_smart_case(KEBAB_CASE) || has_smart_case(SLASH_CASE)) {
                             tap_code(KC_BSPC);
                         }
                         tap_code(KC_SPC);
@@ -195,6 +177,11 @@ process_record_result_t process_smart_case_chars(uint16_t keycode, keyrecord_t *
                     start_smart_case_timer();
                     return PROCESS_RECORD_RETURN_FALSE;
                 }
+                if (has_smart_case(SLASH_CASE)) {
+                    tap_code(KC_SLSH);
+                    start_smart_case_timer();
+                    return PROCESS_RECORD_RETURN_FALSE;
+                }
                 if (has_smart_case(CAMEL_CASE)) {
                     add_oneshot_mods(MOD_LSFT);
                     start_smart_case_timer();
@@ -212,6 +199,12 @@ process_record_result_t process_smart_case_chars(uint16_t keycode, keyrecord_t *
             case KC_END:
                 start_smart_case_timer();
                 break;
+            case KC_DOT:
+            case TD_DOT:
+                if (has_smart_case(SLASH_CASE)) {
+                    start_smart_case_timer();
+                    break;
+                }
             default:
                 if (is_key_on_tap(keycode) && (has_smart_case(WORD_CASE) || !has_smart_case(CAPS_LOCK))) {
                     disable_smart_case();
@@ -219,27 +212,5 @@ process_record_result_t process_smart_case_chars(uint16_t keycode, keyrecord_t *
                 break;
         }
     }
-    return PROCESS_RECORD_CONTINUE;
-}
-
-process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record) {
-    switch (process_smart_case_chars(keycode, record)) {
-        case PROCESS_RECORD_RETURN_TRUE:
-            return PROCESS_RECORD_RETURN_TRUE;
-        case PROCESS_RECORD_RETURN_FALSE:
-            return PROCESS_RECORD_RETURN_FALSE;
-        default:
-            break;
-    };
-
-    switch (process_smart_case_options(keycode, record)) {
-        case PROCESS_RECORD_RETURN_TRUE:
-            return PROCESS_RECORD_RETURN_TRUE;
-        case PROCESS_RECORD_RETURN_FALSE:
-            return PROCESS_RECORD_RETURN_FALSE;
-        default:
-            break;
-    };
-
     return PROCESS_RECORD_CONTINUE;
 }
