@@ -33,6 +33,16 @@ process_record_result_t process_custom_shift(uint16_t keycode, keyrecord_t *reco
                 }
             }
             return PROCESS_RECORD_RETURN_FALSE;
+
+            // Inverted underscore and minus
+        case MC_UNDS:
+            if (isShifted) {
+                clear_shift();
+                tap_code(KC_MINS);
+            } else {
+                tap_code16(KC_UNDS);
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
     }
 
     uint16_t key = extract_base_tapping_keycode(keycode);
