@@ -19,24 +19,6 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Zoom
-
-        case MC_MODP:
-            if (should_send_ctrl(isMacOS, isOneShotShift)) {
-                SEND_STRING(SS_LCTL("+"));
-            } else {
-                SEND_STRING(SS_LGUI("+"));
-            }
-            return PROCESS_RECORD_RETURN_FALSE;
-
-        case MC_MODM:
-            if (should_send_ctrl(isMacOS, isOneShotShift)) {
-                SEND_STRING(SS_LCTL("-"));
-            } else {
-                SEND_STRING(SS_LGUI("-"));
-            }
-            return PROCESS_RECORD_RETURN_FALSE;
-
             // Select All
 
         case MC_SELC:

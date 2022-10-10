@@ -8,7 +8,7 @@ static bool swapping = false;
 static bool tabbing  = false;
 
 process_record_result_t process_window_swapper(uint16_t keycode, keyrecord_t *record) {
-    if (start_long_press(record)) {
+    if (record != NULL && record->event.pressed) {
         return PROCESS_RECORD_CONTINUE;
     }
 
@@ -17,47 +17,15 @@ process_record_result_t process_window_swapper(uint16_t keycode, keyrecord_t *re
     bool isOneShotShift       = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
     bool isShifted            = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
 
-    // Back and Forth in the browser
+    // Finish swapping
 
-    if (!swapping && is_long_press()) {
-        switch (keycode) {
-            case MC_SWLE:
-                if (isMacOS) {
-                    SEND_STRING(SS_LGUI("["));
-                } else {
-                    SEND_STRING(SS_LALT(SS_TAP(X_LEFT)));
-                }
-                return PROCESS_RECORD_RETURN_FALSE;
-            case MC_SWRI:
-                if (isMacOS) {
-                    SEND_STRING(SS_LGUI("]"));
-                } else {
-                    SEND_STRING(SS_LALT(SS_TAP(X_RGHT)));
-                }
-                return PROCESS_RECORD_RETURN_FALSE;
-        }
-    }
-
-    // Back and Forth in the open applications or tabs
-
-    if (swapping && keycode != MC_SWLE && keycode != MC_SWRI) {
-        unregister_mods(MOD_LSFT);
-        if (isMacOS) {
-            if (tabbing) {
-                unregister_mods(MOD_LCTL);
-            } else {
-                unregister_mods(MOD_LGUI);
-            }
-        } else {
-            if (tabbing) {
-                unregister_mods(MOD_LCTL);
-            } else {
-                unregister_mods(MOD_LALT);
-            }
-        }
+    if (swapping && keycode != MC_SWLE && keycode != MC_SWRI && keycode != MC_MODP && keycode != MC_MODM) {
+        clear_mods();
         swapping = false;
         tabbing  = false;
     }
+
+    // Start back and forth in windows or tabs
 
     switch (keycode) {
         case MC_SWLE:
@@ -77,22 +45,87 @@ process_record_result_t process_window_swapper(uint16_t keycode, keyrecord_t *re
                     if (isMacOS) {
                         if (isShifted) {
                             tabbing = true;
-                            register_mods(MOD_LCTL);
+                            clear_shift();
+                            register_mods(MOD_LCTL); // Tab in Mac
                         } else {
-                            register_mods(MOD_LGUI);
+                            register_mods(MOD_LGUI); // Window in Mac
                         }
                     } else {
                         if (isShifted) {
                             tabbing = true;
-                            register_mods(MOD_LCTL);
+                            clear_shift();
+                            register_mods(MOD_LCTL); // Tab in Windows
                         } else {
-                            register_mods(MOD_LALT);
+                            register_mods(MOD_LALT); // Window in Windows
                         }
                     }
                 }
-                tap_code(KC_TAB);
+                tap_code(KC_TAB); // Action key
             }
             return PROCESS_RECORD_RETURN_FALSE;
+    }
+
+    // Start back and forth in history or zoom
+
+    switch (keycode) {
+        case MC_MODP:
+        case MC_MODM:
+            if (!record->event.pressed) {
+                if (!swapping) {
+                    swapping = true;
+                    if (isMacOS) {
+                        if (isShifted) {
+                            tabbing = true;
+                            clear_shift();
+                            register_mods(MOD_LGUI); // History Mac
+                        } else {
+                            register_mods(MOD_LGUI); // Zoom Mac
+                        }
+                    } else {
+                        if (isShifted) {
+                            tabbing = true;
+                            clear_shift();
+                            register_mods(MOD_LALT); // History Windows
+                        } else {
+                            register_mods(MOD_LCTL); // Zoom Windows
+                        }
+                    }
+                }
+            }
+            // Action keys
+            switch (keycode) {
+                case MC_MODM:
+                    if (isMacOS) {
+                        if (tabbing) {
+                            tap_code(KC_LBRC); // History - Mac
+                        } else {
+                            tap_code(KC_MINS); // Zoom - Mac
+                        }
+                    } else {
+                        if (tabbing) {
+                            tap_code(KC_LEFT); // History - Windows
+                        } else {
+                            tap_code(KC_MINS); // Zoom - Windows
+                        }
+                    }
+                    return PROCESS_RECORD_RETURN_FALSE;
+
+                case MC_MODP:
+                    if (isMacOS) {
+                        if (tabbing) {
+                            tap_code(KC_RBRC); // History + Mac
+                        } else {
+                            tap_code16(KC_PLUS); // Zoom + Mac
+                        }
+                    } else {
+                        if (tabbing) {
+                            tap_code(KC_RIGHT); // History + Windows
+                        } else {
+                            tap_code16(KC_PLUS); // Zoom + Windows
+                        }
+                    }
+                    return PROCESS_RECORD_RETURN_FALSE;
+            }
     }
 
     return PROCESS_RECORD_CONTINUE;
