@@ -39,7 +39,7 @@ const uint16_t PROGMEM r_ng_coes_combo[] = {MC_CR_A, MC_CR_O, MC_CR_E, COMBO_END
 
 // Macros
 
-const uint16_t PROGMEM r_mac_ref_combo[] = {MC_SWLE, MC_SWRI, COMBO_END};
+const uint16_t PROGMEM r_mac_ref_combo[] = {MC_MODM, SF_MODP, COMBO_END};
 
 // Base
 
