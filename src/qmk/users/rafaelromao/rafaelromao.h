@@ -14,7 +14,7 @@
 #include "features/custom_oneshot.h"
 #include "features/select_word.h"
 #include "features/dynamic_macro.h"
-#include "features/window_swapper.h"
+#include "features/swapper.h"
 #include "features/custom_shift.h"
 
 void matrix_scan_keymap(void);

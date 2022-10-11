@@ -105,8 +105,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
     };
 
-    // Process window swapper
-    switch (process_window_swapper(keycode, record)) {
+    // Process swapper
+    switch (process_swapper(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:

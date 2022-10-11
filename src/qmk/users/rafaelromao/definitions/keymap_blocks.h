@@ -36,12 +36,12 @@
 #define ____NUMPAD_R4____                               RAI_BSP , MED_0
 
 #define ___________________MACROS_L1___________________ XXXXXXX , MC_ESC  , MC_COMP , MC_AUCO , XXXXXXX
-#define ___________________MACROS_L2___________________ XXXXXXX , SF_SE   , MC_RUAN , MC_QUIK , MC_BUID
+#define ___________________MACROS_L2___________________ XXXXXXX , SF_SEEV , MC_RUAN , MC_QUIK , MC_BUID
 #define ___________________MACROS_L3___________________ XXXXXXX , MC_PROJ , MC_NEER , MC_FIUS , MC_REFC
 #define ____MACROS_L4____                                                             _______ , LOW_BSP
 
 #define ___________________MACROS_R1___________________ XXXXXXX , MC_SELW , KC_ENT  , KC_TAB  , XXXXXXX
-#define ___________________MACROS_R2___________________ TD_MACR , MC_SELL , MC_MODM , SF_ZP   , XXXXXXX
+#define ___________________MACROS_R2___________________ TD_MACR , MC_SELL , MC_MODM , SF_MODP , XXXXXXX
 #define ___________________MACROS_R3___________________ MC_JOIN , MC_COMT , MC_SWLE , MC_SWRI , XXXXXXX
 #define ____MACROS_R4____                               RAI_SPC , _______
 

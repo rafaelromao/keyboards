@@ -95,8 +95,8 @@ enum {
 
 #define LSFTT_N LSFT_T(KC_N)
 #define RSFTT_E RSFT_T(KC_E)
-#define SF_SE LSFT_T(MC_SEEV)
-#define SF_ZP LSFT_T(MC_MODP)
+#define SF_SEEV LSFT_T(MC_SEEV)
+#define SF_MODP LSFT_T(MC_MODP)
 #define SF_F6 LSFT_T(KC_F6)
 #define SF_6 RSFT_T(KC_6)
 

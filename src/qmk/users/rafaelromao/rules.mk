@@ -12,7 +12,7 @@ SRC += features/combos.c
 SRC += features/leader.c
 SRC += features/select_word.c
 SRC += features/dynamic_macro.c
-SRC += features/window_swapper.c
+SRC += features/swapper.c
 SRC += features/custom_shift.c
 
 LTO_ENABLE = yes
