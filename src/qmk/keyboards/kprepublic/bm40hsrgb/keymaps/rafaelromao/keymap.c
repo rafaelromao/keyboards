@@ -185,7 +185,7 @@ void rgb_matrix_indicators_user(void) {
         } else if (has_any_smart_case()) {
             rgb_matrix_set_color(leds[i], RGB_YELLOW);
         } else if (isShift) {
-            rgb_matrix_set_color(leds[i], RGB_SPRINGGREEN);
+            rgb_matrix_set_color(leds[i], RGB_TEAL);
         } else if (isCtrl || isAlt || isGui) {
             rgb_matrix_set_color(leds[i], RGB_WHITE);
         } else {

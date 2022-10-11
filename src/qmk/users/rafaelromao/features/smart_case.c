@@ -7,6 +7,8 @@ smart_case_t smart_case = {.timer = 0, .type = NO_CASE};
 void clear_shift(void) {
     del_oneshot_mods(MOD_LSFT);
     unregister_mods(MOD_LSFT);
+    del_oneshot_mods(MOD_RSFT);
+    unregister_mods(MOD_RSFT);
 }
 
 bool smart_case_timer_expired(void) {
@@ -57,16 +59,6 @@ void set_smart_case(smart_case_type_t smart_case_types) {
         enable_capslock();
         return;
     }
-    if (smart_case_types & WORD_CASE) {
-        // Setting CamelCase with CapsWord already set, makes Pascal Case
-        if (has_smart_case(CAMEL_CASE)) {
-            add_oneshot_mods(MOD_LSFT);
-            return;
-        }
-        if (!host_keyboard_led_state().caps_lock) {
-            tap_code(KC_CAPS);
-        }
-    }
     if (smart_case_types & CAMEL_CASE) {
         // Setting CapsWord with CamelCase already set, makes Pascal Case
         if (has_smart_case(WORD_CASE)) {
@@ -104,28 +96,24 @@ void toggle_smart_case(smart_case_type_t smart_case_types) {
 void set_smart_case_for_mods(keyrecord_t *record) {
     int8_t mods = get_mods();
     disable_smart_case();
-    if ((mods & MOD_MASK_CTRL) && (mods & MOD_MASK_SHIFT) && (mods & MOD_MASK_ALT)) {
-        toggle_capslock(!host_keyboard_led_state().caps_lock);
-        return;
-    }
-    if ((mods & MOD_MASK_SHIFT) && (mods & MOD_MASK_GUI)) {
-        toggle_smart_case(SLASH_CASE);
-        return;
-    }
-    if (mods == 0 || mods & MOD_MASK_CTRL) {
+    if (mods == 0 || mods & MOD_BIT(KC_LCTL)) {
         toggle_smart_case(WORD_CASE);
+        toggle_capslock(!host_keyboard_led_state().caps_lock);
     }
-    if (mods & MOD_MASK_SHIFT) {
+    if (mods & MOD_BIT(KC_RCTL)) {
+        toggle_capslock(!host_keyboard_led_state().caps_lock);
+    }
+    if (mods & MOD_BIT(KC_LSFT)) {
         toggle_smart_case(CAMEL_CASE);
-        return;
     }
-    if (mods & MOD_MASK_ALT) {
+    if (mods & MOD_BIT(KC_RSFT)) {
+        toggle_smart_case(SLASH_CASE);
+    }
+    if (mods & MOD_BIT(KC_LALT)) {
         toggle_smart_case(SNAKE_CASE);
-        return;
     }
-    if (mods & MOD_MASK_GUI) {
+    if (mods & MOD_BIT(KC_RALT)) {
         toggle_smart_case(KEBAB_CASE);
-        return;
     }
 }
 
@@ -162,8 +150,7 @@ process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record
                 } else {
                     spacing = true;
                 }
-                if (has_smart_case(WORD_CASE) && !(has_smart_case(SNAKE_CASE)) && !(has_smart_case(KEBAB_CASE)) &&
-                    !(has_smart_case(CAMEL_CASE))) {
+                if (has_smart_case(WORD_CASE) && !(has_smart_case(SNAKE_CASE)) && !(has_smart_case(CAMEL_CASE))) {
                     disable_smart_case();
                     return PROCESS_RECORD_CONTINUE;
                 }

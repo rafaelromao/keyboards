@@ -215,7 +215,7 @@ void set_mod_indicators(void) {
     } else if (has_any_smart_case()) {
         rgblight_setrgb(RGB_YELLOW);
     } else if (isShift) {
-        rgblight_setrgb(RGB_SPRINGGREEN);
+        rgblight_setrgb(RGB_TEAL);
     } else if (isCtrl || isAlt || isGui) {
         rgblight_setrgb(RGB_WHITE);
     } else {

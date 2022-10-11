@@ -156,11 +156,25 @@ process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *re
         case MAI_ACT:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
-                    if (IS_LAYER_ON(_ACCENT)) {
-                        clear_oneshot_layer_state(ONESHOT_PRESSED);
+                    if (has_any_smart_case()) {
+                        disable_smart_case();
+                        clear_shift();
                     } else {
-                        set_oneshot_layer(_ACCENT, ONESHOT_START);
-                        custom_oneshots.timer = timer_read();
+                        if (isAnyOneShotButShift || isOneShotLockedShift) {
+                            clear_locked_and_oneshot_mods();
+                        } else if (get_mods() != 0) {
+                            set_smart_case_for_mods(record);
+                        } else if (!IS_LAYER_ON(_ACCENT)) {
+                            set_oneshot_layer(_ACCENT, ONESHOT_START);
+                            custom_oneshots.timer = timer_read();
+                        } else {
+                            if (!isOneShotShift && get_mods() == 0) {
+                                add_oneshot_mods(MOD_LSFT);
+                            } else {
+                                clear_oneshot_layer_state(ONESHOT_PRESSED);
+                                clear_shift();
+                            }
+                        }
                     }
                 }
                 return PROCESS_RECORD_RETURN_FALSE;
