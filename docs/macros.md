@@ -29,7 +29,7 @@
 - If shift is active in the first tap, they navigate between the current application tabs instead.
 ##### History and Zoom
 - The second pair will decrease or increase zoom.
-- If shift is active in the first tap, they will navigate in the browser history.
+- If shift is active in the first tap, they will navigate in the browser history instead.
 - Tapping both keys will refresh the current browser tab.
 - If shift is active when tapping both keys, they will clear cache and refresh the current browser tab.
 
