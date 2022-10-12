@@ -25,7 +25,7 @@
 - There are two pairs of dedicated keys.
 - Source Code: [swapper.c](../src/qmk/users/rafaelromao/features/swapper.c)
 ##### Applications and Tabs
-- The first pair swaps back and forth on applications.
+- The first pair swaps back and forth between applications.
 - If shift is active in the first tap, they navigate between the current application tabs instead.
 ##### History and Zoom
 - The second pair will navigate in the browser history.
