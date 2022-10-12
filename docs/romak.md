@@ -42,7 +42,7 @@ The overall finger usage and SFB rate look better in Romak than in Colemak.
 
 ## Extentions
 
-- The [Accents and Macros](macros.md) layer extend the Romak base layer to give easy access to common Portuguese accented characters, along with the letters z and x.
+- The [Accents and Macros](macros.md) layers extend the Romak base layer to give easy access to common Portuguese accented characters, along with the letters z and x.
 - The [Lower and Raise](symbols.md) layers give access to function keys, symbols and numbers. The symbols are arranged to make them easy to use in software programming, with VIM, and math operations.
 
 ##
