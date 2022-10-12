@@ -63,8 +63,7 @@
     - Run Everything (Ctrl+Ctrl)
     - Quick Actions (Alt+Enter)
     - Build (Cmd+F9 / Ctrl+F9)
-    - Project Files (Cmd+1 / Ctrl+1)
-    - Recent Files (Cmd+E / Ctrl+E)
+    - Project Files (Cmd+1 / Ctrl+1) - If shifted, it will show Recent Files (Cmd+E / Ctrl+E)
     - Find Usages (Alt+F7) - If shifted, it will go to Type Definition (Shift+Cmd+B / Shift+Ctrl+B)
     - Rename (Alt+F6) - If shifted, it will show other Refactor options (Ctrl+T / Shift+Ctrl+Alt+T)
 
