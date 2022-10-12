@@ -33,9 +33,9 @@
 - Tapping both keys will refresh the current browser tab.
 - If shift is active when tapping both keys, they will clear cache and refresh the current browser tab.
 
-#### Select Word and Select Lines
+#### Select Word and Select Line
 - These two macros selects the current word or line in the first press and extend the selection to the next ones in consecutive presses.
-- This macro is also OS aware and works the same way on Windows, Linux and MacOS.
+- These macros are also OS aware and works the same way on Windows, Linux and MacOS.
 - Source Code: [select_word.c](../src/qmk/users/rafaelromao/features/select_word.c)
 
 #### Comment Lines
