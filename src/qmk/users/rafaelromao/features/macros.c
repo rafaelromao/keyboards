@@ -294,7 +294,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Esc, Close Window, Close Tab
+            // Esc, Close Tab
 
         case MC_ESC:
             if (isShifted) {
@@ -309,6 +309,8 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
                 tap_code(KC_ESC);
             }
             return PROCESS_RECORD_RETURN_FALSE;
+
+            // Save + Esc
 
         case MC_ESAV:
             process_macro_keycode(MC_SAVE, false, false);
