@@ -5,13 +5,13 @@
 
 // clang-format off
 
-#define ___________________ROMAK_L1____________________ XXXXXXX , KC_F    , KC_D    , KC_W    , XXXXXXX
+#define ___________________ROMAK_L1____________________ XXXXXXX , KC_F    , KC_D    , RALTT_W , XXXXXXX
 #define ___________________ROMAK_L2____________________ KCR_MAC , LSFTT_N , LCTLT_S , LALTT_T , KC_G
 #define ___________________ROMAK_L3____________________ KC_Q    , KC_B    , KC_C    , LGUIT_P , KC_K
 #define ____ROMAK_L4_____                                                             NAV_ACT , LOW_SPC
 
-#define ___________________ROMAK_R1____________________ XXXXXXX , KC_L    , KC_O    , KC_U    , XXXXXXX
-#define ___________________ROMAK_R2____________________ KC_V    , RALTT_H , RCTLT_A , RSFTT_E , KCI_MAC
+#define ___________________ROMAK_R1____________________ XXXXXXX , RALTT_L , KC_O    , KC_U    , XXXXXXX
+#define ___________________ROMAK_R2____________________ KC_V    , LALTT_H , RCTLT_A , RSFTT_E , KCI_MAC
 #define ___________________ROMAK_R3____________________ KC_J    , RGUIT_M , TD_COMM , TD_DOT  , KC_Y
 #define ____ROMAK_R4_____                               RAI_BSP , MED_CAS
 
@@ -25,12 +25,12 @@
 #define ___________________ACCENT_R3___________________ XXXXXXX , MC_CR_A , MC_CR_O , MC_CR_E , XXXXXXX
 #define ____ACCENT_R4____                               KC_BSPC , _______
 
-#define ___________________NUMPAD_L1___________________ XXXXXXX , KC_F9   , KC_F8   , KC_F7   , XXXXXXX
+#define ___________________NUMPAD_L1___________________ XXXXXXX , KC_F9   , KC_F8   , AL_F7   , XXXXXXX
 #define ___________________NUMPAD_L2___________________ KC_F15  , SF_F6   , CT_F5   , AL_F4   , KC_F11
 #define ___________________NUMPAD_L3___________________ KC_F14  , KC_F3   , KC_F2   , GU_F1   , KC_F10
 #define ____NUMPAD_L4____                                                             KC_F12  , LOW_SPC
 
-#define ___________________NUMPAD_R1___________________ XXXXXXX , KC_7    , KC_8    , KC_9    , XXXXXXX
+#define ___________________NUMPAD_R1___________________ XXXXXXX , AL_7    , KC_8    , KC_9    , XXXXXXX
 #define ___________________NUMPAD_R2___________________ TD_COLN , AL_4    , CT_5    , SF_6    , DOT_MAC
 #define ___________________NUMPAD_R3___________________ TG_NUM  , GU_1    , KC_2    , KC_3    , KC_COMM
 #define ____NUMPAD_R4____                               RAI_BSP , MED_0

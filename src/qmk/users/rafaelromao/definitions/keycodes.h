@@ -106,9 +106,13 @@ enum {
 #define CT_5 RCTL_T(KC_5)
 
 #define LALTT_T LALT_T(KC_T)
-#define RALTT_H RALT_T(KC_H)
+#define LALTT_H LALT_T(KC_H)
+#define RALTT_W RALT_T(KC_W)
+#define RALTT_L RALT_T(KC_L)
+#define AL_F7 LALT_T(KC_F7)
 #define AL_F4 LALT_T(KC_F4)
-#define AL_4 RALT_T(KC_4)
+#define AL_7 RALT_T(KC_7)
+#define AL_4 LALT_T(KC_4)
 
 #define LGUIT_P LGUI_T(KC_P)
 #define RGUIT_M RGUI_T(KC_M)

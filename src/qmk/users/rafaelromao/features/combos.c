@@ -56,7 +56,7 @@ const uint16_t PROGMEM l_rom_cop_combo[] = {LOW_SPC, KC_C, LGUIT_P, COMBO_END};
 
 const uint16_t PROGMEM r_rom_x_combo[]   = {RGUIT_M, TD_COMM, COMBO_END};
 const uint16_t PROGMEM r_rom_tab_combo[] = {RAI_BSP, KC_O, KC_U, COMBO_END};
-const uint16_t PROGMEM r_rom_pas_combo[] = {RAI_BSP, RALTT_H, RCTLT_A, COMBO_END};
+const uint16_t PROGMEM r_rom_pas_combo[] = {RAI_BSP, LALTT_H, RCTLT_A, COMBO_END};
 const uint16_t PROGMEM r_rom_ent_combo[] = {RAI_BSP, RCTLT_A, RSFTT_E, COMBO_END};
 const uint16_t PROGMEM r_rom_rai_combo[] = {RAI_BSP, RCTLT_A, COMBO_END};
 const uint16_t PROGMEM r_rom_low_combo[] = {RAI_BSP, RSFTT_E, COMBO_END};
