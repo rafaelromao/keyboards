@@ -27,7 +27,7 @@ The following pages explain how this layout works and which features are impleme
 - [Shortcut Combos](docs/base.md#base-layer-combos)
 - [Numpad Layer](docs/symbols.md#numpad)
 - [Leader Key](docs/macros.md#leader-key)
-- [Window Swapper](docs/macros.md#window-swapper)
+- [Swapper](docs/macros.md#swapper)
 - [Select Word](docs/macros.md#select-word)
 - [Dynamic Macros](docs/macros.md#dynamic-macros)
 - [IDE Macros](docs/macros.md#ide-macros)
