@@ -4,6 +4,10 @@
 
 extern os_t os;
 
+bool is_shift_macro_keycode(uint16_t keycode) {
+    return keycode > SFT_MACRO_START && keycode < SFT_MACRO_END;
+}
+
 process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotShift, bool isShifted) {
     bool isMacOS = os.type == MACOS;
 
@@ -12,7 +16,6 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
 
         case MC_UNDS:
             if (isShifted) {
-                clear_shift();
                 tap_code(KC_MINS);
             } else {
                 tap_code16(KC_UNDS);
@@ -123,81 +126,159 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Rename / Refactor
+            // Quick Actions / Breakpoint
 
-        case MC_REFC:
+        case MC_QUIK:
             if (isShifted) {
-                clear_shift();
                 if (isMacOS) {
-                    SEND_STRING(SS_LCTL(SS_TAP(X_T)));
+                    SEND_STRING(SS_LGUI(SS_TAP(X_F8)));
                 } else {
-                    SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT(SS_TAP(X_T)))));
+                    SEND_STRING(SS_LCTL(SS_TAP(X_F8)));
+                    break;
                 }
             } else {
-                SEND_STRING(SS_LSFT(SS_TAP(X_F6)));
+                SEND_STRING(SS_LALT(SS_TAP(X_ENT)));
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Quick Actions
+            // Type-matching Auto Complete / Basic Auto Complete
 
-        case MC_QUIK:
-            SEND_STRING(SS_LALT(SS_TAP(X_ENT)));
+        case MC_AUCO:
+            if (isShifted) {
+                SEND_STRING(SS_LCTL(SS_TAP(X_SPC)));
+            } else {
+                SEND_STRING(SS_LCTL(SS_LSFT(SS_TAP(X_SPC))));
+            }
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Project Files / Recent Files
+            // Quick Docs / Parameter Info
+
+        case MC_QDOC:
+            if (isShifted) {
+                if (isMacOS) {
+                    SEND_STRING(SS_LCMD(SS_TAP(X_P)));
+                } else {
+                    SEND_STRING(SS_LCTL(SS_TAP(X_P)));
+                    break;
+                }
+            } else {
+                if (isMacOS) {
+                    tap_code(KC_F1);
+                } else {
+                    SEND_STRING(SS_LCTL(SS_TAP(X_Q)));
+                    break;
+                }
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Find Symbol / Find Action
+
+        case MC_FSYM:
+            if (isShifted) {
+                if (isMacOS) {
+                    SEND_STRING(SS_LSFT(SS_LGUI(SS_TAP(X_A))));
+                } else {
+                    SEND_STRING(SS_LSFT(SS_LCTL(SS_TAP(X_A))));
+                }
+            } else {
+                if (isMacOS) {
+                    SEND_STRING(SS_LALT(SS_LGUI(SS_TAP(X_O))));
+                } else {
+                    SEND_STRING(SS_LALT(SS_LSFT(SS_LCTL(SS_TAP(X_N)))));
+                }
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Run / Stop
+
+        case MC_RUN:
+            if (isShifted) {
+                if (isMacOS) {
+                    SEND_STRING(SS_LGUI(SS_TAP(X_F2)));
+                } else {
+                    SEND_STRING(SS_LCTL(SS_TAP(X_F2)));
+                    break;
+                }
+            } else {
+                if (isMacOS) {
+                    SEND_STRING(SS_LCTL(SS_TAP(X_R)));
+                } else {
+                    SEND_STRING(SS_LSFT(SS_TAP(X_F10)));
+                }
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Debug / Resume
+
+        case MC_DBUG:
+            if (isShifted) {
+                if (isMacOS) {
+                    SEND_STRING(SS_LALT(SS_LGUI(SS_TAP(X_R))));
+                } else {
+                    SEND_STRING(SS_TAP(X_F9));
+                    break;
+                }
+            } else {
+                if (isMacOS) {
+                    SEND_STRING(SS_LCTL(SS_TAP(X_D)));
+                } else {
+                    SEND_STRING(SS_LSFT(SS_TAP(X_F9)));
+                }
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Build / Rebuild
+
+        case MC_BUID:
+            if (isShifted) {
+                if (isMacOS) {
+                    SEND_STRING(SS_LSFT(SS_LGUI(SS_TAP(X_F9))));
+                } else {
+                    SEND_STRING(SS_LSFT(SS_LCTL(SS_TAP(X_F9))));
+                }
+            } else {
+                if (isMacOS) {
+                    SEND_STRING(SS_LGUI(SS_TAP(X_F9)));
+                } else {
+                    SEND_STRING(SS_LCTL(SS_TAP(X_F9)));
+                }
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Project Files / Select In
 
         case MC_PROJ:
             if (isShifted) {
-                clear_shift();
+                SEND_STRING(SS_LALT(SS_TAP(X_F1)));
+                return PROCESS_RECORD_RETURN_FALSE;
+            } else {
+                if (isMacOS) {
+                    SEND_STRING(SS_LGUI(SS_TAP(X_1)));
+                } else {
+                    SEND_STRING(SS_LALT(SS_TAP(X_1)));
+                }
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+
+            // Recent Files / Previous Error
+
+        case MC_RECE:
+            if (isShifted) {
+                SEND_STRING(SS_LSFT(SS_TAP(X_F2)));
+            } else {
                 if (isMacOS) {
                     SEND_STRING(SS_LGUI(SS_TAP(X_E)));
                 } else {
                     SEND_STRING(SS_LCTL(SS_TAP(X_E)));
                 }
-                return PROCESS_RECORD_RETURN_FALSE;
-            } else {
-                if (isMacOS) {
-                    SEND_STRING(SS_LGUI("1"));
-                } else {
-                    SEND_STRING(SS_LCTL("1"));
-                }
-                return PROCESS_RECORD_RETURN_FALSE;
-            }
-
-            // Search Everything
-
-        case MC_SEEV:
-            tap_code16(KC_LSFT);
-            tap_code16(KC_LSFT);
-            return PROCESS_RECORD_RETURN_FALSE;
-
-            // Run Anything
-
-        case MC_RUAN:
-            tap_code16(KC_LCTL);
-            tap_code16(KC_LCTL);
-            return PROCESS_RECORD_RETURN_FALSE;
-
-            // Build
-
-        case MC_BUID:
-            if (isMacOS) {
-                SEND_STRING(SS_LGUI(SS_TAP(X_F9)));
-            } else {
-                SEND_STRING(SS_LCTL(SS_TAP(X_F9)));
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Complete Statement / Generete Code
+            // Complete Statement / Next Error
 
         case MC_COMP:
             if (isShifted) {
-                clear_shift();
-                if (isMacOS) {
-                    SEND_STRING(SS_LGUI(SS_TAP(X_N)));
-                } else {
-                    SEND_STRING(SS_LALT(SS_TAP(X_INS)));
-                }
+                SEND_STRING(SS_TAP(X_F2));
             } else {
                 if (isMacOS) {
                     SEND_STRING(SS_LSFT(SS_LGUI(SS_TAP(X_ENT))));
@@ -207,41 +288,36 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Type-matching Auto Complete / Basic Auto Complete
-
-        case MC_AUCO:
-            if (isShifted) {
-                clear_shift();
-                SEND_STRING(SS_LCTL(" "));
-            } else {
-                SEND_STRING(SS_LCTL(SS_LSFT(" ")));
-            }
-            return PROCESS_RECORD_RETURN_FALSE;
-
-            // Next Error / Next Warning
-
-        case MC_NEER:
-            if (isShifted) {
-                clear_shift();
-                SEND_STRING(SS_TAP(X_F2));
-            } else {
-                SEND_STRING(SS_LSFT(SS_TAP(X_F2)));
-            }
-            return PROCESS_RECORD_RETURN_FALSE;
-
-            // Find Usages / Go To Definition
+            // Find Usages / Quick Definition
 
         case MC_FIUS:
             if (isShifted) {
-                clear_shift();
                 if (isMacOS) {
-                    SEND_STRING(SS_LSFT(SS_LGUI(SS_TAP(X_B))));
+                    SEND_STRING(SS_LALT(SS_TAP(X_SPC)));
                 } else {
-                    SEND_STRING(SS_LSFT(SS_LCTL(SS_TAP(X_B))));
+                    SEND_STRING(SS_LCTL(SS_LSFT(SS_TAP(X_I))));
                     break;
                 }
             } else {
                 SEND_STRING(SS_LALT(SS_TAP(X_F7)));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Refactor / Format
+
+        case MC_REFC:
+            if (isShifted) {
+                if (isMacOS) {
+                    SEND_STRING(SS_LGUI(SS_LALT(SS_TAP(X_L))));
+                } else {
+                    SEND_STRING(SS_LCTL(SS_LALT(SS_TAP(X_L))));
+                }
+            } else {
+                if (isMacOS) {
+                    SEND_STRING(SS_LCTL(SS_TAP(X_T)));
+                } else {
+                    SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT(SS_TAP(X_T)))));
+                }
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
@@ -279,7 +355,6 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
 
         case MC_REF:
             if (isShifted) {
-                clear_shift();
                 if (isMacOS) {
                     SEND_STRING(SS_LGUI(SS_LSFT(SS_TAP(X_R))));
                 } else {
@@ -294,11 +369,21 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Esc, Close Tab
+            // Esc, Tab, Enter
 
         case MC_ESC:
+            tap_code(KC_ESC); // It works when shifted, since shifted is removed for macros
+            return PROCESS_RECORD_RETURN_FALSE;
+        case MC_TAB:
+            tap_code(KC_TAB); // It works when shifted, since shifted is removed for macros
+            return PROCESS_RECORD_RETURN_FALSE;
+        case MC_ENT:
+            tap_code(KC_ENT); // It works when shifted, since shifted is removed for macros
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Esc, Close Tab
+        case MC_ESCQ:
             if (isShifted) {
-                clear_shift();
                 if (isMacOS) {
                     SEND_STRING(SS_LGUI(SS_TAP(X_W)));
                 } else {
@@ -325,6 +410,9 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
     if (record != NULL && record->event.pressed) {
         return PROCESS_RECORD_CONTINUE;
     }
+    if (!is_shift_macro_keycode(keycode)) {
+        return PROCESS_RECORD_CONTINUE;
+    }
 
     bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     bool isOneShotShift       = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
@@ -332,12 +420,16 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
 
     // Macros
 
-    switch (process_macro_keycode(keycode, isOneShotShift, isShifted)) {
-        case PROCESS_RECORD_RETURN_FALSE:
-            return PROCESS_RECORD_RETURN_FALSE;
-        default:
-            break;
-    };
+    int8_t mods = get_mods();
+    if (isShifted) {
+        clear_locked_and_oneshot_mods();
+        unregister_mods(mods);
+    }
+    process_record_result_t result = process_macro_keycode(keycode, isOneShotShift, isShifted);
+    if (isShifted) {
+        wait_ms(100);
+        register_mods(mods);
+    }
 
-    return PROCESS_RECORD_CONTINUE;
+    return result;
 }

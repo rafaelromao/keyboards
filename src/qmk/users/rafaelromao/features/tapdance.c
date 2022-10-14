@@ -421,52 +421,26 @@ void td_comm(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void td_dot_finished(qk_tap_dance_state_t *state, void *user_data) {
+void td_dot(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
         case TD_DOUBLE_HOLD:
-            register_code(KC_DOT);
+            tap_code(KC_DOT);
             break;
         case TD_DOUBLE_SINGLE_TAP:
         case TD_DOUBLE_TAP:
-            register_code(KC_DOT);
-            register_code(KC_DOT);
+            tap_code(KC_DOT);
+            tap_code(KC_DOT);
             break;
         case TD_TRIPLE_TAP:
-            register_code(KC_DOT);
-            register_code(KC_DOT);
-            register_code(KC_DOT);
+            tap_code(KC_DOT);
+            tap_code(KC_DOT);
+            tap_code(KC_DOT);
             break;
         case TD_SINGLE_HOLD:
-            register_code16(KC_END);
-            register_code(KC_DOT);
-            break;
-        default:
-            break;
-    }
-}
-
-void td_dot_reset(qk_tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-        case TD_DOUBLE_HOLD:
-            unregister_code(KC_DOT);
-            break;
-        case TD_DOUBLE_SINGLE_TAP:
-        case TD_DOUBLE_TAP:
-            unregister_code(KC_DOT);
-            unregister_code(KC_DOT);
-            break;
-        case TD_TRIPLE_TAP:
-            unregister_code(KC_DOT);
-            unregister_code(KC_DOT);
-            unregister_code(KC_DOT);
-            break;
-        case TD_SINGLE_HOLD:
-            unregister_code16(KC_END);
-            unregister_code(KC_DOT);
+            tap_code16(KC_END);
+            tap_code(KC_DOT);
             break;
         default:
             break;
@@ -496,6 +470,6 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [DLR_CUR] = ACTION_TAP_DANCE_FN(td_currencies),
     [COL_DEG] = ACTION_TAP_DANCE_FN(td_colon),
     [TIL_CIR] = ACTION_TAP_DANCE_FN(td_tild),
-    [DOT_DOT] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_dot_finished, td_dot_reset)};
+    [DOT_DOT] = ACTION_TAP_DANCE_FN(td_dot)};
 
 // clang-format on

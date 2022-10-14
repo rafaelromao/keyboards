@@ -5,10 +5,8 @@
 smart_case_t smart_case = {.timer = 0, .type = NO_CASE};
 
 void clear_shift(void) {
-    del_oneshot_mods(MOD_LSFT);
-    unregister_mods(MOD_LSFT);
-    del_oneshot_mods(MOD_RSFT);
-    unregister_mods(MOD_RSFT);
+    del_oneshot_mods(MOD_MASK_SHIFT);
+    unregister_mods(MOD_MASK_SHIFT);
 }
 
 bool smart_case_timer_expired(void) {

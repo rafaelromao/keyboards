@@ -24,42 +24,6 @@ void process_leader_dictionary(void) {
             tap_code(KC_DOWN);
         }
 
-        // Git - Leader key + G + something
-
-        // Git - Add and Commit
-        SEQ_TWO_KEYS(KC_G, KC_A) {
-            SEND_STRING("git add . && git commit -m \"\"");
-            tap_code(KC_LEFT);
-            tap_code(KC_LEFT);
-        }
-
-        // Git - Commit
-        SEQ_TWO_KEYS(KC_G, KC_C) {
-            SEND_STRING("git commit -m \"\"");
-            tap_code(KC_LEFT);
-            tap_code(KC_LEFT);
-        }
-
-        // Git - New branch
-        SEQ_TWO_KEYS(KC_G, KC_B) {
-            SEND_STRING("git checkout -b ");
-        }
-
-        // Git - New branch
-        SEQ_TWO_KEYS(KC_G, KC_O) {
-            SEND_STRING("git checkout ");
-        }
-
-        // Git - Reset
-        SEQ_TWO_KEYS(KC_G, KC_R) {
-            SEND_STRING("git reset --hard HEAD~ 1");
-        }
-
-        // Git - Set-Upstream
-        SEQ_TWO_KEYS(KC_G, KC_U) {
-            SEND_STRING("git push --set-upstream origin $(git branch --show-current)");
-        }
-
         // Process secret leader sequences
         process_leader_dictionary_secret();
     }

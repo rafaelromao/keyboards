@@ -30,7 +30,7 @@ The following pages explain how this layout works and which features are impleme
 - [Swapper](docs/macros.md#swapper)
 - [Select Word](docs/macros.md#select-word)
 - [Dynamic Macros](docs/macros.md#dynamic-macros)
-- [IDE Macros](docs/macros.md#ide-macros)
+- [Coding Shortcuts](docs/macros.md#coding-shortcuts)
 - [Coding Dancing](docs/symbols.md#coding-dancing)
 
 ## About this repo

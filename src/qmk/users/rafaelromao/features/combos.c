@@ -20,7 +20,7 @@ const uint16_t PROGMEM r_rai_cur_combo[] = {TD_LCRB, TD_RCRB, COMBO_END};
 
 // Navigation
 
-const uint16_t PROGMEM l_nav_esv_combo[] = {MC_ESC, MC_SAVE, COMBO_END};
+const uint16_t PROGMEM l_nav_esv_combo[] = {MC_ESCQ, MC_SAVE, COMBO_END};
 
 // Media
 

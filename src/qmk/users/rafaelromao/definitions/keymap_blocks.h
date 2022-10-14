@@ -35,12 +35,12 @@
 #define ___________________NUMPAD_R3___________________ TG_NUM  , GU_1    , KC_2    , KC_3    , KC_COMM
 #define ____NUMPAD_R4____                               RAI_BSP , MED_0
 
-#define ___________________MACROS_L1___________________ XXXXXXX , MC_ESC  , MC_COMP , MC_AUCO , XXXXXXX
-#define ___________________MACROS_L2___________________ XXXXXXX , SF_SEEV , MC_RUAN , MC_QUIK , MC_BUID
-#define ___________________MACROS_L3___________________ XXXXXXX , MC_PROJ , MC_NEER , MC_FIUS , MC_REFC
+#define ___________________MACROS_L1___________________ XXXXXXX , MC_ESC  , MC_QUIK , MC_AUCO , XXXXXXX
+#define ___________________MACROS_L2___________________ MC_QDOC , SF_FSYM , MC_RUN  , MC_DBUG , MC_BUID
+#define ___________________MACROS_L3___________________ MC_PROJ , MC_RECE , MC_COMP , MC_FIUS , MC_REFC
 #define ____MACROS_L4____                                                             _______ , LOW_BSP
 
-#define ___________________MACROS_R1___________________ XXXXXXX , MC_SELW , KC_ENT  , KC_TAB  , XXXXXXX
+#define ___________________MACROS_R1___________________ XXXXXXX , MC_SELW , MC_ENT  , MC_TAB  , XXXXXXX
 #define ___________________MACROS_R2___________________ TD_MACR , MC_SELL , MC_MODM , SF_MODP , XXXXXXX
 #define ___________________MACROS_R3___________________ MC_JOIN , MC_COMT , MC_SWLE , MC_SWRI , XXXXXXX
 #define ____MACROS_R4____                               RAI_SPC , _______
@@ -65,9 +65,9 @@
 #define ___________________RAISE_R3____________________ KC_PERC , KC_SLSH , KC_LT   , KC_GT   , KC_ASTR
 #define ____RAISE_R4_____                               _______ , _______
 
-#define ___________________MEDIA_L1____________________ XXXXXXX , XXXXXXX , XXXXXXX , OS_RALT , XXXXXXX
-#define ___________________MEDIA_L2____________________ XXXXXXX , OS_LSFT , OS_LCTL , OS_LALT , XXXXXXX
-#define ___________________MEDIA_L3____________________ XXXXXXX , XXXXXXX , XXXXXXX , OS_LGUI , XXXXXXX
+#define ___________________MEDIA_L1____________________ XXXXXXX , MC_ESCQ , MC_SAVE , KC_RALT , XXXXXXX
+#define ___________________MEDIA_L2____________________ XXXXXXX , KC_LSFT , KC_LCTL , KC_LALT , XXXXXXX
+#define ___________________MEDIA_L3____________________ XXXXXXX , XXXXXXX , XXXXXXX , KC_LGUI , XXXXXXX
 #define ____MEDIA_L4_____                                                             MAI_ACT , KC_SPC
 
 #define ___________________MEDIA_R1____________________ XXXXXXX , XXXXXXX , KC_ENT  , KC_TAB  , XXXXXXX
@@ -75,9 +75,9 @@
 #define ___________________MEDIA_R3____________________ TG_NUM  , KC_MPLY , KC_MPRV , KC_MNXT , HYPR_V
 #define ____MEDIA_R4_____                               KC_BSPC , _______
 
-#define ___________________NAVIGATION_L1_______________ XXXXXXX , MC_ESC  , MC_SAVE , KC_RALT , XXXXXXX
-#define ___________________NAVIGATION_L2_______________ XXXXXXX , KC_LSFT , KC_LCTL , KC_LALT , XXXXXXX
-#define ___________________NAVIGATION_L3_______________ XXXXXXX , XXXXXXX , XXXXXXX , KC_LGUI , XXXXXXX
+#define ___________________NAVIGATION_L1_______________ XXXXXXX , MC_ESCQ , MC_SAVE , OS_RALT , XXXXXXX
+#define ___________________NAVIGATION_L2_______________ XXXXXXX , OS_LSFT , OS_LCTL , OS_LALT , XXXXXXX
+#define ___________________NAVIGATION_L3_______________ XXXXXXX , XXXXXXX , XXXXXXX , OS_LGUI , XXXXXXX
 #define __NAVIGATION_L4__                                                             _______ , KC_SPC
 
 #define ___________________NAVIGATION_R1_______________ XXXXXXX , KC_APP  , KC_PGDN , KC_PGUP , XXXXXXX

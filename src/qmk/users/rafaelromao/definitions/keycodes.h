@@ -59,33 +59,48 @@ enum {
 
     MC_SECRET_1, 
 
-    MC_MODP, MC_MODM, MC_SELC, MC_SAVE,
-    MC_UNDO, MC_COPY, MC_PAST, MC_LOCK, 
-    MC_FULL, MC_FIND,
+    // Toggle codes
+    TG_MAC, TG_WIN, TG_CASE, OS_ACNT, 
 
-    MC_REFC, MC_QUIK, MC_PROJ, 
-    MC_SEEV, MC_RUAN, MC_BUID, MC_COMP,
-    MC_AUCO, MC_NEER, MC_FIUS,
-    MC_SELW, MC_SWLE, MC_SWRI, 
-    MC_SELL, MC_REF,
-    MC_JOIN, MC_COMT, 
-    MC_SENT, MC_CUR,
-    MC_ESC, MC_ESAV,
+    // Select Word/Line
+    MC_SELW, MC_SELL, 
     
-    TG_MAC, TG_WIN, 
-    TG_CASE, OS_ACNT, 
+    // Swapper
+    MC_MODP, MC_MODM, MC_SWLE, MC_SWRI, 
+    
+    // Begin macros that can be shifted
+    SFT_MACRO_START,
 
+    // Common shortcuts
+    MC_SELC, MC_SAVE, MC_UNDO, MC_COPY, 
+    MC_PAST, MC_LOCK, MC_FULL, MC_FIND, MC_REF,
+
+    // IDE shortcuts
+    MC_QUIK, MC_AUCO, 
+    MC_QDOC, MC_FSYM, MC_RUN, MC_DBUG, MC_BUID,
+    MC_PROJ, MC_RECE, MC_COMP, MC_FIUS, MC_REFC,
+    MC_JOIN, MC_COMT, 
+
+    // Begir macros used to write text
     STR_MACRO_START,
+    
+    MC_UNDS, MC_ENT, MC_TAB, MC_ESC, 
+    MC_ESCQ, MC_ESAV, MC_SENT, MC_CUR,  
 
+    // End macros that can be shifted
+    SFT_MACRO_END,
+
+    // Programming symbols
     MC_BTIC, MC_DQUO, MC_SQUO, 
-    MC_DAND, MC_DPIP, MC_UNDS,
+    MC_DAND, MC_DPIP, 
 
+    // Accented letters
     MC_GV_A, MC_CR_A, MC_TL_A, MC_SQ_A,
     MC_SQ_U, MC_CR_O, MC_SQ_O, MC_SQ_I,
     MC_CR_E, MC_TL_O, MC_SQ_C, MC_SQ_E,
-
     MC_AO, MC_CAO, MC_OES, MC_COES,
     
+    // End macros used to write text
     STR_MACRO_END,
 
     CUSTOM_KEYCODE_END
@@ -95,8 +110,8 @@ enum {
 
 #define LSFTT_N LSFT_T(KC_N)
 #define RSFTT_E RSFT_T(KC_E)
-#define SF_SEEV LSFT_T(MC_SEEV)
-#define SF_MODP LSFT_T(MC_MODP)
+#define SF_FSYM LSFT_T(MC_FSYM)
+#define SF_MODP RSFT_T(MC_MODP)
 #define SF_F6 LSFT_T(KC_F6)
 #define SF_6 RSFT_T(KC_6)
 

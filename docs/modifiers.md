@@ -10,13 +10,13 @@
 ## One-Shot Mods
 
 One-Shot Mods are modifier keys that, when tapped, remain active until the next key is pressed or a timeout expires. 
-- They are available in the [Media](navigation.md#media) layer and act as standard modifers when held.
+- They are available in the [Navigation](navigation.md#navigation) layer and act as standard modifers when held.
 - These modifiers will be automatically deactivated after 2 seconds. 
 - They can also be activated in sticky mode, with a double tap, and remain active until manually deactivated by tapping the Accents or Smart Case thumb keys.
 
 ## Standard Mods
 
-- Standard modifiers are available in the [Navigation](navigation.md#navigation) layer.
+- Standard modifiers are available in [Media](navigation.md#media) the layer.
 - These modifiers do not have one-shot behavior, so they can be used in situations which a tap or multi tap in a modifier key is required.
 
 ## Thumb Mods
