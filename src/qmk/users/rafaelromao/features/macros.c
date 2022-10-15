@@ -299,7 +299,12 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
                     break;
                 }
             } else {
-                SEND_STRING(SS_LALT(SS_TAP(X_F7)));
+                if (isMacOS) {
+                    SEND_STRING(SS_LGUI(SS_LALT(SS_TAP(X_F7))));
+                } else {
+                    SEND_STRING(SS_LCTL(SS_LALT(SS_TAP(X_F7))));
+                    break;
+                }
             }
             return PROCESS_RECORD_RETURN_FALSE;
 

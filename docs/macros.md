@@ -66,7 +66,7 @@
     - Project Files (Cmd+1 / Alt+1) - If shifted, Select In (Option+F1 / Alt+F1)
     - Recent Files (Cmd+E / Ctrl+E) - If shifted, show Previous Error (Shift+F2)
     - Complete Statement (Cmd+Shift+Enter / Ctrl+Shift+Enter) - If shifted, show Next Error (F2)
-    - Find Usages (Alt+F7) - If shifted, show Quick Definition (Option+Space / Ctrl+Shift+I)
+    - Show Usages (Cmd+Option+F7 / Ctrl+Alt+F7) - If shifted, show Quick Definition (Option+Space / Ctrl+Shift+I)
     - Refactor (Ctrl+T / Ctrl+Shift+Alt+T) - If shifted, Reformat Code (Cmd+Option+L / Ctrl+Alt+L)
 
 ##
