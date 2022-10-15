@@ -72,7 +72,7 @@ enum {
     SFT_MACRO_START,
 
     // Common shortcuts
-    MC_SELC, MC_SAVE, MC_UNDO, MC_COPY, 
+    MC_SELC, MC_SAVE, MC_UNDO, MC_COPY, MC_CTAB, 
     MC_PAST, MC_LOCK, MC_FULL, MC_FIND, MC_REF,
 
     // IDE shortcuts
@@ -85,7 +85,7 @@ enum {
     STR_MACRO_START,
     
     MC_UNDS, MC_ENT, MC_TAB, MC_ESC, 
-    MC_ESCQ, MC_ESAV, MC_SENT, MC_CUR,  
+    MC_ESAV, MC_SENT, MC_CUR,  
 
     // End macros that can be shifted
     SFT_MACRO_END,

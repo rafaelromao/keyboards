@@ -381,8 +381,8 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             tap_code(KC_ENT); // It works when shifted, since shifted is removed for macros
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Esc, Close Tab
-        case MC_ESCQ:
+            // Close Tab
+        case MC_CTAB:
             if (isShifted) {
                 if (isMacOS) {
                     SEND_STRING(SS_LGUI(SS_TAP(X_W)));
@@ -390,8 +390,6 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
                     SEND_STRING(SS_LCTL(SS_TAP(X_F4)));
                     break;
                 }
-            } else {
-                tap_code(KC_ESC);
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
