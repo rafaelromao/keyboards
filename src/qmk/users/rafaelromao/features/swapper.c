@@ -4,10 +4,18 @@
 
 extern os_t os;
 
-static bool swapping = false;
-static bool tabbing  = false;
+static swapper_state_t swapper_state = INITIAL_STATE;
+
+bool is_swapper_keycode(uint16_t keycode) {
+    return keycode == MC_SWLE || keycode != MC_SWRI || keycode == MC_MODP || keycode == MC_MODM;
+}
 
 process_record_result_t process_swapper(uint16_t keycode, keyrecord_t *record) {
+    if (!is_swapper_keycode(keycode)) {
+        clear_mods();
+        swapper_state = INTIAL_STATE;
+        return PROCESS_RECORD_CONTINUE;
+    }
     if (record != NULL && record->event.pressed) {
         return PROCESS_RECORD_CONTINUE;
     }
@@ -17,22 +25,31 @@ process_record_result_t process_swapper(uint16_t keycode, keyrecord_t *record) {
     bool isOneShotShift       = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
     bool isShifted            = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
 
-    // Finish swapping
-
-    if (swapping && keycode != MC_SWLE && keycode != MC_SWRI && keycode != MC_MODP && keycode != MC_MODM) {
+    // Determine swapper state
+    if (swapper_state == INITIAL_STATE) {
+        switch(keycode) {
+            case MC_SWLE:
+            case MC_SWRI:
+                swapper_state = isShifted ? TABBING : SWAPPING;
+            case MC_MODP:
+            case MC_MODM:
+                swapper_state = isShifted ? BROWSING : ZOOMMING;
+        }
         clear_mods();
-        swapping = false;
-        tabbing  = false;
     }
-
-    // Start back and forth in windows or tabs
-
-    switch (keycode) {
-        case MC_SWLE:
-            register_mods(MOD_LSFT); // Back in windows or tabs
-            break;
-        case MC_SWRI:
-            unregister_mods(MOD_LSFT); // Forth in windows or tabs
+    
+    // Swapping or Tabbing
+    switch(swapper_state) {
+        case SWAPPING:
+        case TABBING:
+            switch (keycode) {
+                case MC_SWLE:
+                    register_mods(MOD_LSFT);
+                    break;
+                case MC_SWRI:
+                    unregister_mods(MOD_LSFT);
+                    break;
+            }
             break;
     }
 
