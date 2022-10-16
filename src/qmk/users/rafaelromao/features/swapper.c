@@ -44,15 +44,14 @@ process_record_result_t process_swapper(uint16_t keycode, keyrecord_t *record) {
             switch (keycode) {
                 case MC_SWLE:
                     register_mods(MOD_LSFT);
-                    if (isMacOS) {
-                        register_mods(MOD_LGUI);
-                    } else {
-                        register_mods(MOD_LALT);
-                    }
-                    swapper_state = SWAPPING_CONTINUE;
                     break;
                 case MC_SWRI:
                     unregister_mods(MOD_LSFT);
+                    break;
+            }
+            switch (keycode) {
+                case MC_SWLE:
+                case MC_SWRI:
                     if (isMacOS) {
                         register_mods(MOD_LGUI);
                     } else {
