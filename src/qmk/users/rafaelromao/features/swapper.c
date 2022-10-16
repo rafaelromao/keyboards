@@ -33,7 +33,7 @@ process_record_result_t process_swapper(uint16_t keycode, keyrecord_t *record) {
                 swapper_state = isShifted ? TABBING_START : SWAPPING_START;
             case MC_MODP:
             case MC_MODM:
-                swapper_state = isShifted ? BROWSING_START : ZOOMING;
+                swapper_state = isShifted ? BROWSING_START : ZOOMING_START;
         }
         clear_mods();
     }
