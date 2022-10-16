@@ -7,11 +7,15 @@
 #include "custom_oneshot.h"
 
 typedef enum {
-  INITIAL_STATE,
-  SWAPPING,
-  TABBING,
-  ZOOMING,
-  BROWSING
+  NONE,
+  SWAPPING_START,
+  TABBING_START,
+  ZOOMING_START,
+  BROWSING_START,
+  SWAPPING_CONTINUE,
+  TABBING_CONTINUE,
+  ZOOMING_CONTINUE,
+  BROWSING_CONTINUE
 } swapper_state_t;
 
 process_record_result_t process_swapper(uint16_t keycode, keyrecord_t *record);

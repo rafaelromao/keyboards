@@ -13,7 +13,7 @@ bool is_swapper_keycode(uint16_t keycode) {
 process_record_result_t process_swapper(uint16_t keycode, keyrecord_t *record) {
     if (!is_swapper_keycode(keycode)) {
         clear_mods();
-        swapper_state = INTIAL_STATE;
+        swapper_state = NONE;
         return PROCESS_RECORD_CONTINUE;
     }
     if (record != NULL && record->event.pressed) {
@@ -25,60 +25,68 @@ process_record_result_t process_swapper(uint16_t keycode, keyrecord_t *record) {
     bool isOneShotShift       = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
     bool isShifted            = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
 
-    // Determine swapper state
-    if (swapper_state == INITIAL_STATE) {
+    // Determine swapper start
+    if (swapper_state == NONE) {
         switch(keycode) {
             case MC_SWLE:
             case MC_SWRI:
-                swapper_state = isShifted ? TABBING : SWAPPING;
+                swapper_state = isShifted ? TABBING_START : SWAPPING_START;
             case MC_MODP:
             case MC_MODM:
-                swapper_state = isShifted ? BROWSING : ZOOMMING;
+                swapper_state = isShifted ? BROWSING_START : ZOOMMING;
         }
         clear_mods();
     }
     
-    // Swapping or Tabbing
+    // Start swappers
     switch(swapper_state) {
-        case SWAPPING:
-        case TABBING:
+        case SWAPPING_START:
             switch (keycode) {
                 case MC_SWLE:
                     register_mods(MOD_LSFT);
+                    if (isMacOS) {
+                        register_mods(MOD_LGUI);
+                    } else {
+                        register_mods(MOD_LALT);
+                    }
+                    swapper_state = SWAPPING_CONTINUE;
                     break;
                 case MC_SWRI:
                     unregister_mods(MOD_LSFT);
+                    if (isMacOS) {
+                        register_mods(MOD_LGUI);
+                    } else {
+                        register_mods(MOD_LALT);
+                    }
+                    swapper_state = SWAPPING_CONTINUE;
+                    break;
+            }
+        case TABBING_START:
+            switch (keycode) {
+                case MC_SWLE:
+                    register_mods(MOD_LSFT);
+                    register_mods(MOD_LCTL);
+                    swapper_state = TABBING_CONTINUE;
+                    break;
+                case MC_SWRI:
+                    unregister_mods(MOD_LSFT);
+                    register_mods(MOD_LCTL);
+                    swapper_state = TABBING_CONTINUE;
                     break;
             }
             break;
     }
 
-    // Continue back and forth in windows or tabs
+    // Process swap action
+    switch(swapper_state) {
+        case SWAPPING_CONTINUE:
+        case TABBING_CONTINUE:
+            tap_code(KC_TAB);
 
-    switch (keycode) {
-        case MC_SWLE:
-        case MC_SWRI:
-            if (!swapping) {
-                swapping = true;
-                if (isMacOS) {
-                    if (isShifted) {
-                        tabbing = true;
-                        register_mods(MOD_LCTL); // Tab in Mac
-                    } else {
-                        register_mods(MOD_LGUI); // Window in Mac
-                    }
-                } else {
-                    if (isShifted) {
-                        tabbing = true;
-                        register_mods(MOD_LCTL); // Tab in Windows
-                    } else {
-                        register_mods(MOD_LALT); // Window in Windows
-                    }
-                }
-            }
-            tap_code(KC_TAB); // Action key
-            return PROCESS_RECORD_RETURN_FALSE;
     }
+
+
+    
 
     // Start back and forth in history or zoom
 
