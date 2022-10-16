@@ -11,12 +11,12 @@ bool is_swapper_keycode(uint16_t keycode) {
 }
 
 process_record_result_t process_swapper(uint16_t keycode, keyrecord_t *record) {
-    if (!is_swapper_keycode(keycode)) {
-        clear_mods();
-        swapper_state = NONE;
+    if (record != NULL && record->event.pressed) {
         return PROCESS_RECORD_CONTINUE;
     }
-    if (record != NULL && record->event.pressed) {
+    if (swapper_state != NONE && !is_swapper_keycode(keycode)) {
+        clear_mods();
+        swapper_state = NONE;
         return PROCESS_RECORD_CONTINUE;
     }
 
@@ -25,7 +25,7 @@ process_record_result_t process_swapper(uint16_t keycode, keyrecord_t *record) {
     bool isOneShotShift       = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
     bool isShifted            = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
 
-    // Determine swapper start
+    // Determine swapper start mode
     if (swapper_state == NONE) {
         switch(keycode) {
             case MC_SWLE:
@@ -33,12 +33,12 @@ process_record_result_t process_swapper(uint16_t keycode, keyrecord_t *record) {
                 swapper_state = isShifted ? TABBING_START : SWAPPING_START;
             case MC_MODP:
             case MC_MODM:
-                swapper_state = isShifted ? BROWSING_START : ZOOMMING;
+                swapper_state = isShifted ? BROWSING_START : ZOOMING;
         }
         clear_mods();
     }
     
-    // Start swappers
+    // Start swapper
     switch(swapper_state) {
         case SWAPPING_START:
             switch (keycode) {
@@ -75,6 +75,30 @@ process_record_result_t process_swapper(uint16_t keycode, keyrecord_t *record) {
                     break;
             }
             break;
+        case ZOOMING_START:
+            switch (keycode) {
+                case MC_MODM:
+                case MC_MODP:
+                    if (isMacOS) {
+                        register_mods(MOD_LGUI);
+                    } else {
+                        register_mods(MOD_LCTL);
+                    }
+                    swapper_state = ZOOMING_CONTINUE;
+                    break;
+            }
+        case BROWSING_START:
+            switch (keycode) {
+                case MC_MODM:
+                case MC_MODP:
+                    if (isMacOS) {
+                        register_mods(MOD_LGUI);
+                    } else {
+                        register_mods(MOD_LALT);
+                    }
+                    swapper_state = BROWSING_CONTINUE;
+                    break;
+            }
     }
 
     // Process swap action
@@ -82,72 +106,33 @@ process_record_result_t process_swapper(uint16_t keycode, keyrecord_t *record) {
         case SWAPPING_CONTINUE:
         case TABBING_CONTINUE:
             tap_code(KC_TAB);
-
-    }
-
-
-    
-
-    // Start back and forth in history or zoom
-
-    switch (keycode) {
-        case MC_MODP:
-        case MC_MODM:
-            if (!swapping) {
-                swapping = true;
-                if (isMacOS) {
-                    if (isShifted) {
-                        tabbing = true;
-                        clear_shift();
-                        register_mods(MOD_LGUI); // History Mac
-                    } else {
-                        register_mods(MOD_LGUI); // Zoom Mac
-                    }
-                } else {
-                    if (isShifted) {
-                        tabbing = true;
-                        clear_shift();
-                        register_mods(MOD_LALT); // History Windows
-                    } else {
-                        register_mods(MOD_LCTL); // Zoom Windows
-                    }
-                }
+            break;
+        case ZOOMING_CONTINUE:
+            switch (keycode) {
+                case MC_MODM:
+                    tap_code(KC_MINS);
+                    break;
+                case MC_MODP:
+                    tap_code(KC_EQL);
+                    break;
             }
-            // Action keys
+        case BROWSING_CONTINUE:
             switch (keycode) {
                 case MC_MODM:
                     if (isMacOS) {
-                        if (tabbing) {
-                            tap_code(KC_LBRC); // History - Mac
-                        } else {
-                            tap_code(KC_MINS); // Zoom - Mac
-                        }
+                        tap_code(KC_LBRC);
                     } else {
-                        if (tabbing) {
-                            tap_code(KC_LEFT); // History - Windows
-                        } else {
-                            tap_code(KC_MINS); // Zoom - Windows
-                        }
+                        tap_code(KC_LEFT);
                     }
-                    return PROCESS_RECORD_RETURN_FALSE;
-
+                    break;
                 case MC_MODP:
                     if (isMacOS) {
-                        if (tabbing) {
-                            tap_code(KC_RBRC); // History + Mac
-                        } else {
-                            tap_code16(KC_EQL); // Zoom + Mac
-                        }
+                        tap_code(KC_RBRC);
                     } else {
-                        if (tabbing) {
-                            tap_code(KC_RIGHT); // History + Windows
-                        } else {
-                            tap_code16(KC_EQL); // Zoom + Windows
-                        }
+                        tap_code(KC_RIGHT);
                     }
-                    return PROCESS_RECORD_RETURN_FALSE;
+                    break;
             }
     }
-
-    return PROCESS_RECORD_CONTINUE;
+    return PROCESS_RECORD_RETURN_FALSE;
 }
