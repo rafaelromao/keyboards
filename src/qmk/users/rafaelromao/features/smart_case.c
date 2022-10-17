@@ -182,10 +182,13 @@ process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record
             case KC_RIGHT:
             case KC_HOME:
             case KC_END:
+            case MAI_ACT:
+            case MAI_CAS:
                 start_smart_case_timer();
                 break;
             case KC_DOT:
             case TD_DOT:
+            case KC_SLSH:
                 if (has_smart_case(SLASH_CASE)) {
                     start_smart_case_timer();
                     break;

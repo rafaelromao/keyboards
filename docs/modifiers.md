@@ -38,7 +38,7 @@ One-Shot Mods are modifier keys that, when tapped, remain active until the next 
 
 Smart Cases are custom case modes activated via thumb modifiers.
 - If any modifier is active or locked in one-shot mode, all these modifiers will be deactivated.
-- If any Smart Case is active, it deactivates the Smart Case.
+- If any Smart Case is active, and the thumb key is the right side one, it deactivates the Smart Case.
 - If Shift is in one-shot mode, and no modifier is held, it activates Caps Word.
 - If Shift is not in one-shot mode, and no modifier is held, it activates Shift for one-shot.
 - If modifiers are held, it behaves as follows:
