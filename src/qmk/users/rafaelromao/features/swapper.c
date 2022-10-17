@@ -31,9 +31,11 @@ process_record_result_t process_swapper(uint16_t keycode, keyrecord_t *record) {
             case MC_SWLE:
             case MC_SWRI:
                 swapper_state = isShifted ? TABBING_START : SWAPPING_START;
+                break;
             case MC_MODP:
             case MC_MODM:
                 swapper_state = isShifted ? BROWSING_START : ZOOMING_START;
+                break;
         }
         clear_mods();
     }
@@ -60,6 +62,7 @@ process_record_result_t process_swapper(uint16_t keycode, keyrecord_t *record) {
                     swapper_state = SWAPPING_CONTINUE;
                     break;
             }
+            break;
         case TABBING_START:
             switch (keycode) {
                 case MC_SWLE:
@@ -86,6 +89,7 @@ process_record_result_t process_swapper(uint16_t keycode, keyrecord_t *record) {
                     swapper_state = ZOOMING_CONTINUE;
                     break;
             }
+            break;
         case BROWSING_START:
             switch (keycode) {
                 case MC_MODM:
@@ -98,6 +102,7 @@ process_record_result_t process_swapper(uint16_t keycode, keyrecord_t *record) {
                     swapper_state = BROWSING_CONTINUE;
                     break;
             }
+            break;
     }
 
     // Process swap action
@@ -115,6 +120,7 @@ process_record_result_t process_swapper(uint16_t keycode, keyrecord_t *record) {
                     tap_code(KC_EQL);
                     break;
             }
+            break;
         case BROWSING_CONTINUE:
             switch (keycode) {
                 case MC_MODM:
@@ -132,6 +138,7 @@ process_record_result_t process_swapper(uint16_t keycode, keyrecord_t *record) {
                     }
                     break;
             }
+            break;
     }
     return PROCESS_RECORD_RETURN_FALSE;
 }
