@@ -4,7 +4,7 @@
 
 extern os_t os;
 
-static swapper_state_t swapper_state = INITIAL_STATE;
+static swapper_state_t swapper_state = NONE;
 
 bool is_swapper_keycode(uint16_t keycode) {
     return keycode == MC_SWLE || keycode != MC_SWRI || keycode == MC_MODP || keycode == MC_MODM;
