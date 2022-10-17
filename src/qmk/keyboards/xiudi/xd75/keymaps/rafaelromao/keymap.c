@@ -160,6 +160,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 extern leader_t      leader;
 extern select_word_t select_word;
 extern dyn_macro_t   dyn_macro;
+extern swapper_t     swapper;
 static bool          is_suspended;
 
 void suspend_wakeup_init_kb(void) {
@@ -210,7 +211,7 @@ void set_mod_indicators(void) {
     bool isAlt   = mods & MOD_MASK_ALT || oneshot_mods & MOD_MASK_ALT || oneshot_locked_mods & MOD_MASK_ALT;
     bool isGui   = mods & MOD_MASK_GUI || oneshot_mods & MOD_MASK_GUI || oneshot_locked_mods & MOD_MASK_GUI;
 
-    if (leader.isLeading || select_word.state != STATE_NONE || dyn_macro.recording != 0) {
+    if (swapper.state != NONE || leader.isLeading || select_word.state != STATE_NONE || dyn_macro.recording != 0) {
         rgblight_setrgb(RGB_GREEN);
     } else if (has_any_smart_case()) {
         rgblight_setrgb(RGB_YELLOW);

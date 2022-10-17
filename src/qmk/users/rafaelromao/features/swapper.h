@@ -18,4 +18,8 @@ typedef enum {
   BROWSING_CONTINUE
 } swapper_state_t;
 
+typedef struct {
+    swapper_state_t state;
+} swapper_t;
+
 process_record_result_t process_swapper(uint16_t keycode, keyrecord_t *record);

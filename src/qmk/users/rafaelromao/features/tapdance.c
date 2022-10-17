@@ -93,10 +93,10 @@ void td_close_curly_braces(qk_tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_RCBR);
             break;
         case TD_DOUBLE_TAP:
-            SEND_STRING("return ");
+            SEND_STRING("case ");
             break;
         case TD_TRIPLE_TAP:
-            SEND_STRING("throw ");
+            SEND_STRING("switch(");
             break;
         default:
             break;
@@ -231,10 +231,10 @@ void td_not(qk_tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_EXLM);
             break;
         case TD_DOUBLE_TAP:
-            SEND_STRING("case ");
+            SEND_STRING("return ");
             break;
         case TD_TRIPLE_TAP:
-            SEND_STRING("switch(");
+            SEND_STRING("throw ");
             break;
         default:
             break;

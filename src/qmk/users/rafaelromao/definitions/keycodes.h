@@ -86,15 +86,13 @@ enum {
     
     MC_UNDS, MC_ENT, MC_TAB, MC_ESC, 
     MC_ESAV, MC_SENT, MC_CUR,  
+    MC_DAND, MC_DPIP, 
 
     // End macros that can be shifted
     SFT_MACRO_END,
 
-    // Programming symbols
-    MC_BTIC, MC_DQUO, MC_SQUO, 
-    MC_DAND, MC_DPIP, 
-
     // Accented letters
+    MC_BTIC, MC_DQUO, MC_SQUO, 
     MC_GV_A, MC_CR_A, MC_TL_A, MC_SQ_A,
     MC_SQ_U, MC_CR_O, MC_SQ_O, MC_SQ_I,
     MC_CR_E, MC_TL_O, MC_SQ_C, MC_SQ_E,

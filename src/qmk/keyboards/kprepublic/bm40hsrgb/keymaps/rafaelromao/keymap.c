@@ -138,6 +138,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 extern leader_t      leader;
 extern select_word_t select_word;
+extern swapper_t     swapper;
 const int            led_count = 13;
 int                  leds[]    = {5, 6, 17, 18, 29, 30, 36, 37, 38, 41, 44, 45, 46};
 
@@ -180,7 +181,7 @@ void rgb_matrix_indicators_user(void) {
     bool isGui   = mods & MOD_MASK_GUI || oneshot_mods & MOD_MASK_GUI || oneshot_locked_mods & MOD_MASK_GUI;
 
     for (int i = 0; i < led_count; i++) {
-        if (leader.isLeading || select_word.state != STATE_NONE) {
+        if (swapper.state != NONE || leader.isLeading || select_word.state != STATE_NONE) {
             rgb_matrix_set_color(leds[i], RGB_GREEN);
         } else if (has_any_smart_case()) {
             rgb_matrix_set_color(leds[i], RGB_YELLOW);
