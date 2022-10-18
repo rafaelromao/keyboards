@@ -45,11 +45,11 @@ Smart Cases are custom case modes activated via thumb modifiers.
     - If Left Shift is held, it activates **camelCase**: Space is replaced by OSM(Shift), excluding first char.
     - If Left Control is held, it activates **CAPSWORD**: Caps Lock remains active until space or any word breaking symbol is typed.
     - If Left Shift + Left Control are held, it activates **PascalCase**: Space is replaced by OSM(Shift), including first char.
-    - If Left Alt is held, it activates **snake_case**: Space is replaced by _.
-    - If Left Alt + Left Control are held, it activates **CONSTANT_CASE**.
-    - If Right Alt is held, it activates **kebab-case**: Space is replaced by -.
+    - If Left Gui is held, it activates **snake_case**: Space is replaced by _.
+    - If Left Gui + Left Control are held, it activates **CONSTANT_CASE**.
+    - If Right Gui is held, it activates **kebab-case**: Space is replaced by -.
     - If Right Control is held, it activates **CAPS LOCK**.
-    - If Right Control + Right Alt are held, it activates **SCREAM-KEBAB-CASE**.
+    - If Right Control + Right Gui are held, it activates **SCREAM-KEBAB-CASE**.
     - If Right Shift is held, it activates **slash/case**.
     - If Right Control + Right Shift are held, it activates **SCREAM/SLASH/CASE**.
 - Any Smart Case option, including Caps Lock, will be automatically deactivated after 10 seconds of inactivity or typing space twice.

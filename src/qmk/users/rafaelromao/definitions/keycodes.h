@@ -118,19 +118,19 @@ enum {
 #define CT_F5 LCTL_T(KC_F5)
 #define CT_5 RCTL_T(KC_5)
 
-#define LALTT_T LALT_T(KC_T)
-#define LALTT_H LALT_T(KC_H)
-#define RALTT_W RALT_T(KC_W)
-#define RALTT_L RALT_T(KC_L)
-#define AL_F7 LALT_T(KC_F7)
-#define AL_F4 LALT_T(KC_F4)
-#define AL_7 RALT_T(KC_7)
-#define AL_4 LALT_T(KC_4)
+#define LALTT_P LALT_T(KC_P)
+#define LALTT_M LALT_T(KC_M)
+#define RALTT_Q RALT_T(KC_Q)
+#define RALTT_Y RALT_T(KC_Y)
+#define AL_F1 LALT_T(KC_F1)
+#define AL_1 LALT_T(KC_1)
+#define AL_F14 RALT_T(KC_F14)
+#define AL_COMM RALT_T(KC_COMM)
 
-#define LGUIT_P LGUI_T(KC_P)
-#define RGUIT_M RGUI_T(KC_M)
-#define GU_F1 LGUI_T(KC_F1)
-#define GU_1 RGUI_T(KC_1)
+#define LGUIT_T LGUI_T(KC_T)
+#define RGUIT_H RGUI_T(KC_H)
+#define GU_F4 LGUI_T(KC_F4)
+#define GU_4 RGUI_T(KC_4)
 
 // One-shot mods
 

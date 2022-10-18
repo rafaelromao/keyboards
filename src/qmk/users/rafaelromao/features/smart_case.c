@@ -107,10 +107,10 @@ void set_smart_case_for_mods(keyrecord_t *record) {
     if (mods & MOD_BIT(KC_RSFT)) {
         toggle_smart_case(SLASH_CASE);
     }
-    if (mods & MOD_BIT(KC_LALT)) {
+    if (mods & MOD_BIT(KC_LGUI)) {
         toggle_smart_case(SNAKE_CASE);
     }
-    if (mods & MOD_BIT(KC_RALT)) {
+    if (mods & MOD_BIT(KC_RGUI)) {
         toggle_smart_case(KEBAB_CASE);
     }
 }

@@ -44,32 +44,32 @@ const uint16_t PROGMEM r_mac_clo_combo[] = {MC_SWLE, MC_SWRI, COMBO_END};
 
 // Base
 
-const uint16_t PROGMEM l_rom_z_combo[]   = {KC_C, LGUIT_P, COMBO_END};
+const uint16_t PROGMEM l_rom_z_combo[]   = {KC_C, LALTT_P, COMBO_END};
 const uint16_t PROGMEM l_rom_esc_combo[] = {LOW_SPC, KC_F, KC_D, COMBO_END};
 const uint16_t PROGMEM l_rom_sal_combo[] = {LOW_SPC, KCR_MAC, LSFTT_N, COMBO_END};
 const uint16_t PROGMEM l_rom_rai_combo[] = {LOW_SPC, LSFTT_N, COMBO_END};
 const uint16_t PROGMEM l_rom_low_combo[] = {LOW_SPC, LCTLT_S, COMBO_END};
 const uint16_t PROGMEM l_rom_sav_combo[] = {LOW_SPC, LSFTT_N, LCTLT_S, COMBO_END};
 const uint16_t PROGMEM l_rom_usc_combo[] = {KC_B, KC_C, COMBO_END};
-const uint16_t PROGMEM l_rom_pas_combo[] = {LOW_SPC, LCTLT_S, LALTT_T, COMBO_END};
-const uint16_t PROGMEM l_rom_und_combo[] = {LOW_SPC, KC_Q, KC_B, COMBO_END};
-const uint16_t PROGMEM l_rom_cop_combo[] = {LOW_SPC, KC_C, LGUIT_P, COMBO_END};
+const uint16_t PROGMEM l_rom_pas_combo[] = {LOW_SPC, LCTLT_S, LGUIT_T, COMBO_END};
+const uint16_t PROGMEM l_rom_und_combo[] = {LOW_SPC, RALTT_Q, KC_B, COMBO_END};
+const uint16_t PROGMEM l_rom_cop_combo[] = {LOW_SPC, KC_C, LALTT_P, COMBO_END};
 
-const uint16_t PROGMEM r_rom_x_combo[]   = {RGUIT_M, TD_COMM, COMBO_END};
+const uint16_t PROGMEM r_rom_x_combo[]   = {LALTT_M, TD_COMM, COMBO_END};
 const uint16_t PROGMEM r_rom_tab_combo[] = {RAI_BSP, KC_O, KC_U, COMBO_END};
-const uint16_t PROGMEM r_rom_pas_combo[] = {RAI_BSP, LALTT_H, RCTLT_A, COMBO_END};
+const uint16_t PROGMEM r_rom_pas_combo[] = {RAI_BSP, RGUIT_H, RCTLT_A, COMBO_END};
 const uint16_t PROGMEM r_rom_ent_combo[] = {RAI_BSP, RCTLT_A, RSFTT_E, COMBO_END};
 const uint16_t PROGMEM r_rom_rai_combo[] = {RAI_BSP, RCTLT_A, COMBO_END};
 const uint16_t PROGMEM r_rom_low_combo[] = {RAI_BSP, RSFTT_E, COMBO_END};
 const uint16_t PROGMEM r_rom_ful_combo[] = {RAI_BSP, RSFTT_E, KCI_MAC, COMBO_END};
-const uint16_t PROGMEM r_rom_cop_combo[] = {RAI_BSP, RGUIT_M, TD_COMM, COMBO_END};
+const uint16_t PROGMEM r_rom_cop_combo[] = {RAI_BSP, LALTT_M, TD_COMM, COMBO_END};
 const uint16_t PROGMEM r_rom_sco_combo[] = {TD_COMM, TD_DOT, COMBO_END};
-const uint16_t PROGMEM r_rom_fin_combo[] = {RAI_BSP, TD_DOT, KC_Y, COMBO_END};
-const uint16_t PROGMEM r_rom_sce_combo[] = {RGUIT_M, TD_COMM, TD_DOT, COMBO_END};
+const uint16_t PROGMEM r_rom_fin_combo[] = {RAI_BSP, TD_DOT, RALTT_Y, COMBO_END};
+const uint16_t PROGMEM r_rom_sce_combo[] = {LALTT_M, TD_COMM, TD_DOT, COMBO_END};
 
 // Reset
 
-const uint16_t PROGMEM rom_reset_combo[] = {KCR_MAC, KC_Q, KCI_MAC, KC_Y, COMBO_END};
+const uint16_t PROGMEM rom_reset_combo[] = {KCR_MAC, RALTT_Q, KCI_MAC, RALTT_Y, COMBO_END};
 
 // Secret
 
