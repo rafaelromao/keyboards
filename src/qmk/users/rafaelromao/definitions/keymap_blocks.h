@@ -62,7 +62,7 @@
 
 #define ___________________RAISE_R1____________________ KC_CIRC , TD_DLR  , TD_LCRB , TD_RCRB , XXXXXXX
 #define ___________________RAISE_R2____________________ TD_COLN , KC_MINS , KC_EQL  , TD_NOT  , KC_PLUS
-#define ___________________RAISE_R3____________________ KC_PERC , KC_SLSH , KC_LT   , KC_GT   , KC_ASTR
+#define ___________________RAISE_R3____________________ TD_PERC , KC_SLSH , KC_LT   , KC_GT   , KC_ASTR
 #define ____RAISE_R4_____                               _______ , _______
 
 #define ___________________MEDIA_L1____________________ XXXXXXX , MC_ESC  , MC_SAVE , KC_RALT , XXXXXXX

@@ -25,8 +25,9 @@ enum {
     COM_LEA, 
     DOT_DOT, 
     DLR_CUR, 
-    COL_DEG,
+    COL_ECO,
     TIL_CIR,
+    PER_DEG,
     TD_CODE_END 
 };
 
@@ -49,8 +50,9 @@ enum {
 #define TD_COMM TD(COM_LEA)
 #define TD_DOT TD(DOT_DOT)
 #define TD_DLR TD(DLR_CUR)
-#define TD_COLN TD(COL_DEG)
+#define TD_COLN TD(COL_ECO)
 #define TD_TILD TD(TIL_CIR)
+#define TD_PERC TD(PER_DEG)
 
 // Custom keycodes
 
