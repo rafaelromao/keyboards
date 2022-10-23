@@ -89,12 +89,12 @@
 #define ___________________MAINTENANCE_L1______________ XXXXXXX , RGB_VAD , RGB_VAI , EEP_RST , XXXXXXX
 #define ___________________MAINTENANCE_L2______________ RGB_TOG , RGB_HUD , RGB_HUI , XXXXXXX , QK_BOOT
 #define ___________________MAINTENANCE_L3______________ XXXXXXX , RGB_SAD , RGB_SAI , XXXXXXX , KC_NUM
-#define __MAINTENANCE_L4_                                                             _______ , _______
+#define __MAINTENANCE_L4_                                                             XXXXXXX , XXXXXXX
 
 #define ___________________MAINTENANCE_R1______________ XXXXXXX , EEP_RST , MC_LOCK , KC_SLEP , XXXXXXX
 #define ___________________MAINTENANCE_R2______________ QK_BOOT , TG_MAC  , TG_WIN  , TG_LOCK , KC_PWR
 #define ___________________MAINTENANCE_R3______________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
-#define __MAINTENANCE_R4_                               _______ , _______
+#define __MAINTENANCE_R4_                               XXXXXXX , XXXXXXX
 
 #define _______________________LOCK____L1______________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
 #define _______________________LOCK____L2______________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
