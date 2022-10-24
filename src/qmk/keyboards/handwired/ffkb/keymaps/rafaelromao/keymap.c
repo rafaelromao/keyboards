@@ -133,3 +133,76 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 // clang-format on
+
+// RGB Indicators
+
+extern leader_t      leader;
+extern select_word_t select_word;
+extern dyn_macro_t   dyn_macro;
+extern swapper_t     swapper;
+static bool          is_suspended;
+
+void suspend_wakeup_init_kb(void) {
+    is_suspended = false;
+}
+
+void suspend_power_down_kb(void) {
+    is_suspended = true;
+}
+
+void set_rgblight_by_layer(uint32_t layer) {
+    if (is_suspended) {
+        return;
+    }
+    switch (layer) {
+        case _ROMAK:
+        case _MAINTENANCE:
+            rgblight_reload_from_eeprom();
+            break;
+        case _LOCK:
+            rgblight_setrgb(RGB_OFF);
+            break;
+        case _NUMPAD:
+            rgblight_setrgb(RGB_PURPLE);
+            break;
+        default:
+            rgblight_setrgb(RGB_SPRINGGREEN);
+            break;
+    }
+}
+
+void set_current_layer_rgb(void) {
+    set_rgblight_by_layer(get_highest_layer(layer_state | default_layer_state));
+}
+
+layer_state_t layer_state_set_user(layer_state_t state) {
+    set_rgblight_by_layer(biton32(state));
+    return state;
+}
+
+void set_mod_indicators(void) {
+    uint8_t mods                = get_mods();
+    uint8_t oneshot_mods        = get_oneshot_mods();
+    uint8_t oneshot_locked_mods = get_oneshot_locked_mods();
+
+    bool isShift = mods & MOD_MASK_SHIFT || oneshot_mods & MOD_MASK_SHIFT || oneshot_locked_mods & MOD_MASK_SHIFT;
+    bool isCtrl  = mods & MOD_MASK_CTRL || oneshot_mods & MOD_MASK_CTRL || oneshot_locked_mods & MOD_MASK_CTRL;
+    bool isAlt   = mods & MOD_MASK_ALT || oneshot_mods & MOD_MASK_ALT || oneshot_locked_mods & MOD_MASK_ALT;
+    bool isGui   = mods & MOD_MASK_GUI || oneshot_mods & MOD_MASK_GUI || oneshot_locked_mods & MOD_MASK_GUI;
+
+    if (swapper.state != NONE || leader.isLeading || select_word.state != STATE_NONE || dyn_macro.recording != 0) {
+        rgblight_setrgb(RGB_GREEN);
+    } else if (has_any_smart_case()) {
+        rgblight_setrgb(RGB_YELLOW);
+    } else if (isShift) {
+        rgblight_setrgb(RGB_TEAL);
+    } else if (isCtrl || isAlt || isGui) {
+        rgblight_setrgb(RGB_WHITE);
+    } else {
+        set_current_layer_rgb();
+    }
+}
+
+void matrix_scan_keymap(void) {
+    set_mod_indicators();
+}
