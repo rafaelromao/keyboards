@@ -28,7 +28,7 @@
 #define ___________________NUMPAD_L1___________________ XXXXXXX , KC_F9   , KC_F8   , KC_F7   , XXXXXXX
 #define ___________________NUMPAD_L2___________________ KC_F15  , SF_F6   , CT_F5   , GU_F4   , KC_F11
 #define ___________________NUMPAD_L3___________________ AL_F14  , KC_F3   , KC_F2   , AL_F1   , KC_F10
-#define ____NUMPAD_L4____                                                             KC_F12  , LOW_SPC
+#define ____NUMPAD_L4____                                                             NAV_F12 , LOW_SPC
 
 #define ___________________NUMPAD_R1___________________ XXXXXXX , KC_7    , KC_8    , KC_9    , XXXXXXX
 #define ___________________NUMPAD_R2___________________ TD_COLN , GU_4    , CT_5    , SF_6    , DOT_MAC
@@ -58,7 +58,7 @@
 #define ___________________RAISE_L1____________________ XXXXXXX , KC_F9   , KC_F8   , KC_F7   , XXXXXXX
 #define ___________________RAISE_L2____________________ KC_F15  , KC_F6   , KC_F5   , KC_F4   , KC_F11
 #define ___________________RAISE_L3____________________ KC_F14  , KC_F3   , KC_F2   , KC_F1   , KC_F10
-#define ____RAISE_L4_____                                                             KC_F12  , _______
+#define ____RAISE_L4_____                                                             NAV_F12 , _______
 
 #define ___________________RAISE_R1____________________ KC_CIRC , TD_DLR  , TD_LCRB , TD_RCRB , XXXXXXX
 #define ___________________RAISE_R2____________________ TD_COLN , KC_MINS , KC_EQL  , TD_NOT  , KC_PLUS

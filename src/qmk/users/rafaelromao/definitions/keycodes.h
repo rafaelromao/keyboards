@@ -145,6 +145,7 @@ enum {
 // Layer-taps
 
 #define NAV_ACT  LT(_NAVIGATION, OS_ACNT)
+#define NAV_F12  LT(_NAVIGATION, KC_F12)
 
 #define MED_CAS LT(_MEDIA, TG_CASE)
 #define MED_0   LT(_MEDIA, KC_0)
