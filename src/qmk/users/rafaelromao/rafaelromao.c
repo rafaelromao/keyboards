@@ -25,8 +25,8 @@ void matrix_scan_user(void) {
 // Process record
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    // Process custom_shift
-    switch (process_custom_shift(keycode, record)) {
+    // Process custom taphold
+    switch (process_taphold(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:
@@ -37,6 +37,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     // Process macros
     switch (process_macros(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
+
+    // Process custom_shift
+    switch (process_custom_shift(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:
@@ -67,16 +77,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     // Process smart thumb keys
     switch (process_custom_oneshot(keycode, record)) {
-        case PROCESS_RECORD_RETURN_TRUE:
-            return true;
-        case PROCESS_RECORD_RETURN_FALSE:
-            return false;
-        default:
-            break;
-    };
-
-    // Process custom taphold
-    switch (process_taphold(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:

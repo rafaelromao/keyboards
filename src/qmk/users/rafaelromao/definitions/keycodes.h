@@ -83,9 +83,10 @@ enum {
     MC_PROJ, MC_RECE, MC_COMP, MC_FIUS, MC_REFC,
     MC_JOIN, MC_COMT, 
 
-    // Begir macros used to write text
+    // Begin macros used to write text
     STR_MACRO_START,
     
+    MC_BTIC, MC_DQUO, MC_SQUO, 
     MC_UNDS, MC_ENT, MC_TAB, MC_ESC, 
     MC_ESAV, MC_SENT, MC_CUR,  
     MC_DAND, MC_DPIP, 
@@ -94,7 +95,6 @@ enum {
     SFT_MACRO_END,
 
     // Accented letters
-    MC_BTIC, MC_DQUO, MC_SQUO, 
     MC_GV_A, MC_CR_A, MC_TL_A, MC_SQ_A,
     MC_SQ_U, MC_CR_O, MC_SQ_O, MC_SQ_I,
     MC_CR_E, MC_TL_O, MC_SQ_C, MC_SQ_E,
@@ -146,6 +146,7 @@ enum {
 
 #define NAV_ACT  LT(_NAVIGATION, OS_ACNT)
 #define NAV_F12  LT(_NAVIGATION, KC_F12)
+#define NAV_BTI  LT(_NAVIGATION, MC_BTIC)
 
 #define MED_CAS LT(_MEDIA, TG_CASE)
 #define MED_0   LT(_MEDIA, KC_0)

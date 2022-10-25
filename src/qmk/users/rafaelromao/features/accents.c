@@ -79,32 +79,6 @@ bool is_accented_keycode(uint16_t keycode) {
 
 process_record_result_t process_ngrams(uint16_t keycode, bool isShifted) {
     switch (keycode) {
-            // Accents
-
-        case MC_BTIC:
-            clear_shift();
-            tap_code(KC_GRV);
-            if (!isShifted) {
-                tap_code(KC_SPC);
-            }
-            return PROCESS_RECORD_RETURN_FALSE;
-        case MC_DQUO:
-            clear_shift();
-            tap_code16(KC_DQUO);
-            if (!isShifted) {
-                tap_code(KC_SPC);
-            }
-            return PROCESS_RECORD_RETURN_FALSE;
-        case MC_SQUO:
-            clear_shift();
-            tap_code(KC_QUOT);
-            if (!isShifted) {
-                tap_code(KC_SPC);
-            }
-            return PROCESS_RECORD_RETURN_FALSE;
-
-            // Tild combos
-
         case MC_AO:
             clear_shift();
             tap_code16(KC_TILD);

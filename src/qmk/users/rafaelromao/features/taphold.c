@@ -7,6 +7,7 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
         case LOW_SPC:
         case RAI_BSP:
         case NAV_ACT:
+        case NAV_F12:
         case MED_CAS:
         case MED_0:
             return false;
@@ -35,6 +36,12 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 
 process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+        case NAV_BTI:
+            if (record->event.pressed && record->tap.count > 0) {
+                process_macros(MC_BTIC, NULL);
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+            break;
         case SF_FSYM:
             if (!record->event.pressed && record->tap.count > 0) {
                 process_macros(MC_FSYM, NULL);

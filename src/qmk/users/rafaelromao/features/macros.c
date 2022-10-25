@@ -12,6 +12,27 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
     bool isMacOS = os.type == MACOS;
 
     switch (keycode) {
+            // Quotes
+
+        case MC_BTIC:
+            tap_code(KC_GRV);
+            if (!isShifted) {
+                tap_code(KC_SPC);
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+        case MC_DQUO:
+            tap_code16(KC_DQUO);
+            if (!isShifted) {
+                tap_code(KC_SPC);
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+        case MC_SQUO:
+            tap_code(KC_QUOT);
+            if (!isShifted) {
+                tap_code(KC_SPC);
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
             // Inverted underscore and minus
 
         case MC_UNDS:
@@ -410,10 +431,11 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
 }
 
 process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
-    if (record != NULL && record->event.pressed) {
+    if (!is_shift_macro_keycode(keycode)) {
         return PROCESS_RECORD_CONTINUE;
     }
-    if (!is_shift_macro_keycode(keycode)) {
+
+    if (record != NULL && record->event.pressed) {
         return PROCESS_RECORD_CONTINUE;
     }
 

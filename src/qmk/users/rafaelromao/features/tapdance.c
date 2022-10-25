@@ -245,11 +245,11 @@ void td_dquo(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
-            process_accents(MC_DQUO, NULL);
+            process_macros(MC_DQUO, NULL);
             break;
         case TD_SINGLE_HOLD:
-            process_accents(MC_DQUO, NULL);
-            process_accents(MC_DQUO, NULL);
+            process_macros(MC_DQUO, NULL);
+            process_macros(MC_DQUO, NULL);
             tap_code(KC_LEFT);
             break;
         case TD_DOUBLE_TAP:
@@ -267,11 +267,11 @@ void td_squo(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
-            process_accents(MC_SQUO, NULL);
+            process_macros(MC_SQUO, NULL);
             break;
         case TD_SINGLE_HOLD:
-            process_accents(MC_SQUO, NULL);
-            process_accents(MC_SQUO, NULL);
+            process_macros(MC_SQUO, NULL);
+            process_macros(MC_SQUO, NULL);
             tap_code(KC_LEFT);
             break;
         case TD_DOUBLE_TAP:
