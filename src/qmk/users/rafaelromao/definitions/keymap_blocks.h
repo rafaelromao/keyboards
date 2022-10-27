@@ -76,15 +76,14 @@
 #define ____MEDIA_R4_____                               KC_BSPC , _______
 
 #define ___________________NAVIGATION_L1_______________ XXXXXXX , MC_ESC  , MC_SAVE , OS_RALT , XXXXXXX
-#define ___________________NAVIGATION_L2_______________ MO_MED  , OS_LSFT , OS_LCTL , OS_LGUI , XXXXXXX
+#define ___________________NAVIGATION_L2_______________ XXXXXXX , OS_LSFT , OS_LCTL , OS_LGUI , XXXXXXX
 #define ___________________NAVIGATION_L3_______________ OS_RALT , XXXXXXX , XXXXXXX , OS_LALT , XXXXXXX
-#define __NAVIGATION_L4__                                                             _______ , KC_BSPC
-#define __FIXED_NAV__L4__                                                             _______ , KC_SPC
+#define __NAVIGATION_L4__                                                             _______ , KC_SPC
 
 #define ___________________NAVIGATION_R1_______________ XXXXXXX , KC_APP  , KC_PGDN , KC_PGUP , XXXXXXX
 #define ___________________NAVIGATION_R2_______________ TG_NAV  , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT
 #define ___________________NAVIGATION_R3_______________ XXXXXXX , KC_DEL  , KC_HOME , KC_END  , KC_INS
-#define __NAVIGATION_R4__                               KC_SPC  , MAI_CAS
+#define __NAVIGATION_R4__                               KC_BSPC , MAI_CAS
 #define __FIXED_NAV__R4__                               KC_BSPC , MED_CAS
 
 #define ___________________MAINTENANCE_L1______________ XXXXXXX , RGB_VAD , RGB_VAI , EEP_RST , XXXXXXX
