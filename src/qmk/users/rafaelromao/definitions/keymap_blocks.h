@@ -76,7 +76,7 @@
 #define ____MEDIA_R4_____                               KC_BSPC , _______
 
 #define ___________________NAVIGATION_L1_______________ XXXXXXX , MC_ESC  , MC_SAVE , OS_RALT , XXXXXXX
-#define ___________________NAVIGATION_L2_______________ XXXXXXX , OS_LSFT , OS_LCTL , OS_LGUI , XXXXXXX
+#define ___________________NAVIGATION_L2_______________ MO_MED  , OS_LSFT , OS_LCTL , OS_LGUI , XXXXXXX
 #define ___________________NAVIGATION_L3_______________ OS_RALT , XXXXXXX , XXXXXXX , OS_LALT , XXXXXXX
 #define __NAVIGATION_L4__                                                             _______ , KC_BSPC
 #define __FIXED_NAV__L4__                                                             _______ , KC_SPC

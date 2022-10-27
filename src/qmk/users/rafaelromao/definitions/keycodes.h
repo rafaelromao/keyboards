@@ -148,6 +148,7 @@ enum {
 #define NAV_F12  LT(_NAVIGATION, KC_F12)
 #define NAV_BTI  LT(_NAVIGATION, MC_BTIC)
 
+#define MO_MED  MO(_MEDIA)
 #define MED_CAS LT(_MEDIA, TG_CASE)
 #define MED_0   LT(_MEDIA, KC_0)
 
