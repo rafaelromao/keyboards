@@ -27,3 +27,7 @@ bool is_key_on_tap(uint16_t keycode) {
     }
     return false;
 }
+
+bool is_shift_macro_keycode(uint16_t keycode) {
+    return keycode > SFT_MACRO_START && keycode < SFT_MACRO_END;
+}

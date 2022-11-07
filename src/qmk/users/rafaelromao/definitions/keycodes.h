@@ -179,5 +179,6 @@ enum {
 
 uint16_t extract_base_tapping_keycode(uint16_t keycode);
 bool is_key_on_tap(uint16_t keycode);
+bool is_shift_macro_keycode(uint16_t keycode);
 
 // clang-format on

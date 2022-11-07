@@ -3,6 +3,7 @@ SRC += rafaelromao.c
 SRC += definitions/keycodes.c
 SRC += features/taphold.c
 SRC += features/custom_oneshot.c
+SRC += features/common_shortcuts.c
 SRC += features/tapdance.c
 SRC += features/smart_case.c
 SRC += features/os_toggle.c

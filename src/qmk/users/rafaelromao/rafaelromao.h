@@ -12,6 +12,7 @@
 #include "features/combos.h"
 #include "features/leader.h"
 #include "features/custom_oneshot.h"
+#include "features/common_shortcuts.h"
 #include "features/select_word.h"
 #include "features/dynamic_macro.h"
 #include "features/swapper.h"
