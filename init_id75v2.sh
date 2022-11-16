@@ -24,7 +24,11 @@ then
     echo "Creating ID75 symbolic link..."
     ln -s "$KEYBOARD_HOME/src/qmk/$ID75/arturgoms" "$QMK_HOME/$ID75"
 fi
-echo "Checking out qmk v0.17.0..."
+echo "Checking out qmk v0.18.3..."
 cd $QMK_HOME
-git checkout 0.17.0
-cd ..
+git checkout 0.18.3 
+
+qmk config user.keyboard=idobao/id75/v2
+qmk config user.keymap=arturgoms
+
+echo "Now you can run qmk compile"

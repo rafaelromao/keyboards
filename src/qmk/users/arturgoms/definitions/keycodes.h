@@ -81,7 +81,21 @@ enum {
     CUSTOM_KEYCODE_END,
 
     MC_COMMENT, MC_SAVE, MC_DELETE_WORD, MC_QUIT,
-    MC_VISTA
+    MC_VISTA,
+    MC_NEXT_TAB,
+    MC_PREV_TAB,
+    MC_BUFFERS,
+    MC_MAXIMIZER,
+    MC_HARPOON_1,
+    MC_HARPOON_2,
+    MC_HARPOON_3,
+    MC_HARPOON_4, 
+    MC_HARPOON_5, 
+    MC_HARPOON_6, 
+    MC_HARPOON_7, 
+    MC_HARPOON_8, 
+    MC_HARPOON_9, 
+    MC_HARPOON_0, 
 };
 
 // Mod-taps

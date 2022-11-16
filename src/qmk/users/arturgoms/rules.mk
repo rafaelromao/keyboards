@@ -11,10 +11,9 @@ SRC += features/combos.c
 SRC += features/leader.c
 SRC += features/select_word.c
 SRC += features/dynamic_macro.c
-SRC += features/window_swapper.c
-SRC += features/custom_shortcuts.c
-SRC += features/custom_shift.c
+SRC += features/custom_shortcuts.c 
 
+AUTO_SHIFT_ENABLE = no
 LTO_ENABLE = yes
 EXTRAKEY_ENABLE = yes # Audio control and System control
 TAP_DANCE_ENABLE = yes

@@ -13,8 +13,6 @@
 #include "features/smart_thumb_keys.h"
 #include "features/select_word.h"
 #include "features/dynamic_macro.h"
-#include "features/window_swapper.h"
 #include "features/custom_shortcuts.h"
-#include "features/custom_shift.h"
 
 void matrix_scan_keymap(void);

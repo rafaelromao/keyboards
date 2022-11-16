@@ -338,6 +338,7 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
 
         case MC_DELETE_WORD:
             tap_code(KC_D);
+            tap_code(KC_I);
             tap_code(KC_W);
             return PROCESS_RECORD_RETURN_FALSE;
 
@@ -358,7 +359,91 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
             SEND_STRING(":Vista!!");
             tap_code(KC_ENT);
             return PROCESS_RECORD_RETURN_FALSE;
-    }
+
+        case MC_NEXT_TAB:
+            tap_code(KC_ESCAPE);
+            SEND_STRING(":tabnext");
+            tap_code(KC_ENT);
+            return PROCESS_RECORD_RETURN_FALSE;
+
+        case MC_PREV_TAB:
+            tap_code(KC_ESCAPE);
+            SEND_STRING(":tabprevious");
+            tap_code(KC_ENT);
+            return PROCESS_RECORD_RETURN_FALSE;
+
+        case MC_BUFFERS:
+            tap_code(KC_ESCAPE);
+            SEND_STRING(":lua require(\" user.bfs\").open()");
+            tap_code(KC_ENT);
+            return PROCESS_RECORD_RETURN_FALSE;
+
+        case MC_MAXIMIZER:
+            tap_code(KC_ESCAPE);
+            SEND_STRING(":MaximizerToggle");
+            tap_code(KC_ENT);
+            return PROCESS_RECORD_RETURN_FALSE;
+
+        case MC_HARPOON_1:
+            tap_code(KC_ESCAPE);
+            SEND_STRING("M");
+            tap_code(KC_1);
+            return PROCESS_RECORD_RETURN_FALSE;
+
+        case MC_HARPOON_2:
+            tap_code(KC_ESCAPE);
+            SEND_STRING("M");
+            tap_code(KC_2);
+            return PROCESS_RECORD_RETURN_FALSE;
+
+        case MC_HARPOON_3:
+            tap_code(KC_ESCAPE);
+            SEND_STRING("M");
+            tap_code(KC_3);
+            return PROCESS_RECORD_RETURN_FALSE;
+
+        case MC_HARPOON_4:
+            tap_code(KC_ESCAPE);
+            SEND_STRING("M");
+            tap_code(KC_4);
+            return PROCESS_RECORD_RETURN_FALSE;
+
+        case MC_HARPOON_5:
+            tap_code(KC_ESCAPE);
+            SEND_STRING("M");
+            tap_code(KC_5);
+            return PROCESS_RECORD_RETURN_FALSE;
+
+        case MC_HARPOON_6:
+            tap_code(KC_ESCAPE);
+            SEND_STRING("M");
+            tap_code(KC_6);
+            return PROCESS_RECORD_RETURN_FALSE;
+
+        case MC_HARPOON_7:
+            tap_code(KC_ESCAPE);
+            SEND_STRING("M");
+            tap_code(KC_7);
+            return PROCESS_RECORD_RETURN_FALSE;
+
+        case MC_HARPOON_8:
+            tap_code(KC_ESCAPE);
+            SEND_STRING("M");
+            tap_code(KC_8);
+            return  PROCESS_RECORD_RETURN_FALSE; 
+
+        case MC_HARPOON_9:
+            tap_code(KC_ESCAPE);
+            SEND_STRING("M");
+            tap_code(KC_9);
+            return PROCESS_RECORD_RETURN_FALSE; 
+
+        case MC_HARPOON_0:
+            tap_code(KC_ESCAPE);
+            SEND_STRING("M");
+            tap_code(KC_0);
+            return PROCESS_RECORD_RETURN_FALSE;
+  }
 
     // Accentuated characters
 
