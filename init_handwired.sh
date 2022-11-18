@@ -19,10 +19,10 @@ then
     echo "Creating userspace symbolic link..."
     ln -s "$KEYBOARD_HOME/src/qmk/users/rafaelromao" "$USER_SPACE"
 fi
-if [[ ! -d "$QMK_HOME/$HARDWIRED/ffkb" ]]
+if [[ ! -d "$QMK_HOME/$HARDWIRED/rafaelromao" ]]
 then
-    echo "Creating FFKB symbolic link..."
-    ln -s "$KEYBOARD_HOME/src/qmk/$HANDWIRED/ffkb" "$QMK_HOME/$HANDWIRED"
+    echo "Creating Handwired symbolic link..."
+    ln -s "$KEYBOARD_HOME/src/qmk/$HANDWIRED/rafaelromao" "$QMK_HOME/$HANDWIRED"
 fi
 echo "Checking out qmk v0.18.15..."
 cd $QMK_HOME

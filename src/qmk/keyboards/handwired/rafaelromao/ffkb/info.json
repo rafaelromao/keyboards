@@ -1,6 +1,6 @@
 {
     "manufacturer": "Rafael Romao",
-    "keyboard_name": "handwired/ffkb",
+    "keyboard_name": "handwired/rafaelromao/ffkb",
     "maintainer": "rafaelromao",
     "bootloader": "rp2040",
     "diode_direction": "COL2ROW",
