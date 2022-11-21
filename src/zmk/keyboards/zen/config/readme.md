@@ -57,14 +57,13 @@ The following checklist indicates the supported features, per layer:
     - [x] F-Keys (Left Side)
     - [x] Numbers (Right Side)
 - [ ] Navigation
-    - [ ] OSMs
-    - [ ] Tab / Esc
-    - [ ] Navigation Cluster / Home Row Navigation
-    - [ ] Toggle Navigation Layer Clone
-    - [ ] AltGr Thumb Key
+    - [x] OSMs
+    - [x] Tab / Esc
+    - [x] Navigation Cluster / Home Row Navigation
+    - [x] Toggle Navigation Layer Clone
 - [ ] Media
-    - [ ] Standard Modifiers
-    - [ ] Tab / Enter
+    - [x] Standard Modifiers
+    - [x] Tab / Enter
     - [ ] Media Controls
     - [ ] Toggle Mic / Toggle Cam
     - [ ] Toggle Numpad
