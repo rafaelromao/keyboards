@@ -443,7 +443,115 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
             SEND_STRING("M");
             tap_code(KC_0);
             return PROCESS_RECORD_RETURN_FALSE;
-  }
+
+        case MC_NEXT_BUFFER:
+            tap_code(KC_ESCAPE);
+            SEND_STRING(":bnext");
+            tap_code(KC_ENT);
+            return PROCESS_RECORD_RETURN_FALSE;
+
+        case MC_PREV_BUFFER:
+            tap_code(KC_ESCAPE);
+            SEND_STRING(":bprevious");
+            tap_code(KC_ENT);
+            return PROCESS_RECORD_RETURN_FALSE;
+      // Tmux
+
+        case MC_TMUX_NEXT:
+            tap_code16(LCTL(KC_B));
+            SEND_STRING("n");
+            return PROCESS_RECORD_RETURN_FALSE;
+
+        case MC_TMUX_PREV:
+            tap_code16(LCTL(KC_B));
+            SEND_STRING("p");
+            return PROCESS_RECORD_RETURN_FALSE;
+
+        case MC_TMUX_SPLIT_H:
+            tap_code16(LCTL(KC_B));
+            tap_code16(KC_H);
+            return PROCESS_RECORD_RETURN_FALSE;
+ 
+        case MC_TMUX_SPLIT_V:
+            tap_code16(LCTL(KC_B));
+            tap_code16(KC_V);
+            return PROCESS_RECORD_RETURN_FALSE;        
+ 
+        case MC_TMUX_RELOAD:
+            tap_code16(LCTL(KC_B));
+            tap_code16(KC_R);
+            return PROCESS_RECORD_RETURN_FALSE;      
+ 
+        case MC_TMUX_RENAME:
+            tap_code16(LCTL(KC_B));
+            tap_code16(KC_COMM);
+            return PROCESS_RECORD_RETURN_FALSE;       
+ 
+        case MC_TMUX_SWITCH_UP:
+            tap_code16(LCTL(KC_B));
+            tap_code(KC_UP);
+            return PROCESS_RECORD_RETURN_FALSE;        
+ 
+        case MC_TMUX_SWITCH_DOWN:
+            tap_code16(LCTL(KC_B));
+            tap_code(KC_DOWN);
+            return PROCESS_RECORD_RETURN_FALSE;          
+ 
+        case MC_TMUX_SWITCH_LEFT:
+            tap_code16(LCTL(KC_B));
+            tap_code(KC_LEFT);
+            return PROCESS_RECORD_RETURN_FALSE;       
+ 
+        case MC_TMUX_SWITCH_RIGHT:
+            tap_code16(LCTL(KC_B));
+            tap_code(KC_RGHT);
+            return PROCESS_RECORD_RETURN_FALSE;      
+ 
+      case MC_TMUX_KILL_SESSION:
+            tap_code16(LCTL(KC_B));
+            tap_code(KC_Q);
+            return PROCESS_RECORD_RETURN_FALSE;      
+ 
+      case MC_TMUX_KILL_PANE:
+            tap_code16(LCTL(KC_B));
+            tap_code(KC_W);
+            return PROCESS_RECORD_RETURN_FALSE;      
+ 
+      case MC_TMUX_NEW:
+            tap_code16(LCTL(KC_B));
+            tap_code(KC_C);
+            return PROCESS_RECORD_RETURN_FALSE;      
+ 
+      case MC_TMUX_INSTALL:
+            tap_code16(LCTL(KC_B));
+            tap_code16(LSFT(KC_U));
+            return PROCESS_RECORD_RETURN_FALSE;      
+ 
+      case MC_TMUX_DETACH:
+            tap_code16(LCTL(KC_B));
+            tap_code(KC_D);
+            return PROCESS_RECORD_RETURN_FALSE;   
+ 
+      case MC_TMUX_SAVE:
+            tap_code16(LCTL(KC_B));
+            tap_code16(LCTL(KC_S));
+            return PROCESS_RECORD_RETURN_FALSE;   
+ 
+      case MC_TMUX_CHSH:
+            tap_code16(LCTL(KC_B));
+            tap_code16(KC_I);
+            return PROCESS_RECORD_RETURN_FALSE;   
+ 
+      case MC_TMUX_SESSIONIZER:
+            tap_code16(LCTL(KC_B));
+            tap_code(KC_F);
+            return PROCESS_RECORD_RETURN_FALSE;   
+
+      case MC_TMUX_RESTORE:
+              tap_code16(LCTL(KC_B));
+              tap_code16(LCTL(KC_R));
+              return PROCESS_RECORD_RETURN_FALSE;   
+    }
 
     // Accentuated characters
 

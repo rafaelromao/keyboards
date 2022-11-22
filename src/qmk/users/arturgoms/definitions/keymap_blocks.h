@@ -10,7 +10,7 @@
 #define _________________LAYOUT_L1________________ KC_Q , KC_W , KC_F , KC_P , KC_B
 #define _________________LAYOUT_L2________________ KC_A , KC_R , KC_S , KC_T , KC_G
 #define _________________LAYOUT_L3________________ KC_Z , KC_X , KC_C , KC_D , KC_V
-#define ____LAYOUT_L4_____                         LCTL(KC_B),LT(_RAISE, KC_BSPC), KC_LGUI
+#define ____LAYOUT_L4_____                         LT(_TMUX,LCTL(KC_B)),LT(_RAISE, KC_BSPC), KC_LGUI
 
 #define ________LAYOUT_M0________                 KC_MUTE, KC_VOLD, KC_VOLU
 #define ________LAYOUT_M1________                 RGB_VAD, RGB_VAI, RGB_TOG
@@ -48,7 +48,7 @@
 
 #define _________________RAISE_R0_________________ MC_HARPOON_6 , MC_HARPOON_7 , MC_HARPOON_8 , MC_HARPOON_9 ,MC_HARPOON_0 
 #define _________________RAISE_R1_________________ LCTL(KC_U) , KC_HOME , KC_END , XXXXXXX , XXXXXXX
-#define _________________RAISE_R2_________________ LCTL(KC_D) , LCTL(KC_K) , LCTL(KC_J) , XXXXXXX , XXXXXXX
+#define _________________RAISE_R2_________________ LCTL(KC_D) , MC_PREV_BUFFER , MC_NEXT_BUFFER , XXXXXXX , XXXXXXX
 #define _________________RAISE_R3_________________ MC_SAVE , MC_VISTA,  MC_PREV_TAB , MC_NEXT_TAB, XXXXXXX
 #define _______RAISE_R4_______                     _______ , _______, KC_RGUI
  // |_______________________________________________________________________________________________________________________________|
@@ -65,7 +65,19 @@
 #define ______________MAINTENANCE_R3____________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
 #define ___MAINTENANCE_R4___                     _______ , _______, KC_RGUI
 
+ // |_______________________________________________________________________________________________________________________________|
 
+#define ______________TMUX_L0_____________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX 
+#define ______________TMUX_L1_____________ MC_TMUX_KILL_SESSION , MC_TMUX_KILL_PANE , MC_TMUX_PREV , MC_TMUX_NEXT , MC_TMUX_CHSH 
+#define ______________TMUX_L2_____________ MC_TMUX_RELOAD , MC_TMUX_RESTORE , MC_TMUX_SAVE , MC_TMUX_NEW ,MC_TMUX_RENAME 
+#define ______________TMUX_L3_____________ XXXXXXX , XXXXXXX , XXXXXXX , MC_TMUX_DETACH ,MC_TMUX_SPLIT_V 
+#define __TMUX_L4_                                             XXXXXXX,  _______ , _______
+
+#define ______________TMUX_R0____________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
+#define ______________TMUX_R1____________ MC_TMUX_SESSIONIZER , XXXXXXX , MC_TMUX_INSTALL , XXXXXXX , XXXXXXX
+#define ______________TMUX_R2____________ MC_TMUX_SWITCH_LEFT , MC_TMUX_SWITCH_DOWN , MC_TMUX_SWITCH_UP , MC_TMUX_SWITCH_RIGHT , XXXXXXX 
+#define ______________TMUX_R3____________ XXXXXXX , MC_TMUX_SPLIT_H , XXXXXXX , XXXXXXX , XXXXXXX
+#define ___TMUX_R4___                     _______ , _______, KC_RGUI
 
 
 // clang-format on

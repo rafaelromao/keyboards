@@ -11,5 +11,6 @@ typedef enum {
   _FIXED_NAV,
   _MEDIA,
   _NAVIGATION,
-  _MAINTENANCE
+  _MAINTENANCE,
+  _TMUX
 } layers_t;
