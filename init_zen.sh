@@ -37,4 +37,4 @@ export GNUARMEMB_TOOLCHAIN_PATH=/Applications/ArmGNUToolchain/11.3.rel1/arm-none
 cd ..
 
 echo "Creating build aliases..."
-alias build_zen_default="west build -p -s zmk/app -b corneish_zen_v2_left -- -DZMK_CONFIG=src/zmk/keyboards/zen/default/config"
+alias build_zen_default="west build -p -s zmk/app -b corneish_zen_v2_left -- -DZMK_CONFIG=$ZMK_HOME/keyboards/zen/default/config"
