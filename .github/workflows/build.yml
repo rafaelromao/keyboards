@@ -1,5 +1,0 @@
-on: [push, pull_request, workflow_dispatch]
-
-jobs:
-  build:
-    uses: rafaelromao/keyboards/.github/workflows/build_with_working_directory.yml@zen
