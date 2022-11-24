@@ -30,7 +30,7 @@
 };
 
 / {
-    hold-taps {
+    behaviors {
         msl: layer-tap-with-stick-layer {
             compatible = "zmk,behavior-hold-tap";
             label = "layer-tap-with-stick-layer";
@@ -38,7 +38,6 @@
             flavor = "tap-preferred";
             tapping-term-ms = <175>;
             quick-tap-ms = <0>;
-            layer-tap-with-stick-layer;
             bindings = <&mo>, <&sl>;
         };
         msk: layer-tap-with-stick-key {
@@ -48,7 +47,6 @@
             flavor = "tap-preferred";
             tapping-term-ms = <175>;
             quick-tap-ms = <0>;
-            layer-tap-with-stick-key;
             bindings = <&mo>, <&sk>;
         };
     };
@@ -213,7 +211,7 @@
             label = "Dead ~";
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&mc_tild>, <&kp TILDE>;
+            bindings = <&mc_tilde>, <&kp TILDE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         mm_caret: mm_caret {
@@ -291,9 +289,9 @@
                         label = "ACCENT";
                         bindings = <
    &none           &none           &kp X           &none           &none           &none           &ac_otil        &ac_oacu        &ac_uacu        &none    
-   &none           &kp Z           &ng_squ         &none           &none           &ac_agrv        &ac_atil        &ac_aacu        &ac_eacu        &ac_iacu 
-   &none           &none           &mc_ced         &none           &none           &none           &ac_acir        &ac_ocir        &ac_ecir        &none
-                                   &none           &trans          &kp SPACE       &kp BSPC        &trans          &anone
+   &none           &kp Z           &mc_sqo         &none           &none           &ac_agrv        &ac_atil        &ac_aacu        &ac_eacu        &ac_iacu 
+   &none           &none           &ac_accdi       &none           &none           &none           &ac_acir        &ac_ocir        &ac_ecir        &none
+                                   &none           &trans          &kp SPACE       &kp BSPC        &trans          &none
                         >;
                 };
                 macros_layer {
@@ -309,7 +307,7 @@
                         label = "LOWER";
                         bindings = <
    &none           &kp LPAR        &kp RPAR        &kp BSLH        &none           &none           &kp N7        &kp N8          &kp N9        &none    
-   &mc_bti         &mc_dqo         &mc_squ         &td_and         &td_tilde       &kp COLON       &kp N4        &kp N5          &kp N6        &lt MACROS DOT  
+   &mc_bti         &mc_dqo         &mc_sqo         &td_and         &td_tilde       &kp COLON       &kp N4        &kp N5          &kp N6        &lt MACROS DOT  
    &kp AT          &kp LBKT        &kp RBKT        &kp QMARK       &kp HASH        &none           &kp N1        &kp N2          &kp N3        &kp COMMA 
                                    &none           &trans          &trans          &trans          &msk MED N0   &none
                         >;
@@ -362,9 +360,9 @@
                 maintenance_layer {
                         label = "MAINT";
                         bindings = <
-   &none           &none           &none           &reset          &none           &none           &reset        &kp LOCK        &kp C_RESET   &none    
-   &none           &none           &none           &none           &bootloader     &bootloader     &none         &none           &tog LOCK_KB  &kp C_POWER  
-   &none           &none           &none           &none           &kp KP_NUMLOCK  &out OUT_TOG    &bt BT_SEL 1  &bt BT_PRV      &bt BT_NXT    &bt BT_CLR 
+   &none           &none           &none           &none           &none           &none           &none         &none           &kp K_SLEEP   &none    
+   &none           &none           &none           &none           &bootloader     &bootloader     &none         &none           &tog LOCK_KB  &kp K_POWER  
+   &none           &none           &none           &none           &none           &none           &bt BT_SEL 1  &bt BT_PRV      &bt BT_NXT    &bt BT_CLR 
                                    &none           &trans          &trans          &trans          &trans        &none
                         >;
                 };
