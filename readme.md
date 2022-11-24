@@ -59,12 +59,12 @@ Many features will not be available in ZMK. The readme file will indicate what f
 ### QMK
 
 The scripts [init_bm40.sh](init_bm40.sh) and [init_xd75.sh](init_xd75.sh) will clone [the QMK firmware](https://github.com/qmk/qmk_firmware) and symlink these keyboard files on it.
-After [installing QMK](https://docs.qmk.fm/#/newbs_getting_started) and running the init scripts above, [qmk cli](https://docs.qmk.fm/#/cli) should work, to compile and flash.
+After [installing QMK](https://docs.qmk.fm/#/newbs_getting_started) and running the init scripts above, [qmk cli](https://docs.qmk.fm/#/cli) should be working to compile and flash.
 
 ### ZMK
 
 The script [init_zen.sh](init_zen.sh) will clone [the ZMK firmware](https://github.com/LOWPROKB/zmk) and configure the toolchain.
-After [installing ZMK](https://zmk.dev/docs/development/setup) and running the init script above, [west cli](https://zmk.dev/docs/development/build-flash) should be working to compile the keymap.
+After [installing ZMK](https://zmk.dev/docs/development/setup) and running the init script above, [west cli](https://zmk.dev/docs/development/build-flash) should be working to compile and flash.
 
 ## References
 
