@@ -271,8 +271,8 @@
                         label = "ROMAK";
                         bindings = <
    &none           &kp F           &kp D           &kp W           &none           &none           &kp L           &kp O           &kp U           &none    
-   &lt MACROS R    &mt LSHFT N     &mt LCTRL S     &mt LALT T      &kp G           &kp V           &mt RALT H      &mt RCTRL A     &mt RSHFT E     &lt MACROS I 
-   &kp Q           &kp B           &kp C           &mt LGUI P      &kp K           &kp J           &mt RGUI M      &kp COMMA       &kp DOT         &kp Y
+   &lt MACROS R    &mt LSHFT N     &mt LCTRL S     &mt LGUI T      &kp G           &kp V           &mt RGUI H      &mt RCTRL A     &mt RSHFT E     &lt MACROS I 
+   &mt RALT Q      &kp B           &kp C           &mt LALT P      &kp K           &kp J           &mt LALT M      &kp COMMA       &kp DOT         &mt RALT Y
                                    &none           &msl NAV ACCENT &lt LOWER SPACE &lt RAISE BSPC  &msk MED LSHFT  &none
                         >;
                 };
@@ -280,8 +280,8 @@
                         label = "NUMPAD";
                         bindings = <
    &none           &kp F9          &kp F8          &kp F7          &none           &none           &kp N7          &kp N8          &kp N9          &none    
-   &kp F15         &mt LSHFT F6    &mt LCTRL F5    &mt LALT F4     &kp F11         &kp COLON       &mt RALT N4     &mt RCTRL N5    &mt RSHFT N6    &lt MACROS DOT 
-   &kp F14         &kp F3          &kp F2          &mt F1          &kp LGUI F10    &tog NUMPAD     &mt RGUI N1     &kp N2          &kp N3          &kp COMMA
+   &kp F15         &mt LSHFT F6    &mt LCTRL F5    &mt LGUI F4     &kp F11         &kp COLON       &mt RGUI N4     &mt RCTRL N5    &mt RSHFT N6    &lt MACROS DOT 
+   &mt RALT F14    &kp F3          &kp F2          &mt LALT F1     &kp F10         &tog NUMPAD     &mt LALT N1     &kp N2          &kp N3          &mt RALT COMMA
                                    &none           &msl NAV F12    &trans          &trans          &msk MED N0     &none
                         >;
                 };
