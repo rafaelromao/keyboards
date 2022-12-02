@@ -1,3 +1,6 @@
 secret.*
 .DS_Store
 .vscode
+zmk
+qmk_firmware
+build

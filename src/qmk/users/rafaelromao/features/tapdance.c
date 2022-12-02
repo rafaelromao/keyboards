@@ -285,33 +285,6 @@ void td_squo(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void td_tild(qk_tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            if (is_shifted()) {
-                clear_shift();
-                tap_code16(KC_TILD);
-            } else {
-                tap_code16(KC_TILD);
-                tap_code(KC_SPC);
-            }
-            break;
-        case TD_SINGLE_HOLD:
-            if (is_shifted()) {
-                clear_shift();
-                tap_code16(KC_CIRC);
-            } else {
-                tap_code16(KC_CIRC);
-                tap_code(KC_SPC);
-            }
-            break;
-        default:
-            break;
-    }
-}
-
 void td_perc(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
 
@@ -486,7 +459,6 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [DLR_CUR] = ACTION_TAP_DANCE_FN(td_currencies),
     [COL_ECO] = ACTION_TAP_DANCE_FN(td_colon),
     [PER_DEG] = ACTION_TAP_DANCE_FN(td_perc),
-    [TIL_CIR] = ACTION_TAP_DANCE_FN(td_tild),
     [DOT_DOT] = ACTION_TAP_DANCE_FN(td_dot)};
 
 // clang-format on

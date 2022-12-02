@@ -26,7 +26,6 @@ enum {
     DOT_DOT, 
     DLR_CUR, 
     COL_ECO,
-    TIL_CIR,
     PER_DEG,
     TD_CODE_END 
 };
@@ -51,7 +50,6 @@ enum {
 #define TD_DOT TD(DOT_DOT)
 #define TD_DLR TD(DLR_CUR)
 #define TD_COLN TD(COL_ECO)
-#define TD_TILD TD(TIL_CIR)
 #define TD_PERC TD(PER_DEG)
 
 // Custom keycodes
@@ -86,7 +84,7 @@ enum {
     // Begin macros used to write text
     STR_MACRO_START,
     
-    MC_BTIC, MC_DQUO, MC_SQUO, 
+    MC_BTIC, MC_DQUO, MC_SQUO, MC_CIRC, MC_TILD,
     MC_UNDS, MC_ENT, MC_TAB, MC_ESC, 
     MC_ESAV, MC_SENT, MC_CUR,  
     MC_DAND, MC_DPIP, 
@@ -105,6 +103,10 @@ enum {
 
     CUSTOM_KEYCODE_END
 };
+
+// Custom holds
+
+#define MC_SLSH LT(0, KC_SLSH)
 
 // Mod-taps
 
