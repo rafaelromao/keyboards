@@ -265,6 +265,18 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            layers = <ROMAK NUMPAD>;
+            key-positions = <1 2 30>;
+            bindings = <&kp ESC>;
+        };
+    };
+};
+
+/ {
         keymap {
                 compatible = "zmk,keymap";
                 default_layer {
