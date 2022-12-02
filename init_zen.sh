@@ -37,9 +37,9 @@ export GNUARMEMB_TOOLCHAIN_PATH=/Applications/ArmGNUToolchain/11.3.rel1/arm-none
 cd ..
 
 echo "Creating build aliases..."
-build_left="west build -p -s zmk/app -b corneish_zen_v2_left -- -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/keyboards/zen/"
-build_right="west build -p -s zmk/app -b corneish_zen_v2_right -- -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/keyboards/zen/"
-archive_left="mkdir -p build/artifacts; [ -f build/zephyr/zmk.uf2 ] && cp build/zephyr/zmk.uf2 build/artifacts/corneish_zen_v2_left-zmk.uf2"
-archive_right="mkdir -p build/artifacts; [ -f build/zephyr/zmk.uf2 ] && cp build/zephyr/zmk.uf2 build/artifacts/corneish_zen_v2_right-zmk.uf2"
-alias build_zen_default="${build_left}default && ${build_right}default && ${archive_left} && ${archive_right}"
-alias build_zen="${build_left}rafaelromao && ${build_right}rafaelromao && ${archive_left} && ${archive_right}"
+build_left="west build -p -s app -b corneish_zen_v2_left -- -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/keyboards/zen/"
+build_right="west build -p -s app -b corneish_zen_v2_right -- -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/keyboards/zen/"
+archive_left="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/zephyr/zmk.uf2 ] && cp build/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/corneish_zen_v2_left-zmk.uf2"
+archive_right="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/zephyr/zmk.uf2 ] && cp build/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/corneish_zen_v2_right-zmk.uf2"
+alias build_zen_default="cd zmk && ${build_left}default && ${archive_left} && ${build_right}default && ${archive_right} && cd .."
+alias build_zen="cd zmk && ${build_left}rafaelromao && ${archive_left} && ${build_right}rafaelromao && ${archive_right} && cd .."
