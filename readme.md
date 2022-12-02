@@ -50,18 +50,21 @@ Some features are not available on all keyboards though. For instance, the BM40 
 
 ### ZMK
 
-For ZMK, only the [Corne-ish Zen](http://lowprokb.ca) is supported.
+- [lowprokb.ca/corneish-zen](src/zmk/keyboards/zen/rafaelromao/readme.md)
+
+Many features will not be available in ZMK. The readme file will indicate what features are available.
 
 ## Building
 
 ### QMK
 
 The scripts [init_bm40.sh](init_bm40.sh) and [init_xd75.sh](init_xd75.sh) will clone [the QMK firmware](https://github.com/qmk/qmk_firmware) and symlink these keyboard files on it.
-After [installing QMK](https://docs.qmk.fm/#/newbs_getting_started) and running the init script with `source init_bm40.sh` or `source init_xd75.sh`, [qmk cli](https://docs.qmk.fm/#/cli) should work just fine to compile and flash.
+After [installing QMK](https://docs.qmk.fm/#/newbs_getting_started) and running the init scripts above, [qmk cli](https://docs.qmk.fm/#/cli) should work, to compile and flash.
 
 ### ZMK
 
-For ZMK, the recommended way to build is using GitHub Actions according to [these instructions](https://github.com/LOWPROKB/zmk-config-Corne-ish-Zen#instructions).
+The script [init_zen.sh](init_zen.sh) will clone [the ZMK firmware](https://github.com/LOWPROKB/zmk) and configure the toolchain.
+After [installing ZMK](https://zmk.dev/docs/development/setup) and running the init script above, [west cli](https://zmk.dev/docs/development/build-flash) should be working to compile the keymap.
 
 ## References
 

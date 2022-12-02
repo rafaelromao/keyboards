@@ -3,4 +3,4 @@
 	url = https://github.com/qmk/qmk_firmware
 [submodule "zmk"]
 	path = zmk
-	url = https://github.com/zmkfirmware/zmk.git
+	url = https://github.com/LOWPROKB/zmk.git
