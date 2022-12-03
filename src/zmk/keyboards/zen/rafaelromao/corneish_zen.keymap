@@ -72,6 +72,26 @@
 
 / {
     macros {
+        mc_copy: mc_copy {
+            label = "Copy";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCMD>
+                , <&macro_tap &kp C>
+                , <&macro_release &kp LCMD>
+                ;
+        };
+        mc_paste: mc_paste {
+            label = "Paste";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCMD>
+                , <&macro_tap &kp V>
+                , <&macro_release &kp LCMD>
+                ;
+        };
         mc_save: mc_save {
             label = "Save";
             compatible = "zmk,behavior-macro";
@@ -80,6 +100,17 @@
                 = <&macro_press &kp LCMD>
                 , <&macro_tap &kp S>
                 , <&macro_release &kp LCMD>
+                ;
+        };
+        mc_save_esc: mc_save_esc {
+            label = "Save + Esc";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCMD>
+                , <&macro_tap &kp S>
+                , <&macro_release &kp LCMD>
+                , <&macro_tap &kp ESC>
                 ;
         };
         mc_seln: mc_seln {
@@ -190,6 +221,46 @@
             #binding-cells = <0>;
             bindings = <&macro_tap &kp SINGLE_QUOTE &kp C>;
         };
+        ac_ao: ac_ao {
+            label = "ão";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp TILDE &kp A>
+                , <&macro_tap &kp O>
+                ;  
+        };
+        ac_oes: ac_oes {
+            label = "ões";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp TILDE &kp O>
+                , <&macro_tap &kp E>
+                , <&macro_tap &kp S>
+                ;  
+        };
+        ac_cao: ac_cao {
+            label = "ção";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp SINGLE_QUOTE &kp C>
+                , <&macro_tap &kp TILDE &kp A>
+                , <&macro_tap &kp O>
+                ;  
+        };
+        ac_coes: ac_coes {
+            label = "ções";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp SINGLE_QUOTE &kp C>
+                , <&macro_tap &kp TILDE &kp O>
+                , <&macro_tap &kp E>
+                , <&macro_tap &kp S>
+                ;  
+        };
     };
 };
 
@@ -288,6 +359,103 @@
             layers = <ROMAK NUMPAD>;
             key-positions = <17 18 33>;
             bindings = <&kp ENTER>;
+        };
+        combo_tab {
+            timeout-ms = <50>;
+            layers = <ROMAK NUMPAD>;
+            key-positions = <7 8 33>;
+            bindings = <&kp TAB>;
+        };
+        combo_esc {
+            timeout-ms = <50>;
+            layers = <ROMAK NUMPAD>;
+            key-positions = <1 2 32>;
+            bindings = <&kp ESC>;
+        };
+        combo_save {
+            timeout-ms = <50>;
+            layers = <ROMAK NUMPAD>;
+            key-positions = <11 12 32>;
+            bindings = <&mc_save>;
+        };
+        combo_esc_save {
+            timeout-ms = <50>;
+            layers = <NAV>;
+            key-positions = <1 2>;
+            bindings = <&mc_save_esc>;
+        };
+        combo_unds {
+            timeout-ms = <50>;
+            layers = <ROMAK>;
+            key-positions = <21 22>;
+
+            bindings = <&kp UNDERSCORE>;
+        };
+        combo_semicolon {
+            timeout-ms = <50>;
+            layers = <ROMAK>;
+            key-positions = <27 28>;
+            bindings = <&kp SEMICOLON>;
+        };
+        combo_x {
+            timeout-ms = <50>;
+            layers = <ROMAK>;
+            key-positions = <26 27>;
+            bindings = <&kp X>;
+        };
+        combo_z {
+            timeout-ms = <50>;
+            layers = <ROMAK>;
+            key-positions = <22 23>;
+            bindings = <&kp Z>;
+        };
+        combo_ao {
+            timeout-ms = <50>;
+            layers = <ACCENT>;
+            key-positions = <12 13>;
+            bindings = <&ac_ao>;
+        };
+        combo_oes {
+            timeout-ms = <50>;
+            layers = <ACCENT>;
+            key-positions = <22 23>;
+            bindings = <&ac_oes>;
+        };
+        combo_cao {
+            timeout-ms = <50>;
+            layers = <ACCENT>;
+            key-positions = <11 12 13>;
+            bindings = <&ac_cao>;
+        };
+        combo_oes {
+            timeout-ms = <50>;
+            layers = <ACCENT>;
+            key-positions = <21 22 23>;
+            bindings = <&ac_oes>;
+        };
+        combo_copy_l {
+            timeout-ms = <50>;
+            layers = <ROMAK>;
+            key-positions = <22 23 32>;
+            bindings = <&mc_copy>;
+        };
+        combo_paste_l {
+            timeout-ms = <50>;
+            layers = <ROMAK>;
+            key-positions = <12 13 32>;
+            bindings = <&mc_paste>;
+        };
+        combo_copy_r {
+            timeout-ms = <50>;
+            layers = <ROMAK>;
+            key-positions = <26 27 33>;
+            bindings = <&mc_copy>;
+        };
+        combo_paste_r {
+            timeout-ms = <50>;
+            layers = <ROMAK>;
+            key-positions = <16 17 33>;
+            bindings = <&mc_paste>;
         };
     };
 };
