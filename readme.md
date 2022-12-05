@@ -2,7 +2,7 @@
  
 ## Overview
 
-A 30 keys split keyboard layout, optimized for Portuguese, English, working with numbers and software programming with VIM plugins.
+A split keyboard layout optimized for Portuguese, English, working with numbers and software programming with VIM plugins. The number of keys can vary from 30 to 36.
 
 ![img](img/overview.png)
 
