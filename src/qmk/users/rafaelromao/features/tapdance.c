@@ -230,6 +230,10 @@ void td_not(qk_tap_dance_state_t *state, void *user_data) {
         case TD_SINGLE_TAP:
             tap_code16(KC_EXLM);
             break;
+        case TD_SINGLE_HOLD:
+            tap_code(KC_END);
+            tap_code16(KC_EXLM);
+            break;
         case TD_DOUBLE_TAP:
             SEND_STRING("return ");
             break;
@@ -436,6 +440,51 @@ void td_dot(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
+void td_ques(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code16(KC_QUES);
+            break;
+        case TD_DOUBLE_SINGLE_TAP:
+        case TD_DOUBLE_TAP:
+            tap_code16(KC_QUES);
+            tap_code16(KC_QUES);
+            break;
+        case TD_SINGLE_HOLD:
+            tap_code(KC_END);
+            tap_code16(KC_QUES);
+            break;
+        case TD_TRIPLE_TAP:
+            tap_code16(KC_AMPR);
+            break;
+        default:
+            break;
+    }
+}
+
+void td_slash(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code(KC_SLSH);
+            break;
+        case TD_DOUBLE_SINGLE_TAP:
+        case TD_DOUBLE_TAP:
+            tap_code(KC_SLSH);
+            tap_code(KC_SLSH);
+            break;
+        case TD_SINGLE_HOLD:
+            tap_code16(KC_BSLS);
+            break;
+        case TD_TRIPLE_TAP:
+            tap_code16(KC_PIPE);
+            break;
+        default:
+            break;
+    }
+}
+
 // clang-format off
 
 // Tap dance declarations
@@ -459,6 +508,8 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [DLR_CUR] = ACTION_TAP_DANCE_FN(td_currencies),
     [COL_ECO] = ACTION_TAP_DANCE_FN(td_colon),
     [PER_DEG] = ACTION_TAP_DANCE_FN(td_perc),
+    [QUE_EXC] = ACTION_TAP_DANCE_FN(td_ques),
+    [SLS_BSL] = ACTION_TAP_DANCE_FN(td_slash),
     [DOT_DOT] = ACTION_TAP_DANCE_FN(td_dot)};
 
 // clang-format on

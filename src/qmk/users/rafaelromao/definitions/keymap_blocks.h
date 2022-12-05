@@ -47,7 +47,7 @@
 
 #define ___________________LOWER_L1____________________ XXXXXXX , TD_OPAR , TD_CPAR , MC_CIRC , XXXXXXX
 #define ___________________LOWER_L2____________________ NAV_BTI , TD_DQUO , TD_SQUO , TD_AND  , MC_TILD
-#define ___________________LOWER_L3____________________ KC_AT   , TD_OBR  , TD_CBR  , KC_QUES , KC_HASH
+#define ___________________LOWER_L3____________________ KC_AT   , TD_OBR  , TD_CBR  , TD_QUES , KC_HASH
 #define ____LOWER_L4_____                                                             _______ , _______
 
 #define ___________________LOWER_R1____________________ XXXXXXX , KC_7    , KC_8    , KC_9    , XXXXXXX
@@ -62,7 +62,7 @@
 
 #define ___________________RAISE_R1____________________ KC_CIRC , TD_DLR  , TD_LCRB , TD_RCRB , XXXXXXX
 #define ___________________RAISE_R2____________________ TD_COLN , KC_MINS , KC_EQL  , TD_NOT  , KC_PLUS
-#define ___________________RAISE_R3____________________ TD_PERC , MC_SLSH , KC_LT   , KC_GT   , KC_ASTR
+#define ___________________RAISE_R3____________________ TD_PERC , TD_SLSH , KC_LT   , KC_GT   , KC_ASTR
 #define ____RAISE_R4_____                               _______ , _______
 
 #define ___________________MEDIA_L1____________________ XXXXXXX , MC_ESC  , MC_SAVE , KC_RALT , XXXXXXX

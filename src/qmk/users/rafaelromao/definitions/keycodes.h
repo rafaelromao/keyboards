@@ -27,6 +27,8 @@ enum {
     DLR_CUR, 
     COL_ECO,
     PER_DEG,
+    SLS_BSL,
+    QUE_EXC,
     TD_CODE_END 
 };
 
@@ -51,6 +53,8 @@ enum {
 #define TD_DLR TD(DLR_CUR)
 #define TD_COLN TD(COL_ECO)
 #define TD_PERC TD(PER_DEG)
+#define TD_QUES TD(QUE_EXC)
+#define TD_SLSH TD(SLS_BSL)
 
 // Custom keycodes
 
@@ -103,10 +107,6 @@ enum {
 
     CUSTOM_KEYCODE_END
 };
-
-// Custom holds
-
-#define MC_SLSH LT(0, KC_SLSH)
 
 // Mod-taps
 

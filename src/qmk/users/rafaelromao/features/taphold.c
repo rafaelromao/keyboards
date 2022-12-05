@@ -56,14 +56,6 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
                 return PROCESS_RECORD_RETURN_FALSE;
             }
             break;
-
-        case MC_SLSH:
-            if (record->event.pressed && record->tap.count == 0) {
-                tap_code16(KC_BSLS);
-                return PROCESS_RECORD_RETURN_FALSE;
-            } else {
-                return PROCESS_RECORD_RETURN_TRUE;
-            }
     }
     return PROCESS_RECORD_CONTINUE;
 }
