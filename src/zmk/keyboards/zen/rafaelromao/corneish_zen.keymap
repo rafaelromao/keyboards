@@ -467,8 +467,8 @@
                 accents_layer {
                         label = "ACCENT";
                         bindings = <
-   &none           &none           &kp X           &none           &none           &none           &ac_otil        &ac_oacu        &ac_uacu        &none    
-   &none           &kp Z           &mc_sqo         &none           &none           &ac_agrv        &ac_atil        &ac_aacu        &ac_eacu        &ac_iacu 
+   &none           &none           &kp X           &kp CARET       &none           &none           &ac_otil        &ac_oacu        &ac_uacu        &none    
+   &kp GRAVE       &kp DQT         &kp SQT         &kp Z           &kp TILDE       &ac_agrv        &ac_atil        &ac_aacu        &ac_eacu        &ac_iacu 
    &none           &none           &ac_accdi       &none           &none           &none           &ac_acir        &ac_ocir        &ac_ecir        &none
                                    &trans          &trans          &kp SPACE       &kp BSPC        &trans          &trans
                         >;
