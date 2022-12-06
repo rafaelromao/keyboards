@@ -43,7 +43,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <175>;
             flavor = "tap-preferred";
-            quick-tap-ms = <125>;
+            quick-tap-ms = <0>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
@@ -53,7 +53,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <175>;
             flavor = "tap-preferred";
-            quick-tap-ms = <125>;
+            quick-tap-ms = <0>;
             global-quick-tap;
             bindings = <&mo>, <&sl>;
         };
@@ -63,7 +63,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <175>;
             flavor = "tap-preferred";
-            quick-tap-ms = <125>;
+            quick-tap-ms = <0>;
             global-quick-tap;
             bindings = <&mo>, <&sk>;
         };
@@ -151,6 +151,7 @@
     accents {
         ac_agrv: ac_agrv {
             wait-ms = <0>;
+            tap-ms = <0>;
             label = "à";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -158,6 +159,7 @@
         };
         ac_acir: ac_acir {
             wait-ms = <0>;
+            tap-ms = <0>;
             label = "â";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -165,6 +167,7 @@
         };
         ac_aacu: ac_aacu {
             wait-ms = <0>;
+            tap-ms = <0>;
             label = "á";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -172,6 +175,7 @@
         };
         ac_atil: ac_atil {
             wait-ms = <0>;
+            tap-ms = <0>;
             label = "ã";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -179,6 +183,7 @@
         };
         ac_eacu: ac_eacu {
             wait-ms = <0>;
+            tap-ms = <0>;
             label = "é";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -186,6 +191,7 @@
         };
         ac_ecir: ac_ecir {
             wait-ms = <0>;
+            tap-ms = <0>;
             label = "ê";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -193,6 +199,7 @@
         };
         ac_oacu: ac_oacu {
             wait-ms = <0>;
+            tap-ms = <0>;
             label = "ó";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -200,6 +207,7 @@
         };
         ac_ocir: ac_ocir {
             wait-ms = <10>;
+            tap-ms = <0>;
             label = "ô";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -207,6 +215,7 @@
         };
         ac_otil: ac_otil {
             wait-ms = <0>;
+            tap-ms = <0>;
             label = "õ";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -214,6 +223,7 @@
         };
         ac_uacu: ac_uacu {
             wait-ms = <0>;
+            tap-ms = <0>;
             label = "ú";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -221,6 +231,7 @@
         };
         ac_iacu: ac_iacu {
             wait-ms = <0>;
+            tap-ms = <0>;
             label = "à";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -228,6 +239,7 @@
         };
         ac_accdi: ac_ccdi {
             wait-ms = <0>;
+            tap-ms = <0>;
             label = "ç";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -240,6 +252,7 @@
     symbols {
         mc_bti: mc_bti {
             wait-ms = <0>;
+            tap-ms = <0>;
             label = "`";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -247,6 +260,7 @@
         };
         mc_dqo: mc_dqo {
             wait-ms = <0>;
+            tap-ms = <0>;
             label = "quot";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -254,6 +268,7 @@
         };
         mc_sqo: mc_sqo {
             wait-ms = <0>;
+            tap-ms = <0>;
             label = "'";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -261,6 +276,7 @@
         };
         mc_tilde: mc_tilde {
             wait-ms = <0>;
+            tap-ms = <0>;
             label = "~";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -268,6 +284,7 @@
         };
         mc_caret: mc_caret {
             wait-ms = <0>;
+            tap-ms = <0>;
             label = "^";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -289,6 +306,7 @@
         };
         mc_slash: mc_slash {
             wait-ms = <0>;
+            tap-ms = <0>;
             label = "Slash";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -296,6 +314,7 @@
         };
         mc_backslash: mc_backslash {
             wait-ms = <0>;
+            tap-ms = <0>;
             label = "Backslash";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -313,6 +332,7 @@
         };
         mc_and: mc_and {
             wait-ms = <0>;
+            tap-ms = <0>;
             label = "&&";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -327,6 +347,7 @@
         };
         mc_or: mc_or {
             wait-ms = <0>;
+            tap-ms = <0>;
             label = "||";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -496,7 +517,7 @@
                         bindings = <
    &none           &kp F9          &kp F8          &kp F7          &none           &none           &kp DOLLAR    &kp LBRC        &kp RBRC      &none    
    &kp F15         &kp F6          &kp F5          &kp F4          &kp F11         &kp COLON       &kp MINUS     &kp EQUAL       &kp EXCL      &kp PLUS  
-   &kp F14         &kp F3          &kp F2          &kp F1          &kp F10         &kp PERCENT     &ht_slash     &kp LT          &kp GT        &kp STAR
+   &kp F14         &kp F3          &kp F2          &kp F1          &kp F10         &kp PERCENT     &kp SLASH     &kp LT          &kp GT        &kp STAR
                                    &trans          &kp F12         &trans          &trans          &trans        &trans
                         >;
                 };
