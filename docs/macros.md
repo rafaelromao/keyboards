@@ -6,7 +6,7 @@
 - The Accents layer has common Portuguese accented letters, readily available on a single tap of the left outer thumb key, making them as easy to type as a shifted key (which is available on a single tap of the right outer thumb key).
 - These layer also gives access to z and x, that are not available in the base layer, as well as an standalone apostrophe character.
 - There are dedicated accent keys for à á ã â é ê õ ó ô ú í and ç, which is all that is needed for Portuguese.
-- It is also possible to accent using dead keys, like usually done with the US International layout. To get a dead version of ' " ^ ~ or ` to accent a letter, just press shift before the keys that output these symbols, then type the letter you want to accent. I.e.: Shift " u produces ü. 
+- It is also possible to accent using dead keys, like usually done with the US International layout. To get a dead version of ' " ^ ~ or ` to accent a letter, just tap the OS Accents key before the keys that output these symbols, then type the letter you want to accent. I.e.: OS Accents " u produces ü. 
 - Source code: [accents.c](../src/qmk/users/rafaelromao/features/accents.c)
 
 ### Macros

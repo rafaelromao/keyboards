@@ -12,33 +12,23 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
 
         case MC_BTIC:
             tap_code(KC_GRV);
-            if (!isShifted) {
-                tap_code(KC_SPC);
-            }
+            tap_code(KC_SPC);
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_DQUO:
             tap_code16(KC_DQUO);
-            if (!isShifted) {
-                tap_code(KC_SPC);
-            }
+            tap_code(KC_SPC);
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_SQUO:
             tap_code(KC_QUOT);
-            if (!isShifted) {
-                tap_code(KC_SPC);
-            }
+            tap_code(KC_SPC);
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_CIRC:
             tap_code16(KC_CIRC);
-            if (!isShifted) {
-                tap_code16(KC_SPC);
-            }
+            tap_code16(KC_SPC);
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_TILD:
             tap_code16(KC_TILD);
-            if (!isShifted) {
-                tap_code16(KC_SPC);
-            }
+            tap_code16(KC_SPC);
             return PROCESS_RECORD_RETURN_FALSE;
 
             // Inverted underscore and minus
