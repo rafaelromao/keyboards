@@ -27,12 +27,22 @@
 #define LOCK_KB 9
 #define MAINT 10
 
+&lt {
+    tapping-term-ms = <175>;
+    flavor = "tap-preferred";
+    quick-tap-ms = <125>;
+    global-quick-tap;
+    retro-tap;
+};
+
 &sl {
     release-after-ms = <2000>;
+    quick-release;
 };
 
 &sk {
     release-after-ms = <2000>;
+    quick-release;
 };
 
 / {
@@ -43,8 +53,9 @@
             #binding-cells = <2>;
             tapping-term-ms = <175>;
             flavor = "tap-preferred";
-            quick-tap-ms = <0>;
+            quick-tap-ms = <125>;
             global-quick-tap;
+            retro-tap;
             bindings = <&kp>, <&kp>;
         };
         msl: layer-tap-with-stick-layer {
@@ -53,8 +64,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <175>;
             flavor = "tap-preferred";
-            quick-tap-ms = <0>;
-            global-quick-tap;
+            quick-tap-ms = <125>;
             bindings = <&mo>, <&sl>;
         };
         msk: layer-tap-with-stick-key {
@@ -63,8 +73,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <175>;
             flavor = "tap-preferred";
-            quick-tap-ms = <0>;
-            global-quick-tap;
+            quick-tap-ms = <125>;
             bindings = <&mo>, <&sk>;
         };
     };
@@ -473,7 +482,7 @@
    &mc_sqo         &kp F           &kp D           &kp W           &kp Z           &kp X           &kp L           &kp O           &kp U           &ac_accdi   
    &lt MACROS R    &hm LSHFT N     &hm LCTRL S     &hm LGUI T      &kp G           &kp V           &hm RGUI H      &hm RCTRL A     &hm RSHFT E     &lt MACROS I 
    &hm RALT Q      &kp B           &kp C           &hm LALT P      &kp K           &kp J           &hm LALT M      &kp COMMA       &kp DOT         &hm RALT Y
-                                   &lt RAISE BSPC  &msl NAV ACCENT &lt LOWER SPACE &lt RAISE BSPC  &td_med         &lt LOWER SPACE
+                                   &lt RAISE BSPC  &msl NAV ACCENT &lt LOWER SPACE &lt RAISE BSPC  &msk MED LSHFT  &lt LOWER SPACE
                         >;
                 };
                 numpad_layer {
