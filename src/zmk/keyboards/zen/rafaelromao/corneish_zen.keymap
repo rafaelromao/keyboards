@@ -27,6 +27,13 @@
 #define LOCK_KB 9
 #define MAINT 10
 
+&mt {
+    tapping-term-ms = <175>;
+    flavor = "tap-preferred";
+    quick-tap-ms = <125>;
+    global-quick-tap;
+};
+
 &lt {
     tapping-term-ms = <175>;
     flavor = "tap-preferred";
