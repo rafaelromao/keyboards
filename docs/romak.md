@@ -14,7 +14,7 @@ Romak is a new keyboard layout, inspired by [Colemak](https://colemak.org) and [
 [KLA Next](https://klanext.keyboard-design.com/) was used to compare Romak with Colemak-DH and some other layouts, using the Universal Declaration of Human Rights as text corpus, combining [Portuguese and English](analysis/corpus.txt).
 ### General Performance
 
-Romak scores better than Dvorak and only 1% behind Colemak-DH, scoring better in Same Hand and Same Finger metrics.
+Romak scores better than Dvorak and only 2% behind Colemak-DH, scoring better in Same Hand and Same Finger metrics.
 ![img](../img/perf.png)
 
 ### Heatmaps
