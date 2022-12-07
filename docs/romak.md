@@ -2,7 +2,9 @@
 
 ## Romak
 
-Romak is a new keyboard layout, inspired by [Colemak](https://colemak.org) and [BEAKL](https://ieants.cc/beakl), improved to remove load from pinkies and for typing in Portuguese and English.
+Romak is a new keyboard layout, inspired by [Colemak](https://colemak.org) and [BEAKL](https://ieants.cc/beakl), improved to remove load from pinkies and for typing in Portuguese and English, using a one-shot layer to extend the base layer with accented and less frequent keys.
+
+The number of alpha keys and the number of thumb keys can vary, from a total of 36 down to a total of 30 keys. The variations with less keys reduce the use of pinky and index fingers.
 
 ![img](../img/romak.png)
 
