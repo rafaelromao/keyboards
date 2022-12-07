@@ -415,10 +415,10 @@
             "shiftAltGr": -1
         },
         {
-            "primary": -1,
+            "primary": 231,
             "finger": 7,
             "id": 44,
-            "shift": -1,
+            "shift": 199,
             "altGr": -1,
             "shiftAltGr": -1,
             "numpad": -1
