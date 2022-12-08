@@ -253,13 +253,17 @@
             #binding-cells = <0>;
             bindings = <&macro_tap &kp SINGLE_QUOTE &kp I>;
         };
-        ac_accdi: ac_ccdi {
+        ac_ccdi: ac_ccdi {
             wait-ms = <0>;
             tap-ms = <0>;
             label = "ç";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp SINGLE_QUOTE &kp C>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp C>
+                , <&macro_release &kp LALT>
+                ;
         };
     };
 };
@@ -487,7 +491,7 @@
                 default_layer {
                         label = "ROMAK";
                         bindings = <
-   &mc_sqo         &kp F           &kp D           &kp W           &kp Z           &kp X           &kp L           &kp O           &kp U           &ac_accdi   
+   &mc_sqo         &kp F           &kp D           &kp W           &kp Z           &kp X           &kp L           &kp O           &kp U           &ac_ccdi   
    &lt MACROS R    &hm LSHFT N     &hm LCTRL S     &hm LGUI T      &kp G           &kp V           &hm RGUI H      &hm RCTRL A     &hm RSHFT E     &lt MACROS I 
    &hm RALT Q      &kp B           &kp C           &hm LALT P      &kp K           &kp J           &hm LALT M      &kp COMMA       &kp DOT         &hm RALT Y
                                    &lt RAISE BSPC  &msl NAV ACCENT &lt LOWER SPACE &lt RAISE BSPC  &mm_med         &lt LOWER SPACE
@@ -507,7 +511,7 @@
                         bindings = <
    &none           &none           &kp X           &kp CARET       &none           &none           &ac_otil        &ac_oacu        &ac_uacu        &none    
    &kp GRAVE       &kp DQT         &kp SQT         &kp Z           &kp TILDE       &ac_agrv        &ac_atil        &ac_aacu        &ac_eacu        &ac_iacu 
-   &none           &none           &ac_accdi       &none           &none           &none           &ac_acir        &ac_ocir        &ac_ecir        &none
+   &none           &none           &ac_ccdi        &none           &none           &none           &ac_acir        &ac_ocir        &ac_ecir        &none
                                    &trans          &trans          &kp SPACE       &kp BSPC        &trans          &trans
                         >;
                 };
