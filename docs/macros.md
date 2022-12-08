@@ -27,6 +27,7 @@
 ##### Applications and Tabs
 - The first pair swaps back and forth between applications.
 - If shift is active in the first tap, they navigate between the current application tabs instead.
+    - And tapping both keys will close the current browser tab.
 ##### History and Zoom
 - The second pair will decrease or increase zoom.
 - If shift is active in the first tap, they will navigate in the browser history instead.
