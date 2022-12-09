@@ -171,7 +171,34 @@
             label = "à";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp GRAVE &kp A>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp GRAVE>
+                , <&macro_release &kp LALT>
+                , <&macro_tap &kp A>
+                ;
+        };
+        ac_agrv_u: ac_agrv_u {
+            wait-ms = <0>;
+            tap-ms = <0>;
+            label = "À";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp GRAVE>
+                , <&macro_release &kp LALT>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp A>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+        mm_agrv: mm_agrv {
+            label = "àÀ";
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&ac_agrv>, <&ac_agrv_u>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         ac_acir: ac_acir {
             wait-ms = <0>;
@@ -248,7 +275,7 @@
         ac_iacu: ac_iacu {
             wait-ms = <0>;
             tap-ms = <0>;
-            label = "à";
+            label = "ì";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap &kp SINGLE_QUOTE &kp I>;
@@ -340,16 +367,6 @@
             #binding-cells = <0>;
             bindings = <&macro_tap &kp BACKSLASH>;
         };
-        ht_slash: ht_slash {
-            label = "Slash Backslash";
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <175>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <125>;
-            global-quick-tap;
-            bindings = <&mc_backslash &mc_slash>;
-        };
         mc_and: mc_and {
             wait-ms = <0>;
             tap-ms = <0>;
@@ -379,16 +396,6 @@
             #binding-cells = <0>;
             bindings = <&mc_or>, <&kp PIPE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        ht_and: ht_and {
-            label = "&& ||";
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <175>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <125>;
-            global-quick-tap;
-            bindings = <&mm_or &mm_and>;
         };
         mm_med: mm_med {
             label = "MED SHIFT CAPSWORD";
@@ -510,7 +517,7 @@
                         label = "ACCENT";
                         bindings = <
    &none           &none           &kp X           &kp CARET       &none           &none           &ac_otil        &ac_oacu        &ac_uacu        &none    
-   &kp GRAVE       &kp DQT         &kp SQT         &kp Z           &kp TILDE       &ac_agrv        &ac_atil        &ac_aacu        &ac_eacu        &ac_iacu 
+   &kp GRAVE       &kp DQT         &kp SQT         &kp Z           &kp TILDE       &mm_agrv        &ac_atil        &ac_aacu        &ac_eacu        &ac_iacu 
    &none           &none           &ac_ccdi        &none           &none           &none           &ac_acir        &ac_ocir        &ac_ecir        &none
                                    &trans          &trans          &kp SPACE       &kp BSPC        &trans          &trans
                         >;
