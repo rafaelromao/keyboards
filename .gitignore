@@ -2,5 +2,6 @@ secret.*
 .DS_Store
 .vscode
 zmk
+!src/zmk
 qmk_firmware
 build

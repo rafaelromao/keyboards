@@ -85,6 +85,7 @@ Most features implemented here were based on the work referenced below.
 - [DreymaR](https://dreymar.colemak.org)
 - [Thomas Baart](https://thomasbaart.nl/category/mechanical-keyboards/firmware/qmk)
 - [Ben Vallack](https://youtube.com/c/BenVallack)
+- [Nick Conway](https://github.com/nickconway/zmk-config)
 
 ## Resouces
 
