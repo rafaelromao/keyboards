@@ -5,6 +5,7 @@
 *
 */
 
+#include "features/accents.dtsi"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -158,138 +159,6 @@
                 = <&macro_press &kp LGUI>
                 , <&macro_tap &kp PLUS>
                 , <&macro_release &kp LGUI>
-                ;
-        };
-    };
-};
-
-/ {
-    accents {
-        ac_agrv: ac_agrv {
-            wait-ms = <0>;
-            tap-ms = <0>;
-            label = "à";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp GRAVE>
-                , <&macro_release &kp LALT>
-                , <&macro_tap &kp A>
-                ;
-        };
-        ac_agrv_u: ac_agrv_u {
-            wait-ms = <0>;
-            tap-ms = <0>;
-            label = "À";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp GRAVE>
-                , <&macro_release &kp LALT>
-                , <&macro_press &kp LSHFT>
-                , <&macro_tap &kp A>
-                , <&macro_release &kp LSHFT>
-                ;
-        };
-        mm_agrv: mm_agrv {
-            label = "àÀ";
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&ac_agrv>, <&ac_agrv_u>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        ac_acir: ac_acir {
-            wait-ms = <0>;
-            tap-ms = <0>;
-            label = "â";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp CARET &kp A>;
-        };
-        ac_aacu: ac_aacu {
-            wait-ms = <0>;
-            tap-ms = <0>;
-            label = "á";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp SINGLE_QUOTE &kp A>;
-        };
-        ac_atil: ac_atil {
-            wait-ms = <0>;
-            tap-ms = <0>;
-            label = "ã";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp TILDE &kp A>;
-        };
-        ac_eacu: ac_eacu {
-            wait-ms = <0>;
-            tap-ms = <0>;
-            label = "é";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp SINGLE_QUOTE &kp E>;
-        };
-        ac_ecir: ac_ecir {
-            wait-ms = <0>;
-            tap-ms = <0>;
-            label = "ê";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp CARET &kp E>;
-        };
-        ac_oacu: ac_oacu {
-            wait-ms = <0>;
-            tap-ms = <0>;
-            label = "ó";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp SINGLE_QUOTE &kp O>;
-        };
-        ac_ocir: ac_ocir {
-            wait-ms = <10>;
-            tap-ms = <0>;
-            label = "ô";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp CARET &kp O>;
-        };
-        ac_otil: ac_otil {
-            wait-ms = <0>;
-            tap-ms = <0>;
-            label = "õ";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp TILDE &kp O>;
-        };
-        ac_uacu: ac_uacu {
-            wait-ms = <0>;
-            tap-ms = <0>;
-            label = "ú";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp SINGLE_QUOTE &kp U>;
-        };
-        ac_iacu: ac_iacu {
-            wait-ms = <0>;
-            tap-ms = <0>;
-            label = "ì";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp SINGLE_QUOTE &kp I>;
-        };
-        ac_ccdi: ac_ccdi {
-            wait-ms = <0>;
-            tap-ms = <0>;
-            label = "ç";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp C>
-                , <&macro_release &kp LALT>
                 ;
         };
     };
@@ -517,7 +386,7 @@
                         label = "ACCENT";
                         bindings = <
    &none           &none           &kp X           &kp CARET       &none           &none           &ac_otil        &ac_oacu        &ac_uacu        &none    
-   &kp GRAVE       &kp DQT         &kp SQT         &kp Z           &kp TILDE       &mm_agrv        &ac_atil        &ac_aacu        &ac_eacu        &ac_iacu 
+   &kp GRAVE       &kp DQT         &kp SQT         &kp Z           &kp TILDE       &ac_agrv        &ac_atil        &ac_aacu        &ac_eacu        &ac_iacu 
    &none           &none           &ac_ccdi        &none           &none           &none           &ac_acir        &ac_ocir        &ac_ecir        &none
                                    &trans          &trans          &kp SPACE       &kp BSPC        &trans          &trans
                         >;
