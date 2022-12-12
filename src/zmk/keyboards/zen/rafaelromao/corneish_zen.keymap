@@ -5,53 +5,13 @@
 *
 */
 
-#include "features/accents.dtsi"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-
-/ {
-  chosen {
-    zmk,matrix_transform = &five_column_transform;
-  };
-};
-
-#define ROMAK 0
-#define NUMPAD 1
-#define ACCENT 2
-#define MACROS 3
-#define LOWER 4
-#define RAISE 5
-#define NAV_F 6
-#define MED 7
-#define NAV 8
-#define LOCK_KB 9
-#define MAINT 10
-
-&mt {
-    tapping-term-ms = <175>;
-    flavor = "tap-preferred";
-    quick-tap-ms = <125>;
-    global-quick-tap;
-};
-
-&lt {
-    tapping-term-ms = <175>;
-    flavor = "tap-preferred";
-    quick-tap-ms = <125>;
-    global-quick-tap;
-    retro-tap;
-};
-
-&sl {
-    release-after-ms = <2000>;
-    quick-release;
-};
-
-&sk {
-    release-after-ms = <2000>;
-    quick-release;
-};
+#include "definitions/config.dtsi"
+#include "definitions/keypos.dtsi"
+#include "features/accents.dtsi"
+#include "features/combos.dtsi"
 
 / {
     behaviors {
@@ -59,9 +19,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "homehow-mods";
             #binding-cells = <2>;
-            tapping-term-ms = <175>;
+            tapping-term-ms = <TAPPING_TERM>;
             flavor = "tap-preferred";
-            quick-tap-ms = <125>;
+            quick-tap-ms = <QUICK_TAP_TERM>;
             global-quick-tap;
             retro-tap;
             bindings = <&kp>, <&kp>;
@@ -70,18 +30,18 @@
             compatible = "zmk,behavior-hold-tap";
             label = "layer-tap-with-stick-layer";
             #binding-cells = <2>;
-            tapping-term-ms = <175>;
+            tapping-term-ms = <TAPPING_TERM>;
             flavor = "tap-preferred";
-            quick-tap-ms = <125>;
+            quick-tap-ms = <QUICK_TAP_TERM>;
             bindings = <&mo>, <&sl>;
         };
         msk: layer-tap-with-stick-key {
             compatible = "zmk,behavior-hold-tap";
             label = "layer-tap-with-stick-key";
             #binding-cells = <2>;
-            tapping-term-ms = <175>;
+            tapping-term-ms = <TAPPING_TERM>;
             flavor = "tap-preferred";
-            quick-tap-ms = <125>;
+            quick-tap-ms = <QUICK_TAP_TERM>;
             bindings = <&mo>, <&sk>;
         };
     };
@@ -273,91 +233,6 @@
             bindings = <&msk MED LSHFT>, <&caps_word>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    };
-};
-
-/ {
-    combos {
-        compatible = "zmk,combos";
-        combo_enter {
-            timeout-ms = <50>;
-            layers = <ROMAK NUMPAD>;
-            key-positions = <17 18 33>;
-            bindings = <&kp ENTER>;
-        };
-        combo_tab {
-            timeout-ms = <50>;
-            layers = <ROMAK NUMPAD>;
-            key-positions = <7 8 33>;
-            bindings = <&kp TAB>;
-        };
-        combo_esc {
-            timeout-ms = <50>;
-            layers = <ROMAK NUMPAD>;
-            key-positions = <1 2 32>;
-            bindings = <&kp ESC>;
-        };
-        combo_save {
-            timeout-ms = <50>;
-            layers = <ROMAK NUMPAD>;
-            key-positions = <11 12 32>;
-            bindings = <&mc_save>;
-        };
-        combo_esc_save {
-            timeout-ms = <50>;
-            layers = <NAV>;
-            key-positions = <1 2>;
-            bindings = <&mc_save_esc>;
-        };
-        combo_unds {
-            timeout-ms = <50>;
-            layers = <ROMAK>;
-            key-positions = <21 22>;
-
-            bindings = <&kp UNDERSCORE>;
-        };
-        combo_semicolon {
-            timeout-ms = <50>;
-            layers = <ROMAK>;
-            key-positions = <27 28>;
-            bindings = <&kp SEMICOLON>;
-        };
-        combo_x {
-            timeout-ms = <50>;
-            layers = <ROMAK>;
-            key-positions = <26 27>;
-            bindings = <&kp X>;
-        };
-        combo_z {
-            timeout-ms = <50>;
-            layers = <ROMAK>;
-            key-positions = <22 23>;
-            bindings = <&kp Z>;
-        };
-        combo_copy_l {
-            timeout-ms = <50>;
-            layers = <ROMAK>;
-            key-positions = <22 23 32>;
-            bindings = <&mc_copy>;
-        };
-        combo_paste_l {
-            timeout-ms = <50>;
-            layers = <ROMAK>;
-            key-positions = <12 13 32>;
-            bindings = <&mc_paste>;
-        };
-        combo_copy_r {
-            timeout-ms = <50>;
-            layers = <ROMAK>;
-            key-positions = <26 27 33>;
-            bindings = <&mc_copy>;
-        };
-        combo_paste_r {
-            timeout-ms = <50>;
-            layers = <ROMAK>;
-            key-positions = <16 17 33>;
-            bindings = <&mc_paste>;
         };
     };
 };
