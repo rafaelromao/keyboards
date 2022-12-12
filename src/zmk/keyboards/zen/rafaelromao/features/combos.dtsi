@@ -35,6 +35,8 @@
         COMBO(z,         COMBO_TERM, LBM LBI,     &kp Z,          ROMAK)
         COMBO(paste_l,   COMBO_TERM, LHM LHI LTH, &mc_paste,      ROMAK NUMPAD)
         COMBO(copy_l,    COMBO_TERM, LBM LBI LTH, &mc_copy,       ROMAK NUMPAD)
+        COMBO(fullscr,   COMBO_TERM, LHP LHA LTH, &mc_fullscr,    ROMAK NUMPAD)
+        COMBO(find,       COMBO_TERM, LBP LBA LTH, &mc_find,        ROMAK NUMPAD)
 
         COMBO(enter,     COMBO_TERM, RHM RHA RTH, &kp ENTER,      ROMAK NUMPAD)
         COMBO(tab,       COMBO_TERM, RTM RTA RTH, &kp TAB,        ROMAK NUMPAD)
@@ -42,5 +44,7 @@
         COMBO(x,         COMBO_TERM, RBI RBM,     &kp X,          ROMAK)
         COMBO(paste_r,   COMBO_TERM, RHM RHI RTH, &mc_paste,      ROMAK NUMPAD)
         COMBO(copy_r,    COMBO_TERM, RBM RBI RTH, &mc_copy,       ROMAK NUMPAD)
+        COMBO(sel_all,   COMBO_TERM, RHM RHI RTH, &mc_selall,     ROMAK NUMPAD)
+        COMBO(undo,      COMBO_TERM, RBA RBP RTH, &mc_undo,       ROMAK NUMPAD)
     };
 };

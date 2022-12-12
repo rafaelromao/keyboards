@@ -1,0 +1,119 @@
+/*
+*
+* Copyright (c) 2022 Rafael Romão
+* SPDX-License-Identifier: MIT
+*
+*/
+
+/ {
+    symbols {
+        mc_bti: mc_bti {
+            wait-ms = <0>;
+            tap-ms = <0>;
+            label = "`";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp SQT &kp SPACE>;
+        };
+        mc_dqo: mc_dqo {
+            wait-ms = <0>;
+            tap-ms = <0>;
+            label = "quot";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp DQT &kp SPACE>;
+        };
+        mc_sqo: mc_sqo {
+            wait-ms = <0>;
+            tap-ms = <0>;
+            label = "'";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp SINGLE_QUOTE &kp SPACE>;
+        };
+        mc_tilde: mc_tilde {
+            wait-ms = <0>;
+            tap-ms = <0>;
+            label = "~";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp TILDE &kp SPACE>;
+        };
+        mc_caret: mc_caret {
+            wait-ms = <0>;
+            tap-ms = <0>;
+            label = "^";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp CARET &kp SPACE>;
+        };
+        mm_tilde: mm_tilde {
+            label = "Dead ~";
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mc_tilde>, <&kp TILDE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        mm_caret: mm_caret {
+            label = "Dead ^";
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mc_caret>, <&kp CARET>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        mc_slash: mc_slash {
+            wait-ms = <0>;
+            tap-ms = <0>;
+            label = "Slash";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp SLASH>;
+        };
+        mc_backslash: mc_backslash {
+            wait-ms = <0>;
+            tap-ms = <0>;
+            label = "Backslash";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp BACKSLASH>;
+        };
+        mc_and: mc_and {
+            wait-ms = <0>;
+            tap-ms = <0>;
+            label = "&&";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp AMPS &kp AMPS>;
+        };
+        mm_and: mm_and {
+            label = "&";
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mc_and>, <&kp AMPS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        mc_or: mc_or {
+            wait-ms = <0>;
+            tap-ms = <0>;
+            label = "||";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp PIPE &kp PIPE>;
+        };
+        mm_or: mm_or {
+            label = "|";
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mc_or>, <&kp PIPE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        mm_med: mm_med {
+            label = "MED SHIFT CAPSWORD";
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&msk MED LSHFT>, <&caps_word>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+};
