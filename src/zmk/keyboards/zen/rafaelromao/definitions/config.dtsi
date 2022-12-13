@@ -25,32 +25,3 @@
 
 #define TAPPING_TERM 175
 #define QUICK_TAP_TERM 200
-
-&mt {
-    tapping-term-ms = <TAPPING_TERM>;
-    flavor = "tap-preferred";
-    quick-tap-ms = <QUICK_TAP_TERM>;
-    global-quick-tap;
-};
-
-&lt {
-    tapping-term-ms = <TAPPING_TERM>;
-    flavor = "tap-preferred";
-    quick-tap-ms = <QUICK_TAP_TERM>;
-    global-quick-tap;
-    retro-tap;
-};
-
-&sl {
-    release-after-ms = <2000>;
-    quick-release;
-};
-
-&sk {
-    release-after-ms = <2000>;
-    quick-release;
-};
-
-&caps_word {
-  continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
-};
