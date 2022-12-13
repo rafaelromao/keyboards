@@ -15,9 +15,7 @@
 
 &lt {
     tapping-term-ms = <TAPPING_TERM>;
-    flavor = "hold-preferred";
     quick-tap-ms = <QUICK_TAP_TERM>;
-    global-quick-tap;
 };
 
 &sl {
