@@ -18,13 +18,14 @@ The following checklist indicates the supported features, per layer:
     - [x] Lower Layer Toggle
     - [x] Raise Layer Toggle
     - [x] Media Layer Toggle
-    - [ ] Combos
-        - [ ] Underscore, Semicolon, Esc, Enter, Tab
-        - [ ] Copy, Paste, Save, Select All, Undo, Find, Full Screen
-        - [ ] Reset
+    - [ ] Holds
+    - [x] Combos
+        - [x] Underscore, Semicolon, Esc, Enter, Tab
+        - [x] Copy, Paste, Save, Select All, Undo, Find, Full Screen
+        - [ ] Holds
     - [ ] Smart Case Key
         - [x] One-Shot Shift
-        - [ ] CAPSWORD
+        - [x] CAPSWORD
         - [ ] Disable Locked Mods
         - [ ] Disable Smart Cases
         - [ ] Simple Smart Cases: CAPSWORD, camelCase, snake_case, kebab-case
@@ -37,39 +38,48 @@ The following checklist indicates the supported features, per layer:
 - [ ] Macros
     - [x] Inverted Space and Backspace
     - [ ] Swapper
-    - [ ] Select Line / Select Word
-    - [ ] Join Lines / Comment Lines
+    - [x] Select Line
+    - [ ] Select Word
+    - [ ] Join Lines
+    - [ ] Comment Lines
     - [ ] Coding Shortcuts
-    - [ ] Coding Macros
-    - [ ] ~~Dynamic Macros~~
-- [ ] Numpad Layer
+    - [ ] Dynamic Macros
+- [x] Numpad Layer
     - [x] F-Keys (Left Side)
     - [x] Numbers (Right Side)
     - [x] Home Block Mods
-    - [ ] Combos
+    - [x] Combos
 - [ ] Lower
     - [x] Symbols (Left Side)
     - [x] Numbers (Right Side)
+    - [ ] Holds
+    - [ ] Coding Dancing
+    - [ ] Combos
 - [ ] Raise
     - [x] F-Keys (Left Side)
     - [x] Symbols (Right Side)
+    - [ ] Holds
+    - [ ] Coding Dancing
+    - [ ] Combos
 - [ ] Navigation
     - [x] OSMs
     - [x] Esc / Save
     - [x] Navigation Cluster / Home Row Navigation
-    - [x] Toggle Navigation Layer Clone
+    - [x] Toggle Navigation Layer
+    - [ ] Combos
 - [ ] Media
     - [x] Standard Modifiers
     - [x] Tab / Enter
-    - [ ] Media Controls
-    - [ ] Toggle Mic / Toggle Cam
-    - [ ] Toggle Numpad
-    - [ ] Toggle Navigation Layer Clone
-- [ ] Lock Layer
+    - [x] Media Controls
+    - [x] Toggle Mic / Toggle Cam
+    - [x] Toggle Numpad
+    - [x] Toggle Navigation Layer
+    - [ ] Combos
+- [x] Lock Layer
 - [ ] Maintenance
-    - [ ] Reset to Bootloader / Eeprom Reset
-    - [ ] Power / Sleep / Lock
+    - [x] Reset to Bootloader
+    - [x] Reset Memory
+    - [x] Power / Sleep / Lock
+    - [x] Bluetooth Controls
     - [ ] OS Selection
     - [ ] Num Lock
-    - [ ] ~~RGB Controls~~
-    - [ ] Bluetooth Controls

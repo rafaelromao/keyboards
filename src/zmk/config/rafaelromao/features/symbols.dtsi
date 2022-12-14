@@ -13,7 +13,7 @@
             label = "`";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp SQT &kp SPACE>;
+            bindings = <&macro_tap &kp GRAVE &kp SPACE>;
         };
         mc_dqo: mc_dqo {
             wait-ms = <0>;

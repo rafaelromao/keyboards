@@ -5,7 +5,6 @@
 *
 */
 
-
 &mt {
     tapping-term-ms = <TAPPING_TERM>;
     flavor = "tap-preferred";
