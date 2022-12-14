@@ -31,19 +31,23 @@ The following checklist indicates the supported features, per layer:
         - [ ] Simple Smart Cases: CAPSWORD, camelCase, snake_case, kebab-case
         - [ ] Combined Smart Cases: STRONG_SNAKE_CASE, STRONG-KEBAB-CASE, PascalCase
     - [ ] Double Comma for Leader Key
-- [ ] N-Grams Layer
-    - [x] N-Grams
+- [ ] Accents Layer
     - [x] Accents
     - [ ] Combos
 - [ ] Macros
     - [x] Inverted Space and Backspace
     - [ ] Swapper
+        - [ ] Applications
+        - [ ] Tabs
+        - [ ] History
+        - [x] Zoom
     - [x] Select Line
     - [ ] Select Word
     - [ ] Join Lines
     - [ ] Comment Lines
     - [ ] Coding Shortcuts
     - [ ] Dynamic Macros
+    - [x] Combos
 - [x] Numpad Layer
     - [x] F-Keys (Left Side)
     - [x] Numbers (Right Side)

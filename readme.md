@@ -50,7 +50,7 @@ Some features are not available on all keyboards though. For instance, the BM40 
 
 ### ZMK
 
-- [lowprokb.ca/corneish-zen](src/zmk/keyboards/zen/rafaelromao/readme.md)
+- [lowprokb.ca/corneish-zen](src/zmk/keyboards/lowprokb.ca/corneish-zen/readme.md)
 
 Many features will not be available in ZMK. The readme file will indicate what features are available.
 
