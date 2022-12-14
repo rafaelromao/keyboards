@@ -17,10 +17,6 @@ The zmk version used for this board is the one available at https://github.com/c
 - Connect the left half, put it in bootloader mode and copy the file `build/artifacts/corneish_zen_v2_left-zmk.uf2` to the drive CORNEISHZEN. Wait for the drive to be disconnected.
 - Connect the right half, put it in bootloader mode and copy the file `build/artifacts/corneish_zen_v2_right-zmk.uf2` to the drive CORNEISHZEN. Wait for the drive to be disconnected.
 
-## Keymap
-
-This keymap extends [my userspace](../../../../../users/rafaelromao/readme.md) definitions.
-
 ## Resources
 
 - [Home](https://github.com/rafaelromao/keyboards)

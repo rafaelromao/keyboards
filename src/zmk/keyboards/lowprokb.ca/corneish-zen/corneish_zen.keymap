@@ -13,8 +13,8 @@
 
 #include "../../../config/rafaelromao/features/behaviors.dtsi"
 #include "../../../config/rafaelromao/features/accents.dtsi"
-#include "../../../config/rafaelromao/features/combos.dtsi"
-#include "../../../config/rafaelromao/features/shortcuts.dtsi"
 #include "../../../config/rafaelromao/features/symbols.dtsi"
+#include "../../../config/rafaelromao/features/shortcuts.dtsi"
+#include "../../../config/rafaelromao/features/combos.dtsi"
 
 #include "../../../config/rafaelromao/definitions/keymap.dtsi"

@@ -36,16 +36,22 @@
         COMBO(paste_l,   COMBO_TERM, LHM LHI LTH, &mc_paste,      ROMAK NUMPAD)
         COMBO(copy_l,    COMBO_TERM, LBM LBI LTH, &mc_copy,       ROMAK NUMPAD)
         COMBO(fullscr,   COMBO_TERM, LHP LHA LTH, &mc_fullscr,    ROMAK NUMPAD)
-        COMBO(find,       COMBO_TERM, LBP LBA LTH, &mc_find,        ROMAK NUMPAD)
+        // COMBO(find,       COMBO_TERM, LBP LBA LTH, &mc_find,        ROMAK NUMPAD)
+        // COMBO(raise,     COMBO_TERM, LTA LTH,     &sl RAISE,      ROMAK)
+        // COMBO(lower,     COMBO_TERM, LTM RTH,     &sl LOWER,      ROMAK)
 
         COMBO(enter,     COMBO_TERM, RHM RHA RTH, &kp ENTER,      ROMAK NUMPAD)
         COMBO(tab,       COMBO_TERM, RTM RTA RTH, &kp TAB,        ROMAK NUMPAD)
         COMBO(semicolon, COMBO_TERM, RBM RBA,     &kp SEMICOLON,  ROMAK)
         COMBO(p,         COMBO_TERM, RHI RHM,     &kp P,          ROMAK)
         COMBO(x,         COMBO_TERM, RBI RBM,     &kp X,          ROMAK)
-        COMBO(paste_r,   COMBO_TERM, RHM RHI RTH, &mc_paste,      ROMAK NUMPAD)
-        COMBO(copy_r,    COMBO_TERM, RBM RBI RTH, &mc_copy,       ROMAK NUMPAD)
-        COMBO(sel_all,   COMBO_TERM, RHM RHI RTH, &mc_selall,     ROMAK NUMPAD)
-        COMBO(undo,      COMBO_TERM, RBA RBP RTH, &mc_undo,       ROMAK NUMPAD)
+        COMBO(paste_r,   COMBO_TERM, RHI RHM RTH, &mc_paste,      ROMAK NUMPAD)
+        COMBO(copy_r,    COMBO_TERM, RBI RBM RTH, &mc_copy,       ROMAK NUMPAD)
+        COMBO(selall,    COMBO_TERM, RHA RHP RTH, &mc_selall,     ROMAK NUMPAD)
+        // COMBO(undo,      COMBO_TERM, RBA RBP RTH, &mc_undo,       ROMAK NUMPAD)
+        // COMBO(lower,     COMBO_TERM, RTA RTH,     &sl LOWER,      ROMAK)
+        // COMBO(raise,     COMBO_TERM, RTM RTH,     &sl RAISE,      ROMAK)
+        
+        COMBO(refresh,   COMBO_TERM, RHM RHA,     &mc_refresh,    MACROS)
     };
 };

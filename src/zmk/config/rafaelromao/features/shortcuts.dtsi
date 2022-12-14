@@ -6,120 +6,28 @@
 */
 
 / {
+    #define SHORTCUT(NAME, BINDINGS) \
+        mc_##NAME: mc_##NAME { \
+            compatible = "zmk,behavior-macro"; \
+            label = ZMK_MACRO_STRINGIFY(mc_##NAME); \
+            #binding-cells = <0>; \
+            wait-ms = <10>; \
+            tap-ms = <10>; \
+            bindings = <BINDINGS>; \
+        };
+
     shortcuts {
-        mc_fullscr: mc_fullscr {
-            label = "Full Screen";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_press &kp LCMD>
-                , <&macro_tap &kp F>
-                , <&macro_release &kp LCMD>
-                , <&macro_release &kp LCTRL>
-                ;
-        };
-        mc_find: mc_find {
-            label = "Find";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCMD>
-                , <&macro_tap &kp F>
-                , <&macro_release &kp LCMD>
-                ;
-        };
-        mc_selall: mc_selall {
-            label = "Select All";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCMD>
-                , <&macro_tap &kp A>
-                , <&macro_release &kp LCMD>
-                ;
-        };
-        mc_undo: mc_undo {
-            label = "Undo";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCMD>
-                , <&macro_tap &kp Z>
-                , <&macro_release &kp LCMD>
-                ;
-        };
-        mc_copy: mc_copy {
-            label = "Copy";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCMD>
-                , <&macro_tap &kp C>
-                , <&macro_release &kp LCMD>
-                ;
-        };
-        mc_paste: mc_paste {
-            label = "Paste";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCMD>
-                , <&macro_tap &kp V>
-                , <&macro_release &kp LCMD>
-                ;
-        };
-        mc_save: mc_save {
-            label = "Save";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCMD>
-                , <&macro_tap &kp S>
-                , <&macro_release &kp LCMD>
-                ;
-        };
-        mc_save_esc: mc_save_esc {
-            label = "Save + Esc";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCMD>
-                , <&macro_tap &kp S>
-                , <&macro_release &kp LCMD>
-                , <&macro_tap &kp ESC>
-                ;
-        };
-        mc_seln: mc_seln {
-            label = "Select Line";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp HOME>
-                , <&macro_press &kp LSHFT>
-                , <&macro_tap &kp END>
-                , <&macro_release &kp LSHFT>
-                ;
-        };
-        mc_zout: mc_zout {
-            label = "Zoom Out";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp MINUS>
-                , <&macro_release &kp LGUI>
-                ;
-        };
-        mc_zin: mc_zin {
-            label = "Zoom In";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp PLUS>
-                , <&macro_release &kp LGUI>
-                ;
-        };
+        SHORTCUT(fullscr,  &macro_press &kp LCTRL &macro_press &kp LGUI &macro_tap &kp F &macro_release &kp LGUI &macro_release &kp LCTRL)
+        SHORTCUT(find,      &macro_press &kp LGUI &macro_tap &kp F &macro_release &kp LGUI)
+        SHORTCUT(selall,   &macro_press &kp LGUI &macro_tap &kp A &macro_release &kp LGUI)
+        SHORTCUT(undo,     &macro_press &kp LGUI &macro_tap &kp U &macro_release &kp LGUI)
+        SHORTCUT(copy,     &macro_press &kp LGUI &macro_tap &kp C &macro_release &kp LGUI)
+        SHORTCUT(paste,    &macro_press &kp LGUI &macro_tap &kp V &macro_release &kp LGUI)
+        SHORTCUT(save,     &macro_press &kp LGUI &macro_tap &kp S &macro_release &kp LGUI)
+        SHORTCUT(save_esc, &macro_press &kp LGUI &macro_tap &kp S &macro_release &kp LGUI &kp ESC)
+        SHORTCUT(seln,     &macro_tap &kp HOME &macro_press &kp LSHFT &macro_tap &kp END &macro_release &kp LSHFT)
+        SHORTCUT(zout,     &macro_press &kp LGUI &macro_tap &kp MINUS &macro_release &kp LGUI)
+        SHORTCUT(zin,      &macro_press &kp LGUI &macro_tap &kp PLUS &macro_release &kp LGUI)
+        SHORTCUT(refresh,  &macro_press &kp LGUI &macro_tap &kp R &macro_release &kp LGUI)
     };
 };

@@ -70,22 +70,28 @@ After [installing ZMK](https://zmk.dev/docs/development/setup) and running the i
 
 Most features implemented here were based on the work referenced below.
 
-- [Miryoku](https://github.com/manna-harbour/miryoku)
-- [Seniply](https://stevep99.github.io/seniply)
+### Layouts
 - [Colemak](https://colemak.org)
 - [BEAKL](https://ieants.cc/beakl)
 - [Hands Down](https://sites.google.com/alanreiser.com/handsdown/home)
-- [Precondition](https://github.com/precondition/dactyl-manuform-keymap)
+- [Miryoku](https://github.com/manna-harbour/miryoku)
+- [Seniply](https://stevep99.github.io/seniply)
+- [DreymaR](https://dreymar.colemak.org)
+- [Ben Vallack](https://youtube.com/c/BenVallack)
+
+### QMK
 - [Pascal Getreuer](https://github.com/getreuer/qmk-keymap)
+- [Precondition](https://github.com/precondition/dactyl-manuform-keymap)
 - [Drashna](https://github.com/qmk/qmk_firmware/tree/master/users/drashna)
 - [Callum Oakley](https://github.com/callum-oakley/qmk_firmware/tree/master/users/callum)
 - [Andrew Rae](https://github.com/andrewjrae/kyria-keymap)
 - [Weilbith](https://github.com/weilbith/keyboard_firmware)
 - [Treeman](https://github.com/treeman/qmk_firmware/tree/master/keyboards/ferris/keymaps/treeman)
-- [DreymaR](https://dreymar.colemak.org)
 - [Thomas Baart](https://thomasbaart.nl/category/mechanical-keyboards/firmware/qmk)
-- [Ben Vallack](https://youtube.com/c/BenVallack)
+
+### ZMK
 - [Nick Conway](https://github.com/nickconway/zmk-config)
+- [Cem Aksoylar](https://github.com/caksoylar/zmk/tree/caksoylar/zen-v2)
 
 ## Resouces
 
