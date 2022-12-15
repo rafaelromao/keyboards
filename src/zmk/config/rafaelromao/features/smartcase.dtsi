@@ -1,0 +1,23 @@
+/*
+*
+* Copyright (c) 2022 Rafael Romão
+* SPDX-License-Identifier: MIT
+*
+*/
+
+&caps_word {
+  continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
+};
+
+/ {
+    symbols {
+        mm_med: mm_med {
+            label = "MED SHIFT CAPSWORD";
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&msk MED LSHFT>, <&caps_word>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+};

@@ -27,10 +27,6 @@
     quick-release;
 };
 
-&caps_word {
-  continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
-};
-
 / {
     behaviors {
         hm: homerow-mods {

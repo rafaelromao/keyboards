@@ -29,5 +29,6 @@
         SHORTCUT(zout,     &macro_press &kp LGUI &macro_tap &kp MINUS &macro_release &kp LGUI)
         SHORTCUT(zin,      &macro_press &kp LGUI &macro_tap &kp PLUS &macro_release &kp LGUI)
         SHORTCUT(refresh,  &macro_press &kp LGUI &macro_tap &kp R &macro_release &kp LGUI)
+        SHORTCUT(o_esc,    &macro_tap &kp O &macro_tap &kp ESC)
     };
 };

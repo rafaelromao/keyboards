@@ -48,6 +48,7 @@
         COMBO(paste_r,   COMBO_TERM, RHI RHM RTH, &mc_paste,      ROMAK NUMPAD)
         COMBO(copy_r,    COMBO_TERM, RBI RBM RTH, &mc_copy,       ROMAK NUMPAD)
         COMBO(selall,    COMBO_TERM, RHA RHP RTH, &mc_selall,     ROMAK NUMPAD)
+        COMBO(o_esc,     COMBO_TERM, RTM RTA,     &mc_o_esc,      ROMAK)
         // COMBO(undo,      COMBO_TERM, RBA RBP RTH, &mc_undo,       ROMAK NUMPAD)
         // COMBO(lower,     COMBO_TERM, RTA RTH,     &sl LOWER,      ROMAK)
         // COMBO(raise,     COMBO_TERM, RTM RTH,     &sl RAISE,      ROMAK)
