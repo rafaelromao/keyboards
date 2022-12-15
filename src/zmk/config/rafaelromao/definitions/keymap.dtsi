@@ -47,8 +47,8 @@
                 lower_layer {
                         label = "LOWER";
                         bindings = <
-   &none           &kp LPAR        &kp RPAR        &mm_caret       &none           &none           &kp N7        &kp N8          &kp N9        &none    
-   &mc_bti         &mc_dqo         &mc_sqo         &mm_and         &mm_tilde       &kp COLON       &kp N4        &kp N5          &kp N6        &lt MACROS DOT  
+   &none           &kp LPAR        &kp RPAR        &mc_caret       &none           &none           &kp N7        &kp N8          &kp N9        &none    
+   &mc_bti         &mc_dqo         &mc_sqo         &mm_and         &mc_tilde       &kp COLON       &kp N4        &kp N5          &kp N6        &lt MACROS DOT  
    &kp AT          &kp LBKT        &kp RBKT        &kp QMARK       &kp HASH        &none           &kp N1        &kp N2          &kp N3        &kp COMMA 
                                    &trans          &trans          &trans          &trans          &lt MED N0    &trans
                         >;
