@@ -29,16 +29,6 @@
 
 / {
     behaviors {
-        hm: homerow-mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "homehow-mods";
-            #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <QUICK_TAP_TERM>;
-            global-quick-tap;
-            bindings = <&kp>, <&kp>;
-        };
         msl: layer-tap-with-stick-layer {
             compatible = "zmk,behavior-hold-tap";
             label = "layer-tap-with-stick-layer";

@@ -12,8 +12,8 @@
                         label = "ROMAK";
                         bindings = <
    &mc_sqo         &kp F           &kp D           &kp W           &kp Z           &kp X           &kp L           &kp O           &kp U           &ac_ccdi   
-   &lt MACROS R    &hm LSHFT N     &hm LCTRL S     &hm LGUI T      &kp G           &kp V           &hm RGUI H      &hm RCTRL A     &hm RSHFT E     &lt MACROS I 
-   &hm RALT Q      &kp B           &kp C           &hm LALT P      &kp K           &kp J           &hm LALT M      &kp COMMA       &kp DOT         &hm RALT Y
+   &lt MACROS R    &mt LSHFT N     &mt LCTRL S     &mt LGUI T      &kp G           &kp V           &mt RGUI H      &mt RCTRL A     &mt RSHFT E     &lt MACROS I 
+   &mt RALT Q      &kp B           &kp C           &mt LALT P      &kp K           &kp J           &mt LALT M      &kp COMMA       &kp DOT         &mt RALT Y
                                    &lt RAISE BSPC  &msl NAV ACCENT &lt LOWER SPACE &lt RAISE BSPC  &mm_med         &lt LOWER SPACE
                         >;
                 };
@@ -21,8 +21,8 @@
                         label = "NUMPAD";
                         bindings = <
    &none           &kp F9          &kp F8          &kp F7          &none           &none           &kp N7          &kp N8          &kp N9          &none    
-   &kp F15         &hm LSHFT F6    &hm LCTRL F5    &hm LGUI F4     &kp F11         &kp COLON       &hm RGUI N4     &hm RCTRL N5    &hm RSHFT N6    &lt MACROS DOT 
-   &hm RALT F14    &kp F3          &kp F2          &hm LALT F1     &kp F10         &tog NUMPAD     &hm LALT N1     &kp N2          &kp N3          &hm RALT COMMA
+   &kp F15         &mt LSHFT F6    &mt LCTRL F5    &mt LGUI F4     &kp F11         &kp COLON       &mt RGUI N4     &mt RCTRL N5    &mt RSHFT N6    &lt MACROS DOT 
+   &mt RALT F14    &kp F3          &kp F2          &mt LALT F1     &kp F10         &tog NUMPAD     &mt LALT N1     &kp N2          &kp N3          &mt RALT COMMA
                                    &trans          &msl NAV F12    &trans          &trans          &lt MED N0      &trans
                         >;
                 };
