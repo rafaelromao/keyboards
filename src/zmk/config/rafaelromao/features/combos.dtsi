@@ -1,0 +1,58 @@
+/*
+*
+* Copyright (c) 2022 Rafael Romão
+* SPDX-License-Identifier: MIT
+*
+*/
+
+/*                KEY POSITIONS
+
+  ╭─────────────────────╮ ╭─────────────────────╮
+  │ LTP LTA LTM LTI LTC │ │ RTC RTI RTM RTA RTP │
+  │ LHP LHA LHM LHI LHC │ │ RHC RHI RHM RHA RHP │
+  │ LBP LBA LBM LBI LBC │ │ RBC RBI RBM RBA RBP │
+  ╰───────╮ LT1 LT0 LTH │ │ RTH RT0 RT1 ╭───────╯
+          ╰─────────────╯ ╰─────────────╯ */
+
+/ {
+    #define COMBO_TERM 50
+
+    #define COMBO(NAME, TIMEOUT, KEYS, BINDINGS, LAYERS) \
+        combo_##NAME { \
+            timeout-ms = <TIMEOUT>; \
+            layers = <LAYERS>; \
+            key-positions = <KEYS>; \
+            bindings = <BINDINGS>; \
+        };
+
+    combos {
+        compatible = "zmk,combos";
+
+        COMBO(save,      COMBO_TERM, LHA LHM LTH, &mc_save,       ROMAK NUMPAD)
+        COMBO(esc,       COMBO_TERM, LTA LTM LTH, &kp ESC,        ROMAK NUMPAD)
+        COMBO(esc_save,  COMBO_TERM, LTA LTM,     &mc_save_esc,   NAV)
+        COMBO(unds,      COMBO_TERM, LBA LBM,     &kp UNDERSCORE, ROMAK)
+        COMBO(z,         COMBO_TERM, LBM LBI,     &kp Z,          ROMAK)
+        COMBO(paste_l,   COMBO_TERM, LHM LHI LTH, &mc_paste,      ROMAK NUMPAD)
+        COMBO(copy_l,    COMBO_TERM, LBM LBI LTH, &mc_copy,       ROMAK NUMPAD)
+        COMBO(fullscr,   COMBO_TERM, LHP LHA LTH, &mc_fullscr,    ROMAK NUMPAD)
+        // COMBO(find,       COMBO_TERM, LBP LBA LTH, &mc_find,        ROMAK NUMPAD)
+        // COMBO(raise,     COMBO_TERM, LTA LTH,     &sl RAISE,      ROMAK)
+        // COMBO(lower,     COMBO_TERM, LTM RTH,     &sl LOWER,      ROMAK)
+
+        COMBO(enter,     COMBO_TERM, RHM RHA RTH, &kp ENTER,      ROMAK NUMPAD)
+        COMBO(tab,       COMBO_TERM, RTM RTA RTH, &kp TAB,        ROMAK NUMPAD)
+        COMBO(semicolon, COMBO_TERM, RBM RBA,     &kp SEMICOLON,  ROMAK)
+        COMBO(p,         COMBO_TERM, RHI RHM,     &kp P,          ROMAK)
+        COMBO(x,         COMBO_TERM, RBI RBM,     &kp X,          ROMAK)
+        COMBO(paste_r,   COMBO_TERM, RHI RHM RTH, &mc_paste,      ROMAK NUMPAD)
+        COMBO(copy_r,    COMBO_TERM, RBI RBM RTH, &mc_copy,       ROMAK NUMPAD)
+        COMBO(selall,    COMBO_TERM, RHA RHP RTH, &mc_selall,     ROMAK NUMPAD)
+        COMBO(o_esc,     COMBO_TERM, RTM RTA,     &mc_o_esc,      ROMAK)
+        // COMBO(undo,      COMBO_TERM, RBA RBP RTH, &mc_undo,       ROMAK NUMPAD)
+        // COMBO(lower,     COMBO_TERM, RTA RTH,     &sl LOWER,      ROMAK)
+        // COMBO(raise,     COMBO_TERM, RTM RTH,     &sl RAISE,      ROMAK)
+        
+        COMBO(refresh,   COMBO_TERM, RHM RHA,     &mc_refresh,    MACROS)
+    };
+};

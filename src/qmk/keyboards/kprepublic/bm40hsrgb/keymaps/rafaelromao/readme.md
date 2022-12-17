@@ -1,4 +1,4 @@
-## bm40hsrgb/rafaelromao
+## kprepublic/bm40hsrgb
 ### A 30 keys split keyboard layout, optimized for programmers.
 
 The keyboard in the picture below is a BM40, used to design and test this layout.

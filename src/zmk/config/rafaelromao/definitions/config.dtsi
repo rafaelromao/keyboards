@@ -1,0 +1,88 @@
+/*
+*
+* Copyright (c) 2022 Rafael Romão
+* SPDX-License-Identifier: MIT
+*
+*/
+
+/ {
+  chosen {
+    zmk,matrix_transform = &five_column_transform;
+  };
+};
+
+#define ROMAK 0
+#define NUMPAD 1
+#define ACCENT 2
+#define MACROS 3
+#define LOWER 4
+#define RAISE 5
+#define NAV_F 6
+#define MED 7
+#define NAV 8
+#define LOCK_KB 9
+#define MAINT 10
+
+#define TAPPING_TERM 175
+#define QUICK_TAP_TERM 200
+
+/*                KEY POSITIONS
+
+  ╭─────────────────────╮ ╭─────────────────────╮
+  │ LTP LTA LTM LTI LTC │ │ RTC RTI RTM RTA RTP │
+  │ LHP LHA LHM LHI LHC │ │ RHC RHI RHM RHA RHP │
+  │ LBP LBA LBM LBI LBC │ │ RBC RBI RBM RBA RBP │
+  ╰───────╮ LT1 LT0 LTH │ │ RTH RT0 RT1 ╭───────╯
+          ╰─────────────╯ ╰─────────────╯ 
+  ╭─────────────────────╮ ╭─────────────────────╮
+  │  0   1   2   3   4  │ │   5   6   7   8   9 │
+  │ 10  11  12  13  14  │ │  15  16  17  18  19 │
+  │ 20  21  22  23  24  │ │  25  26  27  28  29 │
+  ╰──────╮  30  31  32  │ │  33  34  35 ╭───────╯
+         ╰──────────────╯ ╰─────────────╯
+
+*/
+
+#define LTP 0   // left-top row
+#define LTA 1
+#define LTM 2
+#define LTI 3
+#define LTC 4  
+
+#define RTC 5   // right-top row
+#define RTI 6
+#define RTM 7
+#define RTA 8
+#define RTP 9
+
+#define LHP 10  // left-middle row
+#define LHA 11
+#define LHM 12
+#define LHI 13
+#define LHC 14
+
+#define RHC 15  // right-middle row
+#define RHI 16
+#define RHM 17
+#define RHA 18
+#define RHP 19
+
+#define LBP 20  // left-bottom row
+#define LBA 21
+#define LBM 22
+#define LBI 23
+#define LBC 24
+
+#define RBC 25  // right-bottom row
+#define RBI 26
+#define RBM 27
+#define RBA 28
+#define RBP 29
+
+#define LT1 30  // left thumb keys
+#define LT0 31
+#define LTH 32
+
+#define RTH 33  // right thumb keys
+#define RT0 34
+#define RT1 35
