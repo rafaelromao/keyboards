@@ -139,7 +139,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 extern leader_t      leader;
 extern select_word_t select_word;
 extern swapper_t     swapper;
-const int            led_count = 13;
+const int            led_count = 17;
 int                  leds[]    = {0, 4, 5, 6, 7, 11, 17, 18, 29, 30, 36, 37, 38, 41, 44, 45, 46};
 
 void set_rgblight_by_layer(uint32_t layer) {
