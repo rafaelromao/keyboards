@@ -47,10 +47,10 @@
                 lower_layer {
                         label = "LOWER";
                         bindings = <
-   &none           &kp LPAR        &kp RPAR        &mc_caret       &none           &none           &kp N7        &kp N8          &kp N9        &none    
-   &mc_bti         &mc_dqo         &mc_sqo         &mm_and         &mc_tilde       &kp COLON       &kp N4        &kp N5          &kp N6        &lt MACROS DOT  
-   &kp AT          &kp LBKT        &kp RBKT        &kp QMARK       &kp HASH        &none           &kp N1        &kp N2          &kp N3        &kp COMMA 
-                                   &trans          &trans          &trans          &trans          &lt MED N0    &trans
+   &none           &kp LPAR        &kp RPAR        &mc_caret       &none           &none           &kp 7         &kp 8           &kp 9         &none    
+   &mc_bti         &mc_dqo         &mc_sqo         &th_and 0 0     &mc_tilde       &kp COLON       &kp 4         &kp 5           &kp 6         &lt MACROS DOT  
+   &kp AT          &kp LBKT        &kp RBKT        &kp QMARK       &kp HASH        &none           &kp 1         &kp 2           &kp 3         &kp COMMA 
+                                   &trans          &trans          &trans          &trans          &lt MED 0     &trans
                         >;
                 };
                 raise_layer {
@@ -58,7 +58,7 @@
                         bindings = <
    &none           &kp F9          &kp F8          &kp F7          &none           &none           &kp DOLLAR    &kp LBRC        &kp RBRC      &none    
    &kp F15         &kp F6          &kp F5          &kp F4          &kp F11         &kp COLON       &kp MINUS     &kp EQUAL       &kp EXCL      &kp PLUS  
-   &kp F14         &kp F3          &kp F2          &kp F1          &kp F10         &kp PERCENT     &kp SLASH     &kp LT          &kp GT        &kp STAR
+   &kp F14         &kp F3          &kp F2          &kp F1          &kp F10         &kp PERCENT     &mt BSLH FSLH &kp LT          &kp GT        &kp STAR
                                    &trans          &kp F12         &trans          &trans          &trans        &trans
                         >;
                 };

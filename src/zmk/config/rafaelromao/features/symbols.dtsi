@@ -7,34 +7,48 @@
 
 / {
     #define SYMBOL(NAME, SYMBOLS) \
-        mc_##NAME: mc_##NAME { \
+        NAME: NAME { \
             compatible = "zmk,behavior-macro"; \
-            label = ZMK_MACRO_STRINGIFY(mc_##NAME); \
+            label = ZMK_MACRO_STRINGIFY(NAME); \
             #binding-cells = <0>; \
             wait-ms = <0>; \
             tap-ms = <0>; \
             bindings = <&macro_tap SYMBOLS>; \
         };
 
-    #define SHIFTED_SYMBOL(NAME, SHIFTED) \
-        mm_##NAME: mm_##NAME { \
+    #define SHIFTED_SYMBOL(NAME, UNSHIFTED, SHIFTED) \
+        NAME: NAME { \
             compatible = "zmk,behavior-mod-morph"; \
-            label = ZMK_MACRO_STRINGIFY(mm_##NAME); \
+            label = ZMK_MACRO_STRINGIFY(NAME); \
             #binding-cells = <0>; \
-            bindings = <&mc_##NAME>, <SHIFTED>; \
+            bindings = <UNSHIFTED>, <SHIFTED>; \
             mods = <(MOD_LSFT|MOD_RSFT)>; \
         };
 
-    symbols {
-        SYMBOL(bti,   &kp GRAVE &kp SPACE)
-        SYMBOL(dqo,   &kp DQT &kp SPACE)
-        SYMBOL(sqo,   &kp SQT &kp SPACE)
-        SYMBOL(tilde, &kp TILDE &kp SPACE)
-        SYMBOL(caret, &kp CARET &kp SPACE)
-        SYMBOL(and,   &kp AMPS &kp AMPS)
-        SYMBOL(or,    &kp PIPE &kp PIPE)
+    #define TAPHOLD_SYMBOL(NAME, TAP, HOLD) \
+         NAME: NAME { \
+            compatible = "zmk,behavior-hold-tap"; \
+            label = ZMK_MACRO_STRINGIFY(NAME); \
+            #binding-cells = <2>; \
+            tapping-term-ms = <TAPPING_TERM>; \
+            flavor = "tap-preferred"; \
+            quick-tap-ms = <QUICK_TAP_TERM>; \
+            global-quick-tap; \
+            bindings = <HOLD>, <TAP>; \
+        };
 
-        SHIFTED_SYMBOL(and, &kp AMPS)
-        SHIFTED_SYMBOL(or,  &kp PIPE)
+    symbols {
+        SYMBOL(mc_bti,   &kp GRAVE &kp SPACE)
+        SYMBOL(mc_dqo,   &kp DQT &kp SPACE)
+        SYMBOL(mc_sqo,   &kp SQT &kp SPACE)
+        SYMBOL(mc_tilde, &kp TILDE &kp SPACE)
+        SYMBOL(mc_caret, &kp CARET &kp SPACE)
+        SYMBOL(mc_and,   &kp AMPS &kp AMPS)
+        SYMBOL(mc_or,    &kp PIPE &kp PIPE)
+
+        SHIFTED_SYMBOL(mm_and, &mc_and, &kp AMPS)
+        SHIFTED_SYMBOL(mm_or,  &mc_or,  &kp PIPE)
+
+        TAPHOLD_SYMBOL(th_and, &mm_and, &mm_or)
     };
 };

@@ -7,8 +7,8 @@
 
 / {
     #define ACCENTED_KEY(NAME, KEY, DEAD_KEY) \
-        ac_##NAME##_l: ac_##NAME##_l { \
-            label = ZMK_MACRO_STRINGIFY(ac_##NAME##_l); \
+        NAME##_l: NAME##_l { \
+            label = ZMK_MACRO_STRINGIFY(NAME##_l); \
             wait-ms = <0>; \
             tap-ms = <0>; \
             compatible = "zmk,behavior-macro"; \
@@ -20,8 +20,8 @@
                 , <&macro_tap &kp KEY> \
                 ; \
         }; \
-        ac_##NAME##_u: ac_##NAME##_u { \
-            label = ZMK_MACRO_STRINGIFY(ac_##NAME##_u); \
+        NAME##_u: NAME##_u { \
+            label = ZMK_MACRO_STRINGIFY(NAME##_u); \
             wait-ms = <0>; \
             tap-ms = <0>; \
             compatible = "zmk,behavior-macro"; \
@@ -36,27 +36,27 @@
                 , <&macro_release &kp LSHFT> \
                 ; \
         }; \
-        ac_##NAME: ac_##NAME { \
-            label = ZMK_MACRO_STRINGIFY(ac_##NAME); \
+        NAME: NAME { \
+            label = ZMK_MACRO_STRINGIFY(NAME); \
             compatible = "zmk,behavior-mod-morph"; \
             #binding-cells = <0>; \
-            bindings = <&ac_##NAME##_l>, <&ac_##NAME##_u>; \
+            bindings = <&NAME##_l>, <&NAME##_u>; \
             mods = <(MOD_LSFT|MOD_RSFT)>; \
             keep-mods = <(MOD_LSFT|MOD_RSFT)>; \
         };
 
     accents {
-        ACCENTED_KEY(agrv, A, GRAVE)
-        ACCENTED_KEY(aacu, A, E)
-        ACCENTED_KEY(atil, A, N)
-        ACCENTED_KEY(acir, A, I)
-        ACCENTED_KEY(eacu, E, E)
-        ACCENTED_KEY(ecir, E, I)
-        ACCENTED_KEY(iacu, I, E)
-        ACCENTED_KEY(oacu, O, E)
-        ACCENTED_KEY(otil, O, N)
-        ACCENTED_KEY(ocir, O, I)
-        ACCENTED_KEY(uacu, U, E)
+        ACCENTED_KEY(ac_agrv, A, GRAVE)
+        ACCENTED_KEY(ac_aacu, A, E)
+        ACCENTED_KEY(ac_atil, A, N)
+        ACCENTED_KEY(ac_acir, A, I)
+        ACCENTED_KEY(ac_eacu, E, E)
+        ACCENTED_KEY(ac_ecir, E, I)
+        ACCENTED_KEY(ac_iacu, I, E)
+        ACCENTED_KEY(ac_oacu, O, E)
+        ACCENTED_KEY(ac_otil, O, N)
+        ACCENTED_KEY(ac_ocir, O, I)
+        ACCENTED_KEY(ac_uacu, U, E)
 
         ac_ccdi: ac_ccdi {
             wait-ms = <0>;

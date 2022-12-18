@@ -7,9 +7,9 @@
 
 / {
     #define SHORTCUT(NAME, BINDINGS) \
-        mc_##NAME: mc_##NAME { \
+        NAME: NAME { \
             compatible = "zmk,behavior-macro"; \
-            label = ZMK_MACRO_STRINGIFY(mc_##NAME); \
+            label = ZMK_MACRO_STRINGIFY(NAME); \
             #binding-cells = <0>; \
             wait-ms = <10>; \
             tap-ms = <10>; \
@@ -17,18 +17,18 @@
         };
 
     shortcuts {
-        SHORTCUT(fullscr,  &macro_press &kp LCTRL &macro_press &kp LGUI &macro_tap &kp F &macro_release &kp LGUI &macro_release &kp LCTRL)
-        SHORTCUT(find,      &macro_press &kp LGUI &macro_tap &kp F &macro_release &kp LGUI)
-        SHORTCUT(selall,   &macro_press &kp LGUI &macro_tap &kp A &macro_release &kp LGUI)
-        SHORTCUT(undo,     &macro_press &kp LGUI &macro_tap &kp U &macro_release &kp LGUI)
-        SHORTCUT(copy,     &macro_press &kp LGUI &macro_tap &kp C &macro_release &kp LGUI)
-        SHORTCUT(paste,    &macro_press &kp LGUI &macro_tap &kp V &macro_release &kp LGUI)
-        SHORTCUT(save,     &macro_press &kp LGUI &macro_tap &kp S &macro_release &kp LGUI)
-        SHORTCUT(save_esc, &macro_press &kp LGUI &macro_tap &kp S &macro_release &kp LGUI &kp ESC)
-        SHORTCUT(seln,     &macro_tap &kp HOME &macro_press &kp LSHFT &macro_tap &kp END &macro_release &kp LSHFT)
-        SHORTCUT(zout,     &macro_press &kp LGUI &macro_tap &kp MINUS &macro_release &kp LGUI)
-        SHORTCUT(zin,      &macro_press &kp LGUI &macro_tap &kp PLUS &macro_release &kp LGUI)
-        SHORTCUT(refresh,  &macro_press &kp LGUI &macro_tap &kp R &macro_release &kp LGUI)
-        SHORTCUT(o_esc,    &macro_tap &kp O &macro_tap &kp ESC)
+        SHORTCUT(mc_fullscr,  &macro_press &kp LCTRL &macro_press &kp LGUI &macro_tap &kp F &macro_release &kp LGUI &macro_release &kp LCTRL)
+        SHORTCUT(mc_find,      &macro_press &kp LGUI &macro_tap &kp F &macro_release &kp LGUI)
+        SHORTCUT(mc_selall,   &macro_press &kp LGUI &macro_tap &kp A &macro_release &kp LGUI)
+        SHORTCUT(mc_undo,     &macro_press &kp LGUI &macro_tap &kp U &macro_release &kp LGUI)
+        SHORTCUT(mc_copy,     &macro_press &kp LGUI &macro_tap &kp C &macro_release &kp LGUI)
+        SHORTCUT(mc_paste,    &macro_press &kp LGUI &macro_tap &kp V &macro_release &kp LGUI)
+        SHORTCUT(mc_save,     &macro_press &kp LGUI &macro_tap &kp S &macro_release &kp LGUI)
+        SHORTCUT(mc_save_esc, &macro_press &kp LGUI &macro_tap &kp S &macro_release &kp LGUI &kp ESC)
+        SHORTCUT(mc_seln,     &macro_tap &kp HOME &macro_press &kp LSHFT &macro_tap &kp END &macro_release &kp LSHFT)
+        SHORTCUT(mc_zout,     &macro_press &kp LGUI &macro_tap &kp MINUS &macro_release &kp LGUI)
+        SHORTCUT(mc_zin,      &macro_press &kp LGUI &macro_tap &kp PLUS &macro_release &kp LGUI)
+        SHORTCUT(mc_refresh,  &macro_press &kp LGUI &macro_tap &kp R &macro_release &kp LGUI)
+        SHORTCUT(mc_o_esc,    &macro_tap &kp O &macro_tap &kp ESC)
     };
 };
