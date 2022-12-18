@@ -91,7 +91,7 @@ Most features implemented here were based on the work referenced below.
 
 ### ZMK
 - [Nick Conway](https://github.com/nickconway/zmk-config)
-- [Cem Aksoylar](https://github.com/caksoylar/zmk/tree/caksoylar/zen-v2)
+- [Cem Aksoylar](https://github.com/caksoylar/zmk-config )
 - [Robert U](https://github.com/urob/zmk-config)
 
 ## Resouces
