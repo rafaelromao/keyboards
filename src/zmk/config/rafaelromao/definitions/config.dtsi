@@ -5,12 +5,6 @@
 *
 */
 
-/ {
-  chosen {
-    zmk,matrix_transform = &five_column_transform;
-  };
-};
-
 #define ROMAK 0
 #define NUMPAD 1
 #define ACCENT 2

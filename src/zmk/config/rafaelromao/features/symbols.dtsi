@@ -38,17 +38,20 @@
         };
 
     symbols {
-        SYMBOL(mc_bti,   &kp GRAVE &kp SPACE)
-        SYMBOL(mc_dqo,   &kp DQT &kp SPACE)
-        SYMBOL(mc_sqo,   &kp SQT &kp SPACE)
-        SYMBOL(mc_tilde, &kp TILDE &kp SPACE)
-        SYMBOL(mc_caret, &kp CARET &kp SPACE)
-        SYMBOL(mc_and,   &kp AMPS &kp AMPS)
-        SYMBOL(mc_or,    &kp PIPE &kp PIPE)
+        SYMBOL(mc_bti,      &kp GRAVE &kp SPACE)
+        SYMBOL(mc_dqo,      &kp DQT &kp SPACE)
+        SYMBOL(mc_sqo,      &kp SQT &kp SPACE)
+        SYMBOL(mc_tilde,    &kp TILDE &kp SPACE)
+        SYMBOL(mc_caret,    &kp CARET &kp SPACE)
+        SYMBOL(mc_and,      &kp AMPS &kp AMPS)
+        SYMBOL(mc_or,       &kp PIPE &kp PIPE)
+        SYMBOL(mc_semi,     &kp SEMI)
+        SYMBOL(mc_end_semi, &kp END &kp SEMI)
 
         SHIFTED_SYMBOL(mm_and, &mc_and, &kp AMPS)
         SHIFTED_SYMBOL(mm_or,  &mc_or,  &kp PIPE)
 
-        TAPHOLD_SYMBOL(th_and, &mm_and, &mm_or)
+        TAPHOLD_SYMBOL(th_and,  &mm_and,  &mm_or)
+        TAPHOLD_SYMBOL(th_semi, &mc_semi, &mc_end_semi)
     };
 };
