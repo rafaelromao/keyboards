@@ -42,7 +42,7 @@
 
         COMBO(cb_enter,    RHM RHA RTH, &kp ENTER,      ROMAK NUMPAD)
         COMBO(cb_tab,      RTM RTA RTH, &kp TAB,        ROMAK NUMPAD)
-        COMBO(cb_semi,     RBM RBA,     &mc_semi,       ROMAK)
+        COMBO(cb_semi,     RBM RBA,     &th_semi 0 0,   ROMAK)
         COMBO(cb_p,        RHI RHM,     &kp P,          ROMAK)
         COMBO(cb_x,        RBI RBM,     &kp X,          ROMAK)
         COMBO(cb_paste_r,  RHI RHM RTH, &mc_paste,      ROMAK NUMPAD)

@@ -36,7 +36,7 @@
             global-quick-tap; \
             bindings = <HOLD>, <TAP>; \
         };
-
+    
     symbols {
         SYMBOL(mc_bti,      &kp GRAVE &kp SPACE)
         SYMBOL(mc_dqo,      &kp DQT &kp SPACE)
