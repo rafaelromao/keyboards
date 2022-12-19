@@ -46,7 +46,7 @@ The following checklist indicates the supported features, per layer:
     - [x] Select Word
     - [x] Join Lines
     - [x] Comment Lines
-    - [ ] Coding Shortcuts
+    - [x] Coding Shortcuts
     - [ ] Dynamic Macros
     - [x] Combos
 - [x] Numpad Layer
