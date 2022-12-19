@@ -21,7 +21,8 @@ The following checklist indicates the supported features, per layer:
     - [x] Holds
     - [x] Combos
         - [x] Underscore, Semicolon, Esc, Enter, Tab
-        - [x] Copy, Paste, Save, Select All, Undo, Find, Full Screen
+        - [x] Copy, Paste, Save, Select All, Full Screen
+        - [ ] Undo, Find, Raise, Lower
         - [x] Holds
     - [ ] Smart Case Key
         - [x] One-Shot Shift
@@ -42,9 +43,9 @@ The following checklist indicates the supported features, per layer:
         - [ ] History
         - [x] Zoom
     - [x] Select Line
-    - [ ] Select Word
-    - [ ] Join Lines
-    - [ ] Comment Lines
+    - [x] Select Word
+    - [x] Join Lines
+    - [x] Comment Lines
     - [ ] Coding Shortcuts
     - [ ] Dynamic Macros
     - [x] Combos
@@ -58,13 +59,13 @@ The following checklist indicates the supported features, per layer:
     - [x] Numbers (Right Side)
     - [x] Holds
     - [ ] Coding Dancing
-    - [ ] Combos
+    - [x] Combos
 - [ ] Raise
     - [x] F-Keys (Left Side)
     - [x] Symbols (Right Side)
     - [x] Holds
     - [ ] Coding Dancing
-    - [ ] Combos
+    - [x] Combos
 - [ ] Navigation
     - [x] OSMs
     - [x] Esc / Save

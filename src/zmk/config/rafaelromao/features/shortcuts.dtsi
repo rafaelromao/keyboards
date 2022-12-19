@@ -25,10 +25,13 @@
         SHORTCUT(mc_paste,    &macro_press &kp LGUI &macro_tap &kp V &macro_release &kp LGUI)
         SHORTCUT(mc_save,     &macro_press &kp LGUI &macro_tap &kp S &macro_release &kp LGUI)
         SHORTCUT(mc_save_esc, &macro_press &kp LGUI &macro_tap &kp S &macro_release &kp LGUI &kp ESC)
+        SHORTCUT(mc_selw,     &macro_tap &kp LA(LEFT) &kp LA(LS(RIGHT)))
         SHORTCUT(mc_seln,     &macro_tap &kp HOME &macro_press &kp LSHFT &macro_tap &kp END &macro_release &kp LSHFT)
         SHORTCUT(mc_zout,     &macro_press &kp LGUI &macro_tap &kp MINUS &macro_release &kp LGUI)
         SHORTCUT(mc_zin,      &macro_press &kp LGUI &macro_tap &kp PLUS &macro_release &kp LGUI)
         SHORTCUT(mc_refresh,  &macro_press &kp LGUI &macro_tap &kp R &macro_release &kp LGUI)
-        SHORTCUT(mc_o_esc,    &macro_tap &kp O &macro_tap &kp ESC)
+        SHORTCUT(mc_o_esc,    &macro_tap &kp O &kp ESC)
+        SHORTCUT(mc_comment,  &macro_tap &kp LG(SLASH))
+        SHORTCUT(mc_join,     &macro_tap &kp END &kp DEL)
     };
 };

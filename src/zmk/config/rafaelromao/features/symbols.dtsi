@@ -12,7 +12,7 @@
             label = ZMK_MACRO_STRINGIFY(NAME); \
             #binding-cells = <0>; \
             wait-ms = <0>; \
-            tap-ms = <0>; \
+            tap-ms = <10>; \
             bindings = <&macro_tap SYMBOLS>; \
         };
 
@@ -70,6 +70,10 @@
         SYMBOL(mc_rpar,          &kp RPAR)
         SYMBOL(mc_end_rpar,      &kp END &kp RPAR)
         TAPHOLD_SYMBOL(th_rpar,  &mc_rpar, &mc_end_rpar)
+        
+        SYMBOL(mc_pars,          &kp LPAR &kp RPAR)
+        SYMBOL(mc_end_pars,      &kp END &kp LPAR &kp RPAR)
+        TAPHOLD_SYMBOL(th_pars,  &mc_pars, &mc_end_pars)
 
         SYMBOL(mc_lbkt,          &kp LBKT)
         SYMBOL(mc_end_lbkt,      &kp END &kp LBKT)
@@ -100,6 +104,8 @@
         SYMBOL(mc_rbrc,          &kp RBRC)
         SYMBOL(mc_end_rbrc,      &kp END &kp RBRC)
         TAPHOLD_SYMBOL(th_rbrc,  &mc_rbrc, &mc_end_rbrc)
+        
+        SYMBOL(mc_braces,        &kp END &kp LBRC &kp RBRC &kp LEFT &kp ENTER)
 
         SYMBOL(mc_colon,         &kp COLON)
         SYMBOL(mc_end_colon,     &kp END &kp COLON)
@@ -116,8 +122,6 @@
         SYMBOL(mc_slash,         &kp SLASH)
         SYMBOL(mc_backslash,     &kp BACKSLASH)
         TAPHOLD_SYMBOL(th_slash, &mc_slash, &mc_backslash)
-
-
 
     };
 };

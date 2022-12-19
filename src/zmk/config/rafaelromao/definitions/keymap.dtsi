@@ -38,9 +38,9 @@
                 macros_layer {
                         label = "MACROS";
                         bindings = <
-   &none           &kp ESC         &none           &none           &none           &none           &none         &kp ENTER       &kp TAB       &none    
+   &none           &kp ESC         &none           &none           &none           &none           &mc_selw      &kp ENTER       &kp TAB       &none    
    &none           &none           &none           &none           &none           &none           &mc_seln      &mc_zout        &mc_zin       &none  
-   &none           &none           &none           &none           &none           &none           &none         &none           &none         &none 
+   &none           &none           &none           &none           &none           &mc_join        &mc_comment    &none           &none         &none 
                                    &trans          &trans          &kp BSPC        &kp SPACE       &trans        &trans
                         >;
                 };
