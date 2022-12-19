@@ -18,11 +18,11 @@ The following checklist indicates the supported features, per layer:
     - [x] Lower Layer Toggle
     - [x] Raise Layer Toggle
     - [x] Media Layer Toggle
-    - [ ] Holds
+    - [x] Holds
     - [x] Combos
         - [x] Underscore, Semicolon, Esc, Enter, Tab
         - [x] Copy, Paste, Save, Select All, Undo, Find, Full Screen
-        - [ ] Holds
+        - [x] Holds
     - [ ] Smart Case Key
         - [x] One-Shot Shift
         - [x] CAPSWORD
@@ -56,13 +56,13 @@ The following checklist indicates the supported features, per layer:
 - [ ] Lower
     - [x] Symbols (Left Side)
     - [x] Numbers (Right Side)
-    - [ ] Holds
+    - [x] Holds
     - [ ] Coding Dancing
     - [ ] Combos
 - [ ] Raise
     - [x] F-Keys (Left Side)
     - [x] Symbols (Right Side)
-    - [ ] Holds
+    - [x] Holds
     - [ ] Coding Dancing
     - [ ] Combos
 - [ ] Navigation
