@@ -6,7 +6,7 @@ The keyboard in the picture below is a Corneish-Zen, used to design and test thi
 
 ### ZMK
 
-The zmk version used for this board is the one available at https://github.com/zmkfirmware/zmk.
+The zmk version used for this board is the one available at https://github.com/rafaelromao/zmk/tree/rafaelromao/zen-v2.
 
 #### Compile
 
