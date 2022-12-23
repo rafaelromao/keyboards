@@ -38,7 +38,7 @@ The following checklist indicates the supported features, per layer:
 - [ ] Macros
     - [x] Inverted Space and Backspace
     - [ ] Swapper
-        - [ ] Applications
+        - [x] Applications
         - [ ] Tabs
         - [ ] History
         - [x] Zoom

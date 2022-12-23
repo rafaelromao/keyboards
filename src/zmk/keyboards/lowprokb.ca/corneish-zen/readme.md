@@ -6,7 +6,7 @@ The keyboard in the picture below is a Corneish-Zen, used to design and test thi
 
 ### ZMK
 
-The zmk version used for this board is the one available at https://github.com/rafaelromao/zmk/tree/rafaelromao/zen-v2.
+The zmk version used for this board is the one available at https://github.com/rafaelromao/zmk/tree/rafaelromao/zen-v2, which contains some experimental code from [Nick Conway](https://github.com/nickconway/zmk-config), [Cem Aksoylar](https://github.com/caksoylar/zmk-config ) and [Robert U](https://github.com/urob/zmk-config), to implement features like `optimized screen management`, `improved CapsWord`, `Swapper`, `Leader Key` and `Dynamic Macro`.
 
 #### Compile
 

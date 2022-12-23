@@ -49,6 +49,7 @@
         SHORTCUT(mc_save,        &macro_press &kp LGUI &macro_tap &kp S &macro_release &kp LGUI)
         SHORTCUT(mc_save_esc,    &macro_press &kp LGUI &macro_tap &kp S &macro_release &kp LGUI &kp ESC)
         SHORTCUT(mc_o_esc,       &macro_tap &kp O &kp ESC)
+        SHORTCUT(mc_shift_tab,   &macro_press &kp LSHFT &macro_tap &kp TAB &macro_release &kp LSHFT)
         
         // Macros
 

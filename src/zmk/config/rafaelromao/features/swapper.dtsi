@@ -1,0 +1,19 @@
+/*
+*
+* Copyright (c) 2022 Rafael Romão
+* SPDX-License-Identifier: MIT
+*
+*/
+
+/ {
+    swappers {
+        sw_win: sw_win {
+            compatible = "zmk,behavior-tri-state";
+            label = ZMK_MACRO_STRINGIFY(sw_win_f);
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
+            ignored-key-positions = <RBM RBA>;
+            ignored-layers = <MACROS>;
+        };
+    };
+};

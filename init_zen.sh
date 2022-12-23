@@ -42,5 +42,4 @@ build_left="west build -p -s app -b corneish_zen_v2_left -- -DZMK_CONFIG=$KEYBOA
 build_right="west build -p -s app -b corneish_zen_v2_right -- -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/keyboards/lowprokb.ca/corneish-zen/"
 archive_left="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/zephyr/zmk.uf2 ] && cp build/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/corneish_zen_v2_left-zmk.uf2"
 archive_right="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/zephyr/zmk.uf2 ] && cp build/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/corneish_zen_v2_right-zmk.uf2"
-alias build_zen_default="cd zmk && ${build_left}default && ${archive_left} && ${build_right}default && ${archive_right} && cd .."
 alias build_zen="cd zmk && ${build_left} && ${archive_left} && ${build_right} && ${archive_right} && cd .."
