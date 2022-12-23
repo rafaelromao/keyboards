@@ -5,13 +5,16 @@
 *
 */
 
-&caps_word {
-  continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
-  /delete-property/ ignore-modifiers;
-};
-
 / {
-    symbols {
+    smart-cases {
+        caps_word {
+            compatible = "zmk,behavior-caps-word";
+			label = "CAPS_WORD";
+			#binding-cells = <0>;
+            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
+            /delete-property/ ignore-modifiers;
+        };
+
         mm_med: mm_med {
             label = "MED SHIFT CAPSWORD";
             compatible = "zmk,behavior-mod-morph";
