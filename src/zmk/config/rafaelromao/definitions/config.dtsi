@@ -12,7 +12,7 @@
 #define LOWER 4
 #define RAISE 5
 #define NAV_F 6
-#define MED 7
+#define MEDIA 7
 #define NAV 8
 #define LOCK_KB 9
 #define MAINT 10

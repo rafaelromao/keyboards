@@ -52,6 +52,7 @@
         COMBO(cb_selall,        RHA RHP RTH, &mc_selall,         ROMAK NUMPAD)
         COMBO(cb_o_esc,         RTM RTA,     &mc_o_esc,          ROMAK)
         COMBO(cb_end_semi_ent,  RBI RBM RBA, &mc_end_semi_ent,   ROMAK)
+        COMBO(cb_end_ent,       RTM RTA,     &th_end_ent 0 0,    MEDIA)
         // COMBO(cb_undo,          RBA RBP RTH, &mc_undo,       ROMAK NUMPAD)
         // COMBO(cb_lower,         RTA RTH,     &sl LOWER,      ROMAK)
         // COMBO(cb_raise,         RTM RTH,     &sl RAISE,      ROMAK)

@@ -18,6 +18,7 @@ echo "Checking out zmk..."
 cd $ZMK_HOME
 git fetch
 git checkout rafaelromao/zen-v2
+git pull
 cd ..
 
 if $INIT

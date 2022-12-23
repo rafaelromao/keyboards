@@ -16,7 +16,7 @@
             label = "MED SHIFT CAPSWORD";
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&msk MED LSHFT>, <&caps_word>;
+            bindings = <&msk MEDIA LSHFT>, <&caps_word>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
