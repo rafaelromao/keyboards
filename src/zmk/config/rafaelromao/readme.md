@@ -21,8 +21,7 @@ The following checklist indicates the supported features, per layer:
     - [x] Holds
     - [x] Combos
         - [x] Underscore, Semicolon, Esc, Enter, Tab
-        - [x] Copy, Paste, Save, Select All, Full Screen
-        - [ ] Undo, Find, Raise, Lower
+        - [x] Copy, Paste, Save, Select All, Full Screen, Undo, Find, Raise, Lower
         - [x] Holds
     - [ ] Smart Case Key
         - [x] One-Shot Shift
