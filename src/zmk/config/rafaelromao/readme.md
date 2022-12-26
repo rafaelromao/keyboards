@@ -70,6 +70,7 @@ The following checklist indicates the supported features, per layer:
     - [x] Esc / Save
     - [x] Navigation Cluster / Home Row Navigation
     - [x] Toggle Navigation Layer
+    - [x] Combos
 - [ ] Media
     - [x] Standard Modifiers
     - [x] Tab / Enter
