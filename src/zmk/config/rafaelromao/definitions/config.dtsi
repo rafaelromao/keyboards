@@ -23,9 +23,9 @@
 /*                KEY POSITIONS
 
   ╭─────────────────────╮ ╭─────────────────────╮
-  │ LTP LTA LTM LTI LTC │ │ RTC RTI RTM RTA RTP │
-  │ LHP LHA LHM LHI LHC │ │ RHC RHI RHM RHA RHP │
-  │ LBP LBA LBM LBI LBC │ │ RBC RBI RBM RBA RBP │
+  │ LTP LTR LTM LTI LTC │ │ RTC RTI RTM RTR RTP │
+  │ LHP LHR LHM LHI LHC │ │ RHC RHI RHM RHR RHP │
+  │ LBP LBR LBM LBI LBC │ │ RBC RBI RBM RBR RBP │
   ╰───────╮ LT1 LT0 LTH │ │ RTH RT0 RT1 ╭───────╯
           ╰─────────────╯ ╰─────────────╯ 
   ╭─────────────────────╮ ╭─────────────────────╮
@@ -38,7 +38,7 @@
 */
 
 #define LTP 0   // left-top row
-#define LTA 1
+#define LTR 1
 #define LTM 2
 #define LTI 3
 #define LTC 4  
@@ -46,11 +46,11 @@
 #define RTC 5   // right-top row
 #define RTI 6
 #define RTM 7
-#define RTA 8
+#define RTR 8
 #define RTP 9
 
 #define LHP 10  // left-middle row
-#define LHA 11
+#define LHR 11
 #define LHM 12
 #define LHI 13
 #define LHC 14
@@ -58,11 +58,11 @@
 #define RHC 15  // right-middle row
 #define RHI 16
 #define RHM 17
-#define RHA 18
+#define RHR 18
 #define RHP 19
 
 #define LBP 20  // left-bottom row
-#define LBA 21
+#define LBR 21
 #define LBM 22
 #define LBI 23
 #define LBC 24
@@ -70,7 +70,7 @@
 #define RBC 25  // right-bottom row
 #define RBI 26
 #define RBM 27
-#define RBA 28
+#define RBR 28
 #define RBP 29
 
 #define LT1 30  // left thumb keys

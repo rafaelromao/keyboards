@@ -8,9 +8,9 @@
 /*                KEY POSITIONS
 
   ╭─────────────────────╮ ╭─────────────────────╮
-  │ LTP LTA LTM LTI LTC │ │ RTC RTI RTM RTA RTP │
-  │ LHP LHA LHM LHI LHC │ │ RHC RHI RHM RHA RHP │
-  │ LBP LBA LBM LBI LBC │ │ RBC RBI RBM RBA RBP │
+  │ LTP LTR LTM LTI LTC │ │ RTC RTI RTM RTR RTP │
+  │ LHP LHR LHM LHI LHC │ │ RHC RHI RHM RHR RHP │
+  │ LBP LBR LBM LBI LBC │ │ RBC RBI RBM RBR RBP │
   ╰───────╮ LT1 LT0 LTH │ │ RTH RT0 RT1 ╭───────╯
           ╰─────────────╯ ╰─────────────╯ */
 
@@ -28,35 +28,40 @@
     combos {
         compatible = "zmk,combos";
 
-        COMBO(cb_save,          LHA LHM LTH, &mc_save,       ROMAK NUMPAD)
-        COMBO(cb_esc,           LTA LTM LTH, &kp ESC,        ROMAK NUMPAD)
-        COMBO(cb_esc_save,      LTA LTM,     &mc_save_esc,   NAV)
-        COMBO(cb_pars,          LTA LTM,     &th_pars 0 0,   LOWER)
-        COMBO(cb_unds,          LBA LBM,     &kp UNDERSCORE, ROMAK)
+        COMBO(cb_save,          LHR LHM LTH, &mc_save,       ROMAK NUMPAD)
+        COMBO(cb_esc,           LTR LTM LTH, &kp ESC,        ROMAK NUMPAD)
+        COMBO(cb_esc_save,      LTR LTM,     &mc_save_esc,   NAV)
+        COMBO(cb_pars,          LTR LTM,     &th_pars 0 0,   LOWER)
+        COMBO(cb_unds,          LBR LBM,     &kp UNDERSCORE, ROMAK)
         COMBO(cb_z,             LBM LBI,     &kp Z,          ROMAK)
         COMBO(cb_paste_l,       LHM LHI LTH, &mc_paste,      ROMAK NUMPAD)
         COMBO(cb_copy_l,        LBM LBI LTH, &mc_copy,       ROMAK NUMPAD)
-        COMBO(cb_fullscr,       LHP LHA LTH, &mc_fullscr,    ROMAK NUMPAD)
-        // COMBO(cb_find,           LBP LBA LTH, &mc_find,        ROMAK NUMPAD)
-        // COMBO(cb_raise,         LTA LTH,     &sl RAISE,      ROMAK)
+        COMBO(cb_fullscr,       LHP LHR LTH, &mc_fullscr,    ROMAK NUMPAD)
+        // COMBO(cb_find,           LBP LBR LTH, &mc_find,        ROMAK NUMPAD)
+        // COMBO(cb_raise,         LTR LTH,     &sl RAISE,      ROMAK)
         // COMBO(cb_lower,         LTM RTH,     &sl LOWER,      ROMAK)
 
-        COMBO(cb_enter,         RHM RHA RTH, &kp ENTER,          ROMAK NUMPAD LOWER)
-        COMBO(cb_tab,           RTM RTA RTH, &kp TAB,            ROMAK NUMPAD)
-        COMBO(cb_braces,        RTA RTM,     &mc_braces,         RAISE)
-        COMBO(cb_semi,          RBM RBA,     &th_semi 0 0,       ROMAK)
+        COMBO(cb_enter,         RHM RHR RTH, &kp ENTER,          ROMAK NUMPAD LOWER)
+        COMBO(cb_tab,           RTM RTR RTH, &kp TAB,            ROMAK NUMPAD)
+        COMBO(cb_braces,        RTR RTM,     &mc_braces,         RAISE)
+        COMBO(cb_semi,          RBM RBR,     &th_semi 0 0,       ROMAK)
         COMBO(cb_p,             RHI RHM,     &kp P,              ROMAK)
         COMBO(cb_x,             RBI RBM,     &kp X,              ROMAK)
         COMBO(cb_paste_r,       RHI RHM RTH, &mc_paste,          ROMAK NUMPAD)
         COMBO(cb_copy_r,        RBI RBM RTH, &mc_copy,           ROMAK NUMPAD)
-        COMBO(cb_selall,        RHA RHP RTH, &mc_selall,         ROMAK NUMPAD)
-        COMBO(cb_o_esc,         RTM RTA,     &mc_o_esc,          ROMAK)
-        COMBO(cb_end_semi_ent,  RBI RBM RBA, &mc_end_semi_ent,   ROMAK)
-        COMBO(cb_end_ent,       RTM RTA,     &th_end_ent 0 0,    MEDIA)
-        // COMBO(cb_undo,          RBA RBP RTH, &mc_undo,       ROMAK NUMPAD)
-        // COMBO(cb_lower,         RTA RTH,     &sl LOWER,      ROMAK)
+        COMBO(cb_selall,        RHR RHP RTH, &mc_selall,         ROMAK NUMPAD)
+        COMBO(cb_o_esc,         RTM RTR,     &mc_o_esc,          ROMAK)
+        COMBO(cb_end_semi_ent,  RBI RBM RBR, &mc_end_semi_ent,   ROMAK)
+        COMBO(cb_end_ent,       RTM RTR,     &th_end_ent 0 0,    MEDIA)
+        COMBO(cb_del,           RBC RBI,     &kp DEL,            MEDIA)
+        COMBO(cb_home,          RBI RBM,     &kp HOME,           MEDIA)
+        //COMBO(cb_end,           RBM RBR,     &kp END,            MEDIA)
+        COMBO(cb_ins,           RBR RBP,     &kp INS,            MEDIA)
+        // COMBO(cb_undo,          RBR RBP RTH, &mc_undo,       ROMAK NUMPAD)
+        // COMBO(cb_lower,         RTR RTH,     &sl LOWER,      ROMAK)
         // COMBO(cb_raise,         RTM RTH,     &sl RAISE,      ROMAK)
         
-        COMBO(cb_refresh,  RHM RHA,     &mc_refresh,    MACROS)
+        COMBO(cb_refresh,       RHM RHR,     &mc_refresh,        MACROS)
+        //COMBO(cb_close_tab,     RBM RBR,     &mc_close_tab,      MACROS)
     };
 };

@@ -71,7 +71,6 @@ The following checklist indicates the supported features, per layer:
     - [x] Esc / Save
     - [x] Navigation Cluster / Home Row Navigation
     - [x] Toggle Navigation Layer
-    - [ ] Combos
 - [ ] Media
     - [x] Standard Modifiers
     - [x] Tab / Enter
@@ -79,7 +78,7 @@ The following checklist indicates the supported features, per layer:
     - [x] Toggle Mic / Toggle Cam
     - [x] Toggle Numpad
     - [x] Toggle Navigation Layer
-    - [ ] Combos
+    - [x] Combos
 - [x] Lock Layer
 - [ ] Maintenance
     - [x] Reset to Bootloader

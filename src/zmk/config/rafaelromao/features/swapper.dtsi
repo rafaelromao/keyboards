@@ -12,7 +12,7 @@
             label = ZMK_MACRO_STRINGIFY(sw_win_f);
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
-            ignored-key-positions = <RBM RBA>;
+            ignored-key-positions = <RBM RBR>;
             ignored-layers = <MACROS>;
         };
     };
