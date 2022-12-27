@@ -103,8 +103,8 @@
         SHORTCUT(mc_reformat,           &macro_tap &kp LG(LA(L)))
         SHIFTED_SHORTCUT(mm_refac,      &mc_refac, &mc_reformat)
 
-        SHORTCUT(mc_selw,               &macro_tap &kp LA(LEFT) &kp LA(LS(RIGHT)))
-        SHORTCUT(mc_seln,               &macro_tap &kp HOME &kp LS(END))
+        SHORTCUT(mc_selw,               &macro_tap &kp LA(RIGHT) &kp LA(LS(LEFT)))
+        SHORTCUT(mc_seln,               &macro_tap &kp HOME &kp LS(DOWN))
 
         SHORTCUT(mc_zout,               &macro_tap &kp LG(MINUS))
         SHORTCUT(mc_zin,                &macro_tap &kp LG(PLUS))
