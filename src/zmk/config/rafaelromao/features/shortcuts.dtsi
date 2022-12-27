@@ -12,7 +12,7 @@
             label = ZMK_MACRO_STRINGIFY(NAME); \
             #binding-cells = <0>; \
             wait-ms = <0>; \
-            tap-ms = <10>; \
+            tap-ms = <0>; \
             bindings = <BINDINGS>; \
         };
     #define SHIFTED_SHORTCUT(NAME, UNSHIFTED, SHIFTED) \

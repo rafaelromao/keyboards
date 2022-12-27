@@ -33,7 +33,7 @@ The following checklist indicates the supported features, per layer:
     - [ ] Double Comma for Leader Key
 - [ ] Accents Layer
     - [x] Accents
-    - [ ] Combos
+    - [x] Combos
 - [ ] Macros
     - [x] Inverted Space and Backspace
     - [ ] Swapper

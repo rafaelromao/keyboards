@@ -12,7 +12,7 @@
             label = ZMK_MACRO_STRINGIFY(NAME); \
             #binding-cells = <0>; \
             wait-ms = <0>; \
-            tap-ms = <10>; \
+            tap-ms = <0>; \
             bindings = <&macro_tap SYMBOLS>; \
         };
 
@@ -132,7 +132,7 @@
         
         SYMBOL(mc_ao,              &ac_atil &kp O)
         SYMBOL(mc_oes,             &ac_otil &kp E &kp S)
-        SYMBOL(mc_cao,             &ac_ccdi &ac_atil &kp O)
-        SYMBOL(mc_coes,            &ac_ccdi &ac_otil &kp E &kp S)
+        SYMBOL(mc_cao,             &ac_ccdi &ac_atil &macro_wait_time 10 &macro_tap &kp O)
+        SYMBOL(mc_coes,            &ac_ccdi &ac_otil &macro_wait_time 10 &macro_tap &kp E &kp S)
     };
 };
