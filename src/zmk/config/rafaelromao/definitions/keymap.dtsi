@@ -10,9 +10,9 @@
 #include "../features/behaviors.dtsi"
 #include "../features/accents.dtsi"
 #include "../features/smartcase.dtsi"
+#include "../features/swapper.dtsi"
 #include "../features/symbols.dtsi"
 #include "../features/shortcuts.dtsi"
-#include "../features/swapper.dtsi"
 #include "../features/combos.dtsi"
 
 / {
@@ -49,8 +49,8 @@
                         label = "MACROS";
                         bindings = <
    &none           &kp ESC         &mm_actions     &mm_typematch   &none           &none           &mc_selw        &kp ENTER       &kp TAB         &none    
-   &mm_docs        &th_find LSHFT 0 &mm_run         &mm_debug       &mm_build       &none           &mc_seln        &mc_zout        &th_zin LSHFT 0 &none  
-   &mm_project     &mm_recent      &mm_complete    &mm_usages      &mm_refac       &mc_join        &mc_comment     &kp LS(TAB)     &sw_win         &none
+   &mm_docs        &th_find LSHFT 0 &mm_run         &mm_debug       &mm_build       &none           &mc_seln        &mm_zh_b        &th_zh LSHFT 0  &none  
+   &mm_project     &mm_recent      &mm_complete    &mm_usages      &mm_refac       &mc_join        &mc_comment     &mm_wt_b        &mm_wt_f        &none
                                    &trans          &trans          &kp BSPC        &kp SPACE       &trans          &trans
                         >;
                 };

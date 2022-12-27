@@ -130,6 +130,8 @@
         SYMBOL(mc_down_end,        &kp DOWN &kp END)
         TAPHOLD_SYMBOL(th_end_ent, &mc_end_ent, &mc_down_end)
         
+        // Accents
+
         SYMBOL(mc_ao,              &ac_atil &kp O)
         SYMBOL(mc_oes,             &ac_otil &kp E &kp S)
         SYMBOL(mc_cao,             &ac_ccdi &ac_atil &macro_wait_time 10 &macro_tap &kp O)

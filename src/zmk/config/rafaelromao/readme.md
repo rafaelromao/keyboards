@@ -8,6 +8,19 @@ This folder contains the port of my keymap to ZMK.
 
 The following checklist indicates the supported features, per layer:
 
+- Missing features:
+    - Coding Dancing
+    - Leader Key
+    - Dynamic Macros
+    - Smart Cases
+    - Locked One-Shot Mods
+    - Windows Support
+    - OS Toggling
+- Known Issues:
+    - Swapping between Applications and Tabs must start in the forward direction.
+    - Swapping between the Navigation History must start in the backward direction.
+    - Cancelling Caps Word leave one-shot shift active.
+
 - [ ] Base Layer
     - [x] MacOS Support
     - [ ] Windows Support
@@ -31,15 +44,15 @@ The following checklist indicates the supported features, per layer:
         - [ ] Simple Smart Cases: CAPSWORD, camelCase, snake_case, kebab-case
         - [ ] Combined Smart Cases: STRONG_SNAKE_CASE, STRONG-KEBAB-CASE, PascalCase
     - [ ] Double Comma for Leader Key
-- [ ] Accents Layer
+- [x] Accents Layer
     - [x] Accents
     - [x] Combos
 - [ ] Macros
     - [x] Inverted Space and Backspace
-    - [ ] Swapper
+    - [x] Swapper
         - [x] Applications
-        - [ ] Tabs
-        - [ ] History
+        - [x] Tabs
+        - [x] History
         - [x] Zoom
     - [x] Select Line
     - [x] Select Word
@@ -57,6 +70,7 @@ The following checklist indicates the supported features, per layer:
     - [x] Symbols (Left Side)
     - [x] Numbers (Right Side)
     - [x] Holds
+    - [ ] Access to Nav layer
     - [ ] Coding Dancing
     - [x] Combos
 - [ ] Raise
@@ -65,13 +79,13 @@ The following checklist indicates the supported features, per layer:
     - [x] Holds
     - [ ] Coding Dancing
     - [x] Combos
-- [ ] Navigation
+- [x] Navigation
     - [x] OSMs
     - [x] Esc / Save
     - [x] Navigation Cluster / Home Row Navigation
     - [x] Toggle Navigation Layer
     - [x] Combos
-- [ ] Media
+- [x] Media
     - [x] Standard Modifiers
     - [x] Tab / Enter
     - [x] Media Controls
