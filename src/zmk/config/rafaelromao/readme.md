@@ -19,7 +19,8 @@ The following checklist indicates the supported features, per layer:
 - Known Issues:
     - Swapping between Applications and Tabs must start in the forward direction.
     - Swapping between the Navigation History must start in the backward direction.
-    - Cancelling Caps Word leave one-shot shift active.
+    - Cancelling Caps Word leaves one-shot shift active.
+    - Select Line cannot be inverted.
 
 - [ ] Base Layer
     - [x] MacOS Support
