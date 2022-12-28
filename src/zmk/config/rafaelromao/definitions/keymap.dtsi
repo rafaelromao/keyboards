@@ -76,8 +76,8 @@
                         label = "NAV";
                         bindings = <
    &none           &kp ESC         &mc_save        &none           &none           &none           &none          &kp PAGE_DOWN    &kp PAGE_UP    &none    
-   &none           &sk LSHIFT      &sk LCTRL       &sk LALT        &none           &tog NAV_F      &kp LEFT       &kp DOWN         &kp UP         &kp RIGHT
-   &sk RALT        &none           &none           &sk LGUI        &none           &none           &kp DEL        &kp HOME         &kp END        &kp INS
+   &none           &sk LSHIFT      &sk LCTRL       &sk LGUI        &none           &tog NAV_F      &kp LEFT       &kp DOWN         &kp UP         &kp RIGHT
+   &sk RALT        &none           &none           &sk LALT        &none           &none           &kp DEL        &kp HOME         &kp END        &kp INS
                                    &trans          &trans          &trans          &trans          &trans         &trans
                         >;
                 };
@@ -85,8 +85,8 @@
                         label = "MEDIA";
                         bindings = <
    &none           &kp ESC         &mc_save        &none           &none           &none           &none          &kp ENTER        &kp TAB        &none    
-   &none           &kp LSHIFT      &kp LCTRL       &kp LALT        &none           &tog NAV_F      &kp C_MUTE     &kp C_VOL_DN     &kp C_VOL_UP   &kp LC(LA(LS(LG(A))))
-   &kp RALT        &none           &none           &kp LGUI        &none           &tog NUMPAD     &kp C_PP       &kp C_PREV       &kp C_NEXT     &kp LC(LA(LS(LG(V))))
+   &none           &kp LSHIFT      &kp LCTRL       &kp LGUI        &none           &tog NAV_F      &kp C_MUTE     &kp C_VOL_DN     &kp C_VOL_UP   &kp LC(LA(LS(LG(A))))
+   &kp RALT        &none           &none           &kp LALT        &none           &tog NUMPAD     &kp C_PP       &kp C_PREV       &kp C_NEXT     &kp LC(LA(LS(LG(V))))
                                    &trans          &mo MAINT       &trans          &trans          &trans         &trans
                         >;
                 };
@@ -94,8 +94,8 @@
                         label = "NAV";
                         bindings = <
    &none           &kp ESC         &mc_save        &none           &none           &none           &none          &kp PAGE_DOWN    &kp PAGE_UP    &none    
-   &none           &sk LSHIFT      &sk LCTRL       &sk LALT        &none           &tog NAV_F      &kp LEFT       &kp DOWN         &kp UP         &kp RIGHT
-   &sk RALT        &none           &none           &sk LGUI        &none           &none           &kp DEL        &kp HOME         &kp END        &kp INS
+   &none           &sk LSHIFT      &sk LCTRL       &sk LGUI        &none           &tog NAV_F      &kp LEFT       &kp DOWN         &kp UP         &kp RIGHT
+   &sk RALT        &none           &none           &sk LALT        &none           &none           &kp DEL        &kp HOME         &kp END        &kp INS
                                    &trans          &trans          &trans          &trans          &mo MAINT      &trans
                         >;
                 };
