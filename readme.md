@@ -39,9 +39,11 @@ This repository contains the keymap files that are used to customize my keyboard
 
 ## Compatibility
 
+This layout was tested with the keyboards listed below, but can be easily adapted to any ortholinear or column staggered keyboard with at least 30 keys, with 2 of them on each thumb.
+
 ### QMK
 
-This layout was tested with the keyboards listed below, but can be easily adapted to any ortholinear or column staggered QMK keyboard with at least 30 keys, with 2 of them on each thumb.
+The reference implementation is done in QMK, so it has all features supported.
 
 - [kprepublic/bm40hsrgb](src/qmk/keyboards/kprepublic/bm40hsrgb/keymaps/rafaelromao/readme.md)
 - [xiudi/xd75](src/qmk/keyboards/xiudi/xd75/keymaps/rafaelromao/readme.md)
@@ -52,7 +54,7 @@ Some features are not available on all keyboards though. For instance, the BM40 
 
 - [lowprokb.ca/corneish-zen](src/zmk/keyboards/lowprokb.ca/corneish-zen/readme.md)
 
-Many features will not be available in ZMK. The readme file will indicate what features are available.
+Sime features might not be available in ZMK. The readme file will indicate what features are available.
 
 ## Building
 
