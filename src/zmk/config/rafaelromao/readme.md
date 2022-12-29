@@ -71,7 +71,7 @@ The following checklist indicates the supported features, per layer:
     - [x] Symbols (Left Side)
     - [x] Numbers (Right Side)
     - [x] Holds
-    - [ ] Access to Nav layer
+    - [x] Access to Nav layer
     - [ ] Coding Dancing
     - [x] Combos
 - [ ] Raise

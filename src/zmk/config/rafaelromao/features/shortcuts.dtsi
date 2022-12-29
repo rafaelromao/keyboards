@@ -15,6 +15,7 @@
             tap-ms = <10>; \
             bindings = <BINDINGS>; \
         };
+
     #define SHIFTED_SHORTCUT(NAME, UNSHIFTED, SHIFTED) \
         NAME: NAME { \
             compatible = "zmk,behavior-mod-morph"; \
@@ -23,6 +24,7 @@
             bindings = <UNSHIFTED>, <SHIFTED>; \
             mods = <(MOD_LSFT|MOD_RSFT)>; \
         };
+
     #define MODTAP_SHORTCUT(NAME, BINDINGS) \
          NAME: NAME { \
             compatible = "zmk,behavior-hold-tap"; \
