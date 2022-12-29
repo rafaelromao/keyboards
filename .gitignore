@@ -1,4 +1,4 @@
-secret.*
+*secret*
 .DS_Store
 .vscode
 zmk
