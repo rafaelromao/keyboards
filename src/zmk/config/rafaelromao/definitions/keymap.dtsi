@@ -14,6 +14,10 @@
 #include "../features/symbols.dtsi"
 #include "../features/shortcuts.dtsi"
 #include "../features/combos.dtsi"
+#include "../features/leader.dtsi"
+#if __has_include("../secret.dtsi")
+#include "../secret.dtsi"
+#endif
 
 / {
         keymap {
@@ -21,7 +25,7 @@
                 default_layer {
                         label = "ROMAK";
                         bindings = <
-   &mc_sqo         &kp F           &kp D           &kp W           &kp Z           &kp X           &kp L           &kp O           &kp U           &ac_ccdi   
+   &mc_sqo         &kp F           &kp D           &kp W           &kp Z           &leader         &kp L           &kp O           &kp U           &ac_ccdi   
    &lt MACROS R    &mt LSHFT N     &mt LCTRL S     &mt LGUI T      &kp G           &kp V           &mt RGUI H      &mt RCTRL A     &mt RSHFT E     &lt MACROS I 
    &mt RALT Q      &kp B           &kp C           &mt LALT P      &kp K           &kp J           &mt LALT M      &th_comma 0 0   &th_dot 0 0     &mt RALT Y
                                    &lt RAISE BSPC  &msl NAV ACCENT &lt LOWER SPACE &lt RAISE BSPC  &mm_med         &lt LOWER SPACE

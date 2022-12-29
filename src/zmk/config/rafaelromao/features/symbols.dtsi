@@ -52,6 +52,12 @@
 
         SYMBOL(mc_comma,          &kp COMMA)
         SYMBOL(mc_end_comma,      &kp END &kp COMMA)
+        td_comma: td_comma {
+            compatible = "zmk,behavior-tap-dance";
+            label = ZMK_MACRO_STRINGIFY(th_comma);
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&leader>;
+        };
         TAPHOLD_SYMBOL(th_comma,  &mc_comma, &mc_end_comma)
 
         // Lower

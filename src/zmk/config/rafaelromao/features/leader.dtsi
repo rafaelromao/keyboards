@@ -1,0 +1,50 @@
+/*
+*
+* Copyright (c) 2022 Rafael Romão
+* SPDX-License-Identifier: MIT
+*
+*/
+/*                KEY POSITIONS
+
+  ╭─────────────────────╮ ╭─────────────────────╮
+  │ LTP LTR LTM LTI LTC │ │ RTC RTI RTM RTR RTP │
+  │ LHP LHR LHM LHI LHC │ │ RHC RHI RHM RHR RHP │
+  │ LBP LBR LBM LBI LBC │ │ RBC RBI RBM RBR RBP │
+  ╰───────╮ LT1 LT0 LTH │ │ RTH RT0 RT1 ╭───────╯
+          ╰─────────────╯ ╰─────────────╯ */
+
+&leader {
+	timeout-ms = <500>;
+};
+
+/ {
+    #define MACRO(NAME, SYMBOLS) \
+        NAME: NAME { \
+			compatible = "zmk,behavior-macro"; \
+            label = ZMK_MACRO_STRINGIFY(NAME); \
+            #binding-cells = <0>; \
+            wait-ms = <10>; \
+            tap-ms = <10>; \
+            bindings = <&macro_tap SYMBOLS>; \
+        };
+
+	#define LEADER(NAME, KEYS, BINDINGS, LAYERS) \
+		NAME { \
+			key-positions = <KEYS>; \
+			bindings = <BINDINGS>; \
+			layers = <LAYERS>; \
+		};
+
+	macros {
+
+        // Vim - Select Whole Block
+		MACRO(mc_sel_block, &kp V &kp A &kp LBRC &kp LS(V) &kp DOWN)
+	};
+
+	leader_sequences {
+		compatible = "zmk,leader-sequences";
+
+		LEADER(ld_sel_block, RHC RHM, &mc_sel_block, ROMAK)
+		
+	};
+};
