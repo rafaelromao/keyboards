@@ -79,6 +79,7 @@ The following checklist indicates the supported features, per layer:
     - [x] Symbols (Right Side)
     - [x] Holds
     - [ ] Coding Dancing
+    - [ ] Dancing Symbols
     - [x] Combos
 - [x] Navigation
     - [x] OSMs

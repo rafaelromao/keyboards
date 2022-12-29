@@ -43,7 +43,7 @@
         SHORTCUT(mc_fullscr,            &macro_tap &kp LC(LG(F)))
         SHORTCUT(mc_find,                &macro_tap &kp LG(F))
         SHORTCUT(mc_selall,             &macro_tap &kp LG(A))
-        SHORTCUT(mc_undo,               &macro_tap &kp LG(U))
+        SHORTCUT(mc_undo,               &macro_tap &kp LG(Z))
         SHORTCUT(mc_copy,               &macro_tap &kp LG(C))
         SHORTCUT(mc_paste,              &macro_tap &kp LG(V))
         SHORTCUT(mc_save,               &macro_tap &kp LG(S))
