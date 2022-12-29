@@ -4,23 +4,24 @@
 
 This folder contains the port of my keymap to ZMK. 
 
+### Missing features:
+- Coding Dancing
+- Dynamic Macros
+- Smart Cases
+- Locked One-Shot Mods
+- Windows Support
+- OS Toggling
+
+### Known Issues:
+- Swapping between Applications and Tabs must start in the forward direction.
+- Swapping between the Navigation History must start in the backward direction.
+- Cancelling Caps Word leaves one-shot shift active.
+- Select Line cannot be inverted or extended to next line.
+- Select Word cannot be extended to previous word.
+ 
 ### Supported Features
 
 The following checklist indicates the supported features, per layer:
-
-- Missing features:
-    - Coding Dancing
-    - Dynamic Macros
-    - Smart Cases
-    - Locked One-Shot Mods
-    - Windows Support
-    - OS Toggling
-- Known Issues:
-    - Swapping between Applications and Tabs must start in the forward direction.
-    - Swapping between the Navigation History must start in the backward direction.
-    - Cancelling Caps Word leaves one-shot shift active.
-    - Select Line cannot be inverted or extended to next line.
-    - Select Word cannot be extended to previous word.
 
 - [ ] Base Layer
     - [x] MacOS Support
