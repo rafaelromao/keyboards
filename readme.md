@@ -54,7 +54,7 @@ Some features are not available on all keyboards though. For instance, the BM40 
 
 ### ZMK
 
-The zmk version used for this keymap is the one available at https://github.com/rafaelromao/zmk/tree/rafaelromao/zen-v2, which contains some experimental code from [Nick Conway](https://github.com/nickconway/zmk-config), [Cem Aksoylar](https://github.com/caksoylar/zmk-config ) and [Robert U](https://github.com/urob/zmk-config), to implement features like `optimized screen management`, `improved CapsWord`, `Swapper`, `Leader Key` and `Dynamic Macro`.
+The zmk version used for this keymap is the one available in [this fork](https://github.com/rafaelromao/zmk/tree/rafaelromao/zen-v2), which contains some experimental code from [Nick Conway](https://github.com/nickconway/zmk-config), [Cem Aksoylar](https://github.com/caksoylar/zmk-config ) and [Robert U](https://github.com/urob/zmk-config), to implement features like `optimized screen management`, `improved CapsWord`, `Swapper`, `Leader Key` and `Dynamic Macro`.
 
 - [lowprokb.ca/corneish-zen](src/zmk/keyboards/lowprokb.ca/corneish-zen/readme.md)
 
