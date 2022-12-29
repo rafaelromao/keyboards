@@ -83,6 +83,7 @@ The following checklist indicates the supported features, per layer:
     - [x] Combos
 - [x] Navigation
     - [x] OSMs
+    - [ ] Locked OSMs
     - [x] Esc / Save
     - [x] Navigation Cluster / Home Row Navigation
     - [x] Toggle Navigation Layer
