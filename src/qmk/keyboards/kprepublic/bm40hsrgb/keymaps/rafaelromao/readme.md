@@ -6,8 +6,6 @@ The keyboard in the picture below is a BM40, used to design and test this layout
 
 ### QMK
 
-The qmk version recommended for this keyboard is 0.18.1, with dynamic macros disabled.
-
 #### Compile
 
 `qmk compile -kb bm40hsrgb -km rafaelromao`
