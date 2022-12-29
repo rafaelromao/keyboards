@@ -45,6 +45,8 @@ This layout was tested with the keyboards listed below, but can be easily adapte
 
 The reference implementation is done in QMK, so it has all features supported.
 
+The qmk version recommended for this keymal is 0.18.1.
+
 - [kprepublic/bm40hsrgb](src/qmk/keyboards/kprepublic/bm40hsrgb/keymaps/rafaelromao/readme.md)
 - [xiudi/xd75](src/qmk/keyboards/xiudi/xd75/keymaps/rafaelromao/readme.md)
 
@@ -52,7 +54,7 @@ Some features are not available on all keyboards though. For instance, the BM40 
 
 ### ZMK
 
-The zmk version used for this board is the one available at https://github.com/rafaelromao/zmk/tree/rafaelromao/zen-v2, which contains some experimental code from [Nick Conway](https://github.com/nickconway/zmk-config), [Cem Aksoylar](https://github.com/caksoylar/zmk-config ) and [Robert U](https://github.com/urob/zmk-config), to implement features like `optimized screen management`, `improved CapsWord`, `Swapper`, `Leader Key` and `Dynamic Macro`.
+The zmk version used for this keymap is the one available at https://github.com/rafaelromao/zmk/tree/rafaelromao/zen-v2, which contains some experimental code from [Nick Conway](https://github.com/nickconway/zmk-config), [Cem Aksoylar](https://github.com/caksoylar/zmk-config ) and [Robert U](https://github.com/urob/zmk-config), to implement features like `optimized screen management`, `improved CapsWord`, `Swapper`, `Leader Key` and `Dynamic Macro`.
 
 - [lowprokb.ca/corneish-zen](src/zmk/keyboards/lowprokb.ca/corneish-zen/readme.md)
 
