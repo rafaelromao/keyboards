@@ -10,7 +10,6 @@ The following checklist indicates the supported features, per layer:
 
 - Missing features:
     - Coding Dancing
-    - Leader Key
     - Dynamic Macros
     - Smart Cases
     - Locked One-Shot Mods
@@ -20,7 +19,8 @@ The following checklist indicates the supported features, per layer:
     - Swapping between Applications and Tabs must start in the forward direction.
     - Swapping between the Navigation History must start in the backward direction.
     - Cancelling Caps Word leaves one-shot shift active.
-    - Select Line cannot be inverted.
+    - Select Line cannot be inverted or extended to next line.
+    - Select Word cannot be extended to previous word.
 
 - [ ] Base Layer
     - [x] MacOS Support
