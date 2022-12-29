@@ -63,7 +63,7 @@ The following checklist indicates the supported features, per layer:
     - [x] Coding Shortcuts
     - [ ] Dynamic Macros
     - [x] Combos
-- [x] Numpad Layer
+- [ ] Numpad Layer
     - [x] F-Keys (Left Side)
     - [x] Numbers (Right Side)
     - [ ] Shifted Numrow = Numpad
