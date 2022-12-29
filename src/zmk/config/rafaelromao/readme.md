@@ -44,7 +44,7 @@ The following checklist indicates the supported features, per layer:
         - [ ] Disable Smart Cases
         - [ ] Simple Smart Cases: CAPSWORD, camelCase, snake_case, kebab-case
         - [ ] Combined Smart Cases: STRONG_SNAKE_CASE, STRONG-KEBAB-CASE, PascalCase
-    - [ ] Double Comma for Leader Key
+    - [x] Double Comma for Leader Key
 - [x] Accents Layer
     - [x] Accents
     - [x] Combos
@@ -79,7 +79,7 @@ The following checklist indicates the supported features, per layer:
     - [x] Symbols (Right Side)
     - [x] Holds
     - [ ] Coding Dancing
-    - [ ] Dancing Symbols
+    - [x] Dancing Symbols
     - [x] Combos
 - [x] Navigation
     - [x] OSMs

@@ -36,6 +36,15 @@
             global-quick-tap; \
             bindings = <HOLD>, <TAP>; \
         };
+
+    #define TAPDANCE_SYMBOL(NAME, TAPHOLD, DTAP, TTAP) \
+         NAME: NAME { \
+            compatible = "zmk,behavior-tap-dance"; \
+            label = ZMK_MACRO_STRINGIFY(NAME); \
+            #binding-cells = <0>; \
+            tapping-term-ms = <TD_TAPPING_TERM>; \
+            bindings = <TAPHOLD>, <DTAP>, <TTAP>; \
+        };
     
     symbols {
 
@@ -52,13 +61,8 @@
 
         SYMBOL(mc_comma,          &kp COMMA)
         SYMBOL(mc_end_comma,      &kp END &kp COMMA)
-        td_comma: td_comma {
-            compatible = "zmk,behavior-tap-dance";
-            label = ZMK_MACRO_STRINGIFY(th_comma);
-            #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&leader>;
-        };
         TAPHOLD_SYMBOL(th_comma,  &mc_comma, &mc_end_comma)
+        TAPDANCE_SYMBOL(td_comma, &th_comma 0 0, &leader, &none)
 
         // Lower
 
@@ -115,6 +119,11 @@
         TAPHOLD_SYMBOL(th_rbrc,    &mc_rbrc, &mc_end_rbrc)
         
         SYMBOL(mc_braces,          &kp END &kp LBRC &kp RBRC &kp LEFT &kp ENTER)
+
+        SYMBOL(mc_dollar,          &kp DOLLAR)
+        SYMBOL(mc_euro,            &kp LS(LA(N2)))
+        SYMBOL(mc_pound,           &kp LA(N3))
+        TAPDANCE_SYMBOL(td_curr,   &mc_dollar, &mc_euro, &mc_pound)
 
         SYMBOL(mc_colon,           &kp COLON)
         SYMBOL(mc_end_colon,       &kp END &kp COLON)
