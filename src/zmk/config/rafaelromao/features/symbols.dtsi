@@ -37,6 +37,18 @@
             bindings = <HOLD>, <TAP>; \
         };
 
+    #define MODTAP_SYMBOL(NAME, BINDINGS) \
+         NAME: NAME { \
+            compatible = "zmk,behavior-hold-tap"; \
+            label = ZMK_MACRO_STRINGIFY(NAME); \
+            #binding-cells = <2>; \
+            tapping-term-ms = <TAPPING_TERM>; \
+            flavor = "tap-preferred"; \
+            quick-tap-ms = <QUICK_TAP_TERM>; \
+            global-quick-tap; \
+            bindings = <&kp>, <BINDINGS>; \
+        };
+
     #define TAPDANCE_SYMBOL(NAME, TAPHOLD, DTAP, TTAP) \
          NAME: NAME { \
             compatible = "zmk,behavior-tap-dance"; \
@@ -77,6 +89,23 @@
         TAPDANCE_SYMBOL(td_comma, &th_comma 0 0, &leader, &none)
 
         // Lower
+
+        SHIFTED_SYMBOL(mc_n0,     &kp N0, &kp KP_N0)
+        SHIFTED_SYMBOL(mc_n1,     &kp N1, &kp KP_N1)
+        SHIFTED_SYMBOL(mc_n2,     &kp N2, &kp KP_N2)
+        SHIFTED_SYMBOL(mc_n3,     &kp N3, &kp KP_N3)
+        SHIFTED_SYMBOL(mc_n4,     &kp N4, &kp KP_N4)
+        SHIFTED_SYMBOL(mc_n5,     &kp N5, &kp KP_N5)
+        SHIFTED_SYMBOL(mc_n6,     &kp N6, &kp KP_N6)
+        SHIFTED_SYMBOL(mc_n7,     &kp N7, &kp KP_N7)
+        SHIFTED_SYMBOL(mc_n8,     &kp N8, &kp KP_N8)
+        SHIFTED_SYMBOL(mc_n9,     &kp N9, &kp KP_N9)
+
+        LAYERTAP_SYMBOL(th_n0,    &mc_n0)
+        MODTAP_SYMBOL(th_n1,      &mc_n1)
+        MODTAP_SYMBOL(th_n4,      &mc_n4)
+        MODTAP_SYMBOL(th_n5,      &mc_n5)
+        MODTAP_SYMBOL(th_n6,      &mc_n6)
 
         SYMBOL(mc_bti,            &kp GRAVE &kp SPACE)
         LAYERTAP_SYMBOL(th_bti,   &mc_bti)

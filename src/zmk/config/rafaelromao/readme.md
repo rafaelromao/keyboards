@@ -66,13 +66,13 @@ The following checklist indicates the supported features, per layer:
 - [ ] Numpad Layer
     - [x] F-Keys (Left Side)
     - [x] Numbers (Right Side)
-    - [ ] Shifted Numrow = Numpad
+    - [x] Shifted Numrow = Numpad
     - [x] Home Block Mods
     - [x] Combos
 - [ ] Lower
     - [x] Symbols (Left Side)
     - [x] Numbers (Right Side)
-    - [ ] Shifted Numrow = Numpad
+    - [x] Shifted Numrow = Numpad
     - [x] Holds
     - [x] Access to Nav layer
     - [ ] Coding Dancing
