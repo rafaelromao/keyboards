@@ -58,7 +58,7 @@ The zmk version used for this keymap is the one available in [this fork](https:/
 
 - [lowprokb.ca/corneish-zen](src/zmk/keyboards/lowprokb.ca/corneish-zen/readme.md)
 
-Some features might not be available in ZMK. The readme file will indicate what features are available.
+Some features might not be available in ZMK. [This readme file](https://github.com/rafaelromao/keyboards/blob/main/src/zmk/config/rafaelromao/readme.md) will indicate what features are available.
 
 ## Building
 
