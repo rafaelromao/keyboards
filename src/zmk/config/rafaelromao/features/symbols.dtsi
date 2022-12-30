@@ -172,7 +172,7 @@
                                  
         MACRO(mc_short,            &kp S &kp H &kp O &kp R &kp T &kp SPACE)
         MACRO(mc_long,             &kp L &kp O &kp N &kp G &kp SPACE)
-        TAPDANCE_SYMBOL(td_rbkt,   &th_lbkt 0 0, &mc_short, &mc_long)
+        TAPDANCE_SYMBOL(td_rbkt,   &th_rbkt 0 0, &mc_short, &mc_long)
 
         SYMBOL(mc_qmark,           &kp QMARK)
         SYMBOL(mc_end_qmark,       &kp END &kp QMARK)
