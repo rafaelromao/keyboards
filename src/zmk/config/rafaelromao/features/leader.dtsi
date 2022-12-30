@@ -18,6 +18,7 @@
 };
 
 / {
+
     #define MACRO(NAME, SYMBOLS) \
         NAME: NAME { \
 			compatible = "zmk,behavior-macro"; \

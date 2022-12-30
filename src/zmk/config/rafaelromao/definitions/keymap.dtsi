@@ -61,17 +61,17 @@
                 lower_layer {
                         label = "LOWER";
                         bindings = <
-   &none           &th_lpar 0 0    &th_rpar 0 0    &mc_caret       &none           &none           &mc_n7          &mc_n8          &mc_n9         &none    
-   &th_bti NAV 0   &th_dqo 0 0     &th_sqo 0 0     &th_and 0 0     &mc_tilde       &kp COLON       &mc_n4          &mc_n5          &mc_n6         &lt MACROS DOT  
-   &kp AT          &th_lbkt 0 0    &th_rbkt 0 0    &th_qmark 0 0   &kp HASH        &none           &mc_n1          &mc_n2          &mc_n3         &kp COMMA 
+   &none           &td_lpar        &td_rpar        &mc_caret       &none           &none           &mc_n7          &mc_n8          &mc_n9         &none    
+   &th_bti NAV 0   &td_dqo         &td_sqo         &td_and         &mc_tilde       &kp COLON       &mc_n4          &mc_n5          &mc_n6         &lt MACROS DOT  
+   &kp AT          &td_lbkt        &td_rbkt        &th_qmark 0 0   &kp HASH        &none           &mc_n1          &mc_n2          &mc_n3         &kp COMMA 
                                    &trans          &trans          &trans          &trans          &th_n0 MEDIA 0  &trans
                         >;
                 };
                 raise_layer {
                         label = "RAISE";
                         bindings = <
-   &none           &kp F9          &kp F8          &kp F7          &none           &none           &td_curr        &th_lbrc 0 0    &th_rbrc 0 0   &none    
-   &kp F15         &kp F6          &kp F5          &kp F4          &kp F11         &th_colon 0 0   &kp MINUS       &kp EQUAL       &th_excl 0 0   &kp PLUS  
+   &none           &kp F9          &kp F8          &kp F7          &none           &none           &td_curr        &td_lbrc        &td_rbrc       &none    
+   &kp F15         &kp F6          &kp F5          &kp F4          &kp F11         &th_colon 0 0   &kp MINUS       &kp EQUAL       &td_excl       &kp PLUS  
    &kp F14         &kp F3          &kp F2          &kp F1          &kp F10         &th_perc 0 0    &th_slash 0 0   &kp LT          &kp GT         &kp STAR
                                    &trans          &kp F12         &trans          &trans          &trans          &trans
                         >;

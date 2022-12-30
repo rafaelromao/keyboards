@@ -18,7 +18,7 @@
 #define MAINT 10
 
 #define TAPPING_TERM 175
-#define TD_TAPPING_TERM 200
+#define TD_TAPPING_TERM 300
 #define QUICK_TAP_TERM 200
 
 /*                KEY POSITIONS

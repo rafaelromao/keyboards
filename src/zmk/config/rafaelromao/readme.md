@@ -5,14 +5,13 @@
 This folder contains the port of my keymap to ZMK. 
 
 ### Missing features:
-- Coding Dancing
 - Dynamic Macros
 - Smart Cases
 - Locked One-Shot Mods
 - Windows Support
-- OS Toggling
 
 ### Known Issues:
+- Accents layer remain active for two taps when the first tapped key is non-accented and capitalized, like Z or X.
 - Swapping between Applications and Tabs must start in the forward direction.
 - Swapping between the Navigation History must start in the backward direction.
 - Cancelling Caps Word leaves one-shot shift active.
@@ -27,9 +26,10 @@ The following checklist indicates the supported features, per layer:
     - [x] MacOS Support
     - [ ] Windows Support
     - [x] Home Block Mods
+    - [x] Thumb Mods
     - [x] Macro Layer Toggle
     - [x] Navigation Layer Toggle
-    - [x] N-Grams Layer Toggle
+    - [x] Accents Layer Toggle
     - [x] Lower Layer Toggle
     - [x] Raise Layer Toggle
     - [x] Media Layer Toggle
@@ -38,13 +38,15 @@ The following checklist indicates the supported features, per layer:
         - [x] Underscore, Semicolon, Esc, Enter, Tab
         - [x] Copy, Paste, Save, Select All, Full Screen, Undo, Find, Raise, Lower
         - [x] Holds
-    - [ ] Smart Case Key
-        - [x] One-Shot Shift
-        - [x] CAPSWORD
+    - [ ] Smart Cases
+        - [x] Activate using right thumb key with mods
+        - [x] CAPSWORD on double tap
+        - [x] Cancel active smart cases
         - [ ] Disable Locked Mods
         - [ ] Disable Smart Cases
         - [ ] Simple Smart Cases: CAPSWORD, camelCase, snake_case, kebab-case
         - [ ] Combined Smart Cases: STRONG_SNAKE_CASE, STRONG-KEBAB-CASE, PascalCase
+        - [ ] Activate using left thumb key with mods
     - [x] Double Comma for Leader Key
 - [x] Accents Layer
     - [x] Accents
@@ -69,19 +71,19 @@ The following checklist indicates the supported features, per layer:
     - [x] Shifted Numrow = Numpad
     - [x] Home Block Mods
     - [x] Combos
-- [ ] Lower
+- [x] Lower
     - [x] Symbols (Left Side)
     - [x] Numbers (Right Side)
     - [x] Shifted Numrow = Numpad
     - [x] Holds
     - [x] Access to Nav layer
-    - [ ] Coding Dancing
+    - [x] Coding Dancing
     - [x] Combos
-- [ ] Raise
+- [x] Raise
     - [x] F-Keys (Left Side)
     - [x] Symbols (Right Side)
     - [x] Holds
-    - [ ] Coding Dancing
+    - [x] Coding Dancing
     - [x] Dancing Symbols
     - [x] Combos
 - [ ] Navigation
