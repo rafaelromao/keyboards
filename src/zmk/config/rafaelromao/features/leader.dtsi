@@ -10,7 +10,7 @@
   │ LTP LTR LTM LTI LTC │ │ RTC RTI RTM RTR RTP │
   │ LHP LHR LHM LHI LHC │ │ RHC RHI RHM RHR RHP │
   │ LBP LBR LBM LBI LBC │ │ RBC RBI RBM RBR RBP │
-  ╰───────╮ LT1 LT0 LTH │ │ RTH RT0 RT1 ╭───────╯
+  ╰───────╮ LT1 LT0 LT0 │ │ RT0 RT0 RT1 ╭───────╯
           ╰─────────────╯ ╰─────────────╯ */
 
 &leader {

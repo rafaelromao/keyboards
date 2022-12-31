@@ -4,6 +4,15 @@
 * SPDX-License-Identifier: MIT
 *
 */
+/*                KEY POSITIONS
+
+  ╭─────────────────────╮ ╭─────────────────────╮
+  │ LTP LTR LTM LTI LTC │ │ RTC RTI RTM RTR RTP │
+  │ LHP LHR LHM LHI LHC │ │ RHC RHI RHM RHR RHP │
+  │ LBP LBR LBM LBI LBC │ │ RBC RBI RBM RBR RBP │
+  ╰───────╮ L2  L1  L0  │ │ R0  R1  R2  ╭───────╯
+          ╰─────────────╯ ╰─────────────╯ */
+
 
 / {
     swappers {

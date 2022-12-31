@@ -27,7 +27,7 @@
   │ LTP LTR LTM LTI LTC │ │ RTC RTI RTM RTR RTP │
   │ LHP LHR LHM LHI LHC │ │ RHC RHI RHM RHR RHP │
   │ LBP LBR LBM LBI LBC │ │ RBC RBI RBM RBR RBP │
-  ╰───────╮ LT1 LT0 LTH │ │ RTH RT0 RT1 ╭───────╯
+  ╰───────╮ L2  L1  L0  │ │ R0  R1  R2  ╭───────╯
           ╰─────────────╯ ╰─────────────╯ 
   ╭─────────────────────╮ ╭─────────────────────╮
   │  0   1   2   3   4  │ │   5   6   7   8   9 │
@@ -74,10 +74,10 @@
 #define RBR 28
 #define RBP 29
 
-#define LT1 30  // left thumb keys
-#define LT0 31
-#define LTH 32
+#define L2  30  // left thumb keys
+#define L1  31
+#define L0  32
 
-#define RTH 33  // right thumb keys
-#define RT0 34
-#define RT1 35
+#define R0  33  // right thumb keys
+#define R1  34
+#define R2  35

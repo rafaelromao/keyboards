@@ -5,15 +5,15 @@
 
 // clang-format off
 
-#define ___________________ROMAK_L1____________________ XXXXXXX , KC_F    , KC_D    , KC_W    , XXXXXXX
+#define ___________________ROMAK_L1____________________ KC_QUOT , KC_F    , KC_D    , KC_W    , KC_Z
 #define ___________________ROMAK_L2____________________ KCR_MAC , LSFTT_N , LCTLT_S , LGUIT_T , KC_G
 #define ___________________ROMAK_L3____________________ RALTT_Q , KC_B    , KC_C    , LALTT_P , KC_K
 #define ____ROMAK_L4_____                                                             NAV_ACT , LOW_SPC
 
-#define ___________________ROMAK_R1____________________ XXXXXXX , KC_L    , KC_O    , KC_U    , XXXXXXX
+#define ___________________ROMAK_R1____________________ KC_X    , KC_L    , KC_O    , KC_U    , MC_SQ_C
 #define ___________________ROMAK_R2____________________ KC_V    , RGUIT_H , RCTLT_A , RSFTT_E , KCI_MAC
 #define ___________________ROMAK_R3____________________ KC_J    , LALTT_M , TD_COMM , TD_DOT  , RALTT_Y
-#define ____ROMAK_R4_____                               RAI_BSP , MED_CAS
+#define ____ROMAK_R4_____                               RAI_BSP , MED_CAS 
 
 #define ___________________ACCENT_L1___________________ XXXXXXX , XXXXXXX , KC_X    , KC_CIRC , XXXXXXX
 #define ___________________ACCENT_L2___________________ KC_GRV  , KC_DQUO , KC_QUOT , KC_Z    , KC_TILD
