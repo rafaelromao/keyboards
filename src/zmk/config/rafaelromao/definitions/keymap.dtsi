@@ -25,7 +25,7 @@
                 default_layer {
                         label = "ROMAK";
                         bindings = <
-   &mc_sqo         &kp F           &kp D           &kp W           &kp Z           &kp X           &kp L           &kp O           &kp U           &ac_ccdi   
+   &mc_sqo         &kp F           &kp D           &kp W           &kp Z           &kp X           &kp L           &kp O           &kp U           &mc_ced    
    &lt MACROS R    &mt LSHFT N     &mt LCTRL S     &mt LGUI T      &kp G           &kp V           &mt RGUI H      &mt RCTRL A     &mt RSHFT E     &lt MACROS I 
    &mt RALT Q      &kp B           &kp C           &mt LALT P      &kp K           &kp J           &mt LALT M      &td_comma       &th_dot 0 0     &mt RALT Y
                                    &sl RAISE       &msl NAV ACCENT &lt LOWER SPACE &lt RAISE BSPC  &mm_med         &sl LOWER
@@ -45,7 +45,7 @@
                         bindings = <
    &none           &none           &kp X           &kp CARET       &none           &none           &ac_otil        &ac_oacu        &ac_uacu        &none    
    &kp GRAVE       &kp DQT         &kp SQT         &kp Z           &kp TILDE       &ac_agrv        &ac_atil        &ac_aacu        &ac_eacu        &ac_iacu 
-   &none           &none           &ac_ccdi        &none           &none           &none           &ac_acir        &ac_ocir        &ac_ecir        &none
+   &none           &none           &mc_ced         &none           &none           &none           &ac_acir        &ac_ocir        &ac_ecir        &none
                                    &trans          &trans          &kp SPACE       &kp BSPC        &trans          &trans
                         >;
                 };

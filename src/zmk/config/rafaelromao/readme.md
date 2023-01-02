@@ -11,7 +11,6 @@ This folder contains the port of my keymap to ZMK.
 - Windows Support
 
 ### Known Issues:
-- Accents layer remain active for two taps when the first tapped key is non-accented and capitalized, like Z or X.
 - Swapping between Applications and Tabs must start in the forward direction.
 - Swapping between the Navigation History must start in the backward direction.
 - Cancelling Caps Word leaves one-shot shift active.
@@ -65,7 +64,7 @@ The following checklist indicates the supported features, per layer:
     - [x] Coding Shortcuts
     - [ ] Dynamic Macros
     - [x] Combos
-- [ ] Numpad Layer
+- [x] Numpad Layer
     - [x] F-Keys (Left Side)
     - [x] Numbers (Right Side)
     - [x] Shifted Numrow = Numpad

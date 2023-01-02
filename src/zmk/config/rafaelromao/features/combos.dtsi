@@ -37,8 +37,8 @@
 
         COMBO(cb_unds,          LBR LBM,     &kp UNDERSCORE,     ROMAK)
         COMBO(cb_z,             LBM LBI,     &kp Z,              ROMAK)
-        COMBO(cb_raise,         LHR L0,      &sl RAISE,          ROMAK)
-        COMBO(cb_lower,         LHM L0,      &sl LOWER,          ROMAK)
+        COMBO(cb_raise_l,       LHR L0,      &sl RAISE,          ROMAK)
+        COMBO(cb_lower_l,       LHM L0,      &sl LOWER,          ROMAK)
         
         COMBO(cb_pars,          LTR LTM,     &th_pars 0 0,       LOWER)
 
@@ -56,8 +56,8 @@
         COMBO(cb_semi,          RBM RBR,     &th_semi 0 0,       ROMAK)
         COMBO(cb_p,             RHI RHM,     &kp P,              ROMAK)
         COMBO(cb_x,             RBI RBM,     &kp X,              ROMAK)
-        COMBO(cb_lower,         RHR R0,      &sl LOWER,          ROMAK)
-        COMBO(cb_raise,         RHM R0,      &sl RAISE,          ROMAK)
+        COMBO(cb_lower_r,       RHR R0,      &sl LOWER,          ROMAK)
+        COMBO(cb_raise_r,       RHM R0,      &sl RAISE,          ROMAK)
 
         COMBO(cb_ao,            RHM RHR,     &mc_ao,             ACCENT)
         COMBO(cb_cao,           RHI RHM RHR, &mc_cao,            ACCENT)

@@ -19,12 +19,11 @@
 
 &sl {
     release-after-ms = <2000>;
-    quick-release;
+    /delete-property/ quick-release;
 };
 
 &sk {
     release-after-ms = <2000>;
-    quick-release;
 };
 
 / {
