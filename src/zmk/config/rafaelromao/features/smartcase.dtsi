@@ -9,19 +9,17 @@
     smart-cases {
         caps_word {
             compatible = "zmk,behavior-caps-word";
-			label = "CAPS_WORD";
-			#binding-cells = <0>;
+            label = ZMK_MACRO_STRINGIFY(caps_word);
+			#binding-cells = <0>;  
             continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
-            /delete-property/ ignore-modifiers;
         };
 
-        mm_med: mm_med {
-            label = "MED SHIFT CAPSWORD";
+        mm_case: mm_case {
             compatible = "zmk,behavior-mod-morph";
+            label = ZMK_MACRO_STRINGIFY(mm_case);
             #binding-cells = <0>;
             bindings = <&msk MEDIA LSHFT>, <&caps_word>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 };

@@ -40,7 +40,7 @@ The following checklist indicates the supported features, per layer:
     - [ ] Smart Cases
         - [x] Activate using right thumb key with mods
         - [x] CAPSWORD on double tap
-        - [x] Cancel active smart cases
+        - [ ] Cancel active smart cases
         - [ ] Disable Locked Mods
         - [ ] Disable Smart Cases
         - [ ] Simple Smart Cases: CAPSWORD, camelCase, snake_case, kebab-case
