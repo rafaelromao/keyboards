@@ -6,16 +6,17 @@
 */
 
 #define ROMAK 0
-#define NUMPAD 1
-#define ACCENT 2
-#define MACROS 3
-#define LOWER 4
-#define RAISE 5
-#define NAV_F 6
-#define MEDIA 7
-#define NAV 8
-#define LOCK_KB 9
-#define MAINT 10
+#define CASE 1
+#define NUMPAD 2
+#define ACCENT 3
+#define MACROS 4
+#define LOWER 5
+#define RAISE 6
+#define NAV_F 7
+#define MEDIA 8
+#define NAV 9
+#define LOCK_KB 10
+#define MAINT 11
 
 #define TAPPING_TERM 175
 #define TD_TAPPING_TERM 200

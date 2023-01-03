@@ -14,11 +14,39 @@
             continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
         };
 
-        mm_case: mm_case {
-            compatible = "zmk,behavior-mod-morph";
-            label = ZMK_MACRO_STRINGIFY(mm_case);
+        mc_space: mc_space {
+			compatible = "zmk,behavior-macro";
+            label = ZMK_MACRO_STRINGIFY(mc_smartcase);
             #binding-cells = <0>;
-            bindings = <&msk MEDIA LSHFT>, <&caps_word>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_tap &kp SPACE &tog CASE>;
+        };
+        
+        lt_space: lt_space {
+			compatible = "zmk,behavior-hold-tap";
+            label = ZMK_MACRO_STRINGIFY(lt_space);
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <QUICK_TAP_TERM>;
+            bindings = <&mo LOWER>, <&mc_space>;
+        };
+
+        mc_smartcase: mc_smartcase {
+			compatible = "zmk,behavior-macro";
+            label = ZMK_MACRO_STRINGIFY(mc_smartcase);
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_tap &caps_word &tog CASE>;
+        };
+
+        mm_smartcase: mm_smartcase {
+            compatible = "zmk,behavior-mod-morph";
+            label = ZMK_MACRO_STRINGIFY(mm_smartcase);
+            #binding-cells = <0>;
+            bindings = <&msk MEDIA LSHFT>, <&mc_smartcase>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
