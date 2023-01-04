@@ -13,7 +13,6 @@ This folder contains the port of my keymap to ZMK.
 ### Known Issues:
 - Swapping between Applications and Tabs must start in the forward direction.
 - Swapping between the Navigation History must start in the backward direction.
-- Cancelling Caps Word leaves one-shot shift active.
 - Select Line cannot be inverted or extended to next line.
 - Select Word cannot be extended to previous word.
  
