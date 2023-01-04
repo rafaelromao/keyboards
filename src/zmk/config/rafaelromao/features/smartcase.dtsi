@@ -10,6 +10,8 @@
         smart_case: smart_case {
             compatible = "zmk,behavior-caps-word";
             label = ZMK_MACRO_STRINGIFY(smart_case);
+            mods = <(MOD_LSFT)>;
+            ignore-alphas;
 			#binding-cells = <0>;  
             layers = <CASE>;
             continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
