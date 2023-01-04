@@ -17,7 +17,7 @@ git submodule update --init --recursive --progress
 echo "Checking out zmk..."
 cd $ZMK_HOME
 git fetch
-git checkout rafaelromao/zen-v2
+git checkout rafaelromao/main
 git pull
 cd ..
 

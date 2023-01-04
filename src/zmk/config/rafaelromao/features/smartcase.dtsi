@@ -7,28 +7,29 @@
 
 / {
     smart-cases {
-        caps_word {
+        smart_case: smart_case {
             compatible = "zmk,behavior-caps-word";
-            label = ZMK_MACRO_STRINGIFY(caps_word);
+            label = ZMK_MACRO_STRINGIFY(smart_case);
 			#binding-cells = <0>;  
             layers = <CASE>;
             continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
         };
 
-        mc_smartcase: mc_smartcase {
-			compatible = "zmk,behavior-macro";
-            label = ZMK_MACRO_STRINGIFY(mc_smartcase);
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&macro_tap &caps_word>;
+        ht_sc: ht_sc {
+            compatible = "zmk,behavior-hold-tap";
+            label = ZMK_MACRO_STRINGIFY(ht_sc);
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <QUICK_TAP_TERM>;
+            bindings = <&mo>, <&smart_case>;
         };
 
-        mm_smartcase: mm_smartcase {
+        mm_sc: mm_sc {
             compatible = "zmk,behavior-mod-morph";
-            label = ZMK_MACRO_STRINGIFY(mm_smartcase);
+            label = ZMK_MACRO_STRINGIFY(mm_sc);
             #binding-cells = <0>;
-            bindings = <&msk MEDIA LSHFT>, <&mc_smartcase>;
+            bindings = <&msk MEDIA LSHFT>, <&smart_case>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
