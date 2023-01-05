@@ -460,6 +460,31 @@ void td_ques(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
+void td_eql(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code(KC_EQL);
+            break;
+        case TD_DOUBLE_SINGLE_TAP:
+        case TD_DOUBLE_TAP:
+            tap_code(KC_EQL);
+            tap_code(KC_EQL);
+            break;
+        case TD_TRIPLE_TAP:
+            tap_code(KC_EQL);
+            tap_code(KC_EQL);
+            tap_code(KC_EQL);
+            break;
+        case TD_SINGLE_HOLD:
+            tap_code(KC_END);
+            tap_code(KC_EQL);
+            break;
+        default:
+            break;
+    }
+}
+
 void td_slash(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
@@ -503,6 +528,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [COL_ECO] = ACTION_TAP_DANCE_FN(td_colon),
     [PER_DEG] = ACTION_TAP_DANCE_FN(td_perc),
     [QUE_EXC] = ACTION_TAP_DANCE_FN(td_ques),
+    [EQL_EEQ] = ACTION_TAP_DANCE_FN(td_eql),
     [SLS_BSL] = ACTION_TAP_DANCE_FN(td_slash),
     [DOT_DOT] = ACTION_TAP_DANCE_FN(td_dot)};
 

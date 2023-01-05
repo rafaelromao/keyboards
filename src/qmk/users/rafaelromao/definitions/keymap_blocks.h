@@ -61,7 +61,7 @@
 #define ____RAISE_L4_____                                                             NAV_F12 , _______
 
 #define ___________________RAISE_R1____________________ KC_CIRC , TD_DLR  , TD_LCRB , TD_RCRB , XXXXXXX
-#define ___________________RAISE_R2____________________ TD_COLN , KC_MINS , KC_EQL  , TD_NOT  , KC_PLUS
+#define ___________________RAISE_R2____________________ TD_COLN , KC_MINS , TD_EQL  , TD_NOT  , KC_PLUS
 #define ___________________RAISE_R3____________________ TD_PERC , TD_SLSH , KC_LT   , KC_GT   , KC_ASTR
 #define ____RAISE_R4_____                               _______ , _______
 

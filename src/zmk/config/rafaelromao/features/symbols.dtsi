@@ -227,6 +227,10 @@
         MACRO_SYMBOL(mc_throw,     &kp T &kp H &kp R &kp O &kp W &kp SPACE)
         TAPDANCE_SYMBOL(td_excl,   &th_excl 0 0, &mc_return, &mc_throw)
 
+        SYMBOL(mc_eql,             &kp EQUAL)
+        SYMBOL(mc_end_eql,         &kp END &kp EQUAL)
+        TAPHOLD_SYMBOL(th_eql,     &mc_eql, &mc_end_eql)
+                                 
         SYMBOL(mc_perc,            &kp PERCENT)
         SYMBOL(mc_degree,          &kp LS(LA(N8)))
         TAPHOLD_SYMBOL(th_perc,    &mc_perc, &mc_degree)

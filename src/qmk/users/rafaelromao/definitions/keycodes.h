@@ -29,6 +29,7 @@ enum {
     PER_DEG,
     SLS_BSL,
     QUE_EXC,
+    EQL_EEQ,
     TD_CODE_END 
 };
 
@@ -55,6 +56,7 @@ enum {
 #define TD_PERC TD(PER_DEG)
 #define TD_QUES TD(QUE_EXC)
 #define TD_SLSH TD(SLS_BSL)
+#define TD_EQL TD(EQL_EEQ)
 
 // Custom keycodes
 

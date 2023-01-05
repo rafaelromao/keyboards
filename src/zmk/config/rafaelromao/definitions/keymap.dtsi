@@ -80,7 +80,7 @@
                         label = "RAISE";
                         bindings = <
    &none           &kp F9          &kp F8          &kp F7          &none           &none           &td_curr         &td_lbrc        &td_rbrc       &none    
-   &kp F15         &kp F6          &kp F5          &kp F4          &kp F11         &th_colon 0 0   &kp MINUS        &kp EQUAL       &td_excl       &kp PLUS  
+   &kp F15         &kp F6          &kp F5          &kp F4          &kp F11         &th_colon 0 0   &kp MINUS        &th_eql 0 0     &td_excl       &kp PLUS  
    &kp F14         &kp F3          &kp F2          &kp F1          &kp F10         &th_perc 0 0    &th_slash 0 0    &kp LT          &kp GT         &kp STAR
                                    &trans          &kp F12         &trans          &trans          &trans           &trans
                         >;
