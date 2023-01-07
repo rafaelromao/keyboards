@@ -16,8 +16,8 @@
 #define ____ROMAK_R4_____                               RAI_BSP , MED_CAS 
 
 #define ___________________ACCENT_L1___________________ XXXXXXX , XXXXXXX , KC_X    , KC_CIRC , XXXXXXX
-#define ___________________ACCENT_L2___________________ KC_GRV  , KC_DQUO , KC_QUOT , KC_Z    , KC_TILD
-#define ___________________ACCENT_L3___________________ XXXXXXX , XXXXXXX , MC_SQ_C , XXXXXXX , XXXXXXX
+#define ___________________ACCENT_L2___________________ KC_GRV  , KC_DQUO , KC_QUOT , KC_Z    , XXXXXXX
+#define ___________________ACCENT_L3___________________ XXXXXXX , XXXXXXX , MC_SQ_C , XXXXXXX , KC_TILD
 #define ____ACCENT_L4____                                                             _______ , KC_SPC
 
 #define ___________________ACCENT_R1___________________ XXXXXXX , MC_TL_O , MC_SQ_O , MC_SQ_U , XXXXXXX
@@ -46,8 +46,8 @@
 #define ____MACROS_R4____                               RAI_SPC , _______
 
 #define ___________________LOWER_L1____________________ XXXXXXX , TD_OPAR , TD_CPAR , MC_CIRC , XXXXXXX
-#define ___________________LOWER_L2____________________ NAV_BTI , TD_DQUO , TD_SQUO , TD_AND  , MC_TILD
-#define ___________________LOWER_L3____________________ KC_AT   , TD_OBR  , TD_CBR  , TD_QUES , KC_HASH
+#define ___________________LOWER_L2____________________ NAV_BTI , TD_DQUO , TD_SQUO , TD_AND  , TD_OR
+#define ___________________LOWER_L3____________________ KC_AT   , TD_OBR  , TD_CBR  , TD_QUES , TD_TILD
 #define ____LOWER_L4_____                                                             _______ , _______
 
 #define ___________________LOWER_R1____________________ XXXXXXX , KC_7    , KC_8    , KC_9    , XXXXXXX

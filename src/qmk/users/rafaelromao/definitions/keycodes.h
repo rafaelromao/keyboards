@@ -20,7 +20,7 @@ enum {
     DQU_FIN, 
     SQU_STR, 
     NOT_SWI, 
-    AND_BOO, 
+    AND_EAN, 
     REC_MAC, 
     COM_LEA, 
     DOT_DOT, 
@@ -30,6 +30,8 @@ enum {
     SLS_BSL,
     QUE_EXC,
     EQL_EEQ,
+    OR_EOR,
+    TIL_HAS,
     TD_CODE_END 
 };
 
@@ -47,7 +49,7 @@ enum {
 #define TD_DQUO TD(DQU_FIN)
 #define TD_SQUO TD(SQU_STR)
 #define TD_NOT TD(NOT_SWI)
-#define TD_AND TD(AND_BOO)
+#define TD_AND TD(AND_EAN)
 #define TD_MACR TD(REC_MAC)
 #define TD_COMM TD(COM_LEA)
 #define TD_DOT TD(DOT_DOT)
@@ -57,6 +59,8 @@ enum {
 #define TD_QUES TD(QUE_EXC)
 #define TD_SLSH TD(SLS_BSL)
 #define TD_EQL TD(EQL_EEQ)
+#define TD_TILD TD(TIL_HAS)
+#define TD_OR TD(OR_EOR)
 
 // Custom keycodes
 

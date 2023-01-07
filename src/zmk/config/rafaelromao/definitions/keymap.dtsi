@@ -71,8 +71,8 @@
                         label = "LOWER";
                         bindings = <
    &none           &td_lpar        &td_rpar        &mc_caret       &none           &none           &mc_n7           &mc_n8          &mc_n9         &none    
-   &th_bti NAV 0   &td_dqo         &td_sqo         &td_and         &mc_tilde       &kp COLON       &mc_n4           &mc_n5          &mc_n6         &lt MACROS DOT  
-   &kp AT          &td_lbkt        &td_rbkt        &th_qmark 0 0   &kp HASH        &none           &mc_n1           &mc_n2          &mc_n3         &kp COMMA 
+   &th_bti NAV 0   &td_dqo         &td_sqo         &th_and 0 0     &th_or 0 0      &kp COLON       &mc_n4           &mc_n5          &mc_n6         &lt MACROS DOT  
+   &kp AT          &td_lbkt        &td_rbkt        &th_qmark 0 0   &th_tilde 0 0   &none           &mc_n1           &mc_n2          &mc_n3         &kp COMMA 
                                    &trans          &trans          &trans          &trans          &th_n0 MEDIA 0   &trans
                         >;
                 };

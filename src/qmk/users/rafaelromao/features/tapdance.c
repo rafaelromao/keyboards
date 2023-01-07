@@ -208,16 +208,46 @@ void td_and(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
-            process_macros(MC_DAND, NULL);
+            tap_code16(KC_AMPR);
             break;
         case TD_SINGLE_HOLD:
+            tap_code(KC_RIGHT);
+            process_macros(MC_DAND, NULL);
+            break;
+        case TD_DOUBLE_TAP:
+            process_macros(MC_DAND, NULL);
+            break;
+        default:
+            break;
+    }
+}
+
+void td_or(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code16(KC_PIPE);
+            break;
+        case TD_SINGLE_HOLD:
+            tap_code(KC_RIGHT);
             process_macros(MC_DPIP, NULL);
             break;
         case TD_DOUBLE_TAP:
-            SEND_STRING("true");
+            process_macros(MC_DPIP, NULL);
             break;
-        case TD_TRIPLE_TAP:
-            SEND_STRING("false");
+        default:
+            break;
+    }
+}
+
+void td_tild(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            process_macros(MC_TILD, NULL);
+            break;
+        case TD_SINGLE_HOLD:
+            tap_code16(KC_HASH);
             break;
         default:
             break;
@@ -497,7 +527,13 @@ void td_slash(qk_tap_dance_state_t *state, void *user_data) {
             tap_code(KC_SLSH);
             break;
         case TD_SINGLE_HOLD:
-            tap_code16(KC_BSLS);
+            if (!is_shifted()) {
+                tap_code16(KC_BSLS);
+            } else {
+                clear_shift();
+                tap_code(KC_END);
+                tap_code16(KC_QUES);
+            }
             break;
         default:
             break;
@@ -521,7 +557,9 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [DQU_FIN] = ACTION_TAP_DANCE_FN(td_dquo),
     [SQU_STR] = ACTION_TAP_DANCE_FN(td_squo),
     [NOT_SWI] = ACTION_TAP_DANCE_FN(td_not),
-    [AND_BOO] = ACTION_TAP_DANCE_FN(td_and),
+    [AND_EAN] = ACTION_TAP_DANCE_FN(td_and),
+    [OR_EOR]  = ACTION_TAP_DANCE_FN(td_or),
+    [TIL_HAS] = ACTION_TAP_DANCE_FN(td_tild),
     [REC_MAC] = ACTION_TAP_DANCE_FN(td_macro),
     [COM_LEA] = ACTION_TAP_DANCE_FN(td_comm),
     [DLR_CUR] = ACTION_TAP_DANCE_FN(td_currencies),
