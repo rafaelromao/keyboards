@@ -37,8 +37,8 @@ The following checklist indicates the supported features, per layer:
         - [x] Copy, Paste, Save, Select All, Full Screen, Undo, Find, Raise, Lower
         - [x] Holds
     - [ ] Smart Cases
-        - [x] Activate using right thumb key with mods
-        - [x] CAPSWORD on double tap
+        - [x] CAPSWORD on double tap 
+        - [ ] Activate using right thumb key with mods
         - [ ] Cancel active smart cases
         - [ ] Disable Locked Mods
         - [ ] Disable Smart Cases
