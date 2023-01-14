@@ -38,7 +38,7 @@ The following checklist indicates the supported features, per layer:
         - [x] Holds
     - [ ] Smart Cases
         - [x] CAPSWORD on double tap 
-        - [ ] Disable Smart Cases 
+        - [x] Disable Smart Cases 
         - [ ] Activate using right thumb key with mods
         - [ ] Cancel active smart cases
         - [ ] Disable Locked Mods
