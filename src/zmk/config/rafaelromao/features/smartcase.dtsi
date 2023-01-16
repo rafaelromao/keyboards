@@ -12,9 +12,10 @@
             label = ZMK_MACRO_STRINGIFY(smart_case);
             mods = <(MOD_LSFT)>;
             ignore-alphas;
+            ignore-modifiers;
 			#binding-cells = <0>;  
             layers = <CASE>;
-            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
+            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT DQT TILDE CARET GRAVE>;
         };
 
         ht_sc: ht_sc {
