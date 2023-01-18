@@ -68,10 +68,23 @@
         ACCENTED_KEY(ac_ocir, O, I)
         ACCENTED_KEY(ac_uacu, U, E)
 
-        MACRO_KEY(mc_ced,  &macro_press &kp LALT &macro_tap &kp C &macro_release &kp LALT)
-        MACRO_KEY(mc_ao,   &macro_tap &ac_atil &kp O)
-        MACRO_KEY(mc_oes,  &macro_tap &ac_otil &kp E &kp S)
-        MACRO_KEY(mc_cao,  &macro_tap &mc_ced &ac_atil &macro_wait_time 10 &macro_tap &kp O)
-        MACRO_KEY(mc_coes, &macro_tap &mc_ced &ac_otil &macro_wait_time 10 &macro_tap &kp E &kp S)
+        ACCENTED_KEY(ac_agrv_c, LS(A), GRAVE)
+        ACCENTED_KEY(ac_aacu_c, LS(A), E)
+        ACCENTED_KEY(ac_atil_c, LS(A), N)
+        ACCENTED_KEY(ac_acir_c, LS(A), I)
+        ACCENTED_KEY(ac_eacu_c, LS(E), E)
+        ACCENTED_KEY(ac_ecir_c, LS(E), I)
+        ACCENTED_KEY(ac_iacu_c, LS(I), E)
+        ACCENTED_KEY(ac_oacu_c, LS(O), E)
+        ACCENTED_KEY(ac_otil_c, LS(O), N)
+        ACCENTED_KEY(ac_ocir_c, LS(O), I)
+        ACCENTED_KEY(ac_uacu_c, LS(U), E)
+
+        MACRO_KEY(mc_ced,   &macro_press &kp LALT &macro_tap &kp C &macro_release &kp LALT)
+        MACRO_KEY(mc_ced_c, &macro_press &kp LALT &macro_tap &kp LS(C) &macro_release &kp LALT)
+        MACRO_KEY(mc_ao,    &macro_tap &ac_atil &kp O)
+        MACRO_KEY(mc_oes,   &macro_tap &ac_otil &kp E &kp S)
+        MACRO_KEY(mc_cao,   &macro_tap &mc_ced &ac_atil &macro_wait_time 10 &macro_tap &kp O)
+        MACRO_KEY(mc_coes,  &macro_tap &mc_ced &ac_otil &macro_wait_time 10 &macro_tap &kp E &kp S)
     };
 };
