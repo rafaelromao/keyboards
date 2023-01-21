@@ -31,13 +31,13 @@
             "GP21"
         ],
         "rows": [
-            "GP6",
+            "GP9",
             "GP7",
             "GP8",
             "GP27",
             "GP26",
             "GP22",
-            "GP9"
+            "GP3"
         ]
     },
     "processor": "RP2040",
