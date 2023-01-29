@@ -1,5 +1,5 @@
 ## lowprokb.ca/corneish-zen
-### A 30 keys split keyboard layout, optimized for programmers.
+### A split lowprofile keyboard.
 
 The keyboard in the picture below is a Corneish-Zen, used to design and test this layout.
 ![img](../../../../../img/zen.png)
@@ -22,5 +22,5 @@ The keyboard in the picture below is a Corneish-Zen, used to design and test thi
 ## Resources
 
 - [Home](https://github.com/rafaelromao/keyboards)
-- [QMK Docs](https://docs.qmk.fm)
+- [ZMK Docs](https://zmk.dev/docs)
 - [Keyboard Tester](https://config.qmk.fm/#/test)

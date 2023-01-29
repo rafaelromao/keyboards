@@ -1,8 +1,28 @@
-## kprepublic/bm40hsrgb
-### A 30 keys split keyboard layout, optimized for programmers.
+## FauxBerry
+### A handwired split keyboard.
 
-The keyboard in the picture below is a BM40, used to design and test this layout.
-![img](../../../../../../../img/fauxberry.jpg)
+![img](../../../../../../img/fauxberry.jpeg)
+
+### Build Details
+
+FauxBerry is a handwired board built using a [RP2040](https://pt.aliexpress.com/item/1005004096147070.html) in a [FFBK](https://fingerpunch.xyz/product/faux-fox-keyboard) case.
+
+This board has two encoders, and a programable LED, used for layer and other statuses indication.
+Some build pictures can be found [here](../../../../../../img/fauxberry).
+
+Parts:
+- 36 keys [FFBK](https://fingerpunch.xyz/product/faux-fox-keyboard) case.
+- [RP2040](https://pt.aliexpress.com/item/1005004096147070.html).
+- [1n4148 diodes](https://pt.aliexpress.com/item/1005003540554760.html).
+- [Angled pins](https://pt.aliexpress.com/item/1005004427303224.html).
+- [24 AWG Wires](https://pt.aliexpress.com/item/32904950428.html).
+- [Dupont cables](https://pt.aliexpress.com/item/1005004155181609.html).
+- [M3 screws and spacers](https://pt.aliexpress.com/item/1005002581025420.html).
+- [Rotary Encoders](https://pt.aliexpress.com/item/1005003532687682.html).
+- [Rotary Encoder caps](https://pt.aliexpress.com/item/1005003527482683.html).
+- [Rotary Encoder adapter](https://www.thingiverse.com/thing:3770166).
+- [Hotswap sockets](https://pt.aliexpress.com/item/1005003873653184.html).
+- [Hotswap socket holders](https://www.thingiverse.com/thing:3117549).
 
 ### QMK
 

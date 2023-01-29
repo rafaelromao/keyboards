@@ -1,5 +1,5 @@
 ## kprepublic/bm40hsrgb
-### A 30 keys split keyboard layout, optimized for programmers.
+### A pseudo split keyboard, in a BM40 body.
 
 The keyboard in the picture below is a BM40, used to design and test this layout.
 ![img](../../../../../../../img/bm40.jpg)
