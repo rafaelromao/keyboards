@@ -11,6 +11,8 @@ This board has two encoders, and a programable LED, used for layer and other sta
 Some build pictures can be found [here](../../../../../../img/fauxberry).
 
 Parts:
+- 30 Boba U4T + 4 Boba U4 Black.
+- MT3 3277 Ergodox Set.
 - 36 keys [FFBK](https://fingerpunch.xyz/product/faux-fox-keyboard) case.
 - [RP2040](https://pt.aliexpress.com/item/1005004096147070.html).
 - [1n4148 diodes](https://pt.aliexpress.com/item/1005003540554760.html).
