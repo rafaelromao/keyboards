@@ -24,8 +24,8 @@ then
     echo "Creating XD75 symbolic link..."
     ln -s "$KEYBOARD_HOME/src/qmk/$XD75/rafaelromao" "$QMK_HOME/$XD75"
 fi
-echo "Checking out qmk v0.18.1..."
+echo "Checking out qmk v0.18.15..."
 cd $QMK_HOME
 git fetch
-git checkout 0.18.1
+git checkout 0.18.15
 cd ..
