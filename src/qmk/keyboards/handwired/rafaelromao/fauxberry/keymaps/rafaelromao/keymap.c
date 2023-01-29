@@ -11,14 +11,14 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
      [_ROMAK] = LAYOUT_wrapper(
- // |_______________________________________________________________________________________________________________________|
+ // |___________________________________________________________________________________________________|
       ___________________ROMAK_L1____________________ , ___________________ROMAK_R1____________________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       ___________________ROMAK_L2____________________ , ___________________ROMAK_R2____________________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       ___________________ROMAK_L3____________________ , ___________________ROMAK_R3____________________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-                          XXXXXXX , ____ROMAK_L4_____ , ____ROMAK_R4_____ , XXXXXXX),
+                          ____ROMAK_L4_____ , XXXXXXX , XXXXXXX , ____ROMAK_R4_____),
  // |___________________________________________________________________________________________________|
 
      [_NUMPAD] = LAYOUT_wrapper(
@@ -29,7 +29,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       ___________________NUMPAD_L3___________________ , ___________________NUMPAD_R3___________________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-                          XXXXXXX , ____NUMPAD_L4____ , ____NUMPAD_R4____ , XXXXXXX),
+                          ____NUMPAD_L4____ , XXXXXXX , XXXXXXX ,____NUMPAD_R4____),
  // |___________________________________________________________________________________________________|
 
      [_ACCENT] = LAYOUT_wrapper(
@@ -40,7 +40,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       ___________________ACCENT_L3___________________ , ___________________ACCENT_R3___________________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-                          XXXXXXX , ____ACCENT_L4____ , ____ACCENT_R4____ , XXXXXXX),
+                          ____ACCENT_L4____ , XXXXXXX , XXXXXXX ,____ACCENT_R4____),
  // |___________________________________________________________________________________________________|
 
      [_MACROS] = LAYOUT_wrapper(
@@ -51,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       ___________________MACROS_L3___________________ , ___________________MACROS_R3___________________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-                          XXXXXXX , ____MACROS_L4____ , ____MACROS_R4____ , XXXXXXX),
+                          ____MACROS_L4____ , XXXXXXX , XXXXXXX ,____MACROS_R4____),
  // |___________________________________________________________________________________________________|
 
      [_LOWER] = LAYOUT_wrapper(
@@ -62,7 +62,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       ___________________LOWER_L3____________________ , ___________________LOWER_R3____________________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-                          XXXXXXX , ____LOWER_L4_____ , ____LOWER_R4_____ , XXXXXXX),
+                          ____LOWER_L4_____ , XXXXXXX , XXXXXXX ,____LOWER_R4_____),
  // |___________________________________________________________________________________________________|
 
      [_RAISE] = LAYOUT_wrapper(
@@ -73,7 +73,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       ___________________RAISE_L3____________________ , ___________________RAISE_R3____________________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-                          XXXXXXX , ____RAISE_L4_____ , ____RAISE_R4_____ , XXXXXXX),
+                          ____RAISE_L4_____ , XXXXXXX , XXXXXXX ,____RAISE_R4_____),
  // |___________________________________________________________________________________________________|
 
      [_FIXED_NAV] = LAYOUT_wrapper(
@@ -84,7 +84,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       ___________________NAVIGATION_L3_______________ , ___________________NAVIGATION_R3_______________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-                          XXXXXXX , __NAVIGATION_L4__ , __FIXED_NAV__R4__ , XXXXXXX),
+                          __NAVIGATION_L4__ , XXXXXXX , XXXXXXX ,__FIXED_NAV__R4__),
  // |___________________________________________________________________________________________________|
 
      [_NAVIGATION] = LAYOUT_wrapper(
@@ -95,7 +95,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       ___________________NAVIGATION_L3_______________ , ___________________NAVIGATION_R3_______________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-                          XXXXXXX , __NAVIGATION_L4__ , __NAVIGATION_R4__ , XXXXXXX),
+                          __NAVIGATION_L4__ , XXXXXXX , XXXXXXX ,__NAVIGATION_R4__),
  // |___________________________________________________________________________________________________|
 
      [_MEDIA] = LAYOUT_wrapper(
@@ -106,7 +106,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       ___________________MEDIA_L3____________________ , ___________________MEDIA_R3____________________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-                          XXXXXXX , ____MEDIA_L4_____ , ____MEDIA_R4_____ , XXXXXXX),
+                          ____MEDIA_L4_____ , XXXXXXX , XXXXXXX ,____MEDIA_R4_____),
  // |___________________________________________________________________________________________________|
 
      [_LOCK] = LAYOUT_wrapper(
@@ -117,7 +117,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       _______________________LOCK____L3______________ , _______________________LOCK____R3______________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-                          XXXXXXX , ______LOCK____L4_ , ______LOCK____R4_ , XXXXXXX),
+                          ______LOCK____L4_ , XXXXXXX , XXXXXXX ,______LOCK____R4_),
  // |___________________________________________________________________________________________________|
 
      [_MAINTENANCE] = LAYOUT_wrapper(
@@ -128,7 +128,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       ___________________MAINTENANCE_L3______________ , ___________________MAINTENANCE_R3______________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-                          XXXXXXX , __MAINTENANCE_L4_ , __MAINTENANCE_R4_ , XXXXXXX)
+                          __MAINTENANCE_L4_ , XXXXXXX , XXXXXXX , __MAINTENANCE_R4_)
  // |___________________________________________________________________________________________________|
 };
 
@@ -221,15 +221,14 @@ bool oled_task_user(void) {
 // Encoder Map
 
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
-    [_ROMAK] =  { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
-    [_NUMPAD] =  { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
-    [_ACCENT] =  { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
-    [_MACROS] =  { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
-    [_LOWER] =  { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
-    [_RAISE] =  { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
-    [_FIXED_NAV] =  { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
-    [_NAVIGATION] =  { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
-    [_MEDIA] =  { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
-    [_LOCK] =  { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
-    [_MAINTENANCE] =  { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  }
-};   
+    [_ROMAK]       = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)},
+    [_NUMPAD]      = {ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)},
+    [_ACCENT]      = {ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)},
+    [_MACROS]      = {ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)},
+    [_LOWER]       = {ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)},
+    [_RAISE]       = {ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)},
+    [_FIXED_NAV]   = {ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)},
+    [_NAVIGATION]  = {ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)},
+    [_MEDIA]       = {ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)},
+    [_LOCK]        = {ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)},
+    [_MAINTENANCE] = {ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)}};
