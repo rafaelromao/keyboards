@@ -47,6 +47,7 @@ The reference implementation is done in QMK, so it has all features supported.
 
 The qmk version recommended for this keymap is 0.18.1.
 
+- [handwired/rafaelromao/fauxberry](https://github.com/rafaelromao/keyboards/blob/main/src/qmk/keyboards/handwired/rafaelromao/fauxberry/readme.md)
 - [kprepublic/bm40hsrgb](src/qmk/keyboards/kprepublic/bm40hsrgb/keymaps/rafaelromao/readme.md)
 - [xiudi/xd75](src/qmk/keyboards/xiudi/xd75/keymaps/rafaelromao/readme.md)
 
