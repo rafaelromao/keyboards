@@ -36,10 +36,6 @@ Parts:
 
 `qmk flash -kb handwired/rafaelromao/fauxberry -km rafaelromao`
 
-## Keymap
-
-This keymap extends [my userspace](../../../../../users/rafaelromao/readme.md) definitions.
-
 ## Resources
 
 - [Home](https://github.com/rafaelromao/keyboards)
