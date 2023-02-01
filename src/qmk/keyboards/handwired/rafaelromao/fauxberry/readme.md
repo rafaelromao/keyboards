@@ -5,7 +5,7 @@
 
 ### Build Details
 
-FauxBerry is a handwired board built using a [RP2040](https://pt.aliexpress.com/item/1005004096147070.html) in a [FFBK](https://fingerpunch.xyz/product/faux-fox-keyboard) case.
+FauxBerry is a handwired board built using a [RP2040](https://pt.aliexpress.com/item/1005004096147070.html) in a [FFKB](https://fingerpunch.xyz/product/faux-fox-keyboard) case.
 
 This board has two encoders, and a programmable LED, used for layer and other statuses indication.
 Some build pictures can be found [here](../../../../../../img/fauxberry).
