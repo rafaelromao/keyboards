@@ -1,5 +1,5 @@
 ## FauxBerry
-### A handwired split keyboard.
+### A handwired unibody split keyboard.
 
 ![img](../../../../../../img/fauxberry.jpeg)
 
