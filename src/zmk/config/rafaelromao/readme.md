@@ -2,7 +2,8 @@
 
 ## ZMK
 
-This folder contains the port of my keymap to ZMK. 
+This folder contains the port of my keymap to ZMK.
+The full documentation can be found [here](https://github.com/rafaelromao/keyboards). 
 
 ### Missing features:
 - Dynamic Macros
