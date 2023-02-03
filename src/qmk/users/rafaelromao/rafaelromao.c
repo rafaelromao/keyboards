@@ -25,8 +25,8 @@ void matrix_scan_user(void) {
 // Process record
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    // Process accents
-    switch (process_accents(keycode, record)) {
+    // Process custom onshot
+    switch (process_custom_oneshot(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:
@@ -35,8 +35,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
     };
 
-    // Process custom onshot
-    switch (process_custom_oneshot(keycode, record)) {
+    // Process accents
+    switch (process_accents(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:
