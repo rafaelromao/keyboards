@@ -11,10 +11,9 @@
         "bootmagic": false,
         "command": false,
         "console": false,
+        "oled": false,
         "extrakey": true,
-        "mousekey": false,
         "nkro": true,
-        "oled": true,
         "encoder": true
     },
     "matrix_pins": {
@@ -60,13 +59,13 @@
     "encoder": {
         "rotary": [
             {
-                "pin_a": "GP28",
-                "pin_b": "GP29",
+                "pin_a": "GP4",
+                "pin_b": "GP5",
                 "resolution": 2
             },
             {
-                "pin_a": "GP4",
-                "pin_b": "GP5",
+                "pin_a": "GP28",
+                "pin_b": "GP29",
                 "resolution": 2
             }
         ]
