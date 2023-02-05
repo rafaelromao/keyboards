@@ -102,9 +102,10 @@ Most features implemented here were based on the work referenced below.
 - [Robert U](https://github.com/urob/zmk-config)
 
 ### 3D Printing and Handwiring
-- [1Pixel3D](https://www.instagram.com/1pixel3d) 
+- [Jan Lunge](https://m.youtube.com/@JanLunge)
 - [Fingerpunch](http://fingerpunch.xyz)
 - [Joe Scotto](https://www.youtube.com/@joe_scotto)
+- [1Pixel3D](https://www.instagram.com/1pixel3d) 
 
 ## Resouces
 
