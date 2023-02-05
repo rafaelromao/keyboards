@@ -101,6 +101,10 @@ Most features implemented here were based on the work referenced below.
 - [Cem Aksoylar](https://github.com/caksoylar/zmk-config )
 - [Robert U](https://github.com/urob/zmk-config)
 
+### Cases and Handwiring
+- [Fingerpunch](http://fingerpunch.xyz)
+- [Joe Scotto](https://www.youtube.com/@joe_scotto)
+
 ## Resouces
 
 - [KLE](http://www.keyboard-layout-editor.com/#/gists/38f4435ff9a10256d9a7e1a0645c2fec)
