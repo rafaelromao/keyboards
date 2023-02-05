@@ -101,7 +101,8 @@ Most features implemented here were based on the work referenced below.
 - [Cem Aksoylar](https://github.com/caksoylar/zmk-config )
 - [Robert U](https://github.com/urob/zmk-config)
 
-### Cases and Handwiring
+### 3D Printing and Handwiring
+- [1Pixel3D](https://www.instagram.com/1pixel3d) 
 - [Fingerpunch](http://fingerpunch.xyz)
 - [Joe Scotto](https://www.youtube.com/@joe_scotto)
 
