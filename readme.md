@@ -106,7 +106,6 @@ Most features implemented here were based on the work referenced below.
 - [Fingerpunch](http://fingerpunch.xyz)
 - [Joe Scotto](https://github.com/joe-scotto)
 - [AlaaSaadAbdo](https://github.com/AlaaSaadAbdo)
-- [1Pixel3D](https://www.instagram.com/1pixel3d) 
 
 ## Resouces
 
