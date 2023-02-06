@@ -104,7 +104,7 @@ Most features implemented here were based on the work referenced below.
 ### 3D Printing and Handwiring
 - [Jan Lunge](https://m.youtube.com/@JanLunge)
 - [Fingerpunch](http://fingerpunch.xyz)
-- [Joe Scotto](https://www.youtube.com/@joe_scotto)
+- [Joe Scotto](https://github.com/joe-scotto)
 - [AlaaSaadAbdo](https://github.com/AlaaSaadAbdo)
 - [1Pixel3D](https://www.instagram.com/1pixel3d) 
 
