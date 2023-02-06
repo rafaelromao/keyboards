@@ -103,7 +103,7 @@ Most features implemented here were based on the work referenced below.
 
 ### 3D Printing and Handwiring
 - [Jan Lunge](https://m.youtube.com/@JanLunge)
-- [Fingerpunch](http://fingerpunch.xyz)
+- [Sadek Baroudi](https://github.com/sadekbaroudi)
 - [Joe Scotto](https://github.com/joe-scotto)
 - [AlaaSaadAbdo](https://github.com/AlaaSaadAbdo)
 
