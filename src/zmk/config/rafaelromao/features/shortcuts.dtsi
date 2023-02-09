@@ -36,6 +36,16 @@
             global-quick-tap; \
             bindings = <&kp>, <BINDINGS>; \
         };
+
+    #define LAYERTAP_SHORTCUT(NAME, BINDINGS) \
+         NAME: NAME { \
+            compatible = "zmk,behavior-hold-tap"; \
+            label = ZMK_MACRO_STRINGIFY(NAME); \
+            #binding-cells = <2>; \
+            tapping-term-ms = <TAPPING_TERM>; \
+            quick-tap-ms = <QUICK_TAP_TERM>; \
+            bindings = <&lt>, <BINDINGS>; \
+        };
     
 
     shortcuts {
@@ -52,6 +62,11 @@
         SHORTCUT(mc_save_esc,           &macro_tap &kp LG(S) &kp ESC)
         SHORTCUT(mc_o_esc,              &macro_tap &kp O &kp ESC)
         SHORTCUT(mc_shift_tab,          &macro_tap &kp LS(TAB))
+
+        // Media
+
+        SHORTCUT(mc_cam,                &macro_tap &kp LC(LA(LS(LG(V)))))
+        SHORTCUT(mc_mic,                &macro_tap &kp LC(LA(LS(LG(A)))))
         
         // Macros
 
@@ -119,5 +134,6 @@
 
         MODTAP_SHORTCUT(th_find,         &mm_find_symbol)
         MODTAP_SHORTCUT(th_zh,          &mm_zh_f)
+        LAYERTAP_SHORTCUT(th_proj,        &mm_project)
     };
 };

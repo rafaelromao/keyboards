@@ -30,11 +30,13 @@
 
         COMBO(cb_save,          LHR LHM L0,  &mc_save,           ROMAK CASE NUMPAD)
         COMBO(cb_esc,           LTR LTM L0,  &kp ESC,            ROMAK CASE NUMPAD)
-        COMBO(cb_undo,          LHM LHI L0,  &mc_undo,           ROMAK CASE NUMPAD)
+        COMBO(cb_fullscr,       LHM LHI L0,  &mc_fullscr,        ROMAK CASE NUMPAD)
         COMBO(cb_find,           LBM LBI L0,  &mc_find,            ROMAK CASE NUMPAD)
-        COMBO(cb_fullscr,       LHP LHR L0,  &mc_fullscr,        ROMAK CASE NUMPAD)
+        COMBO(cb_undo,          LBR LBM L0,  &mc_undo,           ROMAK CASE NUMPAD)
 
         COMBO(cb_unds,          LBR LBM,     &mm_unds,           ROMAK CASE)
+        COMBO(cb_q,             LTR LTM,     &kp Q,              ROMAK CASE)
+        COMBO(cb_y,             LHM LHI,     &kp Y,              ROMAK CASE)
         COMBO(cb_z,             LBM LBI,     &kp Z,              ROMAK CASE)
         COMBO(cb_raise_l,       LHR L0,      &sl RAISE,          ROMAK CASE)
         COMBO(cb_lower_l,       LHM L0,      &sl LOWER,          ROMAK CASE)
@@ -48,7 +50,7 @@
         COMBO(cb_tab,           RTM RTR R0,  &kp TAB,            ROMAK CASE NUMPAD)
         COMBO(cb_paste,         RHI RHM R0,  &mc_paste,          ROMAK CASE NUMPAD)
         COMBO(cb_copy,          RBI RBM R0,  &mc_copy,           ROMAK CASE NUMPAD)
-        COMBO(cb_selall,        RHR RHP R0,  &mc_selall,         ROMAK CASE NUMPAD)
+        COMBO(cb_selall,        RBM RBR R0,  &mc_selall,         ROMAK CASE NUMPAD)
 
         COMBO(cb_o_esc,         RTM RTR,     &mc_o_esc,          ROMAK CASE)
         COMBO(cb_semi,          RBM RBR,     &th_semi 0 0,       ROMAK CASE)
@@ -65,10 +67,6 @@
         COMBO(cb_braces,        RTR RTM,     &mc_braces,         RAISE)
 
         COMBO(cb_end_ent,       RTM RTR,     &th_end_ent 0 0,    MEDIA)
-        COMBO(cb_del,           RBC RBI,     &kp DEL,            MEDIA)
-        COMBO(cb_home,          RBI RBM,     &kp HOME,           MEDIA)
-        COMBO(cb_end,           RBM RBR,     &kp END,            MEDIA)
-        COMBO(cb_ins,           RBR RBP,     &kp INS,            MEDIA)
         
         COMBO(cb_refresh,       RHM RHR,     &mc_refresh,        MACROS)
         COMBO(cb_close_tab,     RBM RBR,     &mc_close_tab,      MACROS)

@@ -36,6 +36,13 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 
 process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+        case NAV_PRJ:
+            if (record->event.pressed && record->tap.count > 0) {
+                process_macros(MC_PROJ, NULL);
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+            break;
+
         case NAV_BTI:
             if (record->event.pressed && record->tap.count > 0) {
                 process_macros(MC_BTIC, NULL);

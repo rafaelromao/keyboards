@@ -28,8 +28,11 @@ enum {
     COL_ECO,
     PER_DEG,
     SLS_BSL,
+    MIN_PLU,
     QUE_EXC,
     EQL_EEQ,
+    LET_ELT,
+    GRT_EGT,
     OR_EOR,
     TIL_HAS,
     TD_CODE_END 
@@ -58,7 +61,10 @@ enum {
 #define TD_PERC TD(PER_DEG)
 #define TD_QUES TD(QUE_EXC)
 #define TD_SLSH TD(SLS_BSL)
+#define TD_MINS TD(MIN_PLU)
 #define TD_EQL TD(EQL_EEQ)
+#define TD_LT TD(LET_ELT)
+#define TD_GT TD(GRT_EGT)
 #define TD_TILD TD(TIL_HAS)
 #define TD_OR TD(OR_EOR)
 
@@ -130,12 +136,10 @@ enum {
 
 #define LALTT_P LALT_T(KC_P)
 #define LALTT_M LALT_T(KC_M)
-#define RALTT_Q RALT_T(KC_Q)
-#define RALTT_Y RALT_T(KC_Y)
+#define RALTT_B RALT_T(KC_B)
 #define AL_F1 LALT_T(KC_F1)
 #define AL_1 LALT_T(KC_1)
-#define AL_F14 RALT_T(KC_F14)
-#define AL_COMM RALT_T(KC_COMM)
+#define AL_F3 RALT_T(KC_F3)
 
 #define LGUIT_T LGUI_T(KC_T)
 #define RGUIT_H RGUI_T(KC_H)
@@ -155,6 +159,7 @@ enum {
 #define NAV_ACT  LT(_NAVIGATION, OS_ACNT)
 #define NAV_F12  LT(_NAVIGATION, KC_F12)
 #define NAV_BTI  LT(_NAVIGATION, MC_BTIC)
+#define NAV_PRJ  LT(_NAVIGATION, MC_PROJ)
 
 #define MED_CAS LT(_MEDIA, TG_CASE)
 #define MED_0   LT(_MEDIA, KC_0)

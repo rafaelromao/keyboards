@@ -27,7 +27,7 @@
                         bindings = <
    &mc_sqo          &kp F               &kp D               &kp W               &kp Z               &kp X               &kp L            &kp O            &kp U            &mc_ced    
    &lt MACROS R     &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp G               &kp V               &mt RGUI H       &mt RCTRL A      &mt RSHFT E      &lt MACROS I 
-   &mt RALT Q       &kp B               &kp C               &mt LALT P          &kp K               &kp J               &mt LALT M       &td_comma        &th_dot 0 0      &mt RALT Y
+   &kp Q            &mt RALT B          &kp C               &mt LALT P          &kp K               &kp J               &mt LALT M       &td_comma        &th_dot 0 0      &kp Y
                                         &sl RAISE           &msl NAV ACCENT     &lt LOWER SPACE     &lt RAISE BSPC      &mm_sc           &sl LOWER
                         >;
                 };
@@ -36,7 +36,7 @@
                         bindings = <
    &mc_sqo          &kp LS(F)           &kp LS(D)           &kp LS(W)           &kp LS(Z)           &kp LS(X)           &kp LS(L)        &kp LS(O)        &kp LS(U)        &mc_ced_c    
    &lt MACROS LS(R) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(G)           &kp LS(V)           &mt RGUI LS(H)   &mt RCTRL LS(A)  &mt RSHFT LS(E)  &lt MACROS LS(I) 
-   &mt RALT LS(Q)   &kp LS(B)           &kp LS(C)           &mt LALT LS(P)      &kp LS(K)           &kp LS(J)           &mt LALT LS(M)   &td_comma        &th_dot 0 0      &mt RALT LS(Y)
+   &kp LS(Q)        &mt RALT LS(B)      &kp LS(C)           &mt LALT LS(P)      &kp LS(K)           &kp LS(J)           &mt LALT LS(M)   &td_comma        &th_dot 0 0      &kp LS(Y)
                                         &trans              &msl NAV CASE_AC    &trans              &trans              &ht_sc MEDIA 0   &trans
                         >;
                 };
@@ -44,26 +44,26 @@
                         label = "NUMPAD";
                         bindings = <
    &none            &kp F9              &kp F8              &kp F7              &none               &none               &mc_n7           &mc_n8           &mc_n9           &none    
-   &kp F15          &mt LSHFT F6        &mt LCTRL F5        &mt LGUI F4         &kp F11             &kp COLON           &th_n4 RGUI 0    &th_n5 RCTRL 0   &th_n6 RSHFT 0   &lt MACROS DOT 
-   &mt RALT F14     &kp F3              &kp F2              &mt LALT F1         &kp F10             &tog NUMPAD         &th_n1 LALT 0    &mc_n2           &mc_n3           &mt RALT COMMA
+   &none            &mt LSHFT F6        &mt LCTRL F5        &mt LGUI F4         &kp F11             &kp COMMA           &th_n4 RGUI 0    &th_n5 RCTRL 0   &th_n6 RSHFT 0   &lt MACROS DOT 
+   &none            &mt RALT F3         &kp F2              &mt LALT F1         &kp F10             &tog NUMPAD         &th_n1 LALT 0    &mc_n2           &mc_n3           &none
                                         &trans              &msl NAV F12        &trans              &trans              &th_n0 MEDIA 0   &trans
                         >;
                 };
                 accents_layer {
                         label = "ACCENT";
                         bindings = <
-   &none            &none               &kp X               &kp CARET           &none               &none               &ac_otil         &ac_oacu         &ac_uacu         &none    
+   &none            &kp Q               &kp X               &kp CARET           &none               &none               &ac_otil         &ac_oacu         &ac_uacu         &none    
    &kp GRAVE        &kp DQT             &kp SQT             &kp Z               &none               &ac_agrv            &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
-   &none            &none               &mc_ced             &none               &kp TILDE           &none               &ac_acir         &ac_ocir         &ac_ecir         &none
+   &none            &none               &mc_ced             &kp Y               &kp TILDE           &none               &ac_acir         &ac_ocir         &ac_ecir         &none
                                         &trans              &trans              &kp SPACE           &kp BSPC            &trans           &trans
                         >;
                 };
                 case_accents_layer {
                         label = "CASE_AC";
                         bindings = <
-   &none            &none              &kp LS(X)            &kp CARET           &none               &none               &ac_otil_c       &ac_oacu_c       &ac_uacu_c       &none    
+   &none            &kp LS(Q)          &kp LS(X)            &kp CARET           &none               &none               &ac_otil_c       &ac_oacu_c       &ac_uacu_c       &none    
    &kp GRAVE        &kp DQT            &kp SQT              &kp LS(Z)           &none               &ac_agrv_c          &ac_atil_c       &ac_aacu_c       &ac_eacu_c       &ac_iacu_c 
-   &none            &none              &mc_ced_c            &none               &kp TILDE           &none               &ac_acir_c       &ac_ocir_c       &ac_ecir_c       &none
+   &none            &none              &mc_ced_c            &kp LS(Y)           &kp TILDE           &none               &ac_acir_c       &ac_ocir_c       &ac_ecir_c       &none
                                        &trans               &trans              &kp SPACE           &kp BSPC            &trans           &trans
                         >;
                 };
@@ -72,25 +72,25 @@
                         bindings = <
    &none            &kp ESC            &mm_actions          &mm_typematch       &none               &none               &mc_selw         &kp ENTER        &kp TAB         &none    
    &mm_docs         &th_find LSHFT 0    &mm_run              &mm_debug           &mm_build           &none               &mc_seln         &mm_zh_b         &th_zh LSHFT 0  &none  
-   &mm_project      &mm_recent         &mm_complete         &mm_usages          &mm_refac           &mc_join            &mc_comment      &mm_wt_b         &mm_wt_f        &none
-                                       &trans               &trans              &kp BSPC            &kp SPACE           &trans           &trans
+   &none            &mm_recent         &mm_complete         &mm_usages          &mm_refac           &mc_join            &mc_comment      &mm_wt_b         &mm_wt_f        &none
+                                       &trans               &th_proj NAV 0      &kp BSPC            &kp SPACE           &trans           &trans
                         >;
                 };
                 lower_layer {
                         label = "LOWER";
                         bindings = <
    &none            &td_lpar           &td_rpar             &mc_caret           &none               &none               &mc_n7           &mc_n8           &mc_n9          &none    
-   &th_bti NAV 0    &td_dqo            &td_sqo              &th_and 0 0         &th_or 0 0          &kp COLON           &mc_n4           &mc_n5           &mc_n6          &lt MACROS DOT  
-   &kp AT           &td_lbkt           &td_rbkt             &th_qmark 0 0       &th_tilde 0 0       &none               &mc_n1           &mc_n2           &mc_n3          &kp COMMA 
+   &th_bti NAV 0    &td_dqo            &td_sqo              &th_and 0 0         &th_or 0 0          &kp COMMA           &mc_n4           &mc_n5           &mc_n6          &lt MACROS DOT  
+   &none            &td_lbkt           &td_rbkt             &th_qmark 0 0       &th_tilde 0 0       &none               &mc_n1           &mc_n2           &mc_n3          &none 
                                        &trans               &trans              &trans              &trans              &th_n0 MEDIA 0   &trans
                         >;
                 };
                 raise_layer {
                         label = "RAISE";
                         bindings = <
-   &none            &kp F9             &kp F8               &kp F7              &none               &none               &td_curr         &td_lbrc         &td_rbrc        &none    
-   &kp F15          &kp F6             &kp F5               &kp F4              &kp F11             &th_colon 0 0       &kp MINUS        &th_eql 0 0      &td_excl        &kp PLUS  
-   &kp F14          &kp F3             &kp F2               &kp F1              &kp F10             &th_perc 0 0        &th_slash 0 0    &kp LT           &kp GT          &kp STAR
+   &none            &kp F9             &kp F8               &kp F7              &none               &none               &th_curr  0 0    &td_lbrc         &td_rbrc        &none    
+   &none            &kp F6             &kp F5               &kp F4              &kp F11             &th_colon 0 0       &th_mins  0 0    &th_eql 0 0      &td_excl        &kp AT  
+   &none            &kp F3             &kp F2               &kp F1              &kp F10             &th_perc 0 0        &th_slash 0 0    &th_lt 0 0       &th_gt 0 0      &none
                                        &trans               &kp F12             &trans              &trans              &trans           &trans
                         >;
                 };
@@ -99,16 +99,16 @@
                         bindings = <
    &none            &kp ESC            &mc_save             &none               &none               &none               &none          &kp PAGE_DOWN      &kp PAGE_UP     &none    
    &none            &sk LSHIFT         &sk LCTRL            &sk LGUI            &none               &tog NAV_F          &kp LEFT       &kp DOWN           &kp UP          &kp RIGHT
-   &sk RALT         &none              &none                &sk LALT            &none               &none               &kp DEL        &kp HOME           &kp END         &kp INS
+   &none            &sk RALT           &none                &sk LALT            &none               &kp INS             &kp DEL        &kp HOME           &kp END         &none
                                        &trans               &trans              &trans              &trans              &trans         &trans
                         >;
                 };
                 media_layer {
                         label = "MEDIA";
                         bindings = <
-   &none            &kp ESC            &mc_save             &none               &none               &none               &none          &kp ENTER          &kp TAB         &none    
-   &none            &kp LSHIFT         &kp LCTRL            &kp LGUI            &none               &tog NAV_F          &kp C_MUTE     &kp C_VOL_DN       &kp C_VOL_UP    &kp LC(LA(LS(LG(A))))
-   &kp RALT         &none              &none                &kp LALT            &none               &tog NUMPAD         &kp C_PP       &kp C_PREV         &kp C_NEXT      &kp LC(LA(LS(LG(V))))
+   &none            &kp ESC            &mc_save             &none               &none               &none               &mc_cam        &kp ENTER          &kp TAB         &none    
+   &none            &kp LSHIFT         &kp LCTRL            &kp LGUI            &none               &tog NAV_F          &mc_mic        &kp C_VOL_DN       &kp C_VOL_UP    &kp C_MUTE
+   &none            &kp RALT           &none                &kp LALT            &none               &tog NUMPAD         &kp C_PP       &kp C_PREV         &kp C_NEXT      &none
                                        &trans               &mo MAINT           &trans              &trans              &trans         &trans
                         >;
                 };
@@ -117,7 +117,7 @@
                         bindings = <
    &none            &kp ESC            &mc_save             &none               &none               &none               &none          &kp PAGE_DOWN      &kp PAGE_UP     &none    
    &none            &sk LSHIFT         &sk LCTRL            &sk LGUI            &none               &tog NAV_F          &kp LEFT       &kp DOWN           &kp UP          &kp RIGHT
-   &sk RALT         &none              &none                &sk LALT            &none               &none               &kp DEL        &kp HOME           &kp END         &kp INS
+   &none            &sk RALT           &none                &sk LALT            &none               &kp INS             &kp DEL        &kp HOME           &kp END         &none
                                        &trans               &trans              &trans              &trans              &mo MAINT      &trans
                         >;
                 };
@@ -135,7 +135,7 @@
                         bindings = <
    &none            &none              &none                &reset              &none               &none               &reset         &kp LC(LG(Q))      &kp C_SLEEP    &none    
    &none            &none              &none                &none               &bootloader         &bootloader         &none          &none              &tog LOCK_KB   &kp C_POWER  
-   &none            &none              &none                &none               &none               &none               &bt BT_SEL 0   &bt BT_PRV         &bt BT_NXT     &bt BT_CLR 
+   &none            &none              &none                &none               &none               &bt BT_CLR          &bt BT_SEL 0   &bt BT_PRV         &bt BT_NXT     &none 
                                        &trans               &trans              &trans              &trans              &trans         &trans
                         >;
                 };
