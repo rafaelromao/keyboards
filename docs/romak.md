@@ -16,7 +16,7 @@ The number of alpha keys and the number of thumb keys can vary, from a total of 
 [KLA Next](https://klanext.keyboard-design.com/) was used to compare Romak with Colemak-DH and some other layouts, using the Universal Declaration of Human Rights as text corpus, combining [Portuguese and English](analysis/corpus.txt).
 ### General Performance
 
-Romak scores better than Dvorak and close to Hands-Down Polyglot and Colemak-DH.
+Romak scores better than Dvorak and close to Hands-Down Polyglot.
 ![img](../img/perf.png)
 
 ### Heatmaps

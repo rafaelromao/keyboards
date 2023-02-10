@@ -15,14 +15,14 @@
 #define ___________________ROMAK_R3____________________ KC_J    , LALTT_M , TD_COMM , TD_DOT  , KC_Y
 #define ____ROMAK_R4_____                               RAI_BSP , MED_CAS 
 
-#define ___________________ACCENT_L1___________________ XXXXXXX , KC_Q    , KC_X    , KC_CIRC , XXXXXXX
-#define ___________________ACCENT_L2___________________ KC_GRV  , KC_DQUO , KC_QUOT , KC_Z    , XXXXXXX
-#define ___________________ACCENT_L3___________________ XXXXXXX , XXXXXXX , MC_SQ_C , KC_Y    , KC_TILD
+#define ___________________ACCENT_L1___________________ XXXXXXX , XXXXXXX , KC_X    , KC_CIRC , XXXXXXX
+#define ___________________ACCENT_L2___________________ KC_GRV  , KC_DQUO , KC_QUOT , KC_Z    , KC_Q
+#define ___________________ACCENT_L3___________________ XXXXXXX , XXXXXXX , MC_SQ_C , XXXXXXX , KC_TILD
 #define ____ACCENT_L4____                                                             _______ , KC_SPC
 
 #define ___________________ACCENT_R1___________________ XXXXXXX , MC_TL_O , MC_SQ_O , MC_SQ_U , XXXXXXX
 #define ___________________ACCENT_R2___________________ MC_GV_A , MC_TL_A , MC_SQ_A , MC_SQ_E , MC_SQ_I
-#define ___________________ACCENT_R3___________________ XXXXXXX , MC_CR_A , MC_CR_O , MC_CR_E , XXXXXXX
+#define ___________________ACCENT_R3___________________ KC_Y    , MC_CR_A , MC_CR_O , MC_CR_E , XXXXXXX
 #define ____ACCENT_R4____                               KC_BSPC , _______
 
 #define ___________________NUMPAD_L1___________________ XXXXXXX , KC_F9   , KC_F8   , KC_F7   , XXXXXXX
