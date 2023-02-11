@@ -5,20 +5,18 @@ The Navigation and Media layer can be activated holding the outer left and right
 
 ### Navigation
 - The Navigation layer gives access to [Standard Modifiers](modifiers.md#standard-modifiers), Enter, Tab, Insert, Delete, Home, End, Page Up, Page Down and VIM style navigation, as well as Esc and a Save shortcut.
-- In VIM, navigation with hjkl should be ignored in favor of the navigation with the fingers in the home position, using the navigation layer.
-    - For that to work better, hjkl should be disabled in normal and visual modes:
-        ```vim
-        nnoremap h <nop>
-        nnoremap j <nop>
-        nnoremap k <nop>
-        nnoremap l <nop>
-        vnoremap h <nop>
-        vnoremap j <nop>
-        vnoremap k <nop>
-        vnoremap l <nop>
-        ```
-    - This trade-off turns the navigation easier and ubiquitous and makes even more sense when using other layout than qwerty.
+- In VIM, navigation with `hjkl` should be remapped to `haei`, to use the fingers in the home position. In addition to that, `e` should be remapped to `l`, `a` should be remapped to `k` and `i` should be remapped to `j`.
 
+```vim
+   noremap a j
+   noremap e k
+   noremap i l
+
+   noremap j a
+   noremap k i
+   noremap l e
+```
+        
 ### Media
 - The Media layer gives access to [One-Shot Modifiers](modifiers.md#one-shot-modifiers), Media controls, Esc and a Save shortcut.
 - The right side of this layer gives access to media keys and shortcuts to toggle the Navigation or Numpad layers on or off.
