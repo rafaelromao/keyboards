@@ -47,9 +47,9 @@ The reference implementation is done in QMK, so it has all features supported.
 
 The qmk version recommended for this keymap is 0.18.1.
 
-- [handwired/rafaelromao/fauxberry](https://github.com/rafaelromao/keyboards/blob/main/src/qmk/keyboards/handwired/rafaelromao/fauxberry/readme.md)
+- [handwired/rafaelromao/fauxberry](src/qmk/keyboards/handwired/rafaelromao/fauxberry/readme.md)
+- [handwired/rafaelromao/xiao](src/qmk/keyboards/handwired/rafaelromao/xiao/readme.md)
 - [kprepublic/bm40hsrgb](src/qmk/keyboards/kprepublic/bm40hsrgb/keymaps/rafaelromao/readme.md)
-- [xiudi/xd75](src/qmk/keyboards/xiudi/xd75/keymaps/rafaelromao/readme.md)
 
 Some features are not available on all keyboards though. For instance, the BM40 does not support Dynamic Macros, while the XD75 doesn't have per key RGB.
 
@@ -59,7 +59,7 @@ The zmk version used for this keymap is the one available in [this fork](https:/
 
 - [lowprokb.ca/corneish-zen](src/zmk/keyboards/lowprokb.ca/corneish-zen/readme.md)
 
-Some features might not be available in ZMK. [This readme file](https://github.com/rafaelromao/keyboards/blob/main/src/zmk/config/rafaelromao/readme.md) will indicate what features are available.
+Some features might not be available in ZMK. [This readme file](src/zmk/config/rafaelromao/readme.md) will indicate what features are available.
 
 ## Building
 
