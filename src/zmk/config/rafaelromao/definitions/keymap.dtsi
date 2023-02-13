@@ -53,8 +53,8 @@
                         label = "ACCENT";
                         bindings = <
    &none            &kp Q               &kp X               &kp CARET           &none               &none               &ac_otil         &ac_oacu         &ac_uacu         &none    
-   &kp GRAVE        &kp DQT             &kp SQT             &kp Z               &none               &ac_agrv            &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
-   &none            &none               &mc_ced             &none               &kp TILDE           &kp Y               &ac_acir         &ac_ocir         &ac_ecir         &none
+   &kp GRAVE        &kp DQT             &kp SQT             &kp Z               &none               &kp Y               &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
+   &none            &none               &mc_ced             &none               &kp TILDE           &ac_agrv            &ac_acir         &ac_ocir         &ac_ecir         &none
                                         &trans              &trans              &kp SPACE           &kp BSPC            &trans           &trans
                         >;
                 };
