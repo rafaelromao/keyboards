@@ -52,8 +52,8 @@
                 accents_layer {
                         label = "ACCENT";
                         bindings = <
-   &none            &none               &kp X               &kp CARET           &none               &none               &ac_otil         &ac_oacu         &ac_uacu         &none    
-   &kp GRAVE        &kp DQT             &kp SQT             &kp Z               &kp Q               &ac_agrv            &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
+   &none            &kp Q               &kp X               &kp CARET           &none               &none               &ac_otil         &ac_oacu         &ac_uacu         &none    
+   &kp GRAVE        &kp DQT             &kp SQT             &kp Z               &none               &ac_agrv            &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
    &none            &none               &mc_ced             &none               &kp TILDE           &kp Y               &ac_acir         &ac_ocir         &ac_ecir         &none
                                         &trans              &trans              &kp SPACE           &kp BSPC            &trans           &trans
                         >;
@@ -61,8 +61,8 @@
                 case_accents_layer {
                         label = "CASE_AC";
                         bindings = <
-   &none            &none              &kp LS(X)            &kp CARET           &none               &none               &ac_otil_c       &ac_oacu_c       &ac_uacu_c       &none    
-   &kp GRAVE        &kp DQT            &kp SQT              &kp LS(Z)           &kp LS(Q)           &kp LS(Y)            &ac_atil_c       &ac_aacu_c       &ac_eacu_c       &ac_iacu_c 
+   &none            &kp LS(Q)          &kp LS(X)            &kp CARET           &none               &none               &ac_otil_c       &ac_oacu_c       &ac_uacu_c       &none    
+   &kp GRAVE        &kp DQT            &kp SQT              &kp LS(Z)           &none               &kp LS(Y)            &ac_atil_c       &ac_aacu_c       &ac_eacu_c       &ac_iacu_c 
    &none            &none              &mc_ced_c            &none               &kp TILDE           &ac_agrv_c           &ac_acir_c       &ac_ocir_c       &ac_ecir_c       &none
                                        &trans               &trans              &kp SPACE           &kp BSPC            &trans           &trans
                         >;

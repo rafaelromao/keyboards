@@ -25,8 +25,8 @@
 #define ___________________NUMPAD_R3_________           TG_NUM  , AL_1    , KC_2    , KC_3    
 #define ____NUMPAD_R4____                               RAI_BSP , MED_0
 
-#define           _________ACCENT_L1_________                     XXXXXXX , KC_X    , KC_CIRC 
-#define ___________________ACCENT_L2___________________ KC_GRV  , KC_DQUO , KC_QUOT , KC_Z    , KC_Q
+#define           _________ACCENT_L1_________                     KC_Q    , KC_X    , KC_CIRC 
+#define ___________________ACCENT_L2___________________ KC_GRV  , KC_DQUO , KC_QUOT , KC_Z    , XXXXXXX
 #define           _________ACCENT_L3___________________           XXXXXXX , MC_SQ_C , XXXXXXX , KC_TILD
 #define                               ____ACCENT_L4____                               _______ , KC_SPC
 
