@@ -12,9 +12,9 @@ Some build pictures can be found [here](../../../../../../docs/xiao.md).
 ![img](../../../../../../img/rommana.jpeg)
 
 Parts:
-- 30 MX switches (Kailh BOX Jade).
-- 28 1u MX keycaps (MT3 3277 Ergodox Set).
-- 2 1.5u MX keycaps (MT3 3277 Ergodox Set).
+- 28 MX switches (Kailh BOX Jade).
+- 24 1u MX keycaps (leftovers from a MT3 3277 Ergodox Set).
+- 4 1.5u MX keycaps (leftovers from a MT3 3277 Engodox Set).
 - Rommana 15 degree tent [case](https://github.com/AlaaSaadAbdo/Rommana).
 - [Seeeduino Xiao RP2040](https://pt.aliexpress.com/item/4000131085893.html).
 - [1n4148 diodes](https://pt.aliexpress.com/item/1005003540554760.html).
