@@ -31,8 +31,8 @@
 #define                               ____ACCENT_L4____                               _______ , KC_SPC
 
 #define           _________ACCENT_R1_________                     MC_TL_O , MC_SQ_O , MC_SQ_U 
-#define ___________________ACCENT_R2___________________ MC_GV_A , MC_TL_A , MC_SQ_A , MC_SQ_E , MC_SQ_I
-#define ___________________ACCENT_R3_________           KC_Y    , MC_CR_A , MC_CR_O , MC_CR_E 
+#define ___________________ACCENT_R2___________________ KC_Y    , MC_TL_A , MC_SQ_A , MC_SQ_E , MC_SQ_I
+#define ___________________ACCENT_R3_________           MC_GV_A , MC_CR_A , MC_CR_O , MC_CR_E 
 #define ____ACCENT_R4____                               KC_BSPC , _______
 
 #define           _________MACROS_L1_________                     MC_ESC  , MC_QUIK , MC_AUCO 
