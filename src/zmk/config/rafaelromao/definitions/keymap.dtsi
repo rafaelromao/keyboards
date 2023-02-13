@@ -25,18 +25,18 @@
                 default_layer {
                         label = "ROMAK";
                         bindings = <
-   &mc_sqo          &kp F               &kp D               &kp W               &kp Z               &kp X               &kp L            &kp O            &kp U            &mc_ced    
+   &kp R            &kp F               &kp D               &kp W               &none               &none               &kp L            &kp O            &kp U            &kp I    
    &lt MACROS R     &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp G               &kp V               &mt RGUI H       &mt RCTRL A      &mt RSHFT E      &lt MACROS I 
-   &kp Q            &mt RALT B          &kp C               &mt LALT P          &kp K               &kp J               &mt LALT M       &td_comma        &th_dot 0 0      &kp Y
+   &lt MACROS R     &mt RALT B          &kp C               &mt LALT P          &kp K               &kp J               &mt LALT M       &td_comma        &th_dot 0 0      &lt MACROS I
                                         &sl RAISE           &msl NAV ACCENT     &lt LOWER SPACE     &lt RAISE BSPC      &mm_sc           &sl LOWER
                         >;
                 };
                 capsword_layer {
                         label = "CASE";
                         bindings = <
-   &mc_sqo          &kp LS(F)           &kp LS(D)           &kp LS(W)           &kp LS(Z)           &kp LS(X)           &kp LS(L)        &kp LS(O)        &kp LS(U)        &mc_ced_c    
+   &kp LS(R)        &kp LS(F)           &kp LS(D)           &kp LS(W)           &none               &none               &kp LS(L)        &kp LS(O)        &kp LS(U)        &kp LS(I)    
    &lt MACROS LS(R) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(G)           &kp LS(V)           &mt RGUI LS(H)   &mt RCTRL LS(A)  &mt RSHFT LS(E)  &lt MACROS LS(I) 
-   &kp LS(Q)        &mt RALT LS(B)      &kp LS(C)           &mt LALT LS(P)      &kp LS(K)           &kp LS(J)           &mt LALT LS(M)   &td_comma        &th_dot 0 0      &kp LS(Y)
+   &lt MACROS LS(R) &mt RALT LS(B)      &kp LS(C)           &mt LALT LS(P)      &kp LS(K)           &kp LS(J)           &mt LALT LS(M)   &td_comma        &th_dot 0 0      &lt MACROS LS(I) 
                                         &trans              &msl NAV CASE_AC    &trans              &trans              &ht_sc MEDIA 0   &trans
                         >;
                 };
