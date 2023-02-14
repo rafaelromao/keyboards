@@ -240,20 +240,6 @@ void td_or(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void td_tild(qk_tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            process_macros(MC_TILD, NULL);
-            break;
-        case TD_SINGLE_HOLD:
-            tap_code16(KC_HASH);
-            break;
-        default:
-            break;
-    }
-}
-
 void td_not(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
@@ -327,11 +313,7 @@ void td_perc(qk_tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_PERC);
             break;
         case TD_SINGLE_HOLD:
-            if (is_macos()) {
-                tap_code16(LSFT(RALT(KC_8)));
-            } else {
-                tap_code16(LSFT(LCTL(KC_2)));
-            }
+            tap_code16(KC_HASH);
             break;
         default:
             break;
@@ -621,7 +603,6 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [NOT_SWI] = ACTION_TAP_DANCE_FN(td_not),
     [AND_EAN] = ACTION_TAP_DANCE_FN(td_and),
     [OR_EOR]  = ACTION_TAP_DANCE_FN(td_or),
-    [TIL_HAS] = ACTION_TAP_DANCE_FN(td_tild),
     [REC_MAC] = ACTION_TAP_DANCE_FN(td_macro),
     [COM_LEA] = ACTION_TAP_DANCE_FN(td_comm),
     [DLR_CUR] = ACTION_TAP_DANCE_FN(td_currencies),

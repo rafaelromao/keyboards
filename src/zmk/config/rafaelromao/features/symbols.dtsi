@@ -189,8 +189,6 @@
         TAPHOLD_SYMBOL(th_or,      &mc_or, &mc_right_or)
 
         SYMBOL(mc_tilde,           &kp TILDE &kp SPACE)
-        SYMBOL(mc_hash,            &kp HASH)
-        TAPHOLD_SYMBOL(th_tilde,   &mc_tilde, &mc_hash)
                                   
         // Raise
 
@@ -244,8 +242,8 @@
         TAPHOLD_SYMBOL(th_gt,      &mc_gt, &mc_end_gt)
                                  
         SYMBOL(mc_perc,            &kp PERCENT)
-        SYMBOL(mc_degree,          &kp LS(LA(N8)))
-        TAPHOLD_SYMBOL(th_perc,    &mc_perc, &mc_degree)
+        SYMBOL(mc_hash,            &kp HASH)
+        TAPHOLD_SYMBOL(th_perc,    &mc_perc, &mc_hash)
         
         SYMBOL(mc_mins,            &kp MINUS)
         SYMBOL(mc_plus,            &kp PLUS)

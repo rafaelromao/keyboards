@@ -34,7 +34,6 @@ enum {
     LET_ELT,
     GRT_EGT,
     OR_EOR,
-    TIL_HAS,
     TD_CODE_END 
 };
 
@@ -65,7 +64,6 @@ enum {
 #define TD_EQL TD(EQL_EEQ)
 #define TD_LT TD(LET_ELT)
 #define TD_GT TD(GRT_EGT)
-#define TD_TILD TD(TIL_HAS)
 #define TD_OR TD(OR_EOR)
 
 // Custom keycodes
@@ -171,10 +169,12 @@ enum {
 #define RAI_BSP LT(_RAISE, KC_BSPC)
 #define LOW_BSP LT(_LOWER, KC_BSPC)
 #define RAI_SPC LT(_RAISE, KC_SPC)
+#define HOL_SPC LT(_HOLD, KC_SPC)
 
 #define KCR_MAC LT(_MACROS, KC_R)
 #define KCI_MAC LT(_MACROS, KC_I)
 #define DOT_MAC LT(_MACROS, KC_DOT)
+#define AT_HOLD LT(_HOLD, KC_AT)
 
 // Layer transitions
 #define OS_LOW OSL(_LOWER)

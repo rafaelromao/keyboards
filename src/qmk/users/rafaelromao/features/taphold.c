@@ -57,6 +57,13 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
             }
             break;
 
+        case AT_HOLD:
+            if (record->event.pressed && record->tap.count > 0) {
+                tap_code16(KC_AT);
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+            break;
+
         case SF_MODP:
             if (record->event.pressed && record->tap.count > 0) {
                 process_swapper(MC_MODP, NULL);

@@ -25,7 +25,7 @@
                 default_layer {
                         label = "ROMAK";
                         bindings = <
-   &kp R            &kp F               &kp D               &kp W               &none               &none               &kp L            &kp O            &kp U            &kp I    
+   &lt MACROS R     &kp F               &kp D               &kp W               &none               &none               &kp L            &kp O            &kp U            &lt MACROS I 
    &lt MACROS R     &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp G               &kp V               &mt RGUI H       &mt RCTRL A      &mt RSHFT E      &lt MACROS I 
    &lt MACROS R     &mt RALT B          &kp C               &mt LALT P          &kp K               &kp J               &mt LALT M       &td_comma        &th_dot 0 0      &lt MACROS I
                                         &sl RAISE           &msl NAV ACCENT     &lt LOWER SPACE     &lt RAISE BSPC      &mm_sc           &sl LOWER
@@ -34,7 +34,7 @@
                 capsword_layer {
                         label = "CASE";
                         bindings = <
-   &kp LS(R)        &kp LS(F)           &kp LS(D)           &kp LS(W)           &none               &none               &kp LS(L)        &kp LS(O)        &kp LS(U)        &kp LS(I)    
+   &lt MACROS LS(R) &kp LS(F)           &kp LS(D)           &kp LS(W)           &none               &none               &kp LS(L)        &kp LS(O)        &kp LS(U)        &lt MACROS LS(I)    
    &lt MACROS LS(R) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(G)           &kp LS(V)           &mt RGUI LS(H)   &mt RCTRL LS(A)  &mt RSHFT LS(E)  &lt MACROS LS(I) 
    &lt MACROS LS(R) &mt RALT LS(B)      &kp LS(C)           &mt LALT LS(P)      &kp LS(K)           &kp LS(J)           &mt LALT LS(M)   &td_comma        &th_dot 0 0      &lt MACROS LS(I) 
                                         &trans              &msl NAV CASE_AC    &trans              &trans              &ht_sc MEDIA 0   &trans
@@ -62,8 +62,8 @@
                         label = "CASE_AC";
                         bindings = <
    &none            &kp LS(Q)          &kp LS(X)            &kp CARET           &none               &none               &ac_otil_c       &ac_oacu_c       &ac_uacu_c       &none    
-   &kp GRAVE        &kp DQT            &kp SQT              &kp LS(Z)           &none               &kp LS(Y)            &ac_atil_c       &ac_aacu_c       &ac_eacu_c       &ac_iacu_c 
-   &none            &none              &mc_ced_c            &none               &kp TILDE           &ac_agrv_c           &ac_acir_c       &ac_ocir_c       &ac_ecir_c       &none
+   &kp GRAVE        &kp DQT            &kp SQT              &kp LS(Z)           &none               &kp LS(Y)           &ac_atil_c       &ac_aacu_c       &ac_eacu_c       &ac_iacu_c 
+   &none            &none              &mc_ced_c            &none               &kp TILDE           &ac_agrv_c          &ac_acir_c       &ac_ocir_c       &ac_ecir_c       &none
                                        &trans               &trans              &kp SPACE           &kp BSPC            &trans           &trans
                         >;
                 };
@@ -73,7 +73,7 @@
    &none            &kp ESC            &mm_actions          &mm_typematch       &none               &none               &mc_selw         &kp ENTER        &kp TAB         &none    
    &mm_docs         &th_find LSHFT 0    &mm_run              &mm_debug           &mm_build           &none               &mc_seln         &mm_zh_b         &th_zh LSHFT 0  &none  
    &none            &mm_recent         &mm_complete         &mm_usages          &mm_refac           &mc_join            &mc_comment      &mm_wt_b         &mm_wt_f        &none
-                                       &trans               &th_proj NAV 0      &kp BSPC            &kp SPACE           &trans           &trans
+                                       &trans               &th_proj NAV 0      &kp BSPC            &lt HOLD SPACE      &trans           &trans
                         >;
                 };
                 lower_layer {
@@ -81,7 +81,7 @@
                         bindings = <
    &none            &td_lpar           &td_rpar             &mc_caret           &none               &none               &mc_n7           &mc_n8           &mc_n9          &none    
    &th_bti NAV 0    &td_dqo            &td_sqo              &th_and 0 0         &th_or 0 0          &kp COMMA           &mc_n4           &mc_n5           &mc_n6          &lt MACROS DOT  
-   &none            &td_lbkt           &td_rbkt             &th_qmark 0 0       &th_tilde 0 0       &none               &mc_n1           &mc_n2           &mc_n3          &none 
+   &none            &td_lbkt           &td_rbkt             &th_qmark 0 0       &mc_tilde           &none               &mc_n1           &mc_n2           &mc_n3          &none 
                                        &trans               &trans              &trans              &trans              &th_n0 MEDIA 0   &trans
                         >;
                 };
@@ -89,9 +89,18 @@
                         label = "RAISE";
                         bindings = <
    &none            &kp F9             &kp F8               &kp F7              &none               &none               &th_curr  0 0    &td_lbrc         &td_rbrc        &none    
-   &none            &kp F6             &kp F5               &kp F4              &kp F11             &th_colon 0 0       &th_mins  0 0    &th_eql 0 0      &td_excl        &kp AT  
+   &none            &kp F6             &kp F5               &kp F4              &kp F11             &th_colon 0 0       &th_mins  0 0    &th_eql 0 0      &td_excl        &lt HOLD AT  
    &none            &kp F3             &kp F2               &kp F1              &kp F10             &th_perc 0 0        &th_slash 0 0    &th_lt 0 0       &th_gt 0 0      &none
                                        &trans               &kp F12             &trans              &trans              &trans           &trans
+                        >;
+                };
+                hold_layer {
+                        label = "HOLD";
+                        bindings = <
+   &none            &trans             &trans               &trans              &none               &none               &kp BACKSLASH    &trans           &trans        &none    
+   &none            &trans             &trans               &trans              &trans              &trans              &kp PLUS         &trans           &trans        &trans  
+   &none            &trans             &trans               &trans              &trans              &kp HASH            &kp STAR         &trans           &trans        &none
+                                       &trans               &trans              &trans              &trans              &trans           &trans
                         >;
                 };
                 fixed_navigation_layer {
