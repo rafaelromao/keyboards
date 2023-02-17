@@ -34,7 +34,7 @@ fi
 echo "Exporting Zephyr Toolchain..."
 cd $ZMK_HOME
 export ZEPHYR_TOOLCHAIN_VARIANT=gnuarmemb
-export GNUARMEMB_TOOLCHAIN_PATH=/Applications/ArmGNUToolchain/11.3.rel1/arm-none-eabi
+export GNUARMEMB_TOOLCHAIN_PATH=/opt/homebrew/opt/arm-none-eabi-gcc
 cd ..
 
 echo "Creating build aliases..."
