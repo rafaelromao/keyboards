@@ -52,18 +52,18 @@
                 accents_layer {
                         label = "ACCENT";
                         bindings = <
-   &none            &none               &kp X               &kp CARET           &none               &none               &ac_otil         &ac_oacu         &ac_uacu         &none
-   &kp GRAVE        &kp DQT             &kp SQT             &kp Z               &none               &kp Y               &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
-   &kp GRAVE        &kp Q               &mc_ced             &none               &kp TILDE           &ac_agrv            &ac_acir         &ac_ocir         &ac_ecir         &ac_iacu
+   &none            &trans              &kp X               &kp CARET           &none               &none               &ac_otil         &ac_oacu         &ac_uacu         &none
+   &kp GRAVE        &kp DQT             &kp SQT             &kp Z               &trans              &kp Y               &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
+   &kp GRAVE        &kp Q               &mc_ced             &trans              &kp TILDE           &ac_agrv            &ac_acir         &ac_ocir         &ac_ecir         &ac_iacu
                                         &trans              &trans              &kp SPACE           &kp BSPC            &trans           &trans
                         >;
                 };
                 case_accents_layer {
                         label = "CASE_AC";
                         bindings = <
-   &none            &none              &kp LS(X)            &kp CARET           &none               &none               &ac_otil_c       &ac_oacu_c       &ac_uacu_c       &none
-   &kp GRAVE        &kp DQT            &kp SQT              &kp LS(Z)           &none               &kp LS(Y)           &ac_atil_c       &ac_aacu_c       &ac_eacu_c       &ac_iacu_c 
-   &kp GRAVE        &kp LS(Q)          &mc_ced_c            &none               &kp TILDE           &ac_agrv_c          &ac_acir_c       &ac_ocir_c       &ac_ecir_c       &ac_iacu_c
+   &none            &trans             &kp LS(X)            &kp CARET           &none               &none               &ac_otil_c       &ac_oacu_c       &ac_uacu_c       &none
+   &kp GRAVE        &kp DQT            &kp SQT              &kp LS(Z)           &trans              &kp LS(Y)           &ac_atil_c       &ac_aacu_c       &ac_eacu_c       &ac_iacu_c 
+   &kp GRAVE        &kp LS(Q)          &mc_ced_c            &trans              &kp TILDE           &ac_agrv_c          &ac_acir_c       &ac_ocir_c       &ac_ecir_c       &ac_iacu_c
                                        &trans               &trans              &kp SPACE           &kp BSPC            &trans           &trans
                         >;
                 };
