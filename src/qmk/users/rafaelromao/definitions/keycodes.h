@@ -110,7 +110,8 @@ enum {
     MC_GV_A, MC_CR_A, MC_TL_A, MC_SQ_A,
     MC_SQ_U, MC_CR_O, MC_SQ_O, MC_SQ_I,
     MC_CR_E, MC_TL_O, MC_SQ_C, MC_SQ_E,
-    MC_AO, MC_CAO, MC_OES, MC_COES,
+    MC_AO, MC_CAO, MC_OES, MC_COES, MC_QU,
+    MC_CA, MC_CO, MC_CU,
     
     // End macros used to write text
     STR_MACRO_END,

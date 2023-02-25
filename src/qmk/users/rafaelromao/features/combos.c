@@ -29,6 +29,9 @@ const uint16_t PROGMEM r_med_ent_combo[] = {KC_ENT, KC_TAB, COMBO_END};
 // Accents
 
 const uint16_t PROGMEM r_ng_ao_combo[]   = {MC_SQ_A, MC_SQ_E, COMBO_END};
+const uint16_t PROGMEM r_ng_cu_combo[]   = {MC_TL_O, MC_SQ_O, COMBO_END};
+const uint16_t PROGMEM r_ng_ca_combo[]   = {MC_TL_A, MC_SQ_A, COMBO_END};
+const uint16_t PROGMEM r_ng_co_combo[]   = {MC_CR_A, MC_CR_O, COMBO_END};
 const uint16_t PROGMEM r_ng_cao_combo[]  = {MC_TL_A, MC_SQ_A, MC_SQ_E, COMBO_END};
 const uint16_t PROGMEM r_ng_oes_combo[]  = {MC_CR_O, MC_CR_E, COMBO_END};
 const uint16_t PROGMEM r_ng_coes_combo[] = {MC_CR_A, MC_CR_O, MC_CR_E, COMBO_END};
@@ -40,8 +43,9 @@ const uint16_t PROGMEM r_mac_clo_combo[] = {MC_SWLE, MC_SWRI, COMBO_END};
 
 // Base
 
-const uint16_t PROGMEM l_rom_q_combo[]   = {LCTLT_S, LGUIT_T, COMBO_END};
-const uint16_t PROGMEM l_rom_z_combo[]   = {KC_C, LALTT_P, COMBO_END};
+const uint16_t PROGMEM l_rom_z_combo[]   = {LCTLT_S, LGUIT_T, COMBO_END};
+const uint16_t PROGMEM l_rom_q_combo[]   = {KC_C, LALTT_P, COMBO_END};
+const uint16_t PROGMEM l_rom_qu_combo[]  = {LSFTT_N, LCTLT_S, COMBO_END};
 const uint16_t PROGMEM l_rom_esc_combo[] = {LOW_SPC, KC_F, KC_D, COMBO_END};
 const uint16_t PROGMEM l_rom_und_combo[] = {LOW_SPC, RALTT_B, KC_C, COMBO_END};
 const uint16_t PROGMEM l_rom_rai_combo[] = {LOW_SPC, LSFTT_N, COMBO_END};
@@ -51,18 +55,17 @@ const uint16_t PROGMEM l_rom_usc_combo[] = {RALTT_B, KC_C, COMBO_END};
 const uint16_t PROGMEM l_rom_ful_combo[] = {LOW_SPC, LCTLT_S, LGUIT_T, COMBO_END};
 const uint16_t PROGMEM l_rom_fin_combo[] = {LOW_SPC, KC_C, LALTT_P, COMBO_END};
 
-const uint16_t PROGMEM r_rom_p_combo[]   = {RGUIT_H, RCTLT_A, COMBO_END};
-const uint16_t PROGMEM r_rom_y_combo[]   = {LALTT_M, TD_COMM, COMBO_END};
-const uint16_t PROGMEM r_rom_d_combo[]   = {KC_V, RGUIT_H, COMBO_END};
-const uint16_t PROGMEM r_rom_x_combo[]   = {KC_J, LALTT_M, COMBO_END};
+const uint16_t PROGMEM r_rom_y_combo[]   = {RGUIT_H, RCTLT_A, COMBO_END};
+const uint16_t PROGMEM r_rom_p_combo[]   = {LALTT_M, TD_COMM, COMBO_END};
+const uint16_t PROGMEM r_rom_x_combo[]   = {RCTLT_A, RSFTT_E, COMBO_END};
 const uint16_t PROGMEM r_rom_tab_combo[] = {RAI_BSP, KC_O, KC_U, COMBO_END};
 const uint16_t PROGMEM r_rom_oes_combo[] = {KC_O, KC_U, COMBO_END};
-const uint16_t PROGMEM r_rom_pas_combo[] = {RAI_BSP, RGUIT_H, RCTLT_A, COMBO_END};
+const uint16_t PROGMEM r_rom_cop_combo[] = {RAI_BSP, RGUIT_H, RCTLT_A, COMBO_END};
+const uint16_t PROGMEM r_rom_pas_combo[] = {RAI_BSP, LALTT_M, TD_COMM, COMBO_END};
 const uint16_t PROGMEM r_rom_ent_combo[] = {RAI_BSP, RCTLT_A, RSFTT_E, COMBO_END};
 const uint16_t PROGMEM r_rom_rai_combo[] = {RAI_BSP, RCTLT_A, COMBO_END};
 const uint16_t PROGMEM r_rom_low_combo[] = {RAI_BSP, RSFTT_E, COMBO_END};
 const uint16_t PROGMEM r_rom_sal_combo[] = {RAI_BSP, TD_COMM, TD_DOT, COMBO_END};
-const uint16_t PROGMEM r_rom_cop_combo[] = {RAI_BSP, LALTT_M, TD_COMM, COMBO_END};
 const uint16_t PROGMEM r_rom_sco_combo[] = {TD_COMM, TD_DOT, COMBO_END};
 const uint16_t PROGMEM r_rom_sce_combo[] = {LALTT_M, TD_COMM, TD_DOT, COMBO_END};
 
@@ -71,11 +74,12 @@ const uint16_t PROGMEM r_rom_sce_combo[] = {LALTT_M, TD_COMM, TD_DOT, COMBO_END}
 const uint16_t PROGMEM secret_1_combo[] = {SEC_1, SEC_2, SEC_3, SEC_4, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
-    COMBO(l_rom_q_combo, KC_Q),        COMBO(r_rom_d_combo, KC_D),      COMBO(r_rom_y_combo, KC_Y),
+    COMBO(l_rom_q_combo, KC_Q),        COMBO(l_rom_qu_combo, MC_QU),    COMBO(r_rom_y_combo, KC_Y),
     COMBO(l_rom_z_combo, KC_Z),        COMBO(r_rom_x_combo, KC_X),      COMBO(l_num_esc_combo, KC_ESC),
     COMBO(l_nav_esv_combo, MC_ESAV),   COMBO(l_num_sav_combo, MC_SAVE), COMBO(r_num_ent_combo, KC_ENT),
     COMBO(l_low_par_combo, TD_PARN),   COMBO(r_low_tab_combo, KC_TAB),  COMBO(r_low_ent_combo, KC_ENT),
-    COMBO(r_ng_ao_combo, MC_AO),       COMBO(r_ng_cao_combo, MC_CAO),   COMBO(r_ng_oes_combo, MC_OES),
+    COMBO(r_ng_ao_combo, MC_AO),       COMBO(r_ng_cu_combo, MC_CU),     COMBO(r_ng_ca_combo, MC_CA),
+    COMBO(r_ng_co_combo, MC_CO),       COMBO(r_ng_cao_combo, MC_CAO),   COMBO(r_ng_oes_combo, MC_OES),
     COMBO(r_ng_coes_combo, MC_COES),   COMBO(r_mac_ref_combo, MC_REF),  COMBO(r_mac_clo_combo, MC_CTAB),
     COMBO(r_rom_cop_combo, MC_COPY),   COMBO(r_rom_sco_combo, TD_SCLE), COMBO(l_rom_usc_combo, MC_UNDS),
     COMBO(l_rom_ful_combo, MC_FULL),   COMBO(r_rom_p_combo, KC_P),      COMBO(r_rom_pas_combo, MC_PAST),
