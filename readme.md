@@ -39,7 +39,7 @@ This repository contains the keymap files that are used to customize my keyboard
 
 ## Compatibility
 
-This layout was tested with the keyboards listed below, but can be easily adapted to most ortholinear or column staggered keyboard with at least 28 keys, with 2 of them on each thumb.
+This layout was tested with the keyboards listed below, but can be easily adapted to most ortholinear or column staggered keyboards with at least 28 keys, with 2 of them on each thumb.
 
 ### QMK
 
