@@ -31,7 +31,7 @@
         COMBO(cb_save,          LHR LHM L0,  &mc_save,           ROMAK CASE NUMPAD)
         COMBO(cb_esc,           LTR LTM L0,  &kp ESC,            ROMAK CASE NUMPAD)
         COMBO(cb_fullscr,       LHM LHI L0,  &mc_fullscr,        ROMAK CASE NUMPAD)
-        COMBO(cb_find,           LBM LBI L0,  &mc_find,            ROMAK CASE NUMPAD)
+        COMBO(cb_find,          LBM LBI L0,  &mc_find,           ROMAK CASE NUMPAD)
         COMBO(cb_undo,          LBR LBM L0,  &mc_undo,           ROMAK CASE NUMPAD)
 
         COMBO(cb_unds,          LBR LBM,     &mm_unds,           ROMAK CASE)
@@ -69,6 +69,8 @@
         COMBO(cb_coes,          RBI RBM RBR, &mc_coes,           ACCENT)
 
         COMBO(cb_braces,        RTR RTM,     &mc_braces,         RAISE)
+        COMBO(cb_plus,          RHR RHM,     &kp PLUS,           RAISE)
+        COMBO(cb_star,          RBR RBM,     &kp STAR,           RAISE)
 
         COMBO(cb_end_ent,       RTM RTR,     &th_end_ent 0 0,    MEDIA)
         

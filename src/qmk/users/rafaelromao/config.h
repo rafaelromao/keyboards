@@ -23,11 +23,12 @@
 #define LEADER_NO_TIMEOUT
 
 // Configure combos
-#define COMBO_COUNT 43
+#define COMBO_COUNT 45
 #define COMBO_TERM 30
 #define EXTRA_SHORT_COMBOS
 #define COMBO_STRICT_TIMER
 #define COMBO_HOLD_TERM 175
+#define COMBO_MUST_TAP_PER_COMBO
 
 // Dynamic macros
 #define DYNAMIC_MACRO_NO_NESTING

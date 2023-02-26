@@ -6,6 +6,7 @@
 #include "smart_case.h"
 #include "custom_oneshot.h"
 #include "macros.h"
+#include "combos.h"
 #include "swapper.h"
 
 process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record);

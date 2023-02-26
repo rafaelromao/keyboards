@@ -34,6 +34,19 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     }
 }
 
+bool get_combo_must_tap(uint16_t index, combo_t *combo) {
+    switch (index) {
+        case l_rom_qu:
+        case l_rom_q:
+        case l_rom_z:
+        case r_rom_y:
+        case r_rom_p:
+        case r_rom_x:
+            return true;
+    }
+    return false;
+}
+
 process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case NAV_PRJ:
@@ -53,13 +66,6 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
         case SF_FSYM:
             if (!record->event.pressed && record->tap.count > 0) {
                 process_macros(MC_FSYM, NULL);
-                return PROCESS_RECORD_RETURN_FALSE;
-            }
-            break;
-
-        case AT_HOLD:
-            if (record->event.pressed && record->tap.count > 0) {
-                tap_code16(KC_AT);
                 return PROCESS_RECORD_RETURN_FALSE;
             }
             break;

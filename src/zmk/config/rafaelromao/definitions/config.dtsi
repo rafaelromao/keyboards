@@ -13,7 +13,6 @@
 #define MACROS 5
 #define LOWER 6
 #define RAISE 7
-#define HOLD 8
 #define NAV_F 9
 #define MEDIA 10
 #define NAV 11

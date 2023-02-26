@@ -313,6 +313,17 @@ void td_perc(qk_tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_PERC);
             break;
         case TD_SINGLE_HOLD:
+            if (is_macos()) {
+                tap_code16(LSFT(RALT(KC_8)));
+            } else {
+                tap_code16(LSFT(LCTL(KC_2)));
+            }
+            break;
+        case TD_DOUBLE_TAP:
+            tap_code16(KC_HASH);
+            break;
+        case TD_TRIPLE_TAP:
+            tap_code16(KC_HASH);
             tap_code16(KC_HASH);
             break;
         default:
@@ -381,7 +392,8 @@ void td_currencies(qk_tap_dance_state_t *state, void *user_data) {
             }
             break;
         case TD_SINGLE_HOLD:
-            tap_code16(KC_BSLS);
+            tap_code16(KC_CIRC);
+            tap_code(KC_SPC);
             break;
         default:
             break;
@@ -540,25 +552,6 @@ void td_eql(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void td_minus(qk_tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            tap_code(KC_MINUS);
-            break;
-        case TD_DOUBLE_SINGLE_TAP:
-        case TD_DOUBLE_TAP:
-            tap_code(KC_MINUS);
-            tap_code(KC_MINUS);
-            break;
-        case TD_SINGLE_HOLD:
-            tap_code16(KC_PLUS);
-            break;
-        default:
-            break;
-    }
-}
-
 void td_slash(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
@@ -571,13 +564,7 @@ void td_slash(qk_tap_dance_state_t *state, void *user_data) {
             tap_code(KC_SLSH);
             break;
         case TD_SINGLE_HOLD:
-            if (!is_shifted()) {
-                tap_code16(KC_ASTR);
-            } else {
-                clear_shift();
-                tap_code(KC_END);
-                tap_code16(KC_QUES);
-            }
+            tap_code16(KC_BSLS);
             break;
         default:
             break;
@@ -612,7 +599,6 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [EQL_EEQ] = ACTION_TAP_DANCE_FN(td_eql),
     [LET_ELT] = ACTION_TAP_DANCE_FN(td_lt),
     [GRT_EGT] = ACTION_TAP_DANCE_FN(td_gt),
-    [MIN_PLU] = ACTION_TAP_DANCE_FN(td_minus),
     [SLS_BSL] = ACTION_TAP_DANCE_FN(td_slash),
     [DOT_DOT] = ACTION_TAP_DANCE_FN(td_dot)};
 

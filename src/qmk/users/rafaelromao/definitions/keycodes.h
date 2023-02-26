@@ -28,7 +28,6 @@ enum {
     COL_ECO,
     PER_DEG,
     SLS_BSL,
-    MIN_PLU,
     QUE_EXC,
     EQL_EEQ,
     LET_ELT,
@@ -60,7 +59,6 @@ enum {
 #define TD_PERC TD(PER_DEG)
 #define TD_QUES TD(QUE_EXC)
 #define TD_SLSH TD(SLS_BSL)
-#define TD_MINS TD(MIN_PLU)
 #define TD_EQL TD(EQL_EEQ)
 #define TD_LT TD(LET_ELT)
 #define TD_GT TD(GRT_EGT)
@@ -170,12 +168,10 @@ enum {
 #define RAI_BSP LT(_RAISE, KC_BSPC)
 #define LOW_BSP LT(_LOWER, KC_BSPC)
 #define RAI_SPC LT(_RAISE, KC_SPC)
-#define HOL_SPC LT(_HOLD, KC_SPC)
 
 #define KCR_MAC LT(_MACROS, KC_R)
 #define KCI_MAC LT(_MACROS, KC_I)
 #define DOT_MAC LT(_MACROS, KC_DOT)
-#define AT_HOLD LT(_HOLD, KC_AT)
 
 // Layer transitions
 #define OS_LOW OSL(_LOWER)

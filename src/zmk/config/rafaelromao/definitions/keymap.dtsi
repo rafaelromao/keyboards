@@ -73,7 +73,7 @@
    &trans           &kp ESC            &mm_actions          &mm_typematch       &none               &none               &mc_selw         &kp ENTER        &kp TAB          &trans    
    &mm_docs         &th_find LSHFT 0   &mm_run              &mm_debug           &mm_build           &none               &mc_seln         &mm_zh_b         &th_zh LSHFT 0   &none  
    &mm_docs         &mm_recent         &mm_complete         &mm_usages          &mm_refac           &mc_join            &mc_comment      &mm_wt_b         &mm_wt_f         &none
-                                       &trans               &th_proj NAV 0      &kp BSPC            &lt HOLD SPACE      &trans           &trans
+                                       &trans               &th_proj NAV 0      &lt LOWER SPACE     &lt RAISE BSPC      &trans           &trans
                         >;
                 };
                 lower_layer {
@@ -89,18 +89,9 @@
                         label = "RAISE";
                         bindings = <
    &trans           &kp F9             &kp F8               &kp F7              &none               &none               &th_curr  0 0    &td_lbrc         &td_rbrc        &trans
-   &none            &kp F6             &kp F5               &kp F4              &kp F11             &th_colon 0 0       &th_mins  0 0    &th_eql 0 0      &td_excl        &lt HOLD AT  
-   &none            &kp F3             &kp F2               &kp F1              &kp F10             &th_perc 0 0        &th_slash 0 0    &th_lt 0 0       &th_gt 0 0      &lt HOLD AT
+   &none            &kp F6             &kp F5               &kp F4              &kp F11             &th_colon 0 0       &kp MINUS        &th_eql 0 0      &td_excl        &kp AT  
+   &none            &kp F3             &kp F2               &kp F1              &kp F10             &th_perc 0 0        &th_slash 0 0    &th_lt 0 0       &th_gt 0 0      &kp AT
                                        &trans               &kp F12             &trans              &trans              &trans           &trans
-                        >;
-                };
-                hold_layer {
-                        label = "HOLD";
-                        bindings = <
-   &trans           &trans             &trans               &trans              &none               &none               &kp BACKSLASH    &trans           &trans          &trans
-   &none            &trans             &trans               &trans              &trans              &trans              &kp PLUS         &trans           &trans          &trans  
-   &none            &trans             &trans               &trans              &trans              &kp HASH            &kp STAR         &trans           &trans          &trans
-                                       &trans               &trans              &trans              &trans              &trans           &trans
                         >;
                 };
                 fixed_navigation_layer {
