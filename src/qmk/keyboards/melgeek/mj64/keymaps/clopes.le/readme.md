@@ -40,7 +40,7 @@ With these changes, this ANSI board will work quite similar to an ABNT2 board.
 
 ### QMK
 
-The qmk version recommended for this keyboard is 0.18.1.
+The qmk version recommended for this keyboard is 0.18.15.
 
 #### Compile
 

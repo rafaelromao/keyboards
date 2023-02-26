@@ -45,7 +45,7 @@ This layout was tested with the keyboards listed below, but can be easily adapte
 
 The reference implementation is done in QMK, so it has all features supported.
 
-The qmk version recommended for this keymap is 0.18.1.
+The qmk version recommended for this keymap is 0.18.15.
 
 - [handwired/rafaelromao/fauxberry](src/qmk/keyboards/handwired/rafaelromao/fauxberry/readme.md)
 - [handwired/rafaelromao/xiao](src/qmk/keyboards/handwired/rafaelromao/xiao/readme.md)

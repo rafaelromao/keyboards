@@ -16,6 +16,7 @@
 
 #include QMK_KEYBOARD_H
 #include "keymap_brazilian_abnt2.h"
+#include "sendstring_brazilian_abnt2.h"
 
 // clang-format off
 
@@ -23,18 +24,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[0] = LAYOUT_64_ansi( /* Base */
 			TD_ESC,    KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     KC_MINS,  KC_EQL,  KC_BSPC,
 		    KC_TAB,    KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     BR_ACUT,  TD_LBRC, BR_BSLS,
-			KC_CAPS,   KC_A,     KC_S,     KC_D,     KC_F,     KC_G,     KC_H,     KC_J,     KC_K,     KC_L,     BR_CCED,  BR_TILD,  KC_ENT,
+			OS_MAC,    KC_A,     KC_S,     KC_D,     KC_F,     KC_G,     KC_H,     KC_J,     KC_K,     KC_L,     BR_CCED,  BR_TILD,  KC_ENT,
 		    KC_LSFT,   KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_N,     KC_M,     KC_COMM,  KC_DOT,   BR_SCLN,  SF_SLSH,  KC_UP,   KC_DEL,
-		    KC_LCTL,   KC_LGUI,  KC_LALT,                      LT(1, KC_SPC),                          KC_RALT,  MO(1),    KC_LEFT,  KC_DOWN, KC_RIGHT
+		    KC_LCTL,   KC_LGUI,  KC_LALT,                      LT(1, KC_SPC),                          OS_MAC,   MO(1),    KC_LEFT,  KC_DOWN, KC_RIGHT
 	),
 	[1] = LAYOUT_64_ansi( /* FN */
 			KC_ESC,    KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,   KC_DEL,
 			_______,   _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  BR_RBRC,  _______,
-            _______,   _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_F9,
+            KC_CAPS,   _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_F9,
 		    _______,   _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_VOLD,  KC_VOLU,  KC_MUTE,  KC_SLSH,  KC_PGUP,  KC_INS,
-			_______,   MO(2),    _______,                      KC_SPC,                                 _______,  _______,  KC_HOME,  KC_PGDN,  KC_END
+			_______,   MO(3),    _______,                      KC_SPC,                                 _______,  _______,  KC_HOME,  KC_PGDN,  KC_END
 	),
-	[2] = LAYOUT_64_ansi( /* Adjust */
+    [2] = LAYOUT_64_ansi(
+			_______,   _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
+			_______,   MC_QUE ,  _______,  MC_ESCL,  MC_RESP,  MC_TEST,  _______,  _______,  MC_INFO,  _______,  TD_P,     _______,  _______,  _______,
+            _______,   TD_A,     MC_SALI,  TD_D,     MC_APTE,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
+		    _______,   _______,  _______,  MC_CONF,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
+			_______,   _______,  _______,                      _______,                                _______,  _______,  _______,  _______,  _______
+    ),
+	[3] = LAYOUT_64_ansi( /* Adjust */
 			_______,   _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
 			_______,   _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
             NK_TOGG,   RGB_TOG,  RGB_MOD,  RGB_HUI,  RGB_HUD,  RGB_SAI,  RGB_SAD,  RGB_VAI,  RGB_VAD,  RGB_SPI,  RGB_SPD,  _______,  _______,
@@ -44,6 +52,88 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 // clang-format on
+
+// Custom Processing
+
+bool spacing = false;
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    if (record != NULL && !record->event.pressed) {
+        return true;
+    }
+    // Deactivate OS Macros
+    switch (keycode) {
+        case LT(1, KC_SPC):
+        case KC_SPC:
+            if (spacing) {
+                clear_oneshot_layer_state(ONESHOT_PRESSED);
+                tap_code(KC_BSPC);
+            } else {
+                spacing = true;
+                return true;
+            }
+            break;
+        case KC_ESC:
+            clear_oneshot_layer_state(ONESHOT_PRESSED);
+            break;
+    }
+
+    spacing = false;
+
+    // Activate OS Macros
+    if (keycode == OS_MAC) {
+        set_oneshot_layer(2, ONESHOT_START);
+        return false;
+    }
+
+    // Process macros
+    switch (keycode) {
+        case MC_QUE:
+            SEND_STRING("; QUE");
+            return false;
+        case MC_ESCL:
+            SEND_STRING("esclarece");
+            return false;
+        case MC_RESP:
+            SEND_STRING("; RESPONDEU que");
+            return false;
+        case MC_TEST:
+            SEND_STRING("testemunha");
+            return false;
+        case MC_INFO:
+            SEND_STRING("informante");
+            return false;
+        case MC_PESO:
+            SEND_STRING("; PERGUNTADO sobre");
+            return false;
+        case MC_PESE:
+            SEND_STRING("; PERGUNTADO se");
+            return false;
+        case MC_ACTA:
+            SEND_STRING("acrescenta");
+            return false;
+        case MC_ACDI:
+            SEND_STRING("acredita");
+            return false;
+        case MC_SALI:
+            SEND_STRING("salienta");
+            return false;
+        case MC_DECL:
+            SEND_STRING("declarante");
+            return false;
+        case MC_DEPO:
+            SEND_STRING("depoente");
+            return false;
+        case MC_APTE:
+            SEND_STRING("; QUE o declarante apresenta como testemunha(s)");
+            return false;
+        case MC_CONF:
+            SEND_STRING(", conforme se expressa");
+            return false;
+    }
+
+    return true;
+}
 
 // Tap dance
 
@@ -107,5 +197,53 @@ void td_brackets(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-qk_tap_dance_action_t tap_dance_actions[] =
-    {[ESC_QUOT] = ACTION_TAP_DANCE_FN(td_esc_quot), [LBRC_RBRC] = ACTION_TAP_DANCE_FN(td_brackets)};
+void tc_a(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code(KC_A);
+            break;
+        case TD_DOUBLE_TAP:
+            process_record_user(MC_ACTA, NULL);
+            break;
+        case TD_TRIPLE_TAP:
+            process_record_user(MC_ACDI, NULL);
+            break;
+        default:
+            break;
+    }
+}
+
+void tc_d(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            process_record_user(MC_DECL, NULL);
+            break;
+        case TD_DOUBLE_TAP:
+            process_record_user(MC_DEPO, NULL);
+            break;
+        default:
+            break;
+    }
+}
+
+void tc_p(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            process_record_user(MC_PESE, NULL);
+            break;
+        case TD_DOUBLE_TAP:
+            process_record_user(MC_PESO, NULL);
+            break;
+        default:
+            break;
+    }
+}
+
+qk_tap_dance_action_t tap_dance_actions[] = {[ESC_QUOT]  = ACTION_TAP_DANCE_FN(td_esc_quot),
+                                             [TC_A]      = ACTION_TAP_DANCE_FN(tc_a),
+                                             [TC_D]      = ACTION_TAP_DANCE_FN(tc_d),
+                                             [TC_P]      = ACTION_TAP_DANCE_FN(tc_p),
+                                             [LBRC_RBRC] = ACTION_TAP_DANCE_FN(td_brackets)};
