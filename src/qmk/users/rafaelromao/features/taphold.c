@@ -35,14 +35,16 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 }
 
 bool get_combo_must_tap(uint16_t index, combo_t *combo) {
-    switch (index) {
-        case l_rom_qu:
-        case l_rom_q:
-        case l_rom_z:
-        case r_rom_y:
-        case r_rom_p:
-        case r_rom_x:
-            return true;
+    uint16_t key;
+    uint8_t  idx = 0;
+    while ((key = pgm_read_word(&combo->keys[idx])) != COMBO_END) {
+        switch (key) {
+            case QK_MOD_TAP ... QK_MOD_TAP_MAX:
+            case QK_LAYER_TAP ... QK_LAYER_TAP_MAX:
+            case QK_MOMENTARY ... QK_MOMENTARY_MAX:
+                return true;
+        }
+        idx += 1;
     }
     return false;
 }
