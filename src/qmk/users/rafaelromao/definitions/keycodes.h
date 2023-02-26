@@ -109,7 +109,7 @@ enum {
     MC_SQ_U, MC_CR_O, MC_SQ_O, MC_SQ_I,
     MC_CR_E, MC_TL_O, MC_SQ_C, MC_SQ_E,
     MC_AO, MC_CAO, MC_OES, MC_COES, MC_QU,
-    MC_CA, MC_CO, MC_CU,
+    MC_CA, MC_CO, MC_CU, MC_GRAC, MC_TICA,
     
     // End macros used to write text
     STR_MACRO_END,

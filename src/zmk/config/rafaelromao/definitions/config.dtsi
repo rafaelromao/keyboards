@@ -13,11 +13,11 @@
 #define MACROS 5
 #define LOWER 6
 #define RAISE 7
-#define NAV_F 9
-#define MEDIA 10
-#define NAV 11
-#define LOCK_KB 12
-#define MAINT 13
+#define NAV_F 8
+#define MEDIA 9
+#define NAV 10
+#define LOCK_KB 11
+#define MAINT 12
 
 #define TAPPING_TERM 175
 #define TD_TAPPING_TERM 200

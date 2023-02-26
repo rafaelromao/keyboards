@@ -213,7 +213,7 @@
         SYMBOL(mc_dollar,          &kp DOLLAR)
         SYMBOL(mc_euro,            &kp LS(LA(N2)))
         SYMBOL(mc_pound,           &kp LA(N3))
-        SYMBOL(mc_caret,           &kp CARET)
+        SYMBOL(mc_caret,           &kp CARET &kp SPACE)
         TAPDANCE_SYMBOL(td_curr,   &mc_dollar, &mc_euro, &mc_pound)
         TAPHOLD_SYMBOL(th_curr,    &td_curr, &mc_caret)
 
@@ -243,10 +243,7 @@
                                  
         SYMBOL(mc_perc,            &kp PERCENT)
         SYMBOL(mc_deg,             &kp LS(LA(N8)))
-        SYMBOL(mc_hash,            &kp HASH)
-        SYMBOL(mc_hash_hash,       &kp HASH &kp HASH)
-        TAPDANCE_SYMBOL(td_perc,   &mc_perc, &mc_hash, &mc_hash_hash)
-        TAPHOLD_SYMBOL(th_perc,    &td_perc, &mc_deg)
+        TAPHOLD_SYMBOL(th_perc,    &mc_perc, &mc_deg)
         
         SYMBOL(mc_slash,           &kp SLASH)
         SYMBOL(mc_bslash,          &kp BACKSLASH)
@@ -256,5 +253,12 @@
         SYMBOL(mc_end_ent,         &kp END &kp ENTER)
         SYMBOL(mc_down_end,        &kp DOWN &kp END)
         TAPHOLD_SYMBOL(th_end_ent, &mc_end_ent, &mc_down_end)
+
+        SYMBOL(mc_sqt,             &kp SQT)
+        SYMBOL(mc_grave,           &kp GRAVE)
+        SYMBOL(mc_tilde,           &kp TILDE)
+        SYMBOL(mc_caret,           &kp CARET)
+        SHIFTED_SYMBOL(mm_grac,    &mc_sqt, &mc_grave)
+        SHIFTED_SYMBOL(mm_tica,    &mc_tilde, &mc_caret)
     };
 };

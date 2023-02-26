@@ -35,8 +35,7 @@
         COMBO(cb_undo,          LBR LBM L0,  &mc_undo,           ROMAK CASE NUMPAD)
 
         COMBO(cb_unds,          LBR LBM,     &mm_unds,           ROMAK CASE)
-        COMBO(cb_qu,            LHR LHM,     &mc_qu,             ROMAK CASE)
-        COMBO(cb_q,             LBM LBI,     &kp Q,              ROMAK CASE)
+        COMBO(cb_q,             LHR LHM,     &kp Q,              ROMAK CASE)
         COMBO(cb_z,             LHM LHI,     &kp Z,              ROMAK CASE)
         COMBO(cb_raise_l,       LHR L0,      &sl RAISE,          ROMAK CASE)
         COMBO(cb_lower_l,       LHM L0,      &sl LOWER,          ROMAK CASE)

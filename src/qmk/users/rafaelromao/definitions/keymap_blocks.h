@@ -25,9 +25,9 @@
 #define ___________________NUMPAD_R3_________           TG_NUM  , AL_1    , KC_2    , KC_3    
 #define ____NUMPAD_R4____                               RAI_BSP , MED_0
 
-#define           _________ACCENT_L1_________                     _______ , KC_X    , KC_CIRC 
-#define ___________________ACCENT_L2___________________ KC_GRV  , KC_DQUO , KC_QUOT , KC_Z    , _______
-#define           _________ACCENT_L3___________________           KC_Q    , MC_SQ_C , _______ , KC_TILD
+#define           _________ACCENT_L1_________                     _______ , KC_X    , _______ 
+#define ___________________ACCENT_L2___________________ MC_GRAC , KC_Q    , MC_SQUO , KC_Z    , MC_TICA
+#define           _________ACCENT_L3___________________           _______ , MC_SQ_C , _______ , _______
 #define                               ____ACCENT_L4____                               _______ , KC_SPC
 
 #define           _________ACCENT_R1_________                     MC_TL_O , MC_SQ_O , MC_SQ_U 
@@ -45,9 +45,9 @@
 #define ___________________MACROS_R3_________           MC_JOIN , MC_COMT , MC_SWLE , MC_SWRI 
 #define ____MACROS_R4____                               RAI_SPC , _______
 
-#define           _________LOWER_L1__________                     TD_OPAR , TD_CPAR , MC_CIRC 
+#define           _________LOWER_L1__________                     TD_OPAR , TD_CPAR , MC_TILD 
 #define ___________________LOWER_L2____________________ NAV_BTI , TD_DQUO , TD_SQUO , TD_AND  , TD_OR
-#define           _________LOWER_L3____________________           TD_OBR  , TD_CBR  , TD_QUES , MC_TILD
+#define           _________LOWER_L3____________________           TD_OBR  , TD_CBR  , TD_QUES , KC_HASH
 #define                               ____LOWER_L4_____                               _______ , _______
 
 #define           _________LOWER_R1__________                     KC_7    , KC_8    , KC_9    

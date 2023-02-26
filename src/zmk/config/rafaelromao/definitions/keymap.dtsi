@@ -52,18 +52,18 @@
                 accents_layer {
                         label = "ACCENT";
                         bindings = <
-   &trans           &trans              &kp X               &kp CARET           &none               &none               &ac_otil         &ac_oacu         &ac_uacu         &trans
-   &kp GRAVE        &kp DQT             &kp SQT             &kp Z               &trans              &kp Y               &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
-   &kp GRAVE        &kp Q               &mc_ced             &trans              &kp TILDE           &ac_agrv            &ac_acir         &ac_ocir         &ac_ecir         &ac_iacu
+   &trans           &trans              &kp X               &trans              &none               &none               &ac_otil         &ac_oacu         &ac_uacu         &trans
+   &mm_grac         &kp Q               &mc_sqo             &kp Z               &mm_tica            &kp Y               &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
+   &mm_grac         &trans              &mc_ced             &trans              &trans              &ac_agrv            &ac_acir         &ac_ocir         &ac_ecir         &ac_iacu
                                         &trans              &trans              &kp SPACE           &kp BSPC            &trans           &trans
                         >;
                 };
                 case_accents_layer {
                         label = "CASE_AC";
                         bindings = <
-   &trans           &trans             &kp LS(X)            &kp CARET           &none               &none               &ac_otil_c       &ac_oacu_c       &ac_uacu_c       &trans
-   &kp GRAVE        &kp DQT            &kp SQT              &kp LS(Z)           &trans              &kp LS(Y)           &ac_atil_c       &ac_aacu_c       &ac_eacu_c       &ac_iacu_c 
-   &kp GRAVE        &kp LS(Q)          &mc_ced_c            &trans              &kp TILDE           &ac_agrv_c          &ac_acir_c       &ac_ocir_c       &ac_ecir_c       &ac_iacu_c
+   &trans           &trans             &kp LS(X)            &trans              &none               &none               &ac_otil_c       &ac_oacu_c       &ac_uacu_c       &trans
+   &mm_grac         &kp LS(Q)          &mc_sqo              &kp LS(Z)           &mm_tica            &kp LS(Y)           &ac_atil_c       &ac_aacu_c       &ac_eacu_c       &ac_iacu_c 
+   &mm_grac         &trans             &mc_ced_c            &trans              &trans              &ac_agrv_c          &ac_acir_c       &ac_ocir_c       &ac_ecir_c       &ac_iacu_c
                                        &trans               &trans              &kp SPACE           &kp BSPC            &trans           &trans
                         >;
                 };
@@ -79,9 +79,9 @@
                 lower_layer {
                         label = "LOWER";
                         bindings = <
-   &trans           &td_lpar           &td_rpar             &mc_caret           &none               &none               &mc_n7           &mc_n8           &mc_n9           &trans
+   &trans           &td_lpar           &td_rpar             &mc_tilde           &none               &none               &mc_n7           &mc_n8           &mc_n9           &trans
    &th_bti NAV 0    &td_dqo            &td_sqo              &th_and 0 0         &th_or 0 0          &kp COMMA           &mc_n4           &mc_n5           &mc_n6           &lt MACROS DOT  
-   &th_bti NAV 0    &td_lbkt           &td_rbkt             &th_qmark 0 0       &mc_tilde           &none               &mc_n1           &mc_n2           &mc_n3           &lt MACROS DOT 
+   &th_bti NAV 0    &td_lbkt           &td_rbkt             &th_qmark 0 0       &kp HASH            &none               &mc_n1           &mc_n2           &mc_n3           &lt MACROS DOT 
                                        &trans               &trans              &trans              &trans              &th_n0 MEDIA 0   &trans
                         >;
                 };

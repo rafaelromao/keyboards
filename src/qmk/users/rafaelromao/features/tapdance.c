@@ -319,13 +319,6 @@ void td_perc(qk_tap_dance_state_t *state, void *user_data) {
                 tap_code16(LSFT(LCTL(KC_2)));
             }
             break;
-        case TD_DOUBLE_TAP:
-            tap_code16(KC_HASH);
-            break;
-        case TD_TRIPLE_TAP:
-            tap_code16(KC_HASH);
-            tap_code16(KC_HASH);
-            break;
         default:
             break;
     }

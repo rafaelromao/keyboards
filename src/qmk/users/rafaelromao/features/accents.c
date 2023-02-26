@@ -131,6 +131,22 @@ process_record_result_t process_ngrams(uint16_t keycode, bool isShifted) {
             tap_code(KC_E);
             tap_code(KC_S);
             return PROCESS_RECORD_RETURN_FALSE;
+        case MC_GRAC:
+            if (isShifted) {
+                clear_shift();
+                tap_code(KC_GRV);
+            } else {
+                tap_code(KC_QUOT);
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+        case MC_TICA:
+            if (isShifted) {
+                clear_shift();
+                tap_code16(KC_CIRC);
+            } else {
+                tap_code16(KC_TILD);
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
     }
 
     return PROCESS_RECORD_CONTINUE;
