@@ -253,12 +253,5 @@
         SYMBOL(mc_end_ent,         &kp END &kp ENTER)
         SYMBOL(mc_down_end,        &kp DOWN &kp END)
         TAPHOLD_SYMBOL(th_end_ent, &mc_end_ent, &mc_down_end)
-
-        SYMBOL(mc_sqt,             &kp SQT)
-        SYMBOL(mc_grave,           &kp GRAVE)
-        SYMBOL(mc_tilde,           &kp TILDE)
-        SYMBOL(mc_caret,           &kp CARET)
-        SHIFTED_SYMBOL(mm_grac,    &mc_sqt, &mc_grave)
-        SHIFTED_SYMBOL(mm_tica,    &mc_tilde, &mc_caret)
     };
 };

@@ -53,8 +53,8 @@
                         label = "ACCENT";
                         bindings = <
    &trans           &trans              &kp X               &trans              &none               &none               &ac_otil         &ac_oacu         &ac_uacu         &trans
-   &mm_grac         &kp Q               &mc_sqo             &kp Z               &mm_tica            &kp Y               &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
-   &mm_grac         &trans              &mc_ced             &trans              &trans              &ac_agrv            &ac_acir         &ac_ocir         &ac_ecir         &ac_iacu
+   &kp GRAVE        &kp Q               &kp SQT             &kp Z               &kp CARET           &kp Y               &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
+   &kp GRAVE        &trans              &mc_ced             &trans              &trans              &ac_agrv            &ac_acir         &ac_ocir         &ac_ecir         &ac_iacu
                                         &trans              &trans              &kp SPACE           &kp BSPC            &trans           &trans
                         >;
                 };
@@ -62,8 +62,8 @@
                         label = "CASE_AC";
                         bindings = <
    &trans           &trans             &kp LS(X)            &trans              &none               &none               &ac_otil_c       &ac_oacu_c       &ac_uacu_c       &trans
-   &mm_grac         &kp LS(Q)          &mc_sqo              &kp LS(Z)           &mm_tica            &kp LS(Y)           &ac_atil_c       &ac_aacu_c       &ac_eacu_c       &ac_iacu_c 
-   &mm_grac         &trans             &mc_ced_c            &trans              &trans              &ac_agrv_c          &ac_acir_c       &ac_ocir_c       &ac_ecir_c       &ac_iacu_c
+   &kp GRAVE        &kp LS(Q)          &kp SQT              &kp LS(Z)           &kp CARET           &kp LS(Y)           &ac_atil_c       &ac_aacu_c       &ac_eacu_c       &ac_iacu_c 
+   &kp GRAVE        &trans             &mc_ced_c            &trans              &trans              &ac_agrv_c          &ac_acir_c       &ac_ocir_c       &ac_ecir_c       &ac_iacu_c
                                        &trans               &trans              &kp SPACE           &kp BSPC            &trans           &trans
                         >;
                 };

@@ -26,7 +26,7 @@
 #define ____NUMPAD_R4____                               RAI_BSP , MED_0
 
 #define           _________ACCENT_L1_________                     _______ , KC_X    , _______ 
-#define ___________________ACCENT_L2___________________ MC_GRAC , KC_Q    , MC_SQUO , KC_Z    , MC_TICA
+#define ___________________ACCENT_L2___________________ KC_GRV  , KC_Q    , KC_QUOT , KC_Z    , KC_CIRC
 #define           _________ACCENT_L3___________________           _______ , MC_SQ_C , _______ , _______
 #define                               ____ACCENT_L4____                               _______ , KC_SPC
 
