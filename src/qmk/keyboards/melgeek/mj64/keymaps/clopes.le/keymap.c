@@ -95,7 +95,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             SEND_STRING("esclarece");
             return false;
         case MC_RESP:
-            SEND_STRING("; RESPONDEU que");
+            SEND_STRING("; RESPONDEU QUE");
             return false;
         case MC_TEST:
             SEND_STRING("testemunha");
