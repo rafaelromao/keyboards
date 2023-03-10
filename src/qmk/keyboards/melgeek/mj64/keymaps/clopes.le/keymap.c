@@ -15,8 +15,8 @@
  */
 
 #include QMK_KEYBOARD_H
-#include "keymap_brazilian_abnt2.h"
 #include "sendstring_brazilian_abnt2.h"
+#include "keycodes.h"
 
 // clang-format off
 
@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			_______,   _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
             NK_TOGG,   RGB_TOG,  RGB_MOD,  RGB_HUI,  RGB_HUD,  RGB_SAI,  RGB_SAD,  RGB_VAI,  RGB_VAD,  RGB_SPI,  RGB_SPD,  _______,  _______,
 		    _______,   _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
-			QK_BOOT,   _______,  EEP_RST,                      RGB_TOG,                                _______,  _______,  _______,  _______,  _______
+			QK_BOOT,   _______,  EE_CLR ,                      RGB_TOG,                                _______,  _______,  _______,  _______,  _______
 	)
 };
 
@@ -139,7 +139,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 static td_tap_t tap_state = {.state = TD_NONE};
 
-__attribute__((weak)) td_state_t dance_state(qk_tap_dance_state_t *state) {
+__attribute__((weak)) td_state_t dance_state(tap_dance_state_t *state) {
     if (state->count == 1) {
         if (state->interrupted || !state->pressed) return TD_SINGLE_TAP;
         // Key has not been interrupted, but the key is still held. Means you want to send a 'HOLD'.
@@ -169,7 +169,7 @@ __attribute__((weak)) td_state_t dance_state(qk_tap_dance_state_t *state) {
         return TD_UNKNOWN;
 }
 
-void td_esc_quot(qk_tap_dance_state_t *state, void *user_data) {
+void td_esc_quot(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
@@ -183,7 +183,7 @@ void td_esc_quot(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void td_brackets(qk_tap_dance_state_t *state, void *user_data) {
+void td_brackets(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
@@ -197,7 +197,7 @@ void td_brackets(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void tc_a(qk_tap_dance_state_t *state, void *user_data) {
+void tc_a(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
@@ -214,7 +214,7 @@ void tc_a(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void tc_d(qk_tap_dance_state_t *state, void *user_data) {
+void tc_d(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
@@ -228,7 +228,7 @@ void tc_d(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void tc_p(qk_tap_dance_state_t *state, void *user_data) {
+void tc_p(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
@@ -242,8 +242,8 @@ void tc_p(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-qk_tap_dance_action_t tap_dance_actions[] = {[ESC_QUOT]  = ACTION_TAP_DANCE_FN(td_esc_quot),
-                                             [TC_A]      = ACTION_TAP_DANCE_FN(tc_a),
-                                             [TC_D]      = ACTION_TAP_DANCE_FN(tc_d),
-                                             [TC_P]      = ACTION_TAP_DANCE_FN(tc_p),
-                                             [LBRC_RBRC] = ACTION_TAP_DANCE_FN(td_brackets)};
+tap_dance_action_t tap_dance_actions[] = {[ESC_QUOT]  = ACTION_TAP_DANCE_FN(td_esc_quot),
+                                          [TC_A]      = ACTION_TAP_DANCE_FN(tc_a),
+                                          [TC_D]      = ACTION_TAP_DANCE_FN(tc_d),
+                                          [TC_P]      = ACTION_TAP_DANCE_FN(tc_p),
+                                          [LBRC_RBRC] = ACTION_TAP_DANCE_FN(td_brackets)};
