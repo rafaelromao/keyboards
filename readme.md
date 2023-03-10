@@ -48,7 +48,7 @@ The reference implementation is done in QMK, so it has all features supported.
 The qmk version recommended for this keymap is 0.18.15.
 
 - [handwired/rafaelromao/fauxberry](src/qmk/keyboards/handwired/rafaelromao/fauxberry/readme.md)
-- [handwired/rafaelromao/xiao](src/qmk/keyboards/handwired/rafaelromao/xiao/readme.md)
+- [handwired/rafaelromao/rommana](src/qmk/keyboards/handwired/rafaelromao/rommana/readme.md)
 - [kprepublic/bm40hsrgb](src/qmk/keyboards/kprepublic/bm40hsrgb/keymaps/rafaelromao/readme.md)
 
 Some features are not available on all keyboards though. For instance, the BM40 does not support Dynamic Macros, while the XD75 doesn't have per key RGB.

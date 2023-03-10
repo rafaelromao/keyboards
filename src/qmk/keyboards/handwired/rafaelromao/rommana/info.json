@@ -1,0 +1,316 @@
+{
+    "manufacturer": "Rafael Romao",
+    "keyboard_name": "handwired/rafaelromao/hummingbird",
+    "maintainer": "rafaelromao",
+    "bootloader": "rp2040",
+    "diode_direction": "COL2ROW",
+    "build": {
+        "lto": false
+    },
+    "features": {
+        "bootmagic": false,
+        "command": false,
+        "console": false,
+        "oled": false,
+        "extrakey": true,
+        "nkro": true,
+        "encoder": false
+    },
+    "matrix_pin_labels": {
+        "rows": [
+            "A0/D0",
+            "A1/D1",
+            "A2/D2",
+            "A3/D3",
+            "SDA/D4",
+            "SCL/D5"
+        ],
+        "cols": [
+            "Tx/D6",
+            "Rx/Csn/D7",
+            "SCK/D8",
+            "MISO/D9",
+            "MOSI/D10"
+        ]
+    },
+    "matrix_pins": {
+        "rows": [
+            "GP26",
+            "GP27",
+            "GP28",
+            "GP29",
+            "GP6",
+            "GP7"
+        ],
+        "cols": [
+            "GP0",
+            "GP1",
+            "GP2",
+            "GP4",
+            "GP3"
+        ]
+    },
+    "processor": "RP2040",
+    "url": "",
+    "usb": {
+        "device_version": "1.0.0",
+        "pid": "0x0000",
+        "vid": "0xFEED"
+    },
+    "rgblight": {
+        "led_count": 1,
+        "pin": "GP25",
+        "hue_steps": 10,
+        "saturation_steps": 17,
+        "brightness_steps": 17,
+        "animations": {
+            "all": false
+        }
+    },
+    "layouts": {
+        "LAYOUT_split_3x5": {
+            "layout": [
+                {
+                    "matrix": [
+                        0,
+                        0
+                    ],
+                    "x": 0,
+                    "y": 0.25
+                },
+                {
+                    "matrix": [
+                        0,
+                        1
+                    ],
+                    "x": 1,
+                    "y": 0.125
+                },
+                {
+                    "matrix": [
+                        0,
+                        2
+                    ],
+                    "x": 2,
+                    "y": 0
+                },
+                {
+                    "matrix": [
+                        0,
+                        3
+                    ],
+                    "x": 3,
+                    "y": 0.125
+                },
+                {
+                    "matrix": [
+                        0,
+                        4
+                    ],
+                    "x": 4,
+                    "y": 0.25
+                },
+                {
+                    "matrix": [
+                        1,
+                        0
+                    ],
+                    "x": 0,
+                    "y": 1.25
+                },
+                {
+                    "matrix": [
+                        1,
+                        1
+                    ],
+                    "x": 1,
+                    "y": 1.125
+                },
+                {
+                    "matrix": [
+                        1,
+                        2
+                    ],
+                    "x": 2,
+                    "y": 1
+                },
+                {
+                    "matrix": [
+                        1,
+                        3
+                    ],
+                    "x": 3,
+                    "y": 1.125
+                },
+                {
+                    "matrix": [
+                        1,
+                        4
+                    ],
+                    "x": 4,
+                    "y": 1.25
+                },
+                {
+                    "matrix": [
+                        2,
+                        0
+                    ],
+                    "x": 1,
+                    "y": 2.25
+                },
+                {
+                    "matrix": [
+                        2,
+                        1
+                    ],
+                    "x": 2,
+                    "y": 2.125
+                },
+                {
+                    "matrix": [
+                        2,
+                        2
+                    ],
+                    "x": 3,
+                    "y": 2
+                },
+                {
+                    "matrix": [
+                        2,
+                        3
+                    ],
+                    "x": 3,
+                    "y": 3.5
+                },
+                {
+                    "matrix": [
+                        2,
+                        4
+                    ],
+                    "x": 4,
+                    "y": 3.75
+                },
+                {
+                    "matrix": [
+                        3,
+                        4
+                    ],
+                    "x": 7,
+                    "y": 0.25
+                },
+                {
+                    "matrix": [
+                        3,
+                        3
+                    ],
+                    "x": 8,
+                    "y": 0.125
+                },
+                {
+                    "matrix": [
+                        3,
+                        2
+                    ],
+                    "x": 9,
+                    "y": 0
+                },
+                {
+                    "matrix": [
+                        3,
+                        1
+                    ],
+                    "x": 10,
+                    "y": 0.125
+                },
+                {
+                    "matrix": [
+                        3,
+                        0
+                    ],
+                    "x": 11,
+                    "y": 0.25
+                },
+                {
+                    "matrix": [
+                        4,
+                        0
+                    ],
+                    "x": 7,
+                    "y": 1.25
+                },
+                {
+                    "matrix": [
+                        4,
+                        1
+                    ],
+                    "x": 8,
+                    "y": 1.125
+                },
+                {
+                    "matrix": [
+                        4,
+                        2
+                    ],
+                    "x": 9,
+                    "y": 1
+                },
+                {
+                    "matrix": [
+                        4,
+                        3
+                    ],
+                    "x": 10,
+                    "y": 1.125
+                },
+                {
+                    "matrix": [
+                        4,
+                        4
+                    ],
+                    "x": 11,
+                    "y": 1.25
+                },
+                {
+                    "matrix": [
+                        5,
+                        0
+                    ],
+                    "x": 8,
+                    "y": 3.75
+                },
+                {
+                    "matrix": [
+                        5,
+                        1
+                    ],
+                    "x": 9,
+                    "y": 3.5
+                },
+                {
+                    "matrix": [
+                        5,
+                        2
+                    ],
+                    "x": 9,
+                    "y": 2.25
+                },
+                {
+                    "matrix": [
+                        5,
+                        3
+                    ],
+                    "x": 10,
+                    "y": 2.125
+                },
+                {
+                    "matrix": [
+                        5,
+                        4
+                    ],
+                    "x": 11,
+                    "y": 2
+                }
+            ]
+        }
+    }
+}
