@@ -26,4 +26,4 @@ typedef struct {
     bool       recording;
 } td_tap_t;
 
-td_state_t dance_state(qk_tap_dance_state_t *state);
+td_state_t dance_state(tap_dance_state_t *state);

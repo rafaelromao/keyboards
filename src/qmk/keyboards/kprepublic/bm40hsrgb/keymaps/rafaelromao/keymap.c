@@ -170,7 +170,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     return state;
 }
 
-void rgb_matrix_indicators_user(void) {
+bool rgb_matrix_indicators_user(void) {
     uint8_t mods                = get_mods();
     uint8_t oneshot_mods        = get_oneshot_mods();
     uint8_t oneshot_locked_mods = get_oneshot_locked_mods();
@@ -193,4 +193,6 @@ void rgb_matrix_indicators_user(void) {
             set_current_layer_rgb();
         }
     }
+
+    return false;
 }

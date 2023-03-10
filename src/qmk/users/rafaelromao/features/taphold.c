@@ -2,7 +2,7 @@
 
 #include "taphold.h"
 
-bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
+uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case LOW_SPC:
         case RAI_BSP:
@@ -10,15 +10,15 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
         case NAV_F12:
         case MED_CAS:
         case MED_0:
-            return false;
+            return QUICK_TAP_TERM;
     }
     switch (keycode) {
         case QK_MOD_TAP ... QK_MOD_TAP_MAX:
         case QK_LAYER_TAP ... QK_LAYER_TAP_MAX:
         case QK_MOMENTARY ... QK_MOMENTARY_MAX:
-            return true;
+            return 50;
         default:
-            return false;
+            return QUICK_TAP_TERM;
     }
 }
 

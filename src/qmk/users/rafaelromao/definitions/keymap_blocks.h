@@ -96,12 +96,12 @@
 #define _______________________LOCK____R3____           XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX 
 #define ______LOCK____R4_                               XXXXXXX , _______
 
-#define           _________MAINTENANCE_L1____                     RGB_VAD , RGB_VAI , EEP_RST 
+#define           _________MAINTENANCE_L1____                     RGB_VAD , RGB_VAI , EE_CLR 
 #define ___________________MAINTENANCE_L2______________ RGB_TOG , RGB_HUD , RGB_HUI , XXXXXXX , QK_BOOT
 #define           _________MAINTENANCE_L3______________           RGB_SAD , RGB_SAI , XXXXXXX , KC_NUM
 #define                               __MAINTENANCE_L4_                               XXXXXXX , XXXXXXX
 
-#define           _________MAINTENANCE_R1____                     EEP_RST , MC_LOCK , KC_SLEP 
+#define           _________MAINTENANCE_R1____                     EE_CLR  , MC_LOCK , KC_SLEP 
 #define ___________________MAINTENANCE_R2______________ QK_BOOT , TG_MAC  , TG_WIN  , TG_LOCK , KC_PWR
 #define ___________________MAINTENANCE_R3____           XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX 
 #define __MAINTENANCE_R4_                               XXXXXXX , XXXXXXX

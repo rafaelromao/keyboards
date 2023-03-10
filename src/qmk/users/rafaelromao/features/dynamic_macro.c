@@ -18,7 +18,7 @@ void dyn_macro_stop(void) {
     keyrecord_t kr;
     dyn_macro.recording = 0;
     kr.event.pressed    = true;
-    process_dynamic_macro(DYN_REC_STOP, &kr);
+    process_dynamic_macro(QK_DYNAMIC_MACRO_RECORD_STOP, &kr);
 #endif
 }
 

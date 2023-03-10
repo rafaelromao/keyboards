@@ -22,7 +22,7 @@ bool is_key_on_tap(uint16_t keycode) {
         }
     }
     keycode = extract_base_tapping_keycode(keycode);
-    if (IS_KEY(keycode)) {
+    if (IS_BASIC_KEYCODE(keycode)) {
         return true;
     }
     return false;
