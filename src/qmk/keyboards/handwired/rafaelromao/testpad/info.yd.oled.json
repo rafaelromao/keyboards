@@ -13,7 +13,8 @@
         "oled": true,
         "extrakey": true,
         "nkro": true,
-        "encoder": false
+        "encoder": false,
+        "wpm": true
     },
     "matrix_pins": {
         "direct": [
