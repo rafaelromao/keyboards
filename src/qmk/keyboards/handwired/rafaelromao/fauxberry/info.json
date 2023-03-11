@@ -11,7 +11,7 @@
         "bootmagic": false,
         "command": false,
         "console": false,
-        "oled": false,
+        "oled": true,
         "extrakey": true,
         "nkro": true,
         "encoder": true
@@ -36,7 +36,7 @@
             "GP27",
             "GP26",
             "GP22",
-            "GP3"
+            "GP6"
         ]
     },
     "processor": "RP2040",

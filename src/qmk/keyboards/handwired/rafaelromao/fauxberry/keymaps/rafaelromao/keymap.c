@@ -172,13 +172,19 @@ void set_rgblight_by_layer(uint32_t layer) {
 }
 
 void set_current_layer_rgb(void) {
-    set_rgblight_by_layer(get_highest_layer(layer_state | default_layer_state));
+    uint16_t layer = get_highest_layer(layer_state | default_layer_state);
+    set_rgblight_by_layer(layer);
 }
 
 layer_state_t layer_state_set_user(layer_state_t state) {
-    set_rgblight_by_layer(biton32(state));
+    uint16_t layer = biton32(state);
+    set_rgblight_by_layer(layer);
     return state;
 }
+
+// static char*[] layer_names = {PSTR("ROMAK\n"), PSTR("NUMPAD\n"),    PSTR("ACCENT\n"),     PSTR("MACROS\n"),
+//                               PSTR("LOWER\n"), PSTR("RAISE\n"),     PSTR("NAVIGATION\n"), PSTR("MEDIA\n"),
+//                               PSTR("LOCK\n"),  PSTR("MAITENANCE\n")};
 
 void set_mod_indicators(void) {
     uint8_t mods                = get_mods();
@@ -192,12 +198,32 @@ void set_mod_indicators(void) {
 
     if (swapper.state != NONE || leader.isLeading || select_word.state != STATE_NONE || dyn_macro.recording != 0) {
         rgblight_setrgb(RGB_GREEN);
+#ifdef OLED_ENABLE
+        if (swapper.state != NONE) {
+            oled_write_P(PSTR("Swapper\n"), false);
+        } else if (leader.isLeading) {
+            oled_write_P(PSTR("Leader Key\n"), false);
+        } else if (select_word.state != STATE_NONE) {
+            oled_write_P(PSTR("Select Word / Line\n"), false);
+        } else if (dyn_macro.recording != 0) {
+            oled_write_P(PSTR("Dynamic Macro\n"), false);
+        }
+#endif
     } else if (has_any_smart_case()) {
         rgblight_setrgb(RGB_YELLOW);
+#ifdef OLED_ENABLE
+        oled_write_P(PSTR("Smart Case\n"), false);
+#endif
     } else if (isShift) {
         rgblight_setrgb(RGB_TEAL);
+#ifdef OLED_ENABLE
+        oled_write_P(PSTR("Shift\n"), false);
+#endif
     } else if (isCtrl || isAlt || isGui) {
         rgblight_setrgb(RGB_WHITE);
+#ifdef OLED_ENABLE
+        oled_write_P(PSTR("Mods\n"), false);
+#endif
     } else {
         set_current_layer_rgb();
     }
@@ -221,3 +247,13 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
     [_MEDIA]       = {ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN)), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)},
     [_LOCK]        = {ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN)), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)},
     [_MAINTENANCE] = {ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN)), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)}};
+
+// Oled
+
+bool oled_task_kb(void) {
+    if (!oled_task_user()) {
+        return false;
+    }
+    set_mod_indicators();
+    return true;
+}
