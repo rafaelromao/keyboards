@@ -71,7 +71,7 @@
 
         COMBO(cb_end_ent,       RTM RTR,     &th_end_ent 0 0,    MEDIA)
         
-        COMBO(cb_refresh,       RHM RHR,     &mc_refresh,        MACROS)
-        COMBO(cb_close_tab,     RBM RBR,     &mc_close_tab,      MACROS)
+        COMBO(cb_refresh_z0,    RHM RHR,     &mm_refresh_z0,     MACROS)
+        COMBO(cb_close_tab_win, RBM RBR,     &mm_close_tab_win,  MACROS)
     };
 };

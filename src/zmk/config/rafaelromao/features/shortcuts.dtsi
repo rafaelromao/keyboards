@@ -53,7 +53,7 @@
         // Romak
 
         SHORTCUT(mc_fullscr,            &macro_tap &kp LC(LG(F)))
-        SHORTCUT(mc_find,                &macro_tap &kp LG(F))
+        SHORTCUT(mc_find,               &macro_tap &kp LG(F))
         SHORTCUT(mc_selall,             &macro_tap &kp LG(A))
         SHORTCUT(mc_undo,               &macro_tap &kp LG(Z))
         SHORTCUT(mc_copy,               &macro_tap &kp LG(C))
@@ -125,15 +125,20 @@
 
         SHORTCUT(mc_zout,               &macro_tap &kp LG(MINUS))
         SHORTCUT(mc_zin,                &macro_tap &kp LG(PLUS))
-
+        
+        SHORTCUT(mc_z0,                 &macro_tap &kp LG(N0))
         SHORTCUT(mc_refresh,            &macro_tap &kp LG(R))
+        SHIFTED_SHORTCUT(mm_refresh_z0,  &mc_z0, &mc_refresh)
+        
         SHORTCUT(mc_close_tab,          &macro_tap &kp LG(W))
+        SHORTCUT(mc_close_win,          &macro_tap &kp LG(Q))
+        SHIFTED_SHORTCUT(mm_close_tab_win,  &mc_close_win, &mc_close_tab)
 
         SHORTCUT(mc_join,               &macro_tap &kp END &kp DEL)
         SHORTCUT(mc_comment,            &macro_tap &kp LG(SLASH))
 
-        MODTAP_SHORTCUT(th_find,         &mm_find_symbol)
+        MODTAP_SHORTCUT(th_find,        &mm_find_symbol)
         MODTAP_SHORTCUT(th_zh,          &mm_zh_f)
-        LAYERTAP_SHORTCUT(th_proj,        &mm_project)
+        LAYERTAP_SHORTCUT(th_proj,      &mm_project)
     };
 };
