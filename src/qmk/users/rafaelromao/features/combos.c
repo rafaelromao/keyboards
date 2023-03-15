@@ -40,7 +40,7 @@ const uint16_t PROGMEM r_ng_coes_combo[] = {MC_CR_A, MC_CR_O, MC_CR_E, COMBO_END
 
 // Macros
 
-const uint16_t PROGMEM r_mac_ref_combo[] = {MC_MODM, SF_MODP, COMBO_END};
+const uint16_t PROGMEM r_mac_z0r_combo[] = {MC_MODM, SF_MODP, COMBO_END};
 const uint16_t PROGMEM r_mac_clo_combo[] = {MC_SWLE, MC_SWRI, COMBO_END};
 
 // Base
@@ -81,7 +81,7 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(r_low_tab_combo, KC_TAB),  COMBO(r_low_ent_combo, KC_ENT),    COMBO(r_ng_ao_combo, MC_AO),
     COMBO(r_ng_cu_combo, MC_CU),     COMBO(r_ng_ca_combo, MC_CA),       COMBO(r_ng_co_combo, MC_CO),
     COMBO(r_ng_cao_combo, MC_CAO),   COMBO(r_ng_oes_combo, MC_OES),     COMBO(r_ng_coes_combo, MC_COES),
-    COMBO(r_mac_ref_combo, MC_REF),  COMBO(r_mac_clo_combo, MC_CTAB),   COMBO(r_rom_cop_combo, MC_COPY),
+    COMBO(r_mac_z0r_combo, MC_Z0R),  COMBO(r_mac_clo_combo, MC_CLOS),   COMBO(r_rom_cop_combo, MC_COPY),
     COMBO(r_rom_sco_combo, TD_SCLE), COMBO(l_rom_usc_combo, MC_UNDS),   COMBO(l_rom_ful_combo, MC_FULL),
     COMBO(r_rom_p_combo, KC_P),      COMBO(r_rom_pas_combo, MC_PAST),   COMBO(l_rom_rai_combo, OS_RAI),
     COMBO(l_rom_low_combo, OS_LOW),  COMBO(l_rom_sav_combo, MC_SAVE),   COMBO(l_rom_esc_combo, KC_ESC),

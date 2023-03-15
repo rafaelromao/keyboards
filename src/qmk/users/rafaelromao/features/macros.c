@@ -301,32 +301,41 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             tap_code(KC_ENT);
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Refresh / Clear Cache
+            // Reset Zoom / Refresh
 
-        case MC_REF:
+        case MC_Z0R:
             if (isShifted) {
-                if (isMacOS) {
-                    SEND_STRING(SS_LGUI(SS_LSFT(SS_TAP(X_R))));
-                } else {
-                    SEND_STRING(SS_LSFT(SS_TAP(X_F5)));
-                }
-            } else {
                 if (isMacOS) {
                     SEND_STRING(SS_LGUI(SS_TAP(X_R)));
                 } else {
                     tap_code(KC_F5);
                 }
+            } else {
+                if (isMacOS) {
+                    SEND_STRING(SS_LGUI(SS_TAP(X_0)));
+                } else {
+                    SEND_STRING(SS_LCTL(SS_TAP(X_0)));
+                }
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Close Tab
+            // Close Window / Close Tab
 
-        case MC_CTAB:
-            if (isMacOS) {
-                SEND_STRING(SS_LGUI(SS_TAP(X_W)));
+        case MC_CLOS:
+            if (isShifted) {
+                if (isMacOS) {
+                    SEND_STRING(SS_LGUI(SS_TAP(X_W)));
+                } else {
+                    SEND_STRING(SS_LCTL(SS_TAP(X_F4)));
+                    break;
+                }
             } else {
-                SEND_STRING(SS_LCTL(SS_TAP(X_F4)));
-                break;
+                if (isMacOS) {
+                    SEND_STRING(SS_LGUI(SS_TAP(X_Q)));
+                } else {
+                    SEND_STRING(SS_LALT(SS_TAP(X_F4)));
+                    break;
+                }
             }
             return PROCESS_RECORD_RETURN_FALSE;
     }

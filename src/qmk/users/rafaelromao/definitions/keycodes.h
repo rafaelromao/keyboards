@@ -84,8 +84,8 @@ enum {
     SFT_MACRO_START,
 
     // Common shortcuts
-    MC_SELC, MC_SAVE, MC_UNDO, MC_COPY, MC_CTAB, 
-    MC_PAST, MC_LOCK, MC_FULL, MC_FIND, MC_REF,
+    MC_SELC, MC_SAVE, MC_UNDO, MC_COPY, MC_CLOS, 
+    MC_PAST, MC_LOCK, MC_FULL, MC_FIND, MC_Z0R,
 
     // IDE shortcuts
     MC_QUIK, MC_AUCO, 

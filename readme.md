@@ -2,7 +2,7 @@
  
 ## Overview
 
-A split keyboard layout optimized for Portuguese, English, working with numbers and software programming with VIM plugins. The number of keys can vary from 28 to 36. Optional keys have bindings only in the base layer.
+A split keyboard layout optimized for Portuguese, English, working with numbers and software programming with VIM plugins.
 
 ![img](img/overview.png)
 
@@ -39,7 +39,7 @@ This repository contains the keymap files that are used to customize my keyboard
 
 ## Compatibility
 
-This layout was tested with the keyboards listed below, but can be easily adapted to most ortholinear or column staggered keyboards with at least 28 keys, with 2 of them on each thumb.
+This layout was tested with the keyboards listed below, but can be easily adapted to most ortholinear or column staggered keyboards with at least 30 keys, with 2 of them on each thumb.
 
 ### QMK
 
