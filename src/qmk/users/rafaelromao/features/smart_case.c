@@ -91,7 +91,7 @@ void toggle_smart_case(smart_case_type_t smart_case_types) {
     }
 }
 
-void set_smart_case_for_mods(keyrecord_t *record) {
+void set_smart_case_for_mods(void) {
     int8_t mods = get_mods();
     disable_smart_case();
     if (mods == 0 || mods & MOD_BIT(KC_LCTL)) {
@@ -184,6 +184,8 @@ process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record
             case KC_END:
             case MAI_ACT:
             case MAI_CAS:
+            case MED_CAS:
+            case RAI_BSP:
                 start_smart_case_timer();
                 break;
             case KC_DOT:

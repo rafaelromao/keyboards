@@ -283,28 +283,6 @@ void td_dquo(tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void td_squo(tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            process_macros(MC_SQUO, NULL);
-            break;
-        case TD_SINGLE_HOLD:
-            process_macros(MC_SQUO, NULL);
-            process_macros(MC_SQUO, NULL);
-            tap_code(KC_LEFT);
-            break;
-        case TD_DOUBLE_TAP:
-            SEND_STRING("String ");
-            break;
-        case TD_TRIPLE_TAP:
-            SEND_STRING("boolean ");
-            break;
-        default:
-            break;
-    }
-}
-
 void td_perc(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
 
@@ -579,7 +557,6 @@ tap_dance_action_t tap_dance_actions[] = {
     [BRT_CBR] = ACTION_TAP_DANCE_FN(td_close_brackets),
     [BRT_PAR] = ACTION_TAP_DANCE_FN(td_parentesis),
     [DQU_FIN] = ACTION_TAP_DANCE_FN(td_dquo),
-    [SQU_STR] = ACTION_TAP_DANCE_FN(td_squo),
     [NOT_SWI] = ACTION_TAP_DANCE_FN(td_not),
     [AND_EAN] = ACTION_TAP_DANCE_FN(td_and),
     [OR_EOR]  = ACTION_TAP_DANCE_FN(td_or),

@@ -10,13 +10,13 @@ uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
         case NAV_F12:
         case MED_CAS:
         case MED_0:
-            return QUICK_TAP_TERM;
+            return 0;
     }
     switch (keycode) {
         case QK_MOD_TAP ... QK_MOD_TAP_MAX:
         case QK_LAYER_TAP ... QK_LAYER_TAP_MAX:
         case QK_MOMENTARY ... QK_MOMENTARY_MAX:
-            return 50;
+            return 0;
         default:
             return QUICK_TAP_TERM;
     }
@@ -51,16 +51,9 @@ bool get_combo_must_tap(uint16_t index, combo_t *combo) {
 
 process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case NAV_PRJ:
+        case NAV_SQO:
             if (record->event.pressed && record->tap.count > 0) {
-                process_macros(MC_PROJ, NULL);
-                return PROCESS_RECORD_RETURN_FALSE;
-            }
-            break;
-
-        case NAV_BTI:
-            if (record->event.pressed && record->tap.count > 0) {
-                process_macros(MC_BTIC, NULL);
+                process_macros(MC_SQUO, NULL);
                 return PROCESS_RECORD_RETURN_FALSE;
             }
             break;

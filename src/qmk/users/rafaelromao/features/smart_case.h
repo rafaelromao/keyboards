@@ -24,7 +24,7 @@ void toggle_capslock(bool capslock);
 void check_disable_smart_case(void);
 void disable_smart_case(void);
 void set_smart_case(smart_case_type_t smart_case_types);
-void set_smart_case_for_mods(keyrecord_t* record);
+void set_smart_case_for_mods(void);
 bool has_smart_case(smart_case_type_t smart_case_types);
 bool has_any_smart_case(void);
 
