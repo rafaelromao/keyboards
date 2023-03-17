@@ -8,6 +8,7 @@ uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
         case RAI_BSP:
         case NAV_ACT:
         case NAV_F12:
+        case NAV_PRJ:
         case MED_CAS:
         case MED_0:
             return 0;
@@ -54,6 +55,13 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
         case NAV_SQO:
             if (record->event.pressed && record->tap.count > 0) {
                 process_macros(MC_SQUO, NULL);
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+            break;
+
+        case NAV_PRJ:
+            if (record->event.pressed && record->tap.count > 0) {
+                process_macros(MC_PROJ, NULL);
                 return PROCESS_RECORD_RETURN_FALSE;
             }
             break;

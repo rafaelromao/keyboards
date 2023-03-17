@@ -35,10 +35,10 @@
 #define ___________________ACCENT_R3_________           MC_GV_A , MC_CR_A , MC_CR_O , MC_CR_E 
 #define ____ACCENT_R4____                               KC_BSPC , _______
 
-#define ___________________MACROS_L1_________           _______ , MC_QDOC , MC_QUIK , MC_AUCO 
-#define ___________________MACROS_L2___________________ MC_PROJ , SF_FSYM , MC_RUN  , MC_DBUG , MC_BUID
+#define ___________________MACROS_L1_________           _______ , MC_ESC  , MC_QUIK , MC_AUCO 
+#define ___________________MACROS_L2___________________ MC_QDOC , SF_FSYM , MC_RUN  , MC_DBUG , MC_BUID
 #define           _________MACROS_L3___________________           MC_RECE , MC_COMP , MC_FIUS , MC_REFC
-#define                               ____MACROS_L4____                               _______ , KC_SPC
+#define                               ____MACROS_L4____                               NAV_PRJ , KC_SPC
 
 #define           _________MACROS_R1___________________           MC_SELW , MC_ENT  , MC_TAB  , _______
 #define ___________________MACROS_R2___________________ TD_MACR , MC_SELL , MC_MODM , SF_MODP , XXXXXXX
@@ -65,7 +65,7 @@
 #define ___________________RAISE_R3__________           TD_PERC , TD_SLSH , TD_LT   , TD_GT   
 #define ____RAISE_R4_____                               _______ , _______
 
-#define ___________________MEDIA_L1__________           _______ , _______ , _______ , KC_RALT 
+#define ___________________MEDIA_L1__________           _______ , MC_ESC  , MC_SAVE , KC_RALT 
 #define ___________________MEDIA_L2____________________ XXXXXXX , KC_LSFT , KC_LCTL , KC_LGUI , KC_LGUI
 #define           _________MEDIA_L3____________________           KC_RALT , XXXXXXX , KC_LALT , XXXXXXX
 #define                               ____MEDIA_L4_____                               MAI_ACT , _______
@@ -75,7 +75,7 @@
 #define ___________________MEDIA_R3__________           TG_NUM  , KC_MPLY , KC_MPRV , KC_MNXT 
 #define ____MEDIA_R4_____                               _______ , _______
 
-#define ___________________NAVIGATION_L1_____           _______ , KC_ESC  , MC_SAVE , OS_RALT 
+#define ___________________NAVIGATION_L1_____           _______ , MC_ESC  , MC_SAVE , OS_RALT 
 #define ___________________NAVIGATION_L2_______________ XXXXXXX , OS_LSFT , OS_LCTL , OS_LGUI , XXXXXXX
 #define           _________NAVIGATION_L3_______________           OS_RALT , XXXXXXX , OS_LALT , XXXXXXX
 #define                               __NAVIGATION_L4__                               _______ , _______
