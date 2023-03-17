@@ -1,6 +1,6 @@
 {
     "manufacturer": "Rafael Romao",
-    "keyboard_name": "handwired/rafaelromao/rommana",
+    "keyboard_name": "handwired/rafaelromao/hummingbird",
     "maintainer": "rafaelromao",
     "bootloader": "rp2040",
     "diode_direction": "COL2ROW",
