@@ -109,6 +109,11 @@ process_record_result_t process_common_shortcuts(uint16_t keycode, keyrecord_t *
 
             // Esc, Tab, Enter
 
+        case MC_ESCC:
+            clear_shift();
+            tap_code(KC_ESC);
+            layer_clear();
+            return PROCESS_RECORD_RETURN_FALSE;
         case MC_ESC:
             clear_shift();
             tap_code(KC_ESC);

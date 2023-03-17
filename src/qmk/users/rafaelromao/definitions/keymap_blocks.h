@@ -5,7 +5,7 @@
 
 // clang-format off
 
-#define ___________________ROMAK_L1__________           KC_ESC  ,  KC_F    , KC_D    , KC_W    
+#define ___________________ROMAK_L1__________           MC_ESCC  ,  KC_F    , KC_D    , KC_W    
 #define ___________________ROMAK_L2____________________ KCR_MAC , LSFTT_N , LCTLT_S , LGUIT_T , KC_G
 #define           _________ROMAK_L3____________________           RALTT_B , KC_C    , LALTT_P , KC_K
 #define                               ____ROMAK_L4_____                               NAV_ACT , LOW_SPC
@@ -28,7 +28,7 @@
 #define ___________________ACCENT_L1_________           _______ , _______ , KC_X    , KC_CIRC 
 #define ___________________ACCENT_L2___________________ KC_QUOT , KC_Q    , _______ , KC_Z    , KC_GRV
 #define           _________ACCENT_L3___________________           _______ , MC_SQ_C , _______ , _______
-#define                               ____ACCENT_L4____                               _______ , KC_SPC
+#define                               ____ACCENT_L4____                               NAV_TAC , KC_SPC
 
 #define           _________ACCENT_R1___________________           MC_TL_O , MC_SQ_O , MC_SQ_U , _______
 #define ___________________ACCENT_R2___________________ KC_Y    , MC_TL_A , MC_SQ_A , MC_SQ_E , MC_SQ_I

@@ -5,7 +5,7 @@
     "bootloader": "rp2040",
     "diode_direction": "COL2ROW",
     "build": {
-        "lto": false
+        "lto": true
     },
     "features": {
         "bootmagic": false,
@@ -16,36 +16,19 @@
         "nkro": true,
         "encoder": false
     },
-    "matrix_pin_labels": {
-        "rows": [
-            "A0/D0",
-            "A1/D1",
-            "A2/D2",
-            "A3/D3",
-            "SDA/D4",
-            "SCL/D5"
-        ],
-        "cols": [
-            "Tx/D6",
-            "Rx/Csn/D7",
-            "SCK/D8",
-            "MISO/D9",
-            "MOSI/D10"
-        ]
-    },
     "matrix_pins": {
         "rows": [
             "GP26",
-            "GP27",
             "GP28",
             "GP29",
             "GP6",
+            "GP27",
             "GP7"
         ],
         "cols": [
+            "GP2",
             "GP0",
             "GP1",
-            "GP2",
             "GP4",
             "GP3"
         ]

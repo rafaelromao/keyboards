@@ -70,7 +70,7 @@ enum {
     MC_SECRET_1, 
 
     // Toggle codes
-    OS_ACNT, TG_MAC, TG_WIN, TG_CASE, 
+    OS_ACNT, TG_MAC, TG_WIN, TG_CASE, TG_ACNT,
 
     // Select Word/Line
     MC_SELW, MC_SELL, 
@@ -95,7 +95,7 @@ enum {
     STR_MACRO_START,
     
     MC_BTIC, MC_DQUO, MC_SQUO, MC_CIRC, MC_TILD,
-    MC_UNDS, MC_ENT, MC_TAB, MC_ESC, 
+    MC_UNDS, MC_ENT, MC_TAB, MC_ESC, MC_ESCC,  
     MC_ESAV, MC_SENT, MC_CUR,  
     MC_DAND, MC_DPIP, MC_OESC,
 
@@ -151,6 +151,7 @@ enum {
 
 // Layer-taps
 
+#define NAV_TAC  LT(_NAVIGATION, TG_ACNT)
 #define NAV_ACT  LT(_NAVIGATION, OS_ACNT)
 #define NAV_F12  LT(_NAVIGATION, KC_F12)
 #define NAV_SQO  LT(_NAVIGATION, MC_SQUO)

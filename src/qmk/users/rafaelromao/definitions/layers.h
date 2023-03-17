@@ -4,6 +4,7 @@ typedef enum {
     _ROMAK,
     _NUMPAD,
     _ACCENT,
+    _FIXED_ACCENT,
     _MACROS,
     _LOWER,
     _RAISE,
