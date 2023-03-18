@@ -29,6 +29,7 @@ enum {
     SLS_BSL,
     QUE_EXC,
     EQL_EEQ,
+    PLU_RET,
     LET_ELT,
     GRT_EGT,
     OR_EOR,
@@ -58,6 +59,7 @@ enum {
 #define TD_QUES TD(QUE_EXC)
 #define TD_SLSH TD(SLS_BSL)
 #define TD_EQL TD(EQL_EEQ)
+#define TD_PLUS TD(PLU_RET)
 #define TD_LT TD(LET_ELT)
 #define TD_GT TD(GRT_EGT)
 #define TD_OR TD(OR_EOR)
@@ -96,7 +98,7 @@ enum {
     
     MC_BTIC, MC_DQUO, MC_SQUO, MC_CIRC, MC_TILD,
     MC_UNDS, MC_ENT, MC_TAB, MC_ESC, MC_ESCC,  
-    MC_ESAV, MC_SENT, MC_CUR,  
+    MC_ESAV, MC_SENT, MC_CUR, MC_SAR, MC_DAR, 
     MC_DAND, MC_DPIP, MC_OESC,
 
     // End macros that can be shifted

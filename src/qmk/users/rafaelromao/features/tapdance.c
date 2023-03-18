@@ -92,12 +92,6 @@ void td_close_curly_braces(tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_END);
             tap_code16(KC_RCBR);
             break;
-        case TD_DOUBLE_TAP:
-            SEND_STRING("case ");
-            break;
-        case TD_TRIPLE_TAP:
-            SEND_STRING("switch(");
-            break;
         default:
             break;
     }
@@ -240,6 +234,27 @@ void td_or(tap_dance_state_t *state, void *user_data) {
     }
 }
 
+void td_plus(tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code16(KC_PLUS);
+            break;
+        case TD_SINGLE_HOLD:
+            tap_code(KC_END);
+            tap_code16(KC_PLUS);
+            break;
+        case TD_DOUBLE_TAP:
+            SEND_STRING("return ");
+            break;
+        case TD_TRIPLE_TAP:
+            SEND_STRING("throw ");
+            break;
+        default:
+            break;
+    }
+}
+
 void td_not(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
@@ -251,10 +266,10 @@ void td_not(tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_EXLM);
             break;
         case TD_DOUBLE_TAP:
-            SEND_STRING("return ");
+            SEND_STRING("case ");
             break;
         case TD_TRIPLE_TAP:
-            SEND_STRING("throw ");
+            SEND_STRING("switch(");
             break;
         default:
             break;
@@ -567,6 +582,7 @@ tap_dance_action_t tap_dance_actions[] = {
     [PER_DEG] = ACTION_TAP_DANCE_FN(td_perc),
     [QUE_EXC] = ACTION_TAP_DANCE_FN(td_ques),
     [EQL_EEQ] = ACTION_TAP_DANCE_FN(td_eql),
+    [PLU_RET] = ACTION_TAP_DANCE_FN(td_plus),
     [LET_ELT] = ACTION_TAP_DANCE_FN(td_lt),
     [GRT_EGT] = ACTION_TAP_DANCE_FN(td_gt),
     [SLS_BSL] = ACTION_TAP_DANCE_FN(td_slash),
