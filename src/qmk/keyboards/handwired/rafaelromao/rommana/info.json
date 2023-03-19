@@ -14,6 +14,7 @@
         "oled": false,
         "extrakey": true,
         "nkro": true,
+        "rgblight": true,
         "encoder": false
     },
     "matrix_pin_labels": {
@@ -57,15 +58,15 @@
         "pid": "0x0000",
         "vid": "0xFEED"
     },
+    "indicators": {
+        "num_lock": "GP16",
+        "scroll_lock": "GP17",
+        "caps_lock": "GP25",
+        "on_state": 0
+    },
     "rgblight": {
         "led_count": 1,
-        "pin": "GP25",
-        "hue_steps": 10,
-        "saturation_steps": 17,
-        "brightness_steps": 17,
-        "animations": {
-            "all": false
-        }
+        "pin": "GP12"
     },
     "layouts": {
         "LAYOUT_split_3x5": {

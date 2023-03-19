@@ -98,7 +98,7 @@
 
 #define ___________________MAINTENANCE_L1____           XXXXXXX , RGB_VAD , RGB_VAI , EE_CLR 
 #define ___________________MAINTENANCE_L2______________ RGB_TOG , RGB_HUD , RGB_HUI , XXXXXXX , QK_BOOT
-#define           _________MAINTENANCE_L3______________           RGB_SAD , RGB_SAI , XXXXXXX , KC_NUM
+#define           _________MAINTENANCE_L3______________           RGB_SAD , RGB_SAI , KC_SCRL , KC_NUM
 #define                               __MAINTENANCE_L4_                               XXXXXXX , XXXXXXX
 
 #define           _________MAINTENANCE_R1______________           EE_CLR  , MC_LOCK , KC_SLEP , XXXXXXX
