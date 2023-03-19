@@ -89,7 +89,7 @@
                         label = "LOWER";
                         bindings = <
    &trans           &td_lpar           &td_rpar             &mc_tilde           &none               &none               &mc_n7           &mc_n8           &mc_n9           &trans
-   &th_bti NAV 0    &td_dqo            &td_sqo              &th_and 0 0         &th_or 0 0          &kp COMMA           &mc_n4           &mc_n5           &mc_n6           &lt MACROS DOT  
+   &th_sqo NAV 0    &td_dqo            &th_or 0 0           &th_and 0 0         &th_bti 0 0         &kp COMMA           &mc_n4           &mc_n5           &mc_n6           &lt MACROS DOT  
    &none            &td_lbkt           &td_rbkt             &th_qmark 0 0       &kp HASH            &none               &mc_n1           &mc_n2           &mc_n3           &none
                                        &trans               &trans              &trans              &trans              &th_n0 MEDIA 0   &trans
                         >;
@@ -97,9 +97,9 @@
                 raise_layer {
                         label = "RAISE";
                         bindings = <
-   &trans           &kp F9             &kp F8               &kp F7              &none               &none               &th_curr  0 0    &td_lbrc         &td_rbrc        &trans
+   &trans           &kp F9             &kp F8               &kp F7              &none               &none               &th_curr  0 0    &th_lbrc 0 0     &th_rbrc 0 0    &trans
    &none            &kp F6             &kp F5               &kp F4              &kp F11             &th_colon 0 0       &kp MINUS        &td_plus         &th_eql 0 0     &kp AT  
-   &none            &kp F3             &kp F2               &kp F1              &kp F10             &th_perc 0 0        &th_slash 0 0    &td_star         &td_excl        &none
+   &none            &kp F3             &kp F2               &kp F1              &kp F10             &th_perc 0 0        &th_slash 0 0    &kp STAR         &td_excl        &none
                                        &trans               &kp F12             &trans              &trans              &trans           &trans
                         >;
                 };

@@ -156,10 +156,6 @@
         SYMBOL(mc_double_sqo,      &mc_sqo &mc_sqo &kp LEFT)
         TAPHOLD_SYMBOL(th_sqo,     &mc_sqo, &mc_double_sqo)
                                  
-        MACRO_SYMBOL(mc_string,    &kp S &kp T &kp R &kp I &kp N &kp G &kp SPACE)
-        MACRO_SYMBOL(mc_boolean,   &kp B &kp O &kp O &kp L &kp E &kp A &kp N &kp SPACE)
-        TAPDANCE_SYMBOL(td_sqo,    &th_sqo 0 0, &mc_string, &mc_boolean)
-                                 
         SYMBOL(mc_lbkt,            &kp LBKT)
         SYMBOL(mc_end_lbkt,        &kp END &kp LBKT)
         TAPHOLD_SYMBOL(th_lbkt,    &mc_lbkt, &mc_end_lbkt)
@@ -204,10 +200,6 @@
         SYMBOL(mc_end_rbrc,        &kp END &kp RBRC)
         TAPHOLD_SYMBOL(th_rbrc,    &mc_rbrc, &mc_end_rbrc)
                                  
-        MACRO_SYMBOL(mc_case,      &kp C &kp A &kp S &kp E &kp SPACE)
-        MACRO_SYMBOL(mc_switch,    &kp S &kp W &kp I &kp T &kp C &kp H &kp LPAR)
-        TAPDANCE_SYMBOL(td_rbrc,   &th_rbrc 0 0, &mc_case, &mc_switch)
-        
         MACRO_SYMBOL(mc_escc,      &kp ESC &tog ROMAK)
         
         SYMBOL(mc_braces,          &kp END &kp LBRC &kp RBRC &kp LEFT &kp ENTER)
@@ -223,17 +215,19 @@
         SYMBOL(mc_end_colon,       &kp END &kp COLON)
         TAPHOLD_SYMBOL(th_colon,   &mc_colon, &mc_end_colon)
 
+        MACRO_SYMBOL(mc_case,      &kp C &kp A &kp S &kp E &kp SPACE)
+        MACRO_SYMBOL(mc_switch,    &kp S &kp W &kp I &kp T &kp C &kp H &kp LPAR)
         SYMBOL(mc_excl,            &kp EXCL)
         SYMBOL(mc_end_excl,        &kp END &kp EXCL)
         TAPHOLD_SYMBOL(th_excl,    &mc_excl, &mc_end_excl)
-                                 
+        TAPDANCE_SYMBOL(td_excl,   &th_excl 0 0, &mc_case, &mc_switch)
+
         MACRO_SYMBOL(mc_return,    &kp R &kp E &kp T &kp U &kp R &kp N &kp SPACE)
         MACRO_SYMBOL(mc_throw,     &kp T &kp H &kp R &kp O &kp W &kp SPACE)
-        TAPDANCE_SYMBOL(td_excl,   &th_excl 0 0, &mc_return, &mc_throw)
-
         SYMBOL(mc_plus,            &kp PLUS)
         SYMBOL(mc_end_plus,        &kp END &kp PLUS)
         TAPHOLD_SYMBOL(th_plus,    &mc_plus, &mc_end_plus)
+        TAPDANCE_SYMBOL(td_plus,   &th_plus 0 0, &mc_return, &mc_throw)
                                  
         SYMBOL(mc_eql,             &kp EQUAL)
         SYMBOL(mc_end_eql,         &kp END &kp EQUAL)
