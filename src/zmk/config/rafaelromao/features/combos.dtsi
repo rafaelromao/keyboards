@@ -66,8 +66,10 @@
         COMBO(cb_coes,          RBI RBM RBR, &mc_coes,           ACCENT)
 
         COMBO(cb_braces,        RTR RTM,     &mc_braces,         RAISE)
-        COMBO(cb_plus,          RHR RHM,     &kp PLUS,           RAISE)
-        COMBO(cb_star,          RBR RBM,     &kp STAR,           RAISE)
+        COMBO(cb_sarrow,        RHI RHM,     &th_sarrow,         RAISE)
+        COMBO(cb_darrow,        RHM RHR,     &th_darrow,         RAISE)
+        COMBO(cb_lt,            RBI RBM,     &td_lt,             RAISE)
+        COMBO(cb_gt,            RBM RBR,     &td_gt,             RAISE)
 
         COMBO(cb_end_ent,       RTM RTR,     &th_end_ent 0 0,    MEDIA)
         

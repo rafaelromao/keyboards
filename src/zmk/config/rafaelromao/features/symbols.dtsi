@@ -208,6 +208,8 @@
         MACRO_SYMBOL(mc_switch,    &kp S &kp W &kp I &kp T &kp C &kp H &kp LPAR)
         TAPDANCE_SYMBOL(td_rbrc,   &th_rbrc 0 0, &mc_case, &mc_switch)
         
+        MACRO_SYMBOL(mc_escc,      &kp ESC &tog ROMAK)
+        
         SYMBOL(mc_braces,          &kp END &kp LBRC &kp RBRC &kp LEFT &kp ENTER)
 
         SYMBOL(mc_dollar,          &kp DOLLAR)
@@ -229,6 +231,10 @@
         MACRO_SYMBOL(mc_throw,     &kp T &kp H &kp R &kp O &kp W &kp SPACE)
         TAPDANCE_SYMBOL(td_excl,   &th_excl 0 0, &mc_return, &mc_throw)
 
+        SYMBOL(mc_plus,            &kp PLUS)
+        SYMBOL(mc_end_plus,        &kp END &kp PLUS)
+        TAPHOLD_SYMBOL(th_plus,    &mc_plus, &mc_end_plus)
+                                 
         SYMBOL(mc_eql,             &kp EQUAL)
         SYMBOL(mc_end_eql,         &kp END &kp EQUAL)
         TAPHOLD_SYMBOL(th_eql,     &mc_eql, &mc_end_eql)
@@ -240,6 +246,14 @@
         SYMBOL(mc_gt,              &kp GT)
         SYMBOL(mc_end_gt,          &kp END &kp GT)
         TAPHOLD_SYMBOL(th_gt,      &mc_gt, &mc_end_gt)
+                                 
+        SYMBOL(mc_sarrow,          &kp MINUS &kp GT)
+        SYMBOL(mc_end_sarrow,      &kp END &mc_sarrow)
+        TAPHOLD_SYMBOL(th_sarrow,  &mc_sarrow, &mc_end_sarrow)
+                                 
+        SYMBOL(mc_darrow,          &kp EQUAL &kp GT)
+        SYMBOL(mc_end_darrow,      &kp END &mc_darrow)
+        TAPHOLD_SYMBOL(th_darrow,  &mc_darrow, &mc_end_darrow)
                                  
         SYMBOL(mc_perc,            &kp PERCENT)
         SYMBOL(mc_deg,             &kp LS(LA(N8)))

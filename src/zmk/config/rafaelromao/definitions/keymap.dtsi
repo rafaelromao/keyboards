@@ -25,7 +25,7 @@
                 default_layer {
                         label = "ROMAK";
                         bindings = <
-   &kp ESC          &kp F               &kp D               &kp W               &none               &none               &kp L            &kp O            &kp U            &kp BSPC
+   &mc_escc         &kp F               &kp D               &kp W               &none               &none               &kp L            &kp O            &kp U            &kp BSPC
    &lt MACROS R     &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp G               &kp V               &mt RGUI H       &mt RCTRL A      &mt RSHFT E      &lt MACROS I 
    &none            &mt RALT B          &kp C               &mt LALT P          &kp K               &kp J               &mt LALT M       &td_comma        &th_dot 0 0      &none
                                         &sl RAISE           &msl NAV ACCENT     &lt LOWER SPACE     &lt RAISE BSPC      &mm_sc           &sl LOWER
@@ -55,7 +55,16 @@
    &trans           &trans              &kp X               &kp CARET           &none               &none               &ac_otil         &ac_oacu         &ac_uacu         &trans
    &kp SQT          &kp Q               &trans              &kp Z               &kp GRAVE           &kp Y               &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
    &none            &trans              &mc_ced             &trans              &trans              &ac_agrv            &ac_acir         &ac_ocir         &ac_ecir         &none
-                                        &trans              &trans              &kp SPACE           &kp BSPC            &trans           &trans
+                                        &trans              &tog ACCENT_F       &kp SPACE           &kp BSPC            &trans           &trans
+                        >;
+                };
+                fixed_accents_layer {
+                        label = "ACCENT";
+                        bindings = <
+   &trans           &trans              &kp X               &kp CARET           &none               &none               &ac_otil         &ac_oacu         &ac_uacu         &trans
+   &kp SQT          &kp Q               &trans              &kp Z               &kp GRAVE           &kp Y               &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
+   &none            &trans              &mc_ced             &trans              &trans              &ac_agrv            &ac_acir         &ac_ocir         &ac_ecir         &none
+                                        &trans              &tog ACCENT_F       &kp SPACE           &kp BSPC            &trans           &trans
                         >;
                 };
                 case_accents_layer {
@@ -70,10 +79,10 @@
                 macros_layer {
                         label = "MACROS";
                         bindings = <
-   &trans           &mm_docs           &mm_actions          &mm_typematch       &none               &none               &mc_selw         &kp ENTER        &kp TAB          &trans    
-   &mm_proj         &th_find LSHFT 0   &mm_run              &mm_debug           &mm_build           &none               &mc_seln         &mm_zh_b         &th_zh LSHFT 0   &none  
+   &trans           &kp ESC            &mm_actions          &mm_typematch       &none               &none               &mc_selw         &kp ENTER        &kp TAB          &trans    
+   &mm_docs         &th_find LSHFT 0   &mm_run              &mm_debug           &mm_build           &none               &mc_seln         &mm_zh_b         &th_zh LSHFT 0   &none  
    &none            &mm_recent         &mm_complete         &mm_usages          &mm_refac           &mc_join            &mc_comment      &mm_wt_b         &mm_wt_f         &none
-                                       &trans               &trans              &lt LOWER BSPC      &lt RAISE SPACE     &trans           &trans
+                                       &trans               &th_proj NAV 0      &kp SPACE           &kp SPACE           &trans           &trans
                         >;
                 };
                 lower_layer {
@@ -89,8 +98,8 @@
                         label = "RAISE";
                         bindings = <
    &trans           &kp F9             &kp F8               &kp F7              &none               &none               &th_curr  0 0    &td_lbrc         &td_rbrc        &trans
-   &none            &kp F6             &kp F5               &kp F4              &kp F11             &th_colon 0 0       &kp MINUS        &th_eql 0 0      &td_excl        &kp AT  
-   &none            &kp F3             &kp F2               &kp F1              &kp F10             &th_perc 0 0        &th_slash 0 0    &th_lt 0 0       &th_gt 0 0      &none
+   &none            &kp F6             &kp F5               &kp F4              &kp F11             &th_colon 0 0       &kp MINUS        &td_plus         &th_eql 0 0     &kp AT  
+   &none            &kp F3             &kp F2               &kp F1              &kp F10             &th_perc 0 0        &th_slash 0 0    &td_star         &td_excl        &none
                                        &trans               &kp F12             &trans              &trans              &trans           &trans
                         >;
                 };
