@@ -217,3 +217,9 @@ void set_mod_indicators(void) {
 void matrix_scan_keymap(void) {
     set_mod_indicators();
 }
+
+void keyboard_post_init_kb(void) {
+    setPinOutput(RGB_POWER_PIN);
+    writePinHigh(RGB_POWER_PIN);
+    rgblight_enable_noeeprom();
+}
