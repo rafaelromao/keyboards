@@ -1,5 +1,5 @@
 # rommana
-### A handwired minimalist dactyl keyboard.
+### A 30 keys handwired split keyboard.
 
 For the complete documentation and source files, go to [this page](../src/qmk/keyboards/handwired/rafaelromao/rommana).
 
