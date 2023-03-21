@@ -1,5 +1,5 @@
 # rommana
-### A handwired unibody split keyboard.
+### A handwired minimalist dactyl keyboard.
 
 For the complete documentation and source files, go to [this page](../src/qmk/keyboards/handwired/rafaelromao/rommana).
 
