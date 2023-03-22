@@ -140,9 +140,7 @@
         TAPHOLD_SYMBOL(th_pars,    &mc_pars, &mc_end_pars)
 
         SYMBOL(mc_caret,           &kp CARET &kp SPACE)
-
         SYMBOL(mc_bti,             &kp GRAVE &kp SPACE)
-        LAYERTAP_SYMBOL(th_bti,    &mc_bti)
 
         SYMBOL(mc_dqo,             &kp DQT &kp SPACE)
         SYMBOL(mc_double_dqo,      &mc_dqo &mc_dqo &kp LEFT)
@@ -153,14 +151,13 @@
         TAPDANCE_SYMBOL(td_dqo,    &th_dqo 0 0, &mc_void, &mc_null)
                                  
         SYMBOL(mc_sqo,             &kp SQT &kp SPACE)
-        SYMBOL(mc_double_sqo,      &mc_sqo &mc_sqo &kp LEFT)
-        TAPHOLD_SYMBOL(th_sqo,     &mc_sqo, &mc_double_sqo)
+        LAYERTAP_SYMBOL(th_sqo,    &mc_sqo)
                                  
         SYMBOL(mc_lbkt,            &kp LBKT)
         SYMBOL(mc_end_lbkt,        &kp END &kp LBKT)
         TAPHOLD_SYMBOL(th_lbkt,    &mc_lbkt, &mc_end_lbkt)
                                  
-        MACRO_SYMBOL(mc_float,      &kp F &kp L &kp O &kp A &kp T &kp SPACE)
+        MACRO_SYMBOL(mc_float,     &kp F &kp L &kp O &kp A &kp T &kp SPACE)
         MACRO_SYMBOL(mc_double,    &kp D &kp O &kp U &kp B &kp L &kp E &kp SPACE)
         TAPDANCE_SYMBOL(td_lbkt,   &th_lbkt 0 0, &mc_float, &mc_double)
                                  
@@ -240,6 +237,10 @@
         SYMBOL(mc_gt,              &kp GT)
         SYMBOL(mc_end_gt,          &kp END &kp GT)
         TAPHOLD_SYMBOL(th_gt,      &mc_gt, &mc_end_gt)
+                                 
+        SYMBOL(mc_ltgt,            &kp LT &kp GT)
+        SYMBOL(mc_end_ltgt,        &kp END &kp LT &kp GT)
+        TAPHOLD_SYMBOL(th_ltgt,    &mc_ltgt, &mc_end_ltgt)
                                  
         SYMBOL(mc_sarrow,          &kp MINUS &kp GT)
         SYMBOL(mc_end_sarrow,      &kp END &mc_sarrow)

@@ -65,8 +65,10 @@
 
         // Media
 
-        SHORTCUT(mc_cam,                &macro_tap &kp LC(LA(LS(LG(V)))))
-        SHORTCUT(mc_mic,                &macro_tap &kp LC(LA(LS(LG(A)))))
+        SHORTCUT(mc_hyp_l,                &macro_tap &kp LC(LA(LS(LG(L)))))
+        SHORTCUT(mc_hyp_h,                &macro_tap &kp LC(LA(LS(LG(H)))))
+        SHORTCUT(mc_meh_l,                &macro_tap &kp LC(LA(LS(L))))
+        SHORTCUT(mc_meh_r,                &macro_tap &kp LC(LA(LS(R))))
         
         // Macros
 
