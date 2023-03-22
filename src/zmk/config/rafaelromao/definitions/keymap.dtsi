@@ -28,7 +28,7 @@
    &mc_escc         &kp F               &kp D               &kp W               &none               &none               &kp L            &kp O            &kp U            &kp BSPC
    &lt MACROS R     &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp G               &kp V               &mt RGUI H       &mt RCTRL A      &mt RSHFT E      &lt MACROS I 
    &none            &mt RALT B          &kp C               &mt LALT P          &kp K               &kp J               &mt LALT M       &td_comma        &th_dot 0 0      &none
-                                        &sl RAISE           &msl NAV ACCENT     &lt LOWER SPACE     &lt RAISE BSPC      &mm_sc           &sl LOWER
+                                        &none               &lt NAV BSPC        &lt LOWER SPACE     &msl RAISE ACCENT   &mm_sc           &none
                         >;
                 };
                 capsword_layer {
@@ -37,7 +37,7 @@
    &none            &kp LS(F)           &kp LS(D)           &kp LS(W)           &none               &none               &kp LS(L)        &kp LS(O)        &kp LS(U)        &trans
    &lt MACROS LS(R) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(G)           &kp LS(V)           &mt RGUI LS(H)   &mt RCTRL LS(A)  &mt RSHFT LS(E)  &lt MACROS LS(I) 
    &none            &mt RALT LS(B)      &kp LS(C)           &mt LALT LS(P)      &kp LS(K)           &kp LS(J)           &mt LALT LS(M)   &td_comma        &th_dot 0 0      &none
-                                        &trans              &msl NAV CASE_AC    &trans              &trans              &ht_sc MEDIA 0   &trans
+                                        &trans              &trans              &trans              &msl RAISE CASE_AC  &ht_sc MEDIA 0   &trans
                         >;
                 };
                 numpad_layer {
@@ -55,7 +55,7 @@
    &trans           &trans              &kp X               &kp CARET           &none               &none               &ac_otil         &ac_oacu         &ac_uacu         &trans
    &kp SQT          &kp Q               &trans              &kp Z               &kp GRAVE           &kp Y               &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
    &none            &trans              &mc_ced             &trans              &trans              &ac_agrv            &ac_acir         &ac_ocir         &ac_ecir         &none
-                                        &trans              &tog ACCENT_F       &kp SPACE           &kp BSPC            &trans           &trans
+                                        &trans              &kp BSPC            &kp SPACE           &tog ACCENT_F            &trans           &trans
                         >;
                 };
                 fixed_accents_layer {
@@ -64,7 +64,7 @@
    &trans           &trans              &kp X               &kp CARET           &none               &none               &ac_otil         &ac_oacu         &ac_uacu         &trans
    &kp SQT          &kp Q               &trans              &kp Z               &kp GRAVE           &kp Y               &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
    &none            &trans              &mc_ced             &trans              &trans              &ac_agrv            &ac_acir         &ac_ocir         &ac_ecir         &none
-                                        &trans              &tog ACCENT_F       &kp SPACE           &kp BSPC            &trans           &trans
+                                        &trans              &kp BSPC            &kp SPACE           &tog ACCENT_F            &trans           &trans
                         >;
                 };
                 case_accents_layer {
@@ -73,7 +73,7 @@
    &trans           &trans             &kp LS(X)            &kp CARET           &none               &none               &ac_otil_c       &ac_oacu_c       &ac_uacu_c       &trans
    &kp SQT          &kp LS(Q)          &trans               &kp LS(Z)           &kp GRAVE           &kp LS(Y)           &ac_atil_c       &ac_aacu_c       &ac_eacu_c       &ac_iacu_c 
    &none            &trans             &mc_ced_c            &trans              &trans              &ac_agrv_c          &ac_acir_c       &ac_ocir_c       &ac_ecir_c       &none
-                                       &trans               &trans              &kp SPACE           &kp BSPC            &trans           &trans
+                                       &trans               &kp BSPC            &kp SPACE           &trans              &trans           &trans
                         >;
                 };
                 macros_layer {
