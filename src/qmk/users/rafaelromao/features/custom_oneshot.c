@@ -69,9 +69,11 @@ void disable_oneshot_mods(void) {
 
 void check_disable_oneshot(uint16_t keycode) {
     switch (keycode) {
-        case NAV_ACT:
+        case RAI_ACT:
+        case RAI_TAC:
         case MED_CAS:
-        case RAI_BSP:
+        case NAV_BSP:
+        case MAI_BSP:
         case MAI_CAS:
         case OS_LOW:
         case OS_RAI:
@@ -152,7 +154,7 @@ process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *re
                 }
             }
 
-        case NAV_ACT:
+        case NAV_BSP:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
                     if (isAnyOneShotButShift || isOneShotLockedShift) {

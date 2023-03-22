@@ -8,12 +8,12 @@
 #define ___________________ROMAK_L1__________           MC_ESCC  ,  KC_F    , KC_D    , KC_W    
 #define ___________________ROMAK_L2____________________ KCR_MAC , LSFTT_N , LCTLT_S , LGUIT_T , KC_G
 #define           _________ROMAK_L3____________________           RALTT_B , KC_C    , LALTT_P , KC_K
-#define                               ____ROMAK_L4_____                               NAV_ACT , LOW_SPC
+#define                               ____ROMAK_L4_____                               NAV_BSP , LOW_SPC
 
 #define           _________ROMAK_R1____________________           KC_L    , KC_O    , KC_U    , KC_BSPC
 #define ___________________ROMAK_R2____________________ KC_V    , RGUIT_H , RCTLT_A , RSFTT_E , KCI_MAC
 #define ___________________ROMAK_R3__________           KC_J    , LALTT_M , TD_COMM , TD_DOT  
-#define ____ROMAK_R4_____                               RAI_BSP , MED_CAS 
+#define ____ROMAK_R4_____                               RAI_ACT , MED_CAS 
 
 #define ___________________NUMPAD_L1_________           _______ , KC_F9   , KC_F8   , KC_F7   
 #define ___________________NUMPAD_L2___________________ XXXXXXX , SF_F6   , CT_F5   , GU_F4   , KC_F11
@@ -23,17 +23,17 @@
 #define           _________NUMPAD_R1___________________           KC_7    , KC_8    , KC_9    , _______
 #define ___________________NUMPAD_R2___________________ KC_COMM , GU_4    , CT_5    , SF_6    , DOT_MAC
 #define ___________________NUMPAD_R3_________           TG_NUM  , AL_1    , KC_2    , KC_3    
-#define ____NUMPAD_R4____                               RAI_BSP , MED_0
+#define ____NUMPAD_R4____                               RAI_SPC , MED_0
 
 #define ___________________ACCENT_L1_________           _______ , _______ , KC_X    , KC_CIRC 
 #define ___________________ACCENT_L2___________________ KC_QUOT , KC_Q    , _______ , KC_Z    , KC_GRV
 #define           _________ACCENT_L3___________________           _______ , MC_SQ_C , _______ , _______
-#define                               ____ACCENT_L4____                               NAV_TAC , KC_SPC
+#define                               ____ACCENT_L4____                               KC_BSPC , KC_SPC
 
 #define           _________ACCENT_R1___________________           MC_TL_O , MC_SQ_O , MC_SQ_U , _______
 #define ___________________ACCENT_R2___________________ KC_Y    , MC_TL_A , MC_SQ_A , MC_SQ_E , MC_SQ_I
 #define ___________________ACCENT_R3_________           MC_GV_A , MC_CR_A , MC_CR_O , MC_CR_E 
-#define ____ACCENT_R4____                               KC_BSPC , _______
+#define ____ACCENT_R4____                               RAI_TAC , _______
 
 #define ___________________MACROS_L1_________           _______ , MC_ESC  , MC_QUIK , MC_AUCO 
 #define ___________________MACROS_L2___________________ MC_QDOC , SF_FSYM , MC_RUN  , MC_DBUG , MC_BUID
@@ -53,7 +53,7 @@
 #define           _________LOWER_R1____________________           KC_7    , KC_8    , KC_9    , _______
 #define ___________________LOWER_R2____________________ KC_COMM , KC_4    , KC_5    , KC_6    , DOT_MAC
 #define ___________________LOWER_R3__________           TG_NUM  , KC_1    , KC_2    , KC_3    
-#define ____LOWER_R4_____                               _______ , MED_0
+#define ____LOWER_R4_____                               RAI_SPC , MED_0
 
 #define ___________________RAISE_L1__________           _______ , KC_F9   , KC_F8   , KC_F7   
 #define ___________________RAISE_L2____________________ XXXXXXX , KC_F6   , KC_F5   , KC_F4   , KC_F11
@@ -68,7 +68,7 @@
 #define ___________________MEDIA_L1__________           _______ , MC_ESC  , MC_SAVE , KC_RALT 
 #define ___________________MEDIA_L2____________________ XXXXXXX , KC_LSFT , KC_LCTL , KC_LGUI , KC_LGUI
 #define           _________MEDIA_L3____________________           KC_RALT , XXXXXXX , KC_LALT , XXXXXXX
-#define                               ____MEDIA_L4_____                               MAI_ACT , _______
+#define                               ____MEDIA_L4_____                               MAI_BSP , _______
 
 #define           _________MEDIA_R1____________________           HYPR_V  , KC_ENT  , KC_TAB  , _______
 #define ___________________MEDIA_R2____________________ TG_NAV  , HYPR_A  , KC_VOLD , KC_VOLU , KC_MUTE
