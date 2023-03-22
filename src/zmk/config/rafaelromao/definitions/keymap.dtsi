@@ -46,7 +46,7 @@
    &trans           &kp F9              &kp F8              &kp F7              &none               &none               &mc_n7           &mc_n8           &mc_n9           &trans
    &none            &mt LSHFT F6        &mt LCTRL F5        &mt LGUI F4         &kp F11             &kp COMMA           &th_n4 RGUI 0    &th_n5 RCTRL 0   &th_n6 RSHFT 0   &lt MACROS DOT 
    &none            &mt RALT F3         &kp F2              &mt LALT F1         &kp F10             &tog NUMPAD         &th_n1 LALT 0    &mc_n2           &mc_n3           &none
-                                        &trans              &msl NAV F12        &trans              &trans              &th_n0 MEDIA 0   &trans
+                                        &trans              &msl NAV F12        &trans              &lt RAISE SPACE     &th_n0 MEDIA 0   &trans
                         >;
                 };
                 accents_layer {
@@ -91,7 +91,7 @@
    &trans           &td_lpar           &td_rpar             &mc_tilde           &none               &none               &mc_n7           &mc_n8           &mc_n9           &trans
    &th_sqo NAV 0    &td_dqo            &th_or 0 0           &th_and 0 0         &th_bti 0 0         &kp COMMA           &mc_n4           &mc_n5           &mc_n6           &lt MACROS DOT  
    &none            &td_lbkt           &td_rbkt             &th_qmark 0 0       &kp HASH            &none               &mc_n1           &mc_n2           &mc_n3           &none
-                                       &trans               &trans              &trans              &trans              &th_n0 MEDIA 0   &trans
+                                       &trans               &trans              &trans              &lt RAISE SPACE     &th_n0 MEDIA 0   &trans
                         >;
                 };
                 raise_layer {
