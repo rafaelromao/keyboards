@@ -162,13 +162,6 @@ process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *re
                     } else if (!IS_LAYER_ON(_ACCENT)) {
                         set_oneshot_layer(_ACCENT, ONESHOT_START);
                         custom_oneshots.timer = timer_read();
-                    } else {
-                        if (!isOneShotShift && get_mods() == 0) {
-                            add_oneshot_mods(MOD_LSFT);
-                        } else {
-                            clear_oneshot_layer_state(ONESHOT_PRESSED);
-                            clear_shift();
-                        }
                     }
                 }
                 return PROCESS_RECORD_RETURN_FALSE;
@@ -184,7 +177,7 @@ process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *re
                     } else {
                         if (isAnyOneShotButShift || isOneShotLockedShift) {
                             clear_locked_and_oneshot_mods();
-                        } else if (!isOneShotShift && get_mods() == 0) {
+                        } else if (!isOneShotShift) {
                             add_oneshot_mods(MOD_LSFT);
                         } else {
                             set_smart_case_for_mods();

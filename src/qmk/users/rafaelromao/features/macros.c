@@ -38,6 +38,14 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             tap_code16(KC_EQL);
             tap_code16(KC_GT);
             return PROCESS_RECORD_RETURN_FALSE;
+        case MC_QU:
+            tap_code(KC_Q);
+            tap_code(KC_U);
+            return PROCESS_RECORD_RETURN_FALSE;
+        case MC_LTGT:
+            tap_code16(KC_LT);
+            tap_code16(KC_GT);
+            return PROCESS_RECORD_RETURN_FALSE;
 
             // O + ESC
 

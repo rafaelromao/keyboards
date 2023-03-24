@@ -239,8 +239,6 @@
         TAPHOLD_SYMBOL(th_gt,      &mc_gt, &mc_end_gt)
                                  
         SYMBOL(mc_ltgt,            &kp LT &kp GT)
-        SYMBOL(mc_end_ltgt,        &kp END &kp LT &kp GT)
-        TAPHOLD_SYMBOL(th_ltgt,    &mc_ltgt, &mc_end_ltgt)
                                  
         SYMBOL(mc_sarrow,          &kp MINUS &kp GT)
         SYMBOL(mc_end_sarrow,      &kp END &mc_sarrow)

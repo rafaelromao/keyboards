@@ -70,7 +70,7 @@
         COMBO(cb_darrow,        RHM RHR,     &th_darrow 0 0,     RAISE)
         COMBO(cb_lt,            RBI RBM,     &th_lt 0 0,         RAISE)
         COMBO(cb_gt,            RBM RBR,     &th_gt 0 0,         RAISE)
-        COMBO(cb_ltgt,          RBI RBM RBR, &th_ltgt 0 0,       RAISE)
+        COMBO(cb_ltgt,          RBI RBM RBR, &mc_ltgt,           RAISE)
 
         COMBO(cb_end_ent,       RTM RTR,     &th_end_ent 0 0,    MEDIA)
         

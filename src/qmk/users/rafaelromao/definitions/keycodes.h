@@ -99,7 +99,7 @@ enum {
     MC_BTIC, MC_DQUO, MC_SQUO, MC_CIRC, MC_TILD,
     MC_UNDS, MC_ENT, MC_TAB, MC_ESC, MC_ESCC,  
     MC_ESAV, MC_SENT, MC_CUR, MC_SAR, MC_DAR, 
-    MC_DAND, MC_DPIP, MC_OESC,
+    MC_DAND, MC_DPIP, MC_OESC, MC_LTGT, 
 
     // End macros that can be shifted
     SFT_MACRO_END,
@@ -184,9 +184,19 @@ enum {
 
 // Custom Shortcuts
 
-#define HYPR_L HYPR(KC_L)
 #define HYPR_H HYPR(KC_H)
+#define HYPR_R HYPR(KC_R)
+#define HYPR_W HYPR(KC_W)
+#define HYPR_G HYPR(KC_G)
+#define HYPR_K HYPR(KC_K)
+#define HYPR_C HYPR(KC_C)
+#define HYPR_L HYPR(KC_L)
 #define MEH_R  MEH(KC_R)
+#define MEH_W  MEH(KC_W)
+#define MEH_G  MEH(KC_G)
+#define MEH_K  MEH(KC_K)
+#define MEH_C  MEH(KC_C)
+#define MEH_L  MEH(KC_L)
 
 uint16_t extract_base_tapping_keycode(uint16_t keycode);
 bool is_key_on_tap(uint16_t keycode);
