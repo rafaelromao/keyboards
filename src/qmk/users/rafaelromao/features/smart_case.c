@@ -182,10 +182,8 @@ process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record
             case KC_RIGHT:
             case KC_HOME:
             case KC_END:
-            case MAI_BSP:
             case MAI_CAS:
             case MED_CAS:
-            case NAV_BSP:
                 start_smart_case_timer();
                 break;
             case KC_DOT:

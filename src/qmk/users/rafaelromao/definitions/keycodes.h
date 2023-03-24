@@ -154,9 +154,9 @@ enum {
 // Layer-taps
 
 #define NAV_BSP LT(_NAVIGATION, KC_BSPC)
-#define NAV_F12  LT(_NAVIGATION, KC_F12)
-#define NAV_SQO  LT(_NAVIGATION, MC_SQUO)
-#define NAV_PRJ  LT(_NAVIGATION, MC_PROJ)
+#define NAV_F12 LT(_NAVIGATION, KC_F12)
+#define NAV_SQO LT(_NAVIGATION, MC_SQUO)
+#define NAV_PRJ LT(_NAVIGATION, MC_PROJ)
 
 #define MED_CAS LT(_MEDIA, TG_CASE)
 #define MED_0   LT(_MEDIA, KC_0)
@@ -165,9 +165,9 @@ enum {
 #define MAI_CAS LT(_MAINTENANCE, TG_CASE)
 
 #define LOW_SPC LT(_LOWER, KC_SPC)
-#define RAI_TAC  LT(_RAISE, TG_ACNT)
-#define RAI_ACT  LT(_RAISE, OS_ACNT)
-#define RAI_SPC  LT(_RAISE, KC_SPC)
+#define RAI_TAC LT(_RAISE, TG_ACNT)
+#define RAI_ACT LT(_RAISE, OS_ACNT)
+#define RAI_SPC LT(_RAISE, KC_SPC)
 
 #define KCR_MAC LT(_MACROS, KC_R)
 #define KCI_MAC LT(_MACROS, KC_I)
@@ -184,8 +184,9 @@ enum {
 
 // Custom Shortcuts
 
-#define HYPR_A HYPR(KC_A)
-#define HYPR_V HYPR(KC_V)
+#define HYPR_L HYPR(KC_L)
+#define HYPR_H HYPR(KC_H)
+#define MEH_R  MEH(KC_R)
 
 uint16_t extract_base_tapping_keycode(uint16_t keycode);
 bool is_key_on_tap(uint16_t keycode);

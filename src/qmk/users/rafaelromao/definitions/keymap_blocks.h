@@ -16,9 +16,9 @@
 #define ____ROMAK_R4_____                               RAI_ACT , MED_CAS 
 
 #define ___________________NUMPAD_L1_________           _______ , KC_F9   , KC_F8   , KC_F7   
-#define ___________________NUMPAD_L2___________________ XXXXXXX , SF_F6   , CT_F5   , GU_F4   , KC_F11
+#define ___________________NUMPAD_L2___________________ KC_F12  , SF_F6   , CT_F5   , GU_F4   , KC_F11
 #define           _________NUMPAD_L3___________________           AL_F3   , KC_F2   , AL_F1   , KC_F10
-#define                               ____NUMPAD_L4____                               NAV_F12 , LOW_SPC
+#define                               ____NUMPAD_L4____                               KC_BSPC , KC_SPC
 
 #define           _________NUMPAD_R1___________________           KC_7    , KC_8    , KC_9    , _______
 #define ___________________NUMPAD_R2___________________ KC_COMM , GU_4    , CT_5    , SF_6    , DOT_MAC
@@ -56,9 +56,9 @@
 #define ____LOWER_R4_____                               RAI_SPC , MED_0
 
 #define ___________________RAISE_L1__________           _______ , KC_F9   , KC_F8   , KC_F7   
-#define ___________________RAISE_L2____________________ XXXXXXX , KC_F6   , KC_F5   , KC_F4   , KC_F11
+#define ___________________RAISE_L2____________________ KC_F12  , KC_F6   , KC_F5   , KC_F4   , KC_F11
 #define           _________RAISE_L3____________________           KC_F3   , KC_F2   , KC_F1   , KC_F10
-#define                               ____RAISE_L4_____                               NAV_F12 , _______
+#define                               ____RAISE_L4_____                               KC_BSPC , KC_SPC
 
 #define           _________RAISE_R1____________________           TD_DLR  , TD_LCRB , TD_RCRB , _______
 #define ___________________RAISE_R2____________________ TD_COLN , KC_MINS , TD_PLUS , TD_EQL  , KC_AT
@@ -70,13 +70,13 @@
 #define           _________MEDIA_L3____________________           KC_RALT , XXXXXXX , KC_LALT , XXXXXXX
 #define                               ____MEDIA_L4_____                               MAI_BSP , _______
 
-#define           _________MEDIA_R1____________________           HYPR_V  , KC_ENT  , KC_TAB  , _______
-#define ___________________MEDIA_R2____________________ TG_NAV  , HYPR_A  , KC_VOLD , KC_VOLU , KC_MUTE
+#define           _________MEDIA_R1____________________           HYPR_L  , KC_ENT  , KC_TAB  , _______
+#define ___________________MEDIA_R2____________________ TG_NAV  , HYPR_H  , KC_VOLD , KC_VOLU , KC_MUTE
 #define ___________________MEDIA_R3__________           TG_NUM  , KC_MPLY , KC_MPRV , KC_MNXT 
 #define ____MEDIA_R4_____                               _______ , _______
 
 #define ___________________NAVIGATION_L1_____           _______ , MC_ESC  , MC_SAVE , OS_RALT 
-#define ___________________NAVIGATION_L2_______________ XXXXXXX , OS_LSFT , OS_LCTL , OS_LGUI , XXXXXXX
+#define ___________________NAVIGATION_L2_______________ MEH_R   , OS_LSFT , OS_LCTL , OS_LGUI , XXXXXXX
 #define           _________NAVIGATION_L3_______________           OS_RALT , XXXXXXX , OS_LALT , XXXXXXX
 #define                               __NAVIGATION_L4__                               _______ , _______
 
