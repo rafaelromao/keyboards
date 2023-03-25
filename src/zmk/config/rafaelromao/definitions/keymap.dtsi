@@ -100,7 +100,7 @@
    &trans           &kp F9             &kp F8               &kp F7              &none               &none               &th_curr  0 0    &th_lbrc 0 0     &th_rbrc 0 0    &trans
    &kp F12          &kp F6             &kp F5               &kp F4              &kp F11             &th_colon 0 0       &kp MINUS        &td_plus         &th_eql 0 0     &kp AT  
    &none            &kp F3             &kp F2               &kp F1              &kp F10             &th_perc 0 0        &th_slash 0 0    &kp STAR         &td_excl        &none
-                                       &trans               &kp BSPC            &trans              &trans              &trans           &trans
+                                       &trans               &kp BSPC            &kp SPACE           &trans              &trans           &trans
                         >;
                 };
                 fixed_navigation_layer {
