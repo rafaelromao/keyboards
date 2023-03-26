@@ -145,13 +145,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 // clang-format on
 
-// RGB Indicators
-
 extern leader_t      leader;
 extern select_word_t select_word;
 extern dyn_macro_t   dyn_macro;
 extern swapper_t     swapper;
+extern os_t          os;
 static bool          is_suspended;
+
+// RGB Indicators
 
 void suspend_wakeup_init_kb(void) {
     is_suspended = false;
@@ -187,16 +188,6 @@ void set_current_layer_rgb(void) {
     set_rgblight_by_layer(layer);
 }
 
-layer_state_t layer_state_set_user(layer_state_t state) {
-    uint16_t layer = biton32(state);
-    set_rgblight_by_layer(layer);
-    return state;
-}
-
-// static char*[] layer_names = {PSTR("ROMAK\n"), PSTR("NUMPAD\n"),    PSTR("ACCENT\n"),     PSTR("MACROS\n"),
-//                               PSTR("LOWER\n"), PSTR("RAISE\n"),     PSTR("NAVIGATION\n"), PSTR("MEDIA\n"),
-//                               PSTR("LOCK\n"),  PSTR("MAITENANCE\n")};
-
 void set_mod_indicators(void) {
     uint8_t mods                = get_mods();
     uint8_t oneshot_mods        = get_oneshot_mods();
@@ -209,32 +200,12 @@ void set_mod_indicators(void) {
 
     if (swapper.state != NONE || leader.isLeading || select_word.state != STATE_NONE || dyn_macro.recording != 0) {
         rgblight_setrgb(RGB_GREEN);
-#ifdef OLED_ENABLE
-        if (swapper.state != NONE) {
-            oled_write_P(PSTR("Swapper\n"), false);
-        } else if (leader.isLeading) {
-            oled_write_P(PSTR("Leader Key\n"), false);
-        } else if (select_word.state != STATE_NONE) {
-            oled_write_P(PSTR("Select Word / Line\n"), false);
-        } else if (dyn_macro.recording != 0) {
-            oled_write_P(PSTR("Dynamic Macro\n"), false);
-        }
-#endif
     } else if (has_any_smart_case()) {
         rgblight_setrgb(RGB_YELLOW);
-#ifdef OLED_ENABLE
-        oled_write_P(PSTR("Smart Case\n"), false);
-#endif
     } else if (isShift) {
         rgblight_setrgb(RGB_TEAL);
-#ifdef OLED_ENABLE
-        oled_write_P(PSTR("Shift\n"), false);
-#endif
     } else if (isCtrl || isAlt || isGui) {
         rgblight_setrgb(RGB_WHITE);
-#ifdef OLED_ENABLE
-        oled_write_P(PSTR("Mods\n"), false);
-#endif
     } else {
         set_current_layer_rgb();
     }
@@ -242,6 +213,12 @@ void set_mod_indicators(void) {
 
 void matrix_scan_keymap(void) {
     set_mod_indicators();
+}
+
+layer_state_t layer_state_set_user(layer_state_t state) {
+    uint16_t layer = biton32(state);
+    set_rgblight_by_layer(layer);
+    return state;
 }
 
 // Encoder Map
@@ -261,10 +238,106 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
 
 // Oled
 
+void set_oled_by_layer(uint32_t layer) {
+    if (is_suspended) {
+        return;
+    }
+    switch (layer) {
+        case _ROMAK:
+            oled_write("ROMAK", false);
+            break;
+        case _NUMPAD:
+            oled_write("NUMPAD", false);
+            break;
+        case _ACCENT:
+        case _FIXED_ACCENT:
+            oled_write("ACCENT", false);
+            break;
+        case _MACROS:
+            oled_write("MACROS", false);
+            break;
+        case _LOWER:
+            oled_write("LOWER", false);
+            break;
+        case _RAISE:
+            oled_write("RAISE", false);
+            break;
+        case _FIXED_NAV:
+        case _NAVIGATION:
+            oled_write("NAVIGATION", false);
+            break;
+        case _MEDIA:
+            oled_write("MEDIA", false);
+            break;
+        case _MAINTENANCE:
+            oled_write("MAINTENANCE", false);
+            break;
+        default:
+            break;
+    }
+}
+
+void set_current_layer_oled(void) {
+    uint16_t layer = get_highest_layer(layer_state | default_layer_state);
+    set_oled_by_layer(layer);
+}
+
+void set_oled_text(void) {
+    uint8_t mods                = get_mods();
+    uint8_t oneshot_mods        = get_oneshot_mods();
+    uint8_t oneshot_locked_mods = get_oneshot_locked_mods();
+
+    bool isShift = mods & MOD_MASK_SHIFT || oneshot_mods & MOD_MASK_SHIFT || oneshot_locked_mods & MOD_MASK_SHIFT;
+    bool isCtrl  = mods & MOD_MASK_CTRL || oneshot_mods & MOD_MASK_CTRL || oneshot_locked_mods & MOD_MASK_CTRL;
+    bool isAlt   = mods & MOD_MASK_ALT || oneshot_mods & MOD_MASK_ALT || oneshot_locked_mods & MOD_MASK_ALT;
+    bool isGui   = mods & MOD_MASK_GUI || oneshot_mods & MOD_MASK_GUI || oneshot_locked_mods & MOD_MASK_GUI;
+
+    oled_set_cursor(0, 0);
+
+    if (swapper.state != NONE || leader.isLeading || select_word.state != STATE_NONE || dyn_macro.recording != 0) {
+        if (swapper.state != NONE) {
+            oled_write("Swapper", false);
+        } else if (leader.isLeading) {
+            oled_write("Leader Key", false);
+        } else if (select_word.state != STATE_NONE) {
+            oled_write("Select Word / Line", false);
+        } else if (dyn_macro.recording != 0) {
+            oled_write("Dynamic Macro", false);
+        }
+    } else if (has_any_smart_case()) {
+        oled_write("Smart Case", false);
+    } else if (isShift || isCtrl || isAlt || isGui) {
+        if (isGui) {
+            if (os.type == MACOS) {
+                oled_write("Cmd ", false);
+            } else {
+                oled_write("Win ", false);
+            }
+        }
+        if (isAlt) {
+            oled_write("Alt ", false);
+        }
+        if (isCtrl) {
+            oled_write("Ctrl ", false);
+        }
+        if (isShift) {
+            oled_write("Shift ", false);
+        }
+    } else {
+        set_current_layer_oled();
+    }
+
+    oled_write("                ", false);
+}
+
 bool oled_task_kb(void) {
     if (!oled_task_user()) {
         return false;
     }
-    set_mod_indicators();
+    set_oled_text();
     return true;
+}
+
+oled_rotation_t oled_init_user(oled_rotation_t rotation) {
+    return OLED_ROTATION_0;
 }
