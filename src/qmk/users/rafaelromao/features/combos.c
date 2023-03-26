@@ -6,12 +6,12 @@
 
 const uint16_t PROGMEM l_num_esc_combo[] = {LOW_SPC, KC_F9, KC_F8, COMBO_END};
 const uint16_t PROGMEM l_num_sav_combo[] = {LOW_SPC, SF_F6, CT_F5, COMBO_END};
-const uint16_t PROGMEM r_num_ent_combo[] = {RAI_ACT, CT_5, SF_6, COMBO_END};
+const uint16_t PROGMEM r_num_ent_combo[] = {RAI_SPC, CT_5, SF_6, COMBO_END};
 
 // Lower
 
 const uint16_t PROGMEM l_low_par_combo[] = {TD_OPAR, TD_CPAR, COMBO_END};
-const uint16_t PROGMEM r_low_ent_combo[] = {RAI_ACT, KC_5, KC_6, COMBO_END};
+const uint16_t PROGMEM r_low_ent_combo[] = {RAI_SPC, KC_5, KC_6, COMBO_END};
 
 // Raise
 

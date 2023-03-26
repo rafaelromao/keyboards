@@ -11,19 +11,25 @@ process_record_result_t process_select_word(uint16_t keycode, keyrecord_t* recor
         if (keycode == MC_SELL || select_word.state == STATE_LINE_SELECTED) {
             // Select Line
             if (select_word.state == STATE_NONE) {
-                tap_code(KC_HOME);
+                if (os.type == MACOS) {
+                    register_code(KC_LGUI);
+                } else {
+                    register_code(KC_LCTL);
+                }
+                tap_code(KC_LEFT);
                 wait_ms(30);
                 register_mods(MOD_LSFT);
-                tap_code(KC_END);
+                tap_code(KC_RIGHT);
+                if (os.type == MACOS) {
+                    unregister_code(KC_LGUI);
+                } else {
+                    unregister_code(KC_LCTL);
+                }
                 select_word.state = STATE_FIRST_LINE;
             } else {
                 register_mods(MOD_LSFT);
-                if (isShifted) {
-                    register_code(KC_UP);
-                } else {
-                    register_code(KC_DOWN);
-                }
-                register_code(KC_END);
+                tap_code(KC_DOWN);
+                tap_code(KC_END);
                 select_word.state = STATE_LINE;
             }
         } else {

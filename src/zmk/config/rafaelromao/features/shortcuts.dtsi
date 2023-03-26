@@ -132,7 +132,7 @@
         SHIFTED_SHORTCUT(mm_refac,      &mc_refac, &mc_reformat)
 
         SHORTCUT(mc_selw,               &macro_tap &kp LA(RIGHT) &kp LA(LS(LEFT)))
-        SHORTCUT(mc_seln,               &macro_tap &kp HOME &kp LS(DOWN))
+        SHORTCUT(mc_seln,               &macro_tap &kp LG(LEFT) &kp LG(LS(RIGHT)))
 
         SHORTCUT(mc_zout,               &macro_tap &kp LG(MINUS))
         SHORTCUT(mc_zin,                &macro_tap &kp LG(PLUS))
