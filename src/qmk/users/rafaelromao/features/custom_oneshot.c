@@ -5,7 +5,6 @@
 extern os_t os;
 
 static custom_oneshots_t custom_oneshots = {.timer = 0};
-static bool              holding_oneshot_layer = false;
 
 // Custom oneshot mods
 
@@ -73,17 +72,13 @@ void check_disable_oneshot(uint16_t keycode) {
         case RAI_TAC:
         case MED_CAS:
         case MAI_CAS:
-        case OS_LOW:
-        case OS_RAI:
         case OS_LSFT:
         case OS_LCTL:
         case OS_LALT:
         case OS_LGUI:
             break;
         default:
-            if (!holding_oneshot_layer) {
-                disable_oneshot_layer();
-            }
+            disable_oneshot_layer();
     }
 }
 
@@ -107,6 +102,8 @@ bool should_send_ctrl(bool isMacOS, bool isOneShotShift) {
 }
 
 process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *record) {
+    check_disable_oneshot(keycode);
+
     bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     bool isOneShotShift       = get_oneshot_mods() & MOD_MASK_SHIFT || isOneShotLockedShift;
     bool isOneShotCtrl        = get_oneshot_mods() & MOD_MASK_CTRL || get_oneshot_locked_mods() & MOD_MASK_CTRL;
@@ -115,43 +112,6 @@ process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *re
     bool isAnyOneShotButShift = isOneShotCtrl || isOneShotAlt || isOneShotGui;
 
     switch (keycode) {
-        case OS_LOW:
-            if (record->tap.count > 0) {
-                if (record->event.pressed) {
-                    if (IS_LAYER_ON(_LOWER)) {
-                        clear_oneshot_layer_state(ONESHOT_PRESSED);
-                    } else {
-                        set_oneshot_layer(_LOWER, ONESHOT_START);
-                        custom_oneshots.timer = timer_read();
-                    }
-                }
-                return PROCESS_RECORD_RETURN_FALSE;
-            } else {
-                if (record->event.pressed) {
-                    holding_oneshot_layer = true;
-                } else {
-                    holding_oneshot_layer = false;
-                }
-            }
-        case OS_RAI:
-            if (record->tap.count > 0) {
-                if (record->event.pressed) {
-                    if (IS_LAYER_ON(_RAISE)) {
-                        clear_oneshot_layer_state(ONESHOT_PRESSED);
-                    } else {
-                        set_oneshot_layer(_RAISE, ONESHOT_START);
-                        custom_oneshots.timer = timer_read();
-                    }
-                }
-                return PROCESS_RECORD_RETURN_FALSE;
-            } else {
-                if (record->event.pressed) {
-                    holding_oneshot_layer = true;
-                } else {
-                    holding_oneshot_layer = false;
-                }
-            }
-
         case RAI_ACT:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {

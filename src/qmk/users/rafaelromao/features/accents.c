@@ -157,7 +157,6 @@ process_record_result_t process_accents(uint16_t keycode, keyrecord_t *record) {
         if (isShifted) {
             unregister_mods(MOD_LSFT);
         }
-        check_disable_oneshot(keycode);
         return PROCESS_RECORD_RETURN_FALSE;
     }
 
@@ -165,12 +164,10 @@ process_record_result_t process_accents(uint16_t keycode, keyrecord_t *record) {
 
     switch (process_ngrams(keycode, isShifted)) {
         case PROCESS_RECORD_RETURN_FALSE:
-            check_disable_oneshot(keycode);
             return PROCESS_RECORD_RETURN_FALSE;
         default:
             break;
     };
 
-    check_disable_oneshot(keycode);
     return PROCESS_RECORD_CONTINUE;
 }
