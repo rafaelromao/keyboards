@@ -137,7 +137,7 @@ process_record_result_t process_ngrams(uint16_t keycode, bool isShifted) {
 }
 
 process_record_result_t process_accents(uint16_t keycode, keyrecord_t *record) {
-    if (record != NULL && record->event.pressed) {
+    if (record != NULL && !record->event.pressed) {
         return PROCESS_RECORD_CONTINUE;
     }
 

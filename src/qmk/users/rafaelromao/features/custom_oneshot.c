@@ -90,7 +90,7 @@ void check_disable_oneshot(uint16_t keycode) {
 // Custom oneshot timeout
 
 bool custom_oneshots_expired(void) {
-    return custom_oneshots.timer > 0 && (timer_elapsed(custom_oneshots.timer) > CUSTOM_ONESHOT_TIMEOUT);
+    return custom_oneshots.timer > 0 && (timer_elapsed(custom_oneshots.timer) > ONESHOT_TIMEOUT);
 }
 
 void check_oneshot_timeout(void) {
@@ -159,10 +159,17 @@ process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *re
                         clear_locked_and_oneshot_mods();
                     } else if (get_mods() != 0) {
                         set_smart_case_for_mods();
-                    } else if (!IS_LAYER_ON(_ACCENT)) {
-                        set_oneshot_layer(_ACCENT, ONESHOT_START);
+                    } else {
                         custom_oneshots.timer = timer_read();
+                        return PROCESS_RECORD_RETURN_TRUE;
                     }
+                }
+                return PROCESS_RECORD_RETURN_FALSE;
+            } else {
+                if (record->event.pressed) {
+                    layer_on(_RAISE);
+                } else {
+                    layer_off(_RAISE);
                 }
                 return PROCESS_RECORD_RETURN_FALSE;
             }

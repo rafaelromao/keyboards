@@ -10,7 +10,7 @@ void clear_shift(void) {
 }
 
 bool smart_case_timer_expired(void) {
-    return smart_case.timer > 0 && (timer_elapsed(smart_case.timer) > 5 * CUSTOM_ONESHOT_TIMEOUT);
+    return smart_case.timer > 0 && (timer_elapsed(smart_case.timer) > 5 * ONESHOT_TIMEOUT);
 }
 
 void start_smart_case_timer(void) {

@@ -166,8 +166,8 @@ enum {
 
 #define LOW_SPC LT(_LOWER, KC_SPC)
 #define RAI_TAC LT(_RAISE, TG_ACNT)
-#define RAI_ACT LT(_RAISE, OS_ACNT)
 #define RAI_SPC LT(_RAISE, KC_SPC)
+#define RAI_ACT OSL(_ACCENT)
 
 #define KCR_MAC LT(_MACROS, KC_R)
 #define KCI_MAC LT(_MACROS, KC_I)
