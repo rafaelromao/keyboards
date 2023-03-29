@@ -53,7 +53,7 @@
                         label = "ACCENT";
                         bindings = <
    &trans           &trans              &kp X               &kp CARET           &none               &none               &ac_otil         &ac_oacu         &ac_uacu         &trans
-   &kp SQT          &kp Q               &trans              &kp Z               &kp GRAVE           &kp Y               &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
+   &kp SQT          &kp Q               &mc_qu              &kp Z               &kp GRAVE           &kp Y               &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
    &none            &trans              &mc_ced             &trans              &trans              &ac_agrv            &ac_acir         &ac_ocir         &ac_ecir         &none
                                         &trans              &kp BSPC            &kp SPACE           &tog ACCENT_F       &trans           &trans
                         >;
