@@ -41,8 +41,8 @@
         COMBO(cb_esc_save,      LTR LTM,     &mc_save_esc,       NAV)
 
         COMBO(cb_enter,         RHM RHR R0,  &kp ENTER,          ROMAK CASE NUMPAD LOWER)
+        COMBO(cb_backspace,     RTM RTR R0,  &kp BACKSPACE,      ROMAK CASE NUMPAD LOWER)
 
-        COMBO(cb_tab,           RTM RTR R0,  &kp TAB,            ROMAK CASE NUMPAD)
         COMBO(cb_paste,         RBI RBM R0,  &mc_paste,          ROMAK CASE NUMPAD)
         COMBO(cb_copy,          RHI RHM R0,  &mc_copy,           ROMAK CASE NUMPAD)
         COMBO(cb_selall,        RBM RBR R0,  &mc_selall,         ROMAK CASE NUMPAD)
