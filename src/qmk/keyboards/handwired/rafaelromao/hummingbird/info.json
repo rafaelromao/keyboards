@@ -19,36 +19,36 @@
     },
     "matrix_pin_labels": {
         "rows": [
+            "SDA/D4",
+            "SCL/D5",
+            "Tx/D6",
+            "MISO/D9",
+            "SCK/D8",
+            "Rx/Csn/D7"
+        ],
+        "cols": [
             "A0/D0",
             "A1/D1",
             "A2/D2",
             "A3/D3",
-            "SDA/D4",
-            "SCL/D5"
-        ],
-        "cols": [
-            "MOSI/D10",
-            "MISO/D9",
-            "Rx/Csn/D7",
-            "Tx/D6",
-            "SCK/D8"
+            "MOSI/D10"
         ]
     },
     "matrix_pins": {
         "rows": [
+            "GP6",
+            "GP7",
+            "GP4",
+            "GP0",
+            "GP3",
+            "GP1"
+        ],
+        "cols": [
             "GP26",
             "GP27",
             "GP28",
             "GP29",
-            "GP6",
-            "GP7"
-        ],
-        "cols": [
-            "GP2",
-            "GP0",
-            "GP1",
-            "GP4",
-            "GP3"
+            "GP2"
         ]
     },
     "processor": "RP2040",
