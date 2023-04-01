@@ -27,7 +27,7 @@ process_record_result_t process_swapper(uint16_t keycode, keyrecord_t *record) {
     // Finish swapper
     if (!is_swapper_keycode(keycode)) {
         if (swapper.state != NONE) {
-            clear_mods();
+            unregister_mods(get_mods());
             swapper.state = NONE;
         }
         return PROCESS_RECORD_CONTINUE;
@@ -50,7 +50,7 @@ process_record_result_t process_swapper(uint16_t keycode, keyrecord_t *record) {
                 swapper.state = isShifted ? BROWSING_START : ZOOMING_START;
                 break;
         }
-        clear_mods();
+        unregister_mods(get_mods());
     }
 
     // Start swapper
