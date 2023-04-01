@@ -238,39 +238,45 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
 
 // Oled
 
+void clear_oled(void) {
+    oled_write("                ", false);
+}
+
 void set_oled_by_layer(uint32_t layer) {
     if (is_suspended) {
+        oled_set_cursor(0, 0);
+        clear_oled();
         return;
     }
     switch (layer) {
         case _ROMAK:
-            oled_write("ROMAK", false);
+            oled_write("        ROMAK     ", false);
             break;
         case _NUMPAD:
-            oled_write("NUMPAD", false);
+            oled_write("        NUMPAD    ", false);
             break;
         case _ACCENT:
         case _FIXED_ACCENT:
-            oled_write("ACCENT", false);
+            oled_write("        ACCENT    ", false);
             break;
         case _MACROS:
-            oled_write("MACROS", false);
+            oled_write("        MACROS    ", false);
             break;
         case _LOWER:
-            oled_write("LOWER", false);
+            oled_write("        LOWER     ", false);
             break;
         case _RAISE:
-            oled_write("RAISE", false);
+            oled_write("        RAISE     ", false);
             break;
         case _FIXED_NAV:
         case _NAVIGATION:
-            oled_write("NAVIGATION", false);
+            oled_write("      NAVIGATION  ", false);
             break;
         case _MEDIA:
-            oled_write("MEDIA", false);
+            oled_write("        MEDIA     ", false);
             break;
         case _MAINTENANCE:
-            oled_write("MAINTENANCE", false);
+            oled_write("     MAINTENANCE  ", false);
             break;
         default:
             break;
@@ -327,7 +333,7 @@ void set_oled_text(void) {
         set_current_layer_oled();
     }
 
-    oled_write("                ", false);
+    clear_oled();
 }
 
 bool oled_task_kb(void) {
