@@ -34,7 +34,7 @@
                 capsword_layer {
                         label = "CASE";
                         bindings = <
-   &none            &kp LS(F)           &kp LS(D)           &kp LS(W)           &none               &none               &kp LS(L)        &kp LS(O)        &kp LS(U)        &trans
+   &trans           &kp LS(F)           &kp LS(D)           &kp LS(W)           &none               &none               &kp LS(L)        &kp LS(O)        &kp LS(U)        &trans
    &lt MACROS LS(R) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(G)           &kp LS(V)           &mt RGUI LS(H)   &mt RCTRL LS(A)  &mt RSHFT LS(E)  &lt MACROS LS(I) 
    &none            &mt RALT LS(B)      &kp LS(C)           &mt LALT LS(P)      &kp LS(K)           &kp LS(J)           &mt LALT LS(M)   &td_comma        &th_dot 0 0      &none
                                         &trans              &trans              &trans              &msl RAISE CASE_AC  &ht_sc MEDIA 0   &trans

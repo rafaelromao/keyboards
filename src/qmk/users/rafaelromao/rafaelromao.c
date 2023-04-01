@@ -25,7 +25,7 @@ void matrix_scan_user(void) {
 // Process record
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    // Process custom onshot
+    // Process custom oneshot
     switch (process_custom_oneshot(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
