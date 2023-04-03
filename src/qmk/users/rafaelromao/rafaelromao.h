@@ -17,5 +17,6 @@
 #include "features/dynamic_macro.h"
 #include "features/swapper.h"
 #include "features/custom_shift.h"
+#include "features/repeat.h"
 
 void matrix_scan_keymap(void);

@@ -72,7 +72,7 @@ enum {
     MC_SECRET_1, 
 
     // Toggle codes
-    OS_ACNT, TG_MAC, TG_WIN, TG_CASE, TG_ACNT,
+    OS_ACNT, TG_MAC, TG_WIN, TG_CASE, TG_ACNT, REPEAT,
 
     // Select Word/Line
     MC_SELW, MC_SELL, 

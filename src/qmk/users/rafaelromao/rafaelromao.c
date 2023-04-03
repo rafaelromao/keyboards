@@ -24,6 +24,16 @@ void matrix_scan_user(void) {
 // Process record
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    // Process Repeat Key
+    switch (process_repeat_key(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
+
     // Process custom oneshot
     switch (process_custom_oneshot(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
