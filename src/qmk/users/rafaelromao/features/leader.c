@@ -4,15 +4,6 @@
 
 leader_t leader = {.isLeading = false};
 
-void leader_start_user() {
-    leader.isLeading = true;
-}
-
-void leader_end_user() {
-    leader.isLeading = false;
-    process_leader_dictionary();
-}
-
 void process_leader_dictionary(void) {
     // Vim - Leader key + V + something
 
@@ -29,4 +20,13 @@ void process_leader_dictionary(void) {
 
     // Process secret leader sequences
     process_leader_dictionary_secret();
+}
+
+void leader_start_user() {
+    leader.isLeading = true;
+}
+
+void leader_end_user() {
+    leader.isLeading = false;
+    process_leader_dictionary();
 }
