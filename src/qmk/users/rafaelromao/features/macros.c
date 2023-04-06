@@ -2,10 +2,8 @@
 
 #include "macros.h"
 
-extern os_t os;
-
 process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotShift, bool isShifted) {
-    bool isMacOS = os.type == MACOS;
+    bool isMacOS = is_macos();
 
     switch (keycode) {
             // Quotes

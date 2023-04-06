@@ -1,17 +1,18 @@
 #include "select_word.h"
 
-extern os_t os;
-
 select_word_t select_word = {.state = STATE_NONE};
 
 process_record_result_t process_select_word(uint16_t keycode, keyrecord_t* record) {
     bool isShifted = get_mods() & MOD_MASK_SHIFT || get_oneshot_mods() & MOD_MASK_SHIFT ||
                      get_oneshot_locked_mods() & MOD_MASK_SHIFT;
+
+    bool isMacOS = is_macos();
+
     if ((keycode == MC_SELW || keycode == MC_SELL) && record->event.pressed) {
         if (keycode == MC_SELL || select_word.state == STATE_LINE_SELECTED) {
             // Select Line
             if (select_word.state == STATE_NONE) {
-                if (os.type == MACOS) {
+                if (isMacOS) {
                     register_code(KC_LGUI);
                 } else {
                     register_code(KC_LCTL);
@@ -20,7 +21,7 @@ process_record_result_t process_select_word(uint16_t keycode, keyrecord_t* recor
                 wait_ms(30);
                 register_mods(MOD_LSFT);
                 tap_code(KC_RIGHT);
-                if (os.type == MACOS) {
+                if (isMacOS) {
                     unregister_code(KC_LGUI);
                 } else {
                     unregister_code(KC_LCTL);
@@ -34,7 +35,7 @@ process_record_result_t process_select_word(uint16_t keycode, keyrecord_t* recor
             }
         } else {
             // Select Word
-            if (os.type == MACOS) {
+            if (isMacOS) {
                 register_code(KC_LALT);
             } else {
                 register_code(KC_LCTL);
@@ -54,7 +55,7 @@ process_record_result_t process_select_word(uint16_t keycode, keyrecord_t* recor
         case STATE_WORD:
             unregister_code(KC_LEFT);
             unregister_mods(MOD_LSFT);
-            if (os.type == MACOS) {
+            if (isMacOS) {
                 unregister_code(KC_LALT);
             } else {
                 unregister_code(KC_LCTL);

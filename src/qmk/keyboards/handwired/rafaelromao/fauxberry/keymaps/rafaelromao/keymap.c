@@ -149,7 +149,6 @@ extern leader_t      leader;
 extern select_word_t select_word;
 extern dyn_macro_t   dyn_macro;
 extern swapper_t     swapper;
-extern os_t          os;
 static bool          is_suspended;
 
 // RGB Indicators
@@ -314,7 +313,7 @@ void set_oled_text(void) {
         oled_write("Smart Case", false);
     } else if (isShift || isCtrl || isAlt || isGui) {
         if (isGui) {
-            if (os.type == MACOS) {
+            if (is_macos()) {
                 oled_write("Cmd ", false);
             } else {
                 oled_write("Win ", false);

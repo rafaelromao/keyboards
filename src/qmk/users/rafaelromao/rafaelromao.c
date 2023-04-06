@@ -1,7 +1,5 @@
 #include "rafaelromao.h"
 
-extern os_t os;
-
 // Led update
 
 bool led_update_user(led_t led_state) {
@@ -24,6 +22,16 @@ void matrix_scan_user(void) {
 // Process record
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    // Process OS toggle
+    switch (process_os_toggle(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
+
     // Process Repeat Key
     switch (process_repeat_key(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
@@ -133,17 +141,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         default:
             break;
     };
-
-    // Process OS toggle
-    switch (process_os_toggle(keycode, record)) {
-        case PROCESS_RECORD_RETURN_TRUE:
-            return true;
-        case PROCESS_RECORD_RETURN_FALSE:
-            return false;
-        default:
-            break;
-    };
-
     return true;
 }
 

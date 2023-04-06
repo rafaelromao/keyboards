@@ -2,8 +2,6 @@
 
 #include "common_shortcuts.h"
 
-extern os_t os;
-
 process_record_result_t process_common_shortcuts(uint16_t keycode, keyrecord_t *record) {
     if (!is_shift_macro_keycode(keycode)) {
         return PROCESS_RECORD_CONTINUE;
@@ -16,7 +14,7 @@ process_record_result_t process_common_shortcuts(uint16_t keycode, keyrecord_t *
     bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     bool isOneShotShift       = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
 
-    bool isMacOS = os.type == MACOS;
+    bool isMacOS = is_macos();
 
     switch (keycode) {
             // Select All

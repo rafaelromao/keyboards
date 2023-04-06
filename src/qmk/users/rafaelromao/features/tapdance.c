@@ -2,8 +2,6 @@
 
 #include "tapdance.h"
 
-extern os_t os;
-
 static td_tap_t tap_state = {.state = TD_NONE};
 
 __attribute__((weak)) td_state_t dance_state(tap_dance_state_t *state) {
@@ -39,10 +37,6 @@ __attribute__((weak)) td_state_t dance_state(tap_dance_state_t *state) {
 bool is_shifted(void) {
     return get_mods() & MOD_MASK_SHIFT || get_oneshot_mods() & MOD_MASK_SHIFT ||
            get_oneshot_locked_mods() & MOD_MASK_SHIFT;
-}
-
-bool is_macos(void) {
-    return os.type == MACOS;
 }
 
 void td_enter_end(tap_dance_state_t *state, void *user_data) {

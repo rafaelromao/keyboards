@@ -2,8 +2,6 @@
 
 #include "swapper.h"
 
-extern os_t os;
-
 swapper_t swapper = {.state = NONE};
 
 bool is_swapper_keycode(uint16_t keycode) {
@@ -33,7 +31,7 @@ process_record_result_t process_swapper(uint16_t keycode, keyrecord_t *record) {
         return PROCESS_RECORD_CONTINUE;
     }
 
-    bool isMacOS              = os.type == MACOS;
+    bool isMacOS              = is_macos();
     bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     bool isOneShotShift       = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
     bool isShifted            = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
