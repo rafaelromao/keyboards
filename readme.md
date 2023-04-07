@@ -12,7 +12,8 @@ The following pages explain how this layout works and which features are impleme
 
 ### Layers
 
-- [Base](docs/base.md) and [Modifiers](docs/modifiers.md)
+- [Romak](docs/base.md)
+- [Modifiers](docs/modifiers.md)
 - [Accents and Macros](docs/macros.md)
 - [Symbols and Numbers](docs/symbols.md)
 - [Navigation and Media](docs/navigation.md)
