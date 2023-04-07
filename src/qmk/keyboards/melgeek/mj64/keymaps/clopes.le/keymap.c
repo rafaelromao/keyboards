@@ -37,9 +37,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	),
     [2] = LAYOUT_64_ansi(
 			_______,   _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
-			_______,   MC_QUE ,  _______,  MC_ESCL,  MC_RESP,  MC_TEST,  _______,  _______,  MC_INFO,  _______,  TD_P,     _______,  _______,  _______,
-            _______,   TD_A,     MC_SALI,  TD_D,     MC_APTE,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
-		    _______,   _______,  _______,  MC_CONF,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
+			_______,   MC_QUE ,  _______,  MC_ESCL,  MC_RESP,  TD_T   ,  _______,  _______,  MC_INFO,  _______,  TD_P   ,  _______,  _______,  _______,
+            _______,   TD_A   ,  TD_S   ,  TD_D   ,  MC_APTE,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
+		    _______,   _______,  _______,  MC_CONF,  TD_V   ,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
 			_______,   _______,  _______,                      _______,                                _______,  _______,  _______,  _______,  _______
     ),
 	[3] = LAYOUT_64_ansi(
@@ -286,8 +286,62 @@ void tc_p(tap_dance_state_t *state, void *user_data) {
     }
 }
 
+void tc_v(tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code(KC_V);
+            break;
+        case TD_DOUBLE_TAP:
+            process_record_user(MC_VINT, NULL);
+            break;
+        case TD_TRIPLE_TAP:
+            process_record_user(MC_VESP, NULL);
+            break;
+        default:
+            break;
+    }
+}
+
+void tc_t(tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            process_record_user(MC_TEST, NULL);
+            break;
+        case TD_DOUBLE_TAP:
+            process_record_user(MC_TINT, NULL);
+            break;
+        case TD_TRIPLE_TAP:
+            process_record_user(MC_TESP, NULL);
+            break;
+        default:
+            break;
+    }
+}
+
+void tc_s(tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            process_record_user(MC_SALI, NULL);
+            break;
+        case TD_DOUBLE_TAP:
+            process_record_user(MC_SINT, NULL);
+            break;
+        case TD_TRIPLE_TAP:
+            process_record_user(MC_SCON, NULL);
+            break;
+        default:
+            break;
+    }
+}
+
 tap_dance_action_t tap_dance_actions[] = {[ESC_QUOT]  = ACTION_TAP_DANCE_FN(td_esc_quot),
                                           [TC_A]      = ACTION_TAP_DANCE_FN(tc_a),
                                           [TC_D]      = ACTION_TAP_DANCE_FN(tc_d),
                                           [TC_P]      = ACTION_TAP_DANCE_FN(tc_p),
+                                          [TC_V]      = ACTION_TAP_DANCE_FN(tc_v),
+                                          [TC_T]      = ACTION_TAP_DANCE_FN(tc_t),
+                                          [TC_S]      = ACTION_TAP_DANCE_FN(tc_s),
                                           [LBRC_RBRC] = ACTION_TAP_DANCE_FN(td_brackets)};

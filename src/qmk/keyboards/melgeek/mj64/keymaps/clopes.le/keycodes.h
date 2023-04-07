@@ -49,11 +49,14 @@ typedef struct {
 
 td_state_t dance_state(tap_dance_state_t *state);
 
-enum { ESC_QUOT, LBRC_RBRC, TC_A, TC_D, TC_P };
+enum { ESC_QUOT, LBRC_RBRC, TC_A, TC_D, TC_P, TC_S, TC_T, TC_V };
 
 #define TD_A TD(TC_A)
 #define TD_D TD(TC_D)
 #define TD_P TD(TC_P)
+#define TD_V TD(TC_V)
+#define TD_S TD(TC_S)
+#define TD_T TD(TC_T)
 
 #define TD_ESC TD(ESC_QUOT)
 #define TD_LBRC TD(LBRC_RBRC)
