@@ -63,7 +63,8 @@
 
         COMBO(cb_braces,        RTR RTM,     &mc_braces,         RAISE)
         COMBO(cb_sarrow,        RHI RHM,     &th_sarrow 0 0,     RAISE)
-        COMBO(cb_darrow,        RHM RHR,     &th_darrow 0 0,     RAISE)
+        COMBO(cb_eqeq,          RHM RHR,     &mc_eqeq,           RAISE)
+        COMBO(cb_noteq,         RHI RHM RHR, &mc_noteq,          RAISE)
         COMBO(cb_lt,            RBI RBM,     &th_lt 0 0,         RAISE)
         COMBO(cb_gt,            RBM RBR,     &th_gt 0 0,         RAISE)
         COMBO(cb_ltgt,          RBI RBM RBR, &mc_ltgt,           RAISE)

@@ -244,9 +244,8 @@
         SYMBOL(mc_end_sarrow,      &kp END &mc_sarrow)
         TAPHOLD_SYMBOL(th_sarrow,  &mc_sarrow, &mc_end_sarrow)
                                  
-        SYMBOL(mc_darrow,          &kp EQUAL &kp GT)
-        SYMBOL(mc_end_darrow,      &kp END &mc_darrow)
-        TAPHOLD_SYMBOL(th_darrow,  &mc_darrow, &mc_end_darrow)
+        SYMBOL(mc_eqeq,            &kp EQUAL &kp EQUAL)
+        SYMBOL(mc_noteq,           &kp EXCL &kp EQUAL)
                                  
         SYMBOL(mc_perc,            &kp PERCENT)
         SYMBOL(mc_deg,             &kp LS(LA(N8)))

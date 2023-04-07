@@ -98,7 +98,7 @@ enum {
     
     MC_BTIC, MC_DQUO, MC_SQUO, MC_CIRC, MC_TILD,
     MC_UNDS, MC_ENT, MC_TAB, MC_ESC, MC_ESCC,  
-    MC_ESAV, MC_SENT, MC_CUR, MC_SAR, MC_DAR, 
+    MC_ESAV, MC_SENT, MC_CUR, MC_SAR, MC_DEQ, MC_NEQ, 
     MC_DAND, MC_DPIP, MC_OESC, MC_LTGT, 
 
     // End macros that can be shifted

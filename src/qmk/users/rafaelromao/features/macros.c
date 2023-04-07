@@ -32,9 +32,13 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             tap_code16(KC_MINS);
             tap_code16(KC_GT);
             return PROCESS_RECORD_RETURN_FALSE;
-        case MC_DAR:
+        case MC_DEQ:
             tap_code16(KC_EQL);
-            tap_code16(KC_GT);
+            tap_code16(KC_EQL);
+            return PROCESS_RECORD_RETURN_FALSE;
+        case MC_NEQ:
+            tap_code16(KC_EXLM);
+            tap_code16(KC_EQL);
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_QU:
             tap_code(KC_Q);
