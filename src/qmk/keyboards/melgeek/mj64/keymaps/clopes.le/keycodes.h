@@ -19,7 +19,13 @@ enum macros {
     MC_DECL,
     MC_DEPO,
     MC_APTE,
-    MC_CONF
+    MC_CONF,
+    MC_VESP,
+    MC_VINT,
+    MC_TESP,
+    MC_TINT,
+    MC_SINT,
+    MC_SCON,
 };
 
 // Tap dance

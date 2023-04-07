@@ -132,48 +132,47 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return false;
 
         case MC_VESP:
-            SEND_STRING("Que compareceu espontaneamente nesta unidade especializada (a), a fim de prestar declarações "
-                        "e ratificar o que foi relatado no Reds (xxxxxx), no qual figura como vítima do crime do art. "
-                        "(xxxxx); PERGUNTADO disse QUE:");
+            SEND_STRING("Que compareceu espontaneamente nesta unidade especializada (a), ");
+            SEND_STRING("a fim de prestar declarações e ratificar o que foi relatado no Reds (xxxxxx), ");
+            SEND_STRING("no qual figura como vítima do crime do art. (xxxxx); PERGUNTADO disse QUE:");
             return false;
 
         case MC_VINT:
-            VITIMA INTIMADA SEND_STRING("Que compareceu nesta unidade especializada devidamente intimado (a), a fim de "
-                                        "prestar declarações sobre os fatos relatados no Reds (xxxxxx), no qual figura "
-                                        "como vítima do crime do art. (xxxxx); PERGUNTADO disse QUE:");
-            return false;
-
-        case MC_TINT:
-            TESTEMUNHA INTIMADA SEND_STRING(
-                "Que compareceu nesta unidade especializada devidamente intimado (a), na qualidade de testemunha, a "
-                "fim de prestar depoimento sobre os fatos relatados no Reds (xxxxxx), QUE investiga o crime do art. "
-                "(xxxxx) que vitimou (xxxxx); QUE foi cientificado (a) do dever legal de dizer a verdade de tudo que "
-                "souber e lhe for perguntado, sob pena de incorrer no crime de falso testemunho; INQUIRIDO disse "
-                "QUE: ");
+            SEND_STRING("Que compareceu nesta unidade especializada devidamente intimado (a), a fim de ");
+            SEND_STRING("prestar declarações sobre os fatos relatados no Reds (xxxxxx), no qual figura ");
+            SEND_STRING("como vítima do crime do art. (xxxxx); PERGUNTADO disse QUE:");
             return false;
 
         case MC_TESP:
-            TESTEMUNHA ESPONTANEA SEND_STRING(
-                "Que compareceu nesta unidade especializada espontaneamente na qualidade de testemunha, a fim de "
-                "prestar depoimento sobre os fatos relatados no Reds, QUE investiga o crime do art. (xxxxx) que "
-                "vitimou (xxxxx); QUE foi cientificado (a) do dever legal de dizer a verdade de tudo que souber e lhe "
-                "for perguntado, sob pena de incorrer no crime de falso testemunho; INQUIRIDO disse QUE: ");
+            SEND_STRING("Que compareceu nesta unidade especializada espontaneamente na qualidade de testemunha, ");
+            SEND_STRING("a fim de prestar depoimento sobre os fatos relatados no Reds, ");
+            SEND_STRING("QUE investiga o crime do art. (xxxxx) que vitimou (xxxxx); ");
+            SEND_STRING("QUE foi cientificado (a) do dever legal de dizer a verdade de tudo que souber e ");
+            SEND_STRING("lhe for perguntado, sob pena de incorrer no crime de falso testemunho; INQUIRIDO disse QUE: ");
+            return false;
+
+        case MC_TINT:
+            SEND_STRING("Que compareceu nesta unidade especializada devidamente intimado (a), na qualidade ");
+            SEND_STRING("de testemunha, a fim de prestar depoimento sobre os fatos relatados no Reds (xxxxxx), ");
+            SEND_STRING("QUE investiga o crime do art. (xxxxx) que vitimou (xxxxx); ");
+            SEND_STRING("QUE foi cientificado (a) do dever legal de dizer a verdade de tudo que souber e lhe for ");
+            SEND_STRING("perguntado, sob pena de incorrer no crime de falso testemunho; INQUIRIDO disse QUE: ");
             return false;
 
         case MC_SINT:
-            SUSPEITO INTIMADO SEND_STRING(
-                "Que compareceu nesta unidade especializada devidamente intimado (a), a fim de prestar declarações "
-                "sobre os fatos relatados no Reds (xxxxxx), QUE investiga o crime do art. (xxxxx) que vitimou (xxxxx); "
-                "QUE foi devidamente cientificado dos seus direitos legais, dentre eles o de permanecer em silêncio; "
-                "PERGUNTADO disse QUE: ");
+            SEND_STRING("Que compareceu nesta unidade especializada devidamente intimado (a), a fim de prestar ");
+            SEND_STRING("declarações sobre os fatos relatados no Reds (xxxxxx), ");
+            SEND_STRING("QUE investiga o crime do art. (xxxxx) que vitimou (xxxxx); ");
+            SEND_STRING("QUE foi devidamente cientificado dos seus direitos legais, dentre eles o de permanecer em ");
+            SEND_STRING("silêncio; PERGUNTADO disse QUE: ");
             return false;
 
-        case MC_SESP:
-            SUSPEITO CONDUZIDO SEND_STRING(
-                "Que compareceu nesta unidade especializada devidamente conduzido (a), a fim de prestar declarações "
-                "sobre os fatos relatados no Reds (xxxxxx), QUE investiga o crime do art. (xxxxx) que vitimou (xxxxx); "
-                "QUE foi devidamente cientificado dos seus direitos legais, dentre eles o de permanecer em silêncio; "
-                "PERGUNTADO disse QUE: ");
+        case MC_SCON:
+            SEND_STRING("Que compareceu nesta unidade especializada devidamente conduzido (a), a fim de prestar ");
+            SEND_STRING("declarações sobre os fatos relatados no Reds (xxxxxx), ");
+            SEND_STRING("QUE investiga o crime do art. (xxxxx) que vitimou (xxxxx); ");
+            SEND_STRING("QUE foi devidamente cientificado dos seus direitos legais, dentre eles o de permanecer em ");
+            SEND_STRING("silêncio; PERGUNTADO disse QUE: ");
             return false;
     }
 
