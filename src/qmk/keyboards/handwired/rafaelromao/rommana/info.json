@@ -19,19 +19,19 @@
     },
     "matrix_pin_labels": {
         "rows": [
-            "A0/D0",
-            "A1/D1",
-            "A2/D2",
-            "A3/D3",
-            "SDA/D4",
-            "SCL/D5"
+            "A0/D0 - GP26",
+            "A1/D1 - GP27",
+            "A2/D2 - GP28",
+            "A3/D3 - GP29",
+            "SDA/D4 - GP6",
+            "SCL/D5 - GP7"
         ],
         "cols": [
-            "MOSI/D10",
-            "MISO/D9",
-            "Rx/Csn/D7",
-            "Tx/D6",
-            "SCK/D8"
+            "MOSI/D10 - GP2",
+            "MISO/D9 - GP0",
+            "Rx/Csn/D7 - GP1",
+            "Tx/D6 - GP4",
+            "SCK/D8 - GP3"
         ]
     },
     "matrix_pins": {
