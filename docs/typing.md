@@ -30,9 +30,9 @@ Accents Layer:
 ## Combos
 - In the accents layer, there are combos for some Portuguese n-grams that use keys present in the Accents layer, so that they can be typed with a single tap, like `ção`, `ão`, `ões`, among others.
 - There are combos for some letters in the base layer too, like `y`, `q`, `x` and `z`, but they are not intended to be used for typing, but for things like VIM bindings instead.
-- There are also combos for the Layer Escape Key (L0+LTR+LTM), Enter (R0+RHM+RHR) and Backspace (R0+RTM+RTR). The combo for Enter is probably the best way to type it most of the time.
+- There are also combos for the Layer Escape Key (L0+LTR+LTM), Enter (R0+RHM+RHR) and Backspace (R0+RTM+RTR). The combo for Enter is probably the best way to type it most of the times.
 ## Repeat Key
-- The Repeat Key, LTM in the Accents layer, can be used to repeat the lask key of shortcut. Although it requires an additional tap with the thumb, it might be more comfortable, and faster, to use than typing the same key twice.
+- The Repeat Key, LTM in the Accents layer, can be used to repeat the last key of shortcut. Although it requires an additional tap with the thumb, it might be more comfortable, and faster, to use than typing the same key twice.
 ## Punctuation
 - Dot and Comma are kept in their qwerty positions, RBM and RBR.
 - Semicolon can be typed tapping Dot and Comma together, and colon can be typed tapping shift before that. But there is also a Colon/Semicolon key at RHC, in the Raise layer, which is activated holding R0.
