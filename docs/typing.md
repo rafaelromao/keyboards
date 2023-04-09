@@ -2,9 +2,9 @@
 
 ## Romak
 - The base layer for this layout is [Romak](romak.md), a new keyboard layout optimized for typing in Portuguese and English.
-- It puts less load on the pinkies, moving A, E and O to better positions for typing in Portuguese, when compared to Colemak.
+- It puts less load on pinkies, moving A, E and O to better positions for typing in Portuguese, when compared to Colemak.
 - It is also designed to work with only 30 keys and fit boards like the Rommana or the Hummingbird. For that to be possible,
-some letters are moved to the Accents layer. This layer not only contain these missing letters but also accented versions of
+some letters are moved to the Accents layer. This layer not only contains these missing letters but also accented versions of
 the vowels, as well as macros to type `ç`, `Qu` and to repeat the last key or shortcut.
 
 ```
