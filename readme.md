@@ -8,30 +8,32 @@ A split keyboard layout optimized for Portuguese, English, working with numbers 
 
 ## How this layout works?
 
-The following pages explain how this layout works and which features are implemented.
+The following pages explain how this layout works.
 
-### Layers
+### Workloads
 
-- [Romak](docs/base.md)
-- [Accents and Macros](docs/macros.md)
-- [Symbols and Numbers](docs/symbols.md)
-- [Navigation and Media](docs/navigation.md)
+- [Overview](docs/overview.md)
+- [Typing](docs/typing.md)
+- [Navigation](docs/navigation.md)
+- [Shortcuts](docs/shortcuts.md)
+- [Working with Numbers](docs/numbers.md)
+- [Programming](docs/programming.md)
 - [Maintenance](docs/maintenance.md)
 
-### Main Features
+    ### Main Features
 
-- [Home Block Mods](docs/modifiers.md#home-block-modifiers)
-- [One Shot Mods](docs/modifiers.md#one-shot-modifiers)
-- [Smart Thumb Keys](docs/base.md#smart-thumb-keys)
-- [Smart Cases](docs/modifiers.md#smart-cases)
-- [Shortcut Combos](docs/base.md#base-layer-combos)
-- [Numpad Layer](docs/symbols.md#numpad)
-- [Leader Key](docs/macros.md#leader-key)
-- [Swapper](docs/macros.md#swapper)
-- [Select Word](docs/macros.md#select-word)
-- [Dynamic Macros](docs/macros.md#dynamic-macros)
-- [Coding Shortcuts](docs/macros.md#coding-shortcuts)
-- [Coding Dancing](docs/symbols.md#coding-dancing)
+    - [Home Block Mods](docs/modifiers.md#home-block-modifiers)
+    - [One Shot Mods](docs/modifiers.md#one-shot-modifiers)
+    - [Smart Thumb Keys](docs/base.md#smart-thumb-keys)
+    - [Smart Cases](docs/modifiers.md#smart-cases)
+    - [Shortcut Combos](docs/base.md#base-layer-combos)
+    - [Numpad Layer](docs/symbols.md#numpad)
+    - [Leader Key](docs/macros.md#leader-key)
+    - [Swapper](docs/macros.md#swapper)
+    - [Select Word](docs/macros.md#select-word)
+    - [Dynamic Macros](docs/macros.md#dynamic-macros)
+    - [Coding Shortcuts](docs/macros.md#coding-shortcuts)
+    - [Coding Dancing](docs/symbols.md#coding-dancing)
 
 ## About this repo
 

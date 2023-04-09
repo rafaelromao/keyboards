@@ -3,7 +3,7 @@
 
 #pragma once
 
-#define DEBOUNCE 5
+#define DEBOUNCE 15
 #define RGBLIGHT_SLEEP
 // RGB LED support for XIAO RP2040
 #define RGB_POWER_PIN GP11
