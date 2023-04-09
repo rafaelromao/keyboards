@@ -36,8 +36,8 @@ Accents Layer:
 ## Punctuation
 - Dot and Comma are kept in their qwerty positions, RBM and RBR.
 - Semicolon can be typed tapping Dot and Comma together, and colon can be typed tapping shift before that. But there is also a Colon/Semicolon key at RHC, in the Raise layer, which is activated holding R0.
-- Question Mark is at LBI, in the Lower layer, activated holding L0. So it can be typed holding L0 and tapping LBI. It can also be typed as a regular shifted slash, RBI. For that, just tap R1, hold R0 and tap RBI. It is also fast and helpfull when the left hand is in the trackball (see the premisses in Overview doc).
-- Exclamation Mark is at RBR!
+- Question Mark is at LBI, in the Lower layer, activated holding L0. So it can be typed holding L0 and tapping LBI. It can also be typed as a regular shifted slash. For that, just tap R1, hold R0 and tap RBI. It is also fast and helpfull when the left hand is in the trackball (see the premisses in Overview doc).
+- Exclamation Mark is at RBR, in the Raise layer.
 ### Punctuation at the end
 - Any punctuation char can be inserted at the end of the line simply by holding it instead of tapping it. It is more useful for coding, but can also be helpfull for typing.
 ## Numbers
