@@ -46,3 +46,4 @@ Accents Layer:
 - See more about [Working with Numbers](numbers.md) to see how to avoid holding L0 to work with numbers.
 ## Navigation
 - To navigate between the text while typing, hold L1 and the right side of the keybord will become a navigation cluster, with the arrows in the 4 home positions. Delete, Home and End are available in the bottom row, and page navigation in the top row.
+- While in the Lower layer, holding LHP will also activate the Navigation layer, allowing easy trasition between numbers and arrow keys.
