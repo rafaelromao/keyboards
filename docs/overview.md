@@ -23,9 +23,9 @@ This layout consider the following premisses, which might not be acceptable for 
 - In the rest of these docs, keys will be referred to using the layer they are and the codes below:
 ```
   ╭─────────────────────╮ ╭─────────────────────╮
-  │ LTP LTR LTM LTI LTC │ │ RTC RTI RTM RTR RTP │
+  │ LTP LTR LTM LTI     │ │     RTI RTM RTR RTP │
   │ LHP LHR LHM LHI LHC │ │ RHC RHI RHM RHR RHP │
-  │ LBP LBR LBM LBI LBC │ │ RBC RBI RBM RBR RBP │
+  │     LBR LBM LBI LBC │ │ RBC RBI RBM RBR     │
   ╰───────────╮ L1  L0  │ │ R0  R1  ╭───────────╯
               ╰─────────╯ ╰─────────╯ 
 ```
