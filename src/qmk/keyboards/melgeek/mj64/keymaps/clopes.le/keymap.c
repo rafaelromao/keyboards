@@ -345,3 +345,15 @@ tap_dance_action_t tap_dance_actions[] = {[ESC_QUOT]  = ACTION_TAP_DANCE_FN(td_e
                                           [TC_T]      = ACTION_TAP_DANCE_FN(tc_t),
                                           [TC_S]      = ACTION_TAP_DANCE_FN(tc_s),
                                           [LBRC_RBRC] = ACTION_TAP_DANCE_FN(td_brackets)};
+
+// Led Indicators
+
+bool rgb_matrix_indicators_user(void) {
+    bool caps = host_keyboard_led_state().caps_lock;
+    if (caps) {
+        rgb_matrix_set_color(64, RGB_RED);
+        rgb_matrix_set_color(65, RGB_RED);
+        rgb_matrix_set_color(66, RGB_RED);
+    }
+    return false;
+}
