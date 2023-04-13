@@ -10,15 +10,14 @@ A split keyboard layout optimized for Portuguese, English, working with numbers 
 
 The following pages explain how this layout works.
 
-### Workloads
+### Workflows
 
 - [Overview](docs/overview.md)
 - [Typing](docs/typing.md)
-- [Navigation](docs/navigation.md)
-- [Shortcuts](docs/shortcuts.md)
+- [Common Shortcuts](docs/shortcuts.md)
+- [Window Management](docs/navigation.md)
 - [Working with Numbers](docs/numbers.md)
 - [Programming](docs/programming.md)
-- [Maintenance](docs/maintenance.md)
 
     ### Main Features
 
