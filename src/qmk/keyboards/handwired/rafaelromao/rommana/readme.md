@@ -12,7 +12,7 @@ Some build pictures can be found [here](../../../../../../docs/rommana.md).
 ![img](../../../../../../img/rommana.jpeg)
 
 Parts:
-- 30 MX switches (Kailh BOX Jade).
+- 30 MX 5-pin switches.
 - 28 1u MX keycaps (leftovers from a MT3 3277 Ergodox Set).
 - 2 1.5u MX keycaps (leftovers from a MT3 3277 Engodox Set).
 - Rommana 15 degree tent [case](https://github.com/AlaaSaadAbdo/Rommana).
