@@ -55,8 +55,8 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             if (isShifted) {
                 register_mods(MOD_MASK_SHIFT);
                 tap_code(KC_O);
-                tap_code(KC_ESC);
                 unregister_mods(MOD_MASK_SHIFT);
+                tap_code(KC_ESC);
             } else {
                 tap_code(KC_O);
                 tap_code(KC_ESC);
