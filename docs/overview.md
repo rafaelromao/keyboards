@@ -3,9 +3,8 @@
 ## Premisses
 This layout consider the following premisses, which might not be acceptable for most people, so let's start with that:
 - If it is possible, use just one hand. It is the opposite of what Miryoku states.
-- The pointing device used is a Kensington Expert Mouse, used with the left hand, in the left side of the left half of the keyboard.
-- But the right hand is assumed to be the strongest, so it might not be a good layout for left handed. But it can also be, so please let me know if you are left handed and it works well for you.
-- Most of the load will go to the right hand, assuming that the left hand might be in the trackball.
+- The pointing device I use is a Kensington Expert Mouse, used with the left hand, in the left side of the left half of the keyboard. This fact influenced a lot of decisions during the development of this layout.
+- Most of the load will go to the right hand, assuming that the left hand might be in the trackball, so it might not be a good layout for left handed people.
 
 ## Layout Overview
 - This is a 30 keys split layout, 3x5+2 keys on each side, minus the two top row pinkie and indek keys.

@@ -17,6 +17,7 @@ The following pages explain how this layout works.
 - [Common Shortcuts](docs/shortcuts.md)
 - [Window Management](docs/navigation.md)
 - [Working with Numbers](docs/numbers.md)
+- [Dynamic Macros](docs/dynamic_macros.md)
 - [Programming](docs/programming.md)
 
     ### Main Features
