@@ -52,7 +52,7 @@
                 accents_layer {
                         label = "ACCENT";
                         bindings = <
-   &trans           &kp DQT             &key_repeat         &kp TILDE           &none               &none               &ac_otil         &ac_oacu         &ac_uacu         &trans
+   &trans           &kp DQT             &key_repeat         &td_tilde           &none               &none               &ac_otil         &ac_oacu         &ac_uacu         &trans
    &kp SQT          &mc_qu              &kp X               &kp Z               &kp GRAVE           &kp Y               &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
    &none            &kp Q               &mc_ced             &trans              &kp CARET           &ac_agrv            &ac_acir         &ac_ocir         &ac_ecir         &none
                                         &trans              &kp BSPC            &kp SPACE           &tog ACCENT_F       &trans           &trans
@@ -61,7 +61,7 @@
                 fixed_accents_layer {
                         label = "ACCENT";
                         bindings = <
-   &trans           &kp DQT             &key_repeat         &kp TILDE           &none               &none               &ac_otil         &ac_oacu         &ac_uacu         &trans
+   &trans           &kp DQT             &key_repeat         &td_tilde           &none               &none               &ac_otil         &ac_oacu         &ac_uacu         &trans
    &kp SQT          &mc_qu              &kp X               &kp Z               &kp GRAVE           &kp Y               &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
    &none            &kp Q               &mc_ced             &trans              &kp CARET           &ac_agrv            &ac_acir         &ac_ocir         &ac_ecir         &none
                                         &trans              &kp BSPC            &kp SPACE           &tog ACCENT_F       &trans           &trans
@@ -70,9 +70,9 @@
                 case_accents_layer {
                         label = "CASE_AC";
                         bindings = <
-   &trans           &trans             &key_repeat          &kp CARET           &none               &none               &ac_otil_c       &ac_oacu_c       &ac_uacu_c       &trans
+   &trans           &trans             &key_repeat          &td_tilde           &none               &none               &ac_otil_c       &ac_oacu_c       &ac_uacu_c       &trans
    &kp SQT          &mc_qu_c           &kp LS(X)            &kp LS(Z)           &kp GRAVE           &kp LS(Y)           &ac_atil_c       &ac_aacu_c       &ac_eacu_c       &ac_iacu_c 
-   &none            &kp LS(Q)          &mc_ced_c            &trans              &trans              &ac_agrv_c          &ac_acir_c       &ac_ocir_c       &ac_ecir_c       &none
+   &none            &kp LS(Q)          &mc_ced_c            &trans              &kp CARET           &ac_agrv_c          &ac_acir_c       &ac_ocir_c       &ac_ecir_c       &none
                                        &trans               &kp BSPC            &kp SPACE           &tog ACCENT_F       &trans           &trans
                         >;
                 };
@@ -88,7 +88,7 @@
                 lower_layer {
                         label = "LOWER";
                         bindings = <
-   &trans           &td_lpar           &td_rpar             &mc_tilde           &none               &none               &mc_n7           &mc_n8           &mc_n9           &trans
+   &trans           &td_lpar           &td_rpar             &td_tilde           &none               &none               &mc_n7           &mc_n8           &mc_n9           &trans
    &th_sqo NAV 0    &td_dqo            &th_and 0 0          &th_or 0 0          &mc_bti             &kp COMMA           &mc_n4           &mc_n5           &mc_n6           &lt MACROS DOT  
    &none            &td_lbkt           &td_rbkt             &th_qmark 0 0       &kp HASH            &none               &mc_n1           &mc_n2           &mc_n3           &none
                                        &trans               &trans              &trans              &lt RAISE SPACE     &th_n0 MEDIA 0   &trans
@@ -97,9 +97,9 @@
                 raise_layer {
                         label = "RAISE";
                         bindings = <
-   &trans           &kp F9             &kp F8               &kp F7              &none               &none               &th_curr  0 0    &th_lbrc 0 0     &th_rbrc 0 0    &trans
-   &kp F12          &kp F6             &kp F5               &kp F4              &kp F11             &th_colon 0 0       &kp MINUS        &td_plus         &th_eql 0 0     &kp AT  
-   &none            &kp F3             &kp F2               &kp F1              &kp F10             &th_perc 0 0        &th_slash 0 0    &kp STAR         &td_excl        &none
+   &trans           &kp F9             &kp F8               &kp F7              &none               &none               &td_curr         &td_lbrc         &td_rbrc        &trans
+   &kp F12          &kp F6             &kp F5               &kp F4              &kp F11             &th_colon 0 0       &kp MINUS        &td_plus         &td_eql         &kp AT  
+   &none            &kp F3             &kp F2               &kp F1              &kp F10             &td_perc            &td_slash        &kp STAR         &td_excl        &none
                                        &trans               &kp BSPC            &kp SPACE           &trans              &trans           &trans
                         >;
                 };

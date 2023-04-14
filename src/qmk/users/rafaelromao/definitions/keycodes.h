@@ -33,6 +33,7 @@ enum {
     LET_ELT,
     GRT_EGT,
     OR_EOR,
+    TIL_PAR,
     TD_CODE_END 
 };
 
@@ -63,6 +64,7 @@ enum {
 #define TD_LT TD(LET_ELT)
 #define TD_GT TD(GRT_EGT)
 #define TD_OR TD(OR_EOR)
+#define TD_TILD TD(TIL_PAR)
 
 // Custom keycodes
 

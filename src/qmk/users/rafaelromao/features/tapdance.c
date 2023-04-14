@@ -39,58 +39,6 @@ bool is_shifted(void) {
            get_oneshot_locked_mods() & MOD_MASK_SHIFT;
 }
 
-void td_enter_end(tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            tap_code16(KC_END);
-            tap_code(KC_ENT);
-            break;
-        case TD_DOUBLE_TAP:
-        case TD_SINGLE_HOLD:
-            SEND_STRING(SS_TAP(X_DOWN) SS_DELAY(100) SS_TAP(X_END));
-            break;
-        default:
-            break;
-    }
-}
-
-void td_open_curly_braces(tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            tap_code16(KC_LCBR);
-            break;
-        case TD_SINGLE_HOLD:
-            tap_code16(KC_END);
-            tap_code16(KC_LCBR);
-            break;
-        case TD_DOUBLE_TAP:
-            SEND_STRING("var ");
-            break;
-        case TD_TRIPLE_TAP:
-            SEND_STRING("final ");
-            break;
-        default:
-            break;
-    }
-}
-
-void td_close_curly_braces(tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            tap_code16(KC_RCBR);
-            break;
-        case TD_SINGLE_HOLD:
-            tap_code16(KC_END);
-            tap_code16(KC_RCBR);
-            break;
-        default:
-            break;
-    }
-}
-
 void td_parentesis(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
@@ -121,9 +69,6 @@ void td_open_parentesis(tap_dance_state_t *state, void *user_data) {
         case TD_DOUBLE_TAP:
             SEND_STRING("for(");
             break;
-        case TD_TRIPLE_TAP:
-            SEND_STRING("while(");
-            break;
         default:
             break;
     }
@@ -142,50 +87,116 @@ void td_close_parentesis(tap_dance_state_t *state, void *user_data) {
         case TD_DOUBLE_TAP:
             SEND_STRING("if(");
             break;
-        case TD_TRIPLE_TAP:
+        default:
+            break;
+    }
+}
+
+void td_tilde(tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            process_macros(MC_TILD, NULL);
+            break;
+        case TD_DOUBLE_TAP:
             SEND_STRING("else ");
             break;
-        default:
-            break;
-    }
-}
-
-void td_open_brackets(tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            tap_code16(KC_LBRC);
-            break;
         case TD_SINGLE_HOLD:
-            tap_code16(KC_END);
-            tap_code16(KC_LBRC);
-            break;
-        case TD_DOUBLE_TAP:
-            SEND_STRING("float ");
-            break;
-        case TD_TRIPLE_TAP:
-            SEND_STRING("double ");
+            if (is_macos()) {
+                tap_code16(RALT(KC_6));
+            } else {
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_2) SS_TAP(X_KP_1)));
+            }
             break;
         default:
             break;
     }
 }
 
-void td_close_brackets(tap_dance_state_t *state, void *user_data) {
+void td_enter_end(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
-            tap_code16(KC_RBRC);
+            tap_code16(KC_END);
+            tap_code(KC_ENT);
+            break;
+        case TD_DOUBLE_TAP:
+        case TD_SINGLE_HOLD:
+            SEND_STRING(SS_TAP(X_DOWN) SS_DELAY(100) SS_TAP(X_END));
+            break;
+        default:
+            break;
+    }
+}
+
+void td_currencies(tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code16(KC_DLR);
+            break;
+        case TD_DOUBLE_TAP:
+            SEND_STRING("final ");
+            break;
+        case TD_SINGLE_HOLD:
+            tap_code16(KC_CIRC);
+            tap_code(KC_SPC);
+            break;
+        default:
+            break;
+    }
+}
+
+void td_open_curly_braces(tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code16(KC_LCBR);
             break;
         case TD_SINGLE_HOLD:
             tap_code16(KC_END);
-            tap_code16(KC_RBRC);
+            tap_code16(KC_LCBR);
             break;
         case TD_DOUBLE_TAP:
-            SEND_STRING("short ");
+            SEND_STRING("var ");
             break;
-        case TD_TRIPLE_TAP:
-            SEND_STRING("long ");
+        default:
+            break;
+    }
+}
+
+void td_close_curly_braces(tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code16(KC_RCBR);
+            break;
+        case TD_SINGLE_HOLD:
+            tap_code16(KC_END);
+            tap_code16(KC_RCBR);
+            break;
+        case TD_DOUBLE_TAP:
+            SEND_STRING("return ");
+            break;
+        default:
+            break;
+    }
+}
+
+void td_dquo(tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            process_macros(MC_DQUO, NULL);
+            break;
+        case TD_SINGLE_HOLD:
+            tap_code16(KC_END);
+            process_macros(MC_DQUO, NULL);
+            break;
+        case TD_DOUBLE_TAP:
+            process_macros(MC_DQUO, NULL);
+            process_macros(MC_DQUO, NULL);
+            tap_code(KC_LEFT);
             break;
         default:
             break;
@@ -222,89 +233,6 @@ void td_or(tap_dance_state_t *state, void *user_data) {
             break;
         case TD_DOUBLE_TAP:
             process_macros(MC_DPIP, NULL);
-            break;
-        default:
-            break;
-    }
-}
-
-void td_plus(tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            tap_code16(KC_PLUS);
-            break;
-        case TD_SINGLE_HOLD:
-            tap_code(KC_END);
-            tap_code16(KC_PLUS);
-            break;
-        case TD_DOUBLE_TAP:
-            SEND_STRING("return ");
-            break;
-        case TD_TRIPLE_TAP:
-            SEND_STRING("throw ");
-            break;
-        default:
-            break;
-    }
-}
-
-void td_not(tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            tap_code16(KC_EXLM);
-            break;
-        case TD_SINGLE_HOLD:
-            tap_code(KC_END);
-            tap_code16(KC_EXLM);
-            break;
-        case TD_DOUBLE_TAP:
-            SEND_STRING("case ");
-            break;
-        case TD_TRIPLE_TAP:
-            SEND_STRING("switch(");
-            break;
-        default:
-            break;
-    }
-}
-
-void td_dquo(tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            process_macros(MC_DQUO, NULL);
-            break;
-        case TD_SINGLE_HOLD:
-            process_macros(MC_DQUO, NULL);
-            process_macros(MC_DQUO, NULL);
-            tap_code(KC_LEFT);
-            break;
-        case TD_DOUBLE_TAP:
-            SEND_STRING("void ");
-            break;
-        case TD_TRIPLE_TAP:
-            SEND_STRING("null");
-            break;
-        default:
-            break;
-    }
-}
-
-void td_perc(tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            tap_code16(KC_PERC);
-            break;
-        case TD_SINGLE_HOLD:
-            if (is_macos()) {
-                tap_code16(LSFT(RALT(KC_8)));
-            } else {
-                tap_code16(LSFT(LCTL(KC_2)));
-            }
             break;
         default:
             break;
@@ -351,35 +279,6 @@ void td_semicolon(tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void td_currencies(tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            tap_code16(KC_DLR);
-            break;
-        case TD_DOUBLE_TAP:
-            if (is_macos()) {
-                tap_code16(LSFT(RALT(KC_2)));
-            } else {
-                tap_code16(LCTL(LALT(KC_5)));
-            }
-            break;
-        case TD_TRIPLE_TAP:
-            if (is_macos()) {
-                tap_code16(RALT(KC_3));
-            } else {
-                tap_code16(LSFT(RALT(KC_4)));
-            }
-            break;
-        case TD_SINGLE_HOLD:
-            tap_code16(KC_CIRC);
-            tap_code(KC_SPC);
-            break;
-        default:
-            break;
-    }
-}
-
 void td_macro(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
@@ -388,6 +287,163 @@ void td_macro(tap_dance_state_t *state, void *user_data) {
             break;
         case TD_SINGLE_TAP:
             dyn_macro_play(is_shifted() ? QK_DYNAMIC_MACRO_PLAY_2 : QK_DYNAMIC_MACRO_PLAY_1);
+            break;
+        default:
+            break;
+    }
+}
+
+void td_plus(tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code16(KC_PLUS);
+            break;
+        case TD_DOUBLE_SINGLE_TAP:
+        case TD_DOUBLE_TAP:
+            tap_code16(KC_PLUS);
+            tap_code16(KC_PLUS);
+            break;
+        case TD_TRIPLE_TAP:
+            tap_code16(KC_PLUS);
+            tap_code16(KC_PLUS);
+            tap_code16(KC_PLUS);
+            break;
+        case TD_SINGLE_HOLD:
+            tap_code(KC_END);
+            tap_code16(KC_PLUS);
+            break;
+        default:
+            break;
+    }
+}
+
+void td_eql(tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code(KC_EQL);
+            break;
+        case TD_DOUBLE_SINGLE_TAP:
+        case TD_DOUBLE_TAP:
+            tap_code(KC_EQL);
+            tap_code(KC_EQL);
+            break;
+        case TD_TRIPLE_TAP:
+            tap_code(KC_EQL);
+            tap_code(KC_EQL);
+            tap_code(KC_EQL);
+            break;
+        case TD_SINGLE_HOLD:
+            tap_code(KC_END);
+            tap_code(KC_EQL);
+            break;
+        default:
+            break;
+    }
+}
+
+void td_open_brackets(tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code16(KC_LBRC);
+            break;
+        case TD_SINGLE_HOLD:
+            tap_code16(KC_END);
+            tap_code16(KC_LBRC);
+            break;
+        case TD_DOUBLE_TAP:
+            SEND_STRING("switch(");
+            break;
+        default:
+            break;
+    }
+}
+
+void td_close_brackets(tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code16(KC_RBRC);
+            break;
+        case TD_SINGLE_HOLD:
+            tap_code16(KC_END);
+            tap_code16(KC_RBRC);
+            break;
+        case TD_DOUBLE_TAP:
+            SEND_STRING("case ");
+            break;
+        default:
+            break;
+    }
+}
+
+void td_ques(tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code16(KC_QUES);
+            break;
+        case TD_DOUBLE_SINGLE_TAP:
+        case TD_DOUBLE_TAP:
+            tap_code16(KC_QUES);
+            tap_code16(KC_QUES);
+            break;
+        case TD_SINGLE_HOLD:
+            tap_code(KC_END);
+            tap_code16(KC_QUES);
+            break;
+        default:
+            break;
+    }
+}
+
+void td_perc(tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code16(KC_PERC);
+            break;
+        case TD_DOUBLE_TAP:
+            if (is_macos()) {
+                tap_code16(RALT(KC_0));
+            } else {
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_1) SS_TAP(X_KP_6) SS_TAP(X_KP_7)));
+            }
+            break;
+        case TD_TRIPLE_TAP:
+            if (is_macos()) {
+                tap_code16(RALT(KC_9));
+            } else {
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_1) SS_TAP(X_KP_6) SS_TAP(X_KP_6)));
+            }
+            break;
+        case TD_SINGLE_HOLD:
+            if (is_macos()) {
+                tap_code16(LSFT(RALT(KC_8)));
+            } else {
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_1) SS_TAP(X_KP_7) SS_TAP(X_KP_6)));
+            }
+            break;
+        default:
+            break;
+    }
+}
+
+void td_not(tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code16(KC_EXLM);
+            break;
+        case TD_SINGLE_HOLD:
+            tap_code(KC_END);
+            tap_code16(KC_EXLM);
+            break;
+        case TD_DOUBLE_TAP:
+            SEND_STRING("throw ");
             break;
         default:
             break;
@@ -447,20 +503,24 @@ void td_dot(tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void td_ques(tap_dance_state_t *state, void *user_data) {
+void td_slash(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
-            tap_code16(KC_QUES);
+            tap_code(KC_SLSH);
             break;
         case TD_DOUBLE_SINGLE_TAP:
         case TD_DOUBLE_TAP:
-            tap_code16(KC_QUES);
-            tap_code16(KC_QUES);
+            tap_code(KC_SLSH);
+            tap_code(KC_SLSH);
+            break;
+        case TD_TRIPLE_TAP:
+            tap_code(KC_SLSH);
+            tap_code(KC_SLSH);
+            tap_code(KC_SLSH);
             break;
         case TD_SINGLE_HOLD:
-            tap_code(KC_END);
-            tap_code16(KC_QUES);
+            tap_code16(KC_BSLS);
             break;
         default:
             break;
@@ -507,50 +567,6 @@ void td_gt(tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void td_eql(tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            tap_code(KC_EQL);
-            break;
-        case TD_DOUBLE_SINGLE_TAP:
-        case TD_DOUBLE_TAP:
-            tap_code(KC_EQL);
-            tap_code(KC_EQL);
-            break;
-        case TD_TRIPLE_TAP:
-            tap_code(KC_EQL);
-            tap_code(KC_EQL);
-            tap_code(KC_EQL);
-            break;
-        case TD_SINGLE_HOLD:
-            tap_code(KC_END);
-            tap_code(KC_EQL);
-            break;
-        default:
-            break;
-    }
-}
-
-void td_slash(tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            tap_code(KC_SLSH);
-            break;
-        case TD_DOUBLE_SINGLE_TAP:
-        case TD_DOUBLE_TAP:
-            tap_code(KC_SLSH);
-            tap_code(KC_SLSH);
-            break;
-        case TD_SINGLE_HOLD:
-            tap_code16(KC_BSLS);
-            break;
-        default:
-            break;
-    }
-}
-
 // clang-format off
 
 // Tap dance declarations
@@ -569,6 +585,7 @@ tap_dance_action_t tap_dance_actions[] = {
     [NOT_SWI] = ACTION_TAP_DANCE_FN(td_not),
     [AND_EAN] = ACTION_TAP_DANCE_FN(td_and),
     [OR_EOR]  = ACTION_TAP_DANCE_FN(td_or),
+    [TIL_PAR] = ACTION_TAP_DANCE_FN(td_tilde),
     [REC_MAC] = ACTION_TAP_DANCE_FN(td_macro),
     [COM_LEA] = ACTION_TAP_DANCE_FN(td_comm),
     [DLR_CUR] = ACTION_TAP_DANCE_FN(td_currencies),
