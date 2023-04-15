@@ -20,8 +20,8 @@
     "matrix_pin_labels": {
         "rows": [
             "A0/D0 - GP26",
-            "Tx/D6 - GP4",
             "SCL/D5 - GP7",
+            "Tx/D6 - GP4",
             "Rx/Csn/D7 - GP1",
             "MOSI/D10 - GP2",
             "SCK/D8 - GP3"
@@ -37,8 +37,8 @@
     "matrix_pins": {
         "rows": [
             "GP26",
-            "GP4",
             "GP7",
+            "GP4",
             "GP1",
             "GP2",
             "GP3"
