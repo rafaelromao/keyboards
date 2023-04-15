@@ -49,6 +49,7 @@ The qmk version recommended for this keymap is 0.20.1.
 
 - [handwired/rafaelromao/fauxberry](src/qmk/keyboards/handwired/rafaelromao/fauxberry/readme.md)
 - [handwired/rafaelromao/rommana](src/qmk/keyboards/handwired/rafaelromao/rommana/readme.md)
+- [handwired/rafaelromao/hummingbird](src/qmk/keyboards/handwired/rafaelromao/hummingbird/readme.md)
 - [kprepublic/bm40hsrgb](src/qmk/keyboards/kprepublic/bm40hsrgb/keymaps/rafaelromao/readme.md)
 
 Some features are not available on all keyboards though. For instance, the BM40 does not support Dynamic Macros.
