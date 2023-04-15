@@ -12,14 +12,13 @@ Some build pictures can be found [here](../../../../../../docs/hummingbird.md).
 ![img](../../../../../../img/hummingbird.jpeg)
 
 Parts:
-- 30 choc switches (Lowprokb Sunsets).
+- 30 choc switches (Kailh Silver).
 - 26 1u choc keycaps (Lowprokb LDSA).
 - 4 1u choc thumb keycaps (Lowprokb LDSA).
 - Hummingbird [case](https://github.com/PJE66/hummingbird).
 - [Seeeduino Xiao RP2040](https://pt.aliexpress.com/item/4000131085893.html).
 - [1n4148 diodes](https://pt.aliexpress.com/item/1005003540554760.html).
 - [24 AWG Wires](https://pt.aliexpress.com/item/32904950428.html).
-- [Dupont cables](https://pt.aliexpress.com/item/1005004155181609.html).
 
 ### QMK
 
