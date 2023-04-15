@@ -1,5 +1,5 @@
 ## Hummingbird
-### A 30 keys handwired split keyboard.
+### A 30 keys handwired unibody split keyboard.
 
 ### Build Details
 
