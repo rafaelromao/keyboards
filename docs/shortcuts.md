@@ -3,7 +3,7 @@
 ## Shortcuts
 
 ### Shortcut Combos
- Combos are available in the base and Numpad layers to send ENTER, ESC, BACKSPACE and common shortcuts like copy, paste, save, select all and undo.
+Combos are available in the base and Numpad layers to send ENTER, ESC, BACKSPACE and common shortcuts like copy, paste, save, select all and undo.
 - Most combos include the home thumb key, the one in the same side, to avoid misfires.
 - One-shot shift can be used to invert the modifier (Ctrl vs Cmd) used in the combos.
 - If shift, or any other modifier, is held, it will be included in the combo. So hold Shift and tap the Undo combo will send Redo instead.
