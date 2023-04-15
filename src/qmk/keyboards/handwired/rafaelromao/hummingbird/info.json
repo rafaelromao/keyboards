@@ -21,10 +21,10 @@
         "rows": [
             "A0/D0 - GP26",
             "SCL/D5 - GP7",
-            "MISO/D9 - GP4",
+            "Tx/D6 - GP0",
             "Rx/Csn/D7 - GP1",
             "SCK/D8 - GP2",
-            "Tx/D6 - GP0"
+            "MISO/D9 - GP4"
         ],
         "cols": [
             "SDA/D4 - GP6",
@@ -38,10 +38,10 @@
         "rows": [
             "GP26",
             "GP7",
-            "GP4",
+            "GP0",
             "GP1",
             "GP2",
-            "GP0"
+            "GP4"
         ],
         "cols": [
             "GP6",
