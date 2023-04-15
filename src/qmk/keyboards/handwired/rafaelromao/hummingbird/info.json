@@ -21,34 +21,34 @@
         "rows": [
             "A0/D0 - GP26",
             "SCL/D5 - GP7",
-            "MISO/D9 - GP0",
+            "MISO/D9 - GP4",
             "Rx/Csn/D7 - GP1",
-            "SCK/D8 - GP3",
-            "Tx/D6 - GP4"
+            "SCK/D8 - GP2",
+            "Tx/D6 - GP0"
         ],
         "cols": [
             "SDA/D4 - GP6",
             "A3/D3 - GP29",
             "A2/D2 - GP28",
             "A1/D1 - GP27",
-            "MOSI/D10 - GP2"
+            "MOSI/D10 - GP3"
         ]
     },
     "matrix_pins": {
         "rows": [
             "GP26",
             "GP7",
-            "GP0",
+            "GP4",
             "GP1",
-            "GP3",
-            "GP4"
+            "GP2",
+            "GP0"
         ],
         "cols": [
             "GP6",
             "GP29",
             "GP28",
             "GP27",
-            "GP2"
+            "GP3"
         ]
     },
     "processor": "RP2040",

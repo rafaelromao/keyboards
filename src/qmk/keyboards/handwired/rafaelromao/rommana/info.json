@@ -27,11 +27,11 @@
             "SCL/D5 - GP7"
         ],
         "cols": [
-            "MOSI/D10 - GP2",
-            "MISO/D9 - GP0",
+            "SCK/D8 - GP2",
+            "Tx/D6 - GP0",
             "Rx/Csn/D7 - GP1",
-            "Tx/D6 - GP4",
-            "SCK/D8 - GP3"
+            "MISO/D9 - GP4",
+            "MOSI/D10 - GP3"
         ]
     },
     "matrix_pins": {
