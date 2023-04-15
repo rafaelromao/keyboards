@@ -19,6 +19,7 @@ Parts:
 - [Seeeduino Xiao RP2040](https://pt.aliexpress.com/item/4000131085893.html).
 - [1n4148 diodes](https://pt.aliexpress.com/item/1005003540554760.html).
 - [24 AWG Wires](https://pt.aliexpress.com/item/32904950428.html).
+- [DIP40 Pin Wide Socket](https://a.aliexpress.com/_msloS7e).
 
 ### QMK
 
