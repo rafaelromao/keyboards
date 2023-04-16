@@ -106,7 +106,7 @@ Most features implemented here were based on the work referenced below.
 - [Jan Lunge](https://m.youtube.com/@JanLunge)
 - [Sadek Baroudi](https://github.com/sadekbaroudi)
 - [Joe Scotto](https://github.com/joe-scotto)
-- [AlaaSaadAbdo](https://github.com/AlaaSaadAbdo)
+- [Alaa Saad Mansour](https://github.com/AlaaSaadAbdo)
 - [Peter Elliot](https://github.com/PJE66)
 
 ## Resouces
