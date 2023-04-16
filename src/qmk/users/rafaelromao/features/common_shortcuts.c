@@ -111,6 +111,7 @@ process_record_result_t process_common_shortcuts(uint16_t keycode, keyrecord_t *
             clear_shift();
             tap_code(KC_ESC);
             layer_clear();
+            disable_smart_case();
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_ESC:
             clear_shift();
