@@ -52,7 +52,7 @@
                 accents_layer {
                         label = "ACCENT";
                         bindings = <
-   &trans           &kp DQT             &key_repeat         &td_tilde           &none               &none               &ac_otil         &ac_oacu         &ac_uacu         &trans
+   &trans           &trans              &key_repeat         &td_tilde           &none               &none               &ac_otil         &ac_oacu         &ac_uacu         &trans
    &kp SQT          &mc_qu              &kp X               &kp Z               &kp GRAVE           &kp Y               &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
    &none            &kp Q               &mc_ced             &trans              &kp CARET           &ac_agrv            &ac_acir         &ac_ocir         &ac_ecir         &none
                                         &trans              &kp BSPC            &kp SPACE           &tog ACCENT_F       &trans           &trans
@@ -61,7 +61,7 @@
                 fixed_accents_layer {
                         label = "ACCENT";
                         bindings = <
-   &trans           &kp DQT             &key_repeat         &td_tilde           &none               &none               &ac_otil         &ac_oacu         &ac_uacu         &trans
+   &trans           &trans              &key_repeat         &td_tilde           &none               &none               &ac_otil         &ac_oacu         &ac_uacu         &trans
    &kp SQT          &mc_qu              &kp X               &kp Z               &kp GRAVE           &kp Y               &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
    &none            &kp Q               &mc_ced             &trans              &kp CARET           &ac_agrv            &ac_acir         &ac_ocir         &ac_ecir         &none
                                         &trans              &kp BSPC            &kp SPACE           &tog ACCENT_F       &trans           &trans
