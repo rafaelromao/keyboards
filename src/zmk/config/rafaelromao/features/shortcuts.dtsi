@@ -139,7 +139,7 @@
         
         SHORTCUT(mc_z0,                 &macro_tap &kp LG(N0))
         SHORTCUT(mc_refresh,            &macro_tap &kp LG(R))
-        SHIFTED_SHORTCUT(mm_refresh_z0,  &mc_z0, &mc_refresh)
+        SHIFTED_SHORTCUT(mm_refresh_z0, &mc_z0, &mc_refresh)
         
         SHORTCUT(mc_close_tab,          &macro_tap &kp LG(W))
         SHORTCUT(mc_close_win,          &macro_tap &kp LG(Q))
@@ -151,5 +151,7 @@
         MODTAP_SHORTCUT(th_find,        &mm_find_symbol)
         MODTAP_SHORTCUT(th_zh,          &mm_zh_f)
         LAYERTAP_SHORTCUT(th_proj,      &mm_project)
+
+        SHORTCUT(mc_escc,               &macro_tap &kp ESC &to ROMAK)
     };
 };

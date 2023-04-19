@@ -100,8 +100,6 @@
         TAPHOLD_SYMBOL(th_comma,   &mc_comma, &mc_end_comma)
         TAPDANCE_SYMBOL(td_comma,  &th_comma 0 0, &leader, &none)
 
-        MACRO_SYMBOL(mc_escc,      &kp ESC &tog ROMAK)
-
         // Lower                  
                                    
         SHIFTED_SYMBOL(mc_n0,      &kp N0, &kp KP_N0)
