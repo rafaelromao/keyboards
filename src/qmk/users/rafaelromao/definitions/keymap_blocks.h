@@ -97,7 +97,7 @@
 #define ______LOCK____R4_                               XXXXXXX , _______
 
 #define ___________________MAINTENANCE_L1____           _______ , RGB_VAD , RGB_VAI , EE_CLR 
-#define ___________________MAINTENANCE_L2______________ RGB_TOG , RGB_HUD , RGB_HUI , XXXXXXX , QK_BOOT
+#define ___________________MAINTENANCE_L2______________ RGB_TOG , RGB_HUD , RGB_HUI , KC_CAPS , QK_BOOT
 #define           _________MAINTENANCE_L3______________           RGB_SAD , RGB_SAI , KC_SCRL , KC_NUM
 #define                               __MAINTENANCE_L4_                               XXXXXXX , XXXXXXX
 
