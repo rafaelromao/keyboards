@@ -312,6 +312,12 @@ void set_oled_text(void) {
     } else if (has_any_smart_case()) {
         oled_write("Smart Case", false);
     } else if (isShift || isCtrl || isAlt || isGui) {
+        if (isShift) {
+            oled_write("Shift ", false);
+        }
+        if (isCtrl) {
+            oled_write("Ctrl ", false);
+        }
         if (isGui) {
             if (is_macos()) {
                 oled_write("Cmd ", false);
@@ -321,12 +327,6 @@ void set_oled_text(void) {
         }
         if (isAlt) {
             oled_write("Alt ", false);
-        }
-        if (isCtrl) {
-            oled_write("Ctrl ", false);
-        }
-        if (isShift) {
-            oled_write("Shift ", false);
         }
     } else {
         set_current_layer_oled();
