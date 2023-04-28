@@ -5,6 +5,7 @@
 leader_t leader = {.isLeading = false};
 
 void process_leader_dictionary(void) {
+#ifndef SAVE_MEMORY
     // Vim - Leader key + V + something
 
     // Vim - Select Whole Block
@@ -20,6 +21,7 @@ void process_leader_dictionary(void) {
 
     // Process secret leader sequences
     process_leader_dictionary_secret();
+#endif
 }
 
 void leader_start_user() {
