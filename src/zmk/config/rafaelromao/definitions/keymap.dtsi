@@ -25,18 +25,18 @@
                 default_layer {
                         label = "ROMAK";
                         bindings = <
-   &mc_escc         &kp F               &kp D               &kp W               &none               &none               &kp L            &kp O            &kp U            &kp BSPC
+   &mc_escc         &kp B               &kp D               &kp W               &none               &none               &kp L            &kp O            &kp U            &kp BSPC
    &lt MACROS R     &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp G               &kp V               &mt RGUI H       &mt RCTRL A      &mt RSHFT E      &lt MACROS I 
-   &none            &mt RALT B          &kp C               &mt LALT P          &kp K               &kp J               &mt LALT M       &td_comma        &th_dot 0 0      &none
+   &none            &mt RALT F          &kp C               &mt LALT P          &kp K               &kp J               &mt LALT M       &td_comma        &th_dot 0 0      &none
                                         &none               &lt NAV BSPC        &lt LOWER SPACE     &msl RAISE ACCENT   &mm_sc           &none
                         >;
                 };
                 capsword_layer {
                         label = "CASE";
                         bindings = <
-   &trans           &kp LS(F)           &kp LS(D)           &kp LS(W)           &none               &none               &kp LS(L)        &kp LS(O)        &kp LS(U)        &trans
+   &trans           &kp LS(B)           &kp LS(D)           &kp LS(W)           &none               &none               &kp LS(L)        &kp LS(O)        &kp LS(U)        &trans
    &lt MACROS LS(R) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(G)           &kp LS(V)           &mt RGUI LS(H)   &mt RCTRL LS(A)  &mt RSHFT LS(E)  &lt MACROS LS(I) 
-   &none            &mt RALT LS(B)      &kp LS(C)           &mt LALT LS(P)      &kp LS(K)           &kp LS(J)           &mt LALT LS(M)   &td_comma        &th_dot 0 0      &none
+   &none            &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(K)           &kp LS(J)           &mt LALT LS(M)   &td_comma        &th_dot 0 0      &none
                                         &trans              &trans              &trans              &msl RAISE CASE_AC  &ht_sc MEDIA 0   &trans
                         >;
                 };
@@ -44,7 +44,7 @@
                         label = "NUMPAD";
                         bindings = <
    &trans           &kp F9              &kp F8              &kp F7              &none               &none               &mc_n7           &mc_n8           &mc_n9           &trans
-   &kp F12          &mt LSHFT F6        &mt LCTRL F5        &mt LGUI F4         &kp F11             &kp COMMA           &th_n4 RGUI 0    &th_n5 RCTRL 0   &th_n6 RSHFT 0   &lt MACROS DOT 
+   &lt MACROS F12   &mt LSHFT F6        &mt LCTRL F5        &mt LGUI F4         &kp F11             &kp COMMA           &th_n4 RGUI 0    &th_n5 RCTRL 0   &th_n6 RSHFT 0   &lt MACROS DOT 
    &none            &mt RALT F3         &kp F2              &mt LALT F1         &kp F10             &tog NUMPAD         &th_n1 LALT 0    &mc_n2           &mc_n3           &none
                                         &trans              &lt NAV BSPC        &trans              &lt RAISE SPACE     &th_n0 MEDIA 0   &trans
                         >;

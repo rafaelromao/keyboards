@@ -8,7 +8,6 @@ uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
         case RAI_SPC:
         case RAI_ACT:
         case NAV_BSP:
-        case NAV_F12:
         case NAV_PRJ:
         case MED_CAS:
         case RAI_TAC:
@@ -28,9 +27,11 @@ uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case QK_MOD_TAP ... QK_MOD_TAP_MAX:
-        case KCR_MAC:
-        case KCI_MAC:
-        case DOT_MAC:
+        case MAC_KCR:
+        case MAC_KCI:
+        case MAC_DOT:
+        case NAV_F12:
+        case NAV_SQO:
             return 300;
         default:
             return TAPPING_TERM;

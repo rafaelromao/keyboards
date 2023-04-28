@@ -135,7 +135,7 @@ enum {
 
 #define LALTT_P LALT_T(KC_P)
 #define LALTT_M LALT_T(KC_M)
-#define RALTT_B RALT_T(KC_B)
+#define RALTT_F RALT_T(KC_F)
 #define AL_F1 LALT_T(KC_F1)
 #define AL_1 LALT_T(KC_1)
 #define AL_F3 RALT_T(KC_F3)
@@ -171,9 +171,9 @@ enum {
 #define RAI_SPC LT(_RAISE, KC_SPC)
 #define RAI_ACT OSL(_ACCENT)
 
-#define KCR_MAC LT(_MACROS, KC_R)
-#define KCI_MAC LT(_MACROS, KC_I)
-#define DOT_MAC LT(_MACROS, KC_DOT)
+#define MAC_KCR LT(_MACROS, KC_R)
+#define MAC_KCI LT(_MACROS, KC_I)
+#define MAC_DOT LT(_MACROS, KC_DOT)
 
 // Layer transitions
 #define MO_MED MO(_MEDIA)

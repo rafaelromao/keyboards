@@ -36,7 +36,7 @@ const uint16_t PROGMEM r_med_ent_combo[] = {KC_ENT, KC_TAB, COMBO_END};
 
 // Accents
 
-const uint16_t PROGMEM l_acc_esc_combo[]  = {KC_SPC, KC_F, KC_X, COMBO_END};
+const uint16_t PROGMEM l_acc_esc_combo[]  = {KC_SPC, KC_B, KC_X, COMBO_END};
 const uint16_t PROGMEM r_acc_ao_combo[]   = {MC_SQ_A, MC_SQ_E, COMBO_END};
 const uint16_t PROGMEM r_acc_cu_combo[]   = {MC_TL_O, MC_SQ_O, COMBO_END};
 const uint16_t PROGMEM r_acc_ca_combo[]   = {MC_TL_A, MC_SQ_A, COMBO_END};
@@ -54,10 +54,10 @@ const uint16_t PROGMEM r_mac_clo_combo[] = {MC_SWLE, MC_SWRI, COMBO_END};
 
 const uint16_t PROGMEM l_rom_z_combo[]   = {LCTLT_S, LGUIT_T, COMBO_END};
 const uint16_t PROGMEM l_rom_q_combo[]   = {LSFTT_N, LCTLT_S, COMBO_END};
-const uint16_t PROGMEM l_rom_esc_combo[] = {LOW_SPC, KC_F, KC_D, COMBO_END};
-const uint16_t PROGMEM l_rom_und_combo[] = {LOW_SPC, RALTT_B, KC_C, COMBO_END};
+const uint16_t PROGMEM l_rom_esc_combo[] = {LOW_SPC, KC_B, KC_D, COMBO_END};
+const uint16_t PROGMEM l_rom_und_combo[] = {LOW_SPC, RALTT_F, KC_C, COMBO_END};
 const uint16_t PROGMEM l_rom_sav_combo[] = {LOW_SPC, LSFTT_N, LCTLT_S, COMBO_END};
-const uint16_t PROGMEM l_rom_usc_combo[] = {RALTT_B, KC_C, COMBO_END};
+const uint16_t PROGMEM l_rom_usc_combo[] = {RALTT_F, KC_C, COMBO_END};
 const uint16_t PROGMEM l_rom_ful_combo[] = {LOW_SPC, LCTLT_S, LGUIT_T, COMBO_END};
 const uint16_t PROGMEM l_rom_fin_combo[] = {LOW_SPC, KC_C, LALTT_P, COMBO_END};
 

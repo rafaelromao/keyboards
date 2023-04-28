@@ -5,23 +5,23 @@
 
 // clang-format off
 
-#define ___________________ROMAK_L1__________           MC_ESCC , KC_F    , KC_D    , KC_W    
-#define ___________________ROMAK_L2____________________ KCR_MAC , LSFTT_N , LCTLT_S , LGUIT_T , KC_G
-#define           _________ROMAK_L3____________________           RALTT_B , KC_C    , LALTT_P , KC_K
+#define ___________________ROMAK_L1__________           MC_ESCC , KC_B    , KC_D    , KC_W    
+#define ___________________ROMAK_L2____________________ MAC_KCR , LSFTT_N , LCTLT_S , LGUIT_T , KC_G
+#define           _________ROMAK_L3____________________           RALTT_F , KC_C    , LALTT_P , KC_K
 #define                               ____ROMAK_L4_____                               NAV_BSP , LOW_SPC
 
 #define           _________ROMAK_R1____________________           KC_L    , KC_O    , KC_U    , KC_BSPC
-#define ___________________ROMAK_R2____________________ KC_V    , RGUIT_H , RCTLT_A , RSFTT_E , KCI_MAC
+#define ___________________ROMAK_R2____________________ KC_V    , RGUIT_H , RCTLT_A , RSFTT_E , MAC_KCI
 #define ___________________ROMAK_R3__________           KC_J    , LALTT_M , TD_COMM , TD_DOT  
 #define ____ROMAK_R4_____                               RAI_ACT , MED_CAS 
 
 #define ___________________NUMPAD_L1_________           _______ , KC_F9   , KC_F8   , KC_F7   
-#define ___________________NUMPAD_L2___________________ KC_F12  , SF_F6   , CT_F5   , GU_F4   , KC_F11
+#define ___________________NUMPAD_L2___________________ NAV_F12 , SF_F6   , CT_F5   , GU_F4   , KC_F11
 #define           _________NUMPAD_L3___________________           AL_F3   , KC_F2   , AL_F1   , KC_F10
-#define                               ____NUMPAD_L4____                               KC_BSPC , KC_SPC
+#define                               ____NUMPAD_L4____                               NAV_BSP , KC_SPC
 
 #define           _________NUMPAD_R1___________________           KC_7    , KC_8    , KC_9    , _______
-#define ___________________NUMPAD_R2___________________ KC_COMM , GU_4    , CT_5    , SF_6    , DOT_MAC
+#define ___________________NUMPAD_R2___________________ KC_COMM , GU_4    , CT_5    , SF_6    , MAC_DOT
 #define ___________________NUMPAD_R3_________           TG_NUM  , AL_1    , KC_2    , KC_3    
 #define ____NUMPAD_R4____                               RAI_SPC , MED_0
 
@@ -51,7 +51,7 @@
 #define                               ____LOWER_L4_____                               _______ , _______
 
 #define           _________LOWER_R1____________________           KC_7    , KC_8    , KC_9    , _______
-#define ___________________LOWER_R2____________________ KC_COMM , KC_4    , KC_5    , KC_6    , DOT_MAC
+#define ___________________LOWER_R2____________________ KC_COMM , KC_4    , KC_5    , KC_6    , MAC_DOT
 #define ___________________LOWER_R3__________           TG_NUM  , KC_1    , KC_2    , KC_3    
 #define ____LOWER_R4_____                               RAI_SPC , MED_0
 
