@@ -38,10 +38,7 @@ const uint16_t PROGMEM r_med_ent_combo[] = {KC_ENT, KC_TAB, COMBO_END};
 
 const uint16_t PROGMEM l_acc_esc_combo[]  = {KC_SPC, KC_B, KC_X, COMBO_END};
 const uint16_t PROGMEM r_acc_ao_combo[]   = {MC_SQ_A, MC_SQ_E, COMBO_END};
-const uint16_t PROGMEM r_acc_cu_combo[]   = {MC_TL_O, MC_SQ_O, COMBO_END};
-const uint16_t PROGMEM r_acc_ca_combo[]   = {MC_TL_A, MC_SQ_A, COMBO_END};
-const uint16_t PROGMEM r_acc_co_combo[]   = {MC_CR_A, MC_CR_O, COMBO_END};
-const uint16_t PROGMEM r_acc_cao_combo[]  = {MC_TL_A, MC_SQ_A, MC_SQ_E, COMBO_END};
+const uint16_t PROGMEM r_acc_cao_combo[]  = {KC_Y, MC_SQ_A, MC_SQ_E, COMBO_END};
 const uint16_t PROGMEM r_acc_oes_combo[]  = {MC_CR_O, MC_CR_E, COMBO_END};
 const uint16_t PROGMEM r_acc_coes_combo[] = {MC_CR_A, MC_CR_O, MC_CR_E, COMBO_END};
 
@@ -84,8 +81,7 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(l_nav_esc_combo, MC_ESCC),  COMBO(l_num_esc_combo, MC_ESCC), COMBO(l_nav_ent_combo, KC_ENT),
     COMBO(l_nav_esv_combo, MC_ESAV),  COMBO(l_num_sav_combo, MC_SAVE), COMBO(r_num_bsp_combo, KC_BSPC),
     COMBO(r_num_ent_combo, KC_ENT),   COMBO(l_low_par_combo, TD_PARN), COMBO(r_low_ent_combo, KC_ENT),
-    COMBO(r_acc_ao_combo, MC_AO),     COMBO(r_acc_cu_combo, MC_CU),    COMBO(r_acc_ca_combo, MC_CA),
-    COMBO(r_acc_co_combo, MC_CO),     COMBO(r_acc_cao_combo, MC_CAO),  COMBO(r_acc_oes_combo, MC_OES),
+    COMBO(r_acc_ao_combo, MC_AO),     COMBO(r_acc_cao_combo, MC_CAO),  COMBO(r_acc_oes_combo, MC_OES),
     COMBO(r_acc_coes_combo, MC_COES), COMBO(r_mac_z0r_combo, MC_Z0R),  COMBO(r_mac_clo_combo, MC_CLOS),
     COMBO(r_rom_cop_combo, MC_COPY),  COMBO(r_rom_sco_combo, TD_SCLE), COMBO(l_rom_usc_combo, MC_UNDS),
     COMBO(l_rom_ful_combo, MC_FULL),  COMBO(r_rom_p_combo, KC_P),      COMBO(r_rom_pas_combo, MC_PAST),

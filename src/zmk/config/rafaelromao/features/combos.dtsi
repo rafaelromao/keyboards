@@ -55,9 +55,6 @@
         COMBO(cb_d,             RHI RHM RHR, &kp D,              ROMAK CASE)
 
         COMBO(cb_ao,            RHM RHR,     &mc_ao,             ACCENT)
-        COMBO(cb_cu,            RTI RTM,     &mc_cu,             ACCENT)
-        COMBO(cb_ca,            RHI RHM,     &mc_co,             ACCENT)
-        COMBO(cb_co,            RBI RBM,     &mc_ca,             ACCENT)
         COMBO(cb_cao,           RHI RHM RHR, &mc_cao,            ACCENT)
         COMBO(cb_oes,           RBM RBR,     &mc_oes,            ACCENT)
         COMBO(cb_coes,          RBI RBM RBR, &mc_coes,           ACCENT)

@@ -53,8 +53,8 @@
                         label = "ACCENT";
                         bindings = <
    &trans           &trans              &key_repeat         &td_tilde           &none               &none               &ac_otil         &ac_oacu         &ac_uacu         &trans
-   &kp SQT          &mc_qu              &kp X               &kp Z               &kp GRAVE           &kp Y               &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
-   &none            &kp Q               &mc_ced             &trans              &kp CARET           &ac_agrv            &ac_acir         &ac_ocir         &ac_ecir         &none
+   &kp SQT          &mc_qu              &kp X               &kp Z               &kp GRAVE           &ac_atil            &kp Y            &ac_aacu         &ac_eacu         &ac_iacu 
+   &none            &kp Q               &mc_ced             &trans              &kp CARET           &ac_otil            &ac_acir         &ac_ocir         &ac_ecir         &none
                                         &trans              &kp BSPC            &kp SPACE           &tog ACCENT_F       &trans           &trans
                         >;
                 };
@@ -62,8 +62,8 @@
                         label = "ACCENT";
                         bindings = <
    &trans           &trans              &key_repeat         &td_tilde           &none               &none               &ac_otil         &ac_oacu         &ac_uacu         &trans
-   &kp SQT          &mc_qu              &kp X               &kp Z               &kp GRAVE           &kp Y               &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
-   &none            &kp Q               &mc_ced             &trans              &kp CARET           &ac_agrv            &ac_acir         &ac_ocir         &ac_ecir         &none
+   &kp SQT          &mc_qu              &kp X               &kp Z               &kp GRAVE           &ac_atil            &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
+   &none            &kp Q               &mc_ced             &trans              &kp CARET           &ac_otil            &ac_acir         &ac_ocir         &ac_ecir         &none
                                         &trans              &kp BSPC            &kp SPACE           &tog ACCENT_F       &trans           &trans
                         >;
                 };
@@ -71,8 +71,8 @@
                         label = "CASE_AC";
                         bindings = <
    &trans           &trans             &key_repeat          &td_tilde           &none               &none               &ac_otil_c       &ac_oacu_c       &ac_uacu_c       &trans
-   &kp SQT          &mc_qu_c           &kp LS(X)            &kp LS(Z)           &kp GRAVE           &kp LS(Y)           &ac_atil_c       &ac_aacu_c       &ac_eacu_c       &ac_iacu_c 
-   &none            &kp LS(Q)          &mc_ced_c            &trans              &kp CARET           &ac_agrv_c          &ac_acir_c       &ac_ocir_c       &ac_ecir_c       &none
+   &kp SQT          &mc_qu_c           &kp LS(X)            &kp LS(Z)           &kp GRAVE           &ac_atil_c          &ac_atil_c       &ac_aacu_c       &ac_eacu_c       &ac_iacu_c 
+   &none            &kp LS(Q)          &mc_ced_c            &trans              &kp CARET           &ac_otil_c          &ac_acir_c       &ac_ocir_c       &ac_ecir_c       &none
                                        &trans               &kp BSPC            &kp SPACE           &tog ACCENT_F       &trans           &trans
                         >;
                 };

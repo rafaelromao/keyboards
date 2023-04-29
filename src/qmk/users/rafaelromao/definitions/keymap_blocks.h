@@ -30,9 +30,9 @@
 #define           _________ACCENT_L3___________________           KC_Q    , MC_SQ_C , _______ , KC_CIRC
 #define                               ____ACCENT_L4____                               KC_BSPC , KC_SPC
 
-#define           _________ACCENT_R1___________________           MC_TL_O , MC_SQ_O , MC_SQ_U , _______
-#define ___________________ACCENT_R2___________________ KC_Y    , MC_TL_A , MC_SQ_A , MC_SQ_E , MC_SQ_I
-#define ___________________ACCENT_R3_________           MC_GV_A , MC_CR_A , MC_CR_O , MC_CR_E 
+#define           _________ACCENT_R1___________________           MC_GV_A , MC_SQ_O , MC_SQ_U , _______
+#define ___________________ACCENT_R2___________________ MC_TL_A , KC_Y    , MC_SQ_A , MC_SQ_E , MC_SQ_I
+#define ___________________ACCENT_R3_________           MC_TL_O , MC_CR_A , MC_CR_O , MC_CR_E 
 #define ____ACCENT_R4____                               RAI_TAC , _______
 
 #define ___________________MACROS_L1_________           _______ , MC_ESC  , MC_QUIK , MC_AUCO 
