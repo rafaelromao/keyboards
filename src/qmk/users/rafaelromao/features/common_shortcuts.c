@@ -61,6 +61,19 @@ process_record_result_t process_common_shortcuts(uint16_t keycode, keyrecord_t *
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
+            // Selec All + Copy
+
+        case MC_SCOP:
+            clear_locked_and_oneshot_mods();
+            if (should_send_ctrl(isMacOS, isOneShotShift)) {
+                SEND_STRING(SS_LCTL("a"));
+                SEND_STRING(SS_LCTL("c"));
+            } else {
+                SEND_STRING(SS_LGUI("a"));
+                SEND_STRING(SS_LGUI("c"));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
             // Paste
 
         case MC_PAST:
@@ -68,6 +81,19 @@ process_record_result_t process_common_shortcuts(uint16_t keycode, keyrecord_t *
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("v"));
             } else {
+                SEND_STRING(SS_LGUI("v"));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Selec All + Paste
+
+        case MC_SPAS:
+            clear_locked_and_oneshot_mods();
+            if (should_send_ctrl(isMacOS, isOneShotShift)) {
+                SEND_STRING(SS_LCTL("a"));
+                SEND_STRING(SS_LCTL("v"));
+            } else {
+                SEND_STRING(SS_LGUI("a"));
                 SEND_STRING(SS_LGUI("v"));
             }
             return PROCESS_RECORD_RETURN_FALSE;
