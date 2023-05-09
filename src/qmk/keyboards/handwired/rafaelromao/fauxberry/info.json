@@ -61,12 +61,12 @@
             {
                 "pin_a": "GP4",
                 "pin_b": "GP5",
-                "resolution": 1
+                "resolution": 2
             },
             {
                 "pin_a": "GP28",
                 "pin_b": "GP29",
-                "resolution": 1
+                "resolution": 2
             }
         ]
     },
