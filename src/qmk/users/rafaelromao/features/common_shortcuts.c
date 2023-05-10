@@ -13,7 +13,7 @@ process_record_result_t process_common_shortcuts(uint16_t keycode, keyrecord_t *
 
     bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     bool isOneShotShift       = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
-
+    bool isShifted            = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
     bool isMacOS = is_macos();
 
     switch (keycode) {
@@ -89,12 +89,27 @@ process_record_result_t process_common_shortcuts(uint16_t keycode, keyrecord_t *
 
         case MC_SPAS:
             clear_locked_and_oneshot_mods();
+            if (isShifted) {
+                clear_shift();
+            }
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("a"));
+                if (isShifted) {
+                    register_mods(MOD_LSFT);
+                }
                 SEND_STRING(SS_LCTL("v"));
+                if (isShifted) {
+                    unregister_mods(MOD_LSFT);
+                }
             } else {
                 SEND_STRING(SS_LGUI("a"));
+                if (isShifted) {
+                    register_mods(MOD_LSFT);
+                }
                 SEND_STRING(SS_LGUI("v"));
+                if (isShifted) {
+                    unregister_mods(MOD_LSFT);
+                }
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
