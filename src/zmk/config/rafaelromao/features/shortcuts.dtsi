@@ -63,6 +63,7 @@
         SHORTCUT(mc_save,               &macro_tap &kp LG(S))
         SHORTCUT(mc_save_esc,           &macro_tap &kp LG(S) &kp ESC)
         SHORTCUT(mc_o_esc,              &macro_tap &kp O &kp ESC)
+        SHORTCUT(mc_sft_o_esc,          &macro_tap &kp LS(O) &kp ESC)
         SHORTCUT(mc_shift_tab,          &macro_tap &kp LS(TAB))
 
         // Media

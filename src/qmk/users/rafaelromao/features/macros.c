@@ -63,6 +63,15 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
+            // LShift(O) + ESC
+
+        case MC_SOES:
+            register_mods(MOD_MASK_SHIFT);
+            tap_code(KC_O);
+            unregister_mods(MOD_MASK_SHIFT);
+            tap_code(KC_ESC);
+            return PROCESS_RECORD_RETURN_FALSE;
+
             // Inverted underscore and minus
 
         case MC_UNDS:
