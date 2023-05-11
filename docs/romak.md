@@ -41,7 +41,7 @@ The [Colemak mod-DH analysis tool](https://colemakmods.github.io/mod-dh/analyze.
 - English text corpus only.
 - Consider the 34 key version of Romak, with q, x, z and y in the base layer.
 
-The overall finger usage and SFB rate look better in Romak than in Colemak.
+The SFB rate is highly impacted by the position of y, in the index finger, but in practice, with y below h in the accents layer, it shows good performance even for fast typing.
 
 <p float="left">
   <img src="../img/sfbs_en_romak.png" width="450" />
