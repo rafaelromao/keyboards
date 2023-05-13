@@ -573,6 +573,21 @@ void td_gt(tap_dance_state_t *state, void *user_data) {
     }
 }
 
+void td_sarr(tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            process_macros(MC_SAR, NULL);
+            break;
+        case TD_SINGLE_HOLD:
+            tap_code(KC_END);
+            process_macros(MC_SAR, NULL);
+            break;
+        default:
+            break;
+    }
+}
+
 // clang-format off
 
 // Tap dance declarations
@@ -603,6 +618,7 @@ tap_dance_action_t tap_dance_actions[] = {
     [LET_ELT] = ACTION_TAP_DANCE_FN(td_lt),
     [GRT_EGT] = ACTION_TAP_DANCE_FN(td_gt),
     [SLS_BSL] = ACTION_TAP_DANCE_FN(td_slash),
+    [SAR_ESA] = ACTION_TAP_DANCE_FN(td_sarr),
     [DOT_DOT] = ACTION_TAP_DANCE_FN(td_dot)};
 
 // clang-format on

@@ -94,7 +94,7 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(r_rom_spa_combo, MC_SPAS), COMBO(l_rom_sav_combo, MC_SAVE),   COMBO(l_rom_esc_combo, MC_ESCC),
     COMBO(l_rom_und_combo, MC_UNDO), COMBO(r_rom_sce_combo, MC_SENT),   COMBO(l_rom_fin_combo, MC_FIND),
     COMBO(r_rom_oes_combo, MC_OESC), COMBO(r_rom_soe_combo, MC_SOES),   COMBO(r_rom_bsp_combo, KC_BSPC),
-    COMBO(r_rom_ent_combo, KC_ENT),  COMBO(r_rom_sal_combo, MC_SELC),   COMBO(r_rai_sar_combo, MC_SAR),
+    COMBO(r_rom_ent_combo, KC_ENT),  COMBO(r_rom_sal_combo, MC_SELC),   COMBO(r_rai_sar_combo, TD_SARR),
     COMBO(r_rai_deq_combo, MC_DEQ),  COMBO(r_rai_neq_combo, MC_NEQ),    COMBO(r_rai_ltgt_combo, MC_LTGT),
     COMBO(r_rai_lt_combo, TD_LT),    COMBO(r_rai_gt_combo, TD_GT),      COMBO(r_rai_cur_combo, MC_CUR),
     COMBO(r_med_ent_combo, TD_EENT), COMBO(secret_1_combo, MC_SECRET_1)};
