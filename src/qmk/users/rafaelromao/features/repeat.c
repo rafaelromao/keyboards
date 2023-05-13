@@ -4,10 +4,13 @@
 
 // Credits: Precondition
 
+#ifndef SAVE_MEMORY
 static uint16_t last_keycode  = KC_NO;
 static uint8_t  last_modifier = 0;
+#endif
 
 process_record_result_t process_repeat_key(uint16_t keycode, const keyrecord_t *record) {
+#ifndef SAVE_MEMORY
     if (keycode != REPEAT) {
         uint16_t mod_state         = get_mods();
         uint16_t oneshot_mod_state = get_oneshot_mods();
@@ -46,5 +49,6 @@ process_record_result_t process_repeat_key(uint16_t keycode, const keyrecord_t *
             unregister_mods(last_modifier);
         }
     }
+#endif
     return PROCESS_RECORD_CONTINUE;
 }
