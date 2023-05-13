@@ -18,6 +18,7 @@ enum {
     BRT_OBR, 
     BRT_CBR, 
     DQU_FIN, 
+    SQU_FIN, 
     NOT_SWI, 
     AND_EAN, 
     REC_MAC, 
@@ -50,6 +51,7 @@ enum {
 #define TD_OBR TD(BRT_OBR)
 #define TD_CBR TD(BRT_CBR)
 #define TD_DQUO TD(DQU_FIN)
+#define TD_SQUO TD(SQU_FIN)
 #define TD_NOT TD(NOT_SWI)
 #define TD_AND TD(AND_EAN)
 #define TD_MACR TD(REC_MAC)
@@ -158,7 +160,7 @@ enum {
 
 #define NAV_BSP LT(_NAVIGATION, KC_BSPC)
 #define NAV_F12 LT(_NAVIGATION, KC_F12)
-#define NAV_SQO LT(_NAVIGATION, MC_SQUO)
+#define NAV_HSH LT(_NAVIGATION, KC_HASH)
 #define NAV_PRJ LT(_NAVIGATION, MC_PROJ)
 
 #define MED_CAS LT(_MEDIA, TG_CASE)

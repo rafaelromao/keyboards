@@ -151,7 +151,10 @@
         TAPDANCE_SYMBOL(td_dqo,    &th_dqo 0 0, &mc_double_dqo, &none)
                                  
         SYMBOL(mc_sqo,             &kp SQT &kp SPACE)
-        LAYERTAP_SYMBOL(th_sqo,    &mc_sqo)
+        SYMBOL(mc_end_sqo,         &kp END &mc_sqo)
+        SYMBOL(mc_double_sqo,      &mc_sqo &mc_sqo &kp LEFT)
+        TAPHOLD_SYMBOL(th_sqo,     &mc_sqo, &mc_end_sqo)
+        TAPDANCE_SYMBOL(td_sqo,    &th_sqo 0 0, &mc_double_sqo, &none)
                                  
         SYMBOL(mc_lbkt,            &kp LBKT)
         SYMBOL(mc_end_lbkt,        &kp END &kp LBKT)
