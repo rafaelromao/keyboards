@@ -26,7 +26,7 @@ Parts:
 - [MX Hotswap sockets](https://pt.aliexpress.com/item/1005003873653184.html).
 - [MX Hotswap socket holders](https://www.thingiverse.com/thing:3117549).
 - [Zipf Kit](https://www.thingiverse.com/thing:5364986).
-- [OLED Screen](https://youtu.be/NAUxTR4vGys) 
+- [OLED Screen](https://youtu.be/NAUxTR4vGys). 
 
 ### QMK
 
