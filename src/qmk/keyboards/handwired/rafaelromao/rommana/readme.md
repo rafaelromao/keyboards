@@ -21,7 +21,7 @@ Parts:
 - [24 AWG Wires](https://aliexpress.com/item/32904950428.html).
 - [Dupont cables](https://aliexpress.com/item/1005004155181609.html).
 - [3D printed handwired hotswap sockets](https://www.printables.com/model/158559-handwire-hot-swap-socket-for-mechanical-keyboards).
-- [Flat cables](https://www.aliexpress.com/item/1005003277577555.html)
+- [Flat cables](https://www.aliexpress.com/item/1005003277577555.html).
 
 ### QMK
 
