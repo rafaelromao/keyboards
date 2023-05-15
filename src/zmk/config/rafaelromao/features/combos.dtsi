@@ -58,6 +58,7 @@
         COMBO(cb_x,             RHM RHR,     &kp X,              ROMAK CASE)
         COMBO(cb_d,             RHI RHM RHR, &kp D,              ROMAK CASE)
 
+        COMBO(cb_zz,            LHM LHI,     &mc_zz,             ACCENT)
         COMBO(cb_ao,            RHM RHR,     &mc_ao,             ACCENT)
         COMBO(cb_cao,           RHI RHM RHR, &mc_cao,            ACCENT)
         COMBO(cb_oes,           RBM RBR,     &mc_oes,            ACCENT)

@@ -83,6 +83,7 @@
         MACRO_KEY(mc_ced,   &macro_press &kp LALT &macro_tap &kp C &macro_release &kp LALT)
         MACRO_KEY(mc_ced_c, &macro_press &kp LALT &macro_tap &kp LS(C) &macro_release &kp LALT)
         MACRO_KEY(mc_ao,    &macro_tap &ac_atil &kp O)
+        MACRO_KEY(mc_zz,    &macro_tap &kp Z &kp Z)
         MACRO_KEY(mc_oes,   &macro_tap &ac_otil &kp E &kp S)
         MACRO_KEY(mc_qu,    &macro_tap &kp Q &macro_wait_time 10 &macro_tap &kp U)
         MACRO_KEY(mc_qu_c,  &macro_press &kp LSHFT &macro_tap &kp Q &macro_wait_time 10 &macro_tap &kp U &macro_release &kp LSHFT)
