@@ -27,7 +27,7 @@
                         bindings = <
    &mc_escc         &kp B               &kp D               &kp W               &none               &none               &kp L            &kp O            &kp U            &kp BSPC
    &lt MACROS R     &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp G               &kp V               &mt RGUI H       &mt RCTRL A      &mt RSHFT E      &lt MACROS I 
-   &none            &mt RALT F          &kp C               &mt LALT P          &kp K               &kp J               &mt LALT M       &td_comma        &th_dot 0 0      &none
+   &none            &mt RALT F          &kp C               &mt LALT P          &kp Z               &kp J               &mt LALT M       &td_comma        &th_dot 0 0      &none
                                         &none               &lt NAV BSPC        &lt LOWER SPACE     &msl RAISE ACCENT   &mm_sc           &none
                         >;
                 };
@@ -36,7 +36,7 @@
                         bindings = <
    &trans           &kp LS(B)           &kp LS(D)           &kp LS(W)           &none               &none               &kp LS(L)        &kp LS(O)        &kp LS(U)        &trans
    &lt MACROS LS(R) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(G)           &kp LS(V)           &mt RGUI LS(H)   &mt RCTRL LS(A)  &mt RSHFT LS(E)  &lt MACROS LS(I) 
-   &none            &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(K)           &kp LS(J)           &mt LALT LS(M)   &td_comma        &th_dot 0 0      &none
+   &none            &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(Z)           &kp LS(J)           &mt LALT LS(M)   &td_comma        &th_dot 0 0      &none
                                         &trans              &trans              &trans              &msl RAISE CASE_AC  &ht_sc MEDIA 0   &trans
                         >;
                 };
@@ -53,7 +53,7 @@
                         label = "ACCENT";
                         bindings = <
    &trans           &trans              &key_repeat         &td_tilde           &none               &none               &ac_agrv         &ac_oacu         &ac_uacu         &trans
-   &trans           &mc_qu              &kp X               &kp Z               &kp SQT           &ac_atil            &kp Y            &ac_aacu         &ac_eacu         &ac_iacu 
+   &trans           &mc_qu              &kp X               &kp K               &kp SQT             &ac_atil            &kp Y            &ac_aacu         &ac_eacu         &ac_iacu 
    &none            &kp Q               &mc_ced             &kp CARET           &kp GRAVE           &ac_otil            &ac_acir         &ac_ocir         &ac_ecir         &none
                                         &trans              &kp BSPC            &kp SPACE           &tog ACCENT_F       &trans           &trans
                         >;
@@ -62,7 +62,7 @@
                         label = "ACCENT";
                         bindings = <
    &trans           &trans              &key_repeat         &td_tilde           &none               &none               &ac_agrv         &ac_oacu         &ac_uacu         &trans
-   &trans           &mc_qu              &kp X               &kp Z               &kp SQT           &ac_atil            &kp Y         &ac_aacu         &ac_eacu         &ac_iacu 
+   &trans           &mc_qu              &kp X               &kp K               &kp SQT             &ac_atil            &kp Y            &ac_aacu         &ac_eacu         &ac_iacu 
    &none            &kp Q               &mc_ced             &kp CARET           &kp GRAVE           &ac_otil            &ac_acir         &ac_ocir         &ac_ecir         &none
                                         &trans              &kp BSPC            &kp SPACE           &tog ACCENT_F       &trans           &trans
                         >;
@@ -71,7 +71,7 @@
                         label = "CASE_AC";
                         bindings = <
    &trans           &trans             &key_repeat          &td_tilde           &none               &none               &ac_agrv_c       &ac_oacu_c       &ac_uacu_c       &trans
-   &trans           &mc_qu_c           &kp LS(X)            &kp LS(Z)           &kp SQT           &ac_atil_c          &kp LS(Y)        &ac_aacu_c       &ac_eacu_c       &ac_iacu_c 
+   &trans           &mc_qu_c           &kp LS(X)            &kp LS(K)           &kp SQT             &ac_atil_c          &kp LS(Y)        &ac_aacu_c       &ac_eacu_c       &ac_iacu_c 
    &none            &kp LS(Q)          &mc_ced_c            &kp CARET           &kp GRAVE           &ac_otil_c          &ac_acir_c       &ac_ocir_c       &ac_ecir_c       &none
                                        &trans               &kp BSPC            &kp SPACE           &tog ACCENT_F       &trans           &trans
                         >;
@@ -108,7 +108,7 @@
                         bindings = <
    &trans           &kp ESC            &mc_save             &mc_meh_w           &none               &none               &mc_meh_l      &kp PAGE_DOWN      &kp PAGE_UP     &trans
    &mc_meh_r        &sk LSHIFT         &sk LCTRL            &sk LGUI            &mc_meh_g           &tog NAV_F          &kp LEFT       &kp DOWN           &kp UP          &kp RIGHT
-   &none            &sk RALT           &mc_meh_c            &sk LALT            &mc_meh_k           &kp INS             &kp DEL        &kp HOME           &kp END         &none
+   &none            &sk RALT           &mc_meh_c            &sk LALT            &mc_meh_z           &kp INS             &kp DEL        &kp HOME           &kp END         &none
                                        &trans               &trans              &trans              &trans              &trans         &trans
                         >;
                 };
@@ -117,7 +117,7 @@
                         bindings = <
    &trans           &kp ESC            &mc_save             &mc_hyp_w           &none               &none               &mc_hyp_l      &kp ENTER          &kp TAB         &trans
    &mc_hyp_r        &kp LSHIFT         &kp LCTRL            &kp LGUI            &mc_hyp_g           &tog NAV_F          &mc_hyp_h      &kp C_VOL_DN       &kp C_VOL_UP    &kp C_MUTE
-   &none            &kp RALT           &mc_hyp_c            &kp LALT            &mc_hyp_k           &tog NUMPAD         &kp C_PP       &kp C_PREV         &kp C_NEXT      &none
+   &none            &kp RALT           &mc_hyp_c            &kp LALT            &mc_hyp_z           &tog NUMPAD         &kp C_PP       &kp C_PREV         &kp C_NEXT      &none
                                        &trans               &mo MAINT           &trans              &trans              &trans         &trans
                         >;
                 };
@@ -126,7 +126,7 @@
                         bindings = <
    &trans           &kp ESC            &mc_save             &mc_meh_w           &none               &none               &mc_meh_l      &kp PAGE_DOWN      &kp PAGE_UP     &trans
    &mc_meh_r        &sk LSHIFT         &sk LCTRL            &sk LGUI            &mc_meh_g           &tog NAV_F          &kp LEFT       &kp DOWN           &kp UP          &kp RIGHT
-   &none            &sk RALT           &mc_meh_c            &sk LALT            &mc_meh_k           &kp INS             &kp DEL        &kp HOME           &kp END         &none
+   &none            &sk RALT           &mc_meh_c            &sk LALT            &mc_meh_z           &kp INS             &kp DEL        &kp HOME           &kp END         &none
                                        &trans               &trans              &trans              &trans              &mo MAINT      &trans
                         >;
                 };

@@ -7,7 +7,7 @@
 
 #define ___________________ROMAK_L1__________           MC_ESCC , KC_B    , KC_D    , KC_W    
 #define ___________________ROMAK_L2____________________ MAC_KCR , LSFTT_N , LCTLT_S , LGUIT_T , KC_G
-#define           _________ROMAK_L3____________________           RALTT_F , KC_C    , LALTT_P , KC_K
+#define           _________ROMAK_L3____________________           RALTT_F , KC_C    , LALTT_P , KC_Z
 #define                               ____ROMAK_L4_____                               NAV_BSP , LOW_SPC
 
 #define           _________ROMAK_R1____________________           KC_L    , KC_O    , KC_U    , KC_BSPC
@@ -26,7 +26,7 @@
 #define ____NUMPAD_R4____                               RAI_SPC , MED_0
 
 #define ___________________ACCENT_L1_________           _______ , _______ , REPEAT  , KC_TILD
-#define ___________________ACCENT_L2___________________ _______ , MC_QU   , KC_X    , KC_Z    , KC_QUOT
+#define ___________________ACCENT_L2___________________ _______ , MC_QU   , KC_X    , KC_K    , KC_QUOT
 #define           _________ACCENT_L3___________________           KC_Q    , MC_SQ_C , KC_CIRC , KC_GRV 
 #define                               ____ACCENT_L4____                               KC_BSPC , KC_SPC
 
@@ -67,7 +67,7 @@
 
 #define ___________________MEDIA_L1__________           _______ , MC_ESC  , MC_SAVE , HYPR_W  
 #define ___________________MEDIA_L2____________________ HYPR_R  , KC_LSFT , KC_LCTL , KC_LGUI , HYPR_G 
-#define           _________MEDIA_L3____________________           KC_RALT , HYPR_C  , KC_LALT , HYPR_K 
+#define           _________MEDIA_L3____________________           KC_RALT , HYPR_C  , KC_LALT , HYPR_Z 
 #define                               ____MEDIA_L4_____                               MAI_BSP , _______
 
 #define           _________MEDIA_R1____________________           HYPR_L  , KC_ENT  , KC_TAB  , _______
@@ -77,7 +77,7 @@
 
 #define ___________________NAVIGATION_L1_____           _______ , MC_ESC  , MC_SAVE , MEH_W 
 #define ___________________NAVIGATION_L2_______________ MEH_R   , OS_LSFT , OS_LCTL , OS_LGUI , MEH_G
-#define           _________NAVIGATION_L3_______________           OS_RALT , MEH_C   , OS_LALT , MEH_K
+#define           _________NAVIGATION_L3_______________           OS_RALT , MEH_C   , OS_LALT , MEH_Z
 #define                               __NAVIGATION_L4__                               _______ , _______
 
 #define           _________NAVIGATION_R1_______________           MEH_L   , KC_PGDN , KC_PGUP , _______

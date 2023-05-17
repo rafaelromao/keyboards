@@ -114,7 +114,7 @@ enum {
     MC_GV_A, MC_CR_A, MC_TL_A, MC_SQ_A,
     MC_SQ_U, MC_CR_O, MC_SQ_O, MC_SQ_I,
     MC_CR_E, MC_TL_O, MC_SQ_C, MC_SQ_E,
-    MC_AO, MC_CAO, MC_OES, MC_COES, MC_QU, MC_ZZ,
+    MC_AO, MC_CAO, MC_OES, MC_COES, MC_QU, 
     
     // End macros used to write text
     STR_MACRO_END,
@@ -191,13 +191,13 @@ enum {
 #define HYPR_R HYPR(KC_R)
 #define HYPR_W HYPR(KC_W)
 #define HYPR_G HYPR(KC_G)
-#define HYPR_K HYPR(KC_K)
+#define HYPR_Z HYPR(KC_Z)
 #define HYPR_C HYPR(KC_C)
 #define HYPR_L HYPR(KC_L)
 #define MEH_R  MEH(KC_R)
 #define MEH_W  MEH(KC_W)
 #define MEH_G  MEH(KC_G)
-#define MEH_K  MEH(KC_K)
+#define MEH_Z  MEH(KC_Z)
 #define MEH_C  MEH(KC_C)
 #define MEH_L  MEH(KC_L)
 
