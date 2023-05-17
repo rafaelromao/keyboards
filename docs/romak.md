@@ -9,7 +9,7 @@ The number of alpha keys and the number of thumb keys can vary, from a total of 
 ![img](../img/romak.png)
 
 - The name Romak is a combination of my last name, **Rom**ão, and Dvor**ak**'s name.
-- Romak assumes the right hand as dominant and puts all vowels plus H, L, J and V on that side. As well as Y in the accents layer.
+- Romak assumes the right hand as dominant and puts all vowels plus H, L, M, J and V on that side. As well as Y in the accents layer.
 - Romak is also designed to favor hand alternation more than rolls.
 
 ## Romak vs Colemak-DH
