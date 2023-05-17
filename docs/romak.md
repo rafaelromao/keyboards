@@ -9,7 +9,7 @@ The number of alpha keys and the number of thumb keys can vary, from a total of 
 ![img](../img/romak.png)
 
 - The name Romak is a combination of my last name, **Rom**ão, and Dvor**ak**'s name.
-- Romak assumes the right hand as dominant and puts all vowels plus H on that side.
+- Romak assumes the right hand as dominant and puts all vowels plus H, L, J and V on that side. As well as Y in the accents layer.
 - Romak is also designed to favor hand alternation more than rolls.
 
 ## Romak vs Colemak-DH
@@ -39,7 +39,7 @@ In Romak, most fingers in the left hand will take less load than the equivalent 
 ### Detailed Finger Analysis
 The [Colemak mod-DH analysis tool](https://colemakmods.github.io/mod-dh/analyze.html) was also used to compare Romak against Colemak-DH.
 - English text corpus only.
-- Consider the 34 key version of Romak, with q, x, z and y in the base layer.
+- Consider the 34 key version of Romak, with q, x, k and y in the base layer.
 
 The SFB rate is highly impacted by the position of y, in the index finger, but in practice, with y below h in the accents layer, it shows good performance even for fast typing.
 
