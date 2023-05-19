@@ -1,7 +1,7 @@
 ## FauxBerry
 ### A handwired unibody split keyboard.
 
-![img](../../../../../../img/fauxberry.jpeg)
+![img](../../../../../../img/fauxberry.jpg)
 
 ### Build Details
 
