@@ -9,8 +9,8 @@ typedef enum {
     _LOWER,
     _RAISE,
     _FIXED_NAV,
-    _NAVIGATION,
     _MEDIA,
+    _NAVIGATION,
     _LOCK,
     _MAINTENANCE
 } layers_t;

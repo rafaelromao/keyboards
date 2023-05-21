@@ -71,7 +71,7 @@
 #define                               ____MEDIA_L4_____                               MAI_BSP , _______
 
 #define           _________MEDIA_R1____________________           HYPR_L  , KC_ENT  , KC_TAB  , _______
-#define ___________________MEDIA_R2____________________ TG_NAV  , HYPR_H  , KC_VOLD , KC_VOLU , KC_MUTE
+#define ___________________MEDIA_R2____________________ TG_NAV  , HYPR_H  , KC_VOLD , KC_VOLU , NAV_MUT
 #define ___________________MEDIA_R3__________           TG_NUM  , KC_MPLY , KC_MPRV , KC_MNXT 
 #define ____MEDIA_R4_____                               _______ , _______
 
