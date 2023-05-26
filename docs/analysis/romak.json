@@ -156,10 +156,10 @@
             "numpad": -1
         },
         {
-            "primary": 100,
+            "primary": 109,
             "finger": 3,
             "id": 15,
-            "shift": 68,
+            "shift": 77,
             "altGr": -1,
             "shiftAltGr": -1,
             "numpad": -1
@@ -196,8 +196,8 @@
             "finger": 7,
             "id": 19,
             "shift": 76,
-            "altGr": 224,
-            "shiftAltGr": 192,
+            "altGr": 245,
+            "shiftAltGr": 213,
             "numpad": -1
         },
         {
@@ -246,12 +246,12 @@
             "numpad": -1
         },
         {
-            "primary": 114,
+            "primary": 100,
             "finger": 1,
             "id": 25,
-            "shift": 82,
-            "altGr": -1,
-            "shiftAltGr": -1,
+            "shift": 68,
+            "altGr": 121,
+            "shiftAltGr": 89,
             "numpad": -1
         },
         {
@@ -295,17 +295,17 @@
             "finger": 7,
             "id": 30,
             "shift": 86,
-            "altGr": 227,
-            "shiftAltGr": 195,
+            "altGr": 224,
+            "shiftAltGr": 192,
             "numpad": -1
         },
         {
-            "primary": 104,
+            "primary": 114,
             "finger": 7,
             "id": 31,
-            "shift": 72,
-            "altGr": 121,
-            "shiftAltGr": 89,
+            "shift": 82,
+            "altGr": 227,
+            "shiftAltGr": 195,
             "numpad": -1
         },
         {
@@ -420,15 +420,15 @@
             "finger": 7,
             "id": 44,
             "shift": 74,
-            "altGr": 245,
-            "shiftAltGr": 213,
+            "altGr": -1,
+            "shiftAltGr": -1,
             "numpad": -1
         },
         {
-            "primary": 109,
+            "primary": 104,
             "finger": 7,
             "id": 45,
-            "shift": 77,
+            "shift": 72,
             "altGr": 226,
             "shiftAltGr": 194,
             "numpad": -1

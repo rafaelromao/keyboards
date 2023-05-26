@@ -25,18 +25,18 @@
                 default_layer {
                         label = "ROMAK";
                         bindings = <
-   &mc_escc         &kp B               &kp D               &kp W               &none               &none               &kp L            &kp O            &kp U            &kp BSPC
-   &lt MACROS R     &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp G               &kp V               &mt RGUI H       &mt RCTRL A      &mt RSHFT E      &lt MACROS I 
-   &none            &mt RALT F          &kp C               &mt LALT P          &kp Z               &kp J               &mt LALT M       &td_comma        &th_dot 0 0      &none
+   &mc_escc         &kp B               &kp M               &kp W               &none               &none               &kp L            &kp O            &kp U            &kp BSPC
+   &lt MACROS D     &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp G               &kp V               &mt RGUI R       &mt RCTRL A      &mt RSHFT E      &lt MACROS I 
+   &none            &mt RALT F          &kp C               &mt LALT P          &kp Z               &kp J               &mt LALT H       &td_comma        &th_dot 0 0      &none
                                         &none               &lt NAV BSPC        &lt LOWER SPACE     &msl RAISE ACCENT   &mm_sc           &none
                         >;
                 };
                 capsword_layer {
                         label = "CASE";
                         bindings = <
-   &trans           &kp LS(B)           &kp LS(D)           &kp LS(W)           &none               &none               &kp LS(L)        &kp LS(O)        &kp LS(U)        &trans
-   &lt MACROS LS(R) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(G)           &kp LS(V)           &mt RGUI LS(H)   &mt RCTRL LS(A)  &mt RSHFT LS(E)  &lt MACROS LS(I) 
-   &none            &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(Z)           &kp LS(J)           &mt LALT LS(M)   &td_comma        &th_dot 0 0      &none
+   &trans           &kp LS(B)           &kp LS(M)           &kp LS(W)           &none               &none               &kp LS(L)        &kp LS(O)        &kp LS(U)        &trans
+   &lt MACROS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(G)           &kp LS(V)           &mt RGUI LS(R)   &mt RCTRL LS(A)  &mt RSHFT LS(E)  &lt MACROS LS(I) 
+   &none            &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(Z)           &kp LS(J)           &mt LALT LS(H)   &td_comma        &th_dot 0 0      &none
                                         &trans              &trans              &trans              &msl RAISE CASE_AC  &ht_sc MEDIA 0   &trans
                         >;
                 };
@@ -53,7 +53,7 @@
                         label = "ACCENT";
                         bindings = <
    &trans           &trans              &key_repeat         &td_tilde           &none               &none               &ac_agrv         &ac_oacu         &ac_uacu         &trans
-   &trans           &mc_qu              &kp X               &kp K               &kp SQT             &ac_atil            &kp Y            &ac_aacu         &ac_eacu         &ac_iacu 
+   &kp Y            &mc_qu              &kp X               &kp K               &kp SQT             &ac_atil            &kp Y            &ac_aacu         &ac_eacu         &ac_iacu 
    &none            &kp Q               &mc_ced             &kp CARET           &kp GRAVE           &ac_otil            &ac_acir         &ac_ocir         &ac_ecir         &none
                                         &trans              &kp BSPC            &kp SPACE           &tog ACCENT_F       &trans           &trans
                         >;
@@ -61,18 +61,18 @@
                 fixed_accents_layer {
                         label = "ACCENT";
                         bindings = <
-   &trans           &trans              &key_repeat         &td_tilde           &none               &none               &ac_agrv         &ac_oacu         &ac_uacu         &trans
-   &trans           &mc_qu              &kp X               &kp K               &kp SQT             &ac_atil            &kp Y            &ac_aacu         &ac_eacu         &ac_iacu 
-   &none            &kp Q               &mc_ced             &kp CARET           &kp GRAVE           &ac_otil            &ac_acir         &ac_ocir         &ac_ecir         &none
+   &trans           &trans              &key_repeat         &td_tilde           &none               &none               &ac_otil         &ac_oacu         &ac_uacu         &trans
+   &kp Y            &mc_qu              &kp X               &kp K               &kp SQT             &ac_agrv            &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
+   &none            &kp Q               &mc_ced             &kp CARET           &kp GRAVE           &none               &ac_acir         &ac_ocir         &ac_ecir         &none
                                         &trans              &kp BSPC            &kp SPACE           &tog ACCENT_F       &trans           &trans
                         >;
                 };
                 case_accents_layer {
                         label = "CASE_AC";
                         bindings = <
-   &trans           &trans             &key_repeat          &td_tilde           &none               &none               &ac_agrv_c       &ac_oacu_c       &ac_uacu_c       &trans
-   &trans           &mc_qu_c           &kp LS(X)            &kp LS(K)           &kp SQT             &ac_atil_c          &kp LS(Y)        &ac_aacu_c       &ac_eacu_c       &ac_iacu_c 
-   &none            &kp LS(Q)          &mc_ced_c            &kp CARET           &kp GRAVE           &ac_otil_c          &ac_acir_c       &ac_ocir_c       &ac_ecir_c       &none
+   &trans           &trans             &key_repeat          &td_tilde           &none               &none               &ac_otil_c       &ac_oacu_c       &ac_uacu_c       &trans
+   &kp LS(Y)        &mc_qu_c           &kp LS(X)            &kp LS(K)           &kp SQT             &ac_agrv_c          &ac_atil_c       &ac_aacu_c       &ac_eacu_c       &ac_iacu_c 
+   &none            &kp LS(Q)          &mc_ced_c            &kp CARET           &kp GRAVE           &none               &ac_acir_c       &ac_ocir_c       &ac_ecir_c       &none
                                        &trans               &kp BSPC            &kp SPACE           &tog ACCENT_F       &trans           &trans
                         >;
                 };

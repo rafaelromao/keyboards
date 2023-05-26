@@ -137,14 +137,14 @@ enum {
 #define CT_5 RCTL_T(KC_5)
 
 #define LALTT_P LALT_T(KC_P)
-#define LALTT_M LALT_T(KC_M)
+#define LALTT_H LALT_T(KC_H)
 #define RALTT_F RALT_T(KC_F)
 #define AL_F1 LALT_T(KC_F1)
 #define AL_1 LALT_T(KC_1)
 #define AL_F3 RALT_T(KC_F3)
 
 #define LGUIT_T LGUI_T(KC_T)
-#define RGUIT_H RGUI_T(KC_H)
+#define RGUIT_R RGUI_T(KC_R)
 #define GU_F4 LGUI_T(KC_F4)
 #define GU_4 RGUI_T(KC_4)
 
@@ -175,7 +175,7 @@ enum {
 #define RAI_SPC LT(_RAISE, KC_SPC)
 #define RAI_ACT OSL(_ACCENT)
 
-#define MAC_KCR LT(_MACROS, KC_R)
+#define MAC_KCD LT(_MACROS, KC_D)
 #define MAC_KCI LT(_MACROS, KC_I)
 #define MAC_DOT LT(_MACROS, KC_DOT)
 
@@ -188,14 +188,14 @@ enum {
 
 // Custom Shortcuts
 
-#define HYPR_H HYPR(KC_H)
+#define HYPR_D HYPR(KC_D)
 #define HYPR_R HYPR(KC_R)
 #define HYPR_W HYPR(KC_W)
 #define HYPR_G HYPR(KC_G)
 #define HYPR_Z HYPR(KC_Z)
 #define HYPR_C HYPR(KC_C)
 #define HYPR_L HYPR(KC_L)
-#define MEH_R  MEH(KC_R)
+#define MEH_D  MEH(KC_D)
 #define MEH_W  MEH(KC_W)
 #define MEH_G  MEH(KC_G)
 #define MEH_Z  MEH(KC_Z)

@@ -27,7 +27,7 @@ uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case QK_MOD_TAP ... QK_MOD_TAP_MAX:
-        case MAC_KCR:
+        case MAC_KCD:
         case MAC_KCI:
         case MAC_DOT:
         case NAV_F12:
