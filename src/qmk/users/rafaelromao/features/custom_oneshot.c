@@ -68,6 +68,8 @@ void disable_oneshot_mods(void) {
 
 void check_disable_oneshot(uint16_t keycode) {
     switch (keycode) {
+        case KC_BSPC:
+        case KC_SPC:
         case RAI_ACT:
         case RAI_TAC:
         case MED_CAS:

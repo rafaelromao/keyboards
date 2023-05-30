@@ -51,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , _________ACCENT_L3___________________ , XXXXXXX , XXXXXXX , ___________________ACCENT_R3_________ , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , ____ACCENT_L4____ ,      XXXXXXX      , ____ACCENT_R4____ , XXXXXXX , XXXXXXX , XXXXXXX),
+      XXXXXXX , XXXXXXX , XXXXXXX , ____FIXED_ACC_L4_ ,      XXXXXXX      , ____FIXED_ACC_R4_ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
      [_MACROS] = LAYOUT_wrapper(

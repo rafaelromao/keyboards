@@ -29,11 +29,13 @@
 #define ___________________ACCENT_L2___________________ KC_Y    , MC_QU   , KC_X    , KC_K    , KC_QUOT
 #define           _________ACCENT_L3___________________           KC_Q    , MC_SQ_C , _______ , KC_GRV 
 #define                               ____ACCENT_L4____                               KC_BSPC , KC_SPC
+#define                               ____FIXED_ACC_L4_                               NAV_BSP , LOW_SPC
 
 #define           _________ACCENT_R1___________________           KC_CIRC , MC_SQ_O , MC_SQ_U , _______
 #define ___________________ACCENT_R2___________________ MC_TL_A , MC_GV_A , MC_SQ_A , MC_SQ_E , MC_SQ_I
 #define ___________________ACCENT_R3_________           MC_TL_O , MC_CR_A , MC_CR_O , MC_CR_E 
-#define ____ACCENT_R4____                               RAI_TAC , _______
+#define ____ACCENT_R4____                               RAI_ACT , _______
+#define ____FIXED_ACC_R4_                               RAI_TAC , _______
 
 #define ___________________MACROS_L1_________           _______ , MC_ESC  , MC_QUIK , MC_AUCO 
 #define ___________________MACROS_L2___________________ MC_QDOC , SF_FSYM , MC_RUN  , MC_DBUG , MC_BUID
@@ -83,7 +85,7 @@
 #define           _________NAVIGATION_R1_______________           MEH_L   , KC_PGDN , KC_PGUP , _______
 #define ___________________NAVIGATION_R2_______________ TG_NAV  , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT
 #define ___________________NAVIGATION_R3_____           KC_INS  , KC_DEL  , KC_HOME , KC_END  
-#define __NAVIGATION_R4__                               _______ , MAI_CAS
+#define __NAVIGATION_R4__                               RAI_TAC , MAI_CAS
 #define __FIXED_NAV__R4__                               _______ , MED_CAS
 
 #define _______________________LOCK____L1____           XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX 

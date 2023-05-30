@@ -55,7 +55,7 @@
    &trans           &mc_sqo             &key_repeat         &kp TILDE           &none               &none               &kp CARET        &ac_oacu         &ac_uacu         &trans
    &kp Y            &mc_qu              &kp X               &kp K               &kp SQT             &ac_atil            &ac_agrv         &ac_aacu         &ac_eacu         &ac_iacu 
    &none            &kp Q               &mc_ced             &none               &kp GRAVE           &ac_otil            &ac_acir         &ac_ocir         &ac_ecir         &none
-                                        &trans              &kp BSPC            &kp SPACE           &tog ACCENT_F       &trans           &trans
+                                        &trans              &kp BSPC            &kp SPACE           &msl RAISE ACCENT   &trans           &trans
                         >;
                 };
                 fixed_accents_layer {
@@ -64,7 +64,7 @@
    &trans           &mc_sqo             &key_repeat         &kp TILDE           &none               &none               &kp CARET        &ac_oacu         &ac_uacu         &trans
    &kp Y            &mc_qu              &kp X               &kp K               &kp SQT             &ac_atil            &ac_agrv         &ac_aacu         &ac_eacu         &ac_iacu 
    &none            &kp Q               &mc_ced             &none               &kp GRAVE           &ac_otil            &ac_acir         &ac_ocir         &ac_ecir         &none
-                                        &trans              &kp BSPC            &kp SPACE           &tog ACCENT_F       &trans           &trans
+                                        &trans              &lt NAV BSPC        &lt LOWER SPACE     &tog ACCENT_F       &trans           &trans
                         >;
                 };
                 case_accents_layer {
@@ -73,7 +73,7 @@
    &trans           &mc_sqo            &key_repeat          &kp TILDE           &none               &none               &kp CARET        &ac_oacu_c       &ac_uacu_c       &trans
    &kp LS(Y)        &mc_qu_c           &kp LS(X)            &kp LS(K)           &kp SQT             &ac_atil_c          &ac_agrv_c       &ac_aacu_c       &ac_eacu_c       &ac_iacu_c 
    &none            &kp LS(Q)          &mc_ced_c            &none               &kp GRAVE           &ac_otil_c          &ac_acir_c       &ac_ocir_c       &ac_ecir_c       &none
-                                       &trans               &kp BSPC            &kp SPACE           &tog ACCENT_F       &trans           &trans
+                                       &trans               &kp BSPC            &kp SPACE           &msl RAISE ACCENT   &trans           &trans
                         >;
                 };
                 macros_layer {
@@ -127,7 +127,7 @@
    &trans           &kp ESC            &mc_save             &mc_meh_w           &none               &none               &mc_meh_l      &kp PAGE_DOWN      &kp PAGE_UP     &trans
    &mc_meh_r        &sk LSHIFT         &sk LCTRL            &sk LGUI            &mc_meh_g           &tog NAV_F          &kp LEFT       &kp DOWN           &kp UP          &kp RIGHT
    &none            &sk RALT           &mc_meh_c            &sk LALT            &mc_meh_z           &kp INS             &kp DEL        &kp HOME           &kp END         &none
-                                       &trans               &trans              &trans              &trans              &mo MAINT      &trans
+                                       &trans               &trans              &trans              &tog ACCENT_F       &mo MAINT      &trans
                         >;
                 };
                 lock_layer {
