@@ -25,14 +25,14 @@
 #define ___________________NUMPAD_R3_________           TG_NUM  , AL_1    , KC_2    , KC_3    
 #define ____NUMPAD_R4____                               RAI_SPC , MED_0
 
-#define ___________________ACCENT_L1_________           _______ , _______ , REPEAT  , KC_TILD
+#define ___________________ACCENT_L1_________           _______ , MC_SQUO , REPEAT  , KC_TILD
 #define ___________________ACCENT_L2___________________ KC_Y    , MC_QU   , KC_X    , KC_K    , KC_QUOT
-#define           _________ACCENT_L3___________________           KC_Q    , MC_SQ_C , KC_CIRC , KC_GRV 
+#define           _________ACCENT_L3___________________           KC_Q    , MC_SQ_C , _______ , KC_GRV 
 #define                               ____ACCENT_L4____                               KC_BSPC , KC_SPC
 
-#define           _________ACCENT_R1___________________           MC_TL_O , MC_SQ_O , MC_SQ_U , _______
-#define ___________________ACCENT_R2___________________ MC_GV_A , MC_TL_A , MC_SQ_A , MC_SQ_E , MC_SQ_I
-#define ___________________ACCENT_R3_________           _______ , MC_CR_A , MC_CR_O , MC_CR_E 
+#define           _________ACCENT_R1___________________           KC_CIRC , MC_SQ_O , MC_SQ_U , _______
+#define ___________________ACCENT_R2___________________ MC_TL_A , MC_GV_A , MC_SQ_A , MC_SQ_E , MC_SQ_I
+#define ___________________ACCENT_R3_________           MC_TL_O , MC_CR_A , MC_CR_O , MC_CR_E 
 #define ____ACCENT_R4____                               RAI_TAC , _______
 
 #define ___________________MACROS_L1_________           _______ , MC_ESC  , MC_QUIK , MC_AUCO 

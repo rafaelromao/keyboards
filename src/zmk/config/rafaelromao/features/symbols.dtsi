@@ -201,8 +201,8 @@
         SYMBOL(mc_dollar,          &kp DOLLAR)
         SYMBOL(mc_caret,           &kp CARET &kp SPACE)
         SYMBOL(mc_euro,            &kp LS(LA(N2)))
-        SHIFTED_SYMBOL(mm_curr,    &mc_dollar, &mc_euro)
-        TAPHOLD_SYMBOL(th_curr,    &mm_curr, &mc_caret)
+        SHIFTED_SYMBOL(mm_curr,    &mc_caret, &mc_euro)
+        TAPHOLD_SYMBOL(th_curr,    &mm_curr, &mc_dollar)
         MACRO_SYMBOL(mc_final,     &kp F &kp I &kp N &kp A &kp L &kp SPACE)
         TAPDANCE_SYMBOL(td_curr,   &th_curr 0 0, &mc_final, &none)
 
