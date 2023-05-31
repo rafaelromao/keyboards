@@ -107,7 +107,7 @@
                         label = "NAV";
                         bindings = <
    &trans           &kp ESC            &mc_save             &mc_meh_w           &none               &none               &mc_meh_l      &kp PAGE_DOWN      &kp PAGE_UP     &trans
-   &mc_meh_r        &sk LSHIFT         &sk LCTRL            &sk LGUI            &mc_meh_g           &tog NAV_F          &kp LEFT       &kp DOWN           &kp UP          &kp RIGHT
+   &mc_meh_d        &sk LSHIFT         &sk LCTRL            &sk LGUI            &mc_meh_g           &tog NAV_F          &kp LEFT       &kp DOWN           &kp UP          &kp RIGHT
    &none            &sk RALT           &mc_meh_c            &sk LALT            &mc_meh_z           &kp INS             &kp DEL        &kp HOME           &kp END         &none
                                        &trans               &trans              &trans              &trans              &trans         &trans
                         >;
@@ -116,7 +116,7 @@
                         label = "MEDIA";
                         bindings = <
    &trans           &kp ESC            &mc_save             &mc_hyp_w           &none               &none               &mc_hyp_l      &kp ENTER          &kp TAB         &trans
-   &mc_hyp_r        &kp LSHIFT         &kp LCTRL            &kp LGUI            &mc_hyp_g           &tog NAV_F          &mc_hyp_h      &kp C_VOL_DN       &kp C_VOL_UP    &lt NAV C_MUTE
+   &mc_hyp_d        &kp LSHIFT         &kp LCTRL            &kp LGUI            &mc_hyp_g           &tog NAV_F          &mc_hyp_r      &kp C_VOL_DN       &kp C_VOL_UP    &lt NAV C_MUTE
    &none            &kp RALT           &mc_hyp_c            &kp LALT            &mc_hyp_z           &tog NUMPAD         &kp C_PP       &kp C_PREV         &kp C_NEXT      &none
                                        &trans               &mo MAINT           &trans              &trans              &trans         &trans
                         >;
@@ -125,7 +125,7 @@
                         label = "NAV";
                         bindings = <
    &trans           &kp ESC            &mc_save             &mc_meh_w           &none               &none               &mc_meh_l      &kp PAGE_DOWN      &kp PAGE_UP     &trans
-   &mc_meh_r        &sk LSHIFT         &sk LCTRL            &sk LGUI            &mc_meh_g           &tog NAV_F          &kp LEFT       &kp DOWN           &kp UP          &kp RIGHT
+   &mc_meh_d        &sk LSHIFT         &sk LCTRL            &sk LGUI            &mc_meh_g           &tog NAV_F          &kp LEFT       &kp DOWN           &kp UP          &kp RIGHT
    &none            &sk RALT           &mc_meh_c            &sk LALT            &mc_meh_z           &kp INS             &kp DEL        &kp HOME           &kp END         &none
                                        &trans               &trans              &trans              &tog ACCENT_F       &mo MAINT      &trans
                         >;

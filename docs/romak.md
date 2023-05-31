@@ -20,7 +20,7 @@ Romak has 2 alpha layers, with an oneshot key used to quickly alternate between 
 - Use AltGr instead of the oneshot key, so the tool considers the AltGr held to access the secondary alpha layer.
 - Since it would consider shift, another oneshot key in Romak, to be held to access capitalized letters, it could not be in the same thumb as AltGr, so I moved space to the right hand and AltGr to the left hand, which would not change that much the effort.
 - Symbols and numbers were excluded from the analysis for all considered layouts. The files with the configurations can be found [here](../docs/analysis/).
-- With this configuration, Romak beats Colemak-DH and the other considered layouts.
+- With this configuration, Romak scores as good as Colemak-DH and BEAKL27.
 ![img](../img/perf.png)
 
 ### Heatmaps

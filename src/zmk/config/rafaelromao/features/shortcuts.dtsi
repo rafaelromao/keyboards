@@ -69,18 +69,18 @@
         // Media
 
         SHORTCUT(mc_hyp_l,                &macro_tap &kp LC(LA(LS(LG(L)))))
-        SHORTCUT(mc_hyp_h,                &macro_tap &kp LC(LA(LS(LG(H)))))
+        SHORTCUT(mc_hyp_r,                &macro_tap &kp LC(LA(LS(LG(R)))))
         SHORTCUT(mc_hyp_g,                &macro_tap &kp LC(LA(LS(LG(G)))))
         SHORTCUT(mc_hyp_z,                &macro_tap &kp LC(LA(LS(LG(Z)))))
         SHORTCUT(mc_hyp_w,                &macro_tap &kp LC(LA(LS(LG(W)))))
         SHORTCUT(mc_hyp_c,                &macro_tap &kp LC(LA(LS(LG(C)))))
-        SHORTCUT(mc_hyp_r,                &macro_tap &kp LC(LA(LS(LG(R)))))
+        SHORTCUT(mc_hyp_d,                &macro_tap &kp LC(LA(LS(LG(D)))))
         SHORTCUT(mc_meh_l,                &macro_tap &kp LC(LA(LS(L))))
         SHORTCUT(mc_meh_g,                &macro_tap &kp LC(LA(LS(G))))
         SHORTCUT(mc_meh_z,                &macro_tap &kp LC(LA(LS(Z))))
         SHORTCUT(mc_meh_w,                &macro_tap &kp LC(LA(LS(W))))
         SHORTCUT(mc_meh_c,                &macro_tap &kp LC(LA(LS(C))))
-        SHORTCUT(mc_meh_r,                &macro_tap &kp LC(LA(LS(R))))
+        SHORTCUT(mc_meh_d,                &macro_tap &kp LC(LA(LS(D))))
         
         // Macros
 
