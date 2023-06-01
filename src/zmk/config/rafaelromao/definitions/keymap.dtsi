@@ -54,7 +54,7 @@
                         bindings = <
    &trans           &none               &key_repeat         &kp TILDE           &none               &none               &kp CARET        &ac_oacu         &ac_uacu         &trans
    &kp Y            &mc_sqo             &kp X               &kp K               &kp SQT             &ac_atil            &ac_agrv         &ac_aacu         &ac_eacu         &ac_iacu 
-   &none            &kp Q               &mc_ced             &mc_qu               &kp GRAVE           &ac_otil            &ac_acir         &ac_ocir         &ac_ecir         &none
+   &none            &kp Q               &mc_ced             &mc_qu              &kp GRAVE           &ac_otil            &ac_acir         &ac_ocir         &ac_ecir         &none
                                         &trans              &kp BSPC            &kp SPACE           &msl RAISE ACCENT   &trans           &trans
                         >;
                 };
@@ -63,7 +63,7 @@
                         bindings = <
    &trans           &none               &key_repeat         &kp TILDE           &none               &none               &kp CARET        &ac_oacu         &ac_uacu         &trans
    &kp Y            &mc_sqo             &kp X               &kp K               &kp SQT             &ac_atil            &ac_agrv         &ac_aacu         &ac_eacu         &ac_iacu 
-   &none            &kp Q               &mc_ced             &mc_qu               &kp GRAVE           &ac_otil            &ac_acir         &ac_ocir         &ac_ecir         &none
+   &none            &kp Q               &mc_ced             &mc_qu              &kp GRAVE           &ac_otil            &ac_acir         &ac_ocir         &ac_ecir         &none
                                         &trans              &lt NAV BSPC        &lt LOWER SPACE     &tog ACCENT_F       &trans           &trans
                         >;
                 };
@@ -72,7 +72,7 @@
                         bindings = <
    &trans           &none               &key_repeat         &kp TILDE           &none               &none               &kp CARET        &ac_oacu_c       &ac_uacu_c       &trans
    &kp LS(Y)        &mc_sqo             &kp LS(X)           &kp LS(K)           &kp SQT             &ac_atil_c          &ac_agrv_c       &ac_aacu_c       &ac_eacu_c       &ac_iacu_c 
-   &none            &kp LS(Q)           &mc_ced_c           &mc_qu_c               &kp GRAVE           &ac_otil_c          &ac_acir_c       &ac_ocir_c       &ac_ecir_c       &none
+   &none            &kp LS(Q)           &mc_ced_c           &mc_qu_c            &kp GRAVE           &ac_otil_c          &ac_acir_c       &ac_ocir_c       &ac_ecir_c       &none
                                         &trans              &kp BSPC            &kp SPACE           &msl RAISE ACCENT   &trans           &trans
                         >;
                 };
