@@ -18,10 +18,10 @@ The number of alpha keys and the number of thumb keys can vary, from a total of 
 
 Romak has 2 alpha layers, with an oneshot key used to quickly alternate between them. This is not supported by KLA Next, so some adjustments were necessary:
 - Use AltGr instead of the oneshot key, so the tool considers the AltGr held to access the secondary alpha layer.
-- Since it would consider shift, another oneshot key in Romak, to be held to access capitalized letters, it could not be in the same thumb as AltGr, so I swapped the backspace and one shot shift keys.
+- Since it would consider shift, another oneshot key in Romak, to be held to access capitalized letters, it could not be in the same thumb as AltGr, so I swapped the backspace and oneshot shift keys.
 - All layouts involved in the comparison have the same thumb configuration.
 - Symbols and numbers were excluded from the analysis for all considered layouts. The files with the configurations can be found [here](../docs/analysis/).
-- With this configuration, Romak scores better than all other considered layouts.
+- With this configuration, Romak scores better than all others.
 ![img](../img/perf.png)
 
 ### Heatmaps
