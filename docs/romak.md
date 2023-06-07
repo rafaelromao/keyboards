@@ -10,7 +10,6 @@ The number of alpha keys and the number of thumb keys can vary, from a total of 
 
 - The name Romak is a combination of my last name, **Rom**ão, and Dvor**ak**'s name.
 - Romak assumes the right hand as dominant and puts all vowels plus R, L, H, J and V on that side.
-- Romak is also designed to favor hand alternation, but is also goom in rolls.
 
 ## KLA Next
 [KLA Next](https://klanext.keyboard-design.com/) was used to compare Romak with Colemak-DH and some other layouts, using the Universal Declaration of Human Rights as text corpus, combining [Portuguese and English](analysis/corpus.txt).
