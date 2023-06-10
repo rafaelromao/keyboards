@@ -103,6 +103,8 @@ bool should_send_ctrl(bool isMacOS, bool isOneShotShift) {
     return (!isMacOS && !isOneShotShift) || (isMacOS && isOneShotShift);
 }
 
+static uint16_t last_space = 0;
+
 process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *record) {
     check_disable_oneshot(keycode);
 
@@ -113,7 +115,32 @@ process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *re
     bool isOneShotGui         = get_oneshot_mods() & MOD_MASK_GUI || get_oneshot_locked_mods() & MOD_MASK_GUI;
     bool isAnyOneShotButShift = isOneShotCtrl || isOneShotAlt || isOneShotGui;
 
+    if (keycode != LOW_SPC) {
+        last_space = 0;
+    }
+
     switch (keycode) {
+        case LOW_SPC:
+            if (record->tap.count > 0) {
+                if (record->event.pressed) {
+                    if (last_space == 0) {
+                        last_space = timer_read();
+                        return PROCESS_RECORD_CONTINUE;
+                    } else {
+                        if (timer_elapsed(last_space) < TAPPING_TERM) {
+                            tap_code(KC_BSPC);
+                            tap_code(KC_DOT);
+                            tap_code(KC_SPC);
+                            add_oneshot_mods(MOD_LSFT);
+                            last_space = 0;
+                            return PROCESS_RECORD_RETURN_FALSE;
+                        }
+                    }
+                    last_space = 0;
+                }
+            }
+            return PROCESS_RECORD_CONTINUE;
+
         case RAI_ACT:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
