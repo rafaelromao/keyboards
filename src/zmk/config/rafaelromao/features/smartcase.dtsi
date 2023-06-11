@@ -27,9 +27,17 @@
             bindings = <&mo>, <&smart_case>;
         };
 
-        mm_sc: mm_sc {
+        nav_sc: nav_sc {
             compatible = "zmk,behavior-mod-morph";
-            label = ZMK_MACRO_STRINGIFY(mm_sc);
+            label = ZMK_MACRO_STRINGIFY(nav_sc);
+            #binding-cells = <0>;
+            bindings = <&msk NAV LSHFT>, <&smart_case>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        med_sc: med_sc {
+            compatible = "zmk,behavior-mod-morph";
+            label = ZMK_MACRO_STRINGIFY(med_sc);
             #binding-cells = <0>;
             bindings = <&msk MEDIA LSHFT>, <&smart_case>;
             mods = <(MOD_LSFT|MOD_RSFT)>;

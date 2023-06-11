@@ -265,5 +265,8 @@
         SYMBOL(mc_end_ent,         &kp END &kp ENTER)
         SYMBOL(mc_down_end,        &kp DOWN &kp END)
         TAPHOLD_SYMBOL(th_end_ent, &mc_end_ent, &mc_down_end)
+
+        MACRO_SYMBOL(mc_new_sentence, &kp DOT &kp SPACE &sk LSHFT)
+        TAPDANCE_SYMBOL(td_lowspc, &lt LOWER SPACE, &mc_new_sentence, &none)
     };
 };
