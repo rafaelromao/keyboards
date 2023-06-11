@@ -122,6 +122,7 @@ process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *re
     }
 
     switch (keycode) {
+#ifndef SAVE_MEMORY
         case LOW_SPC:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
@@ -145,6 +146,7 @@ process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *re
                 }
                 return PROCESS_RECORD_RETURN_FALSE;
             }
+#endif
 
         case RAI_ACT:
             if (record->tap.count > 0) {
