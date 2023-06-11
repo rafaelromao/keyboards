@@ -7,7 +7,7 @@ uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
         case LOW_SPC:
         case RAI_SPC:
         case RAI_ACT:
-        case NAV_BSP:
+        case NAV_CAS:
         case NAV_PRJ:
         case MED_CAS:
         case RAI_TAC:
@@ -41,16 +41,20 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 bool get_combo_must_tap(uint16_t index, combo_t *combo) {
     uint16_t key;
     uint8_t  idx = 0;
+    bool     all_mods = false;
     while ((key = pgm_read_word(&combo->keys[idx])) != COMBO_END) {
         switch (key) {
             case QK_MOD_TAP ... QK_MOD_TAP_MAX:
             case QK_LAYER_TAP ... QK_LAYER_TAP_MAX:
             case QK_MOMENTARY ... QK_MOMENTARY_MAX:
-                return true;
+                all_mods = true;
+                break;
+            default:
+                return false;
         }
         idx += 1;
     }
-    return false;
+    return all_mods;
 }
 
 process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {

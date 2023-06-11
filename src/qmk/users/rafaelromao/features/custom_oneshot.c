@@ -72,7 +72,9 @@ void check_disable_oneshot(uint16_t keycode) {
         case KC_SPC:
         case RAI_ACT:
         case RAI_TAC:
+        case LOW_SPC:
         case MED_CAS:
+        case NAV_CAS:
         case MAI_CAS:
         case OS_LSFT:
         case OS_LCTL:
@@ -123,30 +125,31 @@ process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *re
         case LOW_SPC:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
-                    if (last_space == 0) {
-                        last_space = timer_read();
-                        return PROCESS_RECORD_CONTINUE;
+                    if ((last_space > 0) && (timer_elapsed(last_space) < TAPPING_TERM)) {
+                        tap_code(KC_BSPC);
+                        tap_code(KC_DOT);
+                        tap_code(KC_SPC);
+                        add_oneshot_mods(MOD_LSFT);
+                        last_space = 0;
                     } else {
-                        if (timer_elapsed(last_space) < TAPPING_TERM) {
-                            tap_code(KC_BSPC);
-                            tap_code(KC_DOT);
-                            tap_code(KC_SPC);
-                            add_oneshot_mods(MOD_LSFT);
-                            last_space = 0;
-                            return PROCESS_RECORD_RETURN_FALSE;
-                        }
+                        last_space = timer_read();
+                        tap_code(KC_SPC);
                     }
-                    last_space = 0;
+                    return PROCESS_RECORD_RETURN_FALSE;
                 }
+            } else {
+                if (record->event.pressed) {
+                    layer_on(_LOWER);
+                } else {
+                    layer_off(_LOWER);
+                }
+                return PROCESS_RECORD_RETURN_FALSE;
             }
-            return PROCESS_RECORD_CONTINUE;
 
         case RAI_ACT:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
-                    if (isAnyOneShotButShift || isOneShotLockedShift) {
-                        clear_locked_and_oneshot_mods();
-                    } else if (get_mods() != 0) {
+                    if (get_mods() != 0) {
                         set_smart_case_for_mods();
                     } else {
                         custom_oneshots.timer = timer_read();
@@ -164,6 +167,7 @@ process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *re
             }
 
         case MED_CAS:
+        case NAV_CAS:
         case MAI_CAS:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {

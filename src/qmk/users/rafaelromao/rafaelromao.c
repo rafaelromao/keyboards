@@ -42,6 +42,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
     };
 
+    // Process smart case
+    switch (process_smart_case(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
+
     // Process custom oneshot
     switch (process_custom_oneshot(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
@@ -94,16 +104,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     // Process custom_shift
     switch (process_custom_shift(keycode, record)) {
-        case PROCESS_RECORD_RETURN_TRUE:
-            return true;
-        case PROCESS_RECORD_RETURN_FALSE:
-            return false;
-        default:
-            break;
-    };
-
-    // Process smart case
-    switch (process_smart_case(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:

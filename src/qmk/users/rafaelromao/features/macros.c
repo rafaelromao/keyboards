@@ -72,16 +72,6 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             tap_code(KC_ESC);
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Inverted underscore and minus
-
-        case MC_UNDS:
-            if (isShifted) {
-                tap_code(KC_MINS);
-            } else {
-                tap_code16(KC_UNDS);
-            }
-            return PROCESS_RECORD_RETURN_FALSE;
-
             // Conditional operators
 
         case MC_DAND:
