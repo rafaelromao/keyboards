@@ -46,7 +46,7 @@ The [Colemak mod-DH analysis tool](https://colemakmods.github.io/mod-dh/analyze.
 </p>
 
 ### Keysolve
-The [Keysolve analyzer](https://colemakmods.github.io/mod-dh/analyze.html) was also used to compare Romak against Colemak-DH.
+The [Keysolve analyzer](https://clemenpine.github.io/keysolve-web/) was also used to compare Romak against Colemak-DH.
 - English text corpus only.
 - Consider the 34 key version of Romak, with q, x, k and y in the base layer.
 
