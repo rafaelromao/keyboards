@@ -25,18 +25,18 @@
                 default_layer {
                         label = "ROMAK";
                         bindings = <
-   &mc_escc         &kp B               &kp M               &kp W               &none               &none               &kp L            &kp O            &kp U            &kp BSPC
+   &mc_escc         &kp B               &kp M               &kp W               &kp K               &kp X               &kp L            &kp O            &kp U            &kp BSPC
    &lt MACROS D     &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp G               &kp Z               &mt RGUI R       &mt RCTRL A      &mt RSHFT E      &lt MACROS I 
-   &none            &mt RALT F          &kp C               &mt LALT P          &kp V               &kp J               &mt LALT H       &td_comma        &th_dot 0 0      &none
-                                        &none               &nav_sc             &td_lowspc          &msl RAISE ACCENT   &med_sc          &none
+   &kp Q            &mt RALT F          &kp C               &mt LALT P          &kp V               &kp J               &mt LALT H       &td_comma        &th_dot 0 0      &kp Y
+                                        &none               &msk NAV LSHFT      &lt LOWER SPACE     &msl RAISE ACCENT   &med_sc          &none
                         >;
                 };
                 capsword_layer {
                         label = "CASE";
                         bindings = <
-   &trans           &kp LS(B)           &kp LS(M)           &kp LS(W)           &none               &none               &kp LS(L)        &kp LS(O)        &kp LS(U)        &trans
+   &trans           &kp LS(B)           &kp LS(M)           &kp LS(W)           &kp LS(K)           &kp LS(X)           &kp LS(L)        &kp LS(O)        &kp LS(U)        &trans
    &lt MACROS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(G)           &kp LS(Z)           &mt RGUI LS(R)   &mt RCTRL LS(A)  &mt RSHFT LS(E)  &lt MACROS LS(I) 
-   &none            &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &mt LALT LS(H)   &td_comma        &th_dot 0 0      &none
+   &kp LS(Q)        &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &mt LALT LS(H)   &td_comma        &th_dot 0 0      &kp LS(Y)
                                         &trans              &ht_sc NAV 0        &trans              &msl RAISE CASE_AC  &ht_sc MEDIA 0   &trans
                         >;
                 };
@@ -49,13 +49,22 @@
                                         &trans              &ht_sc NAV 0        &trans              &lt RAISE SPACE     &th_n0 MEDIA 0   &trans
                         >;
                 };
+                macros_layer {
+                        label = "MACROS";
+                        bindings = <
+   &trans           &kp ESC            &mm_actions          &mm_typematch       &none               &none               &mc_selw         &kp ENTER        &kp TAB          &trans    
+   &mm_docs         &th_find LSHFT 0   &mm_run              &mm_debug           &mm_build           &none               &mc_seln         &mm_zh_b         &th_zh LSHFT 0   &none  
+   &none            &mm_recent         &mm_complete         &mm_usages          &mm_refac           &mc_join            &mc_comment      &mm_wt_b         &mm_wt_f         &none
+                                       &trans               &th_proj NAV 0      &lt ACCENT SPACE    &kp SPACE           &trans           &trans
+                        >;
+                };
                 accents_layer {
                         label = "ACCENT";
                         bindings = <
-   &trans           &none               &key_repeat         &kp TILDE           &none               &none               &kp CARET        &ac_oacu         &ac_uacu         &trans
-   &kp Y            &mc_sqo             &kp X               &kp K               &kp SQT             &ac_atil            &ac_agrv         &ac_aacu         &ac_eacu         &ac_iacu 
-   &none            &kp Q               &mc_ced             &mc_qu              &kp GRAVE           &ac_otil            &ac_acir         &ac_ocir         &ac_ecir         &none
-                                        &trans              &trans              &kp SPACE           &msl RAISE ACCENT   &trans           &trans
+   &trans           &none               &none               &none               &none               &none                &kp CARET        &ac_oacu         &ac_uacu         &trans
+   &kp Y            &key_repeat         &kp X               &kp K               &none               &kp GRAVE            &kp SQT          &ac_aacu         &ac_eacu         &ac_iacu 
+   &none            &kp Q               &mc_ced             &mc_qu              &none               &kp TILDE            &ac_acir         &ac_ocir         &ac_ecir         &none
+                                        &trans              &trans              &mc_sentence        &msl RAISE ACCENT   &trans           &trans
                         >;
                 };
                 fixed_accents_layer {
@@ -76,20 +85,11 @@
                                         &trans              &trans              &kp SPACE           &msl RAISE ACCENT   &trans           &trans
                         >;
                 };
-                macros_layer {
-                        label = "MACROS";
-                        bindings = <
-   &trans           &kp ESC            &mm_actions          &mm_typematch       &none               &none               &mc_selw         &kp ENTER        &kp TAB          &trans    
-   &mm_docs         &th_find LSHFT 0   &mm_run              &mm_debug           &mm_build           &none               &mc_seln         &mm_zh_b         &th_zh LSHFT 0   &none  
-   &none            &mm_recent         &mm_complete         &mm_usages          &mm_refac           &mc_join            &mc_comment      &mm_wt_b         &mm_wt_f         &none
-                                       &trans               &th_proj NAV 0      &kp SPACE           &kp SPACE           &trans           &trans
-                        >;
-                };
                 lower_layer {
                         label = "LOWER";
                         bindings = <
-   &trans           &td_lpar           &td_rpar             &td_tilde           &none               &none               &mc_n7           &mc_n8           &mc_n9           &trans
-   &lt NAV HASH     &th_or 0 0         &th_and 0 0          &td_dqo             &td_sqo             &kp COMMA           &mc_n4           &mc_n5           &mc_n6           &lt MACROS DOT  
+   &trans           &td_lpar           &td_rpar             &kp HASH            &none               &none               &mc_n7           &mc_n8           &mc_n9           &trans
+   &lt NAV AT       &th_or 0 0         &th_and 0 0          &td_dqo             &mc_sqo             &kp COMMA           &mc_n4           &mc_n5           &mc_n6           &lt MACROS DOT  
    &none            &td_lbkt           &td_rbkt             &th_qmark 0 0       &mc_bti             &none               &mc_n1           &mc_n2           &mc_n3           &none
                                        &trans               &trans              &trans              &lt RAISE SPACE     &th_n0 MEDIA 0   &trans
                         >;
@@ -98,8 +98,8 @@
                         label = "RAISE";
                         bindings = <
    &trans           &kp F9             &kp F8               &kp F7              &none               &none               &td_curr         &td_lbrc         &td_rbrc        &trans
-   &kp F12          &kp F6             &kp F5               &kp F4              &kp F11             &th_colon 0 0       &kp MINUS        &td_plus         &td_eql         &kp AT  
-   &none            &kp F3             &kp F2               &kp F1              &kp F10             &td_perc            &td_slash        &kp STAR         &td_excl        &none
+   &kp F12          &kp F6             &kp F5               &kp F4              &kp F11             &th_colon 0 0       &kp MINUS        &td_plus         &td_eql         &kp PERCENT  
+   &none            &kp F3             &kp F2               &kp F1              &kp F10             &td_tilde           &td_slash        &kp STAR         &td_excl        &none
                                        &trans               &trans              &kp SPACE           &trans              &trans           &trans
                         >;
                 };

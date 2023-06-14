@@ -31,7 +31,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case MAC_KCI:
         case MAC_DOT:
         case NAV_F12:
-        case NAV_HSH:
+        case NAV_AT:
             return 300;
         default:
             return TAPPING_TERM;
@@ -66,9 +66,9 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
             }
             break;
 
-        case NAV_HSH:
+        case NAV_AT:
             if (record->event.pressed && record->tap.count > 0) {
-                tap_code16(KC_HASH);
+                tap_code16(KC_AT);
                 return PROCESS_RECORD_RETURN_FALSE;
             }
             break;

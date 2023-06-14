@@ -92,27 +92,6 @@ void td_close_parentesis(tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void td_tilde(tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            process_macros(MC_TILD, NULL);
-            break;
-        case TD_DOUBLE_TAP:
-            SEND_STRING("else ");
-            break;
-        case TD_SINGLE_HOLD:
-            if (is_macos()) {
-                tap_code16(RALT(KC_6));
-            } else {
-                SEND_STRING(SS_LALT(SS_TAP(X_KP_2) SS_TAP(X_KP_1)));
-            }
-            break;
-        default:
-            break;
-    }
-}
-
 void td_enter_end(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
@@ -196,26 +175,6 @@ void td_dquo(tap_dance_state_t *state, void *user_data) {
         case TD_DOUBLE_TAP:
             process_macros(MC_DQUO, NULL);
             process_macros(MC_DQUO, NULL);
-            tap_code(KC_LEFT);
-            break;
-        default:
-            break;
-    }
-}
-
-void td_squo(tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            process_macros(MC_SQUO, NULL);
-            break;
-        case TD_SINGLE_HOLD:
-            tap_code16(KC_END);
-            process_macros(MC_SQUO, NULL);
-            break;
-        case TD_DOUBLE_TAP:
-            process_macros(MC_SQUO, NULL);
-            process_macros(MC_SQUO, NULL);
             tap_code(KC_LEFT);
             break;
         default:
@@ -419,12 +378,13 @@ void td_ques(tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void td_perc(tap_dance_state_t *state, void *user_data) {
+void td_tilde(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
 
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
-            tap_code16(KC_PERC);
+            tap_code16(KC_TILD);
+            tap_code16(KC_SPC);
             break;
         case TD_DOUBLE_TAP:
             if (is_macos()) {
@@ -623,16 +583,14 @@ tap_dance_action_t tap_dance_actions[] = {
     [BRT_CBR] = ACTION_TAP_DANCE_FN(td_close_brackets),
     [BRT_PAR] = ACTION_TAP_DANCE_FN(td_parentesis),
     [DQU_FIN] = ACTION_TAP_DANCE_FN(td_dquo),
-    [SQU_FIN] = ACTION_TAP_DANCE_FN(td_squo),
     [NOT_SWI] = ACTION_TAP_DANCE_FN(td_not),
     [AND_EAN] = ACTION_TAP_DANCE_FN(td_and),
     [OR_EOR]  = ACTION_TAP_DANCE_FN(td_or),
-    [TIL_PAR] = ACTION_TAP_DANCE_FN(td_tilde),
     [REC_MAC] = ACTION_TAP_DANCE_FN(td_macro),
     [COM_LEA] = ACTION_TAP_DANCE_FN(td_comm),
     [DLR_CUR] = ACTION_TAP_DANCE_FN(td_currencies),
     [COL_ECO] = ACTION_TAP_DANCE_FN(td_colon),
-    [PER_DEG] = ACTION_TAP_DANCE_FN(td_perc),
+    [TIL_DEG] = ACTION_TAP_DANCE_FN(td_tilde),
     [QUE_EXC] = ACTION_TAP_DANCE_FN(td_ques),
     [EQL_EEQ] = ACTION_TAP_DANCE_FN(td_eql),
     [PLU_RET] = ACTION_TAP_DANCE_FN(td_plus),

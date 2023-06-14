@@ -131,12 +131,6 @@
         MACRO_SYMBOL(mc_if,        &kp I &kp F &kp LPAR)
         TAPDANCE_SYMBOL(td_rpar,   &th_rpar 0 0, &mc_if, &none)
         
-        SYMBOL(mc_tilde,           &kp TILDE)
-        SYMBOL(mc_section,         &kp LA(N6))
-        TAPHOLD_SYMBOL(th_tilde,   &mc_tilde, &mc_section)
-        MACRO_SYMBOL(mc_else,      &kp E &kp L &kp S &kp E &kp SPACE)
-        TAPDANCE_SYMBOL(td_tilde,  &th_tilde 0 0, &mc_else, &none)
-
         SYMBOL(mc_pars,            &kp LPAR &kp RPAR)
         SYMBOL(mc_end_pars,        &kp END &kp LPAR &kp RPAR)
         TAPHOLD_SYMBOL(th_pars,    &mc_pars, &mc_end_pars)
@@ -151,10 +145,6 @@
         TAPDANCE_SYMBOL(td_dqo,    &th_dqo 0 0, &mc_double_dqo, &none)
                                  
         SYMBOL(mc_sqo,             &kp SQT &kp SPACE)
-        SYMBOL(mc_end_sqo,         &kp END &mc_sqo)
-        SYMBOL(mc_double_sqo,      &mc_sqo &mc_sqo &kp LEFT)
-        TAPHOLD_SYMBOL(th_sqo,     &mc_sqo, &mc_end_sqo)
-        TAPDANCE_SYMBOL(td_sqo,    &th_sqo 0 0, &mc_double_sqo, &none)
                                  
         SYMBOL(mc_lbkt,            &kp LBKT)
         SYMBOL(mc_end_lbkt,        &kp END &kp LBKT)
@@ -247,12 +237,12 @@
         TAPHOLD_SYMBOL(th_excl,    &mc_excl, &mc_end_excl)
         TAPDANCE_SYMBOL(td_excl,   &th_excl 0 0, &mc_throw, &none)
 
-        SYMBOL(mc_perc,            &kp PERCENT)
+        SYMBOL(mc_tilde,           &kp TILDE &kp SPACE)
         SYMBOL(mc_deg,             &kp LS(LA(N8)))
         SYMBOL(mc_first_o,         &kp LA(N0))
         SYMBOL(mc_first_a,         &kp LA(N9))
-        TAPHOLD_SYMBOL(th_perc,    &mc_perc, &mc_deg)
-        TAPDANCE_SYMBOL(td_perc,   &th_perc 0 0, &mc_first_o, &mc_first_a)
+        TAPHOLD_SYMBOL(th_tilde,   &mc_tilde, &mc_deg)
+        TAPDANCE_SYMBOL(td_tilde,  &th_tilde 0 0, &mc_first_o, &mc_first_a)
         
         SYMBOL(mc_slash,           &kp SLASH)
         SYMBOL(mc_2_slash,         &kp SLASH &kp SLASH)
@@ -266,7 +256,6 @@
         SYMBOL(mc_down_end,        &kp DOWN &kp END)
         TAPHOLD_SYMBOL(th_end_ent, &mc_end_ent, &mc_down_end)
 
-        MACRO_SYMBOL(mc_new_sentence, &kp DOT &kp SPACE &sk LSHFT)
-        TAPDANCE_SYMBOL(td_lowspc, &lt LOWER SPACE, &mc_new_sentence, &none)
+        MACRO_SYMBOL(mc_sentence,  &kp DOT &kp SPACE &sk LSHFT)
     };
 };

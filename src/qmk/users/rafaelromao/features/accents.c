@@ -79,15 +79,23 @@ bool is_accented_keycode(uint16_t keycode) {
 
 process_record_result_t process_ngrams(uint16_t keycode, bool isShifted) {
     switch (keycode) {
+        case MC_AE:
+            clear_shift();
+            tap_code16(KC_TILD);
+            tap_code(KC_A);
+            tap_code(KC_E);
+            return PROCESS_RECORD_RETURN_FALSE;
         case MC_AO:
             clear_shift();
             tap_code16(KC_TILD);
             tap_code(KC_A);
             tap_code(KC_O);
             return PROCESS_RECORD_RETURN_FALSE;
-        case MC_QU:
-            tap_code(KC_Q);
-            tap_code(KC_U);
+        case MC_OE:
+            clear_shift();
+            tap_code16(KC_TILD);
+            tap_code(KC_O);
+            tap_code(KC_E);
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_CAO:
             clear_shift();
@@ -97,13 +105,6 @@ process_record_result_t process_ngrams(uint16_t keycode, bool isShifted) {
             tap_code(KC_A);
             tap_code(KC_O);
             return PROCESS_RECORD_RETURN_FALSE;
-        case MC_OES:
-            clear_shift();
-            tap_code16(KC_TILD);
-            tap_code(KC_O);
-            tap_code(KC_E);
-            tap_code(KC_S);
-            return PROCESS_RECORD_RETURN_FALSE;
         case MC_COES:
             clear_shift();
             tap_code16(KC_QUOT);
@@ -112,6 +113,10 @@ process_record_result_t process_ngrams(uint16_t keycode, bool isShifted) {
             tap_code(KC_O);
             tap_code(KC_E);
             tap_code(KC_S);
+            return PROCESS_RECORD_RETURN_FALSE;
+        case MC_QU:
+            tap_code(KC_Q);
+            tap_code(KC_U);
             return PROCESS_RECORD_RETURN_FALSE;
     }
 

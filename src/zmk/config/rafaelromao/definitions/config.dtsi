@@ -8,10 +8,10 @@
 #define ROMAK 0
 #define CASE 1
 #define NUMPAD 2
-#define ACCENT 3
-#define ACCENT_F 4
-#define CASE_AC 5
-#define MACROS 6
+#define MACROS 3
+#define ACCENT 4
+#define ACCENT_F 5
+#define CASE_AC 6
 #define LOWER 7
 #define RAISE 8
 #define NAV_F 9
@@ -21,8 +21,8 @@
 #define MAINT 13
 
 #define TAPPING_TERM 175
-#define TD_TAPPING_TERM 200
-#define QUICK_TAP_TERM 50
+#define TD_TAPPING_TERM 175
+#define QUICK_TAP_TERM 100
 
 /*                KEY POSITIONS
 

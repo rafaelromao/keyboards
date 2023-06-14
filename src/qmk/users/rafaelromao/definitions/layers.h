@@ -3,9 +3,9 @@
 typedef enum {
     _ROMAK,
     _NUMPAD,
+    _MACROS,
     _ACCENT,
     _FIXED_ACCENT,
-    _MACROS,
     _LOWER,
     _RAISE,
     _FIXED_NAV,

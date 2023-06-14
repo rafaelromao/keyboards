@@ -18,7 +18,6 @@ enum {
     BRT_OBR, 
     BRT_CBR, 
     DQU_FIN, 
-    SQU_FIN, 
     NOT_SWI, 
     AND_EAN, 
     REC_MAC, 
@@ -26,7 +25,7 @@ enum {
     DOT_DOT, 
     DLR_CUR, 
     COL_ECO,
-    PER_DEG,
+    TIL_DEG,
     SLS_BSL,
     QUE_EXC,
     EQL_EEQ,
@@ -34,7 +33,6 @@ enum {
     LET_ELT,
     GRT_EGT,
     OR_EOR,
-    TIL_PAR,
     SAR_ESA,
     TD_CODE_END 
 };
@@ -51,7 +49,6 @@ enum {
 #define TD_OBR TD(BRT_OBR)
 #define TD_CBR TD(BRT_CBR)
 #define TD_DQUO TD(DQU_FIN)
-#define TD_SQUO TD(SQU_FIN)
 #define TD_NOT TD(NOT_SWI)
 #define TD_AND TD(AND_EAN)
 #define TD_MACR TD(REC_MAC)
@@ -59,7 +56,7 @@ enum {
 #define TD_DOT TD(DOT_DOT)
 #define TD_DLR TD(DLR_CUR)
 #define TD_COLN TD(COL_ECO)
-#define TD_PERC TD(PER_DEG)
+#define TD_TILD TD(TIL_DEG)
 #define TD_QUES TD(QUE_EXC)
 #define TD_SLSH TD(SLS_BSL)
 #define TD_EQL TD(EQL_EEQ)
@@ -67,7 +64,6 @@ enum {
 #define TD_LT TD(LET_ELT)
 #define TD_GT TD(GRT_EGT)
 #define TD_OR TD(OR_EOR)
-#define TD_TILD TD(TIL_PAR)
 #define TD_SARR TD(SAR_ESA)
 
 // Custom keycodes
@@ -103,7 +99,7 @@ enum {
     STR_MACRO_START,
     
     MC_BTIC, MC_DQUO, MC_SQUO, MC_CIRC, MC_TILD,
-    MC_ENT, MC_TAB, MC_ESC, MC_ESCC,  
+    MC_ENT, MC_TAB, MC_ESC, MC_ESCC, MC_NSEN, 
     MC_ESAV, MC_SENT, MC_CUR, MC_SAR, MC_DEQ, MC_NEQ, 
     MC_DAND, MC_DPIP, MC_OESC, MC_SOES, MC_LTGT, 
 
@@ -114,7 +110,7 @@ enum {
     MC_GV_A, MC_CR_A, MC_TL_A, MC_SQ_A,
     MC_SQ_U, MC_CR_O, MC_SQ_O, MC_SQ_I,
     MC_CR_E, MC_TL_O, MC_SQ_C, MC_SQ_E,
-    MC_AO, MC_CAO, MC_OES, MC_COES, MC_QU, 
+    MC_AE, MC_AO, MC_OE, MC_CAO, MC_COES, MC_QU, 
     
     // End macros used to write text
     STR_MACRO_END,
@@ -160,7 +156,7 @@ enum {
 
 #define NAV_CAS LT(_NAVIGATION, TG_CASE)
 #define NAV_F12 LT(_NAVIGATION, KC_F12)
-#define NAV_HSH LT(_NAVIGATION, KC_HASH)
+#define NAV_AT  LT(_NAVIGATION, KC_AT)
 #define NAV_PRJ LT(_NAVIGATION, MC_PROJ)
 #define NAV_MUT LT(_NAVIGATION, KC_MUTE)
 
@@ -169,6 +165,7 @@ enum {
 
 #define MAI_CAS LT(_MAINTENANCE, TG_CASE)
 
+#define ACT_SPC LT(_ACCENT, KC_SPC)
 #define LOW_SPC LT(_LOWER, KC_SPC)
 #define RAI_TAC LT(_RAISE, TG_ACNT)
 #define RAI_SPC LT(_RAISE, KC_SPC)
