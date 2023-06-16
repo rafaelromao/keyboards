@@ -4,7 +4,7 @@
 The Navigation and Media layer can be activated holding the outer left and right thumb keys, respectively.
 
 ### Navigation
-- The Navigation layer gives access to [Standard Modifiers](modifiers.md#standard-modifiers), Enter, Tab, Insert, Delete, Home, End, Page Up, Page Down and VIM style navigation, as well as Esc and a Save shortcut.
+- The Navigation layer gives access to [One-Shot Modifiers](modifiers.md#one-shot-modifiers), Enter, Tab, Insert, Delete, Home, End, Page Up, Page Down and VIM style navigation, as well as Esc and a Save shortcut.
 - In VIM, navigation with `hjkl` should be remapped to `raei`, to use the fingers in the home position. Some other bindings should be remapped as well:
 
 ```vim
@@ -30,7 +30,7 @@ noremap h r
 ```
         
 ### Media
-- The Media layer gives access to [One-Shot Modifiers](modifiers.md#one-shot-modifiers), Media controls, Esc and a Save shortcut.
+- The Media layer gives access to [Standard Modifiers](modifiers.md#standard-modifiers), Media controls, Esc and a Save shortcut.
 - The right side of this layer gives access to media keys and shortcuts to toggle the Navigation or Numpad layers on or off.
 
 ### Navigation Layer Toggle
