@@ -8,13 +8,25 @@ The Navigation and Media layer can be activated holding the outer left and right
 - In VIM, navigation with `hjkl` should be remapped to `haei`, to use the fingers in the home position. In addition to that, `e` should be remapped to `l`, `a` should be remapped to `k` and `i` should be remapped to `j`.
 
 ```vim
-   noremap a j
-   noremap e k
-   noremap i l
+noremap A J
+noremap E K
+noremap I L
+noremap L E
+noremap K Z
+noremap J A
+noremap Z I
+noremap R H
+noremap H R
 
-   noremap j a
-   noremap k i
-   noremap l e
+noremap a j
+noremap e k
+noremap i l
+noremap l e
+noremap k z
+noremap j a
+noremap z i
+noremap r h
+noremap h r
 ```
         
 ### Media

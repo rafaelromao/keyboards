@@ -11,8 +11,8 @@ This board has two encoders, a programmable LED and an OLED screen, used for lay
 Some build pictures can be found [here](../../../../../../docs/fauxberry.md).
 
 Parts:
-- 32 MX switches (30 Boba U4T + 2 Boba U4 Black).
-- 32 1u MX keycaps (MT3 3277 Ergodox Set).
+- 34 MX switches
+- 34 1u MX keycaps (MT3 3277 Ergodox Set).
 - 36 keys [FFKB](https://fingerpunch.xyz/product/faux-fox-keyboard) case.
 - [RP2040](https://pt.aliexpress.com/item/1005004096147070.html).
 - [1n4148 diodes](https://pt.aliexpress.com/item/1005003540554760.html).

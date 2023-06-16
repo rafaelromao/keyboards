@@ -1,9 +1,9 @@
 /*
-*
-* Copyright (c) 2022 Rafael Romão
-* SPDX-License-Identifier: MIT
-*
-*/
+ *
+ * Copyright (c) 2022 Rafael Romão
+ * SPDX-License-Identifier: MIT
+ *
+ */
 
 #define ROMAK 0
 #define CASE 1
@@ -21,8 +21,8 @@
 #define MAINT 13
 
 #define TAPPING_TERM 175
-#define TD_TAPPING_TERM 175
-#define QUICK_TAP_TERM 100
+#define TD_TAPPING_TERM 225
+#define QUICK_TAP_TERM 50
 
 /*                KEY POSITIONS
 

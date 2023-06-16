@@ -21,7 +21,7 @@ git checkout rafaelromao/main
 git pull
 cd ..
 
-if $INIT
+if [[ "${INIT}" == "true" ]]
 then
     echo "Initializing West..."
     cd $ZMK_HOME
@@ -33,8 +33,9 @@ fi
 
 echo "Exporting Zephyr Toolchain..."
 cd $ZMK_HOME
-export ZEPHYR_TOOLCHAIN_VARIANT=gnuarmemb
-export GNUARMEMB_TOOLCHAIN_PATH=/opt/homebrew/opt/arm-none-eabi-gcc
+unset ZEPHYR_TOOLCHAIN_VARIANT
+unset GNUARMEMB_TOOLCHAIN_PATH
+export ZEPHYR_SDK_INSTALL_DIR=~/zephyr-sdk-0.15.0
 cd ..
 
 echo "Creating build aliases..."
