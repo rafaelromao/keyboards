@@ -38,7 +38,7 @@
 #define ___________________ACCENT_L1_________           _______ , _______ , _______ , _______
 #define ___________________ACCENT_L2___________________ KC_Y    , REPEAT  , KC_X    , KC_K    , _______
 #define           _________ACCENT_L3___________________           KC_Q    , MC_SQ_C , MC_QU   , _______ 
-#define                               ____ACCENT_L4____                               _______ , KC_SPC
+#define                               ____ACCENT_L4____                               _______ , MC_NSEN
 #define                               ____FIXED_ACC_L4_                               _______ , LOW_SPC
 
 #define           _________ACCENT_R1___________________           KC_CIRC , MC_SQ_O , MC_SQ_U , _______
