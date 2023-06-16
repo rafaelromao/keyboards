@@ -5,7 +5,7 @@ The Navigation and Media layer can be activated holding the outer left and right
 
 ### Navigation
 - The Navigation layer gives access to [Standard Modifiers](modifiers.md#standard-modifiers), Enter, Tab, Insert, Delete, Home, End, Page Up, Page Down and VIM style navigation, as well as Esc and a Save shortcut.
-- In VIM, navigation with `hjkl` should be remapped to `haei`, to use the fingers in the home position. In addition to that, `e` should be remapped to `l`, `a` should be remapped to `k` and `i` should be remapped to `j`.
+- In VIM, navigation with `hjkl` should be remapped to `raei`, to use the fingers in the home position. Some other bindings should be remapped as well:
 
 ```vim
 noremap A J
