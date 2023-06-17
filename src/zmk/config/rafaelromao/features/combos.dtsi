@@ -34,8 +34,12 @@
         COMBO(cb_find,          LBM LBI L0,  &mc_find,           ROMAK CASE NUMPAD)
         COMBO(cb_undo,          LBR LBM L0,  &mc_undo,           ROMAK CASE NUMPAD)
 
+        COMBO(cb_k,             LBI LBM,     &kp K,              ROMAK)
+        COMBO(cb_q,             LBR LBI LBM, &kp Q,              ROMAK)
+        COMBO(cb_kc,            LBI LBM,     &kp LS(K),          CASE)
+        COMBO(cb_qc,            LBR LBI LBM, &kp LS(Q),          CASE)
         COMBO(cb_unds,          LBR LBM,     &mm_unds,           ROMAK CASE)
-        
+
         COMBO(cb_pars,          LTR LTM,     &th_pars 0 0,       LOWER)
 
         COMBO(cb_esc_save,      LTR LTM,     &mc_save_esc,       NAV)
@@ -80,7 +84,7 @@
         COMBO(cb_ltgt,          RBI RBM RBR, &mc_ltgt,           RAISE)
 
         COMBO(cb_end_ent,       RTM RTR,     &th_end_ent 0 0,    MEDIA)
-        
+
         COMBO(cb_refresh_z0,    RHM RHR,     &mm_refresh_z0,     MACROS)
         COMBO(cb_close_tab_win, RBM RBR,     &mm_close_tab_win,  MACROS)
     };

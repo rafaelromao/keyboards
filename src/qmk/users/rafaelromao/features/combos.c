@@ -55,8 +55,8 @@ const uint16_t PROGMEM r_mac_clo_combo[] = {MC_SWLE, MC_SWRI, COMBO_END};
 
 // Base
 
-const uint16_t PROGMEM l_rom_k_combo[]   = {LCTLT_S, LGUIT_T, COMBO_END};
-const uint16_t PROGMEM l_rom_q_combo[]   = {LSFTT_N, LCTLT_S, COMBO_END};
+const uint16_t PROGMEM l_rom_k_combo[]   = {KC_C, LALTT_P, COMBO_END};
+const uint16_t PROGMEM l_rom_q_combo[]   = {RALTT_F, KC_C, LALTT_P, COMBO_END};
 const uint16_t PROGMEM l_rom_esc_combo[] = {KC_B, KC_M, COMBO_END};
 const uint16_t PROGMEM l_rom_und_combo[] = {LOW_SPC, RALTT_F, KC_C, COMBO_END};
 const uint16_t PROGMEM l_rom_sav_combo[] = {LOW_SPC, LSFTT_N, LCTLT_S, COMBO_END};
