@@ -72,9 +72,10 @@ void check_disable_oneshot(uint16_t keycode) {
         case KC_SPC:
         case RAI_ACT:
         case RAI_TAC:
+        case ACT_SPC:
         case LOW_SPC:
         case MED_CAS:
-        case NAV_CAS:
+        case NAV_REP:
         case MAI_CAS:
         case OS_LSFT:
         case OS_LCTL:
@@ -137,7 +138,6 @@ process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *re
             }
 
         case MED_CAS:
-        case NAV_CAS:
         case MAI_CAS:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {

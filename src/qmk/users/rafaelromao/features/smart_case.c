@@ -180,6 +180,7 @@ process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record
             case KC_HOME:
             case KC_END:
             case MAI_CAS:
+            case RAI_ACT:
             case MED_CAS:
                 start_smart_case_timer();
                 break;

@@ -8,7 +8,7 @@
 #define ___________________ROMAK_L1__________           MC_ESCC , KC_B    , KC_M    , KC_W    
 #define ___________________ROMAK_L2____________________ MAC_KCD , LSFTT_N , LCTLT_S , LGUIT_T , KC_G
 #define           _________ROMAK_L3____________________           RALTT_F , KC_C    , LALTT_P , KC_V
-#define                               ____ROMAK_L4_____                               NAV_CAS , LOW_SPC
+#define                               ____ROMAK_L4_____                               NAV_REP , LOW_SPC
 
 #define           _________ROMAK_R1____________________           KC_L    , KC_O    , KC_U    , KC_BSPC
 #define ___________________ROMAK_R2____________________ KC_Z    , RGUIT_R , RCTLT_A , RSFTT_E , MAC_KCI
@@ -18,7 +18,7 @@
 #define ___________________NUMPAD_L1_________           _______ , KC_F9   , KC_F8   , KC_F7   
 #define ___________________NUMPAD_L2___________________ NAV_F12 , SF_F6   , CT_F5   , GU_F4   , KC_F11
 #define           _________NUMPAD_L3___________________           AL_F3   , KC_F2   , AL_F1   , KC_F10
-#define                               ____NUMPAD_L4____                               NAV_CAS , KC_SPC
+#define                               ____NUMPAD_L4____                               _______ , KC_SPC
 
 #define           _________NUMPAD_R1___________________           KC_7    , KC_8    , KC_9    , _______
 #define ___________________NUMPAD_R2___________________ KC_COMM , GU_4    , CT_5    , SF_6    , MAC_DOT
@@ -35,14 +35,14 @@
 #define ___________________MACROS_R3_________           MC_JOIN , MC_COMT , MC_SWLE , MC_SWRI 
 #define ____MACROS_R4____                               KC_SPC  , _______
 
-#define ___________________ACCENT_L1_________           _______ , _______ , _______ , _______
-#define ___________________ACCENT_L2___________________ KC_Y    , REPEAT  , KC_X    , KC_K    , _______
-#define           _________ACCENT_L3___________________           KC_Q    , MC_SQ_C , MC_QU   , _______ 
-#define                               ____ACCENT_L4____                               _______ , MC_NSEN
-#define                               ____FIXED_ACC_L4_                               _______ , LOW_SPC
+#define ___________________ACCENT_L1_________           _______ , KC_J    , KC_V    , KC_G
+#define ___________________ACCENT_L2___________________ KC_Y    , KC_Z    , KC_X    , KC_K    , KC_QUOT
+#define           _________ACCENT_L3___________________           KC_Q    , MC_SQ_C , MC_QU   , KC_GRV 
+#define                               ____ACCENT_L4____                               OS_LSFT , MC_NSEN
+#define                               ____FIXED_ACC_L4_                               OS_LSFT , KC_SPC
 
-#define           _________ACCENT_R1___________________           KC_CIRC , MC_SQ_O , MC_SQ_U , _______
-#define ___________________ACCENT_R2___________________ KC_GRV  , KC_QUOT , MC_SQ_A , MC_SQ_E , MC_SQ_I
+#define           _________ACCENT_R1___________________           MC_GV_A , MC_SQ_O , MC_SQ_U , _______
+#define ___________________ACCENT_R2___________________ KC_CIRC , MC_TL_A , MC_SQ_A , MC_SQ_E , MC_SQ_I
 #define ___________________ACCENT_R3_________           KC_TILD , MC_CR_A , MC_CR_O , MC_CR_E 
 #define ____ACCENT_R4____                               RAI_ACT , _______
 #define ____FIXED_ACC_R4_                               RAI_TAC , _______
@@ -60,10 +60,10 @@
 #define ___________________RAISE_L1__________           _______ , KC_F9   , KC_F8   , KC_F7   
 #define ___________________RAISE_L2____________________ KC_F12  , KC_F6   , KC_F5   , KC_F4   , KC_F11
 #define           _________RAISE_L3____________________           KC_F3   , KC_F2   , KC_F1   , KC_F10
-#define                               ____RAISE_L4_____                               _______ , KC_SPC
+#define                               ____RAISE_L4_____                               REPEAT  , KC_SPC
 
-#define           _________RAISE_R1____________________           TD_DLR  , TD_LCRB , TD_RCRB , _______
-#define ___________________RAISE_R2____________________ TD_COLN , KC_MINS , TD_PLUS , TD_EQL  , KC_PERC
+#define           _________RAISE_R1____________________           TD_COLN , TD_LCRB , TD_RCRB , _______
+#define ___________________RAISE_R2____________________ TD_DLR  , KC_MINS , TD_PLUS , TD_EQL  , KC_PERC
 #define ___________________RAISE_R3__________           TD_TILD , TD_SLSH , KC_ASTR , TD_NOT   
 #define ____RAISE_R4_____                               _______ , _______
 

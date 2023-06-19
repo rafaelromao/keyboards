@@ -116,7 +116,12 @@ void td_currencies(tap_dance_state_t *state, void *user_data) {
             tap_code(KC_SPC);
             break;
         case TD_DOUBLE_TAP:
-            SEND_STRING("final ");
+            if (is_macos()) {
+                tap_code16(LSFT(RALT(KC_2)));
+            } else {
+                clear_shift();
+                tap_code16(LCTL(LALT(KC_5)));
+            }
             break;
         case TD_SINGLE_HOLD:
             tap_code16(KC_DLR);

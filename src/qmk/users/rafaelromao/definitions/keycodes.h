@@ -154,7 +154,7 @@ enum {
 
 // Layer-taps
 
-#define NAV_CAS LT(_NAVIGATION, TG_CASE)
+#define NAV_REP LT(_NAVIGATION, REPEAT)
 #define NAV_F12 LT(_NAVIGATION, KC_F12)
 #define NAV_AT  LT(_NAVIGATION, KC_AT)
 #define NAV_PRJ LT(_NAVIGATION, MC_PROJ)

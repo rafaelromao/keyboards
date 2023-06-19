@@ -9,7 +9,7 @@
 
 #include "../features/behaviors.dtsi"
 #include "../features/accents.dtsi"
-#include "../features/smartcase.dtsi"
+#include "../features/thumbs.dtsi"
 #include "../features/swapper.dtsi"
 #include "../features/symbols.dtsi"
 #include "../features/shortcuts.dtsi"
@@ -28,7 +28,7 @@
    &mc_escc         &kp B               &kp M               &kp W               &kp K               &kp X               &kp L            &kp O            &kp U            &kp BSPC
    &lt MACROS D     &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp G               &kp Z               &mt RGUI R       &mt RCTRL A      &mt RSHFT E      &lt MACROS I 
    &kp Q            &mt RALT F          &kp C               &mt LALT P          &kp V               &kp J               &mt LALT H       &td_comma        &th_dot 0 0      &kp Y
-                                        &none               &msk NAV LSHFT      &lt LOWER SPACE     &msl RAISE ACCENT   &med_sc          &none
+                                        &none               &ht_repeat NAV 0    &lt LOWER SPACE     &msl RAISE ACCENT   &med_sc          &none
                         >;
                 };
                 capsword_layer {
@@ -37,7 +37,7 @@
    &trans           &kp LS(B)           &kp LS(M)           &kp LS(W)           &kp LS(K)           &kp LS(X)           &kp LS(L)        &kp LS(O)        &kp LS(U)        &trans
    &lt MACROS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(G)           &kp LS(Z)           &mt RGUI LS(R)   &mt RCTRL LS(A)  &mt RSHFT LS(E)  &lt MACROS LS(I) 
    &kp LS(Q)        &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &mt LALT LS(H)   &td_comma        &th_dot 0 0      &kp LS(Y)
-                                        &trans              &ht_sc NAV 0        &trans              &msl RAISE CASE_AC  &ht_sc MEDIA 0   &trans
+                                        &trans              &ht_repeat NAV 0    &trans              &msl RAISE CASE_AC  &ht_sc MEDIA 0   &trans
                         >;
                 };
                 numpad_layer {
@@ -46,7 +46,7 @@
    &trans           &kp F9              &kp F8              &kp F7              &none               &none               &mc_n7           &mc_n8           &mc_n9           &trans
    &lt MACROS F12   &mt LSHFT F6        &mt LCTRL F5        &mt LGUI F4         &kp F11             &kp COMMA           &th_n4 RGUI 0    &th_n5 RCTRL 0   &th_n6 RSHFT 0   &lt MACROS DOT 
    &none            &mt RALT F3         &kp F2              &mt LALT F1         &kp F10             &tog NUMPAD         &th_n1 LALT 0    &mc_n2           &mc_n3           &none
-                                        &trans              &ht_sc NAV 0        &trans              &lt RAISE SPACE     &th_n0 MEDIA 0   &trans
+                                        &trans              &ht_repeat NAV 0    &trans              &lt RAISE SPACE     &th_n0 MEDIA 0   &trans
                         >;
                 };
                 macros_layer {
@@ -61,28 +61,28 @@
                 accents_layer {
                         label = "ACCENT";
                         bindings = <
-   &trans           &none               &none               &none               &none               &none                &kp CARET        &ac_oacu         &ac_uacu         &trans
-   &kp Y            &key_repeat         &kp X               &kp K               &none               &kp GRAVE            &kp SQT          &ac_aacu         &ac_eacu         &ac_iacu 
-   &none            &kp Q               &mc_ced             &mc_qu              &none               &kp TILDE            &ac_acir         &ac_ocir         &ac_ecir         &none
-                                        &trans              &trans              &mc_sentence        &msl RAISE ACCENT   &trans           &trans
+   &trans           &kp J               &kp V               &kp G               &none               &none               &ac_agrv         &ac_oacu         &ac_uacu         &trans
+   &kp Y            &kp Z               &kp X               &kp K               &kp SQT             &kp CARET           &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
+   &none            &kp Q               &mc_ced             &mc_qu              &kp GRAVE           &kp TILDE           &ac_acir         &ac_ocir         &ac_ecir         &none
+                                        &trans              &sk LSHFT           &mc_sentence        &msl RAISE ACCENT   &trans           &trans
                         >;
                 };
                 fixed_accents_layer {
                         label = "ACCENT";
                         bindings = <
-   &trans           &none               &key_repeat         &kp TILDE           &none               &none               &kp CARET        &ac_oacu         &ac_uacu         &trans
-   &kp Y            &mc_sqo             &kp X               &kp K               &kp SQT             &ac_atil            &ac_agrv         &ac_aacu         &ac_eacu         &ac_iacu 
-   &none            &kp Q               &mc_ced             &mc_qu              &kp GRAVE           &ac_otil            &ac_acir         &ac_ocir         &ac_ecir         &none
-                                        &trans              &trans              &lt LOWER SPACE     &tog ACCENT_F       &trans           &trans
+   &trans           &kp J               &kp V               &kp G               &none               &none               &ac_agrv         &ac_oacu         &ac_uacu         &trans
+   &kp Y            &kp Z               &kp X               &kp K               &kp SQT             &kp CARET           &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
+   &none            &kp Q               &mc_ced             &mc_qu              &kp GRAVE           &kp TILDE           &ac_acir         &ac_ocir         &ac_ecir         &none
+                                        &trans              &sk LSHFT           &kp SPACE           &tog ACCENT_F       &trans           &trans
                         >;
                 };
                 case_accents_layer {
                         label = "CASE_AC";
                         bindings = <
-   &trans           &none               &key_repeat         &kp TILDE           &none               &none               &kp CARET        &ac_oacu_c       &ac_uacu_c       &trans
-   &kp LS(Y)        &mc_sqo             &kp LS(X)           &kp LS(K)           &kp SQT             &ac_atil_c          &ac_agrv_c       &ac_aacu_c       &ac_eacu_c       &ac_iacu_c 
-   &none            &kp LS(Q)           &mc_ced_c           &mc_qu_c            &kp GRAVE           &ac_otil_c          &ac_acir_c       &ac_ocir_c       &ac_ecir_c       &none
-                                        &trans              &trans              &kp SPACE           &msl RAISE ACCENT   &trans           &trans
+   &trans           &kp LS(J)           &kp LS(V)           &kp LS(G)           &none               &none               &ac_agrv_c       &ac_oacu_c       &ac_uacu_c       &trans
+   &kp LS(Y)        &kp LS(Z)           &kp LS(X)           &kp LS(K)           &kp SQT             &kp CARET           &ac_atil_c       &ac_aacu_c       &ac_eacu_c       &ac_iacu_c 
+   &none            &kp LS(Q)           &mc_ced_c           &mc_qu_c            &kp GRAVE           &kp TILDE           &ac_acir_c       &ac_ocir_c       &ac_ecir_c       &none
+                                        &trans              &sk LSHFT           &mc_sentence        &msl RAISE ACCENT   &trans           &trans
                         >;
                 };
                 lower_layer {
@@ -97,10 +97,10 @@
                 raise_layer {
                         label = "RAISE";
                         bindings = <
-   &trans           &kp F9             &kp F8               &kp F7              &none               &none               &td_curr         &td_lbrc         &td_rbrc        &trans
-   &kp F12          &kp F6             &kp F5               &kp F4              &kp F11             &th_colon 0 0       &kp MINUS        &td_plus         &td_eql         &kp PERCENT  
+   &trans           &kp F9             &kp F8               &kp F7              &none               &none               &th_colon 0 0    &td_lbrc         &td_rbrc        &trans
+   &kp F12          &kp F6             &kp F5               &kp F4              &kp F11             &td_curr            &kp MINUS        &td_plus         &td_eql         &kp PERCENT  
    &none            &kp F3             &kp F2               &kp F1              &kp F10             &td_tilde           &td_slash        &kp STAR         &td_excl        &none
-                                       &trans               &trans              &kp SPACE           &trans              &trans           &trans
+                                       &trans               &key_repeat         &kp SPACE           &trans              &trans           &trans
                         >;
                 };
                 fixed_navigation_layer {

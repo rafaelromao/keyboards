@@ -6,7 +6,7 @@
 */
 
 / {
-    smart-cases {
+    thumbs {
         smart_case: smart_case {
             compatible = "zmk,behavior-caps-word";
             label = ZMK_MACRO_STRINGIFY(smart_case);
@@ -25,6 +25,16 @@
             flavor = "tap-preferred";
             quick-tap-ms = <QUICK_TAP_TERM>;
             bindings = <&mo>, <&smart_case>;
+        };
+
+        ht_repeat: ht_repeat {
+            compatible = "zmk,behavior-hold-tap";
+            label = ZMK_MACRO_STRINGIFY(ht_repeat);
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <QUICK_TAP_TERM>;
+            bindings = <&mo>, <&key_repeat>;
         };
 
         med_sc: med_sc {
