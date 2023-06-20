@@ -39,7 +39,7 @@ const uint16_t PROGMEM r_med_ent_combo[] = {KC_ENT, KC_TAB, COMBO_END};
 
 const uint16_t PROGMEM l_acc_esc_combo[]  = {KC_J, KC_V, COMBO_END};
 const uint16_t PROGMEM r_acc_squo_combo[] = {MC_TL_A, MC_SQ_A, COMBO_END};
-const uint16_t PROGMEM r_acc_ae_combo[]   = {MC_SQ_O, MC_SQ_U, COMBO_END};
+const uint16_t PROGMEM r_acc_ae_combo[]   = {MC_CR_A, MC_CR_O, COMBO_END};
 const uint16_t PROGMEM r_acc_ao_combo[]   = {MC_SQ_A, MC_SQ_E, COMBO_END};
 const uint16_t PROGMEM r_acc_oe_combo[]   = {MC_CR_O, MC_CR_E, COMBO_END};
 const uint16_t PROGMEM r_acc_cao_combo[]  = {MC_TL_A, MC_SQ_A, MC_SQ_E, COMBO_END};
