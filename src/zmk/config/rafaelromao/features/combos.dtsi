@@ -68,7 +68,7 @@
         COMBO(cb_xc,            RHM RHR,     &kp LS(X),          CASE)
         COMBO(cb_dc,            RHI RHM RHR, &kp LS(D),          CASE)
 
-        COMBO(cb_ae,            RLI RLM,     &mc_ae,             ACCENT ACCENT_F)
+        COMBO(cb_ae,            RBI RBM,     &mc_ae,             ACCENT ACCENT_F)
         COMBO(cb_ao,            RHM RHR,     &mc_ao,             ACCENT ACCENT_F)
         COMBO(cb_oe,            RBM RBR,     &mc_oe,             ACCENT ACCENT_F)
         COMBO(cb_cao,           RHI RHM RHR, &mc_cao,            ACCENT ACCENT_F)
