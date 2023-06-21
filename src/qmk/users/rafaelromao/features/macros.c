@@ -49,7 +49,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             tap_code16(KC_GT);
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // O + ESC
+            // ESC + O + ESC
 
         case MC_OESC:
             if (isShifted) {
@@ -63,7 +63,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // LShift(O) + ESC
+            // ESC + LShift(O) + ESC
 
         case MC_SOES:
             register_mods(MOD_MASK_SHIFT);

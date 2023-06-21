@@ -107,7 +107,9 @@ bool should_send_ctrl(bool isMacOS, bool isOneShotShift) {
 }
 
 process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *record) {
-    check_disable_oneshot(keycode);
+    if (!record->event.pressed) {
+        check_disable_oneshot(keycode);
+    }
 
     bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     bool isOneShotShift       = get_oneshot_mods() & MOD_MASK_SHIFT || isOneShotLockedShift;

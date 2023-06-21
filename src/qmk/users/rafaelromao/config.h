@@ -8,7 +8,6 @@
 #undef LOCKING_RESYNC_ENABLE
 
 // Make it easier to work with tap hold
-#define IGNORE_MOD_TAP_INTERRUPT
 #define PERMISSIVE_HOLD
 #define QUICK_TAP_TERM_PER_KEY
 #define TAPPING_TERM_PER_KEY
@@ -23,12 +22,14 @@
 #define LEADER_NO_TIMEOUT
 
 // Configure combos
-#define COMBO_COUNT 53
 #define COMBO_TERM 30
 #define EXTRA_SHORT_COMBOS
 #define COMBO_STRICT_TIMER
 #define COMBO_HOLD_TERM 175
 #define COMBO_MUST_TAP_PER_COMBO
+
+// Disable Alt Repeat
+#define NO_ALT_REPEAT_KEY
 
 // Dynamic macros
 #define DYNAMIC_MACRO_NO_NESTING

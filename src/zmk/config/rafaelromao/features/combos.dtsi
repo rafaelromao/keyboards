@@ -45,7 +45,7 @@
         COMBO(cb_esc_save,      LTR LTM,     &mc_save_esc,       NAV)
 
         COMBO(cb_enter,         RHM RHR R0,  &kp ENTER,          ROMAK CASE NUMPAD LOWER NAV NAV_F)
-        COMBO(cb_backspace,     RTM RTR,     &kp BACKSPACE,      ROMAK CASE NUMPAD LOWER ACCENT ACCENT_F)
+        COMBO(cb_backspace,     RTM RTR,     &kp BACKSPACE,      ROMAK CASE NUMPAD LOWER NAV NAV_F RAISE ACCENT ACCENT_F)
 
         COMBO(cb_paste,         RBI RBM R0,  &mc_paste,          ROMAK CASE NUMPAD)
         COMBO(cb_copy,          RHI RHM R0,  &mc_copy,           ROMAK CASE NUMPAD)
@@ -75,7 +75,7 @@
         COMBO(cb_coes,          RBI RBM RBR, &mc_coes,           ACCENT ACCENT_F)
         COMBO(cb_squo,          RHI RHM,     &mc_sqo,            ACCENT ACCENT_F)
 
-        COMBO(cb_braces,        RTR RTM,     &mc_braces,         RAISE)
+        COMBO(cb_braces,        RTI RTM RTR, &mc_braces,         RAISE)
         COMBO(cb_sarrow,        RHI RHM,     &th_sarrow 0 0,     RAISE)
         COMBO(cb_eqeq,          RHM RHR,     &mc_eqeq,           RAISE)
         COMBO(cb_noteq,         RHI RHM RHR, &mc_noteq,          RAISE)

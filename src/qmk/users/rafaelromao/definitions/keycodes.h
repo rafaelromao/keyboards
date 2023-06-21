@@ -74,7 +74,7 @@ enum {
     MC_SECRET_1, 
 
     // Toggle codes
-    OS_ACNT, TG_MAC, TG_WIN, TG_CASE, TG_ACNT, REPEAT,
+    OS_ACNT, TG_MAC, TG_WIN, TG_CASE, TG_ACNT, 
 
     // Select Word/Line
     MC_SELW, MC_SELL, 
@@ -98,7 +98,7 @@ enum {
     // Begin macros used to write text
     STR_MACRO_START,
     
-    MC_BTIC, MC_DQUO, MC_SQUO, MC_CIRC, MC_TILD,
+    MC_BTIC, MC_DQUO, MC_SQUO, MC_CIRC, MC_TILD, REPEAT,
     MC_ENT, MC_TAB, MC_ESC, MC_ESCC, MC_NSEN, 
     MC_ESAV, MC_SENT, MC_CUR, MC_SAR, MC_DEQ, MC_NEQ, 
     MC_DAND, MC_DPIP, MC_OESC, MC_SOES, MC_LTGT, 
@@ -154,7 +154,7 @@ enum {
 
 // Layer-taps
 
-#define NAV_REP LT(_NAVIGATION, REPEAT)
+#define NAV_REP LT(_NAVIGATION, QK_REP)
 #define NAV_F12 LT(_NAVIGATION, KC_F12)
 #define NAV_AT  LT(_NAVIGATION, KC_AT)
 #define NAV_PRJ LT(_NAVIGATION, MC_PROJ)

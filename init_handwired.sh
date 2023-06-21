@@ -24,8 +24,8 @@ then
     echo "Creating Handwired symbolic link..."
     ln -s "$KEYBOARD_HOME/src/qmk/$HANDWIRED/rafaelromao" "$QMK_HOME/$HANDWIRED"
 fi
-echo "Checking out qmk v0.20.1..."
+echo "Checking out qmk v0.21.3..."
 cd $QMK_HOME
 git fetch
-git checkout 0.20.1
+git checkout 0.21.3
 cd ..

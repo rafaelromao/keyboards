@@ -9,7 +9,6 @@
 #include "features/os_toggle.h"
 #include "features/macros.h"
 #include "features/accents.h"
-#include "features/combos.h"
 #include "features/leader.h"
 #include "features/custom_oneshot.h"
 #include "features/common_shortcuts.h"

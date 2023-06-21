@@ -33,7 +33,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     };
 
     // Process Repeat Key
-    switch (process_repeat_key(keycode, record)) {
+    switch (process_repeat(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:
@@ -146,7 +146,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 // Dynamic macros
 
-void dynamic_macro_record_start_user(void) {}
+void dynamic_macro_record_start_user(int8_t direction) {}
 
 void dynamic_macro_play_user(int8_t direction) {}
 

@@ -27,6 +27,10 @@
     release-after-ms = <2000>;
 };
 
+&key_repeat {
+    usage-pages = <HID_USAGE_KEY HID_USAGE_CONSUMER>;
+};
+
 / {
     behaviors {
         msl: layer-tap-with-stick-layer {

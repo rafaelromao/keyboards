@@ -9,7 +9,6 @@ SRC += features/smart_case.c
 SRC += features/os_toggle.c
 SRC += features/macros.c
 SRC += features/accents.c
-SRC += features/combos.c
 SRC += features/leader.c
 SRC += features/select_word.c
 SRC += features/dynamic_macro.c
@@ -35,3 +34,5 @@ GRAVE_EMC_ENABLE = no
 MAGIC_ENABLE = no
 MUSIC_ENABLE = no
 OS_DETECTION_ENABLE = yes
+
+INTROSPECTION_KEYMAP_C = features/combos.c
