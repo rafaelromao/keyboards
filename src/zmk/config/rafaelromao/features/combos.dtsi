@@ -29,7 +29,7 @@
         compatible = "zmk,combos";
 
         COMBO(cb_save,          LHR LHM L0,  &mc_save,           ROMAK CASE NUMPAD)
-        COMBO(cb_escc,          LTR LTM,     &mc_escc,           ROMAK CASE NUMPAD NAV_F ACCENT_F)
+        COMBO(cb_escc,          LTR LTM,     &mc_escc,           ROMAK CASE NUMPAD NAV_F)
         COMBO(cb_fullscr,       LHM LHI L0,  &mc_fullscr,        ROMAK CASE NUMPAD)
         COMBO(cb_find,          LBM LBI L0,  &mc_find,           ROMAK CASE NUMPAD)
         COMBO(cb_undo,          LBR LBM L0,  &mc_undo,           ROMAK CASE NUMPAD)
@@ -45,7 +45,7 @@
         COMBO(cb_esc_save,      LTR LTM,     &mc_save_esc,       NAV)
 
         COMBO(cb_enter,         RHM RHR R0,  &kp ENTER,          ROMAK CASE NUMPAD LOWER NAV NAV_F)
-        COMBO(cb_backspace,     RTM RTR,     &kp BACKSPACE,      ROMAK CASE NUMPAD LOWER NAV NAV_F RAISE ACCENT ACCENT_F)
+        COMBO(cb_backspace,     RTM RTR,     &kp BACKSPACE,      ROMAK CASE NUMPAD LOWER NAV NAV_F RAISE ACCENT)
 
         COMBO(cb_paste,         RBI RBM R0,  &mc_paste,          ROMAK CASE NUMPAD)
         COMBO(cb_copy,          RHI RHM R0,  &mc_copy,           ROMAK CASE NUMPAD)
@@ -68,12 +68,12 @@
         COMBO(cb_xc,            RHM RHR,     &kp LS(X),          CASE)
         COMBO(cb_dc,            RHI RHM RHR, &kp LS(D),          CASE)
 
-        COMBO(cb_ae,            RBI RBM,     &mc_ae,             ACCENT ACCENT_F)
-        COMBO(cb_ao,            RHM RHR,     &mc_ao,             ACCENT ACCENT_F)
-        COMBO(cb_oe,            RBM RBR,     &mc_oe,             ACCENT ACCENT_F)
-        COMBO(cb_cao,           RHI RHM RHR, &mc_cao,            ACCENT ACCENT_F)
-        COMBO(cb_coes,          RBI RBM RBR, &mc_coes,           ACCENT ACCENT_F)
-        COMBO(cb_squo,          RHI RHM,     &mc_sqo,            ACCENT ACCENT_F)
+        COMBO(cb_ae,            RBI RBM,     &mc_ae,             ACCENT)
+        COMBO(cb_ao,            RHM RHR,     &mc_ao,             ACCENT)
+        COMBO(cb_oe,            RBM RBR,     &mc_oe,             ACCENT)
+        COMBO(cb_cao,           RHI RHM RHR, &mc_cao,            ACCENT)
+        COMBO(cb_coes,          RBI RBM RBR, &mc_coes,           ACCENT)
+        COMBO(cb_squo,          RHI RHM,     &mc_sqo,            ACCENT)
 
         COMBO(cb_braces,        RTI RTM RTR, &mc_braces,         RAISE)
         COMBO(cb_sarrow,        RHI RHM,     &th_sarrow 0 0,     RAISE)

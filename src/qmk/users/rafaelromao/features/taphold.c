@@ -59,13 +59,6 @@ bool get_combo_must_tap(uint16_t index, combo_t *combo) {
 
 process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case RAI_TAC:
-            if (record->event.pressed && record->tap.count > 0) {
-                layer_invert(_FIXED_ACCENT);
-                return PROCESS_RECORD_RETURN_FALSE;
-            }
-            break;
-
         case NAV_AT:
             if (record->event.pressed && record->tap.count > 0) {
                 tap_code16(KC_AT);

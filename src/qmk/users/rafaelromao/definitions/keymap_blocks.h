@@ -28,7 +28,7 @@
 #define ___________________MACROS_L1_________           _______ , MC_ESC  , MC_QUIK , MC_AUCO 
 #define ___________________MACROS_L2___________________ MC_QDOC , SF_FSYM , MC_RUN  , MC_DBUG , MC_BUID
 #define           _________MACROS_L3___________________           MC_RECE , MC_COMP , MC_FIUS , MC_REFC
-#define                               ____MACROS_L4____                               NAV_PRJ , ACT_SPC
+#define                               ____MACROS_L4____                               NAV_PRJ , KC_SPC
 
 #define           _________MACROS_R1___________________           MC_SELW , MC_ENT  , MC_TAB  , _______
 #define ___________________MACROS_R2___________________ TD_MACR , MC_SELL , MC_MODM , SF_MODP , XXXXXXX
@@ -45,7 +45,6 @@
 #define ___________________ACCENT_R2___________________ KC_CIRC , MC_TL_A , MC_SQ_A , MC_SQ_E , MC_SQ_I
 #define ___________________ACCENT_R3_________           KC_TILD , MC_CR_A , MC_CR_O , MC_CR_E 
 #define ____ACCENT_R4____                               RAI_ACT , _______
-#define ____FIXED_ACC_R4_                               RAI_TAC , _______
 
 #define ___________________LOWER_L1__________           _______ , TD_OPAR , TD_CPAR , KC_HASH 
 #define ___________________LOWER_L2____________________ NAV_AT  , TD_OR   , TD_AND  , TD_DQUO , MC_SQUO
@@ -89,7 +88,7 @@
 #define           _________NAVIGATION_R1_______________           MEH_L   , KC_PGDN , KC_PGUP , _______
 #define ___________________NAVIGATION_R2_______________ TG_NAV  , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT
 #define ___________________NAVIGATION_R3_____           KC_INS  , KC_DEL  , KC_HOME , KC_END  
-#define __NAVIGATION_R4__                               RAI_TAC , MAI_CAS
+#define __NAVIGATION_R4__                               ACT_SPC , MAI_CAS
 #define __FIXED_NAV__R4__                               _______ , MED_CAS
 
 #define _______________________LOCK____L1____           XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX 

@@ -55,34 +55,7 @@
    &trans           &kp ESC            &mm_actions          &mm_typematch       &none               &none               &mc_selw         &kp ENTER        &kp TAB          &trans    
    &mm_docs         &th_find LSHFT 0   &mm_run              &mm_debug           &mm_build           &none               &mc_seln         &mm_zh_b         &th_zh LSHFT 0   &none  
    &none            &mm_recent         &mm_complete         &mm_usages          &mm_refac           &mc_join            &mc_comment      &mm_wt_b         &mm_wt_f         &none
-                                       &trans               &th_proj NAV 0      &lt ACCENT SPACE    &kp SPACE           &trans           &trans
-                        >;
-                };
-                accents_layer {
-                        label = "ACCENT";
-                        bindings = <
-   &trans           &kp J               &kp V               &kp G               &none               &none               &ac_agrv         &ac_oacu         &ac_uacu         &trans
-   &kp Y            &kp Z               &kp X               &kp K               &kp SQT             &kp CARET           &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
-   &none            &kp Q               &mc_ced             &mc_qu              &kp GRAVE           &kp TILDE           &ac_acir         &ac_ocir         &ac_ecir         &none
-                                        &trans              &sl CASE_AC         &mc_sentence        &msl RAISE ACCENT   &trans           &trans
-                        >;
-                };
-                fixed_accents_layer {
-                        label = "ACCENT";
-                        bindings = <
-   &trans           &kp J               &kp V               &kp G               &none               &none               &ac_agrv         &ac_oacu         &ac_uacu         &trans
-   &kp Y            &kp Z               &kp X               &kp K               &kp SQT             &kp CARET           &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
-   &none            &kp Q               &mc_ced             &mc_qu              &kp GRAVE           &kp TILDE           &ac_acir         &ac_ocir         &ac_ecir         &none
-                                        &trans              &sl CASE_AC         &kp SPACE           &tog ACCENT_F       &trans           &trans
-                        >;
-                };
-                case_accents_layer {
-                        label = "CASE_AC";
-                        bindings = <
-   &trans           &kp LS(J)           &kp LS(V)           &kp LS(G)           &none               &none               &ac_agrv_c       &ac_oacu_c       &ac_uacu_c       &trans
-   &kp LS(Y)        &kp LS(Z)           &kp LS(X)           &kp LS(K)           &kp SQT             &kp CARET           &ac_atil_c       &ac_aacu_c       &ac_eacu_c       &ac_iacu_c 
-   &none            &kp LS(Q)           &mc_ced_c           &mc_qu_c            &kp GRAVE           &kp TILDE           &ac_acir_c       &ac_ocir_c       &ac_ecir_c       &none
-                                        &trans              &trans              &mc_sentence        &msl RAISE ACCENT   &trans           &trans
+                                       &trans               &th_proj NAV 0      &kp SPACE           &kp SPACE           &trans           &trans
                         >;
                 };
                 lower_layer {
@@ -127,7 +100,25 @@
    &trans           &kp ESC            &mc_save             &mc_meh_w           &none               &none               &mc_meh_l      &kp PAGE_DOWN      &kp PAGE_UP     &trans
    &mc_meh_d        &sk LSHIFT         &sk LCTRL            &sk LGUI            &mc_meh_g           &tog NAV_F          &kp LEFT       &kp DOWN           &kp UP          &kp RIGHT
    &none            &sk RALT           &mc_meh_c            &sk LALT            &mc_meh_v           &kp INS             &kp DEL        &kp HOME           &kp END         &none
-                                       &trans               &trans              &trans              &tog ACCENT_F       &mo MAINT      &trans
+                                       &trans               &trans              &trans              &lt ACCENT SPACE    &mo MAINT      &trans
+                        >;
+                };
+                accents_layer {
+                        label = "ACCENT";
+                        bindings = <
+   &trans           &kp J               &kp V               &kp G               &none               &none               &ac_agrv         &ac_oacu         &ac_uacu         &trans
+   &kp Y            &kp Z               &kp X               &kp K               &kp SQT             &kp CARET           &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
+   &none            &kp Q               &mc_ced             &mc_qu              &kp GRAVE           &kp TILDE           &ac_acir         &ac_ocir         &ac_ecir         &none
+                                        &trans              &sl CASE_AC         &mc_sentence        &trans              &trans           &trans
+                        >;
+                };
+                case_accents_layer {
+                        label = "CASE_AC";
+                        bindings = <
+   &trans           &kp LS(J)           &kp LS(V)           &kp LS(G)           &none               &none               &ac_agrv_c       &ac_oacu_c       &ac_uacu_c       &trans
+   &kp LS(Y)        &kp LS(Z)           &kp LS(X)           &kp LS(K)           &kp SQT             &kp CARET           &ac_atil_c       &ac_aacu_c       &ac_eacu_c       &ac_iacu_c 
+   &none            &kp LS(Q)           &mc_ced_c           &mc_qu_c            &kp GRAVE           &kp TILDE           &ac_acir_c       &ac_ocir_c       &ac_ecir_c       &none
+                                        &trans              &trans              &mc_sentence        &trans              &trans           &trans
                         >;
                 };
                 lock_layer {
