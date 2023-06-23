@@ -8,9 +8,13 @@ process_record_result_t process_repeat(uint16_t keycode, keyrecord_t *record) {
             if (record->event.pressed) {
                 if (record->tap.count > 0) {
                     keyrecord_t press;
+                    press.event.type    = KEY_EVENT;
+                    press.tap.count     = 1;
                     press.event.pressed = true;
                     process_repeat_key(QK_REP, &press);
                     keyrecord_t release;
+                    release.event.type    = KEY_EVENT;
+                    release.tap.count     = 1;
                     release.event.pressed = false;
                     process_repeat_key(QK_REP, &release);
                     return PROCESS_RECORD_RETURN_TRUE;
