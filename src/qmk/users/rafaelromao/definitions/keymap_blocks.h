@@ -59,11 +59,7 @@
 #define ___________________RAISE_L1__________           _______ , KC_F9   , KC_F8   , KC_F7   
 #define ___________________RAISE_L2____________________ KC_F12  , KC_F6   , KC_F5   , KC_F4   , KC_F11
 #define           _________RAISE_L3____________________           KC_F3   , KC_F2   , KC_F1   , KC_F10
-#ifndef SAVE_MEMORY
 #define                               ____RAISE_L4_____                               QK_REP  , KC_SPC
-#else
-#define                               ____RAISE_L4_____                               _______ , KC_SPC
-#endif
 
 #define           _________RAISE_R1____________________           TD_COLN , TD_LCRB , TD_RCRB , _______
 #define ___________________RAISE_R2____________________ TD_DLR  , KC_MINS , TD_PLUS , TD_EQL  , KC_PERC

@@ -4,7 +4,6 @@
 
 process_record_result_t process_repeat(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-#ifndef SAVE_MEMORY
         case NAV_REP:
             if (record->event.pressed) {
                 if (record->tap.count > 0) {
@@ -17,7 +16,6 @@ process_record_result_t process_repeat(uint16_t keycode, keyrecord_t *record) {
                     return PROCESS_RECORD_RETURN_TRUE;
                 }
             }
-#endif
         default:
             return PROCESS_RECORD_CONTINUE;
     }
