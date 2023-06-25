@@ -14,26 +14,12 @@ The following pages explain how this layout works.
 
 - [Overview](docs/overview.md)
 - [Typing](docs/typing.md)
+- [Modifiers](docs/modifiers.md)
 - [Common Shortcuts](docs/shortcuts.md)
+- [Symbols](docs/symbols.md)
 - [Window Management](docs/navigation.md)
 - [Working with Numbers](docs/numbers.md)
-- [Dynamic Macros](docs/dynamic_macros.md)
 - [Programming](docs/programming.md)
-
-    ### Main Features
-
-    - [Home Block Mods](docs/modifiers.md#home-block-modifiers)
-    - [One Shot Mods](docs/modifiers.md#one-shot-modifiers)
-    - [Smart Thumb Keys](docs/base.md#smart-thumb-keys)
-    - [Smart Cases](docs/modifiers.md#smart-cases)
-    - [Shortcut Combos](docs/base.md#base-layer-combos)
-    - [Numpad Layer](docs/symbols.md#numpad)
-    - [Leader Key](docs/macros.md#leader-key)
-    - [Swapper](docs/macros.md#swapper)
-    - [Select Word](docs/macros.md#select-word)
-    - [Dynamic Macros](docs/macros.md#dynamic-macros)
-    - [Coding Shortcuts](docs/macros.md#coding-shortcuts)
-    - [Coding Dancing](docs/symbols.md#coding-dancing)
 
 ## About this repo
 

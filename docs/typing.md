@@ -1,25 +1,89 @@
 # rafaelromao's keyboard layout
 
 ## Romak
-- The base layer for this layout is [Romak](romak.md), a new keyboard layout optimized for typing in Portuguese and English.
-- It puts less load on pinkies, moving A, E and O to better positions for typing in Portuguese, when compared to Colemak.
-- It is also designed to work with only 30 keys and fit boards like the Rommana or the Hummingbird. For that to be possible,
-some letters are moved to the Accents layer. This layer not only contains these missing letters but also accented versions of
-the vowels, as well as macros to type `'`, `ç`, `Qu` and to repeat the last key or shortcut.
 
-```
+The base layer for this layout is [Romak](romak.md), a new keyboard layout designed for Portuguese and English, with a goal of good hand alternation, reduced finger travel and single finger bigrams, and less use of the pinkie and central columns.
+
+There are two versions of the layout: Romak 34 and Romak 30, according to the number of keys, including four in the thumbs.
+
+A one-shot layer is used to extend the base layer with accentuation and the missing letters, along with `Qu`, which is frequent in Portuguese, and replications of the central column letters.
+
+`ESC`, `BSP`, `'` and some alphas like `X`, `Y`, `Q` and `K` are also available in combos. There are also some combos in the Accents layer, to complement it.
+
+*Romak 34*:
+
 Base Layer:
 
-   F  D  W        L  O  U
-R  N  S  T  G  V  H  A  E  I
-   B  C  P  K  J  M  ,  . 
+```
+ESC  B  M  W  K  X  L  O  U  BSP 
+  D  N  S  T  G  Z  R  A  E  I 
+  Q  F  C  P  V  J  H  ,  .  Y
+```
 
 Accents Layer:
 
-      ®           Õ  Ó  Ú
-'  Qu X  Z     Y  Ã  Á  É  Í
-   Q  Ç        À  Â  Ô  Ê
+```    
+     J  V  G        À  Ó  Ú
+  Y  Z  X  K  '  ^  Ã  Á  É  Í
+     Q  Ç  Qu `  ~  Â  Ô  Ê
 ```
+
+*Romak 30*:
+
+Base Layer:
+
+```
+ESC  B  M  W        L  O  U  BSP 
+  D  N  S  T  G  Z  R  A  E  I 
+     F  C  P  V  J  H  ,  .
+```
+
+Accents Layer:
+
+```    
+     J  V  G        À  Ó  Ú
+  Y  Z  X  K  '  ^  Ã  Á  É  Í
+     Q  Ç  Qu `  ~  Â  Ô  Ê
+```
+
+For both versions, the thumb keys are:
+
+Tap:
+
+```
+Repeat, Space, OS Accents, OS Shift
+```
+
+Hold:
+
+```
+Navigation, Lower, Raise, Media
+```
+
+Symbols, Numbers and Function keys are available in the Lower and Raise layers, activated holding Space and OS Accents.
+
+Modifiers, Navigation and Media keys, as well as Enter, Tab and Esc, can be found in the Navigation and Media layers.
+
+If we consider only the alphas, we have an even smaller form, Romak 24, which is the one I'm using now. The center column is still used for other layers though.
+
+Romak 24:
+
+Base Layer:
+
+```
+     B  M  W        L  O  U   
+  D  N  S  T        R  A  E  I 
+     F  C  P        H  ,  .   
+```
+
+Accents Layer:
+
+```
+     J  V  G        À  Ó  Ú
+  Y  Z  X  K        Ã  Á  É  Í
+     Q  Ç  Qu       Â  Ô  Ê
+```
+
 ## Accents
 - The Accents layer is a oneshot layer. It means it will be automatically deactivated after the first key on it is pressed. Also, this layer is activated tapping the home thumb key at the right side, position R0, which makes it really fast to transition between the base layer and the Accents layer.
 - Tapping R0 twice will lock the Accents layer and it will be active until you tap it again or press the Layer Escape Key. It is helpful for when we need to repeat a key that is in the Accents layer or repeat a shortcut multiple times (see Repeat Key).
@@ -28,11 +92,9 @@ Accents Layer:
 ## Capitalization
 - The best way to capitalize a letter is to use the oneshot shift key, position R1. Tap it and the next key will be capitalized. Which is also pretty fast to use.
 ## Combos
-- In the accents layer, there are combos for some Portuguese n-grams that use keys present in the Accents layer, so that they can be typed with a single tap, like `ção`, `ão`, `ões`, among others.
+- In the accents layer, there are combos for some Portuguese n-grams that use keys present in the Accents layer, so that they can be typed with a single tap, like `ção`, `ão`, `õe` and `ãe`.
 - There are combos for some letters in the base layer too, like `y`, `q`, `x` and `z`, but they are not intended to be used for typing, but for things like VIM bindings instead.
-- There are also combos for the Layer Escape Key (L0+LTR+LTM), Enter (R0+RHM+RHR) and Backspace (R0+RTM+RTR). The combo for Enter is probably the best way to type it most of the times.
-## Repeat Key
-- The Repeat Key, LTM in the Accents layer, can be used to repeat the last key or shortcut. Although it requires an additional tap with the thumb, it might be more comfortable, and faster, to use than typing the same key twice.
+- There are also combos for the Layer Escape Key (LTR+LTM), Enter (R0+RHM+RHR) and Backspace (RTM+RTR). The combo for Enter is probably the best way to type it most of the times.
 ## Punctuation
 - Dot and Comma are kept in their qwerty positions, RBM and RBR.
 - Semicolon can be typed tapping Dot and Comma together, and colon can be typed tapping shift before that. But there is also a Colon/Semicolon key at RHC, in the Raise layer, which is activated holding R0.
@@ -40,6 +102,10 @@ Accents Layer:
 - Exclamation Mark is at RBR, in the Raise layer.
 ### Punctuation at the end
 - Any punctuation char can be inserted at the end of the line simply by holding it instead of tapping it. It is more useful for coding, but can also be helpfull for typing.
+### Sentence Case
+- Double tap space in the base layer, within the tapping term, will send DOT SPACE ONESHOT SHIFT.
+## Repeat Key
+- The Repeat Key, L1 in the base layer, can be used to repeat the last key or shortcut.
 ## Numbers
 - Numbers, for regular typing, are available in a Numpad style in the right side of the Lower layer, with 5 at RHM. They can be accessed holding L0.
 - While in the Lower layer, R0 will type Space instead of activating the Accents layer. This is handy, since L0 must be held to type numbers and it is the same key used to type Space.

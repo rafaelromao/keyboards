@@ -27,20 +27,18 @@ Combos are available in the base and Numpad layers to send ENTER, ESC, BACKSPACE
 - Tapping both keys will refresh the current browser tab.
 - If shift is active when tapping both keys, they will clear cache and refresh the current browser tab.
 
-### IntelliJ Shortcuts
-In the left side os the Macros layers, there are shortcuts for the most common actions in IntelliJ.
-   - Quick Actions (Alt+Enter) - If shifted, toggle a breakpoint in the current line (Cmd+F8 / Ctrl+F8).
-   - Type-matching Auto Complete (Ctrl+Shift+Space) - If shifted, show Basic Auto Complete Options (Ctrl+Space)
-   - Show Quick Docs (F1 / Ctrl+Q) - If shifted, show Parameters Info (Cmd+P / Ctrl+P)
-   - Find Symbol (Cmd+Option+O / Ctrl+Alt+Shift+N) - If shifted, Find Action (Cmd+Shift+A / Ctrl+Shift+A) - Hold will act as Shift
-   - Run (Ctrl+R / Shift+F10) - If shifted, Stop (Cmd+F2 / Ctrl+F2)
-   - Debug (Ctrl+D / Shift+F9) - If shifted, Resume (Cmd+Option+R / F9)
-   - Build (Cmd+F9 / Ctrl+F9) - If shifted, Rebuild (Cmd+Shift+F9 / Ctrl+Shift+F9)
-   - Project Files (Cmd+1 / Alt+1) - If shifted, Select In (Option+F1 / Alt+F1)
-   - Recent Files (Cmd+E / Ctrl+E) - If shifted, show Previous Error (Shift+F2)
-   - Complete Statement (Cmd+Shift+Enter / Ctrl+Shift+Enter) - If shifted, show Next Error (F2)
-   - Show Usages (Cmd+Option+F7 / Ctrl+Alt+F7) - If shifted, show Quick Definition (Option+Space / Ctrl+Shift+I)
-   - Refactor (Ctrl+T / Ctrl+Shift+Alt+T) - If shifted, Reformat Code (Cmd+Option+L / Ctrl+Alt+L)
+### Leader Key
+- Although not available in the Macros layer, the Leader Key is an important tool to play macros.
+- The Leader Key is available through a double tap in the comma.
+- The Leader Key is used to give easy access to some useful shortcuts and macros, like typing an internet domain or recurring terminal commands.
+- Source code: [leader.c](../src/qmk/users/rafaelromao/features/leader.c)
+### Dynamic Macros
+- There is an independent dynamic macro recording key in the Macros layer.
+- Double tapping it will start or stop recording a dynamic macro.
+- Tapping it will play the dynamic macro.
+- If shift is active, it will consider the macro slot 2, otherwise it will consider the macro slot 1.
+- If there is a macro being recorded, use the thumb modifier keys to stop recording and clear the current macro.
+- Source Code: [dynamic_macro.c](../src/qmk/users/rafaelromao/features/dynamic_macro.c)
 
 ### Hypers and Mehs
 Hyper and Meh are two special modifiers composed by the combination of existing modifiers, Hyper = Ctrl + Alt + Shift + Cmd/Win, while Meh = Ctrl + Alt + Shift.

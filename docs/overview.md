@@ -7,7 +7,7 @@ This layout consider the following premisses, which might not be acceptable for 
 - Most of the load will go to the right hand, assuming that the left hand might be in the trackball, so it might not be a good layout for left handed people.
 
 ## Layout Overview
-- This is a 30 keys split layout, 3x5+2 keys on each side, minus the two top row pinkie and indek keys.
+- This is a 30 keys split layout, 3x5+2 keys on each side, minus the two top row pinkie and index keys.
 - This layout works well with the OS configured for US International keyboards.
 - It was designed mostly for typing in Portuguese and English, working with numbers and programming in Java.
 - It reduces the usage of pinkies and indexes and considers the right hand as dominant.
@@ -17,6 +17,21 @@ This layout consider the following premisses, which might not be acceptable for 
 - The Smart Thumb keys in this layout change behavior according to the context (active layer and active modifiers).
 - The four thumb keys control layer transitions, when held (navigation, lower, raise and media).
 - Holding both outer thumb keys will activate the maintenance layer.
+
+## Layers
+
+
+
+
+### Navigation
+- The Navigation layer gives access to [One-Shot Modifiers](modifiers.md#one-shot-modifiers), Enter, Tab, Insert, Delete, Home, End, Page Up, Page Down and VIM style navigation, as well as Esc and a Save shortcut.
+### Media
+- The Media layer gives access to [Standard Modifiers](modifiers.md#standard-modifiers), Media controls, Esc and a Save shortcut.
+- The right side of this layer gives access to media keys and shortcuts to toggle the Navigation or Numpad layers on or off.
+
+### Navigation Layer Toggle
+- A clone of the Navigation layer can be toggled on permanently using the Media layer.
+- This clone works the same way as the original Navigation layer, but the outer right thumb key will activate the Media layer instead of the Maintenance layer.
 
 ## Key Position Reference
 - In the rest of these docs, keys will be referred to using the layer they are and the codes below:
