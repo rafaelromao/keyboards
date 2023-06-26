@@ -26,14 +26,24 @@
 #define ____NUMPAD_R4____                               RAI_SPC , MED_0
 
 #define ___________________MACROS_L1_________           _______ , MC_ESC  , MC_QUIK , MC_AUCO 
-#define ___________________MACROS_L2___________________ MC_QDOC , SF_FSYM , MC_RUN  , MC_DBUG , MC_BUID
+#define ___________________MACROS_L2___________________ NMO_DOC , SF_FSYM , MC_RUN  , MC_DBUG , MC_BUID
 #define           _________MACROS_L3___________________           MC_RECE , MC_COMP , MC_FIUS , MC_REFC
 #define                               ____MACROS_L4____                               NAV_PRJ , ACT_SPC
 
 #define           _________MACROS_R1___________________           MC_SELW , MC_ENT  , MC_TAB  , _______
-#define ___________________MACROS_R2___________________ TD_MACR , MC_SELL , MC_MODM , SF_MODP , XXXXXXX
+#define ___________________MACROS_R2___________________ TD_MACR , MC_SELL , MC_MODM , SF_MODP , MO_NMO
 #define ___________________MACROS_R3_________           MC_JOIN , MC_COMT , MC_SWLE , MC_SWRI 
 #define ____MACROS_R4____                               ACT_SPC , _______
+
+#define ___________________NOMOD_L1__________           KC_ESC  , KC_B    , KC_M    , KC_W    
+#define ___________________NOMOD_L2____________________ KC_D    , KC_N    , KC_S    , KC_T    , KC_G
+#define           _________NOMOD_L3____________________           KC_F    , KC_C    , KC_P    , KC_V
+#define                               ____NOMOD_L4_____                               QK_REP  , KC_SPC
+
+#define           _________NOMOD_R1____________________           KC_L    , KC_O    , KC_U    , KC_BSPC
+#define ___________________NOMOD_R2____________________ KC_Z    , KC_R    , KC_A    , KC_E    , KC_I
+#define ___________________NOMOD_R3__________           KC_J    , KC_H    , KC_COMM , KC_DOT  
+#define ____NOMOD_R4_____                               MO_ACT  , OS_LSFT
 
 #define ___________________ACCENT_L1_________           _______ , KC_J    , KC_V    , KC_G
 #define ___________________ACCENT_L2___________________ KC_Y    , KC_Z    , KC_X    , KC_K    , KC_QUOT
@@ -84,8 +94,8 @@
 #define           _________NAVIGATION_R1_______________           MEH_L   , KC_PGDN , KC_PGUP , _______
 #define ___________________NAVIGATION_R2_______________ TG_NAV  , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT
 #define ___________________NAVIGATION_R3_____           KC_INS  , KC_DEL  , KC_HOME , KC_END  
-#define __NAVIGATION_R4__                               _______ , MAI_CAS
-#define __FIXED_NAV__R4__                               _______ , MED_CAS
+#define __NAVIGATION_R4__                               KC_SPC  , MAI_CAS
+#define __FIXED_NAV__R4__                               KC_SPC  , MED_CAS
 
 #define _______________________LOCK____L1____           XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX 
 #define _______________________LOCK____L2______________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX

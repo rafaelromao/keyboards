@@ -86,8 +86,11 @@
 
             SHIFTED_SYMBOL(mm_semi,    &kp SEMI, &kp COLON)
             SYMBOL(mc_end_semi,        &kp END &kp SEMI)
-            SYMBOL(mc_end_semi_ent,    &kp END &kp SEMI &kp ENTER)
             TAPHOLD_SYMBOL(th_semi,    &mm_semi, &mc_end_semi)
+
+            SYMBOL(mc_epa,             &macro_tap &kp ESC &kp P &kp J)
+            SYMBOL(mc_end_semi_ent,    &kp END &kp SEMI &kp ENTER)
+            TAPHOLD_SYMBOL(th_epa,     &mc_epa, &mc_end_semi_ent)
 
             SHIFTED_SYMBOL(mm_unds,    &kp UNDERSCORE, &kp MINUS)
 

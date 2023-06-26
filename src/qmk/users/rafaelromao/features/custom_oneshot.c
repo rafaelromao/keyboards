@@ -28,7 +28,9 @@ void clear_locked_and_oneshot_mods(void) {
         unregister_mods(MOD_RALT);
         unregister_mods(MOD_LGUI);
     }
+#ifdef DYNAMIC_MACRO_ENABLE
     dyn_macro_reset();
+#endif
 }
 
 void clear_oneshot_mods_state(void) {
@@ -66,24 +68,22 @@ void disable_oneshot_mods(void) {
     custom_oneshots.timer = 0;
 }
 
-void check_disable_oneshot(uint16_t keycode) {
+bool check_disable_oneshot(uint16_t keycode) {
     switch (keycode) {
-        case KC_BSPC:
-        case KC_SPC:
         case RAI_ACT:
         case RAI_TAC:
         case ACT_SPC:
         case LOW_SPC:
         case MED_CAS:
         case NAV_REP:
-        case MAI_CAS:
         case OS_LSFT:
         case OS_LCTL:
         case OS_LALT:
         case OS_LGUI:
-            break;
+            return false;
         default:
             disable_oneshot_layer();
+            return true;
     }
 }
 
@@ -107,8 +107,16 @@ bool should_send_ctrl(bool isMacOS, bool isOneShotShift) {
 }
 
 process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *record) {
-    if (!record->event.pressed) {
-        check_disable_oneshot(keycode);
+    if (record->event.pressed && IS_LAYER_ON(_ACCENT) && check_disable_oneshot(keycode)) {
+        if (is_string_macro_keycode(keycode)) {
+            if (process_accents(keycode, NULL) == PROCESS_RECORD_CONTINUE) {
+                process_macros(keycode, NULL);
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+        } else {
+            tap_code16(keycode);
+            return PROCESS_RECORD_RETURN_FALSE;
+        }
     }
 
     bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;

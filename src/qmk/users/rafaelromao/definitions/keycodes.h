@@ -20,7 +20,9 @@ enum {
     DQU_FIN, 
     NOT_SWI, 
     AND_EAN, 
+#ifndef SAVE_MEMORY
     REC_MAC, 
+#endif
     COM_LEA, 
     DOT_DOT, 
     DLR_CUR, 
@@ -34,6 +36,7 @@ enum {
     GRT_EGT,
     OR_EOR,
     SAR_ESA,
+    EPA_SCE,
     TD_CODE_END 
 };
 
@@ -51,7 +54,11 @@ enum {
 #define TD_DQUO TD(DQU_FIN)
 #define TD_NOT TD(NOT_SWI)
 #define TD_AND TD(AND_EAN)
+#ifdef DYNAMIC_MACRO_ENABLE
 #define TD_MACR TD(REC_MAC)
+#else
+#define TD_MACR XXXXXXX
+#endif
 #define TD_COMM TD(COM_LEA)
 #define TD_DOT TD(DOT_DOT)
 #define TD_DLR TD(DLR_CUR)
@@ -64,6 +71,7 @@ enum {
 #define TD_LT TD(LET_ELT)
 #define TD_GT TD(GRT_EGT)
 #define TD_OR TD(OR_EOR)
+#define TD_EPA TD(EPA_SCE)
 #define TD_SARR TD(SAR_ESA)
 
 // Custom keycodes
@@ -101,7 +109,7 @@ enum {
     MC_BTIC, MC_DQUO, MC_SQUO, MC_CIRC, MC_TILD, REPEAT,
     MC_ENT, MC_TAB, MC_ESC, MC_ESCC, MC_NSEN, 
     MC_ESAV, MC_SENT, MC_CUR, MC_SAR, MC_DEQ, MC_NEQ, 
-    MC_DAND, MC_DPIP, MC_OESC, MC_SOES, MC_LTGT, 
+    MC_DAND, MC_DPIP, MC_OESC, MC_SOES, MC_LTGT, MC_EPA,
 
     // End macros that can be shifted
     SFT_MACRO_END,
@@ -165,17 +173,20 @@ enum {
 
 #define MAI_CAS LT(_MAINTENANCE, TG_CASE)
 
-#define ACT_SPC LT(_ACCENT, KC_SPC)
+#define ACT_SPC LT(_FIXED_ACCENT, KC_SPC)
 #define LOW_SPC LT(_LOWER, KC_SPC)
 #define RAI_TAC LT(_RAISE, TG_ACNT)
 #define RAI_SPC LT(_RAISE, KC_SPC)
-#define RAI_ACT OSL(_ACCENT)
+#define RAI_ACT OSL(_ACCENT) // Hold behavior is implemented in intercepted code
 
 #define MAC_KCD LT(_MACROS, KC_D)
 #define MAC_KCI LT(_MACROS, KC_I)
 #define MAC_DOT LT(_MACROS, KC_DOT)
+#define NMO_DOC LT(_NOMOD, MC_QDOC)
 
 // Layer transitions
+#define MO_ACT MO(_FIXED_ACCENT)
+#define MO_NMO MO(_NOMOD)
 #define MO_MED MO(_MEDIA)
 #define TO_ROM TO(_ROMAK)
 #define TG_NUM TG(_NUMPAD)
@@ -200,6 +211,7 @@ enum {
 
 uint16_t extract_base_tapping_keycode(uint16_t keycode);
 bool is_key_on_tap(uint16_t keycode);
+bool is_string_macro_keycode(uint16_t keycode);
 bool is_shift_macro_keycode(uint16_t keycode);
 
 // clang-format on

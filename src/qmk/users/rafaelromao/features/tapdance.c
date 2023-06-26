@@ -263,6 +263,7 @@ void td_semicolon(tap_dance_state_t *state, void *user_data) {
     }
 }
 
+#ifdef DYNAMIC_MACRO_ENABLE
 void td_macro(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
@@ -276,6 +277,7 @@ void td_macro(tap_dance_state_t *state, void *user_data) {
             break;
     }
 }
+#endif
 
 void td_plus(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
@@ -446,12 +448,17 @@ void td_comm(tap_dance_state_t *state, void *user_data) {
             tap_code(KC_COMM);
             break;
         case TD_DOUBLE_TAP:
+#ifdef LEADER_ENABLE
             if (!is_shifted()) {
                 leader_start();
             } else {
                 tap_code(KC_COMM);
                 tap_code(KC_COMM);
             }
+#else
+            tap_code(KC_COMM);
+            tap_code(KC_COMM);
+#endif
             break;
         case TD_SINGLE_HOLD:
             tap_code16(KC_END);
@@ -558,6 +565,23 @@ void td_gt(tap_dance_state_t *state, void *user_data) {
     }
 }
 
+#ifndef SAVE_MEMORY
+void td_epa(tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            process_macros(MC_EPA, NULL);
+            break;
+        case TD_SINGLE_HOLD:
+            tap_code(KC_END);
+            process_macros(MC_SENT, NULL);
+            break;
+        default:
+            break;
+    }
+}
+#endif
+
 void td_sarr(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
@@ -591,7 +615,9 @@ tap_dance_action_t tap_dance_actions[] = {
     [NOT_SWI] = ACTION_TAP_DANCE_FN(td_not),
     [AND_EAN] = ACTION_TAP_DANCE_FN(td_and),
     [OR_EOR]  = ACTION_TAP_DANCE_FN(td_or),
+#ifdef DYNAMIC_MACRO_ENABLE
     [REC_MAC] = ACTION_TAP_DANCE_FN(td_macro),
+#endif
     [COM_LEA] = ACTION_TAP_DANCE_FN(td_comm),
     [DLR_CUR] = ACTION_TAP_DANCE_FN(td_currencies),
     [COL_ECO] = ACTION_TAP_DANCE_FN(td_colon),
@@ -602,6 +628,9 @@ tap_dance_action_t tap_dance_actions[] = {
     [LET_ELT] = ACTION_TAP_DANCE_FN(td_lt),
     [GRT_EGT] = ACTION_TAP_DANCE_FN(td_gt),
     [SLS_BSL] = ACTION_TAP_DANCE_FN(td_slash),
+#ifndef SAVE_MEMORY
+    [EPA_SCE] = ACTION_TAP_DANCE_FN(td_epa),
+#endif
     [SAR_ESA] = ACTION_TAP_DANCE_FN(td_sarr),
     [DOT_DOT] = ACTION_TAP_DANCE_FN(td_dot)};
 

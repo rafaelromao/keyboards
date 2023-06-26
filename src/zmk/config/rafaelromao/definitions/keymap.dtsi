@@ -53,9 +53,18 @@
                         label = "MACROS";
                         bindings = <
    &trans           &kp ESC            &mm_actions          &mm_typematch       &none               &none               &mc_selw         &kp ENTER        &kp TAB          &trans    
-   &mm_docs         &th_find LSHFT 0   &mm_run              &mm_debug           &mm_build           &none               &mc_seln         &mm_zh_b         &th_zh LSHFT 0   &none  
-   &none            &mm_recent         &mm_complete         &mm_usages          &mm_refac           &mc_join            &mc_comment      &mm_wt_b         &mm_wt_f         &none
+   &mo NMODS        &th_find LSHFT 0   &mm_run              &mm_debug           &mm_build           &none               &mc_seln         &mm_zh_b         &th_zh LSHFT 0   &mo NMODS  
+   &mm_docs         &mm_recent         &mm_complete         &mm_usages          &mm_refac           &mc_join            &mc_comment      &mm_wt_b         &mm_wt_f         &none
                                        &trans               &th_proj NAV 0      &lt ACCENT SPACE    &lt ACCENT SPACE    &trans           &trans
+                        >;
+                };
+                no_mods_layer {
+                        label = "NO MODS";
+                        bindings = <
+   &kp ESC         &kp B               &kp M                &kp W               &kp K               &kp X               &kp L            &kp O            &kp U            &kp BSPC
+   &kp D           &kp N               &kp S                &kp T               &kp G               &kp Z               &kp R            &kp A            &kp E            &kp I 
+   &kp Q           &kp F               &kp C                &kp P               &kp V               &kp J               &kp H            &kp COMMA        &kp DOT          &kp Y
+                                        &none               &key_repeat         &kp SPACE           &mo ACCENT          &sk LSHFT        &none
                         >;
                 };
                 accents_layer {
@@ -100,7 +109,7 @@
    &trans           &kp ESC            &mc_save             &mc_meh_w           &none               &none               &mc_meh_l      &kp PAGE_DOWN      &kp PAGE_UP     &trans
    &mc_meh_d        &sk LSHIFT         &sk LCTRL            &sk LGUI            &mc_meh_g           &tog NAV_F          &kp LEFT       &kp DOWN           &kp UP          &kp RIGHT
    &none            &sk RALT           &mc_meh_c            &sk LALT            &mc_meh_v           &kp INS             &kp DEL        &kp HOME           &kp END         &none
-                                       &trans               &trans              &trans              &trans              &trans         &trans
+                                       &trans               &trans              &trans              &kp SPACE           &trans         &trans
                         >;
                 };
                 media_layer {
@@ -118,7 +127,7 @@
    &trans           &kp ESC            &mc_save             &mc_meh_w           &none               &none               &mc_meh_l      &kp PAGE_DOWN      &kp PAGE_UP     &trans
    &mc_meh_d        &sk LSHIFT         &sk LCTRL            &sk LGUI            &mc_meh_g           &tog NAV_F          &kp LEFT       &kp DOWN           &kp UP          &kp RIGHT
    &none            &sk RALT           &mc_meh_c            &sk LALT            &mc_meh_v           &kp INS             &kp DEL        &kp HOME           &kp END         &none
-                                       &trans               &trans              &trans              &trans              &mo MAINT      &trans
+                                       &trans               &trans              &trans              &kp SPACE           &mo MAINT      &trans
                         >;
                 };
                 lock_layer {

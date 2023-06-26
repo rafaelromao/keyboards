@@ -6,6 +6,7 @@
 #include "../definitions/process_record.h"
 #include "os_toggle.h"
 #include "macros.h"
+#include "accents.h"
 #include "dynamic_macro.h"
 #include "smart_case.h"
 
