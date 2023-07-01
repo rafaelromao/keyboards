@@ -1,7 +1,6 @@
 ## lowprokb.ca/corneish-zen
 ### A premium split keyboard, based on the Corne keyboard
 
-The keyboard in the picture below is a Corneish-Zen, used to design and test this layout.
 ![img](../../../../../img/zen.png)
 
 ### ZMK
