@@ -33,7 +33,7 @@
 #define           _________MACROS_R1___________________           MC_SELW , MC_ENT  , MC_TAB  , _______
 #define ___________________MACROS_R2___________________ TD_MACR , MC_SELL , MC_MODM , SF_MODP , MO_NMO
 #define ___________________MACROS_R3_________           MC_JOIN , MC_COMT , MC_SWLE , MC_SWRI 
-#define ____MACROS_R4____                               ACT_SPC , _______
+#define ____MACROS_R4____                               ACT_SPC , NAV_CAS
 
 #define ___________________NOMOD_L1__________           KC_ESC  , KC_B    , KC_M    , KC_W    
 #define ___________________NOMOD_L2____________________ KC_D    , KC_N    , KC_S    , KC_T    , KC_G
@@ -82,7 +82,7 @@
 #define                               ____MEDIA_L4_____                               MAI_CAS , KC_SPC
 
 #define           _________MEDIA_R1____________________           HYPR_L  , KC_ENT  , KC_TAB  , _______
-#define ___________________MEDIA_R2____________________ TG_NAV  , HYPR_R  , KC_VOLD , KC_VOLU , NAV_MUT
+#define ___________________MEDIA_R2____________________ TG_NAV  , HYPR_R  , KC_VOLD , KC_VOLU , KC_MUTE
 #define ___________________MEDIA_R3__________           TG_NUM  , KC_MPLY , KC_MPRV , KC_MNXT 
 #define ____MEDIA_R4_____                               _______ , _______
 
