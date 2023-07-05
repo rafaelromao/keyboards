@@ -32,7 +32,7 @@
 - Holding a pontuation key (dot, comma or semicollon) will add it to the end of the current line.
 
 ### Sentence Case
-- Double tap space in the base layer, within the tapping term, will send DOT SPACE ONESHOT SHIFT.
+- Tap the Space key in the Accents layer will send DOT SPACE ONESHOT SHIFT.
 
 ### Secrets
 - Secret combos and leader sequencies can be included in the files [secret.h](https://gist.github.com/rafaelromao/29b444b8b0bdec5402067beb35c2bcda) and [secret.c](https://gist.github.com/rafaelromao/76be290d7d58176699b8e20859c15618). These files are not part of the repo, for obvious reasons, so these two gists are provided as templates.
