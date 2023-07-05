@@ -58,6 +58,15 @@
                                        &trans               &th_proj NAV 0      &lt ACCENT SPACE    &lt ACCENT SPACE    &ht_sc NAV 0     &trans
                         >;
                 };
+                macros_extension_layer {
+                        label = "MACROS";
+                        bindings = <
+   &trans           &trans             &trans               &trans              &trans              &trans              &mc_ext_sel      &trans           &trans          &trans    
+   &trans           &trans             &trans               &trans              &trans              &trans              &mc_ext_sel      &trans           &trans          &trans  
+   &trans           &trans             &trans               &trans              &trans              &trans              &trans           &trans           &trans          &trans 
+                                       &trans               &trans              &trans              &trans              &trans           &trans
+                        >;
+                };
                 no_mods_layer {
                         label = "NO MODS";
                         bindings = <

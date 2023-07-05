@@ -19,12 +19,12 @@
 };
 
 &sl {
-    release-after-ms = <2000>;
+    release-after-ms = <1000>;
     quick-release;
 };
 
 &sk {
-    release-after-ms = <2000>;
+    release-after-ms = <1000>;
 };
 
 / {

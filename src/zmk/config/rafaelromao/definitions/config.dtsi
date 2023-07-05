@@ -9,16 +9,17 @@
 #define CASE 1
 #define NUMPAD 2
 #define MACROS 3
-#define NMODS 4
-#define ACCENT 5
-#define CASE_AC 6
-#define LOWER 7
-#define RAISE 8
-#define NAV_F 9
-#define MEDIA 10
-#define NAV 11
-#define LOCK_KB 12
-#define MAINT 13
+#define MACROS_EXT 4
+#define NMODS 5
+#define ACCENT 6
+#define CASE_AC 7
+#define LOWER 8
+#define RAISE 9
+#define NAV_F 10
+#define MEDIA 11
+#define NAV 12
+#define LOCK_KB 13
+#define MAINT 14
 
 #define TAPPING_TERM 175
 #define TD_TAPPING_TERM 225

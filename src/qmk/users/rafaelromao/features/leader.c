@@ -5,18 +5,18 @@
 leader_t leader = {.isLeading = false};
 
 void process_leader_dictionary(void) {
-    // Vim - Leader key + V + something
+    // Sample Leader Sequence
 
     // Vim - Select Whole Block
-    if (leader_sequence_two_keys(KC_V, KC_B)) {
-        tap_code(KC_V);
-        tap_code(KC_A);
-        tap_code16(KC_LCBR);
-        register_mods(MOD_LSFT);
-        tap_code(KC_V);
-        unregister_mods(MOD_LSFT);
-        tap_code(KC_DOWN);
-    }
+    // if (leader_sequence_two_keys(KC_V, KC_B)) {
+    //     tap_code(KC_V);
+    //     tap_code(KC_A);
+    //     tap_code16(KC_LCBR);
+    //     register_mods(MOD_LSFT);
+    //     tap_code(KC_V);
+    //     unregister_mods(MOD_LSFT);
+    //     tap_code(KC_DOWN);
+    // }
 
     // Process secret leader sequences
     process_leader_dictionary_secret();
