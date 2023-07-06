@@ -25,8 +25,8 @@
                 default_layer {
                         label = "ROMAK";
                         bindings = <
-   &mc_escc         &kp B               &kp M               &kp W               &kp K               &kp X               &kp L            &kp O            &kp U            &kp BSPC
-   &lt MACROS D     &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp G               &kp Z               &mt RGUI R       &mt RCTRL A      &mt RSHFT E      &lt MACROS I 
+   &mc_escc         &kp B               &kp M               &kp G               &kp K               &kp X               &kp L            &kp O            &kp U            &kp BSPC
+   &lt MACROS D     &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp W               &kp Z               &mt RGUI R       &mt RCTRL A      &mt RSHFT E      &lt MACROS I 
    &kp Q            &mt RALT F          &kp C               &mt LALT P          &kp V               &kp J               &mt LALT H       &td_comma        &th_dot 0 0      &kp Y
                                         &none               &ht_repeat NAV 0    &lt LOWER SPACE     &msl RAISE ACCENT   &med_sc          &none
                         >;
@@ -34,8 +34,8 @@
                 capsword_layer {
                         label = "CASE";
                         bindings = <
-   &trans           &kp LS(B)           &kp LS(M)           &kp LS(W)           &kp LS(K)           &kp LS(X)           &kp LS(L)        &kp LS(O)        &kp LS(U)        &trans
-   &lt MACROS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(G)           &kp LS(Z)           &mt RGUI LS(R)   &mt RCTRL LS(A)  &mt RSHFT LS(E)  &lt MACROS LS(I) 
+   &trans           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)        &kp LS(O)        &kp LS(U)        &trans
+   &lt MACROS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)   &mt RCTRL LS(A)  &mt RSHFT LS(E)  &lt MACROS LS(I) 
    &kp LS(Q)        &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &mt LALT LS(H)   &td_comma        &th_dot 0 0      &kp LS(Y)
                                         &trans              &ht_repeat NAV 0    &trans              &msl RAISE CASE_AC  &ht_sc MEDIA 0   &trans
                         >;
@@ -70,8 +70,8 @@
                 no_mods_layer {
                         label = "NO MODS";
                         bindings = <
-   &kp ESC         &kp B               &kp M                &kp W               &kp K               &kp X               &kp L            &kp O            &kp U            &kp BSPC
-   &kp D           &kp N               &kp S                &kp T               &kp G               &kp Z               &kp R            &kp A            &kp E            &kp I 
+   &kp ESC         &kp B               &kp M                &kp G               &kp K               &kp X               &kp L            &kp O            &kp U            &kp BSPC
+   &kp D           &kp N               &kp S                &kp T               &kp W               &kp Z               &kp R            &kp A            &kp E            &kp I 
    &kp Q           &kp F               &kp C                &kp P               &kp V               &kp J               &kp H            &kp COMMA        &kp DOT          &kp Y
                                         &none               &key_repeat         &kp SPACE           &mo ACCENT          &sk LSHFT        &none
                         >;
@@ -115,8 +115,8 @@
                 fixed_navigation_layer {
                         label = "NAV";
                         bindings = <
-   &trans           &kp ESC            &mc_save             &mc_meh_w           &none               &none               &mc_meh_l      &kp PAGE_DOWN      &kp PAGE_UP     &trans
-   &mc_meh_d        &sk LSHIFT         &sk LCTRL            &sk LGUI            &mc_meh_g           &tog NAV_F          &kp LEFT       &kp DOWN           &kp UP          &kp RIGHT
+   &trans           &kp ESC            &mc_save             &mc_meh_g           &none               &none               &mc_meh_l      &kp PAGE_DOWN      &kp PAGE_UP     &trans
+   &mc_meh_d        &sk LSHIFT         &sk LCTRL            &sk LGUI            &mc_meh_w           &tog NAV_F          &kp LEFT       &kp DOWN           &kp UP          &kp RIGHT
    &none            &sk RALT           &mc_meh_c            &sk LALT            &mc_meh_v           &kp INS             &kp DEL        &kp HOME           &kp END         &none
                                        &trans               &trans              &trans              &kp SPACE           &trans         &trans
                         >;
@@ -124,8 +124,8 @@
                 media_layer {
                         label = "MEDIA";
                         bindings = <
-   &trans           &kp ESC            &mc_save             &mc_hyp_w           &none               &none               &mc_hyp_l      &kp ENTER          &kp TAB         &trans
-   &mc_hyp_d        &kp LSHIFT         &kp LCTRL            &kp LGUI            &mc_hyp_g           &tog NAV_F          &mc_hyp_r      &kp C_VOL_DN       &kp C_VOL_UP    &kp C_MUTE
+   &trans           &kp ESC            &mc_save             &mc_hyp_g           &none               &none               &mc_hyp_l      &kp ENTER          &kp TAB         &trans
+   &mc_hyp_d        &kp LSHIFT         &kp LCTRL            &kp LGUI            &mc_hyp_w           &tog NAV_F          &mc_hyp_r      &kp C_VOL_DN       &kp C_VOL_UP    &kp C_MUTE
    &none            &kp RALT           &mc_hyp_c            &kp LALT            &mc_hyp_v           &tog NUMPAD         &kp C_PP       &kp C_PREV         &kp C_NEXT      &none
                                        &trans               &mo MAINT           &kp SPACE           &trans              &trans         &trans
                         >;
@@ -133,8 +133,8 @@
                 navigation_layer {
                         label = "NAV";
                         bindings = <
-   &trans           &kp ESC            &mc_save             &mc_meh_w           &none               &none               &mc_meh_l      &kp PAGE_DOWN      &kp PAGE_UP     &trans
-   &mc_meh_d        &sk LSHIFT         &sk LCTRL            &sk LGUI            &mc_meh_g           &tog NAV_F          &kp LEFT       &kp DOWN           &kp UP          &kp RIGHT
+   &trans           &kp ESC            &mc_save             &mc_meh_g           &none               &none               &mc_meh_l      &kp PAGE_DOWN      &kp PAGE_UP     &trans
+   &mc_meh_d        &sk LSHIFT         &sk LCTRL            &sk LGUI            &mc_meh_w           &tog NAV_F          &kp LEFT       &kp DOWN           &kp UP          &kp RIGHT
    &none            &sk RALT           &mc_meh_c            &sk LALT            &mc_meh_v           &kp INS             &kp DEL        &kp HOME           &kp END         &none
                                        &trans               &trans              &trans              &kp SPACE           &mo MAINT      &trans
                         >;

@@ -165,10 +165,10 @@
             "numpad": -1
         },
         {
-            "primary": 119,
+            "primary": 103,
             "finger": 4,
             "id": 16,
-            "shift": 87,
+            "shift": 71,
             "altGr": 35,
             "shiftAltGr": -1,
             "numpad": -1
@@ -282,10 +282,10 @@
             "numpad": -1
         },
         {
-            "primary": 103,
+            "primary": 119,
             "finger": 4,
             "id": 29,
-            "shift": 71,
+            "shift": 87,
             "altGr": 39,
             "shiftAltGr": -1,
             "numpad": -1

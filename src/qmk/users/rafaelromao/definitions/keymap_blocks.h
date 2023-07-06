@@ -5,8 +5,8 @@
 
 // clang-format off
 
-#define ___________________ROMAK_L1__________           MC_ESCC , KC_B    , KC_M    , KC_W    
-#define ___________________ROMAK_L2____________________ MAC_KCD , LSFTT_N , LCTLT_S , LGUIT_T , KC_G
+#define ___________________ROMAK_L1__________           MC_ESCC , KC_B    , KC_M    , KC_G    
+#define ___________________ROMAK_L2____________________ MAC_KCD , LSFTT_N , LCTLT_S , LGUIT_T , KC_W
 #define           _________ROMAK_L3____________________           RALTT_F , KC_C    , LALTT_P , KC_V
 #define                               ____ROMAK_L4_____                               NAV_REP , LOW_SPC
 
@@ -35,8 +35,8 @@
 #define ___________________MACROS_R3_________           MC_JOIN , MC_COMT , MC_SWLE , MC_SWRI 
 #define ____MACROS_R4____                               ACT_SPC , NAV_CAS
 
-#define ___________________NOMOD_L1__________           KC_ESC  , KC_B    , KC_M    , KC_W    
-#define ___________________NOMOD_L2____________________ KC_D    , KC_N    , KC_S    , KC_T    , KC_G
+#define ___________________NOMOD_L1__________           KC_ESC  , KC_B    , KC_M    , KC_G    
+#define ___________________NOMOD_L2____________________ KC_D    , KC_N    , KC_S    , KC_T    , KC_W
 #define           _________NOMOD_L3____________________           KC_F    , KC_C    , KC_P    , KC_V
 #define                               ____NOMOD_L4_____                               QK_REP  , KC_SPC
 
@@ -45,7 +45,7 @@
 #define ___________________NOMOD_R3__________           KC_J    , KC_H    , KC_COMM , KC_DOT  
 #define ____NOMOD_R4_____                               MO_ACT  , OS_LSFT
 
-#define ___________________ACCENT_L1_________           _______ , KC_J    , KC_V    , KC_G
+#define ___________________ACCENT_L1_________           _______ , KC_J    , KC_V    , KC_W
 #define ___________________ACCENT_L2___________________ KC_Y    , KC_Z    , KC_X    , KC_K    , KC_QUOT
 #define           _________ACCENT_L3___________________           KC_Q    , MC_SQ_C , MC_QU   , KC_GRV 
 #define                               ____ACCENT_L4____                               OS_LSFT , MC_NSEN
@@ -76,8 +76,8 @@
 #define ___________________RAISE_R3__________           TD_TILD , TD_SLSH , KC_ASTR , TD_NOT   
 #define ____RAISE_R4_____                               _______ , _______
 
-#define ___________________MEDIA_L1__________           _______ , MC_ESC  , MC_SAVE , HYPR_W  
-#define ___________________MEDIA_L2____________________ HYPR_D  , KC_LSFT , KC_LCTL , KC_LGUI , HYPR_G 
+#define ___________________MEDIA_L1__________           _______ , MC_ESC  , MC_SAVE , HYPR_G  
+#define ___________________MEDIA_L2____________________ HYPR_D  , KC_LSFT , KC_LCTL , KC_LGUI , HYPR_W 
 #define           _________MEDIA_L3____________________           KC_RALT , HYPR_C  , KC_LALT , HYPR_V 
 #define                               ____MEDIA_L4_____                               MAI_CAS , KC_SPC
 
@@ -86,8 +86,8 @@
 #define ___________________MEDIA_R3__________           TG_NUM  , KC_MPLY , KC_MPRV , KC_MNXT 
 #define ____MEDIA_R4_____                               _______ , _______
 
-#define ___________________NAVIGATION_L1_____           _______ , MC_ESC  , MC_SAVE , MEH_W 
-#define ___________________NAVIGATION_L2_______________ MEH_D   , OS_LSFT , OS_LCTL , OS_LGUI , MEH_G
+#define ___________________NAVIGATION_L1_____           _______ , MC_ESC  , MC_SAVE , MEH_G 
+#define ___________________NAVIGATION_L2_______________ MEH_D   , OS_LSFT , OS_LCTL , OS_LGUI , MEH_W
 #define           _________NAVIGATION_L3_______________           OS_RALT , MEH_C   , OS_LALT , MEH_V
 #define                               __NAVIGATION_L4__                               _______ , _______
 
