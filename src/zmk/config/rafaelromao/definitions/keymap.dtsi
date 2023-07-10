@@ -151,7 +151,7 @@
                 maintenance_layer {
                         label = "MAINT";
                         bindings = <
-   &trans           &none              &none                &reset              &none               &none               &reset         &kp LC(LG(Q))      &kp C_SLEEP    &trans
+   &trans           &none              &none                &none               &none               &none               &none          &kp LC(LG(Q))      &kp C_SLEEP    &trans
    &none            &none              &none                &kp CAPS            &bootloader         &bootloader         &none          &none              &tog LOCK_KB   &kp C_POWER 
    &none            &none              &none                &kp SLCK            &kp KP_NUM          &bt BT_CLR          &bt BT_SEL 0   &bt BT_PRV         &bt BT_NXT     &none
                                        &trans               &trans              &trans              &trans              &trans         &trans
