@@ -25,136 +25,136 @@
                 default_layer {
                         label = "ROMAK";
                         bindings = <
-   &mc_escc         &kp B               &kp M               &kp G               &kp K               &kp X               &kp L            &kp O            &kp U            &kp BSPC
-   &lt MACROS D     &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp W               &kp Z               &mt RGUI R       &mt RCTRL A      &mt RSHFT E      &lt MACROS I 
-   &kp Q            &mt RALT F          &kp C               &mt LALT P          &kp V               &kp J               &mt LALT H       &td_comma        &th_dot 0 0      &kp Y
-                                        &none               &ht_repeat NAV 0    &lt LOWER SPACE     &msl RAISE ACCENT   &med_sc          &none
+   &mc_escc            &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp BSPC
+   &lt MACROS D        &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp W               &kp Z               &mt RGUI R          &mt RCTRL A         &mt RSHFT E         &lt MACROS I 
+   &kp Q               &mt RALT F          &kp C               &mt LALT P          &kp V               &kp J               &mt LALT H          &td_comma           &th_dot 0 0         &kp Y
+                                           &none               &ht_repeat NAV 0    &lt LOWER SPACE     &msl RAISE ACCENT   &med_sc             &none
                         >;
                 };
                 capsword_layer {
                         label = "CASE";
                         bindings = <
-   &trans           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)        &kp LS(O)        &kp LS(U)        &trans
-   &lt MACROS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)   &mt RCTRL LS(A)  &mt RSHFT LS(E)  &lt MACROS LS(I) 
-   &kp LS(Q)        &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &mt LALT LS(H)   &td_comma        &th_dot 0 0      &kp LS(Y)
-                                        &trans              &ht_repeat NAV 0    &trans              &msl RAISE CASE_AC  &ht_sc MEDIA 0   &trans
+   &trans              &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &trans
+   &lt MACROS LS(D)    &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt MACROS LS(I) 
+   &kp LS(Q)           &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &mt LALT LS(H)      &td_comma           &th_dot 0 0         &kp LS(Y)
+                                           &trans              &ht_repeat NAV 0    &trans              &msl RAISE CASE_AC  &ht_sc MEDIA 0      &trans
                         >;
                 };
                 numpad_layer {
                         label = "NUMPAD";
                         bindings = <
-   &trans           &kp F9              &kp F8              &kp F7              &none               &none               &mc_n7           &mc_n8           &mc_n9           &trans
-   &lt MACROS F12   &mt LSHFT F6        &mt LCTRL F5        &mt LGUI F4         &kp F11             &kp COMMA           &th_n4 RGUI 0    &th_n5 RCTRL 0   &th_n6 RSHFT 0   &lt MACROS DOT 
-   &none            &mt RALT F3         &kp F2              &mt LALT F1         &kp F10             &tog NUMPAD         &th_n1 LALT 0    &mc_n2           &mc_n3           &none
-                                        &trans              &ht_repeat NAV 0    &trans              &lt RAISE SPACE     &th_n0 MEDIA 0   &trans
-                        >;
-                };
-                macros_layer {
+   &trans              &kp F9              &kp F8              &kp F7              &none               &none               &mc_n7              &mc_n8              &mc_n9              &trans
+   &lt MACROS F12      &mt LSHFT F6        &mt LCTRL F5        &mt LGUI F4         &kp F11             &kp COMMA           &th_n4 RGUI 0       &th_n5 RCTRL 0      &th_n6 RSHFT 0      &lt MACROS DOT 
+   &none               &mt RALT F3         &kp F2              &mt LALT F1         &kp F10             &tog NUMPAD         &th_n1 LALT 0       &mc_n2              &mc_n3              &none
+                                           &trans              &ht_repeat NAV 0    &trans              &lt RAISE SPACE     &th_n0 MEDIA 0      &trans
+                           >;
+                   };
+                   macros_layer {
                         label = "MACROS";
                         bindings = <
-   &trans           &kp ESC            &mm_actions          &mm_typematch       &none               &none               &mc_selw         &kp ENTER        &kp TAB          &trans    
-   &mo NMODS        &th_find LSHFT 0   &mm_run              &mm_debug           &mm_build           &none               &mc_seln         &mm_zh_b         &th_zh LSHFT 0   &mo NMODS  
-   &mm_docs         &mm_recent         &mm_complete         &mm_usages          &mm_refac           &mc_join            &mc_comment      &mm_wt_b         &mm_wt_f         &none
-                                       &trans               &th_proj NAV 0      &lt ACCENT SPACE    &lt ACCENT SPACE    &ht_sc NAV 0     &trans
-                        >;
-                };
-                macros_extension_layer {
+   &trans              &kp ESC             &mm_actions         &mm_typematch       &none               &none               &mc_selw            &kp ENTER           &kp TAB             &trans    
+   &mo NMODS           &th_find LSHFT 0    &mm_run             &mm_debug           &mm_build           &none               &mc_seln            &mm_zh_b            &th_zh LSHFT 0      &mo NMODS  
+   &mm_docs            &mm_recent          &mm_complete        &mm_usages          &mm_refac           &mc_join            &mc_comment         &mm_wt_b            &mm_wt_f            &none
+                                           &trans              &th_proj NAV 0      &lt ACCENT SPACE    &lt ACCENT SPACE    &ht_sc NAV 0        &trans
+                           >;
+                   };
+                   macros_extension_layer {
                         label = "MACROS";
                         bindings = <
-   &trans           &trans             &trans               &trans              &trans              &trans              &mc_ext_sel      &trans           &trans          &trans    
-   &trans           &trans             &trans               &trans              &trans              &trans              &mc_ext_sel      &trans           &trans          &trans  
-   &trans           &trans             &trans               &trans              &trans              &trans              &trans           &trans           &trans          &trans 
-                                       &trans               &trans              &trans              &trans              &trans           &trans
-                        >;
-                };
-                no_mods_layer {
+   &trans              &trans              &trans              &trans              &trans              &trans              &mc_ext_sel         &trans              &trans              &trans    
+   &trans              &trans              &trans              &trans              &trans              &trans              &mc_ext_sel         &trans              &trans              &trans  
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
+                                           &trans              &trans              &trans              &trans              &trans              &trans
+                           >;
+                   };
+                   no_mods_layer {
                         label = "NO MODS";
                         bindings = <
-   &kp ESC         &kp B               &kp M                &kp G               &kp K               &kp X               &kp L            &kp O            &kp U            &kp BSPC
-   &kp D           &kp N               &kp S                &kp T               &kp W               &kp Z               &kp R            &kp A            &kp E            &kp I 
-   &kp Q           &kp F               &kp C                &kp P               &kp V               &kp J               &kp H            &kp COMMA        &kp DOT          &kp Y
-                                        &none               &key_repeat         &kp SPACE           &mo ACCENT          &sk LSHFT        &none
-                        >;
-                };
-                accents_layer {
+   &kp ESC            &kp B                &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp BSPC
+   &kp D              &kp N                &kp S               &kp T               &kp W               &kp Z               &kp R               &kp A               &kp E               &kp I 
+   &kp Q              &kp F                &kp C               &kp P               &kp V               &kp J               &kp H               &kp COMMA           &kp DOT             &kp Y
+                                           &none               &key_repeat         &kp SPACE           &mo ACCENT          &sk LSHFT           &none
+                           >;
+                   };
+                   accents_layer {
                         label = "ACCENT";
                         bindings = <
-   &trans           &kp J               &kp V               &kp W               &none               &none               &ac_agrv         &ac_oacu         &ac_uacu         &trans
-   &kp Y            &kp Z               &kp X               &kp K               &kp SQT             &kp CARET           &ac_atil         &ac_aacu         &ac_eacu         &ac_iacu 
-   &none            &kp Q               &mc_ced             &mc_qu              &kp GRAVE           &kp TILDE           &ac_acir         &ac_ocir         &ac_ecir         &none
-                                        &trans              &sl CASE_AC         &mc_sentence        &trans              &trans           &trans
-                        >;
-                };
-                case_accents_layer {
+   &trans              &kp J               &kp V               &kp W               &none               &none               &ac_agrv            &ac_oacu            &ac_uacu            &trans
+   &kp Y               &kp Z               &kp X               &kp K               &kp SQT             &kp CARET           &ac_atil            &ac_aacu            &ac_eacu            &ac_iacu 
+   &none               &kp Q               &mc_ced             &mc_qu              &kp GRAVE           &kp TILDE           &ac_acir            &ac_ocir            &ac_ecir            &none
+                                           &trans              &sl CASE_AC         &mc_sentence        &trans              &trans              &trans
+                           >;
+                   };
+                   case_accents_layer {
                         label = "CASE_AC";
                         bindings = <
-   &trans           &kp LS(J)           &kp LS(V)           &kp LS(W)           &none               &none               &ac_agrv_c       &ac_oacu_c       &ac_uacu_c       &trans
-   &kp LS(Y)        &kp LS(Z)           &kp LS(X)           &kp LS(K)           &kp SQT             &kp CARET           &ac_atil_c       &ac_aacu_c       &ac_eacu_c       &ac_iacu_c 
-   &none            &kp LS(Q)           &mc_ced_c           &mc_qu_c            &kp GRAVE           &kp TILDE           &ac_acir_c       &ac_ocir_c       &ac_ecir_c       &none
-                                        &trans              &trans              &mc_sentence        &trans              &trans           &trans
-                        >;
-                };
-                lower_layer {
+   &trans              &kp LS(J)           &kp LS(V)           &kp LS(W)           &none               &none               &ac_agrv_c          &ac_oacu_c          &ac_uacu_c          &trans
+   &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(K)           &kp SQT             &kp CARET           &ac_atil_c          &ac_aacu_c          &ac_eacu_c          &ac_iacu_c 
+   &none               &kp LS(Q)           &mc_ced_c           &mc_qu_c            &kp GRAVE           &kp TILDE           &ac_acir_c          &ac_ocir_c          &ac_ecir_c          &none
+                                           &trans              &trans              &mc_sentence        &trans              &trans              &trans
+                           >;
+                   };
+                   lower_layer {
                         label = "LOWER";
                         bindings = <
-   &trans           &td_lpar           &td_rpar             &kp HASH            &none               &none               &mc_n7           &mc_n8           &mc_n9           &trans
-   &lt NAV AT       &th_or 0 0         &th_and 0 0          &td_dqo             &mc_sqo             &kp COMMA           &mc_n4           &mc_n5           &mc_n6           &lt MACROS DOT  
-   &none            &td_lbkt           &td_rbkt             &th_qmark 0 0       &mc_bti             &none               &mc_n1           &mc_n2           &mc_n3           &none
-                                       &trans               &trans              &trans              &lt RAISE SPACE     &th_n0 MEDIA 0   &trans
-                        >;
-                };
-                raise_layer {
+   &trans              &td_lpar            &td_rpar            &kp HASH            &none               &none               &mc_n7              &mc_n8              &mc_n9              &trans
+   &lt NAV AT          &th_or 0 0          &th_and 0 0         &td_dqo             &mc_sqo             &kp COMMA           &mc_n4              &mc_n5              &mc_n6              &lt MACROS DOT  
+   &none               &td_lbkt            &td_rbkt            &th_qmark 0 0       &mc_bti             &none               &mc_n1              &mc_n2              &mc_n3              &none
+                                           &trans              &trans              &trans              &lt RAISE SPACE     &th_n0 MEDIA 0      &trans
+                           >;
+                   };
+                   raise_layer {
                         label = "RAISE";
                         bindings = <
-   &trans           &kp F9             &kp F8               &kp F7              &none               &none               &th_colon 0 0    &td_lbrc         &td_rbrc        &trans
-   &kp F12          &kp F6             &kp F5               &kp F4              &kp F11             &td_curr            &kp MINUS        &td_plus         &td_eql         &kp PERCENT  
-   &none            &kp F3             &kp F2               &kp F1              &kp F10             &td_tilde           &td_slash        &kp STAR         &td_excl        &none
-                                       &trans               &key_repeat         &kp SPACE           &trans              &trans           &trans
-                        >;
-                };
-                fixed_navigation_layer {
+   &trans              &kp F9              &kp F8              &kp F7              &none               &none               &th_colon 0 0       &td_lbrc            &td_rbrc            &trans
+   &kp F12             &kp F6              &kp F5              &kp F4              &kp F11             &td_curr            &kp MINUS           &td_plus            &td_eql             &kp PERCENT  
+   &none               &kp F3              &kp F2              &kp F1              &kp F10             &td_tilde           &td_slash           &kp STAR            &td_excl            &none
+                                           &trans              &key_repeat         &kp SPACE           &trans              &trans              &trans
+                           >;
+                   };
+                   fixed_navigation_layer {
                         label = "NAV";
                         bindings = <
-   &trans           &kp ESC            &mc_save             &mc_meh_g           &none               &none               &mc_meh_l      &kp PAGE_DOWN      &kp PAGE_UP     &trans
-   &mc_meh_d        &sk LSHIFT         &sk LCTRL            &sk LGUI            &mc_meh_w           &tog NAV_F          &kp LEFT       &kp DOWN           &kp UP          &kp RIGHT
-   &none            &sk RALT           &mc_meh_c            &sk LALT            &mc_meh_v           &kp INS             &kp DEL        &kp HOME           &kp END         &none
-                                       &trans               &trans              &trans              &kp SPACE           &trans         &trans
-                        >;
-                };
-                media_layer {
+   &trans              &kp ESC             &mc_save            &mc_meh_g           &none               &none               &mc_meh_l           &kp PAGE_DOWN       &kp PAGE_UP         &trans
+   &mc_meh_d           &sk LSHIFT          &sk LCTRL           &sk LGUI            &mc_meh_w           &tog NAV_F          &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &none               &sk RALT            &mc_meh_c           &sk LALT            &mc_meh_v           &kp INS             &kp DEL             &kp HOME            &kp END             &none
+                                           &trans              &trans              &trans              &kp SPACE           &trans              &trans
+                           >;
+                   };
+                   media_layer {
                         label = "MEDIA";
                         bindings = <
-   &trans           &kp ESC            &mc_save             &mc_hyp_g           &none               &none               &mc_hyp_l      &kp ENTER          &kp TAB         &trans
-   &mc_hyp_d        &kp LSHIFT         &kp LCTRL            &kp LGUI            &mc_hyp_w           &tog NAV_F          &mc_hyp_r      &kp C_VOL_DN       &kp C_VOL_UP    &kp C_MUTE
-   &none            &kp RALT           &mc_hyp_c            &kp LALT            &mc_hyp_v           &tog NUMPAD         &kp C_PP       &kp C_PREV         &kp C_NEXT      &none
-                                       &trans               &mo MAINT           &kp SPACE           &trans              &trans         &trans
-                        >;
-                };
-                navigation_layer {
+   &trans              &kp ESC             &mc_save            &mc_hyp_g           &none               &none               &mc_hyp_l           &kp ENTER           &kp TAB             &trans
+   &mc_hyp_d           &kp LSHIFT          &kp LCTRL           &kp LGUI            &mc_hyp_w           &tog NAV_F          &mc_hyp_r           &kp C_VOL_DN        &kp C_VOL_UP        &kp C_MUTE
+   &none               &kp RALT            &mc_hyp_c           &kp LALT            &mc_hyp_v           &tog NUMPAD         &kp C_PP            &kp C_PREV          &kp C_NEXT          &none
+                                           &trans              &mo MAINT           &kp SPACE           &trans              &trans              &trans
+                           >;
+                   };
+                   navigation_layer {
                         label = "NAV";
                         bindings = <
-   &trans           &kp ESC            &mc_save             &mc_meh_g           &none               &none               &mc_meh_l      &kp PAGE_DOWN      &kp PAGE_UP     &trans
-   &mc_meh_d        &sk LSHIFT         &sk LCTRL            &sk LGUI            &mc_meh_w           &tog NAV_F          &kp LEFT       &kp DOWN           &kp UP          &kp RIGHT
-   &none            &sk RALT           &mc_meh_c            &sk LALT            &mc_meh_v           &kp INS             &kp DEL        &kp HOME           &kp END         &none
-                                       &trans               &trans              &trans              &kp SPACE           &mo MAINT      &trans
+   &trans              &kp ESC             &mc_save            &mc_meh_g           &none               &none               &mc_meh_l           &kp PAGE_DOWN       &kp PAGE_UP         &trans
+   &mc_meh_d           &sk LSHIFT          &sk LCTRL           &sk LGUI            &mc_meh_w           &tog NAV_F          &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &none               &sk RALT            &mc_meh_c           &sk LALT            &mc_meh_v           &kp INS             &kp DEL             &kp HOME            &kp END             &none
+                                           &trans              &trans              &trans              &kp SPACE           &mo MAINT           &trans
                         >;
                 };
                 lock_layer {
                         label = "LOCK";
                         bindings = <
-   &none            &none              &none                &none               &none               &none               &none          &none              &none          &none    
-   &none            &none              &none                &none               &none               &none               &none          &none              &none          &none  
-   &none            &none              &none                &none               &none               &none               &none          &none              &none          &none 
-                                       &none                &trans              &none               &none               &trans         &none
+   &none               &none               &none               &none               &none               &none               &none               &none               &none               &none    
+   &none               &none               &none               &none               &none               &none               &none               &none               &none               &none  
+   &none               &none               &none               &none               &none               &none               &none               &none               &none               &none 
+                                           &none               &trans              &none               &none               &trans              &none
                         >;
                 };
                 maintenance_layer {
                         label = "MAINT";
                         bindings = <
-   &trans           &none              &none                &none               &none               &none               &none          &kp LC(LG(Q))      &kp C_SLEEP    &trans
-   &none            &none              &none                &kp CAPS            &bootloader         &bootloader         &none          &none              &tog LOCK_KB   &kp C_POWER 
-   &none            &none              &none                &kp SLCK            &kp KP_NUM          &bt BT_CLR          &bt BT_SEL 0   &bt BT_PRV         &bt BT_NXT     &none
-                                       &trans               &trans              &trans              &trans              &trans         &trans
+   &trans              &none               &none               &kp PAUSE_BREAK     &none               &none               &kp PRINTSCREEN     &kp LC(LG(Q))      &kp C_SLEEP         &trans 
+   &none               &none               &none               &kp CAPS            &boot_reset 0 0     &bootloader         &none               &none              &tog LOCK_KB        &kp C_POWER 
+   &none               &none               &none               &kp SLCK            &kp KP_NUM          &bt BT_CLR          &bt BT_SEL 0        &bt BT_PRV         &bt BT_NXT          &none
+                                           &trans              &trans              &trans              &trans              &trans              &trans
                         >;
                 };
         };

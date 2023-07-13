@@ -52,123 +52,120 @@
         
         // Romak
 
-        SHORTCUT(mc_fullscr,            &macro_tap &kp LC(LG(F)))
-        SHORTCUT(mc_find,               &macro_tap &kp LG(F))
-        SHORTCUT(mc_selall,             &macro_tap &kp LG(A))
-        SHORTCUT(mc_undo,               &macro_tap &kp LG(Z))
-        SHORTCUT(mc_copy,               &macro_tap &kp LG(C))
-        SHORTCUT(mc_selcopy,            &macro_tap &kp LG(A) &kp LG(C))
-        SHORTCUT(mc_paste,              &macro_tap &kp LG(V))
-        SHORTCUT(mc_selpaste,           &macro_tap &kp LG(A) &kp LG(V))
-        SHORTCUT(mc_save,               &macro_tap &kp LG(S))
-        SHORTCUT(mc_save_esc,           &macro_tap &kp LG(S) &kp ESC)
-        SHORTCUT(mc_o_esc,              &macro_tap &kp O &kp ESC)
-        SHORTCUT(mc_sft_o_esc,          &macro_tap &kp LS(O) &kp ESC)
-        SHORTCUT(mc_shift_tab,          &macro_tap &kp LS(TAB))
+        SHORTCUT(mc_fullscr,                &macro_tap &kp LC(LG(F)))
+        SHORTCUT(mc_find,                   &macro_tap &kp LG(F))
+        SHORTCUT(mc_selall,                 &macro_tap &kp LG(A))
+        SHORTCUT(mc_undo,                   &macro_tap &kp LG(Z))
+        SHORTCUT(mc_copy,                   &macro_tap &kp LG(C))
+        SHORTCUT(mc_selcopy,                &macro_tap &kp LG(A) &kp LG(C))
+        SHORTCUT(mc_paste,                  &macro_tap &kp LG(V))
+        SHORTCUT(mc_selpaste,               &macro_tap &kp LG(A) &kp LG(V))
+        SHORTCUT(mc_save,                   &macro_tap &kp LG(S))
+        SHORTCUT(mc_save_esc,               &macro_tap &kp LG(S) &kp ESC)
+        SHORTCUT(mc_o_esc,                  &macro_tap &kp O &kp ESC)
+        SHORTCUT(mc_sft_o_esc,              &macro_tap &kp LS(O) &kp ESC)
+        SHORTCUT(mc_shift_tab,              &macro_tap &kp LS(TAB))
 
         // Media
 
-        SHORTCUT(mc_hyp_l,                &macro_tap &kp LC(LA(LS(LG(L)))))
-        SHORTCUT(mc_hyp_r,                &macro_tap &kp LC(LA(LS(LG(R)))))
-        SHORTCUT(mc_hyp_g,                &macro_tap &kp LC(LA(LS(LG(G)))))
-        SHORTCUT(mc_hyp_v,                &macro_tap &kp LC(LA(LS(LG(V)))))
-        SHORTCUT(mc_hyp_w,                &macro_tap &kp LC(LA(LS(LG(W)))))
-        SHORTCUT(mc_hyp_c,                &macro_tap &kp LC(LA(LS(LG(C)))))
-        SHORTCUT(mc_hyp_d,                &macro_tap &kp LC(LA(LS(LG(D)))))
-        SHORTCUT(mc_meh_l,                &macro_tap &kp LC(LA(LS(L))))
-        SHORTCUT(mc_meh_g,                &macro_tap &kp LC(LA(LS(G))))
-        SHORTCUT(mc_meh_v,                &macro_tap &kp LC(LA(LS(V))))
-        SHORTCUT(mc_meh_w,                &macro_tap &kp LC(LA(LS(W))))
-        SHORTCUT(mc_meh_c,                &macro_tap &kp LC(LA(LS(C))))
-        SHORTCUT(mc_meh_d,                &macro_tap &kp LC(LA(LS(D))))
+        SHORTCUT(mc_hyp_l,                  &macro_tap &kp LC(LA(LS(LG(L)))))
+        SHORTCUT(mc_hyp_r,                  &macro_tap &kp LC(LA(LS(LG(R)))))
+        SHORTCUT(mc_hyp_g,                  &macro_tap &kp LC(LA(LS(LG(G)))))
+        SHORTCUT(mc_hyp_v,                  &macro_tap &kp LC(LA(LS(LG(V)))))
+        SHORTCUT(mc_hyp_w,                  &macro_tap &kp LC(LA(LS(LG(W)))))
+        SHORTCUT(mc_hyp_c,                  &macro_tap &kp LC(LA(LS(LG(C)))))
+        SHORTCUT(mc_hyp_d,                  &macro_tap &kp LC(LA(LS(LG(D)))))
+        SHORTCUT(mc_meh_l,                  &macro_tap &kp LC(LA(LS(L))))
+        SHORTCUT(mc_meh_g,                  &macro_tap &kp LC(LA(LS(G))))
+        SHORTCUT(mc_meh_v,                  &macro_tap &kp LC(LA(LS(V))))
+        SHORTCUT(mc_meh_w,                  &macro_tap &kp LC(LA(LS(W))))
+        SHORTCUT(mc_meh_c,                  &macro_tap &kp LC(LA(LS(C))))
+        SHORTCUT(mc_meh_d,                  &macro_tap &kp LC(LA(LS(D))))
         
         // Macros
 
-        SHORTCUT(mc_shift,              &sk LSHFT)
+        SHORTCUT(mc_shift,                  &sk LSHFT)
 
-        SHORTCUT(mc_actions,            &macro_tap &kp LA(ENTER))
-        SHORTCUT(mc_breakpoint,         &macro_tap &kp LG(F8))
-        SHIFTED_SHORTCUT(mm_actions,    &mc_actions, &mc_breakpoint)
+        SHORTCUT(mc_actions,                &macro_tap &kp LA(ENTER))
+        SHORTCUT(mc_breakpoint,             &macro_tap &kp LG(F8))
+        SHIFTED_SHORTCUT(mm_actions,        &mc_actions, &mc_breakpoint)
 
-        SHORTCUT(mc_typematch,          &macro_tap &kp LS(LC(SPACE)))
-        SHORTCUT(mc_autocomp,           &macro_tap &kp LC(SPACE))
-        SHIFTED_SHORTCUT(mm_typematch,  &mc_typematch, &mc_autocomp)
+        SHORTCUT(mc_typematch,              &macro_tap &kp LS(LC(SPACE)))
+        SHORTCUT(mc_autocomp,               &macro_tap &kp LC(SPACE))
+        SHIFTED_SHORTCUT(mm_typematch,      &mc_typematch, &mc_autocomp)
 
-        SHORTCUT(mc_docs,               &macro_tap &kp F1)
-        SHORTCUT(mc_params,             &macro_tap &kp LG(P))
-        SHIFTED_SHORTCUT(mm_docs,       &mc_docs, &mc_params)
+        SHORTCUT(mc_docs,                   &macro_tap &kp F1)
+        SHORTCUT(mc_params,                 &macro_tap &kp LG(P))
+        SHIFTED_SHORTCUT(mm_docs,           &mc_docs, &mc_params)
 
-        SHORTCUT(mc_find_symbol,         &macro_tap &kp LA(LG(O)))
-        SHORTCUT(mc_find_action,         &macro_tap &kp LS(LG(A)))
-        SHIFTED_SHORTCUT(mm_find_symbol, &mc_find_symbol, &mc_find_action)
+        SHORTCUT(mc_find_symbol,            &macro_tap &kp LA(LG(O)))
+        SHORTCUT(mc_find_action,            &macro_tap &kp LS(LG(A)))
+        SHIFTED_SHORTCUT(mm_find_symbol,    &mc_find_symbol, &mc_find_action)
+        MODTAP_SHORTCUT(th_find,            &mm_find_symbol)
 
-        SHORTCUT(mc_run,                &macro_tap &kp LC(R))
-        SHORTCUT(mc_stop,               &macro_tap &kp LG(F2))
-        SHIFTED_SHORTCUT(mm_run,        &mc_run, &mc_stop)
+        SHORTCUT(mc_run,                    &macro_tap &kp LC(R))
+        SHORTCUT(mc_stop,                   &macro_tap &kp LG(F2))
+        SHIFTED_SHORTCUT(mm_run,            &mc_run, &mc_stop)
 
-        SHORTCUT(mc_debug,              &macro_tap &kp LC(D))
-        SHORTCUT(mc_resume,             &macro_tap &kp LA(LG(R)))
-        SHIFTED_SHORTCUT(mm_debug,      &mc_debug, &mc_resume)
+        SHORTCUT(mc_debug,                  &macro_tap &kp LC(D))
+        SHORTCUT(mc_resume,                 &macro_tap &kp LA(LG(R)))
+        SHIFTED_SHORTCUT(mm_debug,          &mc_debug, &mc_resume)
 
-        SHORTCUT(mc_build,              &macro_tap &kp LG(F9))
-        SHORTCUT(mc_rebuild,            &macro_tap &kp LS(LG(F9)))
-        SHIFTED_SHORTCUT(mm_build,      &mc_build, &mc_rebuild)
+        SHORTCUT(mc_build,                  &macro_tap &kp LG(F9))
+        SHORTCUT(mc_rebuild,                &macro_tap &kp LS(LG(F9)))
+        SHIFTED_SHORTCUT(mm_build,          &mc_build, &mc_rebuild)
 
-        SHORTCUT(mc_project,            &macro_tap &kp LG(N1))
-        SHORTCUT(mc_select_in,          &macro_tap &kp LA(F1))
-        SHIFTED_SHORTCUT(mm_project,    &mc_project, &mc_select_in)
+        SHORTCUT(mc_project,                &macro_tap &kp LG(N1))
+        SHORTCUT(mc_select_in,              &macro_tap &kp LA(F1))
+        SHIFTED_SHORTCUT(mm_project,        &mc_project, &mc_select_in)
+        LAYERTAP_SHORTCUT(th_proj,          &mm_project)
 
-        SHORTCUT(mc_recent,             &macro_tap &kp LG(E))
-        SHORTCUT(mc_prev_err,           &macro_tap &kp LS(F2))
-        SHIFTED_SHORTCUT(mm_recent,     &mc_select_in, &mc_prev_err)
+        SHORTCUT(mc_recent,                 &macro_tap &kp LG(E))
+        SHORTCUT(mc_prev_err,               &macro_tap &kp LS(F2))
+        SHIFTED_SHORTCUT(mm_recent,         &mc_select_in, &mc_prev_err)
 
-        SHORTCUT(mc_complete,           &macro_tap &kp LS(LG(ENTER)))
-        SHORTCUT(mc_next_err,           &macro_tap &kp F2)
-        SHIFTED_SHORTCUT(mm_complete,   &mc_complete, &mc_next_err)
+        SHORTCUT(mc_complete,               &macro_tap &kp LS(LG(ENTER)))
+        SHORTCUT(mc_next_err,               &macro_tap &kp F2)
+        SHIFTED_SHORTCUT(mm_complete,       &mc_complete, &mc_next_err)
 
-        SHORTCUT(mc_usages,             &macro_tap &kp LG(LA(F7)))
-        SHORTCUT(mc_quick_def,          &macro_tap &kp LA(SPACE))
-        SHIFTED_SHORTCUT(mm_usages,     &mc_usages, &mc_quick_def)
+        SHORTCUT(mc_usages,                 &macro_tap &kp LG(LA(F7)))
+        SHORTCUT(mc_quick_def,              &macro_tap &kp LA(SPACE))
+        SHIFTED_SHORTCUT(mm_usages,         &mc_usages, &mc_quick_def)
 
-        SHORTCUT(mc_refac,              &macro_tap &kp LC(T))
-        SHORTCUT(mc_reformat,           &macro_tap &kp LG(LA(L)))
-        SHIFTED_SHORTCUT(mm_refac,      &mc_refac, &mc_reformat)
+        SHORTCUT(mc_refac,                  &macro_tap &kp LC(T))
+        SHORTCUT(mc_reformat,               &macro_tap &kp LG(LA(L)))
+        SHIFTED_SHORTCUT(mm_refac,          &mc_refac, &mc_reformat)
 
-        SHORTCUT(mc_selw,               &macro_tap &kp LA(LEFT) &kp LA(RIGHT) \
-                                        &macro_press &kp LA(LS(LEFT)) \
-                                        &macro_pause_for_release \
-                                        &macro_release &kp LA(LS(LEFT)) \
-                                        &macro_tap &sl MACROS_EXT)
+        SHORTCUT(mc_selw,                   &macro_tap &kp LA(LEFT) &kp LA(RIGHT) \
+                                            &macro_press &kp LA(LS(LEFT)) \
+                                            &macro_pause_for_release \
+                                            &macro_release &kp LA(LS(LEFT)) \
+                                            &macro_tap &sl MACROS_EXT)
         
-        SHORTCUT(mc_seln,               &macro_tap &kp HOME &kp HOME \
-                                        &macro_press &kp LS(DOWN) \
-                                        &macro_pause_for_release \
-                                        &macro_release &kp LS(DOWN) \
-                                        &macro_tap &sl MACROS_EXT)
+        SHORTCUT(mc_seln,                   &macro_tap &kp HOME &kp HOME \
+                                            &macro_press &kp LS(DOWN) \
+                                            &macro_pause_for_release \
+                                            &macro_release &kp LS(DOWN) \
+                                            &macro_tap &sl MACROS_EXT)
         
-        SHORTCUT(mc_ext_sel,            &macro_press &key_repeat \
-                                        &macro_pause_for_release \
-                                        &macro_release &key_repeat \
-                                        &macro_tap &sl MACROS_EXT)
+        SHORTCUT(mc_ext_sel,                &macro_press &key_repeat \
+                                            &macro_pause_for_release \
+                                            &macro_release &key_repeat \
+                                            &macro_tap &sl MACROS_EXT)
 
-        SHORTCUT(mc_zout,               &macro_tap &kp LG(MINUS))
-        SHORTCUT(mc_zin,                &macro_tap &kp LG(PLUS))
+        SHORTCUT(mc_zout,                   &macro_tap &kp LG(MINUS))
+        SHORTCUT(mc_zin,                    &macro_tap &kp LG(PLUS))
         
-        SHORTCUT(mc_z0,                 &macro_tap &kp LG(N0))
-        SHORTCUT(mc_refresh,            &macro_tap &kp LG(R))
-        SHIFTED_SHORTCUT(mm_refresh_z0, &mc_z0, &mc_refresh)
+        SHORTCUT(mc_z0,                     &macro_tap &kp LG(N0))
+        SHORTCUT(mc_refresh,                &macro_tap &kp LG(R))
+        SHIFTED_SHORTCUT(mm_refresh_z0,     &mc_z0, &mc_refresh)
         
-        SHORTCUT(mc_close_tab,          &macro_tap &kp LG(W))
-        SHORTCUT(mc_close_win,          &macro_tap &kp LG(Q))
+        SHORTCUT(mc_close_tab,              &macro_tap &kp LG(W))
+        SHORTCUT(mc_close_win,              &macro_tap &kp LG(Q))
         SHIFTED_SHORTCUT(mm_close_tab_win,  &mc_close_win, &mc_close_tab)
 
-        SHORTCUT(mc_join,               &macro_tap &kp END &kp DEL)
-        SHORTCUT(mc_comment,            &macro_tap &kp LG(SLASH))
-
-        MODTAP_SHORTCUT(th_find,        &mm_find_symbol)
-        MODTAP_SHORTCUT(th_zh,          &mm_zh_f)
-        LAYERTAP_SHORTCUT(th_proj,      &mm_project)
-
-        SHORTCUT(mc_escc,               &macro_tap &kp ESC &to ROMAK)
+        SHORTCUT(mc_join,                   &macro_tap &kp END &kp DEL)
+        SHORTCUT(mc_comment,                &macro_tap &kp LG(SLASH))
+        SHORTCUT(mc_escc,                   &macro_tap &kp ESC &to ROMAK)
     };
 };

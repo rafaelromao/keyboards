@@ -79,7 +79,7 @@ enum {
 enum {
     CUSTOM_KEYCODE_START = SAFE_RANGE,
 
-    MC_SECRET_1, 
+    MC_SECRET_1,
 
     // Toggle codes
     OS_ACNT, TG_MAC, TG_WIN, TG_CASE, TG_ACNT, 
@@ -160,39 +160,6 @@ enum {
 #define OS_RALT OSM(MOD_RALT)
 #define OS_LGUI OSM(MOD_LGUI)
 
-// Layer-taps
-
-#define NAV_REP LT(_NAVIGATION, QK_REP)
-#define NAV_F12 LT(_NAVIGATION, KC_F12)
-#define NAV_AT  LT(_NAVIGATION, KC_AT)
-#define NAV_PRJ LT(_NAVIGATION, MC_PROJ)
-#define NAV_CAS LT(_NAVIGATION, TG_CASE)
-
-#define MED_CAS LT(_MEDIA, TG_CASE)
-#define MED_0   LT(_MEDIA, KC_0)
-
-#define MAI_CAS LT(_MAINTENANCE, TG_CASE)
-
-#define ACT_SPC LT(_FIXED_ACCENT, KC_SPC)
-#define LOW_SPC LT(_LOWER, KC_SPC)
-#define RAI_TAC LT(_RAISE, TG_ACNT)
-#define RAI_SPC LT(_RAISE, KC_SPC)
-#define RAI_ACT OSL(_ACCENT) // Hold behavior is implemented in intercepted code
-
-#define MAC_KCD LT(_MACROS, KC_D)
-#define MAC_KCI LT(_MACROS, KC_I)
-#define MAC_DOT LT(_MACROS, KC_DOT)
-#define NMO_DOC LT(_NOMOD, MC_QDOC)
-
-// Layer transitions
-#define MO_ACT MO(_FIXED_ACCENT)
-#define MO_NMO MO(_NOMOD)
-#define MO_MED MO(_MEDIA)
-#define TO_ROM TO(_ROMAK)
-#define TG_NUM TG(_NUMPAD)
-#define TG_NAV TG(_FIXED_NAV)
-#define TG_LOCK TG(_LOCK)
-
 // Custom Shortcuts
 
 #define HYPR_D HYPR(KC_D)
@@ -208,6 +175,40 @@ enum {
 #define MEH_V  MEH(KC_V)
 #define MEH_C  MEH(KC_C)
 #define MEH_L  MEH(KC_L)
+
+// Layer-taps
+
+#define NAV_REP LT(_NAVIGATION, QK_REP)
+#define NAV_F12 LT(_NAVIGATION, KC_F12)
+#define NAV_AT  LT(_NAVIGATION, KC_AT)
+#define NAV_PRJ LT(_NAVIGATION, MC_PROJ)
+#define NAV_CAS LT(_NAVIGATION, TG_CASE)
+
+#define MED_CAS LT(_MEDIA, TG_CASE)
+#define MED_0   LT(_MEDIA, KC_0)
+
+#define MAI_CAS LT(_MAINTENANCE, TG_CASE)
+#define QBT_RST LT(_MAINTENANCE, QK_BOOT) // Both Tap and Hold behaviors will be intercepted
+
+#define ACT_SPC LT(_FIXED_ACCENT, KC_SPC)
+#define LOW_SPC LT(_LOWER, KC_SPC)
+#define RAI_TAC LT(_RAISE, TG_ACNT)
+#define RAI_SPC LT(_RAISE, KC_SPC)
+#define RAI_ACT OSL(_ACCENT) // Hold behavior is implemented in intercepted code
+
+#define MAC_KCD LT(_MACROS, KC_D)
+#define MAC_KCI LT(_MACROS, KC_I)
+#define MAC_DOT LT(_MACROS, KC_DOT)
+#define NMO_DOC LT(_NOMOD, MC_QDOC)
+
+// Layer transitions
+#define MO_ACT  MO(_FIXED_ACCENT)
+#define MO_NMO  MO(_NOMOD)
+#define MO_MED  MO(_MEDIA)
+#define TO_ROM  TO(_ROMAK)
+#define TG_NUM  TG(_NUMPAD)
+#define TG_NAV  TG(_FIXED_NAV)
+#define TG_LOCK TG(_LOCK)
 
 uint16_t extract_base_tapping_keycode(uint16_t keycode);
 bool is_key_on_tap(uint16_t keycode);

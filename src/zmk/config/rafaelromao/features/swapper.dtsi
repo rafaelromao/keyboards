@@ -109,5 +109,16 @@
             bindings = <&sw_zoo_f>, <&sw_his_f>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        th_zh: th_zh {
+            compatible = "zmk,behavior-hold-tap";
+            label = ZMK_MACRO_STRINGIFY(th_zh);
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <QUICK_TAP_TERM>;
+            global-quick-tap;
+            bindings = <&kp>, <&mm_zh_f>;
+        };
     };
 };

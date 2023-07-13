@@ -57,7 +57,7 @@
 
         COMBO(cb_o_esc,         RHM R0,      &mc_o_esc,          ROMAK CASE)
         COMBO(cb_sft_o_esc,     RHR R0,      &mc_sft_o_esc,      ROMAK CASE)
-        COMBO(cb_semi,          RBM RBR,     &th_semi 0 0,       ROMAK CASE)
+        COMBO(cb_semi,          RBM RBR,     &th_semi 0 0,       ROMAK CASE LOWER)
         COMBO(cb_epa,           RBI RBM RBR, &th_epa 0 0,        ROMAK CASE)
 
         COMBO(cb_v,             RTI RTM,     &kp V,              ROMAK)

@@ -14,6 +14,7 @@ const uint16_t PROGMEM r_num_tab_combo[] = {RAI_SPC, KC_8, KC_9, COMBO_END};
 
 const uint16_t PROGMEM l_low_par_combo[] = {TD_OPAR, TD_CPAR, COMBO_END};
 const uint16_t PROGMEM r_low_ent_combo[] = {RAI_SPC, KC_5, KC_6, COMBO_END};
+const uint16_t PROGMEM r_low_sco_combo[] = {KC_2, KC_3, COMBO_END};
 
 // Raise
 
@@ -99,8 +100,8 @@ combo_t key_combos[] = {
     COMBO(r_low_ent_combo, KC_ENT),   COMBO(r_acc_ae_combo, MC_AE),     COMBO(r_acc_ao_combo, MC_AO),
     COMBO(r_acc_cao_combo, MC_CAO),   COMBO(r_acc_oe_combo, MC_OE),     COMBO(r_acc_coes_combo, MC_COES),
     COMBO(r_mac_z0r_combo, MC_Z0R),   COMBO(r_mac_clo_combo, MC_CLOS),  COMBO(r_rom_cop_combo, MC_COPY),
-    COMBO(r_rom_scp_combo, MC_SCOP),  COMBO(r_rom_sco_combo, TD_SCLE),  COMBO(l_rom_usc_combo, KC_UNDS),
-    COMBO(l_rom_ful_combo, MC_FULL),
+    COMBO(r_rom_scp_combo, MC_SCOP),  COMBO(r_rom_sco_combo, TD_SCLE),  COMBO(r_low_sco_combo, TD_SCLE),
+    COMBO(l_rom_usc_combo, KC_UNDS),  COMBO(l_rom_ful_combo, MC_FULL),
 #ifndef SAVE_MEMORY
     COMBO(r_rom_epa_combo, TD_EPA),
 #endif

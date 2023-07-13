@@ -107,13 +107,13 @@
 #define _______________________LOCK____R3____           XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX 
 #define ______LOCK____R4_                               XXXXXXX , _______
 
-#define ___________________MAINTENANCE_L1____           _______ , RGB_VAD , RGB_VAI , EE_CLR 
-#define ___________________MAINTENANCE_L2______________ RGB_TOG , RGB_HUD , RGB_HUI , KC_CAPS , QK_BOOT
+#define ___________________MAINTENANCE_L1____           _______ , RGB_VAD , RGB_VAI , KC_PAUS
+#define ___________________MAINTENANCE_L2______________ RGB_TOG , RGB_HUD , RGB_HUI , KC_CAPS , QBT_RST
 #define           _________MAINTENANCE_L3______________           RGB_SAD , RGB_SAI , KC_SCRL , KC_NUM
 #define                               __MAINTENANCE_L4_                               XXXXXXX , XXXXXXX
 
-#define           _________MAINTENANCE_R1______________           EE_CLR  , MC_LOCK , KC_SLEP , _______
-#define ___________________MAINTENANCE_R2______________ QK_BOOT , TG_MAC  , TG_WIN  , TG_LOCK , KC_PWR
+#define           _________MAINTENANCE_R1______________           KC_PSCR , MC_LOCK , KC_SLEP , _______
+#define ___________________MAINTENANCE_R2______________ QBT_RST , TG_MAC  , TG_WIN  , TG_LOCK , KC_PWR
 #define ___________________MAINTENANCE_R3____           XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX 
 #define __MAINTENANCE_R4_                               XXXXXXX , XXXXXXX
 

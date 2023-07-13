@@ -60,36 +60,47 @@ bool get_combo_must_tap(uint16_t index, combo_t *combo) {
 
 process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+        case QBT_RST:
+            if (record->event.pressed) {
+                if (record->tap.count) {
+                    reset_keyboard();
+                } else {
+                    eeconfig_init();
+                    soft_reset_keyboard();
+                }
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
         case NAV_AT:
-            if (record->event.pressed && record->tap.count > 0) {
+            if (record->event.pressed && record->tap.count) {
                 tap_code16(KC_AT);
                 return PROCESS_RECORD_RETURN_FALSE;
             }
             break;
 
         case NMO_DOC:
-            if (record->event.pressed && record->tap.count > 0) {
+            if (record->event.pressed && record->tap.count) {
                 process_macros(MC_QDOC, NULL);
                 return PROCESS_RECORD_RETURN_FALSE;
             }
             break;
 
         case NAV_PRJ:
-            if (record->event.pressed && record->tap.count > 0) {
+            if (record->event.pressed && record->tap.count) {
                 process_macros(MC_PROJ, NULL);
                 return PROCESS_RECORD_RETURN_FALSE;
             }
             break;
 
         case SF_FSYM:
-            if (!record->event.pressed && record->tap.count > 0) {
+            if (!record->event.pressed && record->tap.count) {
                 process_macros(MC_FSYM, NULL);
                 return PROCESS_RECORD_RETURN_FALSE;
             }
             break;
 
         case SF_MODP:
-            if (record->event.pressed && record->tap.count > 0) {
+            if (record->event.pressed && record->tap.count) {
                 process_swapper(MC_MODP, NULL);
                 return PROCESS_RECORD_RETURN_FALSE;
             }
