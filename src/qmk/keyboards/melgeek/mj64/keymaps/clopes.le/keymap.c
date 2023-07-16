@@ -13,10 +13,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+#pragma once
 
 #include QMK_KEYBOARD_H
 #include "sendstring_brazilian_abnt2.h"
-#include "keycodes.h"
+#include "keymap.h"
 
 // clang-format off
 
@@ -33,7 +34,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			_______,   _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  BR_RBRC,  _______,
             _______,   _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_F9,
 		    _______,   _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_VOLD,  KC_VOLU,  KC_MUTE,  KC_SLSH,  KC_PGUP,  KC_INS,
-			_______,   MO(3),    _______,                      KC_SPC,                                 _______,  _______,  KC_HOME,  KC_PGDN,  KC_END
+			_______,   MO(3),    _______,                      _______,                                _______,  _______,  KC_HOME,  KC_PGDN,  KC_END
 	),
     [2] = LAYOUT_64_ansi(
 			_______,   _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
@@ -47,13 +48,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			_______,   _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
             NK_TOGG,   RGB_TOG,  RGB_MOD,  RGB_HUI,  RGB_HUD,  RGB_SAI,  RGB_SAD,  RGB_VAI,  RGB_VAD,  RGB_SPI,  RGB_SPD,  _______,  _______,
 		    _______,   _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
-			QK_BOOT,   _______,  EE_CLR ,                      RGB_TOG,                                _______,  _______,  _______,  _______,  _______
+			QK_BOOT,   _______,  EE_CLR ,                      _______,                                _______,  _______,  _______,  _______,  _______
 	)
 };
 
 // clang-format on
 
 // Custom Processing
+
+#define DECLARACOES "declara" SS_TAP(X_SCLN) SS_TAP(X_QUOT) SS_TAP(X_O) "es"
+#define VITIMA "v" SS_TAP(X_LBRC) SS_TAP(X_I) "tima"
+#define SILENCIO "sil" SS_LSFT(SS_TAP(X_QUOT)) SS_TAP(X_E) "ncio"
 
 bool spacing = false;
 
@@ -63,14 +68,15 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
     // Deactivate OS Macros
     switch (keycode) {
-        case LT(1, KC_SPC):
         case KC_SPC:
-            if (spacing) {
-                clear_oneshot_layer_state(ONESHOT_PRESSED);
-                tap_code(KC_BSPC);
-            } else {
-                spacing = true;
-                return true;
+            if (IS_LAYER_ON(2)) {
+                if (spacing) {
+                    clear_oneshot_layer_state(ONESHOT_PRESSED);
+                    tap_code(KC_BSPC);
+                } else {
+                    spacing = true;
+                    return true;
+                }
             }
             break;
         case KC_ESC:
@@ -133,14 +139,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
         case MC_VESP:
             SEND_STRING("Que compareceu espontaneamente nesta unidade especializada (a), ");
-            SEND_STRING("a fim de prestar declarações e ratificar o que foi relatado no Reds (xxxxxx), ");
-            SEND_STRING("no qual figura como vítima do crime do art. (xxxxx); PERGUNTADO disse QUE:");
+            SEND_STRING("a fim de prestar " DECLARACOES " e ratificar o que foi relatado no Reds (xxxxxx), ");
+            SEND_STRING("no qual figura como " VITIMA " do crime do art. (xxxxx); PERGUNTADO disse QUE:");
             return false;
 
         case MC_VINT:
             SEND_STRING("Que compareceu nesta unidade especializada devidamente intimado (a), a fim de ");
-            SEND_STRING("prestar declarações sobre os fatos relatados no Reds (xxxxxx), no qual figura ");
-            SEND_STRING("como vítima do crime do art. (xxxxx); PERGUNTADO disse QUE:");
+            SEND_STRING("prestar " DECLARACOES " sobre os fatos relatados no Reds (xxxxxx), no qual figura ");
+            SEND_STRING("como " VITIMA " do crime do art. (xxxxx); PERGUNTADO disse QUE:");
             return false;
 
         case MC_TESP:
@@ -161,18 +167,18 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
         case MC_SINT:
             SEND_STRING("Que compareceu nesta unidade especializada devidamente intimado (a), a fim de prestar ");
-            SEND_STRING("declarações sobre os fatos relatados no Reds (xxxxxx), ");
+            SEND_STRING(DECLARACOES " sobre os fatos relatados no Reds (xxxxxx), ");
             SEND_STRING("QUE investiga o crime do art. (xxxxx) que vitimou (xxxxx); ");
             SEND_STRING("QUE foi devidamente cientificado dos seus direitos legais, dentre eles o de permanecer em ");
-            SEND_STRING("silêncio; PERGUNTADO disse QUE: ");
+            SEND_STRING(SILENCIO "; PERGUNTADO disse QUE: ");
             return false;
 
         case MC_SCON:
             SEND_STRING("Que compareceu nesta unidade especializada devidamente conduzido (a), a fim de prestar ");
-            SEND_STRING("declarações sobre os fatos relatados no Reds (xxxxxx), ");
+            SEND_STRING(DECLARACOES " sobre os fatos relatados no Reds (xxxxxx), ");
             SEND_STRING("QUE investiga o crime do art. (xxxxx) que vitimou (xxxxx); ");
             SEND_STRING("QUE foi devidamente cientificado dos seus direitos legais, dentre eles o de permanecer em ");
-            SEND_STRING("silêncio; PERGUNTADO disse QUE: ");
+            SEND_STRING(SILENCIO "; PERGUNTADO disse QUE: ");
             return false;
     }
 

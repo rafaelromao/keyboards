@@ -4,7 +4,7 @@
 
 // Custom Keycodes
 
-enum macros {
+enum {
     OS_MAC = SAFE_RANGE,
     MC_QUE,
     MC_ESCL,
