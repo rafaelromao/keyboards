@@ -11,6 +11,10 @@ Romak is a new keyboard layout, inspired by [Colemak](https://colemak.org) and [
 - The name Romak is a combination of my last name, **Rom**ão, and Dvor**ak**'s name.
 - Romak assumes the right hand as dominant and puts all vowels plus R, L, H, J and V on that side.
 
+- Romak is designed for boards with only 30 keys, in the format 23332+2, but there is also a 3x5+2 version, which can be seen below, along with the numbers and symbols:
+![img](../img/romak-full.png)
+- The performance of both versions is quite similar.
+
 ## KLA Next
 [KLA Next](https://klanext.keyboard-design.com/) was used to compare Romak with Colemak-DH and some other layouts, using the Universal Declaration of Human Rights as text corpus, combining [Portuguese and English](analysis/corpus.txt).
 ### General Performance
