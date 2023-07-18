@@ -86,8 +86,10 @@
         MACRO_KEY(mc_ao,    &macro_tap &ac_atil &kp O)
         MACRO_KEY(mc_oe,    &macro_tap &ac_otil &kp E)
         MACRO_KEY(mc_kn,    &macro_tap &kp K &kp N)
+        MACRO_KEY(mc_ja,    &macro_tap &kp J &macro_wait_time 10 &ac_aacu)
+        MACRO_KEY(mc_ja_c,  &macro_press &kp LSHFT &macro_tap &kp J &macro_release &kp LSHFT &macro_wait_time 10 &macro_tap &ac_aacu)
         MACRO_KEY(mc_qu,    &macro_tap &kp Q &macro_wait_time 10 &macro_tap &kp U)
-        MACRO_KEY(mc_qu_c,  &macro_press &kp LSHFT &macro_tap &kp Q &macro_wait_time 10 &macro_tap &kp U &macro_release &kp LSHFT)
+        MACRO_KEY(mc_qu_c,  &macro_press &kp LSHFT &macro_tap &kp Q &macro_release &kp LSHFT &macro_wait_time 10 &macro_tap &kp U)
         MACRO_KEY(mc_cao,   &macro_tap &mc_ced &ac_atil &macro_wait_time 10 &macro_tap &kp O)
         MACRO_KEY(mc_coes,  &macro_tap &mc_ced &ac_otil &macro_wait_time 10 &macro_tap &kp E &kp S)
     };

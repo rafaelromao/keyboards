@@ -21,8 +21,8 @@
 
 / {
         keymap {
-                compatible = "zmk,keymap";
-                default_layer {
+                   compatible = "zmk,keymap";
+                   default_layer {
                         label = "ROMAK";
                         bindings = <
    &mc_escc            &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp BSPC
@@ -30,8 +30,8 @@
    &kp Q               &mt RALT F          &kp C               &mt LALT P          &kp V               &kp J               &mt LALT H          &td_comma           &th_dot 0 0         &kp Y
                                            &none               &ht_repeat NAV 0    &lt LOWER SPACE     &msl RAISE ACCENT   &med_sc             &none
                         >;
-                };
-                capsword_layer {
+                   };
+                   capsword_layer {
                         label = "CASE";
                         bindings = <
    &trans              &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &trans
@@ -39,8 +39,8 @@
    &kp LS(Q)           &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &mt LALT LS(H)      &td_comma           &th_dot 0 0         &kp LS(Y)
                                            &trans              &ht_repeat NAV 0    &trans              &msl RAISE CASE_AC  &ht_sc MEDIA 0      &trans
                         >;
-                };
-                numpad_layer {
+                   };
+                   numpad_layer {
                         label = "NUMPAD";
                         bindings = <
    &trans              &kp F9              &kp F8              &kp F7              &none               &none               &mc_n7              &mc_n8              &mc_n9              &trans

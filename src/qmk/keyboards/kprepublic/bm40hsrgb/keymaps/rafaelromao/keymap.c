@@ -161,8 +161,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 extern os_t          os;
 extern select_word_t select_word;
 extern swapper_t     swapper;
-const int            led_count = 17;
-int                  leds[]    = {0, 4, 5, 6, 7, 11, 17, 18, 29, 30, 36, 37, 38, 41, 44, 45, 46};
+const int            led_count = 47;
 
 void set_rgblight_by_layer(uint32_t layer) {
     for (int i = 0; i < led_count; i++) {
@@ -171,13 +170,13 @@ void set_rgblight_by_layer(uint32_t layer) {
             case _ROMAK:
                 break;
             case _NUMPAD:
-                rgb_matrix_set_color(leds[i], RGB_PURPLE);
+                rgb_matrix_set_color(i, RGB_PURPLE);
                 break;
             case _MAINTENANCE:
-                rgb_matrix_set_color(leds[i], RGB_RED);
+                rgb_matrix_set_color(i, RGB_RED);
                 break;
             default:
-                rgb_matrix_set_color(leds[i], RGB_BLUE);
+                rgb_matrix_set_color(i, RGB_BLUE);
                 break;
         }
     }
@@ -204,13 +203,13 @@ bool rgb_matrix_indicators_user(void) {
 
     for (int i = 0; i < led_count; i++) {
         if (swapper.state != NONE || select_word.state != STATE_NONE) {
-            rgb_matrix_set_color(leds[i], RGB_GREEN);
+            rgb_matrix_set_color(i, RGB_GREEN);
         } else if (has_any_smart_case()) {
-            rgb_matrix_set_color(leds[i], RGB_YELLOW);
+            rgb_matrix_set_color(i, RGB_YELLOW);
         } else if (isShift) {
-            rgb_matrix_set_color(leds[i], RGB_BLUE);
+            rgb_matrix_set_color(i, RGB_BLUE);
         } else if (isCtrl || isAlt || isGui) {
-            rgb_matrix_set_color(leds[i], RGB_WHITE);
+            rgb_matrix_set_color(i, RGB_WHITE);
         } else {
             set_current_layer_rgb();
         }
