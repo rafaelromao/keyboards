@@ -29,7 +29,7 @@
             bindings = <&macro_tap SYMBOLS>; \
         };
 
-	#define LEADER(NAME, KEYS, BINDINGS, LAYERS) \
+	#define LEADER_SEQ(NAME, KEYS, BINDINGS, LAYERS) \
 		NAME { \
 			key-positions = <KEYS>; \
 			bindings = <BINDINGS>; \
@@ -38,14 +38,15 @@
 
 	macros {
 
-        // Vim - Select Whole Block
-		MACRO(mc_sel_block, &kp V &kp A &kp LBRC &kp LS(V) &kp DOWN)
+        // Leader sequence example
+		// MACRO(mc_sel_block, &kp V &kp A &kp LBRC &kp LS(V) &kp DOWN)
 	};
 
 	leader_sequences {
 		compatible = "zmk,leader-sequences";
 
-		LEADER(ld_sel_block, RHC RHM, &mc_sel_block, ROMAK)
+        // Leader sequence example
+		// LEADER_SEQ(ld_sel_block, RHC RHM, &mc_sel_block, ROMAK)
 		
 	};
 };

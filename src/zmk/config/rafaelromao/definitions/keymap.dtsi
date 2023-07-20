@@ -27,7 +27,7 @@
                         bindings = <
    &mc_escc            &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp BSPC
    &lt MACROS D        &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp W               &kp Z               &mt RGUI R          &mt RCTRL A         &mt RSHFT E         &lt MACROS I 
-   &kp Q               &mt RALT F          &kp C               &mt LALT P          &kp V               &kp J               &mt LALT H          &td_comma           &th_dot 0 0         &kp Y
+   &kp Q               &mt RALT F          &kp C               &mt LALT P          &kp V               &kp J               &mt LALT H          &th_comma 0 0       &th_dot 0 0         &kp Y
                                            &none               &ht_repeat NAV 0    &lt LOWER SPACE     &msl RAISE ACCENT   &med_sc             &none
                         >;
                    };
@@ -36,7 +36,7 @@
                         bindings = <
    &trans              &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &trans
    &lt MACROS LS(D)    &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt MACROS LS(I) 
-   &kp LS(Q)           &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &mt LALT LS(H)      &td_comma           &th_dot 0 0         &kp LS(Y)
+   &kp LS(Q)           &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &mt LALT LS(H)      &th_comma 0 0       &th_dot 0 0         &kp LS(Y)
                                            &trans              &ht_repeat NAV 0    &trans              &msl RAISE CASE_AC  &ht_sc MEDIA 0      &trans
                         >;
                    };
@@ -53,8 +53,8 @@
                         label = "MACROS";
                         bindings = <
    &trans              &kp ESC             &mm_actions         &mm_typematch       &none               &none               &mc_selw            &kp ENTER           &kp TAB             &trans    
-   &mo NMODS           &th_find LSHFT 0    &mm_run             &mm_debug           &mm_build           &none               &mc_seln            &mm_zh_b            &th_zh LSHFT 0      &mo NMODS  
-   &mm_docs            &mm_recent          &mm_complete        &mm_usages          &mm_refac           &mc_join            &mc_comment         &mm_wt_b            &mm_wt_f            &none
+   &mo NMODS           &th_find LSHFT 0    &mm_run             &mm_debug           &mm_build           &leader             &mc_seln            &mm_zh_b            &th_zh LSHFT 0      &mo NMODS  
+   &mm_docs            &mm_recent          &mm_complete        &mm_usages          &mm_refac           &none               &mc_comment         &mm_wt_b            &mm_wt_f            &none
                                            &trans              &th_proj NAV 0      &lt ACCENT SPACE    &lt ACCENT SPACE    &ht_sc NAV 0        &trans
                            >;
                    };

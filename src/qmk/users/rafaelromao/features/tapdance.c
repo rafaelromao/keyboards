@@ -448,17 +448,8 @@ void td_comm(tap_dance_state_t *state, void *user_data) {
             tap_code(KC_COMM);
             break;
         case TD_DOUBLE_TAP:
-#ifdef LEADER_ENABLE
-            if (!is_shifted()) {
-                leader_start();
-            } else {
-                tap_code(KC_COMM);
-                tap_code(KC_COMM);
-            }
-#else
             tap_code(KC_COMM);
             tap_code(KC_COMM);
-#endif
             break;
         case TD_SINGLE_HOLD:
             tap_code16(KC_END);

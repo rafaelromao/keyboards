@@ -31,8 +31,12 @@
 #define                               ____MACROS_L4____                               NAV_PRJ , ACT_SPC
 
 #define           _________MACROS_R1___________________           MC_SELW , MC_ENT  , MC_TAB  , _______
-#define ___________________MACROS_R2___________________ TD_MACR , MC_SELL , MC_MODM , SF_MODP , MO_NMO
-#define ___________________MACROS_R3_________           MC_JOIN , MC_COMT , MC_SWLE , MC_SWRI 
+#ifdef LEADER_ENABLE
+#define ___________________MACROS_R2___________________ QK_LEAD , MC_SELL , MC_MODM , SF_MODP , MO_NMO
+#else
+#define ___________________MACROS_R2___________________ XXXXXXX , MC_SELL , MC_MODM , SF_MODP , MO_NMO
+#endif
+#define ___________________MACROS_R3_________           TD_MACR , MC_COMT , MC_SWLE , MC_SWRI 
 #define ____MACROS_R4____                               ACT_SPC , NAV_CAS
 
 #define ___________________NOMOD_L1__________           KC_ESC  , KC_B    , KC_M    , KC_G    

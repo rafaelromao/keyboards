@@ -101,7 +101,6 @@
             SYMBOL(mc_comma,           &kp COMMA)
             SYMBOL(mc_end_comma,       &kp END &kp COMMA)
             TAPHOLD_SYMBOL(th_comma,   &mc_comma, &mc_end_comma)
-            TAPDANCE_SYMBOL(td_comma,  &th_comma 0 0, &leader, &none)
 
             // Lower
 

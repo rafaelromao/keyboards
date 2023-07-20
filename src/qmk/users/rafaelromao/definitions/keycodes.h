@@ -101,7 +101,7 @@ enum {
     MC_QUIK, MC_AUCO, 
     MC_QDOC, MC_FSYM, MC_RUN, MC_DBUG, MC_BUID,
     MC_PROJ, MC_RECE, MC_COMP, MC_FIUS, MC_REFC,
-    MC_JOIN, MC_COMT, 
+    MC_COMT, 
 
     // Begin macros used to write text
     STR_MACRO_START,

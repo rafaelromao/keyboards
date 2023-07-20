@@ -298,12 +298,6 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Join Lines
-
-        case MC_JOIN:
-            SEND_STRING(SS_TAP(X_END) SS_TAP(X_DEL));
-            return PROCESS_RECORD_RETURN_FALSE;
-
             // Comment Lines
 
         case MC_COMT:
