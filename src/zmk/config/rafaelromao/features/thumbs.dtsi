@@ -14,7 +14,7 @@
             ignore-modifiers;
 			#binding-cells = <0>;  
             layers = <CASE>;
-            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT DQT TILDE CARET GRAVE>;
+            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT TILDE CARET GRAVE>;
         };
 
         ht_sc: ht_sc {
@@ -43,6 +43,15 @@
             #binding-cells = <0>;
             bindings = <&msk MEDIA LSHFT>, <&smart_case>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        smart_num: smart_num {
+            compatible = "zmk,behavior-caps-word";
+            label = ZMK_MACRO_STRINGIFY(smart_num);
+            ignore-numbers;
+			#binding-cells = <0>;
+            layers = <NUMPAD>;
+            continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
         };
     };
 };

@@ -78,6 +78,13 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
             }
             break;
 
+        case LOW_NSE:
+            if (record->event.pressed && record->tap.count) {
+                process_macros(MC_NSEN, NULL);
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+            break;
+
         case NMO_DOC:
             if (record->event.pressed && record->tap.count) {
                 process_macros(MC_QDOC, NULL);

@@ -28,6 +28,7 @@ void disable_smart_case(void) {
     if (host_keyboard_led_state().caps_lock) {
         tap_code(KC_CAPS);
     }
+    layer_move(_ROMAK);
 }
 
 void check_disable_smart_case(void) {
@@ -53,6 +54,10 @@ void enable_capslock(void) {
 }
 
 void set_smart_case(smart_case_type_t smart_case_types) {
+    if (smart_case_types & NUM_CASE) {
+        disable_smart_case();
+        layer_on(_NUMPAD);
+    }
     if (smart_case_types & CAPS_LOCK) {
         enable_capslock();
         return;
@@ -143,6 +148,11 @@ process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record
                     disable_smart_case();
                     return PROCESS_RECORD_RETURN_FALSE;
                 } else {
+                    if (has_smart_case(NUM_CASE)) {
+                        tap_code(KC_SPC);
+                        disable_smart_case();
+                        return PROCESS_RECORD_RETURN_FALSE;
+                    }
                     spacing = true;
                 }
                 if (has_smart_case(WORD_CASE) && !(has_smart_case(SNAKE_CASE)) && !(has_smart_case(CAMEL_CASE))) {

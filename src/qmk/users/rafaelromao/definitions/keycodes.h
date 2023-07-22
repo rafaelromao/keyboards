@@ -82,7 +82,7 @@ enum {
     MC_SECRET_1,
 
     // Toggle codes
-    OS_ACNT, TG_MAC, TG_WIN, TG_CASE, TG_ACNT, 
+    OS_ACNT, TG_MAC, TG_WIN, TG_CASE, TG_ACNT,
 
     // Select Word/Line
     MC_SELW, MC_SELL, 
@@ -107,7 +107,7 @@ enum {
     STR_MACRO_START,
     
     MC_BTIC, MC_DQUO, MC_SQUO, MC_CIRC, MC_TILD, REPEAT,
-    MC_ENT, MC_TAB, MC_ESC, MC_ESCC, MC_NSEN, 
+    MC_ENT, MC_TAB, MC_ESC, MC_ESCC, MC_NSEN, MC_CANC, TG_NUMC,
     MC_ESAV, MC_SENT, MC_CUR, MC_SAR, MC_DEQ, MC_NEQ, 
     MC_DAND, MC_DPIP, MC_OESC, MC_SOES, MC_LTGT, MC_EPA,
 
@@ -193,6 +193,7 @@ enum {
 
 #define ACT_SPC LT(_FIXED_ACCENT, KC_SPC)
 #define LOW_SPC LT(_LOWER, KC_SPC)
+#define LOW_NSE LT(_LOWER, MC_NSEN)
 #define RAI_TAC LT(_RAISE, TG_ACNT)
 #define RAI_SPC LT(_RAISE, KC_SPC)
 #define RAI_ACT OSL(_ACCENT) // Hold behavior is implemented in intercepted code

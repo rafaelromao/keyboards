@@ -74,6 +74,7 @@ bool check_disable_oneshot(uint16_t keycode) {
         case RAI_TAC:
         case ACT_SPC:
         case LOW_SPC:
+        case LOW_NSE:
         case MED_CAS:
         case NAV_REP:
         case OS_LSFT:
@@ -102,12 +103,16 @@ void check_oneshot_timeout(void) {
 
 // Custom oneshot keycodes
 
+void reset_oneshot_timer(void) {
+    custom_oneshots.timer = timer_read();
+}
+
 bool should_send_ctrl(bool isMacOS, bool isOneShotShift) {
     return (!isMacOS && !isOneShotShift) || (isMacOS && isOneShotShift);
 }
 
 process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *record) {
-    if (record->event.pressed && IS_LAYER_ON(_ACCENT) && check_disable_oneshot(keycode)) {
+    if (record->event.pressed && (IS_LAYER_ON(_ACCENT) || IS_LAYER_ON(_SEN_CASE)) && check_disable_oneshot(keycode)) {
         if (is_string_macro_keycode(keycode)) {
             if (process_accents(keycode, NULL) == PROCESS_RECORD_CONTINUE) {
                 process_macros(keycode, NULL);
@@ -133,7 +138,7 @@ process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *re
                     if (get_mods() != 0) {
                         set_smart_case_for_mods();
                     } else {
-                        custom_oneshots.timer = timer_read();
+                        reset_oneshot_timer();
                         return PROCESS_RECORD_RETURN_TRUE;
                     }
                 }

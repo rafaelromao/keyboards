@@ -17,5 +17,6 @@ typedef struct {
 void check_oneshot_timeout(void);
 void clear_locked_and_oneshot_mods(void);
 bool should_send_ctrl(bool isMacOS, bool isOneShotShift);
+void reset_oneshot_timer(void);
 
 process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *record);

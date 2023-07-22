@@ -55,6 +55,8 @@
         COMBO(cb_selcopy,       RHI RHM RHR R0,  &mc_selcopy,    ROMAK CASE NUMPAD)
         COMBO(cb_selpaste,      RBI RBM RBR R0,  &mc_selpaste,   ROMAK CASE NUMPAD)
 
+        COMBO(cb_numword,       RHP R0,      &smart_num,         ROMAK CASE)
+
         COMBO(cb_o_esc,         RHM R0,      &mc_o_esc,          ROMAK CASE)
         COMBO(cb_sft_o_esc,     RHR R0,      &mc_sft_o_esc,      ROMAK CASE)
         COMBO(cb_semi,          RBM RBR,     &th_semi 0 0,       ROMAK CASE LOWER)

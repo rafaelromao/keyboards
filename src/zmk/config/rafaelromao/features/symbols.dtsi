@@ -94,8 +94,8 @@
 
             SHIFTED_SYMBOL(mm_unds,    &kp UNDERSCORE, &kp MINUS)
 
-            SYMBOL(mc_dot,             &kp DOT)
-            SYMBOL(mc_end_dot,         &kp END &kp DOT)
+            SYMBOL(mc_dot,             &kp DOT &sl SEN_CASE)
+            SYMBOL(mc_end_dot,         &kp END &kp DOT &sl SEN_CASE)
             TAPHOLD_SYMBOL(th_dot,     &mc_dot, &mc_end_dot)
 
             SYMBOL(mc_comma,           &kp COMMA)
@@ -159,8 +159,8 @@
             TAPHOLD_SYMBOL(th_rbkt,    &mc_rbkt, &mc_end_rbkt)
             TAPDANCE_SYMBOL(td_rbkt,   &th_rbkt 0 0, &mc_case, &none)
 
-            SYMBOL(mc_qmark,           &kp QMARK)
-            SYMBOL(mc_end_qmark,       &kp END &kp QMARK)
+            SYMBOL(mc_qmark,           &kp QMARK &sl SEN_CASE)
+            SYMBOL(mc_end_qmark,       &kp END &kp QMARK &sl SEN_CASE)
             TAPHOLD_SYMBOL(th_qmark,   &mc_qmark, &mc_end_qmark)
 
             SYMBOL(mc_and,             &kp AMPS)
@@ -228,8 +228,8 @@
 
             SYMBOL(mc_ltgt,            &kp LT &kp GT)
 
-            SYMBOL(mc_excl,            &kp EXCL)
-            SYMBOL(mc_end_excl,        &kp END &kp EXCL)
+            SYMBOL(mc_excl,            &kp EXCL &sl SEN_CASE)
+            SYMBOL(mc_end_excl,        &kp END &kp EXCL &sl SEN_CASE)
             MACRO_SYMBOL(mc_throw,     &kp T &kp H &kp R &kp O &kp W &kp SPACE)
             TAPHOLD_SYMBOL(th_excl,    &mc_excl, &mc_end_excl)
             TAPDANCE_SYMBOL(td_excl,   &th_excl 0 0, &mc_throw, &none)
@@ -253,6 +253,7 @@
             SYMBOL(mc_down_end,        &kp DOWN &kp END)
             TAPHOLD_SYMBOL(th_end_ent, &mc_end_ent, &mc_down_end)
 
-            MACRO_SYMBOL(mc_sentence,  &kp DOT &kp SPACE &sk LSHFT)
+            MACRO_SYMBOL(mc_sentence,  &kp SPACE &sk LSHFT)
+            LAYERTAP_SYMBOL(th_nsen,     &mc_sentence)
         };
 };

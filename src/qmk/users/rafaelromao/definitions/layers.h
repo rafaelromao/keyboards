@@ -9,6 +9,7 @@ typedef enum {
     _FIXED_ACCENT,
     _LOWER,
     _RAISE,
+    _SEN_CASE,
     _FIXED_NAV,
     _MEDIA,
     _NAVIGATION,

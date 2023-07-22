@@ -82,6 +82,7 @@ const uint16_t PROGMEM r_rom_bsp_combo[] = {KC_O, KC_U, COMBO_END};
 const uint16_t PROGMEM r_rom_tab_combo[] = {RAI_ACT, KC_O, KC_U, COMBO_END};
 const uint16_t PROGMEM r_rom_sal_combo[] = {RAI_ACT, TD_COMM, TD_DOT, COMBO_END};
 const uint16_t PROGMEM r_rom_sco_combo[] = {TD_COMM, TD_DOT, COMBO_END};
+const uint16_t PROGMEM r_rom_num_combo[] = {RAI_ACT, MAC_KCI, COMBO_END};
 #ifndef SAVE_MEMORY
 const uint16_t PROGMEM r_rom_epa_combo[] = {LALTT_H, TD_COMM, TD_DOT, COMBO_END};
 #endif
@@ -102,7 +103,8 @@ combo_t key_combos[] = {
     COMBO(r_acc_ao_combo, MC_AO),     COMBO(r_acc_cao_combo, MC_CAO),  COMBO(r_acc_oe_combo, MC_OE),
     COMBO(r_acc_coes_combo, MC_COES), COMBO(r_mac_z0r_combo, MC_Z0R),  COMBO(r_mac_clo_combo, MC_CLOS),
     COMBO(r_rom_cop_combo, MC_COPY),  COMBO(r_rom_scp_combo, MC_SCOP), COMBO(r_rom_sco_combo, TD_SCLE),
-    COMBO(r_low_sco_combo, TD_SCLE),  COMBO(l_rom_usc_combo, KC_UNDS), COMBO(l_rom_ful_combo, MC_FULL),
+    COMBO(r_rom_num_combo, TG_NUMC),  COMBO(r_low_sco_combo, TD_SCLE), COMBO(l_rom_usc_combo, KC_UNDS),
+    COMBO(l_rom_ful_combo, MC_FULL),
 #ifndef SAVE_MEMORY
     COMBO(r_rom_epa_combo, TD_EPA),
 #endif
