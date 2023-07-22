@@ -15,4 +15,4 @@
   };
 };
 
-#include "../../../config/rafaelromao/definitions/keymap.dtsi"
+#include "../../../../definitions/keymap.dtsi"

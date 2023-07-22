@@ -1,7 +1,7 @@
 ## lowprokb.ca/corneish-zen
 ### A premium split keyboard, based on the Corne keyboard
 
-![img](../../../../../img/zen.png)
+![img](../../../../../../../img/zen.png)
 
 ### ZMK
 
@@ -16,7 +16,7 @@
 
 ## Keymap
 
-- The list of supported features in this keymap can be found [here](../../../config/rafaelromao/readme.md).
+- The list of supported features in this keymap can be found [here](../../../../readme.md).
 
 ## Resources
 
