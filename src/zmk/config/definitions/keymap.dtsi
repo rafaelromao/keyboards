@@ -118,7 +118,7 @@
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
-                                           &trans              &mc_cancel          &th_nsen LOWER 0    &trans              &trans              &trans
+                                           &trans              &mc_cancel          &th_nsen LOWER 0    &trans              &msk MEDIA LSHFT    &trans
                            >;
                 };
                 fixed_navigation_layer {

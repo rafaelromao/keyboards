@@ -197,6 +197,7 @@ enum {
 #define RAI_TAC LT(_RAISE, TG_ACNT)
 #define RAI_SPC LT(_RAISE, KC_SPC)
 #define RAI_ACT OSL(_ACCENT) // Hold behavior is implemented in intercepted code
+#define MED_OSF OSM(MOD_LSFT) // Hold behavior is implemented in intercepted code
 
 #define MAC_KCD LT(_MACROS, KC_D)
 #define MAC_KCI LT(_MACROS, KC_I)

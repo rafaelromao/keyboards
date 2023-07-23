@@ -132,6 +132,15 @@ process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *re
     bool isAnyOneShotButShift = isOneShotCtrl || isOneShotAlt || isOneShotGui;
 
     switch (keycode) {
+        case MED_OSF:
+            if (record->tap.count == 0) {
+                if (record->event.pressed) {
+                    layer_on(_MEDIA);
+                } else {
+                    layer_off(_MEDIA);
+                }
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
         case RAI_ACT:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
@@ -151,7 +160,6 @@ process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *re
                 }
                 return PROCESS_RECORD_RETURN_FALSE;
             }
-
         case NAV_CAS:
         case MED_CAS:
         case MAI_CAS:
