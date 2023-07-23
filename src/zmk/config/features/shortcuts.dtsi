@@ -166,7 +166,5 @@
 
         SHORTCUT(mc_comment,                &macro_tap &kp LG(SLASH))
         SHORTCUT(mc_escc,                   &macro_tap &kp ESC &to ROMAK)
-
-        SHORTCUT(mc_cancel,                 &macro_tap &kp F22 &kp K_CANCEL)
     };
 };

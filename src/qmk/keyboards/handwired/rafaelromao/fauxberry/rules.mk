@@ -1,4 +1,5 @@
 SRC += features/leader.c
+SRC += features/sentence_case.c
 SRC += features/dynamic_macro.c
 
 BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality

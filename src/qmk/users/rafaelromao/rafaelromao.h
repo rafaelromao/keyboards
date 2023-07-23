@@ -12,6 +12,7 @@
 #include "features/accents.h"
 #ifdef LEADER_ENABLE
 #    include "features/leader.h"
+#    include "features/sentence_case.h"
 #endif
 #include "features/custom_oneshot.h"
 #include "features/common_shortcuts.h"

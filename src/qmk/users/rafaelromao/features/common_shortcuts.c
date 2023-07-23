@@ -174,13 +174,6 @@ process_record_result_t process_common_shortcuts(uint16_t keycode, keyrecord_t *
             process_common_shortcuts(MC_ESC, NULL);
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Cancel
-
-        case MC_CANC:
-            disable_smart_case();
-            clear_shift();
-            return PROCESS_RECORD_RETURN_FALSE;
-
             // NumWord
 
         case TG_NUMC:

@@ -253,7 +253,9 @@
             SYMBOL(mc_down_end,        &kp DOWN &kp END)
             TAPHOLD_SYMBOL(th_end_ent, &mc_end_ent, &mc_down_end)
 
+            MACRO_SYMBOL(mc_cancel,    &macro_tap &kp F22 &kp K_CANCEL)
             MACRO_SYMBOL(mc_sentence,  &kp SPACE &sl SEN_CASE &sk LSHFT)
-            LAYERTAP_SYMBOL(th_nsen,     &mc_sentence)
+            LAYERTAP_SYMBOL(th_nsen,   &mc_sentence)
+            LAYERTAP_SYMBOL(th_cancel, &mc_cancel)
         };
 };

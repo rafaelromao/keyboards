@@ -370,8 +370,10 @@ void td_ques(tap_dance_state_t *state, void *user_data) {
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
             tap_code16(KC_QUES);
+#ifdef LEADER_ENABLE
             set_oneshot_layer(_SEN_CASE, ONESHOT_START);
             reset_oneshot_timer();
+#endif
             break;
         case TD_DOUBLE_SINGLE_TAP:
         case TD_DOUBLE_TAP:
@@ -381,8 +383,10 @@ void td_ques(tap_dance_state_t *state, void *user_data) {
         case TD_SINGLE_HOLD:
             tap_code(KC_END);
             tap_code16(KC_QUES);
+#ifdef LEADER_ENABLE
             set_oneshot_layer(_SEN_CASE, ONESHOT_START);
             reset_oneshot_timer();
+#endif
             break;
         default:
             break;
@@ -428,14 +432,18 @@ void td_not(tap_dance_state_t *state, void *user_data) {
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
             tap_code16(KC_EXLM);
+#ifdef LEADER_ENABLE
             set_oneshot_layer(_SEN_CASE, ONESHOT_START);
             reset_oneshot_timer();
+#endif
             break;
         case TD_SINGLE_HOLD:
             tap_code(KC_END);
             tap_code16(KC_EXLM);
+#ifdef LEADER_ENABLE
             set_oneshot_layer(_SEN_CASE, ONESHOT_START);
             reset_oneshot_timer();
+#endif
             break;
         case TD_DOUBLE_TAP:
             SEND_STRING("throw ");
@@ -475,8 +483,10 @@ void td_dot(tap_dance_state_t *state, void *user_data) {
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
             tap_code(KC_DOT);
+#ifdef LEADER_ENABLE
             set_oneshot_layer(_SEN_CASE, ONESHOT_START);
             reset_oneshot_timer();
+#endif
             break;
         case TD_DOUBLE_SINGLE_TAP:
         case TD_DOUBLE_TAP:
@@ -491,8 +501,10 @@ void td_dot(tap_dance_state_t *state, void *user_data) {
         case TD_SINGLE_HOLD:
             tap_code16(KC_END);
             tap_code(KC_DOT);
+#ifdef LEADER_ENABLE
             set_oneshot_layer(_SEN_CASE, ONESHOT_START);
             reset_oneshot_timer();
+#endif
             break;
         default:
             break;

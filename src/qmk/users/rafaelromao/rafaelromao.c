@@ -42,6 +42,18 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
     };
 
+#ifdef LEADER_ENABLE
+    // Process Sentence Case
+    switch (process_sentence_case(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
+#endif
+
     // Process custom_shift
     switch (process_custom_shift(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:

@@ -288,6 +288,9 @@ void set_oled_by_layer(uint32_t layer) {
         case _RAISE:
             oled_write("        RAISE     ", false);
             break;
+        case _SEN_CASE:
+            oled_write("   SENTENCE CASE  ", false);
+            break;
         case _FIXED_NAV:
         case _NAVIGATION:
             oled_write("      NAVIGATION  ", false);

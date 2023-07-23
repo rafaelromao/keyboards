@@ -57,7 +57,6 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             tap_code(KC_P);
             tap_code(KC_J);
             return PROCESS_RECORD_RETURN_FALSE;
-#endif
 
             // ESC + O + ESC
 
@@ -81,6 +80,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             unregister_mods(MOD_MASK_SHIFT);
             tap_code(KC_ESC);
             return PROCESS_RECORD_RETURN_FALSE;
+#endif
 
             // Conditional operators
 
@@ -362,15 +362,6 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
                     break;
                 }
             }
-            return PROCESS_RECORD_RETURN_FALSE;
-
-            // Sentence Case
-
-        case MC_NSEN:
-            tap_code(KC_SPC);
-            set_oneshot_layer(_SEN_CASE, ONESHOT_START);
-            reset_oneshot_timer();
-            add_oneshot_mods(MOD_LSFT);
             return PROCESS_RECORD_RETURN_FALSE;
     }
 
