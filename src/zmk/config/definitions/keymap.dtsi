@@ -118,7 +118,25 @@
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
-                                           &trans              &th_cancel NAV 0    &th_nsen LOWER 0    &trans              &msk MEDIA LSHFT    &trans
+                                           &trans              &th_cancel NAV 0    &th_sp_ns LOWER 0   &trans              &th_nsen MEDIA 0    &trans
+                           >;
+                };
+                sentence_case_ext1_layer {
+                     label = "SEN_CS_EXT1";
+                     bindings = <
+   &trans              &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &trans
+   &lt MACROS LS(D)    &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt MACROS LS(I) 
+   &kp LS(Q)           &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &mt LALT LS(H)      &th_comma 0 0       &th_dot 0 0         &kp LS(Y)
+                                           &trans              &th_cancel NAV 0    &th_sp_ns LOWER 0   &msl RAISE SEN_E2   &th_nsen MEDIA 0    &trans
+                           >;
+                };
+                sentence_case_ext2_layer {
+                     label = "SEN_CS_EXT2";
+                     bindings = <
+   &trans              &kp LS(J)           &kp LS(V)           &kp LS(W)           &none               &none               &ac_agrv_c          &ac_oacu_c          &ac_uacu_c          &trans
+   &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(K)           &kp SQT             &kp CARET           &ac_atil_c          &ac_aacu_c          &ac_eacu_c          &ac_iacu_c 
+   &none               &kp LS(Q)           &mc_ced_c           &mc_qu_c            &kp GRAVE           &kp TILDE           &ac_acir_c          &ac_ocir_c          &ac_ecir_c          &none
+                                           &trans              &th_cancel NAV 0    &th_sp_ns LOWER 0   &none               &th_nsen MEDIA 0    &trans
                            >;
                 };
                 fixed_navigation_layer {

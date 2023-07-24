@@ -16,11 +16,13 @@
 #define LOWER 8
 #define RAISE 9
 #define SEN_CASE 10
-#define NAV_F 11
-#define MEDIA 12
-#define NAV 13
-#define LOCK_KB 14
-#define MAINT 15
+#define SEN_E1 11
+#define SEN_E2 12
+#define NAV_F 13
+#define MEDIA 14
+#define NAV 15
+#define LOCK_KB 16
+#define MAINT 17
 
 #define TAPPING_TERM 175
 #define TD_TAPPING_TERM 225

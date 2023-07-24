@@ -6,6 +6,28 @@
 */
 
 / {
+    #define THUMB_LAYERTAP(NAME, BINDINGS) \
+         NAME: NAME { \
+            compatible = "zmk,behavior-hold-tap"; \
+            label = ZMK_MACRO_STRINGIFY(NAME); \
+            #binding-cells = <2>; \
+            tapping-term-ms = <TAPPING_TERM>; \
+            flavor = "tap-preferred"; \
+            quick-tap-ms = <QUICK_TAP_TERM>; \
+            global-quick-tap; \
+            bindings = <&mo>, <BINDINGS>; \
+        };
+
+    #define THUMB_MACRO(NAME, BINDINGS) \
+        NAME: NAME { \
+			compatible = "zmk,behavior-macro"; \
+            label = ZMK_MACRO_STRINGIFY(NAME); \
+            #binding-cells = <0>; \
+            wait-ms = <10>; \
+            tap-ms = <10>; \
+            bindings = <&macro_tap BINDINGS>; \
+        };
+
     thumbs {
         smart_case: smart_case {
             compatible = "zmk,behavior-caps-word";
@@ -53,5 +75,12 @@
             layers = <NUMPAD>;
             continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
         };
+
+        THUMB_MACRO(mc_cancel,        &kp K_CANCEL)
+        THUMB_MACRO(mc_sp_ns,         &kp SPACE &sl SEN_E1)
+        THUMB_MACRO(mc_nsen,          &sl SEN_E1)
+        THUMB_LAYERTAP(th_sp_ns,      &mc_sp_ns)
+        THUMB_LAYERTAP(th_cancel,     &mc_cancel)
+        THUMB_LAYERTAP(th_nsen,       &mc_nsen)
     };
 };

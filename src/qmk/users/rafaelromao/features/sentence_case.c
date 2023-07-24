@@ -3,6 +3,9 @@
 #include "sentence_case.h"
 
 process_record_result_t process_sentence_case(uint16_t keycode, keyrecord_t *record) {
+    bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
+    bool isOneShotShift       = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
+
     switch (keycode) {
         case NAV_CAN:
             if (record->tap.count == 0) {
@@ -16,10 +19,9 @@ process_record_result_t process_sentence_case(uint16_t keycode, keyrecord_t *rec
                 if (record->event.pressed) {
                     disable_smart_case();
                     clear_shift();
-                    return PROCESS_RECORD_RETURN_FALSE;
                 }
             }
-            break;
+            return PROCESS_RECORD_RETURN_FALSE;
 
         case LOW_NSE:
             if (record->tap.count == 0) {
@@ -46,9 +48,16 @@ process_record_result_t process_sentence_case(uint16_t keycode, keyrecord_t *rec
                 } else {
                     layer_off(_MEDIA);
                 }
-                return PROCESS_RECORD_RETURN_FALSE;
+            } else {
+                if (record->event.pressed) {
+                    set_oneshot_layer(_SEN_CASE, ONESHOT_START);
+                    reset_oneshot_timer();
+                    if (!isOneShotShift) {
+                        add_oneshot_mods(MOD_LSFT);
+                    }
+                }
             }
-            break;
+            return PROCESS_RECORD_RETURN_FALSE;
     }
 
     return PROCESS_RECORD_CONTINUE;
