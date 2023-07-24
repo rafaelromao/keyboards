@@ -192,7 +192,8 @@ enum {
 #define MAI_CAS LT(_MAINTENANCE, TG_CASE)
 #define QBT_RST LT(_MAINTENANCE, QK_BOOT) // Both Tap and Hold behaviors will be intercepted
 
-#define ACT_SPC LT(_FIXED_ACCENT, KC_SPC)
+#define NMO_SPC LT(_NOMOD, KC_SPC)
+#define ACT_SPC LT(_ACCENT, KC_SPC)
 #define LOW_SPC LT(_LOWER, KC_SPC)
 #define LOW_NSE LT(_LOWER, MC_NSEN)
 #define RAI_TAC LT(_RAISE, TG_ACNT)
@@ -203,11 +204,9 @@ enum {
 #define MAC_KCD LT(_MACROS, KC_D)
 #define MAC_KCI LT(_MACROS, KC_I)
 #define MAC_DOT LT(_MACROS, KC_DOT)
-#define NMO_DOC LT(_NOMOD, MC_QDOC)
 
 // Layer transitions
-#define MO_ACT  MO(_FIXED_ACCENT)
-#define MO_NMO  MO(_NOMOD)
+#define MO_ACT  MO(_ACCENT)
 #define MO_MED  MO(_MEDIA)
 #define TO_ROM  TO(_ROMAK)
 #define TG_NUM  TG(_NUMPAD)

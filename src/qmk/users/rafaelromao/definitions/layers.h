@@ -6,7 +6,6 @@ typedef enum {
     _MACROS,
     _NOMOD,
     _ACCENT,
-    _FIXED_ACCENT,
     _LOWER,
     _RAISE,
     _SEN_CASE,

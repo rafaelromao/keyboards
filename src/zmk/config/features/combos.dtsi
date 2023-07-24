@@ -34,9 +34,15 @@
         COMBO(cb_find,          LBM LBI L0,  &mc_find,           ROMAK CASE NUMPAD)
         COMBO(cb_undo,          LBR LBM L0,  &mc_undo,           ROMAK CASE NUMPAD)
 
-        COMBO(cb_k,             LBI LBM,     &kp K,              ROMAK)
+        COMBO(cb_w,             LTI LTM,     &kp W,              ROMAK)
+        // COMBO(cb_k,             LHR LHM,     &kp K,              ROMAK) //Disabled until we have Combo Must Tap
+        // COMBO(cb_z,             LHI LHM,     &kp Z,              ROMAK) //Disabled until we have Combo Must Tap
+        COMBO(cb_j,             LBI LBM,     &kp J,              ROMAK)
         COMBO(cb_q,             LBR LBI LBM, &kp Q,              ROMAK)
-        COMBO(cb_kc,            LBI LBM,     &kp LS(K),          CASE)
+        COMBO(cb_wc,            LTI LTM,     &kp LS(W),          CASE)
+        // COMBO(cb_kc,            LHR LHM,     &kp LS(K),          CASE) //Disabled until we have Combo Must Tap
+        // COMBO(cb_zc,            LHI LHM,     &kp LS(Z),          CASE) //Disabled until we have Combo Must Tap
+        COMBO(cb_jc,            LBI LBM,     &kp LS(J),          CASE)
         COMBO(cb_qc,            LBR LBI LBM, &kp LS(Q),          CASE)
         COMBO(cb_unds,          LBR LBM,     &mm_unds,           ROMAK CASE)
 

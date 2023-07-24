@@ -26,15 +26,15 @@
 #define ____NUMPAD_R4____                               RAI_SPC , MED_0
 
 #define ___________________MACROS_L1_________           _______ , MC_ESC  , MC_QUIK , MC_AUCO 
-#define ___________________MACROS_L2___________________ NMO_DOC , SF_FSYM , MC_RUN  , MC_DBUG , MC_BUID
+#define ___________________MACROS_L2___________________ MC_QDOC , SF_FSYM , MC_RUN  , MC_DBUG , MC_BUID
 #define           _________MACROS_L3___________________           MC_RECE , MC_COMP , MC_FIUS , MC_REFC
-#define                               ____MACROS_L4____                               NAV_PRJ , ACT_SPC
+#define                               ____MACROS_L4____                               NAV_PRJ , NMO_SPC
 
 #define           _________MACROS_R1___________________           MC_SELW , MC_ENT  , MC_TAB  , _______
 #ifdef LEADER_ENABLE
-#define ___________________MACROS_R2___________________ QK_LEAD , MC_SELL , MC_MODM , SF_MODP , MO_NMO
+#define ___________________MACROS_R2___________________ QK_LEAD , MC_SELL , MC_MODM , SF_MODP , TG_NUMC
 #else
-#define ___________________MACROS_R2___________________ XXXXXXX , MC_SELL , MC_MODM , SF_MODP , MO_NMO
+#define ___________________MACROS_R2___________________ XXXXXXX , MC_SELL , MC_MODM , SF_MODP , TG_NUMC
 #endif
 #define ___________________MACROS_R3_________           TD_MACR , MC_COMT , MC_SWLE , MC_SWRI 
 #define ____MACROS_R4____                               ACT_SPC , NAV_CAS
@@ -42,7 +42,7 @@
 #define ___________________NOMOD_L1__________           KC_ESC  , KC_B    , KC_M    , KC_G    
 #define ___________________NOMOD_L2____________________ KC_D    , KC_N    , KC_S    , KC_T    , KC_W
 #define           _________NOMOD_L3____________________           KC_F    , KC_C    , KC_P    , KC_V
-#define                               ____NOMOD_L4_____                               QK_REP  , KC_SPC
+#define                               ____NOMOD_L4_____                               QK_REP  , _______
 
 #define           _________NOMOD_R1____________________           KC_L    , KC_O    , KC_U    , KC_BSPC
 #define ___________________NOMOD_R2____________________ KC_Z    , KC_R    , KC_A    , KC_E    , KC_I

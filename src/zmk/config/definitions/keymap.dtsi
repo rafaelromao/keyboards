@@ -53,9 +53,9 @@
                      label = "MACROS";
                      bindings = <
    &trans              &kp ESC             &mm_actions         &mm_typematch       &none               &none               &mc_selw            &kp ENTER           &kp TAB             &trans    
-   &mo NMODS           &th_find LSHFT 0    &mm_run             &mm_debug           &mm_build           &leader             &mc_seln            &mm_zh_b            &th_zh LSHFT 0      &mo NMODS  
-   &mm_docs            &mm_recent          &mm_complete        &mm_usages          &mm_refac           &none               &mc_comment         &mm_wt_b            &mm_wt_f            &none
-                                           &trans              &th_proj NAV 0      &lt ACCENT SPACE    &lt ACCENT SPACE    &ht_sc NAV 0        &trans
+   &mm_docs            &th_find LSHFT 0    &mm_run             &mm_debug           &mm_build           &leader             &mc_seln            &mm_zh_b            &th_zh LSHFT 0      &smart_num 
+   &trans              &mm_recent          &mm_complete        &mm_usages          &mm_refac           &none               &mc_comment         &mm_wt_b            &mm_wt_f            &none
+                                           &trans              &th_proj NAV 0      &lt NMODS SPACE     &lt ACCENT SPACE    &ht_sc NAV 0        &trans
                            >;
                 };
                 macros_extension_layer {
@@ -73,7 +73,7 @@
    &kp ESC            &kp B                &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp BSPC
    &kp D              &kp N                &kp S               &kp T               &kp W               &kp Z               &kp R               &kp A               &kp E               &kp I 
    &kp Q              &kp F                &kp C               &kp P               &kp V               &kp J               &kp H               &kp COMMA           &kp DOT             &kp Y
-                                           &none               &key_repeat         &kp SPACE           &mo ACCENT          &sk LSHFT           &none
+                                           &none               &key_repeat         &trans              &mo ACCENT          &sk LSHFT           &none
                            >;
                 };
                 accents_layer {

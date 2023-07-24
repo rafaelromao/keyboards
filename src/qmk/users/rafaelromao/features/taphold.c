@@ -78,13 +78,6 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
             }
             break;
 
-        case NMO_DOC:
-            if (record->event.pressed && record->tap.count) {
-                process_macros(MC_QDOC, NULL);
-                return PROCESS_RECORD_RETURN_FALSE;
-            }
-            break;
-
         case NAV_PRJ:
             if (record->event.pressed && record->tap.count) {
                 process_macros(MC_PROJ, NULL);
