@@ -32,16 +32,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
     };
 
-    // Process Repeat Key
-    switch (process_repeat(keycode, record)) {
-        case PROCESS_RECORD_RETURN_TRUE:
-            return true;
-        case PROCESS_RECORD_RETURN_FALSE:
-            return false;
-        default:
-            break;
-    };
-
 #ifdef LEADER_ENABLE
     // Process Sentence Case
     switch (process_sentence_case(keycode, record)) {
@@ -53,6 +43,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
     };
 #endif
+
+    // Process Repeat Key
+    switch (process_repeat(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
 
     // Process custom_shift
     switch (process_custom_shift(keycode, record)) {

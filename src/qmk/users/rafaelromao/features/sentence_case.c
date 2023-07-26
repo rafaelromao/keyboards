@@ -2,63 +2,58 @@
 
 #include "sentence_case.h"
 
+sentence_case_t sentence_case = {.state = SENTENCE_CASE_NONE};
+
+void start_sentence_case(void) {
+    // Called after . ? and !
+    sentence_case.state = SENTENCE_CASE_STARTED;
+}
+
 process_record_result_t process_sentence_case(uint16_t keycode, keyrecord_t *record) {
-    bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
-    bool isOneShotShift       = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
-
-    switch (keycode) {
-        case NAV_CAN:
-            if (record->tap.count == 0) {
-                if (record->event.pressed) {
-                    disable_oneshot_layer();
-                    layer_on(_NAVIGATION);
-                } else {
-                    layer_off(_NAVIGATION);
-                }
-            } else {
-                if (record->event.pressed) {
-                    disable_smart_case();
+    if (record->event.pressed) {
+        switch (keycode) {
+            // Navigation
+            case KC_HOME:
+            case KC_END:
+            case KC_LEFT:
+            case KC_RIGHT:
+                if (sentence_case.state == SENTENCE_CASE_STARTED) {
                     clear_shift();
+                    sentence_case.state = SENTENCE_CASE_NONE;
+                    return PROCESS_RECORD_CONTINUE;
                 }
-            }
-            return PROCESS_RECORD_RETURN_FALSE;
-
-        case LOW_NSE:
-            if (record->tap.count == 0) {
-                if (record->event.pressed) {
-                    disable_oneshot_layer();
-                    layer_on(_LOWER);
-                } else {
-                    layer_off(_LOWER);
-                }
-            } else {
-                if (record->event.pressed) {
-                    tap_code(KC_SPC);
-                    set_oneshot_layer(_SEN_CASE, ONESHOT_START);
-                    reset_oneshot_timer();
-                    add_oneshot_mods(MOD_LSFT);
-                }
-            }
-            return PROCESS_RECORD_RETURN_FALSE;
-
-        case MED_OSF:
-            if (record->tap.count == 0) {
-                if (record->event.pressed) {
-                    layer_on(_MEDIA);
-                } else {
-                    layer_off(_MEDIA);
-                }
-            } else {
-                if (record->event.pressed) {
-                    set_oneshot_layer(_SEN_CASE, ONESHOT_START);
-                    reset_oneshot_timer();
-                    if (!isOneShotShift) {
-                        add_oneshot_mods(MOD_LSFT);
-                    }
-                }
-            }
-            return PROCESS_RECORD_RETURN_FALSE;
+        }
     }
-
+    if (record->tap.count && record->event.pressed) {
+        uint16_t key = extract_base_tapping_keycode(keycode);
+        switch (key) {
+            // Space
+            case KC_SPC:
+                if (sentence_case.state == SENTENCE_CASE_STARTED) {
+                    tap_code(KC_SPC);
+                    add_oneshot_mods(MOD_LSFT);
+                    sentence_case.state = SENTENCE_CASE_STARTED;
+                    return PROCESS_RECORD_RETURN_FALSE;
+                }
+        }
+        switch (keycode) {
+            // Cancel
+            case NAV_REP:
+            case QK_REP:
+                if (sentence_case.state == SENTENCE_CASE_STARTED) {
+                    clear_shift();
+                    sentence_case.state = SENTENCE_CASE_NONE;
+                    return PROCESS_RECORD_RETURN_FALSE;
+                }
+            // One Shot Shift
+            case MED_CAS:
+                if (sentence_case.state == SENTENCE_CASE_STARTED) {
+                    add_oneshot_mods(MOD_LSFT);
+                    return PROCESS_RECORD_RETURN_FALSE;
+                }
+            default:
+                sentence_case.state = SENTENCE_CASE_NONE;
+        }
+    }
     return PROCESS_RECORD_CONTINUE;
 }

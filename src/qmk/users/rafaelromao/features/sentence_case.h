@@ -5,4 +5,11 @@
 #include "../definitions/process_record.h"
 #include "custom_oneshot.h"
 
+typedef enum { SENTENCE_CASE_NONE, SENTENCE_CASE_STARTED } sentence_case_state_t;
+
+typedef struct {
+    sentence_case_state_t state;
+} sentence_case_t;
+
+void                    start_sentence_case(void);
 process_record_result_t process_sentence_case(uint16_t keycode, keyrecord_t *record);
