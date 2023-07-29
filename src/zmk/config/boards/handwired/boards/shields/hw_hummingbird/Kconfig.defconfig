@@ -1,7 +1,7 @@
 # Copyright (c) 2021 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_HUMMINGBIRD
+if SHIELD_HW_HUMMINGBIRD
 
 config ZMK_KEYBOARD_NAME
     default "Hummingbird"

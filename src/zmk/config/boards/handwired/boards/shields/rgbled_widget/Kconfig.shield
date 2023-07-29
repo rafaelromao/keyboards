@@ -1,0 +1,2 @@
+config SHIELD_RGBLED_WIDGET
+    def_bool $(shields_list_contains,rgbled_widget)

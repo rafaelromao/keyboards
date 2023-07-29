@@ -1,0 +1,11 @@
+/ {
+    aliases {
+        led-red = &red_led;
+        led-green = &green_led;
+        led-blue = &blue_led;
+    };
+
+    leds {
+        status = "okay";
+    };
+};
