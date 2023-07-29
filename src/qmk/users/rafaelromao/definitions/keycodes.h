@@ -36,7 +36,6 @@ enum {
     GRT_EGT,
     OR_EOR,
     SAR_ESA,
-    EPA_SCE,
     TD_CODE_END 
 };
 
@@ -71,7 +70,6 @@ enum {
 #define TD_LT TD(LET_ELT)
 #define TD_GT TD(GRT_EGT)
 #define TD_OR TD(OR_EOR)
-#define TD_EPA TD(EPA_SCE)
 #define TD_SARR TD(SAR_ESA)
 
 // Custom keycodes
@@ -142,10 +140,10 @@ enum {
 #define CT_5 RCTL_T(KC_5)
 
 #define LALTT_P LALT_T(KC_P)
-#define LALTT_H LALT_T(KC_H)
+#define RALTT_H RALT_T(KC_H)
 #define RALTT_F RALT_T(KC_F)
 #define AL_F1 LALT_T(KC_F1)
-#define AL_1 LALT_T(KC_1)
+#define AL_1 RALT_T(KC_1)
 #define AL_F3 RALT_T(KC_F3)
 
 #define LGUIT_T LGUI_T(KC_T)
@@ -164,18 +162,23 @@ enum {
 // Custom Shortcuts
 
 #define HYPR_D HYPR(KC_D)
+#define HYPR_Z HYPR(KC_Z)
 #define HYPR_R HYPR(KC_R)
 #define HYPR_W HYPR(KC_W)
 #define HYPR_G HYPR(KC_G)
 #define HYPR_V HYPR(KC_V)
 #define HYPR_C HYPR(KC_C)
 #define HYPR_L HYPR(KC_L)
+#define HYPR_M HYPR(KC_M)
+#define HYPR_J HYPR(KC_J)
 #define MEH_D  MEH(KC_D)
+#define MEH_Z  MEH(KC_Z)
 #define MEH_W  MEH(KC_W)
 #define MEH_G  MEH(KC_G)
 #define MEH_V  MEH(KC_V)
 #define MEH_C  MEH(KC_C)
 #define MEH_L  MEH(KC_L)
+#define MEH_M  MEH(KC_M)
 
 // Layer-taps
 
@@ -187,12 +190,12 @@ enum {
 #define NAV_CAN LT(_NAVIGATION, MC_CANC)
 
 #define MED_CAS LT(_MEDIA, TG_CASE)
+#define MED_ROM LT(_MEDIA, TO_ROM)
 #define MED_0   LT(_MEDIA, KC_0)
 
 #define MAI_CAS LT(_MAINTENANCE, TG_CASE)
-#define QBT_RST LT(_MAINTENANCE, QK_BOOT) // Both Tap and Hold behaviors will be intercepted
 
-#define NMO_SPC LT(_NOMOD, KC_SPC)
+#define NMO_DOC LT(_NOMOD, MC_QDOC)
 #define ACT_SPC LT(_FIXED_ACCENT, KC_SPC)
 #define LOW_SPC LT(_LOWER, KC_SPC)
 #define LOW_NSE LT(_LOWER, MC_NSEN)
@@ -208,8 +211,7 @@ enum {
 #define MO_ACT  MO(_FIXED_ACCENT)
 #define MO_MED  MO(_MEDIA)
 #define TO_ROM  TO(_ROMAK)
-#define TG_NUM  TG(_NUMPAD)
-#define TG_NAV  TG(_FIXED_NAV)
+#define TT_NAV  TT(_FIXED_NAV)
 #define TG_LOCK TG(_LOCK)
 
 uint16_t extract_base_tapping_keycode(uint16_t keycode);

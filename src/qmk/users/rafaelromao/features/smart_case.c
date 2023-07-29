@@ -54,6 +54,10 @@ void enable_capslock(void) {
 }
 
 void set_smart_case(smart_case_type_t smart_case_types) {
+    if (smart_case_types & NUMPAD_LOCK) {
+        disable_smart_case();
+        layer_on(_NUMPAD);
+    }
     if (smart_case_types & NUM_CASE) {
         disable_smart_case();
         layer_on(_NUMPAD);
@@ -106,6 +110,11 @@ void set_smart_case_for_mods(void) {
     if (mods & MOD_BIT(KC_RCTL)) {
         toggle_capslock(!host_keyboard_led_state().caps_lock);
     }
+    if (mods & MOD_BIT(KC_LALT)) {
+        toggle_smart_case(NUMPAD_LOCK);
+    } else if (mods & MOD_BIT(KC_RALT)) {
+        toggle_smart_case(NUM_CASE);
+    }
     if (mods & MOD_BIT(KC_LSFT)) {
         toggle_smart_case(CAMEL_CASE);
     }
@@ -123,6 +132,10 @@ void set_smart_case_for_mods(void) {
 static bool spacing = false;
 
 process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record) {
+    if (has_smart_case(NUMPAD_LOCK)) {
+        start_smart_case_timer();
+        return PROCESS_RECORD_CONTINUE;
+    }
     if (has_any_smart_case() && record->event.pressed) {
         switch (keycode) {
             case QK_MOD_TAP ... QK_MOD_TAP_MAX:
@@ -197,7 +210,18 @@ process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record
             case KC_DOT:
             case TD_DOT:
             case KC_SLSH:
-                if (has_smart_case(SLASH_CASE)) {
+                if (has_smart_case(SLASH_CASE) || has_smart_case(NUM_CASE)) {
+                    start_smart_case_timer();
+                    break;
+                }
+            case KC_PERC:
+            case KC_COMM:
+            case TD_COMM:
+            case TD_PLUS:
+            case TD_EQL:
+            case TD_COLN:
+            case KC_F1 ... KC_F12:
+                if (has_smart_case(NUM_CASE)) {
                     start_smart_case_timer();
                     break;
                 }

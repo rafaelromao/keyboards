@@ -34,25 +34,29 @@
         COMBO(cb_find,          LBM LBI L0,  &mc_find,           ROMAK CASE NUMPAD)
         COMBO(cb_undo,          LBR LBM L0,  &mc_undo,           ROMAK CASE NUMPAD)
 
+        COMBO(cb_numword,       LHR LHM,     &smart_num,         ROMAK CASE)
+
         COMBO(cb_w,             LTI LTM,     &kp W,              ROMAK)
-        // COMBO(cb_k,             LHR LHM,     &kp K,              ROMAK) //Disabled until we have Combo Must Tap
-        // COMBO(cb_z,             LHI LHM,     &kp Z,              ROMAK) //Disabled until we have Combo Must Tap
+        COMBO(cb_k,             LHR LHM LHI, &kp K,              ROMAK)
+        COMBO(cb_z,             LHI LHM,     &kp Z,              ROMAK)
         COMBO(cb_j,             LBI LBM,     &kp J,              ROMAK)
         COMBO(cb_q,             LBR LBI LBM, &kp Q,              ROMAK)
         COMBO(cb_wc,            LTI LTM,     &kp LS(W),          CASE)
-        // COMBO(cb_kc,            LHR LHM,     &kp LS(K),          CASE) //Disabled until we have Combo Must Tap
-        // COMBO(cb_zc,            LHI LHM,     &kp LS(Z),          CASE) //Disabled until we have Combo Must Tap
+        COMBO(cb_kc,            LHR LHM LHI, &kp LS(K),          CASE)
+        COMBO(cb_zc,            LHI LHM,     &kp LS(Z),          CASE)
         COMBO(cb_jc,            LBI LBM,     &kp LS(J),          CASE)
         COMBO(cb_qc,            LBR LBI LBM, &kp LS(Q),          CASE)
         COMBO(cb_unds,          LBR LBM,     &mm_unds,           ROMAK CASE)
 
-        COMBO(cb_pars,          LTR LTM,     &th_pars 0 0,       LOWER)
+        COMBO(cb_pars,          LHR LHM,     &th_pars 0 0,       LOWER)
+        COMBO(cb_braces,        LTR LTM,     &mc_braces,         LOWER)
+        COMBO(cb_brackets,      LBR LBM,     &mc_brackets,       LOWER)
 
         COMBO(cb_esc_save,      LTR LTM L0,  &mc_save_esc,       ROMAK)
 
-        COMBO(cb_enter,         RHM RHR R0,  &kp ENTER,          ROMAK CASE NUMPAD LOWER NAV NAV_F MACROS_EXT SEN_CASE)
-        COMBO(cb_backspace,     RTM RTR,     &kp BACKSPACE,      ROMAK CASE NUMPAD LOWER NAV NAV_F MACROS_EXT SEN_CASE)
-        COMBO(cb_tab,           RTM RTR R0,  &kp TAB,            ROMAK CASE NUMPAD LOWER NAV NAV_F MACROS_EXT SEN_CASE)
+        COMBO(cb_enter,         RHM RHR R0,  &kp ENTER,          ROMAK CASE NUMPAD LOWER RAISE NAV NAV_F MACROS_EXT SEN_CASE)
+        COMBO(cb_backspace,     RTM RTR,     &kp BACKSPACE,      ROMAK CASE NUMPAD LOWER RAISE NAV NAV_F MACROS_EXT SEN_CASE)
+        COMBO(cb_tab,           RTM RTR R0,  &kp TAB,            ROMAK CASE NUMPAD LOWER RAISE NAV NAV_F MACROS_EXT SEN_CASE)
 
         COMBO(cb_paste,         RBI RBM R0,  &mc_paste,          ROMAK CASE NUMPAD)
         COMBO(cb_copy,          RHI RHM R0,  &mc_copy,           ROMAK CASE NUMPAD)
@@ -61,12 +65,11 @@
         COMBO(cb_selcopy,       RHI RHM RHR R0,  &mc_selcopy,    ROMAK CASE NUMPAD)
         COMBO(cb_selpaste,      RBI RBM RBR R0,  &mc_selpaste,   ROMAK CASE NUMPAD)
 
-        COMBO(cb_numword,       RHP R0,      &smart_num,         ROMAK CASE)
-
         COMBO(cb_o_esc,         RHM R0,      &mc_o_esc,          ROMAK CASE)
         COMBO(cb_sft_o_esc,     RHR R0,      &mc_sft_o_esc,      ROMAK CASE)
         COMBO(cb_semi,          RBM RBR,     &th_semi 0 0,       ROMAK CASE LOWER)
-        COMBO(cb_epa,           RBI RBM RBR, &th_epa 0 0,        ROMAK CASE)
+        COMBO(cb_sent,          RBI RBM RBR, &mc_end_semi_ent,   ROMAK CASE)
+        COMBO(cb_epa,           RBI RBM,     &mc_epa,            MEDIA)
 
         COMBO(cb_v,             RTI RTM,     &kp V,              ROMAK)
         COMBO(cb_p,             RBI RBM,     &kp P,              ROMAK)
@@ -88,7 +91,6 @@
         COMBO(cb_coes,          RBI RBM RBR, &mc_coes,           ACCENT)
         COMBO(cb_squo,          RHI RHM,     &mc_sqo,            ACCENT)
 
-        COMBO(cb_braces,        RTI RTM RTR, &mc_braces,         RAISE)
         COMBO(cb_sarrow,        RHI RHM,     &th_sarrow 0 0,     RAISE)
         COMBO(cb_eqeq,          RHM RHR,     &mc_eqeq,           RAISE)
         COMBO(cb_noteq,         RHI RHM RHR, &mc_noteq,          RAISE)

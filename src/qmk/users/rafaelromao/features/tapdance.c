@@ -67,7 +67,7 @@ void td_open_parentesis(tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_LPRN);
             break;
         case TD_DOUBLE_TAP:
-            SEND_STRING("for(");
+            SEND_STRING("var ");
             break;
         default:
             break;
@@ -85,7 +85,7 @@ void td_close_parentesis(tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_RPRN);
             break;
         case TD_DOUBLE_TAP:
-            SEND_STRING("if(");
+            SEND_STRING("return ");
             break;
         default:
             break;
@@ -142,7 +142,7 @@ void td_open_curly_braces(tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_LCBR);
             break;
         case TD_DOUBLE_TAP:
-            SEND_STRING("var ");
+            SEND_STRING("for(");
             break;
         default:
             break;
@@ -160,7 +160,7 @@ void td_close_curly_braces(tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_RCBR);
             break;
         case TD_DOUBLE_TAP:
-            SEND_STRING("return ");
+            SEND_STRING("if(");
             break;
         default:
             break;
@@ -442,7 +442,8 @@ void td_not(tap_dance_state_t *state, void *user_data) {
 #endif
             break;
         case TD_DOUBLE_TAP:
-            SEND_STRING("throw ");
+            tap_code16(KC_EXLM);
+            tap_code16(KC_EXLM);
             break;
         default:
             break;
@@ -575,23 +576,6 @@ void td_gt(tap_dance_state_t *state, void *user_data) {
     }
 }
 
-#ifndef SAVE_MEMORY
-void td_epa(tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            process_macros(MC_EPA, NULL);
-            break;
-        case TD_SINGLE_HOLD:
-            tap_code(KC_END);
-            process_macros(MC_SENT, NULL);
-            break;
-        default:
-            break;
-    }
-}
-#endif
-
 void td_sarr(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
@@ -638,9 +622,6 @@ tap_dance_action_t tap_dance_actions[] = {
     [LET_ELT] = ACTION_TAP_DANCE_FN(td_lt),
     [GRT_EGT] = ACTION_TAP_DANCE_FN(td_gt),
     [SLS_BSL] = ACTION_TAP_DANCE_FN(td_slash),
-#ifndef SAVE_MEMORY
-    [EPA_SCE] = ACTION_TAP_DANCE_FN(td_epa),
-#endif
     [SAR_ESA] = ACTION_TAP_DANCE_FN(td_sarr),
     [DOT_DOT] = ACTION_TAP_DANCE_FN(td_dot)};
 

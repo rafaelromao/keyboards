@@ -124,14 +124,14 @@
         SYMBOL(mc_lpar,            &kp LPAR)
         SYMBOL(mc_end_lpar,        &kp END &kp LPAR)
         TAPHOLD_SYMBOL(th_lpar,    &mc_lpar, &mc_end_lpar)
-        MACRO_SYMBOL(mc_for,       &kp F &kp O &kp R &kp LPAR)
-        TAPDANCE_SYMBOL(td_lpar,   &th_lpar 0 0, &mc_for, &none)
+        MACRO_SYMBOL(mc_var,       &kp V &kp A &kp R &kp SPACE)
+        TAPDANCE_SYMBOL(td_lpar,   &th_lpar 0 0, &mc_var, &none)
 
         SYMBOL(mc_rpar,            &kp RPAR)
         SYMBOL(mc_end_rpar,        &kp END &kp RPAR)
         TAPHOLD_SYMBOL(th_rpar,    &mc_rpar, &mc_end_rpar)
-        MACRO_SYMBOL(mc_if,        &kp I &kp F &kp LPAR)
-        TAPDANCE_SYMBOL(td_rpar,   &th_rpar 0 0, &mc_if, &none)
+        MACRO_SYMBOL(mc_return,    &kp R &kp E &kp T &kp U &kp R &kp N &kp SPACE)
+        TAPDANCE_SYMBOL(td_rpar,   &th_rpar 0 0, &mc_return, &none)
 
         SYMBOL(mc_pars,            &kp LPAR &kp RPAR)
         SYMBOL(mc_end_pars,        &kp END &kp LPAR &kp RPAR)
@@ -159,9 +159,28 @@
         TAPHOLD_SYMBOL(th_rbkt,    &mc_rbkt, &mc_end_rbkt)
         TAPDANCE_SYMBOL(td_rbkt,   &th_rbkt 0 0, &mc_case, &none)
 
+        SYMBOL(mc_brackets,        &kp LBKT &kp RBKT)
+
         SYMBOL(mc_qmark,           &kp QMARK &sl SEN_CASE)
         SYMBOL(mc_end_qmark,       &kp END &kp QMARK &sl SEN_CASE)
         TAPHOLD_SYMBOL(th_qmark,   &mc_qmark, &mc_end_qmark)
+
+        SYMBOL(mc_lbrc,            &kp LBRC)
+        SYMBOL(mc_end_lbrc,        &kp END &kp LBRC)
+        MACRO_SYMBOL(mc_for,       &kp F &kp O &kp R &kp LPAR)
+        TAPHOLD_SYMBOL(th_lbrc,    &mc_lbrc, &mc_end_lbrc)
+        TAPDANCE_SYMBOL(td_lbrc,   &th_lbrc 0 0, &mc_for, &none)
+
+        SYMBOL(mc_rbrc,            &kp RBRC)
+        SYMBOL(mc_end_rbrc,        &kp END &kp RBRC)
+        MACRO_SYMBOL(mc_if,        &kp I &kp F &kp LPAR)
+        TAPHOLD_SYMBOL(th_rbrc,    &mc_rbrc, &mc_end_rbrc)
+        TAPDANCE_SYMBOL(td_rbrc,   &th_rbrc 0 0, &mc_if, &none)
+
+        SYMBOL(mc_braces,          &kp END &kp LBRC &kp RBRC &kp LEFT &kp ENTER)
+
+
+        // Raise
 
         SYMBOL(mc_and,             &kp AMPS)
         SYMBOL(mc_right_and,       &kp RIGHT &kp AMPS &kp AMPS)
@@ -170,22 +189,6 @@
         SYMBOL(mc_or,              &kp PIPE)
         SYMBOL(mc_right_or,        &kp RIGHT &kp PIPE &kp PIPE)
         TAPHOLD_SYMBOL(th_or,      &mc_or, &mc_right_or)
-
-        // Raise
-
-        SYMBOL(mc_lbrc,            &kp LBRC)
-        SYMBOL(mc_end_lbrc,        &kp END &kp LBRC)
-        TAPHOLD_SYMBOL(th_lbrc,    &mc_lbrc, &mc_end_lbrc)
-        MACRO_SYMBOL(mc_var,       &kp V &kp A &kp R &kp SPACE)
-        TAPDANCE_SYMBOL(td_lbrc,   &th_lbrc 0 0, &mc_var, &none)
-
-        SYMBOL(mc_rbrc,            &kp RBRC)
-        SYMBOL(mc_end_rbrc,        &kp END &kp RBRC)
-        TAPHOLD_SYMBOL(th_rbrc,    &mc_rbrc, &mc_end_rbrc)
-        MACRO_SYMBOL(mc_return,    &kp R &kp E &kp T &kp U &kp R &kp N &kp SPACE)
-        TAPDANCE_SYMBOL(td_rbrc,   &th_rbrc 0 0, &mc_return, &none)
-
-        SYMBOL(mc_braces,          &kp END &kp LBRC &kp RBRC &kp LEFT &kp ENTER)
 
         SYMBOL(mc_dollar,          &kp DOLLAR)
         SYMBOL(mc_caret,           &kp CARET &kp SPACE)
@@ -230,9 +233,7 @@
 
         SYMBOL(mc_excl,            &kp EXCL &sl SEN_CASE)
         SYMBOL(mc_end_excl,        &kp END &kp EXCL &sl SEN_CASE)
-        MACRO_SYMBOL(mc_throw,     &kp T &kp H &kp R &kp O &kp W &kp SPACE)
         TAPHOLD_SYMBOL(th_excl,    &mc_excl, &mc_end_excl)
-        TAPDANCE_SYMBOL(td_excl,   &th_excl 0 0, &mc_throw, &none)
 
         SYMBOL(mc_tilde,           &kp TILDE &kp SPACE)
         SYMBOL(mc_deg,             &kp LS(LA(N8)))
