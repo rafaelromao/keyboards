@@ -160,7 +160,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 extern os_t          os;
 extern select_word_t select_word;
-extern swapper_t     swapper;
 const int            led_count = 47;
 
 void set_rgblight_by_layer(uint32_t layer) {
@@ -202,7 +201,7 @@ bool rgb_matrix_indicators_user(void) {
     bool isGui   = mods & MOD_MASK_GUI || oneshot_mods & MOD_MASK_GUI || oneshot_locked_mods & MOD_MASK_GUI;
 
     for (int i = 0; i < led_count; i++) {
-        if (swapper.state != NONE || select_word.state != STATE_NONE) {
+        if (select_word.state != STATE_NONE) {
             rgb_matrix_set_color(i, RGB_GREEN);
         } else if (has_any_smart_case()) {
             rgb_matrix_set_color(i, RGB_YELLOW);

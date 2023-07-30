@@ -10,7 +10,6 @@ SRC += features/os_toggle.c
 SRC += features/macros.c
 SRC += features/accents.c
 SRC += features/select_word.c
-SRC += features/swapper.c
 SRC += features/custom_shift.c
 SRC += features/repeat.c
 

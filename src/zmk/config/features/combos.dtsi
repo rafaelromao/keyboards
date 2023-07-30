@@ -29,12 +29,12 @@
         compatible = "zmk,combos";
 
         COMBO(cb_save,          LHR LHM L0,  &mc_save,           ROMAK CASE NUMPAD)
-        COMBO(cb_escc,          LTR LTM,     &mc_escc,           ROMAK CASE NUMPAD NAV NAV_F MACROS_EXT SEN_CASE)
+        COMBO(cb_escc,          LTR LTM,     &mc_escc,           ROMAK CASE NUMPAD NAV NAV_F MACROS_EXT SEN_CASE SEN_E1 SEN_E2)
         COMBO(cb_fullscr,       LHM LHI L0,  &mc_fullscr,        ROMAK CASE NUMPAD)
         COMBO(cb_find,          LBM LBI L0,  &mc_find,           ROMAK CASE NUMPAD)
         COMBO(cb_undo,          LBR LBM L0,  &mc_undo,           ROMAK CASE NUMPAD)
 
-        COMBO(cb_numword,       LHR LHM,     &smart_num,         ROMAK CASE)
+        COMBO(cb_numword,       LHR LHM,     &mc_smart_num,      ROMAK CASE CASE_AC SEN_CASE SEN_E1 SEN_E2 NUMPAD)
 
         COMBO(cb_w,             LTI LTM,     &kp W,              ROMAK)
         COMBO(cb_k,             LHR LHM LHI, &kp K,              ROMAK)
@@ -54,9 +54,9 @@
 
         COMBO(cb_esc_save,      LTR LTM L0,  &mc_save_esc,       ROMAK)
 
-        COMBO(cb_enter,         RHM RHR R0,  &kp ENTER,          ROMAK CASE NUMPAD LOWER RAISE NAV NAV_F MACROS_EXT SEN_CASE)
-        COMBO(cb_backspace,     RTM RTR,     &kp BACKSPACE,      ROMAK CASE NUMPAD LOWER RAISE NAV NAV_F MACROS_EXT SEN_CASE)
-        COMBO(cb_tab,           RTM RTR R0,  &kp TAB,            ROMAK CASE NUMPAD LOWER RAISE NAV NAV_F MACROS_EXT SEN_CASE)
+        COMBO(cb_enter,         RHM RHR R0,  &kp ENTER,          ROMAK CASE NUMPAD LOWER RAISE NAV NAV_F MACROS_EXT SEN_CASE SEN_E1 SEN_E2)
+        COMBO(cb_backspace,     RTM RTR,     &kp BACKSPACE,      ROMAK CASE NUMPAD LOWER RAISE NAV NAV_F MACROS_EXT SEN_CASE SEN_E1 SEN_E2)
+        COMBO(cb_tab,           RTM RTR R0,  &kp TAB,            ROMAK CASE NUMPAD LOWER RAISE NAV NAV_F MACROS_EXT SEN_CASE SEN_E1 SEN_E2)
 
         COMBO(cb_paste,         RBI RBM R0,  &mc_paste,          ROMAK CASE NUMPAD)
         COMBO(cb_copy,          RHI RHM R0,  &mc_copy,           ROMAK CASE NUMPAD)
@@ -84,7 +84,6 @@
 
         COMBO(cb_ja,            RTI RTM,     &mc_ja,             ACCENT)
         COMBO(cb_jac,           RTI RTM,     &mc_ja_c,           CASE_AC)
-        COMBO(cb_ae,            RBI RBM,     &mc_ae,             ACCENT)
         COMBO(cb_ao,            RHM RHR,     &mc_ao,             ACCENT)
         COMBO(cb_oe,            RBM RBR,     &mc_oe,             ACCENT)
         COMBO(cb_cao,           RHI RHM RHR, &mc_cao,            ACCENT)

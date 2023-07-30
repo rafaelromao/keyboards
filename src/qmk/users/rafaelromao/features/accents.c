@@ -79,12 +79,6 @@ bool is_accented_keycode(uint16_t keycode) {
 
 process_record_result_t process_ngrams(uint16_t keycode, bool isShifted) {
     switch (keycode) {
-        case MC_AE:
-            clear_shift();
-            tap_code16(KC_TILD);
-            tap_code(KC_A);
-            tap_code(KC_E);
-            return PROCESS_RECORD_RETURN_FALSE;
         case MC_AO:
             clear_shift();
             tap_code16(KC_TILD);

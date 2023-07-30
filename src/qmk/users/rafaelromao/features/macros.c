@@ -80,8 +80,31 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             unregister_mods(MOD_MASK_SHIFT);
             tap_code(KC_ESC);
             return PROCESS_RECORD_RETURN_FALSE;
+
 #endif
 
+            // END ; ENTER
+
+        case MC_SENT:
+            tap_code(KC_END);
+            tap_code(KC_SCLN);
+            tap_code(KC_ENT);
+            disable_smart_case();
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // END { ENTER }
+
+        case MC_CUR:
+            SEND_STRING(SS_TAP(X_END) "{}" SS_DELAY(50) SS_TAP(X_LEFT) SS_TAP(X_ENT));
+            disable_smart_case();
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // []
+
+        case MC_BRAC:
+            tap_code16(KC_LBRC);
+            tap_code16(KC_RBRC);
+            return PROCESS_RECORD_RETURN_FALSE;
             // Conditional operators
 
         case MC_DAND:
@@ -306,22 +329,6 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             } else {
                 SEND_STRING(SS_LCTL("/"));
             }
-            return PROCESS_RECORD_RETURN_FALSE;
-
-            // END { ENTER }
-
-        case MC_CUR:
-            SEND_STRING(SS_TAP(X_END) "{}" SS_DELAY(50) SS_TAP(X_LEFT) SS_TAP(X_ENT));
-            disable_smart_case();
-            return PROCESS_RECORD_RETURN_FALSE;
-
-            // END ; ENTER
-
-        case MC_SENT:
-            tap_code(KC_END);
-            tap_code(KC_SCLN);
-            tap_code(KC_ENT);
-            disable_smart_case();
             return PROCESS_RECORD_RETURN_FALSE;
 
             // Reset Zoom / Refresh

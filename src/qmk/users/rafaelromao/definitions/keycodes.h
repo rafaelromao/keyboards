@@ -106,7 +106,7 @@ enum {
     
     MC_BTIC, MC_DQUO, MC_SQUO, MC_CIRC, MC_TILD, REPEAT,
     MC_ENT, MC_TAB, MC_ESC, MC_ESCC, MC_NSEN, MC_CANC, TG_NUMC,
-    MC_ESAV, MC_SENT, MC_CUR, MC_SAR, MC_DEQ, MC_NEQ, 
+    MC_ESAV, MC_SENT, MC_CUR, MC_SAR, MC_DEQ, MC_NEQ, MC_BRAC,
     MC_DAND, MC_DPIP, MC_OESC, MC_SOES, MC_LTGT, MC_EPA,
 
     // End macros that can be shifted
@@ -116,7 +116,7 @@ enum {
     MC_GV_A, MC_CR_A, MC_TL_A, MC_SQ_A,
     MC_SQ_U, MC_CR_O, MC_SQ_O, MC_SQ_I,
     MC_CR_E, MC_TL_O, MC_SQ_C, MC_SQ_E,
-    MC_AE, MC_AO, MC_OE, MC_CAO, MC_COES, 
+    MC_AO, MC_OE, MC_CAO, MC_COES, 
     MC_QU, MC_JA,
     
     // End macros used to write text

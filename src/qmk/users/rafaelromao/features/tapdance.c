@@ -263,7 +263,7 @@ void td_semicolon(tap_dance_state_t *state, void *user_data) {
     }
 }
 
-#ifdef DYNAMIC_MACRO_ENABLE
+#ifndef SAVE_MEMORY
 void td_macro(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
@@ -370,7 +370,7 @@ void td_ques(tap_dance_state_t *state, void *user_data) {
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
             tap_code16(KC_QUES);
-#ifdef LEADER_ENABLE
+#ifndef SAVE_MEMORY
             start_sentence_case();
 #endif
             break;
@@ -382,7 +382,7 @@ void td_ques(tap_dance_state_t *state, void *user_data) {
         case TD_SINGLE_HOLD:
             tap_code(KC_END);
             tap_code16(KC_QUES);
-#ifdef LEADER_ENABLE
+#ifndef SAVE_MEMORY
             start_sentence_case();
 #endif
             break;
@@ -430,14 +430,14 @@ void td_not(tap_dance_state_t *state, void *user_data) {
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
             tap_code16(KC_EXLM);
-#ifdef LEADER_ENABLE
+#ifndef SAVE_MEMORY
             start_sentence_case();
 #endif
             break;
         case TD_SINGLE_HOLD:
             tap_code(KC_END);
             tap_code16(KC_EXLM);
-#ifdef LEADER_ENABLE
+#ifndef SAVE_MEMORY
             start_sentence_case();
 #endif
             break;
@@ -480,7 +480,7 @@ void td_dot(tap_dance_state_t *state, void *user_data) {
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
             tap_code(KC_DOT);
-#ifdef LEADER_ENABLE
+#ifndef SAVE_MEMORY
             start_sentence_case();
 #endif
             break;
@@ -497,7 +497,7 @@ void td_dot(tap_dance_state_t *state, void *user_data) {
         case TD_SINGLE_HOLD:
             tap_code16(KC_END);
             tap_code(KC_DOT);
-#ifdef LEADER_ENABLE
+#ifndef SAVE_MEMORY
             start_sentence_case();
 #endif
             break;
@@ -609,7 +609,7 @@ tap_dance_action_t tap_dance_actions[] = {
     [NOT_SWI] = ACTION_TAP_DANCE_FN(td_not),
     [AND_EAN] = ACTION_TAP_DANCE_FN(td_and),
     [OR_EOR]  = ACTION_TAP_DANCE_FN(td_or),
-#ifdef DYNAMIC_MACRO_ENABLE
+#ifndef SAVE_MEMORY
     [REC_MAC] = ACTION_TAP_DANCE_FN(td_macro),
 #endif
     [COM_LEA] = ACTION_TAP_DANCE_FN(td_comm),

@@ -22,8 +22,9 @@ void matrix_scan_user(void) {
 // Process record
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    // Process OS toggle
-    switch (process_os_toggle(keycode, record)) {
+#ifndef SAVE_MEMORY
+    // Process Sentence Case
+    switch (process_sentence_case(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:
@@ -31,10 +32,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         default:
             break;
     };
-
-#ifdef LEADER_ENABLE
-    // Process Sentence Case
-    switch (process_sentence_case(keycode, record)) {
+    // Process swapper
+    switch (process_swapper(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:
@@ -144,8 +143,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
     };
 
-    // Process swapper
-    switch (process_swapper(keycode, record)) {
+    // Process OS toggle
+    switch (process_os_toggle(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:
@@ -153,9 +152,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         default:
             break;
     };
+
     return true;
 }
 
+#ifndef SAVE_MEMORY
 // Dynamic macros
 
 void dynamic_macro_record_start_user(int8_t direction) {}
@@ -165,3 +166,4 @@ void dynamic_macro_play_user(int8_t direction) {}
 void dynamic_macro_record_key_user(int8_t direction, keyrecord_t *record) {}
 
 void dynamic_macro_record_end_user(int8_t direction) {}
+#endif

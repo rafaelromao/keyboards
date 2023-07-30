@@ -31,7 +31,7 @@
 #define                               ____MACROS_L4____                               NAV_PRJ , NMO_DOC
 
 #define           _________MACROS_R1___________________           MC_SELW , MC_ENT  , MC_TAB  , _______
-#ifdef LEADER_ENABLE
+#ifndef SAVE_MEMORY
 #define ___________________MACROS_R2___________________ QK_LEAD , MC_SELL , MC_MODM , SF_MODP , XXXXXXX
 #else
 #define ___________________MACROS_R2___________________ XXXXXXX , MC_SELL , MC_MODM , SF_MODP , XXXXXXX

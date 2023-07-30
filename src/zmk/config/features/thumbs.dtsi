@@ -76,6 +76,7 @@
             continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
         };
 
+        THUMB_MACRO(mc_smart_num,     &to ROMAK &smart_num)
         THUMB_MACRO(mc_cancel,        &kp K_CANCEL)
         THUMB_MACRO(mc_sp_ns,         &kp SPACE &sl SEN_E1)
         THUMB_MACRO(mc_nsen,          &sl SEN_E1)

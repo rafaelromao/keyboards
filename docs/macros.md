@@ -16,9 +16,7 @@
 - The Macros layer not only gives access to some common programming macros and shortcuts but also some complex features, like Select Word, Window Swapper and the ability to record and play Dynamic Macros, as well as the inverted space and backspace keys.
 
 #### Leader Key
-- Although not available in the Macros layer, the Leader Key is an important tool to play macros.
-- The Leader Key is available through a double tap in the comma.
-- The Leader Key is used to give easy access to some useful shortcuts and macros, like typing an internet domain or recurring terminal commands.
+- The Leader Key is available in the Macros layer and can give easy access to some useful shortcuts and macros, like typing an internet domain or recurring terminal commands.
 - Source code: [leader.c](../src/qmk/users/rafaelromao/features/leader.c)
 
 #### Swapper

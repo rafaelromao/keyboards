@@ -89,19 +89,21 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
             }
             break;
 
-        case SF_MODP:
-            if (record->event.pressed && record->tap.count) {
-                process_swapper(MC_MODP, NULL);
-                return PROCESS_RECORD_RETURN_FALSE;
-            }
-            break;
-
         case MED_ROM:
             if (record->event.pressed && record->tap.count) {
                 layer_move(_ROMAK);
                 return PROCESS_RECORD_RETURN_FALSE;
             }
             break;
+
+#ifndef SAVE_MEMORY
+        case SF_MODP:
+            if (record->event.pressed && record->tap.count) {
+                process_swapper(MC_MODP, NULL);
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+            break;
+#endif
     }
     return PROCESS_RECORD_CONTINUE;
 }
