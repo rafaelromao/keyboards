@@ -58,8 +58,8 @@
         COMBO(cb_backspace,     RTM RTR,     &kp BACKSPACE,      ROMAK CASE NUMPAD LOWER RAISE NAV NAV_F MACROS_EXT SEN_CASE SEN_E1 SEN_E2)
         COMBO(cb_tab,           RTM RTR R0,  &kp TAB,            ROMAK CASE NUMPAD LOWER RAISE NAV NAV_F MACROS_EXT SEN_CASE SEN_E1 SEN_E2)
 
-        COMBO(cb_paste,         RBI RBM R0,  &mc_paste,          ROMAK CASE NUMPAD)
-        COMBO(cb_copy,          RHI RHM R0,  &mc_copy,           ROMAK CASE NUMPAD)
+        COMBO(cb_paste,         RBI RBM R0,  &mc_paste,          ROMAK CASE NUMPAD NAV NAV_F)
+        COMBO(cb_copy,          RHI RHM R0,  &mc_copy,           ROMAK CASE NUMPAD NAV NAV_F)
         COMBO(cb_selall,        RBM RBR R0,  &mc_selall,         ROMAK CASE NUMPAD)
 
         COMBO(cb_selcopy,       RHI RHM RHR R0,  &mc_selcopy,    ROMAK CASE NUMPAD)
