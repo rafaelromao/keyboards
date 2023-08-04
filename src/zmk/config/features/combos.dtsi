@@ -35,8 +35,8 @@
         COMBO(cb_undo,          LBR LBM L0,  &mc_undo,           ROMAK CASE NUMPAD SEN_CASE SEN_E1 SEN_E2)
 
         COMBO(cb_numword,       LHR LHM,     &mc_smart_num,      ROMAK CASE CASE_AC SEN_CASE SEN_E1 SEN_E2 NUMPAD)
-        COMBO(cb_numpad_t,      L0 L1,       &tog NUMPAD,        ROMAK CASE CASE_AC SEN_CASE SEN_E1 SEN_E2 NUMPAD)
-        COMBO(cb_numword_t,     R0 R1,       &mc_smart_num,      ROMAK CASE CASE_AC SEN_CASE SEN_E1 SEN_E2 NUMPAD)
+        COMBO(cb_capslock,      L0 L1,       &kp CAPSLOCK,       ROMAK CASE CASE_AC SEN_CASE SEN_E1 SEN_E2 NUMPAD)
+        COMBO(cb_numpad,        R0 R1,       &tog NUMPAD,        ROMAK CASE CASE_AC SEN_CASE SEN_E1 SEN_E2 NUMPAD)
 
         COMBO(cb_w,             LTI LTM,     &kp W,              ROMAK SEN_CASE)
         COMBO(cb_k,             LHR LHM LHI, &kp K,              ROMAK SEN_CASE)

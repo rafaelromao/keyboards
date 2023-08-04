@@ -80,7 +80,7 @@ enum {
     MC_SECRET_1,
 
     // Toggle codes
-    OS_ACNT, TG_MAC, TG_WIN, TG_CASE, TG_ACNT,
+    OS_ACNT, TG_MAC, TG_WIN, TG_CASE, TG_ACNT, TG_CAPS,
 
     // Select Word/Line
     MC_SELW, MC_SELL, 
@@ -213,6 +213,7 @@ enum {
 #define TO_ROM  TO(_ROMAK)
 #define TT_NAV  TT(_FIXED_NAV)
 #define TG_LOCK TG(_LOCK)
+#define TG_NUM  TG(_NUMPAD)
 
 uint16_t extract_base_tapping_keycode(uint16_t keycode);
 bool is_key_on_tap(uint16_t keycode);

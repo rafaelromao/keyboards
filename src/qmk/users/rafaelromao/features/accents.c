@@ -118,6 +118,10 @@ process_record_result_t process_ngrams(uint16_t keycode, bool isShifted) {
             tap_code16(KC_QUOT);
             tap_code(KC_A);
             return PROCESS_RECORD_RETURN_FALSE;
+
+        case TG_CAPS:
+            tap_code(KC_CAPS);
+            return PROCESS_RECORD_RETURN_FALSE;
     }
 
     return PROCESS_RECORD_CONTINUE;
