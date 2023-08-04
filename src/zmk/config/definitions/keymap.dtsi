@@ -28,7 +28,7 @@
    &mc_escc            &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp BSPC
    &lt MACROS D        &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp W               &kp Z               &mt RGUI R          &mt RCTRL A         &mt RSHFT E         &lt MACROS I 
    &kp Q               &mt RALT F          &kp C               &mt LALT P          &kp V               &kp J               &mt RALT H          &th_comma 0 0       &th_dot 0 0         &kp Y
-                                           &none               &ht_repeat NAV 0    &lt LOWER SPACE     &msl RAISE ACCENT   &med_sc             &none
+                                           &none               &ht_repeat NAV 0    &lt LOWER SPACE     &msl RAISE ACCENT   &med_sc             &trans
                         >;
                    };
                 capsword_layer {
