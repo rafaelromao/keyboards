@@ -2,17 +2,19 @@
 
 ## Romak
 
-Romak is a new keyboard layout, inspired by [Colemak](https://colemak.org) and [BEAKL](https://ieants.cc/beakl), improved to remove load from pinkies and for typing in Portuguese and English, using a one-shot layer to extend the base layer with accented and less frequent keys.
+Romak is a new keyboard layout, inspired by [Colemak](https://colemak.org) and [BEAKL](https://ieants.cc/beakl) and [Engram](https://engram.dev), improved to remove load from pinkies and indexes, for typing in Portuguese and English, using a one-shot layer to extend the base layer with accented and less frequent keys.
 
-
+- Romak is designed for boards with only 30 keys, in the format 23332+2, with the alphas distributed only in the main 24 keys, avoiding lateral movement.
 
 ![img](../img/romak.png)
 
 - The name Romak is a combination of my last name, **Rom**ão, and Dvor**ak**'s name.
 - Romak assumes the right hand as dominant and puts all vowels plus R, L, H, J and V on that side.
 
-- Romak is designed for boards with only 30 keys, in the format 23332+2, but there is also a 3x5+2 version, which can be seen below, along with the numbers and symbols:
+- There is also a 3x5+2 version, which can be seen below, along with the numbers and symbols:
+
 ![img](../img/romak-full.png)
+
 - The performance of both versions is quite similar.
 
 ## KLA Next
@@ -22,8 +24,10 @@ Romak is a new keyboard layout, inspired by [Colemak](https://colemak.org) and [
 Romak has 2 alpha layers, with an oneshot key used to quickly alternate between them. This is not supported by KLA Next, so some adjustments were necessary:
 - Use AltGr instead of the oneshot key, so the tool considers the AltGr held to access the secondary alpha layer.
 - All layouts involved in the comparison have the same thumb configuration.
-- Symbols and numbers were excluded from the analysis for all considered layouts. The files with the configurations can be found [here](../docs/analysis/).
-- With this configuration, Romak scores better than all others.
+- Symbols and numbers were excluded from the analysis for all considered layouts.
+- The files with this configuration can be found [here](../docs/analysis/).
+- With this configuration, Romak scores slightly better than the others.
+
 ![img](../img/perf.png)
 
 ### Heatmaps
