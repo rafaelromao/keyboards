@@ -73,7 +73,7 @@
             ignore-numbers;
 			#binding-cells = <0>;
             layers = <NUMPAD>;
-            continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
+            continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12>;
         };
 
         THUMB_MACRO(mc_smart_num,     &to ROMAK &smart_num)
