@@ -4,7 +4,7 @@
 
 Romak is a new keyboard layout, inspired by [Colemak](https://colemak.org) and [BEAKL](https://ieants.cc/beakl) and [Engram](https://engram.dev), improved to remove load from pinkies and indexes, for typing in Portuguese and English, using a one-shot layer to extend the base layer with accented and less frequent keys.
 
-- Romak is designed for boards with only 30 keys, in the format 23332+2, with the alphas distributed only in the main 24 keys, avoiding lateral movement.
+- Romak is designed for boards with only 30 keys, in the format 23332+2, with the alphas distributed only in the main 20 keys, avoiding lateral movement.
 
 ![img](../img/romak.png)
 
