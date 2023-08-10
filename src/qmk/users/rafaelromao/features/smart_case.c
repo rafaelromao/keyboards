@@ -156,9 +156,9 @@ process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record
                 if (spacing) {
                     if (has_smart_case(SNAKE_CASE) || has_smart_case(KEBAB_CASE) || has_smart_case(SLASH_CASE)) {
                         tap_code(KC_BSPC);
+                        disable_smart_case();
                     }
                     tap_code(KC_SPC);
-                    disable_smart_case();
                     return PROCESS_RECORD_RETURN_FALSE;
                 } else {
                     if (has_smart_case(NUM_CASE)) {

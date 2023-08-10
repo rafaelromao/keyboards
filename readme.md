@@ -49,7 +49,6 @@ The qmk version recommended for this keymap is 0.21.3.
 
 - [handwired/rafaelromao/fauxberry](src/qmk/keyboards/handwired/rafaelromao/fauxberry/readme.md)
 - [handwired/rafaelromao/rommana](src/qmk/keyboards/handwired/rafaelromao/rommana/readme.md)
-- [handwired/rafaelromao/hummingbird](src/qmk/keyboards/handwired/rafaelromao/hummingbird/readme.md)
 - [kprepublic/bm40hsrgb](src/qmk/keyboards/kprepublic/bm40hsrgb/keymaps/rafaelromao/readme.md)
 
 Some features are not available on all keyboards though. For instance, the BM40 does not support Dynamic Macros.
@@ -58,7 +57,8 @@ Some features are not available on all keyboards though. For instance, the BM40 
 
 The zmk version used for this keymap is the one available in [this fork](https://github.com/rafaelromao/zmk/tree/rafaelromao/main), which contains some experimental code from [Nick Conway](https://github.com/nickconway/zmk-config), [Cem Aksoylar](https://github.com/caksoylar/zmk-config ) and [Robert U](https://github.com/urob/zmk-config), to implement features like `Swapper`, `Smart Cases` and `Leader Key`, among other small improvements.
 
-- [lowprokb.ca/corneish-zen](src/zmk/keyboards/lowprokb.ca/corneish-zen/readme.md)
+- [lowprokb.ca/corneish-zen](src/zmk/config/boards/lowprokb.ca/corneish-zen/readme.md)
+- [handwired/hummingbird](src/zmk/config/boards/handwired/boards/shields/hw_hummingbird//readme.md)
 
 Some features might not be available in ZMK. [This readme file](src/zmk/config/rafaelromao/readme.md) will indicate what features are missing.
 
@@ -82,6 +82,7 @@ Most features implemented here were based on the work referenced below.
 - [Colemak](https://colemak.org)
 - [BEAKL](https://ieants.cc/beakl)
 - [Hands Down](https://sites.google.com/alanreiser.com/handsdown/home)
+- [Engram](https://engram.dev)
 - [Miryoku](https://github.com/manna-harbour/miryoku)
 - [Seniply](https://stevep99.github.io/seniply)
 - [DreymaR](https://dreymar.colemak.org)
