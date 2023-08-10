@@ -1,7 +1,7 @@
 ## lowprokb.ca/corneish-zen
 ### A premium split keyboard, based on the Corne keyboard
 
-![img](../../../../../../../img/zen.png)
+![img](../../../../../../img/zen.png)
 
 ### ZMK
 
