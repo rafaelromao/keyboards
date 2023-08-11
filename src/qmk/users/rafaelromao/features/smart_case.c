@@ -136,14 +136,10 @@ process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record
         start_smart_case_timer();
         return PROCESS_RECORD_CONTINUE;
     }
-    if (has_any_smart_case() && record->event.pressed) {
+    if (has_any_smart_case() && record->tap.count && record->event.pressed) {
         switch (keycode) {
             case QK_MOD_TAP ... QK_MOD_TAP_MAX:
             case QK_LAYER_TAP ... QK_LAYER_TAP_MAX:
-                // Earlier return if this has not been considered tapped yet.
-                if (record->tap.count == 0) {
-                    return PROCESS_RECORD_CONTINUE;
-                }
                 // Get the base tapping keycode of a mod- or layer-tap key.
                 keycode = extract_base_tapping_keycode(keycode);
         }
