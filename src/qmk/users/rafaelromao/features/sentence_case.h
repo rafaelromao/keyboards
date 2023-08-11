@@ -9,6 +9,7 @@ typedef enum { SENTENCE_CASE_NONE, SENTENCE_CASE_STARTED, SENTENCE_CASE_FINISHIN
 
 typedef struct {
     sentence_case_state_t state;
+    uint16_t              start_time;
 } sentence_case_t;
 
 void                    start_sentence_case(void);

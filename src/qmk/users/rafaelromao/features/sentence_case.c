@@ -7,25 +7,46 @@ sentence_case_t sentence_case = {.state = SENTENCE_CASE_NONE};
 void start_sentence_case(void) {
     // Called after . ? and !
     sentence_case.state = SENTENCE_CASE_STARTED;
+    sentence_case.start_time = timer_read();
+}
+
+bool is_expired(void) {
+    return timer_elapsed(sentence_case.start_time) > ONESHOT_TIMEOUT;
 }
 
 process_record_result_t process_sentence_case(uint16_t keycode, keyrecord_t *record) {
+    // Cancel after timeout
+    if (sentence_case.state != SENTENCE_CASE_NONE && is_expired()) {
+        sentence_case.state = SENTENCE_CASE_NONE;
+        return PROCESS_RECORD_CONTINUE;
+    }
+    // Process next capitalized key
     if (record->event.pressed && sentence_case.state != SENTENCE_CASE_NONE) {
-        switch (keycode) {
-            // Navigation
-            case KC_HOME:
-            case KC_END:
-            case KC_LEFT:
-            case KC_RIGHT:
-            case KC_ENT:
-            case KC_TAB:
-            case TD_DOT:
-            case TD_COMM:
-                clear_shift();
-                sentence_case.state = SENTENCE_CASE_NONE;
-                return PROCESS_RECORD_CONTINUE;
+        if (sentence_case.state == SENTENCE_CASE_FINISHING) {
+            // Process macros
+            switch (keycode) {
+                // Skip dot and comma
+                case TD_DOT:
+                case TD_COMM:
+                    sentence_case.state = SENTENCE_CASE_NONE;
+                    return PROCESS_RECORD_CONTINUE;
+                // Process Qu macro as an alpha
+                case MC_QU:
+                    add_oneshot_mods(MOD_LSFT);
+                    sentence_case.state = SENTENCE_CASE_NONE;
+                    return PROCESS_RECORD_CONTINUE;
+            }
+            // Process alphas
+            uint16_t key = extract_base_tapping_keycode(keycode);
+            switch (key) {
+                case KC_A ... KC_Z:
+                    add_oneshot_mods(MOD_LSFT);
+                    sentence_case.state = SENTENCE_CASE_NONE;
+                    return PROCESS_RECORD_CONTINUE;
+            }
         }
     }
+    // Handle the Sentence Case state
     if (record->tap.count && record->event.pressed) {
         uint16_t key = extract_base_tapping_keycode(keycode);
         switch (key) {
@@ -33,12 +54,14 @@ process_record_result_t process_sentence_case(uint16_t keycode, keyrecord_t *rec
             case KC_SPC:
                 if (sentence_case.state == SENTENCE_CASE_STARTED) {
                     tap_code(KC_SPC);
-                    add_oneshot_mods(MOD_LSFT);
                     sentence_case.state = SENTENCE_CASE_FINISHING;
                     return PROCESS_RECORD_RETURN_FALSE;
                 }
         }
         switch (keycode) {
+            // Continue to Accents layer
+            case RAI_ACT:
+                return PROCESS_RECORD_CONTINUE;
             // Cancel
             case NAV_REP:
             case QK_REP:
