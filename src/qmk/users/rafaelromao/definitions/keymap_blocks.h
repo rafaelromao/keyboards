@@ -18,7 +18,7 @@
 #define ___________________NUMPAD_L1_________           _______ , KC_F9   , KC_F8   , KC_F7   
 #define ___________________NUMPAD_L2___________________ NAV_F12 , SF_F6   , CT_F5   , GU_F4   , KC_F11
 #define           _________NUMPAD_L3___________________           AL_F3   , KC_F2   , AL_F1   , KC_F10
-#define                               ____NUMPAD_L4____                               _______ , KC_SPC
+#define                               ____NUMPAD_L4____                               _______ , LOW_SPC
 
 #define           _________NUMPAD_R1___________________           KC_7    , KC_8    , KC_9    , _______
 #define ___________________NUMPAD_R2___________________ KC_COMM , GU_4    , CT_5    , SF_6    , MAC_DOT

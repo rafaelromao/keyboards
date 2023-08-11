@@ -13,7 +13,9 @@ process_record_result_t process_common_shortcuts(uint16_t keycode, keyrecord_t *
 
     bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     bool isOneShotShift       = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
+#ifndef SAVE_MEMORY
     bool isShifted            = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
+#endif
     bool isMacOS = is_macos();
 
     switch (keycode) {
@@ -61,6 +63,8 @@ process_record_result_t process_common_shortcuts(uint16_t keycode, keyrecord_t *
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
+#ifndef SAVE_MEMORY
+
             // Selec All + Copy
 
         case MC_SCOP:
@@ -71,17 +75,6 @@ process_record_result_t process_common_shortcuts(uint16_t keycode, keyrecord_t *
             } else {
                 SEND_STRING(SS_LGUI("a"));
                 SEND_STRING(SS_LGUI("c"));
-            }
-            return PROCESS_RECORD_RETURN_FALSE;
-
-            // Paste
-
-        case MC_PAST:
-            clear_locked_and_oneshot_mods();
-            if (should_send_ctrl(isMacOS, isOneShotShift)) {
-                SEND_STRING(SS_LCTL("v"));
-            } else {
-                SEND_STRING(SS_LGUI("v"));
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
@@ -110,6 +103,18 @@ process_record_result_t process_common_shortcuts(uint16_t keycode, keyrecord_t *
                 if (isShifted) {
                     unregister_mods(MOD_LSFT);
                 }
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+#endif
+            // Paste
+
+        case MC_PAST:
+            clear_locked_and_oneshot_mods();
+            if (should_send_ctrl(isMacOS, isOneShotShift)) {
+                SEND_STRING(SS_LCTL("v"));
+            } else {
+                SEND_STRING(SS_LGUI("v"));
             }
             return PROCESS_RECORD_RETURN_FALSE;
 

@@ -9,7 +9,7 @@ process_record_result_t process_custom_shift(uint16_t keycode, keyrecord_t *reco
     bool isOneShotShift       = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
     bool isShifted            = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
 
-    uint16_t key = extract_base_tapping_keycode(keycode);
+    uint16_t key = extract_tapping_keycode(keycode);
 
     switch (key) {
             // Shifted numrow = numpad

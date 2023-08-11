@@ -53,6 +53,7 @@ enum {
 #define TD_DQUO TD(DQU_FIN)
 #define TD_NOT TD(NOT_SWI)
 #define TD_AND TD(AND_EAN)
+#define TD_OR TD(OR_EOR)
 #ifdef DYNAMIC_MACRO_ENABLE
 #define TD_MACR TD(REC_MAC)
 #else
@@ -69,7 +70,6 @@ enum {
 #define TD_PLUS TD(PLU_RET)
 #define TD_LT TD(LET_ELT)
 #define TD_GT TD(GRT_EGT)
-#define TD_OR TD(OR_EOR)
 #define TD_SARR TD(SAR_ESA)
 
 // Custom keycodes
@@ -103,7 +103,7 @@ enum {
 
     // Begin macros used to write text
     STR_MACRO_START,
-    
+
     MC_BTIC, MC_DQUO, MC_SQUO, MC_CIRC, MC_TILD, REPEAT,
     MC_ENT, MC_TAB, MC_ESC, MC_ESCC, MC_NSEN, MC_CANC, TG_NUMC,
     MC_ESAV, MC_SENT, MC_CUR, MC_SAR, MC_DEQ, MC_NEQ, MC_BRAC,
@@ -112,12 +112,17 @@ enum {
     // End macros that can be shifted
     SFT_MACRO_END,
 
-    // Accented letters
+    // Start macros for accented letters
+    ACCENT_MACRO_START,
+
     MC_GV_A, MC_CR_A, MC_TL_A, MC_SQ_A,
     MC_SQ_U, MC_CR_O, MC_SQ_O, MC_SQ_I,
     MC_CR_E, MC_TL_O, MC_SQ_C, MC_SQ_E,
     MC_AO, MC_OE, MC_CAO, MC_COES, 
     MC_QU, MC_JA,
+
+    // End macros for accented letters
+    ACCENT_MACRO_END,
     
     // End macros used to write text
     STR_MACRO_END,
@@ -215,8 +220,7 @@ enum {
 #define TG_LOCK TG(_LOCK)
 #define TG_NUM  TG(_NUMPAD)
 
-uint16_t extract_base_tapping_keycode(uint16_t keycode);
-bool is_key_on_tap(uint16_t keycode);
+uint16_t extract_tapping_keycode(uint16_t keycode);
 bool is_string_macro_keycode(uint16_t keycode);
 bool is_shift_macro_keycode(uint16_t keycode);
 

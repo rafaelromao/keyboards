@@ -50,6 +50,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             return PROCESS_RECORD_RETURN_FALSE;
 
 #ifndef SAVE_MEMORY
+
             // ESC + P + A (considering VIM remaps)
 
         case MC_EPA:
@@ -81,8 +82,6 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             tap_code(KC_ESC);
             return PROCESS_RECORD_RETURN_FALSE;
 
-#endif
-
             // END ; ENTER
 
         case MC_SENT:
@@ -91,6 +90,8 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             tap_code(KC_ENT);
             disable_smart_case();
             return PROCESS_RECORD_RETURN_FALSE;
+
+#endif
 
             // END { ENTER }
 

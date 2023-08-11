@@ -2,30 +2,71 @@
 
 #include "keycodes.h"
 
-uint16_t extract_base_tapping_keycode(uint16_t keycode) {
-    // Get the base tapping keycode of a mod- or layer-tap key.
-    return keycode &= 0xff;
-}
-
-bool is_key_on_tap(uint16_t keycode) {
+uint16_t extract_tapping_keycode(uint16_t keycode) {
+    // Return tapping keycode for tap dances
+    switch (keycode) {
+        case TD_SCLE:
+            return KC_SCLN;
+        case TD_LCRB:
+            return KC_LCBR;
+        case TD_RCRB:
+            return KC_RCBR;
+        case TD_OPAR:
+            return KC_LPRN;
+        case TD_CPAR:
+            return KC_RPRN;
+        case TD_OBR:
+            return KC_LBRC;
+        case TD_CBR:
+            return KC_RBRC;
+        case TD_DQUO:
+            return KC_QUOT;
+        case TD_NOT:
+            return KC_EXLM;
+        case TD_AND:
+            return KC_AMPR;
+        case TD_OR:
+            return KC_PIPE;
+        case TD_COMM:
+            return KC_COMM;
+        case TD_DOT:
+            return KC_DOT;
+        case TD_DLR:
+            return KC_DLR;
+        case TD_COLN:
+            return KC_COLN;
+        case TD_TILD:
+            return KC_TILD;
+        case TD_QUES:
+            return KC_QUES;
+        case TD_SLSH:
+            return KC_SLSH;
+        case TD_EQL:
+            return KC_EQL;
+        case TD_PLUS:
+            return KC_PLUS;
+        case TD_LT:
+            return KC_LT;
+        case TD_GT:
+            return KC_GT;
+        default:
+            break;
+    }
+    // Return tapping keycode for custom layer taps
+    switch (keycode) {
+        case NAV_AT:
+            return KC_AT;
+        default:
+            break;
+    }
+    // Return tapping keycode for basic mod taps
     switch (keycode) {
         case QK_MOD_TAP ... QK_MOD_TAP_MAX:
         case QK_LAYER_TAP ... QK_LAYER_TAP_MAX:
-            return true;
+            return keycode &= 0xff;
     }
-    if ((keycode > CUSTOM_KEYCODE_START && keycode < CUSTOM_KEYCODE_END)) {
-        return true;
-    }
-    for (int i = TD_CODE_START + 1; i < TD_CODE_END; i++) {
-        if (TD(i) == keycode) {
-            return true;
-        }
-    }
-    keycode = extract_base_tapping_keycode(keycode);
-    if (IS_BASIC_KEYCODE(keycode)) {
-        return true;
-    }
-    return false;
+    // Return tapping keycode for basic keycode
+    return keycode;
 }
 
 bool is_string_macro_keycode(uint16_t keycode) {

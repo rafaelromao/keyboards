@@ -136,18 +136,30 @@ process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record
         start_smart_case_timer();
         return PROCESS_RECORD_CONTINUE;
     }
-    if (has_any_smart_case() && record->tap.count && record->event.pressed) {
+    if (has_any_smart_case() && record->event.pressed) {
         switch (keycode) {
             case QK_MOD_TAP ... QK_MOD_TAP_MAX:
             case QK_LAYER_TAP ... QK_LAYER_TAP_MAX:
-                // Get the base tapping keycode of a mod- or layer-tap key.
-                keycode = extract_base_tapping_keycode(keycode);
+                // Earlier return if this has not been considered tapped yet.
+                if (record->tap.count == 0) {
+                    return PROCESS_RECORD_CONTINUE;
+                }
         }
-        if (keycode != KC_SPC) {
+        // Get the base tapping keycode of a mod- or layer-tap key.
+        uint16_t key = extract_tapping_keycode(keycode);
+        if (key != KC_SPC) {
             spacing = false;
         }
         // Extend, process or break case
         switch (keycode) {
+            case ACCENT_MACRO_START ... ACCENT_MACRO_END:
+            case RAI_ACT:
+            case NAV_REP:
+            case MED_CAS:
+                start_smart_case_timer();
+                return PROCESS_RECORD_CONTINUE;
+        }
+        switch (key) {
             case KC_SPC:
                 if (spacing) {
                     if (has_smart_case(SNAKE_CASE) || has_smart_case(KEBAB_CASE) || has_smart_case(SLASH_CASE)) {
@@ -188,7 +200,6 @@ process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record
                     start_smart_case_timer();
                     return PROCESS_RECORD_RETURN_FALSE;
                 }
-            case STR_MACRO_START ... STR_MACRO_END:
             case KC_A ... KC_Z:
             case KC_1 ... KC_0:
             case KC_BSPC:
@@ -196,15 +207,13 @@ process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record
             case KC_UNDS:
             case KC_LEFT:
             case KC_RIGHT:
+            case KC_UP:
+            case KC_DOWN:
             case KC_HOME:
             case KC_END:
-            case MAI_CAS:
-            case RAI_ACT:
-            case MED_CAS:
                 start_smart_case_timer();
                 break;
             case KC_DOT:
-            case TD_DOT:
             case KC_SLSH:
                 if (has_smart_case(SLASH_CASE) || has_smart_case(NUM_CASE)) {
                     start_smart_case_timer();
@@ -212,20 +221,20 @@ process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record
                 }
             case KC_PERC:
             case KC_COMM:
-            case TD_COMM:
-            case TD_PLUS:
-            case TD_EQL:
-            case TD_COLN:
+            case KC_PLUS:
+            case KC_EQL:
+            case KC_COLN:
+            case KC_LPRN:
+            case KC_RPRN:
             case KC_F1 ... KC_F12:
                 if (has_smart_case(NUM_CASE)) {
                     start_smart_case_timer();
                     break;
                 }
             default:
-                if (is_key_on_tap(keycode) && (has_smart_case(WORD_CASE) || !has_smart_case(CAPS_LOCK))) {
-                    disable_smart_case();
-                }
-                break;
+                disable_smart_case();
+                tap_code16(key);
+                return PROCESS_RECORD_RETURN_FALSE;
         }
     }
     return PROCESS_RECORD_CONTINUE;

@@ -37,7 +37,7 @@ process_record_result_t process_sentence_case(uint16_t keycode, keyrecord_t *rec
                     return PROCESS_RECORD_CONTINUE;
             }
             // Process alphas
-            uint16_t key = extract_base_tapping_keycode(keycode);
+            uint16_t key = extract_tapping_keycode(keycode);
             switch (key) {
                 case KC_A ... KC_Z:
                     add_oneshot_mods(MOD_LSFT);
@@ -48,7 +48,7 @@ process_record_result_t process_sentence_case(uint16_t keycode, keyrecord_t *rec
     }
     // Handle the Sentence Case state
     if (record->tap.count && record->event.pressed) {
-        uint16_t key = extract_base_tapping_keycode(keycode);
+        uint16_t key = extract_tapping_keycode(keycode);
         switch (key) {
             // Space
             case KC_SPC:
