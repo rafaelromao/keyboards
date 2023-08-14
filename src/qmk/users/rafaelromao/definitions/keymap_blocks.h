@@ -49,9 +49,9 @@
 #define ___________________NOMOD_R3__________           KC_J    , KC_H    , KC_COMM , KC_DOT  
 #define ____NOMOD_R4_____                               MO_ACT  , OS_LSFT
 
-#define ___________________ACCENT_L1_________           _______ , KC_J    , KC_V    , KC_W
-#define ___________________ACCENT_L2___________________ KC_Y    , KC_Z    , KC_X    , KC_K    , KC_QUOT
-#define           _________ACCENT_L3___________________           KC_Q    , MC_SQ_C , MC_QU   , KC_GRV 
+#define ___________________ACCENT_L1_________           _______ , KC_Q    , MC_QU   , KC_K
+#define ___________________ACCENT_L2___________________ KC_Y    , KC_Z    , KC_X    , KC_W    , KC_QUOT
+#define           _________ACCENT_L3___________________           KC_J    , MC_SQ_C , KC_V    , KC_GRV 
 #define                               ____ACCENT_L4____                               _______ , _______
 
 #define           _________ACCENT_R1___________________           MC_GV_A , MC_SQ_O , MC_SQ_U , _______

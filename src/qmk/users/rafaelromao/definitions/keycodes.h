@@ -119,7 +119,7 @@ enum {
     MC_SQ_U, MC_CR_O, MC_SQ_O, MC_SQ_I,
     MC_CR_E, MC_TL_O, MC_SQ_C, MC_SQ_E,
     MC_AO, MC_OE, MC_CAO, MC_COES, 
-    MC_QU, MC_JA,
+    MC_QU, MC_JA, MC_LH,
 
     // End macros for accented letters
     ACCENT_MACRO_END,

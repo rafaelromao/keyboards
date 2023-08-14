@@ -42,8 +42,9 @@ const uint16_t PROGMEM r_med_ent_combo[] = {KC_ENT, KC_TAB, COMBO_END};
 
 // Accents
 
-const uint16_t PROGMEM l_acc_esc_combo[]  = {KC_J, KC_V, COMBO_END};
-const uint16_t PROGMEM r_acc_ja_combo[]   = {MC_GV_A, MC_SQ_O, COMBO_END};
+const uint16_t PROGMEM l_acc_esc_combo[]  = {KC_Q, MC_QU, COMBO_END};
+const uint16_t PROGMEM r_acc_ja_combo[]   = {KC_J, MC_SQ_C, COMBO_END};
+const uint16_t PROGMEM r_acc_lh_combo[]   = {MC_CR_A, MC_CR_O, COMBO_END};
 const uint16_t PROGMEM r_acc_squo_combo[] = {MC_TL_A, MC_SQ_A, COMBO_END};
 const uint16_t PROGMEM r_acc_ao_combo[]   = {MC_SQ_A, MC_SQ_E, COMBO_END};
 const uint16_t PROGMEM r_acc_oe_combo[]   = {MC_CR_O, MC_CR_E, COMBO_END};
@@ -64,11 +65,12 @@ const uint16_t PROGMEM l_rom_cap_combo[] = {NAV_REP, LOW_SPC, COMBO_END};
 const uint16_t PROGMEM r_rom_npd_combo[] = {RAI_ACT, MED_CAS, COMBO_END};
 const uint16_t PROGMEM r_num_npd_combo[] = {RAI_SPC, MED_0, COMBO_END};
 
-const uint16_t PROGMEM l_rom_w_combo[]   = {KC_M, KC_G, COMBO_END};
-const uint16_t PROGMEM l_rom_k_combo[]   = {LSFTT_N, LCTLT_S, LGUIT_T, COMBO_END};
-const uint16_t PROGMEM l_rom_z_combo[]   = {LCTLT_S, LGUIT_T, COMBO_END};
-const uint16_t PROGMEM l_rom_j_combo[]   = {KC_C, LALTT_P, COMBO_END};
-const uint16_t PROGMEM l_rom_q_combo[]   = {RALTT_F, KC_C, LALTT_P, COMBO_END};
+const uint16_t PROGMEM l_rom_k_combo[]   = {KC_M, KC_G, COMBO_END};
+const uint16_t PROGMEM l_rom_w_combo[]   = {LCTLT_S, LGUIT_T, COMBO_END};
+const uint16_t PROGMEM l_rom_z_combo[]   = {LSFTT_N, LCTLT_S, LGUIT_T, COMBO_END};
+const uint16_t PROGMEM l_rom_j_combo[]   = {RALTT_F, KC_C, LALTT_P, COMBO_END};
+const uint16_t PROGMEM l_rom_q_combo[]   = {KC_B, KC_M, KC_G, COMBO_END};
+const uint16_t PROGMEM l_rom_v_combo[]   = {KC_C, LALTT_P, COMBO_END};
 const uint16_t PROGMEM l_rom_esc_combo[] = {KC_B, KC_M, COMBO_END};
 const uint16_t PROGMEM l_rom_esv_combo[] = {LOW_SPC, KC_B, KC_M, COMBO_END};
 const uint16_t PROGMEM l_rom_und_combo[] = {LOW_SPC, RALTT_F, KC_C, COMBO_END};
@@ -105,27 +107,28 @@ const uint16_t PROGMEM secret_1_combo[] = {SEC_1, SEC_2, SEC_3, SEC_4, COMBO_END
 
 combo_t key_combos[] = {
 #ifndef SAVE_MEMORY
-    COMBO(r_med_epa_combo, MC_EPA),   COMBO(r_rom_oes_combo, MC_OESC),  COMBO(r_rom_soe_combo, MC_SOES),
-    COMBO(r_rom_sent_combo, MC_SENT), COMBO(r_rom_scp_combo, MC_SCOP),  COMBO(r_rom_spa_combo, MC_SPAS),
+    COMBO(r_med_epa_combo, MC_EPA),   COMBO(r_rom_oes_combo, MC_OESC),   COMBO(r_rom_soe_combo, MC_SOES),
+    COMBO(r_rom_sent_combo, MC_SENT), COMBO(r_rom_scp_combo, MC_SCOP),   COMBO(r_rom_spa_combo, MC_SPAS),
 #endif
-    COMBO(l_acc_esc_combo, MC_ESCC),  COMBO(l_low_cur_combo, MC_CUR),   COMBO(l_low_par_combo, MC_BRAC),
-    COMBO(l_low_par_combo, TD_PARN),  COMBO(l_nav_esc_combo, MC_ESCC),  COMBO(l_num_esc_combo, MC_ESCC),
-    COMBO(l_num_num_combo, MC_ESCC),  COMBO(l_num_sav_combo, MC_SAVE),  COMBO(l_rom_esc_combo, MC_ESCC),
-    COMBO(l_rom_esv_combo, MC_ESAV),  COMBO(l_rom_fin_combo, MC_FIND),  COMBO(l_rom_ful_combo, MC_FULL),
-    COMBO(l_rom_j_combo, KC_J),       COMBO(l_rom_k_combo, KC_K),       COMBO(l_rom_cap_combo, TG_CAPS),
-    COMBO(l_rom_num_combo, TG_NUMC),  COMBO(l_rom_q_combo, KC_Q),       COMBO(l_rom_sav_combo, MC_SAVE),
-    COMBO(l_rom_und_combo, MC_UNDO),  COMBO(l_rom_usc_combo, KC_UNDS),  COMBO(l_rom_w_combo, KC_W),
-    COMBO(l_rom_z_combo, KC_Z),       COMBO(r_acc_ao_combo, MC_AO),     COMBO(r_acc_bsp_combo, KC_BSPC),
-    COMBO(r_acc_cao_combo, MC_CAO),   COMBO(r_acc_coes_combo, MC_COES), COMBO(r_acc_ja_combo, MC_JA),
-    COMBO(r_acc_oe_combo, MC_OE),     COMBO(r_acc_squo_combo, MC_SQUO), COMBO(r_low_ent_combo, KC_ENT),
-    COMBO(r_low_sco_combo, TD_SCLE),  COMBO(r_mac_clo_combo, MC_CLOS),  COMBO(r_mac_z0r_combo, MC_Z0R),
-    COMBO(r_med_ent_combo, TD_EENT),  COMBO(r_nav_bsp_combo, KC_BSPC),  COMBO(r_nav_ent_combo, KC_ENT),
-    COMBO(r_nav_cop_combo, MC_COPY),  COMBO(r_nav_pas_combo, MC_PAST),  COMBO(r_num_bsp_combo, KC_BSPC),
-    COMBO(r_num_ent_combo, KC_ENT),   COMBO(r_num_npd_combo, TG_NUM),   COMBO(r_num_tab_combo, KC_TAB),
-    COMBO(r_rai_bsp_combo, KC_BSPC),  COMBO(r_rai_deq_combo, MC_DEQ),   COMBO(r_rai_gt_combo, TD_GT),
-    COMBO(r_rai_lt_combo, TD_LT),     COMBO(r_rai_ltgt_combo, MC_LTGT), COMBO(r_rai_neq_combo, MC_NEQ),
-    COMBO(r_rai_sar_combo, TD_SARR),  COMBO(r_rom_bsp_combo, KC_BSPC),  COMBO(r_rom_cop_combo, MC_COPY),
-    COMBO(r_rom_d_combo, KC_D),       COMBO(r_rom_ent_combo, KC_ENT),   COMBO(r_rom_npd_combo, TG_NUM),
-    COMBO(r_rom_p_combo, KC_P),       COMBO(r_rom_pas_combo, MC_PAST),  COMBO(r_rom_sal_combo, MC_SELC),
-    COMBO(r_rom_sco_combo, TD_SCLE),  COMBO(r_rom_tab_combo, KC_TAB),   COMBO(r_rom_v_combo, KC_V),
-    COMBO(r_rom_x_combo, KC_X),       COMBO(r_rom_y_combo, KC_Y),       COMBO(secret_1_combo, MC_SECRET_1)};
+    COMBO(l_acc_esc_combo, MC_ESCC),  COMBO(l_low_cur_combo, MC_CUR),    COMBO(l_low_par_combo, MC_BRAC),
+    COMBO(l_low_par_combo, TD_PARN),  COMBO(l_nav_esc_combo, MC_ESCC),   COMBO(l_num_esc_combo, MC_ESCC),
+    COMBO(l_num_num_combo, MC_ESCC),  COMBO(l_num_sav_combo, MC_SAVE),   COMBO(l_rom_esc_combo, MC_ESCC),
+    COMBO(l_rom_esv_combo, MC_ESAV),  COMBO(l_rom_fin_combo, MC_FIND),   COMBO(l_rom_ful_combo, MC_FULL),
+    COMBO(l_rom_j_combo, KC_J),       COMBO(l_rom_k_combo, KC_K),        COMBO(l_rom_cap_combo, TG_CAPS),
+    COMBO(l_rom_num_combo, TG_NUMC),  COMBO(l_rom_q_combo, KC_Q),        COMBO(l_rom_v_combo, KC_V),
+    COMBO(l_rom_sav_combo, MC_SAVE),  COMBO(l_rom_und_combo, MC_UNDO),   COMBO(l_rom_usc_combo, KC_UNDS),
+    COMBO(l_rom_w_combo, KC_W),       COMBO(l_rom_z_combo, KC_Z),        COMBO(r_acc_ao_combo, MC_AO),
+    COMBO(r_acc_bsp_combo, KC_BSPC),  COMBO(r_acc_cao_combo, MC_CAO),    COMBO(r_acc_coes_combo, MC_COES),
+    COMBO(r_acc_ja_combo, MC_JA),     COMBO(r_acc_lh_combo, MC_LH),      COMBO(r_acc_oe_combo, MC_OE),
+    COMBO(r_acc_squo_combo, MC_SQUO), COMBO(r_low_ent_combo, KC_ENT),    COMBO(r_low_sco_combo, TD_SCLE),
+    COMBO(r_mac_clo_combo, MC_CLOS),  COMBO(r_mac_z0r_combo, MC_Z0R),    COMBO(r_med_ent_combo, TD_EENT),
+    COMBO(r_nav_bsp_combo, KC_BSPC),  COMBO(r_nav_ent_combo, KC_ENT),    COMBO(r_nav_cop_combo, MC_COPY),
+    COMBO(r_nav_pas_combo, MC_PAST),  COMBO(r_num_bsp_combo, KC_BSPC),   COMBO(r_num_ent_combo, KC_ENT),
+    COMBO(r_num_npd_combo, TG_NUM),   COMBO(r_num_tab_combo, KC_TAB),    COMBO(r_rai_bsp_combo, KC_BSPC),
+    COMBO(r_rai_deq_combo, MC_DEQ),   COMBO(r_rai_gt_combo, TD_GT),      COMBO(r_rai_lt_combo, TD_LT),
+    COMBO(r_rai_ltgt_combo, MC_LTGT), COMBO(r_rai_neq_combo, MC_NEQ),    COMBO(r_rai_sar_combo, TD_SARR),
+    COMBO(r_rom_bsp_combo, KC_BSPC),  COMBO(r_rom_cop_combo, MC_COPY),   COMBO(r_rom_d_combo, KC_D),
+    COMBO(r_rom_ent_combo, KC_ENT),   COMBO(r_rom_npd_combo, TG_NUM),    COMBO(r_rom_p_combo, KC_P),
+    COMBO(r_rom_pas_combo, MC_PAST),  COMBO(r_rom_sal_combo, MC_SELC),   COMBO(r_rom_sco_combo, TD_SCLE),
+    COMBO(r_rom_tab_combo, KC_TAB),   COMBO(r_rom_v_combo, KC_V),        COMBO(r_rom_x_combo, KC_X),
+    COMBO(r_rom_y_combo, KC_Y),       COMBO(secret_1_combo, MC_SECRET_1)};
