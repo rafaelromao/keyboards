@@ -80,7 +80,7 @@
         SHORTCUT(mc_hyp_z,                  &macro_tap &kp LC(LA(LS(LG(Z)))))
         SHORTCUT(mc_meh_z,                  &macro_tap &kp LC(LA(LS(Z))))
         SHORTCUT(mc_meh_m,                  &macro_tap &kp LC(LA(LS(M))))
-        SHORTCUT(mc_meh_l,                  &macro_tap &kp LC(LA(LS(L))))
+        SHORTCUT(mc_meh_j,                  &macro_tap &kp LC(LA(LS(J))))
         SHORTCUT(mc_meh_g,                  &macro_tap &kp LC(LA(LS(G))))
         SHORTCUT(mc_meh_v,                  &macro_tap &kp LC(LA(LS(V))))
         SHORTCUT(mc_meh_w,                  &macro_tap &kp LC(LA(LS(W))))

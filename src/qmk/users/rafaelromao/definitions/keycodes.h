@@ -182,7 +182,7 @@ enum {
 #define MEH_G  MEH(KC_G)
 #define MEH_V  MEH(KC_V)
 #define MEH_C  MEH(KC_C)
-#define MEH_L  MEH(KC_L)
+#define MEH_J  MEH(KC_J)
 #define MEH_M  MEH(KC_M)
 
 // Layer-taps

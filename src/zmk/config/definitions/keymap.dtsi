@@ -142,9 +142,9 @@
                 fixed_navigation_layer {
                      label = "NAV";
                      bindings = <
-   &trans              &kp ESC             &mc_meh_m           &mc_meh_g           &none               &none               &mc_meh_l           &kp PAGE_DOWN       &kp PAGE_UP         &trans
+   &trans              &kp ESC             &mc_meh_m           &mc_meh_g           &none               &none               &kp INS             &kp PAGE_DOWN       &kp PAGE_UP         &trans
    &mc_meh_d           &sk LSHIFT          &sk LCTRL           &sk LGUI            &mc_meh_w           &tog NAV_F          &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
-   &none               &sk RALT            &mc_meh_c           &sk LALT            &mc_meh_v           &kp INS             &kp DEL             &kp HOME            &kp END             &none
+   &none               &sk RALT            &mc_meh_c           &sk LALT            &mc_meh_v           &mc_meh_j           &kp DEL             &kp HOME            &kp END             &none
                                            &trans              &trans              &trans              &kp SPACE           &mst MEDIA NAV_F    &trans
                            >;
                 };
@@ -160,9 +160,9 @@
                 navigation_layer {
                      label = "NAV";
                      bindings = <
-   &trans              &kp ESC             &mc_meh_m           &mc_meh_g           &none               &none               &mc_meh_l           &kp PAGE_DOWN       &kp PAGE_UP         &trans
+   &trans              &kp ESC             &mc_meh_m           &mc_meh_g           &none               &none               &kp INS             &kp PAGE_DOWN       &kp PAGE_UP         &trans
    &mc_meh_d           &sk LSHIFT          &sk LCTRL           &sk LGUI            &mc_meh_w           &mc_meh_z           &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
-   &none               &sk RALT            &mc_meh_c           &sk LALT            &mc_meh_v           &kp INS             &kp DEL             &kp HOME            &kp END             &none
+   &none               &sk RALT            &mc_meh_c           &sk LALT            &mc_meh_v           &mc_meh_j           &kp DEL             &kp HOME            &kp END             &none
                                            &trans              &trans              &trans              &kp SPACE           &mo MAINT           &trans
                         >;
                 };

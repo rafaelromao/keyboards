@@ -94,9 +94,9 @@
 #define           _________NAVIGATION_L3_______________           OS_RALT , MEH_C   , OS_LALT , MEH_V
 #define                               __NAVIGATION_L4__                               _______ , _______
 
-#define           _________NAVIGATION_R1_______________           MEH_L   , KC_PGDN , KC_PGUP , _______
+#define           _________NAVIGATION_R1_______________           KC_INS  , KC_PGDN , KC_PGUP , _______
 #define ___________________NAVIGATION_R2_______________ MEH_D   , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT
-#define ___________________NAVIGATION_R3_____           KC_INS  , KC_DEL  , KC_HOME , KC_END  
+#define ___________________NAVIGATION_R3_____           MEH_J   , KC_DEL  , KC_HOME , KC_END  
 #define __NAVIGATION_R4__                               KC_SPC  , MAI_CAS
 #define __FIXED_NAV__R4__                               KC_SPC  , MED_ROM
 
