@@ -1,7 +1,7 @@
 # rafaelromao's keyboard layout
 
-## Maintenance
-The Maintenance layer is activated holding both outer thumb keys and allows us to:
+## System
+The System layer is activated holding both outer thumb keys and allows us to:
 - Put the keyboard in bootloader mode. 
 - Reset the keyboard memory.
 - Configure Bluetooth and RGB lights.
@@ -16,4 +16,4 @@ The Maintenance layer is activated holding both outer thumb keys and allows us t
 [Accents and Macros](macros.md) |
 [Symbols and Numbers](symbols.md) |
 [Navigation and Media](navigation.md) |
-Maintenance
+System

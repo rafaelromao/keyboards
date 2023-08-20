@@ -35,7 +35,7 @@ noremap h r
 
 ### Navigation Layer Toggle
 - A clone of the Navigation layer can be toggled on permanently using the Media layer.
-- This clone works the same way as the original Navigation layer, but the outer right thumb key will activate the Media layer instead of the Maintenance layer.
+- This clone works the same way as the original Navigation layer, but the outer right thumb key will activate the Media layer instead of the System layer.
 
 ##
 [Home](../readme.md) | 
@@ -44,4 +44,4 @@ noremap h r
 [Accents and Macros](macros.md) |
 [Symbols and Numbers](symbols.md) |
 Navigation and Media |
-[Maintenance](maintenance.md)
+[System](system.md)

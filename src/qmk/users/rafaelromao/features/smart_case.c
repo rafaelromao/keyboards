@@ -28,7 +28,7 @@ void disable_smart_case(void) {
     if (host_keyboard_led_state().caps_lock) {
         tap_code(KC_CAPS);
     }
-    layer_move(_ROMAK);
+    layer_move(_ALPHA1);
 }
 
 void check_disable_smart_case(void) {
@@ -152,8 +152,8 @@ process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record
         }
         // Extend, process or break case
         switch (keycode) {
-            case ACCENT_MACRO_START ... ACCENT_MACRO_END:
-            case RAI_ACT:
+            case ALPHA_MACRO_START ... ALPHA_MACRO_END:
+            case RAI_A2:
             case NAV_REP:
             case MED_CAS:
                 start_smart_case_timer();

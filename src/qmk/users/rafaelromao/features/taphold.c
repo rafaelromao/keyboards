@@ -6,13 +6,13 @@ uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case LOW_SPC:
         case RAI_SPC:
-        case RAI_ACT:
+        case RAI_A2:
         case NAV_REP:
         case NAV_PRJ:
         case NAV_CAS:
         case MED_CAS:
-        case MED_ROM:
-        case RAI_TAC:
+        case MED_A1:
+        case RAI_TA2:
         case MED_0:
             return 0;
     }
@@ -29,9 +29,9 @@ uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case QK_MOD_TAP ... QK_MOD_TAP_MAX:
-        case MAC_KCD:
-        case MAC_KCI:
-        case MAC_DOT:
+        case SHO_KCD:
+        case SHO_KCI:
+        case SHO_DOT:
         case NAV_F12:
         case NAV_AT:
             return 300;
@@ -89,9 +89,9 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
             }
             break;
 
-        case MED_ROM:
+        case MED_A1:
             if (record->event.pressed && record->tap.count) {
-                layer_move(_ROMAK);
+                layer_move(_ALPHA1);
                 return PROCESS_RECORD_RETURN_FALSE;
             }
             break;

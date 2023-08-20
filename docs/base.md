@@ -5,12 +5,24 @@
 - This layout works well with the OS configured for US International keyboards.
 - It was designed mostly for coding and typing in Portuguese and English.
 - It reduces the usage of pinkies and indexes and considers the right hand as dominant.
-- The base layer is [Romak](romak.md), a new keyboard layout, inspired by [Colemak](https://colemak.org) and [BEAKL](https://ieants.cc/beakl).
+- The alpha layout is [Romak](romak.md), a new keyboard layout, inspired by [Colemak](https://colemak.org) and [BEAKL](https://ieants.cc/beakl).
+
+### Primary Alpha Layer
+- The Alpha1 layer is the base layer, which contains the most common alphas of Portuguese and English, plus comma and period. It is extended by the Alpha2 layer.
+
+### Secondary Alpha Layer
+- The Alpha2 layer has common Portuguese accented letters, readily available with a single tap on the left outer thumb key (OS Accents), making them as easy to type as shifted letters, which are available with a single tap on the right outer thumb key (OS Shift).
+- This layer also gives access to q, y, z and x, that are not available in the base layer, for the 28 keys variant, as well as an standalone apostrophe character.
+- There are dedicated accent keys for à á ã â é ê õ ó ô ú í and ç, which is all that is needed for Portuguese.
+- It is also possible to accent using dead keys, like usually done with the US International layout.
+- Source code:
+  - [QMK] [accents.c](../src/qmk/users/rafaelromao/features/accents.c)
+  - [ZMK] [accents.dtsi](https://github.com/rafaelromao/keyboards/blob/main/src/zmk/config/rafaelromao/features/accents.dtsi) 
 
 ## Smart Thumb Keys
 - The Smart Thumb keys in this layout change behavior according to the context (active layer and active modifiers).
-- The four thumb keys control layer transitions, when held (navigation, lower, raise and media).
-- Holding both outer thumb keys will activate the maintenance layer.
+- The four thumb keys control layer transitions, when held (Navigation, Lower, Raise and Media).
+- Holding both outer thumb keys will activate the system layer.
 - Source code: [custom_oneshot.c](../src/qmk/users/rafaelromao/features/custom_oneshot.c)
 
 ## Base Layer Combos
@@ -41,7 +53,7 @@
 [Home](../readme.md) | 
 Base |
 [Modifiers](modifiers.md) |
-[Accents and Macros](macros.md) |
+[Shortcuts and Macros](shortcuts.md) |
 [Symbols and Numbers](symbols.md) |
 [Navigation and Media](navigation.md) |
-[Maintenance](maintenance.md)
+[System](system.md)

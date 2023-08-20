@@ -5,7 +5,7 @@
 *
 */
 / {
-    #define ACCENTED_KEY(NAME, KEY, DEAD_KEY) \
+    #define ALPHA2ED_KEY(NAME, KEY, DEAD_KEY) \
         NAME##_l: NAME##_l { \
             label = ZMK_MACRO_STRINGIFY(NAME##_l); \
             wait-ms = <0>; \
@@ -56,29 +56,29 @@
 
 
     accents {
-        ACCENTED_KEY(ac_agrv, A, GRAVE)
-        ACCENTED_KEY(ac_aacu, A, E)
-        ACCENTED_KEY(ac_atil, A, N)
-        ACCENTED_KEY(ac_acir, A, I)
-        ACCENTED_KEY(ac_eacu, E, E)
-        ACCENTED_KEY(ac_ecir, E, I)
-        ACCENTED_KEY(ac_iacu, I, E)
-        ACCENTED_KEY(ac_oacu, O, E)
-        ACCENTED_KEY(ac_otil, O, N)
-        ACCENTED_KEY(ac_ocir, O, I)
-        ACCENTED_KEY(ac_uacu, U, E)
+        ALPHA2ED_KEY(ac_agrv, A, GRAVE)
+        ALPHA2ED_KEY(ac_aacu, A, E)
+        ALPHA2ED_KEY(ac_atil, A, N)
+        ALPHA2ED_KEY(ac_acir, A, I)
+        ALPHA2ED_KEY(ac_eacu, E, E)
+        ALPHA2ED_KEY(ac_ecir, E, I)
+        ALPHA2ED_KEY(ac_iacu, I, E)
+        ALPHA2ED_KEY(ac_oacu, O, E)
+        ALPHA2ED_KEY(ac_otil, O, N)
+        ALPHA2ED_KEY(ac_ocir, O, I)
+        ALPHA2ED_KEY(ac_uacu, U, E)
 
-        ACCENTED_KEY(ac_agrv_c, LS(A), GRAVE)
-        ACCENTED_KEY(ac_aacu_c, LS(A), E)
-        ACCENTED_KEY(ac_atil_c, LS(A), N)
-        ACCENTED_KEY(ac_acir_c, LS(A), I)
-        ACCENTED_KEY(ac_eacu_c, LS(E), E)
-        ACCENTED_KEY(ac_ecir_c, LS(E), I)
-        ACCENTED_KEY(ac_iacu_c, LS(I), E)
-        ACCENTED_KEY(ac_oacu_c, LS(O), E)
-        ACCENTED_KEY(ac_otil_c, LS(O), N)
-        ACCENTED_KEY(ac_ocir_c, LS(O), I)
-        ACCENTED_KEY(ac_uacu_c, LS(U), E)
+        ALPHA2ED_KEY(ac_agrv_c, LS(A), GRAVE)
+        ALPHA2ED_KEY(ac_aacu_c, LS(A), E)
+        ALPHA2ED_KEY(ac_atil_c, LS(A), N)
+        ALPHA2ED_KEY(ac_acir_c, LS(A), I)
+        ALPHA2ED_KEY(ac_eacu_c, LS(E), E)
+        ALPHA2ED_KEY(ac_ecir_c, LS(E), I)
+        ALPHA2ED_KEY(ac_iacu_c, LS(I), E)
+        ALPHA2ED_KEY(ac_oacu_c, LS(O), E)
+        ALPHA2ED_KEY(ac_otil_c, LS(O), N)
+        ALPHA2ED_KEY(ac_ocir_c, LS(O), I)
+        ALPHA2ED_KEY(ac_uacu_c, LS(U), E)
 
         MACRO_KEY(mc_ced,   &macro_press &kp LALT &macro_tap &kp C &macro_release &kp LALT)
         MACRO_KEY(mc_ced_c, &macro_press &kp LALT &macro_tap &kp LS(C) &macro_release &kp LALT)

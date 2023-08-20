@@ -10,15 +10,15 @@
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-     [_ROMAK] = LAYOUT_wrapper(
+     [_ALPHA1] = LAYOUT_wrapper(
  // |___________________________________________________________________________________________________|
-      ___________________ROMAK_L1__________ , KC_K    , KC_X    , _________ROMAK_R1____________________ ,
+      __________________ALPHA1_L1__________ , KC_K    , KC_X    , ________ALPHA1_R1____________________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      ___________________ROMAK_L2____________________ , ___________________ROMAK_R2____________________ ,
+      __________________ALPHA1_L2____________________ , __________________ALPHA1_R2____________________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_Q    , _________ROMAK_L3____________________ , ___________________ROMAK_R3__________ , KC_Y    ,
+      KC_Q    , ________ALPHA1_L3____________________ , __________________ALPHA1_R3__________ , KC_Y    ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-                          ____ROMAK_L4_____ , HYPR_L  , HYPR_R  , ____ROMAK_R4_____),
+                          ___ALPHA1_L4_____ , HYPR_L  , HYPR_R  , ___ALPHA1_R4_____),
  // |___________________________________________________________________________________________________|
 
      [_NUMPAD] = LAYOUT_wrapper(
@@ -32,15 +32,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                           ____NUMPAD_L4____ , XXXXXXX , XXXXXXX , ____NUMPAD_R4____),
  // |___________________________________________________________________________________________________|
 
-     [_MACROS] = LAYOUT_wrapper(
+     [_SHORTCUTS] = LAYOUT_wrapper(
  // |___________________________________________________________________________________________________|
-      ___________________MACROS_L1_________ , XXXXXXX , XXXXXXX , _________MACROS_R1___________________ ,
+      ________________SHORTCUTS_L1_________ , XXXXXXX , XXXXXXX , ______SHORTCUTS_R1___________________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      ___________________MACROS_L2___________________ , ___________________MACROS_R2___________________ ,
+      ________________SHORTCUTS_L2___________________ , ________________SHORTCUTS_R2___________________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , _________MACROS_L3___________________ , ___________________MACROS_R3_________ , XXXXXXX ,
+      XXXXXXX , ______SHORTCUTS_L3___________________ , ________________SHORTCUTS_R3_________ , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-                          ____MACROS_L4____ , XXXXXXX , XXXXXXX , ____MACROS_R4____),
+                          _SHORTCUTS_L4____ , XXXXXXX , XXXXXXX , _SHORTCUTS_R4____),
  // |___________________________________________________________________________________________________|
 
      [_NOMOD] = LAYOUT_wrapper(
@@ -54,26 +54,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                           ____NOMOD_L4_____ , HYPR_L  , HYPR_R  , ____NOMOD_R4_____),
  // |___________________________________________________________________________________________________|
 
-     [_ACCENT] = LAYOUT_wrapper(
+     [_ALPHA2] = LAYOUT_wrapper(
  // |___________________________________________________________________________________________________|
-      ___________________ACCENT_L1_________ , XXXXXXX , XXXXXXX , _________ACCENT_R1___________________ ,
+      ___________________ALPHA2_L1_________ , XXXXXXX , XXXXXXX , _________ALPHA2_R1___________________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      ___________________ACCENT_L2___________________ , ___________________ACCENT_R2___________________ ,
+      ___________________ALPHA2_L2___________________ , ___________________ALPHA2_R2___________________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , _________ACCENT_L3___________________ , ___________________ACCENT_R3_________ , XXXXXXX ,
+      XXXXXXX , _________ALPHA2_L3___________________ , ___________________ALPHA2_R3_________ , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-                          ____ACCENT_L4____ , XXXXXXX , XXXXXXX , ____ACCENT_R4____),
+                          ____ALPHA2_L4____ , XXXXXXX , XXXXXXX , ____ALPHA2_R4____),
  // |___________________________________________________________________________________________________|
 
-     [_FIXED_ACCENT] = LAYOUT_wrapper(
+     [_FIXED_ALPHA2] = LAYOUT_wrapper(
  // |___________________________________________________________________________________________________|
-      ___________________ACCENT_L1_________ , XXXXXXX , XXXXXXX , _________ACCENT_R1___________________ ,
+      ___________________ALPHA2_L1_________ , XXXXXXX , XXXXXXX , _________ALPHA2_R1___________________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      ___________________ACCENT_L2___________________ , ___________________ACCENT_R2___________________ ,
+      ___________________ALPHA2_L2___________________ , ___________________ALPHA2_R2___________________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , _________ACCENT_L3___________________ , ___________________ACCENT_R3_________ , XXXXXXX ,
+      XXXXXXX , _________ALPHA2_L3___________________ , ___________________ALPHA2_R3_________ , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-                          ____ACCENT_L4____ , XXXXXXX , XXXXXXX , ____ACCENT_R4____),
+                          ____ALPHA2_L4____ , XXXXXXX , XXXXXXX , ____ALPHA2_R4____),
  // |___________________________________________________________________________________________________|
 
      [_LOWER] = LAYOUT_wrapper(
@@ -142,15 +142,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                           ______LOCK____L4_ , XXXXXXX , XXXXXXX , ______LOCK____R4_),
  // |___________________________________________________________________________________________________|
 
-     [_MAINTENANCE] = LAYOUT_wrapper(
+     [_SYSTEM] = LAYOUT_wrapper(
  // |___________________________________________________________________________________________________|
-      ___________________MAINTENANCE_L1____ , XXXXXXX , XXXXXXX , _________MAINTENANCE_R1______________ ,
+      ______________________SYSTEM___L1____ , XXXXXXX , XXXXXXX , ____________SYSTEM___R1______________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      ___________________MAINTENANCE_L2______________ , ___________________MAINTENANCE_R2______________ ,
+      ______________________SYSTEM___L2______________ , ______________________SYSTEM___R2______________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , _________MAINTENANCE_L3______________ , ___________________MAINTENANCE_R3____ , XXXXXXX ,
+      XXXXXXX , ____________SYSTEM___L3______________ , ______________________SYSTEM___R3____ , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-                          __MAINTENANCE_L4_ , XXXXXXX , XXXXXXX , __MAINTENANCE_R4_)
+                          _____SYSTEM___L4_ , XXXXXXX , XXXXXXX , _____SYSTEM___R4_)
  // |___________________________________________________________________________________________________|
 };
 
@@ -177,8 +177,8 @@ void set_rgblight_by_layer(uint32_t layer) {
         return;
     }
     switch (layer) {
-        case _ROMAK:
-        case _MAINTENANCE:
+        case _ALPHA1:
+        case _SYSTEM:
             rgblight_reload_from_eeprom();
             break;
         case _LOCK:
@@ -234,17 +234,17 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 // Encoder Map
 
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
-    [_ROMAK]       = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
-    [_NUMPAD]      = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
-    [_ACCENT]      = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
-    [_MACROS]      = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
-    [_LOWER]       = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
-    [_RAISE]       = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
-    [_FIXED_NAV]   = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
-    [_NAVIGATION]  = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
-    [_MEDIA]       = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
-    [_LOCK]        = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
-    [_MAINTENANCE] = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))}};
+    [_ALPHA1]     = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
+    [_NUMPAD]     = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
+    [_ALPHA2]     = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
+    [_SHORTCUTS]  = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
+    [_LOWER]      = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
+    [_RAISE]      = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
+    [_FIXED_NAV]  = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
+    [_NAVIGATION] = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
+    [_MEDIA]      = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
+    [_LOCK]       = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
+    [_SYSTEM]     = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))}};
 
 // Oled
 
@@ -259,26 +259,23 @@ void set_oled_by_layer(uint32_t layer) {
         return;
     }
     switch (layer) {
-        case _ROMAK:
+        case _ALPHA1:
             oled_write("        ROMAK     ", false);
             break;
         case _NUMPAD:
             oled_write("        NUMPAD    ", false);
             break;
-        case _ACCENT:
-            oled_write("        ACCENT    ", false);
+        case _ALPHA2:
+            oled_write("        ALPHA2    ", false);
             break;
-        case _MACROS:
-            oled_write("        MACROS    ", false);
+        case _SHORTCUTS:
+            oled_write("      SHORTCUTS   ", false);
             break;
         case _LOWER:
             oled_write("        LOWER     ", false);
             break;
         case _RAISE:
             oled_write("        RAISE     ", false);
-            break;
-        case _SEN_CASE:
-            oled_write("   SENTENCE CASE  ", false);
             break;
         case _FIXED_NAV:
         case _NAVIGATION:
@@ -287,8 +284,8 @@ void set_oled_by_layer(uint32_t layer) {
         case _MEDIA:
             oled_write("        MEDIA     ", false);
             break;
-        case _MAINTENANCE:
-            oled_write("     MAINTENANCE  ", false);
+        case _SYSTEM:
+            oled_write("       SYSTEM     ", false);
             break;
         default:
             break;

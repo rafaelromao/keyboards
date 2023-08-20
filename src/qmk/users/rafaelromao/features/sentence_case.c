@@ -61,8 +61,8 @@ process_record_result_t process_sentence_case(uint16_t keycode, keyrecord_t *rec
                 }
         }
         switch (keycode) {
-            // Continue to Accents layer
-            case RAI_ACT:
+            // Continue to Alpha2 layer
+            case RAI_A2:
                 return PROCESS_RECORD_CONTINUE;
             // Cancel
             case NAV_REP:

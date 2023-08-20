@@ -23,43 +23,43 @@
         keymap {
                 compatible = "zmk,keymap";
                 default_layer {
-                     label = "ROMAK";
+                     label = "ALPHA1";
                      bindings = <
    &mc_escc            &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp BSPC
-   &lt MACROS D        &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp W               &kp Z               &mt RGUI R          &mt RCTRL A         &mt RSHFT E         &lt MACROS I 
+   &lt SHORTCUTS D     &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp W               &kp Z               &mt RGUI R          &mt RCTRL A         &mt RSHFT E         &lt SHORTCUTS I 
    &kp Q               &mt RALT F          &kp C               &mt LALT P          &kp V               &kp J               &mt RALT H          &th_comma 0 0       &th_dot 0 0         &kp Y
-                                           &none               &ht_repeat NAV 0    &lt LOWER SPACE     &msl RAISE ACCENT   &med_sc             &trans
+                                           &none               &ht_repeat NAV 0    &lt LOWER SPACE     &msl RAISE ALPHA2   &med_sc             &trans
                         >;
                    };
                 capsword_layer {
-                     label = "CASE";
+                     label = "CASE A1";
                      bindings = <
    &trans              &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &trans
-   &lt MACROS LS(D)    &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt MACROS LS(I) 
+   &lt SHORTCUTS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTCUTS LS(I) 
    &kp LS(Q)           &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &mt RALT LS(H)      &th_comma 0 0       &th_dot 0 0         &kp LS(Y)
-                                           &trans              &ht_repeat NAV 0    &trans              &msl RAISE CASE_AC  &ht_sc MEDIA 0      &trans
+                                           &trans              &ht_repeat NAV 0    &trans              &msl RAISE CASE_A2  &ht_sc MEDIA 0      &trans
                         >;
                 };
                 numpad_layer {
                      label = "NUMPAD";
                      bindings = <
    &trans              &kp F9              &kp F8              &kp F7              &none               &none               &mc_n7              &mc_n8              &mc_n9              &trans
-   &lt MACROS F12      &mt LSHFT F6        &mt LCTRL F5        &mt LGUI F4         &kp F11             &kp COMMA           &th_n4 RGUI 0       &th_n5 RCTRL 0      &th_n6 RSHFT 0      &lt MACROS DOT 
+   &lt SHORTCUTS F12   &mt LSHFT F6        &mt LCTRL F5        &mt LGUI F4         &kp F11             &kp COMMA           &th_n4 RGUI 0       &th_n5 RCTRL 0      &th_n6 RSHFT 0      &lt SHORTCUTS DOT 
    &none               &mt RALT F3         &kp F2              &mt LALT F1         &kp F10             &none               &th_n1 RALT 0       &mc_n2              &mc_n3              &none
                                            &trans              &ht_repeat NAV 0    &trans              &lt RAISE SPACE     &th_n0 MEDIA 0      &trans
                            >;
                 };
-                macros_layer {
-                     label = "MACROS";
+                shortcuts_layer {
+                     label = "SHORTCUT";
                      bindings = <
    &trans              &kp ESC             &mm_actions         &mm_typematch       &none               &none               &mc_selw            &kp ENTER           &kp TAB             &trans    
    &trans              &th_find LSHFT 0    &mm_run             &mm_debug           &mm_build           &leader             &mc_seln            &mm_zh_b            &th_zh LSHFT 0      &trans 
    &none               &mm_recent          &mm_complete        &mm_usages          &mm_refac           &none               &mc_comment         &mm_wt_b            &mm_wt_f            &none
-                                           &trans              &th_proj NAV 0      &th_docs NMODS 0    &lt ACCENT SPACE    &mst NAV NAV_F      &trans
+                                           &trans              &th_proj NAV 0      &th_docs NMODS 0    &lt ALPHA2 SPACE    &mst NAV NAV_F      &trans
                            >;
                 };
-                macros_extension_layer {
-                     label = "MACROS";
+                shortcuts_extension_layer {
+                     label = "SHORTCUT";
                      bindings = <
    &trans              &trans              &trans              &trans              &trans              &trans              &mc_ext_sel         &trans              &trans              &trans    
    &trans              &trans              &trans              &trans              &trans              &trans              &mc_ext_sel         &trans              &trans              &trans  
@@ -73,11 +73,11 @@
    &kp ESC            &kp B                &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp BSPC
    &kp D              &kp N                &kp S               &kp T               &kp W               &kp Z               &kp R               &kp A               &kp E               &kp I 
    &kp Q              &kp F                &kp C               &kp P               &kp V               &kp J               &kp H               &kp COMMA           &kp DOT             &kp Y
-                                           &none               &key_repeat         &trans              &mo ACCENT          &sk LSHFT           &none
+                                           &none               &key_repeat         &trans              &mo ALPHA2          &sk LSHFT           &none
                            >;
                 };
-                accents_layer {
-                     label = "ACCENT";
+                alpha2_layer {
+                     label = "ALPHA2";
                      bindings = <
    &trans              &kp Q               &mc_qu              &kp K               &none               &none               &ac_agrv            &ac_oacu            &ac_uacu            &trans
    &kp Y               &kp Z               &kp X               &kp W               &kp SQT             &kp CARET           &ac_atil            &ac_aacu            &ac_eacu            &ac_iacu 
@@ -85,8 +85,8 @@
                                            &trans              &trans              &trans              &trans              &trans              &trans
                            >;
                 };
-                case_accents_layer {
-                     label = "CASE_AC";
+                case_alpha2_layer {
+                     label = "CASE A2";
                      bindings = <
    &trans              &kp LS(Q)           &mc_qu_c            &kp LS(K)           &none               &none               &ac_agrv_c          &ac_oacu_c          &ac_uacu_c          &trans
    &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &kp SQT             &kp CARET           &ac_atil_c          &ac_aacu_c          &ac_eacu_c          &ac_iacu_c 
@@ -98,7 +98,7 @@
                      label = "LOWER";
                      bindings = <
    &trans              &td_lbrc            &td_rbrc            &kp HASH            &none               &none               &mc_n7              &mc_n8              &mc_n9              &trans
-   &lt NAV AT          &td_lpar            &td_rpar            &td_dqo             &mc_sqo             &kp COMMA           &mc_n4              &mc_n5              &mc_n6              &lt MACROS DOT  
+   &lt NAV AT          &td_lpar            &td_rpar            &td_dqo             &mc_sqo             &kp COMMA           &mc_n4              &mc_n5              &mc_n6              &lt SHORTCUTS DOT  
    &none               &td_lbkt            &td_rbkt            &th_qmark 0 0       &mc_bti             &none               &mc_n1              &mc_n2              &mc_n3              &none
                                            &trans              &trans              &trans              &lt RAISE SPACE     &th_n0 MEDIA 0      &trans
                            >;
@@ -125,7 +125,7 @@
                      label = "SEN_CS_EXT1";
                      bindings = <
    &trans              &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &trans
-   &lt MACROS LS(D)    &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt MACROS LS(I) 
+   &lt SHORTCUTS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTCUTS LS(I) 
    &kp LS(Q)           &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &mt LALT LS(H)      &th_comma 0 0       &th_dot 0 0         &kp LS(Y)
                                            &trans              &th_cancel NAV 0    &th_sp_ns LOWER 0   &msl RAISE SEN_E2   &th_nsen MEDIA 0    &trans
                            >;
@@ -163,7 +163,7 @@
    &trans              &kp ESC             &mc_meh_m           &mc_meh_g           &none               &none               &kp INS             &kp PAGE_DOWN       &kp PAGE_UP         &trans
    &mc_meh_d           &sk LSHIFT          &sk LCTRL           &sk LGUI            &mc_meh_w           &mc_meh_z           &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
    &none               &sk RALT            &mc_meh_c           &sk LALT            &mc_meh_v           &mc_meh_j           &kp DEL             &kp HOME            &kp END             &none
-                                           &trans              &trans              &trans              &kp SPACE           &mo MAINT           &trans
+                                           &trans              &trans              &trans              &kp SPACE           &mo SYSTEM          &trans
                         >;
                 };
                 lock_layer {
@@ -175,8 +175,8 @@
                                            &none               &trans              &none               &none               &trans              &none
                         >;
                 };
-                maintenance_layer {
-                     label = "MAINT";
+                system_layer {
+                     label = "SYSTEM";
                      bindings = <
    &trans              &none               &none               &kp PRINTSCREEN     &none               &none               &kp KP_NUM          &kp LC(LG(Q))      &tog LOCK_KB        &trans 
    &none               &none               &none               &kp PAUSE_BREAK     &bootloader         &bootloader         &none               &none              &kp C_SLEEP         &kp C_POWER 

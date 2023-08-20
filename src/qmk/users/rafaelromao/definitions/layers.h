@@ -1,18 +1,17 @@
 #pragma once
 
 typedef enum {
-    _ROMAK,
+    _ALPHA1,
     _NUMPAD,
-    _MACROS,
+    _SHORTCUTS,
     _NOMOD,
-    _ACCENT,
-    _FIXED_ACCENT,
+    _ALPHA2,
+    _FIXED_ALPHA2,
     _LOWER,
     _RAISE,
-    _SEN_CASE,
     _FIXED_NAV,
     _MEDIA,
     _NAVIGATION,
     _LOCK,
-    _MAINTENANCE
+    _SYSTEM
 } layers_t;

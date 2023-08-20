@@ -13,10 +13,10 @@ The following pages explain how this layout works and which features are impleme
 ### Layers
 
 - [Romak](docs/base.md)
-- [Accents and Macros](docs/macros.md)
+- [Shortcuts and Macros](docs/shortcuts.md)
 - [Symbols and Numbers](docs/symbols.md)
 - [Navigation and Media](docs/navigation.md)
-- [Maintenance](docs/maintenance.md)
+- [System](docs/system.md)
 
 ### Main Features
 

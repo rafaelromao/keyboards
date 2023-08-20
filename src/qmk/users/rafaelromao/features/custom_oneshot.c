@@ -70,8 +70,8 @@ void disable_oneshot_mods(void) {
 
 bool check_disable_oneshot(uint16_t keycode) {
     switch (keycode) {
-        case RAI_ACT:
-        case RAI_TAC:
+        case RAI_A2:
+        case RAI_TA2:
         case ACT_SPC:
         case LOW_SPC:
         case LOW_NSE:
@@ -112,7 +112,7 @@ bool should_send_ctrl(bool isMacOS, bool isOneShotShift) {
 }
 
 process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *record) {
-    if (record->event.pressed && (IS_LAYER_ON(_ACCENT) || IS_LAYER_ON(_SEN_CASE)) && check_disable_oneshot(keycode)) {
+    if (record->event.pressed && IS_LAYER_ON(_ALPHA2) && check_disable_oneshot(keycode)) {
         if (is_string_macro_keycode(keycode)) {
             if (process_accents(keycode, NULL) == PROCESS_RECORD_CONTINUE) {
                 process_macros(keycode, NULL);
@@ -132,7 +132,7 @@ process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *re
     bool isAnyOneShotButShift = isOneShotCtrl || isOneShotAlt || isOneShotGui;
 
     switch (keycode) {
-        case RAI_ACT:
+        case RAI_A2:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
                     if (get_mods() != 0) {

@@ -30,7 +30,7 @@
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
             ignored-key-positions = <RBM RBR>;
-            ignored-layers = <MACROS>;
+            ignored-layers = <SHORTCUTS>;
         };
         sw_tab_b: sw_tab_b {
             wait-ms = <0>;
@@ -46,7 +46,7 @@
             #binding-cells = <0>;
             bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
             ignored-key-positions = <RBM RBR>;
-            ignored-layers = <MACROS>;
+            ignored-layers = <SHORTCUTS>;
         };
         mm_wt_b: mm_wt_b {
             compatible = "zmk,behavior-mod-morph";
@@ -85,7 +85,7 @@
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp LBKT>, <&kt LGUI>;
             ignored-key-positions = <RHM RHR>;
-            ignored-layers = <MACROS>;
+            ignored-layers = <SHORTCUTS>;
         };
         sw_his_f: sw_his_f {
             wait-ms = <0>;

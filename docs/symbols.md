@@ -25,7 +25,7 @@ Symbols and Numbers are primarily available in the two classic Lower and Raise l
 - Some common programmer n-grams, like ->, =>, \<!--, -->, <>, />, !=, :=, +=, -=, ${, can all be typed rolling through keys in the right hand.
 
  ### Numpad Layer
-- A dedicated Numpad layer can be activated from the Macros or Media layers.
+- A dedicated Numpad layer can be activated from the Raise layer, or with a combo using both right thumb keys.
 - The left side of the Numpad layer contains function keys.
 - The right side of the Numpad layer contains number keys.
 - Home block mods are also available on both sides of the Numpad layer.
@@ -41,4 +41,4 @@ Symbols and Numbers are primarily available in the two classic Lower and Raise l
 [Accents and Macros](macros.md) |
 Symbols and Numbers |
 [Navigation and Media](navigation.md) |
-[Maintenance](maintenance.md)
+[System](system.md)

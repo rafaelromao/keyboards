@@ -113,7 +113,7 @@ enum {
     SFT_MACRO_END,
 
     // Start macros for accented letters
-    ACCENT_MACRO_START,
+    ALPHA_MACRO_START,
 
     MC_GV_A, MC_CR_A, MC_TL_A, MC_SQ_A,
     MC_SQ_U, MC_CR_O, MC_SQ_O, MC_SQ_I,
@@ -122,7 +122,7 @@ enum {
     MC_QU, MC_JA, MC_LH,
 
     // End macros for accented letters
-    ACCENT_MACRO_END,
+    ALPHA_MACRO_END,
     
     // End macros used to write text
     STR_MACRO_END,
@@ -195,27 +195,27 @@ enum {
 #define NAV_CAN LT(_NAVIGATION, MC_CANC)
 
 #define MED_CAS LT(_MEDIA, TG_CASE)
-#define MED_ROM LT(_MEDIA, TO_ROM)
+#define MED_A1  LT(_MEDIA, TO_A1)
 #define MED_0   LT(_MEDIA, KC_0)
 
-#define MAI_CAS LT(_MAINTENANCE, TG_CASE)
+#define MAI_CAS LT(_SYSTEM, TG_CASE)
 
 #define NMO_DOC LT(_NOMOD, MC_QDOC)
-#define ACT_SPC LT(_FIXED_ACCENT, KC_SPC)
+#define ACT_SPC LT(_FIXED_ALPHA2, KC_SPC)
 #define LOW_SPC LT(_LOWER, KC_SPC)
 #define LOW_NSE LT(_LOWER, MC_NSEN)
-#define RAI_TAC LT(_RAISE, TG_ACNT)
+#define RAI_TA2 LT(_RAISE, TG_ACNT)
 #define RAI_SPC LT(_RAISE, KC_SPC)
-#define RAI_ACT OSL(_ACCENT) // Hold behavior is implemented in intercepted code
+#define RAI_A2  OSL(_ALPHA2) // Hold behavior is implemented in intercepted code
 
-#define MAC_KCD LT(_MACROS, KC_D)
-#define MAC_KCI LT(_MACROS, KC_I)
-#define MAC_DOT LT(_MACROS, KC_DOT)
+#define SHO_KCD LT(_SHORTCUTS, KC_D)
+#define SHO_KCI LT(_SHORTCUTS, KC_I)
+#define SHO_DOT LT(_SHORTCUTS, KC_DOT)
 
 // Layer transitions
-#define MO_ACT  MO(_FIXED_ACCENT)
+#define MO_A2   MO(_FIXED_ALPHA2)
 #define MO_MED  MO(_MEDIA)
-#define TO_ROM  TO(_ROMAK)
+#define TO_A1   TO(_ALPHA1)
 #define TT_NAV  TT(_FIXED_NAV)
 #define TG_LOCK TG(_LOCK)
 #define TG_NUM  TG(_NUMPAD)

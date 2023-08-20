@@ -5,14 +5,14 @@
  *
  */
 
-#define ROMAK 0
-#define CASE 1
+#define ALPHA1 0
+#define CASE_A1 1
 #define NUMPAD 2
-#define MACROS 3
-#define MACROS_EXT 4
+#define SHORTCUTS 3
+#define SHORTCUTS_EXT 4
 #define NMODS 5
-#define ACCENT 6
-#define CASE_AC 7
+#define ALPHA2 6
+#define CASE_A2 7
 #define LOWER 8
 #define RAISE 9
 #define SEN_CASE 10
@@ -22,7 +22,7 @@
 #define MEDIA 14
 #define NAV 15
 #define LOCK_KB 16
-#define MAINT 17
+#define SYSTEM 17
 
 #define TAPPING_TERM 175
 #define TD_TAPPING_TERM 225
