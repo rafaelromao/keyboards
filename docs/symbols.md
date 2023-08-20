@@ -22,7 +22,7 @@ Symbols and Numbers are primarily available in the two classic Lower and Raise l
 ### Symbols in the Raise layer (right side)
 - Symbols that are commonly used in VIM are placed in the right side of the Raise layer, making them easily accessible using only the right hand.
 - Curly braces and angle brackets are also found in the right side of this layer.
-- Some common programmer n-grams, like ->, =>, \<!--, -->, <>, />, !=, :=, +=, -=, ${, can all be typed rolling through keys in the right hand.
+- Some common programmer n-grams, like ->, =>, \<!--, -->, <>, />, !=, :=, +=, -=, can all be typed rolling through keys in the right hand.
 
  ### Numpad Layer
 - A dedicated Numpad layer can be activated from the Raise layer, or with a combo using both right thumb keys.
