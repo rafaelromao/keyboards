@@ -20,12 +20,12 @@ const uint16_t PROGMEM r_low_sco_combo[] = {KC_2, KC_3, COMBO_END};
 
 // Raise
 
-const uint16_t PROGMEM r_rai_lt_combo[]   = {TD_SLSH, KC_ASTR, COMBO_END};
-const uint16_t PROGMEM r_rai_gt_combo[]   = {KC_ASTR, TD_NOT, COMBO_END};
-const uint16_t PROGMEM r_rai_ltgt_combo[] = {TD_SLSH, KC_ASTR, TD_NOT, COMBO_END};
-const uint16_t PROGMEM r_rai_sar_combo[]  = {KC_MINS, TD_PLUS, COMBO_END};
-const uint16_t PROGMEM r_rai_deq_combo[]  = {TD_PLUS, TD_EQL, COMBO_END};
-const uint16_t PROGMEM r_rai_neq_combo[]  = {KC_MINS, TD_PLUS, TD_EQL, COMBO_END};
+const uint16_t PROGMEM r_rai_lt_combo[]   = {TD_EXLM, TD_EQL, COMBO_END};
+const uint16_t PROGMEM r_rai_gt_combo[]   = {TD_EQL, TD_COLN, COMBO_END};
+const uint16_t PROGMEM r_rai_ltgt_combo[] = {TD_EXLM, TD_EQL, TD_COLN, COMBO_END};
+const uint16_t PROGMEM r_rai_sar_combo[]  = {TD_MINS, TD_PLUS, COMBO_END};
+const uint16_t PROGMEM r_rai_deq_combo[]  = {TD_PLUS, TD_SLSH, COMBO_END};
+const uint16_t PROGMEM r_rai_neq_combo[]  = {TD_MINS, TD_PLUS, TD_SLSH, COMBO_END};
 const uint16_t PROGMEM r_rai_bsp_combo[]  = {TD_OR, TD_AND, COMBO_END};
 
 // Navigation
@@ -96,8 +96,8 @@ const uint16_t PROGMEM r_rom_sco_combo[]  = {TD_COMM, TD_DOT, COMBO_END};
 const uint16_t PROGMEM r_rom_scp_combo[]  = {RAI_A2, RGUIT_R, RCTLT_A, RSFTT_E, COMBO_END};
 const uint16_t PROGMEM r_rom_spa_combo[]  = {RAI_A2, RALTT_H, TD_COMM, TD_DOT, COMBO_END};
 const uint16_t PROGMEM r_med_epa_combo[] = {KC_MPLY, KC_MPRV, COMBO_END};
-const uint16_t PROGMEM r_rom_oes_combo[]  = {RAI_A2, RCTLT_A, COMBO_END};
-const uint16_t PROGMEM r_rom_soe_combo[]  = {RAI_A2, RSFTT_E, COMBO_END};
+const uint16_t PROGMEM r_med_oes_combo[]  = {HYPR_R, KC_VOLD, COMBO_END};
+const uint16_t PROGMEM r_med_soe_combo[]  = {KC_VOLD, KC_VOLU, COMBO_END};
 const uint16_t PROGMEM r_rom_sent_combo[] = {RALTT_H, TD_COMM, TD_DOT, COMBO_END};
 #endif
 
@@ -107,7 +107,7 @@ const uint16_t PROGMEM secret_1_combo[] = {SEC_1, SEC_2, SEC_3, SEC_4, COMBO_END
 
 combo_t key_combos[] = {
 #ifndef SAVE_MEMORY
-    COMBO(r_med_epa_combo, MC_EPA),   COMBO(r_rom_oes_combo, MC_OESC),   COMBO(r_rom_soe_combo, MC_SOES),
+    COMBO(r_med_epa_combo, MC_EPA),   COMBO(r_med_oes_combo, MC_OESC),   COMBO(r_med_soe_combo, MC_SOES),
     COMBO(r_rom_sent_combo, MC_SENT), COMBO(r_rom_scp_combo, MC_SCOP),   COMBO(r_rom_spa_combo, MC_SPAS),
 #endif
     COMBO(l_acc_esc_combo, MC_ESCC),  COMBO(l_low_cur_combo, MC_CUR),    COMBO(l_low_par_combo, MC_BRAC),

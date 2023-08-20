@@ -18,20 +18,20 @@ enum {
     BRT_OBR, 
     BRT_CBR, 
     DQU_FIN, 
-    NOT_SWI, 
+    EXL_EEX, 
     AND_EAN, 
 #ifndef SAVE_MEMORY
     REC_MAC, 
 #endif
     COM_LEA, 
     DOT_DOT, 
-    DLR_CUR, 
+    MIN_CUR, 
     COL_ECO,
-    TIL_DEG,
+    PER_DEG,
     SLS_BSL,
     QUE_EXC,
     EQL_EEQ,
-    PLU_RET,
+    PLU_EPL,
     LET_ELT,
     GRT_EGT,
     OR_EOR,
@@ -51,7 +51,7 @@ enum {
 #define TD_OBR TD(BRT_OBR)
 #define TD_CBR TD(BRT_CBR)
 #define TD_DQUO TD(DQU_FIN)
-#define TD_NOT TD(NOT_SWI)
+#define TD_EXLM TD(EXL_EEX)
 #define TD_AND TD(AND_EAN)
 #define TD_OR TD(OR_EOR)
 #ifdef DYNAMIC_MACRO_ENABLE
@@ -61,13 +61,13 @@ enum {
 #endif
 #define TD_COMM TD(COM_LEA)
 #define TD_DOT TD(DOT_DOT)
-#define TD_DLR TD(DLR_CUR)
+#define TD_MINS TD(MIN_CUR)
 #define TD_COLN TD(COL_ECO)
-#define TD_TILD TD(TIL_DEG)
+#define TD_PERC TD(PER_DEG)
 #define TD_QUES TD(QUE_EXC)
 #define TD_SLSH TD(SLS_BSL)
 #define TD_EQL TD(EQL_EEQ)
-#define TD_PLUS TD(PLU_RET)
+#define TD_PLUS TD(PLU_EPL)
 #define TD_LT TD(LET_ELT)
 #define TD_GT TD(GRT_EGT)
 #define TD_SARR TD(SAR_ESA)
@@ -107,7 +107,7 @@ enum {
     MC_BTIC, MC_DQUO, MC_SQUO, MC_CIRC, MC_TILD, REPEAT,
     MC_ENT, MC_TAB, MC_ESC, MC_ESCC, MC_NSEN, MC_CANC, TG_NUMC,
     MC_ESAV, MC_SENT, MC_CUR, MC_SAR, MC_DEQ, MC_NEQ, MC_BRAC,
-    MC_DAND, MC_DPIP, MC_OESC, MC_SOES, MC_LTGT, MC_EPA,
+    MC_DAND, MC_DPIP, MC_OESC, MC_SOES, MC_LTGT, MC_EPA, MC_SEC,
 
     // End macros that can be shifted
     SFT_MACRO_END,

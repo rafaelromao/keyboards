@@ -108,29 +108,6 @@ void td_enter_end(tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void td_currencies(tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            tap_code16(KC_CIRC);
-            tap_code(KC_SPC);
-            break;
-        case TD_DOUBLE_TAP:
-            if (is_macos()) {
-                tap_code16(LSFT(RALT(KC_2)));
-            } else {
-                clear_shift();
-                tap_code16(LCTL(LALT(KC_5)));
-            }
-            break;
-        case TD_SINGLE_HOLD:
-            tap_code16(KC_DLR);
-            break;
-        default:
-            break;
-    }
-}
-
 void td_open_curly_braces(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
@@ -304,6 +281,32 @@ void td_plus(tap_dance_state_t *state, void *user_data) {
     }
 }
 
+void td_mins(tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code16(KC_MINS);
+            break;
+        case TD_DOUBLE_SINGLE_TAP:
+            tap_code16(KC_MINS);
+            tap_code16(KC_MINS);
+            break;
+        case TD_DOUBLE_TAP:
+            if (is_macos()) {
+                tap_code16(LSFT(RALT(KC_2)));
+            } else {
+                clear_shift();
+                tap_code16(LCTL(LALT(KC_5)));
+            }
+            break;
+        case TD_SINGLE_HOLD:
+            tap_code16(KC_DLR);
+            break;
+        default:
+            break;
+    }
+}
+
 void td_eql(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
@@ -391,13 +394,12 @@ void td_ques(tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void td_tilde(tap_dance_state_t *state, void *user_data) {
+void td_percent(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
 
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
-            tap_code16(KC_TILD);
-            tap_code16(KC_SPC);
+            tap_code16(KC_PERC);
             break;
         case TD_DOUBLE_TAP:
             if (is_macos()) {
@@ -425,7 +427,7 @@ void td_tilde(tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void td_not(tap_dance_state_t *state, void *user_data) {
+void td_excl(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
@@ -523,13 +525,7 @@ void td_slash(tap_dance_state_t *state, void *user_data) {
             tap_code(KC_SLSH);
             break;
         case TD_SINGLE_HOLD:
-            if (!is_shifted()) {
-                tap_code16(KC_BSLS);
-            } else {
-                clear_shift();
-                tap_code16(KC_END);
-                tap_code16(KC_QUES);
-            }
+            tap_code16(KC_BSLS);
             break;
         default:
             break;
@@ -606,19 +602,19 @@ tap_dance_action_t tap_dance_actions[] = {
     [BRT_CBR] = ACTION_TAP_DANCE_FN(td_close_brackets),
     [BRT_PAR] = ACTION_TAP_DANCE_FN(td_parentesis),
     [DQU_FIN] = ACTION_TAP_DANCE_FN(td_dquo),
-    [NOT_SWI] = ACTION_TAP_DANCE_FN(td_not),
+    [EXL_EEX] = ACTION_TAP_DANCE_FN(td_excl),
     [AND_EAN] = ACTION_TAP_DANCE_FN(td_and),
     [OR_EOR]  = ACTION_TAP_DANCE_FN(td_or),
 #ifndef SAVE_MEMORY
     [REC_MAC] = ACTION_TAP_DANCE_FN(td_macro),
 #endif
     [COM_LEA] = ACTION_TAP_DANCE_FN(td_comm),
-    [DLR_CUR] = ACTION_TAP_DANCE_FN(td_currencies),
+    [MIN_CUR] = ACTION_TAP_DANCE_FN(td_mins),
     [COL_ECO] = ACTION_TAP_DANCE_FN(td_colon),
-    [TIL_DEG] = ACTION_TAP_DANCE_FN(td_tilde),
+    [PER_DEG] = ACTION_TAP_DANCE_FN(td_percent),
     [QUE_EXC] = ACTION_TAP_DANCE_FN(td_ques),
     [EQL_EEQ] = ACTION_TAP_DANCE_FN(td_eql),
-    [PLU_RET] = ACTION_TAP_DANCE_FN(td_plus),
+    [PLU_EPL] = ACTION_TAP_DANCE_FN(td_plus),
     [LET_ELT] = ACTION_TAP_DANCE_FN(td_lt),
     [GRT_EGT] = ACTION_TAP_DANCE_FN(td_gt),
     [SLS_BSL] = ACTION_TAP_DANCE_FN(td_slash),

@@ -93,11 +93,11 @@
         COMBO(cb_selcopy,       RHI RHM RHR R0,  &mc_selcopy,    ALPHA1 CASE_A1 NUMPAD SEN_CASE SEN_E1 SEN_E2)
         COMBO(cb_selpaste,      RBI RBM RBR R0,  &mc_selpaste,   ALPHA1 CASE_A1 NUMPAD SEN_CASE SEN_E1 SEN_E2)
 
-        COMBO(cb_o_esc,         RHM R0,      &mc_o_esc,          ALPHA1 CASE_A1 SEN_CASE SEN_E1 SEN_E2)
-        COMBO(cb_sft_o_esc,     RHR R0,      &mc_sft_o_esc,      ALPHA1 CASE_A1 SEN_CASE SEN_E1 SEN_E2)
+        COMBO(cb_o_esc,         RHM R0,      &mc_o_esc,          MEDIA)
+        COMBO(cb_sft_o_esc,     RHR R0,      &mc_sft_o_esc,      MEDIA)
+        COMBO(cb_epa,           RBI RBM,     &mc_epa,            MEDIA)
         COMBO(cb_semi,          RBM RBR,     &th_semi 0 0,       ALPHA1 CASE_A1 LOWER SEN_CASE SEN_E1 SEN_E2)
         COMBO(cb_sent,          RBI RBM RBR, &mc_end_semi_ent,   ALPHA1 CASE_A1 SEN_CASE SEN_E1 SEN_E2)
-        COMBO(cb_epa,           RBI RBM,     &mc_epa,            MEDIA)
 
         COMBO(cb_sarrow,        RHI RHM,     &th_sarrow 0 0,     RAISE)
         COMBO(cb_eqeq,          RHM RHR,     &mc_eqeq,           RAISE)

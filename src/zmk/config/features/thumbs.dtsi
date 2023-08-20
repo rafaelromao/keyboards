@@ -35,7 +35,7 @@
             ignore-alphas;
             ignore-modifiers;
 			#binding-cells = <0>;  
-            layers = <CASE>;
+            layers = <CASE_A1>;
             continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT TILDE CARET GRAVE>;
         };
 
@@ -76,7 +76,7 @@
             continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12>;
         };
 
-        THUMB_MACRO(mc_smart_num,     &to ROMAK &smart_num)
+        THUMB_MACRO(mc_smart_num,     &to ALPHA1 &smart_num)
         THUMB_MACRO(mc_cancel,        &kp K_CANCEL)
         THUMB_MACRO(mc_sp_ns,         &kp SPACE &sl SEN_E1)
         THUMB_MACRO(mc_nsen,          &sl SEN_E1)

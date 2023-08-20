@@ -106,9 +106,9 @@
                 raise_layer {
                      label = "RAISE";
                      bindings = <
-   &trans              &kp F9              &kp F8              &kp F7              &none               &none               &th_colon 0 0       &th_and 0 0         &th_or 0 0          &trans
-   &kp F12             &kp F6              &kp F5              &kp F4              &kp F11             &td_curr            &kp MINUS           &td_plus            &td_eql             &kp PERCENT  
-   &none               &kp F3              &kp F2              &kp F1              &kp F10             &td_tilde           &td_slash           &kp STAR            &th_excl 0 0        &none
+   &trans              &kp F9              &kp F8              &kp F7              &none               &none               &td_perc            &th_and 0 0         &th_or 0 0          &trans
+   &kp F12             &kp F6              &kp F5              &kp F4              &kp F11             &mc_caret           &td_mins            &td_plus            &td_slash           &kp STAR  
+   &none               &kp F3              &kp F2              &kp F1              &kp F10             &mc_tilde           &th_excl 0 0        &td_eql             &th_colon 0 0       &none
                                            &trans              &key_repeat         &kp SPACE           &trans              &trans              &trans
                            >;
                 };
@@ -154,7 +154,7 @@
    &trans              &kp ESC             &mc_hyp_m           &mc_hyp_g           &none               &none               &mc_hyp_l           &kp ENTER           &kp TAB             &trans
    &mc_hyp_d           &kp LSHIFT          &kp LCTRL           &kp LGUI            &mc_hyp_w           &mc_hyp_z           &mc_hyp_r           &kp C_VOL_DN        &kp C_VOL_UP        &kp C_MUTE
    &none               &kp RALT            &mc_hyp_c           &kp LALT            &mc_hyp_v           &mc_hyp_j           &kp C_PP            &kp C_PREV          &kp C_NEXT          &none
-                                           &trans              &mo MAINT           &kp SPACE           &trans              &trans              &trans
+                                           &trans              &mo SYSTEM          &kp SPACE           &trans              &trans              &trans
                            >;
                 };
                 navigation_layer {
