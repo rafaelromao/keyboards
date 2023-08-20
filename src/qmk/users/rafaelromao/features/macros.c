@@ -376,7 +376,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             if (isMacOS) {
                 SEND_STRING(SS_LALT(SS_TAP(X_6)));
             } else {
-                SEND_STRING(SS_LALT(SS_LSFT(SS_TAP(X_S))));
+                SEND_STRING(SS_RALT(SS_LSFT(SS_TAP(X_S))));
             }
             return PROCESS_RECORD_RETURN_FALSE;
     }

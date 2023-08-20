@@ -45,7 +45,7 @@
                      bindings = <
    &trans              &kp F9              &kp F8              &kp F7              &none               &none               &mc_n7              &mc_n8              &mc_n9              &trans
    &lt SHORTCUTS F12   &mt LSHFT F6        &mt LCTRL F5        &mt LGUI F4         &kp F11             &kp COMMA           &th_n4 RGUI 0       &th_n5 RCTRL 0      &th_n6 RSHFT 0      &lt SHORTCUTS DOT 
-   &none               &mt RALT F3         &kp F2              &mt LALT F1         &kp F10             &none               &th_n1 RALT 0       &mc_n2              &mc_n3              &none
+   &none               &mt RALT F3         &kp F2              &mt LALT F1         &kp F10             &mc_section         &th_n1 RALT 0       &mc_n2              &mc_n3              &none
                                            &trans              &ht_repeat NAV 0    &trans              &lt RAISE SPACE     &th_n0 MEDIA 0      &trans
                            >;
                 };
@@ -99,8 +99,8 @@
                      bindings = <
    &trans              &td_lbrc            &td_rbrc            &kp HASH            &none               &none               &mc_n7              &mc_n8              &mc_n9              &trans
    &lt NAV AT          &td_lpar            &td_rpar            &td_dqo             &mc_sqo             &kp COMMA           &mc_n4              &mc_n5              &mc_n6              &lt SHORTCUTS DOT  
-   &none               &td_lbkt            &td_rbkt            &th_qmark 0 0       &mc_bti             &none               &mc_n1              &mc_n2              &mc_n3              &none
-                                           &trans              &trans              &trans              &lt RAISE SPACE     &th_n0 MEDIA 0      &trans
+   &none               &td_lbkt            &td_rbkt            &th_qmark 0 0       &mc_bti             &mc_section         &mc_n1              &mc_n2              &mc_n3              &none
+                                           &trans              &kp CAPSLOCK        &trans              &lt RAISE SPACE     &th_n0 MEDIA 0      &trans
                            >;
                 };
                 raise_layer {
@@ -109,7 +109,7 @@
    &trans              &kp F9              &kp F8              &kp F7              &none               &none               &td_perc            &th_and 0 0         &th_or 0 0          &trans
    &kp F12             &kp F6              &kp F5              &kp F4              &kp F11             &mc_caret           &td_mins            &td_plus            &td_slash           &kp STAR  
    &none               &kp F3              &kp F2              &kp F1              &kp F10             &mc_tilde           &th_excl 0 0        &td_eql             &th_colon 0 0       &none
-                                           &trans              &key_repeat         &kp SPACE           &trans              &trans              &trans
+                                           &trans              &key_repeat         &kp SPACE           &trans              &trans              &tog NUMPAD
                            >;
                 };
                 sentence_case_layer {

@@ -121,6 +121,8 @@
         MODTAP_SYMBOL(th_n5,       &mc_n5)
         MODTAP_SYMBOL(th_n6,       &mc_n6)
 
+        SYMBOL(mc_section,         &kp LA(N6))
+
         SYMBOL(mc_lpar,            &kp LPAR)
         SYMBOL(mc_end_lpar,        &kp END &kp LPAR)
         TAPHOLD_SYMBOL(th_lpar,    &mc_lpar, &mc_end_lpar)
