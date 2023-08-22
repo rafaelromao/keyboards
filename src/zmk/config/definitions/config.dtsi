@@ -13,16 +13,17 @@
 #define NMODS 5
 #define ALPHA2 6
 #define CASE_A2 7
-#define LOWER 8
-#define RAISE 9
-#define SEN_CASE 10
-#define SEN_E1 11
-#define SEN_E2 12
-#define NAV_F 13
-#define MEDIA 14
-#define NAV 15
-#define LOCK_KB 16
-#define SYSTEM 17
+#define SYMBOLS 8
+#define LOWER 9
+#define RAISE 10
+#define SEN_CASE 11
+#define SEN_E1 12
+#define SEN_E2 13
+#define NAV_F 14
+#define MEDIA 15
+#define NAV 16
+#define LOCK_KB 17
+#define SYSTEM 18
 
 #define TAPPING_TERM 175
 #define TD_TAPPING_TERM 225

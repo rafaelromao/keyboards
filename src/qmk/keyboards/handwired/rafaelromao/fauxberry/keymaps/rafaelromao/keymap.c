@@ -76,6 +76,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                           ____ALPHA2_L4____ , XXXXXXX , XXXXXXX , ____ALPHA2_R4____),
  // |___________________________________________________________________________________________________|
 
+     [_SYMBOLS] = LAYOUT_wrapper(
+ // |___________________________________________________________________________________________________|
+      _________________SYMBOLS_L1__________ , XXXXXXX , XXXXXXX , _______SYMBOLS_R1____________________ ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      _________________SYMBOLS_L2____________________ , _________________SYMBOLS_R2____________________ ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      XXXXXXX , _______SYMBOLS_L3____________________ , _________________SYMBOLS_R3__________ , XXXXXXX ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+                          __SYMBOLS_L4_____ , XXXXXXX , XXXXXXX , __SYMBOLS_R4_____),
+ // |___________________________________________________________________________________________________|
+
      [_LOWER] = LAYOUT_wrapper(
  // |___________________________________________________________________________________________________|
       ___________________LOWER_L1__________ , XXXXXXX , XXXXXXX , _________LOWER_R1____________________ ,
@@ -238,6 +249,7 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
     [_NUMPAD]     = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
     [_ALPHA2]     = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
     [_SHORTCUTS]  = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
+    [_SYMBOLS]    = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
     [_LOWER]      = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
     [_RAISE]      = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
     [_FIXED_NAV]  = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
@@ -260,6 +272,7 @@ void set_oled_by_layer(uint32_t layer) {
     }
     switch (layer) {
         case _ALPHA1:
+        case _NOMOD:
             oled_write("        ROMAK     ", false);
             break;
         case _NUMPAD:
@@ -270,6 +283,9 @@ void set_oled_by_layer(uint32_t layer) {
             break;
         case _SHORTCUTS:
             oled_write("      SHORTCUTS   ", false);
+            break;
+        case _SYMBOLS:
+            oled_write("      SYMBOLS     ", false);
             break;
         case _LOWER:
             oled_write("        LOWER     ", false);

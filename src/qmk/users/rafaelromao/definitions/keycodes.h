@@ -219,6 +219,7 @@ enum {
 #define TT_NAV  TT(_FIXED_NAV)
 #define TG_LOCK TG(_LOCK)
 #define TG_NUM  TG(_NUMPAD)
+#define OS_SYM  OSL(_SYMBOLS)
 
 uint16_t extract_tapping_keycode(uint16_t keycode);
 bool is_string_macro_keycode(uint16_t keycode);

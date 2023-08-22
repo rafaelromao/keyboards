@@ -7,6 +7,7 @@ typedef enum {
     _NOMOD,
     _ALPHA2,
     _FIXED_ALPHA2,
+    _SYMBOLS,
     _LOWER,
     _RAISE,
     _FIXED_NAV,

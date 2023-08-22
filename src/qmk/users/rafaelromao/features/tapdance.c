@@ -39,23 +39,6 @@ bool is_shifted(void) {
            get_oneshot_locked_mods() & MOD_MASK_SHIFT;
 }
 
-void td_parentesis(tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            tap_code16(KC_LPRN);
-            tap_code16(KC_RPRN);
-            break;
-        case TD_SINGLE_HOLD:
-            tap_code16(KC_END);
-            tap_code16(KC_LPRN);
-            tap_code16(KC_RPRN);
-            break;
-        default:
-            break;
-    }
-}
-
 void td_open_parentesis(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
@@ -241,6 +224,24 @@ void td_semicolon(tap_dance_state_t *state, void *user_data) {
 }
 
 #ifndef SAVE_MEMORY
+
+void td_parentesis(tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code16(KC_LPRN);
+            tap_code16(KC_RPRN);
+            break;
+        case TD_SINGLE_HOLD:
+            tap_code16(KC_END);
+            tap_code16(KC_LPRN);
+            tap_code16(KC_RPRN);
+            break;
+        default:
+            break;
+    }
+}
+
 void td_macro(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
@@ -254,6 +255,7 @@ void td_macro(tap_dance_state_t *state, void *user_data) {
             break;
     }
 }
+
 #endif
 
 void td_plus(tap_dance_state_t *state, void *user_data) {
@@ -600,12 +602,12 @@ tap_dance_action_t tap_dance_actions[] = {
     [BRT_CPA] = ACTION_TAP_DANCE_FN(td_close_parentesis),
     [BRT_OBR] = ACTION_TAP_DANCE_FN(td_open_brackets),
     [BRT_CBR] = ACTION_TAP_DANCE_FN(td_close_brackets),
-    [BRT_PAR] = ACTION_TAP_DANCE_FN(td_parentesis),
     [DQU_FIN] = ACTION_TAP_DANCE_FN(td_dquo),
     [EXL_EEX] = ACTION_TAP_DANCE_FN(td_excl),
     [AND_EAN] = ACTION_TAP_DANCE_FN(td_and),
     [OR_EOR]  = ACTION_TAP_DANCE_FN(td_or),
 #ifndef SAVE_MEMORY
+    [BRT_PAR] = ACTION_TAP_DANCE_FN(td_parentesis),
     [REC_MAC] = ACTION_TAP_DANCE_FN(td_macro),
 #endif
     [COM_LEA] = ACTION_TAP_DANCE_FN(td_comm),

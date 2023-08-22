@@ -112,7 +112,7 @@ bool should_send_ctrl(bool isMacOS, bool isOneShotShift) {
 }
 
 process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *record) {
-    if (record->event.pressed && IS_LAYER_ON(_ALPHA2) && check_disable_oneshot(keycode)) {
+    if (keycode != OS_SYM && record->event.pressed && IS_LAYER_ON(_ALPHA2) && check_disable_oneshot(keycode)) {
         if (is_string_macro_keycode(keycode)) {
             if (process_accents(keycode, NULL) == PROCESS_RECORD_CONTINUE) {
                 process_macros(keycode, NULL);
@@ -132,6 +132,11 @@ process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *re
     bool isAnyOneShotButShift = isOneShotCtrl || isOneShotAlt || isOneShotGui;
 
     switch (keycode) {
+        case OS_SYM:
+            if (record->tap.count > 0) {
+                disable_oneshot_layer();
+                return PROCESS_RECORD_RETURN_TRUE;
+            }
         case RAI_A2:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {

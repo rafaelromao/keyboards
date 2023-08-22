@@ -30,13 +30,13 @@
 #define           ______SHORTCUTS_L3___________________           MC_RECE , MC_COMP , MC_FIUS , MC_REFC
 #define                               _SHORTCUTS_L4____                               NAV_PRJ , NMO_DOC
 
-#define           ______SHORTCUTS_R1___________________           MC_SELW , MC_ENT  , MC_TAB  , _______
+#define           ______SHORTCUTS_R1___________________           TD_MACR , MC_ENT  , MC_TAB  , _______
+#define ________________SHORTCUTS_R2___________________ MC_SELW , MC_SELL , MC_MODM , SF_MODP , XXXXXXX
 #ifndef SAVE_MEMORY
-#define ________________SHORTCUTS_R2___________________ QK_LEAD , MC_SELL , MC_MODM , SF_MODP , XXXXXXX
+#define ________________SHORTCUTS_R3_________           MC_COMT , QK_LEAD , MC_SWLE , MC_SWRI 
 #else
-#define ________________SHORTCUTS_R2___________________ XXXXXXX , MC_SELL , MC_MODM , SF_MODP , XXXXXXX
+#define ________________SHORTCUTS_R3_________           MC_COMT , XXXXXXX , MC_SWLE , MC_SWRI 
 #endif
-#define ________________SHORTCUTS_R3_________           TD_MACR , MC_COMT , MC_SWLE , MC_SWRI 
 #define _SHORTCUTS_R4____                               ACT_SPC , TT_NAV
 
 #define ___________________NOMOD_L1__________           KC_ESC  , KC_B    , KC_M    , KC_G    
@@ -52,12 +52,22 @@
 #define ___________________ALPHA2_L1_________           _______ , KC_Q    , MC_QU   , KC_K
 #define ___________________ALPHA2_L2___________________ KC_Y    , KC_Z    , KC_X    , KC_W    , KC_QUOT
 #define           _________ALPHA2_L3___________________           KC_J    , MC_SQ_C , KC_V    , KC_GRV 
-#define                               ____ALPHA2_L4____                               _______ , _______
+#define                               ____ALPHA2_L4____                               _______ , OS_SYM
 
 #define           _________ALPHA2_R1___________________           MC_GV_A , MC_SQ_O , MC_SQ_U , _______
 #define ___________________ALPHA2_R2___________________ KC_CIRC , MC_TL_A , MC_SQ_A , MC_SQ_E , MC_SQ_I
 #define ___________________ALPHA2_R3_________           KC_TILD , MC_CR_A , MC_CR_O , MC_CR_E 
 #define ____ALPHA2_R4____                               _______ , _______
+
+#define _________________SYMBOLS_L1__________           _______ , TD_LCRB , TD_RCRB , KC_HASH 
+#define _________________SYMBOLS_L2____________________ NAV_AT  , TD_OPAR , TD_CPAR , TD_DQUO , MC_SQUO
+#define           _______SYMBOLS_L3____________________           TD_OBR  , TD_CBR  , TD_QUES , MC_BTIC
+#define                               __SYMBOLS_L4_____                               KC_CAPS , _______
+
+#define           _______SYMBOLS_R1____________________           TD_COLN , TD_EQL  , TD_PERC , _______
+#define _________________SYMBOLS_R2____________________ MC_CIRC , TD_MINS , TD_PLUS , TD_SLSH , KC_ASTR
+#define _________________SYMBOLS_R3__________           MC_TILD , TD_EXLM , TD_AND  , TD_OR     
+#define __SYMBOLS_R4_____                               _______ , TG_NUM
 
 #define ___________________LOWER_L1__________           _______ , TD_LCRB , TD_RCRB , KC_HASH 
 #define ___________________LOWER_L2____________________ NAV_AT  , TD_OPAR , TD_CPAR , TD_DQUO , MC_SQUO
@@ -74,9 +84,9 @@
 #define           _________RAISE_L3____________________           KC_F3   , KC_F2   , KC_F1   , KC_F10
 #define                               ____RAISE_L4_____                               QK_REP  , KC_SPC
 
-#define           _________RAISE_R1____________________           TD_PERC , TD_AND  , TD_OR   , _______
+#define           _________RAISE_R1____________________           TD_COLN , TD_EQL  , TD_PERC , _______
 #define ___________________RAISE_R2____________________ MC_CIRC , TD_MINS , TD_PLUS , TD_SLSH , KC_ASTR
-#define ___________________RAISE_R3__________           MC_TILD , TD_EXLM , TD_EQL  , TD_COLN   
+#define ___________________RAISE_R3__________           MC_TILD , TD_EXLM , TD_AND  , TD_OR     
 #define ____RAISE_R4_____                               _______ , TG_NUM
 
 #define ___________________MEDIA_L1__________           _______ , MC_ESC  , HYPR_M  , HYPR_G  
@@ -110,14 +120,14 @@
 #define _______________________LOCK____R3____           XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX 
 #define ______LOCK____R4_                               XXXXXXX , _______
 
-#define ______________________SYSTEM___L1____           _______ , RGB_VAD , RGB_VAI , KC_PSCR
-#define ______________________SYSTEM___L2______________ RGB_TOG , RGB_HUD , RGB_HUI , KC_PAUS , QK_BOOT
-#define           ____________SYSTEM___L3______________           RGB_SAD , RGB_SAI , KC_SCRL , EE_CLR
+#define ______________________SYSTEM___L1____           _______ , RGB_VAD , RGB_VAI , KC_NUM
+#define ______________________SYSTEM___L2______________ RGB_TOG , RGB_HUD , RGB_HUI , QK_BOOT , XXXXXXX
+#define           ____________SYSTEM___L3______________           RGB_SAD , RGB_SAI , EE_CLR  , XXXXXXX
 #define                               _____SYSTEM___L4_                               XXXXXXX , XXXXXXX
 
-#define           ____________SYSTEM___R1______________           KC_NUM  , MC_LOCK , TG_LOCK , _______
-#define ______________________SYSTEM___R2______________ QK_BOOT , TG_MAC  , TG_WIN  , KC_SLEP , KC_PWR
-#define ______________________SYSTEM___R3____           EE_CLR  , XXXXXXX , XXXXXXX , XXXXXXX 
+#define           ____________SYSTEM___R1______________           TG_MAC  , MC_LOCK , TG_WIN  , _______
+#define ______________________SYSTEM___R2______________ XXXXXXX , QK_BOOT , KC_SLEP , TG_LOCK , XXXXXXX
+#define ______________________SYSTEM___R3____           XXXXXXX , EE_CLR  , XXXXXXX , XXXXXXX 
 #define _____SYSTEM___R4_                               XXXXXXX , XXXXXXX
 
 // clang-format on

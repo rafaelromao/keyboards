@@ -23,7 +23,7 @@
         keymap {
                 compatible = "zmk,keymap";
                 default_layer {
-                     label = "ALPHA1";
+                     label = "ROMAK";
                      bindings = <
    &mc_escc            &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp BSPC
    &lt SHORTCUTS D     &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp W               &kp Z               &mt RGUI R          &mt RCTRL A         &mt RSHFT E         &lt SHORTCUTS I 
@@ -32,7 +32,7 @@
                         >;
                    };
                 capsword_layer {
-                     label = "CASE A1";
+                     label = "CASE";
                      bindings = <
    &trans              &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &trans
    &lt SHORTCUTS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTCUTS LS(I) 
@@ -52,9 +52,9 @@
                 shortcuts_layer {
                      label = "SHORTCUT";
                      bindings = <
-   &trans              &kp ESC             &mm_actions         &mm_typematch       &none               &none               &mc_selw            &kp ENTER           &kp TAB             &trans    
-   &trans              &th_find LSHFT 0    &mm_run             &mm_debug           &mm_build           &leader             &mc_seln            &mm_zh_b            &th_zh LSHFT 0      &trans 
-   &none               &mm_recent          &mm_complete        &mm_usages          &mm_refac           &none               &mc_comment         &mm_wt_b            &mm_wt_f            &none
+   &trans              &kp ESC             &mm_actions         &mm_typematch       &none               &none               &none               &kp ENTER           &kp TAB             &trans    
+   &trans              &th_find LSHFT 0    &mm_run             &mm_debug           &mm_build           &mc_selw            &mc_seln            &mm_zh_b            &th_zh LSHFT 0      &trans 
+   &none               &mm_recent          &mm_complete        &mm_usages          &mm_refac           &mc_comment         &leader             &mm_wt_b            &mm_wt_f            &none
                                            &trans              &th_proj NAV 0      &th_docs NMODS 0    &lt ALPHA2 SPACE    &mst NAV NAV_F      &trans
                            >;
                 };
@@ -82,16 +82,25 @@
    &trans              &kp Q               &mc_qu              &kp K               &none               &none               &ac_agrv            &ac_oacu            &ac_uacu            &trans
    &kp Y               &kp Z               &kp X               &kp W               &kp SQT             &kp CARET           &ac_atil            &ac_aacu            &ac_eacu            &ac_iacu 
    &none               &kp J               &mc_ced             &kp V               &kp GRAVE           &kp TILDE           &ac_acir            &ac_ocir            &ac_ecir            &none
-                                           &trans              &trans              &trans              &trans              &trans              &trans
+                                           &trans              &trans              &sl SYMBOLS         &trans              &trans              &trans
                            >;
                 };
                 case_alpha2_layer {
-                     label = "CASE A2";
+                     label = "CASE";
                      bindings = <
    &trans              &kp LS(Q)           &mc_qu_c            &kp LS(K)           &none               &none               &ac_agrv_c          &ac_oacu_c          &ac_uacu_c          &trans
    &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &kp SQT             &kp CARET           &ac_atil_c          &ac_aacu_c          &ac_eacu_c          &ac_iacu_c 
    &none               &kp LS(J)           &mc_ced_c           &kp LS(V)           &kp GRAVE           &kp TILDE           &ac_acir_c          &ac_ocir_c          &ac_ecir_c          &none
-                                           &trans              &trans              &trans              &trans              &trans              &trans
+                                           &trans              &trans              &sl SYMBOLS         &trans              &trans              &trans
+                           >;
+                };
+                symbols_layer {
+                     label = "SYMBOLS";
+                     bindings = <
+   &trans              &td_lbrc            &td_rbrc            &kp HASH            &none               &none               &th_colon 0 0       &td_eql             &td_perc            &trans
+   &lt NAV AT          &td_lpar            &td_rpar            &td_dqo             &mc_sqo             &mc_caret           &td_mins            &td_plus            &td_slash           &kp STAR  
+   &none               &td_lbkt            &td_rbkt            &th_qmark 0 0       &mc_bti             &mc_tilde           &th_excl 0 0        &th_and 0 0         &th_or 0 0          &none
+                                           &trans              &kp CAPSLOCK        &trans              &trans              &tog NUMPAD         &trans
                            >;
                 };
                 lower_layer {
@@ -106,14 +115,14 @@
                 raise_layer {
                      label = "RAISE";
                      bindings = <
-   &trans              &kp F9              &kp F8              &kp F7              &none               &none               &td_perc            &th_and 0 0         &th_or 0 0          &trans
+   &trans              &kp F9              &kp F8              &kp F7              &none               &none               &th_colon 0 0       &td_eql             &td_perc            &trans
    &kp F12             &kp F6              &kp F5              &kp F4              &kp F11             &mc_caret           &td_mins            &td_plus            &td_slash           &kp STAR  
-   &none               &kp F3              &kp F2              &kp F1              &kp F10             &mc_tilde           &th_excl 0 0        &td_eql             &th_colon 0 0       &none
-                                           &trans              &key_repeat         &kp SPACE           &trans              &trans              &tog NUMPAD
+   &none               &kp F3              &kp F2              &kp F1              &kp F10             &mc_tilde           &th_excl 0 0        &th_and 0 0         &th_or 0 0          &none
+                                           &trans              &key_repeat         &kp SPACE           &trans              &tog NUMPAD         &trans       
                            >;
                 };
                 sentence_case_layer {
-                     label = "SEN_CS";
+                     label = "CASE";
                      bindings = <
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
@@ -122,7 +131,7 @@
                            >;
                 };
                 sentence_case_ext1_layer {
-                     label = "SEN_CS_EXT1";
+                     label = "CASE";
                      bindings = <
    &trans              &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &trans
    &lt SHORTCUTS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTCUTS LS(I) 
@@ -131,7 +140,7 @@
                            >;
                 };
                 sentence_case_ext2_layer {
-                     label = "SEN_CS_EXT2";
+                     label = "CASE";
                      bindings = <
    &trans              &kp LS(Q)           &mc_qu_c            &kp LS(K)           &none               &none               &ac_agrv_c          &ac_oacu_c          &ac_uacu_c          &trans
    &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &kp SQT             &kp CARET           &ac_atil_c          &ac_aacu_c          &ac_eacu_c          &ac_iacu_c 
@@ -178,9 +187,9 @@
                 system_layer {
                      label = "SYSTEM";
                      bindings = <
-   &trans              &none               &none               &kp PRINTSCREEN     &none               &none               &kp KP_NUM          &kp LC(LG(Q))      &tog LOCK_KB        &trans 
-   &none               &none               &none               &kp PAUSE_BREAK     &bootloader         &bootloader         &none               &none              &kp C_SLEEP         &kp C_POWER 
-   &none               &none               &none               &kp SLCK            &sys_reset          &bt BT_CLR          &bt BT_SEL 0        &bt BT_PRV         &bt BT_NXT          &none
+   &trans              &none               &none               &kp KP_NUM          &none               &none               &none               &kp LC(LG(Q))      &none                &trans 
+   &none               &none               &none               &bootloader         &none               &none               &bootloader         &kp C_SLEEP        &tog LOCK_KB         &bt BT_CLR 
+   &none               &none               &none               &sys_reset          &none               &none               &sys_reset          &bt BT_PRV         &bt BT_NXT           &none
                                            &trans              &trans              &trans              &trans              &trans              &trans
                         >;
                 };
