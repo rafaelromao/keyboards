@@ -69,9 +69,9 @@
         COMBO(cb_f10,           LBM LBI,     &kp F10,            RAISE NUMPAD)
         COMBO(cb_f11,           LHM LHI,     &kp F11,            RAISE NUMPAD)
         COMBO(cb_f12,           LTM LTI,     &kp F12,            RAISE NUMPAD)
-        COMBO(cb_f13,           LBM LBR,     &kp F13,            RAISE NUMPAD)
-        COMBO(cb_f14,           LHM LHR,     &kp F14,            RAISE NUMPAD)
-        COMBO(cb_f15,           LTM LTR,     &kp F15,            RAISE NUMPAD)
+        COMBO(cb_f13,           LBM LBR,     &kp F13,            RAISE)
+        COMBO(cb_f14,           LHM LHR,     &kp F14,            RAISE)
+        COMBO(cb_f15,           LTM LTR,     &kp F15,            RAISE)
 
         COMBO(cb_ja,            LBR LBM,     &mc_ja,             ALPHA2)
         COMBO(cb_jac,           LBR LBM,     &mc_ja_c,           CASE_A2)
