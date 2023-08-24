@@ -121,8 +121,8 @@
 #define           ____________SYSTEM___L3______________           RGB_SAD , RGB_SAI , EE_CLR  , XXXXXXX
 #define                               _____SYSTEM___L4_                               XXXXXXX , XXXXXXX
 
-#define           ____________SYSTEM___R1______________           TG_MAC  , MC_LOCK , TG_WIN  , _______
-#define ______________________SYSTEM___R2______________ XXXXXXX , QK_BOOT , KC_SLEP , TG_LOCK , XXXXXXX
+#define           ____________SYSTEM___R1______________           TG_MAC  , TG_LOCK , TG_WIN  , _______
+#define ______________________SYSTEM___R2______________ XXXXXXX , QK_BOOT , KC_SLEP , MC_LOCK , XXXXXXX
 #define ______________________SYSTEM___R3____           XXXXXXX , EE_CLR  , XXXXXXX , XXXXXXX 
 #define _____SYSTEM___R4_                               XXXXXXX , XXXXXXX
 
