@@ -279,6 +279,7 @@ void set_oled_by_layer(uint32_t layer) {
             oled_write("        NUMPAD    ", false);
             break;
         case _ALPHA2:
+        case _FIXED_ALPHA2:
             oled_write("        ALPHA2    ", false);
             break;
         case _SHORTCUTS:
