@@ -106,6 +106,17 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             return PROCESS_RECORD_RETURN_FALSE;
 #endif
 
+            // Euro sign
+
+        case MC_EUR:
+            if (isMacOS) {
+                tap_code16(LSFT(RALT(KC_2)));
+            } else {
+                clear_shift();
+                tap_code16(LCTL(LALT(KC_5)));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
             // Conditional operators
 
         case MC_DAND:

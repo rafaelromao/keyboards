@@ -203,16 +203,11 @@
 
         SYMBOL(mc_minus,           &kp MINUS)
         SYMBOL(mc_dollar,          &kp DOLLAR)
-        SYMBOL(mc_euro,            &kp LS(LA(N2)))
         TAPHOLD_SYMBOL(th_mins,    &mc_minus, &mc_dollar)
-        TAPDANCE_SYMBOL(td_mins,   &th_mins 0 0, &mc_euro, &none)
 
         SYMBOL(mc_plus,            &kp PLUS)
-        SYMBOL(mc_end_plus,        &kp END &kp PLUS)
-        SYMBOL(mc_2_plus,          &kp PLUS &kp PLUS)
-        SYMBOL(mc_3_plus,          &kp PLUS &kp PLUS &kp PLUS)
-        TAPHOLD_SYMBOL(th_plus,    &mc_plus, &mc_end_plus)
-        TAPDANCE_SYMBOL(td_plus,   &th_plus 0 0, &mc_2_plus, &mc_3_plus)
+        SYMBOL(mc_euro,            &kp LS(LA(N2)))
+        TAPHOLD_SYMBOL(th_plus,    &mc_plus, &mc_euro)
 
         SYMBOL(mc_slash,           &kp SLASH)
         SYMBOL(mc_2_slash,         &kp SLASH &kp SLASH)

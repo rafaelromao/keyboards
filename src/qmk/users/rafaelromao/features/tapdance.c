@@ -275,8 +275,7 @@ void td_plus(tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_PLUS);
             break;
         case TD_SINGLE_HOLD:
-            tap_code(KC_END);
-            tap_code16(KC_PLUS);
+            process_macros(MC_EUR, NULL);
             break;
         default:
             break;
@@ -290,16 +289,14 @@ void td_mins(tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_MINS);
             break;
         case TD_DOUBLE_SINGLE_TAP:
+        case TD_DOUBLE_TAP:
             tap_code16(KC_MINS);
             tap_code16(KC_MINS);
             break;
-        case TD_DOUBLE_TAP:
-            if (is_macos()) {
-                tap_code16(LSFT(RALT(KC_2)));
-            } else {
-                clear_shift();
-                tap_code16(LCTL(LALT(KC_5)));
-            }
+        case TD_TRIPLE_TAP:
+            tap_code16(KC_MINS);
+            tap_code16(KC_MINS);
+            tap_code16(KC_MINS);
             break;
         case TD_SINGLE_HOLD:
             tap_code16(KC_DLR);

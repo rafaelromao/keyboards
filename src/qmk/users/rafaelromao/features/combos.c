@@ -122,6 +122,7 @@ const uint16_t PROGMEM r_med_epa_combo[] = {KC_MPLY, KC_MPRV, COMBO_END};
 const uint16_t PROGMEM r_med_oes_combo[]  = {HYPR_R, KC_VOLD, COMBO_END};
 const uint16_t PROGMEM r_med_soe_combo[]  = {KC_VOLD, KC_VOLU, COMBO_END};
 const uint16_t PROGMEM r_rom_sent_combo[] = {RALTT_H, TD_COMM, TD_DOT, COMBO_END};
+const uint16_t PROGMEM r_acc_eur_combo[]  = {MC_GV_A, MC_SQ_O, MC_SQ_U, COMBO_END};
 #endif
 
 // Secret
@@ -133,6 +134,7 @@ combo_t key_combos[] = {
     COMBO(r_med_epa_combo, MC_EPA),   COMBO(r_med_oes_combo, MC_OESC),  COMBO(r_med_soe_combo, MC_SOES),
     COMBO(l_low_par_combo, MC_BRAC),  COMBO(r_rom_sent_combo, MC_SENT), COMBO(r_rom_scp_combo, MC_SCOP),
     COMBO(r_rom_spa_combo, MC_SPAS),  COMBO(l_low_cur_combo, MC_CUR),   COMBO(l_low_par_combo, TD_PARN),
+    COMBO(r_acc_eur_combo, MC_EUR),
 #endif
     COMBO(l_acc_esc_combo, MC_ESCC),  COMBO(l_nav_esc_combo, MC_ESCC),  COMBO(l_num_esc_combo, MC_ESCC),
     COMBO(l_num_num_combo, MC_ESCC),  COMBO(l_num_f10_combo, KC_F10),   COMBO(l_num_f11_combo, KC_F11),

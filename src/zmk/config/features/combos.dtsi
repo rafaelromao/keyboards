@@ -86,6 +86,7 @@
         COMBO(cb_btic,          LBI LBM,     &mc_bti,            ALPHA2)
         COMBO(cb_caret,         LTI LTM,     &mc_caret,          ALPHA2)
         COMBO(cb_dollar,        RTI RTM,     &mc_dollar,         ALPHA2)
+        COMBO(cb_euro,          RTI RTM RTR, &mc_euro,           ALPHA2)
         COMBO(cb_tilde,         RBI RBM,     &mc_tilde,          ALPHA2)
 
         COMBO(cb_build,         LHI LHM,     &mm_build,          SHORTCUTS)
@@ -99,9 +100,9 @@
 
         COMBO(cb_esc_save,      LTR LTM L0,  &mc_save_esc,       ALPHA1 SEN_CASE SEN_E1 SEN_E2)
 
-        COMBO(cb_enter,         RHM RHR R0,  &kp ENTER,          ALPHA1 CASE_A1 NUMPAD LOWER RAISE NAV NAV_F SHORTCUTS SEN_CASE SEN_E1 SEN_E2)
-        COMBO(cb_backspace,     RTM RTR,     &kp BACKSPACE,      ALPHA1 CASE_A1 NUMPAD LOWER RAISE NAV NAV_F SHORTCUTS SEN_CASE SEN_E1 SEN_E2)
-        COMBO(cb_tab,           RTM RTR R0,  &kp TAB,            ALPHA1 CASE_A1 NUMPAD LOWER RAISE NAV NAV_F SHORTCUTS SEN_CASE SEN_E1 SEN_E2)
+        COMBO(cb_enter,         RHM RHR R0,  &kp ENTER,          ALPHA1 CASE_A1 ALPHA2 CASE_A2 NUMPAD LOWER RAISE NAV NAV_F SHORTCUTS SEN_CASE SEN_E1 SEN_E2)
+        COMBO(cb_backspace,     RTM RTR,     &kp BACKSPACE,      ALPHA1 CASE_A1 ALPHA2 CASE_A2 NUMPAD LOWER RAISE NAV NAV_F SHORTCUTS SEN_CASE SEN_E1 SEN_E2)
+        COMBO(cb_tab,           RTM RTR R0,  &kp TAB,            ALPHA1 CASE_A1 ALPHA2 CASE_A2 NUMPAD LOWER RAISE NAV NAV_F SHORTCUTS SEN_CASE SEN_E1 SEN_E2)
 
         COMBO(cb_paste,         RBI RBM R0,  &mc_paste,          ALPHA1 CASE_A1 NUMPAD NAV NAV_F SEN_CASE SEN_E1 SEN_E2)
         COMBO(cb_copy,          RHI RHM R0,  &mc_copy,           ALPHA1 CASE_A1 NUMPAD NAV NAV_F SEN_CASE SEN_E1 SEN_E2)
