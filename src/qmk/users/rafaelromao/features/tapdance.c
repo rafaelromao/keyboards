@@ -458,9 +458,20 @@ void td_comm(tap_dance_state_t *state, void *user_data) {
             tap_code(KC_COMM);
             break;
         case TD_DOUBLE_SINGLE_TAP:
+            tap_code(KC_COMM);
+            tap_code(KC_COMM);
         case TD_DOUBLE_TAP:
+#ifndef SAVE_MEMORY
+            if (!is_shifted()) {
+                leader_start();
+            } else {
+                tap_code(KC_COMM);
+                tap_code(KC_COMM);
+            }
+#else
             tap_code(KC_COMM);
             tap_code(KC_COMM);
+#endif
             break;
         case TD_TRIPLE_TAP:
             tap_code(KC_COMM);

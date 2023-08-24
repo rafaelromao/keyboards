@@ -27,7 +27,7 @@
                      bindings = <
    &mc_escc            &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp BSPC
    &lt SHORTCUTS D     &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp W               &kp Z               &mt RGUI R          &mt RCTRL A         &mt RSHFT E         &lt SHORTCUTS I 
-   &kp Q               &mt RALT F          &kp C               &mt LALT P          &kp V               &kp J               &mt RALT H          &th_comma 0 0       &th_dot 0 0         &kp Y
+   &kp Q               &mt RALT F          &kp C               &mt LALT P          &kp V               &kp J               &mt RALT H          &td_comma           &th_dot 0 0         &kp Y
                                            &none               &ht_repeat NAV 0    &lt LOWER SPACE     &msl RAISE ALPHA2   &med_sc             &trans
                         >;
                    };
@@ -52,9 +52,9 @@
                 shortcuts_layer {
                      label = "SHORTCUT";
                      bindings = <
-   &trans              &kp ESC             &mm_actions         &mm_typematch       &none               &none               &none               &kp ENTER           &kp TAB             &trans    
-   &trans              &th_find LSHFT 0    &mm_run             &mm_debug           &mm_build           &mc_selw            &mc_seln            &mm_zh_b            &th_zh LSHFT 0      &trans 
-   &none               &mm_recent          &mm_complete        &mm_usages          &mm_refac           &mc_comment         &leader             &mm_wt_b            &mm_wt_f            &none
+   &trans              &kp ESC             &mm_actions         &mm_typematch       &none               &none               &mc_selw            &kp ENTER           &kp TAB             &trans    
+   &trans              &th_find LSHFT 0    &mm_run             &mm_debug           &mm_build           &none               &mc_seln            &mm_zh_b            &th_zh LSHFT 0      &trans 
+   &none               &mm_recent          &mm_complete        &mm_usages          &mm_refac           &mc_join            &mc_comment         &mm_wt_b            &mm_wt_f            &none
                                            &trans              &th_proj NAV 0      &th_docs NMODS 0    &lt ALPHA2 SPACE    &mst NAV NAV_F      &trans
                            >;
                 };

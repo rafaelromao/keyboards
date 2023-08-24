@@ -30,13 +30,9 @@
 #define           ______SHORTCUTS_L3___________________           MC_RECE , MC_COMP , MC_FIUS , MC_REFC
 #define                               _SHORTCUTS_L4____                               NAV_PRJ , NMO_DOC
 
-#define           ______SHORTCUTS_R1___________________           TD_MACR , MC_ENT  , MC_TAB  , _______
-#define ________________SHORTCUTS_R2___________________ MC_SELW , MC_SELL , MC_MODM , SF_MODP , XXXXXXX
-#ifndef SAVE_MEMORY
-#define ________________SHORTCUTS_R3_________           MC_COMT , QK_LEAD , MC_SWLE , MC_SWRI 
-#else
-#define ________________SHORTCUTS_R3_________           MC_COMT , XXXXXXX , MC_SWLE , MC_SWRI 
-#endif
+#define           ______SHORTCUTS_R1___________________           MC_SELW , MC_ENT  , MC_TAB  , _______
+#define ________________SHORTCUTS_R2___________________ TD_MACR , MC_SELL , MC_MODM , SF_MODP , XXXXXXX
+#define ________________SHORTCUTS_R3_________           MC_JOIN , MC_COMT , MC_SWLE , MC_SWRI 
 #define _SHORTCUTS_R4____                               ACT_SPC , TT_NAV
 
 #define ___________________NOMOD_L1__________           KC_ESC  , KC_B    , KC_M    , KC_G    

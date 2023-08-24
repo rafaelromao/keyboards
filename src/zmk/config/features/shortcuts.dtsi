@@ -170,6 +170,7 @@
         SHORTCUT(mc_close_win,              &macro_tap &kp LG(Q))
         SHIFTED_SHORTCUT(mm_close_tab_win,  &mc_close_win, &mc_close_tab)
 
+        SHORTCUT(mc_join,                   &macro_tap &kp END &kp DEL)
         SHORTCUT(mc_comment,                &macro_tap &kp LG(SLASH))
         SHORTCUT(mc_escc,                   &macro_tap &kp ESC &to ALPHA1)
     };
