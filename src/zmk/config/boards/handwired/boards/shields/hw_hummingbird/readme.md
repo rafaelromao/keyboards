@@ -15,6 +15,7 @@ Parts:
 - Hummingbird [case](https://github.com/PJE66/hummingbird).
 - [Seeeduino Xiao BLE](https://wiki.seeedstudio.com/XIAO_BLE).
 - [50mAh 3.7v battery - 360821](https://a.aliexpress.com/_mNW9t6a)
+- Dupont cables as on/off switch.
 - [1n4148 diodes](https://pt.aliexpress.com/item/1005003540554760.html).
 - [24 AWG Wires](https://pt.aliexpress.com/item/32904950428.html).
 - [DIP40 Pin Wide Socket](https://a.aliexpress.com/_msloS7e).
