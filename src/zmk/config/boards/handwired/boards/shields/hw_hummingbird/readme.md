@@ -5,9 +5,6 @@
 
 Hummingbird, a handwired board built using a [Seeeduino Xiao BLE](https://wiki.seeedstudio.com/XIAO_BLE).
 
-This board has a programmable LED, used for layer and other statuses indication.
-Some build pictures can be found [here](../../../../../../../../docs/hummingbird.md).
-
 ### Hummingbird
 ![img](../../../../../../../../img/hummingbird.jpeg)
 
