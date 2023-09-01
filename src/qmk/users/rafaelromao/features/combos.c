@@ -155,3 +155,10 @@ combo_t key_combos[] = {
     COMBO(r_rom_pas_combo, MC_PAST),  COMBO(r_rom_sal_combo, MC_SELC),   COMBO(r_rom_sco_combo, TD_SCLE),
     COMBO(r_rom_tab_combo, KC_TAB),   COMBO(r_rom_v_combo, KC_V),        COMBO(r_rom_x_combo, KC_X),
     COMBO(r_rom_y_combo, KC_Y),       COMBO(secret_1_combo, MC_SECRET_1)};
+
+bool combo_should_trigger(uint16_t combo_index, combo_t *combo, uint16_t keycode, keyrecord_t *record) {
+    if ((combo->keycode == KC_F15) && (layer_state_is(_NUMPAD))) {
+        return false;
+    }
+    return true;
+}

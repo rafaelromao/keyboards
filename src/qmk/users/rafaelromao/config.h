@@ -27,6 +27,7 @@
 #define COMBO_STRICT_TIMER
 #define COMBO_HOLD_TERM 175
 #define COMBO_MUST_TAP_PER_COMBO
+#define COMBO_SHOULD_TRIGGER
 
 // Disable Alt Repeat
 #define NO_ALT_REPEAT_KEY
