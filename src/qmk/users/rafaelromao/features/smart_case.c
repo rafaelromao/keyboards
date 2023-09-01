@@ -137,16 +137,23 @@ process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record
         return PROCESS_RECORD_CONTINUE;
     }
     if (has_any_smart_case() && record->event.pressed) {
+        // Earlier return if this has not been considered tapped yet.
         switch (keycode) {
             case QK_MOD_TAP ... QK_MOD_TAP_MAX:
             case QK_LAYER_TAP ... QK_LAYER_TAP_MAX:
-                // Earlier return if this has not been considered tapped yet.
                 if (record->tap.count == 0) {
                     return PROCESS_RECORD_CONTINUE;
                 }
         }
+        // Skip tapdance symbols
+        switch (keycode) {
+            case QK_TAP_DANCE ... QK_TAP_DANCE_MAX:
+                disable_smart_case();
+                return PROCESS_RECORD_CONTINUE;
+        }
         // Get the base tapping keycode of a mod- or layer-tap key.
         uint16_t key = extract_tapping_keycode(keycode);
+        // Check if not typing space
         if (key != KC_SPC) {
             spacing = false;
         }
