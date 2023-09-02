@@ -27,11 +27,11 @@ The following pages explain how this layout works and which features are impleme
 - [Shortcut Combos](docs/base.md#base-layer-combos)
 - [Smart Cases](docs/modifiers.md#smart-cases)
 - [Numpad Layer](docs/symbols.md#numpad)
-- [Leader Key](docs/macros.md#leader-key)
-- [Swapper](docs/macros.md#swapper)
-- [Select Word](docs/macros.md#select-word)
-- [Dynamic Macros](docs/macros.md#dynamic-macros)
-- [Coding Shortcuts](docs/macros.md#coding-shortcuts)
+- [Leader Key](docs/shortcuts.md#leader-key)
+- [Swapper](docs/shortcuts.md#swapper)
+- [Select Word](docs/shortcuts.md#select-word)
+- [Dynamic Macros](docs/shortcuts.md#dynamic-macros)
+- [Coding Shortcuts](docs/shortcuts.md#coding-shortcuts)
 - [Coding Dancing](docs/symbols.md#coding-dancing)
 
 ## About this repo
