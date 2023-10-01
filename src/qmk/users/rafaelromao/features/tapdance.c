@@ -147,6 +147,28 @@ void td_dquo(tap_dance_state_t *state, void *user_data) {
     }
 }
 
+void td_hash(tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code16(KC_HASH);
+            break;
+        case TD_SINGLE_HOLD:
+            process_macros(MC_SQUO, NULL);
+            break;
+        case TD_DOUBLE_TAP:
+            tap_code16(KC_HASH);
+            tap_code16(KC_HASH);
+            break;
+        case TD_TRIPLE_TAP:
+            tap_code16(KC_HASH);
+            tap_code16(KC_HASH);
+            break;
+        default:
+            break;
+    }
+}
+
 void td_and(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
@@ -200,8 +222,7 @@ void td_colon(tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_COLN);
             break;
         case TD_SINGLE_HOLD:
-            tap_code16(KC_END);
-            tap_code16(KC_COLN);
+            process_macros(MC_CIRC, NULL);
             break;
         default:
             break;
@@ -222,8 +243,6 @@ void td_semicolon(tap_dance_state_t *state, void *user_data) {
             break;
     }
 }
-
-#ifndef SAVE_MEMORY
 
 void td_parentesis(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
@@ -255,8 +274,6 @@ void td_macro(tap_dance_state_t *state, void *user_data) {
             break;
     }
 }
-
-#endif
 
 void td_plus(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
@@ -371,10 +388,7 @@ void td_ques(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
-            tap_code16(KC_QUES);
-#ifndef SAVE_MEMORY
-            start_sentence_case();
-#endif
+            process_macros(MC_QUES, NULL);
             break;
         case TD_DOUBLE_SINGLE_TAP:
         case TD_DOUBLE_TAP:
@@ -382,11 +396,26 @@ void td_ques(tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_QUES);
             break;
         case TD_SINGLE_HOLD:
-            tap_code(KC_END);
-            tap_code16(KC_QUES);
-#ifndef SAVE_MEMORY
-            start_sentence_case();
-#endif
+            process_macros(MC_BTIC, NULL);
+            break;
+        default:
+            break;
+    }
+}
+
+void td_excl(tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            process_macros(MC_EXLM, NULL);
+            break;
+        case TD_DOUBLE_SINGLE_TAP:
+        case TD_DOUBLE_TAP:
+            tap_code16(KC_EXLM);
+            tap_code16(KC_EXLM);
+            break;
+        case TD_SINGLE_HOLD:
+            process_macros(MC_TILD, NULL);
             break;
         default:
             break;
@@ -426,31 +455,6 @@ void td_percent(tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void td_excl(tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            tap_code16(KC_EXLM);
-#ifndef SAVE_MEMORY
-            start_sentence_case();
-#endif
-            break;
-        case TD_SINGLE_HOLD:
-            tap_code(KC_END);
-            tap_code16(KC_EXLM);
-#ifndef SAVE_MEMORY
-            start_sentence_case();
-#endif
-            break;
-        case TD_DOUBLE_TAP:
-            tap_code16(KC_EXLM);
-            tap_code16(KC_EXLM);
-            break;
-        default:
-            break;
-    }
-}
-
 void td_comm(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
@@ -461,17 +465,12 @@ void td_comm(tap_dance_state_t *state, void *user_data) {
             tap_code(KC_COMM);
             tap_code(KC_COMM);
         case TD_DOUBLE_TAP:
-#ifndef SAVE_MEMORY
             if (!is_shifted()) {
                 leader_start();
             } else {
                 tap_code(KC_COMM);
                 tap_code(KC_COMM);
             }
-#else
-            tap_code(KC_COMM);
-            tap_code(KC_COMM);
-#endif
             break;
         case TD_TRIPLE_TAP:
             tap_code(KC_COMM);
@@ -492,9 +491,7 @@ void td_dot(tap_dance_state_t *state, void *user_data) {
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
             tap_code(KC_DOT);
-#ifndef SAVE_MEMORY
             start_sentence_case();
-#endif
             break;
         case TD_DOUBLE_SINGLE_TAP:
         case TD_DOUBLE_TAP:
@@ -509,9 +506,7 @@ void td_dot(tap_dance_state_t *state, void *user_data) {
         case TD_SINGLE_HOLD:
             tap_code16(KC_END);
             tap_code(KC_DOT);
-#ifndef SAVE_MEMORY
             start_sentence_case();
-#endif
             break;
         default:
             break;
@@ -614,8 +609,8 @@ tap_dance_action_t tap_dance_actions[] = {
     [EXL_EEX] = ACTION_TAP_DANCE_FN(td_excl),
     [AND_EAN] = ACTION_TAP_DANCE_FN(td_and),
     [OR_EOR]  = ACTION_TAP_DANCE_FN(td_or),
-#ifndef SAVE_MEMORY
     [BRT_PAR] = ACTION_TAP_DANCE_FN(td_parentesis),
+#ifdef DYNAMIC_MACRO_ENABLE
     [REC_MAC] = ACTION_TAP_DANCE_FN(td_macro),
 #endif
     [COM_LEA] = ACTION_TAP_DANCE_FN(td_comm),
@@ -629,6 +624,7 @@ tap_dance_action_t tap_dance_actions[] = {
     [GRT_EGT] = ACTION_TAP_DANCE_FN(td_gt),
     [SLS_BSL] = ACTION_TAP_DANCE_FN(td_slash),
     [SAR_ESA] = ACTION_TAP_DANCE_FN(td_sarr),
+    [HAS_SQO] = ACTION_TAP_DANCE_FN(td_hash),
     [DOT_DOT] = ACTION_TAP_DANCE_FN(td_dot)};
 
 // clang-format on

@@ -12,6 +12,9 @@ SRC += features/accents.c
 SRC += features/select_word.c
 SRC += features/custom_shift.c
 SRC += features/repeat.c
+SRC += features/sentence_case.c
+SRC += features/swapper.c
+SRC += features/leader.c
 
 LTO_ENABLE = yes
 EXTRAKEY_ENABLE = yes # Audio control and System control
@@ -31,5 +34,6 @@ MAGIC_ENABLE = no
 MUSIC_ENABLE = no
 OS_DETECTION_ENABLE = yes
 REPEAT_KEY_ENABLE = yes
+LEADER_ENABLE = yes
 
 INTROSPECTION_KEYMAP_C = features/combos.c

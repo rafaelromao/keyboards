@@ -15,11 +15,12 @@
 #include "features/select_word.h"
 #include "features/custom_shift.h"
 #include "features/repeat.h"
-#ifndef SAVE_MEMORY
-#    include "features/leader.h"
-#    include "features/sentence_case.h"
+#include "features/sentence_case.h"
+#include "features/swapper.h"
+#include "features/leader.h"
+
+#ifdef DYNAMIC_MACRO_ENABLE
 #    include "features/dynamic_macro.h"
-#    include "features/swapper.h"
 #endif
 
 void matrix_scan_keymap(void);

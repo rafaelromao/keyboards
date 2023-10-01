@@ -22,7 +22,6 @@ void matrix_scan_user(void) {
 // Process record
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-#ifndef SAVE_MEMORY
     // Process Sentence Case
     switch (process_sentence_case(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
@@ -41,7 +40,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         default:
             break;
     };
-#endif
 
     // Process Repeat Key
     switch (process_repeat(keycode, record)) {
@@ -156,7 +154,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     return true;
 }
 
-#ifndef SAVE_MEMORY
+#ifdef DYNAMIC_MACRO_ENABLE
 // Dynamic macros
 
 void dynamic_macro_record_start_user(int8_t direction) {}

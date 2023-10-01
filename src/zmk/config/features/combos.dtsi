@@ -53,6 +53,7 @@
         COMBO(cb_qc,            LTR LTI LTM, &kp LS(Q),          CASE_A1 SEN_E1)
 
         COMBO(cb_unds,          LBR LBM,     &mm_unds,           ALPHA1 CASE_A1 SEN_CASE SEN_E1 SEN_E2)
+        COMBO(cb_comm,          RHP R0,      &kp COMMA,          LOWER NUMPAD)
 
         COMBO(cb_vr,            RTI RTM,     &kp V,              ALPHA1 SEN_CASE)
         COMBO(cb_p,             RBI RBM,     &kp P,              ALPHA1 SEN_CASE)
@@ -76,31 +77,53 @@
         COMBO(cb_ja,            LBR LBM,     &mc_ja,             ALPHA2)
         COMBO(cb_jac,           LBR LBM,     &mc_ja_c,           CASE_A2)
         COMBO(cb_lh,            LHR LHM,     &mc_lh,             ALPHA2)
+        COMBO(cb_lpar,          LHR LHM LHI, &mc_lh,             ALPHA2)
+        COMBO(cb_rpa,           LBR LBM LBI, &mc_lh,             ALPHA2)
         COMBO(cb_lhc,           LHR LHM,     &mc_lh_c,           CASE_A2)
+        COMBO(cb_squo,          LTI LTM,     &mc_sqo,            ALPHA2)
+        COMBO(cb_dquo,          LHI LHM,     &mc_dqo,            ALPHA2)
+        COMBO(cb_qmark,         LBI LBM,     &mc_qmark,          ALPHA2)
+
+        COMBO(cb_colon,         RTI RTM,     &mc_colon,          ALPHA2)
+        COMBO(cb_minus,         RHI RHM,     &mc_minus,          ALPHA2)
+        COMBO(cb_excl,          RBI RBM,     &mc_excl,           ALPHA2)
         COMBO(cb_ao,            RHM RHR,     &mc_ao,             ALPHA2)
         COMBO(cb_oe,            RBM RBR,     &mc_oe,             ALPHA2)
         COMBO(cb_cao,           RHI RHM RHR, &mc_cao,            ALPHA2)
         COMBO(cb_coes,          RBI RBM RBR, &mc_coes,           ALPHA2)
-        COMBO(cb_squo,          RHI RHM,     &mc_sqo,            ALPHA2)
-        COMBO(cb_dquo,          LHI LHM,     &mc_dqo,            ALPHA2)
-        COMBO(cb_btic,          LBI LBM,     &mc_bti,            ALPHA2)
-        COMBO(cb_caret,         LTI LTM,     &mc_caret,          ALPHA2)
-        COMBO(cb_dollar,        RTI RTM,     &mc_dollar,         ALPHA2)
-        COMBO(cb_euro,          RTI RTM RTR, &mc_euro,           ALPHA2)
-        COMBO(cb_tilde,         RBI RBM,     &mc_tilde,          ALPHA2)
+
+        COMBO(cb_sqo_s,         LTM LTI,     &mc_sqo,            LOWER SYMBOLS)
+        COMBO(cb_dqo_s,         LHM LHI,     &mc_dqo,            LOWER SYMBOLS)
+        COMBO(cb_bti_s,         LBM LBI,     &mc_bti,            LOWER SYMBOLS)
+        COMBO(cb_braces_s,      LTR LTM,     &mc_braces_s,       SYMBOLS)
+        COMBO(cb_braces,        LTR LTM,     &mc_braces,         LOWER)
+        COMBO(cb_pars,          LHR LHM,     &th_pars 0 0,       LOWER SYMBOLS)
+        COMBO(cb_brackets,      LBR LBM,     &mc_brackets,       LOWER SYMBOLS)
+
+        COMBO(cb_caret,         RTI RTM,     &mc_caret,          RAISE SYMBOLS)
+        COMBO(cb_dollar,        RHI RHM,     &mc_dollar,         SYMBOLS)
+        COMBO(cb_tilde,         RBI RBM,     &mc_tilde,          SYMBOLS)
+        COMBO(cb_euro,          RHM RHR,     &mc_euro,           SYMBOLS)
+        COMBO(cb_bslash,        RBM RBR,     &mc_bslash,         SYMBOLS)
+        COMBO(cb_section,       RHI RHM RHR, &mc_section,        SYMBOLS)
+        COMBO(cb_sarrow,        RHI RHM,     &th_sarrow 0 0,     RAISE)
+        COMBO(cb_eqeq,          RHM RHR,     &mc_eqeq,           RAISE)
+        COMBO(cb_noteq,         RHI RHM RHR, &mc_noteq,          RAISE)
+        COMBO(cb_lt,            RBI RBM,     &th_lt 0 0,         RAISE)
+        COMBO(cb_gt,            RBM RBR,     &th_gt 0 0,         RAISE)
+        COMBO(cb_ltgt,          RBI RBM RBR, &mc_ltgt,           RAISE)
 
         COMBO(cb_build,         LHI LHM,     &mm_build,          SHORTCUTS)
         COMBO(cb_refact,        LBI LBM,     &mm_refac,          SHORTCUTS)
-
-        COMBO(cb_pars,          LHR LHM,     &th_pars 0 0,       LOWER)
-        COMBO(cb_braces,        LTR LTM,     &mc_braces,         LOWER)
-        COMBO(cb_brackets,      LBR LBM,     &mc_brackets,       LOWER)
+        COMBO(cb_join,          RBI RBM,     &mc_join,           SHORTCUTS)
+        COMBO(cb_refresh_z0,    RHM RHR,     &mm_refresh_z0,     SHORTCUTS)
+        COMBO(cb_close_tab_win, RBM RBR,     &mm_close_tab_win,  SHORTCUTS)
 
         COMBO(cb_esc_save,      LTR LTM L0,  &mc_save_esc,       ALPHA1 SEN_CASE SEN_E1 SEN_E2)
 
-        COMBO(cb_enter,         RHM RHR R0,  &kp ENTER,          ALPHA1 CASE_A1 ALPHA2 CASE_A2 NUMPAD LOWER RAISE NAV NAV_F SHORTCUTS SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2)
-        COMBO(cb_backspace,     RTM RTR,     &kp BACKSPACE,      ALPHA1 CASE_A1 ALPHA2 CASE_A2 NUMPAD LOWER RAISE NAV NAV_F SHORTCUTS SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2)
-        COMBO(cb_tab,           RTM RTR R0,  &kp TAB,            ALPHA1 CASE_A1 ALPHA2 CASE_A2 NUMPAD LOWER RAISE NAV NAV_F SHORTCUTS SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2)
+        COMBO(cb_enter,         RHM RHR R0,  &kp ENTER,          ALPHA1 CASE_A1 ALPHA2 CASE_A2 NUMPAD LOWER RAISE SYMBOLS NAV NAV_F SHORTCUTS SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2)
+        COMBO(cb_backspace,     RTM RTR,     &kp BACKSPACE,      ALPHA1 CASE_A1 ALPHA2 CASE_A2 NUMPAD LOWER RAISE SYMBOLS NAV NAV_F SHORTCUTS SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2)
+        COMBO(cb_tab,           RTM RTR R0,  &kp TAB,            ALPHA1 CASE_A1 ALPHA2 CASE_A2 NUMPAD LOWER RAISE SYMBOLS NAV NAV_F SHORTCUTS SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2)
 
         COMBO(cb_paste,         RBI RBM R0,  &mc_paste,          ALPHA1 CASE_A1 NUMPAD NAV NAV_F SEN_CASE SEN_E1 SEN_E2)
         COMBO(cb_copy,          RHI RHM R0,  &mc_copy,           ALPHA1 CASE_A1 NUMPAD NAV NAV_F SEN_CASE SEN_E1 SEN_E2)
@@ -115,16 +138,6 @@
         COMBO(cb_semi,          RBM RBR,     &th_semi 0 0,       ALPHA1 CASE_A1 LOWER SEN_CASE SEN_E1 SEN_E2)
         COMBO(cb_sent,          RBI RBM RBR, &mc_end_semi_ent,   ALPHA1 CASE_A1 SEN_CASE SEN_E1 SEN_E2)
 
-        COMBO(cb_sarrow,        RHI RHM,     &th_sarrow 0 0,     RAISE)
-        COMBO(cb_eqeq,          RHM RHR,     &mc_eqeq,           RAISE)
-        COMBO(cb_noteq,         RHI RHM RHR, &mc_noteq,          RAISE)
-        COMBO(cb_lt,            RBI RBM,     &th_lt 0 0,         RAISE)
-        COMBO(cb_gt,            RBM RBR,     &th_gt 0 0,         RAISE)
-        COMBO(cb_ltgt,          RBI RBM RBR, &mc_ltgt,           RAISE)
-
         COMBO(cb_end_ent,       RTM RTR,     &th_end_ent 0 0,    MEDIA)
-
-        COMBO(cb_refresh_z0,    RHM RHR,     &mm_refresh_z0,     SHORTCUTS)
-        COMBO(cb_close_tab_win, RBM RBR,     &mm_close_tab_win,  SHORTCUTS)
     };
 };

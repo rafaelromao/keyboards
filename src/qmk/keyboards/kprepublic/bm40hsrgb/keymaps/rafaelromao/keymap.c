@@ -76,17 +76,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXXXXX , XXXXXXX , XXXXXXX , ____ALPHA2_L4____ ,      XXXXXXX      , ____ALPHA2_R4____ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
-     [_SYMBOLS] = LAYOUT_wrapper(
- // |_______________________________________________________________________________________________________________________|
-      _________________SYMBOLS_L1__________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , _______SYMBOLS_R1____________________ ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      _________________SYMBOLS_L2____________________ , XXXXXXX , XXXXXXX , _________________SYMBOLS_R2____________________ ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , _______SYMBOLS_L3____________________ , XXXXXXX , XXXXXXX , _________________SYMBOLS_R3__________ , XXXXXXX ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , __SYMBOLS_L4_____ ,      XXXXXXX      , __SYMBOLS_R4_____ , XXXXXXX , XXXXXXX , XXXXXXX),
- // |_______________________________________________________________________________________________________________________|
-
      [_LOWER] = LAYOUT_wrapper(
  // |_______________________________________________________________________________________________________________________|
       ___________________LOWER_L1__________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , _________LOWER_R1____________________ ,
@@ -107,6 +96,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXXXXX , _________RAISE_L3____________________ , XXXXXXX , XXXXXXX , ___________________RAISE_R3__________ , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , ____RAISE_L4_____ ,      XXXXXXX      , ____RAISE_R4_____ , XXXXXXX , XXXXXXX , XXXXXXX),
+ // |_______________________________________________________________________________________________________________________|
+
+     [_SYMBOLS] = LAYOUT_wrapper(
+ // |_______________________________________________________________________________________________________________________|
+      _________________SYMBOLS_L1__________ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , _______SYMBOLS_R1____________________ ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      _________________SYMBOLS_L2____________________ , XXXXXXX , XXXXXXX , _________________SYMBOLS_R2____________________ ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      XXXXXXX , _______SYMBOLS_L3____________________ , XXXXXXX , XXXXXXX , _________________SYMBOLS_R3__________ , XXXXXXX ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      XXXXXXX , XXXXXXX , XXXXXXX , __SYMBOLS_L4_____ ,      XXXXXXX      , __SYMBOLS_R4_____ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
      [_FIXED_NAV] = LAYOUT_wrapper(
@@ -166,64 +166,3 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 // clang-format on
-
-// RGB Indicators
-
-// extern os_t          os;
-// extern select_word_t select_word;
-// const int            led_count = 47;
-
-// void set_rgblight_by_layer(uint32_t layer) {
-//     for (int i = 0; i < led_count; i++) {
-//         switch (layer) {
-//             case _LOCK:
-//             case _ALPHA1:
-//                 break;
-//             case _NUMPAD:
-//                 rgb_matrix_set_color(i, RGB_PURPLE);
-//                 break;
-//             case _SYSTEM:
-//                 rgb_matrix_set_color(i, RGB_RED);
-//                 break;
-//             default:
-//                 rgb_matrix_set_color(i, RGB_BLUE);
-//                 break;
-//         }
-//     }
-// }
-
-// void set_current_layer_rgb(void) {
-//     set_rgblight_by_layer(get_highest_layer(layer_state | default_layer_state));
-// }
-
-// layer_state_t layer_state_set_user(layer_state_t state) {
-//     set_rgblight_by_layer(biton32(state));
-//     return state;
-// }
-
-// bool rgb_matrix_indicators_user(void) {
-//     uint8_t mods                = get_mods();
-//     uint8_t oneshot_mods        = get_oneshot_mods();
-//     uint8_t oneshot_locked_mods = get_oneshot_locked_mods();
-
-//     bool isShift = mods & MOD_MASK_SHIFT || oneshot_mods & MOD_MASK_SHIFT || oneshot_locked_mods & MOD_MASK_SHIFT;
-//     bool isCtrl  = mods & MOD_MASK_CTRL || oneshot_mods & MOD_MASK_CTRL || oneshot_locked_mods & MOD_MASK_CTRL;
-//     bool isAlt   = mods & MOD_MASK_ALT || oneshot_mods & MOD_MASK_ALT || oneshot_locked_mods & MOD_MASK_ALT;
-//     bool isGui   = mods & MOD_MASK_GUI || oneshot_mods & MOD_MASK_GUI || oneshot_locked_mods & MOD_MASK_GUI;
-
-//     for (int i = 0; i < led_count; i++) {
-//         if (select_word.state != STATE_NONE) {
-//             rgb_matrix_set_color(i, RGB_GREEN);
-//         } else if (has_any_smart_case()) {
-//             rgb_matrix_set_color(i, RGB_YELLOW);
-//         } else if (isShift) {
-//             rgb_matrix_set_color(i, RGB_BLUE);
-//         } else if (isCtrl || isAlt || isGui) {
-//             rgb_matrix_set_color(i, RGB_WHITE);
-//         } else {
-//             set_current_layer_rgb();
-//         }
-//     }
-
-//     return false;
-// }

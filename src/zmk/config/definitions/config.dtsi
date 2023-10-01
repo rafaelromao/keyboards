@@ -13,9 +13,9 @@
 #define NMODS 5
 #define ALPHA2 6
 #define CASE_A2 7
-#define SYMBOLS 8
-#define LOWER 9
-#define RAISE 10
+#define LOWER 8
+#define RAISE 9
+#define SYMBOLS 10
 #define SEN_CASE 11
 #define SEN_E1 12
 #define SEN_E2 13

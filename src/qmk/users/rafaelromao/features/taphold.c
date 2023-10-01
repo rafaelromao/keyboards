@@ -96,14 +96,12 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
             }
             break;
 
-#ifndef SAVE_MEMORY
         case SF_MODP:
             if (record->event.pressed && record->tap.count) {
                 process_swapper(MC_MODP, NULL);
                 return PROCESS_RECORD_RETURN_FALSE;
             }
             break;
-#endif
     }
     return PROCESS_RECORD_CONTINUE;
 }

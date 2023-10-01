@@ -49,8 +49,6 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             tap_code16(KC_GT);
             return PROCESS_RECORD_RETURN_FALSE;
 
-#ifndef SAVE_MEMORY
-
             // ESC + P + A (considering VIM remaps)
 
         case MC_EPA:
@@ -98,13 +96,20 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             tap_code16(KC_RBRC);
             return PROCESS_RECORD_RETURN_FALSE;
 
+            // {}
+
+        case MC_CURS:
+            tap_code16(KC_LCBR);
+            tap_code16(KC_RCBR);
+            return PROCESS_RECORD_RETURN_FALSE;
+
             // END { ENTER }
 
         case MC_CUR:
             SEND_STRING(SS_TAP(X_END) "{}" SS_DELAY(50) SS_TAP(X_LEFT) SS_TAP(X_ENT));
             disable_smart_case();
             return PROCESS_RECORD_RETURN_FALSE;
-#endif
+
             // Join Lines
 
         case MC_JOIN:
@@ -394,6 +399,20 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             } else {
                 SEND_STRING(SS_RALT(SS_LSFT(SS_TAP(X_S))));
             }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Question Mark with Sentence Case
+
+        case MC_QUES:
+            tap_code16(KC_QUES);
+            start_sentence_case();
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Exclamation with Sentence Case
+
+        case MC_EXLM:
+            tap_code16(KC_EXLM);
+            start_sentence_case();
             return PROCESS_RECORD_RETURN_FALSE;
     }
 

@@ -82,7 +82,7 @@
    &trans              &kp Q               &mc_qu              &kp K               &none               &none               &ac_agrv            &ac_oacu            &ac_uacu            &trans
    &kp Y               &kp Z               &kp X               &kp W               &kp SQT             &kp CARET           &ac_atil            &ac_aacu            &ac_eacu            &ac_iacu 
    &none               &kp J               &mc_ced             &kp V               &kp GRAVE           &kp TILDE           &ac_acir            &ac_ocir            &ac_ecir            &none
-                                           &trans              &trans              &sl SYMBOLS         &trans              &trans              &trans
+                                           &trans              &mc_sqo             &sl SYMBOLS         &trans              &trans              &trans
                            >;
                 };
                 case_alpha2_layer {
@@ -91,25 +91,16 @@
    &trans              &kp LS(Q)           &mc_qu_c            &kp LS(K)           &none               &none               &ac_agrv_c          &ac_oacu_c          &ac_uacu_c          &trans
    &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &kp SQT             &kp CARET           &ac_atil_c          &ac_aacu_c          &ac_eacu_c          &ac_iacu_c 
    &none               &kp LS(J)           &mc_ced_c           &kp LS(V)           &kp GRAVE           &kp TILDE           &ac_acir_c          &ac_ocir_c          &ac_ecir_c          &none
-                                           &trans              &trans              &sl SYMBOLS         &trans              &trans              &trans
-                           >;
-                };
-                symbols_layer {
-                     label = "SYMBOLS";
-                     bindings = <
-   &trans              &td_lbrc            &td_rbrc            &kp HASH            &none               &none               &th_colon 0 0       &td_eql             &td_perc            &trans
-   &lt NAV AT          &td_lpar            &td_rpar            &td_dqo             &mc_sqo             &mc_caret           &th_mins 0 0        &th_plus 0 0        &td_slash           &kp STAR  
-   &none               &td_lbkt            &td_rbkt            &th_qmark 0 0       &mc_bti             &mc_tilde           &th_excl 0 0        &th_and 0 0         &th_or 0 0          &none
-                                           &trans              &kp CAPSLOCK        &trans              &trans              &tog NUMPAD         &trans
+                                           &trans              &mc_sqo             &sl SYMBOLS         &trans              &trans              &trans
                            >;
                 };
                 lower_layer {
                      label = "LOWER";
                      bindings = <
-   &trans              &td_lbrc            &td_rbrc            &kp HASH            &none               &none               &mc_n7              &mc_n8              &mc_n9              &trans
+   &trans              &td_lbrc            &td_rbrc            &th_hash 0 0        &none               &none               &mc_n7              &mc_n8              &mc_n9              &trans
    &lt NAV AT          &td_lpar            &td_rpar            &td_dqo             &mc_sqo             &kp COMMA           &mc_n4              &mc_n5              &mc_n6              &lt SHORTCUTS DOT  
    &none               &td_lbkt            &td_rbkt            &th_qmark 0 0       &mc_bti             &mc_section         &mc_n1              &mc_n2              &mc_n3              &none
-                                           &trans              &kp CAPSLOCK        &trans              &lt RAISE SPACE     &th_n0 MEDIA 0      &trans
+                                           &trans              &kp CAPSLOCK        &trans              &lt SYMBOLS SPACE   &th_n0 MEDIA 0      &trans
                            >;
                 };
                 raise_layer {
@@ -118,7 +109,16 @@
    &trans              &kp F9              &kp F8              &kp F7              &none               &none               &th_colon 0 0       &td_eql             &td_perc            &trans
    &kp F12             &kp F6              &kp F5              &kp F4              &kp F11             &mc_caret           &th_mins 0 0        &th_plus 0 0        &td_slash           &kp STAR  
    &none               &kp F3              &kp F2              &kp F1              &kp F10             &mc_tilde           &th_excl 0 0        &th_and 0 0         &th_or 0 0          &none
-                                           &trans              &key_repeat         &kp SPACE           &trans              &tog NUMPAD         &trans       
+                                           &trans              &key_repeat         &lt SYMBOLS SPACE   &trans              &tog NUMPAD         &trans       
+                           >;
+                };
+                symbols_layer {
+                     label = "SYMBOLS";
+                     bindings = <
+   &trans              &td_lbrc            &td_rbrc            &th_hash 0 0        &none               &none               &th_colon 0 0       &td_eql             &td_perc            &trans
+   &lt NAV AT          &td_lpar            &td_rpar            &td_dqo             &mc_sqo             &mc_caret           &th_mins 0 0        &th_plus 0 0        &td_slash           &kp STAR  
+   &none               &td_lbkt            &td_rbkt            &th_qmark 0 0       &mc_bti             &mc_tilde           &th_excl 0 0        &th_and 0 0         &th_or 0 0          &none
+                                           &trans              &kp CAPSLOCK        &kp SPACE           &kp SPACE           &tog NUMPAD         &trans
                            >;
                 };
                 sentence_case_layer {

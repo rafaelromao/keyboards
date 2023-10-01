@@ -13,9 +13,7 @@ process_record_result_t process_common_shortcuts(uint16_t keycode, keyrecord_t *
 
     bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     bool isOneShotShift       = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
-#ifndef SAVE_MEMORY
     bool isShifted            = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
-#endif
     bool isMacOS = is_macos();
 
     switch (keycode) {
@@ -63,8 +61,6 @@ process_record_result_t process_common_shortcuts(uint16_t keycode, keyrecord_t *
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
-#ifndef SAVE_MEMORY
-
             // Selec All + Copy
 
         case MC_SCOP:
@@ -106,7 +102,6 @@ process_record_result_t process_common_shortcuts(uint16_t keycode, keyrecord_t *
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
-#endif
             // Paste
 
         case MC_PAST:

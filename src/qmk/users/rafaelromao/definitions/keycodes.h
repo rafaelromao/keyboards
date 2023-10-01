@@ -20,7 +20,7 @@ enum {
     DQU_FIN, 
     EXL_EEX, 
     AND_EAN, 
-#ifndef SAVE_MEMORY
+#ifdef DYNAMIC_MACRO_ENABLE
     REC_MAC, 
 #endif
     COM_LEA, 
@@ -36,6 +36,7 @@ enum {
     GRT_EGT,
     OR_EOR,
     SAR_ESA,
+    HAS_SQO,
     TD_CODE_END 
 };
 
@@ -71,6 +72,7 @@ enum {
 #define TD_LT TD(LET_ELT)
 #define TD_GT TD(GRT_EGT)
 #define TD_SARR TD(SAR_ESA)
+#define TD_HASH TD(HAS_SQO)
 
 // Custom keycodes
 
@@ -105,8 +107,8 @@ enum {
     STR_MACRO_START,
 
     MC_BTIC, MC_DQUO, MC_SQUO, MC_CIRC, MC_TILD, REPEAT, MC_EUR,
-    MC_ENT, MC_TAB, MC_ESC, MC_ESCC, MC_NSEN, MC_CANC, TG_NUMC,
-    MC_ESAV, MC_SENT, MC_CUR, MC_SAR, MC_DEQ, MC_NEQ, MC_BRAC,
+    MC_ENT, MC_TAB, MC_ESC, MC_ESCC, MC_NSEN, MC_CANC, TG_NUMC, MC_EXLM, MC_QUES,
+    MC_ESAV, MC_SENT, MC_CUR, MC_CURS, MC_SAR, MC_DEQ, MC_NEQ, MC_BRAC,
     MC_DAND, MC_DPIP, MC_OESC, MC_SOES, MC_LTGT, MC_EPA, MC_SEC,
 
     // End macros that can be shifted
@@ -206,6 +208,7 @@ enum {
 #define LOW_NSE LT(_LOWER, MC_NSEN)
 #define RAI_TA2 LT(_RAISE, TG_ACNT)
 #define RAI_SPC LT(_RAISE, KC_SPC)
+#define SYM_SPC LT(_SYMBOLS, KC_SPC)
 #define RAI_A2  OSL(_ALPHA2) // Hold behavior is implemented in intercepted code
 
 #define SHO_KCD LT(_SHORTCUTS, KC_D)
