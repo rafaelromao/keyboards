@@ -22,7 +22,8 @@ Parts:
 - [Dupont cables](https://aliexpress.com/item/1005004155181609.html).
 - [3D printed handwired hotswap sockets](https://www.printables.com/model/158559-handwire-hot-swap-socket-for-mechanical-keyboards).
 - [Flat cables](https://www.aliexpress.com/item/1005003277577555.html).
-
+- 10mm M3 screws.
+- 4mm M3 heat insert (OD 4.5mm)
 ### QMK
 
 #### Compile
