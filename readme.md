@@ -72,7 +72,7 @@ After [installing QMK](https://docs.qmk.fm/#/newbs_getting_started) and running 
 
 ### ZMK
 
-The script [init_zmk.sh](init_zmk.sh) will clone [the ZMK firmware](https://github.com/LOWPROKB/zmk) and configure the toolchain.
+The script [init_zmk.sh](init_zmk.sh) will clone [the ZMK firmware](https://github.com/rafaelromao/zmk) and configure the toolchain.
 After [installing ZMK](https://zmk.dev/docs/development/setup) and running the init script above, [west cli](https://zmk.dev/docs/development/build-flash) should be working to compile and flash.
 
 ## References
