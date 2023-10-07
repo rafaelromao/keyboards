@@ -117,7 +117,7 @@
             tapping-term-ms = <TAPPING_TERM>;
             flavor = "tap-preferred";
             quick-tap-ms = <QUICK_TAP_TERM>;
-            global-quick-tap;
+            require-prior-idle-ms = <QUICK_TAP_TERM>;
             bindings = <&kp>, <&mm_zh_f>;
         };
     };

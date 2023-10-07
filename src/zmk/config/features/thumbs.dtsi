@@ -14,7 +14,7 @@
             tapping-term-ms = <TAPPING_TERM>; \
             flavor = "tap-preferred"; \
             quick-tap-ms = <QUICK_TAP_TERM>; \
-            global-quick-tap; \
+            require-prior-idle-ms = <QUICK_TAP_TERM>; \
             bindings = <&mo>, <BINDINGS>; \
         };
 
@@ -65,15 +65,6 @@
             #binding-cells = <0>;
             bindings = <&msk MEDIA LSHFT>, <&smart_case>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        smart_num: smart_num {
-            compatible = "zmk,behavior-caps-word";
-            label = ZMK_MACRO_STRINGIFY(smart_num);
-            ignore-numbers;
-			#binding-cells = <0>;
-            layers = <NUMPAD>;
-            continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12>;
         };
 
         THUMB_MACRO(mc_smart_num,     &to ALPHA1 &smart_num)
