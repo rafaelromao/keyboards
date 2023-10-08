@@ -36,8 +36,8 @@ then
     echo "Creating MJ64 symbolic link..."
     ln -s "$KEYBOARD_HOME/src/qmk/$MJ64/clopes.le" "$QMK_HOME/$MJ64"
 fi
-echo "Checking out qmk v0.21.3..."
+echo "Checking out qmk v0.22.10..."
 cd $QMK_HOME
 git fetch
-git checkout 0.21.3
+git checkout 0.22.10
 cd ..
