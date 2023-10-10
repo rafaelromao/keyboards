@@ -163,6 +163,7 @@ void td_hash(tap_dance_state_t *state, void *user_data) {
         case TD_TRIPLE_TAP:
             tap_code16(KC_HASH);
             tap_code16(KC_HASH);
+            tap_code16(KC_HASH);
             break;
         default:
             break;
