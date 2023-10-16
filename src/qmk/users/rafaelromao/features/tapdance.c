@@ -262,6 +262,34 @@ void td_parentesis(tap_dance_state_t *state, void *user_data) {
     }
 }
 
+void td_zj(tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code16(KC_Z);
+            break;
+        case TD_SINGLE_HOLD:
+            tap_code16(KC_J);
+            break;
+        default:
+            break;
+    }
+}
+
+void td_pq(tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code16(KC_P);
+            break;
+        case TD_SINGLE_HOLD:
+            tap_code16(KC_Q);
+            break;
+        default:
+            break;
+    }
+}
+
 void td_macro(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
@@ -463,15 +491,9 @@ void td_comm(tap_dance_state_t *state, void *user_data) {
             tap_code(KC_COMM);
             break;
         case TD_DOUBLE_SINGLE_TAP:
-            tap_code(KC_COMM);
-            tap_code(KC_COMM);
         case TD_DOUBLE_TAP:
-            if (!is_shifted()) {
-                leader_start();
-            } else {
-                tap_code(KC_COMM);
-                tap_code(KC_COMM);
-            }
+            tap_code(KC_COMM);
+            tap_code(KC_COMM);
             break;
         case TD_TRIPLE_TAP:
             tap_code(KC_COMM);
@@ -479,8 +501,7 @@ void td_comm(tap_dance_state_t *state, void *user_data) {
             tap_code(KC_COMM);
             break;
         case TD_SINGLE_HOLD:
-            tap_code16(KC_END);
-            tap_code(KC_COMM);
+            leader_start();
             break;
         default:
             break;
@@ -578,6 +599,21 @@ void td_gt(tap_dance_state_t *state, void *user_data) {
     }
 }
 
+void td_dcol(tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            process_macros(MC_DCOL, NULL);
+            break;
+        case TD_SINGLE_HOLD:
+            tap_code(KC_END);
+            process_macros(MC_DCOL, NULL);
+            break;
+        default:
+            break;
+    }
+}
+
 void td_sarr(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
@@ -624,8 +660,11 @@ tap_dance_action_t tap_dance_actions[] = {
     [LET_ELT] = ACTION_TAP_DANCE_FN(td_lt),
     [GRT_EGT] = ACTION_TAP_DANCE_FN(td_gt),
     [SLS_BSL] = ACTION_TAP_DANCE_FN(td_slash),
+    [DCO_EDC] = ACTION_TAP_DANCE_FN(td_dcol),
     [SAR_ESA] = ACTION_TAP_DANCE_FN(td_sarr),
     [HAS_SQO] = ACTION_TAP_DANCE_FN(td_hash),
+    [Z_J] = ACTION_TAP_DANCE_FN(td_zj),
+    [P_Q] = ACTION_TAP_DANCE_FN(td_pq),
     [DOT_DOT] = ACTION_TAP_DANCE_FN(td_dot)};
 
 // clang-format on

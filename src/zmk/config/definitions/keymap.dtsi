@@ -27,7 +27,7 @@
                      bindings = <
    &mc_escc            &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp BSPC
    &lt SHORTCUTS D     &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp W               &kp Z               &mt RGUI R          &mt RCTRL A         &mt RSHFT E         &lt SHORTCUTS I 
-   &kp Q               &mt RALT F          &kp C               &mt LALT P          &kp V               &kp J               &mt RALT H          &td_comma           &th_dot 0 0         &kp Y
+   &kp Q               &mt RALT F          &kp C               &mt LALT P          &kp V               &kp J               &mt RALT H          &th_comma 0 0       &th_dot 0 0         &kp Y
                                            &none               &ht_repeat NAV 0    &lt LOWER SPACE     &msl RAISE ALPHA2   &med_sc             &trans
                         >;
                    };
@@ -80,17 +80,17 @@
                      label = "ALPHA2";
                      bindings = <
    &trans              &kp Q               &mc_qu              &kp K               &none               &none               &ac_agrv            &ac_oacu            &ac_uacu            &trans
-   &kp Y               &kp Z               &kp X               &kp W               &kp SQT             &kp CARET           &ac_atil            &ac_aacu            &ac_eacu            &ac_iacu 
-   &none               &kp J               &mc_ced             &kp V               &kp GRAVE           &kp TILDE           &ac_acir            &ac_ocir            &ac_ecir            &none
-                                           &trans              &mc_sqo             &sl SYMBOLS         &trans              &trans              &trans
+   &kp Y               &kp Z               &kp X               &kp W               &none               &none               &ac_atil            &ac_aacu            &ac_eacu            &ac_iacu 
+   &none               &kp J               &mc_ced             &kp V               &none               &none               &ac_acir            &ac_ocir            &ac_ecir            &none
+                                           &trans              &th_quotes 0 0      &sl SYMBOLS         &trans              &trans              &trans
                            >;
                 };
                 case_alpha2_layer {
                      label = "CASE";
                      bindings = <
    &trans              &kp LS(Q)           &mc_qu_c            &kp LS(K)           &none               &none               &ac_agrv_c          &ac_oacu_c          &ac_uacu_c          &trans
-   &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &kp SQT             &kp CARET           &ac_atil_c          &ac_aacu_c          &ac_eacu_c          &ac_iacu_c 
-   &none               &kp LS(J)           &mc_ced_c           &kp LS(V)           &kp GRAVE           &kp TILDE           &ac_acir_c          &ac_ocir_c          &ac_ecir_c          &none
+   &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &none               &none               &ac_atil_c          &ac_aacu_c          &ac_eacu_c          &ac_iacu_c 
+   &none               &kp LS(J)           &mc_ced_c           &kp LS(V)           &none               &none               &ac_acir_c          &ac_ocir_c          &ac_ecir_c          &none
                                            &trans              &mc_sqo             &sl SYMBOLS         &trans              &trans              &trans
                            >;
                 };

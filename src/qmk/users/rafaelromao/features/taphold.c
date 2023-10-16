@@ -102,6 +102,20 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
                 return PROCESS_RECORD_RETURN_FALSE;
             }
             break;
+
+        case TH_QUOT:
+            layer_move(_ALPHA1);
+            if (record->tap.count && record->event.pressed) {
+                tap_code(KC_QUOT);
+                tap_code(KC_SPC);
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+            if (!record->tap.count && record->event.pressed) {
+                tap_code16(KC_DQUO);
+                tap_code(KC_SPC);
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+            break;
     }
     return PROCESS_RECORD_CONTINUE;
 }

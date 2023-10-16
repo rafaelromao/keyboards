@@ -17,8 +17,13 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             tap_code(KC_SPC);
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_SQUO:
-            tap_code(KC_QUOT);
-            tap_code(KC_SPC);
+            if (!isShifted) {
+                tap_code(KC_QUOT);
+                tap_code(KC_SPC);
+            } else {
+                tap_code16(KC_DQUO);
+                tap_code(KC_SPC);
+            }
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_CIRC:
             tap_code16(KC_CIRC);
@@ -27,6 +32,10 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
         case MC_TILD:
             tap_code16(KC_TILD);
             tap_code16(KC_SPC);
+            return PROCESS_RECORD_RETURN_FALSE;
+        case MC_DCOL:
+            tap_code16(KC_COLN);
+            tap_code16(KC_COLN);
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_SAR:
             tap_code16(KC_MINS);
@@ -47,6 +56,14 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
         case MC_LTGT:
             tap_code16(KC_LT);
             tap_code16(KC_GT);
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Shift V
+
+        case MC_VIS:
+            register_mods(MOD_MASK_SHIFT);
+            tap_code(KC_V);
+            unregister_mods(MOD_MASK_SHIFT);
             return PROCESS_RECORD_RETURN_FALSE;
 
             // ESC + P + A (considering VIM remaps)

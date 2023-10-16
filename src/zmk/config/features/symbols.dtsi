@@ -99,9 +99,7 @@
         TAPHOLD_SYMBOL(th_dot,     &mc_dot, &mc_end_dot)
 
         SYMBOL(mc_comma,           &kp COMMA)
-        SYMBOL(mc_end_comma,       &kp END &kp COMMA)
-        TAPHOLD_SYMBOL(th_comma,   &mc_comma, &mc_end_comma)
-        TAPDANCE_SYMBOL(td_comma,  &th_comma 0 0, &leader, &none)
+        TAPHOLD_SYMBOL(th_comma,   &mc_comma, &leader)
 
         // Lower
 
@@ -150,6 +148,8 @@
         TAPHOLD_SYMBOL(th_dqo,     &mc_dqo, &mc_end_dqo)
         TAPDANCE_SYMBOL(td_dqo,    &th_dqo 0 0, &mc_double_dqo, &none)
 
+        TAPHOLD_SYMBOL(th_quotes,  &mc_sqo, &mc_dqo)
+
         SYMBOL(mc_lbkt,            &kp LBKT)
         SYMBOL(mc_end_lbkt,        &kp END &kp LBKT)
         MACRO_SYMBOL(mc_switch,    &kp S &kp W &kp I &kp T &kp C &kp H &kp LPAR)
@@ -182,7 +182,6 @@
 
         SYMBOL(mc_braces,          &kp END &kp LBRC &kp RBRC &kp LEFT &kp ENTER)
         SYMBOL(mc_braces_s,        &kp LBRC &kp RBRC)
-
 
         // Raise
 
@@ -228,6 +227,7 @@
         TAPDANCE_SYMBOL(td_eql,    &th_eql 0 0, &mc_2_eql, &mc_3_eql)
 
         SYMBOL(mc_colon,           &kp COLON)
+        SYMBOL(mc_dcolon,          &kp COLON &kp COLON)
         SYMBOL(mc_caret,           &kp CARET &kp SPACE)
         TAPHOLD_SYMBOL(th_colon,   &mc_colon, &mc_caret)
 
@@ -251,5 +251,13 @@
         SYMBOL(mc_end_ent,         &kp END &kp ENTER)
         SYMBOL(mc_down_end,        &kp DOWN &kp END)
         TAPHOLD_SYMBOL(th_end_ent, &mc_end_ent, &mc_down_end)
+
+        SYMBOL(mc_z,               &kp Z)
+        SYMBOL(mc_j,               &kp J)
+        TAPHOLD_SYMBOL(th_zj,      &mc_z, &mc_j)
+
+        SYMBOL(mc_p,               &kp P)
+        SYMBOL(mc_q,               &kp Q)
+        TAPHOLD_SYMBOL(th_pq,      &mc_p, &mc_q)
     };
 };
