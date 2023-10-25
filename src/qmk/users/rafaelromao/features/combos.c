@@ -45,7 +45,7 @@ const uint16_t PROGMEM r_rai_bsp_combo[]  = {TD_EQL, TD_PERC, COMBO_END};
 
 // Navigation
 
-const uint16_t PROGMEM l_nav_esc_combo[] = {MC_ESC, MC_SAVE, COMBO_END};
+const uint16_t PROGMEM l_nav_esc_combo[] = {MC_ESC, MEH_M, COMBO_END};
 const uint16_t PROGMEM r_nav_ent_combo[] = {KC_SPC, KC_DOWN, KC_UP, COMBO_END};
 const uint16_t PROGMEM r_nav_bsp_combo[] = {KC_PGDN, KC_PGUP, COMBO_END};
 const uint16_t PROGMEM r_nav_cop_combo[] = {KC_SPC, KC_LEFT, KC_DOWN, COMBO_END};
