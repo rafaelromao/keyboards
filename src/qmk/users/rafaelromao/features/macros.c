@@ -431,6 +431,16 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             tap_code16(KC_EXLM);
             start_sentence_case();
             return PROCESS_RECORD_RETURN_FALSE;
+
+            // Delete last word
+
+        case MC_DWOR:
+            if (isMacOS) {
+                SEND_STRING(SS_LALT(SS_TAP(X_BSPC)));
+            } else {
+                SEND_STRING(SS_LCTL(SS_TAP(X_BSPC)));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
     }
 
     return PROCESS_RECORD_CONTINUE;

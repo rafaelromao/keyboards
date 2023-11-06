@@ -91,7 +91,7 @@ enum {
     OS_ACNT, TG_MAC, TG_WIN, TG_CASE, TG_ACNT, TG_CAPS,
 
     // Select Word/Line
-    MC_SELW, MC_SELL, 
+    MC_SELW, MC_SELL,
     
     // Swapper
     MC_MODP, MC_MODM, MC_SWLE, MC_SWRI, 
@@ -107,7 +107,7 @@ enum {
     MC_QUIK, MC_AUCO, 
     MC_QDOC, MC_FSYM, MC_RUN, MC_DBUG, MC_BUID,
     MC_PROJ, MC_RECE, MC_COMP, MC_FIUS, MC_REFC,
-    MC_COMT, MC_JOIN,
+    MC_COMT, MC_JOIN, MC_DWOR,
 
     // Begin macros used to write text
     STR_MACRO_START,
