@@ -100,7 +100,7 @@
 #define           _________NAVIGATION_L3_______________           OS_RALT , MEH_C   , OS_LALT , MEH_V
 #define                               __NAVIGATION_L4__                               _______ , _______
 
-#define           _________NAVIGATION_R1_______________           KC_INS  , KC_PGDN , KC_PGUP , _______
+#define           _________NAVIGATION_R1_______________           KC_INS  , KC_ENT  , KC_TAB  , _______
 #define ___________________NAVIGATION_R2_______________ MEH_D   , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT
 #define ___________________NAVIGATION_R3_____           MEH_J   , KC_DEL  , KC_HOME , KC_END  
 #define __NAVIGATION_R4__                               KC_SPC  , MAI_CAS
@@ -121,8 +121,8 @@
 #define           ____________SYSTEM___L3______________           RGB_SAD , RGB_SAI , EE_CLR  , XXXXXXX
 #define                               _____SYSTEM___L4_                               XXXXXXX , XXXXXXX
 
-#define           ____________SYSTEM___R1______________           TG_MAC  , TG_LOCK , TG_WIN  , _______
-#define ______________________SYSTEM___R2______________ XXXXXXX , QK_BOOT , KC_SLEP , MC_LOCK , XXXXXXX
+#define           ____________SYSTEM___R1______________           TG_OS   , KC_ENT  , KC_TAB  , _______
+#define ______________________SYSTEM___R2______________ XXXXXXX , QK_BOOT , KC_SLEP , MC_LOCK , TG_LOCK
 #define ______________________SYSTEM___R3____           XXXXXXX , EE_CLR  , XXXXXXX , XXXXXXX 
 #define _____SYSTEM___R4_                               XXXXXXX , XXXXXXX
 

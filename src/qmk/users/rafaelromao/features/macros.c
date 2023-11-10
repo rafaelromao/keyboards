@@ -432,6 +432,12 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             start_sentence_case();
             return PROCESS_RECORD_RETURN_FALSE;
 
+            // []'s
+
+        case MC_HUGS:
+            SEND_STRING("[]'s");
+            return PROCESS_RECORD_RETURN_FALSE;
+
             // Delete last word
 
         case MC_DWOR:
