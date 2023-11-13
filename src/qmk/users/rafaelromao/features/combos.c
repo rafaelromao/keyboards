@@ -122,7 +122,7 @@ const uint16_t PROGMEM l_rom_ful_combo[] = {LOW_SPC, LCTLT_S, LGUIT_T, COMBO_END
 const uint16_t PROGMEM l_rom_fin_combo[] = {LOW_SPC, KC_C, LALTT_P, COMBO_END};
 const uint16_t PROGMEM l_rom_ent_combo[] = {LSFTT_N, LCTLT_S, LGUIT_T, COMBO_END};
 const uint16_t PROGMEM l_rom_tab_combo[] = {KC_B, KC_M, KC_G, COMBO_END};
-const uint16_t PROGMEM l_rom_hug_combo[] = {RALTT_F, KC_C, LALTT_P, COMBO_END};
+const uint16_t PROGMEM l_rom_del_combo[] = {RALTT_F, KC_C, LALTT_P, COMBO_END};
 
 const uint16_t PROGMEM r_rom_zj_combo[]   = {KC_L, KC_O, COMBO_END};
 const uint16_t PROGMEM r_rom_y_combo[]    = {RGUIT_R, RCTLT_A, COMBO_END};
@@ -167,7 +167,7 @@ combo_t key_combos[] = {
     COMBO(l_rai_f12_combo, KC_F12),    COMBO(l_rai_f13_combo, KC_F13),   COMBO(l_rai_f14_combo, KC_F14),
     COMBO(l_rai_f15_combo, KC_F15),    COMBO(l_rom_cap_combo, TG_CAPS),  COMBO(l_rom_esc_combo, MC_ESCC),
     COMBO(l_rom_esv_combo, MC_ESAV),   COMBO(l_rom_fin_combo, MC_FIND),  COMBO(l_rom_ful_combo, MC_FULL),
-    COMBO(l_rom_hug_combo, MC_HUGS),   COMBO(l_rom_k_combo, KC_K),       COMBO(l_rom_num_combo, TG_NUMC),
+    COMBO(l_rom_del_combo, KC_DEL),   COMBO(l_rom_k_combo, KC_K),       COMBO(l_rom_num_combo, TG_NUMC),
     COMBO(l_rom_sav_combo, MC_SAVE),   COMBO(l_rom_und_combo, MC_UNDO),  COMBO(l_rom_usc_combo, KC_UNDS),
     COMBO(l_rom_v_combo, KC_V),        COMBO(l_rom_w_combo, KC_W),       COMBO(l_acc_lpa_combo, KC_LPRN),
     COMBO(l_acc_rpa_combo, KC_RPRN),   COMBO(l_sho_bui_combo, MC_BUID),  COMBO(l_sho_ref_combo, MC_REFC),

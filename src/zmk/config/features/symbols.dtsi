@@ -93,7 +93,6 @@
         TAPHOLD_SYMBOL(th_epa,     &mc_epa, &mc_end_semi_ent)
 
         SHIFTED_SYMBOL(mm_unds,    &kp UNDERSCORE, &kp MINUS)
-        SYMBOL(mm_hugs,            &kp LBR &kp RBR &kp SQT &kp S)
 
         SYMBOL(mc_dot,             &kp DOT &sl SEN_CASE)
         SYMBOL(mc_end_dot,         &kp END &kp DOT &sl SEN_CASE)
