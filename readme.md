@@ -92,7 +92,7 @@ Most features implemented here were based on the work referenced below.
 ### QMK
 - [Pascal Getreuer](https://github.com/getreuer/qmk-keymap)
 - [Precondition](https://github.com/precondition/dactyl-manuform-keymap)
-- [Drashna](https://github.com/qmk/qmk_firmware/tree/master/users/drashna)
+- [Drashna](https://github.com/drashna/qmk_userspace)
 - [Callum Oakley](https://github.com/callum-oakley/qmk_firmware/tree/master/users/callum)
 - [Andrew Rae](https://github.com/andrewjrae/kyria-keymap)
 - [Weilbith](https://github.com/weilbith/keyboard_firmware)
