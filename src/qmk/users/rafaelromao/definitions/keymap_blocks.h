@@ -61,7 +61,7 @@
 #define                               ____LOWER_L4_____                               KC_CAPS , _______
 
 #define           _________LOWER_R1____________________           KC_7    , KC_8    , KC_9    , _______
-#define ___________________LOWER_R2____________________ KC_COMM , KC_4    , KC_5    , KC_6    , SHO_DOT
+#define ___________________LOWER_R2____________________ KC_COMM , KC_4    , KC_5    , KC_6    , KC_DOT
 #define ___________________LOWER_R3__________           MC_SEC  , KC_1    , KC_2    , KC_3    
 #define ____LOWER_R4_____                               SYM_SPC , MED_0
 
@@ -71,7 +71,7 @@
 #define                               ____RAISE_L4_____                               QK_REP  , SYM_SPC
 
 #define           _________RAISE_R1____________________           TD_COLN , TD_EQL  , TD_PERC , _______
-#define ___________________RAISE_R2____________________ MC_CIRC , TD_MINS , TD_PLUS , TD_SLSH , KC_ASTR
+#define ___________________RAISE_R2____________________ MC_CIRC , TD_MINS , TD_PLUS , TD_SLSH , MED_AST
 #define ___________________RAISE_R3__________           MC_TILD , TD_EXLM , TD_AND  , TD_OR     
 #define ____RAISE_R4_____                               _______ , TG_NUM
 
@@ -81,7 +81,7 @@
 #define                               __SYMBOLS_L4_____                               KC_CAPS , KC_SPC 
 
 #define           _______SYMBOLS_R1____________________           TD_COLN , TD_EQL  , TD_PERC , _______
-#define _________________SYMBOLS_R2____________________ MC_CIRC , TD_MINS , TD_PLUS , TD_SLSH , KC_ASTR
+#define _________________SYMBOLS_R2____________________ MC_CIRC , TD_MINS , TD_PLUS , TD_SLSH , MED_AST
 #define _________________SYMBOLS_R3__________           MC_TILD , TD_EXLM , TD_AND  , TD_OR     
 #define __SYMBOLS_R4_____                               KC_SPC  , TG_NUM
 

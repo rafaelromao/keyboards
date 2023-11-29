@@ -209,6 +209,7 @@ enum {
 #define MED_CAS LT(_MEDIA, TG_CASE)
 #define MED_A1  LT(_MEDIA, TO_A1)
 #define MED_0   LT(_MEDIA, KC_0)
+#define MED_AST LT(_MEDIA, KC_ASTR)
 
 #define MAI_CAS LT(_SYSTEM, TG_CASE)
 

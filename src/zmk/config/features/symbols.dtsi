@@ -259,5 +259,8 @@
         SYMBOL(mc_p,               &kp P)
         SYMBOL(mc_q,               &kp Q)
         TAPHOLD_SYMBOL(th_pq,      &mc_p, &mc_q)
+
+        SYMBOL(mc_star,            &kp STAR)
+        LAYERTAP_SYMBOL(th_star,    &mc_star)
     };
 };
