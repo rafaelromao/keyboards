@@ -75,34 +75,34 @@
 #define ___________________RAISE_R3__________           MC_TILD , TD_EXLM , TD_AND  , TD_OR     
 #define ____RAISE_R4_____                               _______ , TG_NUM
 
-#define _________________SYMBOLS_L1__________           _______ , TD_LCRB , TD_RCRB , TD_HASH 
-#define _________________SYMBOLS_L2____________________ NAV_AT  , TD_OPAR , TD_CPAR , TD_DQUO , MC_SQUO
-#define           _______SYMBOLS_L3____________________           TD_OBR  , TD_CBR  , TD_QUES , MC_BTIC
+#define _________________SYMBOLS_L1__________           _______ , KC_LCBR , KC_RCBR , KC_HASH 
+#define _________________SYMBOLS_L2____________________ KC_AT   , KC_LPRN , KC_RPRN , KC_DQUO , KC_QUOT
+#define           _______SYMBOLS_L3____________________           KC_LBRC , KC_RBRC , KC_QUES , KC_GRV
 #define                               __SYMBOLS_L4_____                               KC_CAPS , KC_SPC 
 
-#define           _______SYMBOLS_R1____________________           TD_COLN , TD_EQL  , TD_PERC , _______
-#define _________________SYMBOLS_R2____________________ MC_CIRC , TD_MINS , TD_PLUS , TD_SLSH , MED_AST
-#define _________________SYMBOLS_R3__________           MC_TILD , TD_EXLM , TD_AND  , TD_OR     
+#define           _______SYMBOLS_R1____________________           KC_COLN , KC_EQL  , KC_PERC , _______
+#define _________________SYMBOLS_R2____________________ KC_CIRC , KC_MINS , KC_PLUS , KC_SLSH , KC_ASTR
+#define _________________SYMBOLS_R3__________           KC_TILD , KC_EXLM , KC_AMPR , KC_PIPE     
 #define __SYMBOLS_R4_____                               KC_SPC  , TG_NUM
 
 #define ___________________MEDIA_L1__________           _______ , MC_ESC  , HYPR_M  , HYPR_G  
-#define ___________________MEDIA_L2____________________ HYPR_D  , KC_LSFT , KC_LCTL , KC_LGUI , HYPR_W 
-#define           _________MEDIA_L3____________________           KC_RALT , HYPR_C  , KC_LALT , HYPR_V 
+#define ___________________MEDIA_L2____________________ HYPR_D  , KC_LSFT , KC_LCTL , KC_LGUI , XXXXXXX 
+#define           _________MEDIA_L3____________________           KC_RALT , HYPR_C  , KC_LALT , XXXXXXX 
 #define                               ____MEDIA_L4_____                               MAI_CAS , KC_SPC
 
 #define           _________MEDIA_R1____________________           HYPR_L  , KC_ENT  , KC_TAB  , _______
-#define ___________________MEDIA_R2____________________ HYPR_Z  , HYPR_R  , KC_VOLD , KC_VOLU , KC_MUTE
-#define ___________________MEDIA_R3__________           HYPR_J  , KC_MPLY , KC_MPRV , KC_MNXT 
+#define ___________________MEDIA_R2____________________ XXXXXXX , HYPR_R  , KC_VOLD , KC_VOLU , KC_MUTE
+#define ___________________MEDIA_R3__________           XXXXXXX , KC_MPLY , KC_MPRV , KC_MNXT 
 #define ____MEDIA_R4_____                               _______ , _______
 
 #define ___________________NAVIGATION_L1_____           _______ , MC_ESC  , MEH_M   , MEH_G 
-#define ___________________NAVIGATION_L2_______________ MEH_D   , OS_LSFT , OS_LCTL , OS_LGUI , MEH_W
-#define           _________NAVIGATION_L3_______________           OS_RALT , MEH_C   , OS_LALT , MEH_V
+#define ___________________NAVIGATION_L2_______________ MEH_D   , OS_LSFT , OS_LCTL , OS_LGUI , XXXXXXX
+#define           _________NAVIGATION_L3_______________           OS_RALT , MEH_C   , OS_LALT , XXXXXXX
 #define                               __NAVIGATION_L4__                               _______ , _______
 
 #define           _________NAVIGATION_R1_______________           KC_INS  , KC_ENT  , KC_TAB  , _______
-#define ___________________NAVIGATION_R2_______________ MEH_D   , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT
-#define ___________________NAVIGATION_R3_____           MEH_J   , KC_DEL  , KC_HOME , KC_END  
+#define ___________________NAVIGATION_R2_______________ XXXXXXX , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT
+#define ___________________NAVIGATION_R3_____           XXXXXXX , KC_DEL  , KC_HOME , KC_END  
 #define __NAVIGATION_R4__                               KC_SPC  , MAI_CAS
 #define __FIXED_NAV__R4__                               KC_SPC  , MED_A1
 

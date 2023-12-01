@@ -179,22 +179,14 @@ enum {
 // Custom Shortcuts
 
 #define HYPR_D HYPR(KC_D)
-#define HYPR_Z HYPR(KC_Z)
 #define HYPR_R HYPR(KC_R)
-#define HYPR_W HYPR(KC_W)
 #define HYPR_G HYPR(KC_G)
-#define HYPR_V HYPR(KC_V)
 #define HYPR_C HYPR(KC_C)
 #define HYPR_L HYPR(KC_L)
 #define HYPR_M HYPR(KC_M)
-#define HYPR_J HYPR(KC_J)
 #define MEH_D  MEH(KC_D)
-#define MEH_Z  MEH(KC_Z)
-#define MEH_W  MEH(KC_W)
 #define MEH_G  MEH(KC_G)
-#define MEH_V  MEH(KC_V)
 #define MEH_C  MEH(KC_C)
-#define MEH_J  MEH(KC_J)
 #define MEH_M  MEH(KC_M)
 
 // Layer-taps

@@ -115,9 +115,9 @@
                 symbols_layer {
                      label = "SYMBOLS";
                      bindings = <
-   &trans              &td_lbrc            &td_rbrc            &th_hash 0 0        &none               &none               &th_colon 0 0       &td_eql             &td_perc            &trans
-   &lt NAV AT          &td_lpar            &td_rpar            &td_dqo             &mc_sqo             &mc_caret           &th_mins 0 0        &th_plus 0 0        &td_slash           &th_star 0 MEDIA  
-   &none               &td_lbkt            &td_rbkt            &th_qmark 0 0       &mc_bti             &mc_tilde           &th_excl 0 0        &th_and 0 0         &th_or 0 0          &none
+   &trans              &kp LBRC            &kp RBRC            &kp HASH            &none               &none               &kp COLON           &kp EQUAL           &kp PERCENT         &trans
+   &kp AT              &kp LPAR            &kp RPAR            &kp DQT             &kp SQT             &kp CARET           &kp MINUS           &kp PLUS            &kp SLASH           &kp STAR 
+   &none               &kp LBKT            &kp RBKT            &kp QMARK           &kp GRAVE           &kp TILDE           &kp EXCL            &kp AMPS            &kp PIPE            &none
                                            &trans              &kp CAPSLOCK        &kp SPACE           &kp SPACE           &tog NUMPAD         &trans
                            >;
                 };
@@ -152,8 +152,8 @@
                      label = "NAV";
                      bindings = <
    &trans              &kp ESC             &mc_meh_m           &mc_meh_g           &none               &none               &kp INS             &kp ENTER           &kp TAB             &trans
-   &mc_meh_d           &sk LSHIFT          &sk LCTRL           &sk LGUI            &mc_meh_w           &tog NAV_F          &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
-   &none               &sk RALT            &mc_meh_c           &sk LALT            &mc_meh_v           &mc_meh_j           &kp DEL             &kp HOME            &kp END             &none
+   &mc_meh_d           &sk LSHIFT          &sk LCTRL           &sk LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &none               &sk RALT            &mc_meh_c           &sk LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &none
                                            &trans              &trans              &trans              &kp SPACE           &mst MEDIA NAV_F    &trans
                            >;
                 };
@@ -161,8 +161,8 @@
                      label = "MEDIA";
                      bindings = <
    &trans              &kp ESC             &mc_hyp_m           &mc_hyp_g           &none               &none               &mc_hyp_l           &kp ENTER           &kp TAB             &trans
-   &mc_hyp_d           &kp LSHIFT          &kp LCTRL           &kp LGUI            &mc_hyp_w           &mc_hyp_z           &mc_hyp_r           &kp C_VOL_DN        &kp C_VOL_UP        &kp C_MUTE
-   &none               &kp RALT            &mc_hyp_c           &kp LALT            &mc_hyp_v           &mc_hyp_j           &kp C_PP            &kp C_PREV          &kp C_NEXT          &none
+   &mc_hyp_d           &kp LSHIFT          &kp LCTRL           &kp LGUI            &none               &none               &mc_hyp_r           &kp C_VOL_DN        &kp C_VOL_UP        &kp C_MUTE
+   &none               &kp RALT            &mc_hyp_c           &kp LALT            &none               &none               &kp C_PP            &kp C_PREV          &kp C_NEXT          &none
                                            &trans              &mo SYSTEM          &kp SPACE           &trans              &trans              &trans
                            >;
                 };
@@ -170,8 +170,8 @@
                      label = "NAV";
                      bindings = <
    &trans              &kp ESC             &mc_meh_m           &mc_meh_g           &none               &none               &kp INS             &kp ENTER           &kp TAB             &trans
-   &mc_meh_d           &sk LSHIFT          &sk LCTRL           &sk LGUI            &mc_meh_w           &mc_meh_z           &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
-   &none               &sk RALT            &mc_meh_c           &sk LALT            &mc_meh_v           &mc_meh_j           &kp DEL             &kp HOME            &kp END             &none
+   &mc_meh_d           &sk LSHIFT          &sk LCTRL           &sk LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &none               &sk RALT            &mc_meh_c           &sk LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &none
                                            &trans              &trans              &trans              &kp SPACE           &mo SYSTEM          &trans
                         >;
                 };
