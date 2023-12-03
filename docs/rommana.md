@@ -5,6 +5,36 @@ For the complete documentation and source files, go to [this page](../src/qmk/ke
 
 ## The pictures below show some steps in the handwiring process of this board.
 
+The original build was using solderless hotswap sockets, but I do not recommend them. It is not easy to make the connections stable, and for that reason I decided to rebuild it using single switch PCBs.
+
+### Improved build, using single switch PCBs:
+
+Soldering the sockets
+![img](../img/rommana/15.jpeg)
+
+Diodes  soldered in the other side, but I recommend soldering them in the same side as the sockets
+![img](../img/rommana/16.jpeg)
+
+Breaking the rows (all cols and rows already wired)
+![img](../img/rommana/17.jpeg)
+
+Breaking all pcbs
+![img](../img/rommana/18.jpeg)
+
+Putting the pcbs in place
+![img](../img/rommana/19.jpeg)
+
+Both sides mounted, connecting to the MCU
+![img](../img/rommana/20.jpeg)
+
+MCU in place
+![img](../img/rommana/21.jpeg)
+
+Final Build
+![img](../img/rommana/22.jpeg)
+
+### Original build, using solderless hotswap sockets:
+
 Solderless Hot-Swap Sockets
 ![img](../img/rommana/0.jpeg)
 
