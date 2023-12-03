@@ -23,6 +23,7 @@ The following pages explain how this layout works and which features are impleme
 - [Home Block Mods](docs/modifiers.md#home-block-modifiers)
 - [One Shot Mods](docs/modifiers.md#one-shot-modifiers)
 - [Smart Thumb Keys](docs/base.md#smart-thumb-keys)
+- [Repeat Key](docs/base.md#repeat-key)
 - [Sentence Case](docs/base.md#sentence-case)
 - [Shortcut Combos](docs/base.md#base-layer-combos)
 - [Smart Cases](docs/modifiers.md#smart-cases)
