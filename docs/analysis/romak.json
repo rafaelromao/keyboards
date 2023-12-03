@@ -394,7 +394,7 @@
             "finger": 4,
             "id": 41,
             "shift": -1,
-            "altGr": 96,
+            "altGr": -1,
             "shiftAltGr": -1,
             "numpad": -1
         },
