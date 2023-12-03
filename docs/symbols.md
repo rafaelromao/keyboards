@@ -7,6 +7,11 @@ Symbols and Numbers are primarily available in the two classic Lower and Raise l
 - Numbers are available in the right side of the Lower layer and in a dedicated [Numpad](symbols.md#numpad) layer.
 - Function keys are available in the left side of the Raise layer and in a the left side of the dedicated [Numpad](symbols.md#numpad) layer.
 
+### Dedicated Symbol layer
+- There is a dedicate symbol layer that is activated holding both inner thumb keys or, for one shot, tapping in sequence the right than the left inner thumb key.
+- In this layer, there are no mod taps, so it is possible to repeat symbols holding the key.
+- There are also some combos to give access to the symbols usually available holding keys in the Lower or Raise layers.
+
 ### Symbols in the Lower layer (left side)
 - String delimiters, conditional operators, parenthesis and square brackets, among others, are found in the left side of the Lower layer.
 - Source code: [macros.c](../src/qmk/users/rafaelromao/features/macros.c)
