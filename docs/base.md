@@ -21,8 +21,12 @@
 ## Smart Thumb Keys
 - The Smart Thumb keys in this layout change behavior according to the context (active layer and active modifiers).
 - The four thumb keys control layer transitions, when held (Navigation, Lower, Raise and Media).
-- Holding both outer thumb keys will activate the system layer.
+- Holding both outer thumb keys will activate the [System](../system.md) layer, while holding both inner thumb keys activates the [Symbols](../symbols.md) layer.
 - Source code: [custom_oneshot.c](../src/qmk/users/rafaelromao/features/custom_oneshot.c)
+
+## Repeat Key
+- The outer left thumb key, when tapped, repeats the last key or shortcut. This is usefull to avoid tapping the same key twice 5 words like 'tapped'.
+- Holding this key in the base will activate the [Navigation](../navigation.md) layer, but holding it in the [Raise](../symbols.md) layer will keeps repeating the last key or shortcut.
 
 ## Base Layer Combos
 - Combos are available in the base and [Numpad](symbols.md#numpad-layer) layers to send ENTER, ESC, TAB and common shortcuts like copy, paste, save, select all and undo.
@@ -32,11 +36,7 @@
 - There are also combos for z and x, that are not available through dedicated keys in the base layer.
 - Source code: [combos.c](../src/qmk/users/rafaelromao/features/combos.c)
 
-## Base Layer Macros
-- Some macros are available directly from the base layer.
-- Source code: [macros.c](../src/qmk/users/rafaelromao/features/macros.c)
-
-### Double Comma for Leader Key
+### Leader Key
 - The Leader Key can be accessed double tapping the comma key. This allow really fast access to leader sequences.
 
 ### Pontuation Hold
