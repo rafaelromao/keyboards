@@ -1,7 +1,7 @@
 # hummingbird
 ### A 30 keys handwired split keyboard.
 
-For the complete documentation and source files, go to [this page](../src/qmk/keyboards/handwired/rafaelromao/hummingbird).
+This board is not currently working, due to some problems after converting it to Wireless. Below you can find some pictures of the original wired version. I will update it latter when I put it to work again.
 
 ## The pictures below show some steps in the handwiring process of this board.
 
