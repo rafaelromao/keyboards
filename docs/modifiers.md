@@ -19,17 +19,6 @@ One-Shot Mods are modifier keys that, when tapped, remain active until the next 
 - Standard modifiers are available in [Media](navigation.md#media) the layer.
 - These modifiers do not have one-shot behavior, so they can be used in situations which a tap or multi tap in a modifier key is required.
 
-## Thumb Mods
-
-- The two outer thumb keys act as special modifiers when tapped, according to the current state.
-- If there in an active oneshot modifier or Smart Case, they will be disabled.
-- If modifiers are held while the thumb mod keys are pressed, they will activate an Smart Case mode, more on that later.
-- Otherwise, they will activate their main functions, described below.
-
-### One-shot Accents Key
-- The OS Accents key is available in the left outer thumb key and will toggle the Accents layer in one-shot mode when single tapped.
-- Source code: [custom_oneshot.c](../src/qmk/users/rafaelromao/features/custom_oneshot.c)
-
 ### One-shot Shift Key
 - The OS Shift key is available in the right outer thumb key and will toggle the Shift modifier in one-shot mode when single tapped.
 - Source code: [custom_oneshot.c](../src/qmk/users/rafaelromao/features/custom_oneshot.c)
