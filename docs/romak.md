@@ -4,14 +4,14 @@
 
 Romak is a new keyboard layout, inspired by [Colemak](https://colemak.org), [BEAKL](https://ieants.cc/beakl) and [Engram](https://engram.dev), improved to remove load from pinkies and indexes, for typing in Portuguese and English, using a one-shot layer to extend the base layer with accented and less frequent keys.
 
-- Romak is designed for boards with only 30 keys, in the format 23332+2, with the alphas distributed only in the main 20 keys, avoiding lateral movement.
+- Romak is designed for boards with at least 24 keys, in the format 1333+2, avoiding lateral movement and pinky stretches.
 
 ![img](../img/romak.png)
 
 - The name Romak is a combination of my last name, **Rom**ão, and Dvor**ak**'s name.
 - Romak assumes the right hand as dominant and puts all vowels and the consonants that usually comes after other consonats (R, L, H) on that side.
 
-- There is also a 3x5+2 version, which can be seen below, along with the numbers and symbols:
+- There is also versions in the formats 23332+2 and 3x5+2. The latter can be seen below, along with the numbers and symbols:
 
 ![img](../img/romak-full.png)
 
