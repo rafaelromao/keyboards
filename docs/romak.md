@@ -11,10 +11,9 @@ Romak is a new keyboard layout, inspired by [Colemak](https://colemak.org), [BEA
 - The name Romak is a combination of my last name, **Rom**ão, and Dvor**ak**'s name.
 - Romak assumes the right hand as dominant and puts all vowels and the consonants that usually comes after other consonats (R, L, H) on that side.
 - The secondary alpha layer gives access to accented letters as well as the alphas that are not present in the primary alpha layer. Some combos are also available for bigrams and trigrams like `ão`, `õe`, `ção` and `ções`, which are quite common in Portuguese.
-- There is also versions in the formats 23332+2 and 3x5+2, which can be seen below, along with the numbers and symbols:
+- There is also versions in the formats 23332+2 and 3x5+2. The latter can be seen below, along with the numbers and symbols:
 
-![img](../img/romak-30.png)
-![img](../img/romak-34.png)
+![img](../img/romak-full.png)
 
 - The performance of all these versions is quite similar.
 
