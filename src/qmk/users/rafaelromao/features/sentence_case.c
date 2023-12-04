@@ -31,8 +31,6 @@ process_record_result_t process_sentence_case(uint16_t keycode, keyrecord_t *rec
                     sentence_case.state = SENTENCE_CASE_NONE;
                     return PROCESS_RECORD_CONTINUE;
                 // Process alpha macros
-                case MC_LH:
-                case MC_JA:
                 case MC_QU:
                     add_oneshot_mods(MOD_LSFT);
                     sentence_case.state = SENTENCE_CASE_NONE;

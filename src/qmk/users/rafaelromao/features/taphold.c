@@ -34,7 +34,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case SHO_DOT:
         case NAV_F12:
         case NAV_AT:
-            return 300;
+            return 400;
         default:
             return TAPPING_TERM;
     }

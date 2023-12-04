@@ -80,8 +80,8 @@
                      label = "ALPHA2";
                      bindings = <
    &trans              &kp Q               &mc_qu              &kp K               &none               &none               &ac_agrv            &ac_oacu            &ac_uacu            &trans
-   &kp Y               &kp Z               &kp X               &kp W               &none               &none               &ac_atil            &ac_aacu            &ac_eacu            &ac_iacu 
-   &none               &kp J               &mc_ced             &kp V               &none               &none               &ac_acir            &ac_ocir            &ac_ecir            &none
+   &kp Y               &kp Z               &kp X               &kp W               &kp SQT             &kp CARET           &ac_atil            &ac_aacu            &ac_eacu            &ac_iacu 
+   &none               &kp J               &mc_ced             &kp V               &kp GRAVE           &kp TILDE          &ac_acir            &ac_ocir            &ac_ecir            &none
                                            &trans              &th_quotes 0 0      &sl SYMBOLS         &trans              &trans              &trans
                            >;
                 };

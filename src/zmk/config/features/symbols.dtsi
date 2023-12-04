@@ -252,14 +252,6 @@
         SYMBOL(mc_down_end,        &kp DOWN &kp END)
         TAPHOLD_SYMBOL(th_end_ent, &mc_end_ent, &mc_down_end)
 
-        SYMBOL(mc_z,               &kp Z)
-        SYMBOL(mc_j,               &kp J)
-        TAPHOLD_SYMBOL(th_zj,      &mc_z, &mc_j)
-
-        SYMBOL(mc_p,               &kp P)
-        SYMBOL(mc_q,               &kp Q)
-        TAPHOLD_SYMBOL(th_pq,      &mc_p, &mc_q)
-
         SYMBOL(mc_star,            &kp STAR)
         LAYERTAP_SYMBOL(th_star,    &mc_star)
     };

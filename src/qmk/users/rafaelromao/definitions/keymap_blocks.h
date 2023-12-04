@@ -46,13 +46,13 @@
 #define ____NOMOD_R4_____                               MO_A2   , OS_LSFT
 
 #define ___________________ALPHA2_L1_________           _______ , KC_Q    , MC_QU   , KC_K
-#define ___________________ALPHA2_L2___________________ KC_Y    , KC_Z    , KC_X    , KC_W    , XXXXXXX
-#define           _________ALPHA2_L3___________________           KC_J    , MC_SQ_C , KC_V    , XXXXXXX 
+#define ___________________ALPHA2_L2___________________ KC_Y    , KC_Z    , KC_X    , KC_W    , KC_QUOT
+#define           _________ALPHA2_L3___________________           KC_J    , MC_SQ_C , KC_V    , KC_GRV 
 #define                               ____ALPHA2_L4____                               TH_QUOT , OS_SYM
 
 #define           _________ALPHA2_R1___________________           MC_GV_A , MC_SQ_O , MC_SQ_U , _______
-#define ___________________ALPHA2_R2___________________ XXXXXXX , MC_TL_A , MC_SQ_A , MC_SQ_E , MC_SQ_I
-#define ___________________ALPHA2_R3_________           XXXXXXX , MC_CR_A , MC_CR_O , MC_CR_E 
+#define ___________________ALPHA2_R2___________________ KC_CIRC , MC_TL_A , MC_SQ_A , MC_SQ_E , MC_SQ_I
+#define ___________________ALPHA2_R3_________           KC_TILD , MC_CR_A , MC_CR_O , MC_CR_E 
 #define ____ALPHA2_R4____                               _______ , _______
 
 #define ___________________LOWER_L1__________           _______ , TD_LCRB , TD_RCRB , TD_HASH 

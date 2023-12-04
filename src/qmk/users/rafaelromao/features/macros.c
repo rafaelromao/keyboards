@@ -49,10 +49,6 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             tap_code16(KC_EXLM);
             tap_code16(KC_EQL);
             return PROCESS_RECORD_RETURN_FALSE;
-        case MC_QU:
-            tap_code(KC_Q);
-            tap_code(KC_U);
-            return PROCESS_RECORD_RETURN_FALSE;
         case MC_LTGT:
             tap_code16(KC_LT);
             tap_code16(KC_GT);
@@ -60,18 +56,25 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
 
             // Shift V
 
-        case MC_VIS:
+        case MC_SVI:
             register_mods(MOD_MASK_SHIFT);
             tap_code(KC_V);
             unregister_mods(MOD_MASK_SHIFT);
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // ESC + P + A (considering VIM remaps)
+            // Ctrl V
 
-        case MC_EPA:
+        case MC_CVI:
+            register_mods(MOD_MASK_CTRL);
+            tap_code(KC_V);
+            unregister_mods(MOD_MASK_CTRL);
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // ESC + P (considering VIM remaps)
+
+        case MC_ESCP:
             tap_code(KC_ESC);
             tap_code(KC_P);
-            tap_code(KC_J);
             return PROCESS_RECORD_RETURN_FALSE;
 
             // ESC + O + ESC
@@ -436,16 +439,6 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
 
         case MC_HUGS:
             SEND_STRING("[]'s");
-            return PROCESS_RECORD_RETURN_FALSE;
-
-            // Delete last word
-
-        case MC_DWOR:
-            if (isMacOS) {
-                SEND_STRING(SS_LALT(SS_TAP(X_BSPC)));
-            } else {
-                SEND_STRING(SS_LCTL(SS_TAP(X_BSPC)));
-            }
             return PROCESS_RECORD_RETURN_FALSE;
     }
 

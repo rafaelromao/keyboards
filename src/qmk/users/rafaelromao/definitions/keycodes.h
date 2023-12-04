@@ -38,8 +38,6 @@ enum {
     DCO_EDC,
     SAR_ESA,
     HAS_SQO,
-    Z_J,
-    P_Q,
     TD_CODE_END 
 };
 
@@ -77,8 +75,6 @@ enum {
 #define TD_DCOL TD(DCO_EDC)
 #define TD_SARR TD(SAR_ESA)
 #define TD_HASH TD(HAS_SQO)
-#define TD_ZJ TD(Z_J)
-#define TD_PQ TD(P_Q)
 
 // Custom keycodes
 
@@ -104,10 +100,9 @@ enum {
     MC_PAST, MC_SPAS, MC_LOCK, MC_FULL, MC_FIND, MC_Z0R,
 
     // IDE shortcuts
-    MC_QUIK, MC_AUCO, 
+    MC_QUIK, MC_AUCO, MC_COMT, MC_JOIN, 
     MC_QDOC, MC_FSYM, MC_RUN, MC_DBUG, MC_BUID,
     MC_PROJ, MC_RECE, MC_COMP, MC_FIUS, MC_REFC,
-    MC_COMT, MC_JOIN, MC_DWOR,
 
     // Begin macros used to write text
     STR_MACRO_START,
@@ -115,7 +110,7 @@ enum {
     MC_BTIC, MC_DQUO, MC_SQUO, MC_CIRC, MC_TILD, REPEAT, MC_EUR,
     MC_ENT, MC_TAB, MC_ESC, MC_ESCC, MC_NSEN, MC_CANC, TG_NUMC, MC_EXLM, MC_QUES,
     MC_ESAV, MC_SENT, MC_CUR, MC_CURS, MC_DCOL, MC_SAR, MC_DEQ, MC_NEQ, MC_BRAC,
-    MC_DAND, MC_DPIP, MC_OESC, MC_SOES, MC_LTGT, MC_VIS, MC_EPA, MC_SEC, MC_HUGS,
+    MC_DAND, MC_DPIP, MC_OESC, MC_SOES, MC_LTGT, MC_SVI, MC_CVI, MC_ESCP, MC_SEC, MC_HUGS,
 
     // End macros that can be shifted
     SFT_MACRO_END,
@@ -126,8 +121,7 @@ enum {
     MC_GV_A, MC_CR_A, MC_TL_A, MC_SQ_A,
     MC_SQ_U, MC_CR_O, MC_SQ_O, MC_SQ_I,
     MC_CR_E, MC_TL_O, MC_SQ_C, MC_SQ_E,
-    MC_AO, MC_OE, MC_CAO, MC_COES, 
-    MC_QU, MC_JA, MC_LH,
+    MC_AO, MC_OE, MC_CAO, MC_COES, MC_QU,
 
     // End macros for accented letters
     ALPHA_MACRO_END,

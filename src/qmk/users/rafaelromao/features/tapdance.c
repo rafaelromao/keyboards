@@ -262,34 +262,6 @@ void td_parentesis(tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void td_zj(tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            tap_code16(KC_Z);
-            break;
-        case TD_SINGLE_HOLD:
-            tap_code16(KC_J);
-            break;
-        default:
-            break;
-    }
-}
-
-void td_pq(tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            tap_code16(KC_P);
-            break;
-        case TD_SINGLE_HOLD:
-            tap_code16(KC_Q);
-            break;
-        default:
-            break;
-    }
-}
-
 void td_macro(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
@@ -663,8 +635,6 @@ tap_dance_action_t tap_dance_actions[] = {
     [DCO_EDC] = ACTION_TAP_DANCE_FN(td_dcol),
     [SAR_ESA] = ACTION_TAP_DANCE_FN(td_sarr),
     [HAS_SQO] = ACTION_TAP_DANCE_FN(td_hash),
-    [Z_J] = ACTION_TAP_DANCE_FN(td_zj),
-    [P_Q] = ACTION_TAP_DANCE_FN(td_pq),
     [DOT_DOT] = ACTION_TAP_DANCE_FN(td_dot)};
 
 // clang-format on
