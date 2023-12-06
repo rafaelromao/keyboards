@@ -13,8 +13,8 @@ The following pages explain how this layout works and which features are impleme
 ### Layers
 
 - [Alphas](docs/base.md)
-- [Shortcuts and Macros](docs/shortcuts.md)
 - [Symbols and Numbers](docs/symbols.md)
+- [Shortcuts and Macros](docs/shortcuts.md) 
 - [Navigation and Media](docs/navigation.md)
 - [System](docs/system.md)
 
