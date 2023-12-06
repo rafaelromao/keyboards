@@ -7,17 +7,17 @@
 - Home block modifiers are available on both sides of the [Base](base.md) and [Numpad](symbols.md#numpad-layer) layers.
 - Home block modifiers are not available on Lower and Raise layers, since they delay the symbol activation and are not that much useful anyway.
 
+## Standard Mods
+
+- Standard modifiers are available in [Media](navigation.md#media) the layer.
+- These modifiers do not have one-shot behavior, so they can be used in situations which a tap or multi tap in a modifier key is required.
+
 ## One-Shot Mods
 
 One-Shot Mods are modifier keys that, when tapped, remain active until the next key is pressed or a timeout expires. 
 - They are available in the [Navigation](navigation.md#navigation) layer and act as standard modifers when held.
 - These modifiers will be automatically deactivated after 2 seconds. 
 - They can also be activated in sticky mode, with a double tap, and remain active until manually deactivated by tapping the Accents or Smart Case thumb keys.
-
-## Standard Mods
-
-- Standard modifiers are available in [Media](navigation.md#media) the layer.
-- These modifiers do not have one-shot behavior, so they can be used in situations which a tap or multi tap in a modifier key is required.
 
 ### One-shot Shift Key
 - The OS Shift key is available in the right outer thumb key and will toggle the Shift modifier in one-shot mode when single tapped.
