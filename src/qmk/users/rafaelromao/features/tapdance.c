@@ -135,7 +135,7 @@ void td_dquo(tap_dance_state_t *state, void *user_data) {
             break;
         case TD_SINGLE_HOLD:
             tap_code16(KC_END);
-            process_macros(MC_DQUO, NULL);
+            process_macros(MC_SQUO, NULL);
             break;
         case TD_DOUBLE_TAP:
             process_macros(MC_DQUO, NULL);
@@ -154,7 +154,7 @@ void td_hash(tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_HASH);
             break;
         case TD_SINGLE_HOLD:
-            process_macros(MC_SQUO, NULL);
+            process_macros(MC_SEC, NULL);
             break;
         case TD_DOUBLE_TAP:
             tap_code16(KC_HASH);
@@ -223,7 +223,8 @@ void td_colon(tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_COLN);
             break;
         case TD_SINGLE_HOLD:
-            process_macros(MC_CIRC, NULL);
+            tap_code16(KC_END);
+            tap_code16(KC_COLN);
             break;
         default:
             break;
@@ -293,7 +294,7 @@ void td_plus(tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_PLUS);
             break;
         case TD_SINGLE_HOLD:
-            process_macros(MC_EUR, NULL);
+            tap_code16(KC_DLR);
             break;
         default:
             break;
@@ -317,7 +318,7 @@ void td_mins(tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_MINS);
             break;
         case TD_SINGLE_HOLD:
-            tap_code16(KC_DLR);
+            process_macros(MC_CIRC, NULL);
             break;
         default:
             break;
@@ -614,7 +615,7 @@ tap_dance_action_t tap_dance_actions[] = {
     [BRT_CPA] = ACTION_TAP_DANCE_FN(td_close_parentesis),
     [BRT_OBR] = ACTION_TAP_DANCE_FN(td_open_brackets),
     [BRT_CBR] = ACTION_TAP_DANCE_FN(td_close_brackets),
-    [DQU_FIN] = ACTION_TAP_DANCE_FN(td_dquo),
+    [DQU_SQU] = ACTION_TAP_DANCE_FN(td_dquo),
     [EXL_EEX] = ACTION_TAP_DANCE_FN(td_excl),
     [AND_EAN] = ACTION_TAP_DANCE_FN(td_and),
     [OR_EOR]  = ACTION_TAP_DANCE_FN(td_or),
@@ -623,18 +624,18 @@ tap_dance_action_t tap_dance_actions[] = {
     [REC_MAC] = ACTION_TAP_DANCE_FN(td_macro),
 #endif
     [COM_LEA] = ACTION_TAP_DANCE_FN(td_comm),
-    [MIN_CUR] = ACTION_TAP_DANCE_FN(td_mins),
+    [MIN_CIR] = ACTION_TAP_DANCE_FN(td_mins),
     [COL_ECO] = ACTION_TAP_DANCE_FN(td_colon),
     [PER_DEG] = ACTION_TAP_DANCE_FN(td_percent),
     [QUE_EXC] = ACTION_TAP_DANCE_FN(td_ques),
     [EQL_EEQ] = ACTION_TAP_DANCE_FN(td_eql),
-    [PLU_EPL] = ACTION_TAP_DANCE_FN(td_plus),
+    [PLU_DOL] = ACTION_TAP_DANCE_FN(td_plus),
     [LET_ELT] = ACTION_TAP_DANCE_FN(td_lt),
     [GRT_EGT] = ACTION_TAP_DANCE_FN(td_gt),
     [SLS_BSL] = ACTION_TAP_DANCE_FN(td_slash),
     [DCO_EDC] = ACTION_TAP_DANCE_FN(td_dcol),
     [SAR_ESA] = ACTION_TAP_DANCE_FN(td_sarr),
-    [HAS_SQO] = ACTION_TAP_DANCE_FN(td_hash),
+    [HAS_SEC] = ACTION_TAP_DANCE_FN(td_hash),
     [DOT_DOT] = ACTION_TAP_DANCE_FN(td_dot)};
 
 // clang-format on

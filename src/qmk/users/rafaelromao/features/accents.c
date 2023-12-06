@@ -113,6 +113,13 @@ process_record_result_t process_ngrams(uint16_t keycode, bool isShifted) {
             tap_code(KC_U);
             return PROCESS_RECORD_RETURN_FALSE;
 
+            // zz (considering vim remap)
+
+        case MC_ZZ:
+            tap_code(KC_K);
+            tap_code(KC_K);
+            return PROCESS_RECORD_RETURN_FALSE;
+
         case TG_CAPS:
             tap_code(KC_CAPS);
             return PROCESS_RECORD_RETURN_FALSE;

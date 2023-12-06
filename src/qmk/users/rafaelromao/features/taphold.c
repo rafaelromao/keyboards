@@ -68,13 +68,6 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
             }
             break;
 
-        case MED_AST:
-            if (record->event.pressed && record->tap.count) {
-                tap_code16(KC_ASTR);
-                return PROCESS_RECORD_RETURN_FALSE;
-            }
-            break;
-
         case NMO_DOC:
             if (record->event.pressed && record->tap.count) {
                 process_macros(MC_QDOC, NULL);

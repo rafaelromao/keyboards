@@ -120,11 +120,17 @@
         MODTAP_SYMBOL(th_n5,       &mc_n5)
         MODTAP_SYMBOL(th_n6,       &mc_n6)
 
-        SYMBOL(mc_hash,            &kp HASH)
-        SYMBOL(mc_sqo,             &kp SQT &kp SPACE)
-        TAPHOLD_SYMBOL(th_hash,    &mc_hash, &mc_sqo)
-
         SYMBOL(mc_section,         &kp LA(N6))
+        SYMBOL(mc_hash,            &kp HASH)
+        TAPHOLD_SYMBOL(th_hash,    &mc_hash, &mc_section)
+
+        SYMBOL(mc_sqo,             &kp SQT &kp SPACE)
+        SYMBOL(mc_dqo,             &kp DQT &kp SPACE)
+        SYMBOL(mc_double_dqo,      &mc_dqo &mc_dqo &kp LEFT)
+        TAPHOLD_SYMBOL(th_dqo,     &mc_dqo, &mc_sqo)
+        TAPDANCE_SYMBOL(td_dqo,    &th_dqo 0 0, &mc_double_dqo, &none)
+
+        TAPHOLD_SYMBOL(th_quotes,  &mc_sqo, &mc_dqo)
 
         SYMBOL(mc_lpar,            &kp LPAR)
         SYMBOL(mc_end_lpar,        &kp END &kp LPAR)
@@ -141,14 +147,6 @@
         SYMBOL(mc_pars,            &kp LPAR &kp RPAR)
         SYMBOL(mc_end_pars,        &kp END &kp LPAR &kp RPAR)
         TAPHOLD_SYMBOL(th_pars,    &mc_pars, &mc_end_pars)
-
-        SYMBOL(mc_dqo,             &kp DQT &kp SPACE)
-        SYMBOL(mc_end_dqo,         &kp END &mc_dqo)
-        SYMBOL(mc_double_dqo,      &mc_dqo &mc_dqo &kp LEFT)
-        TAPHOLD_SYMBOL(th_dqo,     &mc_dqo, &mc_end_dqo)
-        TAPDANCE_SYMBOL(td_dqo,    &th_dqo 0 0, &mc_double_dqo, &none)
-
-        TAPHOLD_SYMBOL(th_quotes,  &mc_sqo, &mc_dqo)
 
         SYMBOL(mc_lbkt,            &kp LBKT)
         SYMBOL(mc_end_lbkt,        &kp END &kp LBKT)
@@ -200,13 +198,13 @@
         SYMBOL(mc_right_or,        &kp RIGHT &kp PIPE &kp PIPE)
         TAPHOLD_SYMBOL(th_or,      &mc_or, &mc_right_or)
 
+        SYMBOL(mc_caret,           &kp CARET &kp SPACE)
         SYMBOL(mc_minus,           &kp MINUS)
-        SYMBOL(mc_dollar,          &kp DOLLAR)
-        TAPHOLD_SYMBOL(th_mins,    &mc_minus, &mc_dollar)
+        TAPHOLD_SYMBOL(th_mins,    &mc_minus, &mc_caret)
 
         SYMBOL(mc_plus,            &kp PLUS)
-        SYMBOL(mc_euro,            &kp LS(LA(N2)))
-        TAPHOLD_SYMBOL(th_plus,    &mc_plus, &mc_euro)
+        SYMBOL(mc_dollar,          &kp DOLLAR)
+        TAPHOLD_SYMBOL(th_plus,    &mc_plus, &mc_dollar)
 
         SYMBOL(mc_slash,           &kp SLASH)
         SYMBOL(mc_2_slash,         &kp SLASH &kp SLASH)
@@ -219,17 +217,17 @@
         SYMBOL(mc_tilde,           &kp TILDE &kp SPACE)
         TAPHOLD_SYMBOL(th_excl,    &mc_excl, &mc_tilde)
 
+        SYMBOL(mc_colon,           &kp COLON)
+        SYMBOL(mc_end_colon,       &kp END &kp COLON)
+        SYMBOL(mc_dcolon,          &kp COLON &kp COLON)
+        TAPHOLD_SYMBOL(th_colon,   &mc_colon, &mc_end_colon)
+
         SYMBOL(mc_eql,             &kp EQUAL)
         SYMBOL(mc_end_eql,         &kp END &kp EQUAL)
         SYMBOL(mc_2_eql,           &kp EQUAL &kp EQUAL)
         SYMBOL(mc_3_eql,           &kp EQUAL &kp EQUAL &kp EQUAL)
         TAPHOLD_SYMBOL(th_eql,     &mc_eql, &mc_end_eql)
         TAPDANCE_SYMBOL(td_eql,    &th_eql 0 0, &mc_2_eql, &mc_3_eql)
-
-        SYMBOL(mc_colon,           &kp COLON)
-        SYMBOL(mc_dcolon,          &kp COLON &kp COLON)
-        SYMBOL(mc_caret,           &kp CARET &kp SPACE)
-        TAPHOLD_SYMBOL(th_colon,   &mc_colon, &mc_caret)
 
         SYMBOL(mc_sarrow,          &kp MINUS &kp GT)
         SYMBOL(mc_end_sarrow,      &kp END &mc_sarrow)
@@ -252,7 +250,8 @@
         SYMBOL(mc_down_end,        &kp DOWN &kp END)
         TAPHOLD_SYMBOL(th_end_ent, &mc_end_ent, &mc_down_end)
 
-        SYMBOL(mc_star,            &kp STAR)
-        LAYERTAP_SYMBOL(th_star,    &mc_star)
+        SYMBOL(mc_euro,            &kp LS(LA(N2)))
+        SYMBOL(mc_zz,              &kp Z &kp Z)
+
     };
 };

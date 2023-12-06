@@ -17,7 +17,7 @@ enum {
     BRT_CPA, 
     BRT_OBR, 
     BRT_CBR, 
-    DQU_FIN, 
+    DQU_SQU, 
     EXL_EEX, 
     AND_EAN, 
 #ifdef DYNAMIC_MACRO_ENABLE
@@ -25,19 +25,19 @@ enum {
 #endif
     COM_LEA, 
     DOT_DOT, 
-    MIN_CUR, 
+    MIN_CIR, 
     COL_ECO,
     PER_DEG,
     SLS_BSL,
     QUE_EXC,
     EQL_EEQ,
-    PLU_EPL,
+    PLU_DOL,
     LET_ELT,
     GRT_EGT,
     OR_EOR,
     DCO_EDC,
     SAR_ESA,
-    HAS_SQO,
+    HAS_SEC,
     TD_CODE_END 
 };
 
@@ -52,7 +52,7 @@ enum {
 #define TD_CPAR TD(BRT_CPA)
 #define TD_OBR TD(BRT_OBR)
 #define TD_CBR TD(BRT_CBR)
-#define TD_DQUO TD(DQU_FIN)
+#define TD_DQUO TD(DQU_SQU)
 #define TD_EXLM TD(EXL_EEX)
 #define TD_AND TD(AND_EAN)
 #define TD_OR TD(OR_EOR)
@@ -63,18 +63,18 @@ enum {
 #endif
 #define TD_COMM TD(COM_LEA)
 #define TD_DOT TD(DOT_DOT)
-#define TD_MINS TD(MIN_CUR)
+#define TD_MINS TD(MIN_CIR)
 #define TD_COLN TD(COL_ECO)
 #define TD_PERC TD(PER_DEG)
 #define TD_QUES TD(QUE_EXC)
 #define TD_SLSH TD(SLS_BSL)
 #define TD_EQL TD(EQL_EEQ)
-#define TD_PLUS TD(PLU_EPL)
+#define TD_PLUS TD(PLU_DOL)
 #define TD_LT TD(LET_ELT)
 #define TD_GT TD(GRT_EGT)
 #define TD_DCOL TD(DCO_EDC)
 #define TD_SARR TD(SAR_ESA)
-#define TD_HASH TD(HAS_SQO)
+#define TD_HASH TD(HAS_SEC)
 
 // Custom keycodes
 
@@ -107,10 +107,10 @@ enum {
     // Begin macros used to write text
     STR_MACRO_START,
 
-    MC_BTIC, MC_DQUO, MC_SQUO, MC_CIRC, MC_TILD, REPEAT, MC_EUR,
+    MC_BTIC, MC_DQUO, MC_SQUO, MC_CIRC, MC_TILD, REPEAT, 
     MC_ENT, MC_TAB, MC_ESC, MC_ESCC, MC_NSEN, MC_CANC, TG_NUMC, MC_EXLM, MC_QUES,
     MC_ESAV, MC_SENT, MC_CUR, MC_CURS, MC_DCOL, MC_SAR, MC_DEQ, MC_NEQ, MC_BRAC,
-    MC_DAND, MC_DPIP, MC_OESC, MC_SOES, MC_LTGT, MC_SVI, MC_CVI, MC_ESCP, MC_SEC, MC_HUGS,
+    MC_DAND, MC_DPIP, MC_OESC, MC_SOES, MC_LTGT, MC_SVI, MC_CVI, MC_ESCP, MC_SEC, 
 
     // End macros that can be shifted
     SFT_MACRO_END,
@@ -121,7 +121,7 @@ enum {
     MC_GV_A, MC_CR_A, MC_TL_A, MC_SQ_A,
     MC_SQ_U, MC_CR_O, MC_SQ_O, MC_SQ_I,
     MC_CR_E, MC_TL_O, MC_SQ_C, MC_SQ_E,
-    MC_AO, MC_OE, MC_CAO, MC_COES, MC_QU,
+    MC_AO, MC_OE, MC_CAO, MC_COES, MC_QU, MC_ZZ,
 
     // End macros for accented letters
     ALPHA_MACRO_END,
@@ -195,7 +195,6 @@ enum {
 #define MED_CAS LT(_MEDIA, TG_CASE)
 #define MED_A1  LT(_MEDIA, TO_A1)
 #define MED_0   LT(_MEDIA, KC_0)
-#define MED_AST LT(_MEDIA, KC_ASTR)
 
 #define MAI_CAS LT(_SYSTEM, TG_CASE)
 

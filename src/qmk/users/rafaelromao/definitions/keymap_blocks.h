@@ -22,7 +22,7 @@
 
 #define           _________NUMPAD_R1___________________           KC_7    , KC_8    , KC_9    , _______
 #define ___________________NUMPAD_R2___________________ KC_COMM , GU_4    , CT_5    , SF_6    , SHO_DOT
-#define ___________________NUMPAD_R3_________           MC_SEC  , AL_1    , KC_2    , KC_3    
+#define ___________________NUMPAD_R3_________           XXXXXXX , AL_1    , KC_2    , KC_3    
 #define ____NUMPAD_R4____                               RAI_SPC , MED_0
 
 #define ________________SHORTCUTS_L1_________           _______ , MC_ESC  , MC_QUIK , MC_AUCO 
@@ -62,7 +62,7 @@
 
 #define           _________LOWER_R1____________________           KC_7    , KC_8    , KC_9    , _______
 #define ___________________LOWER_R2____________________ KC_COMM , KC_4    , KC_5    , KC_6    , KC_DOT
-#define ___________________LOWER_R3__________           MC_SEC  , KC_1    , KC_2    , KC_3    
+#define ___________________LOWER_R3__________           XXXXXXX , KC_1    , KC_2    , KC_3    
 #define ____LOWER_R4_____                               SYM_SPC , MED_0
 
 #define ___________________RAISE_L1__________           _______ , KC_F9   , KC_F8   , KC_F7   
@@ -71,7 +71,7 @@
 #define                               ____RAISE_L4_____                               QK_REP  , SYM_SPC
 
 #define           _________RAISE_R1____________________           TD_COLN , TD_EQL  , TD_PERC , _______
-#define ___________________RAISE_R2____________________ MC_CIRC , TD_MINS , TD_PLUS , TD_SLSH , MED_AST
+#define ___________________RAISE_R2____________________ MC_CIRC , TD_MINS , TD_PLUS , TD_SLSH , KC_ASTR
 #define ___________________RAISE_R3__________           MC_TILD , TD_EXLM , TD_AND  , TD_OR     
 #define ____RAISE_R4_____                               _______ , TG_NUM
 

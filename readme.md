@@ -95,6 +95,7 @@ Most features implemented here were based on the work referenced below.
 - [Drashna](https://github.com/drashna/qmk_userspace)
 - [Callum Oakley](https://github.com/callum-oakley/qmk_firmware/tree/master/users/callum)
 - [Andrew Rae](https://github.com/andrewjrae/kyria-keymap)
+- [Suraj Kurapati](https://sunaku.github.io/moergo-glove80-keyboard.html)
 - [Weilbith](https://github.com/weilbith/keyboard_firmware)
 - [Treeman](https://github.com/treeman/qmk_firmware/tree/master/keyboards/ferris/keymaps/treeman)
 - [Thomas Baart](https://thomasbaart.nl/category/mechanical-keyboards/firmware/qmk)

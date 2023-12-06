@@ -70,7 +70,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             unregister_mods(MOD_MASK_CTRL);
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // ESC + P (considering VIM remaps)
+            // ESC + P
 
         case MC_ESCP:
             tap_code(KC_ESC);
@@ -134,17 +134,6 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
 
         case MC_JOIN:
             SEND_STRING(SS_TAP(X_END) SS_TAP(X_DEL));
-            return PROCESS_RECORD_RETURN_FALSE;
-
-            // Euro sign
-
-        case MC_EUR:
-            if (isMacOS) {
-                tap_code16(LSFT(RALT(KC_2)));
-            } else {
-                clear_shift();
-                tap_code16(LCTL(LALT(KC_5)));
-            }
             return PROCESS_RECORD_RETURN_FALSE;
 
             // Conditional operators
@@ -433,12 +422,6 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
         case MC_EXLM:
             tap_code16(KC_EXLM);
             start_sentence_case();
-            return PROCESS_RECORD_RETURN_FALSE;
-
-            // []'s
-
-        case MC_HUGS:
-            SEND_STRING("[]'s");
             return PROCESS_RECORD_RETURN_FALSE;
     }
 
