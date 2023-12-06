@@ -2,7 +2,7 @@
 
 ## Home Block Mods
 
-[Home Block Mods](https://precondition.github.io/home-row-mods#alternative-home-row-mods-layout) are an alternative to [Home Row Mods](https://precondition.github.io/home-row-mods), but with the pinky key replaced by the index colunm key in the bottom row.
+[Home Block Mods](https://precondition.github.io/home-row-mods#alternative-home-row-mods-layout) are an alternative to [Home Row Mods](https://precondition.github.io/home-row-mods), but with the pinky key replaced by the index column key in the bottom row.
 
 - Home block modifiers are available on both sides of the [Base](base.md) and [Numpad](symbols.md#numpad-layer) layers.
 - Home block modifiers are not available on Lower and Raise layers, since they delay the symbol activation and are not that much useful anyway.
