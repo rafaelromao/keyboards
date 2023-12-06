@@ -20,12 +20,12 @@ The following pages explain how this layout works and which features are impleme
 
 ### Main Features
 
-- [Modifier Flavors](docs/modifiers.md)
+- [Smart Modifiers](docs/modifiers.md)
 - [Smart Thumb Keys](docs/base.md#smart-thumb-keys)
+- [Smart Cases](docs/modifiers.md#smart-cases)
 - [Repeat Key](docs/base.md#repeat-key)
 - [Sentence Case](docs/base.md#sentence-case)
 - [Shortcut Combos](docs/base.md#base-layer-combos)
-- [Smart Cases](docs/modifiers.md#smart-cases)
 - [Numpad Layer](docs/symbols.md#numpad)
 - [Leader Key](docs/shortcuts.md#leader-key)
 - [Swapper](docs/shortcuts.md#swapper)
