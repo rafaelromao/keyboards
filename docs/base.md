@@ -36,8 +36,11 @@
 - There are also combos for z and x, that are not available through dedicated keys in the base layer.
 - Source code: [combos.c](../src/qmk/users/rafaelromao/features/combos.c)
 
+## Base Layer Macros
+- Some macros are available in the base layers and are triggered according to some specific behaviors, like explained below:
+
 ### Leader Key
-- The Leader Key can be accessed double tapping the comma key. This allow really fast access to leader sequences.
+- The Leader Key can be triggered holding the comma key. This allow easy access to leader sequences.
 
 ### Pontuation Hold
 - Holding a pontuation key (dot, comma or semicollon) will add it to the end of the current line.
