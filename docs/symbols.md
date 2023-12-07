@@ -8,7 +8,7 @@ Symbols and Numbers are primarily available in the two classic Lower and Raise l
 - Function keys are available in the left side of the Raise layer and in a the left side of the dedicated [Numpad](symbols.md#numpad) layer.
 
 ### Dedicated Symbol layer
-- There is a dedicate symbol layer that is activated holding both inner thumb keys or, for one shot, tapping in sequence the right than the left inner thumb key.
+- There is a dedicate symbol layer that is activated holding both inner thumb keys or, for one shot, tapping in sequence the right then the left inner thumb key.
 - In this layer, there are no mod taps, so it is possible to repeat symbols holding the key.
 - There are also some combos to give access to the symbols usually available holding keys in the Lower or Raise layers.
 
