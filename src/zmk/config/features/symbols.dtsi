@@ -250,7 +250,6 @@
         SYMBOL(mc_down_end,        &kp DOWN &kp END)
         TAPHOLD_SYMBOL(th_end_ent, &mc_end_ent, &mc_down_end)
 
-        SYMBOL(mc_euro,            &kp LS(LA(N2)))
         SYMBOL(mc_zz,              &kp Z &kp Z)
 
     };

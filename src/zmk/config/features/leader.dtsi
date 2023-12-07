@@ -19,14 +19,14 @@
 
 / {
 
-    #define MACRO(NAME, SYMBOLS) \
+    #define LEADER_MACRO(NAME, BINDINGS) \
         NAME: NAME { \
 			compatible = "zmk,behavior-macro"; \
             label = ZMK_MACRO_STRINGIFY(NAME); \
             #binding-cells = <0>; \
             wait-ms = <10>; \
             tap-ms = <10>; \
-            bindings = <&macro_tap SYMBOLS>; \
+            bindings = <&macro_tap BINDINGS>; \
         };
 
 	#define LEADER_SEQ(NAME, KEYS, BINDINGS, LAYERS) \
@@ -39,14 +39,13 @@
 	macros {
 
         // Leader sequence example
-		// MACRO(mc_sel_block, &kp V &kp A &kp LBRC &kp LS(V) &kp DOWN)
+        LEADER_MACRO(mc_euro, &kp LS(LA(N2)))
 	};
 
 	leader_sequences {
 		compatible = "zmk,leader-sequences";
 
         // Leader sequence example
-		// LEADER_SEQ(ld_sel_block, RHC RHM, &mc_sel_block, ROMAK)
-		
+		LEADER_SEQ(ld_euro, RHR, &mc_euro, ALPHA1)
 	};
 };
