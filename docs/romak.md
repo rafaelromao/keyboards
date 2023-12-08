@@ -63,11 +63,6 @@ The [Keysolve analyzer](https://clemenpine.github.io/keysolve-web/) was also use
   <img src="../img/keysolve-coldh.png" width="450" />
 </p>
 
-## Extentions
-
-- The [Accents and Macros](macros.md) layers extend the Romak base layer to give easy access to common Portuguese accented characters, along with the letters z and x.
-- The [Lower and Raise](symbols.md) layers give access to function keys, symbols and numbers. The symbols are arranged to make them easy to use in software programming, with VIM, and math operations.
-
 ##
 [Home](../readme.md) | 
 Base |
