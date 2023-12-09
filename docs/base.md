@@ -25,7 +25,7 @@
 - Source code: [custom_oneshot.c](../src/qmk/users/rafaelromao/features/custom_oneshot.c)
 
 ## Repeat Key
-- The outer left thumb key, when tapped, repeats the last key or shortcut. This is usefull to avoid tapping the same key twice 5 words like 'tapped'.
+- The outer left thumb key, when tapped, repeats the last key or shortcut. This is usefull to avoid tapping the same key twice in words like 'tapped'.
 - Holding this key in the base will activate the [Navigation](../navigation.md) layer, but holding it in the [Raise](../symbols.md) layer will keeps repeating the last key or shortcut.
 
 ## Base Layer Combos
