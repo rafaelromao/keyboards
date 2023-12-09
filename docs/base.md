@@ -26,7 +26,7 @@
 
 ## Repeat Key
 - The outer left thumb key, when tapped, repeats the last key or shortcut. This is usefull to avoid tapping the same key twice in words like 'tapped'.
-- Holding this key in the base will activate the [Navigation](../navigation.md) layer, but holding it in the [Raise](../symbols.md) layer will keeps repeating the last key or shortcut.
+- Holding this key in the base will activate the [Navigation](../navigation.md) layer, but holding it in the [Raise](../symbols.md) layer keeps repeating the last key or shortcut.
 
 ## Base Layer Combos
 - Combos are available in the base and [Numpad](symbols.md#numpad-layer) layers to send ENTER, ESC, TAB and common shortcuts like copy, paste, save, select all and undo.
