@@ -31,7 +31,6 @@ noremap h r
         
 ### Media
 - The Media layer gives access to [Standard Modifiers](modifiers.md#standard-modifiers), Media controls, Esc and a Save shortcut.
-- The right side of this layer gives access to media keys and shortcuts to toggle the Navigation or Numpad layers on or off.
 
 ### Navigation Layer Toggle
 - A clone of the Navigation layer can be toggled on permanently using the Shortcuts layer.
