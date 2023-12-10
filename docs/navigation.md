@@ -34,7 +34,7 @@ noremap h r
 - The right side of this layer gives access to media keys and shortcuts to toggle the Navigation or Numpad layers on or off.
 
 ### Navigation Layer Toggle
-- A clone of the Navigation layer can be toggled on permanently using the Media layer.
+- A clone of the Navigation layer can be toggled on permanently using the Shortcuts layer.
 - This clone works the same way as the original Navigation layer, but the outer right thumb key will activate the Media layer instead of the System layer.
 
 ##
