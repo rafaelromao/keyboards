@@ -100,7 +100,7 @@
    &trans              &td_lbrc            &td_rbrc            &th_hash 0 0        &none               &none               &mc_n7              &mc_n8              &mc_n9              &trans
    &lt NAV AT          &td_lpar            &td_rpar            &td_dqo             &mc_sqo             &kp COMMA           &mc_n4              &mc_n5              &mc_n6              &kp DOT  
    &none               &td_lbkt            &td_rbkt            &th_qmark 0 0       &mc_bti             &none               &mc_n1              &mc_n2              &mc_n3              &none
-                                           &trans              &kp CAPSLOCK        &trans              &lt SYMBOLS SPACE   &th_n0 MEDIA 0      &trans
+                                           &trans              &kp CAPSLOCK        &trans              &lt RAISE SPACE     &th_n0 MEDIA 0      &trans
                            >;
                 };
                 raise_layer {

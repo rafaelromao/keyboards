@@ -63,7 +63,7 @@
 #define           _________LOWER_R1____________________           KC_7    , KC_8    , KC_9    , _______
 #define ___________________LOWER_R2____________________ KC_COMM , KC_4    , KC_5    , KC_6    , KC_DOT
 #define ___________________LOWER_R3__________           XXXXXXX , KC_1    , KC_2    , KC_3    
-#define ____LOWER_R4_____                               SYM_SPC , MED_0
+#define ____LOWER_R4_____                               RAI_SPC , MED_0
 
 #define ___________________RAISE_L1__________           _______ , KC_F9   , KC_F8   , KC_F7   
 #define ___________________RAISE_L2____________________ KC_F12  , KC_F6   , KC_F5   , KC_F4   , KC_F11
