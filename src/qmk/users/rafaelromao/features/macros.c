@@ -27,15 +27,15 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_CIRC:
             tap_code16(KC_CIRC);
-            tap_code16(KC_SPC);
+            tap_code(KC_SPC);
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_TILD:
             tap_code16(KC_TILD);
-            tap_code16(KC_SPC);
+            tap_code(KC_SPC);
             return PROCESS_RECORD_RETURN_FALSE;
-        case MC_DCOL:
-            tap_code16(KC_COLN);
-            tap_code16(KC_COLN);
+        case MC_DAR:
+            tap_code16(KC_EQL);
+            tap_code16(KC_GT);
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_SAR:
             tap_code16(KC_MINS);
@@ -49,9 +49,23 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             tap_code16(KC_EXLM);
             tap_code16(KC_EQL);
             return PROCESS_RECORD_RETURN_FALSE;
-        case MC_LTGT:
+        case MC_LTE:
             tap_code16(KC_LT);
+            tap_code16(KC_EQL);
+            return PROCESS_RECORD_RETURN_FALSE;
+        case MC_GTE:
             tap_code16(KC_GT);
+            tap_code16(KC_EQL);
+            return PROCESS_RECORD_RETURN_FALSE;
+        case MC_DDS:
+            tap_code(KC_DOT);
+            tap_code(KC_DOT);
+            tap_code16(KC_SLSH);
+            return PROCESS_RECORD_RETURN_FALSE;
+        case MC_TISL:
+            tap_code16(KC_TILD);
+            tap_code(KC_SPC);
+            tap_code16(KC_SLSH);
             return PROCESS_RECORD_RETURN_FALSE;
 
             // Shift V
@@ -140,16 +154,12 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
 
         case MC_DAND:
             tap_code16(KC_AMPR);
-            if (!isShifted) {
-                tap_code16(KC_AMPR);
-            }
+            tap_code16(KC_AMPR);
             return PROCESS_RECORD_RETURN_FALSE;
 
         case MC_DPIP:
             tap_code16(KC_PIPE);
-            if (!isShifted) {
-                tap_code16(KC_PIPE);
-            }
+            tap_code16(KC_PIPE);
             return PROCESS_RECORD_RETURN_FALSE;
 
             // Quick Actions / Breakpoint
@@ -400,16 +410,6 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Section Symbol
-
-        case MC_SEC:
-            if (isMacOS) {
-                SEND_STRING(SS_LALT(SS_TAP(X_6)));
-            } else {
-                SEND_STRING(SS_RALT(SS_LSFT(SS_TAP(X_S))));
-            }
-            return PROCESS_RECORD_RETURN_FALSE;
-
             // Question Mark with Sentence Case
 
         case MC_QUES:
@@ -422,6 +422,16 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
         case MC_EXLM:
             tap_code16(KC_EXLM);
             start_sentence_case();
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Euro Sign
+
+        case MC_EUR:
+            if (isMacOS) {
+                tap_code16(LSFT(RALT(KC_2)));
+            } else {
+                tap_code16(LCTL(LALT(KC_5)));
+            }
             return PROCESS_RECORD_RETURN_FALSE;
     }
 

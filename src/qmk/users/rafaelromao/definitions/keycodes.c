@@ -7,26 +7,26 @@ uint16_t extract_tapping_keycode(uint16_t keycode) {
     switch (keycode) {
         case TD_SCLE:
             return KC_SCLN;
-        case TD_LCRB:
+        case TD_LCBR:
             return KC_LCBR;
-        case TD_RCRB:
+        case TD_RCBR:
             return KC_RCBR;
-        case TD_OPAR:
+        case TD_LPRN:
             return KC_LPRN;
-        case TD_CPAR:
+        case TD_RPRN:
             return KC_RPRN;
-        case TD_OBR:
+        case TD_LBRC:
             return KC_LBRC;
-        case TD_CBR:
+        case TD_RBRC:
             return KC_RBRC;
         case TD_DQUO:
             return KC_QUOT;
         case TD_EXLM:
             return KC_EXLM;
-        case TD_AND:
-            return KC_AMPR;
-        case TD_OR:
-            return KC_PIPE;
+        case TD_LT:
+            return KC_LT;
+        case TD_GT:
+            return KC_GT;
         case TD_COMM:
             return KC_COMM;
         case TD_DOT:
@@ -45,10 +45,12 @@ uint16_t extract_tapping_keycode(uint16_t keycode) {
             return KC_EQL;
         case TD_PLUS:
             return KC_PLUS;
-        case TD_LT:
-            return KC_LT;
-        case TD_GT:
-            return KC_GT;
+        case TD_TIL:
+            return KC_TILD;
+        case TD_CIRC:
+            return KC_CIRC;
+        case TD_HASH:
+            return KC_HASH;
         default:
             break;
     }

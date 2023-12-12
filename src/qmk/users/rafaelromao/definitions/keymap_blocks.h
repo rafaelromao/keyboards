@@ -55,9 +55,9 @@
 #define ___________________ALPHA2_R3_________           KC_TILD , MC_CR_A , MC_CR_O , MC_CR_E 
 #define ____ALPHA2_R4____                               _______ , _______
 
-#define ___________________LOWER_L1__________           _______ , TD_LCRB , TD_RCRB , TD_HASH 
-#define ___________________LOWER_L2____________________ NAV_AT  , TD_OPAR , TD_CPAR , TD_DQUO , MC_SQUO
-#define           _________LOWER_L3____________________           TD_OBR  , TD_CBR  , TD_QUES , MC_BTIC
+#define ___________________LOWER_L1__________           _______ , TD_LCBR , TD_RCBR , TD_HASH 
+#define ___________________LOWER_L2____________________ NAV_AT  , TD_LPRN , TD_RPRN , TD_DQUO , MC_SQUO
+#define           _________LOWER_L3____________________           TD_LBRC , TD_RBRC , TD_QUES , MC_BTIC
 #define                               ____LOWER_L4_____                               KC_CAPS , _______
 
 #define           _________LOWER_R1____________________           KC_7    , KC_8    , KC_9    , _______
@@ -72,7 +72,7 @@
 
 #define           _________RAISE_R1____________________           TD_COLN , TD_EQL  , TD_PERC , _______
 #define ___________________RAISE_R2____________________ MC_CIRC , TD_MINS , TD_PLUS , TD_SLSH , KC_ASTR
-#define ___________________RAISE_R3__________           MC_TILD , TD_EXLM , TD_AND  , TD_OR     
+#define ___________________RAISE_R3__________           MC_TILD , TD_EXLM , TD_LT   , TD_GT     
 #define ____RAISE_R4_____                               _______ , TG_NUM
 
 #define _________________SYMBOLS_L1__________           _______ , KC_LCBR , KC_RCBR , KC_HASH 
@@ -82,7 +82,7 @@
 
 #define           _______SYMBOLS_R1____________________           KC_COLN , KC_EQL  , KC_PERC , _______
 #define _________________SYMBOLS_R2____________________ KC_CIRC , KC_MINS , KC_PLUS , KC_SLSH , KC_ASTR
-#define _________________SYMBOLS_R3__________           KC_TILD , KC_EXLM , KC_AMPR , KC_PIPE     
+#define _________________SYMBOLS_R3__________           KC_TILD , KC_EXLM , KC_LT   , KC_GT     
 #define __SYMBOLS_R4_____                               KC_SPC  , TG_NUM
 
 #define ___________________MEDIA_L1__________           _______ , MC_ESC  , HYPR_M  , HYPR_G  

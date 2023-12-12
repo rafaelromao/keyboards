@@ -9,15 +9,15 @@ void process_leader_dictionary(void) {
 
     // Sample Leader Sequence
 
-    // Euro sign
-    if (leader_sequence_one_key(KC_E)) {
-            if (isMacOS) {
-                tap_code16(LSFT(RALT(KC_2)));
-            } else {
-                tap_code16(LCTL(LALT(KC_5)));
-            }
-            return;
+    // Section Sign
+    if (leader_sequence_one_key(KC_S)) {
+        if (isMacOS) {
+            SEND_STRING(SS_LALT(SS_TAP(X_6)));
+        } else {
+            SEND_STRING(SS_RALT(SS_LSFT(SS_TAP(X_S))));
         }
+        return;
+    }
 
     // Process secret leader sequences
     process_leader_dictionary_secret();

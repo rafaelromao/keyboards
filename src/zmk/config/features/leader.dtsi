@@ -39,13 +39,13 @@
 	macros {
 
         // Leader sequence example
-        LEADER_MACRO(mc_euro, &kp LS(LA(N2)))
+        LEADER_MACRO(mc_section, &kp LA(N6))
 	};
 
 	leader_sequences {
 		compatible = "zmk,leader-sequences";
 
         // Leader sequence example
-		LEADER_SEQ(ld_euro, RHR, &mc_euro, ALPHA1)
+		LEADER_SEQ(ld_euro, RHR, &mc_section, ALPHA1)
 	};
 };

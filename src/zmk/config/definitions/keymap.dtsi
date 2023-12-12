@@ -108,7 +108,7 @@
                      bindings = <
    &trans              &kp F9              &kp F8              &kp F7              &none               &none               &th_colon 0 0       &td_eql             &td_perc            &trans
    &kp F12             &kp F6              &kp F5              &kp F4              &kp F11             &mc_caret           &th_mins 0 0        &th_plus 0 0        &td_slash           &kp STAR  
-   &none               &kp F3              &kp F2              &kp F1              &kp F10             &mc_tilde           &th_excl 0 0        &th_and 0 0         &th_or 0 0          &none
+   &none               &kp F3              &kp F2              &kp F1              &kp F10             &mc_tilde           &th_excl 0 0        &th_lt 0 0          &th_gt 0 0          &none
                                            &trans              &key_repeat         &lt SYMBOLS SPACE   &trans              &tog NUMPAD         &trans       
                            >;
                 };
@@ -117,7 +117,7 @@
                      bindings = <
    &trans              &kp LBRC            &kp RBRC            &kp HASH            &none               &none               &kp COLON           &kp EQUAL           &kp PERCENT         &trans
    &kp AT              &kp LPAR            &kp RPAR            &kp DQT             &kp SQT             &kp CARET           &kp MINUS           &kp PLUS            &kp SLASH           &kp STAR 
-   &none               &kp LBKT            &kp RBKT            &kp QMARK           &kp GRAVE           &kp TILDE           &kp EXCL            &kp AMPS            &kp PIPE            &none
+   &none               &kp LBKT            &kp RBKT            &kp QMARK           &kp GRAVE           &kp TILDE           &kp EXCL            &kp LT              &kp GT              &none
                                            &trans              &kp CAPSLOCK        &kp SPACE           &kp SPACE           &tog NUMPAD         &trans
                            >;
                 };
@@ -187,7 +187,7 @@
                 system_layer {
                      label = "SYSTEM";
                      bindings = <
-   &trans              &none               &none               &kp KP_NUM          &none               &none               &none               &kp ENTER           &kp TAB             &trans 
+   &trans              &none               &none               &none               &none               &none               &none               &kp ENTER           &kp TAB              &trans 
    &none               &none               &none               &bootloader         &none               &none               &bootloader         &kp C_SLEEP         &kp LC(LG(Q))        &tog LOCK_KB       
    &none               &none               &none               &sys_reset          &none               &none               &sys_reset          &bt BT_PRV          &bt BT_NXT           &none
                                            &trans              &trans              &trans              &trans              &trans              &trans

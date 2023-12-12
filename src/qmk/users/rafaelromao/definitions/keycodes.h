@@ -19,7 +19,8 @@ enum {
     BRT_CBR, 
     DQU_SQU, 
     EXL_EEX, 
-    AND_EAN, 
+    LET_EUR, 
+    GRT_PIP,
 #ifdef DYNAMIC_MACRO_ENABLE
     REC_MAC, 
 #endif
@@ -32,11 +33,10 @@ enum {
     QUE_EXC,
     EQL_EEQ,
     PLU_DOL,
-    LET_ELT,
-    GRT_EGT,
-    OR_EOR,
-    DCO_EDC,
-    SAR_ESA,
+    TIL_LTE,
+    DOR_GTE,
+    CIR_SAR,
+    DAN_DAR,
     HAS_SEC,
     TD_CODE_END 
 };
@@ -45,17 +45,17 @@ enum {
 
 #define TD_EENT TD(ENT_END)
 #define TD_SCLE TD(SCL_END)
-#define TD_LCRB TD(BRT_LCR)
-#define TD_RCRB TD(BRT_RCR)
+#define TD_LCBR TD(BRT_LCR)
+#define TD_RCBR TD(BRT_RCR)
 #define TD_PARN TD(BRT_PAR)
-#define TD_OPAR TD(BRT_OPA)
-#define TD_CPAR TD(BRT_CPA)
-#define TD_OBR TD(BRT_OBR)
-#define TD_CBR TD(BRT_CBR)
+#define TD_LPRN TD(BRT_OPA)
+#define TD_RPRN TD(BRT_CPA)
+#define TD_LBRC TD(BRT_OBR)
+#define TD_RBRC TD(BRT_CBR)
 #define TD_DQUO TD(DQU_SQU)
 #define TD_EXLM TD(EXL_EEX)
-#define TD_AND TD(AND_EAN)
-#define TD_OR TD(OR_EOR)
+#define TD_LT TD(LET_EUR)
+#define TD_GT TD(GRT_PIP)
 #ifdef DYNAMIC_MACRO_ENABLE
 #define TD_MACR TD(REC_MAC)
 #else
@@ -70,10 +70,10 @@ enum {
 #define TD_SLSH TD(SLS_BSL)
 #define TD_EQL TD(EQL_EEQ)
 #define TD_PLUS TD(PLU_DOL)
-#define TD_LT TD(LET_ELT)
-#define TD_GT TD(GRT_EGT)
-#define TD_DCOL TD(DCO_EDC)
-#define TD_SARR TD(SAR_ESA)
+#define TD_TIL TD(TIL_LTE)
+#define TD_DOR TD(DOR_GTE)
+#define TD_CIRC TD(CIR_SAR)
+#define TD_DAND TD(DAN_DAR)
 #define TD_HASH TD(HAS_SEC)
 
 // Custom keycodes
@@ -107,10 +107,11 @@ enum {
     // Begin macros used to write text
     STR_MACRO_START,
 
-    MC_BTIC, MC_DQUO, MC_SQUO, MC_CIRC, MC_TILD, REPEAT, 
-    MC_ENT, MC_TAB, MC_ESC, MC_ESCC, MC_NSEN, MC_CANC, TG_NUMC, MC_EXLM, MC_QUES,
-    MC_ESAV, MC_SENT, MC_CUR, MC_CURS, MC_DCOL, MC_SAR, MC_DEQ, MC_NEQ, MC_BRAC,
-    MC_DAND, MC_DPIP, MC_OESC, MC_SOES, MC_LTGT, MC_SVI, MC_CVI, MC_ESCP, MC_SEC, 
+    MC_BTIC, MC_DQUO, MC_SQUO, MC_CIRC, MC_TILD, REPEAT,
+    MC_EUR, MC_LTE, MC_GTE, MC_DDS, MC_ENT, MC_TAB, MC_ESC, MC_ESCC, 
+    MC_NSEN, MC_CANC, TG_NUMC, MC_EXLM, MC_QUES, MC_ESAV, MC_SENT, 
+    MC_CUR, MC_CURS, MC_DAR, MC_SAR, MC_DEQ, MC_NEQ, MC_BRAC,
+    MC_DAND, MC_DPIP, MC_OESC, MC_SOES, MC_TISL, MC_SVI, MC_CVI, MC_ESCP,
 
     // End macros that can be shifted
     SFT_MACRO_END,
