@@ -240,7 +240,7 @@
         SYMBOL(mc_double_and,      &kp AMPS &kp AMPS)
         TAPHOLD_SYMBOL(th_dand,    &mc_double_and, &mc_darrow)
 
-        SYMBOL(mc_dds,             &kp DOT &kp DOT &kp SPACE)
+        SYMBOL(mc_dds,             &kp DOT &kp DOT &kp SLASH)
 
         SYMBOL(mc_lte,             &kp LT &kp EQL)
         TAPHOLD_SYMBOL(th_tilde,   &mc_tilde, &mc_lte)
