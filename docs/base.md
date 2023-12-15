@@ -5,7 +5,7 @@
 - This layout works well with the OS configured for US International keyboards.
 - It was designed mostly for coding and typing in Portuguese and English.
 - It reduces the usage of pinkies and indexes and considers the right hand as dominant.
-- The alpha layout is [Romak](romak.md), a new keyboard layout, with all vowels on the right hand.
+- The alpha layout is [Romak](https://github.com/rafaelromao/romak), a new keyboard layout, with all vowels on the right hand.
 
 ### Primary Alpha Layer
 - The Alpha1 layer is the base layer, which contains the most common alphas of Portuguese and English, plus comma and period. It is extended by the Alpha2 layer.
