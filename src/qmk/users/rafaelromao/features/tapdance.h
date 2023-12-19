@@ -8,6 +8,7 @@
 #include "dynamic_macro.h"
 #include "macros.h"
 #include "accents.h"
+#include "leader.h"
 
 typedef enum {
     TD_NONE,

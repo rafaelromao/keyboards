@@ -67,6 +67,34 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             tap_code(KC_SPC);
             tap_code16(KC_SLSH);
             return PROCESS_RECORD_RETURN_FALSE;
+        case MC_DEG:
+            if (isMacOS) {
+                tap_code16(LSFT(RALT(KC_8)));
+            } else {
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_1) SS_TAP(X_KP_7) SS_TAP(X_KP_6)));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+        case MC_SEC:
+            if (isMacOS) {
+                SEND_STRING(SS_LALT(SS_TAP(X_6)));
+            } else {
+                SEND_STRING(SS_RALT(SS_LSFT(SS_TAP(X_S))));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+        case MC_ORDO:
+            if (isMacOS) {
+                tap_code16(RALT(KC_0));
+            } else {
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_1) SS_TAP(X_KP_6) SS_TAP(X_KP_7)));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+        case MC_ORDA:
+            if (isMacOS) {
+                tap_code16(RALT(KC_9));
+            } else {
+                SEND_STRING(SS_LALT(SS_TAP(X_KP_1) SS_TAP(X_KP_6) SS_TAP(X_KP_6)));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
 
             // Shift V
 

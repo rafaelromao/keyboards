@@ -105,6 +105,7 @@
         COMBO(cb_pars,          LHR LHM,     &th_pars 0 0,       LOWER SYMBOLS)
         COMBO(cb_brackets,      LBR LBM,     &mc_brackets,       LOWER SYMBOLS)
 
+        COMBO(cb_deg,           RTI RTM,     &mc_deg,            SYMBOLS)
         COMBO(cb_caret,         RHI RHM,     &kp CARET,          SYMBOLS)
         COMBO(cb_tilde,         RBI RBM,     &kp TILDE,          SYMBOLS)
         COMBO(cb_amps,          RHM RHR,     &kp AMPS,           SYMBOLS)

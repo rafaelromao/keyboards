@@ -37,15 +37,16 @@
 		};
 
 	macros {
-
-        // Leader sequence example
         LEADER_MACRO(mc_section, &kp LA(N6))
+        LEADER_MACRO(mc_orda, &kp LA(N0))
+        LEADER_MACRO(mc_ordo, &kp LA(N9))
 	};
 
 	leader_sequences {
 		compatible = "zmk,leader-sequences";
 
-        // Leader sequence example
-		LEADER_SEQ(ld_euro, RHR, &mc_section, ALPHA1)
+		LEADER_SEQ(ld_sect, RBR LHM , &mc_section, ALPHA1)
+		LEADER_SEQ(ld_orda, RBR RTM , &mc_orda, ALPHA1)
+		LEADER_SEQ(ld_ordo, RBR RHM , &mc_ordo, ALPHA1)
 	};
 };

@@ -5,17 +5,19 @@
 leader_t leader = {.isLeading = false};
 
 void process_leader_dictionary(void) {
-    bool isMacOS = is_macos();
-
-    // Sample Leader Sequence
-
-    // Section Sign
-    if (leader_sequence_one_key(KC_S)) {
-        if (isMacOS) {
-            SEND_STRING(SS_LALT(SS_TAP(X_6)));
-        } else {
-            SEND_STRING(SS_RALT(SS_LSFT(SS_TAP(X_S))));
-        }
+    // Section sign
+    if (leader_sequence_two_keys(TD_DOT, KC_S)) {
+        process_macros(MC_SEC, NULL);
+        return;
+    }
+    // Male ordinal sign
+    if (leader_sequence_two_keys(TD_DOT, KC_A)) {
+        process_macros(MC_ORDA, NULL);
+        return;
+    }
+    // Female ordinal sign
+    if (leader_sequence_two_keys(TD_DOT, KC_O)) {
+        process_macros(MC_ORDO, NULL);
         return;
     }
 

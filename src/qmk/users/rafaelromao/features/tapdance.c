@@ -2,6 +2,7 @@
 
 #include "tapdance.h"
 
+extern leader_t leader;
 static td_tap_t tap_state = {.state = TD_NONE};
 
 __attribute__((weak)) td_state_t dance_state(tap_dance_state_t *state) {
@@ -434,25 +435,16 @@ void td_percent(tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_PERC);
             break;
         case TD_DOUBLE_TAP:
-            if (is_macos()) {
-                tap_code16(RALT(KC_0));
-            } else {
-                SEND_STRING(SS_LALT(SS_TAP(X_KP_1) SS_TAP(X_KP_6) SS_TAP(X_KP_7)));
-            }
+            tap_code16(KC_PERC);
+            tap_code16(KC_PERC);
             break;
         case TD_TRIPLE_TAP:
-            if (is_macos()) {
-                tap_code16(RALT(KC_9));
-            } else {
-                SEND_STRING(SS_LALT(SS_TAP(X_KP_1) SS_TAP(X_KP_6) SS_TAP(X_KP_6)));
-            }
+            tap_code16(KC_PERC);
+            tap_code16(KC_PERC);
+            tap_code16(KC_PERC);
             break;
         case TD_SINGLE_HOLD:
-            if (is_macos()) {
-                tap_code16(LSFT(RALT(KC_8)));
-            } else {
-                SEND_STRING(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_1) SS_TAP(X_KP_7) SS_TAP(X_KP_6)));
-            }
+            process_macros(MC_DEG, NULL);
             break;
         default:
             break;
@@ -487,6 +479,9 @@ void td_dot(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
+            if (leader.isLeading) {
+                break;
+            }
             tap_code(KC_DOT);
             start_sentence_case();
             break;

@@ -185,10 +185,7 @@
 
         SYMBOL(mc_perc,            &kp PERCENT)
         SYMBOL(mc_deg,             &kp LS(LA(N8)))
-        SYMBOL(mc_first_o,         &kp LA(N0))
-        SYMBOL(mc_first_a,         &kp LA(N9))
         TAPHOLD_SYMBOL(th_perc,    &mc_perc, &mc_deg)
-        TAPDANCE_SYMBOL(td_perc,   &th_perc 0 0, &mc_first_o, &mc_first_a)
 
         SYMBOL(mc_caret,           &kp CARET &kp SPACE)
         SYMBOL(mc_minus,           &kp MINUS)
