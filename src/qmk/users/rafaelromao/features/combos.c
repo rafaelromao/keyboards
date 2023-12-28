@@ -33,9 +33,9 @@ const uint16_t PROGMEM l_low_bra_combo[] = {TD_LBRC, TD_RBRC, COMBO_END};
 const uint16_t PROGMEM l_low_sqo_combo[] = {TD_RPRN, TD_DQUO, COMBO_END};
 const uint16_t PROGMEM l_low_bti_combo[] = {TD_RBRC, TD_QUES, COMBO_END};
 
-const uint16_t PROGMEM r_low_ent_combo[] = {SYM_SPC, KC_5, KC_6, COMBO_END};
+const uint16_t PROGMEM r_low_ent_combo[]  = {RAI_SPC, KC_5, KC_6, COMBO_END};
 const uint16_t PROGMEM r_low_sco_combo[] = {KC_2, KC_3, COMBO_END};
-const uint16_t PROGMEM r_low_com_combo[] = {SYM_SPC, SHO_DOT, COMBO_END};
+const uint16_t PROGMEM r_low_com_combo[]  = {RAI_SPC, SHO_DOT, COMBO_END};
 const uint16_t PROGMEM r_low_sent_combo[] = {KC_1, KC_2, KC_3, COMBO_END};
 const uint16_t PROGMEM r_low_j_combo[]    = {KC_4, KC_5, COMBO_END};
 const uint16_t PROGMEM r_low_k_combo[]    = {KC_5, KC_6, COMBO_END};
