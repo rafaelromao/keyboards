@@ -24,7 +24,6 @@ enum {
 #ifdef DYNAMIC_MACRO_ENABLE
     REC_MAC, 
 #endif
-    COM_LEA, 
     DOT_DOT, 
     MIN_CIR, 
     COL_ECO,
@@ -61,7 +60,6 @@ enum {
 #else
 #define TD_MACR XXXXXXX
 #endif
-#define TD_COMM TD(COM_LEA)
 #define TD_DOT TD(DOT_DOT)
 #define TD_MINS TD(MIN_CIR)
 #define TD_COLN TD(COL_ECO)
@@ -108,9 +106,9 @@ enum {
     STR_MACRO_START,
 
     MC_BTIC, MC_DQUO, MC_SQUO, MC_CIRC, MC_TILD, REPEAT, MC_ORDO, MC_ORDA,
-    MC_EUR, MC_LTE, MC_GTE, MC_DDS, MC_ENT, MC_TAB, MC_ESC, MC_ESCC, 
+    MC_EUR, MC_LTE, MC_GTE, MC_DDS, MC_ENT, MC_TAB, MC_ESC, MC_ESCC, MC_COMM,
     MC_NSEN, MC_CANC, TG_NUMC, MC_EXLM, MC_QUES, MC_ESAV, MC_SENT, MC_DEG,
-    MC_CUR, MC_CURS, MC_DAR, MC_SAR, MC_DEQ, MC_NEQ, MC_BRAC, MC_SEC,
+    MC_CUR, MC_CURS, MC_DAR, MC_SAR, MC_DEQ, MC_NEQ, MC_BRAC, MC_SEC, MC_DOT, 
     MC_DAND, MC_DPIP, MC_OESC, MC_SOES, MC_TISL, MC_SVI, MC_CVI, MC_ESCP,
 
     // End macros that can be shifted
@@ -152,6 +150,7 @@ enum {
 #define CT_5 RCTL_T(KC_5)
 
 #define LALTT_P LALT_T(KC_P)
+#define LALTT_X LALT_T(KC_X)
 #define RALTT_H RALT_T(KC_H)
 #define RALTT_F RALT_T(KC_F)
 #define AL_F1 LALT_T(KC_F1)
@@ -198,6 +197,8 @@ enum {
 #define MED_0   LT(_MEDIA, KC_0)
 
 #define MAI_CAS LT(_SYSTEM, TG_CASE)
+
+#define LEAD_K LT(_NOMOD, KC_K)
 
 #define NMO_DOC LT(_NOMOD, MC_QDOC)
 #define ACT_SPC LT(_FIXED_ALPHA2, KC_SPC)

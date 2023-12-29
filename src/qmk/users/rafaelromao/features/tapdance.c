@@ -451,30 +451,6 @@ void td_percent(tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void td_comm(tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            tap_code(KC_COMM);
-            break;
-        case TD_DOUBLE_SINGLE_TAP:
-        case TD_DOUBLE_TAP:
-            tap_code(KC_COMM);
-            tap_code(KC_COMM);
-            break;
-        case TD_TRIPLE_TAP:
-            tap_code(KC_COMM);
-            tap_code(KC_COMM);
-            tap_code(KC_COMM);
-            break;
-        case TD_SINGLE_HOLD:
-            leader_start();
-            break;
-        default:
-            break;
-    }
-}
-
 void td_dot(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
@@ -608,7 +584,6 @@ tap_dance_action_t tap_dance_actions[] = {
 #ifdef DYNAMIC_MACRO_ENABLE
     [REC_MAC] = ACTION_TAP_DANCE_FN(td_macro),
 #endif
-    [COM_LEA] = ACTION_TAP_DANCE_FN(td_comm),
     [MIN_CIR] = ACTION_TAP_DANCE_FN(td_mins),
     [COL_ECO] = ACTION_TAP_DANCE_FN(td_colon),
     [PER_DEG] = ACTION_TAP_DANCE_FN(td_percent),

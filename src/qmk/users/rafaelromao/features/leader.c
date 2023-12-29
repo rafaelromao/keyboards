@@ -20,6 +20,10 @@ void process_leader_dictionary(void) {
         process_macros(MC_ORDO, NULL);
         return;
     }
+    // Cancel
+    if (leader_sequence_one_key(KC_K)) {
+        return;
+    }
 
     // Process secret leader sequences
     process_leader_dictionary_secret();

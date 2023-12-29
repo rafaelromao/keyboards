@@ -452,6 +452,13 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             start_sentence_case();
             return PROCESS_RECORD_RETURN_FALSE;
 
+            // Dot with Sentence Case
+
+        case MC_DOT:
+            tap_code16(KC_DOT);
+            start_sentence_case();
+            return PROCESS_RECORD_RETURN_FALSE;
+
             // Euro Sign
 
         case MC_EUR:
@@ -460,6 +467,13 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             } else {
                 tap_code16(LCTL(LALT(KC_5)));
             }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Comma Space
+
+        case MC_COMM:
+            tap_code(KC_COMM);
+            tap_code(KC_SPC);
             return PROCESS_RECORD_RETURN_FALSE;
     }
 
