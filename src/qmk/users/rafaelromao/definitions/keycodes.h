@@ -172,16 +172,25 @@ enum {
 
 // Custom Shortcuts
 
-#define HYPR_D HYPR(KC_D)
 #define HYPR_R HYPR(KC_R)
-#define HYPR_G HYPR(KC_G)
-#define HYPR_C HYPR(KC_C)
 #define HYPR_L HYPR(KC_L)
-#define HYPR_M HYPR(KC_M)
 #define MEH_D  MEH(KC_D)
 #define MEH_G  MEH(KC_G)
 #define MEH_C  MEH(KC_C)
 #define MEH_M  MEH(KC_M)
+
+#ifndef MOUSE_ENABLE
+#define OM_U KC_NO
+#define OM_D KC_NO
+#define OM_L KC_NO
+#define OM_R KC_NO
+#define OM_BTNS KC_NO
+#define OM_HLDS KC_NO
+#define OM_RELS KC_NO
+#define OM_W_U KC_NO
+#define OM_W_D KC_NO
+#define OM_BTN2 KC_NO
+#endif
 
 // Layer-taps
 

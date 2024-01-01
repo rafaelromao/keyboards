@@ -18,6 +18,9 @@
 #include "features/sentence_case.h"
 #include "features/swapper.h"
 #include "features/leader.h"
+#ifdef MOUSE_ENABLE
+#    include "features/getreuer/orbital_mouse.h"
+#endif
 
 #ifdef DYNAMIC_MACRO_ENABLE
 #    include "features/dynamic_macro.h"
