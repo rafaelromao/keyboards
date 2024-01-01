@@ -148,23 +148,17 @@ void td_dquo(tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void td_hash(tap_dance_state_t *state, void *user_data) {
+void td_dlr(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
-            tap_code16(KC_HASH);
+            tap_code16(KC_DLR);
             break;
         case TD_SINGLE_HOLD:
             tap_code16(KC_BSLS);
             break;
         case TD_DOUBLE_TAP:
-            tap_code16(KC_HASH);
-            tap_code16(KC_HASH);
-            break;
-        case TD_TRIPLE_TAP:
-            tap_code16(KC_HASH);
-            tap_code16(KC_HASH);
-            tap_code16(KC_HASH);
+            process_macros(MC_EUR, NULL);
             break;
         default:
             break;
@@ -427,24 +421,24 @@ void td_excl(tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void td_percent(tap_dance_state_t *state, void *user_data) {
+void td_hash(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
 
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
-            tap_code16(KC_PERC);
+            tap_code16(KC_HASH);
             break;
         case TD_DOUBLE_TAP:
-            tap_code16(KC_PERC);
-            tap_code16(KC_PERC);
+            tap_code16(KC_HASH);
+            tap_code16(KC_HASH);
             break;
         case TD_TRIPLE_TAP:
-            tap_code16(KC_PERC);
-            tap_code16(KC_PERC);
-            tap_code16(KC_PERC);
+            tap_code16(KC_HASH);
+            tap_code16(KC_HASH);
+            tap_code16(KC_HASH);
             break;
         case TD_SINGLE_HOLD:
-            process_macros(MC_DEG, NULL);
+            tap_code16(KC_PERC);
             break;
         default:
             break;
@@ -586,7 +580,7 @@ tap_dance_action_t tap_dance_actions[] = {
 #endif
     [MIN_CIR] = ACTION_TAP_DANCE_FN(td_mins),
     [COL_ECO] = ACTION_TAP_DANCE_FN(td_colon),
-    [PER_DEG] = ACTION_TAP_DANCE_FN(td_percent),
+    [HAS_PER] = ACTION_TAP_DANCE_FN(td_hash),
     [QUE_EXC] = ACTION_TAP_DANCE_FN(td_ques),
     [EQL_EEQ] = ACTION_TAP_DANCE_FN(td_eql),
     [PLU_DOL] = ACTION_TAP_DANCE_FN(td_plus),
@@ -595,7 +589,7 @@ tap_dance_action_t tap_dance_actions[] = {
     [SLS_BSL] = ACTION_TAP_DANCE_FN(td_slash),
     [CIR_SAR] = ACTION_TAP_DANCE_FN(td_circ),
     [DAN_DAR] = ACTION_TAP_DANCE_FN(td_dand),
-    [HAS_SEC] = ACTION_TAP_DANCE_FN(td_hash),
+    [DLR_BSL] = ACTION_TAP_DANCE_FN(td_dlr),
     [DOT_DOT] = ACTION_TAP_DANCE_FN(td_dot)};
 
 // clang-format on

@@ -55,7 +55,7 @@
 #define ___________________ALPHA2_R3_________           KC_TILD , MC_CR_A , MC_CR_O , MC_CR_E 
 #define ____ALPHA2_R4____                               _______ , _______
 
-#define ___________________LOWER_L1__________           XXXXXXX , TD_LCBR , TD_RCBR , TD_HASH 
+#define ___________________LOWER_L1__________           XXXXXXX , TD_LCBR , TD_RCBR , TD_DLR 
 #define ___________________LOWER_L2____________________ NAV_AT  , TD_LPRN , TD_RPRN , TD_DQUO , MC_SQUO
 #define           _________LOWER_L3____________________           TD_LBRC , TD_RBRC , TD_QUES , MC_BTIC
 #define                               ____LOWER_L4_____                               KC_CAPS , _______
@@ -70,17 +70,17 @@
 #define           _________RAISE_L3____________________           KC_F3   , KC_F2   , KC_F1   , KC_F10
 #define                               ____RAISE_L4_____                               QK_REP  , SYM_SPC
 
-#define           _________RAISE_R1____________________           TD_COLN , TD_EQL  , TD_PERC , XXXXXXX
+#define           _________RAISE_R1____________________           TD_COLN , TD_EQL  , TD_HASH , XXXXXXX
 #define ___________________RAISE_R2____________________ MC_CIRC , TD_MINS , TD_PLUS , TD_SLSH , KC_ASTR
 #define ___________________RAISE_R3__________           MC_TILD , TD_EXLM , TD_LT   , TD_GT     
 #define ____RAISE_R4_____                               _______ , TG_NUM
 
-#define _________________SYMBOLS_L1__________           XXXXXXX , KC_LCBR , KC_RCBR , KC_HASH 
+#define _________________SYMBOLS_L1__________           XXXXXXX , KC_LCBR , KC_RCBR , KC_DLR 
 #define _________________SYMBOLS_L2____________________ KC_AT   , KC_LPRN , KC_RPRN , KC_DQUO , KC_QUOT
 #define           _______SYMBOLS_L3____________________           KC_LBRC , KC_RBRC , KC_QUES , KC_GRV
 #define                               __SYMBOLS_L4_____                               KC_CAPS , KC_SPC 
 
-#define           _______SYMBOLS_R1____________________           KC_COLN , KC_EQL  , KC_PERC , XXXXXXX
+#define           _______SYMBOLS_R1____________________           KC_COLN , KC_EQL  , KC_HASH , XXXXXXX
 #define _________________SYMBOLS_R2____________________ KC_CIRC , KC_MINS , KC_PLUS , KC_SLSH , KC_ASTR
 #define _________________SYMBOLS_R3__________           KC_TILD , KC_EXLM , KC_LT   , KC_GT     
 #define __SYMBOLS_R4_____                               KC_SPC  , TG_NUM

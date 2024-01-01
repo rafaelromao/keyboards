@@ -5,6 +5,11 @@
 leader_t leader = {.isLeading = false};
 
 void process_leader_dictionary(void) {
+    // Degree sign
+    if (leader_sequence_two_keys(TD_DOT, KC_D)) {
+        process_macros(MC_DEG, NULL);
+        return;
+    }
     // Section sign
     if (leader_sequence_two_keys(TD_DOT, KC_S)) {
         process_macros(MC_SEC, NULL);

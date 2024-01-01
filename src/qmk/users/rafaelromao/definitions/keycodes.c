@@ -33,8 +33,8 @@ uint16_t extract_tapping_keycode(uint16_t keycode) {
             return KC_MINS;
         case TD_COLN:
             return KC_COLN;
-        case TD_PERC:
-            return KC_PERC;
+        case TD_DLR:
+            return KC_DLR;
         case TD_QUES:
             return KC_QUES;
         case TD_SLSH:

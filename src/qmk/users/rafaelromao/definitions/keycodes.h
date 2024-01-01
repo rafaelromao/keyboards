@@ -27,7 +27,7 @@ enum {
     DOT_DOT, 
     MIN_CIR, 
     COL_ECO,
-    PER_DEG,
+    HAS_PER,
     SLS_BSL,
     QUE_EXC,
     EQL_EEQ,
@@ -36,7 +36,7 @@ enum {
     DOR_GTE,
     CIR_SAR,
     DAN_DAR,
-    HAS_SEC,
+    DLR_BSL,
     TD_CODE_END 
 };
 
@@ -63,7 +63,7 @@ enum {
 #define TD_DOT TD(DOT_DOT)
 #define TD_MINS TD(MIN_CIR)
 #define TD_COLN TD(COL_ECO)
-#define TD_PERC TD(PER_DEG)
+#define TD_HASH TD(HAS_PER)
 #define TD_QUES TD(QUE_EXC)
 #define TD_SLSH TD(SLS_BSL)
 #define TD_EQL TD(EQL_EEQ)
@@ -72,7 +72,7 @@ enum {
 #define TD_DOR TD(DOR_GTE)
 #define TD_CIRC TD(CIR_SAR)
 #define TD_DAND TD(DAN_DAR)
-#define TD_HASH TD(HAS_SEC)
+#define TD_DLR TD(DLR_BSL)
 
 // Custom keycodes
 
@@ -120,7 +120,7 @@ enum {
     MC_GV_A, MC_CR_A, MC_TL_A, MC_SQ_A,
     MC_SQ_U, MC_CR_O, MC_SQ_O, MC_SQ_I,
     MC_CR_E, MC_TL_O, MC_SQ_C, MC_SQ_E,
-    MC_AO, MC_OE, MC_CAO, MC_COES, MC_QU, MC_ZZ,
+    MC_AO, MC_OE, MC_CAO, MC_COES, MC_QU,
 
     // End macros for accented letters
     ALPHA_MACRO_END,
