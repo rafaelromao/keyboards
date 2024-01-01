@@ -177,7 +177,7 @@ void td_lt(tap_dance_state_t *state, void *user_data) {
             tap_code16(KC_LT);
             break;
         case TD_SINGLE_HOLD:
-            process_macros(MC_EUR, NULL);
+            tap_code16(KC_UNDS);
             break;
         default:
             break;
