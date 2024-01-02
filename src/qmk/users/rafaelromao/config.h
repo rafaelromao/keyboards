@@ -8,9 +8,9 @@
 #undef LOCKING_RESYNC_ENABLE
 
 // Configure Orbital Mouse
-#define ORBITAL_MOUSE_RADIUS 63
+#define ORBITAL_MOUSE_RADIUS 50
 #define ORBITAL_MOUSE_SPEED_CURVE \
-    { 24, 24, 24, 32, 58, 66, 80, 90, 100, 110, 120, 110, 100, 90, 80, 66 }
+    { 15, 40, 100, 160, 160, 160, 160, 160, 160, 160, 160, 160, 160, 160, 160, 160 }
 //     |               |               |               |           |
 // t = 0.000           1.024           2.048           3.072       3.840 s
 

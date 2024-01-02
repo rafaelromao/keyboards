@@ -7,5 +7,8 @@
 #include "custom_oneshot.h"
 #include "macros.h"
 #include "swapper.h"
+#ifdef MOUSE_ENABLE
+#    include "getreuer/orbital_mouse.h"
+#endif
 
 process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record);

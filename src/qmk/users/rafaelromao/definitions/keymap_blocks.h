@@ -88,7 +88,7 @@
 #define ___________________MEDIA_L1__________           XXXXXXX , MC_ESC  , OM_RELS , OM_HLDS  
 #define ___________________MEDIA_L2____________________ OM_BTN2 , OM_L    , OM_U    , OM_R    , XXXXXXX 
 #define           _________MEDIA_L3____________________           OM_W_D  , OM_D    , OM_W_U  , XXXXXXX 
-#define                               ____MEDIA_L4_____                               MAI_CAS , OM_BTNS
+#define                               ____MEDIA_L4_____                               OM_BTNS , OM_BTNS
 
 #define           _________MEDIA_R1____________________           HYPR_L  , KC_ENT  , KC_TAB  , XXXXXXX
 #define ___________________MEDIA_R2____________________ XXXXXXX , HYPR_R  , KC_VOLD , KC_VOLU , KC_MUTE

@@ -206,6 +206,7 @@ enum {
 #define MED_0   LT(_MEDIA, KC_0)
 
 #define MAI_CAS LT(_SYSTEM, TG_CASE)
+#define MAI_CLK LT(_SYSTEM, OM_BTNS)
 
 #define LEAD_K LT(_NOMOD, KC_K)
 
