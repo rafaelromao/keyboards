@@ -27,7 +27,7 @@ process_record_result_t process_sentence_case(uint16_t keycode, keyrecord_t *rec
             switch (keycode) {
                 // Skip dot and comma
                 case TD_DOT:
-                case MC_COMM:
+                case LEA_COM:
                     sentence_case.state = SENTENCE_CASE_NONE;
                     return PROCESS_RECORD_CONTINUE;
                 // Process alpha macros
