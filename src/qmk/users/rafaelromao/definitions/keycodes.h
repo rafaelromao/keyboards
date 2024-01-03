@@ -24,11 +24,10 @@ enum {
 #ifdef DYNAMIC_MACRO_ENABLE
     REC_MAC, 
 #endif
-    COM_LEA, 
     DOT_DOT, 
     MIN_CIR, 
     COL_ECO,
-    PER_DEG,
+    HAS_PER,
     SLS_BSL,
     QUE_EXC,
     EQL_EEQ,
@@ -37,7 +36,7 @@ enum {
     DOR_GTE,
     CIR_SAR,
     DAN_DAR,
-    HAS_SEC,
+    DLR_BSL,
     TD_CODE_END 
 };
 
@@ -61,11 +60,10 @@ enum {
 #else
 #define TD_MACR XXXXXXX
 #endif
-#define TD_COMM TD(COM_LEA)
 #define TD_DOT TD(DOT_DOT)
 #define TD_MINS TD(MIN_CIR)
 #define TD_COLN TD(COL_ECO)
-#define TD_PERC TD(PER_DEG)
+#define TD_HASH TD(HAS_PER)
 #define TD_QUES TD(QUE_EXC)
 #define TD_SLSH TD(SLS_BSL)
 #define TD_EQL TD(EQL_EEQ)
@@ -74,7 +72,7 @@ enum {
 #define TD_DOR TD(DOR_GTE)
 #define TD_CIRC TD(CIR_SAR)
 #define TD_DAND TD(DAN_DAR)
-#define TD_HASH TD(HAS_SEC)
+#define TD_DLR TD(DLR_BSL)
 
 // Custom keycodes
 
@@ -110,7 +108,7 @@ enum {
     MC_BTIC, MC_DQUO, MC_SQUO, MC_CIRC, MC_TILD, REPEAT, MC_ORDO, MC_ORDA,
     MC_EUR, MC_LTE, MC_GTE, MC_DDS, MC_ENT, MC_TAB, MC_ESC, MC_ESCC, 
     MC_NSEN, MC_CANC, TG_NUMC, MC_EXLM, MC_QUES, MC_ESAV, MC_SENT, MC_DEG,
-    MC_CUR, MC_CURS, MC_DAR, MC_SAR, MC_DEQ, MC_NEQ, MC_BRAC, MC_SEC,
+    MC_CUR, MC_CURS, MC_DAR, MC_SAR, MC_DEQ, MC_NEQ, MC_BRAC, MC_SEC, 
     MC_DAND, MC_DPIP, MC_OESC, MC_SOES, MC_TISL, MC_SVI, MC_CVI, MC_ESCP,
 
     // End macros that can be shifted
@@ -122,7 +120,7 @@ enum {
     MC_GV_A, MC_CR_A, MC_TL_A, MC_SQ_A,
     MC_SQ_U, MC_CR_O, MC_SQ_O, MC_SQ_I,
     MC_CR_E, MC_TL_O, MC_SQ_C, MC_SQ_E,
-    MC_AO, MC_OE, MC_CAO, MC_COES, MC_QU, MC_ZZ,
+    MC_AO, MC_OE, MC_CAO, MC_COES, MC_QU,
 
     // End macros for accented letters
     ALPHA_MACRO_END,
@@ -173,16 +171,25 @@ enum {
 
 // Custom Shortcuts
 
-#define HYPR_D HYPR(KC_D)
 #define HYPR_R HYPR(KC_R)
-#define HYPR_G HYPR(KC_G)
-#define HYPR_C HYPR(KC_C)
 #define HYPR_L HYPR(KC_L)
-#define HYPR_M HYPR(KC_M)
 #define MEH_D  MEH(KC_D)
 #define MEH_G  MEH(KC_G)
 #define MEH_C  MEH(KC_C)
 #define MEH_M  MEH(KC_M)
+
+#ifndef MOUSE_ENABLE
+#define OM_U KC_NO
+#define OM_D KC_NO
+#define OM_L KC_NO
+#define OM_R KC_NO
+#define OM_BTNS KC_NO
+#define OM_HLDS KC_NO
+#define OM_RELS KC_NO
+#define OM_W_U KC_NO
+#define OM_W_D KC_NO
+#define OM_BTN2 KC_NO
+#endif
 
 // Layer-taps
 
@@ -198,6 +205,9 @@ enum {
 #define MED_0   LT(_MEDIA, KC_0)
 
 #define MAI_CAS LT(_SYSTEM, TG_CASE)
+#define MAI_CLK LT(_SYSTEM, OM_BTNS)
+
+#define LEA_COM LT(_NOMOD, KC_COMM)
 
 #define NMO_DOC LT(_NOMOD, MC_QDOC)
 #define ACT_SPC LT(_FIXED_ALPHA2, KC_SPC)

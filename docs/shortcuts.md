@@ -13,6 +13,7 @@
 - Swapper is a set of macros that allows easy swap between applications, tabs, navigation history and zoom levels.
 - These macros will work according to the OS selected in the System layer.
 - There are two pairs of dedicated keys.
+- The implementation was based on [Callums's](https://github.com/callum-oakley/qmk_firmware/tree/master/users/callum) implementation, but extended to support additional features.
 - Source Code: [swapper.c](../src/qmk/users/rafaelromao/features/swapper.c)
 #### Applications and Tabs
 - The first pair swaps back and forth between applications.
@@ -27,6 +28,7 @@
 ### Select Word and Select Line
 - These two macros selects the current word or line in the first press and extend the selection to the next ones in consecutive presses.
 - These macros are also OS aware and works the same way on Windows, Linux and MacOS.
+- The implementation was based on [Pascal's](https://github.com/getreuer/qmk-keymap) implementation, but it does not work the same way.
 - Source Code: [select_word.c](../src/qmk/users/rafaelromao/features/select_word.c)
 
 ### Comment Lines

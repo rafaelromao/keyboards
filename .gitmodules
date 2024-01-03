@@ -1,31 +1,9 @@
-[submodule "qmk_firmware"]
-	path = qmk_firmware
+[submodule "modules/qmk/qmk_firmware"]
+	path = modules/qmk/qmk_firmware
 	url = https://github.com/qmk/qmk_firmware
-[submodule "zmk"]
-	path = zmk
+[submodule "modules/getreuer/qmk-keymap"]
+	path = modules/getreuer/qmk-keymap
+	url = https://github.com/getreuer/qmk-keymap
+[submodule "modules/rafaelromao/zmk"]
+	path = modules/rafaelromao/zmk
 	url = https://github.com/rafaelromao/zmk
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-       
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-       
-        

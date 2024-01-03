@@ -11,9 +11,10 @@
 - The Alpha1 layer is the base layer, which contains the most common alphas of Portuguese and English, plus comma and period. It is extended by the Alpha2 layer.
 
 ### Secondary Alpha Layer
-- The Alpha2 layer has common Portuguese accented letters, readily available with a single tap on the left outer thumb key (OS Accents), making them as easy to type as shifted letters, which are available with a single tap on the right outer thumb key (OS Shift).
-- This layer also gives access to q, y, z and x, that are not available in the base layer, for the 28 keys variant, as well as an standalone apostrophe character.
+- The Alpha2 layer has common Portuguese accented letters, readily available with a single tap on the right inner thumb key (OS Accents), making them as easy to type as shifted letters, which are available with a single tap on the right outer thumb key (OS Shift).
 - There are dedicated accent keys for à á ã â é ê õ ó ô ú í and ç, which is all that is needed for Portuguese.
+- This layer also gives access to comma, dot and replicated versions of q, y, w, v, z and j, that are not available in the base layer, for the 24 keys variant, as well as an standalone apostrophe character in the thumb.
+- This two alpha layers approach is based on [Ben Vallack's keymap](https://youtu.be/5RN_4PQ0j1A?si=f9OkOvNdL3jE4seR).
 - Source code:
   - [QMK] [accents.c](../src/qmk/users/rafaelromao/features/accents.c)
   - [ZMK] [accents.dtsi](https://github.com/rafaelromao/keyboards/blob/main/src/zmk/config/rafaelromao/features/accents.dtsi) 
@@ -47,6 +48,7 @@
 
 ### Sentence Case
 - Tapping Space after `.`, `?` or `!` will trigger ONESHOT SHIFT when the next key is pressed, so that it gets capitalized. Repeat key can be used to cancel this behavior, and it will also expire after one second if no other key is pressed.
+- The implementation was based on [Pascal's](https://github.com/getreuer/qmk-keymap) implementation, but it does not work the same way.
 
 ### Secrets
 - Secret combos and leader sequencies can be included in the files [secret.h](https://gist.github.com/rafaelromao/29b444b8b0bdec5402067beb35c2bcda) and [secret.c](https://gist.github.com/rafaelromao/76be290d7d58176699b8e20859c15618). These files are not part of the repo, for obvious reasons, so these two gists are provided as templates.

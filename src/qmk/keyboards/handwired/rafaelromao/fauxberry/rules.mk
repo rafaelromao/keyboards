@@ -1,5 +1,7 @@
 SRC += features/dynamic_macro.c
+SRC += features/getreuer/orbital_mouse.c
 
+MOUSE_ENABLE = yes
 BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 RGBLIGHT_ENABLE = yes       # Enable keyboard RGB underglow
 WS2812_DRIVER = vendor

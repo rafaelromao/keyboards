@@ -97,7 +97,7 @@
         COMBO(cb_bti,           LBM LBI,     &mc_bti,            LOWER)
         COMBO(cb_braces,        LTR LTM,     &mc_braces,         LOWER)
 
-        COMBO(cb_bsl_s,         LTM LTI,     &kp BACKSLASH,      SYMBOLS)
+        COMBO(cb_euro,          LTM LTI,     &mc_euro,           SYMBOLS)
         COMBO(cb_sqo_s,         LHM LHI,     &kp SQT,            SYMBOLS)
         COMBO(cb_bti_s,         LBM LBI,     &kp GRAVE,          SYMBOLS)
         COMBO(cb_braces_s,      LTR LTM,     &mc_braces_s,       SYMBOLS)
@@ -105,13 +105,11 @@
         COMBO(cb_pars,          LHR LHM,     &th_pars 0 0,       LOWER SYMBOLS)
         COMBO(cb_brackets,      LBR LBM,     &mc_brackets,       LOWER SYMBOLS)
 
-        COMBO(cb_deg,           RTI RTM,     &mc_deg,            SYMBOLS)
+        COMBO(cb_perc,          RTI RTM,     &kp PERCENT,        SYMBOLS)
         COMBO(cb_caret,         RHI RHM,     &kp CARET,          SYMBOLS)
         COMBO(cb_tilde,         RBI RBM,     &kp TILDE,          SYMBOLS)
         COMBO(cb_amps,          RHM RHR,     &kp AMPS,           SYMBOLS)
         COMBO(cb_pipe,          RBM RBR,     &kp PIPE,           SYMBOLS)
-        COMBO(cb_dollar,        RHI RHM RHR, &kp DOLLAR,         SYMBOLS)
-        COMBO(cb_euro,          RBI RBM RBR, &mc_euro,           SYMBOLS)
 
         COMBO(cb_eqeq,          RTI RTM,     &mc_eqeq,           RAISE)
         COMBO(cb_noteq,         RTI RTM RTR, &mc_noteq,          RAISE)

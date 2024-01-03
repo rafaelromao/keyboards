@@ -61,6 +61,25 @@ bool get_combo_must_tap(uint16_t index, combo_t *combo) {
 
 process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+        case MAI_CLK:
+            if (record->event.pressed && record->tap.count) {
+                keyrecord_t krp;
+                krp.event.pressed = true;
+                process_orbital_mouse(OM_BTNS, &krp);
+                keyrecord_t krr;
+                krr.event.pressed = false;
+                process_orbital_mouse(OM_BTNS, &krr);
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+            break;
+
+        case LEA_COM:
+            if (record->event.pressed && !record->tap.count) {
+                leader_start();
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+            break;
+
         case NAV_AT:
             if (record->event.pressed && record->tap.count) {
                 tap_code16(KC_AT);

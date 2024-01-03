@@ -7,6 +7,13 @@
 #undef LOCKING_SUPPORT_ENABLE
 #undef LOCKING_RESYNC_ENABLE
 
+// Configure Orbital Mouse
+#define ORBITAL_MOUSE_RADIUS 50
+#define ORBITAL_MOUSE_SPEED_CURVE \
+    { 15, 40, 100, 160, 160, 160, 160, 160, 160, 160, 160, 160, 160, 160, 160, 160 }
+//     |               |               |               |           |
+// t = 0.000           1.024           2.048           3.072       3.840 s
+
 // Make it easier to work with tap hold
 #define PERMISSIVE_HOLD
 #define QUICK_TAP_TERM_PER_KEY

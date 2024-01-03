@@ -6,9 +6,9 @@ This folder contains the port of my keymap to ZMK.
 The full documentation can be found [here](https://github.com/rafaelromao/keyboards). 
 
 ### Missing features:
+- Orbital Mouse
 - Dynamic Macros
 - Smart Cases
-- Locked One-Shot Mods
 - Windows Support
 
 ### Known Issues:

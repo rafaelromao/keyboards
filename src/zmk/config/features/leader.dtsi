@@ -38,8 +38,9 @@
 
 	macros {
         LEADER_MACRO(mc_section, &kp LA(N6))
-        LEADER_MACRO(mc_orda, &kp LA(N0))
-        LEADER_MACRO(mc_ordo, &kp LA(N9))
+        LEADER_MACRO(mc_orda,    &kp LA(N0))
+        LEADER_MACRO(mc_ordo,    &kp LA(N9))
+        LEADER_MACRO(mc_deg,     &kp LS(LA(N8)))
 	};
 
 	leader_sequences {
@@ -48,5 +49,6 @@
 		LEADER_SEQ(ld_sect, RBR LHM , &mc_section, ALPHA1)
 		LEADER_SEQ(ld_orda, RBR RTM , &mc_orda, ALPHA1)
 		LEADER_SEQ(ld_ordo, RBR RHM , &mc_ordo, ALPHA1)
+		LEADER_SEQ(ld_deg,  RBR LHI , &mc_deg, ALPHA1)
 	};
 };

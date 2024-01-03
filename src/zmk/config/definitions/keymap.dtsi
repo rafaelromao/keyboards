@@ -97,7 +97,7 @@
                 lower_layer {
                      label = "LOWER";
                      bindings = <
-   &trans              &td_lbrc            &td_rbrc            &th_hash 0 0        &none               &none               &mc_n7              &mc_n8              &mc_n9              &trans
+   &trans              &td_lbrc            &td_rbrc            &td_dlr             &none               &none               &mc_n7              &mc_n8              &mc_n9              &trans
    &lt NAV AT          &td_lpar            &td_rpar            &td_dqo             &mc_sqo             &kp COMMA           &mc_n4              &mc_n5              &mc_n6              &kp DOT  
    &none               &td_lbkt            &td_rbkt            &th_qmark 0 0       &mc_bti             &none               &mc_n1              &mc_n2              &mc_n3              &none
                                            &trans              &kp CAPSLOCK        &trans              &lt RAISE SPACE     &th_n0 MEDIA 0      &trans
@@ -106,7 +106,7 @@
                 raise_layer {
                      label = "RAISE";
                      bindings = <
-   &trans              &kp F9              &kp F8              &kp F7              &none               &none               &th_colon 0 0       &td_eql             &th_perc 0 0        &trans
+   &trans              &kp F9              &kp F8              &kp F7              &none               &none               &th_colon 0 0       &td_eql             &th_hash 0 0        &trans
    &kp F12             &kp F6              &kp F5              &kp F4              &kp F11             &mc_caret           &th_mins 0 0        &th_plus 0 0        &td_slash           &kp STAR  
    &none               &kp F3              &kp F2              &kp F1              &kp F10             &mc_tilde           &th_excl 0 0        &th_lt 0 0          &th_gt 0 0          &none
                                            &trans              &key_repeat         &lt SYMBOLS SPACE   &trans              &tog NUMPAD         &trans       
@@ -115,7 +115,7 @@
                 symbols_layer {
                      label = "SYMBOLS";
                      bindings = <
-   &trans              &kp LBRC            &kp RBRC            &kp HASH            &none               &none               &kp COLON           &kp EQUAL           &kp PERCENT         &trans
+   &trans              &kp LBRC            &kp RBRC            &kp DOLLAR          &none               &none               &kp COLON           &kp EQUAL           &kp HASH            &trans
    &kp AT              &kp LPAR            &kp RPAR            &kp DQT             &kp SQT             &kp CARET           &kp MINUS           &kp PLUS            &kp SLASH           &kp STAR 
    &none               &kp LBKT            &kp RBKT            &kp QMARK           &kp GRAVE           &kp TILDE           &kp EXCL            &kp LT              &kp GT              &none
                                            &trans              &kp CAPSLOCK        &kp SPACE           &kp SPACE           &tog NUMPAD         &trans
@@ -152,17 +152,17 @@
                      label = "NAV";
                      bindings = <
    &trans              &kp ESC             &mc_meh_m           &mc_meh_g           &none               &none               &kp INS             &kp ENTER           &kp TAB             &trans
-   &mc_meh_d           &sk LSHIFT          &sk LCTRL           &sk LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
-   &none               &sk RALT            &mc_meh_c           &sk LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &none
+   &mc_meh_d           &kp LSHIFT          &kp LCTRL           &kp LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &none               &kp RALT            &mc_meh_c           &kp LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &none
                                            &trans              &trans              &trans              &kp SPACE           &mst MEDIA NAV_F    &trans
                            >;
                 };
                 media_layer {
                      label = "MEDIA";
                      bindings = <
-   &trans              &kp ESC             &mc_hyp_m           &mc_hyp_g           &none               &none               &mc_hyp_l           &kp ENTER           &kp TAB             &trans
-   &mc_hyp_d           &kp LSHIFT          &kp LCTRL           &kp LGUI            &none               &none               &mc_hyp_r           &kp C_VOL_DN        &kp C_VOL_UP        &kp C_MUTE
-   &none               &kp RALT            &mc_hyp_c           &kp LALT            &none               &none               &kp C_PP            &kp C_PREV          &kp C_NEXT          &none
+   &trans              &kp ESC             &none               &none               &none               &none               &mc_hyp_l           &kp ENTER           &kp TAB             &trans
+   &none               &none               &none               &none               &none               &none               &mc_hyp_r           &kp C_VOL_DN        &kp C_VOL_UP        &kp C_MUTE
+   &none               &none               &none               &none               &none               &none               &kp C_PP            &kp C_PREV          &kp C_NEXT          &none
                                            &trans              &mo SYSTEM          &kp SPACE           &trans              &trans              &trans
                            >;
                 };
@@ -170,8 +170,8 @@
                      label = "NAV";
                      bindings = <
    &trans              &kp ESC             &mc_meh_m           &mc_meh_g           &none               &none               &kp INS             &kp ENTER           &kp TAB             &trans
-   &mc_meh_d           &sk LSHIFT          &sk LCTRL           &sk LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
-   &none               &sk RALT            &mc_meh_c           &sk LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &none
+   &mc_meh_d           &kp LSHIFT          &kp LCTRL           &kp LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &none               &kp RALT            &mc_meh_c           &kp LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &none
                                            &trans              &trans              &trans              &kp SPACE           &mo SYSTEM          &trans
                         >;
                 };

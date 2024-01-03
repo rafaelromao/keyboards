@@ -17,11 +17,19 @@ void matrix_scan_user(void) {
     check_disable_smart_case();
     check_oneshot_timeout();
     matrix_scan_keymap();
+#ifdef MOUSE_ENABLE
+    orbital_mouse_task();
+#endif
 }
 
 // Process record
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+#ifdef MOUSE_ENABLE
+    // Process Orbital Mouse
+    process_orbital_mouse(keycode, record);
+#endif
+
     // Process Sentence Case
     switch (process_sentence_case(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:

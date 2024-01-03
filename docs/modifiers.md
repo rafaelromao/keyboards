@@ -9,15 +9,8 @@
 
 ## Standard Mods
 
-- Standard modifiers are available in [Media](navigation.md#media) the layer.
-- These modifiers do not have one-shot behavior, so they can be used in situations which a tap or multi tap in a modifier key is required.
-
-## One-Shot Mods
-
-One-Shot Mods are modifier keys that, when tapped, remain active until the next key is pressed or a timeout expires. 
-- They are available in the [Navigation](navigation.md#navigation) layer and act as standard modifers when held.
-- These modifiers will be automatically deactivated after 2 seconds. 
-- They can also be activated in sticky mode, with a double tap, and remain active until manually deactivated by tapping the Accents or Smart Case thumb keys.
+- Standard modifiers are available in [Navigation](navigation.md) the layer.
+- These modifiers do not have one-shot or mod-tap behaviors, so they can be used in situations which a tap or multi tap in a modifier key is required.
 
 ### One-shot Shift Key
 - The OS Shift key is available in the right outer thumb key and will toggle the Shift modifier in one-shot mode when single tapped.
@@ -42,6 +35,7 @@ Smart Cases are custom case modes activated via thumb modifiers.
     - If Right Shift is held, it activates **slash/case**.
     - If Right Control + Right Shift are held, it activates **SCREAM/SLASH/CASE**.
 - Any Smart Case option, including Caps Lock, will be automatically deactivated after 10 seconds of inactivity or typing space twice.
+- The implementation was based on [Pascal's CapsWord](https://github.com/getreuer/qmk-keymap) and [Andrew's X-Case](https://github.com/andrewjrae/kyria-keymap), but it does not work the same way. There are not customization functions and Caps Lock is used instead of shift.
 - Source code: [smart_case.c](../src/qmk/users/rafaelromao/features/smart_case.c)
 
 ##

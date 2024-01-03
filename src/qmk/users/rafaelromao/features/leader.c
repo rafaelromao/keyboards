@@ -5,6 +5,11 @@
 leader_t leader = {.isLeading = false};
 
 void process_leader_dictionary(void) {
+    // Degree sign
+    if (leader_sequence_two_keys(TD_DOT, KC_D)) {
+        process_macros(MC_DEG, NULL);
+        return;
+    }
     // Section sign
     if (leader_sequence_two_keys(TD_DOT, KC_S)) {
         process_macros(MC_SEC, NULL);
@@ -18,6 +23,10 @@ void process_leader_dictionary(void) {
     // Female ordinal sign
     if (leader_sequence_two_keys(TD_DOT, KC_O)) {
         process_macros(MC_ORDO, NULL);
+        return;
+    }
+    // Cancel
+    if (leader_sequence_one_key(KC_K)) {
         return;
     }
 
