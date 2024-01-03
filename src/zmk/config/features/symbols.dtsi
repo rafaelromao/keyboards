@@ -120,9 +120,11 @@
         MODTAP_SYMBOL(th_n5,       &mc_n5)
         MODTAP_SYMBOL(th_n6,       &mc_n6)
 
+        SYMBOL(mc_dollar,          &kp DOLLAR)
         SYMBOL(mc_bslash,          &kp BACKSLASH)
-        SYMBOL(mc_hash,            &kp HASH)
-        TAPHOLD_SYMBOL(th_hash,    &mc_hash, &mc_bslash)
+        SYMBOL(mc_euro,            &kp LS(LA(N2)))
+        TAPHOLD_SYMBOL(th_dlr,     &mc_dollar, &mc_bslash)
+        TAPDANCE_SYMBOL(td_dlr,    &th_dlr 0 0, &mc_euro, &none)
 
         SYMBOL(mc_sqo,             &kp SQT &kp SPACE)
         SYMBOL(mc_dqo,             &kp DQT &kp SPACE)
@@ -183,16 +185,15 @@
 
         // Raise
 
+        SYMBOL(mc_hash,            &kp HASH)
         SYMBOL(mc_perc,            &kp PERCENT)
-        SYMBOL(mc_deg,             &kp LS(LA(N8)))
-        TAPHOLD_SYMBOL(th_perc,    &mc_perc, &mc_deg)
+        TAPHOLD_SYMBOL(th_hash,    &mc_hash, &mc_perc)
 
         SYMBOL(mc_caret,           &kp CARET &kp SPACE)
         SYMBOL(mc_minus,           &kp MINUS)
         TAPHOLD_SYMBOL(th_mins,    &mc_minus, &mc_caret)
 
         SYMBOL(mc_plus,            &kp PLUS)
-        SYMBOL(mc_dollar,          &kp DOLLAR)
         TAPHOLD_SYMBOL(th_plus,    &mc_plus, &mc_dollar)
 
         SYMBOL(mc_and,             &kp AMPS)
@@ -203,9 +204,9 @@
         TAPHOLD_SYMBOL(th_slash,   &mc_slash, &mc_and)
         TAPDANCE_SYMBOL(td_slash,  &th_slash 0 0, &mc_2_slash, &mc_3_slash)
 
-        SYMBOL(mc_euro,            &kp LS(LA(N2)))
         SYMBOL(mc_lt,              &kp LT)
-        TAPHOLD_SYMBOL(th_lt,      &mc_lt, &mc_euro)
+        SYMBOL(mc_unds,            &kp UNDERSCORE)
+        TAPHOLD_SYMBOL(th_lt,      &mc_lt, &mc_unds)
 
         SYMBOL(mc_or,              &kp PIPE)
         SYMBOL(mc_gt,              &kp GT)

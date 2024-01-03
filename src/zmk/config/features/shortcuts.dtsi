@@ -67,14 +67,10 @@
         SHORTCUT(mc_sft_o_esc,              &macro_tap &kp LS(O) &kp ESC)
         SHORTCUT(mc_shift_tab,              &macro_tap &kp LS(TAB))
 
-        // Media
+        // Media and Navigation
 
         SHORTCUT(mc_hyp_l,                  &macro_tap &kp LC(LA(LS(LG(L)))))
         SHORTCUT(mc_hyp_r,                  &macro_tap &kp LC(LA(LS(LG(R)))))
-        SHORTCUT(mc_hyp_g,                  &macro_tap &kp LC(LA(LS(LG(G)))))
-        SHORTCUT(mc_hyp_c,                  &macro_tap &kp LC(LA(LS(LG(C)))))
-        SHORTCUT(mc_hyp_d,                  &macro_tap &kp LC(LA(LS(LG(D)))))
-        SHORTCUT(mc_hyp_m,                  &macro_tap &kp LC(LA(LS(LG(M)))))
         SHORTCUT(mc_meh_m,                  &macro_tap &kp LC(LA(LS(M))))
         SHORTCUT(mc_meh_g,                  &macro_tap &kp LC(LA(LS(G))))
         SHORTCUT(mc_meh_c,                  &macro_tap &kp LC(LA(LS(C))))
