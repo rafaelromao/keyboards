@@ -40,11 +40,11 @@
 - Source Code: [macros.c](../src/qmk/users/rafaelromao/features/macros.c)
 
 ### Dynamic Macros
-- There is an independent dynamic macro recording key in the Macros layer.
+- There is a dynamic macro recording key in the Shortcuts layer.
 - Double tapping it will start or stop recording a dynamic macro.
 - Tapping it will play the dynamic macro.
-- If shift is active, it will consider the macro slot 2, otherwise it will consider the macro slot 1.
-- If there is a macro being recorded, use the thumb modifier keys to stop recording and clear the current macro.
+- If shift is active, it will use the macro slot 2, otherwise it will use the macro slot 1.
+- If there is a macro being recorded, you can use the thumb one-shot shift key to stop recording and clear the dynamic macro.
 - Source Code: [dynamic_macro.c](../src/qmk/users/rafaelromao/features/dynamic_macro.c)
 
 ### Coding Shortcuts
