@@ -12,7 +12,7 @@
 - Standard modifiers are available in [Navigation](navigation.md) the layer.
 - These modifiers do not have one-shot or mod-tap behaviors, so they can be used in situations which a tap or multi tap in a modifier key is required.
 
-### One-shot Shift Key
+## One-shot Shift Key
 - The OS Shift key is available in the right outer thumb key and will toggle the Shift modifier in one-shot mode when single tapped.
 - Source code: [custom_oneshot.c](../src/qmk/users/rafaelromao/features/custom_oneshot.c)
 
