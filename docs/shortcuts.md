@@ -48,7 +48,7 @@
 - Source Code: [dynamic_macro.c](../src/qmk/users/rafaelromao/features/dynamic_macro.c)
 
 ### Coding Shortcuts
-- In the left side os the Macros layers, there are shortcuts for the most common actions in IntelliJ.
+- In the left side os the Shortcuts layers, there are shortcuts for the most common actions in IntelliJ.
     - Quick Actions (Alt+Enter) - If shifted, toggle a breakpoint in the current line (Cmd+F8 / Ctrl+F8).
     - Type-matching Auto Complete (Ctrl+Shift+Space) - If shifted, show Basic Auto Complete Options (Ctrl+Space)
     - Show Quick Docs (F1 / Ctrl+Q) - If shifted, show Parameters Info (Cmd+P / Ctrl+P)
