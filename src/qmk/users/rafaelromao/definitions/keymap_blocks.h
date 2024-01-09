@@ -12,7 +12,7 @@
 
 #define           ________ALPHA1_R1____________________           KC_L    , KC_O    , KC_U    , KC_BSPC
 #define __________________ALPHA1_R2____________________ KC_Z    , RGUIT_R , RCTLT_A , RSFTT_E , SHO_KCI
-#define __________________ALPHA1_R3__________           KC_J    , RALTT_H , LEA_COM , TD_DOT  
+#define __________________ALPHA1_R3__________           KC_J    , RALTT_H , TD_COMM , TD_DOT  
 #define ___ALPHA1_R4_____                               RAI_A2  , MED_CAS 
 
 #define ___________________NUMPAD_L1_________           _______ , KC_F9   , KC_F8   , KC_F7   

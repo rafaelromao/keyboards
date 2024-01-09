@@ -445,6 +445,30 @@ void td_hash(tap_dance_state_t *state, void *user_data) {
     }
 }
 
+void td_comm(tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code(KC_COMM);
+            break;
+        case TD_DOUBLE_SINGLE_TAP:
+        case TD_DOUBLE_TAP:
+            tap_code(KC_COMM);
+            tap_code(KC_COMM);
+            break;
+        case TD_TRIPLE_TAP:
+            tap_code(KC_COMM);
+            tap_code(KC_COMM);
+            tap_code(KC_COMM);
+            break;
+        case TD_SINGLE_HOLD:
+            leader_start();
+            break;
+        default:
+            break;
+    }
+}
+
 void td_dot(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
@@ -590,6 +614,7 @@ tap_dance_action_t tap_dance_actions[] = {
     [CIR_SAR] = ACTION_TAP_DANCE_FN(td_circ),
     [DAN_DAR] = ACTION_TAP_DANCE_FN(td_dand),
     [DLR_BSL] = ACTION_TAP_DANCE_FN(td_dlr),
+    [LEA_COM] = ACTION_TAP_DANCE_FN(td_comm),
     [DOT_DOT] = ACTION_TAP_DANCE_FN(td_dot)};
 
 // clang-format on

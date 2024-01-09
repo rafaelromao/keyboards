@@ -73,13 +73,6 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
             }
             break;
 
-        case LEA_COM:
-            if (record->event.pressed && !record->tap.count) {
-                leader_start();
-                return PROCESS_RECORD_RETURN_FALSE;
-            }
-            break;
-
         case NAV_AT:
             if (record->event.pressed && record->tap.count) {
                 tap_code16(KC_AT);

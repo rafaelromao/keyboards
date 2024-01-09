@@ -25,6 +25,7 @@ enum {
     REC_MAC, 
 #endif
     DOT_DOT, 
+    LEA_COM,
     MIN_CIR, 
     COL_ECO,
     HAS_PER,
@@ -61,6 +62,7 @@ enum {
 #define TD_MACR XXXXXXX
 #endif
 #define TD_DOT TD(DOT_DOT)
+#define TD_COMM TD(LEA_COM)
 #define TD_MINS TD(MIN_CIR)
 #define TD_COLN TD(COL_ECO)
 #define TD_HASH TD(HAS_PER)
@@ -161,6 +163,9 @@ enum {
 #define GU_F4 LGUI_T(KC_F4)
 #define GU_4 RGUI_T(KC_4)
 
+#define HYP_KCJ HYPR_T(KC_J)
+#define HYP_KCV HYPR_T(KC_V)
+
 // One-shot mods
 
 #define OS_LSFT OSM(MOD_LSFT)
@@ -206,8 +211,6 @@ enum {
 
 #define MAI_CAS LT(_SYSTEM, TG_CASE)
 #define MAI_CLK LT(_SYSTEM, OM_BTNS)
-
-#define LEA_COM LT(_NOMOD, KC_COMM)
 
 #define NMO_DOC LT(_NOMOD, MC_QDOC)
 #define ACT_SPC LT(_FIXED_ALPHA2, KC_SPC)

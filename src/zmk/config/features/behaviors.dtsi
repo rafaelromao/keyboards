@@ -150,5 +150,51 @@
             bindings = <&mc_sft_ctl_gui>, <&mc_enter>;
         };
 
+        mc_hyp: mc_hyp { 
+            compatible = "zmk,behavior-macro"; 
+            label = ZMK_MACRO_STRINGIFY(mc_hyp);
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &kp LG(LA(LS(LCTRL)))>;
+        };
+
+        mc_v: mc_v { 
+            compatible = "zmk,behavior-macro"; 
+            label = ZMK_MACRO_STRINGIFY(mc_v);
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &kp V>;
+        };
+
+        hyp_v: hyp_v {
+            compatible = "zmk,behavior-hold-tap";
+            label = ZMK_MACRO_STRINGIFY(ht_q);
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <QUICK_TAP_TERM>;
+            bindings = <&mc_hyp>, <&mc_v>;
+        };
+
+        mc_j: mc_j { 
+            compatible = "zmk,behavior-macro"; 
+            label = ZMK_MACRO_STRINGIFY(mc_j);
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &kp J>;
+        };
+
+        hyp_j: hyp_j {
+            compatible = "zmk,behavior-hold-tap";
+            label = ZMK_MACRO_STRINGIFY(ht_q);
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <QUICK_TAP_TERM>;
+            bindings = <&mc_hyp>, <&mc_j>;
+        };
     };
 };

@@ -27,6 +27,8 @@ uint16_t extract_tapping_keycode(uint16_t keycode) {
             return KC_LT;
         case TD_GT:
             return KC_GT;
+        case TD_COMM:
+            return KC_COMM;
         case TD_DOT:
             return KC_DOT;
         case TD_MINS:
