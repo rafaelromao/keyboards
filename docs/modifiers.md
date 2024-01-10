@@ -35,7 +35,7 @@ Smart Cases are custom case modes activated via thumb modifiers.
     - If Right Shift is held, it activates **slash/case**.
     - If Right Control + Right Shift are held, it activates **SCREAM/SLASH/CASE**.
 - Any Smart Case option, including Caps Lock, will be automatically deactivated after 10 seconds of inactivity or typing space twice.
-- The implementation was based on [Pascal's CapsWord](https://github.com/getreuer/qmk-keymap) and [Andrew's X-Case](https://github.com/andrewjrae/kyria-keymap), but it does not work the same way. There are not customization functions and Caps Lock is used instead of shift.
+- The implementation was based on [Pascal's CapsWord](https://github.com/getreuer/qmk-keymap) and [Andrew's X-Case](https://github.com/andrewjrae/kyria-keymap), but it does not work the same way. There are no customization functions and Caps Lock is used instead of shift.
 - Source code: [smart_case.c](../src/qmk/users/rafaelromao/features/smart_case.c)
 
 ##
