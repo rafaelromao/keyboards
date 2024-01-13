@@ -6,7 +6,7 @@
 - The Shortcuts layer not only gives access to some common programming macros and shortcuts but also some complex features, like Select Word, Window Swapper and the ability to record and play Dynamic Macros, as well as the inverted space and backspace keys.
 
 ### Leader Key
-- The Leader Key is available in the Shortcuts layer and can give easy access to some useful shortcuts and macros, like typing an internet domain or recurring terminal commands.
+- The Leader Key is available in the Base layer, holding and releasing comma for 175 milisseconds.  It gives easy access to some useful macros, like typing an internet domain or recurring terminal commands.
 - Source code: [leader.c](../src/qmk/users/rafaelromao/features/leader.c)
 
 ### Swapper
