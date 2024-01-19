@@ -132,8 +132,6 @@
         TAPHOLD_SYMBOL(th_dqo,     &mc_dqo, &mc_sqo)
         TAPDANCE_SYMBOL(td_dqo,    &th_dqo 0 0, &mc_double_dqo, &none)
 
-        TAPHOLD_SYMBOL(th_quotes,  &mc_sqo, &mc_dqo)
-
         SYMBOL(mc_lpar,            &kp LPAR)
         SYMBOL(mc_end_lpar,        &kp END &kp LPAR)
         TAPHOLD_SYMBOL(th_lpar,    &mc_lpar, &mc_end_lpar)

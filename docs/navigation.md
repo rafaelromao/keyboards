@@ -12,7 +12,10 @@ The Navigation and Media layer can be activated holding the outer left and right
 noremap A J
 noremap E K
 noremap I L
-noremap L E
+noremap L G
+noremap G E
+noremap M W
+noremap W M
 noremap K Z
 noremap J A
 noremap Z I
@@ -22,12 +25,18 @@ noremap H R
 noremap a j
 noremap e k
 noremap i l
-noremap l e
+noremap l g
+noremap g e
+noremap m w
+noremap w m
 noremap k z
 noremap j a
 noremap z i
 noremap r h
 noremap h r
+
+noremap kk zz
+noremap ll gg
 ```
         
 #### Navigation Layer Toggle

@@ -14,10 +14,6 @@ void tap_accent_dead_key(uint16_t keycode) {
         case MC_CR_O:
             tap_code16(KC_CIRC);
             break;
-        case MC_TL_A:
-        case MC_TL_O:
-            tap_code16(KC_TILD);
-            break;
         case MC_SQ_C:
         case MC_SQ_A:
         case MC_SQ_E:
@@ -33,7 +29,6 @@ void tap_accent_tap_key(uint32_t keycode) {
     switch (keycode) {
         case MC_GV_A:
         case MC_CR_A:
-        case MC_TL_A:
         case MC_SQ_A:
             tap_code(KC_A);
             break;
@@ -41,7 +36,6 @@ void tap_accent_tap_key(uint32_t keycode) {
         case MC_SQ_E:
             tap_code(KC_E);
             break;
-        case MC_TL_O:
         case MC_CR_O:
         case MC_SQ_O:
             tap_code(KC_O);
@@ -62,12 +56,10 @@ bool is_accented_keycode(uint16_t keycode) {
     switch (keycode) {
         case MC_GV_A:
         case MC_CR_A:
-        case MC_TL_A:
         case MC_SQ_A:
         case MC_CR_E:
         case MC_SQ_E:
         case MC_SQ_I:
-        case MC_TL_O:
         case MC_CR_O:
         case MC_SQ_O:
         case MC_SQ_U:
@@ -79,42 +71,9 @@ bool is_accented_keycode(uint16_t keycode) {
 
 process_record_result_t process_ngrams(uint16_t keycode, bool isShifted) {
     switch (keycode) {
-        case MC_AO:
-            clear_shift();
-            tap_code16(KC_TILD);
-            tap_code(KC_A);
-            tap_code(KC_O);
-            return PROCESS_RECORD_RETURN_FALSE;
-        case MC_OE:
-            clear_shift();
-            tap_code16(KC_TILD);
-            tap_code(KC_O);
-            tap_code(KC_E);
-            return PROCESS_RECORD_RETURN_FALSE;
-        case MC_CAO:
-            clear_shift();
-            tap_code16(KC_QUOT);
-            tap_code(KC_C);
-            tap_code16(KC_TILD);
-            tap_code(KC_A);
-            tap_code(KC_O);
-            return PROCESS_RECORD_RETURN_FALSE;
-        case MC_COES:
-            clear_shift();
-            tap_code16(KC_QUOT);
-            tap_code(KC_C);
-            tap_code16(KC_TILD);
-            tap_code(KC_O);
-            tap_code(KC_E);
-            tap_code(KC_S);
-            return PROCESS_RECORD_RETURN_FALSE;
         case MC_QU:
             tap_code(KC_Q);
             tap_code(KC_U);
-            return PROCESS_RECORD_RETURN_FALSE;
-
-        case TG_CAPS:
-            tap_code(KC_CAPS);
             return PROCESS_RECORD_RETURN_FALSE;
     }
 

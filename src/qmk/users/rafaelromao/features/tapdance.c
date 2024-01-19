@@ -135,7 +135,6 @@ void td_dquo(tap_dance_state_t *state, void *user_data) {
             process_macros(MC_DQUO, NULL);
             break;
         case TD_SINGLE_HOLD:
-            tap_code16(KC_END);
             process_macros(MC_SQUO, NULL);
             break;
         case TD_DOUBLE_TAP:

@@ -10,9 +10,9 @@ typedef enum {
     _LOWER,
     _RAISE,
     _SYMBOLS,
-    _FIXED_NAV,
-    _MEDIA,
     _NAVIGATION,
+    _MEDIA,
+    _FIXED_NAV,
     _LOCK,
     _SYSTEM
 } layers_t;

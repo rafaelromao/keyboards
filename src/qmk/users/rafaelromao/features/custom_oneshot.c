@@ -158,7 +158,6 @@ process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *re
             }
         case NAV_CAS:
         case MED_CAS:
-        case MAI_CAS:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
                     if (has_any_smart_case()) {

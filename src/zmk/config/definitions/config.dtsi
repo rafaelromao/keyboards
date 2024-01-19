@@ -19,9 +19,9 @@
 #define SEN_CASE 11
 #define SEN_E1 12
 #define SEN_E2 13
-#define NAV_F 14
+#define NAV 14
 #define MEDIA 15
-#define NAV 16
+#define NAV_F 16
 #define LOCK_KB 17
 #define SYSTEM 18
 

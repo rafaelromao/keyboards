@@ -53,7 +53,7 @@
                      label = "SHORTCUT";
                      bindings = <
    &trans              &kp ESC             &mm_actions         &mm_typematch       &none               &none               &mc_selw            &kp ENTER           &kp TAB             &trans    
-   &trans              &th_find LSHFT 0    &mm_run             &mm_debug           &mm_build           &none               &mc_seln            &mm_zh_b            &th_zh LSHFT 0      &trans 
+   &mo SYSTEM          &th_find LSHFT 0    &mm_run             &mm_debug           &mm_build           &none               &mc_seln            &mm_zh_b            &th_zh LSHFT 0      &mo SYSTEM
    &none               &mm_recent          &mm_complete        &mm_usages          &mm_refac           &mc_join            &mc_comment         &mm_wt_b            &mm_wt_f            &none
                                            &trans              &th_proj NAV 0      &th_docs NMODS 0    &lt ALPHA2 SPACE    &mst NAV NAV_F      &trans
                            >;
@@ -62,7 +62,7 @@
                      label = "SHORTCUT";
                      bindings = <
    &trans              &trans              &trans              &trans              &trans              &trans              &mc_ext_sel         &trans              &trans              &trans    
-   &trans              &trans              &trans              &trans              &trans              &trans              &mc_ext_sel         &trans              &trans              &trans  
+   &mo SYSTEM          &trans              &trans              &trans              &trans              &trans              &mc_ext_sel         &trans              &trans              &mo SYSTEM  
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
                                            &trans              &trans              &trans              &trans              &trans              &trans
                            >;
@@ -79,18 +79,18 @@
                 alpha2_layer {
                      label = "ALPHA2";
                      bindings = <
-   &trans              &kp Q               &mc_qu              &kp K               &none               &none               &ac_agrv            &ac_oacu            &ac_uacu            &trans
-   &kp Y               &kp Z               &kp X               &kp W               &kp SQT             &kp CARET           &ac_atil            &ac_aacu            &ac_eacu            &ac_iacu 
-   &none               &kp J               &mc_ced             &kp V               &kp GRAVE           &kp TILDE           &ac_acir            &ac_ocir            &ac_ecir            &none
-                                           &trans              &th_quotes 0 0      &sl SYMBOLS         &trans              &trans              &trans
+   &trans              &kp Q               &mc_qu              &kp K               &none               &none               &ac_ocir            &ac_oacu            &ac_uacu            &trans
+   &kp Y               &kp Z               &kp X               &kp W               &kp SQT             &kp CARET           &ac_agrv            &ac_aacu            &ac_eacu            &ac_iacu 
+   &none               &kp J               &mc_ced             &kp V               &kp GRAVE           &kp TILDE           &kp TILDE           &ac_acir            &ac_ecir            &none
+                                           &trans              &mc_sqo             &sl SYMBOLS         &trans              &trans              &trans
                            >;
                 };
                 case_alpha2_layer {
                      label = "CASE";
                      bindings = <
-   &trans              &kp LS(Q)           &mc_qu_c            &kp LS(K)           &none               &none               &ac_agrv_c          &ac_oacu_c          &ac_uacu_c          &trans
-   &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &none               &none               &ac_atil_c          &ac_aacu_c          &ac_eacu_c          &ac_iacu_c 
-   &none               &kp LS(J)           &mc_ced_c           &kp LS(V)           &none               &none               &ac_acir_c          &ac_ocir_c          &ac_ecir_c          &none
+   &trans              &kp LS(Q)           &mc_qu_c            &kp LS(K)           &none               &none               &ac_ocir_c          &ac_oacu_c          &ac_uacu_c          &trans
+   &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &kp SQT             &kp CARET           &ac_agrv_c          &ac_aacu_c          &ac_eacu_c          &ac_iacu_c 
+   &none               &kp LS(J)           &mc_ced_c           &kp LS(V)           &kp GRAVE           &kp TILDE           &kp TILDE           &ac_acir_c          &ac_ecir_c          &none
                                            &trans              &mc_sqo             &sl SYMBOLS         &trans              &trans              &trans
                            >;
                 };
@@ -142,28 +142,10 @@
                 sentence_case_ext2_layer {
                      label = "CASE";
                      bindings = <
-   &trans              &kp LS(Q)           &mc_qu_c            &kp LS(K)           &none               &none               &ac_agrv_c          &ac_oacu_c          &ac_uacu_c          &trans
-   &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &kp SQT             &kp CARET           &ac_atil_c          &ac_aacu_c          &ac_eacu_c          &ac_iacu_c 
-   &none               &kp LS(J)           &mc_ced_c           &kp LS(V)           &kp GRAVE           &kp TILDE           &ac_acir_c          &ac_ocir_c          &ac_ecir_c          &none
+   &trans              &kp LS(Q)           &mc_qu_c            &kp LS(K)           &none               &none               &ac_ocir_c          &ac_oacu_c          &ac_uacu_c          &trans
+   &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &kp SQT             &kp CARET           &ac_agrv_c          &ac_aacu_c          &ac_eacu_c          &ac_iacu_c 
+   &none               &kp LS(J)           &mc_ced_c           &kp LS(V)           &kp GRAVE           &kp TILDE           &kp TILDE           &ac_acir_c          &ac_ecir_c          &none
                                            &trans              &th_cancel NAV 0    &th_sp_ns LOWER 0   &none               &th_nsen MEDIA 0    &trans
-                           >;
-                };
-                fixed_navigation_layer {
-                     label = "NAV";
-                     bindings = <
-   &trans              &kp ESC             &mc_meh_m           &mc_meh_g           &none               &none               &kp INS             &kp ENTER           &kp TAB             &trans
-   &mc_meh_d           &kp LSHIFT          &kp LCTRL           &kp LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
-   &none               &kp RALT            &mc_meh_c           &kp LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &none
-                                           &trans              &trans              &trans              &kp SPACE           &mst MEDIA NAV_F    &trans
-                           >;
-                };
-                media_layer {
-                     label = "MEDIA";
-                     bindings = <
-   &trans              &kp ESC             &none               &none               &none               &none               &mc_hyp_l           &kp ENTER           &kp TAB             &trans
-   &none               &none               &none               &none               &none               &none               &mc_hyp_r           &kp C_VOL_DN        &kp C_VOL_UP        &kp C_MUTE
-   &none               &none               &none               &none               &none               &none               &kp C_PP            &kp C_PREV          &kp C_NEXT          &none
-                                           &trans              &mo SYSTEM          &kp SPACE           &trans              &trans              &trans
                            >;
                 };
                 navigation_layer {
@@ -172,23 +154,41 @@
    &trans              &kp ESC             &mc_meh_m           &mc_meh_g           &none               &none               &kp INS             &kp ENTER           &kp TAB             &trans
    &mc_meh_d           &kp LSHIFT          &kp LCTRL           &kp LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
    &none               &kp RALT            &mc_meh_c           &kp LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &none
-                                           &trans              &trans              &trans              &kp SPACE           &mo SYSTEM          &trans
+                                           &trans              &trans              &trans              &kp SPACE           &mo MEDIA           &trans
                         >;
+                };
+                media_layer {
+                     label = "MEDIA";
+                     bindings = <
+   &trans              &kp ESC             &none               &none               &none               &none               &mc_hyp_l           &kp ENTER           &kp TAB             &trans
+   &none               &none               &none               &none               &none               &none               &mc_hyp_r           &kp C_VOL_DN        &kp C_VOL_UP        &kp C_MUTE
+   &none               &none               &none               &none               &none               &none               &kp C_PP            &kp C_PREV          &kp C_NEXT          &none
+                                           &trans              &mo NAV_F           &kp SPACE           &trans              &trans              &trans
+                           >;
+                };
+                fixed_navigation_layer {
+                     label = "NAV";
+                     bindings = <
+   &trans              &kp ESC             &mc_meh_m           &mc_meh_g           &none               &none               &kp INS             &kp ENTER           &kp TAB             &trans
+   &mc_meh_d           &kp LSHIFT          &kp LCTRL           &kp LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &none               &kp RALT            &mc_meh_c           &kp LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &none
+                                           &trans              &trans              &kp SPACE           &kp SPACE           &tog ALPHA1         &trans
+                           >;
                 };
                 lock_layer {
                      label = "LOCK";
                      bindings = <
    &none               &none               &none               &none               &none               &none               &none               &none               &none               &none    
-   &none               &none               &none               &none               &none               &none               &none               &none               &none               &none  
+   &trans              &none               &none               &none               &none               &none               &none               &none               &none               &trans  
    &none               &none               &none               &none               &none               &none               &none               &none               &none               &none 
-                                           &none               &trans              &none               &none               &trans              &none
+                                           &none               &none               &none               &none               &none               &none
                         >;
                 };
                 system_layer {
                      label = "SYSTEM";
                      bindings = <
-   &trans              &none               &none               &none               &none               &none               &none               &kp ENTER           &kp TAB              &trans 
-   &none               &none               &none               &bootloader         &none               &none               &bootloader         &kp C_SLEEP         &kp LC(LG(Q))        &tog LOCK_KB       
+   &trans              &none               &none               &none               &none               &none               &none               &tog LOCK_KB        &none                &trans 
+   &none               &none               &none               &bootloader         &none               &none               &bootloader         &kp C_SLEEP         &kp LC(LG(Q))        &none      
    &none               &none               &none               &sys_reset          &none               &none               &sys_reset          &bt BT_PRV          &bt BT_NXT           &none
                                            &trans              &trans              &trans              &trans              &trans              &trans
                         >;

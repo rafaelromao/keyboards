@@ -26,12 +26,12 @@
 #define ____NUMPAD_R4____                               RAI_SPC , MED_0
 
 #define ________________SHORTCUTS_L1_________           XXXXXXX , MC_ESC  , MC_QUIK , MC_AUCO 
-#define ________________SHORTCUTS_L2___________________ XXXXXXX , SF_FSYM , MC_RUN  , MC_DBUG , MC_BUID
+#define ________________SHORTCUTS_L2___________________ MO_SYS  , SF_FSYM , MC_RUN  , MC_DBUG , MC_BUID
 #define           ______SHORTCUTS_L3___________________           MC_RECE , MC_COMP , MC_FIUS , MC_REFC
 #define                               _SHORTCUTS_L4____                               NAV_PRJ , NMO_DOC
 
 #define           ______SHORTCUTS_R1___________________           MC_SELW , MC_ENT  , MC_TAB  , XXXXXXX
-#define ________________SHORTCUTS_R2___________________ TD_MACR , MC_SELL , MC_MODM , SF_MODP , XXXXXXX
+#define ________________SHORTCUTS_R2___________________ TD_MACR , MC_SELL , MC_MODM , SF_MODP , MO_SYS
 #define ________________SHORTCUTS_R3_________           MC_JOIN , MC_COMT , MC_SWLE , MC_SWRI 
 #define _SHORTCUTS_R4____                               ACT_SPC , TT_NAV
 
@@ -48,11 +48,11 @@
 #define ___________________ALPHA2_L1_________           XXXXXXX , KC_Q    , MC_QU   , KC_K
 #define ___________________ALPHA2_L2___________________ KC_Y    , KC_Z    , KC_X    , KC_W    , KC_QUOT
 #define           _________ALPHA2_L3___________________           KC_J    , MC_SQ_C , KC_V    , KC_GRV 
-#define                               ____ALPHA2_L4____                               TH_QUOT , OS_SYM
+#define                               ____ALPHA2_L4____                               MC_SQUO , OS_SYM
 
-#define           _________ALPHA2_R1___________________           MC_GV_A , MC_SQ_O , MC_SQ_U , XXXXXXX
-#define ___________________ALPHA2_R2___________________ KC_CIRC , MC_TL_A , MC_SQ_A , MC_SQ_E , MC_SQ_I
-#define ___________________ALPHA2_R3_________           KC_TILD , MC_CR_A , MC_CR_O , MC_CR_E 
+#define           _________ALPHA2_R1___________________           MC_CR_O , MC_SQ_O , MC_SQ_U , XXXXXXX
+#define ___________________ALPHA2_R2___________________ KC_CIRC , MC_GV_A , MC_SQ_A , MC_SQ_E , MC_SQ_I
+#define ___________________ALPHA2_R3_________           KC_TILD , KC_TILD , MC_CR_A , MC_CR_E 
 #define ____ALPHA2_R4____                               _______ , _______
 
 #define ___________________LOWER_L1__________           XXXXXXX , TD_LCBR , TD_RCBR , TD_DLR 
@@ -88,7 +88,7 @@
 #define ___________________MEDIA_L1__________           _______ , MC_ESC  , OM_RELS , OM_HLDS  
 #define ___________________MEDIA_L2____________________ OM_BTN2 , OM_L    , OM_U    , OM_R    , XXXXXXX 
 #define           _________MEDIA_L3____________________           OM_W_D  , OM_D    , OM_W_U  , XXXXXXX 
-#define                               ____MEDIA_L4_____                               MAI_CAS , OM_BTNS
+#define                               ____MEDIA_L4_____                               NAV_FRE , OM_BTNS
 
 #define           _________MEDIA_R1____________________           HYPR_L  , KC_ENT  , KC_TAB  , _______
 #define ___________________MEDIA_R2____________________ XXXXXXX , HYPR_R  , KC_VOLD , KC_VOLU , KC_MUTE
@@ -99,30 +99,31 @@
 #define ___________________NAVIGATION_L2_______________ MEH_D   , KC_LSFT , KC_LCTL , KC_LGUI , XXXXXXX
 #define           _________NAVIGATION_L3_______________           KC_RALT , MEH_C   , KC_LALT , XXXXXXX
 #define                               __NAVIGATION_L4__                               _______ , _______
+#define                               __FIXED_NAV__L4__                               _______ , KC_SPC
 
 #define           _________NAVIGATION_R1_______________           KC_INS  , KC_ENT  , KC_TAB  , _______
 #define ___________________NAVIGATION_R2_______________ XXXXXXX , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT
 #define ___________________NAVIGATION_R3_____           XXXXXXX , KC_DEL  , KC_HOME , KC_END  
-#define __NAVIGATION_R4__                               KC_SPC  , MAI_CAS
-#define __FIXED_NAV__R4__                               KC_SPC  , MED_A1
+#define __NAVIGATION_R4__                               KC_SPC  , MED_CAS
+#define __FIXED_NAV__R4__                               KC_SPC  , TO_A1
 
 #define _______________________LOCK____L1____           XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX 
-#define _______________________LOCK____L2______________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
+#define _______________________LOCK____L2______________ _______ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
 #define           _____________LOCK____L3______________           XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
-#define                               ______LOCK____L4_                               _______ , XXXXXXX
+#define                               ______LOCK____L4_                               XXXXXXX , XXXXXXX
 
 #define           _____________LOCK____R1______________           XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
-#define _______________________LOCK____R2______________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
+#define _______________________LOCK____R2______________ XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , _______
 #define _______________________LOCK____R3____           XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX 
-#define ______LOCK____R4_                               XXXXXXX , _______
+#define ______LOCK____R4_                               XXXXXXX , XXXXXXX
 
-#define ______________________SYSTEM___L1____           XXXXXXX , RGB_VAD , RGB_VAI , KC_NUM
-#define ______________________SYSTEM___L2______________ RGB_TOG , RGB_HUD , RGB_HUI , QK_BOOT , XXXXXXX
+#define ______________________SYSTEM___L1____           XXXXXXX , RGB_VAD , RGB_VAI , RGB_TOG
+#define ______________________SYSTEM___L2______________ XXXXXXX , RGB_HUD , RGB_HUI , QK_BOOT , XXXXXXX
 #define           ____________SYSTEM___L3______________           RGB_SAD , RGB_SAI , EE_CLR  , XXXXXXX
 #define                               _____SYSTEM___L4_                               XXXXXXX , XXXXXXX
 
-#define           ____________SYSTEM___R1______________           TG_OS   , KC_ENT  , KC_TAB  , XXXXXXX
-#define ______________________SYSTEM___R2______________ XXXXXXX , QK_BOOT , KC_SLEP , MC_LOCK , TG_LOCK
+#define           ____________SYSTEM___R1______________           TG_OS   , TG_LOCK , KC_NUM  , XXXXXXX
+#define ______________________SYSTEM___R2______________ XXXXXXX , QK_BOOT , KC_SLEP , MC_LOCK , XXXXXXX
 #define ______________________SYSTEM___R3____           XXXXXXX , EE_CLR  , XXXXXXX , XXXXXXX 
 #define _____SYSTEM___R4_                               XXXXXXX , XXXXXXX
 

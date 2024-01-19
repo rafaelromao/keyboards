@@ -36,8 +36,6 @@
         COMBO(cb_undo,          LBR LBM L0,  &mc_undo,           ALPHA1 CASE_A1 NUMPAD SEN_CASE SEN_E1 SEN_E2)
 
         COMBO(cb_numword,       LBR LBM,     &smart_num,         ALPHA1 CASE_A1 SEN_CASE SEN_E1 NUMPAD)
-        COMBO(cb_capslock,      L0 L1,       &kp CAPSLOCK,       ALPHA1 CASE_A1 CASE_A2 SEN_CASE SEN_E1 SEN_E2 NUMPAD)
-        COMBO(cb_numpad,        R0 R1,       &tog NUMPAD,        ALPHA1 CASE_A1 CASE_A2 SEN_CASE SEN_E1 SEN_E2 NUMPAD)
 
         COMBO(cb_k,             LTM LTI,     &kp K,              ALPHA1 SEN_CASE)
         COMBO(cb_w,             LHM LHI,     &ht_w 0 0,          ALPHA1 SEN_CASE)
@@ -49,7 +47,6 @@
         COMBO(cb_vc,            LBI LBM,     &kp LS(V),          CASE_A1 SEN_E1)
         COMBO(cb_qc,            LHR LHM,     &kp LS(Q),          CASE_A1 SEN_E1)
 
-        COMBO(cb_unds,          LBR LBM,     &mm_unds,           ALPHA2 CASE_A2 SEN_E2)
         COMBO(cb_comm,          RHP R0,      &kp COMMA,          LOWER NUMPAD)
 
         COMBO(cb_x,             RTI RTM,     &kp X,              ALPHA1 SEN_CASE)
@@ -80,20 +77,19 @@
         COMBO(cb_f15,           LTM LTR,     &kp F15,            RAISE)
 
         COMBO(cb_lpa,           LHR LHM,     &kp LPAR,           ALPHA2)
-        COMBO(cb_rpa,           LHM LHI,     &kp RPAR,           ALPHA2)
-        COMBO(cb_hash,          LTI LTM,     &kp HASH,           ALPHA2)
+        COMBO(cb_lunds,         LBR LBM,     &mm_unds,           ALPHA2 CASE_A2 SEN_E2)
+        COMBO(cb_dqo,           LTI LTM,     &mc_dqo,            ALPHA2)
+        COMBO(cb_sqo,           LHM LHI,     &mc_sqo,            ALPHA2)
         COMBO(cb_qmark,         LBI LBM,     &mc_qmark,          ALPHA2)
 
+        COMBO(cb_rpa,           RHM RHR,     &kp RPAR,           ALPHA2)
+        COMBO(cb_runds,         RBM RBR,     &mm_unds,           ALPHA2 CASE_A2 SEN_E2)
         COMBO(cb_colon,         RTI RTM,     &mc_colon,          ALPHA2)
         COMBO(cb_minus,         RHI RHM,     &mc_minus,          ALPHA2)
         COMBO(cb_excl,          RBI RBM,     &mc_excl,           ALPHA2)
-        COMBO(cb_ao,            RHM RHR,     &mc_ao,             ALPHA2)
-        COMBO(cb_oe,            RBM RBR,     &mc_oe,             ALPHA2)
-        COMBO(cb_cao,           RHI RHM RHR, &mc_cao,            ALPHA2)
-        COMBO(cb_coes,          RBI RBM RBR, &mc_coes,           ALPHA2)
 
         COMBO(cb_bsl,           LTI LTM,     &kp BACKSLASH,      LOWER)
-        COMBO(cb_sqo,           LHM LHI,     &mc_sqo,            LOWER)
+        COMBO(cb_sqo2,          LHM LHI,     &mc_sqo,            LOWER)
         COMBO(cb_bti,           LBM LBI,     &mc_bti,            LOWER)
         COMBO(cb_braces,        LTR LTM,     &mc_braces,         LOWER)
 

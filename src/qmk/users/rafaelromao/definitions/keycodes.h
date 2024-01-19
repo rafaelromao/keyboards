@@ -84,7 +84,7 @@ enum {
     MC_SECRET_1,
 
     // Toggle codes
-    OS_ACNT, TG_OS, TG_CASE, TG_ACNT, TG_CAPS,
+    OS_ACNT, TG_OS, TG_CASE, TG_ACNT, 
 
     // Select Word/Line
     MC_SELW, MC_SELL,
@@ -119,10 +119,9 @@ enum {
     // Start macros for accented letters
     ALPHA_MACRO_START,
 
-    MC_GV_A, MC_CR_A, MC_TL_A, MC_SQ_A,
+    MC_GV_A, MC_CR_A, MC_SQ_A, MC_QU,
     MC_SQ_U, MC_CR_O, MC_SQ_O, MC_SQ_I,
-    MC_CR_E, MC_TL_O, MC_SQ_C, MC_SQ_E,
-    MC_AO, MC_OE, MC_CAO, MC_COES, MC_QU,
+    MC_CR_E, MC_SQ_C, MC_SQ_E, 
 
     // End macros for accented letters
     ALPHA_MACRO_END,
@@ -132,10 +131,6 @@ enum {
 
     CUSTOM_KEYCODE_END
 };
-
-// Custom hold-taps
-
-#define TH_QUOT LT(MC_DQUO, MC_SQUO) // Intercepted for both tap and hold
 
 // Mod-taps
 
@@ -198,6 +193,7 @@ enum {
 
 // Layer-taps
 
+#define NAV_FRE LT(_FIXED_NAV, QK_REP)
 #define NAV_REP LT(_NAVIGATION, QK_REP)
 #define NAV_F12 LT(_NAVIGATION, KC_F12)
 #define NAV_AT  LT(_NAVIGATION, KC_AT)
@@ -206,11 +202,7 @@ enum {
 #define NAV_CAN LT(_NAVIGATION, MC_CANC)
 
 #define MED_CAS LT(_MEDIA, TG_CASE)
-#define MED_A1  LT(_MEDIA, TO_A1)
 #define MED_0   LT(_MEDIA, KC_0)
-
-#define MAI_CAS LT(_SYSTEM, TG_CASE)
-#define MAI_CLK LT(_SYSTEM, OM_BTNS)
 
 #define NMO_DOC LT(_NOMOD, MC_QDOC)
 #define ACT_SPC LT(_FIXED_ALPHA2, KC_SPC)
@@ -228,6 +220,7 @@ enum {
 // Layer transitions
 #define MO_A2   MO(_FIXED_ALPHA2)
 #define MO_MED  MO(_MEDIA)
+#define MO_SYS  MO(_SYSTEM)
 #define TO_A1   TO(_ALPHA1)
 #define TT_NAV  TT(_FIXED_NAV)
 #define TG_LOCK TG(_LOCK)
