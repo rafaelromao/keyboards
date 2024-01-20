@@ -7,9 +7,9 @@ uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
         case LOW_SPC:
         case RAI_SPC:
         case RAI_A2:
-        case NAV_REP:
         case NAV_PRJ:
         case NAV_CAS:
+        case NAV_FCA:
         case MED_CAS:
         case RAI_TA2:
         case MED_0:

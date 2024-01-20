@@ -17,9 +17,8 @@ void oneshot_mods_changed_user(uint8_t mods) {
 }
 
 void clear_locked_and_oneshot_mods(void) {
-    uint8_t oneshot_locked_mods = get_oneshot_locked_mods();
     uint8_t oneshot_mods        = get_oneshot_mods();
-    if (oneshot_locked_mods || oneshot_mods) {
+    if (oneshot_mods) {
         clear_oneshot_mods();
         clear_oneshot_locked_mods();
         unregister_mods(MOD_LSFT);
@@ -34,25 +33,24 @@ void clear_locked_and_oneshot_mods(void) {
 }
 
 void clear_oneshot_mods_state(void) {
-    uint8_t oneshot_locked_mods = get_oneshot_locked_mods();
     uint8_t oneshot_mods        = get_oneshot_mods();
-    if (!(oneshot_locked_mods & MOD_LSFT) && (oneshot_mods & MOD_LSFT)) {
+    if (!(oneshot_mods & MOD_LSFT)) {
         del_oneshot_mods(MOD_LSFT);
         unregister_mods(MOD_LSFT);
     }
-    if (!(oneshot_locked_mods & MOD_LCTL) && (oneshot_mods & MOD_LCTL)) {
+    if (!(oneshot_mods & MOD_LCTL)) {
         del_oneshot_mods(MOD_LCTL);
         unregister_mods(MOD_LCTL);
     }
-    if (!(oneshot_locked_mods & MOD_LGUI) && (oneshot_mods & MOD_LGUI)) {
+    if (!(oneshot_mods & MOD_LGUI)) {
         del_oneshot_mods(MOD_LGUI);
         unregister_mods(MOD_LGUI);
     }
-    if (!(oneshot_locked_mods & MOD_LALT) && (oneshot_mods & MOD_LALT)) {
+    if (!(oneshot_mods & MOD_LALT)) {
         del_oneshot_mods(MOD_LALT);
         unregister_mods(MOD_LALT);
     }
-    if (!(oneshot_locked_mods & MOD_RALT) && (oneshot_mods & MOD_RALT)) {
+    if (!(oneshot_mods & MOD_RALT)) {
         del_oneshot_mods(MOD_RALT);
         unregister_mods(MOD_RALT);
     }
@@ -76,7 +74,8 @@ bool check_disable_oneshot(uint16_t keycode) {
         case LOW_SPC:
         case LOW_NSE:
         case MED_CAS:
-        case NAV_REP:
+        case NAV_CAS:
+        case NAV_FCA:
         case OS_LSFT:
         case OS_LCTL:
         case OS_LALT:
@@ -111,6 +110,31 @@ bool should_send_ctrl(bool isMacOS, bool isOneShotShift) {
     return (!isMacOS && !isOneShotShift) || (isMacOS && isOneShotShift);
 }
 
+void process_repeat(void) {
+    keyrecord_t press;
+    press.event.type    = KEY_EVENT;
+    press.tap.count     = 1;
+    press.event.pressed = true;
+    process_repeat_key(QK_REP, &press);
+    keyrecord_t release;
+    release.event.type    = KEY_EVENT;
+    release.tap.count     = 1;
+    release.event.pressed = false;
+    process_repeat_key(QK_REP, &release);
+}
+
+void activate_shift_repeat_or_magic_key(uint16_t keycode) {
+    switch (keycode) {
+        case MED_CAS:
+            add_oneshot_mods(MOD_LSFT);
+            break;
+        case NAV_CAS:
+        case NAV_FCA:
+            process_repeat();
+            break;
+    }
+}
+
 process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *record) {
     if (keycode != OS_SYM && record->event.pressed && IS_LAYER_ON(_ALPHA2) && check_disable_oneshot(keycode)) {
         if (is_string_macro_keycode(keycode)) {
@@ -124,8 +148,7 @@ process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *re
         }
     }
 
-    bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
-    bool isOneShotShift       = get_oneshot_mods() & MOD_MASK_SHIFT || isOneShotLockedShift;
+    bool isOneShotShift       = get_oneshot_mods() & MOD_MASK_SHIFT;
     bool isOneShotCtrl        = get_oneshot_mods() & MOD_MASK_CTRL || get_oneshot_locked_mods() & MOD_MASK_CTRL;
     bool isOneShotAlt         = get_oneshot_mods() & MOD_MASK_ALT || get_oneshot_locked_mods() & MOD_MASK_ALT;
     bool isOneShotGui         = get_oneshot_mods() & MOD_MASK_GUI || get_oneshot_locked_mods() & MOD_MASK_GUI;
@@ -157,6 +180,7 @@ process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *re
                 return PROCESS_RECORD_RETURN_FALSE;
             }
         case NAV_CAS:
+        case NAV_FCA:
         case MED_CAS:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
@@ -164,10 +188,10 @@ process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *re
                         disable_smart_case();
                         clear_shift();
                     } else {
-                        if (isAnyOneShotButShift || isOneShotLockedShift) {
+                        if (isAnyOneShotButShift) {
                             clear_locked_and_oneshot_mods();
                         } else if (!isOneShotShift) {
-                            add_oneshot_mods(MOD_LSFT);
+                            activate_shift_repeat_or_magic_key(keycode);
                         } else {
                             set_smart_case_for_mods();
                         }

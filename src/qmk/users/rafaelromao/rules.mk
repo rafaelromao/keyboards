@@ -11,7 +11,6 @@ SRC += features/macros.c
 SRC += features/accents.c
 SRC += features/select_word.c
 SRC += features/custom_shift.c
-SRC += features/repeat.c
 SRC += features/sentence_case.c
 SRC += features/swapper.c
 SRC += features/leader.c

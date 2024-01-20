@@ -8,7 +8,7 @@
 #define __________________ALPHA1_L1__________           MC_ESCC , KC_B    , KC_M    , KC_G    
 #define __________________ALPHA1_L2____________________ SHO_KCD , LSFTT_N , LCTLT_S , LGUIT_T , KC_W
 #define           ________ALPHA1_L3____________________           RALTT_F , KC_C    , LALTT_P , KC_V
-#define                               ___ALPHA1_L4_____                               NAV_REP , LOW_SPC
+#define                               ___ALPHA1_L4_____                               NAV_CAS , LOW_SPC
 
 #define           ________ALPHA1_R1____________________           KC_L    , KC_O    , KC_U    , KC_BSPC
 #define __________________ALPHA1_R2____________________ KC_Z    , RGUIT_R , RCTLT_A , RSFTT_E , SHO_KCI
@@ -88,7 +88,7 @@
 #define ___________________MEDIA_L1__________           _______ , MC_ESC  , OM_RELS , OM_HLDS  
 #define ___________________MEDIA_L2____________________ OM_BTN2 , OM_L    , OM_U    , OM_R    , XXXXXXX 
 #define           _________MEDIA_L3____________________           OM_W_D  , OM_D    , OM_W_U  , XXXXXXX 
-#define                               ____MEDIA_L4_____                               NAV_FRE , OM_BTNS
+#define                               ____MEDIA_L4_____                               NAV_FCA , OM_BTNS
 
 #define           _________MEDIA_R1____________________           HYPR_L  , KC_ENT  , KC_TAB  , _______
 #define ___________________MEDIA_R2____________________ XXXXXXX , HYPR_R  , KC_VOLD , KC_VOLU , KC_MUTE

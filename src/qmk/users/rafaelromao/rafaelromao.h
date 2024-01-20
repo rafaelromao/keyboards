@@ -14,7 +14,6 @@
 #include "features/common_shortcuts.h"
 #include "features/select_word.h"
 #include "features/custom_shift.h"
-#include "features/repeat.h"
 #include "features/sentence_case.h"
 #include "features/swapper.h"
 #include "features/leader.h"

@@ -164,7 +164,7 @@ const uint16_t PROGMEM secret_1_combo[] = {SEC_1, SEC_2, SEC_3, SEC_4, COMBO_END
 
 combo_t key_combos[] = {
     COMBO(r_num_sent_combo, MC_SENT),   COMBO(l_low_sqo_combo, MC_SQUO),  COMBO(l_low_bti_combo, MC_BTIC),
-    COMBO(r_num_sfg_combo, LSFT(KC_G)), COMBO(r_num_j_combo, KC_A),       COMBO(r_num_k_combo, KC_E),
+    COMBO(r_num_sfg_combo, LSFT(KC_L)), COMBO(r_num_j_combo, KC_A),       COMBO(r_num_k_combo, KC_E),
     COMBO(r_num_pip_combo, KC_PIPE),    COMBO(l_low_bsl_combo, KC_BSLS),  COMBO(r_low_sent_combo, MC_SENT),
     COMBO(r_low_j_combo, KC_A),         COMBO(r_low_k_combo, KC_E),       COMBO(r_low_pip_combo, KC_PIPE),
     COMBO(l_sym_cur_combo, MC_CURS),    COMBO(l_sym_par_combo, TD_PARN),  COMBO(l_sym_bra_combo, MC_BRAC),

@@ -49,16 +49,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
     };
 
-    // Process Repeat Key
-    switch (process_repeat(keycode, record)) {
-        case PROCESS_RECORD_RETURN_TRUE:
-            return true;
-        case PROCESS_RECORD_RETURN_FALSE:
-            return false;
-        default:
-            break;
-    };
-
     // Process smart case
     switch (process_smart_case(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
@@ -162,6 +152,15 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     return true;
 }
 
+bool remember_last_key_user(uint16_t keycode, keyrecord_t *record, uint8_t *remembered_mods) {
+    switch (keycode) {
+        case RAI_A2:
+        case NAV_CAS:
+        case NAV_FCA:
+            return false;
+    }
+    return true;
+}
 #ifdef DYNAMIC_MACRO_ENABLE
 // Dynamic macros
 

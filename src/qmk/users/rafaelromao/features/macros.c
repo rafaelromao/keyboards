@@ -475,8 +475,7 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
         return PROCESS_RECORD_CONTINUE;
     }
 
-    bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
-    bool isOneShotShift       = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
+    bool isOneShotShift       = get_oneshot_mods() & MOD_MASK_SHIFT;
     bool isShifted            = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
 
     // Macros

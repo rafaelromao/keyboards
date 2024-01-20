@@ -161,7 +161,8 @@ process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record
         switch (keycode) {
             case ALPHA_MACRO_START ... ALPHA_MACRO_END:
             case RAI_A2:
-            case NAV_REP:
+            case NAV_CAS:
+            case NAV_FCA:
             case MED_CAS:
                 start_smart_case_timer();
                 return PROCESS_RECORD_CONTINUE;
