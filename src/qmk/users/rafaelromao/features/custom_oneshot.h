@@ -19,5 +19,7 @@ void clear_locked_and_oneshot_mods(void);
 bool should_send_ctrl(bool isMacOS, bool isOneShotShift);
 void reset_oneshot_timer(void);
 void disable_oneshot_layer(void);
+void check_repeat_key_timeout(void);
+void clear_repeat_key(void);
 
 process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *record);

@@ -37,6 +37,7 @@
 
 // Disable Alt Repeat
 #define NO_ALT_REPEAT_KEY
+#define REPEAT_KEY_TIMEOUT 500
 
 // Dynamic macros
 #define DYNAMIC_MACRO_NO_NESTING

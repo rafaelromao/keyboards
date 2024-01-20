@@ -16,6 +16,7 @@ __attribute__((weak)) void matrix_scan_keymap(void) {}
 void matrix_scan_user(void) {
     check_disable_smart_case();
     check_oneshot_timeout();
+    check_repeat_key_timeout();
     matrix_scan_keymap();
 #ifdef MOUSE_ENABLE
     orbital_mouse_task();

@@ -5,6 +5,7 @@
 extern os_t os;
 
 static custom_oneshots_t custom_oneshots = {.timer = 0};
+static uint16_t          repeat_key_timer = 0;
 
 // Custom oneshot mods
 
@@ -107,6 +108,23 @@ bool should_send_ctrl(bool isMacOS, bool isOneShotShift) {
     return (!isMacOS && !isOneShotShift) || (isMacOS && isOneShotShift);
 }
 
+// Custom Shift Repeat Magic Keys
+
+bool repeat_key_expired(void) {
+    return repeat_key_timer == 0 || (timer_elapsed(repeat_key_timer) > REPEAT_KEY_TIMEOUT);
+}
+
+void check_repeat_key_timeout(void) {
+    if (repeat_key_expired()) {
+        clear_repeat_key();
+    }
+}
+
+void clear_repeat_key(void) {
+    repeat_key_timer = 0;
+    set_last_keycode(KC_NO);
+}
+
 bool remember_last_key_user(uint16_t keycode, keyrecord_t *record, uint8_t *remembered_mods) {
     switch (keycode) {
         case RAI_A2:
@@ -115,11 +133,13 @@ bool remember_last_key_user(uint16_t keycode, keyrecord_t *record, uint8_t *reme
         case NAV_FCA:
             return false;
     }
+    repeat_key_timer = timer_read();
     return true;
 }
 
 bool in_mid_word(uint16_t key) {
     switch (key) {
+        case KC_NO:
         case KC_LEFT:
         case KC_RIGHT:
         case KC_DOWN:
