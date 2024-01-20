@@ -118,9 +118,7 @@ bool remember_last_key_user(uint16_t keycode, keyrecord_t *record, uint8_t *reme
     return true;
 }
 
-void process_shift_repeat(uint16_t keycode) {
-    // Check if should repeat the last key or capitalize the next one
-    uint16_t key = extract_tapping_keycode(keycode);
+bool in_mid_word(uint16_t key) {
     switch (key) {
         case KC_LEFT:
         case KC_RIGHT:
@@ -133,17 +131,35 @@ void process_shift_repeat(uint16_t keycode) {
         case KC_TAB:
         case KC_ENT:
         case KC_ESC:
-            add_oneshot_mods(MOD_LSFT);
-            break;
-        default:
-            switch (keycode) {
-                case MED_CAS:
-                case NAV_CAS:
-                case NAV_FCA:
-                    break;
-                default:
-                    tap_code16(key);
-            }
+        case MED_CAS:
+        case NAV_CAS:
+        case NAV_FCA:
+            return false;
+    }
+    return true;
+}
+
+void process_shift_repeat(uint16_t keycode) {
+    uint16_t key = extract_tapping_keycode(keycode);
+    if (in_mid_word(key)) {
+        tap_code16(key);
+    } else {
+        add_oneshot_mods(MOD_LSFT);
+    }
+}
+
+void process_shift_magic(uint16_t keycode) {
+    uint16_t key = extract_tapping_keycode(keycode);
+    if (in_mid_word(key)) {
+        switch (key) {
+            case KC_D:
+                tap_code16(KC_Y);
+                break;
+            default:
+                tap_code16(key);
+        }
+    } else {
+        add_oneshot_mods(MOD_LSFT);
     }
 }
 
@@ -154,7 +170,7 @@ void activate_shift_repeat_or_magic_key(uint16_t keycode) {
             break;
         case NAV_CAS:
         case NAV_FCA:
-            add_oneshot_mods(MOD_LSFT);
+            process_shift_magic(get_last_keycode());
             break;
     }
 }
