@@ -34,6 +34,7 @@
 - The outer right thumb key, when tapped in the middle of a word, repeats the last key. This is usefull to avoid tapping the same key twice in words like 'tapped'.
 - When tapped in the beginning of a word, it acts as One Shot Shift.
 - Holding this key in the base layer will activate the [Media](../navigation.md) layer.
+- This feature was inspired by bmijanovich's [Dynamic Repeat Key](https://github.com/bmijanovich/zmk-config?tab=readme-ov-file#dynamic-repeat-key).
 
 ## Base Layer Combos
 - Combos are available in the base and [Numpad](symbols.md#numpad-layer) layers to send ENTER, ESC, TAB and common shortcuts like copy, paste, save, select all and undo.

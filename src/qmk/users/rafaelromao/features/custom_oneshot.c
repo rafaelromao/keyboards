@@ -77,9 +77,6 @@ bool check_disable_oneshot(uint16_t keycode) {
         case NAV_CAS:
         case NAV_FCA:
         case OS_LSFT:
-        case OS_LCTL:
-        case OS_LALT:
-        case OS_LGUI:
             return false;
         default:
             disable_oneshot_layer();
@@ -110,17 +107,42 @@ bool should_send_ctrl(bool isMacOS, bool isOneShotShift) {
     return (!isMacOS && !isOneShotShift) || (isMacOS && isOneShotShift);
 }
 
+bool remember_last_key_user(uint16_t keycode, keyrecord_t *record, uint8_t *remembered_mods) {
+    switch (keycode) {
+        case RAI_A2:
+        case MED_CAS:
+        case NAV_CAS:
+        case NAV_FCA:
+            return false;
+    }
+    return true;
+}
+
+uint16_t get_alt_repeat_key_keycode_user(uint16_t keycode, uint8_t mods) {
+    uint16_t key = extract_tapping_keycode(keycode);
+    switch (key) {
+        case KC_SPC:
+        case KC_TAB:
+        case KC_ENT:
+        case KC_ESC:
+            add_oneshot_mods(MOD_LSFT);
+            return KC_NO;
+        default:
+            return key;
+    }
+}
+
 void process_repeat(void) {
     keyrecord_t press;
     press.event.type    = KEY_EVENT;
     press.tap.count     = 1;
     press.event.pressed = true;
-    process_repeat_key(QK_REP, &press);
+    process_repeat_key(QK_AREP, &press);
     keyrecord_t release;
     release.event.type    = KEY_EVENT;
     release.tap.count     = 1;
     release.event.pressed = false;
-    process_repeat_key(QK_REP, &release);
+    process_repeat_key(QK_AREP, &release);
 }
 
 void activate_shift_repeat_or_magic_key(uint16_t keycode) {

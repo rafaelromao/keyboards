@@ -164,10 +164,6 @@ enum {
 // One-shot mods
 
 #define OS_LSFT OSM(MOD_LSFT)
-#define OS_LCTL OSM(MOD_LCTL)
-#define OS_LALT OSM(MOD_LALT)
-#define OS_RALT OSM(MOD_RALT)
-#define OS_LGUI OSM(MOD_LGUI)
 
 // Custom Shortcuts
 
