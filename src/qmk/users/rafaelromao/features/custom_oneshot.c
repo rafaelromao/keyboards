@@ -197,6 +197,9 @@ void process_shift_magic(uint16_t keycode) {
             case KC_N:
                 tap_code(KC_D);
                 break;
+            case KC_S:
+                tap_code(KC_M);
+                break;
             case KC_X:
                 tap_code(KC_C);
                 break;
