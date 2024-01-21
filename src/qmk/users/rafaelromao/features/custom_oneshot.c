@@ -150,7 +150,6 @@ bool in_mid_word(uint16_t key) {
         case KC_END:
         // Avoid repeat/magic for new sentences
         case KC_SPC:
-        case KC_BSPC:
         case KC_TAB:
         case KC_ENT:
         case KC_ESC:
