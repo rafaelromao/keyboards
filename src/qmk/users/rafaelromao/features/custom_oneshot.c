@@ -150,10 +150,12 @@ bool in_mid_word(uint16_t key) {
         case KC_END:
         // Avoid repeat/magic for new sentences
         case KC_SPC:
+        case KC_BSPC:
         case KC_TAB:
         case KC_ENT:
         case KC_ESC:
         // not necessary to repeat/magic, so skip to work better with remapped VIM bindings
+        case KC_Y:
         case KC_H:
         case KC_O:
         // avoid recursive calls
@@ -236,6 +238,9 @@ void process_shift_magic(uint16_t keycode) {
                 break;
             case KC_W:
                 tap_code(KC_K);
+                break;
+            case KC_G:
+                tap_code(KC_U);
                 break;
             case KC_L:
                 tap_code(KC_H);
