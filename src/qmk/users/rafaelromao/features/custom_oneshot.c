@@ -73,7 +73,6 @@ bool check_disable_oneshot(uint16_t keycode) {
         case RAI_TA2:
         case ACT_SPC:
         case LOW_SPC:
-        case LOW_NSE:
         case MED_CAS:
         case NAV_CAS:
         case NAV_FCA:
@@ -122,7 +121,6 @@ void check_repeat_key_timeout(void) {
 
 void clear_repeat_key(void) {
     repeat_key_timer = 0;
-    set_last_keycode(KC_NO);
 }
 
 bool remember_last_key_user(uint16_t keycode, keyrecord_t *record, uint8_t *remembered_mods) {
@@ -138,8 +136,12 @@ bool remember_last_key_user(uint16_t keycode, keyrecord_t *record, uint8_t *reme
 }
 
 bool in_mid_word(uint16_t key) {
+    if (repeat_key_timer == 0) {
+        // Used to signal that the last key to repeat expired
+        return false;
+    }
     switch (key) {
-        case KC_NO:
+        // Avoid repeat after navigation
         case KC_LEFT:
         case KC_RIGHT:
         case KC_DOWN:
@@ -151,6 +153,9 @@ bool in_mid_word(uint16_t key) {
         case KC_TAB:
         case KC_ENT:
         case KC_ESC:
+        // not necessary to repeat h, so skip to allow vim replace (remapped to h) with capitalized letters
+        case KC_H:
+        // avoid recursive calls
         case MED_CAS:
         case NAV_CAS:
         case NAV_FCA:
