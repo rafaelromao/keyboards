@@ -176,8 +176,14 @@ void process_shift_repeat(uint16_t keycode) {
                 tap_code(KC_O);
                 return;
         }
-        // repeat only simple tapping keycodes
-        tap_code16(key);
+        // repeat/alternate repeat only simple tapping keycodes
+        switch (key) {
+            case KC_W:
+                tap_code(KC_K);
+                break;
+            default:
+                tap_code16(key);
+        }
     } else {
         add_oneshot_mods(MOD_LSFT);
     }
@@ -228,6 +234,9 @@ void process_shift_magic(uint16_t keycode) {
                 break;
             case KC_K:
                 tap_code(KC_W);
+                break;
+            case KC_W:
+                tap_code(KC_K);
                 break;
             case KC_L:
                 tap_code(KC_H);
