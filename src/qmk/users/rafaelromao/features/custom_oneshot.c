@@ -210,11 +210,13 @@ void process_shift_magic(uint16_t keycode) {
                 tap_code(KC_BSPC);
                 tap_code16(KC_TILD);
                 tap_code(KC_A);
+                tap_code(KC_O);
                 break;
             case KC_O:
                 tap_code(KC_BSPC);
                 tap_code16(KC_TILD);
                 tap_code(KC_O);
+                tap_code(KC_E);
                 break;
             case KC_I:
                 tap_code(KC_BSPC);
