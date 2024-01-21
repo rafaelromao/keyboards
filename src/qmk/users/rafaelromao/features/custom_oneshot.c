@@ -154,9 +154,9 @@ bool in_mid_word(uint16_t key) {
         case KC_TAB:
         case KC_ENT:
         case KC_ESC:
-        // not necessary to repeat/magic h, so skip to allow for fast vim replace (remapped to h) with capitalized
-        // letters
+        // not necessary to repeat/magic, so skip to work better with remapped VIM bindings
         case KC_H:
+        case KC_O:
         // avoid recursive calls
         case MED_CAS:
         case NAV_CAS:
@@ -202,6 +202,9 @@ void process_shift_magic(uint16_t keycode) {
                 break;
             case KC_X:
                 tap_code(KC_C);
+                break;
+            case KC_A:
+                tap_code(KC_O);
                 break;
             case KC_U:
                 tap_code(KC_E);
