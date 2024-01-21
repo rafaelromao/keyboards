@@ -169,6 +169,13 @@ bool in_mid_word(uint16_t key) {
 void process_shift_repeat(uint16_t keycode) {
     uint16_t key = extract_tapping_keycode(keycode);
     if (in_mid_word(key)) {
+        // alternate repeat for macros
+        switch (keycode) {
+            case MC_SQ_C:
+                process_accents(MC_TL_A, NULL);
+                tap_code(KC_O);
+                return;
+        }
         // repeat only simple tapping keycodes
         tap_code16(key);
     } else {
@@ -187,6 +194,10 @@ void process_shift_magic(uint16_t keycode) {
             case MC_SQ_I:
             case MC_SQ_U:
                 tap_code(KC_V);
+                return;
+            case MC_SQ_C:
+                process_accents(MC_TL_O, NULL);
+                tap_code(KC_E);
                 return;
         }
         // magic only simple tapping keycodes
