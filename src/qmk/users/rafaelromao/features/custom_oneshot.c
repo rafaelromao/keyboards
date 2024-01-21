@@ -182,7 +182,10 @@ void process_shift_magic(uint16_t keycode) {
         // magic for macros
         switch (keycode) {
             case MC_SQ_A:
+            case MC_SQ_E:
+            case MC_SQ_O:
             case MC_SQ_I:
+            case MC_SQ_U:
                 tap_code(KC_V);
                 return;
         }
@@ -203,20 +206,20 @@ void process_shift_magic(uint16_t keycode) {
             case KC_E:
                 tap_code(KC_I);
                 break;
+            case KC_T:
+                tap_code(KC_W);
+                break;
+            case KC_K:
+                tap_code(KC_W);
+                break;
+            case KC_L:
+                tap_code(KC_R);
+                break;
+            case KC_R:
+                tap_code(KC_H);
+                break;
             case KC_J:
                 process_accents(MC_SQ_A, NULL);
-                break;
-            case KC_A:
-                tap_code(KC_BSPC);
-                tap_code16(KC_TILD);
-                tap_code(KC_A);
-                tap_code(KC_O);
-                break;
-            case KC_O:
-                tap_code(KC_BSPC);
-                tap_code16(KC_TILD);
-                tap_code(KC_O);
-                tap_code(KC_E);
                 break;
             case KC_I:
                 tap_code(KC_BSPC);

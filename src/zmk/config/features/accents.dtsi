@@ -5,7 +5,7 @@
 *
 */
 / {
-    #define ALPHA2ED_KEY(NAME, KEY, DEAD_KEY) \
+    #define ACCENTED_KEY(NAME, KEY, DEAD_KEY) \
         NAME##_l: NAME##_l { \
             label = ZMK_MACRO_STRINGIFY(NAME##_l); \
             wait-ms = <0>; \
@@ -19,8 +19,8 @@
                 , <&macro_tap &kp KEY> \
                 ; \
         }; \
-        NAME##_u: NAME##_u { \
-            label = ZMK_MACRO_STRINGIFY(NAME##_u); \
+        NAME##_c: NAME##_c { \
+            label = ZMK_MACRO_STRINGIFY(NAME##_c); \
             wait-ms = <0>; \
             tap-ms = <0>; \
             compatible = "zmk,behavior-macro"; \
@@ -39,7 +39,7 @@
             label = ZMK_MACRO_STRINGIFY(NAME); \
             compatible = "zmk,behavior-mod-morph"; \
             #binding-cells = <0>; \
-            bindings = <&NAME##_l>, <&NAME##_u>; \
+            bindings = <&NAME##_l>, <&NAME##_c>; \
             mods = <(MOD_LSFT|MOD_RSFT)>; \
             keep-mods = <(MOD_LSFT|MOD_RSFT)>; \
         };
@@ -56,25 +56,17 @@
 
 
     accents {
-        ALPHA2ED_KEY(ac_agrv, A, GRAVE)
-        ALPHA2ED_KEY(ac_aacu, A, E)
-        ALPHA2ED_KEY(ac_acir, A, I)
-        ALPHA2ED_KEY(ac_eacu, E, E)
-        ALPHA2ED_KEY(ac_ecir, E, I)
-        ALPHA2ED_KEY(ac_iacu, I, E)
-        ALPHA2ED_KEY(ac_oacu, O, E)
-        ALPHA2ED_KEY(ac_ocir, O, I)
-        ALPHA2ED_KEY(ac_uacu, U, E)
-
-        ALPHA2ED_KEY(ac_agrv_c, LS(A), GRAVE)
-        ALPHA2ED_KEY(ac_aacu_c, LS(A), E)
-        ALPHA2ED_KEY(ac_acir_c, LS(A), I)
-        ALPHA2ED_KEY(ac_eacu_c, LS(E), E)
-        ALPHA2ED_KEY(ac_ecir_c, LS(E), I)
-        ALPHA2ED_KEY(ac_iacu_c, LS(I), E)
-        ALPHA2ED_KEY(ac_oacu_c, LS(O), E)
-        ALPHA2ED_KEY(ac_ocir_c, LS(O), I)
-        ALPHA2ED_KEY(ac_uacu_c, LS(U), E)
+        ACCENTED_KEY(ac_agrv, A, GRAVE)
+        ACCENTED_KEY(ac_aacu, A, E)
+        ACCENTED_KEY(ac_atil, A, N)
+        ACCENTED_KEY(ac_acir, A, I)
+        ACCENTED_KEY(ac_eacu, E, E)
+        ACCENTED_KEY(ac_ecir, E, I)
+        ACCENTED_KEY(ac_iacu, I, E)
+        ACCENTED_KEY(ac_oacu, O, E)
+        ACCENTED_KEY(ac_otil, O, N)
+        ACCENTED_KEY(ac_ocir, O, I)
+        ACCENTED_KEY(ac_uacu, U, E)
 
         MACRO_KEY(mc_ced,   &macro_press &kp LALT &macro_tap &kp C &macro_release &kp LALT)
         MACRO_KEY(mc_ced_c, &macro_press &kp LALT &macro_tap &kp LS(C) &macro_release &kp LALT)

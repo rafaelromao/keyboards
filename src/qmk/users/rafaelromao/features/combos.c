@@ -109,10 +109,10 @@ const uint16_t PROGMEM r_acc_bsp_combo[]  = {MC_SQ_O, MC_SQ_U, COMBO_END};
 const uint16_t PROGMEM r_acc_tab_combo[]  = {RAI_A2, MC_SQ_O, MC_SQ_U, COMBO_END};
 const uint16_t PROGMEM r_acc_ent_combo[]  = {RAI_A2, MC_SQ_A, MC_SQ_E, COMBO_END};
 const uint16_t PROGMEM r_acc_col_combo[]  = {MC_CR_O, MC_SQ_O, COMBO_END};
-const uint16_t PROGMEM r_acc_min_combo[]  = {MC_GV_A, MC_SQ_A, COMBO_END};
-const uint16_t PROGMEM r_acc_excl_combo[] = {KC_TILD, MC_CR_A, COMBO_END};
+const uint16_t PROGMEM r_acc_min_combo[]  = {MC_TL_A, MC_SQ_A, COMBO_END};
+const uint16_t PROGMEM r_acc_excl_combo[] = {MC_TL_O, MC_CR_A, COMBO_END};
 const uint16_t PROGMEM r_acc_rpa_combo[]  = {MC_SQ_A, MC_SQ_E, COMBO_END};
-const uint16_t PROGMEM r_acc_und_combo[]  = {MC_CR_A, MC_CR_E, COMBO_END};
+const uint16_t PROGMEM r_acc_agr_combo[]  = {MC_CR_A, MC_CR_E, COMBO_END};
 
 // Alpha 1
 
@@ -185,7 +185,7 @@ combo_t key_combos[] = {
     COMBO(l_rom_w_combo, KC_W),         COMBO(l_acc_lpa_combo, KC_LPRN),  COMBO(l_acc_sqo_combo, MC_SQUO),
     COMBO(l_sho_bui_combo, MC_BUID),    COMBO(l_sho_ref_combo, MC_REFC),  COMBO(r_acc_rpa_combo, KC_RPRN),
     COMBO(r_acc_bsp_combo, KC_BSPC),    COMBO(r_acc_col_combo, KC_COLN),  COMBO(r_acc_excl_combo, MC_EXLM),
-    COMBO(r_acc_min_combo, KC_MINS),    COMBO(r_acc_und_combo, KC_UNDS),  COMBO(r_low_ent_combo, KC_ENT),
+    COMBO(r_acc_min_combo, KC_MINS),    COMBO(r_acc_agr_combo, MC_GV_A),  COMBO(r_low_ent_combo, KC_ENT),
     COMBO(r_low_sco_combo, TD_SCLE),    COMBO(r_med_ent_combo, TD_EENT),  COMBO(r_med_vis_combo, KC_V),
     COMBO(r_med_svi_combo, MC_SVI),     COMBO(r_med_esp_combo, MC_ESCP),  COMBO(r_med_cvi_combo, MC_CVI),
     COMBO(r_med_oes_combo, MC_OESC),    COMBO(r_med_soe_combo, MC_SOES),  COMBO(r_nav_cop_combo, MC_COPY),

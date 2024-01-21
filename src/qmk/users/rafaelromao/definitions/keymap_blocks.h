@@ -51,8 +51,8 @@
 #define                               ____ALPHA2_L4____                               MC_SQUO , OS_SYM
 
 #define           _________ALPHA2_R1___________________           MC_CR_O , MC_SQ_O , MC_SQ_U , XXXXXXX
-#define ___________________ALPHA2_R2___________________ KC_CIRC , MC_GV_A , MC_SQ_A , MC_SQ_E , MC_SQ_I
-#define ___________________ALPHA2_R3_________           KC_TILD , KC_TILD , MC_CR_A , MC_CR_E 
+#define ___________________ALPHA2_R2___________________ KC_CIRC , MC_TL_A , MC_SQ_A , MC_SQ_E , MC_SQ_I
+#define ___________________ALPHA2_R3_________           KC_TILD , MC_TL_O , MC_CR_A , MC_CR_E 
 #define ____ALPHA2_R4____                               _______ , _______
 
 #define ___________________LOWER_L1__________           XXXXXXX , TD_LCBR , TD_RCBR , TD_DLR 

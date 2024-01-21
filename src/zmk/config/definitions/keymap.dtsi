@@ -80,8 +80,8 @@
                      label = "ALPHA2";
                      bindings = <
    &trans              &kp Q               &mc_qu              &kp K               &none               &none               &ac_ocir            &ac_oacu            &ac_uacu            &trans
-   &kp Y               &kp Z               &kp X               &kp W               &kp SQT             &kp CARET           &ac_agrv            &ac_aacu            &ac_eacu            &ac_iacu 
-   &none               &kp J               &mc_ced             &kp V               &kp GRAVE           &kp TILDE           &kp TILDE           &ac_acir            &ac_ecir            &none
+   &kp Y               &kp Z               &kp X               &kp W               &kp SQT             &kp CARET           &ac_atil            &ac_aacu            &ac_eacu            &ac_iacu 
+   &none               &kp J               &mc_ced             &kp V               &kp GRAVE           &kp TILDE           &ac_otil            &ac_acir            &ac_ecir            &none
                                            &trans              &mc_sqo             &sl SYMBOLS         &trans              &trans              &trans
                            >;
                 };
@@ -89,8 +89,8 @@
                      label = "CASE";
                      bindings = <
    &trans              &kp LS(Q)           &mc_qu_c            &kp LS(K)           &none               &none               &ac_ocir_c          &ac_oacu_c          &ac_uacu_c          &trans
-   &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &kp SQT             &kp CARET           &ac_agrv_c          &ac_aacu_c          &ac_eacu_c          &ac_iacu_c 
-   &none               &kp LS(J)           &mc_ced_c           &kp LS(V)           &kp GRAVE           &kp TILDE           &kp TILDE           &ac_acir_c          &ac_ecir_c          &none
+   &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &kp SQT             &kp CARET           &ac_atil_c          &ac_aacu_c          &ac_eacu_c          &ac_iacu_c 
+   &none               &kp LS(J)           &mc_ced_c           &kp LS(V)           &kp GRAVE           &kp TILDE           &ac_otil_c          &ac_acir_c          &ac_ecir_c          &none
                                            &trans              &mc_sqo             &sl SYMBOLS         &trans              &trans              &trans
                            >;
                 };
@@ -143,8 +143,8 @@
                      label = "CASE";
                      bindings = <
    &trans              &kp LS(Q)           &mc_qu_c            &kp LS(K)           &none               &none               &ac_ocir_c          &ac_oacu_c          &ac_uacu_c          &trans
-   &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &kp SQT             &kp CARET           &ac_agrv_c          &ac_aacu_c          &ac_eacu_c          &ac_iacu_c 
-   &none               &kp LS(J)           &mc_ced_c           &kp LS(V)           &kp GRAVE           &kp TILDE           &kp TILDE           &ac_acir_c          &ac_ecir_c          &none
+   &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &kp SQT             &kp CARET           &ac_atil_c          &ac_aacu_c          &ac_eacu_c          &ac_iacu_c 
+   &none               &kp LS(J)           &mc_ced_c           &kp LS(V)           &kp GRAVE           &kp TILDE           &ac_otil_c          &ac_acir_c          &ac_ecir_c          &none
                                            &trans              &th_cancel NAV 0    &th_sp_ns LOWER 0   &none               &th_nsen MEDIA 0    &trans
                            >;
                 };
