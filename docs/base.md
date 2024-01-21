@@ -28,7 +28,7 @@
 - The outer left thumb key, when tapped in the middle of a word, repeats the last key. This is usefull to avoid tapping the same key twice in words like 'tapped'.
 - When tapped in the beginning of a word, it acts as One Shot Shift.
 - Holding this key in the base layer will activate the [Navigation](../navigation.md) layer.
-- Tapping or holding this key in the [Raise](../symbols.md) layer acts as a normal Repeat Key, which can be used to spam repeated keys or shortcuts. 
+- Tapping or holding this key in the [Raise](../symbols.md) layer acts as a normal Repeat Key, which can be used to spam keys or repeat shortcuts. 
 - This feature was inspired by bmijanovich's [Dynamic Repeat Key](https://github.com/bmijanovich/zmk-config?tab=readme-ov-file#dynamic-repeat-key).
 
 ### Smart Shift / Magic Key
