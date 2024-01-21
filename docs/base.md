@@ -24,17 +24,17 @@
 - The four thumb keys control layer transitions, when held (Navigation, Lower, Raise and Media).
 - Source code: [custom_oneshot.c](../src/qmk/users/rafaelromao/features/custom_oneshot.c)
 
-### Smart Shift / Magic Key
-- The outer left thumb key, when tapped in the middle of a word, selects the output according to the context. See more about that [here](https://github.com/rafaelromao/romak/tree/main?tab=readme-ov-file#magic-romak).
+### Smart Shift / Repeat Key
+- The outer left thumb key, when tapped in the middle of a word, repeats the last key. This is usefull to avoid tapping the same key twice in words like 'tapped'.
 - When tapped in the beginning of a word, it acts as One Shot Shift.
 - Holding this key in the base layer will activate the [Navigation](../navigation.md) layer.
-- Tapping or holding this key in the [Raise](../symbols.md) layer acts as a normal Repeat Key, which can be used to spam repeated keys or shortcuts.
-
-### Smart Shift / Repeat Key
-- The outer right thumb key, when tapped in the middle of a word, repeats the last key. This is usefull to avoid tapping the same key twice in words like 'tapped'.
-- When tapped in the beginning of a word, it acts as One Shot Shift.
-- Holding this key in the base layer will activate the [Media](../navigation.md) layer.
 - This feature was inspired by bmijanovich's [Dynamic Repeat Key](https://github.com/bmijanovich/zmk-config?tab=readme-ov-file#dynamic-repeat-key).
+
+### Smart Shift / Magic Key
+- The outer right thumb key, when tapped in the middle of a word, selects the output according to the context. See more about that [here](https://github.com/rafaelromao/romak/tree/main?tab=readme-ov-file#magic-romak).
+- When tapped in the beginning of a word, it also acts as One Shot Shift.
+- Holding this key in the base layer will activate the [Media](../navigation.md) layer.
+- Tapping or holding this key in the [Raise](../symbols.md) layer acts as a normal Repeat Key, which can be used to spam repeated keys or shortcuts.
 
 ## Base Layer Combos
 - Combos are available in the base and [Numpad](symbols.md#numpad-layer) layers to send ENTER, ESC, TAB and common shortcuts like copy, paste, save, select all and undo.

@@ -137,23 +137,25 @@ bool remember_last_key_user(uint16_t keycode, keyrecord_t *record, uint8_t *reme
 
 bool in_mid_word(uint16_t key) {
     if (repeat_key_timer == 0) {
-        // Used to signal that the last key to repeat expired
+        // Used to signal that the last key to repeat/magic expired
         return false;
     }
     switch (key) {
-        // Avoid repeat after navigation
+        // Avoid repeat/magic after navigation
         case KC_LEFT:
         case KC_RIGHT:
         case KC_DOWN:
         case KC_UP:
         case KC_HOME:
         case KC_END:
+        // Avoid repeat/magic for new sentences
         case KC_SPC:
         case KC_BSPC:
         case KC_TAB:
         case KC_ENT:
         case KC_ESC:
-        // not necessary to repeat h, so skip to allow vim replace (remapped to h) with capitalized letters
+        // not necessary to repeat/magic h, so skip to allow for fast vim replace (remapped to h) with capitalized
+        // letters
         case KC_H:
         // avoid recursive calls
         case MED_CAS:
@@ -167,6 +169,7 @@ bool in_mid_word(uint16_t key) {
 void process_shift_repeat(uint16_t keycode) {
     uint16_t key = extract_tapping_keycode(keycode);
     if (in_mid_word(key)) {
+        // repeat only simple tapping keycodes
         tap_code16(key);
     } else {
         add_oneshot_mods(MOD_LSFT);
@@ -176,9 +179,46 @@ void process_shift_repeat(uint16_t keycode) {
 void process_shift_magic(uint16_t keycode) {
     uint16_t key = extract_tapping_keycode(keycode);
     if (in_mid_word(key)) {
+        // magic for macros
+        switch (keycode) {
+            case MC_SQ_A:
+            case MC_SQ_I:
+                tap_code(KC_V);
+                return;
+        }
+        // magic only simple tapping keycodes
         switch (key) {
             case KC_D:
-                tap_code16(KC_Y);
+                tap_code(KC_Y);
+                break;
+            case KC_N:
+                tap_code(KC_D);
+                break;
+            case KC_X:
+                tap_code(KC_C);
+                break;
+            case KC_U:
+                tap_code(KC_E);
+                break;
+            case KC_E:
+                tap_code(KC_I);
+                break;
+            case KC_J:
+                process_accents(MC_SQ_A, NULL);
+                break;
+            case KC_A:
+                tap_code(KC_BSPC);
+                tap_code16(KC_TILD);
+                tap_code(KC_A);
+                break;
+            case KC_O:
+                tap_code(KC_BSPC);
+                tap_code16(KC_TILD);
+                tap_code(KC_O);
+                break;
+            case KC_I:
+                tap_code(KC_BSPC);
+                SEND_STRING("I' ");
                 break;
             default:
                 tap_code16(key);
@@ -191,11 +231,11 @@ void process_shift_magic(uint16_t keycode) {
 void activate_shift_repeat_or_magic_key(uint16_t keycode) {
     switch (keycode) {
         case MED_CAS:
-            process_shift_repeat(get_last_keycode());
+            process_shift_magic(get_last_keycode());
             break;
         case NAV_CAS:
         case NAV_FCA:
-            process_shift_magic(get_last_keycode());
+            process_shift_repeat(get_last_keycode());
             break;
     }
 }

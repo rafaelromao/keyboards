@@ -38,7 +38,7 @@
 // Disable Alt Repeat
 #define NO_ALT_REPEAT_KEY
 // Repeat keys will act as Oneshot Shift after this timeout
-#define REPEAT_KEY_TIMEOUT 250
+#define REPEAT_KEY_TIMEOUT 300
 
 // Dynamic macros
 #define DYNAMIC_MACRO_NO_NESTING
