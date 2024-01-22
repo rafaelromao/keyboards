@@ -180,11 +180,52 @@ void process_shift_repeat(uint16_t keycode) {
                 process_accents(MC_TL_A, NULL);
                 tap_code(KC_O);
                 return;
+            case MC_TL_A:
+                tap_code(KC_O);
+                return;
+            case MC_TL_O:
+                tap_code(KC_E);
+                tap_code(KC_S);
+                return;
         }
         // repeat/alternate repeat only simple tapping keycodes
         switch (key) {
+            case KC_A:
+                tap_code(KC_N);
+                tap_code(KC_D);
+                break;
+            case KC_M:
+                tap_code(KC_E);
+                tap_code(KC_N);
+                tap_code(KC_T);
+                break;
+            case KC_J:
+                tap_code(KC_U);
+                tap_code(KC_S);
+                tap_code(KC_T);
+                break;
+            case KC_I:
+                tap_code(KC_N);
+                tap_code(KC_G);
+                break;
+            case KC_K:
+                tap_code(KC_E);
+                tap_code(KC_Y);
+                break;
+            case KC_V:
+                tap_code(KC_E);
+                tap_code(KC_R);
+                break;
             case KC_W:
-                tap_code(KC_K);
+                tap_code(KC_H);
+                tap_code(KC_I);
+                tap_code(KC_C);
+                tap_code(KC_H);
+                break;
+            case KC_DOT:
+                tap_code(KC_C);
+                tap_code(KC_O);
+                tap_code(KC_M);
                 break;
             default:
                 tap_code16(key);
@@ -208,6 +249,11 @@ void process_shift_magic(uint16_t keycode) {
                 return;
             case MC_SQ_C:
                 process_accents(MC_TL_O, NULL);
+                return;
+            case MC_TL_A:
+                tap_code(KC_O);
+                return;
+            case MC_TL_O:
                 tap_code(KC_E);
                 return;
         }
@@ -217,10 +263,13 @@ void process_shift_magic(uint16_t keycode) {
                 tap_code(KC_Y);
                 break;
             case KC_N:
-                tap_code(KC_D);
+                tap_code(KC_F);
                 break;
             case KC_S:
                 tap_code(KC_M);
+                break;
+            case KC_C:
+                tap_code(KC_S);
                 break;
             case KC_X:
                 tap_code(KC_C);
@@ -232,16 +281,16 @@ void process_shift_magic(uint16_t keycode) {
                 tap_code(KC_E);
                 break;
             case KC_E:
-                tap_code(KC_I);
+                tap_code(KC_U);
                 break;
             case KC_T:
                 tap_code(KC_W);
                 break;
-            case KC_K:
-                tap_code(KC_W);
+            case KC_B:
+                tap_code(KC_Y);
                 break;
-            case KC_W:
-                tap_code(KC_K);
+            case KC_F:
+                tap_code(KC_Y);
                 break;
             case KC_G:
                 tap_code(KC_U);
@@ -252,8 +301,23 @@ void process_shift_magic(uint16_t keycode) {
             case KC_R:
                 tap_code(KC_H);
                 break;
+            case KC_K:
+                tap_code(KC_W);
+                break;
+            case KC_W:
+                tap_code(KC_K);
+                break;
             case KC_J:
                 process_accents(MC_SQ_A, NULL);
+                break;
+            case KC_V:
+                process_accents(MC_SQ_I, NULL);
+                break;
+            case KC_DOT:
+                tap_code(KC_SLSH);
+                break;
+            case KC_MINS:
+                tap_code16(KC_GT);
                 break;
             case KC_I:
                 tap_code(KC_BSPC);
