@@ -136,10 +136,6 @@ bool remember_last_key_user(uint16_t keycode, keyrecord_t *record, uint8_t *reme
 }
 
 bool in_mid_word(uint16_t key) {
-    if ((get_last_mods() & MOD_MASK_SHIFT) > 0) {
-        // If last key was shifted, it is not mid word
-        return false;
-    }
     if (repeat_key_timer == 0) {
         // Used to signal that the last key to repeat/magic expired
         return false;
