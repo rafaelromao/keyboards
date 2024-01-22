@@ -176,6 +176,13 @@ void process_shift_repeat(uint16_t keycode) {
     if (in_mid_word(key)) {
         // alternate repeat for macros
         switch (keycode) {
+            case MC_SQ_A:
+            case MC_SQ_E:
+            case MC_SQ_O:
+            case MC_SQ_I:
+            case MC_SQ_U:
+                tap_code(KC_V);
+                return;
             case MC_SQ_C:
                 process_accents(MC_TL_A, NULL);
                 tap_code(KC_O);
@@ -193,11 +200,6 @@ void process_shift_repeat(uint16_t keycode) {
             case KC_A:
                 tap_code(KC_N);
                 tap_code(KC_D);
-                break;
-            case KC_M:
-                tap_code(KC_E);
-                tap_code(KC_N);
-                tap_code(KC_T);
                 break;
             case KC_J:
                 tap_code(KC_U);
@@ -256,6 +258,9 @@ void process_shift_magic(uint16_t keycode) {
             case MC_TL_O:
                 tap_code(KC_E);
                 return;
+            case MC_QU:
+                process_accents(MC_CR_E, NULL);
+                return;
         }
         // magic only simple tapping keycodes
         switch (key) {
@@ -307,6 +312,9 @@ void process_shift_magic(uint16_t keycode) {
             case KC_P:
                 tap_code(KC_Q);
                 break;
+            case KC_M:
+                tap_code(KC_S);
+                break;
             case KC_W:
                 tap_code(KC_K);
                 break;
@@ -314,7 +322,7 @@ void process_shift_magic(uint16_t keycode) {
                 process_accents(MC_SQ_A, NULL);
                 break;
             case KC_V:
-                process_accents(MC_SQ_I, NULL);
+                process_accents(MC_SQ_A, NULL);
                 break;
             case KC_DOT:
                 tap_code(KC_SLSH);
