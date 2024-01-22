@@ -112,10 +112,11 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             unregister_mods(MOD_MASK_CTRL);
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // ESC + P
+            // "0p
 
-        case MC_ESCP:
-            tap_code(KC_ESC);
+        case MC_0P:
+            tap_code16(KC_DQUO);
+            tap_code(KC_0);
             tap_code(KC_P);
             return PROCESS_RECORD_RETURN_FALSE;
 

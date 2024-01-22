@@ -149,7 +149,8 @@
 
         COMBO(cb_o_esc,         RHI RHM,     &mc_o_esc,          MEDIA)
         COMBO(cb_sft_o_esc,     RHM RHR,     &mc_sft_o_esc,      MEDIA)
-        COMBO(cb_esc_p,         RHI RHM RHR, &mc_esc_p,          MEDIA)
+        COMBO(cb_mesc,          RTI RTM,     &kp ESC,            MEDIA)
+        COMBO(cb_dqt0p,         RHI RHM RHR, &mc_dqt0p,          MEDIA)
         COMBO(cb_vr,            RBI RBM,     &kp V,              MEDIA)
         COMBO(cb_shiftv,        RBM RBR,     &kp LS(V),          MEDIA)
         COMBO(cb_ctrlv,         RBI RBM RBR, &kp LC(V),          MEDIA)

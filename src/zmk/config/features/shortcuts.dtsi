@@ -162,6 +162,6 @@
         SHORTCUT(mc_join,                   &macro_tap &kp END &kp DEL)
         SHORTCUT(mc_comment,                &macro_tap &kp LG(SLASH))
         SHORTCUT(mc_escc,                   &macro_tap &kp ESC &to ALPHA1)
-        SHORTCUT(mc_esc_p,                  &macro_tap &kp ESC &kp P)
+        SHORTCUT(mc_dqt0p,                  &macro_tap &kp DQT &kp N0 &kp P)
     };
 };
