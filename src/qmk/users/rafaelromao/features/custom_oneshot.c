@@ -273,7 +273,7 @@ void process_shift_magic(uint16_t keycode) {
                 tap_code(KC_S);
                 break;
             case KC_X:
-                tap_code(KC_C);
+                process_accents(MC_SQ_I, NULL);
                 break;
             case KC_A:
                 tap_code(KC_O);
