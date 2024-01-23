@@ -74,12 +74,13 @@
                            I           J           K           L           M           N           O           P           \
                            Q           R           S           T           U           V           W           X           \
                            Y           Z           >;
-            bindings =    <&tc_and     &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &ac_aacu    \
+            bindings =    <&tc_and     &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &tc_hoes    \
                            &tc_ng      &ac_aacu    &tc_key     &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat \
                            &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &tc_ver     &tc_which   &key_repeat \
                            &tc_you     &key_repeat >;
         };
         THUMB_MACRO(tc_and,     &kp N &kp D)
+        THUMB_MACRO(tc_hoes,    &ac_otil &kp E &kp S)
         THUMB_MACRO(tc_you,     &kp O &kp U)
         THUMB_MACRO(tc_ng,      &kp N &kp G)
         THUMB_MACRO(tc_key,     &kp E &kp Y)

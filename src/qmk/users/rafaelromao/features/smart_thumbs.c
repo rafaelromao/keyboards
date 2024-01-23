@@ -138,7 +138,7 @@ bool remember_last_key_user(uint16_t keycode, keyrecord_t *record, uint8_t *reme
 bool in_mid_word(uint16_t key, bool isMagic) {
     if (isMagic) {
         switch (key) {
-            // not necessary to repeat/magic, so skip to work better with remapped VIM bindings
+            // not necessary to magic, so skip to work better with remapped VIM bindings
             case KC_Y:
             case KC_H:
             case KC_O:
@@ -194,6 +194,7 @@ void process_shift_repeat(uint16_t keycode) {
                 tap_code(KC_O);
                 return;
             case MC_TL_O:
+                tap_code(KC_E);
                 tap_code(KC_S);
                 return;
         }
@@ -204,8 +205,12 @@ void process_shift_repeat(uint16_t keycode) {
                 tap_code(KC_D);
                 break;
             case KC_J:
-            case KC_H:
                 process_accents(MC_SQ_A, NULL);
+                break;
+            case KC_H:
+                process_accents(MC_TL_O, NULL);
+                tap_code(KC_E);
+                tap_code(KC_S);
                 break;
             case KC_I:
                 tap_code(KC_N);
@@ -259,6 +264,9 @@ void process_shift_magic(uint16_t keycode) {
                 return;
             case MC_TL_A:
                 tap_code(KC_O);
+                return;
+            case MC_TL_O:
+                tap_code(KC_E);
                 return;
             case MC_QU:
                 process_accents(MC_CR_E, NULL);
