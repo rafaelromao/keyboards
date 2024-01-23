@@ -1,10 +1,10 @@
 #include QMK_KEYBOARD_H
 
-#include "custom_oneshot.h"
+#include "smart_thumbs.h"
 
 extern os_t os;
 
-static custom_oneshots_t custom_oneshots = {.timer = 0};
+static custom_oneshots_t custom_oneshots  = {.timer = 0};
 static uint16_t          repeat_key_timer = 0;
 
 // Custom oneshot mods
@@ -18,7 +18,7 @@ void oneshot_mods_changed_user(uint8_t mods) {
 }
 
 void clear_locked_and_oneshot_mods(void) {
-    uint8_t oneshot_mods        = get_oneshot_mods();
+    uint8_t oneshot_mods = get_oneshot_mods();
     if (oneshot_mods) {
         clear_oneshot_mods();
         clear_oneshot_locked_mods();
@@ -34,7 +34,7 @@ void clear_locked_and_oneshot_mods(void) {
 }
 
 void clear_oneshot_mods_state(void) {
-    uint8_t oneshot_mods        = get_oneshot_mods();
+    uint8_t oneshot_mods = get_oneshot_mods();
     if (!(oneshot_mods & MOD_LSFT)) {
         del_oneshot_mods(MOD_LSFT);
         unregister_mods(MOD_LSFT);
@@ -353,7 +353,7 @@ void activate_shift_repeat_or_magic_key(uint16_t keycode) {
     }
 }
 
-process_record_result_t process_custom_oneshot(uint16_t keycode, keyrecord_t *record) {
+process_record_result_t process_smart_thumbs(uint16_t keycode, keyrecord_t *record) {
     if (keycode != OS_SYM && record->event.pressed && IS_LAYER_ON(_ALPHA2) && check_disable_oneshot(keycode)) {
         if (is_string_macro_keycode(keycode)) {
             if (process_accents(keycode, NULL) == PROCESS_RECORD_CONTINUE) {

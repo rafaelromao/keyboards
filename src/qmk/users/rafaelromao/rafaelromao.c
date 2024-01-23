@@ -32,7 +32,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 #endif
 
     // Process custom oneshot
-    switch (process_custom_oneshot(keycode, record)) {
+    switch (process_smart_thumbs(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:
@@ -101,7 +101,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     };
 
     // Process common shortcuts
-    switch (process_common_shortcuts(keycode, record)) {
+    switch (process_shortcuts(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:

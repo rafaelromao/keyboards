@@ -22,7 +22,7 @@
 ## Smart Thumb Keys
 - The Smart Thumb keys in this layout change behavior according to the context (active layer, active modifiers and more).
 - The four thumb keys control layer transitions, when held (Navigation, Lower, Raise and Media).
-- Source code: [custom_oneshot.c](../src/qmk/users/rafaelromao/features/custom_oneshot.c)
+- Source code: [smart_thumbs.c](../src/qmk/users/rafaelromao/features/smart_thumbs.c)
 
 ### Smart Shift / Repeat Key
 - The outer left thumb key, when tapped in the middle of a word, repeats the last key. This is usefull to avoid tapping the same key twice in words like 'tapped'.

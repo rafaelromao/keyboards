@@ -4,7 +4,7 @@
 
 #include "../definitions/keycodes.h"
 #include "os_toggle.h"
-#include "custom_oneshot.h"
+#include "smart_thumbs.h"
 #include "dynamic_macro.h"
 #include "macros.h"
 #include "accents.h"
