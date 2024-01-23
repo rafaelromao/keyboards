@@ -43,8 +43,11 @@ void tap_accent_tap_key(uint32_t keycode) {
             break;
         case MC_CR_O:
         case MC_SQ_O:
+            tap_code(KC_O);
+            break;
         case MC_TL_O:
             tap_code(KC_O);
+            tap_code(KC_E);
             break;
         case MC_SQ_I:
             tap_code(KC_I);

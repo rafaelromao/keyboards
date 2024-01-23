@@ -135,7 +135,18 @@ bool remember_last_key_user(uint16_t keycode, keyrecord_t *record, uint8_t *reme
     return true;
 }
 
-bool in_mid_word(uint16_t key) {
+bool in_mid_word(uint16_t key, bool isMagic) {
+    if (isMagic) {
+        switch (key) {
+            // not necessary to repeat/magic, so skip to work better with remapped VIM bindings
+            case KC_Y:
+            case KC_H:
+            case KC_O:
+            case KC_Z:
+            case KC_J:
+                return false;
+        }
+    }
     if (repeat_key_timer == 0) {
         // Used to signal that the last key to repeat/magic expired
         return false;
@@ -154,10 +165,6 @@ bool in_mid_word(uint16_t key) {
         case KC_TAB:
         case KC_ENT:
         case KC_ESC:
-        // not necessary to repeat/magic, so skip to work better with remapped VIM bindings
-        case KC_Y:
-        case KC_H:
-        case KC_O:
         // avoid recursive calls
         case MED_CAS:
         case NAV_CAS:
@@ -169,7 +176,7 @@ bool in_mid_word(uint16_t key) {
 
 void process_shift_repeat(uint16_t keycode) {
     uint16_t key = extract_tapping_keycode(keycode);
-    if (in_mid_word(key)) {
+    if (in_mid_word(key, false)) {
         // alternate repeat for macros
         switch (keycode) {
             case MC_SQ_A:
@@ -187,7 +194,6 @@ void process_shift_repeat(uint16_t keycode) {
                 tap_code(KC_O);
                 return;
             case MC_TL_O:
-                tap_code(KC_E);
                 tap_code(KC_S);
                 return;
         }
@@ -198,9 +204,8 @@ void process_shift_repeat(uint16_t keycode) {
                 tap_code(KC_D);
                 break;
             case KC_J:
-                tap_code(KC_U);
-                tap_code(KC_S);
-                tap_code(KC_T);
+            case KC_H:
+                process_accents(MC_SQ_A, NULL);
                 break;
             case KC_I:
                 tap_code(KC_N);
@@ -213,6 +218,10 @@ void process_shift_repeat(uint16_t keycode) {
             case KC_V:
                 tap_code(KC_E);
                 tap_code(KC_R);
+                break;
+            case KC_Y:
+                tap_code(KC_O);
+                tap_code(KC_U);
                 break;
             case KC_W:
                 tap_code(KC_H);
@@ -235,7 +244,7 @@ void process_shift_repeat(uint16_t keycode) {
 
 void process_shift_magic(uint16_t keycode) {
     uint16_t key = extract_tapping_keycode(keycode);
-    if (in_mid_word(key)) {
+    if (in_mid_word(key, true)) {
         // magic for macros
         switch (keycode) {
             case MC_SQ_A:
@@ -250,9 +259,6 @@ void process_shift_magic(uint16_t keycode) {
                 return;
             case MC_TL_A:
                 tap_code(KC_O);
-                return;
-            case MC_TL_O:
-                tap_code(KC_E);
                 return;
             case MC_QU:
                 process_accents(MC_CR_E, NULL);
@@ -306,16 +312,13 @@ void process_shift_magic(uint16_t keycode) {
                 tap_code(KC_W);
                 break;
             case KC_P:
-                tap_code(KC_Q);
+                tap_code(KC_T);
                 break;
             case KC_M:
                 tap_code(KC_S);
                 break;
             case KC_W:
                 tap_code(KC_K);
-                break;
-            case KC_J:
-                process_accents(MC_SQ_A, NULL);
                 break;
             case KC_V:
                 process_accents(MC_SQ_A, NULL);

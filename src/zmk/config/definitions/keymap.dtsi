@@ -28,7 +28,7 @@
    &mc_escc            &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp BSPC
    &lt SHORTCUTS D     &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp W               &kp Z               &mt RGUI R          &mt RCTRL A         &mt RSHFT E         &lt SHORTCUTS I 
    &kp Q               &mt RALT F          &kp C               &mt LALT P          &kp V               &kp J               &mt RALT H          &th_comma 0 0       &th_dot 0 0         &kp Y
-                                           &none               &ht_repeat NAV 0    &lt LOWER SPACE     &msl RAISE ALPHA2   &med_sc             &trans
+                                           &none               &ht_repeat NAV 0    &lt LOWER SPACE     &msl RAISE ALPHA2   &ht_magic MEDIA 0   &trans
                         >;
                    };
                 capsword_layer {
@@ -37,7 +37,7 @@
    &trans              &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &trans
    &lt SHORTCUTS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTCUTS LS(I) 
    &kp LS(Q)           &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &mt RALT LS(H)      &th_comma 0 0       &th_dot 0 0         &kp LS(Y)
-                                           &trans              &ht_repeat NAV 0    &trans              &msl RAISE CASE_A2  &ht_sc MEDIA 0      &trans
+                                           &trans              &ht_repeat NAV 0    &trans              &msl RAISE CASE_A2  &ht_magic MEDIA 0   &trans
                         >;
                 };
                 numpad_layer {
