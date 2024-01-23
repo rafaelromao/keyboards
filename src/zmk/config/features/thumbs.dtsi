@@ -76,7 +76,7 @@
                            Y           Z           >;
             bindings =    <&tc_and     &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &tc_hoes    \
                            &tc_ng      &ac_aacu    &tc_key     &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat \
-                           &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &tc_ver     &tc_which   &key_repeat \
+                           &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &ac_aacu    &tc_which   &ac_aacu    \
                            &tc_you     &key_repeat >;
         };
         THUMB_MACRO(tc_and,     &kp N &kp D)
@@ -84,7 +84,6 @@
         THUMB_MACRO(tc_you,     &kp O &kp U)
         THUMB_MACRO(tc_ng,      &kp N &kp G)
         THUMB_MACRO(tc_key,     &kp E &kp Y)
-        THUMB_MACRO(tc_ver,     &kp E &kp R)
         THUMB_MACRO(tc_which,   &kp H &kp I &kp C &kp H)
         THUMB_MACRO(tc_cdilao,  &ac_atil &kp O)
         THUMB_MACRO(tc_dotcom,  &kp C &kp O &kp M)
@@ -115,7 +114,7 @@
                            X           Z           >;
             bindings =    <&kp O       &kp Y       &kp S       &kp Y       &kp U       &kp Y       &kp U       \
                            &tc_smart_i &ac_aacu    &kp W       &kp H       &kp S       &kp F       &kp T       \
-                           &tc_qmk     &kp H       &kp M       &kp W       &kp E       &ac_aacu    &kp K       \
+                           &tc_qmk     &kp L       &kp M       &kp W       &kp E       &ac_iacu    &kp K       \
                            &ac_iacu    &tc_zmk     >;
         };
         THUMB_MACRO(tc_que,     &kp U &ac_ecir)

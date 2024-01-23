@@ -179,15 +179,23 @@ void process_shift_repeat(uint16_t keycode) {
     if (in_mid_word(key, false)) {
         // alternate repeat for macros
         switch (keycode) {
+            case MC_GV_A:
+                process_accents(MC_QU, NULL);
+                return;
             case MC_SQ_A:
             case MC_SQ_E:
-            case MC_SQ_O:
             case MC_SQ_I:
+            case MC_SQ_O:
             case MC_SQ_U:
                 tap_code(KC_V);
                 return;
-            case MC_SQ_C:
-                process_accents(MC_TL_A, NULL);
+            case MC_CR_A:
+                tap_code(KC_M);
+                return;
+            case MC_CR_E:
+                tap_code(KC_E);
+                return;
+            case MC_CR_O:
                 tap_code(KC_O);
                 return;
             case MC_TL_A:
@@ -197,15 +205,19 @@ void process_shift_repeat(uint16_t keycode) {
                 tap_code(KC_E);
                 tap_code(KC_S);
                 return;
+            case MC_SQ_C:
+                process_accents(MC_TL_A, NULL);
+                tap_code(KC_O);
+                return;
+            case MC_QU:
+                process_accents(MC_CR_E, NULL);
+                return;
         }
         // repeat/alternate repeat only simple tapping keycodes
         switch (key) {
             case KC_A:
                 tap_code(KC_N);
                 tap_code(KC_D);
-                break;
-            case KC_J:
-                process_accents(MC_SQ_A, NULL);
                 break;
             case KC_H:
                 process_accents(MC_TL_O, NULL);
@@ -216,17 +228,19 @@ void process_shift_repeat(uint16_t keycode) {
                 tap_code(KC_N);
                 tap_code(KC_G);
                 break;
+            case KC_J:
+                process_accents(MC_SQ_A, NULL);
+                break;
             case KC_K:
                 tap_code(KC_E);
                 tap_code(KC_Y);
                 break;
-            case KC_V:
-                tap_code(KC_E);
-                tap_code(KC_R);
+            case KC_U:
+                tap_code(KC_Y);
                 break;
-            case KC_Y:
-                tap_code(KC_O);
-                tap_code(KC_U);
+            case KC_V:
+            case KC_X:
+                process_accents(MC_SQ_A, NULL);
                 break;
             case KC_W:
                 tap_code(KC_H);
@@ -234,10 +248,18 @@ void process_shift_repeat(uint16_t keycode) {
                 tap_code(KC_C);
                 tap_code(KC_H);
                 break;
+            case KC_Y:
+                tap_code(KC_O);
+                tap_code(KC_U);
+                break;
             case KC_DOT:
                 tap_code(KC_C);
                 tap_code(KC_O);
                 tap_code(KC_M);
+                break;
+            case KC_MINS:
+                tap_code16(KC_MINS);
+                tap_code16(KC_MINS);
                 break;
             default:
                 tap_code16(key);
@@ -252,15 +274,28 @@ void process_shift_magic(uint16_t keycode) {
     if (in_mid_word(key, true)) {
         // magic for macros
         switch (keycode) {
-            case MC_SQ_A:
+            case MC_GV_A:
+                process_accents(MC_QU, NULL);
+                return;
             case MC_SQ_E:
+                tap_code(KC_U);
+                return;
+            case MC_SQ_A:
             case MC_SQ_O:
+                tap_code(KC_X);
+                return;
             case MC_SQ_I:
             case MC_SQ_U:
-                tap_code(KC_V);
+                tap_code(KC_Z);
                 return;
-            case MC_SQ_C:
-                process_accents(MC_TL_O, NULL);
+            case MC_CR_A:
+                tap_code(KC_N);
+                return;
+            case MC_CR_E:
+                tap_code(KC_X);
+                return;
+            case MC_CR_O:
+                tap_code(KC_V);
                 return;
             case MC_TL_A:
                 tap_code(KC_O);
@@ -268,41 +303,29 @@ void process_shift_magic(uint16_t keycode) {
             case MC_TL_O:
                 tap_code(KC_E);
                 return;
+            case MC_SQ_C:
+                process_accents(MC_TL_O, NULL);
+                return;
             case MC_QU:
                 process_accents(MC_CR_E, NULL);
                 return;
         }
         // magic only simple tapping keycodes
         switch (key) {
-            case KC_D:
+            case KC_A:
+                tap_code(KC_O);
+                break;
+            case KC_B:
                 tap_code(KC_Y);
-                break;
-            case KC_N:
-                tap_code(KC_F);
-                break;
-            case KC_S:
-                tap_code(KC_M);
                 break;
             case KC_C:
                 tap_code(KC_S);
                 break;
-            case KC_X:
-                process_accents(MC_SQ_I, NULL);
-                break;
-            case KC_A:
-                tap_code(KC_O);
-                break;
-            case KC_U:
-                tap_code(KC_E);
+            case KC_D:
+                tap_code(KC_Y);
                 break;
             case KC_E:
                 tap_code(KC_U);
-                break;
-            case KC_T:
-                tap_code(KC_W);
-                break;
-            case KC_B:
-                tap_code(KC_Y);
                 break;
             case KC_F:
                 tap_code(KC_Y);
@@ -310,36 +333,49 @@ void process_shift_magic(uint16_t keycode) {
             case KC_G:
                 tap_code(KC_U);
                 break;
-            case KC_L:
-                tap_code(KC_H);
-                break;
-            case KC_R:
-                tap_code(KC_H);
+            case KC_I:
+                tap_code(KC_BSPC);
+                SEND_STRING("I' ");
                 break;
             case KC_K:
                 tap_code(KC_W);
                 break;
-            case KC_P:
-                tap_code(KC_T);
+            case KC_L:
+                tap_code(KC_H);
                 break;
             case KC_M:
                 tap_code(KC_S);
                 break;
-            case KC_W:
-                tap_code(KC_K);
+            case KC_N:
+                tap_code(KC_F);
+                break;
+            case KC_P:
+                tap_code(KC_T);
+                break;
+            case KC_R:
+                tap_code(KC_L);
+                break;
+            case KC_S:
+                tap_code(KC_M);
+                break;
+            case KC_T:
+                tap_code(KC_W);
+                break;
+            case KC_U:
+                tap_code(KC_E);
                 break;
             case KC_V:
-                process_accents(MC_SQ_A, NULL);
+            case KC_X:
+                process_accents(MC_SQ_I, NULL);
+                break;
+            case KC_W:
+                tap_code(KC_K);
                 break;
             case KC_DOT:
                 tap_code(KC_SLSH);
                 break;
             case KC_MINS:
                 tap_code16(KC_GT);
-                break;
-            case KC_I:
-                tap_code(KC_BSPC);
-                SEND_STRING("I' ");
                 break;
             default:
                 tap_code16(key);
@@ -374,11 +410,7 @@ process_record_result_t process_smart_thumbs(uint16_t keycode, keyrecord_t *reco
         }
     }
 
-    bool isOneShotShift       = get_oneshot_mods() & MOD_MASK_SHIFT;
-    bool isOneShotCtrl        = get_oneshot_mods() & MOD_MASK_CTRL || get_oneshot_locked_mods() & MOD_MASK_CTRL;
-    bool isOneShotAlt         = get_oneshot_mods() & MOD_MASK_ALT || get_oneshot_locked_mods() & MOD_MASK_ALT;
-    bool isOneShotGui         = get_oneshot_mods() & MOD_MASK_GUI || get_oneshot_locked_mods() & MOD_MASK_GUI;
-    bool isAnyOneShotButShift = isOneShotCtrl || isOneShotAlt || isOneShotGui;
+    bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT;
 
     switch (keycode) {
         case OS_SYM:
@@ -411,12 +443,14 @@ process_record_result_t process_smart_thumbs(uint16_t keycode, keyrecord_t *reco
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
                     if (has_any_smart_case()) {
-                        disable_smart_case();
-                        clear_shift();
+                        if (!isOneShotShift) {
+                            add_oneshot_mods(MOD_MASK_SHIFT);
+                        } else {
+                            disable_smart_case();
+                            clear_shift();
+                        }
                     } else {
-                        if (isAnyOneShotButShift) {
-                            clear_locked_and_oneshot_mods();
-                        } else if (!isOneShotShift) {
+                        if (!isOneShotShift) {
                             activate_shift_repeat_or_magic_key(keycode);
                         } else {
                             set_smart_case_for_mods();
