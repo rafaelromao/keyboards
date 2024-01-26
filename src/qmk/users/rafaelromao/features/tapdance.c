@@ -2,7 +2,9 @@
 
 #include "tapdance.h"
 
+#ifdef LEADER_ENABLE
 extern leader_t leader;
+#endif
 static td_tap_t tap_state = {.state = TD_NONE};
 
 __attribute__((weak)) td_state_t dance_state(tap_dance_state_t *state) {
@@ -461,7 +463,9 @@ void td_comm(tap_dance_state_t *state, void *user_data) {
             tap_code(KC_COMM);
             break;
         case TD_SINGLE_HOLD:
+#ifdef LEADER_ENABLE
             leader_start();
+#endif
             break;
         default:
             break;
@@ -472,9 +476,11 @@ void td_dot(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
+#ifdef LEADER_ENABLE
             if (leader.isLeading) {
                 break;
             }
+#endif
             tap_code(KC_DOT);
             start_sentence_case();
             break;

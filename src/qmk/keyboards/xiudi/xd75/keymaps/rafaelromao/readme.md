@@ -1,19 +1,19 @@
-## kprepublic/bm40hsrgb
-### A pseudo split keyboard, in a BM40 body.
+## xd75/rafaelromao
+### A pseudo split keyboard, in a XD75 body.
 
-The keyboard in the picture below is a BM40, used to design and test this layout.
+The keyboard in the picture below is a XD75, used to design and test this layout.
 
-![img](../../../../../../../img/bm40.jpg)
+![img](../../../../../../../img/XD75.jpeg)
 
 ### QMK
 
 #### Compile
 
-`qmk compile -kb bm40hsrgb -km rafaelromao`
+`qmk compile -kb xd75 -km rafaelromao`
 
 #### Flash
 
-`qmk flash -kb bm40hsrgb -km rafaelromao`
+`qmk flash -kb xd75 -km rafaelromao`
 
 ## Keymap
 

@@ -13,7 +13,6 @@ SRC += features/select_word.c
 SRC += features/custom_shift.c
 SRC += features/sentence_case.c
 SRC += features/swapper.c
-SRC += features/leader.c
 
 LTO_ENABLE = yes
 EXTRAKEY_ENABLE = yes # Audio control and System control
@@ -22,7 +21,6 @@ COMBO_ENABLE = yes
 NKRO_ENABLE = yes
 OS_DETECTION_ENABLE = yes
 REPEAT_KEY_ENABLE = yes
-LEADER_ENABLE = yes
 MOUSEKEY_ENABLE = no
 BOOTMAGIC_ENABLE = no
 BACKLIGHT_ENABLE = no

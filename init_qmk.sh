@@ -8,6 +8,7 @@ GETREUER_HOME="$KEYBOARD_HOME/$GETREUER_MODULE"
 USER_SPACE="$QMK_HOME/users"
 HANDWIRED="keyboards/handwired"
 BM40="keyboards/kprepublic/bm40hsrgb/keymaps"
+XD75="keyboards/xiudi/xd75/keymaps"
 MJ64="keyboards/melgeek/mj64/keymaps"
 
 if [[ ! -d "$QMK_HOME" ]]
@@ -43,6 +44,11 @@ if [[ ! -d "$QMK_HOME/$BM40/rafaelromao" ]]
 then
     echo "Creating BM40 symbolic link..."
     ln -s "$KEYBOARD_HOME/src/qmk/$BM40/rafaelromao" "$QMK_HOME/$BM40"
+fi
+if [[ ! -d "$QMK_HOME/$XD75/rafaelromao" ]]
+then
+    echo "Creating XD75 symbolic link..."
+    ln -s "$KEYBOARD_HOME/src/qmk/$XD75/rafaelromao" "$QMK_HOME/$XD75"
 fi
 if [[ ! -d "$QMK_HOME/$MJ64/clopes.le" ]]
 then
