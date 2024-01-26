@@ -244,9 +244,7 @@ void process_shift_repeat(uint16_t keycode) {
                 break;
             case KC_W:
                 tap_code(KC_H);
-                tap_code(KC_I);
-                tap_code(KC_C);
-                tap_code(KC_H);
+                tap_code(KC_Y);
                 break;
             case KC_Y:
                 tap_code(KC_O);
