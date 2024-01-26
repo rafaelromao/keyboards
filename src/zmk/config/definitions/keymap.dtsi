@@ -187,8 +187,8 @@
                 system_layer {
                      label = "SYSTEM";
                      bindings = <
-   &trans              &none               &none               &none               &none               &none               &none               &tog LOCK_KB        &none                &trans 
-   &none               &none               &none               &bootloader         &none               &none               &bootloader         &kp C_SLEEP         &kp LC(LG(Q))        &none      
+   &trans              &none               &none               &bootloader         &none               &none               &bootloader         &none               &none                &trans 
+   &none               &none               &none               &none               &none               &none               &kp LC(LG(Q))       &kp C_SLEEP         &tog LOCK_KB         &none      
    &none               &none               &none               &sys_reset          &none               &none               &sys_reset          &bt BT_PRV          &bt BT_NXT           &none
                                            &trans              &trans              &trans              &trans              &trans              &trans
                         >;

@@ -117,13 +117,13 @@
 #define _______________________LOCK____R3____           XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX 
 #define ______LOCK____R4_                               XXXXXXX , XXXXXXX
 
-#define ______________________SYSTEM___L1____           XXXXXXX , RGB_VAD , RGB_VAI , RGB_TOG
-#define ______________________SYSTEM___L2______________ XXXXXXX , RGB_HUD , RGB_HUI , QK_BOOT , XXXXXXX
+#define ______________________SYSTEM___L1____           XXXXXXX , RGB_VAD , RGB_VAI , QK_BOOT
+#define ______________________SYSTEM___L2______________ XXXXXXX , RGB_HUD , RGB_HUI , RGB_TOG , XXXXXXX
 #define           ____________SYSTEM___L3______________           RGB_SAD , RGB_SAI , EE_CLR  , XXXXXXX
 #define                               _____SYSTEM___L4_                               XXXXXXX , XXXXXXX
 
-#define           ____________SYSTEM___R1______________           TG_OS   , TG_LOCK , KC_NUM  , XXXXXXX
-#define ______________________SYSTEM___R2______________ XXXXXXX , QK_BOOT , KC_SLEP , MC_LOCK , XXXXXXX
+#define           ____________SYSTEM___R1______________           QK_BOOT , TG_OS   , KC_NUM  , XXXXXXX
+#define ______________________SYSTEM___R2______________ XXXXXXX , MC_LOCK , KC_SLEP , TG_LOCK , XXXXXXX
 #define ______________________SYSTEM___R3____           XXXXXXX , EE_CLR  , XXXXXXX , XXXXXXX 
 #define _____SYSTEM___R4_                               XXXXXXX , XXXXXXX
 
