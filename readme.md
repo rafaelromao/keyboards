@@ -54,6 +54,8 @@ The qmk version recommended for this keymap is 0.22.10.
 - [handwired/rafaelromao/rommana](src/qmk/keyboards/handwired/rafaelromao/rommana/readme.md)
 - [kprepublic/bm40hsrgb](src/qmk/keyboards/kprepublic/bm40hsrgb/keymaps/rafaelromao/readme.md)
 
+- [xiudi/xd75](src/qmk/keyboards/xiudi/xd75/keymaps/rafaelromao/readme.md)
+
 Some features are not available on all keyboards though. For instance, the BM40 does not support Dynamic Macros.
 
 ### ZMK
