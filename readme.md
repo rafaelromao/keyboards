@@ -91,6 +91,7 @@ Most features implemented here were based on the work referenced below.
 - [Miryoku](https://github.com/manna-harbour/miryoku)
 - [Seniply](https://stevep99.github.io/seniply)
 - [Suraj Kurapati](https://sunaku.github.io/moergo-glove80-keyboard.html)
+- [bmijanovich](https://github.com/bmijanovich/zmk-config)
 - [DreymaR](https://dreymar.colemak.org)
 - [Ben Vallack](https://youtube.com/c/BenVallack)
 
