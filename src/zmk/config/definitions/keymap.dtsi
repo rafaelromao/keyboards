@@ -5,6 +5,7 @@
 *
 */
 
+#include "keycodes.h"
 #include "config.dtsi"
 
 #include "../features/behaviors.dtsi"

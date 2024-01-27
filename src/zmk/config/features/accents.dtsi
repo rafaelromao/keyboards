@@ -4,8 +4,9 @@
 * SPDX-License-Identifier: MIT
 *
 */
+
 / {
-    #define ACCENTED_KEY(NAME, KEY, DEAD_KEY) \
+    #define ACCENTED_KEY(NAME, KEY, DEAD_KEY, TERM) \
         NAME##_l: NAME##_l { \
             label = ZMK_MACRO_STRINGIFY(NAME##_l); \
             wait-ms = <0>; \
@@ -17,6 +18,7 @@
                 , <&macro_tap &kp DEAD_KEY> \
                 , <&macro_release &kp LALT> \
                 , <&macro_tap &kp KEY> \
+                , <&macro_tap &kp TERM> \
                 ; \
         }; \
         NAME##_c: NAME##_c { \
@@ -33,6 +35,7 @@
                 , <&macro_press &kp LSHFT> \
                 , <&macro_tap &kp KEY> \
                 , <&macro_release &kp LSHFT> \
+                , <&macro_tap &kp TERM> \
                 ; \
         }; \
         NAME: NAME { \
@@ -56,21 +59,21 @@
 
 
     accents {
-        ACCENTED_KEY(ac_agrv, A, GRAVE)
-        ACCENTED_KEY(ac_aacu, A, E)
-        ACCENTED_KEY(ac_atil, A, N)
-        ACCENTED_KEY(ac_acir, A, I)
-        ACCENTED_KEY(ac_eacu, E, E)
-        ACCENTED_KEY(ac_ecir, E, I)
-        ACCENTED_KEY(ac_iacu, I, E)
-        ACCENTED_KEY(ac_oacu, O, E)
-        ACCENTED_KEY(ac_otil, O, N)
-        ACCENTED_KEY(ac_ocir, O, I)
-        ACCENTED_KEY(ac_uacu, U, E)
+        ACCENTED_KEY(ac_agrv, A, GRAVE, AGRV_TERM)
+        ACCENTED_KEY(ac_aacu, A, E, AACU_TERM)
+        ACCENTED_KEY(ac_atil, A, N, ATIL_TERM)
+        ACCENTED_KEY(ac_acir, A, I, ACIR_TERM)
+        ACCENTED_KEY(ac_eacu, E, E, EACU_TERM)
+        ACCENTED_KEY(ac_ecir, E, I, ECIR_TERM)
+        ACCENTED_KEY(ac_iacu, I, E, IACU_TERM)
+        ACCENTED_KEY(ac_oacu, O, E, OACU_TERM)
+        ACCENTED_KEY(ac_otil, O, N, OTIL_TERM)
+        ACCENTED_KEY(ac_ocir, O, I, OCIR_TERM)
+        ACCENTED_KEY(ac_uacu, U, E, UACU_TERM)
 
-        MACRO_KEY(mc_ced,   &macro_press &kp LALT &macro_tap &kp C &macro_release &kp LALT)
-        MACRO_KEY(mc_ced_c, &macro_press &kp LALT &macro_tap &kp LS(C) &macro_release &kp LALT)
-        MACRO_KEY(mc_qu,    &macro_tap &kp Q &macro_wait_time 10 &macro_tap &kp U)
-        MACRO_KEY(mc_qu_c,  &macro_press &kp LSHFT &macro_tap &kp Q &macro_release &kp LSHFT &macro_wait_time 10 &macro_tap &kp U)
+        MACRO_KEY(mc_ced,   &kp C_CEDIL)
+        MACRO_KEY(mc_ced_c, &kp LS(C_CEDIL))
+        MACRO_KEY(mc_qu,    &macro_tap &kp Q &macro_wait_time 10 &macro_tap &kp U &kp QU_TERM)
+        MACRO_KEY(mc_qu_c,  &macro_press &kp LSHFT &macro_tap &kp Q &macro_wait_time 10 &macro_tap &kp U &macro_release &kp LSHFT &kp QU_TERM)
     };
 };
