@@ -4,8 +4,9 @@
 * SPDX-License-Identifier: MIT
 *
 */
+
 / {
-    #define ALPHA2ED_KEY(NAME, KEY, DEAD_KEY) \
+    #define ACCENTED_KEY(NAME, KEY, DEAD_KEY, TERM) \
         NAME##_l: NAME##_l { \
             label = ZMK_MACRO_STRINGIFY(NAME##_l); \
             wait-ms = <0>; \
@@ -17,10 +18,11 @@
                 , <&macro_tap &kp DEAD_KEY> \
                 , <&macro_release &kp LALT> \
                 , <&macro_tap &kp KEY> \
+                , <&macro_tap &kp TERM> \
                 ; \
         }; \
-        NAME##_u: NAME##_u { \
-            label = ZMK_MACRO_STRINGIFY(NAME##_u); \
+        NAME##_c: NAME##_c { \
+            label = ZMK_MACRO_STRINGIFY(NAME##_c); \
             wait-ms = <0>; \
             tap-ms = <0>; \
             compatible = "zmk,behavior-macro"; \
@@ -33,13 +35,14 @@
                 , <&macro_press &kp LSHFT> \
                 , <&macro_tap &kp KEY> \
                 , <&macro_release &kp LSHFT> \
+                , <&macro_tap &kp TERM> \
                 ; \
         }; \
         NAME: NAME { \
             label = ZMK_MACRO_STRINGIFY(NAME); \
             compatible = "zmk,behavior-mod-morph"; \
             #binding-cells = <0>; \
-            bindings = <&NAME##_l>, <&NAME##_u>; \
+            bindings = <&NAME##_l>, <&NAME##_c>; \
             mods = <(MOD_LSFT|MOD_RSFT)>; \
             keep-mods = <(MOD_LSFT|MOD_RSFT)>; \
         };
@@ -56,29 +59,21 @@
 
 
     accents {
-        ALPHA2ED_KEY(ac_agrv, A, GRAVE)
-        ALPHA2ED_KEY(ac_aacu, A, E)
-        ALPHA2ED_KEY(ac_acir, A, I)
-        ALPHA2ED_KEY(ac_eacu, E, E)
-        ALPHA2ED_KEY(ac_ecir, E, I)
-        ALPHA2ED_KEY(ac_iacu, I, E)
-        ALPHA2ED_KEY(ac_oacu, O, E)
-        ALPHA2ED_KEY(ac_ocir, O, I)
-        ALPHA2ED_KEY(ac_uacu, U, E)
+        ACCENTED_KEY(ac_agrv, A, GRAVE, AGRV_TERM)
+        ACCENTED_KEY(ac_aacu, A, E, AACU_TERM)
+        ACCENTED_KEY(ac_atil, A, N, ATIL_TERM)
+        ACCENTED_KEY(ac_acir, A, I, ACIR_TERM)
+        ACCENTED_KEY(ac_eacu, E, E, EACU_TERM)
+        ACCENTED_KEY(ac_ecir, E, I, ECIR_TERM)
+        ACCENTED_KEY(ac_iacu, I, E, IACU_TERM)
+        ACCENTED_KEY(ac_oacu, O, E, OACU_TERM)
+        ACCENTED_KEY(ac_otil, O, N, OTIL_TERM)
+        ACCENTED_KEY(ac_ocir, O, I, OCIR_TERM)
+        ACCENTED_KEY(ac_uacu, U, E, UACU_TERM)
 
-        ALPHA2ED_KEY(ac_agrv_c, LS(A), GRAVE)
-        ALPHA2ED_KEY(ac_aacu_c, LS(A), E)
-        ALPHA2ED_KEY(ac_acir_c, LS(A), I)
-        ALPHA2ED_KEY(ac_eacu_c, LS(E), E)
-        ALPHA2ED_KEY(ac_ecir_c, LS(E), I)
-        ALPHA2ED_KEY(ac_iacu_c, LS(I), E)
-        ALPHA2ED_KEY(ac_oacu_c, LS(O), E)
-        ALPHA2ED_KEY(ac_ocir_c, LS(O), I)
-        ALPHA2ED_KEY(ac_uacu_c, LS(U), E)
-
-        MACRO_KEY(mc_ced,   &macro_press &kp LALT &macro_tap &kp C &macro_release &kp LALT)
-        MACRO_KEY(mc_ced_c, &macro_press &kp LALT &macro_tap &kp LS(C) &macro_release &kp LALT)
-        MACRO_KEY(mc_qu,    &macro_tap &kp Q &macro_wait_time 10 &macro_tap &kp U)
-        MACRO_KEY(mc_qu_c,  &macro_press &kp LSHFT &macro_tap &kp Q &macro_release &kp LSHFT &macro_wait_time 10 &macro_tap &kp U)
+        MACRO_KEY(mc_ced,   &kp C_CEDIL)
+        MACRO_KEY(mc_ced_c, &kp LS(C_CEDIL))
+        MACRO_KEY(mc_qu,    &macro_tap &kp Q &macro_wait_time 10 &macro_tap &kp U &kp QU_TERM)
+        MACRO_KEY(mc_qu_c,  &macro_press &kp LSHFT &macro_tap &kp Q &macro_wait_time 10 &macro_tap &kp U &macro_release &kp LSHFT &kp QU_TERM)
     };
 };

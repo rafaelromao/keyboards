@@ -28,6 +28,7 @@
 #define TAPPING_TERM 175
 #define TD_TAPPING_TERM 225
 #define QUICK_TAP_TERM 100
+#define ADAPTIVE_KEY_TIMEOUT 300
 
 /*                KEY POSITIONS
 

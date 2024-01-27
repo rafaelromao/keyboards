@@ -22,8 +22,9 @@ The following pages explain how this layout works and which features are impleme
 
 - [Smart Modifiers](docs/modifiers.md)
 - [Smart Thumb Keys](docs/base.md#smart-thumb-keys)
+- [Smart Shift / Repeat Key](docs/base.md#smart-thumb-keys)
+- [Smart Shift / Magic Key](docs/base.md#smart-thumb-keys)
 - [Smart Cases](docs/modifiers.md#smart-cases)
-- [Repeat Key](docs/base.md#repeat-key)
 - [Sentence Case](docs/base.md#sentence-case)
 - [Shortcut Combos](docs/base.md#base-layer-combos)
 - [Numpad Layer](docs/symbols.md#numpad)

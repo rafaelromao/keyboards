@@ -12,7 +12,7 @@
 
 ### Secondary Alpha Layer
 - The Alpha2 layer has common Portuguese accented letters, readily available with a single tap on the right inner thumb key (OS Accents), making them as easy to type as shifted letters, which are available with a single tap on the right outer thumb key (OS Shift).
-- There are dedicated accent keys for à á ã â é ê õ ó ô ú í and ç, which is all that is needed for Portuguese.
+- There are dedicated accent keys for à á â é ê ó ô ú í and ç, as well as a dead key for ~, which is all that is needed for Portuguese.
 - This layer also gives access to comma, dot and replicated versions of q, y, w, v, z and j, that are not available in the base layer, for the 24 keys variant, as well as an standalone apostrophe character in the thumb.
 - This two alpha layers approach is based on [Ben Vallack's keymap](https://youtu.be/5RN_4PQ0j1A?si=f9OkOvNdL3jE4seR).
 - Source code:
@@ -20,21 +20,26 @@
   - [ZMK] [accents.dtsi](https://github.com/rafaelromao/keyboards/blob/main/src/zmk/config/rafaelromao/features/accents.dtsi) 
 
 ## Smart Thumb Keys
-- The Smart Thumb keys in this layout change behavior according to the context (active layer and active modifiers).
+- The Smart Thumb keys in this layout change behavior according to the context (active layer, active modifiers and more).
 - The four thumb keys control layer transitions, when held (Navigation, Lower, Raise and Media).
-- Holding both outer thumb keys will activate the [System](../system.md) layer, while holding both inner thumb keys activates the [Symbols](../symbols.md) layer.
-- Source code: [custom_oneshot.c](../src/qmk/users/rafaelromao/features/custom_oneshot.c)
+- Source code: [smart_thumbs.c](../src/qmk/users/rafaelromao/features/smart_thumbs.c)
 
-## Repeat Key
-- The outer left thumb key, when tapped, repeats the last key or shortcut. This is usefull to avoid tapping the same key twice in words like 'tapped'.
-- Holding this key in the base will activate the [Navigation](../navigation.md) layer, but holding it in the [Raise](../symbols.md) layer keeps repeating the last key or shortcut.
+### Smart Shift / Repeat Key
+- The outer left thumb key, when tapped in the middle of a word, repeats the last key. This is usefull to avoid tapping the same key twice in words like 'tapped'.
+- When tapped in the beginning of a word, it acts as One Shot Shift.
+- Holding this key in the base layer will activate the [Navigation](../navigation.md) layer.
+- Tapping or holding this key in the [Raise](../symbols.md) layer acts as a normal Repeat Key, which can be used to spam or to repeat shortcuts. 
+- This feature was inspired by bmijanovich's [Dynamic Repeat Key](https://github.com/bmijanovich/zmk-config?tab=readme-ov-file#dynamic-repeat-key).
+
+### Smart Shift / Magic Key
+- The outer right thumb key, when tapped in the middle of a word, selects the output according to the context. See more about that [here](https://github.com/rafaelromao/romak/tree/main?tab=readme-ov-file#magic-romak).
+- When tapped in the beginning of a word, it also acts as One Shot Shift.
+- Holding this key in the base layer will activate the [Media](../navigation.md) layer.
 
 ## Base Layer Combos
 - Combos are available in the base and [Numpad](symbols.md#numpad-layer) layers to send ENTER, ESC, TAB and common shortcuts like copy, paste, save, select all and undo.
-- Most combos include the home thumb key, the one in the same side, to avoid misfires.
-- One-shot shift can be used to invert the modifier (Ctrl vs Cmd) used in the combos.
-- If shift, or any other modifier, is held, it will be included in the combo. So hold Shift and tap the Undo combo will send Redo instead.
-- There are also combos for z and x, that are not available through dedicated keys in the base layer.
+- Most combos include the home thumb key, the one in the same side.
+- If shift or any other modifier is held, it will be included in the combo. So hold Shift and tap the Undo combo will send Redo instead.
 - Source code: [combos.c](../src/qmk/users/rafaelromao/features/combos.c)
 
 ## Base Layer Macros

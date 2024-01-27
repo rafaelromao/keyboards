@@ -14,7 +14,7 @@
 
 ## One-shot Shift Key
 - The OS Shift key is available in the right outer thumb key and will toggle the Shift modifier in one-shot mode when single tapped.
-- Source code: [custom_oneshot.c](../src/qmk/users/rafaelromao/features/custom_oneshot.c)
+- Source code: [smart_thumbs.c](../src/qmk/users/rafaelromao/features/smart_thumbs.c)
 
 ## Smart Cases
 

@@ -1,8 +1,8 @@
 #include QMK_KEYBOARD_H
 
-#include "common_shortcuts.h"
+#include "shortcuts.h"
 
-process_record_result_t process_common_shortcuts(uint16_t keycode, keyrecord_t *record) {
+process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record) {
     if (!is_shift_macro_keycode(keycode)) {
         return PROCESS_RECORD_CONTINUE;
     }
@@ -11,10 +11,9 @@ process_record_result_t process_common_shortcuts(uint16_t keycode, keyrecord_t *
         return PROCESS_RECORD_CONTINUE;
     }
 
-    bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
-    bool isOneShotShift       = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
-    bool isShifted            = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
-    bool isMacOS = is_macos();
+    bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT;
+    bool isShifted      = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
+    bool isMacOS        = is_macos();
 
     switch (keycode) {
             // Select All
@@ -170,8 +169,8 @@ process_record_result_t process_common_shortcuts(uint16_t keycode, keyrecord_t *
             // Save + Esc
 
         case MC_ESAV:
-            process_common_shortcuts(MC_SAVE, NULL);
-            process_common_shortcuts(MC_ESC, NULL);
+            process_shortcuts(MC_SAVE, NULL);
+            process_shortcuts(MC_ESC, NULL);
             return PROCESS_RECORD_RETURN_FALSE;
 
             // NumWord

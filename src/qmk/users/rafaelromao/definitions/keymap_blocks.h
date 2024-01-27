@@ -8,7 +8,7 @@
 #define __________________ALPHA1_L1__________           MC_ESCC , KC_B    , KC_M    , KC_G    
 #define __________________ALPHA1_L2____________________ SHO_KCD , LSFTT_N , LCTLT_S , LGUIT_T , KC_W
 #define           ________ALPHA1_L3____________________           RALTT_F , KC_C    , LALTT_P , KC_V
-#define                               ___ALPHA1_L4_____                               NAV_REP , LOW_SPC
+#define                               ___ALPHA1_L4_____                               NAV_CAS , LOW_SPC
 
 #define           ________ALPHA1_R1____________________           KC_L    , KC_O    , KC_U    , KC_BSPC
 #define __________________ALPHA1_R2____________________ KC_Z    , RGUIT_R , RCTLT_A , RSFTT_E , SHO_KCI
@@ -51,8 +51,8 @@
 #define                               ____ALPHA2_L4____                               MC_SQUO , OS_SYM
 
 #define           _________ALPHA2_R1___________________           MC_CR_O , MC_SQ_O , MC_SQ_U , XXXXXXX
-#define ___________________ALPHA2_R2___________________ KC_CIRC , MC_GV_A , MC_SQ_A , MC_SQ_E , MC_SQ_I
-#define ___________________ALPHA2_R3_________           KC_TILD , KC_TILD , MC_CR_A , MC_CR_E 
+#define ___________________ALPHA2_R2___________________ KC_CIRC , MC_TL_A , MC_SQ_A , MC_SQ_E , MC_SQ_I
+#define ___________________ALPHA2_R3_________           KC_TILD , MC_TL_O , MC_CR_A , MC_CR_E 
 #define ____ALPHA2_R4____                               _______ , _______
 
 #define ___________________LOWER_L1__________           XXXXXXX , TD_LCBR , TD_RCBR , TD_DLR 
@@ -88,7 +88,7 @@
 #define ___________________MEDIA_L1__________           _______ , MC_ESC  , OM_RELS , OM_HLDS  
 #define ___________________MEDIA_L2____________________ OM_BTN2 , OM_L    , OM_U    , OM_R    , XXXXXXX 
 #define           _________MEDIA_L3____________________           OM_W_D  , OM_D    , OM_W_U  , XXXXXXX 
-#define                               ____MEDIA_L4_____                               NAV_FRE , OM_BTNS
+#define                               ____MEDIA_L4_____                               NAV_FCA , OM_BTNS
 
 #define           _________MEDIA_R1____________________           HYPR_L  , KC_ENT  , KC_TAB  , _______
 #define ___________________MEDIA_R2____________________ XXXXXXX , HYPR_R  , KC_VOLD , KC_VOLU , KC_MUTE
@@ -117,13 +117,13 @@
 #define _______________________LOCK____R3____           XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX 
 #define ______LOCK____R4_                               XXXXXXX , XXXXXXX
 
-#define ______________________SYSTEM___L1____           XXXXXXX , RGB_VAD , RGB_VAI , RGB_TOG
-#define ______________________SYSTEM___L2______________ XXXXXXX , RGB_HUD , RGB_HUI , QK_BOOT , XXXXXXX
+#define ______________________SYSTEM___L1____           XXXXXXX , RGB_VAD , RGB_VAI , QK_BOOT
+#define ______________________SYSTEM___L2______________ XXXXXXX , RGB_HUD , RGB_HUI , RGB_TOG , XXXXXXX
 #define           ____________SYSTEM___L3______________           RGB_SAD , RGB_SAI , EE_CLR  , XXXXXXX
 #define                               _____SYSTEM___L4_                               XXXXXXX , XXXXXXX
 
-#define           ____________SYSTEM___R1______________           TG_OS   , TG_LOCK , KC_NUM  , XXXXXXX
-#define ______________________SYSTEM___R2______________ XXXXXXX , QK_BOOT , KC_SLEP , MC_LOCK , XXXXXXX
+#define           ____________SYSTEM___R1______________           QK_BOOT , TG_OS   , KC_NUM  , XXXXXXX
+#define ______________________SYSTEM___R2______________ XXXXXXX , MC_LOCK , KC_SLEP , TG_LOCK , XXXXXXX
 #define ______________________SYSTEM___R3____           XXXXXXX , EE_CLR  , XXXXXXX , XXXXXXX 
 #define _____SYSTEM___R4_                               XXXXXXX , XXXXXXX
 

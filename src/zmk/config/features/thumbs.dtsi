@@ -39,14 +39,20 @@
             continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT TILDE CARET GRAVE>;
         };
 
-        ht_sc: ht_sc {
-            compatible = "zmk,behavior-hold-tap";
-            label = ZMK_MACRO_STRINGIFY(ht_sc);
-            #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <QUICK_TAP_TERM>;
-            bindings = <&mo>, <&smart_case>;
+        THUMB_MACRO(tc_smart_num,     &to ALPHA1 &smart_num)
+        THUMB_MACRO(tc_cancel,        &kp K_CANCEL)
+        THUMB_MACRO(tc_sp_ns,         &kp SPACE &sl SEN_E1)
+        THUMB_MACRO(tc_nsen,          &sl SEN_E1)
+        THUMB_LAYERTAP(th_sp_ns,      &tc_sp_ns)
+        THUMB_LAYERTAP(th_cancel,     &tc_cancel)
+        THUMB_LAYERTAP(th_nsen,       &tc_nsen)
+
+        shift_smart_case: shift_smart_case {
+            compatible = "zmk,behavior-mod-morph";
+            label = ZMK_MACRO_STRINGIFY(shift_smart_case);
+            #binding-cells = <0>;
+            bindings = <&sk LSHFT>, <&smart_case>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         ht_repeat: ht_repeat {
@@ -56,23 +62,63 @@
             tapping-term-ms = <TAPPING_TERM>;
             flavor = "tap-preferred";
             quick-tap-ms = <QUICK_TAP_TERM>;
-            bindings = <&mo>, <&key_repeat>;
+            bindings = <&mo>, <&smart_shift_repeat>;
         };
-
-        med_sc: med_sc {
-            compatible = "zmk,behavior-mod-morph";
-            label = ZMK_MACRO_STRINGIFY(med_sc);
+        smart_shift_repeat: smart_shift_repeat {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = ZMK_MACRO_STRINGIFY(smart_shift_repeat);
             #binding-cells = <0>;
-            bindings = <&msk MEDIA LSHFT>, <&smart_case>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
+            defaults = <&shift_smart_case>;
+            antecedents = <A           AACU_TERM   ATIL_TERM   ACIR_TERM   AGRV_TERM   B           C           C_CEDIL     D           \
+                           E           EACU_TERM   ECIR_TERM   F           G           H           I           IACU_TERM   J           \
+                           K           L           M           N           O           OACU_TERM   OTIL_TERM   OCIR_TERM   P           \
+                           Q           QU_TERM     R           S           T           U           UACU_TERM   V           W           \
+                           X           Y           Z           DOT         MINUS>;
+            bindings =    <&tc_nd      &kp V       &kp O       &kp M       &mc_qu      &key_repeat &key_repeat &tc_atilo   &key_repeat \
+                           &key_repeat &kp V       &kp E       &key_repeat &key_repeat &tc_oes     &tc_ng      &kp V       &ac_aacu    \
+                           &tc_ey      &key_repeat &key_repeat &key_repeat &key_repeat &kp V       &tc_es      &kp O       &key_repeat \
+                           &key_repeat &ac_ecir    &key_repeat &key_repeat &key_repeat &kp Y       &kp V       &ac_aacu    &tc_hy     \
+                           &ac_aacu    &tc_ou      &key_repeat &tc_com     &tc_sep>;
         };
+        THUMB_MACRO(tc_nd,      &kp N &kp D)
+        THUMB_MACRO(tc_oes,     &ac_otil &kp E &kp S)
+        THUMB_MACRO(tc_es,      &kp E &kp S)
+        THUMB_MACRO(tc_ou,      &kp O &kp U)
+        THUMB_MACRO(tc_ng,      &kp N &kp G)
+        THUMB_MACRO(tc_ey,      &kp E &kp Y)
+        THUMB_MACRO(tc_hy,      &kp H &kp Y)
+        THUMB_MACRO(tc_atilo,   &ac_atil &kp O)
+        THUMB_MACRO(tc_com,     &kp C &kp O &kp M)
+        THUMB_MACRO(tc_sep,     &kp MINUS &kp MINUS)
 
-        THUMB_MACRO(mc_smart_num,     &to ALPHA1 &smart_num)
-        THUMB_MACRO(mc_cancel,        &kp K_CANCEL)
-        THUMB_MACRO(mc_sp_ns,         &kp SPACE &sl SEN_E1)
-        THUMB_MACRO(mc_nsen,          &sl SEN_E1)
-        THUMB_LAYERTAP(th_sp_ns,      &mc_sp_ns)
-        THUMB_LAYERTAP(th_cancel,     &mc_cancel)
-        THUMB_LAYERTAP(th_nsen,       &mc_nsen)
+        ht_magic: ht_magic {
+            compatible = "zmk,behavior-hold-tap";
+            label = ZMK_MACRO_STRINGIFY(ht_sc);
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <QUICK_TAP_TERM>;
+            bindings = <&mo>, <&smart_shift_magic>;
+        };
+        smart_shift_magic: smart_shift_magic {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = ZMK_MACRO_STRINGIFY(smart_shift_magic);
+            #binding-cells = <0>;
+            max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
+            defaults = <&shift_smart_case>;
+            antecedents = <A           AACU_TERM   ATIL_TERM   ACIR_TERM   AGRV_TERM   B           C           C_CEDIL     D           \
+                           E           EACU_TERM   ECIR_TERM   F           G                       I           IACU_TERM               \
+                           K           L           M           N                       OACU_TERM   OTIL_TERM   OCIR_TERM   P           \
+                           Q           QU_TERM     R           S           T           U           UACU_TERM   V           W           \
+                           X                                   DOT         MINUS>;
+            bindings =    <&kp O       &kp X       &kp O       &kp N       &mc_qu      &kp Y       &kp S       &tc_otile   &kp Y       \
+                           &kp U       &kp U       &kp X       &kp Y       &kp U                   &tc_smart_i &kp Z                   \
+                           &kp W       &kp H       &kp S       &kp F                   &kp X       &kp E       &kp V       &kp T       \
+                           &key_repeat &ac_ecir    &kp L       &kp M       &kp W       &kp E       &kp Z       &ac_iacu    &kp K       \
+                           &ac_iacu                            &kp SLASH   &kp GT>;
+        };
+        THUMB_MACRO(tc_otile,   &ac_otil &kp E)
+        THUMB_MACRO(tc_smart_i, &kp BACKSPACE &kp LS(I) &kp QUOT &kp SPACE)
     };
 };

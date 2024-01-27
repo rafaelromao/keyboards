@@ -1,7 +1,7 @@
 # rafaelromao's keyboard layout
 
 ## System
-The System layer is activated holding both outer thumb keys and allows us to:
+The System layer is activated holding both pinky keys and allows us to:
 - Put the keyboard in bootloader mode. 
 - Reset the keyboard memory.
 - Configure Bluetooth and RGB lights.

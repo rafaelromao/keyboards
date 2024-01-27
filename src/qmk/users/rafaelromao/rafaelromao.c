@@ -16,6 +16,7 @@ __attribute__((weak)) void matrix_scan_keymap(void) {}
 void matrix_scan_user(void) {
     check_disable_smart_case();
     check_oneshot_timeout();
+    check_repeat_key_timeout();
     matrix_scan_keymap();
 #ifdef MOUSE_ENABLE
     orbital_mouse_task();
@@ -30,6 +31,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     process_orbital_mouse(keycode, record);
 #endif
 
+    // Process custom oneshot
+    switch (process_smart_thumbs(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
+
     // Process Sentence Case
     switch (process_sentence_case(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
@@ -41,16 +52,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     };
     // Process swapper
     switch (process_swapper(keycode, record)) {
-        case PROCESS_RECORD_RETURN_TRUE:
-            return true;
-        case PROCESS_RECORD_RETURN_FALSE:
-            return false;
-        default:
-            break;
-    };
-
-    // Process Repeat Key
-    switch (process_repeat(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:
@@ -89,16 +90,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
     };
 
-    // Process custom oneshot
-    switch (process_custom_oneshot(keycode, record)) {
-        case PROCESS_RECORD_RETURN_TRUE:
-            return true;
-        case PROCESS_RECORD_RETURN_FALSE:
-            return false;
-        default:
-            break;
-    };
-
     // Process accents
     switch (process_accents(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
@@ -110,7 +101,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     };
 
     // Process common shortcuts
-    switch (process_common_shortcuts(keycode, record)) {
+    switch (process_shortcuts(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:

@@ -6,6 +6,10 @@ extern os_t os;
 
 void tap_accent_dead_key(uint16_t keycode) {
     switch (keycode) {
+        case MC_TL_A:
+        case MC_TL_O:
+            tap_code16(KC_TILD);
+            break;
         case MC_GV_A:
             tap_code16(KC_GRV);
             break;
@@ -30,6 +34,7 @@ void tap_accent_tap_key(uint32_t keycode) {
         case MC_GV_A:
         case MC_CR_A:
         case MC_SQ_A:
+        case MC_TL_A:
             tap_code(KC_A);
             break;
         case MC_CR_E:
@@ -38,6 +43,9 @@ void tap_accent_tap_key(uint32_t keycode) {
             break;
         case MC_CR_O:
         case MC_SQ_O:
+            tap_code(KC_O);
+            break;
+        case MC_TL_O:
             tap_code(KC_O);
             break;
         case MC_SQ_I:
@@ -57,10 +65,12 @@ bool is_accented_keycode(uint16_t keycode) {
         case MC_GV_A:
         case MC_CR_A:
         case MC_SQ_A:
+        case MC_TL_A:
         case MC_CR_E:
         case MC_SQ_E:
         case MC_SQ_I:
         case MC_CR_O:
+        case MC_TL_O:
         case MC_SQ_O:
         case MC_SQ_U:
         case MC_SQ_C:
@@ -85,8 +95,7 @@ process_record_result_t process_accents(uint16_t keycode, keyrecord_t *record) {
         return PROCESS_RECORD_CONTINUE;
     }
 
-    bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
-    bool isOneShotShift       = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
+    bool isOneShotShift       = get_oneshot_mods() & MOD_MASK_SHIFT;
     bool isShifted            = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
 
     // Accented characters

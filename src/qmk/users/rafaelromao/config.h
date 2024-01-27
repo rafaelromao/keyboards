@@ -24,9 +24,8 @@
 #define ONESHOT_TIMEOUT 1000
 
 // Configure leader key
-#define LEADER_TIMEOUT 500
+#define LEADER_TIMEOUT 1000
 #define LEADER_PER_KEY_TIMING
-#define LEADER_NO_TIMEOUT
 
 // Configure combos
 #define COMBO_TERM 30
@@ -38,6 +37,8 @@
 
 // Disable Alt Repeat
 #define NO_ALT_REPEAT_KEY
+// Repeat keys will act as Oneshot Shift after this timeout
+#define REPEAT_KEY_TIMEOUT 300
 
 // Dynamic macros
 #define DYNAMIC_MACRO_NO_NESTING

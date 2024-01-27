@@ -112,10 +112,11 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             unregister_mods(MOD_MASK_CTRL);
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // ESC + P
+            // "0p
 
-        case MC_ESCP:
-            tap_code(KC_ESC);
+        case MC_0P:
+            tap_code16(KC_DQUO);
+            tap_code(KC_0);
             tap_code(KC_P);
             return PROCESS_RECORD_RETURN_FALSE;
 
@@ -475,8 +476,7 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
         return PROCESS_RECORD_CONTINUE;
     }
 
-    bool isOneShotLockedShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
-    bool isOneShotShift       = isOneShotLockedShift || get_oneshot_mods() & MOD_MASK_SHIFT;
+    bool isOneShotShift       = get_oneshot_mods() & MOD_MASK_SHIFT;
     bool isShifted            = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
 
     // Macros

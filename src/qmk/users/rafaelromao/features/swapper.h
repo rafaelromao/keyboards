@@ -4,7 +4,7 @@
 #include "../definitions/keycodes.h"
 #include "../definitions/process_record.h"
 #include "os_toggle.h"
-#include "custom_oneshot.h"
+#include "smart_thumbs.h"
 
 typedef enum {
   NONE,

@@ -109,9 +109,9 @@ enum {
 
     MC_BTIC, MC_DQUO, MC_SQUO, MC_CIRC, MC_TILD, REPEAT, MC_ORDO, MC_ORDA,
     MC_EUR, MC_LTE, MC_GTE, MC_DDS, MC_ENT, MC_TAB, MC_ESC, MC_ESCC, 
-    MC_NSEN, MC_CANC, TG_NUMC, MC_EXLM, MC_QUES, MC_ESAV, MC_SENT, MC_DEG,
+    TG_NUMC, MC_EXLM, MC_QUES, MC_ESAV, MC_SENT, MC_DEG,
     MC_CUR, MC_CURS, MC_DAR, MC_SAR, MC_DEQ, MC_NEQ, MC_BRAC, MC_SEC, 
-    MC_DAND, MC_DPIP, MC_OESC, MC_SOES, MC_TISL, MC_SVI, MC_CVI, MC_ESCP,
+    MC_DAND, MC_DPIP, MC_OESC, MC_SOES, MC_TISL, MC_SVI, MC_CVI, MC_0P,
 
     // End macros that can be shifted
     SFT_MACRO_END,
@@ -121,7 +121,7 @@ enum {
 
     MC_GV_A, MC_CR_A, MC_SQ_A, MC_QU,
     MC_SQ_U, MC_CR_O, MC_SQ_O, MC_SQ_I,
-    MC_CR_E, MC_SQ_C, MC_SQ_E, 
+    MC_CR_E, MC_SQ_C, MC_SQ_E, MC_TL_A, MC_TL_O,
 
     // End macros for accented letters
     ALPHA_MACRO_END,
@@ -164,10 +164,6 @@ enum {
 // One-shot mods
 
 #define OS_LSFT OSM(MOD_LSFT)
-#define OS_LCTL OSM(MOD_LCTL)
-#define OS_LALT OSM(MOD_LALT)
-#define OS_RALT OSM(MOD_RALT)
-#define OS_LGUI OSM(MOD_LGUI)
 
 // Custom Shortcuts
 
@@ -193,13 +189,11 @@ enum {
 
 // Layer-taps
 
-#define NAV_FRE LT(_FIXED_NAV, QK_REP)
-#define NAV_REP LT(_NAVIGATION, QK_REP)
 #define NAV_F12 LT(_NAVIGATION, KC_F12)
 #define NAV_AT  LT(_NAVIGATION, KC_AT)
 #define NAV_PRJ LT(_NAVIGATION, MC_PROJ)
 #define NAV_CAS LT(_NAVIGATION, TG_CASE)
-#define NAV_CAN LT(_NAVIGATION, MC_CANC)
+#define NAV_FCA LT(_FIXED_NAV, TG_CASE)
 
 #define MED_CAS LT(_MEDIA, TG_CASE)
 #define MED_0   LT(_MEDIA, KC_0)
@@ -207,7 +201,6 @@ enum {
 #define NMO_DOC LT(_NOMOD, MC_QDOC)
 #define ACT_SPC LT(_FIXED_ALPHA2, KC_SPC)
 #define LOW_SPC LT(_LOWER, KC_SPC)
-#define LOW_NSE LT(_LOWER, MC_NSEN)
 #define RAI_TA2 LT(_RAISE, TG_ACNT)
 #define RAI_SPC LT(_RAISE, KC_SPC)
 #define SYM_SPC LT(_SYMBOLS, KC_SPC)

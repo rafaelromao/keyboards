@@ -4,7 +4,7 @@
 #include "../definitions/keycodes.h"
 #include "tapdance.h"
 #include "smart_case.h"
-#include "custom_oneshot.h"
+#include "smart_thumbs.h"
 #include "macros.h"
 #include "swapper.h"
 #ifdef MOUSE_ENABLE

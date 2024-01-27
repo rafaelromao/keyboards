@@ -3,7 +3,7 @@
 #include QMK_KEYBOARD_H
 #include "../definitions/keycodes.h"
 #include "../definitions/process_record.h"
-#include "custom_oneshot.h"
+#include "smart_thumbs.h"
 
 typedef enum { SENTENCE_CASE_NONE, SENTENCE_CASE_STARTED, SENTENCE_CASE_FINISHING } sentence_case_state_t;
 
