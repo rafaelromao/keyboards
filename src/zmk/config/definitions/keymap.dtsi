@@ -173,7 +173,7 @@
    &trans              &kp ESC             &mc_meh_m           &mc_meh_g           &none               &none               &kp INS             &kp ENTER           &kp TAB             &trans
    &mc_meh_d           &kp LSHIFT          &kp LCTRL           &kp LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
    &none               &kp RALT            &mc_meh_c           &kp LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &none
-                                           &trans              &trans              &kp SPACE           &kp SPACE           &tog ALPHA1         &trans
+                                           &trans              &trans              &kp SPACE           &kp SPACE           &to ALPHA1          &trans
                            >;
                 };
                 lock_layer {
