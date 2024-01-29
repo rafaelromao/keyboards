@@ -28,10 +28,13 @@ Symbols and Numbers are primarily available in the two classic Lower and Raise l
 - Some common programmer n-grams, like ->, =>, \<!--, -->, <>, />, !=, :=, +=, -=, can all be typed rolling through keys in the right hand.
 
  ### Numpad Layer
-- A dedicated Numpad layer can be activated from the Raise layer, or with a combo using both right thumb keys.
+- A dedicated Numpad layer can be activated from the Raise layer, using a single hand.
 - The left side of the Numpad layer contains function keys.
 - The right side of the Numpad layer contains number keys.
 - Home block mods are also available on both sides of the Numpad layer.
+
+### NumWord
+- NumWord is a variation of CapsWord, but for numbers instead. A combo with ring and middle fingers in the right side bottom row will activate the Numpad layer and it will stay active while numbers and symbols are typed, returning to the base layer otherwise.
 
 ### Coding Dancing
 - Coding Dancing is a set of macros available through tap dances (Double Tap) in the Lower layer.
