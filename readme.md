@@ -28,6 +28,7 @@ The following pages explain how this layout works and which features are impleme
 - [Sentence Case](docs/base.md#sentence-case)
 - [Shortcut Combos](docs/base.md#base-layer-combos)
 - [Numpad Layer](docs/symbols.md#numpad)
+- [NumWord](docs/symbols.md#numword)
 - [Leader Key](docs/shortcuts.md#leader-key)
 - [Swapper](docs/shortcuts.md#swapper)
 - [Select Word](docs/shortcuts.md#select-word-and-select-line)
