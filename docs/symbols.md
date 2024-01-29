@@ -34,7 +34,7 @@ Symbols and Numbers are primarily available in the two classic Lower and Raise l
 - Home block mods are also available on both sides of the Numpad layer.
 
 ### NumWord
-- NumWord is a variation of CapsWord, but for numbers instead. A combo with ring and middle fingers in the left side bottom row will activate the Numpad layer and it will stay active while numbers and symbols are typed, returning to the base layer otherwise.
+- NumWord is a variation of CapsWord, but for numbers instead. A combo with ring and middle fingers in the left side bottom row will activate the Numpad layer and it will stay active while keys from the NumPad, Raise or Symbol layers are typed, returning to the base layer otherwise.
 
 ### Coding Dancing
 - Coding Dancing is a set of macros available through tap dances (Double Tap) in the Lower layer.
