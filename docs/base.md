@@ -49,7 +49,7 @@
 - The Leader Key can be triggered holding the comma key. This allow easy access to leader sequences.
 
 ### Pontuation Hold
-- Holding a pontuation key (dot, comma or semicollon) will add it to the end of the current line.
+- Holding a pontuation key (dot, comma or semicolon) will add it to the end of the current line.
 
 ### Sentence Case
 - Tapping Space after `.`, `?` or `!` will trigger ONESHOT SHIFT when the next key is pressed, so that it gets capitalized. Repeat key can be used to cancel this behavior, and it will also expire after one second if no other key is pressed.
