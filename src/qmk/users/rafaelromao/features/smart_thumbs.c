@@ -303,6 +303,8 @@ void process_shift_magic(uint16_t keycode) {
                 return;
             case MC_SQ_C:
                 process_accents(MC_TL_O, NULL);
+                tap_code(KC_E);
+                tap_code(KC_S);
                 return;
             case MC_QU:
                 process_accents(MC_CR_E, NULL);
