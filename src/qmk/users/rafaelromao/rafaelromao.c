@@ -31,6 +31,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     process_orbital_mouse(keycode, record);
 #endif
 
+    // Process Sentence Case
+    switch (process_sentence_case(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
+
     // Process custom oneshot
     switch (process_smart_thumbs(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
@@ -41,15 +51,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
     };
 
-    // Process Sentence Case
-    switch (process_sentence_case(keycode, record)) {
-        case PROCESS_RECORD_RETURN_TRUE:
-            return true;
-        case PROCESS_RECORD_RETURN_FALSE:
-            return false;
-        default:
-            break;
-    };
     // Process swapper
     switch (process_swapper(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
