@@ -85,16 +85,6 @@
 #define _________________SYMBOLS_R3__________           KC_TILD , KC_EXLM , KC_LT   , KC_GT     
 #define __SYMBOLS_R4_____                               KC_SPC  , TG_NUM
 
-#define ___________________MEDIA_L1__________           _______ , MC_ESC  , OM_RELS , OM_HLDS  
-#define ___________________MEDIA_L2____________________ OM_BTN2 , OM_L    , OM_U    , OM_R    , XXXXXXX 
-#define           _________MEDIA_L3____________________           OM_W_D  , OM_D    , OM_W_U  , XXXXXXX 
-#define                               ____MEDIA_L4_____                               NAV_FCA , OM_BTNS
-
-#define           _________MEDIA_R1____________________           HYPR_L  , KC_ENT  , KC_TAB  , _______
-#define ___________________MEDIA_R2____________________ XXXXXXX , HYPR_R  , KC_VOLD , KC_VOLU , KC_MUTE
-#define ___________________MEDIA_R3__________           XXXXXXX , KC_MPLY , KC_MPRV , KC_MNXT 
-#define ____MEDIA_R4_____                               _______ , _______
-
 #define ___________________NAVIGATION_L1_____           _______ , MC_ESC  , MEH_M   , MEH_G 
 #define ___________________NAVIGATION_L2_______________ MEH_D   , KC_LSFT , KC_LCTL , KC_LGUI , XXXXXXX
 #define           _________NAVIGATION_L3_______________           KC_RALT , MEH_C   , KC_LALT , XXXXXXX
@@ -106,6 +96,16 @@
 #define ___________________NAVIGATION_R3_____           XXXXXXX , KC_DEL  , KC_HOME , KC_END  
 #define __NAVIGATION_R4__                               KC_SPC  , MED_CAS
 #define __FIXED_NAV__R4__                               KC_SPC  , TO_A1
+
+#define ___________________MEDIA_L1__________           _______ , MC_ESC  , OM_RELS , OM_HLDS  
+#define ___________________MEDIA_L2____________________ OM_BTN2 , OM_L    , OM_U    , OM_R    , XXXXXXX 
+#define           _________MEDIA_L3____________________           OM_W_D  , OM_D    , OM_W_U  , XXXXXXX 
+#define                               ____MEDIA_L4_____                               NAV_FCA , OM_BTNS
+
+#define           _________MEDIA_R1____________________           HYPR_L  , KC_ENT  , KC_TAB  , _______
+#define ___________________MEDIA_R2____________________ XXXXXXX , HYPR_R  , KC_VOLD , KC_VOLU , KC_MUTE
+#define ___________________MEDIA_R3__________           XXXXXXX , KC_MPLY , KC_MPRV , KC_MNXT 
+#define ____MEDIA_R4_____                               _______ , _______
 
 #define _______________________LOCK____L1____           XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX 
 #define _______________________LOCK____L2______________ _______ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
