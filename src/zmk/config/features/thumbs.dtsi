@@ -75,7 +75,7 @@
                            K           L           M           N           O           OACU_TERM   OTIL_TERM   OCIR_TERM   P           \
                            Q           QU_TERM     R           S           T           U           UACU_TERM   V           W           \
                            X           Y           Z           DOT         MINUS>;
-            bindings =    <&tc_nd      &kp V       &kp O       &kp M       &mc_qu      &key_repeat &key_repeat &tc_atilo   &key_repeat \
+            bindings =    <&tc_nd      &kp V       &kp O       &kp N       &mc_qu      &key_repeat &key_repeat &tc_atilo   &key_repeat \
                            &key_repeat &kp V       &kp E       &key_repeat &key_repeat &tc_oes     &tc_ng      &kp V       &ac_aacu    \
                            &tc_ey      &key_repeat &key_repeat &key_repeat &key_repeat &kp V       &tc_es      &kp O       &key_repeat \
                            &key_repeat &ac_ecir    &key_repeat &key_repeat &key_repeat &kp Y       &kp V       &ac_aacu    &tc_hy     \
@@ -112,7 +112,7 @@
                            K           L           M           N                       OACU_TERM   OTIL_TERM   OCIR_TERM   P           \
                            Q           QU_TERM     R           S           T           U           UACU_TERM   V           W           \
                            X                                   DOT         MINUS>;
-            bindings =    <&kp O       &kp X       &kp O       &kp N       &mc_qu      &kp Y       &kp S       &tc_otiles  &kp Y       \
+            bindings =    <&kp O       &kp X       &kp O       &kp M       &mc_qu      &kp Y       &kp S       &tc_otiles  &kp Y       \
                            &kp U       &kp U       &kp X       &kp Y       &kp U                   &tc_smart_i &kp Z                   \
                            &kp W       &kp H       &kp S       &kp F                   &kp X       &kp E       &kp V       &kp T       \
                            &key_repeat &ac_ecir    &kp L       &kp M       &kp W       &kp E       &kp Z       &ac_iacu    &kp K       \

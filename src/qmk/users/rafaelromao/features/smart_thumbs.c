@@ -190,7 +190,7 @@ void process_shift_repeat(uint16_t keycode) {
                 tap_code(KC_V);
                 return;
             case MC_CR_A:
-                tap_code(KC_M);
+                tap_code(KC_N);
                 return;
             case MC_CR_E:
                 tap_code(KC_E);
@@ -287,7 +287,7 @@ void process_shift_magic(uint16_t keycode) {
                 tap_code(KC_Z);
                 return;
             case MC_CR_A:
-                tap_code(KC_N);
+                tap_code(KC_M);
                 return;
             case MC_CR_E:
                 tap_code(KC_X);
