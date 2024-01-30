@@ -170,7 +170,9 @@ process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record
         switch (key) {
             case KC_SPC:
                 if (spacing) {
-                    if (has_smart_case(SNAKE_CASE) || has_smart_case(KEBAB_CASE) || has_smart_case(SLASH_CASE)) {
+                    if (has_smart_case(CAMEL_CASE)) {
+                        disable_smart_case();
+                    } else if (has_smart_case(SNAKE_CASE) || has_smart_case(KEBAB_CASE) || has_smart_case(SLASH_CASE)) {
                         tap_code(KC_BSPC);
                         disable_smart_case();
                     }
