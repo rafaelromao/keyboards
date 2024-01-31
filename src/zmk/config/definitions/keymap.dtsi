@@ -5,6 +5,7 @@
 *
 */
 
+#include <dt-bindings/zmk/dynamic-macros.h>
 #include "keycodes.h"
 #include "config.dtsi"
 
@@ -54,7 +55,7 @@
                      label = "SHORTCUT";
                      bindings = <
    &trans              &kp ESC             &mm_actions         &mm_typematch       &none               &none               &mc_selw            &kp ENTER           &kp TAB             &trans    
-   &mo SYSTEM          &th_find LSHFT 0    &mm_run             &mm_debug           &mm_build           &none               &mc_seln            &mm_zh_b            &th_zh LSHFT 0      &mo SYSTEM
+   &mo SYSTEM          &th_find LSHFT 0    &mm_run             &mm_debug           &mm_build           &td_dynmacro        &mc_seln            &mm_zh_b            &th_zh LSHFT 0      &mo SYSTEM
    &none               &mm_recent          &mm_complete        &mm_usages          &mm_refac           &mc_join            &mc_comment         &mm_wt_b            &mm_wt_f            &none
                                            &trans              &th_proj NAV 0      &th_docs NMODS 0    &lt ALPHA2 SPACE    &mst NAV NAV_F      &trans
                            >;

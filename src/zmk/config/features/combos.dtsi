@@ -122,6 +122,7 @@
         COMBO(cb_join,          RBI RBM,     &mc_join,           SHORTCUTS)
         COMBO(cb_refresh_z0,    RHM RHR,     &mm_refresh_z0,     SHORTCUTS)
         COMBO(cb_close_tab_win, RBM RBR,     &mm_close_tab_win,  SHORTCUTS)
+        COMBO(cb_dynmacro,      RHI RHM,     &td_dynmacro,       SHORTCUTS)
 
         COMBO(cb_bt_clear,      RBM RBR,     &bt BT_CLR,         SYSTEM)
 

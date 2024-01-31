@@ -205,5 +205,20 @@
             quick-tap-ms = <QUICK_TAP_TERM>;
             bindings = <&mc_hyp>, <&mc_j>;
         };
+
+        dynmacro: dynmacro {
+            label = "ZM_dynamic-macro";
+            compatible = "zmk,behavior-dynamic-macro";
+            #binding-cells = <1>;
+            wait-ms = <1>;
+        };
+
+        td_dynmacro: td_dynmacro {
+            compatible = "zmk,behavior-tap-dance";
+            label = ZMK_MACRO_STRINGIFY(td_dynmacro);
+            #binding-cells = <0>;
+            tapping-term-ms = <TD_TAPPING_TERM>;
+            bindings = <&dynmacro PLAY>, <&dynmacro RECORD>, <&none>;
+        };
     };
 };

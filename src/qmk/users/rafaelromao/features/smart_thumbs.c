@@ -28,9 +28,6 @@ void clear_locked_and_oneshot_mods(void) {
         unregister_mods(MOD_RALT);
         unregister_mods(MOD_LGUI);
     }
-#ifdef DYNAMIC_MACRO_ENABLE
-    dyn_macro_reset();
-#endif
 }
 
 void clear_oneshot_mods_state(void) {

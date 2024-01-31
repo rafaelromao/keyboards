@@ -7,7 +7,6 @@ The full documentation can be found [here](https://github.com/rafaelromao/keyboa
 
 ### Missing features:
 - Orbital Mouse
-- Dynamic Macros
 - Smart Cases
 - Windows Support
 
