@@ -16,11 +16,10 @@
 
 // Make it easier to work with tap hold
 #define PERMISSIVE_HOLD
-#define QUICK_TAP_TERM_PER_KEY
 #define TAPPING_TERM_PER_KEY
-#define ONESHOT_TAP_TOGGLE 2
-#define TAPPING_TOGGLE 1
 #define TAPPING_TERM 175
+#define QUICK_TAP_TERM 175
+#define QUICK_TAP_TERM_PER_KEY
 #define ONESHOT_TIMEOUT 1000
 
 // Configure leader key
@@ -37,7 +36,7 @@
 
 // Disable Alt Repeat
 #define NO_ALT_REPEAT_KEY
-// Repeat keys will act as Oneshot Shift after this timeout
+// Repeat/Magic keys will act as Oneshot Shift after this timeout
 #define REPEAT_KEY_TIMEOUT 300
 
 // Dynamic macros
