@@ -245,7 +245,7 @@
         SYMBOL(mc_double_or,       &kp PIPE &kp PIPE)
         TAPHOLD_SYMBOL(th_dor,     &mc_double_or, &mc_gte)
 
-        SYMBOL(mc_tisl,            &kp TILDE &kp SLASH)
+        SYMBOL(mc_tisl,            &kp TILDE &kp SPACE &kp SLASH)
 
         SYMBOL(mc_end_ent,         &kp END &kp ENTER)
         SYMBOL(mc_down_end,        &kp DOWN &kp END)

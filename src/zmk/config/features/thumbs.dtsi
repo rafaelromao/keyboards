@@ -29,9 +29,9 @@
         };
 
     thumbs {
-        smart_case: smart_case {
+        custom_caps_word: custom_caps_word {
             compatible = "zmk,behavior-caps-word";
-            label = ZMK_MACRO_STRINGIFY(smart_case);
+            label = ZMK_MACRO_STRINGIFY(custom_caps_word);
             ignore-alphas;
             ignore-modifiers;
 			#binding-cells = <0>;  
@@ -47,11 +47,11 @@
         THUMB_LAYERTAP(th_cancel,     &tc_cancel)
         THUMB_LAYERTAP(th_nsen,       &tc_nsen)
 
-        shift_smart_case: shift_smart_case {
+        shift_caps_word: shift_caps_word {
             compatible = "zmk,behavior-mod-morph";
-            label = ZMK_MACRO_STRINGIFY(shift_smart_case);
+            label = ZMK_MACRO_STRINGIFY(shift_caps_word);
             #binding-cells = <0>;
-            bindings = <&sk LSHFT>, <&smart_case>;
+            bindings = <&sk LSHFT>, <&custom_caps_word>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -69,7 +69,7 @@
             label = ZMK_MACRO_STRINGIFY(smart_shift_repeat);
             #binding-cells = <0>;
             max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
-            defaults = <&shift_smart_case>;
+            defaults = <&shift_caps_word>;
             antecedents = <A           AACU_TERM   ATIL_TERM   ACIR_TERM   AGRV_TERM   B           C           C_CEDIL     D           \
                            E           EACU_TERM   ECIR_TERM   F           G           H           I           IACU_TERM   J           \
                            K           L           M           N           O           OACU_TERM   OTIL_TERM   OCIR_TERM   P           \
@@ -106,7 +106,7 @@
             label = ZMK_MACRO_STRINGIFY(smart_shift_magic);
             #binding-cells = <0>;
             max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
-            defaults = <&shift_smart_case>;
+            defaults = <&shift_caps_word>;
             antecedents = <A           AACU_TERM   ATIL_TERM   ACIR_TERM   AGRV_TERM   B           C           C_CEDIL     D           \
                            E           EACU_TERM   ECIR_TERM   F           G                       I           IACU_TERM               \
                            K           L           M           N                       OACU_TERM   OTIL_TERM   OCIR_TERM   P           \
