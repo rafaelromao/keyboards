@@ -29,6 +29,30 @@
         };
 
     thumbs {
+        // ********************** SENTENCE CASE ********************** //
+
+        THUMB_MACRO(tc_cancel,        &kp K_CANCEL)
+        THUMB_MACRO(tc_sp_ns,         &kp SPACE &sl SEN_E1)
+        THUMB_MACRO(tc_nsen,          &sl SEN_E1)
+        THUMB_LAYERTAP(th_sp_ns,      &tc_sp_ns)
+        THUMB_LAYERTAP(th_cancel,     &tc_cancel)
+        THUMB_LAYERTAP(th_nsen,       &tc_nsen)
+
+        // ********************** NUM WORD ********************** //
+
+        custom_num_word: custom_num_word {
+            compatible = "zmk,behavior-caps-word";
+            label = ZMK_MACRO_STRINGIFY(custom_num_word);
+            ignore-numbers;
+			#binding-cells = <0>;
+            layers = <NUMPAD>;
+            continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12>;
+        };
+
+        THUMB_MACRO(tc_custom_num_word,     &to ALPHA1 &custom_num_word)
+
+        // ******************* SMART SHIFT / CAPS WORD ******************* //
+
         custom_caps_word: custom_caps_word {
             compatible = "zmk,behavior-caps-word";
             label = ZMK_MACRO_STRINGIFY(custom_caps_word);
@@ -39,14 +63,6 @@
             continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT TILDE CARET GRAVE>;
         };
 
-        THUMB_MACRO(tc_smart_num,     &to ALPHA1 &smart_num)
-        THUMB_MACRO(tc_cancel,        &kp K_CANCEL)
-        THUMB_MACRO(tc_sp_ns,         &kp SPACE &sl SEN_E1)
-        THUMB_MACRO(tc_nsen,          &sl SEN_E1)
-        THUMB_LAYERTAP(th_sp_ns,      &tc_sp_ns)
-        THUMB_LAYERTAP(th_cancel,     &tc_cancel)
-        THUMB_LAYERTAP(th_nsen,       &tc_nsen)
-
         shift_caps_word: shift_caps_word {
             compatible = "zmk,behavior-mod-morph";
             label = ZMK_MACRO_STRINGIFY(shift_caps_word);
@@ -54,6 +70,8 @@
             bindings = <&sk LSHFT>, <&custom_caps_word>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        // ******************** SMART SHIFT / REPEAT KEY ******************** //
 
         ht_repeat: ht_repeat {
             compatible = "zmk,behavior-hold-tap";
@@ -92,6 +110,8 @@
         THUMB_MACRO(tc_com,     &kp C &kp O &kp M)
         THUMB_MACRO(tc_sep,     &kp MINUS &kp MINUS)
 
+        // ******************** SMART SHIFT / MAGIC KEY ******************** //
+
         ht_magic: ht_magic {
             compatible = "zmk,behavior-hold-tap";
             label = ZMK_MACRO_STRINGIFY(ht_sc);
@@ -120,5 +140,19 @@
         };
         THUMB_MACRO(tc_otiles,   &ac_otil &kp E &kp S)
         THUMB_MACRO(tc_smart_i, &kp BACKSPACE &kp LS(I) &kp QUOT &kp SPACE)
+
+        // ******************** SMART CASES ******************** //
+
+        THUMB_MACRO(mc_sl_alpha2,  &sl ALPHA2)
+
+        msl_a2: msl_a2 {
+            compatible = "zmk,behavior-hold-tap";
+            label = ZMK_MACRO_STRINGIFY(msl_a2);
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <QUICK_TAP_TERM>;
+            bindings = <&mo>, <&mc_sl_alpha2>;
+        };
     };
 };

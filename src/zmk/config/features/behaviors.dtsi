@@ -66,15 +66,6 @@
             bindings = <&mo>, <&tog>;
         };
 
-        smart_num: smart_num {
-            compatible = "zmk,behavior-caps-word";
-            label = ZMK_MACRO_STRINGIFY(smart_num);
-            ignore-numbers;
-			#binding-cells = <0>;
-            layers = <NUMPAD>;
-            continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12>;
-        };
-
         mc_sft_ctl: mc_sft_ctl { 
             compatible = "zmk,behavior-macro"; 
             label = ZMK_MACRO_STRINGIFY(mc_sft_ctl);

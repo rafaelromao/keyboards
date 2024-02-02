@@ -35,7 +35,7 @@
         COMBO(cb_find,          LBM LBI L0,  &mc_find,           ALPHA1 CASE_A1 NUMPAD SEN_CASE SEN_E1 SEN_E2)
         COMBO(cb_undo,          LBR LBM L0,  &mc_undo,           ALPHA1 CASE_A1 NUMPAD SEN_CASE SEN_E1 SEN_E2)
 
-        COMBO(cb_numword,       LBR LBM,     &smart_num,         ALPHA1 CASE_A1 SEN_CASE SEN_E1 NUMPAD)
+        COMBO(cb_numword,       LBR LBM,     &custom_num_word,   ALPHA1 CASE_A1 SEN_CASE SEN_E1 NUMPAD)
 
         COMBO(cb_k,             LTM LTI,     &kp K,              ALPHA1 SEN_CASE)
         COMBO(cb_w,             LHM LHI,     &ht_w 0 0,          ALPHA1 SEN_CASE)
