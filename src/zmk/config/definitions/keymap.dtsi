@@ -28,7 +28,7 @@
                      label = "ROMAK";
                      bindings = <
    &mc_escc            &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp BSPC
-   &lt SHORTCUTS D     &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp W               &kp Z               &mt RGUI R          &mt RCTRL A         &mt RSHFT E         &lt SHORTCUTS I 
+   &lt SHORTCUTS D     &mt RSHFT N         &mt LCTRL S         &mt LGUI T          &kp W               &kp Z               &mt RGUI R          &mt RCTRL A         &mt RSHFT E         &lt SHORTCUTS I 
    &kp Q               &mt RALT F          &kp C               &mt LALT P          &kp V               &kp J               &mt RALT H          &th_comma 0 0       &th_dot 0 0         &kp Y
                                            &none               &ht_repeat NAV 0    &ltn LOWER SPACE    &msl_raise_smart    &ht_magic MEDIA 0   &trans
                         >;
@@ -49,15 +49,6 @@
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
                                            &trans              &trans              &msk_dash LOWER 0   &trans              &trans              &trans
-                           >;
-                };
-                slash_case_layer {
-                     label = "SNAKE";
-                     bindings = <
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
-                                           &trans              &trans              &msk_slash LOWER 0  &trans              &trans              &trans
                            >;
                 };
                 spacing_layer {
