@@ -6,24 +6,27 @@
  */
 
 #define ALPHA1 0
-#define CASE_A1 1
-#define NUMPAD 2
-#define SHORTCUTS 3
-#define SHORTCUTS_EXT 4
-#define NMODS 5
-#define ALPHA2 6
-#define CASE_A2 7
-#define LOWER 8
-#define RAISE 9
-#define SYMBOLS 10
-#define SEN_CASE 11
-#define SEN_E1 12
-#define SEN_E2 13
-#define NAV 14
-#define MEDIA 15
-#define NAV_F 16
-#define LOCK_KB 17
-#define SYSTEM 18
+#define CML_A1 1
+#define CMLS_A1 2
+#define CMLS_A2 3
+#define CASE_A1 4
+#define NUMPAD 5
+#define SHORTCUTS 6
+#define SHORTCUTS_EXT 7
+#define NMODS 8
+#define ALPHA2 9
+#define CASE_A2 10
+#define LOWER 11
+#define RAISE 12
+#define SYMBOLS 13
+#define SEN_CASE 14
+#define SEN_E1 15
+#define SEN_E2 16
+#define NAV 17
+#define MEDIA 18
+#define NAV_F 19
+#define LOCK_KB 20
+#define SYSTEM 21
 
 #define TAPPING_TERM 175
 #define TD_TAPPING_TERM 225
