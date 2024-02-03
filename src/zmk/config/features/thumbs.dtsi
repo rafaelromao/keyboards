@@ -28,13 +28,29 @@
             bindings = <&macro_tap BINDINGS>; \
         };
 
-    #define THUMB_MORPH(NAME, MODS, UNMODDED, MODDED) \
+    #define THUMB_MORPH(NAME, MODS, MODDED, UNMODDED) \
         NAME: NAME { \
             compatible = "zmk,behavior-mod-morph"; \
             label = ZMK_MACRO_STRINGIFY(NAME); \
             #binding-cells = <0>; \
             bindings = <UNMODDED>, <MODDED>; \
             mods = <(MODS)>; \
+        };
+
+    #define THUMB_COMBO_MORPH(NAME, FIRST_MOD, SECOND_MOD, IF_BOTH, OR_ELSE) \
+        NAME##_CHECK_SECOND: NAME##_CHECK_SECOND { \
+            compatible = "zmk,behavior-mod-morph"; \
+            label = ZMK_MACRO_STRINGIFY(NAME##_CHECK_SECOND); \
+            #binding-cells = <0>; \
+            bindings = <OR_ELSE>, <IF_BOTH>; \
+            mods = <(SECOND_MOD)>; \
+        }; \
+        NAME: NAME { \
+            compatible = "zmk,behavior-mod-morph"; \
+            label = ZMK_MACRO_STRINGIFY(NAME); \
+            #binding-cells = <0>; \
+            bindings = <OR_ELSE>, <&NAME##_CHECK_SECOND>; \
+            mods = <(FIRST_MOD)>; \
         };
 
     thumbs {
@@ -164,15 +180,18 @@
             bindings = <&mo>, <&mc_sl_alpha2>;
         };
 
-        THUMB_MORPH(sc_caps_word, MOD_LCTL, &msl_a2 RAISE 0, &custom_caps_word)
-        THUMB_MORPH(sc_caps_lock, MOD_RCTL, &sc_caps_word, &to CASE_A1)
-        THUMB_MORPH(sc_numpad, MOD_LALT, &sc_caps_lock, &to NUMPAD)
-        THUMB_MORPH(sc_numword, MOD_RALT, &sc_numpad, &custom_num_word)
-        THUMB_MORPH(sc_camelcase, MOD_RSFT, &sc_numword, &to CAMEL_CASE)
-        THUMB_MORPH(sc_snakecase, MOD_LGUI, &sc_camelcase, &to SNAKE_CASE)
-        THUMB_MORPH(sc_kebabcase, MOD_RGUI, &sc_snakecase, &to KEBAB_CASE)
+        THUMB_MORPH(sc_caps_word,  MOD_LCTL, &custom_caps_word         , &msl_a2 RAISE 0 )
+        THUMB_MORPH(sc_caps_lock,  MOD_RCTL, &to CASE_A1               , &sc_caps_word   )
+        THUMB_MORPH(sc_numpad,     MOD_LALT, &to NUMPAD                , &sc_caps_lock   )
+        THUMB_MORPH(sc_numword,    MOD_RALT, &custom_num_word          , &sc_numpad      )
+        THUMB_MORPH(sc_camelcase,  MOD_RSFT, &to CAMEL_CASE            , &sc_numword     )
+        THUMB_MORPH(sc_snakecase,  MOD_LGUI, &to SNAKE_CASE            , &sc_camelcase   )
+        THUMB_MORPH(sc_kebabcase,  MOD_RGUI, &to KEBAB_CASE            , &sc_snakecase   )
+
+        THUMB_MACRO(tc_shift_camel,  &to CAMEL_CASE &sl CMLS_A1)
+        THUMB_COMBO_MORPH(sc_pascalcase, MOD_RSFT|MOD_LSFT, MOD_LCTL, &tc_shift_camel, &sc_kebabcase)
         
-        #define msl_raise_smart sc_kebabcase
+        #define msl_raise_smart sc_pascalcase
 
         THUMB_MACRO(mc_msk_camel, &sl CMLS_A1)
         THUMB_MACRO(mc_msk_snake, &kp UNDERSCORE &sl SPACING)
