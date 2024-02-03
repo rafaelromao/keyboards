@@ -136,15 +136,15 @@
             #binding-cells = <0>;
             max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
             defaults = <&shift_caps_word>;
-            antecedents = <A           AACU_TERM   ATIL_TERM   ACIR_TERM   AGRV_TERM   B           C           C_CEDIL     D           \
+            antecedents = <A           AACU_TERM   ATIL_TERM   ACIR_TERM   AGRV_TERM   B                       C_CEDIL     D           \
                            E           EACU_TERM   ECIR_TERM   F           G                       I           IACU_TERM               \
                            K           L           M           N                       OACU_TERM   OTIL_TERM   OCIR_TERM   P           \
-                           Q           QU_TERM     R           S           T           U           UACU_TERM   V           W           \
+                           Q           QU_TERM     R                       T           U           UACU_TERM   V           W           \
                            X                                   DOT         MINUS>;
-            bindings =    <&kp O       &kp X       &kp O       &kp M       &mc_qu      &kp Y       &kp S       &tc_otiles  &kp Y       \
+            bindings =    <&kp O       &kp X       &kp O       &kp M       &mc_qu      &kp Y                   &tc_otiles  &kp Y       \
                            &kp U       &kp U       &kp X       &kp Y       &kp U                   &tc_smart_i &kp Z                   \
                            &kp W       &kp H       &kp S       &kp F                   &kp X       &kp E       &kp V       &kp T       \
-                           &key_repeat &ac_ecir    &kp L       &kp M       &kp W       &kp E       &kp Z       &ac_iacu    &kp K       \
+                           &key_repeat &ac_ecir    &kp L                   &kp W       &kp E       &kp Z       &ac_iacu    &kp K       \
                            &ac_iacu                            &kp SLASH   &kp GT>;
         };
         THUMB_MACRO(tc_otiles,   &ac_otil &kp E &kp S)
