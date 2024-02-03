@@ -164,16 +164,63 @@
             bindings = <&mo>, <&mc_sl_alpha2>;
         };
 
-        #define msl_raise_smart sc_camelcase
-
         THUMB_MORPH(sc_caps_word, MOD_LCTL, &msl_a2 RAISE 0, &custom_caps_word)
         THUMB_MORPH(sc_caps_lock, MOD_RCTL, &sc_caps_word, &to CASE_A1)
         THUMB_MORPH(sc_numpad, MOD_LALT, &sc_caps_lock, &to NUMPAD)
         THUMB_MORPH(sc_numword, MOD_RALT, &sc_numpad, &custom_num_word)
-        THUMB_MORPH(sc_camelcase, MOD_LSFT, &sc_numword, &to CML_A1)
+        THUMB_MORPH(sc_camelcase, MOD_LSFT, &sc_numword, &to CAMEL_CASE)
+        THUMB_MORPH(sc_snakecase, MOD_LGUI, &sc_camelcase, &to SNAKE_CASE)
+        THUMB_MORPH(sc_kebabcase, MOD_RGUI, &sc_snakecase, &to KEBAB_CASE)
+        THUMB_MORPH(sc_slashcase, MOD_RSFT, &sc_kebabcase, &to SLASH_CASE)
         
+        #define msl_raise_smart sc_slashcase
+
         THUMB_MACRO(mc_msk_camel, &sl CMLS_A1)
+        THUMB_MACRO(mc_msk_snake, &kp UNDERSCORE &sl SPACING)
+        THUMB_MACRO(mc_msk_kebab, &kp MINUS &sl SPACING)
+        THUMB_MACRO(mc_msk_slash, &kp SLASH &sl SPACING)
         THUMB_MACRO(mc_msk_space, &kp SPACE &to ALPHA1)
+        THUMB_MACRO(mc_msk_space_b, &kp BACKSPACE &kp SPACE &to ALPHA1)
+
+        msk_unds: msk_unds {
+            compatible = "zmk,behavior-hold-tap";
+            label = ZMK_MACRO_STRINGIFY(msk_unds);
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <QUICK_TAP_TERM>;
+            bindings = <&mo>, <&mc_msk_snake>;
+        };
+
+        msk_dash: msk_dash {
+            compatible = "zmk,behavior-hold-tap";
+            label = ZMK_MACRO_STRINGIFY(msk_dash);
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <QUICK_TAP_TERM>;
+            bindings = <&mo>, <&mc_msk_kebab>;
+        };
+
+        msk_slash: msk_slash {
+            compatible = "zmk,behavior-hold-tap";
+            label = ZMK_MACRO_STRINGIFY(msk_slash);
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <QUICK_TAP_TERM>;
+            bindings = <&mo>, <&mc_msk_slash>;
+        };
+
+        msk_spcb: msk_spcb {
+            compatible = "zmk,behavior-hold-tap";
+            label = ZMK_MACRO_STRINGIFY(msk_spcb);
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <QUICK_TAP_TERM>;
+            bindings = <&mo>, <&mc_msk_space_b>;
+        };
 
         msk_sft: msk_sft {
             compatible = "zmk,behavior-hold-tap";

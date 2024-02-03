@@ -33,6 +33,43 @@
                                            &none               &ht_repeat NAV 0    &ltn LOWER SPACE    &msl_raise_smart    &ht_magic MEDIA 0   &trans
                         >;
                 };
+                snake_case_layer {
+                     label = "SNAKE";
+                     bindings = <
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
+                                           &trans              &trans              &msk_unds LOWER 0   &trans              &trans              &trans
+                           >;
+                };
+                kebab_case_layer {
+                     label = "SNAKE";
+                     bindings = <
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
+                                           &trans              &trans              &msk_dash LOWER 0   &trans              &trans              &trans
+                           >;
+                };
+                slash_case_layer {
+                     label = "SNAKE";
+                     bindings = <
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
+                                           &trans              &trans              &msk_slash LOWER 0  &trans              &trans              &trans
+                           >;
+                };
+                spacing_layer {
+                     label = "SPACE";
+                     bindings = <
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
+                                           &trans              &trans              &msk_spcb LOWER 0   &trans              &trans              &trans
+                           >;
+                };
+
                 camel_case_layer {
                      label = "CAMEL";
                      bindings = <
@@ -60,6 +97,7 @@
                                            &trans              &mc_sqo             &msk_spc SYMBOLS 0  &trans              &trans              &trans
                            >;
                 };
+
                 capsword_layer {
                      label = "CASE";
                      bindings = <
