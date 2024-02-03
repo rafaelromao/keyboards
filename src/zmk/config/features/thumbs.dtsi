@@ -28,6 +28,15 @@
             bindings = <&macro_tap BINDINGS>; \
         };
 
+    #define THUMB_MORPH(NAME, MODS, UNMODDED, MODDED) \
+        NAME: NAME { \
+            compatible = "zmk,behavior-mod-morph"; \
+            label = ZMK_MACRO_STRINGIFY(NAME); \
+            #binding-cells = <0>; \
+            bindings = <UNMODDED>, <MODDED>; \
+            mods = <(MODS)>; \
+        };
+
     thumbs {
         // ********************** SENTENCE CASE ********************** //
 
@@ -154,5 +163,12 @@
             quick-tap-ms = <QUICK_TAP_TERM>;
             bindings = <&mo>, <&mc_sl_alpha2>;
         };
+
+        #define msl_raise_smart sc_numword
+
+        THUMB_MORPH(sc_caps_word, MOD_LCTL, &msl_a2 RAISE 0, &custom_caps_word)
+        THUMB_MORPH(sc_caps_lock, MOD_RCTL, &sc_caps_word, &to CASE_A1)
+        THUMB_MORPH(sc_numpad, MOD_LALT, &sc_caps_lock, &to NUMPAD)
+        THUMB_MORPH(sc_numword, MOD_RALT, &sc_numpad, &custom_num_word)
     };
 };
