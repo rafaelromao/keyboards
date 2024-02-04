@@ -197,10 +197,7 @@
         SYMBOL(mc_and,             &kp AMPS)
 
         SYMBOL(mc_slash,           &kp SLASH)
-        SYMBOL(mc_2_slash,         &kp SLASH &kp SLASH)
-        SYMBOL(mc_3_slash,         &kp SLASH &kp SLASH &kp SLASH)
         TAPHOLD_SYMBOL(th_slash,   &mc_slash, &mc_and)
-        TAPDANCE_SYMBOL(td_slash,  &th_slash 0 0, &mc_2_slash, &mc_3_slash)
 
         SYMBOL(mc_lt,              &kp LT)
         SYMBOL(mc_unds,            &kp UNDERSCORE)
@@ -221,10 +218,7 @@
 
         SYMBOL(mc_eql,             &kp EQUAL)
         SYMBOL(mc_end_eql,         &kp END &kp EQUAL)
-        SYMBOL(mc_2_eql,           &kp EQUAL &kp EQUAL)
-        SYMBOL(mc_3_eql,           &kp EQUAL &kp EQUAL &kp EQUAL)
         TAPHOLD_SYMBOL(th_eql,     &mc_eql, &mc_end_eql)
-        TAPDANCE_SYMBOL(td_eql,    &th_eql 0 0, &mc_2_eql, &mc_3_eql)
 
         SYMBOL(mc_eqeq,            &kp EQUAL &kp EQUAL)
         SYMBOL(mc_noteq,           &kp EXCL &kp EQUAL)
