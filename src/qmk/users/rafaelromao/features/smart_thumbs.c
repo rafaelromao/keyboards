@@ -143,6 +143,7 @@ bool in_mid_word(uint16_t key, bool isMagic) {
             case KC_J:
             case KC_S:
             case KC_C:
+            case KC_G:
                 return false;
         }
     }
@@ -325,9 +326,6 @@ void process_shift_magic(uint16_t keycode) {
                 break;
             case KC_F:
                 tap_code(KC_Y);
-                break;
-            case KC_G:
-                tap_code(KC_U);
                 break;
             case KC_I:
                 tap_code(KC_BSPC);
