@@ -61,7 +61,7 @@
                            >;
                 };
                 kebab_case_layer {
-                     label = "SNAKE";
+                     label = "KEBAB";
                      bindings = <
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
