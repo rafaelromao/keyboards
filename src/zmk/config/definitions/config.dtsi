@@ -6,11 +6,11 @@
  */
 
 #define ALPHA1 0
-#define SNAKE_CASE 1
-#define KEBAB_CASE 2
-#define SPACING 3
-#define CAMEL_CASE 4
-#define CAMEL_CASE_S 5
+#define CAMEL_CASE 1
+#define SMART_CASE_S 2
+#define SNAKE_CASE 3
+#define KEBAB_CASE 4
+#define SPACING 5
 #define CASE_A1 6
 #define NUMPAD 7
 #define SHORTCUTS 8

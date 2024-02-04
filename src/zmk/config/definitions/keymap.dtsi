@@ -32,6 +32,25 @@
                                            &none               &ht_repeat NAV 0    &ltn LOWER SPACE    &msl_raise_smart    &ht_magic MEDIA 0   &trans
                         >;
                 };
+                camel_case_layer {
+                     label = "CAMEL";
+                     bindings = <
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
+                                           &trans              &trans              &msk_sft LOWER 0    &trans              &trans              &trans
+                           >;
+                };
+                smart_case_shifted_layer {
+                     label = "CASE";
+                     bindings = <
+   &trans              &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &trans
+   &lt SHORTCUTS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTCUTS LS(I) 
+   &kp LS(Q)           &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &mt RALT LS(H)      &th_comma 0 0       &th_dot 0 0         &kp LS(Y)
+                                           &trans              &ht_repeat NAV 0    &msk_spc LOWER 0    &msl RAISE CASE_A2  &ht_magic MEDIA 0   &trans
+                        >;
+                };
+
                 snake_case_layer {
                      label = "SNAKE";
                      bindings = <
@@ -58,25 +77,6 @@
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
                                            &trans              &trans              &msk_spcb LOWER 0   &trans              &trans              &trans
                            >;
-                };
-
-                camel_case_layer {
-                     label = "CAMEL";
-                     bindings = <
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
-                                           &trans              &trans              &msk_sft LOWER 0    &trans              &trans              &trans
-                           >;
-                };
-                camel_case_shifted_layer {
-                     label = "CAMEL";
-                     bindings = <
-   &trans              &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &trans
-   &lt SHORTCUTS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTCUTS LS(I) 
-   &kp LS(Q)           &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &mt RALT LS(H)      &th_comma 0 0       &th_dot 0 0         &kp LS(Y)
-                                           &trans              &ht_repeat NAV 0    &msk_spc LOWER 0    &msl RAISE CASE_A2  &ht_magic MEDIA 0   &trans
-                        >;
                 };
 
                 capsword_layer {
