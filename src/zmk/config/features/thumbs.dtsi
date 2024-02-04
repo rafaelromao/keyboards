@@ -54,6 +54,46 @@
         };
 
     thumbs {
+        
+        // ********************** CUSTOM HOLD TAPS ********************** //
+
+        ltn: layer-tap-no-quick-tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = ZMK_MACRO_STRINGIFY(layer-tap-no-quick-tap);
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <0>;
+            bindings = <&mo>, <&kp>;
+        };
+        msl: layer-tap-with-stick-layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = ZMK_MACRO_STRINGIFY(layer-tap-with-stick-layer);
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <QUICK_TAP_TERM>;
+            bindings = <&mo>, <&sl>;
+        };
+        msk: layer-tap-with-stick-key {
+            compatible = "zmk,behavior-hold-tap";
+            label = ZMK_MACRO_STRINGIFY(layer-tap-with-stick-key);
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <QUICK_TAP_TERM>;
+            bindings = <&mo>, <&sk>;
+        };
+        mst: layer-tap-with-tog-key {
+            compatible = "zmk,behavior-hold-tap";
+            label = ZMK_MACRO_STRINGIFY(layer-tap-with-tog-key);
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <QUICK_TAP_TERM>;
+            bindings = <&mo>, <&tog>;
+        };
+
         // ********************** SENTENCE CASE ********************** //
 
         THUMB_MACRO(tc_cancel,        &kp K_CANCEL)
@@ -188,12 +228,12 @@
         THUMB_MORPH(sc_snakecase,  MOD_LGUI, &to SNAKE_CASE            , &sc_camelcase   )
         THUMB_MORPH(sc_kebabcase,  MOD_RGUI, &to KEBAB_CASE            , &sc_snakecase   )
 
-        THUMB_MACRO(tc_shift_camel,  &to CAMEL_CASE &sl CMLS_A1)
+        THUMB_MACRO(tc_shift_camel,  &to CAMEL_CASE &sl CAMEL_CASE_S)
         THUMB_COMBO_MORPH(sc_pascalcase, MOD_RSFT|MOD_LSFT, MOD_LCTL, &tc_shift_camel, &sc_kebabcase)
         
         #define msl_raise_smart sc_pascalcase
 
-        THUMB_MACRO(mc_msk_camel, &sl CMLS_A1)
+        THUMB_MACRO(mc_msk_camel, &sl CAMEL_CASE_S)
         THUMB_MACRO(mc_msk_snake, &kp UNDERSCORE &sl SPACING)
         THUMB_MACRO(mc_msk_kebab, &kp MINUS &sl SPACING)
         THUMB_MACRO(mc_msk_space, &kp SPACE &to ALPHA1)

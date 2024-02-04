@@ -9,7 +9,6 @@
 #include "keycodes.h"
 #include "config.dtsi"
 
-#include "../features/behaviors.dtsi"
 #include "../features/accents.dtsi"
 #include "../features/thumbs.dtsi"
 #include "../features/swapper.dtsi"
@@ -76,17 +75,8 @@
    &trans              &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &trans
    &lt SHORTCUTS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTCUTS LS(I) 
    &kp LS(Q)           &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &mt RALT LS(H)      &th_comma 0 0       &th_dot 0 0         &kp LS(Y)
-                                           &trans              &ht_repeat NAV 0    &msk_spc LOWER 0    &msl RAISE CMLS_A2  &ht_magic MEDIA 0   &trans
+                                           &trans              &ht_repeat NAV 0    &msk_spc LOWER 0    &msl RAISE CASE_A2  &ht_magic MEDIA 0   &trans
                         >;
-                };
-                camel_case_alpha2_shifted_layer {
-                     label = "CAMEL";
-                     bindings = <
-   &trans              &kp LS(Q)           &mc_qu_c            &kp LS(K)           &none               &none               &ac_ocir_c          &ac_oacu_c          &ac_uacu_c          &trans
-   &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &kp SQT             &kp CARET           &ac_atil_c          &ac_aacu_c          &ac_eacu_c          &ac_iacu_c 
-   &none               &kp LS(J)           &mc_ced_c           &kp LS(V)           &kp GRAVE           &kp TILDE           &ac_otil_c          &ac_acir_c          &ac_ecir_c          &none
-                                           &trans              &mc_sqo             &msk_spc SYMBOLS 0  &trans              &trans              &trans
-                           >;
                 };
 
                 capsword_layer {

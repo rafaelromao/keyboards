@@ -10,26 +10,25 @@
 #define KEBAB_CASE 2
 #define SPACING 3
 #define CAMEL_CASE 4
-#define CMLS_A1 5
-#define CMLS_A2 6
-#define CASE_A1 7
-#define NUMPAD 8
-#define SHORTCUTS 9
-#define SHORTCUTS_EXT 10
-#define NMODS 11
-#define ALPHA2 12
-#define CASE_A2 13
-#define LOWER 14
-#define RAISE 15
-#define SYMBOLS 16
-#define SEN_CASE 17
-#define SEN_E1 18
-#define SEN_E2 19
-#define NAV 20
-#define MEDIA 21
-#define NAV_F 22
-#define LOCK_KB 23
-#define SYSTEM 24
+#define CAMEL_CASE_S 5
+#define CASE_A1 6
+#define NUMPAD 7
+#define SHORTCUTS 8
+#define SHORTCUTS_EXT 9
+#define NMODS 10
+#define ALPHA2 11
+#define CASE_A2 12
+#define LOWER 13
+#define RAISE 14
+#define SYMBOLS 15
+#define SEN_CASE 16
+#define SEN_E1 17
+#define SEN_E2 18
+#define NAV 19
+#define MEDIA 20
+#define NAV_F 21
+#define LOCK_KB 22
+#define SYSTEM 23
 
 #define TAPPING_TERM 175
 #define TD_TAPPING_TERM 225
@@ -96,3 +95,25 @@
 #define R0  33  // right thumb keys
 #define R1  34
 #define R2  35
+
+&mt {
+    tapping-term-ms = <TAPPING_TERM>;
+    flavor = "tap-preferred";
+    quick-tap-ms = <QUICK_TAP_TERM>;
+};
+
+&lt {
+    tapping-term-ms = <TAPPING_TERM>;
+    flavor = "tap-preferred";
+    quick-tap-ms = <QUICK_TAP_TERM>;
+};
+
+&sl {
+    release-after-ms = <1000>;
+    quick-release;
+};
+
+&sk {
+    release-after-ms = <1000>;
+    quick-release;
+};

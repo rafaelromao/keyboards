@@ -157,4 +157,139 @@
         COMBO(cb_ctrlv,         RBI RBM RBR, &kp LC(V),          MEDIA)
         COMBO(cb_end_ent,       RTM RTR,     &th_end_ent 0 0,    MEDIA NAV NAV_F SHORTCUTS SYSTEM)
     };
+
+    combo_must_tap_workaround {
+
+        mc_sft_ctl: mc_sft_ctl { 
+            compatible = "zmk,behavior-macro"; 
+            label = ZMK_MACRO_STRINGIFY(mc_sft_ctl);
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &kp LS(LCTRL)>;
+        };
+
+        mc_ctl_gui: mc_ctl_gui { 
+            compatible = "zmk,behavior-macro"; 
+            label = ZMK_MACRO_STRINGIFY(mc_ctl_gui);
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &kp LG(LCTRL)>;
+        };
+
+        mc_sft_ctl_gui: mc_sft_ctl_gui { 
+            compatible = "zmk,behavior-macro"; 
+            label = ZMK_MACRO_STRINGIFY(mc_sft_ctl_gui);
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &kp LS(LG(LCTRL))>;
+        };
+
+        mc_q: mc_q { 
+            compatible = "zmk,behavior-macro"; 
+            label = ZMK_MACRO_STRINGIFY(mc_q);
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &kp Q>;
+        };
+
+        ht_q: ht_q {
+            compatible = "zmk,behavior-hold-tap";
+            label = ZMK_MACRO_STRINGIFY(ht_q);
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            flavor = "hold-preferred";
+            quick-tap-ms = <QUICK_TAP_TERM>;
+            bindings = <&mc_sft_ctl>, <&mc_q>;
+        };
+
+        mc_w: mc_w { 
+            compatible = "zmk,behavior-macro"; 
+            label = ZMK_MACRO_STRINGIFY(mc_w);
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &kp W>;
+        };
+
+        ht_w: ht_w {
+            compatible = "zmk,behavior-hold-tap";
+            label = ZMK_MACRO_STRINGIFY(ht_w);
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            flavor = "hold-preferred";
+            quick-tap-ms = <QUICK_TAP_TERM>;
+            bindings = <&mc_ctl_gui>, <&mc_w>;
+        };
+
+        mc_enter: mc_enter { 
+            compatible = "zmk,behavior-macro"; 
+            label = ZMK_MACRO_STRINGIFY(mc_enter);
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &kp ENTER>;
+        };
+
+        ht_enter: ht_enter {
+            compatible = "zmk,behavior-hold-tap";
+            label = ZMK_MACRO_STRINGIFY(ht_enter);
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            flavor = "hold-preferred";
+            quick-tap-ms = <QUICK_TAP_TERM>;
+            bindings = <&mc_sft_ctl_gui>, <&mc_enter>;
+        };
+
+        mc_hyp: mc_hyp { 
+            compatible = "zmk,behavior-macro"; 
+            label = ZMK_MACRO_STRINGIFY(mc_hyp);
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &kp LG(LA(LS(LCTRL)))>;
+        };
+
+        mc_v: mc_v { 
+            compatible = "zmk,behavior-macro"; 
+            label = ZMK_MACRO_STRINGIFY(mc_v);
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &kp V>;
+        };
+
+        hyp_v: hyp_v {
+            compatible = "zmk,behavior-hold-tap";
+            label = ZMK_MACRO_STRINGIFY(ht_v);
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            flavor = "hold-preferred";
+            quick-tap-ms = <QUICK_TAP_TERM>;
+            bindings = <&mc_hyp>, <&mc_v>;
+        };
+
+        mc_j: mc_j { 
+            compatible = "zmk,behavior-macro"; 
+            label = ZMK_MACRO_STRINGIFY(mc_j);
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &kp J>;
+        };
+
+        hyp_j: hyp_j {
+            compatible = "zmk,behavior-hold-tap";
+            label = ZMK_MACRO_STRINGIFY(ht_j);
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            flavor = "hold-preferred";
+            quick-tap-ms = <QUICK_TAP_TERM>;
+            bindings = <&mc_hyp>, <&mc_j>;
+        };
+
+    };
 };
