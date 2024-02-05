@@ -21,6 +21,7 @@
 #define QUICK_TAP_TERM 175
 #define QUICK_TAP_TERM_PER_KEY
 #define ONESHOT_TIMEOUT 1000
+#define TAPPING_TOGGLE 1
 
 // Configure leader key
 #define LEADER_TIMEOUT 1000
