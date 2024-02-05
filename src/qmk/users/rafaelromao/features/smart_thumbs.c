@@ -206,8 +206,9 @@ void process_shift_repeat(uint16_t keycode) {
                 tap_code(KC_S);
                 return;
             case MC_SQ_C:
-                process_accents(MC_TL_A, NULL);
-                tap_code(KC_O);
+                process_accents(MC_TL_O, NULL);
+                tap_code(KC_E);
+                tap_code(KC_S);
                 return;
             case MC_QU:
                 process_accents(MC_CR_E, NULL);
@@ -302,9 +303,8 @@ void process_shift_magic(uint16_t keycode) {
                 tap_code(KC_E);
                 return;
             case MC_SQ_C:
-                process_accents(MC_TL_O, NULL);
-                tap_code(KC_E);
-                tap_code(KC_S);
+                process_accents(MC_TL_A, NULL);
+                tap_code(KC_O);
                 return;
             case MC_QU:
                 process_accents(MC_CR_E, NULL);
