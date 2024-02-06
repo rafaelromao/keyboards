@@ -171,7 +171,7 @@
         THUMB_MACRO(tc_ng,      &kp N &kp G)
         THUMB_MACRO(tc_ey,      &kp E &kp Y)
         THUMB_MACRO(tc_hy,      &kp H &kp Y)
-        THUMB_MACRO(tc_otiles,   &ac_otil &kp E &kp S)
+        THUMB_MACRO(tc_otiles,  &ac_otil &kp E &kp S)
         THUMB_MACRO(tc_com,     &kp C &kp O &kp M)
         THUMB_MACRO(tc_sep,     &kp MINUS &kp MINUS)
 
@@ -197,8 +197,8 @@
                            K           L           M           N                       OACU_TERM   OTIL_TERM   OCIR_TERM   P           \
                            Q           QU_TERM     R                       T           U           UACU_TERM   V           W           \
                            X                                   DOT         MINUS>;
-            bindings =    <&kp O       &kp X       &kp O       &kp M                   &kp Y                   &tc_atilo   &kp Y       \
-                           &kp U       &kp U       &kp X       &kp Y       &kp U                   &tc_smart_i &kp Z                   \
+            bindings =    <&kp O       &kp X       &kp O       &kp M       &mc_qu      &kp Y                   &tc_atilo   &kp Y       \
+                           &kp U       &kp U       &kp X       &kp Y                               &tc_smart_i &kp Z                   \
                            &kp W       &kp H       &kp S       &kp F                   &kp X       &kp E       &kp V       &kp T       \
                            &key_repeat &ac_ecir    &kp L                   &kp W       &kp E       &kp Z       &ac_iacu    &kp K       \
                            &ac_iacu                            &kp SLASH   &kp GT>;
