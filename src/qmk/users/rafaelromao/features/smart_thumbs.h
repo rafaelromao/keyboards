@@ -15,7 +15,7 @@ typedef struct {
 } custom_oneshots_t;
 
 void check_oneshot_timeout(void);
-void clear_locked_and_oneshot_mods(void);
+void clear_oneshot_shift(void);
 bool should_send_ctrl(bool isMacOS, bool isOneShotShift);
 void reset_oneshot_timer(void);
 void disable_oneshot_layer(void);

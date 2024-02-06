@@ -19,7 +19,7 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
             // Select All
 
         case MC_SELC:
-            clear_locked_and_oneshot_mods();
+            clear_oneshot_shift();
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("a"));
             } else {
@@ -30,7 +30,7 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
             // Save
 
         case MC_SAVE:
-            clear_locked_and_oneshot_mods();
+            clear_oneshot_shift();
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("s"));
             } else {
@@ -41,7 +41,7 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
             // Undo
 
         case MC_UNDO:
-            clear_locked_and_oneshot_mods();
+            clear_oneshot_shift();
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("z"));
             } else {
@@ -52,7 +52,7 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
             // Copy
 
         case MC_COPY:
-            clear_locked_and_oneshot_mods();
+            clear_oneshot_shift();
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("c"));
             } else {
@@ -63,7 +63,7 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
             // Selec All + Copy
 
         case MC_SCOP:
-            clear_locked_and_oneshot_mods();
+            clear_oneshot_shift();
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("a"));
                 SEND_STRING(SS_LCTL("c"));
@@ -76,7 +76,7 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
             // Selec All + Paste
 
         case MC_SPAS:
-            clear_locked_and_oneshot_mods();
+            clear_oneshot_shift();
             if (isShifted) {
                 clear_shift();
             }
@@ -104,7 +104,7 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
             // Paste
 
         case MC_PAST:
-            clear_locked_and_oneshot_mods();
+            clear_oneshot_shift();
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("v"));
             } else {
@@ -115,7 +115,7 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
             // Find
 
         case MC_FIND:
-            clear_locked_and_oneshot_mods();
+            clear_oneshot_shift();
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("f"));
             } else {
@@ -126,7 +126,7 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
             // Lock
 
         case MC_LOCK:
-            clear_locked_and_oneshot_mods();
+            clear_oneshot_shift();
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LGUI("l"));
             } else {
@@ -137,7 +137,7 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
             // Full Screen
 
         case MC_FULL:
-            clear_locked_and_oneshot_mods();
+            clear_oneshot_shift();
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 tap_code(KC_F11);
             } else {

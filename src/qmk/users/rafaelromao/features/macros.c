@@ -483,7 +483,7 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
 
     int8_t mods = get_mods();
     if (isShifted) {
-        clear_locked_and_oneshot_mods();
+        clear_oneshot_shift();
         unregister_mods(mods);
     }
     process_record_result_t result = process_macro_keycode(keycode, isOneShotShift, isShifted);

@@ -17,16 +17,11 @@ void oneshot_mods_changed_user(uint8_t mods) {
     }
 }
 
-void clear_locked_and_oneshot_mods(void) {
+void clear_oneshot_shift(void) {
     uint8_t oneshot_mods = get_oneshot_mods();
     if (oneshot_mods) {
         clear_oneshot_mods();
-        clear_oneshot_locked_mods();
         unregister_mods(MOD_LSFT);
-        unregister_mods(MOD_LCTL);
-        unregister_mods(MOD_LALT);
-        unregister_mods(MOD_RALT);
-        unregister_mods(MOD_LGUI);
     }
 }
 
@@ -35,22 +30,6 @@ void clear_oneshot_mods_state(void) {
     if (!(oneshot_mods & MOD_LSFT)) {
         del_oneshot_mods(MOD_LSFT);
         unregister_mods(MOD_LSFT);
-    }
-    if (!(oneshot_mods & MOD_LCTL)) {
-        del_oneshot_mods(MOD_LCTL);
-        unregister_mods(MOD_LCTL);
-    }
-    if (!(oneshot_mods & MOD_LGUI)) {
-        del_oneshot_mods(MOD_LGUI);
-        unregister_mods(MOD_LGUI);
-    }
-    if (!(oneshot_mods & MOD_LALT)) {
-        del_oneshot_mods(MOD_LALT);
-        unregister_mods(MOD_LALT);
-    }
-    if (!(oneshot_mods & MOD_RALT)) {
-        del_oneshot_mods(MOD_RALT);
-        unregister_mods(MOD_RALT);
     }
 }
 

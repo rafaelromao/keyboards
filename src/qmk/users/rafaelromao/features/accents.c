@@ -101,7 +101,7 @@ process_record_result_t process_accents(uint16_t keycode, keyrecord_t *record) {
     // Accented characters
 
     if (is_accented_keycode(keycode)) {
-        clear_locked_and_oneshot_mods();
+        clear_oneshot_shift();
         tap_accent_dead_key(keycode);
         if (isShifted) {
             register_mods(MOD_LSFT);
