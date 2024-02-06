@@ -3,6 +3,8 @@
 #include QMK_KEYBOARD_H
 #include "../definitions/keycodes.h"
 #include "../definitions/process_record.h"
+#include "accents.h"
+#include "macros.h"
 
 typedef enum {
     NO_CASE     = 1 << 0,

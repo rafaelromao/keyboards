@@ -20,7 +20,7 @@ uint16_t extract_tapping_keycode(uint16_t keycode) {
         case TD_RBRC:
             return KC_RBRC;
         case TD_DQUO:
-            return KC_QUOT;
+            return MC_DQUO;
         case TD_EXLM:
         case MC_EXLM:
             return KC_EXLM;
@@ -48,9 +48,9 @@ uint16_t extract_tapping_keycode(uint16_t keycode) {
         case TD_PLUS:
             return KC_PLUS;
         case TD_TIL:
-            return KC_TILD;
+            return MC_TILD;
         case TD_CIRC:
-            return KC_CIRC;
+            return MC_CIRC;
         case TD_HASH:
             return KC_HASH;
         default:
@@ -79,4 +79,8 @@ bool is_string_macro_keycode(uint16_t keycode) {
 
 bool is_shift_macro_keycode(uint16_t keycode) {
     return keycode > SFT_MACRO_START && keycode < SFT_MACRO_END;
+}
+
+bool is_accent_macro_keycode(uint16_t keycode) {
+    return keycode > ACCENT_MACRO_START && keycode < ACCENT_MACRO_END;
 }

@@ -117,14 +117,14 @@ enum {
     SFT_MACRO_END,
 
     // Start macros for accented letters
-    ALPHA_MACRO_START,
+    ACCENT_MACRO_START,
 
     MC_GV_A, MC_CR_A, MC_SQ_A, MC_QU,
     MC_SQ_U, MC_CR_O, MC_SQ_O, MC_SQ_I,
     MC_CR_E, MC_SQ_C, MC_SQ_E, MC_TL_A, MC_TL_O,
 
     // End macros for accented letters
-    ALPHA_MACRO_END,
+    ACCENT_MACRO_END,
     
     // End macros used to write text
     STR_MACRO_END,
@@ -223,5 +223,6 @@ enum {
 uint16_t extract_tapping_keycode(uint16_t keycode);
 bool is_string_macro_keycode(uint16_t keycode);
 bool is_shift_macro_keycode(uint16_t keycode);
+bool is_accent_macro_keycode(uint16_t keycode);
 
 // clang-format on
