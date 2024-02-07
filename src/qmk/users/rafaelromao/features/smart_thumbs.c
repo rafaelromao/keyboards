@@ -286,7 +286,7 @@ void process_shift_magic(uint16_t keycode) {
                 tap_code(KC_O);
                 return;
             case MC_QU:
-                process_accents(MC_CR_E, NULL);
+                process_accents(MC_SQ_I, NULL);
                 return;
         }
         // magic only simple tapping keycodes

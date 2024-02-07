@@ -200,7 +200,7 @@
             bindings =    <&kp O       &kp X       &kp O       &kp M       &mc_qu      &kp Y                   &tc_atilo   &kp Y       \
                            &kp U       &kp U       &kp X       &kp Y                               &tc_smart_i &kp Z                   \
                            &kp W       &kp H       &kp S       &kp F                   &kp X       &kp E       &kp V       &kp T       \
-                           &key_repeat &ac_ecir    &kp L                   &kp W       &kp E       &kp Z       &ac_iacu    &kp K       \
+                           &key_repeat &ac_iacu    &kp L                   &kp W       &kp E       &kp Z       &ac_iacu    &kp K       \
                            &ac_iacu                            &kp SLASH   &kp GT>;
         };
         THUMB_MACRO(tc_atilo,   &ac_atil &kp O)
