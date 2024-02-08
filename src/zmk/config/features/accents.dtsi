@@ -75,5 +75,6 @@
         MACRO_KEY(mc_ced_c, &kp LS(C_CEDIL))
         MACRO_KEY(mc_qu,    &macro_tap &kp Q &macro_wait_time 10 &macro_tap &kp U &kp QU_TERM)
         MACRO_KEY(mc_qu_c,  &macro_press &kp LSHFT &macro_tap &kp Q &macro_wait_time 10 &macro_tap &kp U &macro_release &kp LSHFT &kp QU_TERM)
+        MACRO_KEY(mc_qu_cs, &macro_press &kp LSHFT &macro_tap &kp Q &macro_wait_time 10 &macro_release &kp LSHFT &macro_tap &kp U &kp QU_TERM)
     };
 };

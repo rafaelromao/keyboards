@@ -190,7 +190,7 @@
                 sentence_case_ext2_layer {
                      label = "CASE";
                      bindings = <
-   &trans              &kp LS(Q)           &mc_qu_c            &kp LS(K)           &none               &none               &ac_ocir_c          &ac_oacu_c          &ac_uacu_c          &trans
+   &trans              &kp LS(Q)           &mc_qu_cs           &kp LS(K)           &none               &none               &ac_ocir_c          &ac_oacu_c          &ac_uacu_c          &trans
    &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &kp SQT             &kp CARET           &ac_atil_c          &ac_aacu_c          &ac_eacu_c          &ac_iacu_c 
    &none               &kp LS(J)           &mc_ced_c           &kp LS(V)           &kp GRAVE           &kp TILDE           &ac_otil_c          &ac_acir_c          &ac_ecir_c          &none
                                            &trans              &th_cancel NAV 0    &th_sp_ns LOWER 0   &none               &th_nsen MEDIA 0    &trans

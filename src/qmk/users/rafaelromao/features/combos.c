@@ -188,7 +188,7 @@ combo_t key_combos[] = {
     COMBO(r_acc_bsp_combo, KC_BSPC),    COMBO(r_acc_col_combo, KC_COLN),   COMBO(r_acc_excl_combo, MC_EXLM),
     COMBO(r_acc_min_combo, KC_MINS),    COMBO(r_acc_agr_combo, MC_GV_A),   COMBO(r_low_ent_combo, KC_ENT),
     COMBO(r_low_sco_combo, TD_SCLE),    COMBO(r_med_ent_combo, TD_EENT),   COMBO(r_med_vis_combo, KC_V),
-    COMBO(r_med_svi_combo, MC_SVI),     COMBO(r_med_esc_combo, KC_ESC),    COMBO(r_med_esp_combo, MC_0P),
+    COMBO(r_med_svi_combo, MC_SVI),     COMBO(r_med_esc_combo, MC_ESCC),   COMBO(r_med_esp_combo, MC_0P),
     COMBO(r_med_cvi_combo, MC_CVI),     COMBO(r_med_oes_combo, MC_OESC),   COMBO(r_med_soe_combo, MC_SOES),
     COMBO(r_nav_cop_combo, MC_COPY),    COMBO(r_nav_ent_combo, KC_ENT),    COMBO(r_nav_pdn_combo, KC_PGDN),
     COMBO(r_nav_pup_combo, KC_PGUP),    COMBO(r_nav_pas_combo, MC_PAST),   COMBO(r_num_bsp_combo, KC_BSPC),
