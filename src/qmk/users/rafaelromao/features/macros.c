@@ -168,12 +168,6 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             disable_smart_case();
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Join Lines
-
-        case MC_JOIN:
-            SEND_STRING(SS_TAP(X_END) SS_TAP(X_DEL));
-            return PROCESS_RECORD_RETURN_FALSE;
-
             // Conditional operators
 
         case MC_DAND:
@@ -455,6 +449,16 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
                 tap_code16(LSFT(RALT(KC_2)));
             } else {
                 tap_code16(LCTL(LALT(KC_5)));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Delete Word
+
+        case MC_DELW:
+            if (isMacOS) {
+                tap_code16(LALT(KC_BSPC));
+            } else {
+                tap_code16(LCTL(KC_BSPC));
             }
             return PROCESS_RECORD_RETURN_FALSE;
     }

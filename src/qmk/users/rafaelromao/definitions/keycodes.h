@@ -84,7 +84,7 @@ enum {
     MC_SECRET_1,
 
     // Toggle codes
-    OS_ACNT, TG_OS, TG_CASE, TG_ACNT, 
+    OS_ACNT, TG_WIN, TG_MAC, TG_CASE, TG_ACNT, 
 
     // Select Word/Line
     MC_SELW, MC_SELL,
@@ -99,8 +99,11 @@ enum {
     MC_SELC, MC_SAVE, MC_UNDO, MC_COPY, MC_SCOP, MC_CLOS, 
     MC_PAST, MC_SPAS, MC_LOCK, MC_FULL, MC_FIND, MC_Z0R,
 
+    // App Shortcuts
+    MC_PREV, MC_TABS, MC_CALC, MC_MIC, MC_CAM,
+
     // IDE shortcuts
-    MC_QUIK, MC_AUCO, MC_COMT, MC_JOIN, 
+    MC_QUIK, MC_AUCO, MC_COMT, 
     MC_QDOC, MC_FSYM, MC_RUN, MC_DBUG, MC_BUID,
     MC_PROJ, MC_RECE, MC_COMP, MC_FIUS, MC_REFC,
 
@@ -109,7 +112,7 @@ enum {
 
     MC_BTIC, MC_DQUO, MC_SQUO, MC_CIRC, MC_TILD, REPEAT, MC_ORDO, MC_ORDA,
     MC_EUR, MC_LTE, MC_GTE, MC_DDS, MC_ENT, MC_TAB, MC_ESC, MC_ESCC, 
-    TG_NUMC, MC_EXLM, MC_QUES, MC_ESAV, MC_SENT, MC_DEG,
+    TG_NUMC, MC_EXLM, MC_QUES, MC_ESAV, MC_SENT, MC_DEG, MC_DELW,
     MC_CUR, MC_CURS, MC_DAR, MC_SAR, MC_DEQ, MC_NEQ, MC_BRAC, MC_SEC, 
     MC_DAND, MC_DPIP, MC_OESC, MC_SOES, MC_TISL, MC_SVI, MC_CVI, MC_0P,
 
@@ -137,7 +140,8 @@ enum {
 #define LSFTT_N LSFT_T(KC_N)
 #define RSFTT_E RSFT_T(KC_E)
 #define SF_FSYM LSFT_T(MC_FSYM)
-#define SF_MODP RSFT_T(MC_MODP)
+#define SF_MODM RSFT_T(MC_MODM)
+#define SF_UP RSFT_T(KC_UP)
 #define SF_F6 LSFT_T(KC_F6)
 #define SF_6 RSFT_T(KC_6)
 
@@ -167,13 +171,6 @@ enum {
 
 // Custom Shortcuts
 
-#define HYPR_R HYPR(KC_R)
-#define HYPR_L HYPR(KC_L)
-#define MEH_D  MEH(KC_D)
-#define MEH_G  MEH(KC_G)
-#define MEH_C  MEH(KC_C)
-#define MEH_M  MEH(KC_M)
-
 #ifndef MOUSE_ENABLE
 #define OM_U KC_NO
 #define OM_D KC_NO
@@ -191,15 +188,13 @@ enum {
 
 #define NAV_F12 LT(_NAVIGATION, KC_F12)
 #define NAV_AT  LT(_NAVIGATION, KC_AT)
-#define NAV_PRJ LT(_NAVIGATION, MC_PROJ)
 #define NAV_CAS LT(_NAVIGATION, TG_CASE)
 #define NAV_FCA LT(_FIXED_NAV, TG_CASE)
 
 #define MED_CAS LT(_MEDIA, TG_CASE)
 #define MED_0   LT(_MEDIA, KC_0)
 
-#define NMO_DOC LT(_NOMOD, MC_QDOC)
-#define ACT_SPC LT(_FIXED_ALPHA2, KC_SPC)
+#define NMO_SPC LT(_NOMOD, KC_SPC)
 #define LOW_SPC LT(_LOWER, KC_SPC)
 #define RAI_TA2 LT(_RAISE, TG_ACNT)
 #define RAI_SPC LT(_RAISE, KC_SPC)
@@ -208,7 +203,9 @@ enum {
 
 #define SHO_KCD LT(_SHORTCUTS, KC_D)
 #define SHO_KCI LT(_SHORTCUTS, KC_I)
-#define SHO_DOT LT(_SHORTCUTS, KC_DOT)
+#define INT_SPC LT(_INTELLIJ, KC_SPC)
+#define INT_DOT LT(_INTELLIJ, KC_DOT)
+#define INT_AST LT(_INTELLIJ, KC_ASTR)
 
 // Layer transitions
 #define MO_A2   MO(_FIXED_ALPHA2)

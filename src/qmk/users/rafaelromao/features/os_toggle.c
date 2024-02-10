@@ -26,13 +26,14 @@ process_record_result_t process_os_toggle(uint16_t keycode, keyrecord_t *record)
     switch (keycode) {
             // Change OS type
 
-        case TG_OS:
+        case TG_WIN:
             if (record->event.pressed) {
-                if (os.type == OS_MACOS) {
-                    os.type = OS_WINDOWS;
-                } else {
-                    os.type = OS_MACOS;
-                }
+                os.type = OS_WINDOWS;
+            }
+            return false;
+        case TG_MAC:
+            if (record->event.pressed) {
+                os.type = OS_MACOS;
             }
             return false;
     }

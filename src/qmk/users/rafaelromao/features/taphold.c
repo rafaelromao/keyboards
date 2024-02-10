@@ -7,7 +7,6 @@ uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
         case LOW_SPC:
         case RAI_SPC:
         case RAI_A2:
-        case NAV_PRJ:
         case NAV_CAS:
         case NAV_FCA:
         case MED_CAS:
@@ -23,7 +22,8 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case QK_MOD_TAP ... QK_MOD_TAP_MAX:
         case SHO_KCD:
         case SHO_KCI:
-        case SHO_DOT:
+        case INT_DOT:
+        case INT_AST:
         case NAV_F12:
         case NAV_AT:
             return 225;
@@ -60,16 +60,9 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
             }
             break;
 
-        case NMO_DOC:
+        case INT_AST:
             if (record->event.pressed && record->tap.count) {
-                process_macros(MC_QDOC, NULL);
-                return PROCESS_RECORD_RETURN_FALSE;
-            }
-            break;
-
-        case NAV_PRJ:
-            if (record->event.pressed && record->tap.count) {
-                process_macros(MC_PROJ, NULL);
+                tap_code16(KC_ASTR);
                 return PROCESS_RECORD_RETURN_FALSE;
             }
             break;
@@ -81,9 +74,9 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
             }
             break;
 
-        case SF_MODP:
+        case SF_MODM:
             if (record->event.pressed && record->tap.count) {
-                process_swapper(MC_MODP, NULL);
+                process_swapper(MC_MODM, NULL);
                 return PROCESS_RECORD_RETURN_FALSE;
             }
             break;

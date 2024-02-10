@@ -178,6 +178,40 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
         case TG_NUMC:
             set_smart_case(NUM_CASE);
             return PROCESS_RECORD_RETURN_FALSE;
+
+            // App Shortcuts
+
+        case MC_PREV:
+            if (isShifted) {
+                SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT("p"))));
+            } else {
+                SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT("s"))));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+        case MC_TABS:
+            if (isShifted) {
+                SEND_STRING(SS_LSFT(SS_LGUI("a")));
+            } else {
+                SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT("f"))));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+        case MC_CALC:
+            if (isShifted) {
+                SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT("c"))));
+            } else {
+                SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT("t"))));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+        case MC_MIC:
+            if (isShifted) {
+                tap_code(KC_MUTE);
+            } else {
+                SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT(SS_LGUI("m")))));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+        case MC_CAM:
+            SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT(SS_LGUI("c")))));
+            return PROCESS_RECORD_RETURN_FALSE;
     }
 
     return PROCESS_RECORD_CONTINUE;
