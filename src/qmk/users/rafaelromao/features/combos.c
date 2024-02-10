@@ -84,7 +84,7 @@ const uint16_t PROGMEM l_sym_eur_combo[]  = {KC_RCBR, KC_DLR, COMBO_END};
 const uint16_t PROGMEM l_sym_cur_combo[]  = {KC_LCBR, KC_RCBR, COMBO_END};
 const uint16_t PROGMEM l_sym_par_combo[]  = {KC_LPRN, KC_RPRN, COMBO_END};
 const uint16_t PROGMEM l_sym_bra_combo[]  = {KC_LBRC, KC_RBRC, COMBO_END};
-const uint16_t PROGMEM l_sym_quo_combo[]  = {KC_RPRN, KC_DQUO, COMBO_END};
+const uint16_t PROGMEM l_sym_quo_combo[]  = {KC_RPRN, MC_DQUO, COMBO_END};
 const uint16_t PROGMEM l_sym_grv_combo[]  = {KC_RBRC, KC_QUES, COMBO_END};
 
 const uint16_t PROGMEM r_sym_perc_combo[] = {KC_COLN, KC_EQL, COMBO_END};

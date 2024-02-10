@@ -86,13 +86,13 @@
 #define ____ALPHA2_R4____                               _______ , _______
 
 #define _________________SYMBOLS_L1__________           XXXXXXX , KC_LCBR , KC_RCBR , KC_DLR 
-#define _________________SYMBOLS_L2____________________ KC_AT   , KC_LPRN , KC_RPRN , KC_DQUO , KC_QUOT
-#define           _______SYMBOLS_L3____________________           KC_LBRC , KC_RBRC , KC_QUES , KC_GRV
+#define _________________SYMBOLS_L2____________________ KC_AT   , KC_LPRN , KC_RPRN , MC_DQUO , MC_SQUO
+#define           _______SYMBOLS_L3____________________           KC_LBRC , KC_RBRC , KC_QUES , MC_BTIC
 #define                               __SYMBOLS_L4_____                               KC_CAPS , KC_SPC 
 
 #define           _______SYMBOLS_R1____________________           KC_COLN , KC_EQL  , KC_HASH , XXXXXXX
-#define _________________SYMBOLS_R2____________________ KC_CIRC , KC_MINS , KC_PLUS , KC_SLSH , KC_ASTR
-#define _________________SYMBOLS_R3__________           KC_TILD , KC_EXLM , KC_LT   , KC_GT     
+#define _________________SYMBOLS_R2____________________ MC_CIRC , KC_MINS , KC_PLUS , KC_SLSH , KC_ASTR
+#define _________________SYMBOLS_R3__________           MC_TILD , KC_EXLM , KC_LT   , KC_GT     
 #define __SYMBOLS_R4_____                               KC_SPC  , TG_NUM
 
 #define ___________________NAVIGATION_L1_____           _______ , MC_ESC  , KC_PGUP , KC_INS 
