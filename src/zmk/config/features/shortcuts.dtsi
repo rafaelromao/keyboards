@@ -91,7 +91,6 @@
         SHORTCUT(mc_docs,                   &macro_tap &kp F1)
         SHORTCUT(mc_params,                 &macro_tap &kp LG(P))
         SHIFTED_SHORTCUT(mm_docs,           &mc_docs, &mc_params)
-        LAYERTAP_SHORTCUT(th_docs,            &mm_docs)
 
         SHORTCUT(mc_find_symbol,            &macro_tap &kp LA(LG(O)))
         SHORTCUT(mc_find_action,            &macro_tap &kp LS(LG(A)))
@@ -113,7 +112,6 @@
         SHORTCUT(mc_project,                &macro_tap &kp LG(N1))
         SHORTCUT(mc_select_in,              &macro_tap &kp LA(F1))
         SHIFTED_SHORTCUT(mm_project,        &mc_project, &mc_select_in)
-        LAYERTAP_SHORTCUT(th_proj,          &mm_project)
 
         SHORTCUT(mc_recent,                 &macro_tap &kp LG(E))
         SHORTCUT(mc_prev_err,               &macro_tap &kp LS(F2))
@@ -159,9 +157,10 @@
         SHORTCUT(mc_close_win,              &macro_tap &kp LG(Q))
         SHIFTED_SHORTCUT(mm_close_tab_win,  &mc_close_win, &mc_close_tab)
 
-        SHORTCUT(mc_join,                   &macro_tap &kp END &kp DEL)
         SHORTCUT(mc_comment,                &macro_tap &kp LG(SLASH))
         SHORTCUT(mc_escc,                   &macro_tap &kp ESC &to ALPHA1)
         SHORTCUT(mc_dqt0p,                  &macro_tap &kp DQT &kp N0 &kp P)
+
+        SHORTCUT(mc_delword,                &macro_tap &kp LA(BACKSPACE))
     };
 };
