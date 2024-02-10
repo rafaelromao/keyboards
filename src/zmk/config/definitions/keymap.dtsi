@@ -118,18 +118,18 @@
                 shortcuts_left_layer {
                      label = "SHORTCUT";
                      bindings = <
-   &trans              &mm_close_tab_win   &mm_refresh_z0      &mc_meh_g           &none               &none               &mc_selw            &kp ENTER           &kp ESC             &trans    
-   &none               &th_zh_b LSHFT 0    &mm_zh_f            &mc_meh_m           &none               &none               &mc_seln            &kp DOWN            &mt RSHFT UP        &mo SYSTEM
-   &none               &mm_wt_b            &mm_wt_f            &mc_meh_c           &none               &none               &td_dynmacro        &kp LC(LG(Q))       &kp C_SLEEP         &none
+   &trans              &mm_close_tab_win   &mm_refresh_z0      &mm_preview         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &trans    
+   &none               &th_zh_b LSHFT 0    &mm_zh_f            &mm_tabs            &none               &none               &mc_seln            &kp DOWN            &mt RSHFT UP        &mo SYSTEM
+   &none               &mm_wt_b            &mm_wt_f            &mm_calc            &none               &none               &td_dynmacro        &kp LC(LG(Q))       &kp C_SLEEP         &none
                                            &trans              &mst NAV NAV_F      &lt NMODS SPACE     &lt INTELLIJ SPACE  &mst NAV NAV_F      &trans
                            >;
                 };
                 shortcuts_right_layer {
                      label = "SHORTCUT";
                      bindings = <
-   &trans              &mm_close_tab_win   &mm_refresh_z0      &mc_meh_g           &none               &none               &mc_selw            &kp ENTER           &kp ESC             &trans    
-   &mo SYSTEM          &th_zh_b LSHFT 0    &mm_zh_f            &mc_meh_m           &none               &none               &mc_seln            &kp DOWN            &mt RSHFT UP        &none
-   &none               &mm_wt_b            &mm_wt_f            &mc_meh_c           &none               &none               &td_dynmacro        &kp LC(LG(Q))       &kp C_SLEEP         &none
+   &trans              &mm_close_tab_win   &mm_refresh_z0      &mm_preview         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &trans    
+   &mo SYSTEM          &th_zh_b LSHFT 0    &mm_zh_f            &mm_tabs            &none               &none               &mc_seln            &kp DOWN            &mt RSHFT UP        &none
+   &none               &mm_wt_b            &mm_wt_f            &mm_calc            &none               &none               &td_dynmacro        &kp LC(LG(Q))       &kp C_SLEEP         &none
                                            &trans              &mst NAV NAV_F      &lt NMODS SPACE     &lt INTELLIJ SPACE  &mst NAV NAV_F      &trans
                            >;
                 };
@@ -227,7 +227,7 @@
                      label = "MEDIA";
                      bindings = <
    &trans              &kp ESC             &none               &none               &none               &none               &kp TAB             &kp ENTER           &kp BACKSPACE       &trans
-   &none               &none               &none               &none               &none               &none               &mc_hyp_r           &mt C_MUTE C_VOL_DN &kp C_VOL_UP        &mc_hyp_l
+   &none               &none               &none               &none               &none               &none               &mc_mic             &mt C_MUTE C_VOL_DN &kp C_VOL_UP        &mc_cam
    &none               &none               &none               &none               &none               &none               &kp C_PP            &kp C_PREV          &kp C_NEXT          &none
                                            &trans              &mo NAV_F           &kp SPACE           &trans              &trans              &trans
                            >;
