@@ -91,7 +91,7 @@
         SHORTCUT(mc_docs,                   &macro_tap &kp F1)
         SHORTCUT(mc_params,                 &macro_tap &kp LG(P))
         SHIFTED_SHORTCUT(mm_docs,           &mc_docs, &mc_params)
-        MODTAP_SHORTCUT(th_docs,            &mm_docs)
+        LAYERTAP_SHORTCUT(th_docs,            &mm_docs)
 
         SHORTCUT(mc_find_symbol,            &macro_tap &kp LA(LG(O)))
         SHORTCUT(mc_find_action,            &macro_tap &kp LS(LG(A)))
