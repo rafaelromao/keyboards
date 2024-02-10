@@ -29,8 +29,8 @@
             label = ZMK_MACRO_STRINGIFY(sw_win_f);
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
-            ignored-key-positions = <RBM RBR>;
-            ignored-layers = <SHORTCUTS>;
+            ignored-key-positions = <LBM LBR>;
+            ignored-layers = <SHORTS_L SHORTS_R>;
         };
         sw_tab_b: sw_tab_b {
             wait-ms = <0>;
@@ -45,8 +45,8 @@
             label = ZMK_MACRO_STRINGIFY(sw_tab_f);
             #binding-cells = <0>;
             bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
-            ignored-key-positions = <RBM RBR>;
-            ignored-layers = <SHORTCUTS>;
+            ignored-key-positions = <LBM LBR>;
+            ignored-layers = <SHORTS_L SHORTS_R>;
         };
         mm_wt_b: mm_wt_b {
             compatible = "zmk,behavior-mod-morph";
@@ -84,8 +84,8 @@
             label = ZMK_MACRO_STRINGIFY(sw_his_b);
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp LBKT>, <&kt LGUI>;
-            ignored-key-positions = <RHM RHR>;
-            ignored-layers = <SHORTCUTS>;
+            ignored-key-positions = <LHM LHR>;
+            ignored-layers = <SHORTS_L SHORTS_R>;
         };
         sw_his_f: sw_his_f {
             wait-ms = <0>;
@@ -110,15 +110,15 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        th_zh: th_zh {
+        th_zh_b: th_zh_b {
             compatible = "zmk,behavior-hold-tap";
-            label = ZMK_MACRO_STRINGIFY(th_zh);
+            label = ZMK_MACRO_STRINGIFY(th_zh_b);
             #binding-cells = <2>;
             tapping-term-ms = <TAPPING_TERM>;
             flavor = "tap-preferred";
             quick-tap-ms = <QUICK_TAP_TERM>;
             require-prior-idle-ms = <QUICK_TAP_TERM>;
-            bindings = <&kp>, <&mm_zh_f>;
+            bindings = <&kp>, <&mm_zh_b>;
         };
     };
 };

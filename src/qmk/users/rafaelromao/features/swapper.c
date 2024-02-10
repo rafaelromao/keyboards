@@ -10,7 +10,7 @@ bool is_swapper_keycode(uint16_t keycode) {
         case MC_SWRI:
         case MC_MODM:
         case MC_MODP:
-        case SF_MODP:
+        case SF_MODM:
             return true;
         default:
             return false;

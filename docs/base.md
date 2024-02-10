@@ -46,7 +46,8 @@
 - Some macros are available in the base layers and are triggered according to some specific behaviors, like explained below:
 
 ### Leader Key
-- The Leader Key can be triggered holding the comma key. This allow easy access to leader sequences.
+- The Leader Key is available in the Base layer, holding and releasing comma for 175 milisseconds. It gives easy access to some useful macros, like typing an internet domain or recurring terminal commands.
+- Source code: [leader.c](../src/qmk/users/rafaelromao/features/leader.c)
 
 ### Pontuation Hold
 - Holding a pontuation key (dot, comma or semicolon) will add it to the end of the current line.
