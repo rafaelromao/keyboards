@@ -2,13 +2,14 @@
 
 typedef enum {
     _ALPHA1,
+    _LOWER,
+    _RAISE,
     _NUMPAD,
     _SHORTCUTS,
+    _INTELLIJ,
     _NOMOD,
     _ALPHA2,
     _FIXED_ALPHA2,
-    _LOWER,
-    _RAISE,
     _SYMBOLS,
     _NAVIGATION,
     _MEDIA,

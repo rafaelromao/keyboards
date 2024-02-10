@@ -15,6 +15,26 @@
 #define __________________ALPHA1_R3__________           KC_J    , RALTT_H , TD_COMM , TD_DOT  
 #define ___ALPHA1_R4_____                               RAI_A2  , MED_CAS 
 
+#define ___________________LOWER_L1__________           XXXXXXX , TD_LCBR , TD_RCBR , TD_DLR 
+#define ___________________LOWER_L2____________________ NAV_AT  , TD_LPRN , TD_RPRN , TD_DQUO , MC_SQUO
+#define           _________LOWER_L3____________________           TD_LBRC , TD_RBRC , TD_QUES , MC_BTIC
+#define                               ____LOWER_L4_____                               KC_CAPS , _______
+
+#define           _________LOWER_R1____________________           KC_7    , KC_8    , KC_9    , XXXXXXX
+#define ___________________LOWER_R2____________________ KC_COMM , KC_4    , KC_5    , KC_6    , KC_DOT
+#define ___________________LOWER_R3__________           KC_DOT  , KC_1    , KC_2    , KC_3    
+#define ____LOWER_R4_____                               RAI_SPC , MED_0
+
+#define ___________________RAISE_L1__________           XXXXXXX , KC_F9   , KC_F8   , KC_F7   
+#define ___________________RAISE_L2____________________ KC_F12  , KC_F6   , KC_F5   , KC_F4   , KC_F11
+#define           _________RAISE_L3____________________           KC_F3   , KC_F2   , KC_F1   , KC_F10
+#define                               ____RAISE_L4_____                               QK_REP  , SYM_SPC
+
+#define           _________RAISE_R1____________________           TD_COLN , TD_EQL  , TD_HASH , XXXXXXX
+#define ___________________RAISE_R2____________________ MC_CIRC , TD_MINS , TD_PLUS , TD_SLSH , KC_ASTR
+#define ___________________RAISE_R3__________           MC_TILD , TD_EXLM , TD_LT   , TD_GT     
+#define ____RAISE_R4_____                               _______ , TG_NUM
+
 #define ___________________NUMPAD_L1_________           _______ , KC_F9   , KC_F8   , KC_F7   
 #define ___________________NUMPAD_L2___________________ NAV_F12 , SF_F6   , CT_F5   , GU_F4   , KC_F11
 #define           _________NUMPAD_L3___________________           AL_F3   , KC_F2   , AL_F1   , KC_F10
@@ -35,6 +55,16 @@
 #define ________________SHORTCUTS_R3_________           MC_JOIN , MC_COMT , MC_SWLE , MC_SWRI 
 #define _SHORTCUTS_R4____                               ACT_SPC , TT_NAV
 
+#define _________________INTELLIJ_L1_________           XXXXXXX , MC_ESC  , MC_QUIK , MC_AUCO 
+#define _________________INTELLIJ_L2___________________ MO_SYS  , SF_FSYM , MC_RUN  , MC_DBUG , MC_BUID
+#define           _______INTELLIJ_L3___________________           MC_RECE , MC_COMP , MC_FIUS , MC_REFC
+#define                               __INTELLIJ_L4____                               NAV_PRJ , NMO_DOC
+
+#define           _______INTELLIJ_R1___________________           MC_SELW , MC_ENT  , MC_TAB  , XXXXXXX
+#define _________________INTELLIJ_R2___________________ TD_MACR , MC_SELL , MC_MODM , SF_MODP , MO_SYS
+#define _________________INTELLIJ_R3_________           MC_JOIN , MC_COMT , MC_SWLE , MC_SWRI 
+#define __INTELLIJ_R4____                               ACT_SPC , TT_NAV
+
 #define ___________________NOMOD_L1__________           KC_Q    , KC_B    , KC_M    , KC_G    
 #define ___________________NOMOD_L2____________________ KC_D    , KC_N    , KC_S    , KC_T    , KC_W
 #define           _________NOMOD_L3____________________           KC_F    , KC_C    , KC_P    , KC_V
@@ -54,26 +84,6 @@
 #define ___________________ALPHA2_R2___________________ KC_CIRC , MC_TL_A , MC_SQ_A , MC_SQ_E , MC_SQ_I
 #define ___________________ALPHA2_R3_________           KC_TILD , MC_TL_O , MC_CR_A , MC_CR_E 
 #define ____ALPHA2_R4____                               _______ , _______
-
-#define ___________________LOWER_L1__________           XXXXXXX , TD_LCBR , TD_RCBR , TD_DLR 
-#define ___________________LOWER_L2____________________ NAV_AT  , TD_LPRN , TD_RPRN , TD_DQUO , MC_SQUO
-#define           _________LOWER_L3____________________           TD_LBRC , TD_RBRC , TD_QUES , MC_BTIC
-#define                               ____LOWER_L4_____                               KC_CAPS , _______
-
-#define           _________LOWER_R1____________________           KC_7    , KC_8    , KC_9    , XXXXXXX
-#define ___________________LOWER_R2____________________ KC_COMM , KC_4    , KC_5    , KC_6    , KC_DOT
-#define ___________________LOWER_R3__________           KC_DOT  , KC_1    , KC_2    , KC_3    
-#define ____LOWER_R4_____                               RAI_SPC , MED_0
-
-#define ___________________RAISE_L1__________           XXXXXXX , KC_F9   , KC_F8   , KC_F7   
-#define ___________________RAISE_L2____________________ KC_F12  , KC_F6   , KC_F5   , KC_F4   , KC_F11
-#define           _________RAISE_L3____________________           KC_F3   , KC_F2   , KC_F1   , KC_F10
-#define                               ____RAISE_L4_____                               QK_REP  , SYM_SPC
-
-#define           _________RAISE_R1____________________           TD_COLN , TD_EQL  , TD_HASH , XXXXXXX
-#define ___________________RAISE_R2____________________ MC_CIRC , TD_MINS , TD_PLUS , TD_SLSH , KC_ASTR
-#define ___________________RAISE_R3__________           MC_TILD , TD_EXLM , TD_LT   , TD_GT     
-#define ____RAISE_R4_____                               _______ , TG_NUM
 
 #define _________________SYMBOLS_L1__________           XXXXXXX , KC_LCBR , KC_RCBR , KC_DLR 
 #define _________________SYMBOLS_L2____________________ KC_AT   , KC_LPRN , KC_RPRN , KC_DQUO , KC_QUOT
