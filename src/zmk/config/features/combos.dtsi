@@ -22,7 +22,6 @@
             timeout-ms = <COMBO_TERM>; \
             layers = <LAYERS>; \
             key-positions = <KEYS>; \
-            require-prior-idle-ms = <QUICK_TAP_TERM>; \
             bindings = <BINDINGS>; \
         };
 
