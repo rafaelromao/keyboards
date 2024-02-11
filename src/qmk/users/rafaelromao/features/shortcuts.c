@@ -183,23 +183,23 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
 
         case MC_PREV:
             if (isShifted) {
-                SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT("p"))));
-            } else {
                 SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT("s"))));
+            } else {
+                SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT("p"))));
             }
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_TABS:
             if (isShifted) {
-                SEND_STRING(SS_LSFT(SS_LGUI("a")));
-            } else {
                 SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT("f"))));
+            } else {
+                SEND_STRING(SS_LSFT(SS_LGUI("a")));
             }
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_CALC:
             if (isShifted) {
-                SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT("c"))));
-            } else {
                 SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT("t"))));
+            } else {
+                SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT("c"))));
             }
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_MIC:
