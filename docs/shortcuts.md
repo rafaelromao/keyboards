@@ -10,17 +10,15 @@
 ### Swapper
 - Swapper is a set of macros that allows easy swap between applications, tabs, navigation history and zoom levels.
 - These macros will work according to the OS selected in the System layer.
-- There are two pairs of dedicated keys.
 - The implementation was based on [Callums's](https://github.com/callum-oakley/qmk_firmware/tree/master/users/callum) implementation, but extended to support additional features.
 - Source Code: [swapper.c](../src/qmk/users/rafaelromao/features/swapper.c)
 #### Applications and Tabs
 - The first pair swaps back and forth between applications.
 - If shift is active in the first tap, they navigate between the current application tabs instead.
-    - And tapping both keys will close the current browser tab.
+
 #### History and Zoom
 - The second pair will decrease or increase zoom.
 - If shift is active in the first tap, they will navigate in the browser history instead.
-- Tapping both keys will refresh the current browser tab.
 - If shift is active when tapping both keys, they will clear cache and refresh the current browser tab.
 
 ### Select Word and Select Line
