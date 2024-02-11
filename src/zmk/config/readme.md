@@ -10,6 +10,4 @@ The full documentation can be found [here](https://github.com/rafaelromao/keyboa
 - Windows Support
 
 ### Known Issues:
-- Swapping between Applications and Tabs must start in the forward direction.
-- Swapping between the Navigation History must start in the backward direction.
 - Smart Cases does not implement slash/case.
