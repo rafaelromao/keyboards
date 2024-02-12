@@ -20,10 +20,11 @@ Parts:
 - [1n4148 diodes](https://aliexpress.com/item/1005003540554760.html).
 - [24 AWG Wires](https://aliexpress.com/item/32904950428.html).
 - [Dupont cables](https://aliexpress.com/item/1005004155181609.html).
-- [3D printed handwired hotswap sockets](https://www.printables.com/model/158559-handwire-hot-swap-socket-for-mechanical-keyboards).
+- [Hotswap Single Switch PCBs](https://keycapsss.com/keyboard-parts/pcbs/173/mxledbit-single-switch-pcb-mx-choc-hot-swap-socket?c=14) 
 - [Flat cables](https://www.aliexpress.com/item/1005003277577555.html).
 - 10mm M3 screws.
 - 4mm M3 heat insert (OD 4.5mm)
+  
 ### QMK
 
 #### Compile
