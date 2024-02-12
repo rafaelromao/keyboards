@@ -96,7 +96,7 @@
 #define __SYMBOLS_R4_____                               KC_SPC  , TG_NUM
 
 #define ___________________NAVIGATION_L1_____           _______ , MC_ESC  , KC_PGUP , KC_INS 
-#define ___________________NAVIGATION_L2_______________ XXXXXXX , KC_LSFT , KC_LCTL , KC_LGUI , XXXXXXX
+#define ___________________NAVIGATION_L2_______________ _______ , KC_LSFT , KC_LCTL , KC_LGUI , XXXXXXX
 #define           _________NAVIGATION_L3_______________           KC_RALT , KC_PGDN , KC_LALT , XXXXXXX
 #define                               __NAVIGATION_L4__                               _______ , _______
 #define                               __FIXED_NAV__L4__                               _______ , KC_SPC

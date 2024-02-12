@@ -50,3 +50,8 @@ echo "Creating Hummingbird build alias..."
 build_hummingbird_unibody="west build --pristine -s app -b seeeduino_xiao_ble --build-dir build/hummingbird -- -DSHIELD='hw_hummingbird rgbled_widget' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/config/boards/handwired"
 archive_hummingbird_unibody="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/hummingbird/zephyr/zmk.uf2 ] && mv build/hummingbird/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/hummingbird-zmk.uf2"
 alias build_hummingbird="cd ${ZMK_HOME} && ${build_hummingbird_unibody} && ${archive_hummingbird_unibody} && cd $KEYBOARD_HOME"
+
+echo "Creating Testpad build alias..."
+build_testpad_unibody="west build --pristine -s app -b seeeduino_xiao_ble --build-dir build/testpad -- -DSHIELD='testpad' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/config/boards/handwired"
+archive_testpad_unibody="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/testpad/zephyr/zmk.uf2 ] && mv build/testpad/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/testpad-zmk.uf2"
+alias build_testpad="cd ${ZMK_HOME} && ${build_testpad_unibody} && ${archive_testpad_unibody} && cd $KEYBOARD_HOME"

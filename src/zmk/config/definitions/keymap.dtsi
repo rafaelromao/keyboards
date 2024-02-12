@@ -218,7 +218,7 @@
                      label = "NAV";
                      bindings = <
    &trans              &kp ESC             &kp PAGE_UP         &kp INS             &none               &none               &kp TAB             &kp ENTER           &mc_delword         &trans
-   &none               &kp LSHIFT          &kp LCTRL           &kp LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &trans              &kp LSHIFT          &kp LCTRL           &kp LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
    &none               &kp RALT            &kp PAGE_DOWN       &kp LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &none
                                            &trans              &trans              &trans              &kp SPACE           &mo MEDIA           &trans
                         >;
@@ -236,7 +236,7 @@
                      label = "NAV";
                      bindings = <
    &trans              &kp ESC             &kp PAGE_UP         &kp INS             &none               &none               &kp TAB             &kp ENTER           &mc_delword         &trans
-   &none               &kp LSHIFT          &kp LCTRL           &kp LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &trans              &kp LSHIFT          &kp LCTRL           &kp LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
    &none               &kp RALT            &kp PAGE_DOWN       &kp LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &none
                                            &trans              &trans              &kp SPACE           &kp SPACE           &to ALPHA1          &trans
                            >;

@@ -1,0 +1,25 @@
+/*
+*
+* Copyright (c) 2024 Rafael Romão
+* SPDX-License-Identifier: MIT
+*
+*/
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+/ {
+        keymap {
+                compatible = "zmk,keymap";
+                default_layer {
+                     label = "TESTPAD";
+                     bindings = <
+                        &kp LS(LC(LA(LG(A)))) &kp LS(LC(LA(LG(B)))) &kp LS(LC(LA(LG(C))))
+                        &kp LS(LC(LA(LG(D)))) &kp LS(LC(LA(LG(E)))) &kp LS(LC(LA(LG(F))))
+                        &kp LS(LC(LA(LG(G)))) &kp LS(LC(LA(LG(H)))) &kp LS(LC(LA(LG(I))))
+                        &kp LS(LC(LA(LG(J)))) &bootloader 
+                        >;
+                };
+        };
+};
