@@ -6,6 +6,7 @@
 #include "smart_case.h"
 #include "smart_thumbs.h"
 #include "macros.h"
+#include "shortcuts.h"
 #include "swapper.h"
 #ifdef MOUSE_ENABLE
 #    include "getreuer/orbital_mouse.h"

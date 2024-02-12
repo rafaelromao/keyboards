@@ -69,7 +69,7 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
 
         case SF_FSYM:
             if (!record->event.pressed && record->tap.count) {
-                process_macros(MC_FSYM, NULL);
+                process_shortcuts(MC_FSYM, NULL);
                 return PROCESS_RECORD_RETURN_FALSE;
             }
             break;

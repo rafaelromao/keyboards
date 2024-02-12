@@ -169,7 +169,7 @@
 
         SHORTCUT(mc_delword,                &macro_tap &kp LA(BACKSPACE))
         SHORTCUT(mc_extsel,                 &macro_tap &kp LA(UP))
-        SHORTCUT(mc_shrsel,                 &macro_tap &kp LA(UD))
+        SHORTCUT(mc_shrsel,                 &macro_tap &kp LA(DOWN))
         SHIFTED_SHORTCUT(mm_extsel,         &mc_extsel, &mc_shrsel)
     };
 };

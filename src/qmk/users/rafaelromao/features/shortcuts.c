@@ -212,6 +212,328 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
         case MC_CAM:
             SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT(SS_LGUI("c")))));
             return PROCESS_RECORD_RETURN_FALSE;
+
+            // INTELLIJ
+
+            // Quick Actions / Breakpoint
+
+        case MC_QUIK:
+            if (isShifted) {
+                if (isMacOS) {
+                    SEND_STRING(SS_LGUI(SS_TAP(X_F8)));
+                } else {
+                    SEND_STRING(SS_LCTL(SS_TAP(X_F8)));
+                    break;
+                }
+            } else {
+                SEND_STRING(SS_LALT(SS_TAP(X_ENT)));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Type-matching Auto Complete / Basic Auto Complete
+
+        case MC_AUCO:
+            if (isShifted) {
+                SEND_STRING(SS_LCTL(SS_TAP(X_SPC)));
+            } else {
+                SEND_STRING(SS_LCTL(SS_LSFT(SS_TAP(X_SPC))));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Quick Docs / Parameter Info
+
+        case MC_QDOC:
+            if (isShifted) {
+                if (isMacOS) {
+                    SEND_STRING(SS_LCMD(SS_TAP(X_P)));
+                } else {
+                    SEND_STRING(SS_LCTL(SS_TAP(X_P)));
+                    break;
+                }
+            } else {
+                if (isMacOS) {
+                    tap_code(KC_F1);
+                } else {
+                    SEND_STRING(SS_LCTL(SS_TAP(X_Q)));
+                    break;
+                }
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Find Symbol / Find Action
+
+        case MC_FSYM:
+            if (isShifted) {
+                if (isMacOS) {
+                    SEND_STRING(SS_LSFT(SS_LGUI(SS_TAP(X_A))));
+                } else {
+                    SEND_STRING(SS_LSFT(SS_LCTL(SS_TAP(X_A))));
+                }
+            } else {
+                if (isMacOS) {
+                    SEND_STRING(SS_LALT(SS_LGUI(SS_TAP(X_O))));
+                } else {
+                    SEND_STRING(SS_LALT(SS_LSFT(SS_LCTL(SS_TAP(X_N)))));
+                }
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Run / Stop
+
+        case MC_RUN:
+            if (isShifted) {
+                if (isMacOS) {
+                    SEND_STRING(SS_LGUI(SS_TAP(X_F2)));
+                } else {
+                    SEND_STRING(SS_LCTL(SS_TAP(X_F2)));
+                    break;
+                }
+            } else {
+                if (isMacOS) {
+                    SEND_STRING(SS_LCTL(SS_TAP(X_R)));
+                } else {
+                    SEND_STRING(SS_LSFT(SS_TAP(X_F10)));
+                }
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Debug / Resume
+
+        case MC_DBUG:
+            if (isShifted) {
+                if (isMacOS) {
+                    SEND_STRING(SS_LALT(SS_LGUI(SS_TAP(X_R))));
+                } else {
+                    SEND_STRING(SS_TAP(X_F9));
+                    break;
+                }
+            } else {
+                if (isMacOS) {
+                    SEND_STRING(SS_LCTL(SS_TAP(X_D)));
+                } else {
+                    SEND_STRING(SS_LSFT(SS_TAP(X_F9)));
+                }
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Build / Rebuild
+
+        case MC_BUID:
+            if (isShifted) {
+                if (isMacOS) {
+                    SEND_STRING(SS_LSFT(SS_LGUI(SS_TAP(X_F9))));
+                } else {
+                    SEND_STRING(SS_LSFT(SS_LCTL(SS_TAP(X_F9))));
+                }
+            } else {
+                if (isMacOS) {
+                    SEND_STRING(SS_LGUI(SS_TAP(X_F9)));
+                } else {
+                    SEND_STRING(SS_LCTL(SS_TAP(X_F9)));
+                }
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Project Files / Select In
+
+        case MC_PROJ:
+            if (isShifted) {
+                SEND_STRING(SS_LALT(SS_TAP(X_F1)));
+                return PROCESS_RECORD_RETURN_FALSE;
+            } else {
+                if (isMacOS) {
+                    SEND_STRING(SS_LGUI(SS_TAP(X_1)));
+                } else {
+                    SEND_STRING(SS_LALT(SS_TAP(X_1)));
+                }
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+
+            // Recent Files / Previous Error
+
+        case MC_RECE:
+            if (isShifted) {
+                SEND_STRING(SS_LSFT(SS_TAP(X_F2)));
+            } else {
+                if (isMacOS) {
+                    SEND_STRING(SS_LGUI(SS_TAP(X_E)));
+                } else {
+                    SEND_STRING(SS_LCTL(SS_TAP(X_E)));
+                }
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Complete Statement / Next Error
+
+        case MC_COMP:
+            if (isShifted) {
+                SEND_STRING(SS_TAP(X_F2));
+            } else {
+                if (isMacOS) {
+                    SEND_STRING(SS_LSFT(SS_LGUI(SS_TAP(X_ENT))));
+                } else {
+                    SEND_STRING(SS_LSFT(SS_LCTL(SS_TAP(X_ENT))));
+                }
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Find Usages / Quick Definition
+
+        case MC_FIUS:
+            if (isShifted) {
+                if (isMacOS) {
+                    SEND_STRING(SS_LALT(SS_TAP(X_SPC)));
+                } else {
+                    SEND_STRING(SS_LCTL(SS_LSFT(SS_TAP(X_I))));
+                    break;
+                }
+            } else {
+                if (isMacOS) {
+                    SEND_STRING(SS_LGUI(SS_LALT(SS_TAP(X_F7))));
+                } else {
+                    SEND_STRING(SS_LCTL(SS_LALT(SS_TAP(X_F7))));
+                    break;
+                }
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Refactor / Reformat
+
+        case MC_REFC:
+            if (isShifted) {
+                if (isMacOS) {
+                    SEND_STRING(SS_LGUI(SS_LALT(SS_TAP(X_L))));
+                } else {
+                    SEND_STRING(SS_LCTL(SS_LALT(SS_TAP(X_L))));
+                }
+            } else {
+                if (isMacOS) {
+                    SEND_STRING(SS_LCTL(SS_TAP(X_T)));
+                } else {
+                    SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT(SS_TAP(X_T)))));
+                }
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Comment Lines
+
+        case MC_COMT:
+            if (isMacOS) {
+                SEND_STRING(SS_LGUI("/"));
+            } else {
+                SEND_STRING(SS_LCTL("/"));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Reset Zoom / Refresh
+
+        case MC_Z0R:
+            if (isShifted) {
+                if (isMacOS) {
+                    SEND_STRING(SS_LGUI(SS_TAP(X_R)));
+                } else {
+                    tap_code(KC_F5);
+                }
+            } else {
+                if (isMacOS) {
+                    SEND_STRING(SS_LGUI(SS_TAP(X_0)));
+                } else {
+                    SEND_STRING(SS_LCTL(SS_TAP(X_0)));
+                }
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Esc / Close Tab
+
+        case MC_CLOS:
+            if (isShifted) {
+                if (isMacOS) {
+                    SEND_STRING(SS_LGUI(SS_TAP(X_W)));
+                } else {
+                    SEND_STRING(SS_LCTL(SS_TAP(X_F4)));
+                    break;
+                }
+            } else {
+                tap_code(KC_ESC);
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Delete Word
+
+        case MC_DELW:
+            if (isMacOS) {
+                tap_code16(LALT(KC_BSPC));
+            } else {
+                tap_code16(LCTL(KC_BSPC));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Extent or Shrink Selection
+
+        case MC_EXSE:
+            if (isShifted) {
+                if (isMacOS) {
+                    tap_code16(LALT(KC_DOWN));
+                } else {
+                    tap_code16(LCTL(LSFT(KC_W)));
+                }
+            } else {
+                if (isMacOS) {
+                    tap_code16(LALT(KC_UP));
+                } else {
+                    tap_code16(LCTL(KC_W));
+                }
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // VIM
+
+            // Shift V
+
+        case MC_SVI:
+            register_mods(MOD_MASK_SHIFT);
+            tap_code(KC_V);
+            unregister_mods(MOD_MASK_SHIFT);
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Ctrl V
+
+        case MC_CVI:
+            register_mods(MOD_MASK_CTRL);
+            tap_code(KC_V);
+            unregister_mods(MOD_MASK_CTRL);
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // "0p
+
+        case MC_0P:
+            tap_code16(KC_DQUO);
+            tap_code(KC_0);
+            tap_code(KC_P);
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // ESC + O + ESC
+
+        case MC_OESC:
+            if (isShifted) {
+                register_mods(MOD_MASK_SHIFT);
+                tap_code(KC_O);
+                unregister_mods(MOD_MASK_SHIFT);
+                tap_code(KC_ESC);
+            } else {
+                tap_code(KC_O);
+                tap_code(KC_ESC);
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // ESC + LShift(O) + ESC
+
+        case MC_SOES:
+            register_mods(MOD_MASK_SHIFT);
+            tap_code(KC_O);
+            unregister_mods(MOD_MASK_SHIFT);
+            tap_code(KC_ESC);
+            return PROCESS_RECORD_RETURN_FALSE;
     }
 
     return PROCESS_RECORD_CONTINUE;
