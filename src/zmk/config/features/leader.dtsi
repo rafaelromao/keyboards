@@ -22,7 +22,6 @@
     #define LEADER_MACRO(NAME, BINDINGS) \
         NAME: NAME { \
 			compatible = "zmk,behavior-macro"; \
-            label = ZMK_MACRO_STRINGIFY(NAME); \
             #binding-cells = <0>; \
             wait-ms = <10>; \
             tap-ms = <10>; \
@@ -54,7 +53,6 @@
 
     dynamic_macros {
         dynmacro: dynmacro {
-            label = "ZM_dynamic-macro";
             compatible = "zmk,behavior-dynamic-macro";
             #binding-cells = <1>;
             wait-ms = <1>;
@@ -62,7 +60,6 @@
 
         td_dynmacro: td_dynmacro {
             compatible = "zmk,behavior-tap-dance";
-            label = ZMK_MACRO_STRINGIFY(td_dynmacro);
             #binding-cells = <0>;
             tapping-term-ms = <TD_TAPPING_TERM>;
             bindings = <&dynmacro PLAY>, <&dynmacro RECORD>, <&none>;
