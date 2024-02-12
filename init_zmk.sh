@@ -2,14 +2,22 @@
 
 KEYBOARD_HOME="$(pwd)"
 export ZMK_HOME="$KEYBOARD_HOME/modules/rafaelromao/zmk"
+RGBWIDGET_HOME="$KEYBOARD_HOME/modules/caksoylar/zmk-rgbled-widget"
+
+if [[ ! -d "$RGBWIDGET_HOME" ]]
+then
+    echo "Add git sub-modules..."
+    git submodule add -f https://github.com/caksoylar/zmk-rgbled-widget modules/caksoylar/zmk-rgbled-widget
+fi
 
 INIT=false
-if [[ ! -d "$ZMK_HOME" ]]
+if [[ ! -d "$ZMK_HOME/.west" ]]
 then
     INIT=true
     echo "Add git sub-modules..."
     git submodule add -f https://github.com/rafaelromao/zmk modules/rafaelromao/zmk
 fi
+
 echo "Update git sub-modules..."
 git submodule sync --recursive
 git submodule update --init --recursive --progress
@@ -47,7 +55,8 @@ alias build_zen_both_sides="cd ${ZMK_HOME} && ${build_zen_left} && ${archive_zen
 alias build_zen="cd ${ZMK_HOME} && ${build_zen_left} && ${archive_zen_left} && cd ${KEYBOARD_HOME}"
 
 echo "Creating Hummingbird build alias..."
-build_hummingbird_unibody="west build --pristine -s app -b seeeduino_xiao_ble --build-dir build/hummingbird -- -DSHIELD='hw_hummingbird rgbled_widget' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/config/boards/handwired"
+build_hummingbird_unibody="west build --pristine -s app -b seeeduino_xiao_ble --build-dir build/hummingbird -- -DSHIELD='hw_hummingbird' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/config/boards/handwired"
+# build_hummingbird_unibody="west build --pristine -s app -b seeeduino_xiao_ble --build-dir build/hummingbird -- -DSHIELD='hw_hummingbird rgbled_adapter' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/config/boards/handwired -DZMK_EXTRA_MODULES=$RGBWIDGET_HOME"
 archive_hummingbird_unibody="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/hummingbird/zephyr/zmk.uf2 ] && mv build/hummingbird/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/hummingbird-zmk.uf2"
 alias build_hummingbird="cd ${ZMK_HOME} && ${build_hummingbird_unibody} && ${archive_hummingbird_unibody} && cd $KEYBOARD_HOME"
 
