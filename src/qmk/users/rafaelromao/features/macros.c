@@ -408,7 +408,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Close Window / Close Tab
+            // Esc / Close Tab
 
         case MC_CLOS:
             if (isShifted) {
@@ -419,12 +419,7 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
                     break;
                 }
             } else {
-                if (isMacOS) {
-                    SEND_STRING(SS_LGUI(SS_TAP(X_Q)));
-                } else {
-                    SEND_STRING(SS_LALT(SS_TAP(X_F4)));
-                    break;
-                }
+                tap_code(KC_ESC);
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
@@ -459,6 +454,24 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
                 tap_code16(LALT(KC_BSPC));
             } else {
                 tap_code16(LCTL(KC_BSPC));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Extent or Shrink Selection
+
+        case MC_EXSE:
+            if (isShifted) {
+                if (isMacOS) {
+                    tap_code16(LALT(KC_DOWN));
+                } else {
+                    tap_code16(LCTL(LSFT(KC_W)));
+                }
+            } else {
+                if (isMacOS) {
+                    tap_code16(LALT(KC_UP));
+                } else {
+                    tap_code16(LCTL(KC_W));
+                }
             }
             return PROCESS_RECORD_RETURN_FALSE;
     }

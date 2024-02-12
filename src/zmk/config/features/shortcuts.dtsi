@@ -160,13 +160,16 @@
         SHIFTED_SHORTCUT(mm_refresh_z0,     &mc_z0, &mc_refresh)
         
         SHORTCUT(mc_close_tab,              &macro_tap &kp LG(W))
-        SHORTCUT(mc_close_win,              &macro_tap &kp LG(Q))
-        SHIFTED_SHORTCUT(mm_close_tab_win,  &mc_close_win, &mc_close_tab)
+        SHORTCUT(mc_esc,                    &macro_tap &kp ESC)
+        SHIFTED_SHORTCUT(mm_close_tab_esc,  &mc_close_win, &mc_esc)
 
         SHORTCUT(mc_comment,                &macro_tap &kp LG(SLASH))
         SHORTCUT(mc_escc,                   &macro_tap &kp ESC &to ALPHA1)
         SHORTCUT(mc_dqt0p,                  &macro_tap &kp DQT &kp N0 &kp P)
 
         SHORTCUT(mc_delword,                &macro_tap &kp LA(BACKSPACE))
+        SHORTCUT(mc_extsel,                 &macro_tap &kp LA(UP))
+        SHORTCUT(mc_shrsel,                 &macro_tap &kp LA(UD))
+        SHIFTED_SHORTCUT(mm_extsel,         &mc_extsel, &mc_shrsel)
     };
 };
