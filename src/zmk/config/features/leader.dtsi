@@ -54,6 +54,7 @@
     dynamic_macros {
         dynmacro: dynmacro {
             compatible = "zmk,behavior-dynamic-macro";
+            label = "dynmacro";
             #binding-cells = <1>;
             wait-ms = <1>;
         };

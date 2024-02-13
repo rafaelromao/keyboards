@@ -119,6 +119,7 @@
 
         shift_caps_word: shift_caps_word {
             compatible = "zmk,behavior-mod-morph";
+            label = "shift_caps_word";
             #binding-cells = <0>;
             bindings = <&sk LSHFT>, <&custom_caps_word>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -136,6 +137,7 @@
         };
         smart_shift_repeat: smart_shift_repeat {
             compatible = "zmk,behavior-antecedent-morph";
+            label = "smart_shift_repeat";
             #binding-cells = <0>;
             max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
             defaults = <&shift_caps_word>;
@@ -173,6 +175,7 @@
         };
         smart_shift_magic: smart_shift_magic {
             compatible = "zmk,behavior-antecedent-morph";
+            label = "smart_shift_magic";
             #binding-cells = <0>;
             max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
             defaults = <&shift_caps_word>;
