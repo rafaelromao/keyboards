@@ -9,7 +9,6 @@
     #define SHORTCUT(NAME, BINDINGS) \
         NAME: NAME { \
             compatible = "zmk,behavior-macro"; \
-            label = ZMK_MACRO_STRINGIFY(NAME); \
             #binding-cells = <0>; \
             wait-ms = <10>; \
             tap-ms = <10>; \
@@ -19,7 +18,6 @@
     #define SHIFTED_SHORTCUT(NAME, UNSHIFTED, SHIFTED) \
         NAME: NAME { \
             compatible = "zmk,behavior-mod-morph"; \
-            label = ZMK_MACRO_STRINGIFY(NAME); \
             #binding-cells = <0>; \
             bindings = <UNSHIFTED>, <SHIFTED>; \
             mods = <(MOD_LSFT|MOD_RSFT)>; \
@@ -28,7 +26,6 @@
     #define MODTAP_SHORTCUT(NAME, BINDINGS) \
          NAME: NAME { \
             compatible = "zmk,behavior-hold-tap"; \
-            label = ZMK_MACRO_STRINGIFY(NAME); \
             #binding-cells = <2>; \
             tapping-term-ms = <TAPPING_TERM>; \
             flavor = "tap-preferred"; \
@@ -40,7 +37,6 @@
     #define LAYERTAP_SHORTCUT(NAME, BINDINGS) \
          NAME: NAME { \
             compatible = "zmk,behavior-hold-tap"; \
-            label = ZMK_MACRO_STRINGIFY(NAME); \
             #binding-cells = <2>; \
             tapping-term-ms = <TAPPING_TERM>; \
             quick-tap-ms = <QUICK_TAP_TERM>; \

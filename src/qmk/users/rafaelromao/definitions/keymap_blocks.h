@@ -55,7 +55,7 @@
 #define ________________SHORTCUTS_R3_________           XXXXXXX , TD_MACR , MC_LOCK , KC_SLEP
 #define _SHORTCUTS_R4____                               INT_SPC , TT_NAV
 
-#define _________________INTELLIJ_L1_________           XXXXXXX , KC_ESC  , MC_AUCO , MC_BUID 
+#define _________________INTELLIJ_L1_________           XXXXXXX , MC_CLOS , MC_AUCO , MC_BUID 
 #define _________________INTELLIJ_L2___________________ MC_PROJ , SF_FSYM , MC_RUN  , MC_DBUG , XXXXXXX
 #define           _______INTELLIJ_L3___________________           MC_RECE , MC_COMP , MC_FIUS , XXXXXXX
 #define                               __INTELLIJ_L4____                               _______ , _______

@@ -25,7 +25,7 @@ git submodule update --init --recursive --progress
 echo "Checking out zmk..."
 cd $ZMK_HOME
 git fetch
-git checkout 20240122/rafaelromao/main
+git checkout 20240212/rafaelromao/main
 git pull
 cd $KEYBOARD_HOME
 
@@ -43,7 +43,7 @@ echo "Exporting Zephyr Toolchain..."
 cd $ZMK_HOME
 unset ZEPHYR_TOOLCHAIN_VARIANT
 unset GNUARMEMB_TOOLCHAIN_PATH
-export ZEPHYR_SDK_INSTALL_DIR=~/zephyr-sdk-0.15.0
+export ZEPHYR_SDK_INSTALL_DIR=~/zephyr-sdk-0.16.3
 cd $KEYBOARD_HOME
 
 echo "Creating Zen build alias..."
@@ -55,8 +55,7 @@ alias build_zen_both_sides="cd ${ZMK_HOME} && ${build_zen_left} && ${archive_zen
 alias build_zen="cd ${ZMK_HOME} && ${build_zen_left} && ${archive_zen_left} && cd ${KEYBOARD_HOME}"
 
 echo "Creating Hummingbird build alias..."
-build_hummingbird_unibody="west build --pristine -s app -b seeeduino_xiao_ble --build-dir build/hummingbird -- -DSHIELD='hw_hummingbird' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/config/boards/handwired"
-# build_hummingbird_unibody="west build --pristine -s app -b seeeduino_xiao_ble --build-dir build/hummingbird -- -DSHIELD='hw_hummingbird rgbled_adapter' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/config/boards/handwired -DZMK_EXTRA_MODULES=$RGBWIDGET_HOME"
+build_hummingbird_unibody="west build --pristine -s app -b seeeduino_xiao_ble --build-dir build/hummingbird -- -DSHIELD='hw_hummingbird rgbled_adapter' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/config/boards/handwired -DZMK_EXTRA_MODULES=$RGBWIDGET_HOME"
 archive_hummingbird_unibody="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/hummingbird/zephyr/zmk.uf2 ] && mv build/hummingbird/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/hummingbird-zmk.uf2"
 alias build_hummingbird="cd ${ZMK_HOME} && ${build_hummingbird_unibody} && ${archive_hummingbird_unibody} && cd $KEYBOARD_HOME"
 

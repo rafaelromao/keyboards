@@ -19,14 +19,12 @@
         sw_win_b: sw_win_b {
             wait-ms = <0>;
             tap-ms = <0>;
-            label = ZMK_MACRO_STRINGIFY(sw_win_b);
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap &kp LS(TAB)>;
         };
         sw_win_f: sw_win_f {
             compatible = "zmk,behavior-tri-state";
-            label = ZMK_MACRO_STRINGIFY(sw_win_f);
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
             ignored-key-positions = <LBM LBR>;
@@ -35,14 +33,12 @@
         sw_tab_b: sw_tab_b {
             wait-ms = <0>;
             tap-ms = <0>;
-            label = ZMK_MACRO_STRINGIFY(sw_tab_b);
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap &kp LS(TAB)>;
         };
         sw_tab_f: sw_tab_f {
             compatible = "zmk,behavior-tri-state";
-            label = ZMK_MACRO_STRINGIFY(sw_tab_f);
             #binding-cells = <0>;
             bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
             ignored-key-positions = <LBM LBR>;
@@ -50,14 +46,12 @@
         };
         mm_wt_b: mm_wt_b {
             compatible = "zmk,behavior-mod-morph";
-            label = ZMK_MACRO_STRINGIFY(mm_wt_b);
             #binding-cells = <0>;
             bindings = <&sw_win_b>, <&sw_tab_b>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         mm_wt_f: mm_wt_f {
             compatible = "zmk,behavior-mod-morph";
-            label = ZMK_MACRO_STRINGIFY(mm_wt_f);
             #binding-cells = <0>;
             bindings = <&sw_win_f>, <&sw_tab_f>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -66,7 +60,6 @@
         sw_zoo_b: sw_zoo_b {
             wait-ms = <0>;
             tap-ms = <0>;
-            label = ZMK_MACRO_STRINGIFY(sw_zoo_b);
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap &mc_zout>;
@@ -74,14 +67,12 @@
         sw_zoo_f: sw_zoo_f {
             wait-ms = <0>;
             tap-ms = <0>;
-            label = ZMK_MACRO_STRINGIFY(sw_zoo_f);
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap &mc_zin>;
         };
         sw_his_b: sw_his_b {
             compatible = "zmk,behavior-tri-state";
-            label = ZMK_MACRO_STRINGIFY(sw_his_b);
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp LBKT>, <&kt LGUI>;
             ignored-key-positions = <LHM LHR>;
@@ -90,21 +81,18 @@
         sw_his_f: sw_his_f {
             wait-ms = <0>;
             tap-ms = <0>;
-            label = ZMK_MACRO_STRINGIFY(sw_his_f);
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap &kp RBKT>;
         };
         mm_zh_b: mm_zh_b {
             compatible = "zmk,behavior-mod-morph";
-            label = ZMK_MACRO_STRINGIFY(mm_zh_b);
             #binding-cells = <0>;
             bindings = <&sw_zoo_b>, <&sw_his_b>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         mm_zh_f: mm_zh_f {
             compatible = "zmk,behavior-mod-morph";
-            label = ZMK_MACRO_STRINGIFY(mm_zh_f);
             #binding-cells = <0>;
             bindings = <&sw_zoo_f>, <&sw_his_f>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -112,7 +100,6 @@
 
         th_zh_b: th_zh_b {
             compatible = "zmk,behavior-hold-tap";
-            label = ZMK_MACRO_STRINGIFY(th_zh_b);
             #binding-cells = <2>;
             tapping-term-ms = <TAPPING_TERM>;
             flavor = "tap-preferred";

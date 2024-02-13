@@ -235,10 +235,6 @@ void process_shift_repeat(uint16_t keycode) {
                 tap_code(KC_O);
                 tap_code(KC_M);
                 break;
-            case KC_MINS:
-                tap_code16(KC_MINS);
-                tap_code16(KC_MINS);
-                break;
             default:
                 tap_code16(key);
         }
@@ -343,9 +339,6 @@ void process_shift_magic(uint16_t keycode) {
                 break;
             case KC_DOT:
                 tap_code(KC_SLSH);
-                break;
-            case KC_MINS:
-                tap_code16(KC_GT);
                 break;
             default:
                 tap_code16(key);
