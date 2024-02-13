@@ -49,7 +49,7 @@ This layout was tested with the keyboards listed below, but can be easily adapte
 
 The reference implementation is done in QMK, so it has all features supported.
 
-The qmk version recommended for this keymap is 0.22.10.
+The QMK version recommended for this keymap is 0.22.10.
 
 The tested boards are listed below:
 
@@ -69,6 +69,8 @@ The zmk version used for this keymap is the one available in [this fork](https:/
 - [Dynamic Macros](https://github.com/zmkfirmware/zmk/pull/1351)
 - [Mouse Keys](https://github.com/zmkfirmware/zmk/pull/778)
 - [Some improvements for the Corne-ish Zen display](https://gist.github.com/caksoylar/c411313990978e1903c244f03039187a)
+
+The ZMK version recommended for this keymap is Zephyr 3.5
 
 The tested boards are listed below:
 

@@ -7,6 +7,7 @@ The full documentation can be found [here](https://github.com/rafaelromao/keyboa
 
 ### Missing features:
 - Orbital Mouse
+    - Regular Mouse Emulation is available instead.
 - Windows Support
 
 ### Known Issues:
