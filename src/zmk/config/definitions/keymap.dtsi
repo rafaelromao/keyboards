@@ -145,7 +145,7 @@
                 intellij_layer {
                      label = "INTELLIJ";
                      bindings = <
-   &trans              &kp ESC             &mm_typematch       &mm_build           &none               &none               &mm_extsel          &kp ENTER           &kp ESC             &trans    
+   &trans              &mm_close_tab_esc   &mm_typematch       &mm_build           &none               &none               &mm_extsel          &kp ENTER           &kp ESC             &trans    
    &mm_project         &th_find LSHFT 0    &mm_run             &mm_debug           &none               &none               &mm_actions         &kp DOWN            &mt RSHFT UP        &trans
    &none               &mm_recent          &mm_complete        &mm_usages          &none               &none               &mm_docs            &mm_refac           &mc_comment         &none
                                            &trans              &trans              &trans              &trans              &trans              &trans
