@@ -51,6 +51,8 @@ The reference implementation is done in QMK, so it has all features supported.
 
 The qmk version recommended for this keymap is 0.22.10.
 
+The tested boards are listed below:
+
 - [handwired/rafaelromao/fauxberry](src/qmk/keyboards/handwired/rafaelromao/fauxberry/readme.md)
 - [handwired/rafaelromao/rommana](src/qmk/keyboards/handwired/rafaelromao/rommana/readme.md)
 - [kprepublic/bm40hsrgb](src/qmk/keyboards/kprepublic/bm40hsrgb/keymaps/rafaelromao/readme.md)
@@ -60,7 +62,15 @@ Some features are not available on all keyboards though. For instance, the BM40 
 
 ### ZMK
 
-The zmk version used for this keymap is the one available in [this fork](https://github.com/rafaelromao/zmk/tree/rafaelromao/main), which contains some experimental code from [Nick Conway](https://github.com/nickconway/zmk-config), [Cem Aksoylar](https://github.com/caksoylar/zmk-config ) and [Robert U](https://github.com/urob/zmk-config), to implement features like `Swapper`, `Smart Cases` and `Leader Key`, among other small improvements.
+The zmk version used for this keymap is the one available in [this fork](https://github.com/rafaelromao/zmk/tree/rafaelromao/main), which contains some experimental code from [Nick Conway](https://github.com/nickconway/zmk-config), [Cem Aksoylar](https://github.com/caksoylar/zmk-config ), [Robert U](https://github.com/urob/zmk-config) and [Alexander Krikun](https://github.com/krikun98), to implement features like:
+- [Swapper](https://github.com/zmkfirmware/zmk/pull/1366)
+- [Smart Word](https://github.com/zmkfirmware/zmk/pull/1451)
+- [Leader Key](https://github.com/zmkfirmware/zmk/pull/1380)
+- [Dynamic Macros](https://github.com/zmkfirmware/zmk/pull/1351)
+- [Mouse Keys](https://github.com/zmkfirmware/zmk/pull/778)
+- [Some improvements for the Corne-ish Zen display](https://gist.github.com/caksoylar/c411313990978e1903c244f03039187a)
+
+The tested boards are listed below:
 
 - [lowprokb.ca/corneish-zen](src/zmk/config/boards/lowprokb.ca/corneish-zen/readme.md)
 - [handwired/hummingbird](src/zmk/config/boards/handwired/boards/shields/hw_hummingbird//readme.md)
@@ -109,6 +119,7 @@ Most features implemented here were based on the work referenced below.
 - [Nick Conway](https://github.com/nickconway/zmk-config)
 - [Cem Aksoylar](https://github.com/caksoylar/zmk-config )
 - [Robert U](https://github.com/urob/zmk-config)
+- [Alexander Krikun](https://github.com/krikun98)
 
 ### 3D Printing and Handwiring
 - [Jan Lunge](https://m.youtube.com/@JanLunge)
