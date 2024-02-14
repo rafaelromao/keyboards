@@ -1,9 +1,9 @@
 # Copyright (c) 2021 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_HW_HUMMINGBIRD
+if SHIELD_AELLOPOS
 
 config ZMK_KEYBOARD_NAME
-    default "Hummingbird"
+    default "Aellopos"
 
 endif
