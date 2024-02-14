@@ -43,15 +43,18 @@
 - Up and Down arrows, Enter and Esc are also available in the right side of this layer to make it easier to navigate in context menus.
 - There is also a home row shift in the right side to allow access to different actions when shift is active.
 
-### Comment Lines
+### IntelliJ Shortcuts
 
-- This macro comments/uncomments the current line or selected text block.
-- Source Code: [macros.c](../src/qmk/users/rafaelromao/features/macros.c)
+The list of bellow contains the most used IntelliJ shortcuts.
+To avoid conflicts with MacOS and Windows shortcuts, in both Operating Systems, custom shortcuts from [MacOS for All](https://github.com/samvtran/jetbrains-macos-keybindings-for-all) plugin are used instead of the default ones.
 
-### Coding Shortcuts
+| Default Action | Shifted Action | Custom Shortcut | Shifted Shortcut
+|---|---|---|---|
+| Comment Lines |  | Gui + / |
+| Quick Actions | Toggle Breakpoint | Alt + Enter | Gui + F8
+| Type-matching | Auto Complete | Ctrl + Shift + Space | Ctrl + Space
 
-- Quick Actions (Alt+Enter) - If shifted, toggle a breakpoint in the current line (Cmd+F8 / Ctrl+F8).
-- Type-matching Auto Complete (Ctrl+Shift+Space) - If shifted, show Basic Auto Complete Options (Ctrl+Space)
+
 - Show Quick Docs (F1 / Ctrl+Q) - If shifted, show Parameters Info (Cmd+P / Ctrl+P)
 - Find Symbol (Cmd+Option+O / Ctrl+Alt+Shift+N) - If shifted, Find Action (Cmd+Shift+A / Ctrl+Shift+A) - Hold will act as Shift
 - Run (Ctrl+R / Shift+F10) - If shifted, Stop (Cmd+F2 / Ctrl+F2)

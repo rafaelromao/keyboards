@@ -192,7 +192,7 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
             if (isShifted) {
                 SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT("f"))));
             } else {
-                SEND_STRING(SS_LSFT(SS_LGUI("a")));
+                SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT(SS_LGUI("t")))));
             }
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_CALC:

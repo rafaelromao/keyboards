@@ -123,6 +123,7 @@ bool in_mid_word(uint16_t key, bool isMagic) {
             case KC_S:
             case KC_C:
             case KC_G:
+            case KC_MINUS:
                 return false;
         }
     }

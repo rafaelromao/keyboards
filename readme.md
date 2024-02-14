@@ -33,8 +33,8 @@ The following pages explain how this layout works and which features are impleme
 - [Swapper](docs/shortcuts.md#swapper)
 - [Select Word](docs/shortcuts.md#select-word-and-select-line)
 - [Dynamic Macros](docs/shortcuts.md#dynamic-macros)
-- [Coding Shortcuts](docs/shortcuts.md#coding-shortcuts)
 - [Coding Dancing](docs/symbols.md#coding-dancing)
+- [IntelliJ Shortcuts](docs/shortcuts.md#coding-shortcuts)
 - [Orbital Mouse](docs/navigation.md#orbital-mouse)
 
 ## About this repo
