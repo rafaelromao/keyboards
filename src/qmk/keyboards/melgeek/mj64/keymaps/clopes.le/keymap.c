@@ -38,9 +38,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	),
     [2] = LAYOUT_64_ansi(
 			_______,   _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
-			_______,   MC_QUE ,  _______,  MC_ESCL,  MC_RESP,  TD_T   ,  _______,  _______,  MC_INFO,  _______,  TD_P   ,  _______,  _______,  _______,
-            _______,   TD_A   ,  TD_S   ,  TD_D   ,  MC_APTE,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
-		    _______,   _______,  _______,  MC_CONF,  TD_V   ,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
+			_______,   _______,  TD_W   ,  _______,  MC_R   ,  _______,  _______,  _______,  TD_I   ,  _______,  TD_P   ,  _______,  _______,  _______,
+            _______,   _______,  TD_S   ,  TD_D   ,  MC_F   ,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
+		    _______,   _______,  _______,  MC_C   ,  _______,  _______,  TD_N   ,  _______,  _______,  _______,  _______,  _______,  _______,  _______,
 			_______,   _______,  _______,                      _______,                                _______,  _______,  _______,  _______,  _______
     ),
 	[3] = LAYOUT_64_ansi(
@@ -56,37 +56,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 // Custom Processing
 
-#define DECLARACOES "declara" SS_TAP(X_SCLN) SS_TAP(X_QUOT) SS_TAP(X_O) "es"
+#define RAZAO "raz" SS_TAP(X_QUOT) SS_TAP(X_A) "o"
+#define INVESTIGACAO "investiga" SS_TAP(X_SCLN) SS_TAP(X_QUOT) SS_TAP(X_A) "o"
+#define APURACAO "apura" SS_TAP(X_SCLN) SS_TAP(X_QUOT) SS_TAP(X_A) "o"
 #define VITIMA "v" SS_TAP(X_LBRC) SS_TAP(X_I) "tima"
+#define POLICIA "POL" SS_LSFT(SS_TAP(X_LBRC) SS_TAP(X_I)) "CIA"
 #define SILENCIO "sil" SS_LSFT(SS_TAP(X_QUOT)) SS_TAP(X_E) "ncio"
-
-bool spacing = false;
+#define CODIGO "c" SS_TAP(X_LBRC) SS_TAP(X_O) "digo"
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     if (record != NULL && !record->event.pressed) {
         return true;
     }
-    // Deactivate OS Macros
-    switch (keycode) {
-        case KC_SPC:
-            if (IS_LAYER_ON(2)) {
-                if (spacing) {
-                    clear_oneshot_layer_state(ONESHOT_PRESSED);
-                    tap_code(KC_BSPC);
-                } else {
-                    spacing = true;
-                    return true;
-                }
-            }
-            break;
-        case KC_ESC:
-            clear_oneshot_layer_state(ONESHOT_PRESSED);
-            break;
-    }
 
-    spacing = false;
-
-    // Activate OS Macros
     if (keycode == OS_MAC) {
         set_oneshot_layer(2, ONESHOT_START);
         return false;
@@ -94,92 +76,90 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     // Process macros
     switch (keycode) {
-        case MC_QUE:
-            SEND_STRING("; QUE");
+        case MC_R:
+            SEND_STRING("RESPONDEU QUE:");
             return false;
-        case MC_ESCL:
-            SEND_STRING("esclarece");
+        case MC_F:
+            SEND_STRING("QUE o declarante apresenta como testemunha(s)");
             return false;
-        case MC_RESP:
-            SEND_STRING("; RESPONDEU QUE");
-            return false;
-        case MC_TEST:
-            SEND_STRING("testemunha");
-            return false;
-        case MC_INFO:
-            SEND_STRING("informante");
-            return false;
-        case MC_PESO:
-            SEND_STRING("; PERGUNTADO sobre");
-            return false;
-        case MC_PESE:
-            SEND_STRING("; PERGUNTADO se");
-            return false;
-        case MC_ACTA:
-            SEND_STRING("acrescenta");
-            return false;
-        case MC_ACDI:
-            SEND_STRING("acredita");
-            return false;
-        case MC_SALI:
-            SEND_STRING("salienta");
-            return false;
-        case MC_DECL:
-            SEND_STRING("declarante");
-            return false;
-        case MC_DEPO:
-            SEND_STRING("depoente");
-            return false;
-        case MC_APTE:
-            SEND_STRING("; QUE o declarante apresenta como testemunha(s)");
-            return false;
-        case MC_CONF:
-            SEND_STRING(", conforme se expressa");
+        case MC_C:
+            SEND_STRING("conforme se expressa");
             return false;
 
-        case MC_VESP:
-            SEND_STRING("Que compareceu espontaneamente nesta unidade especializada (a), ");
-            SEND_STRING("a fim de prestar " DECLARACOES " e ratificar o que foi relatado no Reds (xxxxxx), ");
-            SEND_STRING("no qual figura como " VITIMA " do crime do art. (xxxxx); PERGUNTADO disse QUE:");
+        case MC_P1:
+            SEND_STRING("PERGUNTADO DISSE QUE:");
+            return false;
+        case MC_P2:
+            SEND_STRING("PERGUNTADO se");
             return false;
 
-        case MC_VINT:
-            SEND_STRING("Que compareceu nesta unidade especializada devidamente intimado (a), a fim de ");
-            SEND_STRING("prestar " DECLARACOES " sobre os fatos relatados no Reds (xxxxxx), no qual figura ");
-            SEND_STRING("como " VITIMA " do crime do art. (xxxxx); PERGUNTADO disse QUE:");
+        case MC_D1:
+            SEND_STRING("QUE o (a) DECLARANTE afirma que:");
+            return false;
+        case MC_D2:
+            SEND_STRING("QUE o (a) DECLARANTE informa que:");
+            return false;
+        case MC_D3:
+            SEND_STRING("QUE o (a) DECLARANTE acrescenta que:");
             return false;
 
-        case MC_TESP:
-            SEND_STRING("Que compareceu nesta unidade especializada espontaneamente na qualidade de testemunha, ");
-            SEND_STRING("a fim de prestar depoimento sobre os fatos relatados no Reds, ");
-            SEND_STRING("QUE investiga o crime do art. (xxxxx) que vitimou (xxxxx); ");
-            SEND_STRING("QUE foi cientificado (a) do dever legal de dizer a verdade de tudo que souber e ");
-            SEND_STRING("lhe for perguntado, sob pena de incorrer no crime de falso testemunho; INQUIRIDO disse QUE: ");
+        case MC_N1:
+            SEND_STRING("QUE o (a) DEPOENTE afirma que:");
+            return false;
+        case MC_N2:
+            SEND_STRING("QUE o (a) DEPOENTE informa que:");
+            return false;
+        case MC_N3:
+            SEND_STRING("QUE o (a) DEPOENTE acrescenta que:");
             return false;
 
-        case MC_TINT:
-            SEND_STRING("Que compareceu nesta unidade especializada devidamente intimado (a), na qualidade ");
-            SEND_STRING("de testemunha, a fim de prestar depoimento sobre os fatos relatados no Reds (xxxxxx), ");
-            SEND_STRING("QUE investiga o crime do art. (xxxxx) que vitimou (xxxxx); ");
-            SEND_STRING("QUE foi cientificado (a) do dever legal de dizer a verdade de tudo que souber e lhe for ");
-            SEND_STRING("perguntado, sob pena de incorrer no crime de falso testemunho; INQUIRIDO disse QUE: ");
+        case MC_S1:
+            SEND_STRING("QUE o (a) DECLARANTE salienta que:");
+            return false;
+        case MC_S2:
+            SEND_STRING("QUE o (a) DEPOENTE salienta que:");
             return false;
 
-        case MC_SINT:
-            SEND_STRING("Que compareceu nesta unidade especializada devidamente intimado (a), a fim de prestar ");
-            SEND_STRING(DECLARACOES " sobre os fatos relatados no Reds (xxxxxx), ");
-            SEND_STRING("QUE investiga o crime do art. (xxxxx) que vitimou (xxxxx); ");
-            SEND_STRING("QUE foi devidamente cientificado dos seus direitos legais, dentre eles o de permanecer em ");
-            SEND_STRING(SILENCIO "; PERGUNTADO disse QUE: ");
+        case MC_W1:
+            SEND_STRING("DECLARANTE");
+            return false;
+        case MC_W2:
+            SEND_STRING("DEPOENTE");
             return false;
 
-        case MC_SCON:
-            SEND_STRING("Que compareceu nesta unidade especializada devidamente conduzido (a), a fim de prestar ");
-            SEND_STRING(DECLARACOES " sobre os fatos relatados no Reds (xxxxxx), ");
-            SEND_STRING("QUE investiga o crime do art. (xxxxx) que vitimou (xxxxx); ");
-            SEND_STRING("QUE foi devidamente cientificado dos seus direitos legais, dentre eles o de permanecer em ");
-            SEND_STRING(SILENCIO "; PERGUNTADO disse QUE: ");
+        case MC_I1:
+            SEND_STRING("QUE compareceu nesta DELEGACIA DE " POLICIA " devidamente intimado(a) ________, ");
+            SEND_STRING("na qualidade de " VITIMA ", em " RAZAO " da " INVESTIGACAO " que tramita nesta unidade ");
+            SEND_STRING("sob o REDS ________ QUE INVESTIGA O CRIME DE ____________; QUE foi devidamente ");
+            SEND_STRING("cientificado sobre o objeto em " APURACAO "; PERGUNTADO DISSE QUE:");
             return false;
+
+        case MC_I2:
+            SEND_STRING("QUE compareceu nesta DELEGACIA DE " POLICIA " devidamente intimado(a) ________, ");
+            SEND_STRING("na qualidade de SUSPEITO, em " RAZAO " da " INVESTIGACAO " que tramita nesta unidade ");
+            SEND_STRING("sob o REDS ________ QUE INVESTIGA O CRIME DE ____________; QUE foi devidamente ");
+            SEND_STRING("cientificado sobre o objeto em " APURACAO " e informado pela Autoridade Policial ");
+            SEND_STRING("de todos os seus direitos constitucionais, inclusive o de permanecer em " SILENCIO ", ");
+            SEND_STRING("e optou espontaneamente por esclarecer os fatos; PERGUNTADO DISSE QUE:");
+            return false;
+
+        case MC_I3:
+            SEND_STRING("QUE compareceu nesta DELEGACIA DE " POLICIA " devidamente intimado(a) ________, ");
+            SEND_STRING("na qualidade de TESTEMUNHA, em " RAZAO " da " INVESTIGACAO " que tramita nesta unidade ");
+            SEND_STRING("sob o REDS ________ QUE INVESTIGA O CRIME DE ____________; QUE foi devidamente ");
+            SEND_STRING("cientificado sobre o objeto em " APURACAO " e informado pela Autoridade Policial ");
+            SEND_STRING("de todos os seus direitos constitucionais, e cientificado do dever de dizer a verdade ");
+            SEND_STRING("de tudo que souber e/ou lhe for perguntado, podendo responder pelo crime de falso ");
+            SEND_STRING("testemunho artigo 342, caput, do " CODIGO " Penal; INQUERIDO DISSE QUE:");
+            return false;
+    }
+
+    switch (keycode) {
+        case QK_TAP_DANCE ... QK_TAP_DANCE_MAX:
+            break;
+        default:
+            clear_oneshot_layer_state(ONESHOT_PRESSED);
+            break;
     }
 
     return true;
@@ -247,109 +227,112 @@ void td_brackets(tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void tc_a(tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            tap_code(KC_A);
-            break;
-        case TD_DOUBLE_TAP:
-            process_record_user(MC_ACTA, NULL);
-            break;
-        case TD_TRIPLE_TAP:
-            process_record_user(MC_ACDI, NULL);
-            break;
-        default:
-            break;
-    }
-}
-
 void tc_d(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
-            process_record_user(MC_DECL, NULL);
+            process_record_user(MC_D1, NULL);
             break;
         case TD_DOUBLE_TAP:
-            process_record_user(MC_DEPO, NULL);
+            process_record_user(MC_D2, NULL);
+            break;
+        case TD_TRIPLE_TAP:
+            process_record_user(MC_D3, NULL);
             break;
         default:
             break;
     }
+    clear_oneshot_layer_state(ONESHOT_PRESSED);
 }
 
 void tc_p(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
-            process_record_user(MC_PESE, NULL);
+            process_record_user(MC_P1, NULL);
             break;
         case TD_DOUBLE_TAP:
-            process_record_user(MC_PESO, NULL);
+            process_record_user(MC_P2, NULL);
             break;
         default:
             break;
     }
+    clear_oneshot_layer_state(ONESHOT_PRESSED);
 }
 
-void tc_v(tap_dance_state_t *state, void *user_data) {
+void tc_w(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
-            tap_code(KC_V);
+            process_record_user(MC_W1, NULL);
             break;
         case TD_DOUBLE_TAP:
-            process_record_user(MC_VINT, NULL);
-            break;
-        case TD_TRIPLE_TAP:
-            process_record_user(MC_VESP, NULL);
+            process_record_user(MC_W2, NULL);
             break;
         default:
             break;
     }
-}
-
-void tc_t(tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            process_record_user(MC_TEST, NULL);
-            break;
-        case TD_DOUBLE_TAP:
-            process_record_user(MC_TINT, NULL);
-            break;
-        case TD_TRIPLE_TAP:
-            process_record_user(MC_TESP, NULL);
-            break;
-        default:
-            break;
-    }
+    clear_oneshot_layer_state(ONESHOT_PRESSED);
 }
 
 void tc_s(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
-            process_record_user(MC_SALI, NULL);
+            process_record_user(MC_S1, NULL);
             break;
         case TD_DOUBLE_TAP:
-            process_record_user(MC_SINT, NULL);
-            break;
-        case TD_TRIPLE_TAP:
-            process_record_user(MC_SCON, NULL);
+            process_record_user(MC_S2, NULL);
             break;
         default:
             break;
     }
+    clear_oneshot_layer_state(ONESHOT_PRESSED);
+}
+
+void tc_n(tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            process_record_user(MC_N1, NULL);
+            break;
+        case TD_DOUBLE_TAP:
+            process_record_user(MC_N2, NULL);
+            break;
+        case TD_TRIPLE_TAP:
+            process_record_user(MC_N3, NULL);
+            break;
+        default:
+            break;
+    }
+    clear_oneshot_layer_state(ONESHOT_PRESSED);
+}
+
+void tc_i(tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            process_record_user(MC_I1, NULL);
+            break;
+        case TD_DOUBLE_TAP:
+            process_record_user(MC_I2, NULL);
+            break;
+        case TD_TRIPLE_TAP:
+            process_record_user(MC_I3, NULL);
+            break;
+        default:
+            break;
+    }
+    clear_oneshot_layer_state(ONESHOT_PRESSED);
 }
 
 tap_dance_action_t tap_dance_actions[] = {[ESC_QUOT]  = ACTION_TAP_DANCE_FN(td_esc_quot),
-                                          [TC_A]      = ACTION_TAP_DANCE_FN(tc_a),
                                           [TC_D]      = ACTION_TAP_DANCE_FN(tc_d),
                                           [TC_P]      = ACTION_TAP_DANCE_FN(tc_p),
-                                          [TC_V]      = ACTION_TAP_DANCE_FN(tc_v),
-                                          [TC_T]      = ACTION_TAP_DANCE_FN(tc_t),
+                                          [TC_W]      = ACTION_TAP_DANCE_FN(tc_w),
                                           [TC_S]      = ACTION_TAP_DANCE_FN(tc_s),
+                                          [TC_N]      = ACTION_TAP_DANCE_FN(tc_n),
+                                          [TC_I]      = ACTION_TAP_DANCE_FN(tc_i),
                                           [LBRC_RBRC] = ACTION_TAP_DANCE_FN(td_brackets)};
 
 // Led Indicators

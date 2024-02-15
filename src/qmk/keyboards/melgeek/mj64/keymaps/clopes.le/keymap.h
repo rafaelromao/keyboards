@@ -6,26 +6,24 @@
 
 enum {
     OS_MAC = SAFE_RANGE,
-    MC_QUE,
-    MC_ESCL,
-    MC_RESP,
-    MC_TEST,
-    MC_INFO,
-    MC_PESO,
-    MC_PESE,
-    MC_ACTA,
-    MC_ACDI,
-    MC_SALI,
-    MC_DECL,
-    MC_DEPO,
-    MC_APTE,
-    MC_CONF,
-    MC_VESP,
-    MC_VINT,
-    MC_TESP,
-    MC_TINT,
-    MC_SINT,
-    MC_SCON,
+    MC_R,
+    MC_W1,
+    MC_W2,
+    MC_P1,
+    MC_P2,
+    MC_S1,
+    MC_S2,
+    MC_D1,
+    MC_D2,
+    MC_D3,
+    MC_F,
+    MC_C,
+    MC_N1,
+    MC_N2,
+    MC_N3,
+    MC_I1,
+    MC_I2,
+    MC_I3,
 };
 
 // Tap dance
@@ -49,14 +47,14 @@ typedef struct {
 
 td_state_t dance_state(tap_dance_state_t *state);
 
-enum { ESC_QUOT, LBRC_RBRC, TC_A, TC_D, TC_P, TC_S, TC_T, TC_V };
+enum { ESC_QUOT, LBRC_RBRC, TC_D, TC_P, TC_S, TC_W, TC_I, TC_N };
 
-#define TD_A TD(TC_A)
 #define TD_D TD(TC_D)
 #define TD_P TD(TC_P)
-#define TD_V TD(TC_V)
+#define TD_I TD(TC_I)
 #define TD_S TD(TC_S)
-#define TD_T TD(TC_T)
+#define TD_W TD(TC_W)
+#define TD_N TD(TC_N)
 
 #define TD_ESC TD(ESC_QUOT)
 #define TD_LBRC TD(LBRC_RBRC)
