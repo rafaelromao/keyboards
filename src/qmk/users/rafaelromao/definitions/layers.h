@@ -6,7 +6,7 @@ typedef enum {
     _RAISE,
     _NUMPAD,
     _SHORTCUTS,
-    _INTELLIJ,
+    _CODING,
     _NOMOD,
     _ALPHA2,
     _FIXED_ALPHA2,

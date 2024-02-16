@@ -18,7 +18,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_Q    , ________ALPHA1_L3____________________ , __________________ALPHA1_R3__________ , KC_Y    ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-                          ___ALPHA1_L4_____ , HYPR_L  , HYPR_R  , ___ALPHA1_R4_____),
+                          ___ALPHA1_L4_____ , XXXXXXX , XXXXXXX , ___ALPHA1_R4_____),
  // |___________________________________________________________________________________________________|
 
      [_LOWER] = LAYOUT_wrapper(
@@ -65,15 +65,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                           _SHORTCUTS_L4____ , XXXXXXX , XXXXXXX , _SHORTCUTS_R4____),
  // |___________________________________________________________________________________________________|
 
-     [_INTELLIJ] = LAYOUT_wrapper(
+     [_CODING] = LAYOUT_wrapper(
  // |___________________________________________________________________________________________________|
-      _________________INTELLIJ_L1_________ , XXXXXXX , XXXXXXX , _______INTELLIJ_R1___________________ ,
+      ___________________CODING_L1_________ , XXXXXXX , XXXXXXX , _________CODING_R1___________________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      _________________INTELLIJ_L2___________________ , _________________INTELLIJ_R2___________________ ,
+      ___________________CODING_L2___________________ , ___________________CODING_R2___________________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , _______INTELLIJ_L3___________________ , _________________INTELLIJ_R3_________ , XXXXXXX ,
+      XXXXXXX , _________CODING_L3___________________ , ___________________CODING_R3_________ , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-                          __INTELLIJ_L4____ , XXXXXXX , XXXXXXX , __INTELLIJ_R4____),
+                          ____CODING_L4____ , XXXXXXX , XXXXXXX , ____CODING_R4____),
  // |___________________________________________________________________________________________________|
 
      [_NOMOD] = LAYOUT_wrapper(
@@ -84,7 +84,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_Q    , _________NOMOD_L3____________________ , ___________________NOMOD_R3__________ , KC_Y    ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-                          ____NOMOD_L4_____ , HYPR_L  , HYPR_R  , ____NOMOD_R4_____),
+                          ____NOMOD_L4_____ , XXXXXXX , XXXXXXX , ____NOMOD_R4_____),
  // |___________________________________________________________________________________________________|
 
      [_ALPHA2] = LAYOUT_wrapper(
@@ -262,7 +262,7 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
     [_NUMPAD]     = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
     [_ALPHA2]     = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
     [_SHORTCUTS]  = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
-    [_INTELLIJ]   = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
+    [_CODING]     = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
     [_SYMBOLS]    = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
     [_FIXED_NAV]  = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
     [_NAVIGATION] = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU), ENCODER_CCW_CW(S(KC_PGUP), S(KC_PGDN))},
@@ -303,8 +303,8 @@ void set_oled_by_layer(uint32_t layer) {
         case _SHORTCUTS:
             oled_write("      SHORTCUTS   ", false);
             break;
-        case _INTELLIJ:
-            oled_write("       INTELLIJ   ", false);
+        case _CODING:
+            oled_write("       CODING   ", false);
             break;
         case _SYMBOLS:
             oled_write("      SYMBOLS     ", false);

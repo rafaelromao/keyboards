@@ -82,9 +82,21 @@
 
         SHORTCUT(mc_shift,                  &sk LSHFT)
 
-        SHORTCUT(mc_actions,                &macro_tap &kp LA(ENTER))
         SHORTCUT(mc_breakpoint,             &macro_tap &kp LG(F8))
-        SHIFTED_SHORTCUT(mm_actions,        &mc_actions, &mc_breakpoint)
+        SHORTCUT(mc_view_breakpoints,       &macro_tap &kp LG(LS(F8)))
+        SHIFTED_SHORTCUT(mm_break,          &mc_breakpoint, &mc_view_breakpoints)
+
+        SHORTCUT(mc_step_over,              &macro_tap &kp F8)
+        SHORTCUT(mc_evaluate,               &macro_tap &kp LA(F8))
+        SHIFTED_SHORTCUT(mm_step_over,      &mc_step_over, &mc_breakpoint)
+
+        SHORTCUT(mc_step_into,              &macro_tap &kp F7)
+        SHORTCUT(mc_step_out,               &macro_tap &kp LS(F8))
+        SHIFTED_SHORTCUT(mm_step_into,      &mc_step_into, &mc_step_out)
+
+        SHORTCUT(mc_actions,                &macro_tap &kp LA(ENTER))
+        SHORTCUT(mc_generate,               &macro_tap &kp LG(N))
+        SHIFTED_SHORTCUT(mm_actions,        &mc_actions, &mc_generate)
 
         SHORTCUT(mc_typematch,              &macro_tap &kp LS(LC(SPACE)))
         SHORTCUT(mc_autocomp,               &macro_tap &kp LC(SPACE))
@@ -163,8 +175,5 @@
         SHORTCUT(mc_dqt0p,                  &macro_tap &kp DQT &kp N0 &kp P)
 
         SHORTCUT(mc_delword,                &macro_tap &kp LA(BACKSPACE))
-        SHORTCUT(mc_extsel,                 &macro_tap &kp LA(UP))
-        SHORTCUT(mc_shrsel,                 &macro_tap &kp LA(DOWN))
-        SHIFTED_SHORTCUT(mm_extsel,         &mc_extsel, &mc_shrsel)
     };
 };

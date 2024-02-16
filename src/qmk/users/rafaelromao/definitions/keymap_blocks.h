@@ -55,15 +55,15 @@
 #define ________________SHORTCUTS_R3_________           XXXXXXX , TD_MACR , MC_LOCK , KC_SLEP
 #define _SHORTCUTS_R4____                               INT_SPC , TT_NAV
 
-#define _________________INTELLIJ_L1_________           XXXXXXX , MC_CLOS , MC_AUCO , MC_BUID 
-#define _________________INTELLIJ_L2___________________ MC_PROJ , MC_FSYM , MC_RUN  , MC_DBUG , XXXXXXX
-#define           _______INTELLIJ_L3___________________           MC_RECE , MC_COMP , MC_FIUS , XXXXXXX
-#define                               __INTELLIJ_L4____                               _______ , _______
+#define ___________________CODING_L1_________           XXXXXXX , MC_CLOS , MC_AUCO , MC_BUID 
+#define ___________________CODING_L2___________________ MC_PROJ , MC_FSYM , MC_RUN  , MC_DBUG , XXXXXXX
+#define           _________CODING_L3___________________           MC_RECE , MC_COMP , MC_FIUS , XXXXXXX
+#define                               ____CODING_L4____                               MC_STIN , MC_STOV
 
-#define           _______INTELLIJ_R1___________________           MC_EXSE , MC_ENT  , KC_ESC  , XXXXXXX
-#define _________________INTELLIJ_R2___________________ XXXXXXX , MC_QUIK , KC_DOWN , SF_UP   , XXXXXXX
-#define _________________INTELLIJ_R3_________           XXXXXXX , MC_QDOC , MC_REFC , MC_COMT 
-#define __INTELLIJ_R4____                               _______ , _______
+#define           _________CODING_R1___________________           MC_BREK , MC_ENT  , KC_ESC  , XXXXXXX
+#define ___________________CODING_R2___________________ XXXXXXX , MC_QUIK , KC_DOWN , SF_UP   , XXXXXXX
+#define ___________________CODING_R3_________           XXXXXXX , MC_QDOC , MC_REFC , MC_COMT 
+#define ____CODING_R4____                               _______ , _______
 
 #define ___________________NOMOD_L1__________           KC_Q    , KC_B    , KC_M    , KC_G    
 #define ___________________NOMOD_L2____________________ KC_D    , KC_N    , KC_S    , KC_T    , KC_W

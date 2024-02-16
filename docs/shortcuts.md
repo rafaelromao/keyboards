@@ -35,36 +35,37 @@
 - If there is a macro being recorded, you can use the thumb one-shot shift key to stop recording and clear the dynamic macro.
 - Source Code: [dynamic_macro.c](../src/qmk/users/rafaelromao/features/dynamic_macro.c)
 
-## IntelliJ
+## Coding
 
-- An IntelliJ layer can be activated holding the right pinky key from the Raise or Numpad layers, used to access function keys, which are common during debugging sessions.
-- This layer can also be activated holding the home thumb in the right side of the shortcuts layer, which makes it possible to hold the thumb and pinky keys together in any order to activate the IntelliJ layer.
+- An Coding layer can be activated holding the right pinky key from the Raise or Numpad layers.
+- This layer can also be activated holding the home thumb in the right side of the shortcuts layer, which makes it possible to hold the thumb and pinky keys together in any order to activate the Coding layer.
 - This layer gives access to some common programming shortcuts and also some macros.
-- Up and Down arrows, Enter and Esc are also available in the right side of this layer to make it easier to navigate in context menus.
+- Arrows, Enter and Esc are also available in the right side of this layer to make it easier to navigate in context menus.
 - There is also a home row shift in the right side to allow access to different actions when shift is active.
 
-### IntelliJ Shortcuts
+### Coding Shortcuts
 
-The list of bellow contains the most used IntelliJ shortcuts.
-To avoid conflicts with MacOS and Windows shortcuts, in both Operating Systems, custom shortcuts from [MacOS for All](https://github.com/samvtran/jetbrains-macos-keybindings-for-all) plugin are used instead of the default ones.
+The list bellow contains my most used Coding shortcuts. The IntelliJ keymap for MacOS is used and must be configured in the desired IDE.
 
-| Default Action | Shifted Action | Custom Shortcut | Shifted Shortcut
+| Default Action | Shifted Action | Default Shortcut | Shifted Shortcut
 |---|---|---|---|
-| Comment Lines |  | Gui + / |
-| Quick Actions | Toggle Breakpoint | Alt + Enter | Gui + F8
-| Type-matching | Auto Complete | Ctrl + Shift + Space | Ctrl + Space
-
-
-- Show Quick Docs (F1 / Ctrl+Q) - If shifted, show Parameters Info (Cmd+P / Ctrl+P)
-- Find Symbol (Cmd+Option+O / Ctrl+Alt+Shift+N) - If shifted, Find Action (Cmd+Shift+A / Ctrl+Shift+A) - Hold will act as Shift
-- Run (Ctrl+R / Shift+F10) - If shifted, Stop (Cmd+F2 / Ctrl+F2)
-- Debug (Ctrl+D / Shift+F9) - If shifted, Resume (Cmd+Option+R / F9)
-- Build (Cmd+F9 / Ctrl+F9) - If shifted, Rebuild (Cmd+Shift+F9 / Ctrl+Shift+F9)
-- Project Files (Cmd+1 / Alt+1) - If shifted, Select In (Option+F1 / Alt+F1)
-- Recent Files (Cmd+E / Ctrl+E) - If shifted, show Previous Error (Shift+F2)
-- Complete Statement (Cmd+Shift+Enter / Ctrl+Shift+Enter) - If shifted, show Next Error (F2)
-- Show Usages (Cmd+Option+F7 / Ctrl+Alt+F7) - If shifted, show Quick Definition (Option+Space / Ctrl+Shift+I)
-- Refactor (Ctrl+T / Ctrl+Shift+Alt+T) - If shifted, Reformat Code (Cmd+Option+L / Ctrl+Alt+L)
+| Quick Actions      | Generate          | Alt + Enter          | Gui + N
+| Toggle Breakpoint  | View Breakpoints  | Gui + F8             | Gui + Shift + F8
+| Step Over          | Evaluate          | F8                   | Alt + F8
+| Step Into          | Step Out          | F7                   | Shift + F8
+| Refactor           | Reformat Code     | Ctrl + T             | Gui + Alt + L
+| Type-matching      | Auto Complete     | Ctrl + Shift + Space | Ctrl + Space
+| Quick Docs         | Parameters Info   | F1                   | Gui + P
+| Find Symbol        | Find Action       | Gui + Alt + O        | Gui + Shift + A
+| Extend Selection   | Shrink Selection  | Gui + W              | Gui + Shift + W
+| Run                | Stop              | Ctrl + R             | Ctrl + F2
+| Debug              | Resume            | Ctrl + D             | Gui + Alt + R
+| Build              | Rebuild           | Gui + F9             | Gui + Shift + F9
+| Recent Files       | Previous Error    | Gui + E              | Shift + F2
+| Complete Statement | Next Error        | Gui + Shift + Enter  | F2
+| Show Usages        | Quick Definition  | Gui + Alt + F7       | Alt + Space
+| Project Files      | Select In         | Gui + 1              | Alt + F1
+| Comment Lines      |                   | Gui + /              |
 
 ##
 [Home](../readme.md) | 

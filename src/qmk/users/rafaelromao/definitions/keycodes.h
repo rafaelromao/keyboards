@@ -103,9 +103,9 @@ enum {
     MC_PREV, MC_TABS, MC_CALC, MC_MIC, MC_CAM,
 
     // IDE shortcuts
-    MC_QUIK, MC_AUCO, MC_COMT, MC_EXSE,
-    MC_QDOC, MC_FSYM, MC_RUN, MC_DBUG, MC_BUID,
-    MC_PROJ, MC_RECE, MC_COMP, MC_FIUS, MC_REFC,
+    MC_QUIK, MC_AUCO, MC_COMT, MC_STIN, MC_STOV,
+    MC_QDOC, MC_FSYM, MC_RUN, MC_DBUG, MC_BUID, MC_BREK,
+    MC_PROJ, MC_RECE, MC_COMP, MC_FIUS, MC_REFC, 
 
     // Begin macros used to write text
     STR_MACRO_START,
@@ -203,9 +203,9 @@ enum {
 
 #define SHO_KCD LT(_SHORTCUTS, KC_D)
 #define SHO_KCI LT(_SHORTCUTS, KC_I)
-#define INT_SPC LT(_INTELLIJ, KC_SPC)
-#define INT_DOT LT(_INTELLIJ, KC_DOT)
-#define INT_AST LT(_INTELLIJ, KC_ASTR)
+#define INT_SPC LT(_CODING, KC_SPC)
+#define INT_DOT LT(_CODING, KC_DOT)
+#define INT_AST LT(_CODING, KC_ASTR)
 
 // Layer transitions
 #define MO_A2   MO(_FIXED_ALPHA2)

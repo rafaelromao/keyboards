@@ -18,7 +18,7 @@
 #define SHORTS_L 10
 #define SHORTS_R 11
 #define SHORTCUTS_EXT 12
-#define INTELLIJ 13
+#define CODING 13
 #define NMODS 14
 #define ALPHA2 15
 #define CASE_A2 16

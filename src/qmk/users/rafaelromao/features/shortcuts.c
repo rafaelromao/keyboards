@@ -198,16 +198,32 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
             SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT(SS_LGUI("c")))));
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // INTELLIJ
+            // CODING
 
-            // Quick Actions / Breakpoint
+            // Quick Actions / Generate
 
         case MC_QUIK:
             if (isShifted) {
-                SEND_STRING(SS_LCTL(SS_TAP(X_F8)));
+                SEND_STRING(SS_LGUI(SS_TAP(X_N)));
             } else {
                 SEND_STRING(SS_LALT(SS_TAP(X_ENT)));
             }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Refactor / Reformat
+
+        case MC_REFC:
+            if (isShifted) {
+                SEND_STRING(SS_LGUI(SS_LALT(SS_TAP(X_L))));
+            } else {
+                SEND_STRING(SS_LCTL(SS_TAP(X_T)));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Comment Lines
+
+        case MC_COMT:
+            SEND_STRING(SS_LGUI("/"));
             return PROCESS_RECORD_RETURN_FALSE;
 
             // Type-matching Auto Complete / Basic Auto Complete
@@ -224,7 +240,7 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
 
         case MC_QDOC:
             if (isShifted) {
-                SEND_STRING(SS_LCTL(SS_TAP(X_P)));
+                SEND_STRING(SS_LGUI(SS_TAP(X_P)));
             } else {
                 tap_code(KC_F1);
             }
@@ -234,9 +250,19 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
 
         case MC_FSYM:
             if (isShifted) {
-                SEND_STRING(SS_LSFT(SS_LCTL(SS_TAP(X_A))));
+                SEND_STRING(SS_LSFT(SS_LGUI(SS_TAP(X_A))));
             } else {
-                SEND_STRING(SS_LALT(SS_LCTL(SS_TAP(X_O))));
+                SEND_STRING(SS_LALT(SS_LGUI(SS_TAP(X_O))));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Toggle Breakpoint / View Breakpoints
+
+        case MC_BREK:
+            if (isShifted) {
+                SEND_STRING(SS_LGUI(SS_LSFT(SS_TAP(X_F8))));
+            } else {
+                SEND_STRING(SS_LGUI(SS_TAP(X_F8)));
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
@@ -246,7 +272,7 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
             if (isShifted) {
                 SEND_STRING(SS_LCTL(SS_TAP(X_F2)));
             } else {
-                SEND_STRING(SS_LCTL(SS_LALT(SS_TAP(X_R))));
+                SEND_STRING(SS_LCTL(SS_TAP(X_R)));
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
@@ -254,9 +280,9 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
 
         case MC_DBUG:
             if (isShifted) {
-                SEND_STRING(SS_TAP(X_F9));
+                SEND_STRING(SS_LGUI(SS_LALT(SS_TAP(X_R))));
             } else {
-                SEND_STRING(SS_LCTL(SS_LALT(SS_TAP(X_D))));
+                SEND_STRING(SS_LCTL(SS_TAP(X_D)));
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
@@ -264,19 +290,9 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
 
         case MC_BUID:
             if (isShifted) {
-                SEND_STRING(SS_LSFT(SS_LCTL(SS_TAP(X_F9))));
+                SEND_STRING(SS_LSFT(SS_LGUI(SS_TAP(X_F9))));
             } else {
-                SEND_STRING(SS_LCTL(SS_TAP(X_F9)));
-            }
-            return PROCESS_RECORD_RETURN_FALSE;
-
-            // Project Files / Select In
-
-        case MC_PROJ:
-            if (isShifted) {
-                SEND_STRING(SS_LALT(SS_TAP(X_F1)));
-            } else {
-                SEND_STRING(SS_LALT(SS_TAP(X_1)));
+                SEND_STRING(SS_LGUI(SS_TAP(X_F9)));
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
@@ -286,7 +302,7 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
             if (isShifted) {
                 SEND_STRING(SS_LSFT(SS_TAP(X_F2)));
             } else {
-                SEND_STRING(SS_LCTL(SS_TAP(X_E)));
+                SEND_STRING(SS_LGUI(SS_TAP(X_E)));
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
@@ -296,7 +312,7 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
             if (isShifted) {
                 SEND_STRING(SS_TAP(X_F2));
             } else {
-                SEND_STRING(SS_LSFT(SS_LCTL(SS_TAP(X_ENT))));
+                SEND_STRING(SS_LSFT(SS_LGUI(SS_TAP(X_ENT))));
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
@@ -306,24 +322,38 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
             if (isShifted) {
                 SEND_STRING(SS_LALT(SS_TAP(X_SPC)));
             } else {
-                SEND_STRING(SS_LALT(SS_TAP(X_F7)));
+                SEND_STRING(SS_LGUI(SS_LALT(SS_TAP(X_F7))));
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Refactor / Reformat
+            // Project Files / Select In
 
-        case MC_REFC:
+        case MC_PROJ:
             if (isShifted) {
-                SEND_STRING(SS_LCTL(SS_LALT(SS_TAP(X_L))));
+                SEND_STRING(SS_LALT(SS_TAP(X_F1)));
             } else {
-                SEND_STRING(SS_LCTL(SS_TAP(X_T)));
+                SEND_STRING(SS_LGUI(SS_TAP(X_1)));
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Comment Lines
+            // Step Over / Evaluate
 
-        case MC_COMT:
-            SEND_STRING(SS_LCTL("/"));
+        case MC_STOV:
+            if (isShifted) {
+                SEND_STRING(SS_LALT(SS_TAP(X_F8)));
+            } else {
+                SEND_STRING(SS_TAP(X_F8));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Step Into / Step Out
+
+        case MC_STIN:
+            if (isShifted) {
+                SEND_STRING(SS_LSFT(SS_TAP(X_F8)));
+            } else {
+                SEND_STRING(SS_TAP(X_F7));
+            }
             return PROCESS_RECORD_RETURN_FALSE;
 
             // Reset Zoom / Refresh
@@ -366,24 +396,6 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
                 tap_code16(LALT(KC_BSPC));
             } else {
                 tap_code16(LCTL(KC_BSPC));
-            }
-            return PROCESS_RECORD_RETURN_FALSE;
-
-            // Extent or Shrink Selection
-
-        case MC_EXSE:
-            if (isShifted) {
-                if (isMacOS) {
-                    tap_code16(LALT(KC_DOWN));
-                } else {
-                    tap_code16(LCTL(LSFT(KC_W)));
-                }
-            } else {
-                if (isMacOS) {
-                    tap_code16(LALT(KC_UP));
-                } else {
-                    tap_code16(LCTL(KC_W));
-                }
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
