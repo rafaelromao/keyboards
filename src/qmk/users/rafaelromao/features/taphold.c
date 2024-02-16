@@ -60,6 +60,13 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
             }
             break;
 
+        case NAV_STI:
+            if (record->event.pressed && record->tap.count) {
+                process_shortcuts(MC_STIN, NULL);
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+            break;
+
         case INT_AST:
             if (record->event.pressed && record->tap.count) {
                 tap_code16(KC_ASTR);

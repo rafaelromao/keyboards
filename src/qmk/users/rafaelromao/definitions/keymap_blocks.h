@@ -58,7 +58,7 @@
 #define ___________________CODING_L1_________           XXXXXXX , MC_CLOS , MC_AUCO , MC_BUID 
 #define ___________________CODING_L2___________________ MC_PROJ , MC_FSYM , MC_RUN  , MC_DBUG , XXXXXXX
 #define           _________CODING_L3___________________           MC_RECE , MC_COMP , MC_FIUS , XXXXXXX
-#define                               ____CODING_L4____                               MC_STIN , MC_STOV
+#define                               ____CODING_L4____                               NAV_STI , MC_STOV
 
 #define           _________CODING_R1___________________           MC_BREK , MC_ENT  , KC_ESC  , XXXXXXX
 #define ___________________CODING_R2___________________ XXXXXXX , MC_QUIK , KC_DOWN , SF_UP   , XXXXXXX

@@ -93,6 +93,7 @@
         SHORTCUT(mc_step_into,              &macro_tap &kp F7)
         SHORTCUT(mc_step_out,               &macro_tap &kp LS(F8))
         SHIFTED_SHORTCUT(mm_step_into,      &mc_step_into, &mc_step_out)
+        LAYERTAP_SHORTCUT(th_step_into,     &mm_step_into)
 
         SHORTCUT(mc_actions,                &macro_tap &kp LA(ENTER))
         SHORTCUT(mc_generate,               &macro_tap &kp LG(N))

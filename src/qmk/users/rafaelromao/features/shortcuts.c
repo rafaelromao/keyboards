@@ -2,20 +2,8 @@
 
 #include "shortcuts.h"
 
-process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record) {
-    if (!is_shift_macro_keycode(keycode)) {
-        return PROCESS_RECORD_CONTINUE;
-    }
-
-    if (record != NULL && record->event.pressed) {
-        return PROCESS_RECORD_CONTINUE;
-    }
-
-    bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT;
-    bool isShifted      = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
-    bool isMacOS        = is_macos();
-    clear_shift();
-    clear_oneshot_shift();
+process_record_result_t process_shortcut_keycode(uint16_t keycode, bool isOneShotShift, bool isShifted) {
+    bool isMacOS = is_macos();
 
     switch (keycode) {
             // Select All
@@ -450,4 +438,32 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
     }
 
     return PROCESS_RECORD_CONTINUE;
+}
+
+process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record) {
+    if (!is_shift_macro_keycode(keycode)) {
+        return PROCESS_RECORD_CONTINUE;
+    }
+
+    if (record != NULL && !record->event.pressed) {
+        return PROCESS_RECORD_CONTINUE;
+    }
+
+    bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT;
+    bool isShifted      = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
+
+    // Macros
+
+    int8_t mods = get_mods();
+    if (isShifted) {
+        clear_oneshot_shift();
+        unregister_mods(mods);
+    }
+    process_record_result_t result = process_shortcut_keycode(keycode, isOneShotShift, isShifted);
+    if (isShifted) {
+        wait_ms(100);
+        register_mods(mods);
+    }
+
+    return result;
 }

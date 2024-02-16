@@ -189,6 +189,7 @@ enum {
 #define NAV_F12 LT(_NAVIGATION, KC_F12)
 #define NAV_AT  LT(_NAVIGATION, KC_AT)
 #define NAV_CAS LT(_NAVIGATION, TG_CASE)
+#define NAV_STI LT(_NAVIGATION, MC_STIN) // Hold behavior is implemented in intercepted code
 #define NAV_FCA LT(_FIXED_NAV, TG_CASE)
 
 #define MED_CAS LT(_MEDIA, TG_CASE)
