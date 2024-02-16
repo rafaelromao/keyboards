@@ -14,12 +14,13 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
     bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT;
     bool isShifted      = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
     bool isMacOS        = is_macos();
+    clear_shift();
+    clear_oneshot_shift();
 
     switch (keycode) {
             // Select All
 
         case MC_SELC:
-            clear_oneshot_shift();
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("a"));
             } else {
@@ -30,7 +31,6 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
             // Save
 
         case MC_SAVE:
-            clear_oneshot_shift();
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("s"));
             } else {
@@ -41,7 +41,6 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
             // Undo
 
         case MC_UNDO:
-            clear_oneshot_shift();
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("z"));
             } else {
@@ -52,7 +51,6 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
             // Copy
 
         case MC_COPY:
-            clear_oneshot_shift();
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("c"));
             } else {
@@ -63,7 +61,6 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
             // Selec All + Copy
 
         case MC_SCOP:
-            clear_oneshot_shift();
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("a"));
                 SEND_STRING(SS_LCTL("c"));
@@ -76,10 +73,6 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
             // Selec All + Paste
 
         case MC_SPAS:
-            clear_oneshot_shift();
-            if (isShifted) {
-                clear_shift();
-            }
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("a"));
                 if (isShifted) {
@@ -104,7 +97,6 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
             // Paste
 
         case MC_PAST:
-            clear_oneshot_shift();
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("v"));
             } else {
@@ -115,7 +107,6 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
             // Find
 
         case MC_FIND:
-            clear_oneshot_shift();
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("f"));
             } else {
@@ -126,7 +117,6 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
             // Lock
 
         case MC_LOCK:
-            clear_oneshot_shift();
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LGUI("l"));
             } else {
@@ -137,7 +127,6 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
             // Full Screen
 
         case MC_FULL:
-            clear_oneshot_shift();
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 tap_code(KC_F11);
             } else {
@@ -148,21 +137,17 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
             // Esc, Tab, Enter
 
         case MC_ESCC:
-            clear_shift();
             tap_code(KC_ESC);
             layer_clear();
             disable_smart_case();
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_ESC:
-            clear_shift();
             tap_code(KC_ESC);
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_TAB:
-            clear_shift();
             tap_code(KC_TAB);
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_ENT:
-            clear_shift();
             tap_code(KC_ENT);
             return PROCESS_RECORD_RETURN_FALSE;
 
@@ -219,12 +204,7 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
 
         case MC_QUIK:
             if (isShifted) {
-                if (isMacOS) {
-                    SEND_STRING(SS_LGUI(SS_TAP(X_F8)));
-                } else {
-                    SEND_STRING(SS_LCTL(SS_TAP(X_F8)));
-                    break;
-                }
+                SEND_STRING(SS_LCTL(SS_TAP(X_F8)));
             } else {
                 SEND_STRING(SS_LALT(SS_TAP(X_ENT)));
             }
@@ -244,19 +224,9 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
 
         case MC_QDOC:
             if (isShifted) {
-                if (isMacOS) {
-                    SEND_STRING(SS_LCMD(SS_TAP(X_P)));
-                } else {
-                    SEND_STRING(SS_LCTL(SS_TAP(X_P)));
-                    break;
-                }
+                SEND_STRING(SS_LCTL(SS_TAP(X_P)));
             } else {
-                if (isMacOS) {
-                    tap_code(KC_F1);
-                } else {
-                    SEND_STRING(SS_LCTL(SS_TAP(X_Q)));
-                    break;
-                }
+                tap_code(KC_F1);
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
@@ -264,17 +234,9 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
 
         case MC_FSYM:
             if (isShifted) {
-                if (isMacOS) {
-                    SEND_STRING(SS_LSFT(SS_LGUI(SS_TAP(X_A))));
-                } else {
-                    SEND_STRING(SS_LSFT(SS_LCTL(SS_TAP(X_A))));
-                }
+                SEND_STRING(SS_LSFT(SS_LCTL(SS_TAP(X_A))));
             } else {
-                if (isMacOS) {
-                    SEND_STRING(SS_LALT(SS_LGUI(SS_TAP(X_O))));
-                } else {
-                    SEND_STRING(SS_LALT(SS_LSFT(SS_LCTL(SS_TAP(X_N)))));
-                }
+                SEND_STRING(SS_LALT(SS_LCTL(SS_TAP(X_O))));
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
@@ -282,18 +244,9 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
 
         case MC_RUN:
             if (isShifted) {
-                if (isMacOS) {
-                    SEND_STRING(SS_LGUI(SS_TAP(X_F2)));
-                } else {
-                    SEND_STRING(SS_LCTL(SS_TAP(X_F2)));
-                    break;
-                }
+                SEND_STRING(SS_LCTL(SS_TAP(X_F2)));
             } else {
-                if (isMacOS) {
-                    SEND_STRING(SS_LCTL(SS_TAP(X_R)));
-                } else {
-                    SEND_STRING(SS_LSFT(SS_TAP(X_F10)));
-                }
+                SEND_STRING(SS_LCTL(SS_LALT(SS_TAP(X_R))));
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
@@ -301,18 +254,9 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
 
         case MC_DBUG:
             if (isShifted) {
-                if (isMacOS) {
-                    SEND_STRING(SS_LALT(SS_LGUI(SS_TAP(X_R))));
-                } else {
-                    SEND_STRING(SS_TAP(X_F9));
-                    break;
-                }
+                SEND_STRING(SS_TAP(X_F9));
             } else {
-                if (isMacOS) {
-                    SEND_STRING(SS_LCTL(SS_TAP(X_D)));
-                } else {
-                    SEND_STRING(SS_LSFT(SS_TAP(X_F9)));
-                }
+                SEND_STRING(SS_LCTL(SS_LALT(SS_TAP(X_D))));
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
@@ -320,17 +264,9 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
 
         case MC_BUID:
             if (isShifted) {
-                if (isMacOS) {
-                    SEND_STRING(SS_LSFT(SS_LGUI(SS_TAP(X_F9))));
-                } else {
-                    SEND_STRING(SS_LSFT(SS_LCTL(SS_TAP(X_F9))));
-                }
+                SEND_STRING(SS_LSFT(SS_LCTL(SS_TAP(X_F9))));
             } else {
-                if (isMacOS) {
-                    SEND_STRING(SS_LGUI(SS_TAP(X_F9)));
-                } else {
-                    SEND_STRING(SS_LCTL(SS_TAP(X_F9)));
-                }
+                SEND_STRING(SS_LCTL(SS_TAP(X_F9)));
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
@@ -339,15 +275,10 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
         case MC_PROJ:
             if (isShifted) {
                 SEND_STRING(SS_LALT(SS_TAP(X_F1)));
-                return PROCESS_RECORD_RETURN_FALSE;
             } else {
-                if (isMacOS) {
-                    SEND_STRING(SS_LGUI(SS_TAP(X_1)));
-                } else {
-                    SEND_STRING(SS_LALT(SS_TAP(X_1)));
-                }
-                return PROCESS_RECORD_RETURN_FALSE;
+                SEND_STRING(SS_LALT(SS_TAP(X_1)));
             }
+            return PROCESS_RECORD_RETURN_FALSE;
 
             // Recent Files / Previous Error
 
@@ -355,11 +286,7 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
             if (isShifted) {
                 SEND_STRING(SS_LSFT(SS_TAP(X_F2)));
             } else {
-                if (isMacOS) {
-                    SEND_STRING(SS_LGUI(SS_TAP(X_E)));
-                } else {
-                    SEND_STRING(SS_LCTL(SS_TAP(X_E)));
-                }
+                SEND_STRING(SS_LCTL(SS_TAP(X_E)));
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
@@ -369,31 +296,17 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
             if (isShifted) {
                 SEND_STRING(SS_TAP(X_F2));
             } else {
-                if (isMacOS) {
-                    SEND_STRING(SS_LSFT(SS_LGUI(SS_TAP(X_ENT))));
-                } else {
-                    SEND_STRING(SS_LSFT(SS_LCTL(SS_TAP(X_ENT))));
-                }
+                SEND_STRING(SS_LSFT(SS_LCTL(SS_TAP(X_ENT))));
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Find Usages / Quick Definition
+            // Show Usages / Quick Definition
 
         case MC_FIUS:
             if (isShifted) {
-                if (isMacOS) {
-                    SEND_STRING(SS_LALT(SS_TAP(X_SPC)));
-                } else {
-                    SEND_STRING(SS_LCTL(SS_LSFT(SS_TAP(X_I))));
-                    break;
-                }
+                SEND_STRING(SS_LALT(SS_TAP(X_SPC)));
             } else {
-                if (isMacOS) {
-                    SEND_STRING(SS_LGUI(SS_LALT(SS_TAP(X_F7))));
-                } else {
-                    SEND_STRING(SS_LCTL(SS_LALT(SS_TAP(X_F7))));
-                    break;
-                }
+                SEND_STRING(SS_LALT(SS_TAP(X_F7)));
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
@@ -401,28 +314,16 @@ process_record_result_t process_shortcuts(uint16_t keycode, keyrecord_t *record)
 
         case MC_REFC:
             if (isShifted) {
-                if (isMacOS) {
-                    SEND_STRING(SS_LGUI(SS_LALT(SS_TAP(X_L))));
-                } else {
-                    SEND_STRING(SS_LCTL(SS_LALT(SS_TAP(X_L))));
-                }
+                SEND_STRING(SS_LCTL(SS_LALT(SS_TAP(X_L))));
             } else {
-                if (isMacOS) {
-                    SEND_STRING(SS_LCTL(SS_TAP(X_T)));
-                } else {
-                    SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT(SS_TAP(X_T)))));
-                }
+                SEND_STRING(SS_LCTL(SS_TAP(X_T)));
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
             // Comment Lines
 
         case MC_COMT:
-            if (isMacOS) {
-                SEND_STRING(SS_LGUI("/"));
-            } else {
-                SEND_STRING(SS_LCTL("/"));
-            }
+            SEND_STRING(SS_LCTL("/"));
             return PROCESS_RECORD_RETURN_FALSE;
 
             // Reset Zoom / Refresh
