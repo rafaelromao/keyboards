@@ -294,13 +294,23 @@ process_record_result_t process_shortcut_keycode(uint16_t keycode, bool isOneSho
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Complete Statement / Next Error
+            // Swapper / Next Error
 
-        case MC_COMP:
+        case MC_SWAP:
             if (isShifted) {
                 SEND_STRING(SS_TAP(X_F2));
             } else {
+                SEND_STRING(SS_LCTL(SS_TAP(X_TAB)));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Arrow Down / Complete Statement
+
+        case MC_DOWN:
+            if (isShifted) {
                 SEND_STRING(SS_LSFT(SS_LGUI(SS_TAP(X_ENT))));
+            } else {
+                tap_code(KC_DOWN);
             }
             return PROCESS_RECORD_RETURN_FALSE;
 

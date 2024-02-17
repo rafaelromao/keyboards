@@ -49,23 +49,23 @@ The list bellow contains my most used Coding shortcuts. The IntelliJ keymap for 
 
 | Default Action | Shifted Action | Default Shortcut | Shifted Shortcut
 |---|---|---|---|
-| Quick Actions      | Generate          | Alt + Enter          | Gui + N
-| Toggle Breakpoint  | View Breakpoints  | Gui + F8             | Gui + Shift + F8
-| Step Over          | Evaluate          | F8                   | Alt + F8
-| Step Into          | Step Out          | F7                   | Shift + F8
-| Refactor           | Reformat Code     | Ctrl + T             | Gui + Alt + L
-| Type-matching      | Auto Complete     | Ctrl + Shift + Space | Ctrl + Space
-| Quick Docs         | Parameters Info   | F1                   | Gui + P
-| Find Symbol        | Find Action       | Gui + Alt + O        | Gui + Shift + A
-| Extend Selection   | Shrink Selection  | Gui + W              | Gui + Shift + W
-| Run                | Stop              | Ctrl + R             | Ctrl + F2
-| Debug              | Resume            | Ctrl + D             | Gui + Alt + R
-| Build              | Rebuild           | Gui + F9             | Gui + Shift + F9
-| Recent Files       | Previous Error    | Gui + E              | Shift + F2
-| Complete Statement | Next Error        | Gui + Shift + Enter  | F2
-| Show Usages        | Quick Definition  | Gui + Alt + F7       | Alt + Space
-| Project Files      | Select In         | Gui + 1              | Alt + F1
-| Comment Lines      |                   | Gui + /              |
+| Type-matching      | Auto Complete      | Ctrl + Shift + Space | Ctrl + Space
+| Quick Actions      | Generate           | Alt + Enter          | Gui + N
+| Quick Docs         | Parameters Info    | F1                   | Gui + P
+| Arrow Down         | Complete Statement | Down                 | Gui + Shift + Enter
+| Refactor           | Reformat Code      | Ctrl + T             | Gui + Alt + L
+| Comment Lines      |                    | Gui + /              |
+| Project Files      | Select In          | Gui + 1              | Alt + F1
+| Step Over          | Evaluate           | F8                   | Alt + F8
+| Step Into          | Step Out           | F7                   | Shift + F8
+| Toggle Breakpoint  | View Breakpoints   | Gui + F8             | Gui + Shift + F8
+| Find Symbol        | Find Action        | Gui + Alt + O        | Gui + Shift + A
+| Run                | Stop               | Ctrl + R             | Ctrl + F2
+| Debug              | Resume             | Ctrl + D             | Gui + Alt + R
+| Build              | Rebuild            | Gui + F9             | Gui + Shift + F9
+| Recent Files       | Previous Error     | Gui + E              | Shift + F2
+| Swapper            | Next Error         | Ctrl + Tab           | F2
+| Show Usages        | Quick Definition   | Gui + Alt + F7       | Alt + Space
 
 ##
 [Home](../readme.md) | 

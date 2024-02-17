@@ -22,8 +22,8 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case QK_MOD_TAP ... QK_MOD_TAP_MAX:
         case SHO_KCD:
         case SHO_KCI:
-        case INT_DOT:
-        case INT_AST:
+        case COD_DOT:
+        case COD_AST:
         case NAV_F12:
         case NAV_AT:
             return 225;
@@ -67,7 +67,14 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
             }
             break;
 
-        case INT_AST:
+        case NAV_COD:
+            if (record->event.pressed && record->tap.count) {
+                layer_on(_CODING);
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+            break;
+
+        case COD_AST:
             if (record->event.pressed && record->tap.count) {
                 tap_code16(KC_ASTR);
                 return PROCESS_RECORD_RETURN_FALSE;

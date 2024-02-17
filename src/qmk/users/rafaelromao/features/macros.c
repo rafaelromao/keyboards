@@ -2,7 +2,14 @@
 
 #include "macros.h"
 
-process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotShift, bool isShifted) {
+process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
+    if (!is_shift_macro_keycode(keycode)) {
+        return PROCESS_RECORD_CONTINUE;
+    }
+
+    if (record != NULL && !record->event.pressed) {
+        return PROCESS_RECORD_CONTINUE;
+    }
     bool isMacOS = is_macos();
 
     switch (keycode) {
@@ -209,32 +216,4 @@ process_record_result_t process_macro_keycode(uint16_t keycode, bool isOneShotSh
     }
 
     return PROCESS_RECORD_CONTINUE;
-}
-
-process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
-    if (!is_shift_macro_keycode(keycode)) {
-        return PROCESS_RECORD_CONTINUE;
-    }
-
-    if (record != NULL && !record->event.pressed) {
-        return PROCESS_RECORD_CONTINUE;
-    }
-
-    bool isOneShotShift       = get_oneshot_mods() & MOD_MASK_SHIFT;
-    bool isShifted            = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
-
-    // Macros
-
-    int8_t mods = get_mods();
-    if (isShifted) {
-        clear_oneshot_shift();
-        unregister_mods(mods);
-    }
-    process_record_result_t result = process_macro_keycode(keycode, isOneShotShift, isShifted);
-    if (isShifted) {
-        wait_ms(100);
-        register_mods(mods);
-    }
-
-    return result;
 }

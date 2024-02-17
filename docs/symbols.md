@@ -29,9 +29,8 @@ Symbols and Numbers are primarily available in the two classic Lower and Raise l
  
  ### Numpad Layer
 - A dedicated Numpad layer can be activated from the Raise layer, using a single hand.
-- The left side of the Numpad layer contains function keys.
+- The left side of the Numpad layer contains mouse keys, just like the left side of the [Media](navigation.md#media) layer.
 - The right side of the Numpad layer contains number keys.
-- Home block mods are also available on both sides of the Numpad layer.
 
 ### NumWord
 - NumWord is a variation of CapsWord, but for numbers instead. A combo with ring and middle fingers in the left side bottom row will activate the Numpad layer and it will stay active while numbers or symbols are typed, returning to the base layer otherwise.

@@ -110,10 +110,10 @@
                 numpad_layer {
                      label = "NUMPAD";
                      bindings = <
-   &trans              &kp F9              &kp F8              &kp F7              &none               &none               &mc_n7              &mc_n8              &mc_n9              &trans
-   &lt SHORTS_L F12    &mt LSHFT F6        &mt LCTRL F5        &mt LGUI F4         &kp F11             &kp COMMA           &th_n4 RGUI 0       &th_n5 RCTRL 0      &th_n6 RSHFT 0      &lt CODING DOT 
-   &none               &mt RALT F3         &kp F2              &mt LALT F1         &kp F10             &none               &th_n1 RALT 0       &mc_n2              &mc_n3              &none
-                                           &trans              &ht_repeat NAV 0    &trans              &ltn SYMBOLS SPACE  &th_n0 MEDIA 0      &trans
+   &trans              &kp ESC             &none               &none               &none               &none               &mc_n7              &mc_n8              &mc_n9              &trans
+   &mkp RCLK           &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &kp COMMA           &mc_n4              &mc_n5              &mc_n6              &lt CODING DOT 
+   &none               &msc SCRL_DOWN      &mmv MOVE_DOWN      &msc SCRL_UP        &none               &none               &mc_n1              &mc_n2              &mc_n3              &none
+                                           &trans              &mo NAV_F           &mkp LCLK           &ltn SYMBOLS SPACE  &th_n0 MEDIA 0      &trans
                            >;
                 };
                 shortcuts_left_layer {
@@ -122,7 +122,7 @@
    &trans              &mm_close_tab_esc   &mm_refresh_z0      &mm_preview         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &trans    
    &none               &th_zh_b LSHFT 0    &mm_zh_f            &mm_tabs            &none               &none               &mc_seln            &kp DOWN            &mt RSHFT UP        &mo SYSTEM
    &none               &mm_wt_b            &mm_wt_f            &mm_calc            &none               &none               &td_dynmacro        &kp LC(LG(Q))       &kp C_SLEEP         &none
-                                           &trans              &mst NAV NAV_F      &lt NMODS SPACE     &lt CODING SPACE  &mst NAV NAV_F      &trans
+                                           &trans              &mst NAV CODING     &mst NMODS NMODS    &lt CODING SPACE    &mst NAV NAV_F      &trans
                            >;
                 };
                 shortcuts_right_layer {
@@ -131,7 +131,7 @@
    &trans              &mm_close_tab_esc   &mm_refresh_z0      &mm_preview         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &trans    
    &mo SYSTEM          &th_zh_b LSHFT 0    &mm_zh_f            &mm_tabs            &none               &none               &mc_seln            &kp DOWN            &mt RSHFT UP        &none
    &none               &mm_wt_b            &mm_wt_f            &mm_calc            &none               &none               &td_dynmacro        &kp LC(LG(Q))       &kp C_SLEEP         &none
-                                           &trans              &mst NAV NAV_F      &lt NMODS SPACE     &lt CODING SPACE  &mst NAV NAV_F      &trans
+                                           &trans              &mst NAV CODING     &mst NMODS NMODS    &lt CODING SPACE    &mst NAV NAV_F      &trans
                            >;
                 };
                 shortcuts_extension_layer {
@@ -146,9 +146,9 @@
                 coding_layer {
                      label = "CODING";
                      bindings = <
-   &trans              &mm_close_tab_esc   &mm_typematch       &mm_build           &none               &none               &mm_break           &kp ENTER           &kp ESC             &trans    
-   &mm_project         &mm_find            &mm_run             &mm_debug           &none               &none               &mm_actions         &kp DOWN            &mt RSHFT UP        &trans
-   &none               &mm_recent          &mm_complete        &mm_usages          &none               &none               &mm_docs            &mm_refac           &mc_comment         &none
+   &trans              &mm_close_tab_esc   &mm_break           &mm_build           &none               &none               &mm_typematch       &kp ENTER           &kp ESC             &trans    
+   &mm_project         &mm_find            &mm_run             &mm_debug           &none               &none               &mm_actions         &mm_down            &mt RSHFT UP        &trans
+   &none               &mm_recent          &mm_swapper         &mm_usages          &none               &none               &mm_docs            &mm_refac           &mc_comment         &none
                                            &trans              &th_step_into NAV 0 &mm_step_over       &trans              &trans              &trans
                            >;
                 };

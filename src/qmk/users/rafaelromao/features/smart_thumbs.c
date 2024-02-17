@@ -47,7 +47,7 @@ bool check_disable_oneshot(uint16_t keycode) {
     switch (keycode) {
         case RAI_A2:
         case RAI_TA2:
-        case INT_SPC:
+        case COD_SPC:
         case LOW_SPC:
         case MED_CAS:
         case NAV_CAS:

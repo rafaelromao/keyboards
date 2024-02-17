@@ -103,9 +103,9 @@ enum {
     MC_PREV, MC_TABS, MC_CALC, MC_MIC, MC_CAM,
 
     // IDE shortcuts
-    MC_QUIK, MC_AUCO, MC_COMT, MC_STIN, MC_STOV,
+    MC_QUIK, MC_AUCO, MC_COMT, MC_STIN, MC_STOV, MC_DOWN,
     MC_QDOC, MC_FSYM, MC_RUN, MC_DBUG, MC_BUID, MC_BREK,
-    MC_PROJ, MC_RECE, MC_COMP, MC_FIUS, MC_REFC, 
+    MC_PROJ, MC_RECE, MC_SWAP, MC_FIUS, MC_REFC, 
 
     // Begin macros used to write text
     STR_MACRO_START,
@@ -132,6 +132,17 @@ enum {
     // End macros used to write text
     STR_MACRO_END,
 
+    F_OM_U,
+    F_OM_D,
+    F_OM_L,
+    F_OM_R,
+    F_OM_BTNS,
+    F_OM_HLDS,
+    F_OM_RELS,
+    F_OM_W_U,
+    F_OM_W_D,
+    F_OM_BTN2,
+
     CUSTOM_KEYCODE_END
 };
 
@@ -142,25 +153,16 @@ enum {
 #define SF_FSYM LSFT_T(MC_FSYM)
 #define SF_MODM RSFT_T(MC_MODM)
 #define SF_UP RSFT_T(KC_UP)
-#define SF_F6 LSFT_T(KC_F6)
-#define SF_6 RSFT_T(KC_6)
 
 #define LCTLT_S LCTL_T(KC_S)
 #define RCTLT_A RCTL_T(KC_A)
-#define CT_F5 LCTL_T(KC_F5)
-#define CT_5 RCTL_T(KC_5)
 
 #define LALTT_P LALT_T(KC_P)
 #define RALTT_H RALT_T(KC_H)
 #define RALTT_F RALT_T(KC_F)
-#define AL_F1 LALT_T(KC_F1)
-#define AL_1 RALT_T(KC_1)
-#define AL_F3 RALT_T(KC_F3)
 
 #define LGUIT_T LGUI_T(KC_T)
 #define RGUIT_R RGUI_T(KC_R)
-#define GU_F4 LGUI_T(KC_F4)
-#define GU_4 RGUI_T(KC_4)
 
 #define HYP_KCJ HYPR_T(KC_J)
 #define HYP_KCV HYPR_T(KC_V)
@@ -172,16 +174,16 @@ enum {
 // Custom Shortcuts
 
 #ifndef MOUSE_ENABLE
-#define OM_U KC_NO
-#define OM_D KC_NO
-#define OM_L KC_NO
-#define OM_R KC_NO
-#define OM_BTNS KC_NO
-#define OM_HLDS KC_NO
-#define OM_RELS KC_NO
-#define OM_W_U KC_NO
-#define OM_W_D KC_NO
-#define OM_BTN2 KC_NO
+#define OM_U    F_OM_U
+#define OM_D    F_OM_D
+#define OM_L    F_OM_L
+#define OM_R    F_OM_R
+#define OM_BTNS F_OM_BTNS
+#define OM_HLDS F_OM_HLDS
+#define OM_RELS F_OM_RELS
+#define OM_W_U  F_OM_W_U
+#define OM_W_D  F_OM_W_D
+#define OM_BTN2 F_OM_BTN2
 #endif
 
 // Layer-taps
@@ -195,7 +197,7 @@ enum {
 #define MED_CAS LT(_MEDIA, TG_CASE)
 #define MED_0   LT(_MEDIA, KC_0)
 
-#define NMO_SPC LT(_NOMOD, KC_SPC)
+#define NAV_COD LT(_NAVIGATION, _CODING)
 #define LOW_SPC LT(_LOWER, KC_SPC)
 #define RAI_TA2 LT(_RAISE, TG_ACNT)
 #define RAI_SPC LT(_RAISE, KC_SPC)
@@ -204,9 +206,9 @@ enum {
 
 #define SHO_KCD LT(_SHORTCUTS, KC_D)
 #define SHO_KCI LT(_SHORTCUTS, KC_I)
-#define INT_SPC LT(_CODING, KC_SPC)
-#define INT_DOT LT(_CODING, KC_DOT)
-#define INT_AST LT(_CODING, KC_ASTR)
+#define COD_SPC LT(_CODING, KC_SPC)
+#define COD_DOT LT(_CODING, KC_DOT)
+#define COD_AST LT(_CODING, KC_ASTR)
 
 // Layer transitions
 #define MO_A2   MO(_FIXED_ALPHA2)
@@ -214,6 +216,7 @@ enum {
 #define MO_SYS  MO(_SYSTEM)
 #define TO_A1   TO(_ALPHA1)
 #define TT_NAV  TT(_FIXED_NAV)
+#define TT_NMO  TT(_NOMOD)
 #define TG_LOCK TG(_LOCK)
 #define TG_NUM  TG(_NUMPAD)
 #define OS_SYM  OSL(_SYMBOLS)

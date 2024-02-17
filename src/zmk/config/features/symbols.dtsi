@@ -108,10 +108,6 @@
         SHIFTED_SYMBOL(mc_n9,      &kp N9, &kp KP_N9)
 
         LAYERTAP_SYMBOL(th_n0,     &mc_n0)
-        MODTAP_SYMBOL(th_n1,       &mc_n1)
-        MODTAP_SYMBOL(th_n4,       &mc_n4)
-        MODTAP_SYMBOL(th_n5,       &mc_n5)
-        MODTAP_SYMBOL(th_n6,       &mc_n6)
 
         SYMBOL(mc_dollar,          &kp DOLLAR)
         SYMBOL(mc_bslash,          &kp BACKSLASH)

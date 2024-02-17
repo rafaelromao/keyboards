@@ -31,37 +31,37 @@
 #define                               ____RAISE_L4_____                               QK_REP  , SYM_SPC
 
 #define           _________RAISE_R1____________________           TD_COLN , TD_EQL  , TD_HASH , XXXXXXX
-#define ___________________RAISE_R2____________________ MC_CIRC , TD_MINS , TD_PLUS , TD_SLSH , INT_AST
+#define ___________________RAISE_R2____________________ MC_CIRC , TD_MINS , TD_PLUS , TD_SLSH , COD_AST
 #define ___________________RAISE_R3__________           MC_TILD , TD_EXLM , TD_LT   , TD_GT     
 #define ____RAISE_R4_____                               _______ , TG_NUM
 
-#define ___________________NUMPAD_L1_________           _______ , KC_F9   , KC_F8   , KC_F7   
-#define ___________________NUMPAD_L2___________________ NAV_F12 , SF_F6   , CT_F5   , GU_F4   , KC_F11
-#define           _________NUMPAD_L3___________________           AL_F3   , KC_F2   , AL_F1   , KC_F10
-#define                               ____NUMPAD_L4____                               _______ , LOW_SPC
+#define ___________________NUMPAD_L1_________           _______ , MC_ESC  , OM_RELS , OM_HLDS  
+#define ___________________NUMPAD_L2___________________ OM_BTN2 , OM_L    , OM_U    , OM_R    , XXXXXXX
+#define           _________NUMPAD_L3___________________           OM_W_D  , OM_D    , OM_W_U  , XXXXXXX
+#define                               ____NUMPAD_L4____                               NAV_FCA , OM_BTNS
 
 #define           _________NUMPAD_R1___________________           KC_7    , KC_8    , KC_9    , _______
-#define ___________________NUMPAD_R2___________________ KC_COMM , GU_4    , CT_5    , SF_6    , INT_DOT
-#define ___________________NUMPAD_R3_________           KC_DOT  , AL_1    , KC_2    , KC_3    
+#define ___________________NUMPAD_R2___________________ KC_COMM , KC_4    , KC_5    , KC_6    , COD_DOT
+#define ___________________NUMPAD_R3_________           KC_DOT  , KC_1    , KC_2    , KC_3    
 #define ____NUMPAD_R4____                               RAI_SPC , MED_0
 
 #define ________________SHORTCUTS_L1_________           XXXXXXX , MC_CLOS , MC_Z0R  , MC_PREV 
 #define ________________SHORTCUTS_L2___________________ MO_SYS  , SF_MODM , MC_MODP , MC_TABS , XXXXXXX
 #define           ______SHORTCUTS_L3___________________           MC_SWLE , MC_SWRI , MC_CALC , XXXXXXX
-#define                               _SHORTCUTS_L4____                               TT_NAV  , NMO_SPC
+#define                               _SHORTCUTS_L4____                               NAV_COD  , TT_NMO
 
 #define           ______SHORTCUTS_R1___________________           MC_SELW , MC_ENT  , KC_ESC  , XXXXXXX
 #define ________________SHORTCUTS_R2___________________ XXXXXXX , MC_SELL , KC_DOWN , SF_UP   , MO_SYS
 #define ________________SHORTCUTS_R3_________           XXXXXXX , TD_MACR , MC_LOCK , KC_SLEP
-#define _SHORTCUTS_R4____                               INT_SPC , TT_NAV
+#define _SHORTCUTS_R4____                               COD_SPC , TT_NAV
 
-#define ___________________CODING_L1_________           XXXXXXX , MC_CLOS , MC_AUCO , MC_BUID 
+#define ___________________CODING_L1_________           XXXXXXX , MC_CLOS , MC_BREK , MC_BUID 
 #define ___________________CODING_L2___________________ MC_PROJ , MC_FSYM , MC_RUN  , MC_DBUG , XXXXXXX
-#define           _________CODING_L3___________________           MC_RECE , MC_COMP , MC_FIUS , XXXXXXX
+#define           _________CODING_L3___________________           MC_RECE , MC_SWAP , MC_FIUS , XXXXXXX
 #define                               ____CODING_L4____                               NAV_STI , MC_STOV
 
-#define           _________CODING_R1___________________           MC_BREK , MC_ENT  , KC_ESC  , XXXXXXX
-#define ___________________CODING_R2___________________ XXXXXXX , MC_QUIK , KC_DOWN , SF_UP   , XXXXXXX
+#define           _________CODING_R1___________________           MC_AUCO , MC_ENT  , KC_ESC  , XXXXXXX
+#define ___________________CODING_R2___________________ XXXXXXX , MC_QUIK , MC_DOWN , SF_UP   , XXXXXXX
 #define ___________________CODING_R3_________           XXXXXXX , MC_QDOC , MC_REFC , MC_COMT 
 #define ____CODING_R4____                               _______ , _______
 
