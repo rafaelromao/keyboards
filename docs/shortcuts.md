@@ -37,10 +37,10 @@
 
 ## Coding
 
-- An Coding layer can be activated holding the right pinky key from the Raise or Numpad layers.
+- A Coding layer can be activated holding the right pinky key from the Raise or Numpad layers.
 - This layer can also be activated holding the home thumb in the right side of the shortcuts layer, which makes it possible to hold the thumb and pinky keys together in any order to activate the Coding layer.
 - This layer gives access to some common programming shortcuts and also some macros.
-- Arrows, Enter and Esc are also available in the right side of this layer to make it easier to navigate in context menus.
+- Up and Down arrows, Enter and Esc are also available in the right side of this layer to make it easier to navigate in context menus.
 - There is also a home row shift in the right side to allow access to different actions when shift is active.
 
 ### Coding Shortcuts
