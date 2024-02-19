@@ -229,7 +229,15 @@ process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record
             case KC_COLN:
             case KC_LPRN:
             case KC_RPRN:
-            case KC_F1 ... KC_F12:
+            case OM_BTN2:
+            case OM_L:
+            case OM_U:
+            case OM_R:
+            case OM_W_D:
+            case OM_D:
+            case OM_W_U:
+            case OM_RELS:
+            case OM_HLDS:
                 if (has_smart_case(NUM_CASE)) {
                     start_smart_case_timer();
                     break;

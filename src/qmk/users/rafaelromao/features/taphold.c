@@ -22,7 +22,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case QK_MOD_TAP ... QK_MOD_TAP_MAX:
         case SHO_KCD:
         case SHO_KCI:
-        case COD_DOT:
+        case SHO_DOT:
         case COD_AST:
         case NAV_F12:
         case NAV_AT:

@@ -5,6 +5,9 @@
 #include "../definitions/process_record.h"
 #include "accents.h"
 #include "macros.h"
+#ifdef MOUSE_ENABLE
+#    include "features/getreuer/orbital_mouse.h"
+#endif
 
 typedef enum {
     NO_CASE     = 1 << 0,

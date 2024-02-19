@@ -101,7 +101,7 @@
             ignore-numbers;
 			#binding-cells = <0>;
             layers = <NUMPAD>;
-            continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12>;
+            continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL MOVE_LEFT MOVE_RIGHT MOVE_UP MOVE_DOWN SCRL_DOWN SCRL_UP RCLK LCLK>;
         };
 
         THUMB_MACRO(tc_custom_num_word,     &to ALPHA1 &custom_num_word)

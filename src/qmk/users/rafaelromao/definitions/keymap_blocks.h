@@ -41,14 +41,14 @@
 #define                               ____NUMPAD_L4____                               NAV_FCA , OM_BTNS
 
 #define           _________NUMPAD_R1___________________           KC_7    , KC_8    , KC_9    , _______
-#define ___________________NUMPAD_R2___________________ KC_COMM , KC_4    , KC_5    , KC_6    , COD_DOT
+#define ___________________NUMPAD_R2___________________ KC_COMM , KC_4    , KC_5    , KC_6    , SHO_DOT
 #define ___________________NUMPAD_R3_________           KC_DOT  , KC_1    , KC_2    , KC_3    
 #define ____NUMPAD_R4____                               RAI_SPC , MED_0
 
 #define ________________SHORTCUTS_L1_________           XXXXXXX , MC_CLOS , MC_Z0R  , MC_PREV 
 #define ________________SHORTCUTS_L2___________________ MO_SYS  , SF_MODM , MC_MODP , MC_TABS , XXXXXXX
 #define           ______SHORTCUTS_L3___________________           MC_SWLE , MC_SWRI , MC_CALC , XXXXXXX
-#define                               _SHORTCUTS_L4____                               NAV_COD  , TT_NMO
+#define                               _SHORTCUTS_L4____                               NAV_COD , TT_NMO
 
 #define           ______SHORTCUTS_R1___________________           MC_SELW , MC_ENT  , KC_ESC  , XXXXXXX
 #define ________________SHORTCUTS_R2___________________ XXXXXXX , MC_SELL , KC_DOWN , SF_UP   , MO_SYS

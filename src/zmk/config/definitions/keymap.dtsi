@@ -111,7 +111,7 @@
                      label = "NUMPAD";
                      bindings = <
    &trans              &kp ESC             &none               &none               &none               &none               &mc_n7              &mc_n8              &mc_n9              &trans
-   &mkp RCLK           &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &kp COMMA           &mc_n4              &mc_n5              &mc_n6              &lt CODING DOT 
+   &mkp RCLK           &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &kp COMMA           &mc_n4              &mc_n5              &mc_n6              &lt SHORTS_R DOT 
    &none               &msc SCRL_DOWN      &mmv MOVE_DOWN      &msc SCRL_UP        &none               &none               &mc_n1              &mc_n2              &mc_n3              &none
                                            &trans              &mo NAV_F           &mkp LCLK           &ltn SYMBOLS SPACE  &th_n0 MEDIA 0      &trans
                            >;

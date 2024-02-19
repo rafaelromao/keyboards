@@ -132,16 +132,18 @@ enum {
     // End macros used to write text
     STR_MACRO_END,
 
-    F_OM_U,
-    F_OM_D,
-    F_OM_L,
-    F_OM_R,
-    F_OM_BTNS,
-    F_OM_HLDS,
-    F_OM_RELS,
-    F_OM_W_U,
-    F_OM_W_D,
-    F_OM_BTN2,
+#ifndef MOUSE_ENABLE
+    OM_U,
+    OM_D,
+    OM_L,
+    OM_R,
+    OM_BTNS,
+    OM_HLDS,
+    OM_RELS,
+    OM_W_U,
+    OM_W_D,
+    OM_BTN2,
+#endif
 
     CUSTOM_KEYCODE_END
 };
@@ -171,21 +173,6 @@ enum {
 
 #define OS_LSFT OSM(MOD_LSFT)
 
-// Custom Shortcuts
-
-#ifndef MOUSE_ENABLE
-#define OM_U    F_OM_U
-#define OM_D    F_OM_D
-#define OM_L    F_OM_L
-#define OM_R    F_OM_R
-#define OM_BTNS F_OM_BTNS
-#define OM_HLDS F_OM_HLDS
-#define OM_RELS F_OM_RELS
-#define OM_W_U  F_OM_W_U
-#define OM_W_D  F_OM_W_D
-#define OM_BTN2 F_OM_BTN2
-#endif
-
 // Layer-taps
 
 #define NAV_F12 LT(_NAVIGATION, KC_F12)
@@ -206,8 +193,8 @@ enum {
 
 #define SHO_KCD LT(_SHORTCUTS, KC_D)
 #define SHO_KCI LT(_SHORTCUTS, KC_I)
+#define SHO_DOT LT(_SHORTCUTS, KC_DOT)
 #define COD_SPC LT(_CODING, KC_SPC)
-#define COD_DOT LT(_CODING, KC_DOT)
 #define COD_AST LT(_CODING, KC_ASTR)
 
 // Layer transitions

@@ -65,7 +65,7 @@ const uint16_t PROGMEM l_num_ent_combo[] = {OM_L, OM_U, OM_R, COMBO_END};
 const uint16_t PROGMEM l_num_del_combo[] = {OM_W_D, OM_D, OM_W_U, COMBO_END};
 const uint16_t PROGMEM l_num_num_combo[] = {OM_W_D, OM_D, COMBO_END};
 
-const uint16_t PROGMEM r_num_com_combo[] = {RAI_SPC, COD_DOT, COMBO_END};
+const uint16_t PROGMEM r_num_com_combo[] = {RAI_SPC, SHO_DOT, COMBO_END};
 
 // Lower
 
