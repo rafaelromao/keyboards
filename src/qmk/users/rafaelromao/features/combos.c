@@ -6,18 +6,18 @@
 
 const uint16_t PROGMEM l_rom_k_combo[]   = {KC_M, KC_G, COMBO_END};
 const uint16_t PROGMEM l_rom_w_combo[]   = {LCTLT_S, LGUIT_T, COMBO_END};
-const uint16_t PROGMEM l_rom_v_combo[]   = {KC_C, LALTT_P, COMBO_END};
+const uint16_t PROGMEM l_rom_v_combo[]   = {LEA_KCC, LALTT_P, COMBO_END};
 const uint16_t PROGMEM l_rom_q_combo[]   = {LSFTT_N, LCTLT_S, COMBO_END};
-const uint16_t PROGMEM l_rom_num_combo[] = {RALTT_F, KC_C, COMBO_END};
+const uint16_t PROGMEM l_rom_num_combo[] = {RALTT_F, LEA_KCC, COMBO_END};
 const uint16_t PROGMEM l_rom_esc_combo[] = {KC_B, KC_M, COMBO_END};
 const uint16_t PROGMEM l_rom_esv_combo[] = {LOW_SPC, KC_B, KC_M, COMBO_END};
-const uint16_t PROGMEM l_rom_und_combo[] = {LOW_SPC, RALTT_F, KC_C, COMBO_END};
+const uint16_t PROGMEM l_rom_und_combo[] = {LOW_SPC, RALTT_F, LEA_KCC, COMBO_END};
 const uint16_t PROGMEM l_rom_sav_combo[] = {LOW_SPC, LSFTT_N, LCTLT_S, COMBO_END};
 const uint16_t PROGMEM l_rom_ful_combo[] = {LOW_SPC, LCTLT_S, LGUIT_T, COMBO_END};
-const uint16_t PROGMEM l_rom_fin_combo[] = {LOW_SPC, KC_C, LALTT_P, COMBO_END};
+const uint16_t PROGMEM l_rom_fin_combo[] = {LOW_SPC, LEA_KCC, LALTT_P, COMBO_END};
 const uint16_t PROGMEM l_rom_ent_combo[] = {LSFTT_N, LCTLT_S, LGUIT_T, COMBO_END};
 const uint16_t PROGMEM l_rom_tab_combo[] = {KC_B, KC_M, KC_G, COMBO_END};
-const uint16_t PROGMEM l_rom_del_combo[] = {RALTT_F, KC_C, LALTT_P, COMBO_END};
+const uint16_t PROGMEM l_rom_del_combo[] = {RALTT_F, LEA_KCC, LALTT_P, COMBO_END};
 
 const uint16_t PROGMEM r_rom_x_combo[]    = {KC_L, KC_O, COMBO_END};
 const uint16_t PROGMEM r_rom_z_combo[]    = {RGUIT_R, RCTLT_A, COMBO_END};

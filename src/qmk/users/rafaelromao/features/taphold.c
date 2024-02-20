@@ -53,6 +53,17 @@ bool get_combo_must_tap(uint16_t index, combo_t *combo) {
 
 process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+        case LEA_KCC:
+            if (record->event.pressed && !record->tap.count) {
+#ifdef LEADER_ENABLE
+                leader_start();
+                return PROCESS_RECORD_RETURN_FALSE;
+#else
+                return PROCESS_RECORD_RETURN_TRUE;
+#endif
+            }
+            break;
+
         case NAV_AT:
             if (record->event.pressed && record->tap.count) {
                 tap_code16(KC_AT);

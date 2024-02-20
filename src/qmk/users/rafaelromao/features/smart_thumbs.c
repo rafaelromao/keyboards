@@ -123,7 +123,6 @@ bool in_mid_word(uint16_t key, bool isMagic) {
             case KC_S:
             case KC_C:
             case KC_G:
-            case KC_MINUS:
                 return false;
         }
     }
@@ -152,6 +151,15 @@ bool in_mid_word(uint16_t key, bool isMagic) {
             return false;
     }
     return true;
+}
+
+void apply_repeat_magic_default(void) {
+    if (!has_any_smart_case()) {
+        add_oneshot_mods(MOD_LSFT);
+    } else {
+        disable_smart_case();
+        clear_shift();
+    }
 }
 
 void process_shift_repeat(uint16_t keycode) {
@@ -237,10 +245,17 @@ void process_shift_repeat(uint16_t keycode) {
                 tap_code(KC_M);
                 break;
             default:
-                tap_code16(key);
+                switch (key) {
+                    case KC_A ... KC_Z:
+                        tap_code16(key);
+                        break;
+                    default:
+                        apply_repeat_magic_default();
+                        break;
+                }
         }
     } else {
-        add_oneshot_mods(MOD_LSFT);
+        apply_repeat_magic_default();
     }
 }
 
@@ -342,10 +357,11 @@ void process_shift_magic(uint16_t keycode) {
                 tap_code(KC_SLSH);
                 break;
             default:
-                tap_code16(key);
+                apply_repeat_magic_default();
+                break;
         }
     } else {
-        add_oneshot_mods(MOD_LSFT);
+        apply_repeat_magic_default();
     }
 }
 
@@ -407,12 +423,7 @@ process_record_result_t process_smart_thumbs(uint16_t keycode, keyrecord_t *reco
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
                     if (has_any_smart_case()) {
-                        if (!isOneShotShift) {
-                            add_oneshot_mods(MOD_MASK_SHIFT);
-                        } else {
-                            disable_smart_case();
-                            clear_shift();
-                        }
+                        activate_shift_repeat_or_magic_key(keycode);
                     } else {
                         if (!isOneShotShift) {
                             activate_shift_repeat_or_magic_key(keycode);

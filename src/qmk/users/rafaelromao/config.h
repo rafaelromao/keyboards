@@ -24,7 +24,7 @@
 #define TAPPING_TOGGLE 1
 
 // Configure leader key
-#define LEADER_TIMEOUT 1000
+#define LEADER_TIMEOUT 500
 #define LEADER_PER_KEY_TIMING
 
 // Configure combos

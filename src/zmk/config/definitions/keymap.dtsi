@@ -29,7 +29,7 @@
                      bindings = <
    &mc_escc            &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp BSPC
    &lt SHORTS_L D      &mt RSHFT N         &mt LCTRL S         &mt LGUI T          &kp W               &kp Z               &mt RGUI R          &mt RCTRL A         &mt RSHFT E         &lt SHORTS_R I 
-   &kp Q               &mt RALT F          &kp C               &mt LALT P          &kp V               &kp J               &mt RALT H          &th_comma 0 0       &th_dot 0 0         &kp Y
+   &kp Q               &mt RALT F          &th_c 0 0           &mt LALT P          &kp V               &kp J               &mt RALT H          &th_comma 0 0       &th_dot 0 0         &kp Y
                                            &none               &ht_repeat NAV 0    &ltn LOWER SPACE    &msl_raise_smart    &ht_magic MEDIA 0   &none
                         >;
                 };
@@ -86,7 +86,7 @@
    &trans              &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &trans
    &lt SHORTS_L LS(D)  &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTS_R LS(I) 
    &kp LS(Q)           &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &mt RALT LS(H)      &th_comma 0 0       &th_dot 0 0         &kp LS(Y)
-                                           &trans              &ht_repeat NAV 0    &trans              &msl RAISE CASE_A2  &ht_magic MEDIA 0   &trans
+                                           &trans              &ht_repeat_c NAV 0  &trans              &msl RAISE CASE_A2  &ht_magic_c MEDIA 0 &trans
                         >;
                 };
                 lower_layer {
@@ -110,10 +110,10 @@
                 numpad_layer {
                      label = "NUMPAD";
                      bindings = <
-   &trans              &kp ESC             &none               &none               &none               &none               &mc_n7              &mc_n8              &mc_n9              &trans
-   &mkp RCLK           &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &kp COMMA           &mc_n4              &mc_n5              &mc_n6              &lt SHORTS_R DOT 
+   &trans              &kp ESC             &mkp LCLK           &mkp RCLK           &none               &none               &mc_n7              &mc_n8              &mc_n9              &trans
+   &none               &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &kp COMMA           &mc_n4              &mc_n5              &mc_n6              &lt SHORTS_R DOT 
    &none               &msc SCRL_DOWN      &mmv MOVE_DOWN      &msc SCRL_UP        &none               &none               &mc_n1              &mc_n2              &mc_n3              &none
-                                           &trans              &mo NAV_F           &mkp LCLK           &ltn SYMBOLS SPACE  &th_n0 MEDIA 0      &trans
+                                           &trans              &mo NAV_F           &trans              &ltn SYMBOLS SPACE  &th_n0 MEDIA 0      &trans
                            >;
                 };
                 shortcuts_left_layer {
@@ -158,7 +158,7 @@
    &kp ESC            &kp B                &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp BSPC
    &kp D              &kp N                &kp S               &kp T               &kp W               &kp Z               &kp R               &kp A               &kp E               &kp I 
    &kp Q              &kp F                &kp C               &kp P               &kp V               &kp J               &kp H               &kp COMMA           &kp DOT             &kp Y
-                                           &none               &key_repeat         &trans              &mo ALPHA2          &sk LSHFT           &none
+                                           &none               &key_repeat         &trans              &msl ALPHA2 ALPHA2  &sk LSHFT           &none
                            >;
                 };
                 alpha2_layer {
@@ -227,10 +227,10 @@
                 media_layer {
                      label = "MEDIA";
                      bindings = <
-   &trans              &kp ESC             &none               &none               &none               &none               &kp TAB             &kp ENTER           &kp BACKSPACE       &trans
-   &mkp RCLK           &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &none               &mc_mic             &mt C_MUTE C_VOL_DN &kp C_VOL_UP        &mc_cam
+   &trans              &kp ESC             &mkp LCLK           &mkp RCLK           &none               &none               &kp TAB             &kp ENTER           &kp BACKSPACE       &trans
+   &none               &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &none               &mc_mic             &mt C_MUTE C_VOL_DN &kp C_VOL_UP        &mc_cam
    &none               &msc SCRL_DOWN      &mmv MOVE_DOWN      &msc SCRL_UP        &none               &none               &kp C_PP            &kp C_PREV          &kp C_NEXT          &none
-                                           &trans              &mo NAV_F           &mkp LCLK           &trans              &trans              &trans
+                                           &trans              &mo NAV_F           &trans              &trans              &trans              &trans
                            >;
                 };
                 fixed_navigation_layer {

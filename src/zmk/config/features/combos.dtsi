@@ -28,8 +28,8 @@
     combos {
         compatible = "zmk,combos";
 
-        COMBO(cb_save,          LHR LHM L0,  &mc_save,           ALPHA1 CASE_A1 NUMPAD SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE)
-        COMBO(cb_escc,          LTR LTM,     &mc_escc,           ALPHA1 CASE_A1 NUMPAD NAV NAV_F SHORTS_L SHORTS_R SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE)
+        COMBO(cb_save,          LHR LHM L0,  &mc_save,           ALPHA1 CASE_A1 NUMPAD SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE NMODS CODING)
+        COMBO(cb_escc,          LTR LTM,     &mc_escc,           ALPHA1 CASE_A1 NUMPAD NAV NAV_F SHORTS_L SHORTS_R SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE NMODS CODING)
         COMBO(cb_fullscr,       LHM LHI L0,  &mc_fullscr,        ALPHA1 CASE_A1 NUMPAD SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE)
         COMBO(cb_find,          LBM LBI L0,  &mc_find,           ALPHA1 CASE_A1 NUMPAD SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE)
         COMBO(cb_undo,          LBR LBM L0,  &mc_undo,           ALPHA1 CASE_A1 NUMPAD SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE)

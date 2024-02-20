@@ -7,7 +7,7 @@
 
 #define __________________ALPHA1_L1__________           MC_ESCC , KC_B    , KC_M    , KC_G    
 #define __________________ALPHA1_L2____________________ SHO_KCD , LSFTT_N , LCTLT_S , LGUIT_T , KC_W
-#define           ________ALPHA1_L3____________________           RALTT_F , KC_C    , LALTT_P , KC_V
+#define           ________ALPHA1_L3____________________           RALTT_F , LEA_KCC , LALTT_P , KC_V
 #define                               ___ALPHA1_L4_____                               NAV_CAS , LOW_SPC
 
 #define           ________ALPHA1_R1____________________           KC_L    , KC_O    , KC_U    , KC_BSPC
@@ -35,10 +35,10 @@
 #define ___________________RAISE_R3__________           MC_TILD , TD_EXLM , TD_LT   , TD_GT     
 #define ____RAISE_R4_____                               _______ , TG_NUM
 
-#define ___________________NUMPAD_L1_________           _______ , MC_ESC  , OM_RELS , OM_HLDS  
-#define ___________________NUMPAD_L2___________________ OM_BTN2 , OM_L    , OM_U    , OM_R    , XXXXXXX
+#define ___________________NUMPAD_L1_________           _______ , MC_ESC  , OM_BTN1 , OM_BTN2  
+#define ___________________NUMPAD_L2___________________ XXXXXXX , OM_L    , OM_U    , OM_R    , XXXXXXX
 #define           _________NUMPAD_L3___________________           OM_W_D  , OM_D    , OM_W_U  , XXXXXXX
-#define                               ____NUMPAD_L4____                               NAV_FCA , OM_BTNS
+#define                               ____NUMPAD_L4____                               NAV_FCA , _______
 
 #define           _________NUMPAD_R1___________________           KC_7    , KC_8    , KC_9    , _______
 #define ___________________NUMPAD_R2___________________ KC_COMM , KC_4    , KC_5    , KC_6    , SHO_DOT
@@ -73,7 +73,7 @@
 #define           _________NOMOD_R1____________________           KC_L    , KC_O    , KC_U    , KC_Y
 #define ___________________NOMOD_R2____________________ KC_Z    , KC_R    , KC_A    , KC_E    , KC_I
 #define ___________________NOMOD_R3__________           KC_J    , KC_H    , KC_COMM , KC_DOT  
-#define ____NOMOD_R4_____                               MO_A2   , OS_LSFT
+#define ____NOMOD_R4_____                               OSL_A2  , OS_LSFT
 
 #define ___________________ALPHA2_L1_________           XXXXXXX , KC_Q    , MC_QU   , KC_K
 #define ___________________ALPHA2_L2___________________ KC_Y    , KC_Z    , KC_X    , KC_W    , KC_QUOT
@@ -107,10 +107,10 @@
 #define __NAVIGATION_R4__                               KC_SPC  , MED_CAS
 #define __FIXED_NAV__R4__                               KC_SPC  , TO_A1
 
-#define ___________________MEDIA_L1__________           _______ , MC_ESC  , OM_RELS , OM_HLDS  
-#define ___________________MEDIA_L2____________________ OM_BTN2 , OM_L    , OM_U    , OM_R    , XXXXXXX 
+#define ___________________MEDIA_L1__________           _______ , MC_ESC  , OM_BTN1 , OM_BTN2  
+#define ___________________MEDIA_L2____________________ XXXXXXX , OM_L    , OM_U    , OM_R    , XXXXXXX 
 #define           _________MEDIA_L3____________________           OM_W_D  , OM_D    , OM_W_U  , XXXXXXX 
-#define                               ____MEDIA_L4_____                               NAV_FCA , OM_BTNS
+#define                               ____MEDIA_L4_____                               NAV_FCA , _______
 
 #define           _________MEDIA_R1____________________           KC_TAB  , KC_ENT  , KC_BSPC , _______
 #define ___________________MEDIA_R2____________________ XXXXXXX , MC_MIC  , KC_VOLD , KC_VOLU , MC_CAM

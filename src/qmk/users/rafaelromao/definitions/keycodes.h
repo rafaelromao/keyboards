@@ -189,7 +189,9 @@ enum {
 #define RAI_TA2 LT(_RAISE, TG_ACNT)
 #define RAI_SPC LT(_RAISE, KC_SPC)
 #define SYM_SPC LT(_SYMBOLS, KC_SPC)
+#define LEA_KCC LT(_SYMBOLS, KC_C) // Hold behavior is implemented in intercepted code
 #define RAI_A2  OSL(_ALPHA2) // Hold behavior is implemented in intercepted code
+#define OSL_A2  OSL(_FIXED_ALPHA2) // We need the fixed alpha to distinguish from the intercepted RAI_A2
 
 #define SHO_KCD LT(_SHORTCUTS, KC_D)
 #define SHO_KCI LT(_SHORTCUTS, KC_I)
@@ -198,7 +200,6 @@ enum {
 #define COD_AST LT(_CODING, KC_ASTR)
 
 // Layer transitions
-#define MO_A2   MO(_FIXED_ALPHA2)
 #define MO_MED  MO(_MEDIA)
 #define MO_SYS  MO(_SYSTEM)
 #define TO_A1   TO(_ALPHA1)

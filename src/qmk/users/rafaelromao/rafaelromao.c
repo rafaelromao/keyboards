@@ -31,6 +31,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     process_orbital_mouse(keycode, record);
 #endif
 
+    // Process shortcuts
+    switch (process_shortcuts(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
+
     // Process Sentence Case
     switch (process_sentence_case(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
@@ -93,16 +103,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     // Process accents
     switch (process_accents(keycode, record)) {
-        case PROCESS_RECORD_RETURN_TRUE:
-            return true;
-        case PROCESS_RECORD_RETURN_FALSE:
-            return false;
-        default:
-            break;
-    };
-
-    // Process common shortcuts
-    switch (process_shortcuts(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:
