@@ -142,6 +142,7 @@ enum {
     OM_RELS,
     OM_W_U,
     OM_W_D,
+    OM_BTN1,
     OM_BTN2,
 #endif
 
