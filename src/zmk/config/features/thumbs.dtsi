@@ -68,12 +68,12 @@
                            LS(X)         LS(Y)         LS(Z)         \
                            >; \
             bindings =    < \
-                           &tc_nd        &kp V         &kp O         &kp N         &mc_qu           &key_repeat    &key_repeat   &tc_otiles       &key_repeat \
+                           &kp V         &kp V         &kp O         &kp N         &mc_qu           &key_repeat    &key_repeat   &tc_otiles       &key_repeat \
                            &key_repeat   &kp V         &kp E         &key_repeat   &key_repeat      &tc_oes        &tc_ng        &kp V            &ac_aacu    \
                            &tc_ey        &key_repeat   &key_repeat   &key_repeat   &key_repeat      &kp V          &tc_es        &kp O            &key_repeat \
                            &key_repeat   &ac_ecir      &key_repeat   &key_repeat   &key_repeat      &kp Y          &kp V         &ac_aacu         &tc_hy      \
                            &ac_aacu      &tc_ou        &key_repeat   &tc_com       \
-                           &tc_nd_c      &kp LS(V)     &kp LS(O)     &kp LS(N)     &mc_qu_c         &key_repeat    &key_repeat   &tc_otiles_c     &key_repeat \
+                           &kp LS(V)     &kp LS(V)     &kp LS(O)     &kp LS(N)     &mc_qu_c         &key_repeat    &key_repeat   &tc_otiles_c     &key_repeat \
                            &key_repeat   &kp LS(V)     &kp LS(E)     &key_repeat   &key_repeat      &tc_oes_c      &tc_ng_c      &kp LS(V)        &ac_aacu_c    \
                            &tc_ey_c      &key_repeat   &key_repeat   &key_repeat   &key_repeat      &kp LS(V)      &tc_es_c      &kp LS(O)        &key_repeat \
                            &key_repeat   &ac_ecir_c    &key_repeat   &key_repeat   &key_repeat      &kp LS(Y)      &kp LS(V)     &ac_aacu_c       &tc_hy_c      \
@@ -203,7 +203,6 @@
         SMART_REPEAT(smart_shift_repeat, "smart_shift_repeat", &shift_caps_word)
         SMART_REPEAT(smart_cancel_repeat, "smart_cancel_repeat", &tc_cancel)
 
-        THUMB_MACRO(tc_nd,        &kp N &kp D)
         THUMB_MACRO(tc_oes,       &ac_otil &kp E &kp S)
         THUMB_MACRO(tc_es,        &kp E &kp S)
         THUMB_MACRO(tc_ou,        &kp O &kp U)
@@ -212,7 +211,6 @@
         THUMB_MACRO(tc_hy,        &kp H &kp Y)
         THUMB_MACRO(tc_otiles,    &ac_otil &kp E &kp S)
         THUMB_MACRO(tc_com,       &kp C &kp O &kp M)
-        THUMB_MACRO(tc_nd_c,      &kp LS(N) &kp LS(D))
         THUMB_MACRO(tc_oes_c,     &ac_otil_c &kp LS(E) &kp LS(S))
         THUMB_MACRO(tc_es_c,      &kp LS(E) &kp LS(S))
         THUMB_MACRO(tc_ou_c,      &kp LS(O) &kp LS(U))

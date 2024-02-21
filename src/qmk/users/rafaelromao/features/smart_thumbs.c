@@ -205,8 +205,7 @@ void process_shift_repeat(uint16_t keycode) {
         // repeat/alternate repeat only simple tapping keycodes
         switch (key) {
             case KC_A:
-                tap_code(KC_N);
-                tap_code(KC_D);
+                tap_code(KC_V);
                 break;
             case KC_H:
                 process_accents(MC_TL_O, NULL);
