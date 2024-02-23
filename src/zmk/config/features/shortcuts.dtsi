@@ -114,6 +114,7 @@
         SHORTCUT(mc_find_symbol,            &macro_tap &kp LA(LG(O)))
         SHORTCUT(mc_find_action,            &macro_tap &kp LS(LG(A)))
         SHIFTED_SHORTCUT(mm_find,           &mc_find_symbol, &mc_find_action)
+        MODTAP_SHORTCUT(th_find,            &mm_find)
 
         SHORTCUT(mc_run,                    &macro_tap &kp LC(R))
         SHORTCUT(mc_stop,                   &macro_tap &kp LG(F2))

@@ -56,7 +56,7 @@
 #define _SHORTCUTS_R4____                               COD_SPC , TT_NAV
 
 #define ___________________CODING_L1_________           XXXXXXX , MC_CLOS , MC_BREK , MC_BUID 
-#define ___________________CODING_L2___________________ MC_PROJ , MC_FSYM , MC_RUN  , MC_DBUG , XXXXXXX
+#define ___________________CODING_L2___________________ MC_PROJ , SF_FSYM , MC_RUN  , MC_DBUG , XXXXXXX
 #define           _________CODING_L3___________________           MC_RECE , MC_SWAP , MC_FIUS , XXXXXXX
 #define                               ____CODING_L4____                               NAV_STI , MC_STOV
 

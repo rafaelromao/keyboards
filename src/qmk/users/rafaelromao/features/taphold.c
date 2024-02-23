@@ -92,6 +92,13 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
             }
             break;
 
+        case SF_FSYM:
+            if (record->event.pressed && record->tap.count) {
+                process_shortcuts(MC_FSYM, NULL);
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+            break;
+
         case SF_MODM:
             if (record->event.pressed && record->tap.count) {
                 process_swapper(MC_MODM, NULL);

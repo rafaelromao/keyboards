@@ -41,7 +41,7 @@
 - This layer can also be activated holding the home thumb in the right side of the shortcuts layer, which makes it possible to hold the thumb and pinky keys together in any order to activate the Coding layer.
 - This layer gives access to some common programming shortcuts and also some macros.
 - Up and Down arrows, Enter and Esc are also available in the right side of this layer to make it easier to navigate in context menus.
-- There is also a home row shift in the right side to allow access to different actions when shift is active.
+- There are also home row shift in the both sides to allow access to different actions when shift is active.
 
 ### Coding Shortcuts
 
