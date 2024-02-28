@@ -15,7 +15,7 @@
           ╰─────────────╯ ╰─────────────╯ */
 
 / {
-    #define COMBO_TERM 50
+    #define COMBO_TERM 80
 
     #define COMBO(NAME, KEYS, BINDINGS, LAYERS) \
         NAME { \
