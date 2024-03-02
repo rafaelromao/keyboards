@@ -74,9 +74,9 @@ This fork is also updated to Zephyr 3.5.
 
 The tested boards are listed below:
 
-- [lowprokb.ca/corneish-zen](src/zmk/config/boards/lowprokb.ca/corneish-zen/readme.md)
+- [lowprokb.ca/corneish-zen](src/zmk/boards/lowprokb.ca/corneish-zen/readme.md)
 
-Some features might not be available in ZMK. [This readme file](src/zmk/config/rafaelromao/readme.md) will indicate what features are missing.
+Some features might not be available in ZMK. [This readme file](src/zmk/rafaelromao/readme.md) will indicate what features are missing.
 
 ## Building
 
