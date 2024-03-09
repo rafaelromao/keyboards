@@ -17,21 +17,6 @@ uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
     return QUICK_TAP_TERM;
 }
 
-uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case QK_MOD_TAP ... QK_MOD_TAP_MAX:
-        case SHO_KCD:
-        case SHO_KCI:
-        case SHO_DOT:
-        case COD_AST:
-        case NAV_F12:
-        case NAV_AT:
-            return 225;
-        default:
-            return TAPPING_TERM;
-    }
-}
-
 bool get_combo_must_tap(uint16_t index, combo_t *combo) {
     uint16_t key;
     uint8_t  idx = 0;
