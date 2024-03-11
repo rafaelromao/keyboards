@@ -77,6 +77,7 @@
         COMBO(cb_kv,            RHM RHR,     &kp E,              LOWER NUMPAD)
         COMBO(cb_zz,            RHI RHM RHR, &mc_zz,             LOWER NUMPAD)
 
+        COMBO(cb_a1,            LBR LBM,     &to ALPHA1,         NUMPAD)
         COMBO(cb_f10,           LBM LBI,     &kp F10,            RAISE NUMPAD)
         COMBO(cb_f11,           LHM LHI,     &kp F11,            RAISE NUMPAD)
         COMBO(cb_f12,           LTM LTI,     &kp F12,            RAISE NUMPAD)

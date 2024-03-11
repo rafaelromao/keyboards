@@ -56,6 +56,8 @@
             max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>; \
             defaults = <DEFAULT>; \
             antecedents = < \
+                           N1            N2            N3            N4            N5               \
+                           N6            N7            N8            N9            N0               \
                            A             AACU_TERM     ATIL_TERM     ACIR_TERM     AGRV_TERM        B              C             C_CEDIL          D           \
                            E             EACU_TERM     ECIR_TERM     F             G                H              I             IACU_TERM        J           \
                            K             L             M             N             O                OACU_TERM      OTIL_TERM     OCIR_TERM        P           \
@@ -68,6 +70,8 @@
                            LS(X)         LS(Y)         LS(Z)         \
                            >; \
             bindings =    < \
+                           &key_repeat   &key_repeat   &key_repeat   &key_repeat   &key_repeat      \
+                           &key_repeat   &key_repeat   &key_repeat   &key_repeat   &key_repeat      \
                            &kp V         &kp V         &kp O         &kp N         &mc_qu           &key_repeat    &key_repeat   &tc_otiles       &key_repeat \
                            &key_repeat   &kp V         &kp E         &key_repeat   &key_repeat      &tc_oes        &tc_ng        &kp V            &ac_aacu    \
                            &tc_ey        &key_repeat   &key_repeat   &key_repeat   &key_repeat      &kp V          &tc_es        &kp O            &key_repeat \

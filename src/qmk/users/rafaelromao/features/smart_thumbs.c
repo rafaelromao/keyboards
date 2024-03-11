@@ -246,6 +246,7 @@ void process_shift_repeat(uint16_t keycode) {
             default:
                 switch (key) {
                     case KC_A ... KC_Z:
+                    case KC_1 ... KC_0:
                         tap_code16(key);
                         break;
                     default:
