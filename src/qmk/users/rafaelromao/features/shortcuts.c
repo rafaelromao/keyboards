@@ -130,12 +130,15 @@ process_record_result_t process_shortcut_keycode(uint16_t keycode, bool isOneSho
             disable_smart_case();
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_ESC:
+            clear_shift();
             tap_code(KC_ESC);
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_TAB:
+            clear_shift();
             tap_code(KC_TAB);
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_ENT:
+            clear_shift();
             tap_code(KC_ENT);
             return PROCESS_RECORD_RETURN_FALSE;
 

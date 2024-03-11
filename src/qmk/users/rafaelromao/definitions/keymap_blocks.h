@@ -35,7 +35,7 @@
 #define ___________________RAISE_R3__________           MC_TILD , TD_EXLM , TD_LT   , TD_GT     
 #define ____RAISE_R4_____                               _______ , TG_NUM
 
-#define ___________________NUMPAD_L1_________           _______ , MC_ESC  , OM_BTN1 , OM_BTN2  
+#define ___________________NUMPAD_L1_________           _______ , KC_ESC  , OM_BTN1 , OM_BTN2  
 #define ___________________NUMPAD_L2___________________ XXXXXXX , OM_L    , OM_U    , OM_R    , XXXXXXX
 #define           _________NUMPAD_L3___________________           OM_W_D  , OM_D    , OM_W_U  , XXXXXXX
 #define                               ____NUMPAD_L4____                               NAV_FCA , _______
@@ -50,7 +50,7 @@
 #define           ______SHORTCUTS_L3___________________           MC_SWLE , MC_SWRI , MC_CALC , XXXXXXX
 #define                               _SHORTCUTS_L4____                               NAV_COD , TT_NMO
 
-#define           ______SHORTCUTS_R1___________________           MC_SELW , MC_ENT  , KC_ESC  , XXXXXXX
+#define           ______SHORTCUTS_R1___________________           MC_SELW , MC_ENT  , MC_ESC  , XXXXXXX
 #define ________________SHORTCUTS_R2___________________ XXXXXXX , MC_SELL , KC_DOWN , SF_UP   , MO_SYS
 #define ________________SHORTCUTS_R3_________           XXXXXXX , TD_MACR , MC_LOCK , KC_SLEP
 #define _SHORTCUTS_R4____                               COD_SPC , TT_NAV
@@ -60,7 +60,7 @@
 #define           _________CODING_L3___________________           MC_RECE , MC_SWAP , MC_FIUS , XXXXXXX
 #define                               ____CODING_L4____                               NAV_STI , MC_STOV
 
-#define           _________CODING_R1___________________           MC_AUCO , MC_ENT  , KC_ESC  , XXXXXXX
+#define           _________CODING_R1___________________           MC_AUCO , MC_ENT  , MC_ESC  , XXXXXXX
 #define ___________________CODING_R2___________________ XXXXXXX , MC_QUIK , MC_DOWN , SF_UP   , XXXXXXX
 #define ___________________CODING_R3_________           XXXXXXX , MC_QDOC , MC_REFC , MC_COMT 
 #define ____CODING_R4____                               _______ , _______
@@ -107,7 +107,7 @@
 #define __NAVIGATION_R4__                               KC_SPC  , MED_CAS
 #define __FIXED_NAV__R4__                               KC_SPC  , TO_A1
 
-#define ___________________MEDIA_L1__________           _______ , MC_ESC  , OM_BTN1 , OM_BTN2  
+#define ___________________MEDIA_L1__________           _______ , KC_ESC  , OM_BTN1 , OM_BTN2  
 #define ___________________MEDIA_L2____________________ XXXXXXX , OM_L    , OM_U    , OM_R    , XXXXXXX 
 #define           _________MEDIA_L3____________________           OM_W_D  , OM_D    , OM_W_U  , XXXXXXX 
 #define                               ____MEDIA_L4_____                               NAV_FCA , _______
