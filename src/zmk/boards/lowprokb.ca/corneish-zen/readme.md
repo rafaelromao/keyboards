@@ -1,7 +1,18 @@
 ## lowprokb.ca/corneish-zen
-### A premium split keyboard, based on the Corne keyboard
+### A premium split keyboard, based on the Corne
 
-![img](../../../../../img/zen.png)
+![img](../../../../../img/zen.jpeg)
+
+### Tenting Base
+
+- The tenting base can be built using the items bellow:
+  - 2x [3D printed frames](ZenTent.stl).
+  - 2x [45x65mm magnetic stickers](https://www.aliexpress.com/item/4000152137062.html).
+  - 4x [45x65mm metal plates](https://www.aliexpress.com/item/1005005883276929.html).
+    - 2 of them must be superglued to the back of the Zen (a single drop in the center of the metal plate, to make it possible to remove if necessary).
+    - 2 of them must be glued to the adhesive side of the magnet, to give it stability (the built in adhesive is enough).
+  - 4x [Nillkin laptop stands](https://www.aliexpress.com/item/1005004603358207.html).
+  - More details can be found [here](https://imgur.com/gallery/ktgfP37).
 
 ### ZMK
 
