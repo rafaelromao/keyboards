@@ -330,7 +330,7 @@ bool process_shift_magic_for_macros(uint16_t keycode) {
 
 bool process_shift_magic_for_alphas(uint16_t keycode) {
     uint16_t next_key = keycode;
-    switch (key) {
+    switch (keycode) {
         case KC_A:
             next_key = KC_O;
             break;
