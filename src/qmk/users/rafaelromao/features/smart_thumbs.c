@@ -162,46 +162,68 @@ void apply_repeat_magic_default(void) {
     }
 }
 
+keyrecord_t make_keyevent(bool press, uint16_t keycode) {
+    keyrecord_t result = {
+        .event   = MAKE_COMBOEVENT(press),
+        .keycode = keycode,
+    };
+    return result;
+}
+
+void tap(uint16_t keycode) {
+    action_tapping_process(make_keyevent(true, keycode));
+    action_tapping_process(make_keyevent(false, keycode));
+}
+
+bool process_shift_repeat_for_macros(uint16_t keycode) {
+    uint16_t next_key = keycode;
+    switch (keycode) {
+        case MC_GV_A:
+            next_key = MC_QU;
+            break;
+        case MC_SQ_A:
+        case MC_SQ_E:
+        case MC_SQ_I:
+        case MC_SQ_O:
+        case MC_SQ_U:
+            next_key = KC_V;
+            break;
+        case MC_CR_A:
+            next_key = KC_N;
+            break;
+        case MC_CR_E:
+            next_key = KC_E;
+            break;
+        case MC_CR_O:
+            next_key = KC_O;
+            break;
+        case MC_TL_A:
+            next_key = KC_O;
+            break;
+        case MC_TL_O:
+            next_key = MC_ES;
+            break;
+        case MC_SQ_C:
+            next_key = MC_OES;
+            break;
+        case MC_QU:
+            next_key = KC_E;
+            break;
+    }
+    if (next_key != keycode) {
+        tap(next_key);
+        return true;
+    }
+    return false;
+}
+
 void process_shift_repeat(uint16_t keycode) {
     uint16_t key = extract_tapping_keycode(keycode);
     if (in_mid_word(key, false)) {
-        // alternate repeat for macros
-        switch (keycode) {
-            case MC_GV_A:
-                process_accents(MC_QU, NULL);
-                return;
-            case MC_SQ_A:
-            case MC_SQ_E:
-            case MC_SQ_I:
-            case MC_SQ_O:
-            case MC_SQ_U:
-                tap_code(KC_V);
-                return;
-            case MC_CR_A:
-                tap_code(KC_N);
-                return;
-            case MC_CR_E:
-                tap_code(KC_E);
-                return;
-            case MC_CR_O:
-                tap_code(KC_O);
-                return;
-            case MC_TL_A:
-                tap_code(KC_O);
-                return;
-            case MC_TL_O:
-                tap_code(KC_E);
-                tap_code(KC_S);
-                return;
-            case MC_SQ_C:
-                process_accents(MC_TL_O, NULL);
-                tap_code(KC_E);
-                tap_code(KC_S);
-                return;
-            case MC_QU:
-                process_accents(MC_CR_E, NULL);
-                return;
+        if (process_shift_repeat_for_macros(key)) {
+            return;
         }
+
         // repeat/alternate repeat only simple tapping keycodes
         switch (key) {
             case KC_A:
