@@ -170,12 +170,12 @@ keyrecord_t make_keyevent(bool press, uint16_t keycode) {
     return result;
 }
 
-void tap(uint16_t keycode) {
+void action_tap(uint16_t keycode) {
     action_tapping_process(make_keyevent(true, keycode));
     action_tapping_process(make_keyevent(false, keycode));
 }
 
-bool process_shift_repeat_for_macros(uint16_t keycode) {
+bool process_shift_alternate_repeat_for_macros(uint16_t keycode) {
     uint16_t next_key = keycode;
     switch (keycode) {
         case MC_GV_A:
@@ -211,7 +211,49 @@ bool process_shift_repeat_for_macros(uint16_t keycode) {
             break;
     }
     if (next_key != keycode) {
-        tap(next_key);
+        action_tap(next_key);
+        return true;
+    }
+    return false;
+}
+
+bool process_shift_alternate_repeat_for_alphas(uint16_t keycode) {
+    uint16_t next_key = keycode;
+    switch (keycode) {
+        case KC_A:
+            next_key = KC_V;
+            break;
+        case KC_H:
+            next_key = MC_OES;
+            break;
+        case KC_I:
+            next_key = MC_NG;
+            break;
+        case KC_J:
+            next_key = MC_SQ_A;
+            break;
+        case KC_K:
+            next_key = MC_EY;
+            break;
+        case KC_U:
+            next_key = KC_Y;
+            break;
+        case KC_V:
+        case KC_X:
+            next_key = MC_SQ_A;
+            break;
+        case KC_W:
+            next_key = MC_HY;
+            break;
+        case KC_Y:
+            next_key = MC_OU;
+            break;
+        case KC_DOT:
+            next_key = MC_COM;
+            break;
+    }
+    if (next_key != keycode) {
+        action_tap(next_key);
         return true;
     }
     return false;
@@ -220,61 +262,20 @@ bool process_shift_repeat_for_macros(uint16_t keycode) {
 void process_shift_repeat(uint16_t keycode) {
     uint16_t key = extract_tapping_keycode(keycode);
     if (in_mid_word(key, false)) {
-        if (process_shift_repeat_for_macros(key)) {
+        if (process_shift_alternate_repeat_for_macros(key)) {
             return;
         }
-
-        // repeat/alternate repeat only simple tapping keycodes
+        if (process_shift_alternate_repeat_for_alphas(key)) {
+            return;
+        }
         switch (key) {
-            case KC_A:
-                tap_code(KC_V);
-                break;
-            case KC_H:
-                process_accents(MC_TL_O, NULL);
-                tap_code(KC_E);
-                tap_code(KC_S);
-                break;
-            case KC_I:
-                tap_code(KC_N);
-                tap_code(KC_G);
-                break;
-            case KC_J:
-                process_accents(MC_SQ_A, NULL);
-                break;
-            case KC_K:
-                tap_code(KC_E);
-                tap_code(KC_Y);
-                break;
-            case KC_U:
-                tap_code(KC_Y);
-                break;
-            case KC_V:
-            case KC_X:
-                process_accents(MC_SQ_A, NULL);
-                break;
-            case KC_W:
-                tap_code(KC_H);
-                tap_code(KC_Y);
-                break;
-            case KC_Y:
-                tap_code(KC_O);
-                tap_code(KC_U);
-                break;
-            case KC_DOT:
-                tap_code(KC_C);
-                tap_code(KC_O);
-                tap_code(KC_M);
+            case KC_A ... KC_Z:
+            case KC_1 ... KC_0:
+                action_tap(key);
                 break;
             default:
-                switch (key) {
-                    case KC_A ... KC_Z:
-                    case KC_1 ... KC_0:
-                        tap_code16(key);
-                        break;
-                    default:
-                        apply_repeat_magic_default();
-                        break;
-                }
+                apply_repeat_magic_default();
+                break;
         }
     } else {
         apply_repeat_magic_default();

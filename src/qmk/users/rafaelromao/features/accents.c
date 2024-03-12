@@ -94,6 +94,27 @@ process_record_result_t process_ngrams(uint16_t keycode, bool isShifted) {
             tap_code(KC_E);
             tap_code(KC_S);
             return PROCESS_RECORD_RETURN_FALSE;
+        case MC_NG:
+            tap_code(KC_N);
+            tap_code(KC_G);
+            return PROCESS_RECORD_RETURN_FALSE;
+        case MC_EY:
+            tap_code(KC_E);
+            tap_code(KC_Y);
+            return PROCESS_RECORD_RETURN_FALSE;
+        case MC_HY:
+            tap_code(KC_H);
+            tap_code(KC_Y);
+            return PROCESS_RECORD_RETURN_FALSE;
+        case MC_OU:
+            tap_code(KC_O);
+            tap_code(KC_U);
+            return PROCESS_RECORD_RETURN_FALSE;
+        case MC_COM:
+            tap_code(KC_C);
+            tap_code(KC_O);
+            tap_code(KC_M);
+            return PROCESS_RECORD_RETURN_FALSE;
     }
 
     return PROCESS_RECORD_CONTINUE;
