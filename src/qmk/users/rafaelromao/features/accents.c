@@ -89,6 +89,9 @@ process_record_result_t process_ngrams(uint16_t keycode, bool isShifted) {
             tap_code(KC_E);
             tap_code(KC_S);
             return PROCESS_RECORD_RETURN_FALSE;
+        case MC_AO:
+            process_accents(MC_TL_A, NULL);
+            tap_code(KC_O);
         case MC_OES:
             process_accents(MC_TL_O, NULL);
             tap_code(KC_E);
@@ -114,6 +117,10 @@ process_record_result_t process_ngrams(uint16_t keycode, bool isShifted) {
             tap_code(KC_C);
             tap_code(KC_O);
             tap_code(KC_M);
+            return PROCESS_RECORD_RETURN_FALSE;
+        case MC_FIX_I:
+            tap_code(KC_BSPC);
+            SEND_STRING("I' ");
             return PROCESS_RECORD_RETURN_FALSE;
     }
 

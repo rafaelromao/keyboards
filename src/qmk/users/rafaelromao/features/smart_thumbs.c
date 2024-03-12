@@ -282,107 +282,125 @@ void process_shift_repeat(uint16_t keycode) {
     }
 }
 
+bool process_shift_magic_for_macros(uint16_t keycode) {
+    uint16_t next_key = keycode;
+    switch (keycode) {
+        case MC_GV_A:
+            next_key = MC_QU;
+            break;
+        case MC_SQ_E:
+            next_key = KC_U;
+            break;
+        case MC_SQ_A:
+        case MC_SQ_O:
+            next_key = KC_X;
+            break;
+        case MC_SQ_I:
+        case MC_SQ_U:
+            next_key = KC_Z;
+            break;
+        case MC_CR_A:
+            next_key = KC_M;
+            break;
+        case MC_CR_E:
+            next_key = KC_X;
+            break;
+        case MC_CR_O:
+            next_key = KC_V;
+            break;
+        case MC_TL_A:
+            next_key = KC_O;
+            break;
+        case MC_TL_O:
+            next_key = KC_E;
+            break;
+        case MC_SQ_C:
+            next_key = MC_AO;
+            break;
+        case MC_QU:
+            next_key = MC_SQ_I;
+            break;
+    }
+    if (next_key != keycode) {
+        action_tap(next_key);
+        return true;
+    }
+    return false;
+}
+
+bool process_shift_magic_for_alphas(uint16_t keycode) {
+    uint16_t next_key = keycode;
+    switch (key) {
+        case KC_A:
+            next_key = KC_O;
+            break;
+        case KC_B:
+            next_key = KC_Y;
+            break;
+        case KC_D:
+            next_key = KC_Y;
+            break;
+        case KC_E:
+            next_key = KC_U;
+            break;
+        case KC_F:
+            next_key = KC_Y;
+            break;
+        case KC_I:
+            next_key = MC_FIX_I;
+            break;
+        case KC_K:
+            next_key = KC_W;
+            break;
+        case KC_L:
+            next_key = KC_H;
+            break;
+        case KC_M:
+            next_key = KC_S;
+            break;
+        case KC_N:
+            next_key = KC_F;
+            break;
+        case KC_P:
+            next_key = KC_T;
+            break;
+        case KC_R:
+            next_key = KC_L;
+            break;
+        case KC_T:
+            next_key = KC_W;
+            break;
+        case KC_U:
+            next_key = KC_E;
+            break;
+        case KC_V:
+        case KC_X:
+            next_key = MC_SQ_I;
+            break;
+        case KC_W:
+            next_key = KC_K;
+            break;
+        case KC_DOT:
+            next_key = KC_SLSH;
+            break;
+    }
+    if (next_key != keycode) {
+        action_tap(next_key);
+        return true;
+    }
+    return false;
+}
+
 void process_shift_magic(uint16_t keycode) {
     uint16_t key = extract_tapping_keycode(keycode);
     if (in_mid_word(key, true)) {
-        // magic for macros
-        switch (keycode) {
-            case MC_GV_A:
-                process_accents(MC_QU, NULL);
-                return;
-            case MC_SQ_E:
-                tap_code(KC_U);
-                return;
-            case MC_SQ_A:
-            case MC_SQ_O:
-                tap_code(KC_X);
-                return;
-            case MC_SQ_I:
-            case MC_SQ_U:
-                tap_code(KC_Z);
-                return;
-            case MC_CR_A:
-                tap_code(KC_M);
-                return;
-            case MC_CR_E:
-                tap_code(KC_X);
-                return;
-            case MC_CR_O:
-                tap_code(KC_V);
-                return;
-            case MC_TL_A:
-                tap_code(KC_O);
-                return;
-            case MC_TL_O:
-                tap_code(KC_E);
-                return;
-            case MC_SQ_C:
-                process_accents(MC_TL_A, NULL);
-                tap_code(KC_O);
-                return;
-            case MC_QU:
-                process_accents(MC_SQ_I, NULL);
-                return;
+        if (process_shift_magic_for_macros(key)) {
+            return;
         }
-        // magic only simple tapping keycodes
-        switch (key) {
-            case KC_A:
-                tap_code(KC_O);
-                break;
-            case KC_B:
-                tap_code(KC_Y);
-                break;
-            case KC_D:
-                tap_code(KC_Y);
-                break;
-            case KC_E:
-                tap_code(KC_U);
-                break;
-            case KC_F:
-                tap_code(KC_Y);
-                break;
-            case KC_I:
-                tap_code(KC_BSPC);
-                SEND_STRING("I' ");
-                break;
-            case KC_K:
-                tap_code(KC_W);
-                break;
-            case KC_L:
-                tap_code(KC_H);
-                break;
-            case KC_M:
-                tap_code(KC_S);
-                break;
-            case KC_N:
-                tap_code(KC_F);
-                break;
-            case KC_P:
-                tap_code(KC_T);
-                break;
-            case KC_R:
-                tap_code(KC_L);
-                break;
-            case KC_T:
-                tap_code(KC_W);
-                break;
-            case KC_U:
-                tap_code(KC_E);
-                break;
-            case KC_V:
-            case KC_X:
-                process_accents(MC_SQ_I, NULL);
-                break;
-            case KC_W:
-                tap_code(KC_K);
-                break;
-            case KC_DOT:
-                tap_code(KC_SLSH);
-                break;
-            default:
-                apply_repeat_magic_default();
-                break;
+        if (process_shift_magic_for_alphas(key)) {
+            return;
         }
+        apply_repeat_magic_default();
     } else {
         apply_repeat_magic_default();
     }
