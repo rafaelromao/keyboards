@@ -102,13 +102,25 @@ process_record_result_t process_shortcut_keycode(uint16_t keycode, bool isOneSho
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
-            // Lock
+            // Join Words
+
+        case MC_JOIN:
+            if (isMacOS) {
+                SEND_STRING(SS_DOWN(X_LALT) SS_TAP(X_LEFT) SS_UP(X_LALT) SS_TAP(X_BSPC) SS_DOWN(X_LALT) SS_TAP(X_RIGHT)
+                                SS_UP(X_LALT));
+            } else {
+                SEND_STRING(SS_DOWN(X_LCTL) SS_TAP(X_LEFT) SS_UP(X_LCTL) SS_TAP(X_BSPC) SS_DOWN(X_LCTL) SS_TAP(X_RIGHT)
+                                SS_UP(X_LCTL));
+            }
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // Lock / Sleep
 
         case MC_LOCK:
-            if (should_send_ctrl(isMacOS, isOneShotShift)) {
-                SEND_STRING(SS_LGUI("l"));
-            } else {
+            if (isMacOS) {
                 SEND_STRING(SS_LGUI(SS_LCTL("q")));
+            } else {
+                SEND_STRING(SS_LGUI("l"));
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
@@ -130,15 +142,12 @@ process_record_result_t process_shortcut_keycode(uint16_t keycode, bool isOneSho
             disable_smart_case();
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_ESC:
-            clear_shift();
             tap_code(KC_ESC);
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_TAB:
-            clear_shift();
             tap_code(KC_TAB);
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_ENT:
-            clear_shift();
             tap_code(KC_ENT);
             return PROCESS_RECORD_RETURN_FALSE;
 

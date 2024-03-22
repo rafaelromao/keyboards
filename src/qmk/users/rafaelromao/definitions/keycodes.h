@@ -116,7 +116,7 @@ enum {
     TG_NUMC, MC_EXLM, MC_QUES, MC_ESAV, MC_SENT, MC_DEG, MC_DELW, 
     MC_CUR, MC_CURS, MC_DAR, MC_SAR, MC_DEQ, MC_NEQ, MC_BRAC, MC_SEC, 
     MC_DAND, MC_DPIP, MC_OESC, MC_SOES, MC_TISL, MC_SVI, MC_CVI, MC_0P,
-    REPEAT, 
+    REPEAT, MC_JOIN, 
 
     // End macros that can be shifted
     SFT_MACRO_END,
@@ -195,6 +195,7 @@ enum {
 #define LEA_KCC LT(_SYMBOLS, KC_C) // Hold behavior is implemented in intercepted code
 #define RAI_A2  OSL(_ALPHA2) // Hold behavior is implemented in intercepted code
 #define OSL_A2  OSL(_FIXED_ALPHA2) // We need the fixed alpha to distinguish from the intercepted RAI_A2
+#define SLE_LOC LT(_FIXED_NAV, _FIXED_ALPHA2) // Hold and tap are implemented in intercepted code
 
 #define SHO_KCD LT(_SHORTCUTS, KC_D)
 #define SHO_KCI LT(_SHORTCUTS, KC_I)

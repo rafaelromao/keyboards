@@ -38,6 +38,19 @@ bool get_combo_must_tap(uint16_t index, combo_t *combo) {
 
 process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+        case SLE_LOC:
+            if (record->event.pressed) {
+                if (!record->tap.count) {
+                    register_code16(KC_SLEP);
+                    wait_ms(500);
+                    unregister_code16(KC_SLEP);
+                    return PROCESS_RECORD_RETURN_FALSE;
+                } else {
+                    process_shortcuts(MC_LOCK, NULL);
+                }
+            }
+            break;
+
         case LEA_KCC:
             if (record->event.pressed && !record->tap.count) {
 #ifdef LEADER_ENABLE

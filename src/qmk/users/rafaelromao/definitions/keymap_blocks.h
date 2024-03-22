@@ -52,7 +52,7 @@
 
 #define           ______SHORTCUTS_R1___________________           MC_SELW , MC_ENT  , MC_ESC  , XXXXXXX
 #define ________________SHORTCUTS_R2___________________ XXXXXXX , MC_SELL , KC_DOWN , SF_UP   , MO_SYS
-#define ________________SHORTCUTS_R3_________           XXXXXXX , TD_MACR , MC_LOCK , KC_SLEP
+#define ________________SHORTCUTS_R3_________           XXXXXXX , MC_JOIN , TD_MACR , SLE_LOC
 #define _SHORTCUTS_R4____                               COD_SPC , TT_NAV
 
 #define ___________________CODING_L1_________           XXXXXXX , MC_CLOS , MC_BREK , MC_BUID 

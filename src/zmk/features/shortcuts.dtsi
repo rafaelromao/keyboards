@@ -44,7 +44,6 @@
             bindings = <&lt>, <BINDINGS>; \
         };
     
-
     shortcuts {
         
         // Romak
@@ -181,5 +180,8 @@
         SHORTCUT(mc_dqt0p,                  &macro_tap &kp DQT &kp N0 &kp P)
 
         SHORTCUT(mc_delword,                &macro_tap &kp LA(BACKSPACE))
+        SHORTCUT(mc_joinwords,              &macro_tap &kp LA(LEFT) &kp BACKSPACE &kp LA(RIGHT))
+
+        SHORTCUT(mc_sleep,                  &macro_press &kp C_SLEEP &macro_pause_for_release &macro_release &kp C_SLEEP &macro_tap &kp LC(LG(Q)))
     };
 };
