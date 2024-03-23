@@ -60,8 +60,8 @@ archive_aellopos_unibody="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/ae
 alias build_aellopos="cd ${ZMK_HOME} && ${build_aellopos_unibody} && ${archive_aellopos_unibody} && cd $KEYBOARD_HOME"
 
 echo "Creating Cygnus alias..."
-build_cygnus_left="west build -s app -b nice_nano_v2 --build-dir build/cygnus_left -- -DSHIELD='cygnus_left rgbled_adapter' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/boards/handwired -DZMK_EXTRA_MODULES=$RGBWIDGET_HOME"
-build_cygnus_right="west build -s app -b nice_nano_v2 --build-dir build/cygnus_right -- -DSHIELD='cygnus_right rgbled_adapter' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/boards/handwired -DZMK_EXTRA_MODULES=$RGBWIDGET_HOME"
+build_cygnus_left="west build -s app -b nice_nano_v2 --build-dir build/cygnus_left -- -DSHIELD='cygnus_left' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/boards/handwired"
+build_cygnus_right="west build -s app -b nice_nano_v2 --build-dir build/cygnus_right -- -DSHIELD='cygnus_right' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/boards/handwired"
 
 archive_zen_left="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/cygnus_left/zephyr/zmk.uf2 ] && mv build/cygnus_left/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/cygnus_left-zmk.uf2"
 archive_zen_right="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/cygnus_right/zephyr/zmk.uf2 ] && mv build/cygnus_right/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/cygnus_right-zmk.uf2"
