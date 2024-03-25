@@ -92,6 +92,7 @@ process_record_result_t process_ngrams(uint16_t keycode, bool isShifted) {
         case MC_AO:
             process_accents(MC_TL_A, NULL);
             tap_code(KC_O);
+            return PROCESS_RECORD_RETURN_FALSE;
         case MC_OES:
             process_accents(MC_TL_O, NULL);
             tap_code(KC_E);
