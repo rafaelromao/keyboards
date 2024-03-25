@@ -10,9 +10,9 @@
          NAME: NAME { \
             compatible = "zmk,behavior-hold-tap"; \
             #binding-cells = <2>; \
-            tapping-term-ms = <TAPPING_TERM>; \
+            tapping-term-ms = <QUICK_TAP_TERM>; \
             flavor = "tap-preferred"; \
-            quick-tap-ms = <QUICK_TAP_TERM>; \
+            quick-tap-ms = <0>; \
             require-prior-idle-ms = <QUICK_TAP_TERM>; \
             bindings = <&mo>, <BINDINGS>; \
         };
@@ -125,7 +125,7 @@
         ltn: layer-tap-no-quick-tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM>;
+            tapping-term-ms = <QUICK_TAP_TERM>;
             flavor = "tap-preferred";
             quick-tap-ms = <0>;
             bindings = <&mo>, <&kp>;
@@ -133,25 +133,25 @@
         msl: layer-tap-with-stick-layer {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM>;
+            tapping-term-ms = <QUICK_TAP_TERM>;
             flavor = "tap-preferred";
-            quick-tap-ms = <QUICK_TAP_TERM>;
+            quick-tap-ms = <0>;
             bindings = <&mo>, <&sl>;
         };
         msk: layer-tap-with-stick-key {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM>;
+            tapping-term-ms = <QUICK_TAP_TERM>;
             flavor = "tap-preferred";
-            quick-tap-ms = <QUICK_TAP_TERM>;
+            quick-tap-ms = <0>;
             bindings = <&mo>, <&sk>;
         };
         mst: layer-tap-with-tog-key {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM>;
+            tapping-term-ms = <QUICK_TAP_TERM>;
             flavor = "tap-preferred";
-            quick-tap-ms = <QUICK_TAP_TERM>;
+            quick-tap-ms = <0>;
             bindings = <&mo>, <&tog>;
         };
 
@@ -226,18 +226,18 @@
         ht_repeat: ht_repeat {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM>;
+            tapping-term-ms = <QUICK_TAP_TERM>;
             flavor = "tap-preferred";
-            quick-tap-ms = <QUICK_TAP_TERM>;
+            quick-tap-ms = <0>;
             bindings = <&mo>, <&smart_shift_repeat>;
         };
 
         ht_repeat_c: ht_repeat_c {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM>;
+            tapping-term-ms = <QUICK_TAP_TERM>;
             flavor = "tap-preferred";
-            quick-tap-ms = <QUICK_TAP_TERM>;
+            quick-tap-ms = <0>;
             bindings = <&mo>, <&smart_cancel_repeat>;
         };
 
@@ -253,18 +253,18 @@
         ht_magic: ht_magic {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM>;
+            tapping-term-ms = <QUICK_TAP_TERM>;
             flavor = "tap-preferred";
-            quick-tap-ms = <QUICK_TAP_TERM>;
+            quick-tap-ms = <0>;
             bindings = <&mo>, <&smart_shift_magic>;
         };
 
         ht_magic_c: ht_magic_c {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM>;
+            tapping-term-ms = <QUICK_TAP_TERM>;
             flavor = "tap-preferred";
-            quick-tap-ms = <QUICK_TAP_TERM>;
+            quick-tap-ms = <0>;
             bindings = <&mo>, <&smart_cancel_magic>;
         };
 
@@ -275,9 +275,9 @@
         msl_a2: msl_a2 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM>;
+            tapping-term-ms = <QUICK_TAP_TERM>;
             flavor = "tap-preferred";
-            quick-tap-ms = <QUICK_TAP_TERM>;
+            quick-tap-ms = <0>;
             bindings = <&mo>, <&mc_sl_alpha2>;
         };
 
@@ -309,45 +309,45 @@
         msk_unds: msk_unds {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM>;
+            tapping-term-ms = <QUICK_TAP_TERM>;
             flavor = "tap-preferred";
-            quick-tap-ms = <QUICK_TAP_TERM>;
+            quick-tap-ms = <0>;
             bindings = <&mo>, <&mc_msk_snake>;
         };
 
         msk_dash: msk_dash {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM>;
+            tapping-term-ms = <QUICK_TAP_TERM>;
             flavor = "tap-preferred";
-            quick-tap-ms = <QUICK_TAP_TERM>;
+            quick-tap-ms = <0>;
             bindings = <&mo>, <&mc_msk_kebab>;
         };
 
         msk_spcb: msk_spcb {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM>;
+            tapping-term-ms = <QUICK_TAP_TERM>;
             flavor = "tap-preferred";
-            quick-tap-ms = <QUICK_TAP_TERM>;
+            quick-tap-ms = <0>;
             bindings = <&mo>, <&mc_msk_space_b>;
         };
 
         msk_sft: msk_sft {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM>;
+            tapping-term-ms = <QUICK_TAP_TERM>;
             flavor = "tap-preferred";
-            quick-tap-ms = <QUICK_TAP_TERM>;
+            quick-tap-ms = <0>;
             bindings = <&mo>, <&mc_msk_camel>;
         };
 
         msk_spc: msk_spc {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM>;
+            tapping-term-ms = <QUICK_TAP_TERM>;
             flavor = "tap-preferred";
-            quick-tap-ms = <QUICK_TAP_TERM>;
+            quick-tap-ms = <0>;
             bindings = <&mo>, <&mc_msk_space>;
         };
 

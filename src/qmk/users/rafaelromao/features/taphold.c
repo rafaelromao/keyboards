@@ -2,6 +2,21 @@
 
 #include "taphold.h"
 
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case LOW_SPC:
+        case RAI_SPC:
+        case RAI_A2:
+        case NAV_CAS:
+        case NAV_FCA:
+        case MED_CAS:
+        case RAI_TA2:
+        case MED_0:
+            return 175;
+    }
+    return TAPPING_TERM;
+}
+
 uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case LOW_SPC:

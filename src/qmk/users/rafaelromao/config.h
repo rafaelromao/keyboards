@@ -16,8 +16,9 @@
 
 // Make it easier to work with tap hold
 #define PERMISSIVE_HOLD
-#define TAPPING_TERM 175
-#define QUICK_TAP_TERM 175
+#define TAPPING_TERM 300
+#define TAPPING_TERM_PER_KEY
+#define QUICK_TAP_TERM 300
 #define QUICK_TAP_TERM_PER_KEY
 #define ONESHOT_TIMEOUT 1000
 #define TAPPING_TOGGLE 1
@@ -30,7 +31,7 @@
 #define COMBO_TERM 30
 #define EXTRA_SHORT_COMBOS
 #define COMBO_STRICT_TIMER
-#define COMBO_HOLD_TERM 175
+#define COMBO_HOLD_TERM 300
 #define COMBO_MUST_TAP_PER_COMBO
 #define COMBO_SHOULD_TRIGGER
 
