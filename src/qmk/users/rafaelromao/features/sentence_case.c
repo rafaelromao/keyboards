@@ -63,8 +63,9 @@ process_record_result_t process_sentence_case(uint16_t keycode, keyrecord_t *rec
             case RAI_A2:
                 return PROCESS_RECORD_CONTINUE;
             // Cancel
-            case NAV_CAS:
-            case NAV_FCA:
+            case NAV_REP:
+            case FNA_REP:
+            case NAV_MAG:
             case QK_REP:
                 if (sentence_case.state != SENTENCE_CASE_NONE) {
                     clear_shift();

@@ -5,7 +5,7 @@
 extern os_t os;
 
 static custom_oneshots_t custom_oneshots  = {.timer = 0};
-static uint16_t          repeat_key_timer = 0;
+static uint16_t          custom_repeat_key_timer = 0;
 
 // Custom oneshot mods
 
@@ -50,8 +50,9 @@ bool check_disable_oneshot(uint16_t keycode) {
         case COD_SPC:
         case LOW_SPC:
         case MED_CAS:
-        case NAV_CAS:
-        case NAV_FCA:
+        case NAV_REP:
+        case FNA_REP:
+        case NAV_MAG:
         case OS_LSFT:
             return false;
         default:
@@ -83,83 +84,33 @@ bool should_send_ctrl(bool isMacOS, bool isOneShotShift) {
     return (!isMacOS && !isOneShotShift) || (isMacOS && isOneShotShift);
 }
 
-// Custom Shift Repeat Magic Keys
+// Custom Repeat and Magic Keys
 
-bool repeat_key_expired(void) {
-    return repeat_key_timer == 0 || (timer_elapsed(repeat_key_timer) > REPEAT_KEY_TIMEOUT);
+bool custom_repeat_key_expired(void) {
+    return custom_repeat_key_timer == 0 || (timer_elapsed(custom_repeat_key_timer) > CUSTOM_ALT_REPEAT_KEY_TIMEOUT);
 }
 
 void check_repeat_key_timeout(void) {
-    if (repeat_key_expired()) {
+    if (custom_repeat_key_expired()) {
         clear_repeat_key();
     }
 }
 
 void clear_repeat_key(void) {
-    repeat_key_timer = 0;
+    custom_repeat_key_timer = 0;
 }
 
 bool remember_last_key_user(uint16_t keycode, keyrecord_t *record, uint8_t *remembered_mods) {
     switch (keycode) {
         case RAI_A2:
         case MED_CAS:
-        case NAV_CAS:
-        case NAV_FCA:
+        case NAV_REP:
+        case FNA_REP:
+        case NAV_MAG:
             return false;
     }
-    repeat_key_timer = timer_read();
+    custom_repeat_key_timer = timer_read();
     return true;
-}
-
-bool in_mid_word(uint16_t key, bool isMagic) {
-    if (isMagic) {
-        switch (key) {
-            // not necessary to magic, so skip to work better with remapped VIM bindings
-            case KC_Y:
-            case KC_H:
-            case KC_O:
-            case KC_Z:
-            case KC_J:
-            case KC_S:
-            case KC_C:
-            case KC_G:
-                return false;
-        }
-    }
-    if (repeat_key_timer == 0) {
-        // Used to signal that the last key to repeat/magic expired
-        return false;
-    }
-    switch (key) {
-        // Avoid repeat/magic after navigation
-        case KC_LEFT:
-        case KC_RIGHT:
-        case KC_DOWN:
-        case KC_UP:
-        case KC_HOME:
-        case KC_END:
-        // Avoid repeat/magic for new sentences
-        case KC_SPC:
-        case KC_BSPC:
-        case KC_TAB:
-        case KC_ENT:
-        case KC_ESC:
-        // avoid recursive calls
-        case MED_CAS:
-        case NAV_CAS:
-        case NAV_FCA:
-            return false;
-    }
-    return true;
-}
-
-void apply_repeat_magic_default(void) {
-    if (!has_any_smart_case()) {
-        add_oneshot_mods(MOD_LSFT);
-    } else {
-        disable_smart_case();
-        clear_shift();
-    }
 }
 
 keyrecord_t make_keyevent(bool press, uint16_t keycode) {
@@ -204,7 +155,7 @@ bool process_shift_alternate_repeat_for_macros(uint16_t keycode) {
             next_key = MC_ES;
             break;
         case MC_SQ_C:
-            next_key = MC_OES;
+            next_key = MC_AO;
             break;
         case MC_QU:
             next_key = KC_E;
@@ -261,25 +212,15 @@ bool process_shift_alternate_repeat_for_alphas(uint16_t keycode) {
 
 void process_shift_repeat(uint16_t keycode) {
     uint16_t key = extract_tapping_keycode(keycode);
-    if (in_mid_word(key, false)) {
+    if (!custom_repeat_key_expired()) {
         if (process_shift_alternate_repeat_for_macros(key)) {
             return;
         }
         if (process_shift_alternate_repeat_for_alphas(key)) {
             return;
         }
-        switch (key) {
-            case KC_A ... KC_Z:
-            case KC_1 ... KC_0:
-                action_tap(key);
-                break;
-            default:
-                apply_repeat_magic_default();
-                break;
-        }
-    } else {
-        apply_repeat_magic_default();
     }
+    action_tap(QK_REP);
 }
 
 bool process_shift_magic_for_macros(uint16_t keycode) {
@@ -315,7 +256,7 @@ bool process_shift_magic_for_macros(uint16_t keycode) {
             next_key = KC_E;
             break;
         case MC_SQ_C:
-            next_key = MC_AO;
+            next_key = MC_OES;
             break;
         case MC_QU:
             next_key = MC_SQ_I;
@@ -337,6 +278,9 @@ bool process_shift_magic_for_alphas(uint16_t keycode) {
         case KC_B:
             next_key = KC_Y;
             break;
+        case KC_C:
+            next_key = KC_S;
+            break;
         case KC_D:
             next_key = KC_Y;
             break;
@@ -346,8 +290,14 @@ bool process_shift_magic_for_alphas(uint16_t keycode) {
         case KC_F:
             next_key = KC_Y;
             break;
+        case KC_H:
+            next_key = KC_R;
+            break;
         case KC_I:
             next_key = MC_FIX_I;
+            break;
+        case KC_J:
+            next_key = MC_TL_A;
             break;
         case KC_K:
             next_key = KC_W;
@@ -366,6 +316,9 @@ bool process_shift_magic_for_alphas(uint16_t keycode) {
             break;
         case KC_R:
             next_key = KC_L;
+            break;
+        case KC_S:
+            next_key = KC_C;
             break;
         case KC_T:
             next_key = KC_W;
@@ -393,26 +346,22 @@ bool process_shift_magic_for_alphas(uint16_t keycode) {
 
 void process_shift_magic(uint16_t keycode) {
     uint16_t key = extract_tapping_keycode(keycode);
-    if (in_mid_word(key, true)) {
-        if (process_shift_magic_for_macros(key)) {
-            return;
-        }
-        if (process_shift_magic_for_alphas(key)) {
-            return;
-        }
-        apply_repeat_magic_default();
-    } else {
-        apply_repeat_magic_default();
+    if (process_shift_magic_for_macros(key)) {
+        return;
     }
+    if (process_shift_magic_for_alphas(key)) {
+        return;
+    }
+    action_tap(QK_REP);
 }
 
 void activate_shift_repeat_or_magic_key(uint16_t keycode) {
     switch (keycode) {
-        case MED_CAS:
+        case NAV_MAG:
             process_shift_magic(get_last_keycode());
             break;
-        case NAV_CAS:
-        case NAV_FCA:
+        case NAV_REP:
+        case FNA_REP:
             process_shift_repeat(get_last_keycode());
             break;
     }
@@ -458,22 +407,30 @@ process_record_result_t process_smart_thumbs(uint16_t keycode, keyrecord_t *reco
                 }
                 return PROCESS_RECORD_RETURN_FALSE;
             }
-        case NAV_CAS:
-        case NAV_FCA:
+        case NAV_REP:
+        case FNA_REP:
+        case NAV_MAG:
+            if (record->tap.count > 0) {
+                if (record->event.pressed) {
+                    activate_shift_repeat_or_magic_key(keycode);
+                    return PROCESS_RECORD_RETURN_FALSE;
+                }
+            }
         case MED_CAS:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
                     if (has_any_smart_case()) {
-                        activate_shift_repeat_or_magic_key(keycode);
+                        disable_smart_case();
+                        clear_shift();
                     } else {
                         if (!isOneShotShift) {
-                            activate_shift_repeat_or_magic_key(keycode);
+                            add_oneshot_mods(MOD_LSFT);
                         } else {
                             set_smart_case_for_mods();
                         }
                     }
+                    return PROCESS_RECORD_RETURN_FALSE;
                 }
-                return PROCESS_RECORD_RETURN_FALSE;
             }
     }
 

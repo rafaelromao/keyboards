@@ -116,7 +116,7 @@ enum {
     TG_NUMC, MC_EXLM, MC_QUES, MC_ESAV, MC_SENT, MC_DEG, MC_DELW, 
     MC_CUR, MC_CURS, MC_DAR, MC_SAR, MC_DEQ, MC_NEQ, MC_BRAC, MC_SEC, 
     MC_DAND, MC_DPIP, MC_OESC, MC_SOES, MC_TISL, MC_SVI, MC_CVI, MC_0P,
-    REPEAT, MC_JOIN, 
+    REPEAT, MAGIC, MC_JOIN,
 
     // End macros that can be shifted
     SFT_MACRO_END,
@@ -180,9 +180,10 @@ enum {
 
 #define NAV_F12 LT(_NAVIGATION, KC_F12)
 #define NAV_AT  LT(_NAVIGATION, KC_AT)
-#define NAV_CAS LT(_NAVIGATION, TG_CASE)
 #define NAV_STI LT(_NAVIGATION, MC_STIN) // Hold behavior is implemented in intercepted code
-#define NAV_FCA LT(_FIXED_NAV, TG_CASE)
+#define NAV_MAG LT(_NAVIGATION, MAGIC)
+#define NAV_REP LT(_NAVIGATION, REPEAT)
+#define FNA_REP LT(_FIXED_NAV, REPEAT)
 
 #define MED_CAS LT(_MEDIA, TG_CASE)
 #define MED_0   LT(_MEDIA, KC_0)

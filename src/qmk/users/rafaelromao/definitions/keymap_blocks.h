@@ -8,7 +8,7 @@
 #define __________________ALPHA1_L1__________           KC_Q    , KC_B    , KC_M    , KC_G    
 #define __________________ALPHA1_L2____________________ SHO_KCD , LSFTT_N , LCTLT_S , LGUIT_T , KC_W
 #define           ________ALPHA1_L3____________________           RALTT_F , LEA_KCC , LALTT_P , KC_V
-#define                               ___ALPHA1_L4_____                               NAV_CAS , LOW_SPC
+#define                               ___ALPHA1_L4_____                               NAV_REP , LOW_SPC
 
 #define           ________ALPHA1_R1____________________           KC_L    , KC_O    , KC_U    , KC_Y
 #define __________________ALPHA1_R2____________________ KC_Z    , RGUIT_R , RCTLT_A , RSFTT_E , SHO_KCI
@@ -38,7 +38,7 @@
 #define ___________________NUMPAD_L1_________           XXXXXXX , KC_ESC  , OM_BTN1 , OM_BTN2  
 #define ___________________NUMPAD_L2___________________ XXXXXXX , OM_L    , OM_U    , OM_R    , XXXXXXX
 #define           _________NUMPAD_L3___________________           OM_W_D  , OM_D    , OM_W_U  , XXXXXXX
-#define                               ____NUMPAD_L4____                               NAV_FCA , _______
+#define                               ____NUMPAD_L4____                               NAV_REP , _______
 
 #define           _________NUMPAD_R1___________________           KC_7    , KC_8    , KC_9    , XXXXXXX
 #define ___________________NUMPAD_R2___________________ XXXXXXX , KC_4    , KC_5    , KC_6    , SHO_DOT
@@ -78,12 +78,12 @@
 #define ___________________ALPHA2_L1_________           XXXXXXX , KC_Q    , MC_QU   , KC_K
 #define ___________________ALPHA2_L2___________________ KC_Y    , KC_Z    , KC_X    , KC_W    , XXXXXXX
 #define           _________ALPHA2_L3___________________           KC_J    , MC_SQ_C , KC_V    , XXXXXXX 
-#define                               ____ALPHA2_L4____                               MC_SQUO , OS_SYM
+#define                               ____ALPHA2_L4____                               NAV_MAG , OS_SYM
 
 #define           _________ALPHA2_R1___________________           MC_CR_O , MC_SQ_O , MC_SQ_U , XXXXXXX
 #define ___________________ALPHA2_R2___________________ XXXXXXX , MC_TL_A , MC_SQ_A , MC_SQ_E , MC_SQ_I
 #define ___________________ALPHA2_R3_________           XXXXXXX , MC_TL_O , MC_CR_A , MC_CR_E 
-#define ____ALPHA2_R4____                               _______ , _______
+#define ____ALPHA2_R4____                               _______ , MC_SQUO
 
 #define _________________SYMBOLS_L1__________           XXXXXXX , KC_LCBR , KC_RCBR , KC_DLR 
 #define _________________SYMBOLS_L2____________________ KC_AT   , KC_LPRN , KC_RPRN , MC_DQUO , XXXXXXX
@@ -110,7 +110,7 @@
 #define ___________________MEDIA_L1__________           XXXXXXX , KC_ESC  , OM_BTN1 , OM_BTN2  
 #define ___________________MEDIA_L2____________________ XXXXXXX , OM_L    , OM_U    , OM_R    , XXXXXXX 
 #define           _________MEDIA_L3____________________           OM_W_D  , OM_D    , OM_W_U  , XXXXXXX 
-#define                               ____MEDIA_L4_____                               NAV_FCA , _______
+#define                               ____MEDIA_L4_____                               FNA_REP , _______
 
 #define           _________MEDIA_R1____________________           KC_TAB  , KC_ENT  , KC_BSPC , XXXXXXX
 #define ___________________MEDIA_R2____________________ XXXXXXX , MC_MIC  , KC_VOLD , KC_VOLU , MC_CAM

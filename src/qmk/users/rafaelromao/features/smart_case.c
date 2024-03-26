@@ -154,8 +154,9 @@ process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record
         // Extend, process or break case
         switch (keycode) {
             case RAI_A2:
-            case NAV_CAS:
-            case NAV_FCA:
+            case NAV_REP:
+            case FNA_REP:
+            case NAV_MAG:
             case MED_CAS:
                 start_smart_case_timer();
                 return PROCESS_RECORD_CONTINUE;

@@ -30,7 +30,7 @@
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp Y
    &lt SHORTS_L D      &mt RSHFT N         &mt LCTRL S         &mt LGUI T          &kp W               &kp Z               &mt RGUI R          &mt RCTRL A         &mt RSHFT E         &lt SHORTS_R I 
    &lt SHORTS_L D      &mt RALT F          &th_c 0 0           &mt LALT P          &kp V               &kp J               &mt RALT H          &th_comma 0 0       &th_dot 0 0         &lt SHORTS_R I
-                                           &none               &ht_repeat NAV 0    &ltn LOWER SPACE    &msl_raise_smart    &ht_magic MEDIA 0   &none
+                                           &none               &ht_repeat NAV 0    &ltn LOWER SPACE    &msl_raise_smart    &ht_caps MEDIA 0    &none
                         >;
                 };
                 camel_case_layer {
@@ -48,7 +48,7 @@
    &trans              &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &trans
    &lt SHORTS_L LS(D)  &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTS_R LS(I) 
    &lt SHORTS_L LS(D)  &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &mt RALT LS(H)      &th_comma 0 0       &th_dot 0 0         &lt SHORTS_R LS(I)
-                                           &trans              &ht_repeat NAV 0    &msk_spc LOWER 0    &msl RAISE CASE_A2  &ht_magic MEDIA 0   &trans
+                                           &trans              &ht_repeat NAV 0    &msk_spc LOWER 0    &msl RAISE CASE_A2  &ht_caps MEDIA 0    &trans
                         >;
                 };
 
@@ -86,7 +86,7 @@
    &trans              &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &none
    &lt SHORTS_L LS(D)  &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTS_R LS(I) 
    &lt SHORTS_L LS(D)  &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &mt RALT LS(H)      &th_comma 0 0       &th_dot 0 0         &lt SHORTS_R LS(I)
-                                           &trans              &ht_repeat_c NAV 0  &trans              &msl RAISE CASE_A2  &ht_magic_c MEDIA 0 &trans
+                                           &trans              &ht_repeat NAV 0    &trans              &msl RAISE CASE_A2  &th_cancel MEDIA 0    &trans
                         >;
                 };
                 lower_layer {
@@ -113,7 +113,7 @@
    &none               &kp ESC             &mkp LCLK           &mkp RCLK           &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
    &none               &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &none               &mc_n4              &mc_n5              &mc_n6              &lt SHORTS_R DOT 
    &none               &msc SCRL_DOWN      &mmv MOVE_DOWN      &msc SCRL_UP        &none               &none               &mc_n1              &mc_n2              &mc_n3              &lt SHORTS_R DOT 
-                                           &trans              &ht_repeat_c NAV 0  &trans              &ltn SYMBOLS SPACE  &th_n0 MEDIA 0      &trans
+                                           &trans              &ht_repeat NAV 0    &trans              &ltn SYMBOLS SPACE  &th_n0 MEDIA 0      &trans
                            >;
                 };
                 shortcuts_left_layer {
@@ -167,7 +167,7 @@
    &none               &kp Q               &mc_qu              &kp K               &none               &none               &ac_ocir            &ac_oacu            &ac_uacu            &none
    &kp Y               &kp Z               &kp X               &kp W               &none               &none               &ac_atil            &ac_aacu            &ac_eacu            &ac_iacu 
    &kp Y               &kp J               &mc_ced             &kp V               &none               &none               &ac_otil            &ac_acir            &ac_ecir            &ac_iacu
-                                           &trans              &mc_sqo             &sl SYMBOLS         &trans              &trans              &trans
+                                           &trans              &ht_magic NAV 0     &sl SYMBOLS         &trans              &mc_sqo             &trans
                            >;
                 };
                 case_alpha2_layer {
@@ -176,7 +176,7 @@
    &none               &kp LS(Q)           &mc_qu_c            &kp LS(K)           &none               &none               &ac_ocir_c          &ac_oacu_c          &ac_uacu_c          &none
    &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &none               &none               &ac_atil_c          &ac_aacu_c          &ac_eacu_c          &ac_iacu_c 
    &kp LS(Y)           &kp LS(J)           &mc_ced_c           &kp LS(V)           &none               &none               &ac_otil_c          &ac_acir_c          &ac_ecir_c          &ac_iacu_c
-                                           &trans              &mc_sqo             &sl SYMBOLS         &trans              &trans              &trans
+                                           &trans              &ht_magic NAV 0     &sl SYMBOLS         &trans              &mc_sqo             &trans
                            >;
                 };
                 symbols_layer {
@@ -194,7 +194,7 @@
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
-                                           &trans              &th_cancel NAV 0    &th_sp_ns SYMBOLS 0 &trans              &th_nsen MEDIA 0    &trans
+                                           &trans              &trans              &th_sp_ns SYMBOLS 0 &trans              &th_nsen MEDIA 0    &trans
                            >;
                 };
                 sentence_case_ext1_layer {

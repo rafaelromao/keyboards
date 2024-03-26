@@ -48,76 +48,6 @@
             mods = <(FIRST_MOD)>; \
         };
 
-    #define SMART_REPEAT(NAME, LABEL, DEFAULT) \
-        NAME: NAME { \
-            compatible = "zmk,behavior-antecedent-morph"; \
-            label = LABEL; \
-            #binding-cells = <0>; \
-            max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>; \
-            defaults = <DEFAULT>; \
-            antecedents = < \
-                           N1            N2            N3            N4            N5               \
-                           N6            N7            N8            N9            N0               \
-                           A             AACU_TERM     ATIL_TERM     ACIR_TERM     AGRV_TERM        B              C             C_CEDIL          D           \
-                           E             EACU_TERM     ECIR_TERM     F             G                H              I             IACU_TERM        J           \
-                           K             L             M             N             O                OACU_TERM      OTIL_TERM     OCIR_TERM        P           \
-                           Q             QU_TERM       R             S             T                U              UACU_TERM     V                W           \
-                           X             Y             Z             DOT           \
-                           LS(A)         C_AACU_TERM   C_ATIL_TERM   C_ACIR_TERM   C_AGRV_TERM      LS(B)          LS(C)         LS(C_CEDIL)      LS(D)       \
-                           LS(E)         C_EACU_TERM   C_ECIR_TERM   LS(F)         LS(G)            LS(H)          LS(I)         C_IACU_TERM      LS(J)       \
-                           LS(K)         LS(L)         LS(M)         LS(N)         LS(O)            C_OACU_TERM    C_OTIL_TERM   C_OCIR_TERM      LS(P)       \
-                           LS(Q)         C_QU_TERM     LS(R)         LS(S)         LS(T)            LS(U)          C_UACU_TERM   LS(V)            LS(W)       \
-                           LS(X)         LS(Y)         LS(Z)         \
-                           >; \
-            bindings =    < \
-                           &key_repeat   &key_repeat   &key_repeat   &key_repeat   &key_repeat      \
-                           &key_repeat   &key_repeat   &key_repeat   &key_repeat   &key_repeat      \
-                           &kp V         &kp V         &kp O         &kp N         &mc_qu           &key_repeat    &key_repeat   &tc_otiles       &key_repeat \
-                           &key_repeat   &kp V         &kp E         &key_repeat   &key_repeat      &tc_oes        &tc_ng        &kp V            &ac_aacu    \
-                           &tc_ey        &key_repeat   &key_repeat   &key_repeat   &key_repeat      &kp V          &tc_es        &kp O            &key_repeat \
-                           &key_repeat   &ac_ecir      &key_repeat   &key_repeat   &key_repeat      &kp Y          &kp V         &ac_aacu         &tc_hy      \
-                           &ac_aacu      &tc_ou        &key_repeat   &tc_com       \
-                           &kp LS(V)     &kp LS(V)     &kp LS(O)     &kp LS(N)     &mc_qu_c         &key_repeat    &key_repeat   &tc_otiles_c     &key_repeat \
-                           &key_repeat   &kp LS(V)     &kp LS(E)     &key_repeat   &key_repeat      &tc_oes_c      &tc_ng_c      &kp LS(V)        &ac_aacu_c    \
-                           &tc_ey_c      &key_repeat   &key_repeat   &key_repeat   &key_repeat      &kp LS(V)      &tc_es_c      &kp LS(O)        &key_repeat \
-                           &key_repeat   &ac_ecir_c    &key_repeat   &key_repeat   &key_repeat      &kp LS(Y)      &kp LS(V)     &ac_aacu_c       &tc_hy_c      \
-                           &ac_aacu_c    &tc_ou_c      &key_repeat   \
-                           >; \
-        };
-
-    #define SMART_MAGIC(NAME, LABEL, DEFAULT) \
-        NAME: NAME { \
-            compatible = "zmk,behavior-antecedent-morph"; \
-            label = LABEL; \
-            #binding-cells = <0>; \
-            max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>; \
-            defaults = <DEFAULT>; \
-            antecedents = < \
-                           A             AACU_TERM     ATIL_TERM     ACIR_TERM     AGRV_TERM       B                             C_CEDIL         D         \
-                           E             EACU_TERM     ECIR_TERM     F                                           I               IACU_TERM                 \
-                           K             L             M             N                             OACU_TERM     OTIL_TERM       OCIR_TERM       P         \
-                           Q             QU_TERM       R                           T               U             UACU_TERM       V               W         \
-                           X             DOT           \
-                           LS(A)         C_AACU_TERM   C_ATIL_TERM   C_ACIR_TERM   C_AGRV_TERM     LS(B)                         LS(C_CEDIL)     LS(D)     \
-                           LS(E)         C_EACU_TERM   C_ECIR_TERM   LS(F)                                       LS(I)           C_IACU_TERM               \
-                           LS(K)         LS(L)         LS(M)         LS(N)                         C_OACU_TERM   C_OTIL_TERM     C_OCIR_TERM     LS(P)     \
-                           LS(Q)         C_QU_TERM     LS(R)                       LS(T)           LS(U)         C_UACU_TERM     LS(V)           LS(W)     \
-                           LS(X)         \
-                           >; \
-            bindings =    < \
-                           &kp O         &kp X         &kp O         &kp M         &mc_qu          &kp Y                         &tc_atilo       &kp Y     \
-                           &kp U         &kp U         &kp X         &kp Y                                       &tc_smart_i     &kp Z                     \
-                           &kp W         &kp H         &kp S         &kp F                         &kp X         &kp E           &kp V           &kp T     \
-                           &key_repeat   &ac_iacu      &kp L                       &kp W           &kp E         &kp Z           &ac_iacu        &kp K     \
-                           &ac_iacu      &kp SLASH     \
-                           &kp LS(O)     &kp LS(X)     &kp LS(O)     &kp LS(M)     &mc_qu_c        &kp LS(Y)                     &tc_atilo_c     &kp LS(Y) \
-                           &kp LS(U)     &kp LS(U)     &kp LS(X)     &kp LS(Y)                                   &tc_smart_i     &kp LS(Z)                 \
-                           &kp LS(W)     &kp LS(H)     &kp LS(S)     &kp LS(F)                     &kp LS(X)     &kp LS(E)       &kp LS(V)       &kp LS(T) \
-                           &key_repeat   &ac_iacu_c    &kp LS(L)                   &kp LS(W)       &kp LS(E)     &kp LS(Z)       &ac_iacu_c      &kp LS(K) \
-                           &ac_iacu_c    \
-                           >; \
-        };
-
     thumbs {
         
         // ********************** CUSTOM HOLD TAPS ********************** //
@@ -183,7 +113,7 @@
 
         THUMB_MACRO(tc_custom_num_word,     &to ALPHA1 &custom_num_word)
 
-        // ******************* SMART SHIFT / CAPS WORD ******************* //
+        // ******************* CAPS WORD ******************* //
 
         custom_caps_word: custom_caps_word {
             compatible = "zmk,behavior-caps-word";
@@ -202,26 +132,75 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        // ******************** SMART SHIFT / REPEAT KEY ******************** //
+        ht_caps: ht_caps {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <QUICK_TAP_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <0>;
+            bindings = <&mo>, <&shift_caps_word>;
+        };
 
-        SMART_REPEAT(smart_shift_repeat, "smart_shift_repeat", &shift_caps_word)
-        SMART_REPEAT(smart_cancel_repeat, "smart_cancel_repeat", &tc_cancel)
+        // ******************** REPEAT KEY ******************** //
 
-        THUMB_MACRO(tc_oes,       &ac_otil &kp E &kp S)
-        THUMB_MACRO(tc_es,        &kp E &kp S)
-        THUMB_MACRO(tc_ou,        &kp O &kp U)
-        THUMB_MACRO(tc_ng,        &kp N &kp G)
-        THUMB_MACRO(tc_ey,        &kp E &kp Y)
-        THUMB_MACRO(tc_hy,        &kp H &kp Y)
-        THUMB_MACRO(tc_otiles,    &ac_otil &kp E &kp S)
-        THUMB_MACRO(tc_com,       &kp C &kp O &kp M)
-        THUMB_MACRO(tc_oes_c,     &ac_otil_c &kp LS(E) &kp LS(S))
-        THUMB_MACRO(tc_es_c,      &kp LS(E) &kp LS(S))
-        THUMB_MACRO(tc_ou_c,      &kp LS(O) &kp LS(U))
-        THUMB_MACRO(tc_ng_c,      &kp LS(N) &kp LS(G))
-        THUMB_MACRO(tc_ey_c,      &kp LS(E) &kp LS(Y))
-        THUMB_MACRO(tc_hy_c,      &kp LS(H) &kp LS(Y))
-        THUMB_MACRO(tc_otiles_c,  &ac_otil_c &kp LS(E) &kp LS(S))
+        labeled_key_repeat: labeled_key_repeat {
+			compatible = "zmk,behavior-macro";
+            label = "labeled_key_repeat";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_tap &key_repeat>;
+        };
+
+        smart_repeat: smart_repeat {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "smart_repeat";
+            #binding-cells = <0>;
+            max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
+            defaults = <&labeled_key_repeat>;
+            antecedents = <
+                           A             AACU_TERM     ATIL_TERM     ACIR_TERM     AGRV_TERM                                     C_CEDIL                      \
+                                         EACU_TERM     ECIR_TERM                                    H              I             IACU_TERM        J           \
+                           K                                                                        OACU_TERM      OTIL_TERM     OCIR_TERM                    \
+                                         QU_TERM                                                    U              UACU_TERM     V                W           \
+                           X             Y                           DOT                                                                                      \
+
+                           LS(A)         C_AACU_TERM   C_ATIL_TERM   C_ACIR_TERM   C_AGRV_TERM                                   LS(C_CEDIL)                  \
+                                         C_EACU_TERM   C_ECIR_TERM                                  LS(H)          LS(I)         C_IACU_TERM      LS(J)       \
+                           LS(K)                                                                    C_OACU_TERM    C_OTIL_TERM   C_OCIR_TERM                  \
+                                         C_QU_TERM                                                  LS(U)          C_UACU_TERM   LS(V)            LS(W)       \
+                           LS(X)         LS(Y)                                                                                                                \
+                           >;
+            bindings =    <
+                           &kp V         &kp V         &kp O         &kp N         &mc_qu                                        &tc_atilo                    \
+                                         &kp V         &kp E                                        &tc_oes        &tc_ng        &kp V            &ac_aacu    \
+                           &tc_ey                                                                   &kp V          &tc_es        &kp O                        \
+                                         &ac_ecir                                                   &kp Y          &kp V         &ac_aacu         &tc_hy      \
+                           &ac_aacu      &tc_ou                      &tc_com       \
+
+                           &kp LS(V)     &kp LS(V)     &kp LS(O)     &kp LS(N)     &mc_qu_c                                      &tc_atilo_c                  \
+                                         &kp LS(V)     &kp LS(E)                                    &tc_oes_c      &tc_ng_c      &kp LS(V)        &ac_aacu_c  \
+                           &tc_ey_c                                                                 &kp LS(V)      &tc_es_c      &kp LS(O)                    \
+                                         &ac_ecir_c                                                 &kp LS(Y)      &kp LS(V)     &ac_aacu_c       &tc_hy_c    \
+                           &ac_aacu_c    &tc_ou_c                                                                                                             \
+                           >;
+        };
+
+        THUMB_MACRO(tc_atilo,   &ac_atil &kp O)
+        THUMB_MACRO(tc_oes,     &ac_otil &kp E &kp S)
+        THUMB_MACRO(tc_es,      &kp E &kp S)
+        THUMB_MACRO(tc_ou,      &kp O &kp U)
+        THUMB_MACRO(tc_ng,      &kp N &kp G)
+        THUMB_MACRO(tc_ey,      &kp E &kp Y)
+        THUMB_MACRO(tc_hy,      &kp H &kp Y)
+        THUMB_MACRO(tc_com,     &kp C &kp O &kp M)
+        THUMB_MACRO(tc_atilo_c, &ac_atil_c &kp LS(O))
+        THUMB_MACRO(tc_oes_c,   &ac_otil_c &kp LS(E) &kp LS(S))
+        THUMB_MACRO(tc_es_c,    &kp LS(E) &kp LS(S))
+        THUMB_MACRO(tc_ou_c,    &kp LS(O) &kp LS(U))
+        THUMB_MACRO(tc_ng_c,    &kp LS(N) &kp LS(G))
+        THUMB_MACRO(tc_ey_c,    &kp LS(E) &kp LS(Y))
+        THUMB_MACRO(tc_hy_c,    &kp LS(H) &kp LS(Y))
 
         ht_repeat: ht_repeat {
             compatible = "zmk,behavior-hold-tap";
@@ -229,26 +208,49 @@
             tapping-term-ms = <QUICK_TAP_TERM>;
             flavor = "tap-preferred";
             quick-tap-ms = <0>;
-            bindings = <&mo>, <&smart_shift_repeat>;
+            bindings = <&mo>, <&smart_repeat>;
         };
 
-        ht_repeat_c: ht_repeat_c {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <QUICK_TAP_TERM>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <0>;
-            bindings = <&mo>, <&smart_cancel_repeat>;
+        // ******************** MAGIC KEY ******************** //
+
+        smart_magic: smart_magic {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "smart_magic";
+            #binding-cells = <0>;
+            max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
+            defaults = <&labeled_key_repeat>;
+            antecedents = <
+                           A             AACU_TERM     ATIL_TERM     ACIR_TERM     AGRV_TERM       B             C               C_CEDIL         D           \
+                           E             EACU_TERM     ECIR_TERM     F                             H             I               IACU_TERM       J           \
+                           K             L             M             N                             OACU_TERM     OTIL_TERM       OCIR_TERM       P           \
+                                         QU_TERM       R             S             T               U             UACU_TERM       V               W           \
+                           X                                         DOT                                                                                     \
+
+                           LS(A)         C_AACU_TERM   C_ATIL_TERM   C_ACIR_TERM   C_AGRV_TERM     LS(B)         LS(C)           LS(C_CEDIL)     LS(D)       \
+                           LS(E)         C_EACU_TERM   C_ECIR_TERM   LS(F)                         LS(H)         LS(I)           C_IACU_TERM     LS(J)       \
+                           LS(K)         LS(L)         LS(M)         LS(N)                         C_OACU_TERM   C_OTIL_TERM     C_OCIR_TERM     LS(P)       \
+                                         C_QU_TERM     LS(R)         LS(S)         LS(T)           LS(U)         C_UACU_TERM     LS(V)           LS(W)       \
+                           LS(X)                                                                                                                             \
+                           >;
+            bindings =    <
+                           &kp O         &kp X         &kp O         &kp M         &mc_qu          &kp Y         &kp S           &tc_otiles      &kp Y       \
+                           &kp U         &kp U         &kp X         &kp Y                         &kp R         &tc_smart_i     &kp Z           &ac_atil    \
+                           &kp W         &kp H         &kp S         &kp F                         &kp X         &kp E           &kp V           &kp T       \
+                                         &ac_iacu      &kp L         &kp S         &kp W           &kp E         &kp Z           &ac_iacu        &kp K       \
+                           &ac_iacu                                  &kp SLASH                                                                               \
+
+                           &kp LS(O)     &kp LS(X)     &kp LS(O)     &kp LS(M)     &mc_qu_c        &kp LS(Y)     &kp LS(S)       &tc_otiles_c    &kp LS(Y)   \
+                           &kp LS(U)     &kp LS(U)     &kp LS(X)     &kp LS(Y)                     &kp LS(R)     &tc_smart_i     &kp LS(Z)       &ac_atil_c  \
+                           &kp LS(W)     &kp LS(H)     &kp LS(S)     &kp LS(F)                     &kp LS(X)     &kp LS(E)       &kp LS(V)       &kp LS(T)   \
+                                         &ac_iacu_c    &kp LS(L)     &kp LS(C)     &kp LS(W)       &kp LS(E)     &kp LS(Z)       &ac_iacu_c      &kp LS(K)   \
+                           &ac_iacu_c                                                                                                                        \
+                           >;
         };
 
-        // ******************** SMART SHIFT / MAGIC KEY ******************** //
 
-        SMART_MAGIC(smart_shift_magic, "smart_shift_magic", &shift_caps_word)
-        SMART_MAGIC(smart_cancel_magic, "smart_cancel_magic", &tc_cancel)
-
-        THUMB_MACRO(tc_atilo,   &ac_atil &kp O)
-        THUMB_MACRO(tc_atilo_c, &ac_atil_c &kp LS(O))
-        THUMB_MACRO(tc_smart_i, &kp BACKSPACE &kp LS(I) &kp QUOT &kp SPACE)
+        THUMB_MACRO(tc_otiles,   &ac_otil &kp E &kp S)
+        THUMB_MACRO(tc_otiles_c, &ac_otil_c &kp LS(E) &kp LS(S))
+        THUMB_MACRO(tc_smart_i,  &kp BACKSPACE &kp LS(I) &kp QUOT &kp SPACE)
 
         ht_magic: ht_magic {
             compatible = "zmk,behavior-hold-tap";
@@ -256,16 +258,7 @@
             tapping-term-ms = <QUICK_TAP_TERM>;
             flavor = "tap-preferred";
             quick-tap-ms = <0>;
-            bindings = <&mo>, <&smart_shift_magic>;
-        };
-
-        ht_magic_c: ht_magic_c {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <QUICK_TAP_TERM>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <0>;
-            bindings = <&mo>, <&smart_cancel_magic>;
+            bindings = <&mo>, <&smart_magic>;
         };
 
         // ******************** SMART CASES ******************** //

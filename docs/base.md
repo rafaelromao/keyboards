@@ -24,17 +24,16 @@
 - The four thumb keys control layer transitions, when held (Navigation, Lower, Raise and Media).
 - Source code: [smart_thumbs.c](../src/qmk/users/rafaelromao/features/smart_thumbs.c)
 
-### Smart Shift / Repeat Key
-- The outer left thumb key, when tapped in the middle of a word, repeats the last key. This is usefull to avoid tapping the same key twice in words like 'tapped'.
-- When tapped in the beginning of a word, it acts as One Shot Shift.
+### Smart Repeat / Magic Key
+- The outer left thumb key repeats the last key by default (Repeat Key), but outputs an alternate result for keys that do not worth repeating (Alternate Repeat Key).
+- When tapped in the secondary alpha layer, this key outputs alternate results by default (Magic Key), but repeats the key when there is no predefined alternate result.
+  - See more about that [here](https://github.com/rafaelromao/romak/tree/main?tab=readme-ov-file#magic-romak).
 - Holding this key in the base layer will activate the [Navigation](../navigation.md) layer.
 - Tapping or holding this key in the [Raise](../symbols.md) layer acts as a normal Repeat Key, which can be used to spam or to repeat shortcuts. 
-- This feature was inspired by bmijanovich's [Dynamic Repeat Key](https://github.com/bmijanovich/zmk-config?tab=readme-ov-file#dynamic-repeat-key).
 
-### Smart Shift / Magic Key
-- The outer right thumb key, when tapped in the middle of a word, selects the output according to the context. See more about that [here](https://github.com/rafaelromao/romak/tree/main?tab=readme-ov-file#magic-romak).
-- When tapped in the beginning of a word, it also acts as One Shot Shift.
-- Holding this key in the base layer will activate the [Media](../navigation.md) layer.
+### Smart Shift / Caps Word
+- The OS Shift key is available in the right outer thumb key and will toggle the Shift modifier in one-shot mode when single tapped.
+- When double tapped, this key will activate Caps Word.
 
 ## Base Layer Combos
 - Combos are available in the base and [Numpad](symbols.md#numpad-layer) layers to send ENTER, ESC, TAB and common shortcuts like copy, paste, save, select all and undo.
