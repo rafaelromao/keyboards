@@ -33,8 +33,7 @@
     keys {
         compatible = "gpio-keys";
         on_off_key: on_off_key {
-            gpios = <&pro_micro 7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-            zephyr,code = <0>;
+            gpios = <&pro_micro 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         };
     };
 

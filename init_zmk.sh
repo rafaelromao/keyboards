@@ -46,6 +46,11 @@ unset GNUARMEMB_TOOLCHAIN_PATH
 export ZEPHYR_SDK_INSTALL_DIR=~/zephyr-sdk-0.16.3
 cd $KEYBOARD_HOME
 
+echo "Creating Reset build alias..."
+build_reset_unibody="west build -s app -b nice_nano_v2 --build-dir build/reset -- -DSHIELD='settings_reset'"
+archive_reset_unibody="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/reset/zephyr/zmk.uf2 ] && mv build/reset/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/reset-zmk.uf2"
+alias build_reset="cd ${ZMK_HOME} && ${build_reset_unibody} && ${archive_reset_unibody} && cd $KEYBOARD_HOME"
+
 echo "Creating Zen build alias..."
 build_zen_left="west build -s app -b corneish_zen_v2_left --build-dir build/corneish_zen_left -- -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/boards/lowprokb.ca/corneish-zen"
 build_zen_right="west build -s app -b corneish_zen_v2_right --build-dir build/corneish_zen_right -- -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/boards/lowprokb.ca/corneish-zen"
@@ -62,11 +67,10 @@ alias build_aellopos="cd ${ZMK_HOME} && ${build_aellopos_unibody} && ${archive_a
 echo "Creating Cygnus alias..."
 build_cygnus_left="west build -s app -b nice_nano_v2 --build-dir build/cygnus_left -- -DSHIELD='cygnus_left' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/boards/handwired"
 build_cygnus_right="west build -s app -b nice_nano_v2 --build-dir build/cygnus_right -- -DSHIELD='cygnus_right' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/boards/handwired"
-
 archive_cygnus_left="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/cygnus_left/zephyr/zmk.uf2 ] && mv build/cygnus_left/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/cygnus_left-zmk.uf2"
 archive_cygnus_right="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/cygnus_right/zephyr/zmk.uf2 ] && mv build/cygnus_right/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/cygnus_right-zmk.uf2"
 alias build_cygnus_both_sides="cd ${ZMK_HOME} && ${build_cygnus_left} && ${archive_cygnus_left} && ${build_cygnus_right} && ${archive_cygnus_right} && cd ${KEYBOARD_HOME}"
-alias build_cygnus="cd ${ZMK_HOME} && ${build_cygnus_right} && ${archive_cygnus_right} && cd ${KEYBOARD_HOME}"
+alias build_cygnus="cd ${ZMK_HOME} && ${build_cygnus_left} && ${archive_cygnus_left} && cd ${KEYBOARD_HOME}"
 
 echo "Creating Testpad build alias..."
 build_testpad_unibody="west build -s app -b seeeduino_xiao_ble --build-dir build/testpad -- -DSHIELD='testpad rgbled_adapter' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/boards/handwired -DZMK_EXTRA_MODULES=$RGBWIDGET_HOME"
