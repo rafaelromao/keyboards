@@ -12,7 +12,7 @@ Parts:
 - 36 MX switches (Gateron Oil Kings).
 - 34 1u MX keycaps (MT3 Blanks).
 - 2 1.5u MX thumb keycaps (MT3 Blanks).
-- Cygnus [case](https://github.com/juhakaup/keyboards/tree/main/Cygnus%20v1.0/stl/cygnus).
+- Cygnus [case](https://github.com/juhakaup/keyboards/tree/main/Cygnus%20v1.0/stl).
 - [2 Supermini NRF52840](https://www.aliexpress.com/item/1005006035267231.html).
 - [2 500mAh 3.7v battery - 752035](https://www.aliexpress.com/item/1005005984848543.html)
 - [36 Single Switch PCBs](https://keycapsss.com/keyboard-parts/pcbs/173/mxledbit-single-switch-pcb-mx-choc-hot-swap-socket).
