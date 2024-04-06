@@ -19,9 +19,7 @@ Parts:
 - [2 500mAh 3.7v battery - 752035](https://www.aliexpress.com/item/1005005984848543.html)
 - [36 Single Switch PCBs](https://keycapsss.com/keyboard-parts/pcbs/173/mxledbit-single-switch-pcb-mx-choc-hot-swap-socket).
 - [Dupont cables](https://aliexpress.com/item/1005004155181609.html).
-- [1n4148 diodes](https://pt.aliexpress.com/item/1005003540554760.html).
-- [24 AWG Wires](https://pt.aliexpress.com/item/32904950428.html).
-- [2 SS12F15 Switches](https://www.aliexpress.com/item/4000699324084.html).
+- [1n4148 diodes + diode legs](https://pt.aliexpress.com/item/1005003540554760.html).
 
 ### ZMK
 
