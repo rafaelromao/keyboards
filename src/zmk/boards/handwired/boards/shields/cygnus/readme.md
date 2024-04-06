@@ -5,8 +5,6 @@
 
 Dactyl Cygnus is a handwired board originally designed by @juhakaup and available at [https://github.com/juhakaup/keyboards](https://github.com/juhakaup/keyboards).
 
-In this wireless version, the reset button was removed and the TRRS jack slot was replaced by a SS12F15 switch slot. The modified STL file for the wireless bottom case can be found [here](cygnus_case_wireless_bottom_right.stl).
-
 ### Dactyl Cygnus
 ![img](../../../../../../../img/cygnus.jpeg)
 
