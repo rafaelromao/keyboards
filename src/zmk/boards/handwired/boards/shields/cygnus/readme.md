@@ -27,7 +27,8 @@ Parts:
 
 #### Flash
 
-- Connect the keyboard, put it in bootloader mode and copy the file `build/artifacts/cygnus-zmk.uf2` to the drive NICENANO. Wait for the drive to be disconnected.
+- Connect the left half, put it in bootloader mode and copy the file `build/artifacts/cygnus_left-zmk.uf2` to the drive NICENANO. Wait for the drive to be disconnected.
+- Connect the right half, put it in bootloader mode and copy the file `build/artifacts/cygnus_right-zmk.uf2` to the drive NICENANO. Wait for the drive to be disconnected.
 
 ## Keymap
 
