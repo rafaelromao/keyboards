@@ -75,7 +75,8 @@ This fork is also updated to Zephyr 3.5.
 
 The tested boards are listed below:
 
-- [lowprokb.ca/corneish-zen](src/zmk/boards/lowprokb.ca/corneish-zen/readme.md)
+- [Corne-ish Zen](src/zmk/boards/lowprokb.ca/corneish-zen/readme.md)
+- [Dactyl Cygnus](src/zmk/boards/handwired/boards/shields/cygnus/readme.md)
 
 Some features might not be available in ZMK. [This readme file](src/zmk/rafaelromao/readme.md) will indicate what features are missing.
 
