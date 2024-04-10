@@ -10,9 +10,21 @@ process_record_result_t process_shortcut_keycode(uint16_t keycode, bool isOneSho
 
         case MC_SELC:
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
+                if (isShifted) {
+                    register_mods(MOD_LSFT);
+                }
                 SEND_STRING(SS_LCTL("a"));
+                if (isShifted) {
+                    unregister_mods(MOD_LSFT);
+                }
             } else {
+                if (isShifted) {
+                    register_mods(MOD_LSFT);
+                }
                 SEND_STRING(SS_LGUI("a"));
+                if (isShifted) {
+                    unregister_mods(MOD_LSFT);
+                }
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
@@ -20,9 +32,21 @@ process_record_result_t process_shortcut_keycode(uint16_t keycode, bool isOneSho
 
         case MC_SAVE:
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
+                if (isShifted) {
+                    register_mods(MOD_LSFT);
+                }
                 SEND_STRING(SS_LCTL("s"));
+                if (isShifted) {
+                    unregister_mods(MOD_LSFT);
+                }
             } else {
+                if (isShifted) {
+                    register_mods(MOD_LSFT);
+                }
                 SEND_STRING(SS_LGUI("s"));
+                if (isShifted) {
+                    unregister_mods(MOD_LSFT);
+                }
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
@@ -30,9 +54,21 @@ process_record_result_t process_shortcut_keycode(uint16_t keycode, bool isOneSho
 
         case MC_UNDO:
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
+                if (isShifted) {
+                    register_mods(MOD_LSFT);
+                }
                 SEND_STRING(SS_LCTL("z"));
+                if (isShifted) {
+                    unregister_mods(MOD_LSFT);
+                }
             } else {
+                if (isShifted) {
+                    register_mods(MOD_LSFT);
+                }
                 SEND_STRING(SS_LGUI("z"));
+                if (isShifted) {
+                    unregister_mods(MOD_LSFT);
+                }
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
@@ -40,9 +76,21 @@ process_record_result_t process_shortcut_keycode(uint16_t keycode, bool isOneSho
 
         case MC_COPY:
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
+                if (isShifted) {
+                    register_mods(MOD_LSFT);
+                }
                 SEND_STRING(SS_LCTL("c"));
+                if (isShifted) {
+                    unregister_mods(MOD_LSFT);
+                }
             } else {
+                if (isShifted) {
+                    register_mods(MOD_LSFT);
+                }
                 SEND_STRING(SS_LGUI("c"));
+                if (isShifted) {
+                    unregister_mods(MOD_LSFT);
+                }
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
@@ -51,10 +99,22 @@ process_record_result_t process_shortcut_keycode(uint16_t keycode, bool isOneSho
         case MC_SCOP:
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("a"));
+                if (isShifted) {
+                    register_mods(MOD_LSFT);
+                }
                 SEND_STRING(SS_LCTL("c"));
+                if (isShifted) {
+                    unregister_mods(MOD_LSFT);
+                }
             } else {
                 SEND_STRING(SS_LGUI("a"));
-                SEND_STRING(SS_LGUI("c"));
+                if (isShifted) {
+                    register_mods(MOD_LSFT);
+                }
+                SEND_STRING(SS_LCTL("c"));
+                if (isShifted) {
+                    unregister_mods(MOD_LSFT);
+                }
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
@@ -86,9 +146,21 @@ process_record_result_t process_shortcut_keycode(uint16_t keycode, bool isOneSho
 
         case MC_PAST:
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
+                if (isShifted) {
+                    register_mods(MOD_LSFT);
+                }
                 SEND_STRING(SS_LCTL("v"));
+                if (isShifted) {
+                    unregister_mods(MOD_LSFT);
+                }
             } else {
+                if (isShifted) {
+                    register_mods(MOD_LSFT);
+                }
                 SEND_STRING(SS_LGUI("v"));
+                if (isShifted) {
+                    unregister_mods(MOD_LSFT);
+                }
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
@@ -96,9 +168,21 @@ process_record_result_t process_shortcut_keycode(uint16_t keycode, bool isOneSho
 
         case MC_FIND:
             if (should_send_ctrl(isMacOS, isOneShotShift)) {
+                if (isShifted) {
+                    register_mods(MOD_LSFT);
+                }
                 SEND_STRING(SS_LCTL("f"));
+                if (isShifted) {
+                    unregister_mods(MOD_LSFT);
+                }
             } else {
+                if (isShifted) {
+                    register_mods(MOD_LSFT);
+                }
                 SEND_STRING(SS_LGUI("f"));
+                if (isShifted) {
+                    unregister_mods(MOD_LSFT);
+                }
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
