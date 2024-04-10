@@ -60,9 +60,9 @@ const uint16_t PROGMEM r_acc_agr_combo[]  = {MC_CR_A, MC_CR_E, COMBO_END};
 
 // Numpad
 
-const uint16_t PROGMEM l_num_esc_combo[] = {KC_ESC, OM_RELS, COMBO_END};
+const uint16_t PROGMEM l_num_esc_combo[] = {KC_ESC, OM_BTN1, COMBO_END};
 const uint16_t PROGMEM l_num_sav_combo[] = {KC_SPC, OM_L, OM_U, COMBO_END};
-const uint16_t PROGMEM l_num_tab_combo[] = {KC_ESC, OM_RELS, OM_HLDS, COMBO_END};
+const uint16_t PROGMEM l_num_tab_combo[] = {KC_ESC, OM_BTN1, OM_BTN2, COMBO_END};
 const uint16_t PROGMEM l_num_ent_combo[] = {OM_L, OM_U, OM_R, COMBO_END};
 const uint16_t PROGMEM l_num_del_combo[] = {OM_W_D, OM_D, OM_W_U, COMBO_END};
 const uint16_t PROGMEM l_num_num_combo[] = {OM_W_D, OM_D, COMBO_END};
