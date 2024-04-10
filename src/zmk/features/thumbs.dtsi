@@ -111,7 +111,7 @@
             continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL MOVE_LEFT MOVE_RIGHT MOVE_UP MOVE_DOWN SCRL_DOWN SCRL_UP RCLK LCLK>;
         };
 
-        THUMB_MACRO(tc_custom_num_word,     &to ALPHA1 &custom_num_word)
+        THUMB_MACRO(tc_custom_num_word, &to ALPHA1 &custom_num_word)
 
         // ******************* CAPS WORD ******************* //
 
@@ -124,12 +124,15 @@
             continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT TILDE CARET GRAVE >;
         };
 
-        shift_caps_word: shift_caps_word {
-            compatible = "zmk,behavior-mod-morph";
-            label = "shift_caps_word";
-            #binding-cells = <0>;
-            bindings = <&sk LSHFT>, <&custom_caps_word>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+        THUMB_MACRO(tc_shift_layer, &sl SMART_CASE_S)
+
+        ht_shift: ht_shift {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <QUICK_TAP_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <0>;
+            bindings = <&mo>, <&tc_shift_layer>;
         };
 
         ht_caps: ht_caps {
@@ -138,7 +141,7 @@
             tapping-term-ms = <QUICK_TAP_TERM>;
             flavor = "tap-preferred";
             quick-tap-ms = <0>;
-            bindings = <&mo>, <&shift_caps_word>;
+            bindings = <&mo>, <&custom_caps_word>;
         };
 
         // ******************** REPEAT KEY ******************** //
@@ -274,16 +277,18 @@
             bindings = <&mo>, <&mc_sl_alpha2>;
         };
 
-        THUMB_MORPH(sc_caps_word,  MOD_LCTL, &custom_caps_word         , &msl_a2 RAISE 0 )
-        THUMB_MORPH(sc_caps_lock,  MOD_RCTL, &to CASE_A1               , &sc_caps_word   )
         THUMB_MORPH(sc_numpad,     MOD_LALT, &to NUMPAD                , &sc_caps_lock   )
-        THUMB_MORPH(sc_numword,    MOD_RALT, &custom_num_word          , &sc_numpad      )
-        THUMB_MORPH(sc_camelcase,  MOD_RSFT, &to CAMEL_CASE            , &sc_numword     )
+        THUMB_MORPH(sc_camelcase,  MOD_LSFT, &to CAMEL_CASE            , &sc_numword     )
+        THUMB_MORPH(sc_caps_word,  MOD_LCTL, &custom_caps_word         , &msl_a2 RAISE 0 )
         THUMB_MORPH(sc_snakecase,  MOD_LGUI, &to SNAKE_CASE            , &sc_camelcase   )
+
+        THUMB_MORPH(sc_numword,    MOD_RALT, &custom_num_word          , &sc_numpad      )
         THUMB_MORPH(sc_kebabcase,  MOD_RGUI, &to KEBAB_CASE            , &sc_snakecase   )
+        THUMB_MORPH(sc_caps_lock,  MOD_RCTL, &to CASE_A1               , &sc_caps_word   )
+        THUMB_MORPH(sc_slashcase,  MOD_RSFT, &to SLASH_CASE            , &sc_kebabcase   )
 
         THUMB_MACRO(tc_shift_camel,  &to CAMEL_CASE &sl SMART_CASE_S)
-        THUMB_COMBO_MORPH(sc_pascalcase, MOD_LCTL, MOD_RSFT|MOD_LSFT, &tc_shift_camel, &sc_kebabcase)
+        THUMB_COMBO_MORPH(sc_pascalcase, MOD_LCTL, MOD_LSFT, &tc_shift_camel, &sc_slashcase)
 
         THUMB_MACRO(tc_strong_snakecase,  &tog SMART_CASE_S &tog SNAKE_CASE)
         THUMB_COMBO_MORPH(sc_strong_snake_case, MOD_LCTL, MOD_LGUI, &tc_strong_snakecase, &sc_pascalcase)
@@ -291,11 +296,15 @@
         THUMB_MACRO(tc_strong_kebabcase,  &tog SMART_CASE_S &tog KEBAB_CASE)
         THUMB_COMBO_MORPH(sc_strong_kebab_case, MOD_RCTL, MOD_RGUI, &tc_strong_kebabcase, &sc_strong_snake_case)
         
-        #define msl_raise_smart sc_strong_kebab_case
+        THUMB_MACRO(tc_strong_slashcase,  &tog SMART_CASE_S &tog SLASH_CASE)
+        THUMB_COMBO_MORPH(sc_strong_slash_case, MOD_RCTL, MOD_RSFT, &tc_strong_slashcase, &sc_strong_kebab_case)
+        
+        #define msl_raise_smart sc_strong_slash_case
 
         THUMB_MACRO(mc_msk_camel, &sl SMART_CASE_S)
         THUMB_MACRO(mc_msk_snake, &kp UNDERSCORE &sl SPACING)
         THUMB_MACRO(mc_msk_kebab, &kp MINUS &sl SPACING)
+        THUMB_MACRO(mc_msk_slash, &kp SLASH &sl SPACING)
         THUMB_MACRO(mc_msk_space, &kp SPACE &to ALPHA1)
         THUMB_MACRO(mc_msk_space_b, &kp BACKSPACE &kp SPACE &to ALPHA1)
 
@@ -315,6 +324,15 @@
             flavor = "tap-preferred";
             quick-tap-ms = <0>;
             bindings = <&mo>, <&mc_msk_kebab>;
+        };
+
+        msk_slash: msk_slash {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <QUICK_TAP_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <0>;
+            bindings = <&mo>, <&mc_msk_slash>;
         };
 
         msk_spcb: msk_spcb {

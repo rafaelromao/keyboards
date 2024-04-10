@@ -8,10 +8,10 @@
 /*                KEY POSITIONS
 
   ╭─────────────────────╮ ╭─────────────────────╮
-  │ LTP LTR LTM LTI LTC │ │ RTC RTI RTM RTR RTP │
+  │ LTP LTR LTM LTI     │ │     RTI RTM RTR RTP │
   │ LHP LHR LHM LHI LHC │ │ RHC RHI RHM RHR RHP │
-  │ LBP LBR LBM LBI LBC │ │ RBC RBI RBM RBR RBP │
-  ╰───────╮ L2  L1  L0  │ │ R0  R1  R2  ╭───────╯
+  │     LBR LBM LBI LBC │ │ RBC RBI RBM RBR     │
+  ╰───────╮     L1  L0  │ │ R0  R1      ╭───────╯
           ╰─────────────╯ ╰─────────────╯ */
 
 / {
@@ -28,11 +28,14 @@
     combos {
         compatible = "zmk,combos";
 
-        COMBO(cb_save,          LHR LHM L0,  &mc_save,           ALPHA1 CASE_A1 NUMPAD NAV NAV_F SHORTS_L SHORTS_R SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE NMODS CODING)
-        COMBO(cb_escc,          LTR LTM,     &mc_escc,           ALPHA1 CASE_A1 NUMPAD NAV NAV_F SHORTS_L SHORTS_R SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE NMODS CODING)
-        COMBO(cb_fullscr,       LHM LHI L0,  &mc_fullscr,        ALPHA1 CASE_A1 NUMPAD NAV NAV_F SHORTS_L SHORTS_R SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE)
-        COMBO(cb_find,          LBM LBI L0,  &mc_find,           ALPHA1 CASE_A1 NUMPAD NAV NAV_F SHORTS_L SHORTS_R SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE)
-        COMBO(cb_undo,          LBR LBM L0,  &mc_undo,           ALPHA1 CASE_A1 NUMPAD NAV NAV_F SHORTS_L SHORTS_R SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE)
+        COMBO(cb_boot_l,        LTP LHP,      &bootloader,        ALPHA1)
+        COMBO(cb_boot_r,        RTP RHP,      &bootloader,        ALPHA1)
+
+        COMBO(cb_save,          LHR LHM L0,  &mc_save,           ALPHA1 CASE_A1 NUMPAD NAV NAV_F SHORTS_L SHORTS_R SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE KEBAB_CASE SLASH_CASE SMART_CASE_S NMODS CODING)
+        COMBO(cb_escc,          LTR LTM,     &mc_escc,           ALPHA1 CASE_A1 NUMPAD NAV NAV_F SHORTS_L SHORTS_R SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE KEBAB_CASE SLASH_CASE SMART_CASE_S NMODS CODING)
+        COMBO(cb_fullscr,       LHM LHI L0,  &mc_fullscr,        ALPHA1 CASE_A1 NUMPAD NAV NAV_F SHORTS_L SHORTS_R SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE KEBAB_CASE SLASH_CASE SMART_CASE_S)
+        COMBO(cb_find,          LBM LBI L0,  &mc_find,           ALPHA1 CASE_A1 NUMPAD NAV NAV_F SHORTS_L SHORTS_R SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE KEBAB_CASE SLASH_CASE SMART_CASE_S)
+        COMBO(cb_undo,          LBR LBM L0,  &mc_undo,           ALPHA1 CASE_A1 NUMPAD NAV NAV_F SHORTS_L SHORTS_R SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE KEBAB_CASE SLASH_CASE SMART_CASE_S)
 
         COMBO(cb_paste,         RBI RBM R0,  &mc_paste,          ALPHA1 CASE_A1 LOWER NUMPAD NAV NAV_F SHORTS_L SHORTS_R SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE)
         COMBO(cb_copy,          RHI RHM R0,  &mc_copy,           ALPHA1 CASE_A1 LOWER NUMPAD NAV NAV_F SHORTS_L SHORTS_R SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE)
@@ -58,18 +61,18 @@
         COMBO(cb_x,             RTI RTM,     &kp X,              ALPHA1 SEN_CASE)
         COMBO(cb_z,             RHI RHM,     &ht_z 0 0,          ALPHA1 SEN_CASE)
         COMBO(cb_j,             RBI RBM,     &hyp_j 0 0,         ALPHA1 SEN_CASE)
-        COMBO(cb_y,             RHM RHR,     &kp Y,              ALPHA1 SEN_CASE)
+        COMBO(cb_y,             RHM RHR,     &ht_y 0 0,          ALPHA1 SEN_CASE)
         COMBO(cb_d,             RTI RTM RTR, &kp D,              ALPHA1 SEN_CASE)
         COMBO(cb_p,             RHI RHM RHR, &ht_p 0 0,          ALPHA1 SEN_CASE)
         COMBO(cb_grva,          RBM RBR,     &ac_agrv,           ALPHA2)
 
-        COMBO(cb_xc,            RTI RTM,     &kp LS(X),          CASE_A1 SEN_E1)
-        COMBO(cb_zc,            RHI RHM,     &kp LS(Z),          CASE_A1 SEN_E1)
-        COMBO(cb_jc,            RBI RBM,     &kp LS(J),          CASE_A1 SEN_E1)
-        COMBO(cb_yc,            RHM RHR,     &kp LS(Y),          CASE_A1 SEN_E2)
-        COMBO(cb_dc,            RTI RTM RTR, &kp LS(D),          CASE_A1 SEN_E2)
-        COMBO(cb_pc,            RHI RHM RHR, &kp LS(P),          CASE_A1 SEN_E2)
-        COMBO(cb_grvac,         RBM RBR,     &ac_agrv_c,         CASE_A1 SEN_E2)
+        COMBO(cb_xc,            RTI RTM,     &kp LS(X),          CASE_A1 SEN_E1 SMART_CASE_S)
+        COMBO(cb_zc,            RHI RHM,     &kp LS(Z),          CASE_A1 SEN_E1 SMART_CASE_S)
+        COMBO(cb_jc,            RBI RBM,     &kp LS(J),          CASE_A1 SEN_E1 SMART_CASE_S)
+        COMBO(cb_yc,            RHM RHR,     &kp LS(Y),          CASE_A1 SEN_E2 SMART_CASE_S)
+        COMBO(cb_dc,            RTI RTM RTR, &kp LS(D),          CASE_A1 SEN_E1 SMART_CASE_S)
+        COMBO(cb_pc,            RHI RHM RHR, &kp LS(P),          CASE_A1 SEN_E1 SMART_CASE_S)
+        COMBO(cb_grvac,         RBM RBR,     &ac_agrv_c,         CASE_A1 SEN_E2 SMART_CASE_S)
 
         COMBO(cb_sfl,           RTI RTM,     &kp LS(L),          LOWER NUMPAD)
         COMBO(cb_jv,            RHI RHM,     &kp A,              LOWER NUMPAD)
@@ -126,12 +129,12 @@
 
         COMBO(cb_esc_save,      LTR LTM L0,  &mc_save_esc,       ALPHA1 SEN_CASE SEN_E1 SEN_E2)
 
-        COMBO(cb_backspace,     RTM RTR,     &kp BACKSPACE,      ALPHA1 CASE_A1 ALPHA2 CASE_A2 NUMPAD LOWER RAISE SYMBOLS NAV NAV_F SHORTS_L SHORTS_R SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE NMODS CODING)
-        COMBO(cb_enter_r,       RHM RHR R0,  &kp ENTER,          ALPHA1 CASE_A1 ALPHA2 CASE_A2 NUMPAD LOWER RAISE SYMBOLS NAV NAV_F SHORTS_L SHORTS_R SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE NMODS CODING)
-        COMBO(cb_enter_l,       LHM LHR LHI, &ht_enter 0 0,      ALPHA1 CASE_A1 ALPHA2 CASE_A2 NUMPAD LOWER RAISE SYMBOLS NAV NAV_F SHORTS_L SHORTS_R SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE NMODS CODING)
-        COMBO(cb_del,           LBR LBM LBI, &kp DEL,            ALPHA1 CASE_A1 ALPHA2 CASE_A2 NUMPAD LOWER RAISE SYMBOLS NAV NAV_F SHORTS_L SHORTS_R SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE NMODS CODING)
-        COMBO(cb_tab_r,         RTM RTR R0,  &kp TAB,            ALPHA1 CASE_A1 ALPHA2 CASE_A2 NUMPAD LOWER RAISE SYMBOLS NAV NAV_F SHORTS_L SHORTS_R SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE NMODS CODING)
-        COMBO(cb_tab_l,         LTM LTR LTI, &kp TAB,            ALPHA1 CASE_A1 ALPHA2 CASE_A2 NUMPAD LOWER RAISE SYMBOLS NAV NAV_F SHORTS_L SHORTS_R SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE NMODS CODING)
+        COMBO(cb_backspace,     RTM RTR,     &kp BACKSPACE,      ALPHA1 CASE_A1 ALPHA2 CASE_A2 NUMPAD LOWER RAISE SYMBOLS NAV NAV_F SHORTS_L SHORTS_R SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE KEBAB_CASE SLASH_CASE SMART_CASE_S NMODS CODING)
+        COMBO(cb_enter_r,       RHM RHR R0,  &kp ENTER,          ALPHA1 CASE_A1 ALPHA2 CASE_A2 NUMPAD LOWER RAISE SYMBOLS NAV NAV_F SHORTS_L SHORTS_R SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE KEBAB_CASE SLASH_CASE SMART_CASE_S NMODS CODING)
+        COMBO(cb_enter_l,       LHM LHR LHI, &ht_enter 0 0,      ALPHA1 CASE_A1 ALPHA2 CASE_A2 NUMPAD LOWER RAISE SYMBOLS NAV NAV_F SHORTS_L SHORTS_R SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE KEBAB_CASE SLASH_CASE SMART_CASE_S NMODS CODING)
+        COMBO(cb_del,           LBR LBM LBI, &kp DEL,            ALPHA1 CASE_A1 ALPHA2 CASE_A2 NUMPAD LOWER RAISE SYMBOLS NAV NAV_F SHORTS_L SHORTS_R SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE KEBAB_CASE SLASH_CASE SMART_CASE_S NMODS CODING)
+        COMBO(cb_tab_r,         RTM RTR R0,  &kp TAB,            ALPHA1 CASE_A1 ALPHA2 CASE_A2 NUMPAD LOWER RAISE SYMBOLS NAV NAV_F SHORTS_L SHORTS_R SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE KEBAB_CASE SLASH_CASE SMART_CASE_S NMODS CODING)
+        COMBO(cb_tab_l,         LTM LTR LTI, &kp TAB,            ALPHA1 CASE_A1 ALPHA2 CASE_A2 NUMPAD LOWER RAISE SYMBOLS NAV NAV_F SHORTS_L SHORTS_R SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE KEBAB_CASE SLASH_CASE SMART_CASE_S NMODS CODING)
 
         COMBO(cb_semi,          RBM RBR,     &th_semi 0 0,       ALPHA1 CASE_A1 LOWER SEN_CASE SEN_E1 SEN_E2)
         COMBO(cb_sent,          RBI RBM RBR, &mc_end_semi_ent,   ALPHA1 CASE_A1 SEN_CASE SEN_E1 SEN_E2 LOWER NUMPAD)
@@ -179,6 +182,7 @@
         COMBO_MUST_TAP(ht_q     , &kp LSHFT &kp LCTL                   , &kp Q)
         COMBO_MUST_TAP(ht_enter , &kp LSHFT &kp LCTL &kp LGUI          , &kp ENTER)
         COMBO_MUST_TAP(ht_z     , &kp RCTL  &kp RGUI                   , &kp Z)
+        COMBO_MUST_TAP(ht_y     , &kp RCTL  &kp RSFT                   , &kp Y)
         COMBO_MUST_TAP(ht_p     , &kp RSHFT &kp RCTL &kp RGUI          , &kp P)
         COMBO_MUST_TAP(hyp_v    , &kp LSHFT &kp LCTL &kp LGUI &kp LALT , &kp V)
         COMBO_MUST_TAP(hyp_j    , &kp RSHFT &kp RCTL &kp RGUI &kp RALT , &kp J)

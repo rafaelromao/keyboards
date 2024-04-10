@@ -28,9 +28,9 @@
                      label = "ROMAK";
                      bindings = <
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp Y
-   &lt SHORTS_L D      &mt RSHFT N         &mt LCTRL S         &mt LGUI T          &kp W               &kp Z               &mt RGUI R          &mt RCTRL A         &mt RSHFT E         &lt SHORTS_R I 
+   &lt SHORTS_L D      &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp W               &kp Z               &mt RGUI R          &mt RCTRL A         &mt RSHFT E         &lt SHORTS_R I 
    &lt SHORTS_L D      &mt RALT F          &th_c 0 0           &mt LALT P          &kp V               &kp J               &mt RALT H          &th_comma 0 0       &th_dot 0 0         &lt SHORTS_R I
-                                           &none               &ht_repeat NAV 0    &ltn LOWER SPACE    &msl_raise_smart    &ht_caps MEDIA 0    &none
+                                           &none               &ht_repeat NAV 0    &ltn LOWER SPACE    &msl_raise_smart    &ht_shift MEDIA 0   &none
                         >;
                 };
                 camel_case_layer {
@@ -68,6 +68,15 @@
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
                                            &trans              &trans              &msk_dash LOWER 0   &trans              &trans              &trans
+                           >;
+                };
+                slash_case_layer {
+                     label = "SLASH";
+                     bindings = <
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
+                                           &trans              &trans              &msk_slash LOWER 0  &trans              &trans              &trans
                            >;
                 };
                 spacing_layer {
@@ -219,7 +228,7 @@
                      label = "NAV";
                      bindings = <
    &none               &kp ESC             &kp PAGE_UP         &kp INS             &none               &none               &kp TAB             &kp ENTER           &mc_delword         &none
-   &none               &kp LSHIFT          &kp LCTRL           &kp LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &none               &kp LSHFT           &kp LCTRL           &kp LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
    &none               &kp RALT            &kp PAGE_DOWN       &kp LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &mc_cam
                                            &trans              &trans              &trans              &kp SPACE           &mo MEDIA           &trans
                         >;
@@ -237,7 +246,7 @@
                      label = "NAV";
                      bindings = <
    &none               &kp ESC             &kp PAGE_UP         &kp INS             &none               &none               &kp TAB             &kp ENTER           &mc_delword         &none
-   &none               &kp LSHIFT          &kp LCTRL           &kp LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &none               &kp LSHFT           &kp LCTRL           &kp LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
    &none               &kp RALT            &kp PAGE_DOWN       &kp LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &kp RIGHT
                                            &trans              &trans              &kp SPACE           &kp SPACE           &to ALPHA1          &trans
                            >;
