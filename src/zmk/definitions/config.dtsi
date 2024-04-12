@@ -7,7 +7,7 @@
 
 #define ALPHA1 0
 #define CAMEL_CASE 1
-#define SMART_CASE_S 2
+#define SHIFT_A1 2
 #define SNAKE_CASE 3
 #define KEBAB_CASE 4
 #define SLASH_CASE 5
@@ -22,16 +22,17 @@
 #define CODING 14
 #define NMODS 15
 #define ALPHA2 16
-#define CASE_A2 17
-#define SYMBOLS 18
-#define SEN_CASE 19
-#define SEN_E1 20
-#define SEN_E2 21
-#define NAV 22
-#define MEDIA 23
-#define NAV_F 24
-#define LOCK_KB 25
-#define SYSTEM 26
+#define SHIFT_A2 17
+#define CASE_A2 18
+#define SYMBOLS 19
+#define SEN_CASE 20
+#define SEN_E1 21
+#define SEN_E2 22
+#define NAV 23
+#define MEDIA 24
+#define NAV_F 25
+#define LOCK_KB 26
+#define SYSTEM 27
 
 #define TAPPING_TERM 175
 #define TD_TAPPING_TERM 225

@@ -124,7 +124,7 @@
             continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT TILDE CARET GRAVE >;
         };
 
-        THUMB_MACRO(tc_shift_layer, &sl SMART_CASE_S)
+        THUMB_MACRO(tc_shift_layer, &sl SHIFT_A1)
 
         ht_shift: ht_shift {
             compatible = "zmk,behavior-hold-tap";
@@ -287,21 +287,21 @@
         THUMB_MORPH(sc_caps_lock,  MOD_RCTL, &to CASE_A1               , &sc_caps_word   )
         THUMB_MORPH(sc_slashcase,  MOD_RSFT, &to SLASH_CASE            , &sc_kebabcase   )
 
-        THUMB_MACRO(tc_shift_camel,  &to CAMEL_CASE &sl SMART_CASE_S)
+        THUMB_MACRO(tc_shift_camel,  &to CAMEL_CASE &sl SHIFT_A1)
         THUMB_COMBO_MORPH(sc_pascalcase, MOD_LCTL, MOD_LSFT, &tc_shift_camel, &sc_slashcase)
 
-        THUMB_MACRO(tc_strong_snakecase,  &tog SMART_CASE_S &tog SNAKE_CASE)
+        THUMB_MACRO(tc_strong_snakecase,  &tog SHIFT_A1 &tog SNAKE_CASE)
         THUMB_COMBO_MORPH(sc_strong_snake_case, MOD_LCTL, MOD_LGUI, &tc_strong_snakecase, &sc_pascalcase)
         
-        THUMB_MACRO(tc_strong_kebabcase,  &tog SMART_CASE_S &tog KEBAB_CASE)
+        THUMB_MACRO(tc_strong_kebabcase,  &tog SHIFT_A1 &tog KEBAB_CASE)
         THUMB_COMBO_MORPH(sc_strong_kebab_case, MOD_RCTL, MOD_RGUI, &tc_strong_kebabcase, &sc_strong_snake_case)
         
-        THUMB_MACRO(tc_strong_slashcase,  &tog SMART_CASE_S &tog SLASH_CASE)
+        THUMB_MACRO(tc_strong_slashcase,  &tog SHIFT_A1 &tog SLASH_CASE)
         THUMB_COMBO_MORPH(sc_strong_slash_case, MOD_RCTL, MOD_RSFT, &tc_strong_slashcase, &sc_strong_kebab_case)
         
         #define msl_raise_smart sc_strong_slash_case
 
-        THUMB_MACRO(mc_msk_camel, &sl SMART_CASE_S)
+        THUMB_MACRO(mc_msk_camel, &sl SHIFT_A1)
         THUMB_MACRO(mc_msk_snake, &kp UNDERSCORE &sl SPACING)
         THUMB_MACRO(mc_msk_kebab, &kp MINUS &sl SPACING)
         THUMB_MACRO(mc_msk_slash, &kp SLASH &sl SPACING)

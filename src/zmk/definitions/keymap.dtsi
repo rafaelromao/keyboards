@@ -42,13 +42,13 @@
                                            &trans              &trans              &msk_sft LOWER 0    &trans              &trans              &trans
                            >;
                 };
-                smart_case_shifted_layer {
+                shifted_alpha1_layer {
                      label = "CASE";
                      bindings = <
    &trans              &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &trans
    &lt SHORTS_L LS(D)  &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTS_R LS(I) 
    &lt SHORTS_L LS(D)  &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &mt RALT LS(H)      &th_comma 0 0       &th_dot 0 0         &lt SHORTS_R LS(I)
-                                           &trans              &ht_repeat NAV 0    &msk_spc LOWER 0    &msl RAISE CASE_A2  &ht_caps MEDIA 0    &trans
+                                           &trans              &ht_repeat NAV 0    &msk_spc LOWER 0    &msl RAISE SHIFT_A2 &ht_caps MEDIA 0    &trans
                         >;
                 };
 
@@ -176,6 +176,15 @@
    &none               &kp Q               &mc_qu              &kp K               &none               &none               &ac_ocir            &ac_oacu            &ac_uacu            &none
    &kp Y               &kp Z               &kp X               &kp W               &none               &none               &ac_atil            &ac_aacu            &ac_eacu            &ac_iacu 
    &kp Y               &kp J               &mc_ced             &kp V               &none               &none               &ac_otil            &ac_acir            &ac_ecir            &ac_iacu
+                                           &trans              &ht_magic NAV 0     &sl SYMBOLS         &trans              &mc_sqo             &trans
+                           >;
+                };
+                shifted_alpha2_layer {
+                     label = "CASE";
+                     bindings = <
+   &none               &kp LS(Q)           &mc_qu_cs           &kp LS(K)           &none               &none               &ac_ocir_c          &ac_oacu_c          &ac_uacu_c          &none
+   &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &none               &none               &ac_atil_c          &ac_aacu_c          &ac_eacu_c          &ac_iacu_c 
+   &kp LS(Y)           &kp LS(J)           &mc_ced_c           &kp LS(V)           &none               &none               &ac_otil_c          &ac_acir_c          &ac_ecir_c          &ac_iacu_c
                                            &trans              &ht_magic NAV 0     &sl SYMBOLS         &trans              &mc_sqo             &trans
                            >;
                 };
