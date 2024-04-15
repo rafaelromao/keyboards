@@ -28,8 +28,8 @@
                      label = "ROMAK";
                      bindings = <
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp Y
-   &lt SHORTS_L D      &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp W               &kp Z               &mt RGUI R          &mt RCTRL A         &mt RSHFT E         &lt SHORTS_R I 
-   &lt SHORTS_L D      &mt RALT F          &th_c 0 0           &mt LALT P          &kp V               &kp J               &mt RALT H          &th_comma 0 0       &th_dot 0 0         &lt SHORTS_R I
+   &blt SHORTS_L D     &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp W               &kp Z               &mt RGUI R          &mt RCTRL A         &mt RSHFT E         &blt SHORTS_R I 
+   &blt SHORTS_L D     &mt RALT F          &th_c 0 0           &mt LALT P          &kp V               &kp J               &mt RALT H          &th_comma 0 0       &th_dot 0 0         &blt SHORTS_R I
                                            &none               &ht_repeat NAV 0    &ltn LOWER SPACE    &msl_raise_smart    &ht_shift MEDIA 0   &none
                         >;
                 };
@@ -46,8 +46,8 @@
                      label = "CASE";
                      bindings = <
    &trans              &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &trans
-   &lt SHORTS_L LS(D)  &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTS_R LS(I) 
-   &lt SHORTS_L LS(D)  &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &mt RALT LS(H)      &th_comma 0 0       &th_dot 0 0         &lt SHORTS_R LS(I)
+   &blt SHORTS_L LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &blt SHORTS_R LS(I) 
+   &blt SHORTS_L LS(D) &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &mt RALT LS(H)      &th_comma 0 0       &th_dot 0 0         &blt SHORTS_R LS(I)
                                            &trans              &ht_repeat NAV 0    &msk_spc LOWER 0    &msl RAISE SHIFT_A2 &ht_caps MEDIA 0    &trans
                         >;
                 };
@@ -93,8 +93,8 @@
                      label = "CASE";
                      bindings = <
    &trans              &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &none
-   &lt SHORTS_L LS(D)  &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTS_R LS(I) 
-   &lt SHORTS_L LS(D)  &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &mt RALT LS(H)      &th_comma 0 0       &th_dot 0 0         &lt SHORTS_R LS(I)
+   &blt SHORTS_L LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &blt SHORTS_R LS(I) 
+   &blt SHORTS_L LS(D) &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &mt RALT LS(H)      &th_comma 0 0       &th_dot 0 0         &blt SHORTS_R LS(I)
                                            &trans              &ht_repeat NAV 0    &trans              &msl RAISE CASE_A2  &th_cancel MEDIA 0    &trans
                         >;
                 };
@@ -111,8 +111,8 @@
                      label = "RAISE";
                      bindings = <
    &none               &kp F9              &kp F8              &kp F7              &none               &none               &th_colon 0 0       &th_eql 0 0         &th_hash 0 0        &none
-   &none               &kp F6              &kp F5              &kp F4              &none               &none               &th_mins 0 0        &th_plus 0 0        &th_slash 0 0       &lt SHORTS_R STAR  
-   &none               &kp F3              &kp F2              &kp F1              &none               &none               &th_excl 0 0        &th_lt 0 0          &th_gt 0 0          &lt SHORTS_R STAR
+   &none               &kp F6              &kp F5              &kp F4              &none               &none               &th_mins 0 0        &th_plus 0 0        &th_slash 0 0       &blt SHORTS_R STAR  
+   &none               &kp F3              &kp F2              &kp F1              &none               &none               &th_excl 0 0        &th_lt 0 0          &th_gt 0 0          &blt SHORTS_R STAR
                                            &trans              &key_repeat         &lt SYMBOLS SPACE   &trans              &tog NUMPAD         &trans       
                            >;
                 };
@@ -120,8 +120,8 @@
                      label = "NUMPAD";
                      bindings = <
    &none               &kp ESC             &mkp LCLK           &mkp RCLK           &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
-   &none               &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &none               &mc_n4              &mc_n5              &mc_n6              &lt SHORTS_R DOT 
-   &none               &msc SCRL_DOWN      &mmv MOVE_DOWN      &msc SCRL_UP        &none               &none               &mc_n1              &mc_n2              &mc_n3              &lt SHORTS_R DOT 
+   &none               &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &none               &mc_n4              &mc_n5              &mc_n6              &nlt SHORTS_R DOT 
+   &none               &msc SCRL_DOWN      &mmv MOVE_DOWN      &msc SCRL_UP        &none               &none               &mc_n1              &mc_n2              &mc_n3              &nlt SHORTS_R DOT 
                                            &trans              &ht_repeat NAV 0    &trans              &ltn SYMBOLS SPACE  &th_n0 MEDIA 0      &trans
                            >;
                 };
