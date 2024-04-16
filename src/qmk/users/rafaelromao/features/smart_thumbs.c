@@ -160,6 +160,9 @@ bool process_shift_alternate_repeat_for_macros(uint16_t keycode) {
         case MC_QU:
             next_key = KC_E;
             break;
+        case MC_SQUO:
+            next_key = KC_V;
+            break;
     }
     if (next_key != keycode) {
         action_tap(next_key);

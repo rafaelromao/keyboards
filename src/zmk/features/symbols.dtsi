@@ -118,7 +118,8 @@
         TAPHOLD_SYMBOL(th_dlr,     &mc_dollar, &mc_bslash)
         TAPDANCE_SYMBOL(td_dlr,    &th_dlr 0 0, &mc_euro, &none)
 
-        SYMBOL(mc_sqo,             &kp SQT &kp SPACE)
+        SYMBOL(mc_sqo,             &kp SQT &kp SPACE &kp SQUO_TERM)
+        SYMBOL(mc_sqo_c,           &kp SQT &kp SPACE &kp C_SQUO_TERM)
         SYMBOL(mc_dqo,             &kp DQT &kp SPACE)
         SYMBOL(mc_double_dqo,      &mc_dqo &mc_dqo &kp LEFT)
         TAPHOLD_SYMBOL(th_dqo,     &mc_dqo, &mc_sqo)

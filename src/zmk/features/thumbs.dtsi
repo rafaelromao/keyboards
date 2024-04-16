@@ -165,26 +165,26 @@
                            A             AACU_TERM     ATIL_TERM     ACIR_TERM     AGRV_TERM                                     C_CEDIL                      \
                                          EACU_TERM     ECIR_TERM                                    H              I             IACU_TERM        J           \
                            K                                                                        OACU_TERM      OTIL_TERM     OCIR_TERM                    \
-                                         QU_TERM                                                    U              UACU_TERM     V                W           \
+                                         QU_TERM       SQUO_TERM                                    U              UACU_TERM     V                W           \
                            X             Y                           DOT                                                                                      \
 
                            LS(A)         C_AACU_TERM   C_ATIL_TERM   C_ACIR_TERM   C_AGRV_TERM                                   LS(C_CEDIL)                  \
                                          C_EACU_TERM   C_ECIR_TERM                                  LS(H)          LS(I)         C_IACU_TERM      LS(J)       \
                            LS(K)                                                                    C_OACU_TERM    C_OTIL_TERM   C_OCIR_TERM                  \
-                                         C_QU_TERM                                                  LS(U)          C_UACU_TERM   LS(V)            LS(W)       \
+                                         C_QU_TERM     C_SQUO_TERM                                  LS(U)          C_UACU_TERM   LS(V)            LS(W)       \
                            LS(X)         LS(Y)                                                                                                                \
                            >;
             bindings =    <
                            &kp V         &kp V         &kp O         &kp N         &mc_qu                                        &tc_atilo                    \
                                          &kp V         &kp E                                        &tc_oes        &tc_ng        &kp V            &ac_aacu    \
                            &tc_ey                                                                   &kp V          &tc_es        &kp O                        \
-                                         &ac_ecir                                                   &kp Y          &kp V         &ac_aacu         &tc_hy      \
+                                         &ac_ecir      &kp V                                         &kp Y          &kp V         &ac_aacu         &tc_hy      \
                            &ac_aacu      &tc_ou                      &tc_com       \
 
                            &kp LS(V)     &kp LS(V)     &kp LS(O)     &kp LS(N)     &mc_qu_c                                      &tc_atilo_c                  \
                                          &kp LS(V)     &kp LS(E)                                    &tc_oes_c      &tc_ng_c      &kp LS(V)        &ac_aacu_c  \
                            &tc_ey_c                                                                 &kp LS(V)      &tc_es_c      &kp LS(O)                    \
-                                         &ac_ecir_c                                                 &kp LS(Y)      &kp LS(V)     &ac_aacu_c       &tc_hy_c    \
+                                         &ac_ecir_c    &kp LS(V)                                    &kp LS(Y)      &kp LS(V)     &ac_aacu_c       &tc_hy_c    \
                            &ac_aacu_c    &tc_ou_c                                                                                                             \
                            >;
         };

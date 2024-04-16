@@ -185,7 +185,7 @@
    &none               &kp LS(Q)           &mc_qu_cs           &kp LS(K)           &none               &none               &ac_ocir_c          &ac_oacu_c          &ac_uacu_c          &none
    &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &none               &none               &ac_atil_c          &ac_aacu_c          &ac_eacu_c          &ac_iacu_c 
    &kp LS(Y)           &kp LS(J)           &mc_ced_c           &kp LS(V)           &none               &none               &ac_otil_c          &ac_acir_c          &ac_ecir_c          &ac_iacu_c
-                                           &trans              &ht_magic NAV 0     &sl SYMBOLS         &trans              &mc_sqo             &trans
+                                           &trans              &ht_magic NAV 0     &sl SYMBOLS         &trans              &mc_sqo_c           &trans
                            >;
                 };
                 case_alpha2_layer {
@@ -194,7 +194,7 @@
    &none               &kp LS(Q)           &mc_qu_c            &kp LS(K)           &none               &none               &ac_ocir_c          &ac_oacu_c          &ac_uacu_c          &none
    &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &none               &none               &ac_atil_c          &ac_aacu_c          &ac_eacu_c          &ac_iacu_c 
    &kp LS(Y)           &kp LS(J)           &mc_ced_c           &kp LS(V)           &none               &none               &ac_otil_c          &ac_acir_c          &ac_ecir_c          &ac_iacu_c
-                                           &trans              &ht_magic NAV 0     &sl SYMBOLS         &trans              &mc_sqo             &trans
+                                           &trans              &ht_magic NAV 0     &sl SYMBOLS         &trans              &mc_sqo_c           &trans
                            >;
                 };
                 symbols_layer {
