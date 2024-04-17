@@ -147,6 +147,10 @@
         COMBO(cb_shiftv,        RBM RBR,     &kp LS(V),          MEDIA)
         COMBO(cb_ctrlv,         RBI RBM RBR, &kp LC(V),          MEDIA)
         COMBO(cb_end_ent,       RTM RTR,     &th_end_ent 0 0,    MEDIA NAV NAV_F SHORTS_L SHORTS_R SYSTEM)
+
+        COMBO(cd_sc_nav,        LHR LHM L1,  &mc_sc_nav,         ALPHA1)
+        COMBO(cd_cg_nav,        LHM LHI L1,  &mc_cg_nav,         ALPHA1)
+        COMBO(cd_ag_nav,        LBR LHM L1,  &mc_ag_nav,         ALPHA1)
     };
 
     #define COMBO_MUST_TAP(NAME, HOLD, TAP) \
@@ -177,7 +181,6 @@
         };
 
     combo_must_tap {
-
         COMBO_MUST_TAP(ht_w     , &kp LCTL  &kp LGUI                   , &kp W)
         COMBO_MUST_TAP(ht_q     , &kp LSHFT &kp LCTL                   , &kp Q)
         COMBO_MUST_TAP(ht_enter , &kp LSHFT &kp LCTL &kp LGUI          , &kp ENTER)
@@ -186,6 +189,5 @@
         COMBO_MUST_TAP(ht_p     , &kp RSHFT &kp RCTL &kp RGUI          , &kp P)
         COMBO_MUST_TAP(hyp_v    , &kp LSHFT &kp LCTL &kp LGUI &kp LALT , &kp V)
         COMBO_MUST_TAP(hyp_j    , &kp RSHFT &kp RCTL &kp RGUI &kp RALT , &kp J)
-
     };
 };
