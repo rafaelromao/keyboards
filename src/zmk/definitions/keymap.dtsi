@@ -104,7 +104,7 @@
    &trans              &td_lbrc            &td_rbrc            &td_dlr             &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
    &lt NAV AT          &td_lpar            &td_rpar            &td_dqo             &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
    &lt NAV AT          &td_lbkt            &td_rbkt            &th_qmark 0 0       &none               &none               &mc_n1              &mc_n2              &mc_n3              &kp DOT
-                                           &trans              &kp CAPSLOCK        &trans              &lt RAISE SPACE     &th_n0 MEDIA 0      &trans
+                                           &trans              &to CASE_A1         &trans              &lt RAISE SPACE     &th_n0 MEDIA 0      &trans
                            >;
                 };
                 raise_layer {
