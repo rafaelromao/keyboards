@@ -30,6 +30,7 @@
 
         COMBO(cb_boot_l,        LTP LHP,      &bootloader,        ALPHA1)
         COMBO(cb_boot_r,        RTP RHP,      &bootloader,        ALPHA1)
+        COMBO(cb_alpha1,        LTR LTM,      &to ALPHA1,         MEDIA)
 
         COMBO(cb_save,          LHR LHM L0,  &mc_save,           ALPHA1 CASE_A1 NUMPAD NAV NAV_F SHORTS_L SHORTS_R SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE KEBAB_CASE SLASH_CASE SHIFT_A1 NMODS CODING)
         COMBO(cb_escc,          LTR LTM,     &mc_escc,           ALPHA1 CASE_A1 NUMPAD NAV NAV_F SHORTS_L SHORTS_R SHORTCUTS_EXT SEN_CASE SEN_E1 SEN_E2 CAMEL_CASE SNAKE_CASE KEBAB_CASE SLASH_CASE SHIFT_A1 NMODS CODING)
