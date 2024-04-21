@@ -17,7 +17,7 @@
 - This two alpha layers approach is based on [Ben Vallack's keymap](https://youtu.be/5RN_4PQ0j1A?si=f9OkOvNdL3jE4seR).
 - Source code:
   - [QMK] [accents.c](../src/qmk/users/rafaelromao/features/accents.c)
-  - [ZMK] [accents.dtsi](https://github.com/rafaelromao/keyboards/blob/main/src/zmk/config/rafaelromao/features/accents.dtsi) 
+  - [ZMK] [accents.dtsi](https://github.com/rafaelromao/keyboards/blob/main/src/zmk/features/accents.dtsi) 
 
 ## Smart Thumb Keys
 - The Smart Thumb keys in this layout change behavior according to the context (active layer, active modifiers and more).
