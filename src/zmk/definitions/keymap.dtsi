@@ -147,7 +147,7 @@
                      label = "SHORTCUT";
                      bindings = <
    &trans              &trans              &trans              &trans              &trans              &trans              &mc_ext_sel         &trans              &trans              &trans    
-   &trans              &trans              &trans              &trans              &trans              &trans              &mc_ext_sel         &trans              &trans              &trans  
+   &trans              &trans              &trans              &trans              &trans              &trans              &th_ext_sel LGUI 0  &trans              &trans              &trans  
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
                                            &trans              &trans              &trans              &trans              &trans              &trans
                            >;

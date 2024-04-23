@@ -163,6 +163,7 @@
                                             &macro_pause_for_release \
                                             &macro_release &key_repeat \
                                             &macro_tap &sl SHORTCUTS_EXT)
+        MODTAP_SHORTCUT(th_ext_sel,         &mc_ext_sel)
 
         SHORTCUT(mc_zout,                   &macro_tap &kp LG(MINUS))
         SHORTCUT(mc_zin,                    &macro_tap &kp LG(PLUS))
