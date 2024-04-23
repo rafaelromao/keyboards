@@ -7,7 +7,6 @@ The System layer is activated holding both pinky keys and allows us to:
 - Configure Bluetooth and RGB lights.
 - Put the host computer in sleep mode, lock it or power it off.
 - Change the operating system used in keys that are OS aware, like the shortcut combos.
-  - Source code: [os_toggle.c](../src/qmk/users/rafaelromao/features/os_toggle.c)
 
 ##
 [Home](../readme.md) | 
