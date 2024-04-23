@@ -11,7 +11,7 @@
 - Swapper is a set of macros that allows easy swap between applications, tabs, navigation history and zoom levels.
 - These macros will work according to the OS selected in the System layer.
 - The implementation was based on [Callums's](https://github.com/callum-oakley/qmk_firmware/tree/master/users/callum) implementation, but extended to support additional features.
-- Source Code: [swapper.c](../src/qmk/users/rafaelromao/features/swapper.c)
+
 #### Applications and Tabs
 - The first pair swaps back and forth between applications.
 - If shift is active in the first tap, they navigate between the current application tabs instead.
@@ -25,7 +25,6 @@
 - These two macros selects the current word or line in the first press and extend the selection to the next ones in consecutive presses.
 - These macros are also OS aware and works the same way on Windows, Linux and MacOS.
 - The implementation was based on [Pascal's](https://github.com/getreuer/qmk-keymap) implementation, but it does not work the same way.
-- Source Code: [select_word.c](../src/qmk/users/rafaelromao/features/select_word.c)
 
 ### Dynamic Macros
 - There is a dynamic macro recording key in the Shortcuts layer.
@@ -33,7 +32,6 @@
 - Tapping it will play the dynamic macro.
 - If shift is active, it will use the macro slot 2, otherwise it will use the macro slot 1.
 - If there is a macro being recorded, you can use the thumb one-shot shift key to stop recording and clear the dynamic macro.
-- Source Code: [dynamic_macro.c](../src/qmk/users/rafaelromao/features/dynamic_macro.c)
 
 ## Coding
 
