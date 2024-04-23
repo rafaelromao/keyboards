@@ -15,14 +15,10 @@
 - There are dedicated accent keys for à á â é ê ó ô ú í and ç, as well as a dead key for ~, which is all that is needed for Portuguese.
 - This layer also gives access to comma, dot and replicated versions of q, y, w, v, z and j, that are not available in the base layer, for the 24 keys variant, as well as an standalone apostrophe character in the thumb.
 - This two alpha layers approach is based on [Ben Vallack's keymap](https://youtu.be/5RN_4PQ0j1A?si=f9OkOvNdL3jE4seR).
-- Source code:
-  - [QMK] [accents.c](../src/qmk/users/rafaelromao/features/accents.c)
-  - [ZMK] [accents.dtsi](https://github.com/rafaelromao/keyboards/blob/main/src/zmk/features/accents.dtsi) 
 
 ## Smart Thumb Keys
 - The Smart Thumb keys in this layout change behavior according to the context (active layer, active modifiers and more).
 - The four thumb keys control layer transitions, when held (Navigation, Lower, Raise and Media).
-- Source code: [smart_thumbs.c](../src/qmk/users/rafaelromao/features/smart_thumbs.c)
 
 ### Smart Repeat / Magic Key
 - The outer left thumb key repeats the last key by default (Repeat Key), but outputs an alternate result for keys that do not worth repeating (Alternate Repeat Key).
@@ -39,14 +35,12 @@
 - Combos are available in the base and [Numpad](symbols.md#numpad-layer) layers to send ENTER, ESC, TAB and common shortcuts like copy, paste, save, select all and undo.
 - Most combos include the home thumb key, the one in the same side.
 - If shift or any other modifier is held, it will be included in the combo. So hold Shift and tap the Undo combo will send Redo instead.
-- Source code: [combos.c](../src/qmk/users/rafaelromao/features/combos.c)
 
 ## Base Layer Macros
 - Some macros are available in the base layers and are triggered according to some specific behaviors, like explained below:
 
 ### Leader Key
 - The Leader Key is available in the Base layer, holding and releasing comma for 175 milisseconds. It gives easy access to some useful macros, like typing an internet domain or recurring terminal commands.
-- Source code: [leader.c](../src/qmk/users/rafaelromao/features/leader.c)
 
 ### Pontuation Hold
 - Holding a pontuation key (dot, comma or semicolon) will add it to the end of the current line.
