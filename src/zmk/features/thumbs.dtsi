@@ -178,7 +178,7 @@
                            &kp V         &kp V         &kp O         &kp N         &mc_qu                                        &tc_atilo                    \
                                          &kp V         &kp E                                        &tc_oes        &tc_ng        &kp V            &ac_aacu    \
                            &tc_ey                                                                   &kp V          &tc_es        &kp O                        \
-                                         &ac_ecir      &kp V                                         &kp Y          &kp V         &ac_aacu         &tc_hy      \
+                                         &ac_ecir      &kp V                                        &kp Y          &kp V         &ac_aacu         &tc_hy      \
                            &ac_aacu      &tc_ou                      &tc_com       \
 
                            &kp LS(V)     &kp LS(V)     &kp LS(O)     &kp LS(N)     &mc_qu_c                                      &tc_atilo_c                  \
@@ -239,18 +239,20 @@
                            &kp O         &kp X         &kp O         &kp M         &mc_qu          &kp Y         &kp S           &tc_otiles      &kp Y       \
                            &kp U         &kp U         &kp X         &kp Y                         &kp R         &tc_smart_i     &kp Z           &ac_atil    \
                            &kp W         &kp H         &kp S         &kp F                         &kp X         &kp E           &kp V           &kp T       \
-                                         &ac_iacu      &kp L         &kp S         &kp W           &kp E         &kp Z           &ac_iacu        &kp K       \
+                                         &ac_iacu      &tc_ly        &kp S         &kp W           &kp E         &kp Z           &ac_iacu        &kp K       \
                            &ac_iacu                                  &kp SLASH                                                                               \
 
                            &kp LS(O)     &kp LS(X)     &kp LS(O)     &kp LS(M)     &mc_qu_c        &kp LS(Y)     &kp LS(S)       &tc_otiles_c    &kp LS(Y)   \
                            &kp LS(U)     &kp LS(U)     &kp LS(X)     &kp LS(Y)                     &kp LS(R)     &tc_smart_i     &kp LS(Z)       &ac_atil_c  \
                            &kp LS(W)     &kp LS(H)     &kp LS(S)     &kp LS(F)                     &kp LS(X)     &kp LS(E)       &kp LS(V)       &kp LS(T)   \
-                                         &ac_iacu_c    &kp LS(L)     &kp LS(C)     &kp LS(W)       &kp LS(E)     &kp LS(Z)       &ac_iacu_c      &kp LS(K)   \
+                                         &ac_iacu_c    &tc_ly_c      &kp LS(C)     &kp LS(W)       &kp LS(E)     &kp LS(Z)       &ac_iacu_c      &kp LS(K)   \
                            &ac_iacu_c                                                                                                                        \
                            >;
         };
 
 
+        THUMB_MACRO(tc_ly,       &kp L &kp Y)
+        THUMB_MACRO(tc_ly_c,     &kp LS(L) &kp LS(Y))
         THUMB_MACRO(tc_otiles,   &ac_otil &kp E &kp S)
         THUMB_MACRO(tc_otiles_c, &ac_otil_c &kp LS(E) &kp LS(S))
         THUMB_MACRO(tc_smart_i,  &kp BACKSPACE &kp LS(I) &kp QUOT &kp SPACE)
