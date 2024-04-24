@@ -126,7 +126,7 @@ void action_tap(uint16_t keycode) {
     action_tapping_process(make_keyevent(false, keycode));
 }
 
-bool process_shift_alternate_repeat_for_macros(uint16_t keycode) {
+bool process_alternate_repeat_for_macros(uint16_t keycode) {
     uint16_t next_key = keycode;
     switch (keycode) {
         case MC_GV_A:
@@ -171,7 +171,7 @@ bool process_shift_alternate_repeat_for_macros(uint16_t keycode) {
     return false;
 }
 
-bool process_shift_alternate_repeat_for_alphas(uint16_t keycode) {
+bool process_alternate_repeat_for_alphas(uint16_t keycode) {
     uint16_t next_key = keycode;
     switch (keycode) {
         case KC_A:
@@ -213,20 +213,20 @@ bool process_shift_alternate_repeat_for_alphas(uint16_t keycode) {
     return false;
 }
 
-void process_shift_repeat(uint16_t keycode) {
+void process_repeat(uint16_t keycode) {
     uint16_t key = extract_tapping_keycode(keycode);
     if (!custom_repeat_key_expired()) {
-        if (process_shift_alternate_repeat_for_macros(key)) {
+        if (process_alternate_repeat_for_macros(key)) {
             return;
         }
-        if (process_shift_alternate_repeat_for_alphas(key)) {
+        if (process_alternate_repeat_for_alphas(key)) {
             return;
         }
     }
     action_tap(QK_REP);
 }
 
-bool process_shift_magic_for_macros(uint16_t keycode) {
+bool process_magic_for_macros(uint16_t keycode) {
     uint16_t next_key = keycode;
     switch (keycode) {
         case MC_GV_A:
@@ -272,7 +272,7 @@ bool process_shift_magic_for_macros(uint16_t keycode) {
     return false;
 }
 
-bool process_shift_magic_for_alphas(uint16_t keycode) {
+bool process_magic_for_alphas(uint16_t keycode) {
     uint16_t next_key = keycode;
     switch (keycode) {
         case KC_A:
@@ -347,25 +347,25 @@ bool process_shift_magic_for_alphas(uint16_t keycode) {
     return false;
 }
 
-void process_shift_magic(uint16_t keycode) {
+void process_magic(uint16_t keycode) {
     uint16_t key = extract_tapping_keycode(keycode);
-    if (process_shift_magic_for_macros(key)) {
+    if (process_magic_for_macros(key)) {
         return;
     }
-    if (process_shift_magic_for_alphas(key)) {
+    if (process_magic_for_alphas(key)) {
         return;
     }
     action_tap(QK_REP);
 }
 
-void activate_shift_repeat_or_magic_key(uint16_t keycode) {
+void activate_repeat_or_magic_key(uint16_t keycode) {
     switch (keycode) {
         case NAV_MAG:
-            process_shift_magic(get_last_keycode());
+            process_magic(get_last_keycode());
             break;
         case NAV_REP:
         case FNA_REP:
-            process_shift_repeat(get_last_keycode());
+            process_repeat(get_last_keycode());
             break;
     }
 }
@@ -415,7 +415,7 @@ process_record_result_t process_smart_thumbs(uint16_t keycode, keyrecord_t *reco
         case NAV_MAG:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
-                    activate_shift_repeat_or_magic_key(keycode);
+                    activate_repeat_or_magic_key(keycode);
                     return PROCESS_RECORD_RETURN_FALSE;
                 }
             }
