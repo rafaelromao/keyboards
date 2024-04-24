@@ -93,7 +93,7 @@
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
-            bindings = <&macro_tap &kp K_CANCEL>;
+            bindings = <&macro_tap &kp K_CANCEL &to ALPHA1>;
         };
         THUMB_MACRO(tc_sp_ns,         &kp SPACE &sl SEN_E1)
         THUMB_MACRO(tc_nsen,          &sl SEN_E1)
@@ -290,13 +290,13 @@
         THUMB_MACRO(tc_shift_camel,  &to CAMEL_CASE &sl SHIFT_A1)
         THUMB_COMBO_MORPH(sc_pascalcase, MOD_LCTL, MOD_LSFT, &tc_shift_camel, &sc_slashcase)
 
-        THUMB_MACRO(tc_strong_snakecase,  &tog SHIFT_A1 &tog SNAKE_CASE)
+        THUMB_MACRO(tc_strong_snakecase,  &tog CASE_A1 &tog SNAKE_CASE)
         THUMB_COMBO_MORPH(sc_strong_snake_case, MOD_LCTL, MOD_LGUI, &tc_strong_snakecase, &sc_pascalcase)
         
-        THUMB_MACRO(tc_strong_kebabcase,  &tog SHIFT_A1 &tog KEBAB_CASE)
+        THUMB_MACRO(tc_strong_kebabcase,  &tog CASE_A1 &tog KEBAB_CASE)
         THUMB_COMBO_MORPH(sc_strong_kebab_case, MOD_RCTL, MOD_RGUI, &tc_strong_kebabcase, &sc_strong_snake_case)
         
-        THUMB_MACRO(tc_strong_slashcase,  &tog SHIFT_A1 &tog SLASH_CASE)
+        THUMB_MACRO(tc_strong_slashcase,  &tog CASE_A1 &tog SLASH_CASE)
         THUMB_COMBO_MORPH(sc_strong_slash_case, MOD_RCTL, MOD_RSFT, &tc_strong_slashcase, &sc_strong_kebab_case)
         
         #define msl_raise_smart sc_strong_slash_case

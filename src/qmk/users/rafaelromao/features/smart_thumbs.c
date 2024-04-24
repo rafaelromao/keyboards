@@ -422,7 +422,7 @@ process_record_result_t process_smart_thumbs(uint16_t keycode, keyrecord_t *reco
         case MED_CAS:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
-                    if (has_smart_case(WORD_CASE)) {
+                    if (has_smart_case(WORD_CASE) || has_smart_case(CAPS_LOCK)) {
                         disable_smart_case();
                         clear_shift();
                     } else {
