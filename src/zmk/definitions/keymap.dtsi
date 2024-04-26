@@ -45,9 +45,9 @@
                 shifted_alpha1_layer {
                      label = "CASE";
                      bindings = <
-   &trans              &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &trans
-   &lt SHORTS_L LS(D)  &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTS_R LS(I) 
-   &lt SHORTS_L LS(D)  &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &mt RALT LS(H)      &th_comma 0 0       &th_dot 0 0         &lt SHORTS_R LS(I)
+   &trans              &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &trans
+   &lt SHORTS_L RS(D)  &mt LSHFT RS(N)     &mt LCTRL RS(S)     &mt LGUI RS(T)      &kp RS(W)           &kp RS(Z)           &mt RGUI RS(R)      &mt RCTRL RS(A)     &mt RSHFT RS(E)     &lt SHORTS_R RS(I) 
+   &lt SHORTS_L RS(D)  &mt RALT RS(F)      &kp RS(C)           &mt LALT RS(P)      &kp RS(V)           &kp RS(J)           &mt RALT RS(H)      &th_comma 0 0       &th_dot 0 0         &lt SHORTS_R RS(I)
                                            &trans              &ht_repeat NAV 0    &msk_spc LOWER 0    &msl RAISE SHIFT_A2 &ht_caps MEDIA 0    &trans
                         >;
                 };
@@ -182,9 +182,9 @@
                 shifted_alpha2_layer {
                      label = "CASE";
                      bindings = <
-   &none               &kp LS(Q)           &mc_qu_cs           &kp LS(K)           &none               &none               &ac_ocir_c          &ac_oacu_c          &ac_uacu_c          &none
-   &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &none               &none               &ac_atil_c          &ac_aacu_c          &ac_eacu_c          &ac_iacu_c 
-   &kp LS(Y)           &kp LS(J)           &mc_ced_c           &kp LS(V)           &none               &none               &ac_otil_c          &ac_acir_c          &ac_ecir_c          &ac_iacu_c
+   &none               &kp RS(Q)           &mc_qu_s            &kp RS(K)           &none               &none               &ac_ocir_s          &ac_oacu_s          &ac_uacu_s          &none
+   &kp RS(Y)           &kp RS(Z)           &kp RS(X)           &kp RS(W)           &none               &none               &ac_atil_s          &ac_aacu_s          &ac_eacu_s          &ac_iacu_s 
+   &kp RS(Y)           &kp RS(J)           &mc_ced_s           &kp RS(V)           &none               &none               &ac_otil_s          &ac_acir_s          &ac_ecir_s          &ac_iacu_s 
                                            &trans              &ht_magic NAV 0     &sl SYMBOLS         &trans              &mc_sqo_c           &trans
                            >;
                 };
@@ -227,7 +227,7 @@
                 sentence_case_ext2_layer {
                      label = "CASE";
                      bindings = <
-   &none               &kp LS(Q)           &mc_qu_cs           &kp LS(K)           &none               &none               &ac_ocir_c          &ac_oacu_c          &ac_uacu_c          &none
+   &none               &kp LS(Q)           &mc_qu_s            &kp LS(K)           &none               &none               &ac_ocir_c          &ac_oacu_c          &ac_uacu_c          &none
    &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &none               &none               &ac_atil_c          &ac_aacu_c          &ac_eacu_c          &ac_iacu_c 
    &kp LS(Y)           &kp LS(J)           &mc_ced_c           &kp LS(V)           &none               &none               &ac_otil_c          &ac_acir_c          &ac_ecir_c          &ac_iacu_c
                                            &trans              &th_cancel NAV 0    &th_sp_ns SYMBOLS 0 &none               &th_nsen MEDIA 0    &trans

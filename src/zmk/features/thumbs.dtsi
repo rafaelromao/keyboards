@@ -173,19 +173,31 @@
                            LS(K)                                                                    C_OACU_TERM    C_OTIL_TERM   C_OCIR_TERM                  \
                                          C_QU_TERM     C_SQUO_TERM                                  LS(U)          C_UACU_TERM   LS(V)            LS(W)       \
                            LS(X)         LS(Y)                                                                                                                \
+
+                           RS(A)         S_AACU_TERM   S_ATIL_TERM   S_ACIR_TERM   S_AGRV_TERM                                   RS(C_CEDIL)                  \
+                                         S_EACU_TERM   S_ECIR_TERM                                  RS(H)          RS(I)         S_IACU_TERM      RS(J)       \
+                           RS(K)                                                                    S_OACU_TERM    S_OTIL_TERM   S_OCIR_TERM                  \
+                                         S_QU_TERM                                                  RS(U)          S_UACU_TERM   RS(V)            RS(W)       \
+                           RS(X)         RS(Y)                                                                                                                \
                            >;
             bindings =    <
                            &kp V         &kp V         &kp O         &kp N         &mc_qu                                        &tc_atilo                    \
                                          &kp V         &kp E                                        &tc_oes        &tc_ng        &kp V            &ac_aacu    \
                            &tc_ey                                                                   &kp V          &tc_es        &kp O                        \
                                          &ac_ecir      &kp V                                        &kp Y          &kp V         &ac_aacu         &tc_hy      \
-                           &ac_aacu      &tc_ou                      &tc_com       \
+                           &ac_aacu      &tc_ou                      &tc_com                                                                                  \
 
                            &kp LS(V)     &kp LS(V)     &kp LS(O)     &kp LS(N)     &mc_qu_c                                      &tc_atilo_c                  \
                                          &kp LS(V)     &kp LS(E)                                    &tc_oes_c      &tc_ng_c      &kp LS(V)        &ac_aacu_c  \
                            &tc_ey_c                                                                 &kp LS(V)      &tc_es_c      &kp LS(O)                    \
                                          &ac_ecir_c    &kp LS(V)                                    &kp LS(Y)      &kp LS(V)     &ac_aacu_c       &tc_hy_c    \
                            &ac_aacu_c    &tc_ou_c                                                                                                             \
+
+                           &kp V         &kp V         &kp O         &kp N         &mc_qu                                        &tc_atilo                    \
+                                         &kp V         &kp E                                        &tc_oes        &tc_ng        &kp V            &ac_aacu    \
+                           &tc_ey                                                                   &kp V          &tc_es        &kp O                        \
+                                         &ac_ecir                                                   &kp Y          &kp V         &ac_aacu         &tc_hy      \
+                           &ac_aacu      &tc_ou                                                                                                               \
                            >;
         };
 
@@ -234,6 +246,12 @@
                            LS(K)         LS(L)         LS(M)         LS(N)                         C_OACU_TERM   C_OTIL_TERM     C_OCIR_TERM     LS(P)       \
                                          C_QU_TERM     LS(R)         LS(S)         LS(T)           LS(U)         C_UACU_TERM     LS(V)           LS(W)       \
                            LS(X)                                                                                                                             \
+
+                           RS(A)         S_AACU_TERM   S_ATIL_TERM   S_ACIR_TERM   S_AGRV_TERM     RS(B)         RS(C)           RS(C_CEDIL)     RS(D)       \
+                           RS(E)         S_EACU_TERM   S_ECIR_TERM   RS(F)                         RS(H)         RS(I)           S_IACU_TERM     RS(J)       \
+                           RS(K)         RS(L)         RS(M)         RS(N)                         S_OACU_TERM   S_OTIL_TERM     S_OCIR_TERM     RS(P)       \
+                                         S_QU_TERM     RS(R)         RS(S)         RS(T)           RS(U)         S_UACU_TERM     RS(V)           RS(W)       \
+                           RS(X)                                                                                                                             \
                            >;
             bindings =    <
                            &kp O         &kp X         &kp O         &kp M         &mc_qu          &kp Y         &kp S           &tc_otiles      &kp Y       \
@@ -247,6 +265,12 @@
                            &kp LS(W)     &kp LS(H)     &kp LS(S)     &kp LS(F)                     &kp LS(X)     &kp LS(E)       &kp LS(V)       &kp LS(T)   \
                                          &ac_iacu_c    &tc_ly_c      &kp LS(C)     &kp LS(W)       &kp LS(E)     &kp LS(Z)       &ac_iacu_c      &kp LS(K)   \
                            &ac_iacu_c                                                                                                                        \
+
+                           &kp O         &kp X         &kp O         &kp M         &mc_qu          &kp Y         &kp S           &tc_otiles      &kp Y       \
+                           &kp U         &kp U         &kp X         &kp Y                         &kp R         &tc_smart_i     &kp Z           &ac_atil    \
+                           &kp W         &kp H         &kp S         &kp F                         &kp X         &kp E           &kp V           &kp T       \
+                                         &ac_iacu      &tc_ly        &kp S         &kp W           &kp E         &kp Z           &ac_iacu        &kp K       \
+                           &ac_iacu                                                                                                                          \
                            >;
         };
 
