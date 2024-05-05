@@ -218,6 +218,19 @@ process_record_result_t process_shortcut_keycode(uint16_t keycode, bool isOneSho
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
+            // End Enter
+
+        case MC_EENT:
+            tap_code16(KC_END);
+            tap_code(KC_ENT);
+            return PROCESS_RECORD_RETURN_FALSE;
+
+            // End Enter
+
+        case MC_DEND:
+            SEND_STRING(SS_TAP(X_DOWN) SS_DELAY(100) SS_TAP(X_END));
+            return PROCESS_RECORD_RETURN_FALSE;
+
             // Esc, Tab, Enter
 
         case MC_ESCC:

@@ -101,8 +101,8 @@
                 lower_layer {
                      label = "LOWER";
                      bindings = <
-   &trans              &td_lbrc            &td_rbrc            &td_dlr             &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
-   &lt NAV AT          &td_lpar            &td_rpar            &td_dqo             &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
+   &trans              &td_lbrc            &td_rbrc            &th_bsl 0 0         &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
+   &lt NAV AT          &td_lpar            &td_rpar            &th_dqo 0 0         &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
    &lt NAV AT          &td_lbkt            &td_rbkt            &th_qmark 0 0       &none               &none               &mc_n1              &mc_n2              &mc_n3              &kp DOT
                                            &trans              &to CASE_A1         &trans              &lt RAISE SPACE     &th_n0 MEDIA 0      &trans
                            >;
@@ -110,7 +110,7 @@
                 raise_layer {
                      label = "RAISE";
                      bindings = <
-   &none               &kp F9              &kp F8              &kp F7              &none               &none               &th_colon 0 0       &th_eql 0 0         &th_hash 0 0        &none
+   &none               &kp F9              &kp F8              &kp F7              &none               &none               &th_colon 0 0       &th_eql 0 0         &th_perc 0 0        &none
    &none               &kp F6              &kp F5              &kp F4              &none               &none               &th_mins 0 0        &th_plus 0 0        &th_slash 0 0       &lt SHORTS_R STAR  
    &none               &kp F3              &kp F2              &kp F1              &none               &none               &th_excl 0 0        &th_lt 0 0          &th_gt 0 0          &lt SHORTS_R STAR
                                            &trans              &key_repeat         &lt SYMBOLS SPACE   &trans              &tog NUMPAD         &trans       
@@ -200,7 +200,7 @@
                 symbols_layer {
                      label = "SYMBOLS";
                      bindings = <
-   &none               &kp LBRC            &kp RBRC            &kp DOLLAR          &none               &none               &kp COLON           &kp EQUAL           &kp HASH            &none
+   &none               &kp LBRC            &kp RBRC            &kp BACKSLASH       &none               &none               &kp COLON           &kp EQUAL           &kp PERCENT          &none
    &kp AT              &kp LPAR            &kp RPAR            &mc_dqo             &none               &none               &kp MINUS           &kp PLUS            &kp SLASH           &kp STAR 
    &kp AT              &kp LBKT            &kp RBKT            &kp QMARK           &none               &none               &kp EXCL            &kp LT              &kp GT              &kp STAR 
                                            &trans              &trans              &kp SPACE           &kp SPACE           &trans              &trans

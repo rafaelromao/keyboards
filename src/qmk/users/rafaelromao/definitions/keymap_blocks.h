@@ -15,7 +15,7 @@
 #define __________________ALPHA1_R3__________           KC_J    , RALTT_H , TD_COMM , TD_DOT  
 #define ___ALPHA1_R4_____                               RAI_A2  , MED_CAS 
 
-#define ___________________LOWER_L1__________           XXXXXXX , TD_LCBR , TD_RCBR , TD_DLR 
+#define ___________________LOWER_L1__________           XXXXXXX , TD_LCBR , TD_RCBR , TD_BSLS
 #define ___________________LOWER_L2____________________ NAV_AT  , TD_LPRN , TD_RPRN , TD_DQUO , XXXXXXX
 #define           _________LOWER_L3____________________           TD_LBRC , TD_RBRC , TD_QUES , XXXXXXX
 #define                               ____LOWER_L4_____                               KC_CAPS , _______
@@ -30,7 +30,7 @@
 #define           _________RAISE_L3____________________           KC_F3   , KC_F2   , KC_F1   , XXXXXXX
 #define                               ____RAISE_L4_____                               QK_REP  , SYM_SPC
 
-#define           _________RAISE_R1____________________           TD_COLN , TD_EQL  , TD_HASH , XXXXXXX
+#define           _________RAISE_R1____________________           TD_COLN , TD_EQL  , TD_PERC , XXXXXXX
 #define ___________________RAISE_R2____________________ XXXXXXX , TD_MINS , TD_PLUS , TD_SLSH , COD_AST
 #define ___________________RAISE_R3__________           XXXXXXX , TD_EXLM , TD_LT   , TD_GT     
 #define ____RAISE_R4_____                               _______ , TG_NUM
@@ -90,7 +90,7 @@
 #define           _______SYMBOLS_L3____________________           KC_LBRC , KC_RBRC , KC_QUES , XXXXXXX
 #define                               __SYMBOLS_L4_____                               KC_CAPS , KC_SPC 
 
-#define           _______SYMBOLS_R1____________________           KC_COLN , KC_EQL  , KC_HASH , XXXXXXX
+#define           _______SYMBOLS_R1____________________           KC_COLN , KC_EQL  , KC_PERC , XXXXXXX
 #define _________________SYMBOLS_R2____________________ XXXXXXX , KC_MINS , KC_PLUS , KC_SLSH , KC_ASTR
 #define _________________SYMBOLS_R3__________           XXXXXXX , KC_EXLM , KC_LT   , KC_GT     
 #define __SYMBOLS_R4_____                               KC_SPC  , TG_NUM
@@ -101,7 +101,7 @@
 #define                               __NAVIGATION_L4__                               _______ , _______
 #define                               __FIXED_NAV__L4__                               _______ , KC_SPC
 
-#define           _________NAVIGATION_R1_______________           KC_TAB  , KC_ENT  , MC_DELW , XXXXXXX
+#define           _________NAVIGATION_R1_______________           MC_TAB  , KC_ENT  , MC_DELW , XXXXXXX
 #define ___________________NAVIGATION_R2_______________ XXXXXXX , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT
 #define ___________________NAVIGATION_R3_____           XXXXXXX , KC_DEL  , KC_HOME , KC_END  
 #define __NAVIGATION_R4__                               KC_SPC  , MED_CAS

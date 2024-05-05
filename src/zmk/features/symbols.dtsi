@@ -75,7 +75,7 @@
 
     symbols {
 
-        // Romak
+        // Base
 
         SHIFTED_SYMBOL(mm_semi,    &kp SEMI, &kp COLON)
         SYMBOL(mc_end_semi,        &kp END &kp SEMI)
@@ -112,18 +112,19 @@
 
         LAYERTAP_SYMBOL(th_n0,     &mc_n0)
 
+        SYMBOL(mc_us,              &kp LS(U) &kp LS(S) &kp DOLLAR)
+        SYMBOL(mc_br,              &kp LS(R) &kp DOLLAR)
+
         SYMBOL(mc_dollar,          &kp DOLLAR)
         SYMBOL(mc_bslash,          &kp BACKSLASH)
         SYMBOL(mc_euro,            &kp LS(LA(N2)))
-        TAPHOLD_SYMBOL(th_dlr,     &mc_dollar, &mc_bslash)
-        TAPDANCE_SYMBOL(td_dlr,    &th_dlr 0 0, &mc_euro, &none)
+        TAPHOLD_SYMBOL(th_bsl,     &mc_bslash, &mc_dollar)
 
         SYMBOL(mc_sqo,             &kp SQT &kp SPACE &kp SQUO_TERM)
         SYMBOL(mc_sqo_c,           &kp SQT &kp SPACE &kp C_SQUO_TERM)
         SYMBOL(mc_dqo,             &kp DQT &kp SPACE)
         SYMBOL(mc_double_dqo,      &mc_dqo &mc_dqo &kp LEFT)
         TAPHOLD_SYMBOL(th_dqo,     &mc_dqo, &mc_sqo)
-        TAPDANCE_SYMBOL(td_dqo,    &th_dqo 0 0, &mc_double_dqo, &none)
 
         SYMBOL(mc_lpar,            &kp LPAR)
         SYMBOL(mc_end_lpar,        &kp END &kp LPAR)
@@ -178,7 +179,7 @@
 
         SYMBOL(mc_hash,            &kp HASH)
         SYMBOL(mc_perc,            &kp PERCENT)
-        TAPHOLD_SYMBOL(th_hash,    &mc_hash, &mc_perc)
+        TAPHOLD_SYMBOL(th_perc,    &mc_perc, &mc_hash)
 
         SYMBOL(mc_caret,           &kp CARET &kp SPACE)
         SYMBOL(mc_minus,           &kp MINUS)
@@ -236,7 +237,6 @@
 
         SYMBOL(mc_end_ent,         &kp END &kp ENTER)
         SYMBOL(mc_down_end,        &kp DOWN &kp END)
-        TAPHOLD_SYMBOL(th_end_ent, &mc_end_ent, &mc_down_end)
 
         SYMBOL(mc_zz,              &kp Z &kp Z)
     };

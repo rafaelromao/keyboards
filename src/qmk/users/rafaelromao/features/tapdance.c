@@ -78,22 +78,6 @@ void td_close_parentesis(tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void td_enter_end(tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    switch (tap_state.state) {
-        case TD_SINGLE_TAP:
-            tap_code16(KC_END);
-            tap_code(KC_ENT);
-            break;
-        case TD_DOUBLE_TAP:
-        case TD_SINGLE_HOLD:
-            SEND_STRING(SS_TAP(X_DOWN) SS_DELAY(100) SS_TAP(X_END));
-            break;
-        default:
-            break;
-    }
-}
-
 void td_open_curly_braces(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
@@ -153,13 +137,14 @@ void td_dlr(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
-            tap_code16(KC_DLR);
-            break;
-        case TD_SINGLE_HOLD:
             tap_code16(KC_BSLS);
             break;
+        case TD_SINGLE_HOLD:
+            tap_code16(KC_DLR);
+            break;
         case TD_DOUBLE_TAP:
-            process_macros(MC_EUR, NULL);
+            tap_code16(KC_BSLS);
+            tap_code16(KC_BSLS);
             break;
         default:
             break;
@@ -427,19 +412,10 @@ void td_hash(tap_dance_state_t *state, void *user_data) {
 
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
-            tap_code16(KC_HASH);
-            break;
-        case TD_DOUBLE_TAP:
-            tap_code16(KC_HASH);
-            tap_code16(KC_HASH);
-            break;
-        case TD_TRIPLE_TAP:
-            tap_code16(KC_HASH);
-            tap_code16(KC_HASH);
-            tap_code16(KC_HASH);
+            tap_code16(KC_PERC);
             break;
         case TD_SINGLE_HOLD:
-            tap_code16(KC_PERC);
+            tap_code16(KC_HASH);
             break;
         default:
             break;
@@ -591,7 +567,6 @@ void td_dand(tap_dance_state_t *state, void *user_data) {
 // Tap dance declarations
 
 tap_dance_action_t tap_dance_actions[] = {
-    [ENT_END] = ACTION_TAP_DANCE_FN(td_enter_end),
     [SCL_END] = ACTION_TAP_DANCE_FN(td_semicolon),
     [BRT_LCR] = ACTION_TAP_DANCE_FN(td_open_curly_braces),
     [BRT_RCR] = ACTION_TAP_DANCE_FN(td_close_curly_braces),

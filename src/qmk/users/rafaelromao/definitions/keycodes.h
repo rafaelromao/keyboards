@@ -8,7 +8,6 @@
 
 enum { 
     TD_CODE_START, 
-    ENT_END, 
     SCL_END, 
     BRT_LCR, 
     BRT_RCR, 
@@ -43,7 +42,6 @@ enum {
 
 // Tap dance keycodes
 
-#define TD_EENT TD(ENT_END)
 #define TD_SCLE TD(SCL_END)
 #define TD_LCBR TD(BRT_LCR)
 #define TD_RCBR TD(BRT_RCR)
@@ -65,7 +63,7 @@ enum {
 #define TD_COMM TD(LEA_COM)
 #define TD_MINS TD(MIN_CIR)
 #define TD_COLN TD(COL_ECO)
-#define TD_HASH TD(HAS_PER)
+#define TD_PERC TD(HAS_PER)
 #define TD_QUES TD(QUE_EXC)
 #define TD_SLSH TD(SLS_BSL)
 #define TD_EQL TD(EQL_EEQ)
@@ -74,7 +72,7 @@ enum {
 #define TD_DOR TD(DOR_GTE)
 #define TD_CIRC TD(CIR_SAR)
 #define TD_DAND TD(DAN_DAR)
-#define TD_DLR TD(DLR_BSL)
+#define TD_BSLS TD(DLR_BSL)
 
 // Custom keycodes
 
@@ -116,7 +114,7 @@ enum {
     TG_NUMC, MC_EXLM, MC_QUES, MC_ESAV, MC_SENT, MC_DEG, MC_DELW, MC_LY,
     MC_CUR, MC_CURS, MC_DAR, MC_SAR, MC_DEQ, MC_NEQ, MC_BRAC, MC_SEC, 
     MC_DAND, MC_DPIP, MC_OESC, MC_SOES, MC_TISL, MC_SVI, MC_CVI, MC_0P,
-    REPEAT, MAGIC, MC_JOIN,
+    REPEAT, MAGIC, MC_JOIN, MC_EENT, MC_DEND, MC_US, MC_BR,
 
     // End macros that can be shifted
     SFT_MACRO_END,

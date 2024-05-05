@@ -213,6 +213,14 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
             tap_code16(KC_EXLM);
             start_sentence_case();
             return PROCESS_RECORD_RETURN_FALSE;
+
+        case MC_US:
+            SEND_STRING("US$");
+            return PROCESS_RECORD_RETURN_FALSE;
+
+        case MC_BR:
+            SEND_STRING("R$");
+            return PROCESS_RECORD_RETURN_FALSE;
     }
 
     return PROCESS_RECORD_CONTINUE;
