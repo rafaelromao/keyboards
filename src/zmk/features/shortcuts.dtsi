@@ -64,11 +64,11 @@
 
         // Media and Navigation
 
-        SHORTCUT(mc_cam,                    &macro_tap &kp LC(LA(LS(LG(C)))))
-        SHORTCUT(mc_mic,                    &macro_tap &kp LC(LA(LS(LG(M)))))
+        SHORTCUT(mc_cam,                    &macro_tap &kp LC(LA(LS(V))))
+        SHORTCUT(mc_mic,                    &macro_tap &kp LC(LA(LS(A))))
         SHORTCUT(mc_preview,                &macro_tap &kp LC(LA(LS(P))))
         SHORTCUT(mc_clip,                   &macro_tap &kp LC(LA(LS(S))))
-        SHORTCUT(mc_tabs,                   &macro_tap &kp LC(LA(LS(LG(T)))))
+        SHORTCUT(mc_tabs,                   &macro_tap &kp LC(LA(LS(B))))
         SHORTCUT(mc_files,                  &macro_tap &kp LC(LA(LS(F))))
         SHORTCUT(mc_calc,                   &macro_tap &kp LC(LA(LS(C))))
         SHORTCUT(mc_term,                   &macro_tap &kp LC(LA(LS(T))))

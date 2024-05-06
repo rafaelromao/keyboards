@@ -274,7 +274,7 @@ process_record_result_t process_shortcut_keycode(uint16_t keycode, bool isOneSho
             if (isShifted) {
                 SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT("f"))));
             } else {
-                SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT(SS_LGUI("t")))));
+                SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT("b"))));
             }
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_CALC:
@@ -285,14 +285,10 @@ process_record_result_t process_shortcut_keycode(uint16_t keycode, bool isOneSho
             }
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_MIC:
-            if (isShifted) {
-                tap_code(KC_MUTE);
-            } else {
-                SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT(SS_LGUI("m")))));
-            }
+            SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT("a"))));
             return PROCESS_RECORD_RETURN_FALSE;
         case MC_CAM:
-            SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT(SS_LGUI("c")))));
+            SEND_STRING(SS_LSFT(SS_LCTL(SS_LALT("v"))));
             return PROCESS_RECORD_RETURN_FALSE;
 
             // CODING
