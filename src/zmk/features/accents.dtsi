@@ -76,9 +76,9 @@
         ACCENTED_KEY(ac_ocir, O, I    , OCIR_TERM, C_OCIR_TERM, S_OCIR_TERM)
         ACCENTED_KEY(ac_uacu, U, E    , UACU_TERM, C_UACU_TERM, S_UACU_TERM)
 
-        MACRO_KEY(mc_ced,   &kp C_CEDIL)
-        MACRO_KEY(mc_ced_c, &kp LS(C_CEDIL))
-        MACRO_KEY(mc_ced_s, &kp RS(C_CEDIL))
+        MACRO_KEY(mc_ced,   &kp C_CEDIL &sl CCEDIL)
+        MACRO_KEY(mc_ced_c, &kp LS(C_CEDIL) &sl CASE_CCEDIL)
+        MACRO_KEY(mc_ced_s, &kp RS(C_CEDIL) &sl CCEDIL)
         MACRO_KEY(mc_qu,    &macro_tap &kp Q &macro_wait_time 10 &macro_tap &kp U &kp QU_TERM)
         MACRO_KEY(mc_qu_c,  &macro_press &kp LSHFT &macro_tap &kp Q &macro_wait_time 10 &macro_tap &kp U &macro_release &kp LSHFT &kp QU_TERM)
         MACRO_KEY(mc_qu_s,  &macro_press &kp LSHFT &macro_tap &kp Q &macro_wait_time 10 &macro_release &kp LSHFT &macro_tap &kp U &kp QU_TERM)

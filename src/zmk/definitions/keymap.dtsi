@@ -179,6 +179,15 @@
                                            &trans              &ht_magic NAV 0     &sl SYMBOLS         &trans              &mc_sqo             &trans
                            >;
                 };
+                ccedil_layer {
+                     label = "ALPHA2";
+                     bindings = <
+   &trans              &trans              &trans              &trans              &trans              &trans              &ac_ocir            &trans              &trans              &trans    
+   &trans              &trans              &trans              &trans              &trans              &trans              &ac_atil            &trans              &trans              &ac_uacu  
+   &trans              &trans              &trans              &trans              &trans              &trans              &ac_otil            &ac_aacu            &ac_oacu            &trans 
+                                           &trans              &trans              &trans              &trans              &trans              &trans
+                           >;
+                };
                 shifted_alpha2_layer {
                      label = "CASE";
                      bindings = <
@@ -195,6 +204,15 @@
    &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &none               &none               &ac_atil_c          &ac_aacu_c          &ac_eacu_c          &ac_iacu_c 
    &kp LS(Y)           &kp LS(J)           &mc_ced_c           &kp LS(V)           &none               &none               &ac_otil_c          &ac_acir_c          &ac_ecir_c          &ac_iacu_c
                                            &trans              &ht_magic NAV 0     &sl SYMBOLS         &trans              &mc_sqo_c           &trans
+                           >;
+                };
+                case_ccedil_layer {
+                     label = "CASE";
+                     bindings = <
+   &trans              &trans              &trans              &trans              &trans              &trans              &ac_ocir_c          &trans              &trans              &trans    
+   &trans              &trans              &trans              &trans              &trans              &trans              &ac_atil_c          &trans              &trans              &ac_uacu_c  
+   &trans              &trans              &trans              &trans              &trans              &trans              &ac_otil_c          &ac_aacu_c          &ac_oacu_c          &trans 
+                                           &trans              &trans              &trans              &trans              &trans              &trans
                            >;
                 };
                 symbols_layer {
