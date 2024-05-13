@@ -49,14 +49,14 @@ const uint16_t PROGMEM l_acc_ques_combo[] = {MC_SQ_C, KC_V, COMBO_END};
 const uint16_t PROGMEM l_acc_ent_combo[]  = {KC_Z, KC_X, KC_W, COMBO_END};
 const uint16_t PROGMEM l_acc_tab_combo[]  = {KC_Q, MC_QU, KC_K, COMBO_END};
 
-const uint16_t PROGMEM r_acc_bsp_combo[]  = {MC_SQ_O, MC_SQ_U, COMBO_END};
-const uint16_t PROGMEM r_acc_tab_combo[]  = {RAI_A2, MC_SQ_O, MC_SQ_U, COMBO_END};
-const uint16_t PROGMEM r_acc_ent_combo[]  = {RAI_A2, MC_SQ_A, MC_SQ_E, COMBO_END};
-const uint16_t PROGMEM r_acc_col_combo[]  = {MC_CR_O, MC_SQ_O, COMBO_END};
-const uint16_t PROGMEM r_acc_min_combo[]  = {MC_TL_A, MC_SQ_A, COMBO_END};
-const uint16_t PROGMEM r_acc_excl_combo[] = {MC_TL_O, MC_CR_A, COMBO_END};
-const uint16_t PROGMEM r_acc_rpa_combo[]  = {MC_SQ_A, MC_SQ_E, COMBO_END};
-const uint16_t PROGMEM r_acc_agr_combo[]  = {MC_CR_A, MC_CR_E, COMBO_END};
+const uint16_t PROGMEM r_acc_bsp_combo[]  = {MC_CR_A, MC_CR_E, COMBO_END};
+const uint16_t PROGMEM r_acc_tab_combo[]  = {RAI_A2, MC_CR_A, MC_CR_E, COMBO_END};
+const uint16_t PROGMEM r_acc_ent_combo[]  = {RAI_A2, MC_SQ_E, MC_SQ_A, COMBO_END};
+const uint16_t PROGMEM r_acc_col_combo[]  = {MC_CR_O, MC_CR_A, COMBO_END};
+const uint16_t PROGMEM r_acc_min_combo[]  = {MC_TL_A, MC_SQ_E, COMBO_END};
+const uint16_t PROGMEM r_acc_excl_combo[] = {MC_TL_O, MC_SQ_O, COMBO_END};
+const uint16_t PROGMEM r_acc_rpa_combo[]  = {MC_SQ_E, MC_SQ_A, COMBO_END};
+const uint16_t PROGMEM r_acc_agr_combo[]  = {MC_SQ_O, MC_SQ_U, COMBO_END};
 
 // Numpad
 
