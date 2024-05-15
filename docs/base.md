@@ -11,10 +11,13 @@
 - The Alpha1 layer is the base layer, which contains the most common alphas of Portuguese and English, plus comma and period. It is extended by the Alpha2 layer.
 
 ### Secondary Alpha Layer
-- The Alpha2 layer has common Portuguese accented letters, readily available with a single tap on the right inner thumb key (OS Accents), making them as easy to type as shifted letters, which are available with a single tap on the right outer thumb key (OS Shift).
-- There are dedicated accent keys for à á â é ê ó ô ú í and ç, as well as a dead key for ~, which is all that is needed for Portuguese.
-- This layer also gives access to comma, dot and replicated versions of q, y, w, v, z and j, that are not available in the base layer, for the 24 keys variant, as well as an standalone apostrophe character in the thumb.
+- The Alpha2 layer has common Portuguese accentuated letters, readily available with a single tap on the right inner thumb key, along with the alphas that are missing in the base layer.
+- There are dedicated keys for à á â é ê ó ô ú í and ç, as well, which is all that is needed for Portuguese.
 - This two alpha layers approach is based on [Ben Vallack's keymap](https://youtu.be/5RN_4PQ0j1A?si=f9OkOvNdL3jE4seR).
+
+#### Ç Extension
+
+There is an extension to the secondary alpha layer, which I call *Ç Extension*. It activates an one-shot layer just after `ç` is typed, to allow easy access to the vowels and accentuated vowels that are commonly seen after `ç`, in Portuguese, so that typing common bigrams like `çã` and `çõ` will not require two consecutive activations of the secondary alpha layer. The characters `a`, `ã`, `â`, `o`, `ô`, `õ`, `u` and `ú` are available in this layer, while `e`, `é`, `ê` and `í` are not, since they will never appear after `ç`. The position of these characters in the secondary alpha layer is also thought to support this.
 
 ## Smart Thumb Keys
 - The Smart Thumb keys in this layout change behavior according to the context (active layer, active modifiers and more).
