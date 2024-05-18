@@ -80,9 +80,9 @@
 #define           _________ALPHA2_L3___________________           KC_J    , MC_SQ_C , KC_V    , XXXXXXX 
 #define                               ____ALPHA2_L4____                               NAV_MAG , OS_SYM
 
-#define           _________ALPHA2_R1___________________           MC_CR_O , MC_SQ_O , MC_SQ_U , XXXXXXX
-#define ___________________ALPHA2_R2___________________ XXXXXXX , MC_TL_A , MC_SQ_A , MC_SQ_E , MC_SQ_I
-#define ___________________ALPHA2_R3_________           XXXXXXX , MC_TL_O , MC_CR_A , MC_CR_E 
+#define           _________ALPHA2_R1___________________           MC_CR_O , MC_CR_A , MC_CR_E , XXXXXXX
+#define ___________________ALPHA2_R2___________________ XXXXXXX , MC_TL_A , MC_SQ_E , MC_SQ_A , MC_SQ_I
+#define ___________________ALPHA2_R3_________           XXXXXXX , MC_TL_O , MC_SQ_O , MC_SQ_U 
 #define ____ALPHA2_R4____                               _______ , MC_SQUO
 
 #define _________________SYMBOLS_L1__________           XXXXXXX , KC_LCBR , KC_RCBR , KC_DLR 
