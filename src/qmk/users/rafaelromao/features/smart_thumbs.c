@@ -333,6 +333,9 @@ bool process_magic_for_alphas(uint16_t keycode) {
         case KC_X:
             next_key = MC_SQ_I;
             break;
+        case KC_Z:
+            next_key = MC_SQ_A;
+            break;
         case KC_W:
             next_key = KC_K;
             break;
