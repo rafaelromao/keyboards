@@ -62,23 +62,7 @@ Some features are not available on all keyboards though. For instance, the BM40 
 
 ### ZMK
 
-The zmk version used for this keymap is the one available in [this fork](https://github.com/rafaelromao/zmk), which contains some experimental code from [Nick Conway](https://github.com/nickconway/zmk-config), [Cem Aksoylar](https://github.com/caksoylar/zmk-config ), [Robert U](https://github.com/urob/zmk-config), [VoidYourWarranty2](https://github.com/voidyourwarranty2/zmk) and [Alexander Krikun](https://github.com/krikun98), to implement features like:
-- [Swapper](https://github.com/zmkfirmware/zmk/pull/1366)
-- [Smart Word](https://github.com/zmkfirmware/zmk/pull/1451)
-- [Leader Key](https://github.com/zmkfirmware/zmk/pull/1380)
-- [Dynamic Macros](https://github.com/zmkfirmware/zmk/pull/1351)
-- [Adaptive Keys](https://github.com/zmkfirmware/zmk/pull/2042)
-- [Mouse Keys](https://github.com/zmkfirmware/zmk/pull/778)
-- [Some improvements for the Corne-ish Zen display](https://gist.github.com/caksoylar/c411313990978e1903c244f03039187a)
-
-This fork is also updated to Zephyr 3.5.
-
-The tested boards are listed below:
-
-- [Corne-ish Zen](src/zmk/boards/lowprokb.ca/corneish-zen/readme.md)
-- [Dactyl Cygnus](src/zmk/boards/handwired/boards/shields/cygnus/readme.md)
-
-Some features might not be available in ZMK. [This readme file](src/zmk/rafaelromao/readme.md) will indicate what features are missing.
+For the ZMK version, check the `main` branch.
 
 ## Building
 
@@ -86,11 +70,6 @@ Some features might not be available in ZMK. [This readme file](src/zmk/rafaelro
 
 The script [init_qmk.sh](init_qmk.sh) will clone [the QMK firmware](https://github.com/qmk/qmk_firmware) and symlink these keyboard files on it.
 After [installing QMK](https://docs.qmk.fm/#/newbs_getting_started) and running the init script above, [qmk cli](https://docs.qmk.fm/#/cli) should be working to compile and flash.
-
-### ZMK
-
-The script [init_zmk.sh](init_zmk.sh) will clone [the ZMK firmware](https://github.com/rafaelromao/zmk) and configure the toolchain.
-After [installing ZMK](https://zmk.dev/docs/development/setup) and running the init script above, [west cli](https://zmk.dev/docs/development/build-flash) should be working to compile and flash.
 
 ## References
 
@@ -118,12 +97,6 @@ Most features implemented here were based on the work referenced below.
 - [Treeman](https://github.com/treeman/qmk_firmware/tree/master/keyboards/ferris/keymaps/treeman)
 - [Thomas Baart](https://thomasbaart.nl/category/mechanical-keyboards/firmware/qmk)
 
-### ZMK
-- [Nick Conway](https://github.com/nickconway/zmk-config)
-- [Cem Aksoylar](https://github.com/caksoylar/zmk-config )
-- [Robert U](https://github.com/urob/zmk-config)
-- [Alexander Krikun](https://github.com/krikun98)
-
 ### 3D Printing and Handwiring
 - [Jan Lunge](https://m.youtube.com/@JanLunge)
 - [Sadek Baroudi](https://github.com/sadekbaroudi)
@@ -136,7 +109,6 @@ Most features implemented here were based on the work referenced below.
 - [KLE](http://www.keyboard-layout-editor.com/#/gists/38f4435ff9a10256d9a7e1a0645c2fec)
 - [Keymap DB](https://keymapdb.com/rafaelromao/)
 - [QMK Docs](https://docs.qmk.fm)
-- [ZMK Docs](https://zmk.dev/docs)
 - [Keyboard Tester](https://config.qmk.fm/#/test)
 - [r/olkb](https://www.reddit.com/r/olkb)
 - [r/ErgoMechKeyboards](https://www.reddit.com/r/ErgoMechKeyboards)
