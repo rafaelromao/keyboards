@@ -66,7 +66,7 @@ const uint16_t PROGMEM l_num_ent_combo[] = {OM_L, OM_U, OM_R, COMBO_END};
 const uint16_t PROGMEM l_num_del_combo[] = {OM_W_D, OM_D, OM_W_U, COMBO_END};
 const uint16_t PROGMEM l_num_num_combo[] = {OM_W_D, OM_D, COMBO_END};
 
-const uint16_t PROGMEM r_num_com_combo[] = {RAI_SPC, SHO_DOT, COMBO_END};
+const uint16_t PROGMEM r_num_com_combo[] = {SYM_SPC, SHO_DOT, COMBO_END};
 
 // Lower
 
@@ -78,10 +78,10 @@ const uint16_t PROGMEM l_low_sqo_combo[] = {TD_RPRN, TD_DQUO, COMBO_END};
 const uint16_t PROGMEM l_low_bti_combo[] = {TD_RBRC, TD_QUES, COMBO_END};
 
 const uint16_t PROGMEM r_low_bsp_combo[]  = {KC_8, KC_9, COMBO_END};
-const uint16_t PROGMEM r_low_tab_combo[]  = {RAI_SPC, KC_8, KC_9, COMBO_END};
-const uint16_t PROGMEM r_low_ent_combo[]  = {RAI_SPC, KC_5, KC_6, COMBO_END};
+const uint16_t PROGMEM r_low_tab_combo[]  = {SYM_SPC, KC_8, KC_9, COMBO_END};
+const uint16_t PROGMEM r_low_ent_combo[]  = {SYM_SPC, KC_5, KC_6, COMBO_END};
 const uint16_t PROGMEM r_low_sco_combo[]  = {KC_2, KC_3, COMBO_END};
-const uint16_t PROGMEM r_low_com_combo[]  = {RAI_SPC, KC_DOT, COMBO_END};
+const uint16_t PROGMEM r_low_com_combo[]  = {SYM_SPC, KC_DOT, COMBO_END};
 const uint16_t PROGMEM r_low_us_combo[]   = {KC_7, KC_8, KC_9, COMBO_END};
 const uint16_t PROGMEM r_low_br_combo[]   = {KC_4, KC_5, KC_6, COMBO_END};
 const uint16_t PROGMEM r_low_eur_combo[]  = {KC_1, KC_2, KC_3, COMBO_END};
@@ -89,11 +89,11 @@ const uint16_t PROGMEM r_low_sfg_combo[]  = {KC_7, KC_8, COMBO_END};
 const uint16_t PROGMEM r_low_j_combo[]    = {KC_4, KC_5, COMBO_END};
 const uint16_t PROGMEM r_low_k_combo[]    = {KC_5, KC_6, COMBO_END};
 const uint16_t PROGMEM r_low_pip_combo[]  = {KC_1, KC_2, COMBO_END};
-const uint16_t PROGMEM r_low_cop_combo[]  = {RAI_SPC, KC_4, KC_5, COMBO_END};
-const uint16_t PROGMEM r_low_pas_combo[]  = {RAI_SPC, KC_1, KC_2, COMBO_END};
-const uint16_t PROGMEM r_low_sal_combo[]  = {RAI_SPC, KC_2, KC_3, COMBO_END};
-const uint16_t PROGMEM r_low_scp_combo[]  = {RAI_SPC, KC_4, KC_5, KC_6, COMBO_END};
-const uint16_t PROGMEM r_low_spa_combo[]  = {RAI_SPC, KC_1, KC_2, KC_3, COMBO_END};
+const uint16_t PROGMEM r_low_cop_combo[]  = {SYM_SPC, KC_4, KC_5, COMBO_END};
+const uint16_t PROGMEM r_low_pas_combo[]  = {SYM_SPC, KC_1, KC_2, COMBO_END};
+const uint16_t PROGMEM r_low_sal_combo[]  = {SYM_SPC, KC_2, KC_3, COMBO_END};
+const uint16_t PROGMEM r_low_scp_combo[]  = {SYM_SPC, KC_4, KC_5, KC_6, COMBO_END};
+const uint16_t PROGMEM r_low_spa_combo[]  = {SYM_SPC, KC_1, KC_2, KC_3, COMBO_END};
 
 // Raise
 
