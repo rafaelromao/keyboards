@@ -34,7 +34,7 @@
 
         COMBO(cb_boot_l,        LTR LBI,     &bootloader,        ALL_LAYERS)
         COMBO(cb_boot_r,        RTR RBI,     &bootloader,        ALL_LAYERS)
-        COMBO(cb_alpha1,        LBR LBM LBI, &to ALPHA1,         ALL_LAYERS)
+        COMBO(cb_alpha1,        LTM LTR LTI, &to ALPHA1,         ALL_LAYERS)
 
         COMBO(cb_escc,          LTR LTM,     &mc_escc,           ALL_LAYERS_BUT_LOWER_SYMBOLS)
         COMBO(cb_backspace,     RTM RTR,     &kp BACKSPACE,      ALL_LAYERS_BUT_RAISE_SYMBOLS_NAV_MEDIA)
@@ -45,7 +45,7 @@
         COMBO(cb_enter_r,       RHM RHR R0,  &kp ENTER,          ALL_LAYERS)
         COMBO(cb_enter_l,       LHM LHR LHI, &ht_enter 0 0,      ALL_LAYERS)
         COMBO(cb_tab_r,         RTM RTR R0,  &kp TAB,            ALL_LAYERS)
-        COMBO(cb_tab_l,         LTM LTR LTI, &kp TAB,            ALL_LAYERS)
+        COMBO(cb_tab_l,         LBR LBM LBI, &kp TAB,            ALL_LAYERS)
 
         COMBO(cb_paste,         RBI RBM R0,  &mc_paste,          ALL_LAYERS)
         COMBO(cb_copy,          RHI RHM R0,  &mc_copy,           ALL_LAYERS)
