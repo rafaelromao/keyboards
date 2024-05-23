@@ -29,7 +29,7 @@
                      bindings = <
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp Y
    &lt SHORTS_L D      &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp W               &kp Z               &mt RGUI R          &mt RCTRL A         &mt RSHFT E         &lt SHORTS_R I 
-   &lt SHORTS_L D      &mt RALT F          &th_c 0 0           &mt LALT P          &kp V               &kp J               &mt RALT H          &th_comma 0 0       &th_dot 0 0         &lt SHORTS_R I
+   &trans              &mt RALT F          &th_c 0 0           &mt LALT P          &kp V               &kp J               &ht_magic RALT 0    &th_comma 0 0       &th_dot 0 0         &trans
                                            &none               &ht_repeat NAV 0    &ltn LOWER SPACE    &msl_raise_smart    &ht_shift MEDIA 0   &none
                         >;
                 };
@@ -47,8 +47,8 @@
                      bindings = <
    &trans              &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &trans
    &lt SHORTS_L RS(D)  &mt LSHFT RS(N)     &mt LCTRL RS(S)     &mt LGUI RS(T)      &kp RS(W)           &kp RS(Z)           &mt RGUI RS(R)      &mt RCTRL RS(A)     &mt RSHFT RS(E)     &lt SHORTS_R RS(I) 
-   &lt SHORTS_L RS(D)  &mt RALT RS(F)      &kp RS(C)           &mt LALT RS(P)      &kp RS(V)           &kp RS(J)           &mt RALT RS(H)      &th_comma 0 0       &th_dot 0 0         &lt SHORTS_R RS(I)
-                                           &trans              &ht_repeat NAV 0    &msk_spc LOWER 0    &msl RAISE SHIFT_A2 &ht_caps MEDIA 0    &trans
+   &trans              &mt RALT RS(F)      &kp RS(C)           &mt LALT RS(P)      &kp RS(V)           &kp RS(J)           &mt RALT RS(H)      &th_comma 0 0       &th_dot 0 0         &trans
+                                           &trans              &trans              &msk_spc LOWER 0    &msl RAISE SHIFT_A2 &ht_caps MEDIA 0    &trans
                         >;
                 };
 
@@ -94,8 +94,8 @@
                      bindings = <
    &trans              &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &none
    &lt SHORTS_L LS(D)  &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTS_R LS(I) 
-   &lt SHORTS_L LS(D)  &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &mt RALT LS(H)      &th_comma 0 0       &th_dot 0 0         &lt SHORTS_R LS(I)
-                                           &trans              &ht_repeat NAV 0    &trans              &msl RAISE CASE_A2  &th_cancel MEDIA 0    &trans
+   &trans              &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic RALT 0    &th_comma 0 0       &th_dot 0 0         &trans
+                                           &trans              &trans              &trans              &msl RAISE CASE_A2  &th_cancel MEDIA 0    &trans
                         >;
                 };
                 lower_layer {
@@ -103,7 +103,7 @@
                      bindings = <
    &trans              &td_lbrc            &td_rbrc            &th_bsl 0 0         &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
    &lt NAV AT          &td_lpar            &td_rpar            &th_dqo 0 0         &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
-   &lt NAV AT          &td_lbkt            &td_rbkt            &th_qmark 0 0       &none               &none               &mc_n1              &mc_n2              &mc_n3              &kp DOT
+   &trans              &td_lbkt            &td_rbkt            &th_qmark 0 0       &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
                                            &trans              &to CASE_A1         &trans              &lt SYMBOLS SPACE   &th_n0 MEDIA 0      &trans
                            >;
                 };
@@ -112,7 +112,7 @@
                      bindings = <
    &none               &kp F9              &kp F8              &kp F7              &none               &none               &th_colon 0 0       &th_eql 0 0         &th_perc 0 0        &none
    &none               &kp F6              &kp F5              &kp F4              &none               &none               &th_mins 0 0        &th_plus 0 0        &th_slash 0 0       &lt SHORTS_R STAR  
-   &none               &kp F3              &kp F2              &kp F1              &none               &none               &th_excl 0 0        &th_lt 0 0          &th_gt 0 0          &lt SHORTS_R STAR
+   &none               &kp F3              &kp F2              &kp F1              &none               &none               &th_excl 0 0        &th_lt 0 0          &th_gt 0 0          &trans
                                            &trans              &key_repeat         &lt SYMBOLS SPACE   &trans              &tog NUMPAD         &trans       
                            >;
                 };
@@ -130,16 +130,16 @@
                      bindings = <
    &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &kp LS(Y) 
    &kp LS(D)           &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &kp LS(I) 
-   &kp LS(D)           &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &mt LALT LS(H)      &th_comma 0 0       &th_dot 0 0         &kp LS(I) 
+   &trans              &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic RALT 0    &th_comma 0 0       &th_dot 0 0         &trans
                                            &trans              &th_cancel NAV 0    &th_sp_ns SYMBOLS 0 &msl SYMBOLS SEN_E2 &th_nsen MEDIA 0    &trans
                            >;
                 };
                 sentence_case_ext2_layer {
                      display-name = "CASE";
                      bindings = <
-   &none               &kp LS(Q)           &mc_qu_s            &kp LS(K)           &none               &none               &ac_ocir_c          &ac_ecir_c          &ac_acir_c          &none
+   &none               &kp LS(H)           &mc_qu_s            &kp LS(K)           &none               &none               &ac_ocir_c          &ac_ecir_c          &ac_acir_c          &none
    &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &none               &none               &ac_atil_c          &ac_eacu_c          &ac_aacu_c          &ac_iacu_c 
-   &kp LS(Y)           &kp LS(J)           &mc_ced_c           &kp LS(V)           &none               &none               &ac_otil_c          &ac_oacu_c          &ac_uacu_c          &ac_iacu_c
+   &trans              &kp LS(J)           &mc_ced_c           &kp LS(V)           &none               &none               &ac_otil_c          &ac_oacu_c          &ac_uacu_c          &ac_iacu_c
                                            &trans              &th_cancel NAV 0    &th_sp_ns SYMBOLS 0 &none               &th_nsen MEDIA 0    &trans
                            >;
                 };
@@ -148,7 +148,7 @@
                      bindings = <
    &none               &kp ESC             &mkp LCLK           &mkp RCLK           &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
    &none               &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &none               &mc_n4              &mc_n5              &mc_n6              &lt SHORTS_R DOT 
-   &none               &msc SCRL_DOWN      &mmv MOVE_DOWN      &msc SCRL_UP        &none               &none               &mc_n1              &mc_n2              &mc_n3              &lt SHORTS_R DOT 
+   &none               &msc SCRL_DOWN      &mmv MOVE_DOWN      &msc SCRL_UP        &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
                                            &trans              &ht_repeat NAV 0    &trans              &ltn SYMBOLS SPACE  &th_n0 MEDIA 0      &trans
                            >;
                 };
@@ -157,7 +157,7 @@
                      bindings = <
    &none               &mm_close_tab_esc   &mm_refresh_z0      &mm_preview         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &none    
    &none               &th_zh_b LSHFT 0    &mm_zh_f            &mm_tabs            &none               &none               &mc_seln            &kp DOWN            &mt RSHFT UP        &mo SYSTEM
-   &none               &mm_wt_b            &mm_wt_f            &mm_calc            &none               &none               &mc_joinwords       &td_dynmacro        &mc_sleep           &mo SYSTEM
+   &none               &mm_wt_b            &mm_wt_f            &mm_calc            &none               &none               &mc_joinwords       &td_dynmacro        &mc_sleep           &trans
                                            &trans              &mst NAV CODING     &mst NMODS NMODS    &lt CODING SPACE    &mst NAV NAV_F      &trans
                            >;
                 };
@@ -166,7 +166,7 @@
                      bindings = <
    &none               &mm_close_tab_esc   &mm_refresh_z0      &mm_preview         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &none    
    &mo SYSTEM          &th_zh_b LSHFT 0    &mm_zh_f            &mm_tabs            &none               &none               &mc_seln            &kp DOWN            &mt RSHFT UP        &none
-   &mo SYSTEM          &mm_wt_b            &mm_wt_f            &mm_calc            &none               &none               &mc_joinwords       &td_dynmacro        &mc_sleep           &none
+   &trans              &mm_wt_b            &mm_wt_f            &mm_calc            &none               &none               &mc_joinwords       &td_dynmacro        &mc_sleep           &none
                                            &trans              &mst NAV CODING     &mst NMODS NMODS    &lt CODING SPACE    &mst NAV NAV_F      &trans
                            >;
                 };
@@ -184,7 +184,7 @@
                      bindings = <
    &none               &mm_close_tab_esc   &mm_break           &mm_build           &none               &none               &mm_typematch       &kp ENTER           &kp ESC             &none    
    &mm_project         &th_find LSHFT 0    &mm_run             &mm_debug           &none               &none               &mm_actions         &mm_down            &mt RSHFT UP        &none
-   &mm_project         &mm_recent          &mm_swapper         &mm_usages          &none               &none               &mm_docs            &mm_refac           &mc_comment         &none
+   &trans              &mm_recent          &mm_swapper         &mm_usages          &none               &none               &mm_docs            &mm_refac           &mc_comment         &none
                                            &trans              &th_step_into NAV 0 &mm_step_over       &trans              &trans              &trans
                            >;
                 };
@@ -193,17 +193,17 @@
                      bindings = <
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp Y
    &kp D               &kp N               &kp S               &kp T               &kp W               &kp Z               &kp R               &kp A               &kp E               &kp I 
-   &kp D               &kp F               &kp C               &kp P               &kp V               &kp J               &kp H               &kp COMMA           &kp DOT             &kp I
+   &trans              &kp F               &kp C               &kp P               &kp V               &kp J               &kp H               &kp COMMA           &kp DOT             &trans
                                            &none               &key_repeat         &trans              &msl ALPHA2 ALPHA2  &sk LSHFT           &none
                            >;
                 };
                 alpha2_layer {
                      display-name = "ALPHA2";
                      bindings = <
-   &none               &kp Q               &mc_qu              &kp K               &none               &none               &ac_ocir            &ac_ecir            &ac_acir            &none
+   &none               &kp H               &mc_qu              &kp K               &none               &none               &ac_ocir            &ac_ecir            &ac_acir            &none
    &kp Y               &kp Z               &kp X               &kp W               &none               &none               &ac_atil            &ac_eacu            &ac_aacu            &ac_iacu 
-   &kp Y               &kp J               &mc_ced             &kp V               &none               &none               &ac_otil            &ac_oacu            &ac_uacu            &ac_iacu
-                                           &trans              &ht_magic NAV 0     &sl SYMBOLS         &trans              &mc_sqo             &trans
+   &trans              &kp J               &mc_ced             &kp V               &none               &none               &ac_otil            &ac_oacu            &ac_uacu            &trans
+                                           &trans              &trans              &sl SYMBOLS         &trans              &mc_sqo             &trans
                            >;
                 };
                 ccedil_layer {
@@ -218,19 +218,19 @@
                 shifted_alpha2_layer {
                      display-name = "CASE";
                      bindings = <
-   &none               &kp RS(Q)           &mc_qu_s            &kp RS(K)           &none               &none               &ac_ocir_s          &ac_ecir_s          &ac_acir_s          &none
+   &none               &kp RS(H)           &mc_qu_s            &kp RS(K)           &none               &none               &ac_ocir_s          &ac_ecir_s          &ac_acir_s          &none
    &kp RS(Y)           &kp RS(Z)           &kp RS(X)           &kp RS(W)           &none               &none               &ac_atil_s          &ac_eacu_s          &ac_aacu_s          &ac_iacu_s 
-   &kp RS(Y)           &kp RS(J)           &mc_ced_s           &kp RS(V)           &none               &none               &ac_otil_s          &ac_oacu_s          &ac_uacu_s          &ac_iacu_s 
-                                           &trans              &ht_magic NAV 0     &sl SYMBOLS         &trans              &mc_sqo_c           &trans
+   &trans              &kp RS(J)           &mc_ced_s           &kp RS(V)           &none               &none               &ac_otil_s          &ac_oacu_s          &ac_uacu_s          &trans 
+                                           &trans              &trans              &sl SYMBOLS         &trans              &mc_sqo_c           &trans
                            >;
                 };
                 case_alpha2_layer {
                      display-name = "CASE";
                      bindings = <
-   &none               &kp LS(Q)           &mc_qu_c            &kp LS(K)           &none               &none               &ac_ocir_c          &ac_ecir_c          &ac_acir_c          &none
+   &none               &kp LS(H)           &mc_qu_c            &kp LS(K)           &none               &none               &ac_ocir_c          &ac_ecir_c          &ac_acir_c          &none
    &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &none               &none               &ac_atil_c          &ac_eacu_c          &ac_aacu_c          &ac_iacu_c 
-   &kp LS(Y)           &kp LS(J)           &mc_ced_c           &kp LS(V)           &none               &none               &ac_otil_c          &ac_oacu_c          &ac_uacu_c          &ac_iacu_c
-                                           &trans              &ht_magic NAV 0     &sl SYMBOLS         &trans              &mc_sqo_c           &trans
+   &trans              &kp LS(J)           &mc_ced_c           &kp LS(V)           &none               &none               &ac_otil_c          &ac_oacu_c          &ac_uacu_c          &trans
+                                           &trans              &trans              &sl SYMBOLS         &trans              &mc_sqo_c           &trans
                            >;
                 };
                 case_ccedil_layer {
@@ -245,9 +245,9 @@
                 symbols_layer {
                      display-name = "SYMBOLS";
                      bindings = <
-   &none               &kp LBRC            &kp RBRC            &kp BACKSLASH       &none               &none               &kp COLON           &kp EQUAL           &kp PERCENT          &none
+   &none               &kp LBRC            &kp RBRC            &kp BACKSLASH       &none               &none               &kp COLON           &kp EQUAL           &kp PERCENT         &none
    &kp AT              &kp LPAR            &kp RPAR            &mc_dqo             &none               &none               &kp MINUS           &kp PLUS            &kp SLASH           &kp STAR 
-   &kp AT              &kp LBKT            &kp RBKT            &kp QMARK           &none               &none               &kp EXCL            &kp LT              &kp GT              &kp STAR 
+   &trans              &kp LBKT            &kp RBKT            &kp QMARK           &none               &none               &kp EXCL            &kp LT              &kp GT              &trans
                                            &trans              &trans              &kp SPACE           &kp SPACE           &trans              &trans
                            >;
                 };
@@ -256,7 +256,7 @@
                      bindings = <
    &none               &kp ESC             &kp PAGE_UP         &kp INS             &none               &none               &kp TAB             &kp ENTER           &mc_delword         &none
    &none               &kp LSHFT           &kp LCTRL           &kp LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
-   &none               &kp RALT            &kp PAGE_DOWN       &kp LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &mc_cam
+   &none               &kp RALT            &kp PAGE_DOWN       &kp LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &trans
                                            &trans              &trans              &trans              &kp SPACE           &mo MEDIA           &trans
                         >;
                 };
@@ -265,7 +265,7 @@
                      bindings = <
    &none               &kp ESC             &mkp LCLK           &mkp RCLK           &none               &none               &kp TAB             &kp ENTER           &kp BACKSPACE       &none
    &none               &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &none               &mc_mic             &mt C_MUTE C_VOL_DN &kp C_VOL_UP        &mc_cam
-   &none               &msc SCRL_DOWN      &mmv MOVE_DOWN      &msc SCRL_UP        &none               &none               &kp C_PP            &kp C_PREV          &kp C_NEXT          &mc_cam
+   &none               &msc SCRL_DOWN      &mmv MOVE_DOWN      &msc SCRL_UP        &none               &none               &kp C_PP            &kp C_PREV          &kp C_NEXT          &trans
                                            &trans              &mo NAV_F           &trans              &trans              &trans              &trans
                            >;
                 };
@@ -274,7 +274,7 @@
                      bindings = <
    &none               &kp ESC             &kp PAGE_UP         &kp INS             &none               &none               &kp TAB             &kp ENTER           &mc_delword         &none
    &none               &kp LSHFT           &kp LCTRL           &kp LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
-   &none               &kp RALT            &kp PAGE_DOWN       &kp LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &kp RIGHT
+   &none               &kp RALT            &kp PAGE_DOWN       &kp LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &trans
                                            &trans              &trans              &kp SPACE           &kp SPACE           &to ALPHA1          &trans
                            >;
                 };

@@ -155,6 +155,15 @@
             bindings = <&macro_tap &key_repeat>;
         };
 
+        labeled_h: labeled_h {
+			compatible = "zmk,behavior-macro";
+            label = "labeled_h";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_tap &kp H>;
+        };
+
         smart_repeat: smart_repeat {
             compatible = "zmk,behavior-antecedent-morph";
             label = "smart_repeat";
@@ -233,44 +242,44 @@
             label = "smart_magic";
             #binding-cells = <0>;
             max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
-            defaults = <&labeled_key_repeat>;
+            defaults = <&labeled_h>;
             antecedents = <
-                           A             AACU_TERM     ATIL_TERM     ACIR_TERM     AGRV_TERM       B             C               C_CEDIL         D           \
-                           E             EACU_TERM     ECIR_TERM     F                             H             I               IACU_TERM       J           \
-                           K             L             M             N                             OACU_TERM     OTIL_TERM       OCIR_TERM       P           \
-                                         QU_TERM       R             S             T               U             UACU_TERM       V               W           \
-                           X             Z                           DOT                                                                                     \
+                           A             AACU_TERM     ATIL_TERM     ACIR_TERM     AGRV_TERM       B             C               C_CEDIL         D            \
+                           E             EACU_TERM     ECIR_TERM     F             G               H             I               IACU_TERM       J            \
+                           K             L             M             N             O               OACU_TERM     OTIL_TERM       OCIR_TERM       P            \
+                           Q             QU_TERM       R             S             T               U             UACU_TERM       V               W            \
+                           X             Y             Z             DOT                                                                                      \
 
-                           LS(A)         C_AACU_TERM   C_ATIL_TERM   C_ACIR_TERM   C_AGRV_TERM     LS(B)         LS(C)           LS(C_CEDIL)     LS(D)       \
-                           LS(E)         C_EACU_TERM   C_ECIR_TERM   LS(F)                         LS(H)         LS(I)           C_IACU_TERM     LS(J)       \
-                           LS(K)         LS(L)         LS(M)         LS(N)                         C_OACU_TERM   C_OTIL_TERM     C_OCIR_TERM     LS(P)       \
-                                         C_QU_TERM     LS(R)         LS(S)         LS(T)           LS(U)         C_UACU_TERM     LS(V)           LS(W)       \
-                           LS(X)         LS(Z)                                                                                                               \
+                           LS(A)         C_AACU_TERM   C_ATIL_TERM   C_ACIR_TERM   C_AGRV_TERM     LS(B)         LS(C)           LS(C_CEDIL)     LS(D)        \
+                           LS(E)         C_EACU_TERM   C_ECIR_TERM   LS(F)         LS(G)           LS(H)         LS(I)           C_IACU_TERM     LS(J)        \
+                           LS(K)         LS(L)         LS(M)         LS(N)         LS(O)           C_OACU_TERM   C_OTIL_TERM     C_OCIR_TERM     LS(P)        \
+                           LS(Q)         C_QU_TERM     LS(R)         LS(S)         LS(T)           LS(U)         C_UACU_TERM     LS(V)           LS(W)        \
+                           LS(X)         LS(Y)         LS(Z)                                                                                                  \
 
-                           RS(A)         S_AACU_TERM   S_ATIL_TERM   S_ACIR_TERM   S_AGRV_TERM     RS(B)         RS(C)           RS(C_CEDIL)     RS(D)       \
-                           RS(E)         S_EACU_TERM   S_ECIR_TERM   RS(F)                         RS(H)         RS(I)           S_IACU_TERM     RS(J)       \
-                           RS(K)         RS(L)         RS(M)         RS(N)                         S_OACU_TERM   S_OTIL_TERM     S_OCIR_TERM     RS(P)       \
-                                         S_QU_TERM     RS(R)         RS(S)         RS(T)           RS(U)         S_UACU_TERM     RS(V)           RS(W)       \
-                           RS(X)         RS(Z)                                                                                                               \
+                           RS(A)         S_AACU_TERM   S_ATIL_TERM   S_ACIR_TERM   S_AGRV_TERM     RS(B)         RS(C)           RS(C_CEDIL)     RS(D)        \
+                           RS(E)         S_EACU_TERM   S_ECIR_TERM   RS(F)         RS(G)           RS(H)         RS(I)           S_IACU_TERM     RS(J)        \
+                           RS(K)         RS(L)         RS(M)         RS(N)         RS(O)           S_OACU_TERM   S_OTIL_TERM     S_OCIR_TERM     RS(P)        \
+                           RS(Q)         S_QU_TERM     RS(R)         RS(S)         RS(T)           RS(V)         S_UACU_TERM     RS(V)           RS(W)        \
+                           RS(X)         RS(Y)         RS(Z)                                                                                                  \
                            >;
             bindings =    <
-                           &kp O         &kp X         &kp O         &kp M         &mc_qu          &kp Y         &kp S           &tc_otiles      &kp Y       \
-                           &kp U         &kp U         &kp X         &kp Y                         &kp R         &tc_smart_i     &kp Z           &ac_atil    \
-                           &kp W         &kp H         &kp S         &kp F                         &kp X         &kp E           &kp V           &kp T       \
-                                         &ac_iacu      &tc_ly        &kp S         &kp W           &kp E         &kp Z           &ac_iacu        &kp K       \
-                           &ac_iacu      &ac_aacu                    &kp SLASH                                                                               \
+                           &kp V         &kp V         &kp O         &kp M         &mc_qu          &kp Y         &kp H           &tc_atilo       &kp Y        \
+                           &kp V         &kp V         &kp V         &kp Y         &kp H           &sl ALPHA2    &kp V           &kp V           &sl ALPHA2   \
+                           &sl ALPHA2    &kp H         &kp Y         &kp H         &kp V           &sl ALPHA2    &kp E           &kp V           &kp H        \
+                           &sl ALPHA2    &ac_ecir      &tc_ly        &kp H         &kp H           &kp V         &kp V           &sl ALPHA2      &kp H        \
+                           &sl ALPHA2    &kp N         &sl ALPHA2    &kp SLASH                                                                                \
 
-                           &kp LS(O)     &kp LS(X)     &kp LS(O)     &kp LS(M)     &mc_qu_c        &kp LS(Y)     &kp LS(S)       &tc_otiles_c    &kp LS(Y)   \
-                           &kp LS(U)     &kp LS(U)     &kp LS(X)     &kp LS(Y)                     &kp LS(R)     &tc_smart_i     &kp LS(Z)       &ac_atil_c  \
-                           &kp LS(W)     &kp LS(H)     &kp LS(S)     &kp LS(F)                     &kp LS(X)     &kp LS(E)       &kp LS(V)       &kp LS(T)   \
-                                         &ac_iacu_c    &tc_ly_c      &kp LS(C)     &kp LS(W)       &kp LS(E)     &kp LS(Z)       &ac_iacu_c      &kp LS(K)   \
-                           &ac_iacu_c    &ac_aacu_c                                                                                                          \
+                           &kp LS(V)     &kp LS(V)     &kp LS(O)     &kp LS(M)     &mc_qu_c        &kp LS(Y)     &kp LS(H)       &tc_atilo_c     &kp LS(Y)    \
+                           &kp LS(V)     &kp LS(V)     &kp LS(V)     &kp LS(Y)     &kp LS(H)       &sl SHIFT_A2  &kp V           &kp LS(V)       &sl SHIFT_A2 \
+                           &sl SHIFT_A2  &kp LS(H)     &kp LS(Y)     &kp LS(H)     &kp LS(V)       &sl SHIFT_A2  &kp LS(E)       &kp LS(V)       &kp LS(H)    \
+                           &sl SHIFT_A2  &ac_ecir_c    &tc_ly_c      &kp LS(H)     &kp LS(H)       &kp LS(E)     &kp LS(V)       &sl SHIFT_A2    &kp LS(H)    \
+                           &sl SHIFT_A2  &kp LS(N)     &sl SHIFT_A2                                                                                           \
 
-                           &kp O         &kp X         &kp O         &kp M         &mc_qu          &kp Y         &kp S           &tc_otiles      &kp Y       \
-                           &kp U         &kp U         &kp X         &kp Y                         &kp R         &tc_smart_i     &kp Z           &ac_atil    \
-                           &kp W         &kp H         &kp S         &kp F                         &kp X         &kp E           &kp V           &kp T       \
-                                         &ac_iacu      &tc_ly        &kp S         &kp W           &kp E         &kp Z           &ac_iacu        &kp K       \
-                           &ac_iacu      &ac_aacu                                                                                                            \
+                           &kp V         &kp V         &kp O         &kp M         &mc_qu          &kp Y         &kp H           &tc_atilo       &kp Y        \
+                           &kp V         &kp V         &kp V         &kp Y         &kp H           &sl ALPHA2    &kp V           &kp V           &sl ALPHA2   \
+                           &sl ALPHA2    &kp H         &kp Y         &kp H         &kp V           &sl ALPHA2    &kp E           &kp V           &kp H        \
+                           &sl ALPHA2    &ac_ecir      &tc_ly        &kp H         &kp H           &kp V         &kp V           &sl ALPHA2      &kp H        \
+                           &sl ALPHA2    &kp N         &sl ALPHA2                                                                                             \
                            >;
         };
 
@@ -279,7 +288,6 @@
         THUMB_MACRO(tc_ly_c,     &kp LS(L) &kp LS(Y))
         THUMB_MACRO(tc_otiles,   &ac_otil &kp E &kp S)
         THUMB_MACRO(tc_otiles_c, &ac_otil_c &kp LS(E) &kp LS(S))
-        THUMB_MACRO(tc_smart_i,  &kp BACKSPACE &kp LS(I) &kp QUOT &kp SPACE)
 
         ht_magic: ht_magic {
             compatible = "zmk,behavior-hold-tap";
@@ -287,7 +295,7 @@
             tapping-term-ms = <QUICK_TAP_TERM>;
             flavor = "tap-preferred";
             quick-tap-ms = <0>;
-            bindings = <&mo>, <&smart_magic>;
+            bindings = <&kp>, <&smart_magic>;
         };
 
         // ******************** SMART CASES ******************** //
