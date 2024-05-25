@@ -171,14 +171,14 @@
             max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
             defaults = <&labeled_key_repeat>;
             antecedents = <
-                            H          QU_TERM      AGRV_TERM    K          X          W          C_CEDIL     SQUO_TERM   \
-                            LS(H)      C_QU_TERM    C_AGRV_TERM  LS(K)      LS(X)      LS(W)      LS(C_CEDIL) C_SQUO_TERM \
-                            RS(H)      S_QU_TERM    S_AGRV_TERM  RS(K)      RS(X)      RS(W)      RS(C_CEDIL)             \
+                            H          QU_TERM      AGRV_TERM    K          W          C_CEDIL     SQUO_TERM   \
+                            LS(H)      C_QU_TERM    C_AGRV_TERM  LS(K)      LS(W)      LS(C_CEDIL) C_SQUO_TERM \
+                            RS(H)      S_QU_TERM    S_AGRV_TERM  RS(K)      RS(W)      RS(C_CEDIL)             \
                            >;
             bindings =    <
-                            &kp Y      &ac_ecir     &mc_qu       &tc_ey     &kp Y      &tc_hy     &sk ALPHA2  &kp V       \
-                            &kp LS(Y)  &ac_ecir_c   &mc_qu_c     &tc_ey_c   &kp LS(Y)  &tc_hy     &sk CASE_A2 &kp V       \
-                            &kp RS(Y)  &ac_ecir_s   &mc_qu_s     &tc_ey     &kp RS(Y)  &tc_hy     &sk SHIFT_A2            \
+                            &kp Y      &ac_ecir     &mc_qu       &tc_ey     &tc_hy     &sk ALPHA2  &kp V       \
+                            &kp LS(Y)  &ac_ecir_c   &mc_qu_c     &tc_ey_c   &tc_hy     &sk CASE_A2 &kp V       \
+                            &kp RS(Y)  &ac_ecir_s   &mc_qu_s     &tc_ey     &tc_hy     &sk SHIFT_A2            \
                            >;
         };
 
