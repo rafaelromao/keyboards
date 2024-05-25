@@ -171,19 +171,21 @@
             max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
             defaults = <&labeled_key_repeat>;
             antecedents = <
-                            H          QU_TERM      AGRV_TERM    K          W          C_CEDIL     SQUO_TERM   \
-                            LS(H)      C_QU_TERM    C_AGRV_TERM  LS(K)      LS(W)      LS(C_CEDIL) C_SQUO_TERM \
-                            RS(H)      S_QU_TERM    S_AGRV_TERM  RS(K)      RS(W)      RS(C_CEDIL)             \
+                            H          QU_TERM      AGRV_TERM    C_CEDIL     SQUO_TERM   \
+                            LS(H)      C_QU_TERM    C_AGRV_TERM  LS(C_CEDIL) C_SQUO_TERM \
+                            RS(H)      S_QU_TERM    S_AGRV_TERM  RS(C_CEDIL)             \
                            >;
             bindings =    <
-                            &kp Y      &ac_ecir     &mc_qu       &tc_ey     &tc_hy     &sk ALPHA2  &kp V       \
-                            &kp LS(Y)  &ac_ecir_c   &mc_qu_c     &tc_ey_c   &tc_hy     &sk CASE_A2 &kp V       \
-                            &kp RS(Y)  &ac_ecir_s   &mc_qu_s     &tc_ey     &tc_hy     &sk SHIFT_A2            \
+                            &tc_ah     &ac_ecir     &mc_qu       &sk ALPHA2  &kp V       \
+                            &tc_ah_c   &ac_ecir_c   &mc_qu_c     &sk CASE_A2 &kp V       \
+                            &tc_ah     &ac_ecir_s   &mc_qu       &sk SHIFT_A2            \
                            >;
         };
 
+        THUMB_MACRO(tc_ah,      &kp A &kp H)
         THUMB_MACRO(tc_ey,      &kp E &kp Y)
         THUMB_MACRO(tc_hy,      &kp H &kp Y)
+        THUMB_MACRO(tc_ah_c,    &kp LS(A) &kp LS(H))
         THUMB_MACRO(tc_ey_c,    &kp LS(E) &kp LS(Y))
         THUMB_MACRO(tc_hy_c,    &kp LS(H) &kp LS(Y))
 
