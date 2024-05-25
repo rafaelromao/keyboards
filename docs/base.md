@@ -26,7 +26,7 @@
 - The four thumb keys control layer transitions, when held (Navigation, Lower, Raise and Media).
 
 ### Repeat Key
-- The outer left thumb key repeats the last key by default, but outputs an alternate result for keys that do not worth repeating, like `H`, `Qu`, `K`, `X` and `W`. For `Ç`, the repeat key reactivates the Secondary Alpha Layer.
+- The outer left thumb key repeats the last key by default, but outputs an alternate result for keys that do not worth repeating. For `Ç`, the repeat key reactivates the Secondary Alpha Layer, which makes it easier to type `çã` and `çõ`.
 - Holding this key in the base layer will activate the [Navigation](../navigation.md) layer.
 - Tapping or holding this key in the [Raise](../symbols.md) layer acts as a normal Repeat Key, which can be used to spam or to repeat shortcuts. 
 
