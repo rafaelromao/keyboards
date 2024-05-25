@@ -12,7 +12,7 @@
 
 #define           ________ALPHA1_R1____________________           KC_L    , KC_O    , KC_U    , KC_Y
 #define __________________ALPHA1_R2____________________ KC_Z    , RGUIT_R , RCTLT_A , RSFTT_E , SHO_KCI
-#define __________________ALPHA1_R3__________           KC_J    , RALTT_H , TD_COMM , TD_DOT  
+#define __________________ALPHA1_R3__________           KC_J    , ALT_MAG , TD_COMM , TD_DOT  
 #define ___ALPHA1_R4_____                               RAI_A2  , MED_CAS 
 
 #define ___________________LOWER_L1__________           XXXXXXX , TD_LCBR , TD_RCBR , TD_BSLS
@@ -23,7 +23,7 @@
 #define           _________LOWER_R1____________________           KC_7    , KC_8    , KC_9    , XXXXXXX
 #define ___________________LOWER_R2____________________ XXXXXXX , KC_4    , KC_5    , KC_6    , KC_DOT
 #define ___________________LOWER_R3__________           XXXXXXX , KC_1    , KC_2    , KC_3    
-#define ____LOWER_R4_____                               RAI_SPC , MED_0
+#define ____LOWER_R4_____                               SYM_SPC , MED_0
 
 #define ___________________RAISE_L1__________           XXXXXXX , KC_F9   , KC_F8   , KC_F7   
 #define ___________________RAISE_L2____________________ XXXXXXX , KC_F6   , KC_F5   , KC_F4   , XXXXXXX
@@ -43,7 +43,7 @@
 #define           _________NUMPAD_R1___________________           KC_7    , KC_8    , KC_9    , XXXXXXX
 #define ___________________NUMPAD_R2___________________ XXXXXXX , KC_4    , KC_5    , KC_6    , SHO_DOT
 #define ___________________NUMPAD_R3_________           XXXXXXX , KC_1    , KC_2    , KC_3    
-#define ____NUMPAD_R4____                               RAI_SPC , MED_0
+#define ____NUMPAD_R4____                               SYM_SPC , MED_0
 
 #define ________________SHORTCUTS_L1_________           XXXXXXX , MC_CLOS , MC_Z0R  , MC_PREV 
 #define ________________SHORTCUTS_L2___________________ MO_SYS  , SF_MODM , MC_MODP , MC_TABS , XXXXXXX
@@ -75,14 +75,14 @@
 #define ___________________NOMOD_R3__________           KC_J    , KC_H    , KC_COMM , KC_DOT  
 #define ____NOMOD_R4_____                               OSL_A2  , OS_LSFT
 
-#define ___________________ALPHA2_L1_________           XXXXXXX , KC_Q    , MC_QU   , KC_K
+#define ___________________ALPHA2_L1_________           XXXXXXX , KC_H    , MC_QU   , KC_K
 #define ___________________ALPHA2_L2___________________ KC_Y    , KC_Z    , KC_X    , KC_W    , XXXXXXX
 #define           _________ALPHA2_L3___________________           KC_J    , MC_SQ_C , KC_V    , XXXXXXX 
-#define                               ____ALPHA2_L4____                               NAV_MAG , OS_SYM
+#define                               ____ALPHA2_L4____                               NAV_Q   , OS_SYM
 
-#define           _________ALPHA2_R1___________________           MC_CR_O , MC_SQ_O , MC_SQ_U , XXXXXXX
-#define ___________________ALPHA2_R2___________________ XXXXXXX , MC_TL_A , MC_SQ_A , MC_SQ_E , MC_SQ_I
-#define ___________________ALPHA2_R3_________           XXXXXXX , MC_TL_O , MC_CR_A , MC_CR_E 
+#define           _________ALPHA2_R1___________________           MC_CR_O , MC_CR_E , MC_CR_A , XXXXXXX
+#define ___________________ALPHA2_R2___________________ XXXXXXX , MC_TL_A , MC_SQ_E , MC_SQ_A , MC_SQ_I
+#define ___________________ALPHA2_R3_________           XXXXXXX , MC_TL_O , MC_SQ_O , MC_SQ_U 
 #define ____ALPHA2_R4____                               _______ , MC_SQUO
 
 #define _________________SYMBOLS_L1__________           XXXXXXX , KC_LCBR , KC_RCBR , KC_DLR 

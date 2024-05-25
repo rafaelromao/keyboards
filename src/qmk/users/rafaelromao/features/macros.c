@@ -106,6 +106,8 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
             tap_code16(KC_SLSH);
             return PROCESS_RECORD_RETURN_FALSE;
 
+#ifndef SAVE_MEMORY
+
             // °
 
         case MC_DEG:
@@ -145,6 +147,8 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
                 SEND_STRING(SS_LALT(SS_TAP(X_KP_1) SS_TAP(X_KP_6) SS_TAP(X_KP_6)));
             }
             return PROCESS_RECORD_RETURN_FALSE;
+
+#endif
 
             // END ; ENTER
 

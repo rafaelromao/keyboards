@@ -84,3 +84,8 @@ bool is_shift_macro_keycode(uint16_t keycode) {
 bool is_accent_macro_keycode(uint16_t keycode) {
     return keycode > ACCENT_MACRO_START && keycode < ACCENT_MACRO_END;
 }
+
+bool is_shifted(void) {
+    return get_mods() & MOD_MASK_SHIFT || get_oneshot_mods() & MOD_MASK_SHIFT ||
+           get_oneshot_locked_mods() & MOD_MASK_SHIFT;
+}

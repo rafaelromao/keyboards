@@ -153,10 +153,11 @@ process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record
         }
         // Extend, process or break case
         switch (keycode) {
+            case OSL_A2:
             case RAI_A2:
             case NAV_REP:
             case FNA_REP:
-            case NAV_MAG:
+            case ALT_MAG:
             case MED_CAS:
                 start_smart_case_timer();
                 return PROCESS_RECORD_CONTINUE;
@@ -244,12 +245,12 @@ process_record_result_t process_smart_case(uint16_t keycode, keyrecord_t *record
                     break;
                 }
             default:
-                disable_smart_case();
                 if (is_shift_macro_keycode(key)) {
                     process_macros(key, NULL);
                 } else if (is_accent_macro_keycode(key)) {
                     process_accents(key, NULL);
                 } else {
+                    disable_smart_case();
                     tap_code16(key);
                 }
                 return PROCESS_RECORD_RETURN_FALSE;
