@@ -7,7 +7,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case LOW_SPC:
         case RAI_SPC:
         case RAI_A2:
-        case NAV_MAG:
+        case NAV_Q:
         case NAV_REP:
         case FNA_REP:
         case MED_CAS:
@@ -23,7 +23,7 @@ uint16_t get_quick_tap_term(uint16_t keycode, keyrecord_t *record) {
         case LOW_SPC:
         case RAI_SPC:
         case RAI_A2:
-        case NAV_MAG:
+        case NAV_Q:
         case NAV_REP:
         case FNA_REP:
         case MED_CAS:
@@ -117,6 +117,17 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
         case SF_MODM:
             if (record->event.pressed && record->tap.count) {
                 process_swapper(MC_MODM, NULL);
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+            break;
+
+        case ALT_MAG:
+            if (record->event.pressed && record->tap.count) {
+                if (is_shifted()) {
+                    tap_code(KC_H);
+                } else {
+                    activate_repeat_or_magic_key(true);
+                }
                 return PROCESS_RECORD_RETURN_FALSE;
             }
             break;

@@ -26,11 +26,12 @@ process_record_result_t process_sentence_case(uint16_t keycode, keyrecord_t *rec
             // Process macros
             switch (keycode) {
                 // Skip dot and comma
-                case TD_DOT:
                 case TD_COMM:
+                case TD_DOT:
                     sentence_case.state = SENTENCE_CASE_NONE;
                     return PROCESS_RECORD_CONTINUE;
                 // Process alpha macros
+                case MC_AH:
                 case MC_QU:
                     add_oneshot_mods(MOD_LSFT);
                     sentence_case.state = SENTENCE_CASE_NONE;
@@ -61,11 +62,11 @@ process_record_result_t process_sentence_case(uint16_t keycode, keyrecord_t *rec
         switch (keycode) {
             // Continue to Alpha2 layer
             case RAI_A2:
+            case OSL_A2:
                 return PROCESS_RECORD_CONTINUE;
             // Cancel
             case NAV_REP:
             case FNA_REP:
-            case NAV_MAG:
             case QK_REP:
                 if (sentence_case.state != SENTENCE_CASE_NONE) {
                     clear_shift();

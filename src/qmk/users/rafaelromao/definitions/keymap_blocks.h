@@ -12,7 +12,7 @@
 
 #define           ________ALPHA1_R1____________________           KC_L    , KC_O    , KC_U    , KC_Y
 #define __________________ALPHA1_R2____________________ KC_Z    , RGUIT_R , RCTLT_A , RSFTT_E , SHO_KCI
-#define __________________ALPHA1_R3__________           KC_J    , RALTT_H , TD_COMM , TD_DOT  
+#define __________________ALPHA1_R3__________           KC_J    , ALT_MAG , TD_COMM , TD_DOT  
 #define ___ALPHA1_R4_____                               RAI_A2  , MED_CAS 
 
 #define ___________________LOWER_L1__________           XXXXXXX , TD_LCBR , TD_RCBR , TD_BSLS
@@ -75,10 +75,10 @@
 #define ___________________NOMOD_R3__________           KC_J    , KC_H    , KC_COMM , KC_DOT  
 #define ____NOMOD_R4_____                               OSL_A2  , OS_LSFT
 
-#define ___________________ALPHA2_L1_________           XXXXXXX , KC_Q    , MC_QU   , KC_K
+#define ___________________ALPHA2_L1_________           XXXXXXX , KC_H    , MC_QU   , KC_K
 #define ___________________ALPHA2_L2___________________ KC_Y    , KC_Z    , KC_X    , KC_W    , XXXXXXX
 #define           _________ALPHA2_L3___________________           KC_J    , MC_SQ_C , KC_V    , XXXXXXX 
-#define                               ____ALPHA2_L4____                               NAV_MAG , OS_SYM
+#define                               ____ALPHA2_L4____                               NAV_Q   , OS_SYM
 
 #define           _________ALPHA2_R1___________________           MC_CR_O , MC_CR_E , MC_CR_A , XXXXXXX
 #define ___________________ALPHA2_R2___________________ XXXXXXX , MC_TL_A , MC_SQ_E , MC_SQ_A , MC_SQ_I
