@@ -23,20 +23,20 @@ const uint16_t PROGMEM l_rom_tab_combo[] = {RALTT_F, LEA_KCC, LALTT_P, COMBO_END
 
 const uint16_t PROGMEM r_rom_x_combo[]    = {KC_L, KC_O, COMBO_END};
 const uint16_t PROGMEM r_rom_z_combo[]    = {RGUIT_R, RCTLT_A, COMBO_END};
-const uint16_t PROGMEM r_rom_j_combo[]    = {RALTT_H, TD_COMM, COMBO_END};
+const uint16_t PROGMEM r_rom_j_combo[]    = {ALT_MAG, TD_COMM, COMBO_END};
 const uint16_t PROGMEM r_rom_y_combo[]    = {RCTLT_A, RSFTT_E, COMBO_END};
 const uint16_t PROGMEM r_rom_d_combo[]    = {KC_L, KC_O, KC_U, COMBO_END};
 const uint16_t PROGMEM r_rom_p_combo[]    = {RGUIT_R, RCTLT_A, RSFTT_E, COMBO_END};
 const uint16_t PROGMEM r_rom_cop_combo[]  = {RAI_A2, RGUIT_R, RCTLT_A, COMBO_END};
-const uint16_t PROGMEM r_rom_pas_combo[]  = {RAI_A2, RALTT_H, TD_COMM, COMBO_END};
+const uint16_t PROGMEM r_rom_pas_combo[]  = {RAI_A2, ALT_MAG, TD_COMM, COMBO_END};
 const uint16_t PROGMEM r_rom_sal_combo[]  = {RAI_A2, TD_COMM, TD_DOT, COMBO_END};
 const uint16_t PROGMEM r_rom_scp_combo[]  = {RAI_A2, RGUIT_R, RCTLT_A, RSFTT_E, COMBO_END};
-const uint16_t PROGMEM r_rom_spa_combo[]  = {RAI_A2, RALTT_H, TD_COMM, TD_DOT, COMBO_END};
+const uint16_t PROGMEM r_rom_spa_combo[]  = {RAI_A2, ALT_MAG, TD_COMM, TD_DOT, COMBO_END};
 const uint16_t PROGMEM r_rom_ent_combo[]  = {RAI_A2, RCTLT_A, RSFTT_E, COMBO_END};
 const uint16_t PROGMEM r_rom_bsp_combo[]  = {KC_O, KC_U, COMBO_END};
 const uint16_t PROGMEM r_rom_tab_combo[]  = {RAI_A2, KC_O, KC_U, COMBO_END};
 const uint16_t PROGMEM r_rom_sco_combo[]  = {TD_COMM, TD_DOT, COMBO_END};
-const uint16_t PROGMEM r_rom_sent_combo[] = {RALTT_H, TD_COMM, TD_DOT, COMBO_END};
+const uint16_t PROGMEM r_rom_sent_combo[] = {ALT_MAG, TD_COMM, TD_DOT, COMBO_END};
 
 // Alpha 2
 
