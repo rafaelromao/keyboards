@@ -1,9 +1,9 @@
 # Copyright (c) 2021 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_AELLOPOS
+if SHIELD_ROMMANA
 
 config ZMK_KEYBOARD_NAME
-    default "Aellopos"
+    default "Rommana"
 
 endif

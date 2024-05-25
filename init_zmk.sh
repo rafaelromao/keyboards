@@ -59,10 +59,10 @@ archive_zen_right="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/corneish_
 alias build_zen_both_sides="cd ${ZMK_HOME} && ${build_zen_left} && ${archive_zen_left} && ${build_zen_right} && ${archive_zen_right} && cd ${KEYBOARD_HOME}"
 alias build_zen="cd ${ZMK_HOME} && ${build_zen_left} && ${archive_zen_left} && cd ${KEYBOARD_HOME}"
 
-echo "Creating Aellopos build alias..."
-build_aellopos_unibody="west build -s app -b nice_nano_v2 --build-dir build/aellopos -- -DSHIELD='aellopos' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/boards/handwired"
-archive_aellopos_unibody="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/aellopos/zephyr/zmk.uf2 ] && mv build/aellopos/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/aellopos-zmk.uf2"
-alias build_aellopos="cd ${ZMK_HOME} && ${build_aellopos_unibody} && ${archive_aellopos_unibody} && cd $KEYBOARD_HOME"
+echo "Creating Rommana build alias..."
+build_rommana_unibody="west build -s app -b seeeduino_xiao_rp2040 --build-dir build/rommana -- -DSHIELD='rommana' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/boards/handwired"
+archive_rommana_unibody="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/rommana/zephyr/zmk.uf2 ] && mv build/rommana/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/rommana-zmk.uf2"
+alias build_rommana="cd ${ZMK_HOME} && ${build_rommana_unibody} && ${archive_rommana_unibody} && cd $KEYBOARD_HOME"
 
 echo "Creating Cygnus alias..."
 build_cygnus_left="west build -s app -b nice_nano_v2 --build-dir build/cygnus_left -- -DSHIELD='cygnus_left' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/boards/handwired"

@@ -37,11 +37,6 @@ __attribute__((weak)) td_state_t dance_state(tap_dance_state_t *state) {
         return TD_UNKNOWN;
 }
 
-bool is_shifted(void) {
-    return get_mods() & MOD_MASK_SHIFT || get_oneshot_mods() & MOD_MASK_SHIFT ||
-           get_oneshot_locked_mods() & MOD_MASK_SHIFT;
-}
-
 void td_open_parentesis(tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {

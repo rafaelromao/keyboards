@@ -22,10 +22,11 @@ The following pages explain how this layout works and which features are impleme
 
 - [Smart Modifiers](docs/modifiers.md)
 - [Smart Thumb Keys](docs/base.md#smart-thumb-keys)
-- [Smart Repeat / Magic Key](docs/base.md#smart-thumb-keys)
 - [Smart Shift / Caps Word](docs/base.md#smart-thumb-keys)
 - [Smart Cases](docs/modifiers.md#smart-cases)
 - [Sentence Case](docs/base.md#sentence-case)
+- [Repeat Key](docs/base.md#repeat-key)
+- [Magic Key](docs/base.md#magic-key)
 - [Shortcut Combos](docs/base.md#base-layer-combos)
 - [Numpad Layer](docs/symbols.md#numpad)
 - [NumWord](docs/symbols.md#numword)
@@ -47,14 +48,10 @@ This layout was tested with the keyboards listed below, but can be easily adapte
 
 ### QMK
 
-The reference implementation is done in QMK, so it has all features supported.
+The reference implementation was made in QMK, but it is kept here for historical purposes only. It will not receive evolutive maintenance and might not be in sync with the documentation. To see the lastest version of the docs that is in sync with the implementation, check the branch called `last_qmk`, or the tags `v0.36*`.
 
-The QMK version recommended for this keymap is 0.22.10.
+The keyboards that are still kept in QMK are the ones listed below:
 
-The tested boards are listed below:
-
-- [handwired/rafaelromao/fauxberry](src/qmk/keyboards/handwired/rafaelromao/fauxberry/readme.md)
-- [handwired/rafaelromao/rommana](src/qmk/keyboards/handwired/rafaelromao/rommana/readme.md)
 - [kprepublic/bm40hsrgb](src/qmk/keyboards/kprepublic/bm40hsrgb/keymaps/rafaelromao/readme.md)
 - [xiudi/xd75](src/qmk/keyboards/xiudi/xd75/keymaps/rafaelromao/readme.md)
 
@@ -73,8 +70,9 @@ The zmk version used for this keymap is the one available in [this fork](https:/
 
 This fork is also updated to Zephyr 3.5.
 
-The tested boards are listed below:
+The keyboards that run the ZMK implementation of this Keymap are listed below:
 
+- [Rommana](src/zmk/boards/handwired/boards/shields/rommana/readme.md)
 - [Corne-ish Zen](src/zmk/boards/lowprokb.ca/corneish-zen/readme.md)
 - [Dactyl Cygnus](src/zmk/boards/handwired/boards/shields/cygnus/readme.md)
 
@@ -97,6 +95,7 @@ After [installing ZMK](https://zmk.dev/docs/development/setup) and running the i
 Most features implemented here were based on the work referenced below.
 
 ### Layouts
+- [Romak](https://github.com/rafaelromao/romak)
 - [Colemak](https://colemak.org)
 - [BEAKL](https://ieants.cc/beakl)
 - [Hands Down](https://sites.google.com/alanreiser.com/handsdown/home)

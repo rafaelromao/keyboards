@@ -23,3 +23,4 @@ void check_repeat_key_timeout(void);
 void clear_repeat_key(void);
 
 process_record_result_t process_smart_thumbs(uint16_t keycode, keyrecord_t *record);
+void                    activate_repeat_or_magic_key(bool isMagic);

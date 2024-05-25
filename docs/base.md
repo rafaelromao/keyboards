@@ -11,19 +11,22 @@
 - The Alpha1 layer is the base layer, which contains the most common alphas of Portuguese and English, plus comma and period. It is extended by the Alpha2 layer.
 
 ### Secondary Alpha Layer
-- The Alpha2 layer has common Portuguese accented letters, readily available with a single tap on the right inner thumb key (OS Accents), making them as easy to type as shifted letters, which are available with a single tap on the right outer thumb key (OS Shift).
-- There are dedicated accent keys for à á â é ê ó ô ú í and ç, as well as a dead key for ~, which is all that is needed for Portuguese.
-- This layer also gives access to comma, dot and replicated versions of q, y, w, v, z and j, that are not available in the base layer, for the 24 keys variant, as well as an standalone apostrophe character in the thumb.
+- The Alpha2 layer has common Portuguese accentuated letters, readily available with a single tap on the right inner thumb key, along with the alphas that are missing in the base layer.
+- There are dedicated keys for `à` `á` `â` `é` `ê` `ó` `ô` `ú` `í` and `ç`, as well, which is all that is needed for Portuguese.
 - This two alpha layers approach is based on [Ben Vallack's keymap](https://youtu.be/5RN_4PQ0j1A?si=f9OkOvNdL3jE4seR).
+
+#### Ç Extension
+- There is an extension to the Secondary Alpha Layer, which I call *Ç Extension*. It activates an one-shot layer just after `ç` is typed, to allow easy access to the vowels and accentuated vowels that are commonly seen after `ç`, in Portuguese, so that typing common bigrams like `çã` and `çõ` will not require two consecutive activations of the Secondary Alpha Layer. The characters `a`, `ã`, `â`, `o`, `ô`, `õ`, `u` and `ú` are available in this layer, while `e`, `é`, `ê` and `í` are not, since they will never appear after `ç`. The position of these characters in the secondary alpha layer is also thought to support this.
+
+### Magic Key
+- The Bottom Row Index Key, in the right hand, is programmed to act as a Magic Key. It will behave like `H` after most consonants, like `V` after vowels or accentuated vowels, like `Y` after `B`, `M`, `D` and `F`, and will reactivate the Secondary Alpha Layer when tapped after a consonant from the Secondary Alpha Layer. To see more about that, check the [Magic Romak](https://github.com/rafaelromao/romak/tree/main?tab=readme-ov-file#magic-romak) page.
 
 ## Smart Thumb Keys
 - The Smart Thumb keys in this layout change behavior according to the context (active layer, active modifiers and more).
 - The four thumb keys control layer transitions, when held (Navigation, Lower, Raise and Media).
 
-### Smart Repeat / Magic Key
-- The outer left thumb key repeats the last key by default (Repeat Key), but outputs an alternate result for keys that do not worth repeating (Alternate Repeat Key).
-- When tapped in the secondary alpha layer, this key outputs alternate results by default (Magic Key), but repeats the key when there is no predefined alternate result.
-  - See more about that [here](https://github.com/rafaelromao/romak/tree/main?tab=readme-ov-file#magic-romak).
+### Repeat Key
+- The outer left thumb key repeats the last key by default, but outputs an alternate result for keys that do not worth repeating. For `Ç`, the repeat key reactivates the Secondary Alpha Layer, which makes it easier to type `çã` and `çõ`.
 - Holding this key in the base layer will activate the [Navigation](../navigation.md) layer.
 - Tapping or holding this key in the [Raise](../symbols.md) layer acts as a normal Repeat Key, which can be used to spam or to repeat shortcuts. 
 

@@ -108,7 +108,6 @@ enum {
     // Begin macros used to write text
     STR_MACRO_START,
 
-    MC_NG, MC_EY, MC_HY, MC_OU, MC_COM, MC_AO, MC_ES, MC_OES, MC_FIX_I,
     MC_BTIC, MC_DQUO, MC_SQUO, MC_CIRC, MC_TILD, MC_ORDO, MC_ORDA,
     MC_EUR, MC_LTE, MC_GTE, MC_DDS, MC_ENT, MC_TAB, MC_ESC, MC_ESCC, 
     TG_NUMC, MC_EXLM, MC_QUES, MC_ESAV, MC_SENT, MC_DEG, MC_DELW, MC_LY,
@@ -122,7 +121,7 @@ enum {
     // Start macros for accented letters
     ACCENT_MACRO_START,
 
-    MC_GV_A, MC_CR_A, MC_SQ_A, MC_QU,
+    MC_GV_A, MC_CR_A, MC_SQ_A, MC_QU, MC_AH,
     MC_SQ_U, MC_CR_O, MC_SQ_O, MC_SQ_I,
     MC_CR_E, MC_SQ_C, MC_SQ_E, MC_TL_A, MC_TL_O,
 
@@ -161,8 +160,9 @@ enum {
 #define RCTLT_A RCTL_T(KC_A)
 
 #define LALTT_P LALT_T(KC_P)
-#define RALTT_H RALT_T(KC_H)
 #define RALTT_F RALT_T(KC_F)
+
+#define ALT_MAG RALT_T(KC_H)
 
 #define LGUIT_T LGUI_T(KC_T)
 #define RGUIT_R RGUI_T(KC_R)
@@ -178,8 +178,8 @@ enum {
 
 #define NAV_F12 LT(_NAVIGATION, KC_F12)
 #define NAV_AT  LT(_NAVIGATION, KC_AT)
-#define NAV_STI LT(_NAVIGATION, MC_STIN) // Hold behavior is implemented in intercepted code
-#define NAV_MAG LT(_NAVIGATION, MAGIC)
+#define NAV_STI LT(_NAVIGATION, MC_STIN) // Tap behavior is implemented in intercepted code
+#define NAV_Q   LT(_NAVIGATION, KC_Q)
 #define NAV_REP LT(_NAVIGATION, REPEAT)
 #define FNA_REP LT(_FIXED_NAV, REPEAT)
 
@@ -216,5 +216,6 @@ uint16_t extract_tapping_keycode(uint16_t keycode);
 bool is_string_macro_keycode(uint16_t keycode);
 bool is_shift_macro_keycode(uint16_t keycode);
 bool is_accent_macro_keycode(uint16_t keycode);
+bool is_shifted(void);
 
 // clang-format on

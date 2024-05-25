@@ -52,7 +52,7 @@ bool check_disable_oneshot(uint16_t keycode) {
         case MED_CAS:
         case NAV_REP:
         case FNA_REP:
-        case NAV_MAG:
+        case ALT_MAG:
         case OS_LSFT:
             return false;
         default:
@@ -106,7 +106,7 @@ bool remember_last_key_user(uint16_t keycode, keyrecord_t *record, uint8_t *reme
         case MED_CAS:
         case NAV_REP:
         case FNA_REP:
-        case NAV_MAG:
+        case ALT_MAG:
             return false;
     }
     custom_repeat_key_timer = timer_read();
@@ -126,39 +126,17 @@ void action_tap(uint16_t keycode) {
     action_tapping_process(make_keyevent(false, keycode));
 }
 
-bool process_alternate_repeat_for_macros(uint16_t keycode) {
-    uint16_t next_key = keycode;
-    switch (keycode) {
-        case MC_GV_A:
-            next_key = MC_QU;
-            break;
-        case MC_SQ_A:
-        case MC_SQ_E:
-        case MC_SQ_I:
-        case MC_SQ_O:
-        case MC_SQ_U:
-            next_key = KC_V;
-            break;
-        case MC_CR_A:
-            next_key = KC_N;
-            break;
-        case MC_CR_E:
-            next_key = KC_E;
-            break;
-        case MC_CR_O:
-            next_key = KC_O;
-            break;
-        case MC_TL_A:
-            next_key = KC_O;
-            break;
-        case MC_TL_O:
-            next_key = MC_ES;
+void process_repeat(uint16_t keycode) {
+    uint16_t next_key = extract_tapping_keycode(keycode);
+    switch (next_key) {
+        case KC_H:
+            next_key = MC_AH;
             break;
         case MC_SQ_C:
-            next_key = MC_AO;
+            next_key = OSL_A2;
             break;
         case MC_QU:
-            next_key = KC_E;
+            next_key = MC_CR_E;
             break;
         case MC_SQUO:
             next_key = KC_V;
@@ -166,207 +144,71 @@ bool process_alternate_repeat_for_macros(uint16_t keycode) {
     }
     if (next_key != keycode) {
         action_tap(next_key);
-        return true;
+    } else {
+        action_tap(QK_REP);
     }
-    return false;
 }
 
-bool process_alternate_repeat_for_alphas(uint16_t keycode) {
-    uint16_t next_key = keycode;
-    switch (keycode) {
-        case KC_A:
-            next_key = KC_V;
+void process_magic(uint16_t keycode) {
+    uint16_t next_key = extract_tapping_keycode(keycode);
+    switch (next_key) {
+        case MC_TL_A:
+        case MC_TL_O:
+        case MC_CR_A:
+            next_key = KC_NO;
             break;
-        case KC_H:
-            next_key = MC_OES;
-            break;
-        case KC_I:
-            next_key = MC_NG;
-            break;
-        case KC_J:
-            next_key = MC_SQ_A;
-            break;
-        case KC_K:
-            next_key = MC_EY;
-            break;
-        case KC_U:
-            next_key = KC_Y;
-            break;
-        case KC_V:
-        case KC_X:
-            next_key = MC_SQ_A;
-            break;
-        case KC_W:
-            next_key = MC_HY;
-            break;
-        case KC_Y:
-            next_key = MC_OU;
-            break;
-        case KC_DOT:
-            next_key = MC_COM;
-            break;
-    }
-    if (next_key != keycode) {
-        action_tap(next_key);
-        return true;
-    }
-    return false;
-}
-
-void process_repeat(uint16_t keycode) {
-    uint16_t key = extract_tapping_keycode(keycode);
-    if (!custom_repeat_key_expired()) {
-        if (process_alternate_repeat_for_macros(key)) {
-            return;
-        }
-        if (process_alternate_repeat_for_alphas(key)) {
-            return;
-        }
-    }
-    action_tap(QK_REP);
-}
-
-bool process_magic_for_macros(uint16_t keycode) {
-    uint16_t next_key = keycode;
-    switch (keycode) {
         case MC_GV_A:
             next_key = MC_QU;
             break;
-        case MC_SQ_E:
-            next_key = KC_U;
-            break;
-        case MC_SQ_A:
-        case MC_SQ_O:
-            next_key = KC_X;
-            break;
-        case MC_SQ_I:
-        case MC_SQ_U:
-            next_key = KC_Z;
-            break;
-        case MC_CR_A:
-            next_key = KC_M;
-            break;
-        case MC_CR_E:
-            next_key = KC_X;
-            break;
-        case MC_CR_O:
-            next_key = KC_V;
-            break;
-        case MC_TL_A:
-            next_key = KC_O;
-            break;
-        case MC_TL_O:
-            next_key = KC_E;
-            break;
-        case MC_SQ_C:
-            next_key = MC_OES;
-            break;
         case MC_QU:
-            next_key = MC_SQ_I;
-            break;
-    }
-    if (next_key != keycode) {
-        action_tap(next_key);
-        return true;
-    }
-    return false;
-}
-
-bool process_magic_for_alphas(uint16_t keycode) {
-    uint16_t next_key = keycode;
-    switch (keycode) {
-        case KC_A:
-            next_key = KC_O;
-            break;
-        case KC_B:
-            next_key = KC_Y;
-            break;
-        case KC_C:
-            next_key = KC_S;
-            break;
-        case KC_D:
-            next_key = KC_Y;
-            break;
-        case KC_E:
-            next_key = KC_U;
-            break;
-        case KC_F:
-            next_key = KC_Y;
-            break;
-        case KC_H:
-            next_key = KC_R;
-            break;
-        case KC_I:
-            next_key = MC_FIX_I;
-            break;
-        case KC_J:
-            next_key = MC_TL_A;
-            break;
-        case KC_K:
-            next_key = KC_W;
-            break;
-        case KC_L:
-            next_key = KC_H;
-            break;
-        case KC_M:
-            next_key = KC_S;
-            break;
-        case KC_N:
-            next_key = KC_F;
-            break;
-        case KC_P:
-            next_key = KC_T;
-            break;
-        case KC_R:
-            next_key = MC_LY;
-            break;
-        case KC_S:
-            next_key = KC_C;
-            break;
-        case KC_T:
-            next_key = KC_W;
-            break;
-        case KC_U:
-            next_key = KC_E;
-            break;
-        case KC_V:
-        case KC_X:
-            next_key = MC_SQ_I;
-            break;
-        case KC_W:
-            next_key = KC_K;
+            next_key = OSL_A2;
             break;
         case KC_DOT:
             next_key = KC_SLSH;
             break;
+        case KC_A:
+        case KC_E:
+        case KC_I:
+        case KC_O:
+        case KC_U:
+        case MC_SQ_E:
+        case MC_SQ_A:
+        case MC_SQ_O:
+        case MC_SQ_I:
+        case MC_SQ_U:
+        case MC_CR_E:
+        case MC_CR_O:
+        case MC_SQUO:
+            next_key = KC_V;
+            break;
+        case KC_B:
+        case KC_D:
+        case KC_M:
+        case KC_F:
+            next_key = KC_Y;
+            break;
+        case MC_SQ_C:
+        case KC_H:
+        case KC_J:
+        case KC_K:
+        case KC_V:
+        case KC_X:
+        case KC_Z:
+            next_key = OSL_A2;
+            break;
     }
-    if (next_key != keycode) {
+    if (next_key != keycode && next_key != extract_tapping_keycode(keycode)) {
         action_tap(next_key);
-        return true;
+    } else {
+        action_tap(KC_H);
     }
-    return false;
 }
 
-void process_magic(uint16_t keycode) {
-    uint16_t key = extract_tapping_keycode(keycode);
-    if (process_magic_for_macros(key)) {
-        return;
-    }
-    if (process_magic_for_alphas(key)) {
-        return;
-    }
-    action_tap(QK_REP);
-}
-
-void activate_repeat_or_magic_key(uint16_t keycode) {
-    switch (keycode) {
-        case NAV_MAG:
-            process_magic(get_last_keycode());
-            break;
-        case NAV_REP:
-        case FNA_REP:
-            process_repeat(get_last_keycode());
-            break;
+void activate_repeat_or_magic_key(bool isMagic) {
+    if (isMagic) {
+        process_magic(get_last_keycode());
+    } else {
+        process_repeat(get_last_keycode());
     }
 }
 
@@ -412,10 +254,9 @@ process_record_result_t process_smart_thumbs(uint16_t keycode, keyrecord_t *reco
             }
         case NAV_REP:
         case FNA_REP:
-        case NAV_MAG:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
-                    activate_repeat_or_magic_key(keycode);
+                    activate_repeat_or_magic_key(false);
                     return PROCESS_RECORD_RETURN_FALSE;
                 }
             }
