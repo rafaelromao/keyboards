@@ -22,10 +22,11 @@ The following pages explain how this layout works and which features are impleme
 
 - [Smart Modifiers](docs/modifiers.md)
 - [Smart Thumb Keys](docs/base.md#smart-thumb-keys)
-- [Smart Repeat / Magic Key](docs/base.md#smart-thumb-keys)
 - [Smart Shift / Caps Word](docs/base.md#smart-thumb-keys)
 - [Smart Cases](docs/modifiers.md#smart-cases)
 - [Sentence Case](docs/base.md#sentence-case)
+- [Repeat Key](docs/base.md#repeat-key)
+- [Magic Key](docs/base.md#magic-key)
 - [Shortcut Combos](docs/base.md#base-layer-combos)
 - [Numpad Layer](docs/symbols.md#numpad)
 - [NumWord](docs/symbols.md#numword)
@@ -94,6 +95,7 @@ After [installing ZMK](https://zmk.dev/docs/development/setup) and running the i
 Most features implemented here were based on the work referenced below.
 
 ### Layouts
+- [Romak](https://github.com/rafaelromao/romak)
 - [Colemak](https://colemak.org)
 - [BEAKL](https://ieants.cc/beakl)
 - [Hands Down](https://sites.google.com/alanreiser.com/handsdown/home)
