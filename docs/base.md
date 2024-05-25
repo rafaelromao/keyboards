@@ -15,9 +15,6 @@
 - There are dedicated keys for `à` `á` `â` `é` `ê` `ó` `ô` `ú` `í` and `ç`, as well, which is all that is needed for Portuguese.
 - This two alpha layers approach is based on [Ben Vallack's keymap](https://youtu.be/5RN_4PQ0j1A?si=f9OkOvNdL3jE4seR).
 
-#### Ç Extension
-- There is an extension to the Secondary Alpha Layer, which I call *Ç Extension*. It activates an one-shot layer just after `ç` is typed, to allow easy access to the vowels and accentuated vowels that are commonly seen after `ç`, in Portuguese, so that typing common bigrams like `çã` and `çõ` will not require two consecutive activations of the Secondary Alpha Layer. The characters `a`, `ã`, `â`, `o`, `ô`, `õ`, `u` and `ú` are available in this layer, while `e`, `é`, `ê` and `í` are not, since they will never appear after `ç`. The position of these characters in the secondary alpha layer is also thought to support this.
-
 ### Magic Key
 - The Bottom Row Index Key, in the right hand, is programmed to act as a Magic Key. It will behave like `H` after most consonants, like `V` after vowels or accentuated vowels, like `Y` after `B`, `M`, `D` and `F`, and will reactivate the Secondary Alpha Layer when tapped after a consonant from the Secondary Alpha Layer. To see more about that, check the [Magic Romak](https://github.com/rafaelromao/romak/tree/main?tab=readme-ov-file#magic-romak) page.
 
