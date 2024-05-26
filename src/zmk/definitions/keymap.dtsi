@@ -155,16 +155,16 @@
                 shortcuts_left_layer {
                      display-name = "SHORTCUT";
                      bindings = <
-   &none               &mm_close_tab_esc   &mm_refresh_z0      &mm_preview         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &none    
-   &none               &th_zh_b LSHFT 0    &mm_zh_f            &mm_tabs            &none               &none               &mc_seln            &kp DOWN            &mt RSHFT UP        &mo SYSTEM
-   &none               &mm_wt_b            &mm_wt_f            &mm_calc            &none               &none               &mc_joinwords       &td_dynmacro        &mc_sleep           &trans
+   &none               &mc_esc_cancel      &mc_files           &mm_preview         &none               &none               &mc_selw            &mc_enter_accept    &mc_esc_cancel             &none    
+   &none               &mc_app_switcher    &mm_zh_f            &mm_tabs            &none               &none               &mc_seln            &mm_down_shifttab   &mm_up_tab          &mo SYSTEM
+   &none               &mm_wt_b            &mm_wt_f            &mm_calc            &none               &none               &td_dynmacro        &mc_app_quit        &mc_sleep           &trans
                                            &trans              &mst NAV CODING     &mst NMODS NMODS    &lt CODING SPACE    &mst NAV NAV_F      &trans
                            >;
                 };
                 shortcuts_right_layer {
                      display-name = "SHORTCUT";
                      bindings = <
-   &none               &mm_close_tab_esc   &mm_refresh_z0      &mm_preview         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &none    
+   &none               &mc_esc_cancel      &mm_refresh_z0      &mm_preview         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &none    
    &mo SYSTEM          &th_zh_b LSHFT 0    &mm_zh_f            &mm_tabs            &none               &none               &mc_seln            &kp DOWN            &mt RSHFT UP        &none
    &trans              &mm_wt_b            &mm_wt_f            &mm_calc            &none               &none               &mc_joinwords       &td_dynmacro        &mc_sleep           &none
                                            &trans              &mst NAV CODING     &mst NMODS NMODS    &lt CODING SPACE    &mst NAV NAV_F      &trans

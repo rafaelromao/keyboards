@@ -23,6 +23,14 @@
             mods = <(MOD_LSFT|MOD_RSFT)>; \
         };
 
+    #define MORPHED_SHORTCUT(NAME, UNMORPHED, MORPHED, MODS) \
+        NAME: NAME { \
+            compatible = "zmk,behavior-mod-morph"; \
+            #binding-cells = <0>; \
+            bindings = <UNMORPHED>, <MORPHED>; \
+            mods = <(MODS)>; \
+        };
+
     #define MODTAP_SHORTCUT(NAME, BINDINGS) \
          NAME: NAME { \
             compatible = "zmk,behavior-hold-tap"; \
@@ -175,6 +183,17 @@
         SHORTCUT(mc_close_tab,              &macro_tap &kp LG(W))
         SHORTCUT(mc_esc,                    &macro_tap &kp ESC)
         SHIFTED_SHORTCUT(mm_close_tab_esc,  &mc_esc, &mc_close_tab)
+
+        MORPHED_SHORTCUT(mm_down_shifttab,  &mc_down, &mc_shift_tab, MOD_LGUI)
+        
+        SHORTCUT(mc_up,                     &macro_tap &kp UP)
+        SHORTCUT(mc_tab,                    &macro_tap &kp TAB)
+        MORPHED_SHORTCUT(mm_up_tab,         &mc_up, &mc_tab, MOD_LGUI)
+
+        SHORTCUT(mc_esc_cancel,             &macro_tap &kp ESC &macro_release &kp LGUI)
+        SHORTCUT(mc_app_switcher,           &macro_press &kp LGUI &macro_tap &kp TAB)
+        SHORTCUT(mc_enter_accept,           &macro_tap &kp ENTER &macro_release &kp LGUI)
+        SHORTCUT(mc_app_quit,               &macro_tap &kp Q)
 
         SHORTCUT(mc_comment,                &macro_tap &kp LG(SLASH))
         SHORTCUT(mc_escc,                   &macro_tap &kp ESC &to ALPHA1)
