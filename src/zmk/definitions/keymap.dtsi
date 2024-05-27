@@ -156,8 +156,8 @@
                      display-name = "SHORTCUT";
                      bindings = <
    &none               &kp ESC             &mc_files           &mc_preview         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &none    
-   &none               &ht_refresh RGUI 0  &mc_app_swapper     &th_tabs LGUI 0     &none               &none               &mc_seln            &mm_down_minus      &mm_up_plus         &mo SYSTEM
-   &none               &mc_term            &mc_clip            &mc_calc            &none               &none               &td_dynmacro        &mm_lock_zoom0     &kp C_SLEEP         &trans
+   &none               &kp RGUI            &mc_app_swapper     &th_tabs LGUI 0     &none               &none               &mc_seln            &mm_down_minus      &mm_up_plus         &mo SYSTEM
+   &none               &mc_term            &mc_clip            &mc_calc            &none               &none               &td_dynmacro        &ht_ref_clo_z0 0 0  &mc_sleep           &trans
                                            &trans              &mst CODING CODING  &mst NMODS NMODS    &lt CODING SPACE    &mst NAV NAV_F      &trans
                            >;
                 };
@@ -165,8 +165,8 @@
                      display-name = "SHORTCUT";
                      bindings = <
    &none               &kp ESC             &mc_files           &mc_preview         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &none    
-   &mo SYSTEM          &ht_refresh RGUI 0  &mc_app_swapper     &th_tabs LGUI 0     &none               &none               &mc_seln            &mm_down_minus      &mm_up_plus         &none
-   &none               &mc_term            &mc_clip            &mc_calc            &none               &none               &td_dynmacro        &mm_lock_zoom0     &kp C_SLEEP         &trans
+   &mo SYSTEM          &kp RGUI            &mc_app_swapper     &th_tabs LGUI 0     &none               &none               &mc_seln            &mm_down_minus      &mm_up_plus         &none
+   &none               &mc_term            &mc_clip            &mc_calc            &none               &none               &td_dynmacro        &ht_ref_clo_z0 0 0  &mc_sleep           &trans
                                            &trans              &mst CODING CODING  &mst NMODS NMODS    &lt CODING SPACE    &mst NAV NAV_F      &trans
                            >;
                 };
