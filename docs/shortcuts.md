@@ -8,18 +8,9 @@
 - There are also home row shift in the both sides to allow access to different actions when shift is active.
 
 ### Swapper
-- Swapper is a set of macros that allows easy swap between applications, tabs, navigation history and zoom levels.
-- These macros will work according to the OS selected in the System layer.
-- The implementation was based on [Callums's](https://github.com/callum-oakley/qmk_firmware/tree/master/users/callum) implementation, but extended to support additional features.
-
-#### Applications and Tabs
-- The first pair swaps back and forth between applications.
-- If shift is active in the first tap, they navigate between the current application tabs instead.
-
-#### History and Zoom
-- The second pair will decrease or increase zoom.
-- If shift is active in the first tap, they will navigate in the browser history instead.
-- If shift is active when tapping both keys, they will clear cache and refresh the current browser tab.
+- Swapper is a smart sub layer that makes it easier to navigate between the list of open applications.  
+- Tapping the Swapper key will swap to the most recent app. Holding it will display the list of apps and the up and down arrow keys can be used to navigate.
+- The idea was based on [Callums's](https://github.com/callum-oakley/qmk_firmware/tree/master/users/callum) swapper feature.
 
 ### Select Word and Select Line
 - These two macros selects the current word or line in the first press and extend the selection to the next ones in consecutive presses.
