@@ -16,96 +16,26 @@
 
 / {
     swappers {
+        sw_win_s: sw_win_s {
+            compatible = "zmk,behavior-tri-state";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&none>, <&kt LGUI>;
+            ignored-key-positions = <RHM RHR RBM>;
+            ignored-layers = <SHORTS_L SHORTS_R SHORTCUTS_EXT>;
+        };
+        sw_win_f: sw_win_f {
+            wait-ms = <0>;
+            tap-ms = <0>;
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp TAB>;
+        };
         sw_win_b: sw_win_b {
             wait-ms = <0>;
             tap-ms = <0>;
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap &kp LS(TAB)>;
-        };
-        sw_win_f: sw_win_f {
-            compatible = "zmk,behavior-tri-state";
-            #binding-cells = <0>;
-            bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
-            ignored-key-positions = <LBM LBR>;
-            ignored-layers = <SHORTS_L SHORTS_R>;
-        };
-        sw_tab_b: sw_tab_b {
-            wait-ms = <0>;
-            tap-ms = <0>;
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp LS(TAB)>;
-        };
-        sw_tab_f: sw_tab_f {
-            compatible = "zmk,behavior-tri-state";
-            #binding-cells = <0>;
-            bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
-            ignored-key-positions = <LBM LBR>;
-            ignored-layers = <SHORTS_L SHORTS_R>;
-        };
-        mm_wt_b: mm_wt_b {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&sw_win_b>, <&sw_tab_b>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        mm_wt_f: mm_wt_f {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&sw_win_f>, <&sw_tab_f>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        sw_zoo_b: sw_zoo_b {
-            wait-ms = <0>;
-            tap-ms = <0>;
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &mc_zout>;
-        };
-        sw_zoo_f: sw_zoo_f {
-            wait-ms = <0>;
-            tap-ms = <0>;
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &mc_zin>;
-        };
-        sw_his_b: sw_his_b {
-            compatible = "zmk,behavior-tri-state";
-            #binding-cells = <0>;
-            bindings = <&kt LGUI>, <&kp LBKT>, <&kt LGUI>;
-            ignored-key-positions = <LHM LHR>;
-            ignored-layers = <SHORTS_L SHORTS_R>;
-        };
-        sw_his_f: sw_his_f {
-            wait-ms = <0>;
-            tap-ms = <0>;
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp RBKT>;
-        };
-        mm_zh_b: mm_zh_b {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&sw_zoo_b>, <&sw_his_b>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        mm_zh_f: mm_zh_f {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&sw_zoo_f>, <&sw_his_f>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        th_zh_b: th_zh_b {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <QUICK_TAP_TERM>;
-            require-prior-idle-ms = <QUICK_TAP_TERM>;
-            bindings = <&kp>, <&mm_zh_b>;
         };
     };
 };

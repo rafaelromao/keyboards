@@ -95,8 +95,17 @@
    &trans              &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &none
    &lt SHORTS_L LS(D)  &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTS_R LS(I) 
    &trans              &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic RALT 0    &th_comma 0 0       &th_dot 0 0         &trans
-                                           &trans              &trans              &trans              &msl RAISE CASE_A2  &th_cancel MEDIA 0    &trans
+                                           &trans              &trans              &trans              &msl RAISE CASE_A2  &th_cancel MEDIA 0  &trans
                         >;
+                };
+                capslock_layer {
+                     display-name = "CASE";
+                     bindings = <
+   &trans              &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &none
+   &lt SHORTS_L LS(D)  &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTS_R LS(I) 
+   &trans              &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic RALT 0    &th_comma 0 0       &th_dot 0 0         &trans
+                                           &trans              &trans              &th_sp_caps LOWER 0 &msl RAISE CASE_A2  &th_cancel MEDIA 0  &trans
+                           >;
                 };
                 lower_layer {
                      display-name = "LOWER";
@@ -128,9 +137,9 @@
                 sentence_case_ext1_layer {
                      display-name = "CASE";
                      bindings = <
-   &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &kp LS(Y) 
-   &kp LS(D)           &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &kp LS(I) 
-   &trans              &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic RALT 0    &th_comma 0 0       &th_dot 0 0         &trans
+   &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y) 
+   &kp RS(D)           &mt LSHFT RS(N)     &mt LCTRL RS(S)     &mt LGUI RS(T)      &kp RS(W)           &kp RS(Z)           &mt RGUI RS(R)      &mt RCTRL RS(A)     &mt RSHFT RS(E)     &kp RS(I) 
+   &trans              &mt RALT RS(F)      &kp RS(C)           &mt LALT RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic RALT 0    &th_comma 0 0       &th_dot 0 0         &trans
                                            &trans              &th_cancel NAV 0    &th_sp_ns SYMBOLS 0 &msl SYMBOLS SEN_E2 &th_nsen MEDIA 0    &trans
                            >;
                 };
@@ -155,34 +164,34 @@
                 shortcuts_left_layer {
                      display-name = "SHORTCUT";
                      bindings = <
-   &none               &mm_close_tab_esc   &mm_refresh_z0      &mm_preview         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &none    
-   &none               &th_zh_b LSHFT 0    &mm_zh_f            &mm_tabs            &none               &none               &mc_seln            &kp DOWN            &mt RSHFT UP        &mo SYSTEM
-   &none               &mm_wt_b            &mm_wt_f            &mm_calc            &none               &none               &mc_joinwords       &td_dynmacro        &mc_sleep           &trans
-                                           &trans              &mst NAV CODING     &mst NMODS NMODS    &lt CODING SPACE    &mst NAV NAV_F      &trans
+   &none               &kp ESC             &mc_files           &mc_preview         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &none    
+   &none               &kp RGUI            &mc_app_swapper     &th_tabs LGUI 0     &none               &none               &mc_seln            &mm_down_minus      &mm_up_plus         &mo SYSTEM
+   &none               &mc_term            &mc_clip            &mc_calc            &none               &none               &td_dynmacro        &ht_ref_clo_z0 0 0  &mc_sleep           &trans
+                                           &trans              &mst CODING CODING  &mst NMODS NMODS    &lt CODING SPACE    &mst NAV NAV_F      &trans
                            >;
                 };
                 shortcuts_right_layer {
                      display-name = "SHORTCUT";
                      bindings = <
-   &none               &mm_close_tab_esc   &mm_refresh_z0      &mm_preview         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &none    
-   &mo SYSTEM          &th_zh_b LSHFT 0    &mm_zh_f            &mm_tabs            &none               &none               &mc_seln            &kp DOWN            &mt RSHFT UP        &none
-   &trans              &mm_wt_b            &mm_wt_f            &mm_calc            &none               &none               &mc_joinwords       &td_dynmacro        &mc_sleep           &none
-                                           &trans              &mst NAV CODING     &mst NMODS NMODS    &lt CODING SPACE    &mst NAV NAV_F      &trans
+   &none               &kp ESC             &mc_files           &mc_preview         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &none    
+   &mo SYSTEM          &kp RGUI            &mc_app_swapper     &th_tabs LGUI 0     &none               &none               &mc_seln            &mm_down_minus      &mm_up_plus         &none
+   &none               &mc_term            &mc_clip            &mc_calc            &none               &none               &td_dynmacro        &ht_ref_clo_z0 0 0  &mc_sleep           &trans
+                                           &trans              &mst CODING CODING  &mst NMODS NMODS    &lt CODING SPACE    &mst NAV NAV_F      &trans
                            >;
                 };
                 shortcuts_extension_layer {
                      display-name = "SHORTCUT";
                      bindings = <
    &trans              &trans              &trans              &trans              &trans              &trans              &mc_ext_sel         &trans              &trans              &trans    
-   &trans              &trans              &trans              &trans              &trans              &trans              &th_ext_sel LGUI 0  &trans              &trans              &trans  
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
+   &trans              &trans              &trans              &trans              &trans              &trans              &th_ext_sel LGUI 0  &sw_win_b           &sw_win_f           &trans  
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &mc_app_quit        &trans              &trans 
                                            &trans              &trans              &trans              &trans              &trans              &trans
                            >;
                 };
                 coding_layer {
                      display-name = "CODING";
                      bindings = <
-   &none               &mm_close_tab_esc   &mm_break           &mm_build           &none               &none               &mm_typematch       &kp ENTER           &kp ESC             &none    
+   &none               &kp ESC             &mm_break           &mm_build           &none               &none               &mm_typematch       &kp ENTER           &kp ESC             &none    
    &mm_project         &th_find LSHFT 0    &mm_run             &mm_debug           &none               &none               &mm_actions         &mm_down            &mt RSHFT UP        &none
    &trans              &mm_recent          &mm_swapper         &mm_usages          &none               &none               &mm_docs            &mm_refac           &mc_comment         &none
                                            &trans              &th_step_into NAV 0 &mm_step_over       &trans              &trans              &trans

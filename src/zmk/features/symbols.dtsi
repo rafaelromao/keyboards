@@ -96,7 +96,7 @@
 
         SYMBOL(mc_comma,           &kp COMMA)
         TAPHOLD_SYMBOL(th_comma,   &mc_comma, &leader)
-
+        
         // Lower
 
         SHIFTED_SYMBOL(mc_n0,      &kp N0, &kp KP_N0)
