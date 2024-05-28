@@ -221,7 +221,7 @@
    &trans              &trans              &trans              &trans              &trans              &trans              &ac_ocir            &trans              &trans              &trans    
    &trans              &trans              &trans              &trans              &trans              &trans              &ac_atil            &trans              &ac_aacu            &trans  
    &trans              &trans              &trans              &trans              &trans              &trans              &ac_otil            &ac_oacu            &ac_uacu            &trans 
-                                           &trans              &trans              &trans              &trans              &trans              &trans
+                                           &trans              &sl ALPHA2          &trans              &trans              &trans              &trans
                            >;
                 };
                 shifted_alpha2_layer {
@@ -248,7 +248,7 @@
    &trans              &trans              &trans              &trans              &trans              &trans              &ac_ocir_c          &trans              &trans              &trans    
    &trans              &trans              &trans              &trans              &trans              &trans              &ac_atil_c          &trans              &ac_aacu_c          &trans  
    &trans              &trans              &trans              &trans              &trans              &trans              &ac_otil_c          &ac_oacu_c          &ac_uacu_c          &trans 
-                                           &trans              &trans              &trans              &trans              &trans              &trans
+                                           &trans              &sl CASE_A2         &trans              &trans              &trans              &trans
                            >;
                 };
                 symbols_layer {

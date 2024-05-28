@@ -196,14 +196,14 @@
             max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
             defaults = <&labeled_key_repeat>;
             antecedents = <
-                            H                     QU_TERM      AGRV_TERM    C_CEDIL       SQUO_TERM   \
-                            LS(H)      LS(I)      C_QU_TERM    C_AGRV_TERM  LS(C_CEDIL)   C_SQUO_TERM \
-                            RS(H)      RS(I)      S_QU_TERM    S_AGRV_TERM  RS(C_CEDIL)               \
+                            H                     QU_TERM      AGRV_TERM     SQUO_TERM   \
+                            LS(H)      LS(I)      C_QU_TERM    C_AGRV_TERM   C_SQUO_TERM \
+                            RS(H)      RS(I)      S_QU_TERM    S_AGRV_TERM               \
                            >;
             bindings =    <
-                            &tc_ah                &ac_ecir     &mc_qu       &sk ALPHA2    &kp V       \
-                            &tc_ah_c   &mc_sqo    &ac_ecir_c   &mc_qu_c     &sk CASE_A2   &kp V       \
-                            &tc_ah     &mc_sqo    &ac_ecir_s   &mc_qu       &sk SHIFT_A2              \
+                            &tc_ah                &ac_ecir     &mc_qu        &kp V       \
+                            &tc_ah_c   &mc_sqo    &ac_ecir_c   &mc_qu_c      &kp V       \
+                            &tc_ah     &mc_sqo    &ac_ecir_s   &mc_qu                    \
                            >;
         };
 
