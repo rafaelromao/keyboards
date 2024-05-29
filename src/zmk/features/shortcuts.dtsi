@@ -174,18 +174,18 @@
                                             &macro_press &kp LA(LS(LEFT)) \
                                             &macro_pause_for_release \
                                             &macro_release &kp LA(LS(LEFT)) \
-                                            &macro_tap &sl SHORTCUTS_EXT)
+                                            &macro_tap &sl SHORTS_EXT_1)
         
         SHORTCUT(mc_seln,                   &macro_tap &kp HOME &kp HOME \
                                             &macro_press &kp LS(DOWN) \
                                             &macro_pause_for_release \
                                             &macro_release &kp LS(DOWN) \
-                                            &macro_tap &sl SHORTCUTS_EXT)
+                                            &macro_tap &sl SHORTS_EXT_1)
         
         SHORTCUT(mc_ext_sel,                &macro_press &key_repeat \
                                             &macro_pause_for_release \
                                             &macro_release &key_repeat \
-                                            &macro_tap &sl SHORTCUTS_EXT)
+                                            &macro_tap &sl SHORTS_EXT_1)
         MODTAP_SHORTCUT(th_ext_sel,         &mc_ext_sel)
 
         SHORTCUT(mc_zout,                   &macro_tap &kp LG(MINUS))
@@ -198,7 +198,7 @@
         MORPHED_SHORTCUT(mm_ref_z0,         &mc_refresh, &mc_z0, MOD_RGUI)
         TAPHOLD_SHORTCUT(ht_ref_clo_z0,     &mm_ref_z0, &mc_close_tab)
         
-        SHORTCUT(mc_app_swapper,            &macro_press &mo SHORTCUTS_EXT &macro_tap &sw_win_s &kp TAB &macro_pause_for_release &macro_release &mo SHORTCUTS_EXT)
+        SHORTCUT(mc_app_swapper,            &macro_press &mo SHORTS_EXT_2 &macro_tap &sw_win_s &kp TAB &macro_pause_for_release &macro_release &mo SHORTS_EXT_2)
         SHORTCUT(mc_app_quit,               &macro_tap &kp Q)
         MORPHED_SHORTCUT_KM(mm_down_minus,  &kp DOWN, &kp MINUS, MOD_RGUI)
         MORPHED_SHORTCUT_KM(mm_up_plus,     &kp UP, &kp PLUS, MOD_RGUI)
