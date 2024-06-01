@@ -169,121 +169,12 @@
             bindings = <&mo>, <&terminated_caps_word>;
         };
 
-        // ******************** REPEAT KEY ******************** //
-
-        labeled_key_repeat: labeled_key_repeat {
-			compatible = "zmk,behavior-macro";
-            label = "labeled_key_repeat";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&macro_tap &key_repeat>;
-        };
-
-        labeled_h: labeled_h {
-			compatible = "zmk,behavior-macro";
-            label = "labeled_h";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&macro_tap &kp H>;
-        };
-
-        smart_repeat: smart_repeat {
-            compatible = "zmk,behavior-antecedent-morph";
-            label = "smart_repeat";
-            #binding-cells = <0>;
-            max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
-            defaults = <&labeled_key_repeat>;
-            antecedents = <
-                            H                     QU_TERM      AGRV_TERM     SQUO_TERM   \
-                            LS(H)      LS(I)      C_QU_TERM    C_AGRV_TERM   C_SQUO_TERM \
-                            RS(H)      RS(I)      S_QU_TERM    S_AGRV_TERM               \
-                           >;
-            bindings =    <
-                            &tc_ah                &ac_ecir     &mc_qu        &kp V       \
-                            &tc_ah_c   &mc_sqo    &ac_ecir_c   &mc_qu_c      &kp V       \
-                            &tc_ah     &mc_sqo    &ac_ecir_s   &mc_qu                    \
-                           >;
-        };
-
-        THUMB_MACRO(tc_ah,      &kp A &kp H)
-        THUMB_MACRO(tc_ey,      &kp E &kp Y)
-        THUMB_MACRO(tc_hy,      &kp H &kp Y)
-        THUMB_MACRO(tc_ah_c,    &kp LS(A) &kp LS(H))
-        THUMB_MACRO(tc_ey_c,    &kp LS(E) &kp LS(Y))
-        THUMB_MACRO(tc_hy_c,    &kp LS(H) &kp LS(Y))
-
-        ht_repeat: ht_repeat {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <QUICK_TAP_TERM>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <0>;
-            bindings = <&mo>, <&smart_repeat>;
-        };
-
-        // ******************** MAGIC KEY ******************** //
-
-        smart_magic: smart_magic {
-            compatible = "zmk,behavior-antecedent-morph";
-            label = "smart_magic";
-            #binding-cells = <0>;
-            max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
-            defaults = <&labeled_h>;
-            antecedents = <
-                           A             AACU_TERM     ATIL_TERM     ACIR_TERM     AGRV_TERM       B             C               C_CEDIL         D            \
-                           E             EACU_TERM     ECIR_TERM     F             G               H             I               IACU_TERM       J            \
-                           K             L             M             N             O               OACU_TERM     OTIL_TERM       OCIR_TERM       P            \
-                           Q             QU_TERM       R             S             T               U             UACU_TERM       V               W            \
-                           X             Y             Z             DOT           SQUO_TERM                                                                  \
-
-                           LS(A)         C_AACU_TERM   C_ATIL_TERM   C_ACIR_TERM   C_AGRV_TERM     LS(B)         LS(C)           LS(C_CEDIL)     LS(D)        \
-                           LS(E)         C_EACU_TERM   C_ECIR_TERM   LS(F)         LS(G)           LS(H)         LS(I)           C_IACU_TERM     LS(J)        \
-                           LS(K)         LS(L)         LS(M)         LS(N)         LS(O)           C_OACU_TERM   C_OTIL_TERM     C_OCIR_TERM     LS(P)        \
-                           LS(Q)         C_QU_TERM     LS(R)         LS(S)         LS(T)           LS(U)         C_UACU_TERM     LS(V)           LS(W)        \
-                           LS(X)         LS(Y)         LS(Z)         LS(SPACE)     C_SQUO_TERM     CAPSWORD_TERM                                              \
-
-                           RS(A)         S_AACU_TERM   S_ATIL_TERM   S_ACIR_TERM   S_AGRV_TERM     RS(B)         RS(C)           RS(C_CEDIL)     RS(D)        \
-                           RS(E)         S_EACU_TERM   S_ECIR_TERM   RS(F)         RS(G)           RS(H)         RS(I)           S_IACU_TERM     RS(J)        \
-                           RS(K)         RS(L)         RS(M)         RS(N)         RS(O)           S_OACU_TERM   S_OTIL_TERM     S_OCIR_TERM     RS(P)        \
-                           RS(Q)         S_QU_TERM     RS(R)         RS(S)         RS(T)           RS(V)         S_UACU_TERM     RS(V)           RS(W)        \
-                           RS(X)         RS(Y)         RS(Z)                                                                                                  \
-                           >;
-            bindings =    <
-                           &kp V         &kp V         &none         &none         &none           &kp Y         &kp H           &sl ALPHA2      &kp Y        \
-                           &kp V         &kp V         &kp V         &kp Y         &kp H           &sl ALPHA2    &kp V           &kp V           &sl ALPHA2   \
-                           &sl ALPHA2    &kp H         &kp Y         &kp H         &kp V           &kp Y         &none           &kp V           &kp H        \
-                           &sl ALPHA2    &sl ALPHA2    &kp H         &kp H         &kp H           &kp V         &kp V           &sl ALPHA2      &kp H        \
-                           &sl ALPHA2    &sl ALPHA2    &sl ALPHA2    &kp SLASH     &kp V                                                                      \
-
-                           &kp LS(V)     &kp LS(V)     &none         &none         &none           &kp LS(Y)     &kp LS(H)       &sl CASE_A2     &kp LS(Y)    \
-                           &kp LS(V)     &kp LS(V)     &kp LS(V)     &kp LS(Y)     &kp LS(H)       &sl CASE_A2   &kp V           &kp LS(V)       &sl CASE_A2  \
-                           &sl CASE_A2   &kp LS(H)     &kp LS(Y)     &kp LS(H)     &kp LS(V)       &kp LS(V)     &none           &kp LS(V)       &kp LS(H)    \
-                           &sl CASE_A2   &sl CASE_A2   &kp LS(H)     &kp LS(H)     &kp LS(H)       &kp LS(V)     &kp LS(V)       &sl CASE_A2     &kp LS(H)    \
-                           &sl CASE_A2   &sl CASE_A2   &sl CASE_A2   &kp LS(H)     &kp V           &kp LS(H)                                                  \
-
-                           &kp V         &kp V         &none         &none         &none           &kp Y         &kp H           &sl ALPHA2      &kp Y        \
-                           &kp V         &kp V         &kp V         &kp Y         &kp H           &sl ALPHA2    &kp V           &kp V           &sl ALPHA2   \
-                           &sl ALPHA2    &kp H         &kp Y         &kp H         &kp V           &kp Y         &none           &kp V           &kp H        \
-                           &sl ALPHA2    &sl ALPHA2    &kp H         &kp H         &kp H           &kp V         &kp V           &sl ALPHA2      &kp H        \
-                           &sl ALPHA2    &sl ALPHA2    &sl ALPHA2                                                                                             \
-                           >;
-        };
-
-
-        ht_magic: ht_magic {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <QUICK_TAP_TERM>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <0>;
-            bindings = <&kp>, <&smart_magic>;
-        };
-
         // ******************** SMART CASES ******************** //
 
-        THUMB_MACRO(mc_sl_alpha2,  &sl ALPHA2)
+        THUMB_MACRO(mc_sl_alpha2,  &enforced_a2)
+
+        THUMB_LAYERTAP(th_sft_a2,  &enforced_a2_s)
+        THUMB_LAYERTAP(th_case_a2,  &enforced_a2_c)
 
         msl_a2: msl_a2 {
             compatible = "zmk,behavior-hold-tap";
