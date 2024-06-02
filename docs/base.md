@@ -33,6 +33,10 @@
 - Holding this key in the base layer will activate the [Navigation](../navigation.md) layer.
 - Tapping or holding this key in the [Raise](../symbols.md) layer acts as a normal Repeat Key, which can be used to spam or to repeat shortcuts. 
 
+### Caps Word / Caps Line
+- Caps Word will captalize a single word and return to normal mode after a word break.
+- Caps Line will be similar to Caps Word, but will not break after a word, but only after a line break.
+
 ### Smart Shift / Caps Word
 - The OS Shift key is available in the right outer thumb key and will toggle the Shift modifier in one-shot mode when single tapped.
 - When double tapped, this key will activate Caps Word.

@@ -36,6 +36,11 @@
         COMBO(cb_boot_r,        RTR RBI,     &bootloader,        ALL_LAYERS)
         COMBO(cb_alpha1,        LTM LTR LTI, &to ALPHA1,         ALL_LAYERS)
 
+        COMBO(cb_capsline_l,    LTM LTR LHI, &terminated_caps_lock, ALL_LAYERS)
+        COMBO(cb_capsline_r,    RTM RTR RHI, &terminated_caps_lock, ALL_LAYERS)
+        COMBO(cb_capsword_l,    LHM LHR LBI, &terminated_caps_word, ALL_LAYERS)
+        COMBO(cb_capsword_r,    RHM RHR RBI, &terminated_caps_word, ALL_LAYERS)
+
         COMBO(cb_escc,          LTR LTM,     &mc_escc,           ALL_LAYERS_BUT_LOWER_RAISE_SYMBOLS)
         COMBO(cb_backspace,     RTM RTR,     &kp BACKSPACE,      ALL_LAYERS_BUT_RAISE_SYMBOLS_NAV_MEDIA)
         COMBO(cb_save,          LHR LHM L0,  &mc_save,           ALL_LAYERS)
