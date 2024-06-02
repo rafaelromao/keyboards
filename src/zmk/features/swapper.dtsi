@@ -21,7 +21,7 @@
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&none>, <&kt LGUI>;
             ignored-key-positions = <RHM RHR RBM>;
-            ignored-layers = <SHORTS_L SHORTS_R SHORTS_EXT_2>;
+            ignored-layers = <SHORTCUTS SHORTS_EXT_2>;
         };
         sw_win_f: sw_win_f {
             wait-ms = <0>;

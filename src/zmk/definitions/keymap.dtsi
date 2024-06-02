@@ -29,7 +29,7 @@
                      display-name = "ROMAK";
                      bindings = <
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp Y
-   &lt SHORTS_L D      &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp W               &kp Z               &mt RGUI R          &mt RCTRL A         &mt RSHFT E         &lt SHORTS_R I 
+   &lt SHORTCUTS D     &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp W               &kp Z               &mt RGUI R          &mt RCTRL A         &mt RSHFT E         &lt SHORTCUTS I      
    &trans              &mt RALT F          &th_c 0 0           &mt LALT P          &kp V               &kp J               &ht_magic RALT 0    &th_comma 0 0       &th_dot 0 0         &trans
                                            &none               &ht_repeat NAV 0    &ltn LOWER SPACE    &msl_raise_smart    &ht_shift MEDIA 0   &none
                         >;
@@ -47,7 +47,7 @@
                      display-name = "CASE";
                      bindings = <
    &trans              &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &trans
-   &lt SHORTS_L RS(D)  &mt LSHFT RS(N)     &mt LCTRL RS(S)     &mt LGUI RS(T)      &kp RS(W)           &kp RS(Z)           &mt RGUI RS(R)      &mt RCTRL RS(A)     &mt RSHFT RS(E)     &lt SHORTS_R RS(I) 
+   &lt SHORTCUTS RS(D) &mt LSHFT RS(N)     &mt LCTRL RS(S)     &mt LGUI RS(T)      &kp RS(W)           &kp RS(Z)           &mt RGUI RS(R)      &mt RCTRL RS(A)     &mt RSHFT RS(E)     &lt SHORTCUTS RS(I) 
    &trans              &mt RALT RS(F)      &kp RS(C)           &mt LALT RS(P)      &kp RS(V)           &kp RS(J)           &mt RALT RS(H)      &th_comma 0 0       &th_dot 0 0         &trans
                                            &trans              &trans              &msk_spc LOWER 0    &th_sft_a2 RAISE 0  &ht_caps MEDIA 0    &trans
                         >;
@@ -94,7 +94,7 @@
                      display-name = "CASE";
                      bindings = <
    &trans              &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &none
-   &lt SHORTS_L LS(D)  &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTS_R LS(I) 
+   &lt SHORTCUTS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTCUTS LS(I) 
    &trans              &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic RALT 0    &th_comma 0 0       &th_dot 0 0         &trans
                                            &trans              &trans              &trans              &th_case_a2 RAISE 0 &th_cancel MEDIA 0  &trans
                         >;
@@ -103,7 +103,7 @@
                      display-name = "CASE";
                      bindings = <
    &trans              &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &none
-   &lt SHORTS_L LS(D)  &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTS_R LS(I) 
+   &lt SHORTCUTS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTCUTS LS(I) 
    &trans              &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic RALT 0    &th_comma 0 0       &th_dot 0 0         &trans
                                            &trans              &trans              &th_sp_caps LOWER 0 &th_case_a2 RAISE 0 &th_cancel MEDIA 0  &trans
                            >;
@@ -121,7 +121,7 @@
                      display-name = "RAISE";
                      bindings = <
    &none               &kp F9              &kp F8              &kp F7              &none               &none               &th_colon 0 0       &th_eql 0 0         &th_perc 0 0        &none
-   &none               &kp F6              &kp F5              &kp F4              &none               &none               &th_mins 0 0        &th_plus 0 0        &th_slash 0 0       &lt SHORTS_R STAR  
+   &none               &kp F6              &kp F5              &kp F4              &none               &none               &th_mins 0 0        &th_plus 0 0        &th_slash 0 0       &lt SHORTCUTS STAR  
    &none               &kp F3              &kp F2              &kp F1              &none               &none               &th_excl 0 0        &th_lt 0 0          &th_gt 0 0          &trans
                                            &trans              &key_repeat         &lt SYMBOLS SPACE   &trans              &tog NUMPAD         &trans       
                            >;
@@ -157,25 +157,16 @@
                      display-name = "NUMPAD";
                      bindings = <
    &none               &kp ESC             &mkp LCLK           &mkp RCLK           &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
-   &none               &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &none               &mc_n4              &mc_n5              &mc_n6              &lt SHORTS_R DOT 
+   &none               &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &none               &mc_n4              &mc_n5              &mc_n6              &lt SHORTCUTS DOT 
    &none               &msc SCRL_DOWN      &mmv MOVE_DOWN      &msc SCRL_UP        &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
                                            &trans              &ht_repeat NAV 0    &trans              &ltn SYMBOLS SPACE  &th_n0 MEDIA 0      &trans
                            >;
                 };
-                shortcuts_left_layer {
+                shortcuts_layer {
                      display-name = "SHORTCUT";
                      bindings = <
    &none               &kp ESC             &mc_files           &mc_preview         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &none    
-   &none               &kp RGUI            &mc_app_swapper     &th_tabs LGUI 0     &none               &none               &mc_seln            &mm_down_minus      &mm_up_plus         &mo SYSTEM
-   &none               &mc_term            &mc_clip            &mc_calc            &none               &none               &td_dynmacro        &ht_ref_clo_z0 0 0  &mc_sleep           &trans
-                                           &trans              &mst CODING CODING  &mst NMODS NMODS    &lt CODING SPACE    &mst NAV NAV_F      &trans
-                           >;
-                };
-                shortcuts_right_layer {
-                     display-name = "SHORTCUT";
-                     bindings = <
-   &none               &kp ESC             &mc_files           &mc_preview         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &none    
-   &mo SYSTEM          &kp RGUI            &mc_app_swapper     &th_tabs LGUI 0     &none               &none               &mc_seln            &mm_down_minus      &mm_up_plus         &none
+   &mo SYSTEM          &kp RGUI            &mc_app_swapper     &th_tabs LGUI 0     &none               &none               &mc_seln            &mm_down_minus      &mm_up_plus         &mo SYSTEM
    &none               &mc_term            &mc_clip            &mc_calc            &none               &none               &td_dynmacro        &ht_ref_clo_z0 0 0  &mc_sleep           &trans
                                            &trans              &mst CODING CODING  &mst NMODS NMODS    &lt CODING SPACE    &mst NAV NAV_F      &trans
                            >;
