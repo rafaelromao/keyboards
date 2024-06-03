@@ -22,7 +22,7 @@
 - The Bottom Row Index Key, in the right hand, is programmed to act as a Magic Key. It will behave like `H` after most consonants, like `V` after vowels or accentuated vowels, like `Y` after `B`, `M`, `D` and `F`, and will reactivate the Secondary Alpha Layer when tapped after a consonant from the Secondary Alpha Layer. To see more about that, check the [Magic Romak](https://github.com/rafaelromao/romak/tree/main?tab=readme-ov-file#magic-romak) page.
 
 #### Magic Key Enforcers
-- Magic Key Enforcers are adaptive keys that replace the dedicated keys for `H`, `V`, `Y` and `OS Alpha 2` and will send a `BACKSPACE` instead of the typed key, in case the use of the Magic Key is more appropriate. This feature will enforce the use of the Magic Key and force me to get used to it. Once I get used to the Magic Key, this feature will become irrelevant. 
+- Magic Key Enforcers are adaptive keys that replace the dedicated keys for `H`, `V` and `Y`, and will send a `BACKSPACE` instead of the typed key, in case the use of the Magic Key is more appropriate. This feature will enforce the use of the Magic Key and force me to get used to it. Once I get used to the Magic Key, this feature will become irrelevant. 
 
 ## Smart Thumb Keys
 - The Smart Thumb keys in this layout change behavior according to the context (active layer, active modifiers and more).

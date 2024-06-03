@@ -171,10 +171,11 @@
 
         // ******************** SMART CASES ******************** //
 
-        THUMB_MACRO(mc_sl_alpha2,  &enforced_a2)
-
-        THUMB_LAYERTAP(th_sft_a2,  &enforced_a2_s)
-        THUMB_LAYERTAP(th_case_a2,  &enforced_a2_c)
+        THUMB_MACRO(mc_sl_alpha2,  &sl ALPHA2)
+        THUMB_MACRO(mc_sft_a2,     &sl SHIFT_A2)
+        THUMB_MACRO(mc_case_a2,    &sl CASE_A2)
+        THUMB_LAYERTAP(th_sft_a2,  &mc_sft_a2)
+        THUMB_LAYERTAP(th_case_a2, &mc_case_a2)
 
         msl_a2: msl_a2 {
             compatible = "zmk,behavior-hold-tap";

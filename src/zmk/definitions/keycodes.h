@@ -49,3 +49,5 @@
 #define S_AGRV_TERM 0x070125
 
 #define CAPSWORD_TERM 0x070126
+#define V_TERM 0x070127
+#define H_TERM 0x070128
