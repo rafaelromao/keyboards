@@ -142,7 +142,7 @@
             defaults = <&labeled_v>;
             antecedents = <
                            A             AACU_TERM     E             EACU_TERM     ECIR_TERM   \
-                           I             IACU_TERM     O             OACU_TERM     SQUO_TERM   \
+                           I             IACU_TERM     O             OACU_TERM                 \
                            U             UACU_TERM                                             \
                            RS(A)         S_AACU_TERM   RS(E)         S_EACU_TERM   S_ECIR_TERM \
                            RS(I)         S_IACU_TERM   RS(O)         S_OACU_TERM               \
@@ -150,7 +150,7 @@
                            >;
             bindings =    <
                            &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC    \
-                           &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC    \
+                           &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC                  \
                            &kp BSPC      &kp BSPC                                              \
                            &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC    \
                            &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC    \
@@ -176,12 +176,12 @@
             antecedents = <
                            LS(A)         C_AACU_TERM   LS(E)         C_EACU_TERM   C_ECIR_TERM \
                            LS(I)         C_IACU_TERM   LS(O)         C_OACU_TERM   C_OCIR_TERM \
-                           LS(U)         C_UACU_TERM   C_SQUO_TERM                             \
+                           LS(U)         C_UACU_TERM                                \
                            >;
             bindings =    <
                            &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC    \
                            &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC    \
-                           &kp BSPC      &kp BSPC      &kp BSPC                                \
+                           &kp BSPC      &kp BSPC                                      \
                            >;
         };
 
