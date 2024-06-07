@@ -78,7 +78,7 @@
                            E             EACU_TERM     ECIR_TERM     F             G               H             I               IACU_TERM       J             \
                            K             L             M             N             O               OACU_TERM     OTIL_TERM       OCIR_TERM       P             \
                            Q             QU_TERM       R             S             T               U             UACU_TERM       V               W             \
-                           X             Y             Z             DOT                           SPACE         H_TERM                                        \
+                           X             Y             Z             DOT           V_TERM          SPACE         H_TERM                                        \
 
                            LS(A)         C_AACU_TERM   C_ATIL_TERM   C_ACIR_TERM   C_AGRV_TERM     LS(B)         LS(C)           LS(C_CEDIL)     LS(D)         \
                            LS(E)         C_EACU_TERM   C_ECIR_TERM   LS(F)         LS(G)           LS(H)         LS(I)           C_IACU_TERM     LS(J)         \
@@ -97,7 +97,7 @@
                            &tc_v         &tc_v         &tc_v         &kp Y         &tc_h           &sl ALPHA2    &tc_v           &tc_v           &sl ALPHA2    \
                            &sl ALPHA2    &tc_h         &kp Y         &tc_h         &tc_v           &tc_v         &none           &tc_v           &tc_h         \
                            &sl ALPHA2    &sl ALPHA2    &tc_h         &tc_h         &tc_h           &tc_v         &tc_v           &sl ALPHA2      &tc_h         \
-                           &sl ALPHA2    &sl ALPHA2    &sl ALPHA2    &kp SLASH                     &tc_h         &sl ALPHA2                                    \
+                           &sl ALPHA2    &sl ALPHA2    &sl ALPHA2    &kp SLASH     &sl ALPHA2      &tc_h         &sl ALPHA2                                    \
 
                            &kp LS(V)     &kp LS(V)     &none         &none         &none           &kp LS(Y)     &kp LS(H)       &sl CASE_A2     &kp LS(Y)     \
                            &kp LS(V)     &kp LS(V)     &kp LS(V)     &kp LS(Y)     &kp LS(H)       &sl CASE_A2   &kp LS(V)       &kp LS(V)       &sl CASE_A2   \
