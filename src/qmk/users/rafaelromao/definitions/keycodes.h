@@ -179,7 +179,7 @@ enum {
 #define NAV_F12 LT(_NAVIGATION, KC_F12)
 #define NAV_AT  LT(_NAVIGATION, KC_AT)
 #define NAV_STI LT(_NAVIGATION, MC_STIN) // Tap behavior is implemented in intercepted code
-#define NAV_Q   LT(_NAVIGATION, KC_Q)
+#define NAV_H   LT(_NAVIGATION, KC_H)
 #define NAV_REP LT(_NAVIGATION, REPEAT)
 #define FNA_REP LT(_FIXED_NAV, REPEAT)
 
