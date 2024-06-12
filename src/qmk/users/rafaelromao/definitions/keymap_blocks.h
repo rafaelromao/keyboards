@@ -75,10 +75,10 @@
 #define ___________________NOMOD_R3__________           KC_J    , KC_H    , KC_COMM , KC_DOT  
 #define ____NOMOD_R4_____                               OSL_A2  , OS_LSFT
 
-#define ___________________ALPHA2_L1_________           XXXXXXX , KC_H    , MC_QU   , KC_K
+#define ___________________ALPHA2_L1_________           XXXXXXX , KC_Q    , MC_QU   , KC_K
 #define ___________________ALPHA2_L2___________________ KC_Y    , KC_Z    , KC_X    , KC_W    , XXXXXXX
 #define           _________ALPHA2_L3___________________           KC_J    , MC_SQ_C , KC_V    , XXXXXXX 
-#define                               ____ALPHA2_L4____                               NAV_Q   , OS_SYM
+#define                               ____ALPHA2_L4____                               NAV_H   , OS_SYM
 
 #define           _________ALPHA2_R1___________________           MC_CR_O , MC_CR_E , MC_CR_A , XXXXXXX
 #define ___________________ALPHA2_R2___________________ XXXXXXX , MC_TL_A , MC_SQ_E , MC_SQ_A , MC_SQ_I
