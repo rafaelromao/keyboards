@@ -241,13 +241,13 @@
             defaults = <&labeled_h>;
             antecedents = <
                            C             G             N             P           \
-                           S             T             W             SPACE       \
+                           S             T             W                         \
                            RS(C)         RS(G)         RS(N)         RS(P)       \
                            RS(S)         RS(T)         RS(W)                     \
                            >;
             bindings =    <
                            &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC    \
-                           &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC    \
+                           &kp BSPC      &kp BSPC      &kp BSPC                  \
                            &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC    \
                            &kp BSPC      &kp BSPC      &kp BSPC                  \
                            >;

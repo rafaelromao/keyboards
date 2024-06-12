@@ -147,10 +147,10 @@
                 sentence_case_ext2_layer {
                      display-name = "CASE";
                      bindings = <
-   &none               &kp LS(H)           &mc_qu_s            &kp LS(K)           &none               &none               &ac_ocir_c          &ac_ecir_c          &ac_acir_c          &none
-   &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &none               &none               &ac_atil_c          &ac_eacu_c          &ac_aacu_c          &ac_iacu_c 
-   &trans              &kp LS(J)           &mc_ced_c           &kp LS(V)           &none               &none               &ac_otil_c          &ac_oacu_c          &ac_uacu_c          &ac_iacu_c
-                                           &trans              &th_cancel NAV 0    &th_sp_ns SYMBOLS 0 &none               &th_nsen MEDIA 0    &trans
+   &none               &kp RS(Q)           &mc_qu_s            &kp RS(K)           &none               &none               &ac_ocir_c          &ac_ecir_c          &ac_acir_c          &none
+   &kp RS(Y)           &kp RS(Z)           &kp RS(X)           &kp RS(W)           &none               &none               &ac_atil_c          &ac_eacu_c          &ac_aacu_c          &ac_iacu_c 
+   &trans              &kp RS(J)           &mc_ced_c           &kp RS(V)           &none               &none               &ac_otil_c          &ac_oacu_c          &ac_uacu_c          &ac_iacu_c
+                                           &trans              &kp RS(H)           &th_sp_ns SYMBOLS 0 &none               &th_nsen MEDIA 0    &trans
                            >;
                 };
                 numpad_layer {
@@ -210,10 +210,10 @@
                 alpha2_layer {
                      display-name = "ALPHA2";
                      bindings = <
-   &none               &enforced_h         &mc_qu              &kp K               &none               &none               &ac_ocir            &ac_ecir            &ac_acir            &none
+   &none               &kp Q               &mc_qu              &kp K               &none               &none               &ac_ocir            &ac_ecir            &ac_acir            &none
    &enforced_y         &kp Z               &kp X               &kp W               &none               &none               &ac_atil            &ac_eacu            &ac_aacu            &ac_iacu 
    &trans              &kp J               &mc_ced             &enforced_v         &none               &none               &ac_otil            &ac_oacu            &ac_uacu            &trans
-                                           &trans              &kp Q               &sl SYMBOLS         &trans              &mc_sqo             &trans
+                                           &trans              &enforced_h         &sl SYMBOLS         &trans              &mc_sqo             &trans
                            >;
                 };
                 ccedil_layer {
@@ -228,19 +228,19 @@
                 shifted_alpha2_layer {
                      display-name = "CASE";
                      bindings = <
-   &none               &kp RS(H)           &mc_qu_s            &kp RS(K)           &none               &none               &ac_ocir_s          &ac_ecir_s          &ac_acir_s          &none
+   &none               &kp RS(Q)           &mc_qu_s            &kp RS(K)           &none               &none               &ac_ocir_s          &ac_ecir_s          &ac_acir_s          &none
    &kp RS(Y)           &kp RS(Z)           &kp RS(X)           &kp RS(W)           &none               &none               &ac_atil_s          &ac_eacu_s          &ac_aacu_s          &ac_iacu_s 
    &trans              &kp RS(J)           &mc_ced_s           &kp RS(V)           &none               &none               &ac_otil_s          &ac_oacu_s          &ac_uacu_s          &trans 
-                                           &trans              &kp RS(Q)           &sl SYMBOLS         &trans              &mc_sqo_c           &trans
+                                           &trans              &kp RS(H)           &sl SYMBOLS         &trans              &mc_sqo_c           &trans
                            >;
                 };
                 case_alpha2_layer {
                      display-name = "CASE";
                      bindings = <
-   &none               &enforced_h_c       &mc_qu_c            &kp LS(K)           &none               &none               &ac_ocir_c          &ac_ecir_c          &ac_acir_c          &none
+   &none               &kp LS(Q)           &mc_qu_c            &kp LS(K)           &none               &none               &ac_ocir_c          &ac_ecir_c          &ac_acir_c          &none
    &enforced_y_c       &kp LS(Z)           &kp LS(X)           &kp LS(W)           &none               &none               &ac_atil_c          &ac_eacu_c          &ac_aacu_c          &ac_iacu_c 
    &trans              &kp LS(J)           &mc_ced_c           &enforced_v_c       &none               &none               &ac_otil_c          &ac_oacu_c          &ac_uacu_c          &trans
-                                           &trans              &kp LS(Q)           &sl SYMBOLS         &trans              &mc_sqo_c           &trans
+                                           &trans              &enforced_h_c       &sl SYMBOLS         &trans              &mc_sqo_c           &trans
                            >;
                 };
                 case_ccedil_layer {
