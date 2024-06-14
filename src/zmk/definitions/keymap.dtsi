@@ -192,7 +192,7 @@
                 coding_layer {
                      display-name = "CODING";
                      bindings = <
-   &none               &kp ESC             &mm_break           &mm_build           &none               &none               &mm_typematch       &kp ENTER           &kp ESC             &none    
+   &none               &kp ESC             &mm_build           &mm_break           &none               &none               &mm_typematch       &kp ENTER           &kp ESC             &none    
    &mm_project         &th_find LSHFT 0    &mm_run             &mm_debug           &none               &none               &mm_actions         &mm_down            &mt RSHFT UP        &none
    &trans              &mm_recent          &mm_swapper         &mm_usages          &none               &none               &mm_docs            &mm_refac           &mc_comment         &none
                                            &trans              &th_step_into NAV 0 &mm_step_over       &trans              &trans              &trans
