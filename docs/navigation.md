@@ -46,8 +46,8 @@ noremap ll gg
 ### Media
 - The Media layer gives access to [Standard Modifiers](modifiers.md#standard-modifiers), Media controls, Esc and a Save shortcut.
 
-#### Orbital Mouse
-- In the left side of the Media layer, there are keys to control the mouse using the Orbital Mouse implementation by [Pascal Getreuer](https://github.com/getreuer/qmk-keymap).
+#### Mouse Keys
+- In the left side of the Media layer, there are keys to control the mouse.
 
 ##
 [Home](../readme.md) | 
