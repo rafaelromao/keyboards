@@ -36,7 +36,7 @@ The following pages explain how this layout works and which features are impleme
 - [Dynamic Macros](docs/shortcuts.md#dynamic-macros)
 - [Coding Dancing](docs/symbols.md#coding-dancing)
 - [Coding Shortcuts](docs/shortcuts.md#coding-shortcuts)
-- [Orbital Mouse](docs/navigation.md#orbital-mouse)
+- [Mouse Keys](docs/navigation.md#mouse-keys)
 
 ## About this repo
 
