@@ -120,7 +120,7 @@
                 raise_layer {
                      display-name = "RAISE";
                      bindings = <
-   &none               &kp F9              &kp F8              &kp F7              &none               &none               &th_colon 0 0       &th_eql 0 0         &th_perc 0 0        &none
+   &none               &kp F9              &kp F8              &kp F7              &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
    &none               &kp F6              &kp F5              &kp F4              &none               &none               &th_mins 0 0        &th_plus 0 0        &th_slash 0 0       &lt SHORTCUTS STAR  
    &none               &kp F3              &kp F2              &kp F1              &none               &none               &th_excl 0 0        &th_lt 0 0          &th_gt 0 0          &trans
                                            &trans              &key_repeat         &lt SYMBOLS SPACE   &trans              &tog NUMPAD         &trans       
@@ -255,7 +255,7 @@
                 symbols_layer {
                      display-name = "SYMBOLS";
                      bindings = <
-   &none               &kp LBRC            &kp RBRC            &kp BACKSLASH       &none               &none               &kp COLON           &kp EQUAL           &kp PERCENT         &none
+   &none               &kp LBRC            &kp RBRC            &kp BACKSLASH       &none               &none               &kp PERCENT         &kp EQUAL           &kp COLON           &none
    &kp AT              &kp LPAR            &kp RPAR            &mc_dqo             &none               &none               &kp MINUS           &kp PLUS            &kp SLASH           &kp STAR 
    &trans              &kp LBKT            &kp RBKT            &kp QMARK           &none               &none               &kp EXCL            &kp LT              &kp GT              &trans
                                            &trans              &trans              &kp SPACE           &kp SPACE           &trans              &trans
