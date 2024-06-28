@@ -86,7 +86,6 @@
         COMBO(cb_yc,            RHM RHR,     &kp LS(Y),          CASE_A1 SEN_E2 SHIFT_A1)
         COMBO(cb_dc,            RTI RTM RTR, &kp LS(D),          CASE_A1 SEN_E1 SHIFT_A1)
         COMBO(cb_pc,            RHI RHM RHR, &kp LS(P),          CASE_A1 SEN_E1 SHIFT_A1)
-        COMBO(cb_grvac,         RBM RBR,     &ac_agrv_c,         CASE_A2 SEN_E2 SHIFT_A2)
 
         COMBO(cb_sfl,           RTI RTM,     &kp LS(L),          LOWER NUMPAD)
         COMBO(cb_jv,            RHI RHM,     &kp A,              LOWER NUMPAD)
@@ -104,15 +103,14 @@
         COMBO(cb_f14,           LHM LHR,     &kp F14,            RAISE)
         COMBO(cb_f15,           LTM LTR,     &kp F15,            RAISE)
 
-        COMBO(cb_dqo_s,         LHM LHR,     &kp DQT,            ALPHA2)
-        COMBO(cb_sqo_s,         LHM LHI,     &kp SQT,            ALPHA2)
-        COMBO(cb_bti_s,         LBM LBI,     &kp GRAVE,          ALPHA2)
-        COMBO(cb_unds,          LBR LBM,     &mm_unds,           ALPHA2 CASE_A2 SEN_E2)
-        COMBO(cb_colon,         RTM RTR,     &mc_colon,          ALPHA2 CASE_A2 SEN_E2)
-        COMBO(cb_amps,          RHM RHR,     &kp AMPS,           ALPHA2 CASE_A2 SEN_E2 SYMBOLS)
-        COMBO(cb_caret_s,       RHI RHM,     &kp CARET,          ALPHA2)
-        COMBO(cb_tilde_s,       RBI RBM,     &kp TILDE,          ALPHA2)
-        COMBO(cb_grva,          RBM RBR,     &ac_agrv,           ALPHA2)
+        COMBO(cb_dqo_s,         LTM LTI,     &kp DQT,            ALPHA2 CASE_A2 SEN_E2 SHIFT_A2)
+        COMBO(cb_sqo_s,         LHM LHI,     &kp SQT,            ALPHA2 CASE_A2 SEN_E2 SHIFT_A2)
+        COMBO(cb_bti_s,         LBM LBI,     &kp GRAVE,          ALPHA2 CASE_A2 SEN_E2 SHIFT_A2)
+        COMBO(cb_caret_s,       LHR LHM,     &kp CARET,          ALPHA2 CASE_A2 SEN_E2 SHIFT_A2)
+        COMBO(cb_tilde_s,       LBR LBM,     &kp TILDE,          ALPHA2 CASE_A2 SEN_E2 SHIFT_A2)
+        COMBO(cb_unds,          RBM RBR,     &mm_unds,           ALPHA2 CASE_A2 SEN_E2 SHIFT_A2)
+        COMBO(cb_grva,          RHM RHR,     &ac_agrv,           ALPHA2 SEN_E2)
+        COMBO(cb_grvac,         RHM RHR,     &ac_agrv_c,         CASE_A2 SEN_E2 SHIFT_A2)
 
         COMBO(cb_braces,        LTR LTM,     &mc_braces,         LOWER)
 
@@ -126,6 +124,7 @@
         COMBO(cb_caret,         RHI RHM,     &mc_caret,          SYMBOLS)
         COMBO(cb_tilde,         RBI RBM,     &mc_tilde,          SYMBOLS)
         COMBO(cb_euro,          RTM RTR,     &mc_euro,           SYMBOLS)
+        COMBO(cb_amps,          RHM RHR,     &kp AMPS,           SYMBOLS)
         COMBO(cb_pipe,          RBM RBR,     &kp PIPE,           SYMBOLS)
 
         COMBO(cb_hash,          RTI RTM,     &kp HASH,           RAISE SYMBOLS)
