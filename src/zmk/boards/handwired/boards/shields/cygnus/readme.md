@@ -23,7 +23,8 @@ Parts:
 
 #### Compile
 
-- Run the script `build_cygnus`.
+- Run the script `build_cygnus` to build the firmware for the left side only.
+- Run the script `build_cygnus_all` to build the firmware for the left and right sides.
 
 #### Flash
 

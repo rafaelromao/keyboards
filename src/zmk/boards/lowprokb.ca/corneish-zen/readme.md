@@ -18,7 +18,8 @@
 
 #### Compile
 
-- Run the script `build_zen`.
+- Run the script `build_zen` to build the firmware for the left side only.
+- Run the script `build_zen_all` to build the firmware for the left and right sides.
 
 #### Flash
 
