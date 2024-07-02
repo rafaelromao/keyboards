@@ -13,7 +13,6 @@
             tapping-term-ms = <QUICK_TAP_TERM>; \
             flavor = "tap-preferred"; \
             quick-tap-ms = <0>; \
-            require-prior-idle-ms = <QUICK_TAP_TERM>; \
             bindings = <&mo>, <BINDINGS>; \
         };
 
