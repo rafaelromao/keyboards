@@ -53,7 +53,6 @@ The reference implementation was made in QMK, but it is kept here for historical
 The keyboards that are still kept in QMK are the ones listed below:
 
 - [kprepublic/bm40hsrgb](src/qmk/keyboards/kprepublic/bm40hsrgb/keymaps/rafaelromao/readme.md)
-- [xiudi/xd75](src/qmk/keyboards/xiudi/xd75/keymaps/rafaelromao/readme.md)
 
 Some features are not available on all keyboards though. For instance, the BM40 does not support Dynamic Macros.
 
@@ -72,9 +71,10 @@ This fork is also updated to Zephyr 3.5.
 
 The keyboards that run the ZMK implementation of this Keymap are listed below:
 
+- [Diamond](src/zmk/boards/handwired/boards/shields/diamond/readme.md)
+- [Dactyl Cygnus](src/zmk/boards/handwired/boards/shields/cygnus/readme.md)
 - [Rommana](src/zmk/boards/handwired/boards/shields/rommana/readme.md)
 - [Corne-ish Zen](src/zmk/boards/lowprokb.ca/corneish-zen/readme.md)
-- [Dactyl Cygnus](src/zmk/boards/handwired/boards/shields/cygnus/readme.md)
 
 Some features might not be available in ZMK. [This readme file](src/zmk/rafaelromao/readme.md) will indicate what features are missing.
 
