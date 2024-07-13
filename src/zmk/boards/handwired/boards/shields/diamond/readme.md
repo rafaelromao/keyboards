@@ -20,6 +20,8 @@ Parts:
 - [28 AWG Wires](https://www.aliexpress.com/item/1005006249194665.html).
 - [1n4148 diodes + diode legs](https://pt.aliexpress.com/item/1005003540554760.html).
 
+[Here] (../../../../../../../docs/diamond.md) you can see some build images.
+
 ### ZMK
 
 #### Compile
