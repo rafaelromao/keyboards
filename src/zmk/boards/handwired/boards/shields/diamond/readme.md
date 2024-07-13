@@ -3,7 +3,7 @@
 
 ### Build Details
 
-Diamond is a handwired board originally designed by me but heavily inspired by the [Rommana](https://github.com/AlaaSaadAbdo/Rommana).
+Diamond is a handwired board originally designed by me but heavily inspired by the [Rommana](https://github.com/AlaaSaadAbdo/Rommana) and using the switch holders of the [Dactyl Cygnus](https://github.com/juhakaup/keyboards).
 
 ### Diamond
 ![img](../../../../../../../img/diamond.jpeg)
@@ -14,7 +14,7 @@ Parts:
 - 6 1.5u MX keycaps (MT3 Blanks).
 - Diamond [case](../../../../../../../stls/diamond).
 - [3 Supermini NRF52840](https://www.aliexpress.com/item/1005006035267231.html).
-- [2 500mAh 3.7v battery - 752035](https://www.aliexpress.com/item/1005005984848543.html)
+- [3 500mAh 3.7v battery - 752035](https://www.aliexpress.com/item/1005005984848543.html)
 - [24 Single Switch PCBs](https://keycapsss.com/keyboard-parts/pcbs/173/mxledbit-single-switch-pcb-mx-choc-hot-swap-socket).
 - [Dupont Cables](https://aliexpress.com/item/1005004155181609.html).
 - [28 AWG Wires](https://www.aliexpress.com/item/1005006249194665.html).
@@ -24,7 +24,7 @@ Parts:
 
 #### Compile
 
-- Run the script `build_diamond` to build the firmware for the dongle only.
+- Run the script `build_diamond` to build the firmware for the central left side (use it without a dongle) and the dongle only.
 - Run the script `build_diamond_all` to build the firmware for both sides and the dongle.
 
 #### Flash
