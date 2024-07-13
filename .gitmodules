@@ -10,3 +10,6 @@
 [submodule "modules/caksoylar/zmk-rgbled-widget"]
 	path = modules/caksoylar/zmk-rgbled-widget
 	url = https://github.com/caksoylar/zmk-rgbled-widget
+[submodule "modules/englmaxi/zmk-dongle-display"]
+	path = modules/englmaxi/zmk-dongle-display
+	url = https://github.com/englmaxi/zmk-dongle-display
