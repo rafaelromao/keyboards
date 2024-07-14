@@ -8,17 +8,26 @@ Diamond is a handwired board originally designed by me but heavily inspired by t
 ### Diamond
 ![img](../../../../../../../img/diamond.jpeg)
 
-Parts:
+Parts for the keyboard:
 - 24 MX switches (Boba U4).
 - 18 1u MX keycaps (MT3 Blanks).
 - 6 1.5u MX keycaps (MT3 Blanks).
-- Diamond [case](../../../../../../../stls/diamond).
-- [3 Supermini NRF52840](https://www.aliexpress.com/item/1005006035267231.html).
-- [3 500mAh 3.7v battery - 752035](https://www.aliexpress.com/item/1005005984848543.html)
+- Diamond [case](../../../../../../../stls/Diamond).
+- [2 Supermini NRF52840](https://www.aliexpress.com/item/1005006035267231.html).
+- [2 500mAh 3.7v battery - 752035](https://www.aliexpress.com/item/1005005984848543.html)
 - [24 Single Switch PCBs](https://keycapsss.com/keyboard-parts/pcbs/173/mxledbit-single-switch-pcb-mx-choc-hot-swap-socket).
+- [2 6x6x6 switches](https://www.aliexpress.com/item/4001166999847.html).
+- [2 SS12F15 switches](https://www.aliexpress.com/item/4000699324084.html).
 - [Dupont Cables](https://aliexpress.com/item/1005004155181609.html).
 - [28 AWG Wires](https://www.aliexpress.com/item/1005006249194665.html).
 - [1n4148 diodes + diode legs](https://pt.aliexpress.com/item/1005003540554760.html).
+
+Parts for the dongle:
+- Dongle [case](../../../../../../../stls/Dongle) (soon).
+- [1 6x6x6 switch](https://www.aliexpress.com/item/4001166999847.html).
+- [1 SS12F15 switch](https://www.aliexpress.com/item/4000699324084.html).
+- [1 Supermini NRF52840](https://www.aliexpress.com/item/1005006035267231.html).
+- [1 500mAh 3.7v battery - 752035](https://www.aliexpress.com/item/1005005984848543.html)
 
 [Here](../../../../../../../docs/diamond.md) you can see some build images.
 
@@ -44,3 +53,4 @@ Parts:
 - [Home](https://github.com/rafaelromao/keyboards)
 - [ZMK Docs](https://zmk.dev/docs)
 - [Keyboard Tester](https://config.qmk.fm/#/test)
+
