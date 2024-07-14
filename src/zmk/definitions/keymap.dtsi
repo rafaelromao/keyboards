@@ -114,7 +114,7 @@
    &trans              &td_lbrc            &td_rbrc            &th_bsl 0 0         &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
    &lt NAV AT          &td_lpar            &td_rpar            &th_dqo 0 0         &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
    &trans              &td_lbkt            &td_rbkt            &th_qmark 0 0       &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
-                                           &trans              &to CASE_A1         &trans              &lt SYMBOLS SPACE   &th_n0 MEDIA 0      &trans
+                                           &trans              &to CASE_A1         &trans              &lt RAISE SPACE     &th_n0 MEDIA 0      &trans
                            >;
                 };
                 raise_layer {
@@ -123,7 +123,7 @@
    &none               &kp F9              &kp F8              &kp F7              &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
    &none               &kp F6              &kp F5              &kp F4              &none               &none               &th_mins 0 0        &th_plus 0 0        &th_slash 0 0       &lt SHORTCUTS STAR  
    &none               &kp F3              &kp F2              &kp F1              &none               &none               &th_excl 0 0        &th_lt 0 0          &th_gt 0 0          &trans
-                                           &trans              &key_repeat         &lt SYMBOLS SPACE   &trans              &tog NUMPAD         &trans       
+                                           &trans              &key_repeat         &lt LOW_CP SPACE    &trans              &tog NUMPAD         &trans       
                            >;
                 };
                 sentence_case_layer {
@@ -132,7 +132,7 @@
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
-                                           &trans              &trans              &th_sp_ns SYMBOLS 0 &trans              &th_nsen MEDIA 0    &trans
+                                           &trans              &trans              &th_sp_ns LOW_CP 0  &trans              &th_nsen MEDIA 0    &trans
                            >;
                 };
                 sentence_case_ext1_layer {
@@ -141,7 +141,7 @@
    &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y) 
    &kp RS(D)           &mt LSHFT RS(N)     &mt LCTRL RS(S)     &mt LGUI RS(T)      &kp RS(W)           &kp RS(Z)           &mt RGUI RS(R)      &mt RCTRL RS(A)     &mt RSHFT RS(E)     &kp RS(I) 
    &trans              &mt RALT RS(F)      &kp RS(C)           &mt LALT RS(P)      &kp RS(V)           &kp RS(J)           &ht_sft_h RALT 0    &th_comma 0 0       &th_dot 0 0         &trans
-                                           &trans              &th_cancel NAV 0    &th_sp_ns SYMBOLS 0 &msl SYMBOLS SEN_E2 &th_nsen MEDIA 0    &trans
+                                           &trans              &th_cancel NAV 0    &th_sp_ns LOW_CP 0  &msl RAI_CP SEN_E2  &th_nsen MEDIA 0    &trans
                            >;
                 };
                 sentence_case_ext2_layer {
@@ -150,7 +150,7 @@
    &none               &kp RS(Q)           &mc_qu_s            &kp RS(K)           &none               &none               &ac_ocir_c          &ac_ecir_c          &ac_acir_c          &none
    &kp RS(Y)           &kp RS(Z)           &kp RS(X)           &kp RS(W)           &none               &none               &ac_atil_c          &ac_eacu_c          &ac_aacu_c          &ac_iacu_c 
    &trans              &kp RS(J)           &mc_ced_c           &kp RS(V)           &none               &none               &ac_otil_c          &ac_oacu_c          &ac_uacu_c          &ac_iacu_c
-                                           &trans              &kp RS(H)           &th_sp_ns SYMBOLS 0 &none               &th_nsen MEDIA 0    &trans
+                                           &trans              &kp RS(H)           &th_sp_ns LOW_CP 0  &msl RAI_CP SEN_E2  &th_nsen MEDIA 0    &trans
                            >;
                 };
                 numpad_layer {
@@ -159,7 +159,7 @@
    &none               &kp ESC             &mkp LCLK           &mkp RCLK           &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
    &none               &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &none               &mc_n4              &mc_n5              &mc_n6              &lt SHORTCUTS DOT 
    &none               &msc SCRL_DOWN      &mmv MOVE_DOWN      &msc SCRL_UP        &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
-                                           &trans              &ht_repeat NAV 0    &trans              &ltn SYMBOLS SPACE  &th_n0 MEDIA 0      &trans
+                                           &trans              &ht_repeat NAV 0    &trans              &ltn LOW_CP SPACE   &th_n0 MEDIA 0      &trans
                            >;
                 };
                 shortcuts_layer {
@@ -213,7 +213,7 @@
    &none               &kp Q               &mc_qu              &kp K               &none               &none               &ac_ocir            &ac_ecir            &ac_acir            &none
    &enforced_y         &kp Z               &kp X               &kp W               &none               &none               &ac_atil            &ac_eacu            &ac_aacu            &ac_iacu 
    &trans              &kp J               &mc_ced             &enforced_v         &none               &none               &ac_otil            &ac_oacu            &ac_uacu            &trans
-                                           &trans              &enforced_h         &sl SYMBOLS         &trans              &mc_sqo             &trans
+                                           &trans              &enforced_h         &sl LOW_CP          &trans              &mc_sqo             &trans
                            >;
                 };
                 ccedil_layer {
@@ -231,7 +231,7 @@
    &none               &kp RS(Q)           &mc_qu_s            &kp RS(K)           &none               &none               &ac_ocir_s          &ac_ecir_s          &ac_acir_s          &none
    &kp RS(Y)           &kp RS(Z)           &kp RS(X)           &kp RS(W)           &none               &none               &ac_atil_s          &ac_eacu_s          &ac_aacu_s          &ac_iacu_s 
    &trans              &kp RS(J)           &mc_ced_s           &kp RS(V)           &none               &none               &ac_otil_s          &ac_oacu_s          &ac_uacu_s          &trans 
-                                           &trans              &kp RS(H)           &sl SYMBOLS         &trans              &mc_sqo_c           &trans
+                                           &trans              &kp RS(H)           &sl LOW_CP          &trans              &mc_sqo_c           &trans
                            >;
                 };
                 case_alpha2_layer {
@@ -240,7 +240,7 @@
    &none               &kp LS(Q)           &mc_qu_c            &kp LS(K)           &none               &none               &ac_ocir_c          &ac_ecir_c          &ac_acir_c          &none
    &enforced_y_c       &kp LS(Z)           &kp LS(X)           &kp LS(W)           &none               &none               &ac_atil_c          &ac_eacu_c          &ac_aacu_c          &ac_iacu_c 
    &trans              &kp LS(J)           &mc_ced_c           &enforced_v_c       &none               &none               &ac_otil_c          &ac_oacu_c          &ac_uacu_c          &trans
-                                           &trans              &enforced_h_c       &sl SYMBOLS         &trans              &mc_sqo_c           &trans
+                                           &trans              &enforced_h_c       &sl LOW_CP          &trans              &mc_sqo_c           &trans
                            >;
                 };
                 case_ccedil_layer {
@@ -252,13 +252,22 @@
                                            &trans              &sl CASE_A2         &trans              &trans              &trans              &trans
                            >;
                 };
-                symbols_layer {
-                     display-name = "SYMBOLS";
+                lower_copy_layer {
+                     display-name = "LOWER";
                      bindings = <
-   &none               &kp LBRC            &kp RBRC            &kp BACKSLASH       &none               &none               &kp PERCENT         &kp EQUAL           &kp COLON           &none
-   &kp AT              &kp LPAR            &kp RPAR            &mc_dqo             &none               &none               &kp MINUS           &kp PLUS            &kp SLASH           &kp STAR 
-   &trans              &kp LBKT            &kp RBKT            &kp QMARK           &none               &none               &kp EXCL            &kp LT              &kp GT              &trans
-                                           &trans              &trans              &kp SPACE           &kp SPACE           &trans              &trans
+   &trans              &td_lbrc            &td_rbrc            &th_bsl 0 0         &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
+   &lt NAV AT          &td_lpar            &td_rpar            &th_dqo 0 0         &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
+   &trans              &td_lbkt            &td_rbkt            &th_qmark 0 0       &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
+                                           &trans              &trans              &sl RAI_CP          &lt RAI_CP SPACE    &th_n0 MEDIA 0      &trans
+                           >;
+                };
+                raise_copy_layer {
+                     display-name = "RAISE";
+                     bindings = <
+   &none               &kp F9              &kp F8              &kp F7              &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
+   &none               &kp F6              &kp F5              &kp F4              &none               &none               &th_mins 0 0        &th_plus 0 0        &th_slash 0 0       &lt SHORTCUTS STAR  
+   &none               &kp F3              &kp F2              &kp F1              &none               &none               &th_excl 0 0        &th_lt 0 0          &th_gt 0 0          &trans
+                                           &trans              &key_repeat         &kp SPACE           &kp SPACE           &trans              &trans       
                            >;
                 };
                 navigation_layer {

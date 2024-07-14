@@ -30,12 +30,13 @@
 #define SHIFT_A2 22
 #define CASE_A2 23
 #define CASE_CCEDIL 24
-#define SYMBOLS 25
-#define NAV 26
-#define MEDIA 27
-#define NAV_F 28
-#define LOCK_KB 29
-#define SYSTEM 30
+#define LOW_CP 25
+#define RAI_CP 26
+#define NAV 27
+#define MEDIA 28
+#define NAV_F 29
+#define LOCK_KB 30
+#define SYSTEM 31
 
 #define TAPPING_TERM 175
 #define TD_TAPPING_TERM 225

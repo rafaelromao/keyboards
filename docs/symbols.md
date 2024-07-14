@@ -22,11 +22,6 @@ Symbols and Numbers are primarily available in the two classic Lower and Raise l
 - Symbols that are commonly used in VIM are placed in the right side of the Raise layer, making them easily accessible using only the right hand.
 - Some common programmer n-grams, like ->, =>, \<!--, -->, <>, />, !=, :=, +=, -=, can all be typed rolling through keys in the right hand.
 
-### Symbol layer
-- There is a dedicate Symbol layer that is activated holding the left inner thumb key on the Raise layer, or for one shot, tapping in sequence the right then the left inner thumb key.
-- In this layer, there are no mod taps, so it is possible to repeat symbols holding the key.
-- There are also some combos to give access to the symbols usually available holding keys in the Lower or Raise layers.
- 
  ### Numpad Layer
 - A dedicated Numpad layer can be activated from the Raise layer, using a single hand.
 - The left side of the Numpad layer contains mouse keys, just like the left side of the [Media](navigation.md#media) layer.
