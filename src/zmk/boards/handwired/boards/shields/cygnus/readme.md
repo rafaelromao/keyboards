@@ -19,6 +19,8 @@ Parts:
 - [Dupont cables](https://aliexpress.com/item/1005004155181609.html).
 - [1n4148 diodes + diode legs](https://pt.aliexpress.com/item/1005003540554760.html).
 
+[Here](../../../../../../../docs/cygnus.md) you can see some build images.
+
 ### ZMK
 
 #### Compile
