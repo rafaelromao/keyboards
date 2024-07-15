@@ -20,7 +20,9 @@ Parts for the keyboard:
 - [2 SS12F15 switches](https://www.aliexpress.com/item/4000699324084.html).
 - [Dupont Cables](https://aliexpress.com/item/1005004155181609.html).
 - [28 AWG Wires](https://www.aliexpress.com/item/1005006249194665.html).
-- [1n4148 diodes + diode legs](https://pt.aliexpress.com/item/1005003540554760.html).
+- [1n4148 diodes + diode legs](https://www.aliexpress.com/item/1005003540554760.html).
+- [3 65x45 Metal Plates](https://www.aliexpress.com/item/1005006610531442.html).
+- [1 65x45 Magnet](https://www.aliexpress.com/item/4000152137062.html).
 
 Parts for the dongle:
 - Dongle [case](../../../../../../../stls/Dongle) (soon).
