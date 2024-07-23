@@ -25,7 +25,8 @@ Parts for the keyboard:
 - [1 65x45 Magnet](https://www.aliexpress.com/item/4000152137062.html).
 
 Parts for the dongle:
-- Dongle [case](../../../../../../../stls/Dongle) (soon).
+- Dongle [case](../../../../../../../stls/Dongle/).
+- [1 0.96 I2C OLED Screen](https://www.aliexpress.com/item/1005006262908701.html).
 - [1 6x6x6 switch](https://www.aliexpress.com/item/4001166999847.html).
 - [1 SS12F15 switch](https://www.aliexpress.com/item/4000699324084.html).
 - [1 Supermini NRF52840](https://www.aliexpress.com/item/1005006035267231.html).
