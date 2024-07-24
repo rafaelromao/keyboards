@@ -16,7 +16,7 @@ Diamond is a handwired board originally designed by me but heavily inspired by t
 
 ### Diamond v1
 
-The first version of Diamond is the result of 3 prototype, after the first two, some small adjustment were implemented.
+The first version of Diamond is the result of 3 prototypes, after the first two, some small adjustment were implemented.
 
 This version is expected to be wireless only, using a Supermini NRF52840 MCU (Nice Nano v2 clone).
 
