@@ -30,9 +30,9 @@ For the second version, the following improvements were implemented:
 - Included a hole in the base to allow the LED of the Xiao RP2040 to shine through the bottom of the keyboard.
 - Included a variation of the thumb cluster, with the keys inclined instead of flat.
 - Included a variation of the switch holders, using Choc switches instead of MX switches.
-- Included an unibody base, compatible with all body versions, with its own on/off switch, reset button and USB-C breakout board in hr middle.
- - This unibody base has a center cover with a hole for n OLED screen (0.91 or 0.96).
- - A single MCU and battery are required, and should be assembled in the sides, in their regular places. Cables could cross from one side to the other throw the unused on/off switch holes.
+- Included an unibody base, compatible with all body versions, with its own on/off switch, reset button and USB-C breakout board in the middle.
+  - This unibody base has a center cover with a hole for an OLED screen (0.91 or 0.96), anf also two versions of a small lid to cover it.
+  - A single MCU and battery are required, and should be assembled in the sides, in their regular places. Cables could cross from one side to the other throw the unused on/off switch holes.
 
 #### STL Files
 The STL files are provided for the right side. To print the left side, just mirror them.
