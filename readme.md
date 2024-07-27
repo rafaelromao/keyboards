@@ -106,6 +106,7 @@ Most features implemented here were based on the work referenced below.
 - [bmijanovich](https://github.com/bmijanovich/zmk-config)
 - [DreymaR](https://dreymar.colemak.org)
 - [Ben Vallack](https://youtube.com/c/BenVallack)
+- [Nordrassil](https://github.com/empressabyss/nordrassil) 
 
 ### QMK
 - [Pascal Getreuer](https://github.com/getreuer/qmk-keymap)
