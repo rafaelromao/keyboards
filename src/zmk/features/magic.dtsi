@@ -93,21 +93,21 @@
                            RS(X)         RS(Y)         RS(Z)                                                                                                   \
                            >;
             bindings =    <
-                           &tc_v         &tc_v         &tc_h         &tc_h         &tc_h           &tc_h         &tc_h           &sl ALPHA2      &tc_h         \
-                           &tc_v         &tc_v         &tc_v         &tc_h         &tc_h           &sl ALPHA2    &tc_v           &tc_v           &sl ALPHA2    \
-                           &sl ALPHA2    &tc_h         &tc_h         &tc_h         &tc_v           &tc_v         &tc_h           &tc_v           &tc_h         \
+                           &tc_v         &tc_v         &none         &none         &none           &kp Y         &tc_h           &sl ALPHA2      &kp Y         \
+                           &tc_v         &tc_v         &tc_v         &kp Y         &tc_h           &sl ALPHA2    &tc_v           &tc_v           &sl ALPHA2    \
+                           &sl ALPHA2    &tc_h         &kp Y         &tc_h         &tc_v           &tc_v         &none           &tc_v           &tc_h         \
                            &sl ALPHA2    &sl ALPHA2    &tc_h         &tc_h         &tc_h           &tc_v         &tc_v           &sl ALPHA2      &tc_h         \
                            &sl ALPHA2    &sl ALPHA2    &sl ALPHA2    &kp SLASH     &sl ALPHA2      &tc_h         &sl ALPHA2                                    \
 
-                           &kp LS(V)     &kp LS(V)     &tc_h         &tc_h         &tc_h           &kp LS(H)     &kp LS(H)       &sl CASE_A2     &kp LS(H)     \
-                           &kp LS(V)     &kp LS(V)     &kp LS(V)     &kp LS(H)     &kp LS(H)       &sl CASE_A2   &kp LS(V)       &kp LS(V)       &sl CASE_A2   \
-                           &sl CASE_A2   &kp LS(H)     &kp LS(H)     &kp LS(H)     &kp LS(V)       &kp LS(V)     &tc_h           &kp LS(V)       &kp LS(H)     \
+                           &kp LS(V)     &kp LS(V)     &none         &none         &none           &kp LS(Y)     &kp LS(H)       &sl CASE_A2     &kp LS(Y)     \
+                           &kp LS(V)     &kp LS(V)     &kp LS(V)     &kp LS(Y)     &kp LS(H)       &sl CASE_A2   &kp LS(V)       &kp LS(V)       &sl CASE_A2   \
+                           &sl CASE_A2   &kp LS(H)     &kp LS(Y)     &kp LS(H)     &kp LS(V)       &kp LS(V)     &none           &kp LS(V)       &kp LS(H)     \
                            &sl CASE_A2   &sl CASE_A2   &kp LS(H)     &kp LS(H)     &kp LS(H)       &kp LS(V)     &kp LS(V)       &sl CASE_A2     &kp LS(H)     \
                            &sl CASE_A2   &sl CASE_A2   &sl CASE_A2                 &kp LS(H)                                                                   \
 
-                           &tc_v         &tc_v         &tc_h         &tc_h         &tc_h           &tc_h         &tc_h           &sl ALPHA2      &tc_h         \
-                           &tc_v         &tc_v         &tc_v         &tc_h         &tc_h           &sl ALPHA2    &tc_v           &tc_v           &sl ALPHA2    \
-                           &sl ALPHA2    &tc_h         &tc_h         &tc_h         &tc_v           &tc_v         &tc_h           &tc_v           &tc_h         \
+                           &tc_v         &tc_v         &none         &none         &none           &kp Y         &tc_h           &sl ALPHA2      &kp Y         \
+                           &tc_v         &tc_v         &tc_v         &kp Y         &tc_h           &sl ALPHA2    &tc_v           &tc_v           &sl ALPHA2    \
+                           &sl ALPHA2    &tc_h         &kp Y         &tc_h         &tc_v           &tc_v         &none           &tc_v           &tc_h         \
                            &sl ALPHA2    &sl ALPHA2    &tc_h         &tc_h         &tc_h           &tc_v         &tc_v           &sl ALPHA2      &tc_h         \
                            &sl ALPHA2    &sl ALPHA2    &sl ALPHA2                                                                                              \
                            >;
@@ -182,6 +182,54 @@
                            &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC    \
                            &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC    \
                            &kp BSPC      &kp BSPC                                      \
+                           >;
+        };
+
+        labeled_y: labeled_y {
+			compatible = "zmk,behavior-macro";
+            label = "labeled_y";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_tap &kp Y>;
+        };
+
+        enforced_y: enforced_y {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "enforced_y";
+            #binding-cells = <0>;
+            max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
+            defaults = <&labeled_y>;
+            antecedents = <
+                            M             F             B             D             \
+                            RS(M)         RS(F)         RS(B)         RS(D)         \
+                           >;
+            bindings =    <
+                            &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC      \
+                            &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC      \
+                           >;
+        };
+
+        labeled_y_c: labeled_y_c {
+			compatible = "zmk,behavior-macro";
+            label = "labeled_y_c";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_tap &kp LS(Y)>;
+        };
+
+        enforced_y_c: enforced_y_c {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "enforced_y_c";
+            #binding-cells = <0>;
+            max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
+            defaults = <&labeled_y_c>;
+            antecedents = <
+                            LS(M)         LS(F)         LS(B)         LS(D)         \
+                           >;
+            bindings =    <
+                            &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC      \
                            >;
         };
 
