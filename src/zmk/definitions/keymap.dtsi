@@ -212,7 +212,7 @@
                      bindings = <
    &none               &kp Q               &mc_qu              &kp K               &none               &none               &ac_ocir            &ac_ecir            &ac_acir            &none
    &enforced_y         &kp Z               &kp X               &kp W               &none               &none               &ac_atil            &ac_eacu            &ac_aacu            &ac_iacu 
-   &trans              &kp J               &mc_ced             &enforced_v         &none               &none               &ac_otil            &ac_oacu            &ac_uacu            &trans
+   &trans              &kp J               &mc_ced             &reversed_magic     &none               &none               &ac_otil            &ac_oacu            &ac_uacu            &trans
                                            &trans              &enforced_h         &sl LOW_CP          &trans              &mc_sqo             &trans
                            >;
                 };
@@ -239,7 +239,7 @@
                      bindings = <
    &none               &kp LS(Q)           &mc_qu_c            &kp LS(K)           &none               &none               &ac_ocir_c          &ac_ecir_c          &ac_acir_c          &none
    &enforced_y_c       &kp LS(Z)           &kp LS(X)           &kp LS(W)           &none               &none               &ac_atil_c          &ac_eacu_c          &ac_aacu_c          &ac_iacu_c 
-   &trans              &kp LS(J)           &mc_ced_c           &enforced_v_c       &none               &none               &ac_otil_c          &ac_oacu_c          &ac_uacu_c          &trans
+   &trans              &kp LS(J)           &mc_ced_c           &reversed_magic_c   &none               &none               &ac_otil_c          &ac_oacu_c          &ac_uacu_c          &trans
                                            &trans              &enforced_h_c       &sl LOW_CP          &trans              &mc_sqo_c           &trans
                            >;
                 };
