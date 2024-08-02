@@ -106,6 +106,8 @@ Most features implemented here were based on the work referenced below.
 - [bmijanovich](https://github.com/bmijanovich/zmk-config)
 - [DreymaR](https://dreymar.colemak.org)
 - [Ben Vallack](https://youtube.com/c/BenVallack)
+- [Magic Sturdy](https://github.com/Ikcelaks/keyboard_layouts/blob/main/magic_sturdy/magic_sturdy.md)
+- [Uno](https://lykt.xyz/uno)
 - [Nordrassil](https://github.com/empressabyss/nordrassil) 
 
 ### QMK
