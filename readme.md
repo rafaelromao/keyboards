@@ -140,5 +140,7 @@ Most features implemented here were based on the work referenced below.
 - [QMK Docs](https://docs.qmk.fm)
 - [ZMK Docs](https://zmk.dev/docs)
 - [Keyboard Tester](https://config.qmk.fm/#/test)
+- [Word Finder - English](https://www.merriam-webster.com/wordfinder/classic/contains/all/-1/th/1)
+- [Word Finder - Portuguese](https://www.palavras.net/search.php?m=th&d=17)
 - [r/olkb](https://www.reddit.com/r/olkb)
 - [r/ErgoMechKeyboards](https://www.reddit.com/r/ErgoMechKeyboards)
