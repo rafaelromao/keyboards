@@ -1,6 +1,0 @@
-SRC += features/leader.c
-
-LEADER_ENABLE = yes
-DYNAMIC_MACRO_ENABLE = no
-RGB_MATRIX_ENABLE = no
-RGBLIGHT_ENABLE = no
