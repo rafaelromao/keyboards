@@ -40,7 +40,7 @@ The following pages explain how this layout works and which features are impleme
 
 ## About this repo
 
-This repository contains the keymap files that are used to customize my keyboards. The firmware files are included as submodules or external references and symlinks are used to make them see the keymap files.
+This repository contains the keymap files that are used to customize my keyboards. The firmware files are included as submodules or external references.
 
 ## Compatibility
 
@@ -48,13 +48,7 @@ This layout was tested with the keyboards listed below, but can be easily adapte
 
 ### QMK
 
-The reference implementation was made in QMK, but it is kept here for historical purposes only. It will not receive evolutive maintenance and might not be in sync with the documentation. To see the lastest version of the docs that is in sync with the implementation, check the branch called `last_qmk`, or the tags `v0.36*`.
-
-The keyboards that are still kept in QMK are the ones listed below:
-
-- [kprepublic/bm40hsrgb](src/qmk/keyboards/kprepublic/bm40hsrgb/keymaps/rafaelromao/readme.md)
-
-Some features are not available on all keyboards though. For instance, the BM40 does not support Dynamic Macros.
+There is an outdate QMK version of this keymap, available in a separate [qmk_userspace](http://github.com/rafaelromao/qmk_userspace) repo.
 
 ### ZMK
 
@@ -79,11 +73,6 @@ The keyboards that run the ZMK implementation of this Keymap are listed below:
 Some features might not be available in ZMK. [This readme file](src/zmk/rafaelromao/readme.md) will indicate what features are missing.
 
 ## Building
-
-### QMK
-
-The script [init_qmk.sh](init_qmk.sh) will clone [the QMK firmware](https://github.com/qmk/qmk_firmware) and symlink these keyboard files on it.
-After [installing QMK](https://docs.qmk.fm/#/newbs_getting_started) and running the init script above, [qmk cli](https://docs.qmk.fm/#/cli) should be working to compile and flash.
 
 ### ZMK
 
