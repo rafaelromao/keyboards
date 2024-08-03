@@ -119,7 +119,7 @@
             bindings = <&kp>, <&magic_key>;
         };
 
-        // ******************** MAGIC KEY ENFORCERS ******************** //
+        // ******************** REVERSED MAGIC KEY ******************** //
 
         labeled_v: labeled_v {
 			compatible = "zmk,behavior-macro";
@@ -142,7 +142,7 @@
                            U             UACU_TERM                                             \
                            RS(A)         S_AACU_TERM   RS(E)         S_EACU_TERM   S_ECIR_TERM \
                            RS(I)         S_IACU_TERM   RS(O)         S_OACU_TERM               \
-                           RS(V)         S_UACU_TERM                                           \
+                           RS(U)         S_UACU_TERM                                           \
                            >;
             bindings =    <
                            &tc_h         &tc_h         &tc_h         &tc_h         &tc_h       \
@@ -180,6 +180,8 @@
                            &kp LS(H)     &kp LS(H)                                             \
                            >;
         };
+
+        // ******************** MAGIC KEY ENFORCERS ******************** //
 
         labeled_y: labeled_y {
 			compatible = "zmk,behavior-macro";
@@ -226,51 +228,6 @@
                            >;
             bindings =    <
                             &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC      \
-                           >;
-        };
-
-        enforced_h: enforced_h {
-            compatible = "zmk,behavior-antecedent-morph";
-            label = "enforced_h";
-            #binding-cells = <0>;
-            max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
-            defaults = <&labeled_h>;
-            antecedents = <
-                           C             G             N             P           \
-                           S             T             W                         \
-                           RS(C)         RS(G)         RS(N)         RS(P)       \
-                           RS(S)         RS(T)         RS(W)                     \
-                           >;
-            bindings =    <
-                           &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC    \
-                           &kp BSPC      &kp BSPC      &kp BSPC                  \
-                           &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC    \
-                           &kp BSPC      &kp BSPC      &kp BSPC                  \
-                           >;
-        };
-
-        labeled_h_c: labeled_h_c {
-			compatible = "zmk,behavior-macro";
-            label = "labeled_h_c";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&macro_tap &kp LS(H)>;
-        };
-
-        enforced_h_c: enforced_h_c {
-            compatible = "zmk,behavior-antecedent-morph";
-            label = "enforced_h_c";
-            #binding-cells = <0>;
-            max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
-            defaults = <&labeled_h_c>;
-            antecedents = <
-                           LS(C)         LS(G)         LS(N)         LS(P)         \
-                           LS(S)         LS(T)         LS(W)         CAPSWORD_TERM \
-                           >;
-            bindings =    <
-                           &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC      \
-                           &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC      \
                            >;
         };
 
