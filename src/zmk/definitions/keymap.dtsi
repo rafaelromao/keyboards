@@ -157,7 +157,7 @@
                      display-name = "NUMPAD";
                      bindings = <
    &none               &kp ESC             &mkp LCLK           &mkp RCLK           &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
-   &none               &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &none               &mc_n4              &mc_n5              &mc_n6              &lt SHORTCUTS DOT 
+   &mo NAV             &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &none               &mc_n4              &mc_n5              &mc_n6              &lt SHORTCUTS DOT 
    &none               &msc SCRL_DOWN      &mmv MOVE_DOWN      &msc SCRL_UP        &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
                                            &trans              &ht_repeat NAV 0    &trans              &ltn LOW_CP SPACE   &th_n0 MEDIA 0      &trans
                            >;
@@ -252,11 +252,20 @@
                                            &trans              &trans              &trans              &kp BACKSPACE       &trans              &trans
                            >;
                 };
+                navigation_layer {
+                     display-name = "NAV";
+                     bindings = <
+   &none               &kp ESC             &kp PAGE_UP         &kp INS             &none               &none               &kp TAB             &kp ENTER           &mc_delword         &none
+   &mo LOW_CP          &kp LSHFT           &kp LCTRL           &kp LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &none               &kp RALT            &kp PAGE_DOWN       &kp LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &trans
+                                           &trans              &trans              &trans              &kp SPACE           &mo MEDIA           &trans
+                        >;
+                };
                 lower_copy_layer {
                      display-name = "LOWER";
                      bindings = <
    &trans              &td_lbrc            &td_rbrc            &th_bsl 0 0         &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
-   &lt NAV AT          &td_lpar            &td_rpar            &th_dqo 0 0         &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
+   &lt NAV_F AT        &td_lpar            &td_rpar            &th_dqo 0 0         &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
    &trans              &td_lbkt            &td_rbkt            &th_qmark 0 0       &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
                                            &trans              &trans              &sl RAI_CP          &lt RAI_CP SPACE    &th_n0 MEDIA 0      &trans
                            >;
@@ -269,15 +278,6 @@
    &none               &kp F3              &kp F2              &kp F1              &none               &none               &th_excl 0 0        &th_lt 0 0          &th_gt 0 0          &trans
                                            &trans              &key_repeat         &kp SPACE           &kp SPACE           &trans              &trans       
                            >;
-                };
-                navigation_layer {
-                     display-name = "NAV";
-                     bindings = <
-   &none               &kp ESC             &kp PAGE_UP         &kp INS             &none               &none               &kp TAB             &kp ENTER           &mc_delword         &none
-   &none               &kp LSHFT           &kp LCTRL           &kp LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
-   &none               &kp RALT            &kp PAGE_DOWN       &kp LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &trans
-                                           &trans              &trans              &trans              &kp SPACE           &mo MEDIA           &trans
-                        >;
                 };
                 media_layer {
                      display-name = "MEDIA";

@@ -30,9 +30,9 @@
 #define SHIFT_A2 22
 #define CASE_A2 23
 #define CASE_CCEDIL 24
-#define LOW_CP 25
-#define RAI_CP 26
-#define NAV 27
+#define NAV 25
+#define LOW_CP 26
+#define RAI_CP 27
 #define MEDIA 28
 #define NAV_F 29
 #define LOCK_KB 30
