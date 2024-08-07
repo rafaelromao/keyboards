@@ -167,7 +167,7 @@
                      bindings = <
    &none               &kp ESC             &mc_files           &mc_preview         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &none    
    &mo SYSTEM          &kp RGUI            &mc_app_swapper     &th_tabs LGUI 0     &none               &none               &mc_seln            &mm_down_minus      &mm_up_plus         &mo SYSTEM
-   &none               &mc_term            &mc_clip            &mc_calc            &none               &none               &td_dynmacro        &ht_ref_clo_z0 0 0  &mc_sleep           &trans
+   &none               &mc_term            &mc_clip            &mc_calc            &none               &none               &mc_selh            &ht_ref_clo_z0 0 0  &td_dynmacro        &trans
                                            &trans              &mst FUSION FUSION  &mst NMODS NMODS    &mst CODING CODING  &mst NAV NAV_F      &trans
                            >;
                 };
@@ -264,7 +264,7 @@
                 navigation_layer {
                      display-name = "NAV";
                      bindings = <
-   &none               &kp ESC             &kp PAGE_UP         &kp INS             &none               &none               &kp TAB             &kp ENTER           &mc_delword         &none
+   &none               &mc_prevword        &kp PAGE_UP         &mc_nextword        &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
    &mo LOW_CP          &kp LSHFT           &kp LCTRL           &kp LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
    &none               &kp RALT            &kp PAGE_DOWN       &kp LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &trans
                                            &trans              &trans              &trans              &kp SPACE           &mo MEDIA           &trans
@@ -300,28 +300,19 @@
                 fixed_navigation_layer {
                      display-name = "NAV";
                      bindings = <
-   &none               &kp ESC             &kp PAGE_UP         &kp INS             &none               &none               &kp TAB             &kp ENTER           &mc_delword         &none
+   &none               &mc_prevword        &kp PAGE_UP         &mc_nextword        &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
    &none               &kp LSHFT           &kp LCTRL           &kp LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
    &none               &kp RALT            &kp PAGE_DOWN       &kp LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &trans
                                            &trans              &trans              &kp SPACE           &kp SPACE           &to ALPHA1          &trans
                            >;
                 };
-                lock_layer {
-                     display-name = "LOCK";
-                     bindings = <
-   &none               &none               &none               &none               &none               &none               &none               &none               &none               &none    
-   &trans              &none               &none               &none               &none               &none               &none               &none               &none               &trans  
-   &none               &none               &none               &none               &none               &none               &none               &none               &none               &none 
-                                           &none               &none               &none               &none               &none               &none
-                        >;
-                };
                 system_layer {
                      display-name = "SYSTEM";
                      bindings = <
-   &none               &none               &none               &sys_reset          &none               &none               &sys_reset          &none               &none                &none 
-   &none               &none               &none               &bootloader         &none               &none               &bootloader         &none               &tog LOCK_KB         &none      
-   &none               &none               &none               &none               &none               &none               &bt BT_CLR          &bt BT_PRV          &bt BT_NXT           &none
-                                           &trans              &trans              &trans              &trans              &trans              &trans
+   &none               &none               &none               &sys_reset          &none               &none               &sys_reset          &kp INS             &none               &none 
+   &none               &none               &none               &bootloader         &none               &none               &bootloader         &kp C_SLEEP         &none               &none      
+   &none               &none               &none               &none               &none               &none               &none               &mc_lock            &none               &none
+                                           &trans              &bt BT_CLR          &bt BT_SEL 0        &bt BT_PRV          &bt BT_NXT          &trans
                         >;
                 };
         };

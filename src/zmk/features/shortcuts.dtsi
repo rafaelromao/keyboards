@@ -170,6 +170,8 @@
         SHORTCUT(mc_reformat,               &macro_tap &kp LG(LA(L)))
         SHIFTED_SHORTCUT(mm_refac,          &mc_refac, &mc_reformat)
 
+        SHORTCUT(mc_selh,                   &macro_tap &kp LS(HOME))
+        
         SHORTCUT(mc_selw,                   &macro_tap &kp LA(LEFT) &kp LA(RIGHT) \
                                             &macro_press &kp LA(LS(LEFT)) \
                                             &macro_pause_for_release \
@@ -203,12 +205,14 @@
         MORPHED_SHORTCUT_KM(mm_down_minus,  &kp DOWN, &kp MINUS, MOD_RGUI)
         MORPHED_SHORTCUT_KM(mm_up_plus,     &kp UP, &kp PLUS, MOD_RGUI)
 
-        SHORTCUT(mc_sleep,                  &macro_press &kp C_SLEEP &macro_pause_for_release &macro_release &kp C_SLEEP &macro_tap &kp LC(LG(Q)))
+        SHORTCUT(mc_lock,                   &macro_tap &kp LC(LG(Q)))
 
         SHORTCUT(mc_comment,                &macro_tap &kp LG(SLASH))
         SHORTCUT(mc_escc,                   &macro_tap &kp ESC &to ALPHA1)
         SHORTCUT(mc_dqt0p,                  &macro_tap &kp DQT &kp N0 &kp P)
 
+        SHORTCUT(mc_prevword,               &macro_tap &kp LA(LEFT))
+        SHORTCUT(mc_nextword,               &macro_tap &kp LA(RIGHT))
         SHORTCUT(mc_delword,                &macro_tap &kp LA(BACKSPACE))
         SHORTCUT(mc_joinwords,              &macro_tap &kp LA(LEFT) &kp BACKSPACE &kp LA(RIGHT))
 

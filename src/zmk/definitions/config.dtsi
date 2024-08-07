@@ -36,8 +36,7 @@
 #define RAI_CP 28
 #define MEDIA 29
 #define NAV_F 30
-#define LOCK_KB 31
-#define SYSTEM 32
+#define SYSTEM 31
 
 #define TAPPING_TERM 175
 #define TD_TAPPING_TERM 225
