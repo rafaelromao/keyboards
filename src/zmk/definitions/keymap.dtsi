@@ -163,16 +163,16 @@
                            >;
                 };
                 shortcuts_layer {
-                     display-name = "SHORTCUT";
+                     display-name = "SHORTCUTS";
                      bindings = <
    &none               &kp ESC             &mc_files           &mc_preview         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &none    
    &mo SYSTEM          &kp RGUI            &mc_app_swapper     &th_tabs LGUI 0     &none               &none               &mc_seln            &mm_down_minus      &mm_up_plus         &mo SYSTEM
    &none               &mc_term            &mc_clip            &mc_calc            &none               &none               &td_dynmacro        &ht_ref_clo_z0 0 0  &mc_sleep           &trans
-                                           &trans              &mst CODING CODING  &mst NMODS NMODS    &lt CODING SPACE    &mst NAV NAV_F      &trans
+                                           &trans              &mst FUSION FUSION  &mst NMODS NMODS    &mst CODING CODING  &mst NAV NAV_F      &trans
                            >;
                 };
                 shortcuts_ext_1_layer {
-                     display-name = "SHORTCUT";
+                     display-name = "SHORTCUTS";
                      bindings = <
    &trans              &trans              &trans              &trans              &trans              &trans              &mc_ext_sel         &trans              &trans              &trans    
    &trans              &trans              &trans              &trans              &trans              &trans              &th_ext_sel LGUI 0  &trans              &trans              &trans  
@@ -181,7 +181,7 @@
                            >;
                 };
                 shortcuts_ext_2_layer {
-                     display-name = "SHORTCUT";
+                     display-name = "SHORTCUTS";
                      bindings = <
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &sw_win_b           &sw_win_f           &trans  
@@ -213,7 +213,7 @@
    &none               &kp Q               &mc_qu              &kp K               &none               &none               &ac_ocir            &ac_ecir            &ac_acir            &none
    &enforced_y         &kp Z               &kp X               &kp W               &none               &none               &ac_atil            &ac_eacu            &ac_aacu            &ac_iacu 
    &trans              &kp J               &mc_ced             &reversed_magic     &none               &none               &ac_otil            &ac_oacu            &ac_uacu            &trans
-                                           &trans              &kp H               &sl LOW_CP          &trans              &mc_sqo             &trans
+                                           &trans              &kp H               &sl LOW_CP          &kp SPACE           &mc_sqo             &trans
                            >;
                 };
                 ccedil_layer {
@@ -250,6 +250,15 @@
    &trans              &trans              &trans              &trans              &trans              &trans              &ac_atil_c          &trans              &ac_aacu_c          &trans  
    &trans              &trans              &trans              &trans              &trans              &trans              &ac_otil_c          &ac_oacu_c          &ac_uacu_c          &trans 
                                            &trans              &trans              &trans              &kp BACKSPACE       &trans              &trans
+                           >;
+                };
+                fusion360_layer {
+                     display-name = "FUSION 360";
+                     bindings = <
+   &trans              &trans              &trans              &trans              &trans              &none               &kp L               &kp O               &kp M               &none
+   &trans              &trans              &trans              &trans              &trans              &none               &kp R               &kp S               &kp E               &lt NAV I
+   &trans              &trans              &trans              &trans              &trans              &none               &kp H               &kp C               &kp F               &none
+                                           &trans              &trans              &trans              &mc_orbit           &mc_pan             &none
                            >;
                 };
                 navigation_layer {
