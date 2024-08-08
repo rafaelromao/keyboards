@@ -91,6 +91,7 @@ Most features implemented here were based on the work referenced below.
 - [Engram](https://engram.dev)
 - [Miryoku](https://github.com/manna-harbour/miryoku)
 - [Seniply](https://stevep99.github.io/seniply)
+- [Thinqu](https://microexploitation.com/2018/06/04/thinqu/)
 - [Suraj Kurapati](https://sunaku.github.io/moergo-glove80-keyboard.html)
 - [bmijanovich](https://github.com/bmijanovich/zmk-config)
 - [DreymaR](https://dreymar.colemak.org)
