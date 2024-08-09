@@ -46,7 +46,7 @@
                 shifted_alpha1_layer {
                      display-name = "CASE";
                      bindings = <
-   &trans              &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &trans
+   &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y)
    &lt SHORTCUTS RS(D) &mt LSHFT RS(N)     &mt LCTRL RS(S)     &mt LGUI RS(T)      &kp RS(W)           &kp RS(Z)           &mt RGUI RS(R)      &mt RCTRL RS(A)     &mt RSHFT RS(E)     &lt SHORTCUTS RS(I) 
    &trans              &mt RALT RS(F)      &kp RS(C)           &mt LALT RS(P)      &kp RS(V)           &kp RS(J)           &ht_sft_h RALT 0    &th_comma 0 0       &th_dot 0 0         &trans
                                            &trans              &trans              &msk_spc LOWER 0    &th_sft_a2 RAISE 0  &ht_caps MEDIA 0    &trans
@@ -93,7 +93,7 @@
                 capsword_layer {
                      display-name = "CASE";
                      bindings = <
-   &trans              &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &none
+   &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &kp LS(Y)
    &lt SHORTCUTS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTCUTS LS(I) 
    &trans              &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic RALT 0    &th_comma 0 0       &th_dot 0 0         &trans
                                            &trans              &trans              &trans              &th_case_a2 RAISE 0 &th_cancel MEDIA 0  &trans
@@ -102,7 +102,7 @@
                 capslock_layer {
                      display-name = "CASE";
                      bindings = <
-   &trans              &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &none
+   &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &kp LS(Y)
    &lt SHORTCUTS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTCUTS LS(I) 
    &trans              &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic RALT 0    &th_comma 0 0       &th_dot 0 0         &trans
                                            &trans              &trans              &th_sp_caps LOWER 0 &th_case_a2 RAISE 0 &th_cancel MEDIA 0  &trans
@@ -149,7 +149,7 @@
                      bindings = <
    &none               &kp RS(Q)           &mc_qu_s            &kp RS(K)           &none               &none               &ac_ocir_c          &ac_ecir_c          &ac_acir_c          &none
    &kp RS(Y)           &kp RS(Z)           &kp RS(X)           &kp RS(W)           &none               &none               &ac_atil_c          &ac_eacu_c          &ac_aacu_c          &ac_iacu_c 
-   &trans              &kp RS(J)           &mc_ced_c           &kp RS(V)           &none               &none               &ac_otil_c          &ac_oacu_c          &ac_uacu_c          &ac_iacu_c
+   &trans              &kp RS(J)           &mc_ced_c           &kp RS(V)           &none               &none               &ac_otil_c          &ac_oacu_c          &ac_uacu_c          &trans
                                            &trans              &kp RS(H)           &th_sp_ns LOW_CP 0  &msl RAI_CP SEN_E2  &th_nsen MEDIA 0    &trans
                            >;
                 };
@@ -291,10 +291,10 @@
                 fixed_navigation_layer {
                      display-name = "NAV";
                      bindings = <
-   &none               &mc_prevword        &kp PAGE_UP         &mc_nextword        &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
-   &mc_shortcuts       &kp LSHFT           &kp LCTRL           &kp LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
-   &none               &kp RALT            &kp PAGE_DOWN       &kp LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &trans
-                                           &trans              &trans              &kp SPACE           &kp SPACE           &to ALPHA1          &trans
+   &none               &kp ESC             &mkp LCLK           &mkp RCLK           &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
+   &mc_shortcuts       &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &none               &msc SCRL_DOWN      &mmv MOVE_DOWN      &msc SCRL_UP        &none               &none               &kp DEL             &kp HOME            &kp END             &trans
+                                           &trans              &mo NAV_F           &trans              &trans              &to ALPHA1          &trans
                            >;
                 };
                 system_layer {

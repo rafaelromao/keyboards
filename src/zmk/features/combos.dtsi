@@ -43,6 +43,7 @@
 
         COMBO(cb_escc,          LTR LTM,     &mc_escc,           ALL_LAYERS_BUT_LOWER_RAISE)
         COMBO(cb_backspace,     RTM RTR,     &kp BACKSPACE,      ALL_LAYERS_BUT_RAISE_NAV_MEDIA)
+        COMBO(cb_mousenav,      LBR LBM LBI, &to NAV_F,          ALL_LAYERS_BUT_RAISE_NAV_MEDIA)
         COMBO(cb_save,          LHR LHM L0,  &mc_save,           ALL_LAYERS)
         COMBO(cb_fullscr,       LHM LHI L0,  &mc_fullscr,        ALL_LAYERS)
         COMBO(cb_find,          LBM LBI L0,  &mc_find,           ALL_LAYERS)
@@ -50,7 +51,6 @@
         COMBO(cb_enter_r,       RHM RHR R0,  &kp ENTER,          ALL_LAYERS)
         COMBO(cb_enter_l,       LHM LHR LHI, &ht_enter 0 0,      ALL_LAYERS)
         COMBO(cb_tab_r,         RTM RTR R0,  &kp TAB,            ALL_LAYERS)
-        COMBO(cb_tab_l,         LBR LBM LBI, &kp TAB,            ALL_LAYERS)
 
         COMBO(cb_paste,         RBI RBM R0,  &mc_paste,          ALL_LAYERS)
         COMBO(cb_copy,          RHI RHM R0,  &mc_copy,           ALL_LAYERS)
@@ -147,6 +147,7 @@
         COMBO(cb_ma1,           RTI RTM,     &to ALPHA1,         MEDIA)
         COMBO(cb_mescc,         RTM RTR,     &mc_escc,           MEDIA)
 
+        COMBO(cb_alpha1nav,     LBM LBR LBI, &to ALPHA1,         NAV_F)
         COMBO(cb_down_end,      RTI RTM,     &mc_down_end,       NAV NAV_F)
         COMBO(cb_end_ent,       RTM RTR,     &mc_end_ent,        NAV NAV_F)
 
