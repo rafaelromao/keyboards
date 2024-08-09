@@ -222,5 +222,7 @@
 
         SHORTCUT(mc_orbit,                  &macro_tap &kp LG(LC(LA(LS(O)))))
         SHORTCUT(mc_pan,                    &macro_tap &kp LG(LC(LA(LS(A)))))
+
+        SHORTCUT(mc_shortcuts,              &macro_tap &to ALPHA1 &macro_press &mo SHORTCUTS &macro_pause_for_release &macro_release &mo SHORTCUTS)
    };
 };
