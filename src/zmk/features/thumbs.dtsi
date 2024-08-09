@@ -106,8 +106,9 @@
             compatible = "zmk,behavior-caps-word";
             ignore-numbers;
 			#binding-cells = <0>;
-            layers = <NUMPAD>;
-            continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL MOVE_LEFT MOVE_RIGHT MOVE_UP MOVE_DOWN SCRL_DOWN SCRL_UP RCLK LCLK>;
+            layers = <LOWER>;
+            continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL AMPS PIPE HASH TILDE CARET
+                             LBRC RBRC BACKSLASH DOLLAR AT LPAR RPAR DQT SQT LBKT RBKT QMARK GRAVE>;
         };
 
         THUMB_MACRO(tc_custom_num_word, &to ALPHA1 &custom_num_word)
@@ -192,7 +193,7 @@
 
         THUMB_MORPH(sc_caps_word,  MOD_LCTL, &terminated_caps_word , &msl_a2 RAISE 0 )
         THUMB_MORPH(sc_caps_lock,  MOD_RCTL, &terminated_caps_lock , &sc_caps_word   )
-        THUMB_MORPH(sc_numpad,     MOD_LALT, &to NUMPAD            , &sc_caps_lock   )
+        THUMB_MORPH(sc_numpad,     MOD_LALT, &to LOWER             , &sc_caps_lock   )
         THUMB_MORPH(sc_numword,    MOD_RALT, &custom_num_word      , &sc_numpad      )
         THUMB_MORPH(sc_camelcase,  MOD_LSFT, &to CAMEL_CASE        , &sc_numword     )
         THUMB_MORPH(sc_snakecase,  MOD_LGUI, &to SNAKE_CASE        , &sc_camelcase   )
