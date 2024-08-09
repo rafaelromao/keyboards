@@ -39,15 +39,16 @@ noremap kk zz
 noremap ll gg
 ```
         
-#### Navigation Layer Toggle
-- A clone of the Navigation layer can be toggled on permanently using the Shortcuts layer.
-- This clone works the same way as the original Navigation layer, but the outer right thumb key will activate the Media layer instead of the System layer.
-
 ### Media
 - The Media layer gives access to [Standard Modifiers](modifiers.md#standard-modifiers), Media controls, Esc and a Save shortcut.
 
 #### Mouse Keys
 - In the left side of the Media layer, there are keys to control the mouse.
+
+#### Fixed Navigation Layer
+- A fixed version of the Navigation layer can be toggled on permanently using the Shortcuts layer.
+- In this layer, the left side is replaced by the left side of the Media layer, giving access to Mouse Keys.
+- This clone works the same way as the original Navigation layer, but the outer right thumb key will activate the Media layer instead of the System layer.
 
 ##
 [Home](../readme.md) | 

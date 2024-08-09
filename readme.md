@@ -28,7 +28,6 @@ The following pages explain how this layout works and which features are impleme
 - [Repeat Key](docs/base.md#repeat-key)
 - [Magic Key](docs/base.md#magic-key)
 - [Shortcut Combos](docs/base.md#base-layer-combos)
-- [Numpad Layer](docs/symbols.md#numpad)
 - [NumWord](docs/symbols.md#numword)
 - [Leader Key](docs/shortcuts.md#leader-key)
 - [Swapper](docs/shortcuts.md#swapper)

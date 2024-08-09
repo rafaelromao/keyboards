@@ -4,8 +4,8 @@
 Symbols and Numbers are primarily available in the two classic Lower and Raise layers, activated holding the space and backspace thumb keys, respectively.
 - Symbols are available in the left side of the Lower layer and in the right side of the Raise layer, making them easier to reach with a single hand.
 - There are combos to allow cross activation and one-shot activation of both symbol layers.
-- Numbers are available in the right side of the Lower layer and in a dedicated [Numpad](symbols.md#numpad) layer.
-- Function keys are available in the left side of the Raise layer and in a the left side of the dedicated [Numpad](symbols.md#numpad) layer.
+- Numbers are available in the right side of the Lower layer.
+- Function keys are available in the left side of the Raise layer.
 
 ### Symbols in the Lower layer (left side)
 - String delimiters, parenthesis, curly and square brackets, among others, are found in the left side of the Lower layer.
@@ -22,13 +22,8 @@ Symbols and Numbers are primarily available in the two classic Lower and Raise l
 - Symbols that are commonly used in VIM are placed in the right side of the Raise layer, making them easily accessible using only the right hand.
 - Some common programmer n-grams, like ->, =>, \<!--, -->, <>, />, !=, :=, +=, -=, can all be typed rolling through keys in the right hand.
 
- ### Numpad Layer
-- A dedicated Numpad layer can be activated from the Raise layer, using a single hand.
-- The left side of the Numpad layer contains mouse keys, just like the left side of the [Media](navigation.md#media) layer.
-- The right side of the Numpad layer contains number keys.
-
 ### NumWord
-- NumWord is a variation of CapsWord, but for numbers instead. A combo with ring and middle fingers in the left side bottom row will activate the Numpad layer and it will stay active while numbers or symbols are typed, returning to the base layer otherwise.
+- NumWord is a variation of CapsWord, but for numbers instead. A combo with ring and middle fingers in the left side bottom row will activate the Lower layer and it will stay active while numbers or symbols are typed, returning to the base layer otherwise.
 
 ### Coding Dancing
 - Coding Dancing is a set of macros available through tap dances (Double Tap) in the Lower layer.
