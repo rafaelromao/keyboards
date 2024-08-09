@@ -123,7 +123,7 @@
    &none               &kp F9              &kp F8              &kp F7              &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
    &none               &kp F6              &kp F5              &kp F4              &none               &none               &th_mins 0 0        &th_plus 0 0        &th_slash 0 0       &lt SHORTCUTS STAR  
    &none               &kp F3              &kp F2              &kp F1              &none               &none               &th_excl 0 0        &th_lt 0 0          &th_gt 0 0          &trans
-                                           &trans              &key_repeat         &lt LOW_CP SPACE    &trans              &tog NUMPAD         &trans       
+                                           &trans              &key_repeat         &lt LOW_CP SPACE    &trans              &trans              &trans       
                            >;
                 };
                 sentence_case_layer {
@@ -151,15 +151,6 @@
    &kp RS(Y)           &kp RS(Z)           &kp RS(X)           &kp RS(W)           &none               &none               &ac_atil_c          &ac_eacu_c          &ac_aacu_c          &ac_iacu_c 
    &trans              &kp RS(J)           &mc_ced_c           &kp RS(V)           &none               &none               &ac_otil_c          &ac_oacu_c          &ac_uacu_c          &ac_iacu_c
                                            &trans              &kp RS(H)           &th_sp_ns LOW_CP 0  &msl RAI_CP SEN_E2  &th_nsen MEDIA 0    &trans
-                           >;
-                };
-                numpad_layer {
-                     display-name = "NUMPAD";
-                     bindings = <
-   &none               &kp ESC             &mkp LCLK           &mkp RCLK           &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
-   &mo NAV             &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &none               &mc_n4              &mc_n5              &mc_n6              &lt SHORTCUTS DOT 
-   &none               &msc SCRL_DOWN      &mmv MOVE_DOWN      &msc SCRL_UP        &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
-                                           &trans              &ht_repeat NAV 0    &trans              &ltn LOW_CP SPACE   &th_n0 MEDIA 0      &trans
                            >;
                 };
                 shortcuts_layer {
