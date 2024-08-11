@@ -26,8 +26,8 @@
 
 ## Coding
 
-- A Coding layer can be activated holding the right pinky key from the Raise or Numpad layers.
-- This layer can also be activated holding the home thumb in the right side of the shortcuts layer, which makes it possible to hold the thumb and pinky keys together in any order to activate the Coding layer.
+- A Coding layer can be activated holding the right pinky key from the Raise layers.
+- This layer can also be activated tapping or holding the home thumb in the right side of the shortcuts layer, which makes it possible to hold the thumb and pinky keys together in any order to activate the Coding layer.
 - This layer gives access to some common programming shortcuts and also some macros.
 - Up and Down arrows, Enter and Esc are also available in the right side of this layer to make it easier to navigate in context menus.
 - There are also home row shift in the both sides to allow access to different actions when shift is active.
@@ -55,6 +55,10 @@ The list bellow contains my most used Coding shortcuts. The IntelliJ keymap for 
 | Recent Files       | Previous Error     | Gui + E              | Shift + F2
 | Swapper            | Next Error         | Ctrl + Tab           | F2
 | Show Usages        | Quick Definition   | Gui + Alt + F7       | Alt + Space
+
+## Fusion 360
+
+A Fusion 360 layer can be activated tapping or holding the outer thumb key in the left side of the Shortcuts layer. This layer has bindings for the most common shortcuts in the right side of the board, and it is designed that way so that the left hand can be kept in a trackball all the time.
 
 ##
 [Home](../readme.md) | 
