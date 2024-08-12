@@ -244,10 +244,10 @@
                            >;
                 };
                 fusion360_layer {
-                     display-name = "FUSION 360";
+                     display-name = "FUSION";
                      bindings = <
    &trans              &trans              &trans              &trans              &trans              &none               &kp L               &kp O               &kp M               &none
-   &trans              &trans              &trans              &trans              &trans              &none               &kp R               &kp S               &kp E               &lt NAV I
+   &trans              &trans              &trans              &trans              &trans              &none               &kp R               &kp A               &kp E               &lt NAV I
    &trans              &trans              &trans              &trans              &trans              &none               &kp H               &kp C               &kp F               &none
                                            &trans              &trans              &trans              &mc_orbit           &mc_pan             &none
                            >;
