@@ -86,7 +86,7 @@ Most features implemented here were based on the work referenced below.
 ### Layouts
 - [Romak](https://github.com/rafaelromao/romak)
 - [Colemak](https://colemak.org)
-- [BEAKL](https://ieants.cc/beakl)
+- [BEAKL](https://deskthority.net/wiki/BEAKL)
 - [Hands Down](https://sites.google.com/alanreiser.com/handsdown/home)
 - [Engram](https://engram.dev)
 - [Miryoku](https://github.com/manna-harbour/miryoku)
