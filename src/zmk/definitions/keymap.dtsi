@@ -111,9 +111,9 @@
                 lower_layer {
                      display-name = "LOWER";
                      bindings = <
-   &trans              &td_lbrc            &td_rbrc            &th_bsl 0 0         &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
-   &lt NAV AT          &td_lpar            &td_rpar            &th_dqo 0 0         &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
-   &trans              &td_lbkt            &td_rbkt            &th_qmark 0 0       &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
+   &trans              &td_rbrc            &td_lbrc            &th_bsl 0 0         &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
+   &lt NAV AT          &td_rpar            &td_lpar            &th_dqo 0 0         &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
+   &trans              &td_rbkt            &td_lbkt            &th_qmark 0 0       &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
                                            &trans              &sl RAISE           &trans              &lt RAISE SPACE     &th_n0 MEDIA 0      &trans
                            >;
                 };
@@ -264,9 +264,9 @@
                 lower_copy_layer {
                      display-name = "LOWER";
                      bindings = <
-   &trans              &td_lbrc            &td_rbrc            &th_bsl 0 0         &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
-   &lt NAV_F AT        &td_lpar            &td_rpar            &th_dqo 0 0         &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
-   &trans              &td_lbkt            &td_rbkt            &th_qmark 0 0       &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
+   &trans              &td_rbrc            &td_lbrc            &th_bsl 0 0         &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
+   &lt NAV_F AT        &td_rpar            &td_lpar            &th_dqo 0 0         &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
+   &trans              &td_rbkt            &td_lbkt            &th_qmark 0 0       &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
                                            &trans              &sl RAI_CP          &trans              &lt RAI_CP SPACE    &th_n0 MEDIA 0      &trans
                            >;
                 };
