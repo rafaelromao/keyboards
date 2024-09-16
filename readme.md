@@ -125,6 +125,7 @@ Most features implemented here were based on the work referenced below.
 
 ## Resouces
 
+- [Awesome ZMK](https://github.com/ssbb/awesome-zmk)
 - [KLE](http://www.keyboard-layout-editor.com/#/gists/38f4435ff9a10256d9a7e1a0645c2fec)
 - [Keymap DB](https://keymapdb.com/rafaelromao/)
 - [QMK Docs](https://docs.qmk.fm)
