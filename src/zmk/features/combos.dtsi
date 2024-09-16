@@ -129,13 +129,15 @@
         COMBO(cb_tilde_s,       LBR LBM,     &kp TILDE,          ALPHA2 CASE_A2 SEN_E2 SHIFT_A2)
         COMBO(cb_ques,          RHI RHM,     &mc_qmark,          ALPHA2 CASE_A2 SEN_E2 SHIFT_A2)
         COMBO(cb_excl,          RBI RBM,     &mc_excl,           ALPHA2 CASE_A2 SEN_E2 SHIFT_A2)
-        COMBO(cb_unds,          RBM RBR,     &mm_unds,           ALPHA2 CASE_A2 SEN_E2 SHIFT_A2)
+        COMBO(cb_unds,          RBM RBR,     &mm_unds,           ALPHA2 CASE_A2 SEN_E2)
+        COMBO(cb_minus,         RBM RBR,     &kp MINUS,          SHIFT_A2)
         COMBO(cb_grva,          RHM RHR,     &ac_agrv,           ALPHA2 SEN_E2)
         COMBO(cb_grvac,         RHM RHR,     &ac_agrv_c,         CASE_A2 SEN_E2 SHIFT_A2)
 
         COMBO(cb_esc_save,      LTR LTM L0,  &mc_save_esc,       ALPHA1 SEN_CASE SEN_E1 SEN_E2)
 
-        COMBO(cb_semi,          RBM RBR,     &th_semi 0 0,       ALPHA1 CASE_A1 SHIFT_A1 CPLK_A1 LOWER LOW_CP SEN_CASE SEN_E1 SEN_E2)
+        COMBO(cb_semi,          RBM RBR,     &th_semi 0 0,       ALPHA1 CASE_A1 CPLK_A1 LOWER LOW_CP SEN_CASE SEN_E1 SEN_E2)
+        COMBO(cb_colon,         RBM RBR,     &kp COLON 0 0,      SHIFT_A1)
         COMBO(cb_sent,          RBI RBM RBR, &mc_end_semi_ent,   ALPHA1 CASE_A1 SHIFT_A1 CPLK_A1 SEN_CASE SEN_E1 SEN_E2 LOWER LOW_CP)
 
         COMBO(cb_o_esc,         RHI RHM,     &mc_o_esc,          MEDIA)
