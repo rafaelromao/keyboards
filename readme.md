@@ -98,7 +98,8 @@ Most features implemented here were based on the work referenced below.
 - [Ben Vallack](https://youtube.com/c/BenVallack)
 - [Magic Sturdy](https://github.com/Ikcelaks/keyboard_layouts/blob/main/magic_sturdy/magic_sturdy.md)
 - [Unity](https://lykt.xyz/uno)
-- [Nordrassil](https://github.com/empressabyss/nordrassil) 
+- [Nordrassil](https://github.com/empressabyss/nordrassil)
+- [Sartak](https://github.com/sartak/keyboard)
 
 ### QMK
 - [Pascal Getreuer](https://github.com/getreuer/qmk-keymap)
