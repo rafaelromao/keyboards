@@ -1,8 +1,14 @@
 # Copyright (c) 2021 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-config SHIELD_CYGNUS_LEFT
-    def_bool $(shields_list_contains,cygnus_left)
+config SHIELD_CYGNUS_CENTRAL_DONGLE
+    def_bool $(shields_list_contains,cygnus_central_dongle)
 
-config SHIELD_CYGNUS_RIGHT
-    def_bool $(shields_list_contains,cygnus_right)
+config SHIELD_CYGNUS_CENTRAL_LEFT
+    def_bool $(shields_list_contains,cygnus_central_left)
+
+config SHIELD_CYGNUS_PERIPHERAL_LEFT
+    def_bool $(shields_list_contains,cygnus_peripheral_left)
+
+config SHIELD_CYGNUS_PERIPHERAL_RIGHT
+    def_bool $(shields_list_contains,cygnus_peripheral_right)
