@@ -7,7 +7,7 @@ For the complete documentation and source files, go to [this page](../src/zmk/bo
 
 For better handwiring instructions, see [this video](https://youtu.be/h_ex-oMVOrI) of the creator of the board.
 
-### Improved build, using single switch PCBs:
+### Some build images
 
 Where the battery would go
 ![img](../img/cygnus/01.jpeg)
