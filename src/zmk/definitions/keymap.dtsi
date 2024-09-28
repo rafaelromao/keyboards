@@ -249,7 +249,7 @@
    &trans              &trans              &trans              &trans              &trans              &none               &kp L               &kp O               &kp M               &none
    &trans              &trans              &trans              &trans              &trans              &none               &kp R               &kp A               &kp E               &lt NAV I
    &trans              &trans              &trans              &trans              &trans              &none               &kp H               &kp C               &kp F               &none
-                                           &trans              &trans              &trans              &mc_orbit           &mc_pan             &none
+                                           &trans              &trans              &lt LOW_CP SPACE    &mc_orbit           &mc_pan             &none
                            >;
                 };
                 navigation_layer {
