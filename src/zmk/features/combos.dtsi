@@ -44,7 +44,7 @@
         COMBO(cb_capsword_l,    LHM LHR LBI, &terminated_caps_word, ALL_LAYERS)
         COMBO(cb_capsword_r,    RHM RHR RBI, &terminated_caps_word, ALL_LAYERS)
 
-        COMBO(cb_escc,          LTR LTM,     &mc_escc,           ALL_LAYERS_BUT_RAISE)
+        COMBO(cb_esc,           LTR LTM,     &kp ESC,            ALL_LAYERS_BUT_RAISE)
         COMBO(cb_backspace,     RTM RTR,     &kp BACKSPACE,      ALL_LAYERS_BUT_RAISE_MEDIA)
         COMBO(cb_mousenav,      LBR LBM LBI, &to NAV_F,          ALL_LAYERS_BUT_RAISE_NAV_MEDIA)
         COMBO(cb_save,          LHR LHM L0,  &mc_save,           ALL_LAYERS)
@@ -147,7 +147,7 @@
         COMBO(cb_shiftv,        RBM RBR,     &kp LS(V),          MEDIA)
         COMBO(cb_ctrlv,         RBI RBM RBR, &kp LC(V),          MEDIA)
         COMBO(cb_ma1,           RTI RTM,     &to ALPHA1,         MEDIA)
-        COMBO(cb_mescc,         RTM RTR,     &mc_escc,           MEDIA)
+        COMBO(cb_mesc,          RTM RTR,     &kp ESC,            MEDIA)
 
         COMBO(cb_alpha1nav,     LBM LBR LBI, &to ALPHA1,         NAV_F)
         COMBO(cb_down_home,     RBI RBM,     &mc_down_home,      NAV NAV_F)
