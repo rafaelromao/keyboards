@@ -30,7 +30,7 @@
                      bindings = <
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp Y
    &lt SHORTCUTS D     &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp W               &kp Z               &mt RGUI R          &mt RCTRL A         &mt RSHFT E         &lt SHORTCUTS I      
-   &trans              &mt RALT F          &th_c 0 0           &mt LALT P          &kp V               &kp J               &ht_magic RALT 0    &th_comma 0 0       &th_dot 0 0         &trans
+   &kp Q               &mt RALT F          &th_c 0 0           &mt LALT P          &kp V               &kp J               &ht_magic RALT 0    &th_comma 0 0       &th_dot 0 0         &kp Y
                                            &none               &ht_repeat NAV 0    &ltn LOWER SPACE    &msl_raise_smart    &ht_shift MEDIA 0   &none
                         >;
                 };
