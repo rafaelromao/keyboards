@@ -112,10 +112,12 @@ Most features implemented here were based on the work referenced below.
 - [Thomas Baart](https://thomasbaart.nl/category/mechanical-keyboards/firmware/qmk)
 
 ### ZMK
-- [Nick Conway](https://github.com/nickconway/zmk-config)
-- [Cem Aksoylar](https://github.com/caksoylar/zmk-config )
-- [Robert U](https://github.com/urob/zmk-config)
-- [Alexander Krikun](https://github.com/krikun98)
+- [petejohanson](https://github.com/petejohanson/)
+- [bravekarma](https://github.com/caksoylar)
+- [nickconway](https://github.com/nickconway)
+- [urob](https://github.com/urob)
+- [ssbb](https://github.com/ssbb)
+- [krikun98](https://github.com/krikun98)
 
 ### 3D Printing and Handwiring
 - [Jan Lunge](https://m.youtube.com/@JanLunge)

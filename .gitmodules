@@ -7,3 +7,12 @@
 [submodule "modules/englmaxi/zmk-dongle-display"]
 	path = modules/englmaxi/zmk-dongle-display
 	url = https://github.com/englmaxi/zmk-dongle-display
+[submodule "modules/dhruvinsh/zmk-tri-state"]
+	path = modules/dhruvinsh/zmk-tri-state
+	url = https://github.com/dhruvinsh/zmk-tri-state
+[submodule "modules/urob/zmk-auto-layer"]
+	path = modules/urob/zmk-auto-layer
+	url = https://github.com/urob/zmk-auto-layer
+[submodule "modules/ssbb/zmk-antecedent-morph"]
+	path = modules/ssbb/zmk-antecedent-morph
+	url = https://github.com/ssbb/zmk-antecedent-morph
