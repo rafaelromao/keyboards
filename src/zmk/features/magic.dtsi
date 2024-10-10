@@ -19,15 +19,6 @@
             bindings = <&macro_tap &key_repeat>;
         };
 
-        labeled_h: labeled_h {
-			compatible = "zmk,behavior-macro";
-            label = "labeled_h";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&macro_tap &kp H &kp H_TERM>;
-        };
-
         alternate_repeat_key: alternate_repeat_key {
             compatible = "zmk,behavior-antecedent-morph";
             label = "alternate_repeat_key";
@@ -38,19 +29,15 @@
                             A          V_TERM     QU_TERM      AGRV_TERM     SQUO_TERM   \
                             LS(H)      LS(I)      C_QU_TERM    C_AGRV_TERM   C_SQUO_TERM \
                             RS(H)      RS(I)      S_QU_TERM    S_AGRV_TERM   H_TERM      \
-                            H \
+                            H          Y          LS(Y)        RS(Y)                     \
                            >;
             bindings =    <
                             &tc_h      &kp V      &ac_ecir     &mc_qu        &kp V       \
                             &kp LS(A)  &mc_sqo    &ac_ecir_c   &mc_qu_c      &kp V       \
                             &kp A      &mc_sqo    &ac_ecir_s   &mc_qu        &kp A       \
-                            &kp A \
+                            &kp A      &kp D      &kp LS(D)    &kp RS(D)                 \
                            >;
         };
-
-        THUMB_MACRO(tc_v,           &kp V &kp V_TERM)
-        THUMB_MACRO(tc_h,           &kp H &kp H_TERM)
-        THUMB_MACRO(tc_bspc_leader, &kp BACKSPACE &leader)
 
         ht_repeat: ht_repeat {
             compatible = "zmk,behavior-hold-tap";
@@ -63,6 +50,27 @@
 
         // ******************** MAGIC KEY ******************** //
 
+        THUMB_MACRO(tc_bspc_leader, &kp BACKSPACE &leader)
+        THUMB_MACRO(tc_h,           &kp H &kp H_TERM)
+        
+        labeled_h: labeled_h {
+			compatible = "zmk,behavior-macro";
+            label = "labeled_h";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&tc_h>;
+        };
+
+        labeled_h_c: labeled_h_c {
+			compatible = "zmk,behavior-macro";
+            label = "labeled_h_c";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_tap &kp LS(H)>;
+        };
+
         magic_key: magic_key {
             compatible = "zmk,behavior-antecedent-morph";
             label = "magic_key";
@@ -70,42 +78,52 @@
             max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
             defaults = <&labeled_h>;
             antecedents = <
-                           A             AACU_TERM     ATIL_TERM     ACIR_TERM     AGRV_TERM       B             C               C_CEDIL         D             \
-                           E             EACU_TERM     ECIR_TERM     F             G               H             I               IACU_TERM       J             \
-                           K             L             M             N             O               OACU_TERM     OTIL_TERM       OCIR_TERM       P             \
-                           Q             QU_TERM       R             S             T               U             UACU_TERM       V               W             \
-                           X             Y             Z             DOT           V_TERM          SPACE         H_TERM          COMMA                         \
+                           A             AACU_TERM     ATIL_TERM     ACIR_TERM     AGRV_TERM       \
+                           E             EACU_TERM     ECIR_TERM     I             IACU_TERM       \
+                           O             OACU_TERM     OTIL_TERM     OCIR_TERM                     \
+                           U             UACU_TERM     DOT           COMMA                         \
 
-                           LS(A)         C_AACU_TERM   C_ATIL_TERM   C_ACIR_TERM   C_AGRV_TERM     LS(B)         LS(C)           LS(C_CEDIL)     LS(D)         \
-                           LS(E)         C_EACU_TERM   C_ECIR_TERM   LS(F)         LS(G)           LS(H)         LS(I)           C_IACU_TERM     LS(J)         \
-                           LS(K)         LS(L)         LS(M)         LS(N)         LS(O)           C_OACU_TERM   C_OTIL_TERM     C_OCIR_TERM     LS(P)         \
-                           LS(Q)         C_QU_TERM     LS(R)         LS(S)         LS(T)           LS(U)         C_UACU_TERM     LS(V)           LS(W)         \
-                           LS(X)         LS(Y)         LS(Z)                       CAPSWORD_TERM                                                               \
-
-                           RS(A)         S_AACU_TERM   S_ATIL_TERM   S_ACIR_TERM   S_AGRV_TERM     RS(B)         RS(C)           RS(C_CEDIL)     RS(D)         \
-                           RS(E)         S_EACU_TERM   S_ECIR_TERM   RS(F)         RS(G)           RS(H)         RS(I)           S_IACU_TERM     RS(J)         \
-                           RS(K)         RS(L)         RS(M)         RS(N)         RS(O)           S_OACU_TERM   S_OTIL_TERM     S_OCIR_TERM     RS(P)         \
-                           RS(Q)         S_QU_TERM     RS(R)         RS(S)         RS(T)           RS(V)         S_UACU_TERM     RS(V)           RS(W)         \
-                           RS(X)         RS(Y)         RS(Z)                                                                                                   \
+                           RS(A)         S_AACU_TERM   S_ATIL_TERM   S_ACIR_TERM   S_AGRV_TERM     \
+                           RS(E)         S_EACU_TERM   S_ECIR_TERM   RS(I)         S_IACU_TERM     \
+                           RS(O)         S_OACU_TERM   S_OTIL_TERM   S_OCIR_TERM   S_UACU_TERM     \
                            >;
             bindings =    <
-                           &tc_v         &tc_v         &tc_v         &tc_v         &tc_v           &kp Y         &tc_h           &sl ALPHA2      &kp Y         \
-                           &tc_v         &tc_v         &tc_v         &kp Y         &tc_h           &sl ALPHA2    &tc_v           &tc_v           &sl ALPHA2    \
-                           &sl ALPHA2    &tc_h         &kp Y         &tc_h         &tc_v           &tc_v         &tc_v           &tc_v           &tc_h         \
-                           &sl ALPHA2    &sl ALPHA2    &tc_h         &tc_h         &tc_h           &tc_v         &tc_v           &sl ALPHA2      &tc_h         \
-                           &sl ALPHA2    &sl ALPHA2    &sl ALPHA2    &kp SLASH     &sl ALPHA2      &tc_h         &sl ALPHA2      &tc_bspc_leader               \
+                           &tc_v         &tc_v         &tc_v         &tc_v         &tc_v           \
+                           &tc_v         &tc_v         &tc_v         &tc_v         &tc_v           \
+                           &tc_v         &tc_v         &tc_v         &tc_v                         \
+                           &tc_v         &tc_v         &kp SLASH     &tc_bspc_leader               \
 
-                           &kp LS(V)     &kp LS(V)     &kp LS(V)     &kp LS(V)     &kp LS(V)       &kp LS(Y)     &kp LS(H)       &sl CASE_A2     &kp LS(Y)     \
-                           &kp LS(V)     &kp LS(V)     &kp LS(V)     &kp LS(Y)     &kp LS(H)       &sl CASE_A2   &kp LS(V)       &kp LS(V)       &sl CASE_A2   \
-                           &sl CASE_A2   &kp LS(H)     &kp LS(Y)     &kp LS(H)     &kp LS(V)       &kp LS(V)     &kp LS(V)       &kp LS(V)       &kp LS(H)     \
-                           &sl CASE_A2   &sl CASE_A2   &kp LS(H)     &kp LS(H)     &kp LS(H)       &kp LS(V)     &kp LS(V)       &sl CASE_A2     &kp LS(H)     \
-                           &sl CASE_A2   &sl CASE_A2   &sl CASE_A2                 &kp LS(H)                                                                   \
+                           &tc_v         &tc_v         &tc_v         &tc_v         &tc_v           \
+                           &tc_v         &tc_v         &tc_v         &tc_v         &tc_v           \
+                           &tc_v         &tc_v         &tc_v         &tc_v         &tc_v           \
+                           >;
+        };
 
-                           &tc_v         &tc_v         &tc_v         &tc_v         &tc_v           &kp Y         &tc_h           &sl ALPHA2      &kp Y         \
-                           &tc_v         &tc_v         &tc_v         &kp Y         &tc_h           &sl ALPHA2    &tc_v           &tc_v           &sl ALPHA2    \
-                           &sl ALPHA2    &tc_h         &kp Y         &tc_h         &tc_v           &tc_v         &tc_v           &tc_v           &tc_h         \
-                           &sl ALPHA2    &sl ALPHA2    &tc_h         &tc_h         &tc_h           &tc_v         &tc_v           &sl ALPHA2      &tc_h         \
-                           &sl ALPHA2    &sl ALPHA2    &sl ALPHA2                                                                                              \
+        magic_key_c: magic_key_c {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "magic_key_c";
+            #binding-cells = <0>;
+            max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
+            defaults = <&labeled_h_c>;
+            antecedents = <
+                           LS(A)         C_AACU_TERM   C_ATIL_TERM   C_ACIR_TERM   C_AGRV_TERM     \
+                           LS(E)         C_EACU_TERM   C_ECIR_TERM   LS(I)         C_IACU_TERM     \
+                           LS(O)         C_OACU_TERM   C_OTIL_TERM   C_OCIR_TERM                 \
+                           LS(U)         C_UACU_TERM                                               \
+
+                           RS(A)         S_AACU_TERM   S_ATIL_TERM   S_ACIR_TERM   S_AGRV_TERM     \
+                           RS(E)         S_EACU_TERM   S_ECIR_TERM   RS(I)         S_IACU_TERM     \
+                           RS(O)         S_OACU_TERM   S_OTIL_TERM   S_OCIR_TERM   S_UACU_TERM     \
+                           >;
+            bindings =    <
+                           &kp LS(V)     &kp LS(V)     &kp LS(V)     &kp LS(V)     &kp LS(V)       \
+                           &kp LS(V)     &kp LS(V)     &kp LS(V)     &kp LS(V)     &kp LS(V)       \
+                           &kp LS(V)     &kp LS(V)     &kp LS(V)     &kp LS(V)                     \
+                           &kp LS(V)     &kp LS(V)                                                 \
+
+                           &kp RS(V)     &kp RS(V)     &kp RS(V)     &kp RS(V)     &kp RS(V)       \
+                           &kp RS(V)     &kp RS(V)     &kp RS(V)     &kp RS(V)     &kp RS(V)       \
+                           &kp RS(V)     &kp RS(V)     &kp RS(V)     &kp RS(V)     &kp RS(V)       \
                            >;
         };
 
@@ -119,7 +137,18 @@
             bindings = <&kp>, <&magic_key>;
         };
 
+        ht_magic_c: ht_magic_c {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <QUICK_TAP_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <0>;
+            bindings = <&kp>, <&magic_key_c>;
+        };
+
         // ******************** REVERSED MAGIC KEY ******************** //
+
+        THUMB_MACRO(tc_v, &kp V &kp V_TERM)
 
         labeled_v: labeled_v {
 			compatible = "zmk,behavior-macro";
@@ -127,7 +156,7 @@
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
-            bindings = <&macro_tap &kp V>;
+            bindings = <&tc_v>;
         };
 
         reversed_magic: reversed_magic {
@@ -140,6 +169,7 @@
                            A             AACU_TERM     E             EACU_TERM     ECIR_TERM   \
                            I             IACU_TERM     O             OACU_TERM                 \
                            U             UACU_TERM                                             \
+
                            RS(A)         S_AACU_TERM   RS(E)         S_EACU_TERM   S_ECIR_TERM \
                            RS(I)         S_IACU_TERM   RS(O)         S_OACU_TERM               \
                            RS(U)         S_UACU_TERM                                           \
@@ -148,6 +178,7 @@
                            &tc_h         &tc_h         &tc_h         &tc_h         &tc_h       \
                            &tc_h         &tc_h         &tc_h         &tc_h                     \
                            &tc_h         &tc_h                                                 \
+
                            &tc_h         &tc_h         &tc_h         &tc_h         &tc_h       \
                            &tc_h         &tc_h         &tc_h         &tc_h         &tc_h       \
                            &tc_h         &tc_h                                                 \
@@ -173,61 +204,19 @@
                            LS(A)         C_AACU_TERM   LS(E)         C_EACU_TERM   C_ECIR_TERM \
                            LS(I)         C_IACU_TERM   LS(O)         C_OACU_TERM   C_OCIR_TERM \
                            LS(U)         C_UACU_TERM                                           \
+
+                           RS(A)         S_AACU_TERM   RS(E)         S_EACU_TERM   S_ECIR_TERM \
+                           RS(I)         S_IACU_TERM   RS(O)         S_OACU_TERM               \
+                           RS(U)         S_UACU_TERM                                           \
                            >;
             bindings =    <
                            &kp LS(H)     &kp LS(H)     &kp LS(H)     &kp LS(H)     &kp LS(H)   \
                            &kp LS(H)     &kp LS(H)     &kp LS(H)     &kp LS(H)     &kp LS(H)   \
                            &kp LS(H)     &kp LS(H)                                             \
-                           >;
-        };
 
-        // ******************** MAGIC KEY ENFORCERS ******************** //
-
-        labeled_y: labeled_y {
-			compatible = "zmk,behavior-macro";
-            label = "labeled_y";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&macro_tap &kp Y>;
-        };
-
-        enforced_y: enforced_y {
-            compatible = "zmk,behavior-antecedent-morph";
-            label = "enforced_y";
-            #binding-cells = <0>;
-            max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
-            defaults = <&labeled_y>;
-            antecedents = <
-                            M             F             B             D             \
-                            RS(M)         RS(F)         RS(B)         RS(D)         \
-                           >;
-            bindings =    <
-                            &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC      \
-                            &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC      \
-                           >;
-        };
-
-        labeled_y_c: labeled_y_c {
-			compatible = "zmk,behavior-macro";
-            label = "labeled_y_c";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&macro_tap &kp LS(Y)>;
-        };
-
-        enforced_y_c: enforced_y_c {
-            compatible = "zmk,behavior-antecedent-morph";
-            label = "enforced_y_c";
-            #binding-cells = <0>;
-            max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
-            defaults = <&labeled_y_c>;
-            antecedents = <
-                            LS(M)         LS(F)         LS(B)         LS(D)         \
-                           >;
-            bindings =    <
-                            &kp BSPC      &kp BSPC      &kp BSPC      &kp BSPC      \
+                           &kp RS(H)     &kp RS(H)     &kp RS(H)     &kp RS(H)     &kp RS(H)   \
+                           &kp RS(H)     &kp RS(H)     &kp RS(H)     &kp RS(H)     &kp RS(H)   \
+                           &kp RS(H)     &kp RS(H)                                             \
                            >;
         };
 

@@ -204,6 +204,7 @@
         SHORTCUT(mc_app_quit,               &macro_tap &kp Q)
         MORPHED_SHORTCUT_KM(mm_down_minus,  &kp DOWN, &kp MINUS, MOD_RGUI)
         MORPHED_SHORTCUT_KM(mm_up_plus,     &kp UP, &kp PLUS, MOD_RGUI)
+        MORPHED_SHORTCUT_KM(mm_seln_down_minus,  &kp DOWN, &kp MINUS, MOD_RGUI)
 
         SHORTCUT(mc_lock,                   &macro_tap &kp LC(LG(Q)))
 

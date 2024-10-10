@@ -97,9 +97,6 @@
         SYMBOL(mc_comma,           &kp COMMA)
         TAPHOLD_SYMBOL(th_comma,   &mc_comma, &leader)
 
-        SYMBOL(mc_sft_h,           &kp RS(H))
-        MODTAP_SYMBOL(ht_sft_h,    &mc_sft_h)
-        
         // Lower
 
         SHIFTED_SYMBOL(mc_n0,      &kp N0, &kp KP_N0)
