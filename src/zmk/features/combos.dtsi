@@ -39,11 +39,6 @@
         COMBO(cb_alpha1,        LTM LTR LTI, &to ALPHA1,         ALL_LAYERS_BUT_ALPHA1)
         COMBO(cb_fusion,        LTM LTR LTI, &to FUSION,         ALPHA1)
 
-        COMBO(cb_capsline_l,    LTM LTR LHI, &terminated_caps_lock, ALL_LAYERS)
-        COMBO(cb_capsline_r,    RTM RTR RHI, &terminated_caps_lock, ALL_LAYERS)
-        COMBO(cb_capsword_l,    LHM LHR LBI, &terminated_caps_word, ALL_LAYERS)
-        COMBO(cb_capsword_r,    RHM RHR RBI, &terminated_caps_word, ALL_LAYERS)
-
         COMBO(cb_esc,           LTR LTM,     &kp ESC,            ALL_LAYERS_BUT_RAISE)
         COMBO(cb_backspace,     RTM RTR,     &kp BACKSPACE,      ALL_LAYERS_BUT_RAISE_MEDIA)
         COMBO(cb_mousenav,      LBR LBM LBI, &to NAV_F,          ALL_LAYERS_BUT_RAISE_NAV_MEDIA)
@@ -122,6 +117,10 @@
         COMBO(cb_f14,           LHM LHR,     &kp F14,            RAISE RAI_CP)
         COMBO(cb_f15,           LTM LTR,     &kp F15,            RAISE RAI_CP)
 
+        COMBO(cb_lpar,          RHI RHM RHR, &kp LPAR,           ALPHA2 CASE_A2 SEN_E2 SHIFT_A2)
+        COMBO(cb_rpar,          RBI RBM RBR, &kp RPAR,           ALPHA2 CASE_A2 SEN_E2 SHIFT_A2)
+        COMBO(cb_dqo,           RTI RTM RTR, &mc_dqo,            ALPHA2 CASE_A2 SEN_E2 SHIFT_A2)
+        COMBO(cb_minus,         RTI RTM,     &kp MINUS,          ALPHA2 CASE_A2 SEN_E2 SHIFT_A2)
         COMBO(cb_dqo_s,         LTM LTI,     &kp DQT,            ALPHA2 CASE_A2 SEN_E2 SHIFT_A2)
         COMBO(cb_sqo_s,         LHM LHI,     &kp SQT,            ALPHA2 CASE_A2 SEN_E2 SHIFT_A2)
         COMBO(cb_bti_s,         LBM LBI,     &kp GRAVE,          ALPHA2 CASE_A2 SEN_E2 SHIFT_A2)
@@ -130,7 +129,7 @@
         COMBO(cb_ques,          RHI RHM,     &mc_qmark,          ALPHA2 CASE_A2 SEN_E2 SHIFT_A2)
         COMBO(cb_excl,          RBI RBM,     &mc_excl,           ALPHA2 CASE_A2 SEN_E2 SHIFT_A2)
         COMBO(cb_unds,          RBM RBR,     &mm_unds,           ALPHA2 CASE_A2 SEN_E2)
-        COMBO(cb_minus,         RBM RBR,     &kp MINUS,          SHIFT_A2)
+        COMBO(cb_minus_unds,    RBM RBR,     &kp MINUS,          SHIFT_A2)
         COMBO(cb_grva,          RHM RHR,     &ac_agrv,           ALPHA2 SEN_E2)
         COMBO(cb_grvac,         RHM RHR,     &ac_agrv_c,         CASE_A2 SEN_E2 SHIFT_A2)
 
@@ -150,9 +149,11 @@
         COMBO(cb_mesc,          RTM RTR,     &kp ESC,            MEDIA)
 
         COMBO(cb_alpha1nav,     LBM LBR LBI, &to ALPHA1,         NAV_F)
+        COMBO(cb_insert,        RTI RTM RTR, &kp INS,            NAV NAV_F)
         COMBO(cb_down_home,     RBI RBM,     &mc_down_home,      NAV NAV_F)
         COMBO(cb_down_end,      RBR RBM,     &mc_down_end,       NAV NAV_F)
-        COMBO(cb_up_end_del,    RHM RHI,     &mc_up_end_del,     NAV NAV_F)
+        COMBO(cb_up_end_del,    RTM RTI,     &mc_up_end_del,     NAV NAV_F)
+        COMBO(cb_up_end_ent,    RHM RHI,     &mc_up_end_ent,     NAV NAV_F)
         COMBO(cb_end_ent,       RHM RHR,     &mc_end_ent,        NAV NAV_F)
 
         COMBO(cd_sc_nav,        LHR LHM L1,  &mc_sc_nav,         ALPHA1 CASE_A1 SHIFT_A1 CPLK_A1 SEN_E1)

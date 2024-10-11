@@ -231,6 +231,7 @@
         SYMBOL(mc_tisl,            &kp TILDE &kp SPACE &kp SLASH)
 
         SYMBOL(mc_up_end_del,      &kp UP &kp END &kp DEL)
+        SYMBOL(mc_up_end_ent,      &kp UP &kp END &kp ENTER)
         SYMBOL(mc_end_ent,         &kp END &kp ENTER)
         SYMBOL(mc_down_home,       &kp DOWN &kp HOME)
         SYMBOL(mc_down_end,        &kp DOWN &kp END)

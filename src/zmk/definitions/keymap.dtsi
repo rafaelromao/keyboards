@@ -157,8 +157,8 @@
                      display-name = "SHORTCUTS";
                      bindings = <
    &none               &kp ESC             &mc_files           &mc_preview         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &none    
-   &mo SYSTEM          &kp RGUI            &mc_app_swapper     &th_tabs LGUI 0     &none               &none               &mc_seln            &mm_down_minus      &mm_up_plus         &mo SYSTEM
-   &none               &mc_term            &mc_clip            &mc_calc            &none               &none               &mc_selh            &ht_ref_clo_z0 0 0  &td_dynmacro        &trans
+   &mo SYSTEM          &th_zoom RGUI 0     &mc_app_swapper     &th_tabs LGUI 0     &none               &none               &mc_seln            &mm_down_minus      &mm_up_plus         &mo SYSTEM
+   &none               &mc_term            &mc_calc            &mc_launch          &none               &none               &mc_selh            &ht_ref_clo_z0 0 0  &mc_clip            &trans
                                            &trans              &mst FUSION FUSION  &mst NMODS NMODS    &mst CODING CODING  &mst NAV NAV_F      &trans
                            >;
                 };
@@ -222,7 +222,7 @@
    &none               &kp RS(Q)           &mc_qu_s            &kp RS(K)           &none               &none               &ac_ocir_s          &ac_ecir_s          &ac_acir_s          &none
    &kp RS(Y)           &kp RS(Z)           &kp RS(X)           &kp RS(W)           &none               &none               &ac_atil_s          &ac_eacu_s          &ac_aacu_s          &ac_iacu_s 
    &trans              &kp RS(J)           &mc_ced_s           &reversed_magic_c   &none               &none               &ac_otil_s          &ac_oacu_s          &ac_uacu_s          &trans 
-                                           &trans              &sl RAI_CP          &sl LOW_CP          &trans              &mc_sqo_c           &trans
+                                           &trans              &sl RAI_CP          &sl LOW_CP          &trans              &mc_dqo             &trans
                            >;
                 };
                 case_alpha2_layer {
@@ -285,7 +285,7 @@
    &none               &kp ESC             &mkp LCLK           &mkp RCLK           &none               &none               &kp TAB             &kp ENTER           &kp BACKSPACE       &none
    &none               &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &none               &mc_mic             &mt C_MUTE C_VOL_DN &kp C_VOL_UP        &mc_cam
    &none               &msc SCRL_DOWN      &mmv MOVE_DOWN      &msc SCRL_UP        &none               &none               &kp C_PP            &kp C_PREV          &kp C_NEXT          &trans
-                                           &trans              &mo NAV_F           &trans              &trans              &trans              &trans
+                                           &trans              &mo NAV_F           &kp SPACE           &trans              &trans              &trans
                            >;
                 };
                 fixed_navigation_layer {
@@ -300,7 +300,7 @@
                 system_layer {
                      display-name = "SYSTEM";
                      bindings = <
-   &none               &none               &none               &sys_reset          &none               &none               &sys_reset          &kp INS             &none               &none 
+   &none               &none               &none               &sys_reset          &none               &none               &sys_reset          &none               &none               &none 
    &none               &none               &none               &bootloader         &none               &none               &bootloader         &kp C_SLEEP         &none               &none      
    &none               &none               &none               &none               &none               &none               &none               &mc_lock            &none               &none
                                            &trans              &bt BT_CLR          &bt BT_SEL 0        &bt BT_PRV          &bt BT_NXT          &trans
