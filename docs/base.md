@@ -42,7 +42,7 @@
 - When double tapped, this key will activate Caps Word.
 
 ## Base Layer Combos
-- Combos are available in the base and [Numpad](symbols.md#numpad-layer) layers to send ENTER, ESC, TAB and common shortcuts like copy, paste, save, select all and undo.
+- Combos are available in the base layer to send ENTER, ESC, TAB and common shortcuts like copy, paste, save, select all and undo.
 - Most combos include the home thumb key, the one in the same side.
 - If shift or any other modifier is held, it will be included in the combo. So hold Shift and tap the Undo combo will send Redo instead.
 
