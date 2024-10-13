@@ -30,7 +30,7 @@ For the second version, the following improvements were implemented:
 - Included a hole in the base to allow the LED of the Xiao RP2040 to shine through the bottom of the keyboard.
 - Included a variation of the thumb cluster, with the keys inclined instead of flat.
 - Included a variation of the switch holders, using Choc switches instead of MX switches.
-- Included an unibody base, compatible with all body versions, with its own on/off switch, reset button and USB-C breakout board in the middle.
+- Remove the bottom hole for the magnet, to simplify printing.
 
 #### STL Files
 The STL files are provided for the right side. To print the left side, just mirror them.
