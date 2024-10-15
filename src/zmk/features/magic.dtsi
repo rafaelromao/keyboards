@@ -26,16 +26,16 @@
             max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
             defaults = <&labeled_key_repeat>;
             antecedents = <
-                            A          V_TERM     QU_TERM      AGRV_TERM     SQUO_TERM   \
-                            LS(H)      LS(I)      C_QU_TERM    C_AGRV_TERM   C_SQUO_TERM \
-                            RS(H)      RS(I)      S_QU_TERM    S_AGRV_TERM   H_TERM      \
-                            H          Y          LS(Y)        RS(Y)                     \
+                            A          V_TERM     QU_TERM      AGRV_TERM     SQUO_TERM      J           C_CEDIL     \
+                            LS(H)      LS(I)      C_QU_TERM    C_AGRV_TERM   C_SQUO_TERM    LS(J)       LS(C_CEDIL) \
+                            RS(H)      RS(I)      S_QU_TERM    S_AGRV_TERM   H_TERM         RS(J)       RS(C_CEDIL) \
+                            H          Y          LS(Y)        RS(Y)         \
                            >;
             bindings =    <
-                            &tc_h      &kp V      &ac_ecir     &mc_qu        &kp V       \
-                            &kp LS(A)  &mc_sqo    &ac_ecir_c   &mc_qu_c      &kp V       \
-                            &kp A      &mc_sqo    &ac_ecir_s   &mc_qu        &kp A       \
-                            &kp A      &kp D      &kp LS(D)    &kp RS(D)                 \
+                            &tc_h      &kp V      &ac_ecir     &mc_qu        &kp V          &ac_aacu    &sl ALPHA2  \
+                            &kp LS(A)  &mc_sqo    &ac_ecir_c   &mc_qu_c      &kp V          &ac_aacu_c  &sl ALPHA2  \
+                            &kp A      &mc_sqo    &ac_ecir_s   &mc_qu        &kp A          &ac_aacu_s  &sl ALPHA2  \
+                            &kp A      &kp D      &kp LS(D)    &kp RS(D)     \
                            >;
         };
 

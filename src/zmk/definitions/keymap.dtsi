@@ -201,27 +201,27 @@
                 alpha2_layer {
                      display-name = "ALPHA2";
                      bindings = <
-   &none               &kp Q               &mc_qu              &kp K               &none               &none               &ac_ocir            &ac_ecir            &ac_acir            &none
-   &kp Y               &kp Z               &kp X               &kp W               &none               &none               &ac_atil            &ac_eacu            &ac_aacu            &ac_iacu 
-   &trans              &kp J               &mc_ced             &reversed_magic     &none               &none               &ac_otil            &ac_oacu            &ac_uacu            &trans
+   &none               &kp Q               &mc_qu              &kp K               &none               &none               &ac_ocir            &ac_oacu            &ac_uacu            &none
+   &kp Y               &kp Z               &kp X               &kp W               &none               &none               &ac_atil            &ac_aacu            &ac_eacu            &ac_iacu 
+   &trans              &kp J               &mc_ced             &reversed_magic     &none               &none               &ac_otil            &ac_acir            &ac_ecir            &trans
                                            &trans              &sl RAI_CP          &sl LOW_CP          &kp SPACE           &mc_sqo             &trans
                            >;
                 };
                 ccedil_layer {
                      display-name = "Ç EXT";
                      bindings = <
-   &trans              &trans              &trans              &trans              &trans              &trans              &ac_ocir            &trans              &trans              &trans    
-   &trans              &trans              &trans              &trans              &trans              &trans              &ac_atil            &trans              &ac_aacu            &trans  
-   &trans              &trans              &trans              &trans              &trans              &trans              &ac_otil            &ac_oacu            &ac_uacu            &trans 
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
+   &trans              &trans              &trans              &mc_aotil           &trans              &trans              &ac_atil            &trans              &trans              &trans  
+   &trans              &trans              &trans              &mc_otiles          &trans              &trans              &ac_otil            &trans              &trans              &trans 
                                            &trans              &trans              &trans              &kp BACKSPACE       &trans              &trans
                            >;
                 };
                 shifted_alpha2_layer {
                      display-name = "CASE";
                      bindings = <
-   &none               &kp RS(Q)           &mc_qu_s            &kp RS(K)           &none               &none               &ac_ocir_s          &ac_ecir_s          &ac_acir_s          &none
-   &kp RS(Y)           &kp RS(Z)           &kp RS(X)           &kp RS(W)           &none               &none               &ac_atil_s          &ac_eacu_s          &ac_aacu_s          &ac_iacu_s 
-   &trans              &kp RS(J)           &mc_ced_s           &reversed_magic_c   &none               &none               &ac_otil_s          &ac_oacu_s          &ac_uacu_s          &trans 
+   &none               &kp RS(Q)           &mc_qu_s            &kp RS(K)           &none               &none               &ac_ocir_s          &ac_oacu_s          &ac_uacu_s          &none
+   &kp RS(Y)           &kp RS(Z)           &kp RS(X)           &kp RS(W)           &none               &none               &ac_atil_s          &ac_aacu_s          &ac_eacu_s          &ac_iacu_s 
+   &trans              &kp RS(J)           &mc_ced_s           &reversed_magic_c   &none               &none               &ac_otil_s          &ac_acir_s          &ac_ecir_s          &trans 
                                            &trans              &sl RAI_CP          &sl LOW_CP          &trans              &mc_dqo             &trans
                            >;
                 };
@@ -237,9 +237,9 @@
                 case_ccedil_layer {
                      display-name = "CASE";
                      bindings = <
-   &trans              &trans              &trans              &trans              &trans              &trans              &ac_ocir_c          &trans              &trans              &trans    
-   &trans              &trans              &trans              &trans              &trans              &trans              &ac_atil_c          &trans              &ac_aacu_c          &trans  
-   &trans              &trans              &trans              &trans              &trans              &trans              &ac_otil_c          &ac_oacu_c          &ac_uacu_c          &trans 
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
+   &trans              &trans              &trans              &mc_aotil_c         &trans              &trans              &ac_atil_c          &trans              &trans              &trans  
+   &trans              &trans              &trans              &mc_otiles_c        &trans              &trans              &trans              &ac_otil_c          &trans              &trans              &trans 
                                            &trans              &trans              &trans              &kp BACKSPACE       &trans              &trans
                            >;
                 };
