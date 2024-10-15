@@ -207,7 +207,7 @@
         THUMB_COMBO_MORPH(sc_strong_kebab_case, MOD_RCTL, MOD_RGUI, &tc_strong_kebabcase, &sc_strong_snake_case)
         THUMB_COMBO_MORPH(sc_strong_slash_case, MOD_RCTL, MOD_RSFT, &tc_strong_slashcase, &sc_strong_kebab_case)
         
-        #define msl_raise_smart msl_a2 RAISE 0
+        #define msl_raise_smart sc_caps_lock
 
         THUMB_MACRO(mc_msk_camel, &sl SHIFT_A1)
         THUMB_MACRO(mc_msk_snake, &kp UNDERSCORE &sl SPACING)
