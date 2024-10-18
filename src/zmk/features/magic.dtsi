@@ -81,7 +81,7 @@
                            A             AACU_TERM     ATIL_TERM     ACIR_TERM     AGRV_TERM       \
                            E             EACU_TERM     ECIR_TERM     I             IACU_TERM       \
                            O             OACU_TERM     OTIL_TERM     OCIR_TERM                     \
-                           U             UACU_TERM     DOT           COMMA                         \
+                           U             UACU_TERM                                                 \
 
                            RS(A)         S_AACU_TERM   S_ATIL_TERM   S_ACIR_TERM   S_AGRV_TERM     \
                            RS(E)         S_EACU_TERM   S_ECIR_TERM   RS(I)         S_IACU_TERM     \
@@ -91,12 +91,12 @@
                            &tc_v         &tc_v         &tc_v         &tc_v         &tc_v           \
                            &tc_v         &tc_v         &tc_v         &tc_v         &tc_v           \
                            &tc_v         &tc_v         &tc_v         &tc_v                         \
-                           &tc_v         &tc_v         &kp SLASH     &tc_bspc_leader               \
+                           &tc_v         &tc_v                                                     \
 
                            &tc_v         &tc_v         &tc_v         &tc_v         &tc_v           \
                            &tc_v         &tc_v         &tc_v         &tc_v         &tc_v           \
                            &tc_v         &tc_v         &tc_v         &tc_v         &tc_v           \
-                           >;
+                           >; 
         };
 
         magic_key_c: magic_key_c {
