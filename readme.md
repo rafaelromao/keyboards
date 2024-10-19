@@ -116,7 +116,7 @@ Most features implemented here were based on the work referenced below.
 - [Cem Aksoylar](https://github.com/caksoylar/zmk-config )
 - [Robert U](https://github.com/urob/zmk-config)
 - [Alexander Krikun](https://github.com/krikun98)
-- [Void Your Warranty 2] (https://github.com/voidyourwarranty2/zmk)
+- [Void Your Warranty 2](https://github.com/voidyourwarranty2/zmk)
 - [SSBB](https://github.com/ssbb/awesome-zmk) 
 
 ### 3D Printing and Handwiring
