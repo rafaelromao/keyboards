@@ -118,6 +118,7 @@ Most features implemented here were based on the work referenced below.
 - [urob](https://github.com/urob)
 - [ssbb](https://github.com/ssbb)
 - [krikun98](https://github.com/krikun98)
+- [voidyourwarranty2](https://github.com/voidyourwarranty2/zmk)
 
 ### 3D Printing and Handwiring
 - [Jan Lunge](https://m.youtube.com/@JanLunge)
@@ -128,7 +129,6 @@ Most features implemented here were based on the work referenced below.
 
 ## Resouces
 
-- [Awesome ZMK](https://github.com/ssbb/awesome-zmk)
 - [KLE](http://www.keyboard-layout-editor.com/#/gists/38f4435ff9a10256d9a7e1a0645c2fec)
 - [Keymap DB](https://keymapdb.com/rafaelromao/)
 - [QMK Docs](https://docs.qmk.fm)
