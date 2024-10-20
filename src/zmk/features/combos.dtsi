@@ -15,11 +15,9 @@
           ╰─────────────╯ ╰─────────────╯ */
 
 / {
-    #define ALL_LAYERS_BUT_ALPHA1                   CAMEL_CASE SHIFT_A1 SNAKE_CASE KEBAB_CASE SLASH_CASE SPACING CASE_A1 CPLK_A1 LOWER LOW_CP SEN_CASE SEN_E1 SEN_E2 SHORTCUTS SHORTS_EXT_1 SHORTS_EXT_2 CODING NMODS ALPHA2 CCEDIL SHIFT_A2 CASE_A2 CASE_CCEDIL SYSTEM FUSION MEDIA NAV NAV_F RAISE RAI_CP
     #define ALL_LAYERS                       ALPHA1 CAMEL_CASE SHIFT_A1 SNAKE_CASE KEBAB_CASE SLASH_CASE SPACING CASE_A1 CPLK_A1 LOWER LOW_CP SEN_CASE SEN_E1 SEN_E2 SHORTCUTS SHORTS_EXT_1 SHORTS_EXT_2 CODING NMODS ALPHA2 CCEDIL SHIFT_A2 CASE_A2 CASE_CCEDIL SYSTEM FUSION MEDIA NAV NAV_F RAISE RAI_CP
     #define ALL_LAYERS_BUT_RAISE             ALPHA1 CAMEL_CASE SHIFT_A1 SNAKE_CASE KEBAB_CASE SLASH_CASE SPACING CASE_A1 CPLK_A1 LOWER LOW_CP SEN_CASE SEN_E1 SEN_E2 SHORTCUTS SHORTS_EXT_1 SHORTS_EXT_2 CODING NMODS ALPHA2 CCEDIL SHIFT_A2 CASE_A2 CASE_CCEDIL SYSTEM FUSION MEDIA NAV NAV_F             
     #define ALL_LAYERS_BUT_RAISE_MEDIA       ALPHA1 CAMEL_CASE SHIFT_A1 SNAKE_CASE KEBAB_CASE SLASH_CASE SPACING CASE_A1 CPLK_A1 LOWER LOW_CP SEN_CASE SEN_E1 SEN_E2 SHORTCUTS SHORTS_EXT_1 SHORTS_EXT_2 CODING NMODS ALPHA2 CCEDIL SHIFT_A2 CASE_A2 CASE_CCEDIL SYSTEM FUSION       NAV NAV_F             
-    #define ALL_LAYERS_BUT_RAISE_NAV_MEDIA   ALPHA1 CAMEL_CASE SHIFT_A1 SNAKE_CASE KEBAB_CASE SLASH_CASE SPACING CASE_A1 CPLK_A1 LOWER LOW_CP SEN_CASE SEN_E1 SEN_E2 SHORTCUTS SHORTS_EXT_1 SHORTS_EXT_2 CODING NMODS ALPHA2 CCEDIL SHIFT_A2 CASE_A2 CASE_CCEDIL SYSTEM FUSION                             
 
     #define COMBO_TERM 50
 
@@ -36,19 +34,17 @@
 
         COMBO(cb_boot_l,        LTR LBI,     &bootloader,        ALL_LAYERS)
         COMBO(cb_boot_r,        RTR RBI,     &bootloader,        ALL_LAYERS)
-        COMBO(cb_alpha1,        LTM LTR LTI, &to ALPHA1,         ALL_LAYERS_BUT_ALPHA1)
-        COMBO(cb_fusion,        LTM LTR LTI, &to FUSION,         ALPHA1)
+        COMBO(cb_alpha1,        LTM LTR LTI, &to ALPHA1,         ALL_LAYERS)
+        COMBO(cb_mousenav,      LBR LBM LBI, &to NAV_F,          ALL_LAYERS)
 
         COMBO(cb_esc,           LTR LTM,     &kp ESC,            ALL_LAYERS_BUT_RAISE)
         COMBO(cb_backspace,     RTM RTR,     &kp BACKSPACE,      ALL_LAYERS_BUT_RAISE_MEDIA)
-        COMBO(cb_mousenav,      LBR LBM LBI, &to NAV_F,          ALL_LAYERS_BUT_RAISE_NAV_MEDIA)
         COMBO(cb_save,          LHR LHM L0,  &mc_save,           ALL_LAYERS)
         COMBO(cb_fullscr,       LHM LHI L0,  &mc_fullscr,        ALL_LAYERS)
         COMBO(cb_find,          LBM LBI L0,  &mc_find,           ALL_LAYERS)
         COMBO(cb_undo,          LBR LBM L0,  &mc_undo,           ALL_LAYERS)
-        COMBO(cb_enter_r,       RHM RHR R0,  &kp ENTER,          ALL_LAYERS)
-        COMBO(cb_enter_l,       LHM LHR LHI, &ht_enter 0 0,      ALL_LAYERS)
-        COMBO(cb_tab_r,         RTM RTR R0,  &kp TAB,            ALL_LAYERS)
+        COMBO(cb_enter,         RHM RHR R0,  &kp ENTER,          ALL_LAYERS)
+        COMBO(cb_tab,           RTM RTR R0,  &kp TAB,            ALL_LAYERS)
 
         COMBO(cb_paste,         RBI RBM R0,  &mc_paste,          ALL_LAYERS)
         COMBO(cb_copy,          RHI RHM R0,  &mc_copy,           ALL_LAYERS)
