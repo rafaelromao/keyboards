@@ -60,7 +60,7 @@ git submodule update --init --recursive --progress
 echo "Checking out zmk..."
 cd $ZMK_HOME
 git fetch
-git checkout 20241007/main
+git checkout 20241020/main
 git pull
 cd $KEYBOARD_HOME
 
