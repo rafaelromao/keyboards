@@ -203,8 +203,10 @@
         
         SHORTCUT(mc_launch,                 &macro_tap &kp LG(SPACE))
 
-        SHORTCUT(mc_app_swapper,            &macro_press &mo SHORTS_EXT_2 &macro_tap &sw_win_s &kp TAB &macro_pause_for_release &macro_release &mo SHORTS_EXT_2)
+        SHORTCUT(mc_app_swapper,            &macro_press &kp LGUI &mo SHORTS_EXT_2 &macro_tap &kp TAB &macro_pause_for_release &macro_release &kp LGUI &mo SHORTS_EXT_2)
         SHORTCUT(mc_app_quit,               &macro_tap &kp Q)
+        SHORTCUT(mc_win_f,                  &macro_tap &kp TAB)
+        SHORTCUT(mc_win_b,                  &macro_tap &kp LS(TAB))
         MORPHED_SHORTCUT_KM(mm_down_minus,  &kp DOWN, &kp MINUS, MOD_RGUI)
         MORPHED_SHORTCUT_KM(mm_up_plus,     &kp UP, &kp PLUS, MOD_RGUI)
         MORPHED_SHORTCUT_KM(mm_seln_down_minus,  &kp DOWN, &kp MINUS, MOD_RGUI)

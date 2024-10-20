@@ -4,16 +4,14 @@ KEYBOARD_HOME="$(pwd)"
 ZMK_MODULE="modules/rafaelromao/zmk"
 RGBWIDGET_MODULE="modules/caksoylar/zmk-rgbled-widget"
 DONGLE_MODULE="modules/englmaxi/zmk-dongle-display"
-TRISTATE_MODULE="modules/dhruvinsh/zmk-tri-state"
 AUTOLAYER_MODULE="modules/urob/zmk-auto-layer"
 ANTECEDENT_MODULE="modules/ssbb/zmk-antecedent-morph"
 export ZMK_HOME="$KEYBOARD_HOME/$ZMK_MODULE"
 RGBWIDGET_HOME="$KEYBOARD_HOME/$RGBWIDGET_MODULE"
 DONGLE_HOME="$KEYBOARD_HOME/$DONGLE_MODULE"
-TRISTATE_HOME="$KEYBOARD_HOME/$TRISTATE_MODULE"
 AUTOLAYER_HOME="$KEYBOARD_HOME/$AUTOLAYER_MODULE"
 ANTECEDENT_HOME="$KEYBOARD_HOME/$ANTECEDENT_MODULE"
-BEHAVIOR_MODULES="$AUTOLAYER_HOME;$TRISTATE_HOME
+BEHAVIOR_MODULES="$AUTOLAYER_HOME"
 
 if [[ ! -d "$DONGLE_HOME" ]]
 then
@@ -31,12 +29,6 @@ if [[ ! -d "$ANTECEDENT_HOME" ]]
 then
     echo "Add git sub-modules..."
     git submodule add -f https://github.com/ssbb/zmk-antecedent-morph $ANTECEDENT_MODULE
-fi
-
-if [[ ! -d "$TRISTATE_HOME" ]]
-then
-    echo "Add git sub-modules..."
-    git submodule add -f https://github.com/dhruvinsh/zmk-tri-state $TRISTATE_MODULE
 fi
 
 if [[ ! -d "$AUTOLAYER_HOME" ]]
