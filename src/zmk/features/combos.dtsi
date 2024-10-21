@@ -35,7 +35,8 @@
         COMBO(cb_boot_l,        LTR LBI,     &bootloader,        ALL_LAYERS)
         COMBO(cb_boot_r,        RTR RBI,     &bootloader,        ALL_LAYERS)
         COMBO(cb_alpha1,        LTM LTR LTI, &to ALPHA1,         ALL_LAYERS)
-        COMBO(cb_mousenav,      LBR LBM LBI, &to NAV_F,          ALL_LAYERS)
+        COMBO(cb_mousenav,      LHR LHM LHI, &ht_nav 0 0,        ALL_LAYERS)
+        COMBO(cb_fusion,        LBR LBM LBI, &to FUSION,         ALL_LAYERS)
 
         COMBO(cb_esc,           LTR LTM,     &kp ESC,            ALL_LAYERS_BUT_RAISE)
         COMBO(cb_backspace,     RTM RTR,     &kp BACKSPACE,      ALL_LAYERS_BUT_RAISE_MEDIA)
@@ -196,7 +197,7 @@
     combo_must_tap {
         COMBO_MUST_TAP(ht_w     , &kp LCTL  &kp LGUI                   , &kp W)
         COMBO_MUST_TAP(ht_q     , &kp LSHFT &kp LCTL                   , &kp Q)
-        COMBO_MUST_TAP(ht_enter , &kp LSHFT &kp LCTL &kp LGUI          , &kp ENTER)
+        COMBO_MUST_TAP(ht_nav   , &kp LSHFT &kp LCTL &kp LGUI          , &to NAV_F)
         COMBO_MUST_TAP(ht_z     , &kp RCTL  &kp RGUI                   , &kp Z)
         COMBO_MUST_TAP(ht_y     , &kp RCTL  &kp RSFT                   , &kp Y)
         COMBO_MUST_TAP(ht_p     , &kp RSHFT &kp RCTL &kp RGUI          , &kp P)
