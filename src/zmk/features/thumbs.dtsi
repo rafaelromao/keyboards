@@ -101,54 +101,60 @@
 
         // ********************** NUM WORD ********************** //
 
-        custom_num_word: custom_num_word {
-            compatible = "zmk,behavior-auto-layer";
-            ignore-numbers;
-			#binding-cells = <1>;
-            continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL AMPS PIPE HASH TILDE CARET
-                             LBRC RBRC BACKSLASH DOLLAR AT LPAR RPAR DQT SQT LBKT RBKT QMARK GRAVE>;
-        };
+        #define custom_num_word caps_word
+
+        // custom_num_word: custom_num_word {
+        //     compatible = "zmk,behavior-auto-layer";
+        //     ignore-numbers;
+		// 	#binding-cells = <1>;
+        //     continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL AMPS PIPE HASH TILDE CARET
+        //                      LBRC RBRC BACKSLASH DOLLAR AT LPAR RPAR DQT SQT LBKT RBKT QMARK GRAVE>;
+        // };
 
         tc_num_word: tc_num_word {
 			compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-            bindings = <&macro_tap &to ALPHA1 &custom_num_word LOWER>;
+            bindings = <&macro_tap &to ALPHA1 &custom_num_word>;
         };
 
         // ******************* CAPS WORD ******************* //
 
-        custom_caps_word: custom_caps_word {
-            compatible = "zmk,behavior-auto-layer";
-            ignore-alphas;
-            ignore-modifiers;
-			#binding-cells = <1>;  
-            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT TILDE CARET GRAVE>;
-        };
+        #define custom_caps_word caps_word
+
+        // custom_caps_word: custom_caps_word {
+        //     compatible = "zmk,behavior-auto-layer";
+        //     ignore-alphas;
+        //     ignore-modifiers;
+		// 	#binding-cells = <1>;  
+        //     continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT TILDE CARET GRAVE>;
+        // };
         terminated_caps_word: terminated_caps_word {
 			compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-            bindings = <&macro_tap &custom_caps_word CASE_A1>;
+            bindings = <&macro_tap &custom_caps_word>;
             // bindings = <&macro_tap &kp CAPSWORD_TERM &custom_caps_word CASE_A1>;
         };
 
-        custom_caps_lock: custom_caps_lock {
-            compatible = "zmk,behavior-auto-layer";
-            ignore-alphas;
-            ignore-modifiers;
-			#binding-cells = <1>;  
-            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT TILDE CARET GRAVE SPACE>;
-        };
+        #define custom_caps_lock caps_word
+
+        // custom_caps_lock: custom_caps_lock {
+        //     compatible = "zmk,behavior-auto-layer";
+        //     ignore-alphas;
+        //     ignore-modifiers;
+		// 	#binding-cells = <1>;  
+        //     continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT TILDE CARET GRAVE SPACE>;
+        // };
         terminated_caps_lock: terminated_caps_lock {
 			compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
             // bindings = <&macro_tap &kp CAPSWORD_TERM &custom_caps_lock CPLK_A1>;
-            bindings = <&macro_tap &custom_caps_lock CPLK_A1>;
+            bindings = <&macro_tap &custom_caps_lock>;
         };
 
         THUMB_MACRO(tc_shift_layer, &sl SHIFT_A1)
