@@ -201,7 +201,7 @@
         THUMB_MACRO(tc_strong_kebabcase,  &tog CASE_A1 &tog KEBAB_CASE)
         THUMB_MACRO(tc_strong_slashcase,  &tog CASE_A1 &tog SLASH_CASE)
 
-        THUMB_MORPH(sc_caps_word,  MOD_LCTL, &terminated_caps_word , &msl_a2 RAISE 0)
+        THUMB_MORPH(sc_caps_word,  MOD_LCTL, &terminated_caps_word , &kp A)
         THUMB_MORPH(sc_caps_lock,  MOD_RCTL, &terminated_caps_lock , &sc_caps_word   )
         THUMB_MORPH(sc_numpad,     MOD_LALT, &to LOWER             , &sc_caps_lock   )
         THUMB_MORPH(sc_numword,    MOD_RALT, &tc_num_word          , &sc_numpad      )
