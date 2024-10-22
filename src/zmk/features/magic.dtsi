@@ -52,7 +52,8 @@
 
         // ******************** MAGIC KEY ******************** //
 
-        THUMB_MACRO(tc_bspc_leader, &kp BACKSPACE &leader)
+        // THUMB_MACRO(tc_bspc_leader, &kp BACKSPACE &leader)
+        THUMB_MACRO(tc_bspc_leader, &kp BACKSPACE)
         // THUMB_MACRO(tc_h,           &kp H &kp H_TERM)
         THUMB_MACRO(tc_h,           &kp H)
         

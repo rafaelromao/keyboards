@@ -92,10 +92,12 @@
         TAPHOLD_SYMBOL(th_dot,     &mc_dot, &mc_end_dot)
 
         SYMBOL(mc_c,               &kp C)
-        TAPHOLD_SYMBOL(th_c,       &mc_c, &leader)
+        // TAPHOLD_SYMBOL(th_c,       &mc_c, &leader)
+        TAPHOLD_SYMBOL(th_c,       &mc_c, &mc_c)
 
         SYMBOL(mc_comma,           &kp COMMA)
-        TAPHOLD_SYMBOL(th_comma,   &mc_comma, &leader)
+        // TAPHOLD_SYMBOL(th_comma,   &mc_comma, &leader)
+        TAPHOLD_SYMBOL(th_comma,   &mc_comma, &mc_comma)
 
         // Lower
 

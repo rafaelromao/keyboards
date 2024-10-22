@@ -1,53 +1,53 @@
-/*
-*
-* Copyright (c) 2022 Rafael Romão
-* SPDX-License-Identifier: MIT
-*
-*/
-/*                KEY POSITIONS
+// /*
+// *
+// * Copyright (c) 2022 Rafael Romão
+// * SPDX-License-Identifier: MIT
+// *
+// */
+// /*                KEY POSITIONS
 
-  ╭─────────────────────╮ ╭─────────────────────╮
-  │ LTP LTR LTM LTI LTC │ │ RTC RTI RTM RTR RTP │
-  │ LHP LHR LHM LHI LHC │ │ RHC RHI RHM RHR RHP │
-  │ LBP LBR LBM LBI LBC │ │ RBC RBI RBM RBR RBP │
-  ╰───────╮ L2  L1  L0  │ │ R0  R1  R2  ╭───────╯
-          ╰─────────────╯ ╰─────────────╯ */
+//   ╭─────────────────────╮ ╭─────────────────────╮
+//   │ LTP LTR LTM LTI LTC │ │ RTC RTI RTM RTR RTP │
+//   │ LHP LHR LHM LHI LHC │ │ RHC RHI RHM RHR RHP │
+//   │ LBP LBR LBM LBI LBC │ │ RBC RBI RBM RBR RBP │
+//   ╰───────╮ L2  L1  L0  │ │ R0  R1  R2  ╭───────╯
+//           ╰─────────────╯ ╰─────────────╯ */
 
-&leader {
-	timeout-ms = <500>;
-};
+// &leader {
+// 	timeout-ms = <500>;
+// };
 
-/ {
+// / {
 
-    #define LEADER_MACRO(NAME, BINDINGS) \
-        NAME: NAME { \
-			compatible = "zmk,behavior-macro"; \
-            #binding-cells = <0>; \
-            wait-ms = <10>; \
-            tap-ms = <10>; \
-            bindings = <&macro_tap BINDINGS>; \
-        };
+//     #define LEADER_MACRO(NAME, BINDINGS) \
+//         NAME: NAME { \
+// 			compatible = "zmk,behavior-macro"; \
+//             #binding-cells = <0>; \
+//             wait-ms = <10>; \
+//             tap-ms = <10>; \
+//             bindings = <&macro_tap BINDINGS>; \
+//         };
 
-	#define LEADER_SEQ(NAME, KEYS, BINDINGS, LAYERS) \
-		NAME { \
-			key-positions = <KEYS>; \
-			bindings = <BINDINGS>; \
-			layers = <LAYERS>; \
-		};
+// 	#define LEADER_SEQ(NAME, KEYS, BINDINGS, LAYERS) \
+// 		NAME { \
+// 			key-positions = <KEYS>; \
+// 			bindings = <BINDINGS>; \
+// 			layers = <LAYERS>; \
+// 		};
 
-	macros {
-        LEADER_MACRO(mc_section, &kp LA(N6))
-        LEADER_MACRO(mc_orda,    &kp LA(N0))
-        LEADER_MACRO(mc_ordo,    &kp LA(N9))
-        LEADER_MACRO(mc_deg,     &kp LS(LA(N8)))
-	};
+// 	macros {
+//         LEADER_MACRO(mc_section, &kp LA(N6))
+//         LEADER_MACRO(mc_orda,    &kp LA(N0))
+//         LEADER_MACRO(mc_ordo,    &kp LA(N9))
+//         LEADER_MACRO(mc_deg,     &kp LS(LA(N8)))
+// 	};
 
-	leader_sequences {
-		compatible = "zmk,leader-sequences";
+// 	leader_sequences {
+// 		compatible = "zmk,leader-sequences";
 
-		LEADER_SEQ(ld_sect, RBR LHM , &mc_section, ALPHA1)
-		LEADER_SEQ(ld_orda, RBR RTM , &mc_orda, ALPHA1)
-		LEADER_SEQ(ld_ordo, RBR RHM , &mc_ordo, ALPHA1)
-		LEADER_SEQ(ld_deg,  RBR LHI , &mc_deg, ALPHA1)
-	};
-};
+// 		LEADER_SEQ(ld_sect, RBR LHM , &mc_section, ALPHA1)
+// 		LEADER_SEQ(ld_orda, RBR RTM , &mc_orda, ALPHA1)
+// 		LEADER_SEQ(ld_ordo, RBR RHM , &mc_ordo, ALPHA1)
+// 		LEADER_SEQ(ld_deg,  RBR LHI , &mc_deg, ALPHA1)
+// 	};
+// };
