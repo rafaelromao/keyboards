@@ -119,7 +119,7 @@
                      display-name = "RAISE";
                      bindings = <
    &none               &kp F9              &kp F8              &kp F7              &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
-   &none               &kp F6              &kp F5              &kp F4              &none               &none               &th_mins 0 0        &th_plus 0 0        &th_slash 0 0       &lt CODING STAR  
+   &lt CODING BSLH     &kp F6              &kp F5              &kp F4              &none               &none               &th_mins 0 0        &th_plus 0 0        &th_slash 0 0       &lt CODING STAR  
    &none               &kp F3              &kp F2              &kp F1              &none               &none               &th_excl 0 0        &th_lt 0 0          &th_gt 0 0          &trans
                                            &trans              &key_repeat         &lt LOW_CP SPACE    &trans              &trans              &trans       
                            >;
@@ -155,9 +155,9 @@
                      display-name = "SHORTCUTS";
                      bindings = <
    &none               &kp ESC             &mc_files           &mc_preview         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &none    
-   &mo SYSTEM          &th_zoom RGUI 0     &mc_app_swapper     &th_tabs LGUI 0     &none               &none               &mc_seln            &mm_down_minus      &mm_up_plus         &mo SYSTEM
+   &none               &th_zoom RGUI 0     &mc_app_swapper     &th_tabs LGUI 0     &none               &none               &mc_seln            &mm_down_minus      &mm_up_plus         &none
    &none               &mc_term            &mc_calc            &mc_launch          &none               &none               &mc_selh            &ht_ref_clo_z0 0 0  &mc_clip            &trans
-                                           &trans              &mst FUSION FUSION  &mst NMODS NMODS    &mst CODING CODING  &mst NAV NAV_F      &trans
+                                           &trans              &trans              &lt CODING SPACE    &lt CODING SPACE    &trans              &trans
                            >;
                 };
                 shortcuts_ext_1_layer {
@@ -181,10 +181,10 @@
                 coding_layer {
                      display-name = "CODING";
                      bindings = <
-   &none               &kp ESC             &mm_build           &mm_break           &none               &none               &mm_typematch       &kp ENTER           &kp ESC             &none    
-   &mm_project         &th_find LSHFT 0    &mm_run             &mm_debug           &none               &none               &mm_actions         &mm_down            &mt RSHFT UP        &none
-   &trans              &mm_recent          &mm_swapper         &mm_usages          &none               &none               &mm_docs            &mm_refac           &mc_comment         &none
-                                           &trans              &th_step_into NAV 0 &mm_step_over       &trans              &trans              &trans
+   &none               &mm_project         &mm_build           &mm_break           &none               &none               &mc_step_out        &mc_step_into       &mc_step_over       &none    
+   &none               &th_find LSHFT 0    &mm_run             &mm_debug           &none               &none               &mm_actions         &mc_complete        &th_comment RSHFT 0 &none
+   &trans              &mm_recent          &mm_swapper         &mm_usages          &none               &none               &mm_docs            &mm_refac           &mc_evaluate        &none
+                                           &trans              &mo NAV             &mm_typematch       &mm_typematch       &mo NAV             &trans
                            >;
                 };
                 no_mods_layer {

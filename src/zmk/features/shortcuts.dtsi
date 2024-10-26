@@ -102,11 +102,10 @@
 
         // Macros
 
-        SHORTCUT(mc_shift,                  &sk LSHFT)
+        SHORTCUT(mc_comment,                &macro_tap &kp LG(SLASH))
+        MODTAP_SHORTCUT(th_comment,         &mc_comment)
 
-        SHORTCUT(mc_down,                   &macro_tap &kp DOWN)
         SHORTCUT(mc_complete,               &macro_tap &kp LS(LG(ENTER)))
-        SHIFTED_SHORTCUT(mm_down,           &mc_down, &mc_complete)
 
         SHORTCUT(mc_breakpoint,             &macro_tap &kp LG(F8))
         SHORTCUT(mc_view_breakpoints,       &macro_tap &kp LG(LS(F8)))
@@ -114,12 +113,9 @@
 
         SHORTCUT(mc_step_over,              &macro_tap &kp F8)
         SHORTCUT(mc_evaluate,               &macro_tap &kp LA(F8))
-        SHIFTED_SHORTCUT(mm_step_over,      &mc_step_over, &mc_breakpoint)
 
         SHORTCUT(mc_step_into,              &macro_tap &kp F7)
         SHORTCUT(mc_step_out,               &macro_tap &kp LS(F8))
-        SHIFTED_SHORTCUT(mm_step_into,      &mc_step_into, &mc_step_out)
-        LAYERTAP_SHORTCUT(th_step_into,     &mm_step_into)
 
         SHORTCUT(mc_actions,                &macro_tap &kp LA(ENTER))
         SHORTCUT(mc_generate,               &macro_tap &kp LG(N))
@@ -213,7 +209,6 @@
 
         SHORTCUT(mc_lock,                   &macro_tap &kp LC(LG(Q)))
 
-        SHORTCUT(mc_comment,                &macro_tap &kp LG(SLASH))
         SHORTCUT(mc_dqt0p,                  &macro_tap &kp DQT &kp N0 &kp P)
 
         SHORTCUT(mc_prevword,               &macro_tap &kp LA(LEFT))
