@@ -15,10 +15,10 @@
 #include "../features/symbols.dtsi"
 #include "../features/shortcuts.dtsi"
 #include "../features/combos.dtsi"
-// #include "../features/leader.dtsi"
-// #if __has_include("../secret.dtsi")
-// #include "../secret.dtsi"
-// #endif
+#include "../features/leader.dtsi"
+#if __has_include("../secret.dtsi")
+#include "../secret.dtsi"
+#endif
 
 / {
         keymap {

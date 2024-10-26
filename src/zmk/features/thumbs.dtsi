@@ -101,60 +101,52 @@
 
         // ********************** NUM WORD ********************** //
 
-        #define custom_num_word caps_word
-
-        // custom_num_word: custom_num_word {
-        //     compatible = "zmk,behavior-auto-layer";
-        //     ignore-numbers;
-		// 	#binding-cells = <1>;
-        //     continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL AMPS PIPE HASH TILDE CARET
-        //                      LBRC RBRC BACKSLASH DOLLAR AT LPAR RPAR DQT SQT LBKT RBKT QMARK GRAVE>;
-        // };
+        custom_num_word: custom_num_word {
+            compatible = "zmk,behavior-auto-layer";
+            ignore-numbers;
+			#binding-cells = <1>;
+            continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL AMPS PIPE HASH TILDE CARET
+                             LBRC RBRC BACKSLASH DOLLAR AT LPAR RPAR DQT SQT LBKT RBKT QMARK GRAVE>;
+        };
 
         tc_num_word: tc_num_word {
 			compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-            bindings = <&macro_tap &to ALPHA1 &custom_num_word>;
+            bindings = <&macro_tap &to ALPHA1 &custom_num_word LOWER>;
         };
 
         // ******************* CAPS WORD ******************* //
 
-        #define custom_caps_word caps_word
-
-        // custom_caps_word: custom_caps_word {
-        //     compatible = "zmk,behavior-auto-layer";
-        //     ignore-alphas;
-        //     ignore-modifiers;
-		// 	#binding-cells = <1>;  
-        //     continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT TILDE CARET GRAVE>;
-        // };
+        custom_caps_word: custom_caps_word {
+            compatible = "zmk,behavior-auto-layer";
+            ignore-alphas;
+            ignore-modifiers;
+			#binding-cells = <1>;  
+            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT TILDE CARET GRAVE>;
+        };
         terminated_caps_word: terminated_caps_word {
 			compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-            bindings = <&macro_tap &custom_caps_word>;
-            // bindings = <&macro_tap &kp CAPSWORD_TERM &custom_caps_word CASE_A1>;
+            bindings = <&macro_tap &kp CAPSWORD_TERM &custom_caps_word CASE_A1>;
         };
 
-        #define custom_caps_lock caps_word
-
-        // custom_caps_lock: custom_caps_lock {
-        //     compatible = "zmk,behavior-auto-layer";
-        //     ignore-alphas;
-        //     ignore-modifiers;
-		// 	#binding-cells = <1>;  
-        //     continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT TILDE CARET GRAVE SPACE>;
-        // };
+        custom_caps_lock: custom_caps_lock {
+            compatible = "zmk,behavior-auto-layer";
+            ignore-alphas;
+            ignore-modifiers;
+			#binding-cells = <1>;  
+            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT TILDE CARET GRAVE SPACE>;
+        };
         terminated_caps_lock: terminated_caps_lock {
 			compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-            // bindings = <&macro_tap &kp CAPSWORD_TERM &custom_caps_lock CPLK_A1>;
-            bindings = <&macro_tap &custom_caps_lock>;
+            bindings = <&macro_tap &kp CAPSWORD_TERM &custom_caps_lock CPLK_A1>;
         };
 
         THUMB_MACRO(tc_shift_layer, &sl SHIFT_A1)
@@ -201,7 +193,7 @@
         THUMB_MACRO(tc_strong_kebabcase,  &tog CASE_A1 &tog KEBAB_CASE)
         THUMB_MACRO(tc_strong_slashcase,  &tog CASE_A1 &tog SLASH_CASE)
 
-        THUMB_MORPH(sc_caps_word,  MOD_LCTL, &terminated_caps_word , &kp A)
+        THUMB_MORPH(sc_caps_word,  MOD_LCTL, &terminated_caps_word , &msl_a2 RAISE 0 )
         THUMB_MORPH(sc_caps_lock,  MOD_RCTL, &terminated_caps_lock , &sc_caps_word   )
         THUMB_MORPH(sc_numpad,     MOD_LALT, &to LOWER             , &sc_caps_lock   )
         THUMB_MORPH(sc_numword,    MOD_RALT, &tc_num_word          , &sc_numpad      )
@@ -215,7 +207,7 @@
         THUMB_COMBO_MORPH(sc_strong_kebab_case, MOD_RCTL, MOD_RGUI, &tc_strong_kebabcase, &sc_strong_snake_case)
         THUMB_COMBO_MORPH(sc_strong_slash_case, MOD_RCTL, MOD_RSFT, &tc_strong_slashcase, &sc_strong_kebab_case)
         
-        #define msl_raise_smart sc_strong_slash_case
+        #define msl_raise_smart sc_caps_lock
 
         THUMB_MACRO(mc_msk_camel, &sl SHIFT_A1)
         THUMB_MACRO(mc_msk_snake, &kp UNDERSCORE &sl SPACING)

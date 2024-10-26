@@ -6,7 +6,7 @@
 */
 
 / {
-    #define ACCENTED_KEY(NAME, KEY, DEAD_KEY) \
+    #define ACCENTED_KEY(NAME, KEY, DEAD_KEY, TERM, C_TERM, S_TERM) \
         NAME: NAME { \
             wait-ms = <0>; \
             tap-ms = <0>; \
@@ -17,6 +17,7 @@
                 , <&macro_tap &kp DEAD_KEY> \
                 , <&macro_release &kp LALT> \
                 , <&macro_tap &kp KEY> \
+                , <&macro_tap &kp TERM> \
                 ; \
         }; \
         NAME##_c: NAME##_c { \
@@ -32,6 +33,7 @@
                 , <&macro_press &kp LSHFT> \
                 , <&macro_tap &kp KEY> \
                 , <&macro_release &kp LSHFT> \
+                , <&macro_tap &kp C_TERM> \
                 ; \
         }; \
         NAME##_s: NAME##_s { \
@@ -47,6 +49,7 @@
                 , <&macro_press &kp LSHFT> \
                 , <&macro_tap &kp KEY> \
                 , <&macro_release &kp LSHFT> \
+                , <&macro_tap &kp S_TERM> \
                 ; \
         }; \
     
@@ -61,24 +64,24 @@
 
 
     accents {
-        ACCENTED_KEY(ac_agrv, A, GRAVE)
-        ACCENTED_KEY(ac_aacu, A, E    )
-        ACCENTED_KEY(ac_atil, A, N    )
-        ACCENTED_KEY(ac_acir, A, I    )
-        ACCENTED_KEY(ac_eacu, E, E    )
-        ACCENTED_KEY(ac_ecir, E, I    )
-        ACCENTED_KEY(ac_iacu, I, E    )
-        ACCENTED_KEY(ac_oacu, O, E    )
-        ACCENTED_KEY(ac_otil, O, N    )
-        ACCENTED_KEY(ac_ocir, O, I    )
-        ACCENTED_KEY(ac_uacu, U, E    )
+        ACCENTED_KEY(ac_agrv, A, GRAVE, AGRV_TERM, C_AGRV_TERM, S_AGRV_TERM)
+        ACCENTED_KEY(ac_aacu, A, E    , AACU_TERM, C_AACU_TERM, S_AACU_TERM)
+        ACCENTED_KEY(ac_atil, A, N    , ATIL_TERM, C_ATIL_TERM, S_ATIL_TERM)
+        ACCENTED_KEY(ac_acir, A, I    , ACIR_TERM, C_ACIR_TERM, S_ACIR_TERM)
+        ACCENTED_KEY(ac_eacu, E, E    , EACU_TERM, C_EACU_TERM, S_EACU_TERM)
+        ACCENTED_KEY(ac_ecir, E, I    , ECIR_TERM, C_ECIR_TERM, S_ECIR_TERM)
+        ACCENTED_KEY(ac_iacu, I, E    , IACU_TERM, C_IACU_TERM, S_IACU_TERM)
+        ACCENTED_KEY(ac_oacu, O, E    , OACU_TERM, C_OACU_TERM, S_OACU_TERM)
+        ACCENTED_KEY(ac_otil, O, N    , OTIL_TERM, C_OTIL_TERM, S_OTIL_TERM)
+        ACCENTED_KEY(ac_ocir, O, I    , OCIR_TERM, C_OCIR_TERM, S_OCIR_TERM)
+        ACCENTED_KEY(ac_uacu, U, E    , UACU_TERM, C_UACU_TERM, S_UACU_TERM)
 
         MACRO_KEY(mc_ced,   &kp C_CEDIL &sl CCEDIL)
         MACRO_KEY(mc_ced_c, &kp LS(C_CEDIL) &sl CASE_CCEDIL)
         MACRO_KEY(mc_ced_s, &kp RS(C_CEDIL) &sl CCEDIL)
-        MACRO_KEY(mc_qu,    &macro_tap &kp Q &macro_wait_time 10 &macro_tap &kp U)
-        MACRO_KEY(mc_qu_c,  &macro_press &kp LSHFT &macro_tap &kp Q &macro_wait_time 10 &macro_tap &kp U &macro_release &kp LSHFT)
-        MACRO_KEY(mc_qu_s,  &macro_press &kp LSHFT &macro_tap &kp Q &macro_wait_time 10 &macro_release &kp LSHFT &macro_tap &kp U)
+        MACRO_KEY(mc_qu,    &macro_tap &kp Q &macro_wait_time 10 &macro_tap &kp U &kp QU_TERM)
+        MACRO_KEY(mc_qu_c,  &macro_press &kp LSHFT &macro_tap &kp Q &macro_wait_time 10 &macro_tap &kp U &macro_release &kp LSHFT &kp QU_TERM)
+        MACRO_KEY(mc_qu_s,  &macro_press &kp LSHFT &macro_tap &kp Q &macro_wait_time 10 &macro_release &kp LSHFT &macro_tap &kp U &kp QU_TERM)
         MACRO_KEY(mc_aotil,    &macro_tap &macro_wait_time 10 &macro_tap &ac_atil &kp O)
         MACRO_KEY(mc_aotil_c,  &macro_tap &macro_wait_time 10 &macro_tap &ac_atil_c &kp LS(O))
         MACRO_KEY(mc_otiles,   &macro_tap &ac_otil &macro_wait_time 10 &kp E &kp S)
