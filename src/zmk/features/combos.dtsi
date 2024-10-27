@@ -108,12 +108,12 @@
         COMBO(cb_dor_gte,       RBM RBR,     &th_dor 0 0,        RAISE RAI_CP)
         COMBO(cb_tisl,          RBI RBM RBR, &mc_tisl,           RAISE RAI_CP)
 
-        COMBO(cb_f10,           LBM LBI,     &kp F10,            RAISE RAI_CP)
-        COMBO(cb_f11,           LHM LHI,     &kp F11,            RAISE RAI_CP)
-        COMBO(cb_f12,           LTM LTI,     &kp F12,            RAISE RAI_CP)
-        COMBO(cb_f13,           LBM LBR,     &kp F13,            RAISE RAI_CP)
-        COMBO(cb_f14,           LHM LHR,     &kp F14,            RAISE RAI_CP)
-        COMBO(cb_f15,           LTM LTR,     &kp F15,            RAISE RAI_CP)
+        COMBO(cb_f10,           RBM RBI,     &kp F10,            FUNCTIONS)
+        COMBO(cb_f11,           RHM RHI,     &kp F11,            FUNCTIONS)
+        COMBO(cb_f12,           RTM RTI,     &kp F12,            FUNCTIONS)
+        COMBO(cb_f13,           RBM RBR,     &kp F13,            FUNCTIONS)
+        COMBO(cb_f14,           RHM RHR,     &kp F14,            FUNCTIONS)
+        COMBO(cb_f15,           RTM RTR,     &kp F15,            FUNCTIONS)
 
         COMBO(cb_lpar,          RHI RHM RHR, &kp LPAR,           ALPHA2 CASE_A2 SEN_E2 SHIFT_A2)
         COMBO(cb_rpar,          RBI RBM RBR, &kp RPAR,           ALPHA2 CASE_A2 SEN_E2 SHIFT_A2)

@@ -92,7 +92,7 @@
         TAPHOLD_SYMBOL(th_dot,     &mc_dot, &mc_end_dot)
 
         SYMBOL(mc_c,               &kp C)
-        TAPHOLD_SYMBOL(th_c,       &mc_c, &leader)
+        LAYERTAP_SYMBOL(th_c,      &mc_c)
 
         SYMBOL(mc_comma,           &kp COMMA)
         LAYERTAP_SYMBOL(th_comma,  &mc_comma)

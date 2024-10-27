@@ -28,7 +28,7 @@
                      bindings = <
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp Y
    &lt SHORTCUTS D     &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp W               &kp Z               &mt RGUI R          &mt RCTRL A         &mt RSHFT E         &lt SHORTCUTS I      
-   &kp Q               &mt RALT F          &th_c 0 0           &mt LALT P          &kp V               &kp J               &ht_magic RALT 0    &th_comma SYSTEM 0  &th_dot 0 0         &kp Y
+   &kp Q               &mt RALT F          &th_c FUNCTIONS 0   &mt LALT P          &kp V               &kp J               &ht_magic RALT 0    &th_comma SYSTEM 0  &th_dot 0 0         &kp Y
                                            &none               &ht_repeat NAV 0    &ltn LOWER SPACE    &msl_a2 RAISE 0     &ht_shift MEDIA 0   &none
                         >;
                 };
@@ -192,17 +192,8 @@
                      bindings = <
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp Y
    &kp D               &kp N               &kp S               &kp T               &kp W               &kp Z               &kp R               &kp A               &kp E               &kp I 
-   &trans              &kp F               &kp C               &kp P               &kp V               &kp J               &kp H               &kp COMMA           &kp DOT             &trans
-                                           &none               &key_repeat         &trans              &msl NMODS2 NMODS2  &sk LSHFT           &none
-                           >;
-                };
-                no_mods_alpha2_layer {
-                     display-name = "NO MODS";
-                     bindings = <
-   &none               &kp Q               &mc_qu              &kp K               &none               &none               &ac_ocir            &ac_oacu            &ac_uacu            &none
-   &kp Y               &kp Z               &kp X               &kp W               &none               &none               &ac_atil            &ac_aacu            &ac_eacu            &ac_iacu 
-   &trans              &kp J               &mc_ced             &kp V               &none               &none               &ac_otil            &ac_acir            &ac_ecir            &trans
-                                           &none               &trans              &kp SPACE           &kp SPACE           &mc_sqo             &none
+   &trans              &kp F               &kp C               &kp P               &kp V               &kp J               &magic_key           &kp COMMA           &kp DOT             &trans
+                                           &none               &key_repeat         &kp SPACE           &sl ALPHA2          &sk LSHFT           &none
                            >;
                 };
                 alpha2_layer {
@@ -253,9 +244,9 @@
                 fusion360_layer {
                      display-name = "FUSION";
                      bindings = <
-   &trans              &trans              &trans              &trans              &trans              &none               &kp L               &kp O               &kp M               &none
-   &trans              &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp W               &kp Z               &mt RGUI R          &mt RCTRL A         &mt RSHFT E         &lt NAV I
-   &trans              &mt RALT F          &trans              &mt LALT P          &trans              &none               &mt RALT H          &kp C               &kp F               &none
+   &trans              &kp ESC             &mkp LCLK           &mkp RCLK           &trans              &none               &kp L               &kp O               &kp M               &none
+   &trans              &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &kp W               &kp Z               &mt RGUI R          &mt RCTRL A         &mt RSHFT E         &lt NAV I
+   &trans              &msc SCRL_DOWN      &mmv MOVE_DOWN      &msc SCRL_UP        &trans              &none               &mt RALT H          &kp C               &kp F               &none
                                            &trans              &trans              &lt LOW_CP SPACE    &th_orbit RAI_CP 0  &th_pan MEDIA 0     &none
                            >;
                 };
@@ -263,7 +254,7 @@
                      display-name = "NAV";
                      bindings = <
    &none               &mc_prevword        &kp PAGE_UP         &mc_nextword        &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
-   &mo LOW_CP          &kp LSHFT           &kp LCTRL           &kp LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &none               &kp LSHFT           &kp LCTRL           &kp LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
    &none               &kp RALT            &kp PAGE_DOWN       &kp LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &trans
                                            &trans              &trans              &trans              &kp SPACE           &mo MEDIA           &trans
                         >;
@@ -287,22 +278,30 @@
                            >;
                 };
                 media_layer {
-                     display-name = "MEDIA";
-                     bindings = <
-   &none               &kp ESC             &trans              &trans              &none               &none               &kp TAB             &kp ENTER           &kp BACKSPACE       &none
-   &none               &trans              &trans              &trans              &trans              &none               &mc_mic             &mt C_MUTE C_VOL_DN &kp C_VOL_UP        &mc_cam
-   &none               &trans              &trans              &trans              &trans              &none               &kp C_PP            &kp C_PREV          &kp C_NEXT          &trans
-                                           &trans              &mo NAV_F           &kp SPACE           &trans              &trans              &trans
-                           >;
+                    display-name = "MEDIA";
+                    bindings = <
+   &none               &kp ESC             &mkp LCLK           &mkp RCLK           &none               &none               &kp TAB             &kp ENTER           &kp BACKSPACE       &none
+   &none               &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &none               &mc_mic             &mt C_MUTE C_VOL_DN &kp C_VOL_UP        &mc_cam
+   &none               &msc SCRL_DOWN      &mmv MOVE_DOWN      &msc SCRL_UP        &none               &none               &kp C_PP            &kp C_PREV          &kp C_NEXT          &trans
+                                           &trans              &mo NAV_F           &kp SPACE           &trans              &trans              &trans                           >;
                 };
                 fixed_navigation_layer {
                      display-name = "NAV";
                      bindings = <
-   &none               &kp ESC             &trans              &trans              &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
-   &mc_shortcuts       &trans              &trans              &trans              &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
-   &none               &trans              &trans              &trans              &none               &none               &kp DEL             &kp HOME            &kp END             &trans
-                                           &trans              &mo NAV_F           &trans              &trans              &to ALPHA1          &trans
+   &none               &mc_prevword        &kp PAGE_UP         &mc_nextword        &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
+   &none               &kp LSHFT           &kp LCTRL           &kp LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &none               &kp RALT            &kp PAGE_DOWN       &kp LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &trans
+                                           &trans              &trans              &trans              &kp SPACE           &trans              &trans
                            >;
+                };
+                functions_layer {
+                     display-name = "FUN";
+                     bindings = <
+   &none               &none               &none               &mc_lock            &none               &none               &kp F7             &kp F8               &kp F9              &none 
+   &none               &none               &none               &kp C_SLEEP         &none               &none               &kp F4             &kp F5               &kp F6              &none      
+   &none               &none               &none               &leader             &none               &none               &kp F1             &kp F2               &kp F3              &none
+                                           &none               &sys_reset          &bootloader         &none               &none              &none
+                        >;
                 };
                 system_layer {
                      display-name = "SYSTEM";
