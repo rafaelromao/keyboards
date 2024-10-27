@@ -25,29 +25,7 @@
             bindings = <&macro_tap BINDINGS>; \
         };
 
-    #define SMART_MORPH(NAME, MODS, MODDED, UNMODDED) \
-        NAME: NAME { \
-            compatible = "zmk,behavior-mod-morph"; \
-            #binding-cells = <0>; \
-            bindings = <UNMODDED>, <MODDED>; \
-            mods = <(MODS)>; \
-        };
-
-    #define SMART_COMBO_MORPH(NAME, FIRST_MOD, SECOND_MOD, IF_BOTH, OR_ELSE) \
-        NAME##_CHECK_SECOND: NAME##_CHECK_SECOND { \
-            compatible = "zmk,behavior-mod-morph"; \
-            #binding-cells = <0>; \
-            bindings = <OR_ELSE>, <IF_BOTH>; \
-            mods = <(SECOND_MOD)>; \
-        }; \
-        NAME: NAME { \
-            compatible = "zmk,behavior-mod-morph"; \
-            #binding-cells = <0>; \
-            bindings = <OR_ELSE>, <&NAME##_CHECK_SECOND>; \
-            mods = <(FIRST_MOD)>; \
-        };
-
-    thumbs {
+    smart {
         
         // ********************** CUSTOM HOLD TAPS ********************** //
 
@@ -101,10 +79,12 @@
 
         // ********************** NUM WORD ********************** //
 
-        custom_num_word: custom_num_word {
-            compatible = "zmk,behavior-auto-layer";
+        smart_num: smart_num {
+            // compatible = "zmk,behavior-auto-layer";
+            compatible = "zmk,behavior-caps-word";
             ignore-numbers;
-			#binding-cells = <1>;
+			#binding-cells = <0>;
+            layers = <LOWER>;
             continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL AMPS PIPE HASH TILDE CARET
                              LBRC RBRC BACKSLASH DOLLAR AT LPAR RPAR DQT SQT LBKT RBKT QMARK GRAVE>;
         };
@@ -114,31 +94,19 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-            bindings = <&macro_tap &to ALPHA1 &custom_num_word LOWER>;
+            // bindings = <&macro_tap &to ALPHA1 &smart_num LOWER>;
+            bindings = <&macro_tap &to LOWER &smart_num>;
         };
 
-        // ******************* CAPS WORD ******************* //
-
-        smart_word: smart_word {
-            compatible = "zmk,behavior-auto-layer";
-            ignore-alphas;
-            ignore-modifiers;
-			#binding-cells = <1>;  
-            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT TILDE CARET GRAVE>;
-        };
-        // terminated_caps_word: terminated_caps_word {
-		// 	compatible = "zmk,behavior-macro";
-        //     #binding-cells = <0>;
-        //     wait-ms = <0>;
-        //     tap-ms = <0>;
-        //     bindings = <&macro_tap &kp CAPSWORD_TERM &smart_word CASE_A1>;
-        // };
+        // ******************* CAPS LINE ******************* //
 
         smart_line: smart_line {
-            compatible = "zmk,behavior-auto-layer";
+            // compatible = "zmk,behavior-auto-layer";
+            compatible = "zmk,behavior-caps-word";
             ignore-alphas;
             ignore-modifiers;
-			#binding-cells = <1>;  
+			#binding-cells = <0>;  
+            layers = <CPLK_A1>;
             continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT TILDE CARET GRAVE SPACE>;
         };
         // terminated_caps_lock: terminated_caps_lock {
@@ -149,7 +117,28 @@
         //     bindings = <&macro_tap &kp CAPSWORD_TERM &smart_line CPLK_A1>;
         // };
 
-        SMART_MACRO(tc_smart_word, &smart_word CASE_A1)
+        // SMART_MACRO(tc_smart_line, &smart_word CPLK_A1)
+        SMART_MACRO(tc_smart_line, &smart_line)
+
+        // ******************* CAPS WORD ******************* //
+
+        smart_word: smart_word {
+            // compatible = "zmk,behavior-auto-layer";
+            compatible = "zmk,behavior-caps-word";
+            ignore-alphas;
+            ignore-modifiers;
+            layers = <CASE_A1>;
+			#binding-cells = <0>;  
+            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT TILDE CARET GRAVE>;
+        };
+        // terminated_caps_word: terminated_caps_word {
+		// 	compatible = "zmk,behavior-macro";
+        //     #binding-cells = <0>;
+        //     wait-ms = <0>;
+        //     tap-ms = <0>;
+        //     bindings = <&macro_tap &kp CAPSWORD_TERM &smart_word CASE_A1>;
+        // };
+
         SMART_MACRO(tc_shift_layer, &sl SHIFT_A1)
         SMART_MACRO(tc_sp_caps,     &kp LS(SPACE))
         SMART_LAYERTAP(th_sp_caps,  &tc_sp_caps)
@@ -162,6 +151,9 @@
             quick-tap-ms = <0>;
             bindings = <&mo>, <&tc_shift_layer>;
         };
+
+        // SMART_MACRO(tc_smart_word, &smart_word CASE_A1)
+        SMART_MACRO(tc_smart_word, &smart_word)
 
         ht_caps: ht_caps {
             compatible = "zmk,behavior-hold-tap";

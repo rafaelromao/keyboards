@@ -11,7 +11,7 @@ RGBWIDGET_HOME="$KEYBOARD_HOME/$RGBWIDGET_MODULE"
 DONGLE_HOME="$KEYBOARD_HOME/$DONGLE_MODULE"
 AUTOLAYER_HOME="$KEYBOARD_HOME/$AUTOLAYER_MODULE"
 ANTECEDENT_HOME="$KEYBOARD_HOME/$ANTECEDENT_MODULE"
-BEHAVIOR_MODULES="$AUTOLAYER_HOME;$ANTECEDENT_HOME"
+BEHAVIOR_MODULES=""
 
 if [[ ! -d "$DONGLE_HOME" ]]
 then
@@ -52,7 +52,7 @@ git submodule update --init --recursive --progress
 echo "Checking out zmk..."
 cd $ZMK_HOME
 git fetch
-git checkout 20241007/main
+git checkout 20240328/rafaelromao/main
 git pull
 cd $KEYBOARD_HOME
 

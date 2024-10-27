@@ -306,8 +306,8 @@
                 system_layer {
                      display-name = "SYSTEM";
                      bindings = <
-   &none               &to SLASH_CASE      &smart_line CPLK_A1 &to KEBAB_CASE      &none               &none               &mc_lock           &none                &none               &none 
-   &none               &to CAMEL_CASE      &smart_word CASE_A1 &to SNAKE_CASE      &none               &none               &kp C_SLEEP        &none                &none               &none      
+   &none               &to SLASH_CASE      &tc_smart_line      &to KEBAB_CASE      &none               &none               &mc_lock           &none                &none               &none 
+   &none               &to CAMEL_CASE      &tc_smart_word      &to SNAKE_CASE      &none               &none               &kp C_SLEEP        &none                &none               &none      
    &none               &bt BT_PRV          &bt BT_NXT          &bt BT_CLR          &none               &none               &leader            &none                &none               &none
                                            &none               &none               &none               &bootloader         &sys_reset         &none
                         >;
