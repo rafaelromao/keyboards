@@ -10,7 +10,7 @@
 
 #include "../features/mouse.dtsi"
 #include "../features/accents.dtsi"
-#include "../features/thumbs.dtsi"
+#include "../features/smart.dtsi"
 #include "../features/magic.dtsi"
 #include "../features/symbols.dtsi"
 #include "../features/shortcuts.dtsi"
@@ -28,8 +28,8 @@
                      bindings = <
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp Y
    &lt SHORTCUTS D     &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp W               &kp Z               &mt RGUI R          &mt RCTRL A         &mt RSHFT E         &lt SHORTCUTS I      
-   &kp Q               &mt RALT F          &th_c 0 0           &mt LALT P          &kp V               &kp J               &ht_magic RALT 0    &th_comma 0 0       &th_dot 0 0         &kp Y
-                                           &none               &ht_repeat NAV 0    &ltn LOWER SPACE    &msl_raise_smart    &ht_shift MEDIA 0   &none
+   &kp Q               &mt RALT F          &th_c 0 0           &mt LALT P          &kp V               &kp J               &ht_magic RALT 0    &th_comma SYSTEM 0  &th_dot 0 0         &kp Y
+                                           &none               &ht_repeat NAV 0    &ltn LOWER SPACE    &msl_a2 RAISE 0     &ht_shift MEDIA 0   &none
                         >;
                 };
                 camel_case_layer {
@@ -110,7 +110,7 @@
                      display-name = "LOWER";
                      bindings = <
    &trans              &td_lbrc            &td_rbrc            &th_bsl 0 0         &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
-   &lt NAV AT          &td_lpar            &td_rpar            &th_dqo 0 0         &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
+   &lt CODING AT       &td_lpar            &td_rpar            &th_dqo 0 0         &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
    &trans              &td_lbkt            &td_rbkt            &th_qmark 0 0       &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
                                            &trans              &sl RAISE           &trans              &lt RAISE SPACE     &th_n0 MEDIA 0      &trans
                            >;
@@ -119,7 +119,7 @@
                      display-name = "RAISE";
                      bindings = <
    &none               &kp F9              &kp F8              &kp F7              &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
-   &lt CODING BSLH     &kp F6              &kp F5              &kp F4              &none               &none               &th_mins 0 0        &th_plus 0 0        &th_slash 0 0       &lt CODING STAR  
+   &kp BSLH            &kp F6              &kp F5              &kp F4              &none               &none               &th_mins 0 0        &th_plus 0 0        &th_slash 0 0       &lt CODING STAR  
    &none               &kp F3              &kp F2              &kp F1              &none               &none               &th_excl 0 0        &th_lt 0 0          &th_gt 0 0          &trans
                                            &trans              &key_repeat         &lt LOW_CP SPACE    &trans              &trans              &trans       
                            >;
@@ -202,7 +202,7 @@
    &none               &kp Q               &mc_qu              &kp K               &none               &none               &ac_ocir            &ac_oacu            &ac_uacu            &none
    &kp Y               &kp Z               &kp X               &kp W               &none               &none               &ac_atil            &ac_aacu            &ac_eacu            &ac_iacu 
    &trans              &kp J               &mc_ced             &kp V               &none               &none               &ac_otil            &ac_acir            &ac_ecir            &trans
-                                           &none               &key_repeat         &trans              &none               &sk LSHFT           &none
+                                           &none               &trans              &kp SPACE           &kp SPACE           &mc_sqo             &none
                            >;
                 };
                 alpha2_layer {
@@ -211,7 +211,7 @@
    &none               &kp Q               &mc_qu              &kp K               &none               &none               &ac_ocir            &ac_oacu            &ac_uacu            &none
    &kp Y               &kp Z               &kp X               &kp W               &none               &none               &ac_atil            &ac_aacu            &ac_eacu            &ac_iacu 
    &trans              &kp J               &mc_ced             &reversed_magic     &none               &none               &ac_otil            &ac_acir            &ac_ecir            &trans
-                                           &trans              &trans              &kp SPACE           &kp SPACE           &mc_sqo             &trans
+                                           &none               &trans              &kp SPACE           &kp SPACE           &mc_sqo             &none
                            >;
                 };
                 ccedil_layer {
@@ -272,7 +272,7 @@
                      display-name = "LOWER";
                      bindings = <
    &trans              &td_lbrc            &td_rbrc            &th_bsl 0 0         &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
-   &lt NAV_F AT        &td_lpar            &td_rpar            &th_dqo 0 0         &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
+   &lt CODING AT       &td_lpar            &td_rpar            &th_dqo 0 0         &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
    &trans              &td_lbkt            &td_rbkt            &th_qmark 0 0       &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
                                            &trans              &sl RAI_CP          &trans              &lt RAI_CP SPACE    &th_n0 MEDIA 0      &trans
                            >;
@@ -307,10 +307,10 @@
                 system_layer {
                      display-name = "SYSTEM";
                      bindings = <
-   &none               &none               &none               &sys_reset          &none               &none               &sys_reset          &none               &none               &none 
-   &none               &none               &none               &bootloader         &none               &none               &bootloader         &kp C_SLEEP         &none               &none      
-   &none               &none               &none               &none               &none               &none               &none               &mc_lock            &none               &none
-                                           &trans              &bt BT_CLR          &bt BT_SEL 0        &bt BT_PRV          &bt BT_NXT          &trans
+   &none               &to SLASH_CASE      &smart_line CPLK_A1 &to KEBAB_CASE      &none               &none               &mc_lock           &none                &none               &none 
+   &none               &to CAMEL_CASE      &smart_word CASE_A1 &to SNAKE_CASE      &none               &none               &kp C_SLEEP        &none                &none               &none      
+   &none               &bt BT_PRV          &bt BT_NXT          &bt BT_CLR          &none               &none               &leader            &none                &none               &none
+                                           &none               &none               &none               &bootloader         &sys_reset         &none
                         >;
                 };
         };

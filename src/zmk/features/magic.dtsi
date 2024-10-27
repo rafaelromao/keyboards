@@ -29,13 +29,13 @@
                             A                     QU_TERM      AGRV_TERM     SQUO_TERM      X           J           C_CEDIL        AACU_TERM      EACU_TERM      OACU_TERM   \
                             LS(H)      LS(I)      C_QU_TERM    C_AGRV_TERM   C_SQUO_TERM    LS(X)       LS(J)       LS(C_CEDIL)    C_AACU_TERM    C_EACU_TERM    C_OACU_TERM \
                             RS(H)      RS(I)      S_QU_TERM    S_AGRV_TERM   H              RS(X)       RS(J)       RS(C_CEDIL)    S_AACU_TERM    S_EACU_TERM    S_OACU_TERM \
-                            H          Y          LS(Y)        RS(Y)         \                                                 
+                            H          Y          LS(Y)        RS(Y)         \
                            >;                                                                                                  
             bindings =    <                                                                                                    
                             &tc_h                 &ac_ecir     &mc_qu        &kp V          &kp Y       &ac_aacu    &sl ALPHA2     &kp X          &kp X          &kp X      \
                             &kp LS(A)  &mc_sqo    &ac_ecir_c   &mc_qu_c      &kp V          &kp LS(Y)   &ac_aacu_c  &sl ALPHA2     &kp LS(X)      &kp LS(X)      &kp LS(X)  \
                             &kp A      &mc_sqo    &ac_ecir_s   &mc_qu        &kp A          &kp Y       &ac_aacu    &sl ALPHA2     &kp X          &kp X          &kp X      \
-                            &kp A      &kp D      &kp LS(D)    &kp D     \
+                            &kp A      &kp D      &kp LS(D)    &kp D         \
                            >;
         };
 
@@ -50,8 +50,7 @@
 
         // ******************** MAGIC KEY ******************** //
 
-        THUMB_MACRO(tc_bspc_leader, &kp BACKSPACE)
-        THUMB_MACRO(tc_h,           &kp H)
+        SMART_MACRO(tc_h, &kp H)
         
         labeled_h: labeled_h {
 			compatible = "zmk,behavior-macro";
@@ -90,7 +89,7 @@
                            >; 
         };
 
-        THUMB_MACRO(tc_h_c, &kp LS(H))
+        SMART_MACRO(tc_h_c, &kp LS(H))
 
         labeled_h_c: labeled_h_c {
 			compatible = "zmk,behavior-macro";
@@ -149,7 +148,7 @@
 
         // ******************** REVERSED MAGIC KEY ******************** //
 
-        THUMB_MACRO(tc_v, &kp V)
+        SMART_MACRO(tc_v, &kp V)
 
         labeled_v: labeled_v {
 			compatible = "zmk,behavior-macro";
@@ -186,7 +185,7 @@
                            >;
         };
 
-        THUMB_MACRO(tc_v_c, &kp LS(V))
+        SMART_MACRO(tc_v_c, &kp LS(V))
 
         labeled_v_c: labeled_v_c {
 			compatible = "zmk,behavior-macro";

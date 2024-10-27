@@ -6,7 +6,7 @@
 */
 
 / {
-    #define THUMB_LAYERTAP(NAME, BINDINGS) \
+    #define SMART_LAYERTAP(NAME, BINDINGS) \
          NAME: NAME { \
             compatible = "zmk,behavior-hold-tap"; \
             #binding-cells = <2>; \
@@ -16,7 +16,7 @@
             bindings = <&mo>, <BINDINGS>; \
         };
 
-    #define THUMB_MACRO(NAME, BINDINGS) \
+    #define SMART_MACRO(NAME, BINDINGS) \
         NAME: NAME { \
 			compatible = "zmk,behavior-macro"; \
             #binding-cells = <0>; \
@@ -25,7 +25,7 @@
             bindings = <&macro_tap BINDINGS>; \
         };
 
-    #define THUMB_MORPH(NAME, MODS, MODDED, UNMODDED) \
+    #define SMART_MORPH(NAME, MODS, MODDED, UNMODDED) \
         NAME: NAME { \
             compatible = "zmk,behavior-mod-morph"; \
             #binding-cells = <0>; \
@@ -33,7 +33,7 @@
             mods = <(MODS)>; \
         };
 
-    #define THUMB_COMBO_MORPH(NAME, FIRST_MOD, SECOND_MOD, IF_BOTH, OR_ELSE) \
+    #define SMART_COMBO_MORPH(NAME, FIRST_MOD, SECOND_MOD, IF_BOTH, OR_ELSE) \
         NAME##_CHECK_SECOND: NAME##_CHECK_SECOND { \
             compatible = "zmk,behavior-mod-morph"; \
             #binding-cells = <0>; \
@@ -93,11 +93,11 @@
             tap-ms = <10>;
             bindings = <&macro_tap &kp K_CANCEL &to ALPHA1>;
         };
-        THUMB_MACRO(tc_sp_ns,         &kp SPACE &sl SEN_E1)
-        THUMB_MACRO(tc_nsen,          &sl SEN_E1)
-        THUMB_LAYERTAP(th_sp_ns,      &tc_sp_ns)
-        THUMB_LAYERTAP(th_cancel,     &tc_cancel)
-        THUMB_LAYERTAP(th_nsen,       &tc_nsen)
+        SMART_MACRO(tc_sp_ns,         &kp SPACE &sl SEN_E1)
+        SMART_MACRO(tc_nsen,          &sl SEN_E1)
+        SMART_LAYERTAP(th_sp_ns,      &tc_sp_ns)
+        SMART_LAYERTAP(th_cancel,     &tc_cancel)
+        SMART_LAYERTAP(th_nsen,       &tc_nsen)
 
         // ********************** NUM WORD ********************** //
 
@@ -119,39 +119,40 @@
 
         // ******************* CAPS WORD ******************* //
 
-        custom_caps_word: custom_caps_word {
+        smart_word: smart_word {
             compatible = "zmk,behavior-auto-layer";
             ignore-alphas;
             ignore-modifiers;
 			#binding-cells = <1>;  
             continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT TILDE CARET GRAVE>;
         };
-        terminated_caps_word: terminated_caps_word {
-			compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings = <&macro_tap &kp CAPSWORD_TERM &custom_caps_word CASE_A1>;
-        };
+        // terminated_caps_word: terminated_caps_word {
+		// 	compatible = "zmk,behavior-macro";
+        //     #binding-cells = <0>;
+        //     wait-ms = <0>;
+        //     tap-ms = <0>;
+        //     bindings = <&macro_tap &kp CAPSWORD_TERM &smart_word CASE_A1>;
+        // };
 
-        custom_caps_lock: custom_caps_lock {
+        smart_line: smart_line {
             compatible = "zmk,behavior-auto-layer";
             ignore-alphas;
             ignore-modifiers;
 			#binding-cells = <1>;  
             continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT TILDE CARET GRAVE SPACE>;
         };
-        terminated_caps_lock: terminated_caps_lock {
-			compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings = <&macro_tap &kp CAPSWORD_TERM &custom_caps_lock CPLK_A1>;
-        };
+        // terminated_caps_lock: terminated_caps_lock {
+		// 	compatible = "zmk,behavior-macro";
+        //     #binding-cells = <0>;
+        //     wait-ms = <0>;
+        //     tap-ms = <0>;
+        //     bindings = <&macro_tap &kp CAPSWORD_TERM &smart_line CPLK_A1>;
+        // };
 
-        THUMB_MACRO(tc_shift_layer, &sl SHIFT_A1)
-        THUMB_MACRO(tc_sp_caps,     &kp LS(SPACE))
-        THUMB_LAYERTAP(th_sp_caps,  &tc_sp_caps)
+        SMART_MACRO(tc_smart_word, &smart_word CASE_A1)
+        SMART_MACRO(tc_shift_layer, &sl SHIFT_A1)
+        SMART_MACRO(tc_sp_caps,     &kp LS(SPACE))
+        SMART_LAYERTAP(th_sp_caps,  &tc_sp_caps)
 
         ht_shift: ht_shift {
             compatible = "zmk,behavior-hold-tap";
@@ -168,16 +169,17 @@
             tapping-term-ms = <QUICK_TAP_TERM>;
             flavor = "tap-preferred";
             quick-tap-ms = <0>;
-            bindings = <&mo>, <&terminated_caps_word>;
+            // bindings = <&mo>, <&terminated_caps_word>;
+            bindings = <&mo>, <&tc_smart_word>;
         };
 
         // ******************** SMART CASES ******************** //
 
-        THUMB_MACRO(mc_sl_alpha2,  &sl ALPHA2)
-        THUMB_MACRO(mc_sft_a2,     &sl SHIFT_A2)
-        THUMB_MACRO(mc_case_a2,    &sl CASE_A2)
-        THUMB_LAYERTAP(th_sft_a2,  &mc_sft_a2)
-        THUMB_LAYERTAP(th_case_a2, &mc_case_a2)
+        SMART_MACRO(mc_sl_alpha2,  &sl ALPHA2)
+        SMART_MACRO(mc_sft_a2,     &sl SHIFT_A2)
+        SMART_MACRO(mc_case_a2,    &sl CASE_A2)
+        SMART_LAYERTAP(th_sft_a2,  &mc_sft_a2)
+        SMART_LAYERTAP(th_case_a2, &mc_case_a2)
 
         msl_a2: msl_a2 {
             compatible = "zmk,behavior-hold-tap";
@@ -188,33 +190,17 @@
             bindings = <&mo>, <&mc_sl_alpha2>;
         };
 
-        THUMB_MACRO(tc_shift_camel     ,  &to CAMEL_CASE &sl SHIFT_A1)
-        THUMB_MACRO(tc_strong_snakecase,  &tog CASE_A1 &tog SNAKE_CASE)
-        THUMB_MACRO(tc_strong_kebabcase,  &tog CASE_A1 &tog KEBAB_CASE)
-        THUMB_MACRO(tc_strong_slashcase,  &tog CASE_A1 &tog SLASH_CASE)
+        SMART_MACRO(tc_pascal_case,  &to CAMEL_CASE &sl SHIFT_A1)
+        SMART_MACRO(tc_s_snakecase,  &tog CASE_A1 &tog SNAKE_CASE)
+        SMART_MACRO(tc_s_kebabcase,  &tog CASE_A1 &tog KEBAB_CASE)
+        SMART_MACRO(tc_s_slashcase,  &tog CASE_A1 &tog SLASH_CASE)
 
-        THUMB_MORPH(sc_caps_word,  MOD_LCTL, &terminated_caps_word , &msl_a2 RAISE 0 )
-        THUMB_MORPH(sc_caps_lock,  MOD_RCTL, &terminated_caps_lock , &sc_caps_word   )
-        THUMB_MORPH(sc_numpad,     MOD_LALT, &to LOWER             , &sc_caps_lock   )
-        THUMB_MORPH(sc_numword,    MOD_RALT, &tc_num_word          , &sc_numpad      )
-        THUMB_MORPH(sc_camelcase,  MOD_LSFT, &to CAMEL_CASE        , &sc_numword     )
-        THUMB_MORPH(sc_snakecase,  MOD_LGUI, &to SNAKE_CASE        , &sc_camelcase   )
-        THUMB_MORPH(sc_kebabcase,  MOD_RGUI, &to KEBAB_CASE        , &sc_snakecase   )
-        THUMB_MORPH(sc_slashcase,  MOD_RSFT, &to SLASH_CASE        , &sc_kebabcase   )
-
-        THUMB_COMBO_MORPH(sc_pascalcase       , MOD_LCTL, MOD_LSFT, &tc_shift_camel     , &sc_slashcase)
-        THUMB_COMBO_MORPH(sc_strong_snake_case, MOD_LCTL, MOD_LGUI, &tc_strong_snakecase, &sc_pascalcase)
-        THUMB_COMBO_MORPH(sc_strong_kebab_case, MOD_RCTL, MOD_RGUI, &tc_strong_kebabcase, &sc_strong_snake_case)
-        THUMB_COMBO_MORPH(sc_strong_slash_case, MOD_RCTL, MOD_RSFT, &tc_strong_slashcase, &sc_strong_kebab_case)
-        
-        #define msl_raise_smart sc_caps_lock
-
-        THUMB_MACRO(mc_msk_camel, &sl SHIFT_A1)
-        THUMB_MACRO(mc_msk_snake, &kp UNDERSCORE &sl SPACING)
-        THUMB_MACRO(mc_msk_kebab, &kp MINUS &sl SPACING)
-        THUMB_MACRO(mc_msk_slash, &kp SLASH &sl SPACING)
-        THUMB_MACRO(mc_msk_space, &kp SPACE &to ALPHA1)
-        THUMB_MACRO(mc_msk_space_b, &kp BACKSPACE &kp SPACE &to ALPHA1)
+        SMART_MACRO(mc_msk_camel, &sl SHIFT_A1)
+        SMART_MACRO(mc_msk_snake, &kp UNDERSCORE &sl SPACING)
+        SMART_MACRO(mc_msk_kebab, &kp MINUS &sl SPACING)
+        SMART_MACRO(mc_msk_slash, &kp SLASH &sl SPACING)
+        SMART_MACRO(mc_msk_space, &kp SPACE &to ALPHA1)
+        SMART_MACRO(mc_msk_space_b, &kp BACKSPACE &kp SPACE &to ALPHA1)
 
         msk_unds: msk_unds {
             compatible = "zmk,behavior-hold-tap";
