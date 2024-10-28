@@ -110,7 +110,7 @@
                      display-name = "LOWER";
                      bindings = <
    &trans              &mc_caret           &kp AT              &kp DOLLAR          &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
-   &th_tilde CODING 0  &mc_bti             &mc_sqo             &th_dqo 0 0         &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
+   &th_tilde CODING 0  &mc_bti             &mc_sqo             &mc_dqo             &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
    &trans              &kp DOT             &kp COMMA           &th_qmark 0 0       &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
                                            &trans              &sl RAISE           &trans              &lt RAISE SPACE     &th_n0 MEDIA 0      &trans
                            >;
@@ -118,9 +118,9 @@
                 raise_layer {
                      display-name = "RAISE";
                      bindings = <
-   &none               &td_lbrc            &td_rbrc            &kp HASH            &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
-   &kp BSLH            &td_lpar            &td_rpar            &kp AMPS            &none               &none               &th_mins 0 0        &th_plus 0 0        &th_slash 0 0       &lt CODING STAR  
-   &none               &td_lbkt            &td_rbkt            &kp PIPE            &none               &none               &th_excl 0 0        &th_lt 0 0          &th_gt 0 0          &trans
+   &none               &th_lbrc 0 0        &th_rbrc 0 0        &kp HASH            &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
+   &kp BSLH            &th_lpar 0 0        &th_rpar 0 0        &kp AMPS            &none               &none               &th_mins 0 0        &th_plus 0 0        &th_slash 0 0       &lt CODING STAR  
+   &none               &th_lbkt 0 0        &th_rbkt 0 0        &kp PIPE            &none               &none               &th_excl 0 0        &th_lt 0 0          &th_gt 0 0          &trans
                                            &trans              &key_repeat         &lt LOW_CP SPACE    &trans              &trans              &trans       
                            >;
                 };
@@ -263,7 +263,7 @@
                      display-name = "LOWER";
                      bindings = <
    &trans              &mc_caret           &kp AT              &kp DOLLAR          &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
-   &mc_tilde           &mc_bti             &mc_sqo             &th_dqo 0 0         &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
+   &mc_tilde           &mc_bti             &mc_sqo             &mc_dqo             &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
    &trans              &kp DOT             &kp COMMA           &th_qmark 0 0       &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
                                            &trans              &sl RAI_CP          &trans              &lt RAI_CP SPACE    &th_n0 MEDIA 0      &trans
                            >;
@@ -271,16 +271,16 @@
                 raise_copy_layer {
                      display-name = "RAISE";
                      bindings = <
-   &none               &td_lbrc            &td_rbrc            &kp HASH            &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
-   &kp BSLH            &td_lpar            &td_rpar            &kp AMPS            &none               &none               &th_mins 0 0        &th_plus 0 0        &th_slash 0 0       &kp STAR  
-   &none               &td_lbkt            &td_rbkt            &kp PIPE            &none               &none               &th_excl 0 0        &th_lt 0 0          &th_gt 0 0          &trans
+   &none               &th_lbrc 0 0        &th_rbrc 0 0        &kp HASH            &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
+   &kp BSLH            &th_lpar 0 0        &th_rpar 0 0        &kp AMPS            &none               &none               &th_mins 0 0        &th_plus 0 0        &th_slash 0 0       &kp STAR  
+   &none               &th_lbkt 0 0        &th_rbkt 0 0        &kp PIPE            &none               &none               &th_excl 0 0        &th_lt 0 0          &th_gt 0 0          &trans
                                            &trans              &key_repeat         &kp SPACE           &kp SPACE           &trans              &trans       
                            >;
                 };
                 media_layer {
                     display-name = "MEDIA";
                     bindings = <
-   &none               &kp ESC             &mkp LCLK           &mkp RCLK           &none               &none               &kp TAB             &kp ENTER           &kp BACKSPACE       &none
+   &none               &kp ESC             &mkp LCLK           &mkp RCLK           &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
    &none               &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &none               &mc_mic             &mt C_MUTE C_VOL_DN &kp C_VOL_UP        &mc_cam
    &none               &msc SCRL_DOWN      &mmv MOVE_DOWN      &msc SCRL_UP        &none               &none               &kp C_PP            &kp C_PREV          &kp C_NEXT          &trans
                                            &trans              &mo NAV_F           &kp SPACE           &trans              &trans              &trans                           >;
