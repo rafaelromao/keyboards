@@ -4,7 +4,7 @@
 
 A split keyboard layout optimized for Portuguese, English, working with numbers and software programming with VIM plugins.
 
-![img](img/overview.png)
+![img](img/overview.svg)
 
 ## How this layout works?
 

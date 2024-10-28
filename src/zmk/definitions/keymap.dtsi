@@ -109,18 +109,18 @@
                 lower_layer {
                      display-name = "LOWER";
                      bindings = <
-   &trans              &mc_caret           &kp AT              &kp DOLLAR          &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
-   &th_tilde CODING 0  &mc_bti             &mc_sqo             &mc_dqo             &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
-   &trans              &kp DOT             &kp COMMA           &th_qmark 0 0       &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
+   &trans              &th_lbrc 0 0        &th_rbrc 0 0        &kp BSLH            &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
+   &lt CODING AT       &th_lpar 0 0        &th_rpar 0 0        &kp AMPS            &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
+   &trans              &th_lbkt 0 0        &th_rbkt 0 0        &kp PIPE            &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
                                            &trans              &sl RAISE           &trans              &lt RAISE SPACE     &th_n0 MEDIA 0      &trans
                            >;
                 };
                 raise_layer {
                      display-name = "RAISE";
                      bindings = <
-   &none               &th_lbrc 0 0        &th_rbrc 0 0        &kp HASH            &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
-   &kp BSLH            &th_lpar 0 0        &th_rpar 0 0        &kp AMPS            &none               &none               &th_mins 0 0        &th_plus 0 0        &th_slash 0 0       &lt CODING STAR  
-   &none               &th_lbkt 0 0        &th_rbkt 0 0        &kp PIPE            &none               &none               &th_excl 0 0        &th_lt 0 0          &th_gt 0 0          &trans
+   &none               &mc_caret           &kp HASH            &kp DOLLAR          &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
+   &mc_tilde           &mc_bti             &mc_sqo             &mc_dqo             &none               &none               &th_mins 0 0        &th_plus 0 0        &th_slash 0 0       &lt CODING STAR  
+   &none               &kp DOT             &kp COMMA           &th_qmark 0 0       &none               &none               &th_excl 0 0        &th_lt 0 0          &th_gt 0 0          &trans
                                            &trans              &key_repeat         &lt LOW_CP SPACE    &trans              &trans              &trans       
                            >;
                 };
@@ -262,18 +262,18 @@
                 lower_copy_layer {
                      display-name = "LOWER";
                      bindings = <
-   &trans              &mc_caret           &kp AT              &kp DOLLAR          &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
-   &mc_tilde           &mc_bti             &mc_sqo             &mc_dqo             &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
-   &trans              &kp DOT             &kp COMMA           &th_qmark 0 0       &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
+   &trans              &th_lbrc 0 0        &th_rbrc 0 0        &kp BSLH            &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
+   &kp AT              &th_lpar 0 0        &th_rpar 0 0        &kp AMPS            &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
+   &trans              &th_lbkt 0 0        &th_rbkt 0 0        &kp PIPE            &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
                                            &trans              &sl RAI_CP          &trans              &lt RAI_CP SPACE    &th_n0 MEDIA 0      &trans
                            >;
                 };
                 raise_copy_layer {
                      display-name = "RAISE";
                      bindings = <
-   &none               &th_lbrc 0 0        &th_rbrc 0 0        &kp HASH            &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
-   &kp BSLH            &th_lpar 0 0        &th_rpar 0 0        &kp AMPS            &none               &none               &th_mins 0 0        &th_plus 0 0        &th_slash 0 0       &kp STAR  
-   &none               &th_lbkt 0 0        &th_rbkt 0 0        &kp PIPE            &none               &none               &th_excl 0 0        &th_lt 0 0          &th_gt 0 0          &trans
+   &none               &mc_caret           &kp HASH            &kp DOLLAR          &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
+   &mc_tilde           &mc_bti             &mc_sqo             &mc_dqo             &none               &none               &th_mins 0 0        &th_plus 0 0        &th_slash 0 0       &kp STAR  
+   &none               &kp DOT             &kp COMMA           &th_qmark 0 0       &none               &none               &th_excl 0 0        &th_lt 0 0          &th_gt 0 0          &trans
                                            &trans              &key_repeat         &kp SPACE           &kp SPACE           &trans              &trans       
                            >;
                 };

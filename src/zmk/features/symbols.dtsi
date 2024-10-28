@@ -115,11 +115,8 @@
         SYMBOL(mc_tilde,           &kp TILDE &kp SPACE)
         LAYERTAP_SYMBOL(th_tilde,  &mc_tilde)
 
-        SYMBOL(mc_sarrow,          &kp MINUS &kp GT)
         SYMBOL(mc_and,             &kp AMPS &kp AMPS)
         SYMBOL(mc_or,              &kp PIPE &kp PIPE)
-
-        // Raise
 
         SYMBOL(mc_rpar,            &kp RPAR)
         SYMBOL(mc_end_rpar,        &kp END &kp RPAR)
@@ -149,8 +146,6 @@
         SYMBOL(mc_end_lbrc,        &kp END &kp LBRC)
         TAPHOLD_SYMBOL(th_lbrc,    &mc_lbrc, &mc_end_lbrc)
 
-        SYMBOL(mc_braces,          &kp END &kp LBRC &kp RBRC &kp LEFT &kp ENTER)
-
         SYMBOL(mc_pars,            &kp LPAR &kp RPAR)
         SYMBOL(mc_end_pars,        &kp END &kp LPAR &kp RPAR)
         TAPHOLD_SYMBOL(th_pars,    &mc_pars, &mc_end_pars)
@@ -158,6 +153,14 @@
         SYMBOL(mc_brackets,         &kp LBKT &kp RBKT)
         SYMBOL(mc_end_brackets,     &kp END &kp LBKT &kp RBKT)
         TAPHOLD_SYMBOL(th_brackets, &mc_brackets, &mc_end_brackets)
+
+        // Raise
+
+        SYMBOL(mc_braces_new,      &kp END &kp LBRC &kp ENTER)
+        SYMBOL(mc_parens_new,      &kp END &kp RPAR &kp LBRC &kp ENTER)
+        SYMBOL(mc_brackets_new,    &kp END &kp LBKT &kp RBKT &kp SEMI &kp ENTER)
+        SYMBOL(mc_sarrow,          &kp MINUS &kp GT)
+        SYMBOL(mc_darrow,          &kp EQUAL &kp GT)
 
         SYMBOL(mc_perc,            &kp PERCENT)
         SYMBOL(mc_end_perc,        &kp END &kp PERCENT)
@@ -201,10 +204,6 @@
         SYMBOL(mc_caret,           &kp CARET &kp SPACE)
         SYMBOL(mc_end_caret,       &kp END &kp CARET &kp SPACE)
         TAPHOLD_SYMBOL(th_caret,   &mc_caret, &mc_end_caret)
-
-        SYMBOL(mc_darrow,          &kp EQL &kp GT)
-        SYMBOL(mc_double_and,      &kp AMPS &kp AMPS)
-        TAPHOLD_SYMBOL(th_dand,    &mc_double_and, &mc_darrow)
 
         SYMBOL(mc_dds,             &kp DOT &kp DOT &kp SLASH)
         SYMBOL(mc_tisl,            &kp TILDE &kp SPACE &kp SLASH)
