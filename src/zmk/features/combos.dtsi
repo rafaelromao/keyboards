@@ -76,8 +76,6 @@
         COMBO(cb_vc,            LBI LBM,     &kp LS(V),          CASE_A1 SEN_E1 SHIFT_A1 CPLK_A1)
         COMBO(cb_qc,            LHR LHM,     &kp LS(Q),          CASE_A1 SEN_E1 SHIFT_A1 CPLK_A1)
 
-        COMBO(cb_coding,        RHP R0,      &to CODING,         ALPHA1 SEN_CASE)
-
         COMBO(cb_x,             RTI RTM,     &kp X,              ALPHA1 SEN_CASE)
         COMBO(cb_z,             RHI RHM,     &ht_z 0 0,          ALPHA1 SEN_CASE)
         COMBO(cb_j,             RBI RBM,     &hyp_j 0 0,         ALPHA1 SEN_CASE)

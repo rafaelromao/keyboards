@@ -157,7 +157,7 @@
         // Raise
 
         SYMBOL(mc_braces_new,      &kp END &kp LBRC &kp ENTER)
-        SYMBOL(mc_parens_new,      &kp END &kp RPAR &kp LBRC &kp ENTER)
+        SYMBOL(mc_parens_new,      &kp END &kp LPAR &kp RPAR &kp SEMI &kp ENTER)
         SYMBOL(mc_brackets_new,    &kp END &kp LBKT &kp RBKT &kp SEMI &kp ENTER)
         SYMBOL(mc_sarrow,          &kp MINUS &kp GT)
         SYMBOL(mc_darrow,          &kp EQUAL &kp GT)
@@ -167,16 +167,9 @@
         TAPHOLD_SYMBOL(th_perc,    &mc_perc, &mc_end_perc)
 
         SYMBOL(mc_minus,           &kp MINUS)
-        SYMBOL(mc_end_minus,       &kp END &kp MINUS)
-        TAPHOLD_SYMBOL(th_mins,    &mc_minus, &mc_end_minus)
-
         SYMBOL(mc_plus,            &kp PLUS)
-        SYMBOL(mc_end_plus,        &kp END &kp PLUS)
-        TAPHOLD_SYMBOL(th_plus,    &mc_plus, &mc_end_plus)
-
         SYMBOL(mc_slash,           &kp SLASH)
-        SYMBOL(mc_end_slash,       &kp END &kp SLASH)
-        TAPHOLD_SYMBOL(th_slash,   &mc_slash, &mc_end_slash)
+        SYMBOL(mc_star,            &kp STAR)
 
         SYMBOL(mc_lt,              &kp LT)
         SYMBOL(mc_end_lt,          &kp END &kp LT)
@@ -197,13 +190,15 @@
         SYMBOL(mc_eql,             &kp EQUAL)
         SYMBOL(mc_end_eql,         &kp END &kp EQUAL)
         TAPHOLD_SYMBOL(th_eql,     &mc_eql, &mc_end_eql)
-
         SYMBOL(mc_eqeq,            &kp EQUAL &kp EQUAL)
+
         SYMBOL(mc_noteq,           &kp EXCL &kp EQUAL)
 
         SYMBOL(mc_caret,           &kp CARET &kp SPACE)
         SYMBOL(mc_end_caret,       &kp END &kp CARET &kp SPACE)
         TAPHOLD_SYMBOL(th_caret,   &mc_caret, &mc_end_caret)
+
+        SYMBOL(mc_degree,          &kp LS(LA(N8)))
 
         SYMBOL(mc_dds,             &kp DOT &kp DOT &kp SLASH)
         SYMBOL(mc_tisl,            &kp TILDE &kp SPACE &kp SLASH)

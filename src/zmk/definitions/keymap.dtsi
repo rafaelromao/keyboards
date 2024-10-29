@@ -119,8 +119,8 @@
                      display-name = "RAISE";
                      bindings = <
    &none               &mc_caret           &kp HASH            &kp DOLLAR          &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
-   &mc_tilde           &mc_bti             &mc_sqo             &mc_dqo             &none               &none               &th_mins 0 0        &th_plus 0 0        &th_slash 0 0       &lt CODING STAR  
-   &none               &kp DOT             &kp COMMA           &th_qmark 0 0       &none               &none               &th_excl 0 0        &th_lt 0 0          &th_gt 0 0          &trans
+   &mc_tilde           &mc_bti             &mc_sqo             &mc_dqo             &none               &none               &th_qmark 0 0       &mc_minus           &mc_plus            &lt CODING COMMA  
+   &none               &th_lt 0 0          &th_gt 0 0          &mc_degree          &none               &none               &th_excl 0 0        &mc_slash           &mc_star            &trans
                                            &trans              &key_repeat         &lt LOW_CP SPACE    &trans              &trans              &trans       
                            >;
                 };
@@ -272,8 +272,8 @@
                      display-name = "RAISE";
                      bindings = <
    &none               &mc_caret           &kp HASH            &kp DOLLAR          &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
-   &mc_tilde           &mc_bti             &mc_sqo             &mc_dqo             &none               &none               &th_mins 0 0        &th_plus 0 0        &th_slash 0 0       &kp STAR  
-   &none               &kp DOT             &kp COMMA           &th_qmark 0 0       &none               &none               &th_excl 0 0        &th_lt 0 0          &th_gt 0 0          &trans
+   &mc_tilde           &mc_bti             &mc_sqo             &mc_dqo             &none               &none               &th_qmark 0 0       &mc_minus           &mc_plus            &kp STAR  
+   &none               &th_lt 0 0          &th_gt 0 0          &mc_degree          &none               &none               &th_excl 0 0        &mc_slash           &mc_star            &trans
                                            &trans              &key_repeat         &kp SPACE           &kp SPACE           &trans              &trans       
                            >;
                 };
