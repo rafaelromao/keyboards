@@ -47,7 +47,7 @@
         COMBO(cb_tog_softwarel, LBM LBI,     &to SOFTWARE,       SHORTCUTS)
         COMBO(cb_tog_lower,     RTM RTI,     &to LOWER,          SHORTCUTS)
         COMBO(cb_tog_nav,       RHM RHI,     &to NAV_F,          SHORTCUTS)
-        COMBO(cb_tog_softwarer, RBM RBI,     &to SOFTWARE,         SHORTCUTS)
+        COMBO(cb_tog_softwarer, RBM RBI,     &to SOFTWARE,       SHORTCUTS)
 
         COMBO(cb_esc,           LTR LTM,     &kp ESC,            ALL_LAYERS_BUT_RAISE_SYSTEM)
 
@@ -65,6 +65,7 @@
 
         COMBO(cb_nav_lower,     LBR LBM,     &mo NAV,            LOWER LOW_CP)
         COMBO(cb_lower_nav,     LBR LBM,     &mo LOW_CP,         NAV NAV_F)
+        COMBO(cb_sk_rgui,       RHM RHR,     &sk RGUI,           SOFTWARE)
 
         COMBO(cb_k,             LTM LTI,     &kp K,              ALPHA1 SEN_CASE)
         COMBO(cb_w,             LHM LHI,     &ht_w 0 0,          ALPHA1 SEN_CASE)
