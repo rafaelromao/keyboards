@@ -44,8 +44,8 @@
 	leader_sequences {
 		compatible = "zmk,leader-sequences";
 
-		LEADER_SEQ(ld_sect, RBR LHM , &mc_section, ALPHA1)
-		LEADER_SEQ(ld_orda, RBR RTM , &mc_orda, ALPHA1)
-		LEADER_SEQ(ld_ordo, RBR RHM , &mc_ordo, ALPHA1)
+		LEADER_SEQ(ld_sect, RBR LHM , &mc_section, ALPHA1 SYSTEM FUNCTIONS)
+		LEADER_SEQ(ld_orda, RBR RTM , &mc_orda, ALPHA1 SYSTEM FUNCTIONS)
+		LEADER_SEQ(ld_ordo, RBR RHM , &mc_ordo, ALPHA1 SYSTEM FUNCTIONS)
 	};
 };
