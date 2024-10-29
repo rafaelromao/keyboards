@@ -110,7 +110,7 @@
                      display-name = "LOWER";
                      bindings = <
    &trans              &th_lbrc 0 0        &th_rbrc 0 0        &kp BSLH            &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
-   &lt CODING AT       &th_lpar 0 0        &th_rpar 0 0        &kp AMPS            &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
+   &lt SOFTWARE AT     &th_lpar 0 0        &th_rpar 0 0        &kp AMPS            &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
    &trans              &th_lbkt 0 0        &th_rbkt 0 0        &kp PIPE            &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
                                            &trans              &sl RAISE           &trans              &lt RAISE SPACE     &th_n0 MEDIA 0      &trans
                            >;
@@ -119,7 +119,7 @@
                      display-name = "RAISE";
                      bindings = <
    &none               &mc_caret           &kp HASH            &kp DOLLAR          &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
-   &mc_tilde           &mc_bti             &mc_sqo             &mc_dqo             &none               &none               &th_qmark 0 0       &mc_minus           &mc_plus            &lt CODING COMMA  
+   &mc_tilde           &mc_bti             &mc_sqo             &mc_dqo             &none               &none               &th_qmark 0 0       &mc_minus           &mc_plus            &lt SOFTWARE COMMA  
    &none               &th_lt 0 0          &th_gt 0 0          &mc_degree          &none               &none               &th_excl 0 0        &mc_slash           &mc_star            &trans
                                            &trans              &key_repeat         &lt LOW_CP SPACE    &trans              &trans              &trans       
                            >;
@@ -156,8 +156,8 @@
                      bindings = <
    &none               &kp ESC             &mc_files           &mc_preview         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &none    
    &none               &th_zoom RGUI 0     &mc_app_swapper     &th_tabs LGUI 0     &none               &none               &mc_seln            &mm_down_minus      &mm_up_plus         &none
-   &none               &mc_term            &mc_calc            &mc_launch          &none               &none               &mc_selh            &ht_ref_clo_z0 0 0  &mc_clip            &trans
-                                           &trans              &trans              &lt CODING SPACE    &lt CODING SPACE    &trans              &trans
+   &none               &mc_term            &mc_calc            &mc_apps            &none               &none               &mc_selh            &ht_ref_clo_z0 0 0  &mc_clip            &trans
+                                           &trans              &trans              &lt SOFTWARE SPACE  &lt SOFTWARE SPACE  &trans              &trans
                            >;
                 };
                 shortcuts_ext_1_layer {
@@ -178,13 +178,13 @@
                                            &trans              &trans              &trans              &trans              &trans              &trans
                            >;
                 };
-                coding_layer {
-                     display-name = "CODING";
+                software_layer {
+                     display-name = "SOFTWARE";
                      bindings = <
-   &none               &mm_project         &mm_build           &mm_break           &none               &none               &mc_step_out        &mc_step_into       &mc_step_over       &none    
-   &none               &th_find LSHFT 0    &mm_run             &mm_debug           &none               &none               &mm_actions         &mc_complete        &th_comment RSHFT 0 &none
-   &trans              &mm_recent          &mm_swapper         &mm_usages          &none               &none               &mm_docs            &mm_refac           &mc_evaluate        &none
-                                           &trans              &mo NAV             &mm_typematch       &mm_typematch       &mo NAV             &trans
+   &none               &mc_meh_b           &mc_meh_m           &mc_meh_g           &none               &none               &mc_meh_l           &mc_meh_o           &mc_meh_u           &none    
+   &none               &th_meh_n LGUI 0    &mc_meh_s           &mc_meh_t           &none               &none               &mc_meh_r           &mc_meh_a           &th_meh_e RGUI 0    &none
+   &trans              &mc_meh_f           &mc_meh_c           &mc_meh_p           &none               &none               &mc_meh_h           &mc_meh_comma       &mc_meh_dot         &none
+                                           &trans              &th_meh_k NAV 0     &mc_meh_w           &mc_meh_z           &th_meh_j NAV 0     &trans
                            >;
                 };
                 no_mods_layer {
@@ -192,7 +192,7 @@
                      bindings = <
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp Y
    &kp D               &kp N               &kp S               &kp T               &kp W               &kp Z               &kp R               &kp A               &kp E               &kp I 
-   &trans              &kp F               &kp C               &kp P               &kp V               &kp J               &magic_key           &kp COMMA           &kp DOT             &trans
+   &trans              &kp F               &kp C               &kp P               &kp V               &kp J               &magic_key          &kp COMMA           &kp DOT             &trans
                                            &none               &key_repeat         &kp SPACE           &sl ALPHA2          &sk LSHFT           &none
                            >;
                 };
@@ -239,15 +239,6 @@
    &trans              &trans              &trans              &mc_aotil_c         &trans              &trans              &ac_atil_c          &trans              &trans              &trans  
    &trans              &trans              &trans              &mc_otiles_c        &trans              &trans              &ac_otil_c          &trans              &trans              &trans              &trans 
                                            &trans              &trans              &trans              &kp BACKSPACE       &trans              &trans
-                           >;
-                };
-                fusion360_layer {
-                     display-name = "FUSION";
-                     bindings = <
-   &trans              &kp ESC             &mkp LCLK           &mkp RCLK           &trans              &none               &kp L               &kp O               &kp M               &none
-   &trans              &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &kp W               &kp Z               &mt RGUI R          &mt RCTRL A         &mt RSHFT E         &lt NAV I
-   &trans              &msc SCRL_DOWN      &mmv MOVE_DOWN      &msc SCRL_UP        &trans              &none               &mt RALT H          &kp C               &kp F               &none
-                                           &trans              &trans              &lt LOW_CP SPACE    &th_orbit RAI_CP 0  &th_pan MEDIA 0     &none
                            >;
                 };
                 navigation_layer {
