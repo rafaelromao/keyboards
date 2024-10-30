@@ -15,10 +15,16 @@
           ╰─────────────╯ ╰─────────────╯ */
 
 / {
-    #define ALPHA1_LAYERS                    ALPHA1 CASE_A1 SHIFT_A1 CPLK_A1 SEN_CASE SEN_E1 NMODS
-    #define ALPHA2_LAYERS                    ALPHA2 CASE_A2 SEN_E2 SHIFT_A2
-    #define ALL_LAYERS                       ALPHA1 CAMEL_CASE SHIFT_A1 SNAKE_CASE KEBAB_CASE SLASH_CASE SPACING CASE_A1 CPLK_A1 LOWER LOW_CP SEN_CASE SEN_E1 SEN_E2 SHORTCUTS SHORTS_EXT_1 SHORTS_EXT_2 SOFTWARE NMODS ALPHA2 CCEDIL SHIFT_A2 CASE_A2 CASE_CCEDIL SMART MEDIA NAV NAV_F RAISE RAI_CP
-    #define ALL_LAYERS_BUT_RAISE_SMART  ALPHA1 CAMEL_CASE SHIFT_A1 SNAKE_CASE KEBAB_CASE SLASH_CASE SPACING CASE_A1 CPLK_A1 LOWER LOW_CP SEN_CASE SEN_E1 SEN_E2 SHORTCUTS SHORTS_EXT_1 SHORTS_EXT_2 SOFTWARE NMODS ALPHA2 CCEDIL SHIFT_A2 CASE_A2 CASE_CCEDIL        MEDIA NAV NAV_F             
+    #define ALPHA1_LAYERS               ALPHA1 CASE_A1 CPLK_A1 SEN_CASE SEN_E1 SEN_E2 NMODS
+    #define ALPHA2_LAYERS               NMODS_2 ALPHA2 SHIFT_A2 CASE_A2 CCEDIL CASE_CCEDIL 
+    #define SMARTCASE_LAYERS            CAMEL_CASE SNAKE_CASE KEBAB_CASE SLASH_CASE SPACING 
+    #define LOWER_LAYERS                LOWER LOW_CP  
+    #define RAISE_LAYERS                RAISE RAI_CP   
+    #define SHORTCUT_LAYERS             SHORTCUTS SHORTS_EXT_1 SHORTS_EXT_2 SOFTWARE  
+    #define NAVMEDIA_LAYERS             MEDIA NAV NAV_F  
+    #define SYSTEM_LAYERS               SMART FUNCTIONS  
+    #define ALL_LAYERS                  ALPHA1_LAYERS SHIFT_A1 ALPHA2_LAYERS SMARTCASE_LAYERS LOWER_LAYERS SHORTCUT_LAYERS NAVMEDIA_LAYERS           SYSTEM_LAYERS RAISE_LAYERS 
+    #define ALL_LAYERS_BUT_RAISE_SMART  ALPHA1_LAYERS SHIFT_A1 ALPHA2_LAYERS SMARTCASE_LAYERS LOWER_LAYERS SHORTCUT_LAYERS NAVMEDIA_LAYERS FUNCTIONS           
 
     #define COMBO_TERM 50
 
@@ -136,7 +142,7 @@
         COMBO(cb_dqo_s,         LTM LTI,     &kp DQT,            ALPHA2_LAYERS)
         COMBO(cb_sqo_s,         LHM LHI,     &kp SQT,            ALPHA2_LAYERS)
         COMBO(cb_bti_s,         LBM LBR,     &kp GRAVE,          ALPHA2_LAYERS)
-        COMBO(cb_caret_s,       LHI LHM,     &kp CARET,          ALPHA2_LAYERS)
+        COMBO(cb_caret_s,       LHR LHM,     &kp CARET,          ALPHA2_LAYERS)
         COMBO(cb_tilde_s,       LBI LBM,     &kp TILDE,          ALPHA2_LAYERS)
         COMBO(cb_ques,          RHI RHM,     &mc_qmark,          ALPHA2_LAYERS)
         COMBO(cb_excl,          RBI RBM,     &mc_excl,           ALPHA2_LAYERS)
@@ -148,7 +154,7 @@
         COMBO(cb_esc_save,      LTR LTM L0,  &mc_save_esc,       ALPHA1_LAYERS)
 
         COMBO(cb_semi,          RBM RBR,     &th_semi 0 0,       ALPHA1_LAYERS LOWER LOW_CP)
-        COMBO(cb_colon,         RBM RBR,     &kp COLON 0 0,      SHIFT_A1)
+        COMBO(cb_colon,         RBM RBR,     &kp COLON,          SHIFT_A1)
         COMBO(cb_sent,          RBI RBM RBR, &mc_end_semi_ent,   ALPHA1_LAYERS LOWER LOW_CP)
 
         COMBO(cb_o_esc,         RHI RHM,     &mc_o_esc,          MEDIA)

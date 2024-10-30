@@ -148,7 +148,7 @@
         //     bindings = <&macro_tap &kp CAPSWORD_TERM &smart_line CPLK_A1>;
         // };
 
-        // SMART_MACRO(tc_smart_line, &smart_word CPLK_A1)
+        // SMART_MACRO(tc_smart_line, &smart_line CPLK_A1)
         SMART_MACRO(tc_smart_line, &smart_line)
 
         // ******************* CAPS WORD ******************* //
