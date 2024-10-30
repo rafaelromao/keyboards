@@ -32,10 +32,6 @@ The following pages explain how this layout works and which features are impleme
 - [Leader Key](docs/shortcuts.md#leader-key)
 - [Swapper](docs/shortcuts.md#swapper)
 - [Select Word](docs/shortcuts.md#select-word-and-select-line)
-- [Dynamic Macros](docs/shortcuts.md#dynamic-macros)
-- [Coding Dancing](docs/symbols.md#coding-dancing)
-- [Coding Shortcuts](docs/shortcuts.md#coding-shortcuts)
-- [Fusion 360 Shortcuts](docs/shortcuts.md#fusion-360)
 - [Mouse Keys](docs/navigation.md#mouse-keys)
 
 ## About this repo

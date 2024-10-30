@@ -17,8 +17,8 @@
 / {
     #define ALPHA1_LAYERS                    ALPHA1 CASE_A1 SHIFT_A1 CPLK_A1 SEN_CASE SEN_E1 NMODS
     #define ALPHA2_LAYERS                    ALPHA2 CASE_A2 SEN_E2 SHIFT_A2
-    #define ALL_LAYERS                       ALPHA1 CAMEL_CASE SHIFT_A1 SNAKE_CASE KEBAB_CASE SLASH_CASE SPACING CASE_A1 CPLK_A1 LOWER LOW_CP SEN_CASE SEN_E1 SEN_E2 SHORTCUTS SHORTS_EXT_1 SHORTS_EXT_2 SOFTWARE NMODS ALPHA2 CCEDIL SHIFT_A2 CASE_A2 CASE_CCEDIL SYSTEM MEDIA NAV NAV_F RAISE RAI_CP
-    #define ALL_LAYERS_BUT_RAISE_SYSTEM      ALPHA1 CAMEL_CASE SHIFT_A1 SNAKE_CASE KEBAB_CASE SLASH_CASE SPACING CASE_A1 CPLK_A1 LOWER LOW_CP SEN_CASE SEN_E1 SEN_E2 SHORTCUTS SHORTS_EXT_1 SHORTS_EXT_2 SOFTWARE NMODS ALPHA2 CCEDIL SHIFT_A2 CASE_A2 CASE_CCEDIL        MEDIA NAV NAV_F             
+    #define ALL_LAYERS                       ALPHA1 CAMEL_CASE SHIFT_A1 SNAKE_CASE KEBAB_CASE SLASH_CASE SPACING CASE_A1 CPLK_A1 LOWER LOW_CP SEN_CASE SEN_E1 SEN_E2 SHORTCUTS SHORTS_EXT_1 SHORTS_EXT_2 SOFTWARE NMODS ALPHA2 CCEDIL SHIFT_A2 CASE_A2 CASE_CCEDIL SMART MEDIA NAV NAV_F RAISE RAI_CP
+    #define ALL_LAYERS_BUT_RAISE_SMART  ALPHA1 CAMEL_CASE SHIFT_A1 SNAKE_CASE KEBAB_CASE SLASH_CASE SPACING CASE_A1 CPLK_A1 LOWER LOW_CP SEN_CASE SEN_E1 SEN_E2 SHORTCUTS SHORTS_EXT_1 SHORTS_EXT_2 SOFTWARE NMODS ALPHA2 CCEDIL SHIFT_A2 CASE_A2 CASE_CCEDIL        MEDIA NAV NAV_F             
 
     #define COMBO_TERM 50
 
@@ -45,9 +45,9 @@
         COMBO(cb_tog_softwarel, LBM LBI,     &to SOFTWARE,       SHORTCUTS)
         COMBO(cb_tog_lower,     RTM RTI,     &to LOWER,          SHORTCUTS)
         COMBO(cb_tog_nav,       RHM RHI,     &to NAV_F,          SHORTCUTS)
-        COMBO(cb_tog_softwarer, RBM RBI,     &to SOFTWARE,       SHORTCUTS)
+        COMBO(cb_tog_software,  RBM RBI,     &to SOFTWARE,       SHORTCUTS)
 
-        COMBO(cb_esc,           LTR LTM,     &kp ESC,            ALL_LAYERS_BUT_RAISE_SYSTEM)
+        COMBO(cb_esc,           LTR LTM,     &kp ESC,            ALL_LAYERS_BUT_RAISE_SMART)
 
         COMBO(cb_save,          LHR LHM L0,  &mc_save,           ALL_LAYERS)
         COMBO(cb_fullscr,       LHM LHI L0,  &mc_fullscr,        ALL_LAYERS)
@@ -63,7 +63,11 @@
 
         COMBO(cb_nav_lower,     LBR LBM,     &mo NAV,            LOWER LOW_CP)
         COMBO(cb_lower_nav,     LBR LBM,     &mo LOW_CP,         NAV NAV_F)
+
+        COMBO(cb_sk_lgui,       LHM LHR,     &sk LGUI,           SOFTWARE)
         COMBO(cb_sk_rgui,       RHM RHR,     &sk RGUI,           SOFTWARE)
+        COMBO(cb_auto_nmods_l,  LHM LHR,     &tc_smart_nomods,   SOFTWARE)
+        COMBO(cb_auto_nmods_r,  RHM RHR,     &tc_smart_nomods,   SOFTWARE)
 
         COMBO(cb_k,             LTM LTI,     &kp K,              ALPHA1 SEN_CASE)
         COMBO(cb_w,             LHM LHI,     &ht_w 0 0,          ALPHA1 SEN_CASE)
@@ -166,10 +170,10 @@
         COMBO(cd_cg_nav,        LHM LHI L1,  &mc_cg_nav,         ALPHA1_LAYERS)
         COMBO(cd_ag_nav,        LBR LHM L1,  &mc_ag_nav,         ALPHA1_LAYERS)
 
-        COMBO(cb_pascal_case,   LHR LHM,     &tc_pascal_case,    SYSTEM)
-        COMBO(cb_s_snakecase,   LHI LHM,     &tc_s_snakecase,    SYSTEM)
-        COMBO(cb_s_kebabcase,   LTI LTM,     &tc_s_kebabcase,    SYSTEM)
-        COMBO(cb_s_slashcase,   LTR LTM,     &tc_s_slashcase,    SYSTEM)
+        COMBO(cb_pascal_case,   LHR LHM,     &tc_pascal_case,    SMART)
+        COMBO(cb_s_snakecase,   LHI LHM,     &tc_s_snakecase,    SMART)
+        COMBO(cb_s_kebabcase,   LTI LTM,     &tc_s_kebabcase,    SMART)
+        COMBO(cb_s_slashcase,   LTR LTM,     &tc_s_slashcase,    SMART)
     };
 
     #define COMBO_MUST_TAP(NAME, HOLD, TAP) \

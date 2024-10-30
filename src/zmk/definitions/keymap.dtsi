@@ -28,7 +28,7 @@
                      bindings = <
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp Y
    &lt SHORTCUTS D     &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp W               &kp Z               &mt RGUI R          &mt RCTRL A         &mt RSHFT E         &lt SHORTCUTS I      
-   &kp Q               &mt RALT F          &th_c FUNCTIONS 0   &mt LALT P          &kp V               &kp J               &ht_magic RALT 0    &th_comma SYSTEM 0  &th_dot 0 0         &kp Y
+   &kp Q               &mt RALT F          &th_c FUNCTIONS 0   &mt LALT P          &kp V               &kp J               &ht_magic RALT 0    &th_comma SMART 0   &th_dot 0 0         &kp Y
                                            &none               &ht_repeat NAV 0    &ltn LOWER SPACE    &msl_a2 RAISE 0     &ht_shift MEDIA 0   &none
                         >;
                 };
@@ -187,13 +187,22 @@
                                            &trans              &th_meh_k NAV 0     &mc_meh_w           &mc_meh_z           &th_meh_j NAV 0     &trans
                            >;
                 };
-                no_mods_layer {
-                     display-name = "NO MODS";
+                no_mods_1_layer {
+                     display-name = "NO MODS 1";
                      bindings = <
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp Y
    &kp D               &kp N               &kp S               &kp T               &kp W               &kp Z               &kp R               &kp A               &kp E               &kp I 
-   &trans              &kp F               &kp C               &kp P               &kp V               &kp J               &magic_key          &kp COMMA           &kp DOT             &trans
-                                           &none               &key_repeat         &kp SPACE           &sl ALPHA2          &sk LSHFT           &none
+   &trans              &kp F               &kp C               &kp P               &kp V               &kp J               &kp H               &kp COMMA           &kp DOT             &trans
+                                           &none               &ht_repeat NAV 0    &lt LOW_CP SPACE    &msl_na2 RAI_CP 0   &ht_shift MEDIA 0   &none
+                           >;
+                };
+                no_mods_2_layer {
+                     display-name = "NO MODS 2";
+                     bindings = <
+   &none               &kp Q               &mc_qu              &kp K               &none               &none               &ac_ocir            &ac_oacu            &ac_uacu            &none
+   &kp Y               &kp Z               &kp X               &kp W               &none               &none               &ac_atil            &ac_aacu            &ac_eacu            &ac_iacu 
+   &trans              &kp J               &mc_ced             &kp V               &none               &none               &ac_otil            &ac_acir            &ac_ecir            &trans
+                                           &none               &trans              &lt LOW_CP SPACE    &lt RAI_CP SPACE    &ht_shift MEDIA 0   &none
                            >;
                 };
                 alpha2_layer {
@@ -294,8 +303,8 @@
                                            &none               &none               &none               &none               &none              &none
                         >;
                 };
-                system_layer {
-                     display-name = "SYSTEM";
+                smartcases_layer {
+                     display-name = "SMART";
                      bindings = <
    &none               &to SLASH_CASE      &tc_smart_line      &to KEBAB_CASE      &none               &none               &mc_lock           &none                &sys_reset          &none 
    &none               &to CAMEL_CASE      &tc_smart_word      &to SNAKE_CASE      &none               &none               &kp C_SLEEP        &none                &bootloader         &none      

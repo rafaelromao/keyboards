@@ -77,6 +77,37 @@
         SMART_LAYERTAP(th_cancel,     &tc_cancel)
         SMART_LAYERTAP(th_nsen,       &tc_nsen)
 
+        // ********************** SMART NO MODS ********************** //
+
+        smart_nomods: smart_nomods {
+            // compatible = "zmk,behavior-auto-layer";
+            compatible = "zmk,behavior-caps-word";
+            ignore-numbers;
+			#binding-cells = <0>;
+            layers = <NMODS>;
+            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT TILDE CARET GRAVE SPACE>;
+        };
+
+        tc_smart_nomods: tc_smart_nomods {
+			compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            // bindings = <&macro_tap &to NMODS &smart_nomods NMODS>;
+            bindings = <&macro_tap &smart_nomods>;
+        };
+
+        SMART_MACRO(mc_sl_nomods2, &sl NMODS_2)
+
+        msl_na2: msl_na2 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <QUICK_TAP_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <0>;
+            bindings = <&mo>, <&mc_sl_nomods2>;
+        };
+
         // ********************** NUM WORD ********************** //
 
         smart_num: smart_num {
@@ -95,7 +126,7 @@
             wait-ms = <0>;
             tap-ms = <0>;
             // bindings = <&macro_tap &to ALPHA1 &smart_num LOWER>;
-            bindings = <&macro_tap &to LOWER &smart_num>;
+            bindings = <&macro_tap &smart_num>;
         };
 
         // ******************* CAPS LINE ******************* //
