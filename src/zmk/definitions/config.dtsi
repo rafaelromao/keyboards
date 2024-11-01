@@ -14,29 +14,40 @@
 #define SPACING 6
 #define CASE_A1 7
 #define CPLK_A1 8
-#define LOWER 9
-#define RAISE 10
-#define SEN_CASE 11
-#define SEN_E1 12
-#define SEN_E2 13
-#define SHORTCUTS 14
-#define SHORTS_EXT_1 15
-#define SHORTS_EXT_2 16
-#define SOFTWARE 17
-#define NMODS 18
-#define NMODS_2 19
-#define ALPHA2 20
-#define CCEDIL 21
-#define SHIFT_A2 22
-#define CASE_A2 23
-#define CASE_CCEDIL 24
-#define NAV 25
-#define LOW_CP 26
-#define RAI_CP 27
-#define MEDIA 28
-#define NAV_F 29
-#define FUNCTIONS 30
-#define SMART 31
+
+#define ALPHA2 9
+#define CCEDIL 10
+#define SHIFT_A2 11
+#define CASE_A2 12
+#define CASE_CCEDIL 13
+
+#define LOWER 14
+#define RAISE 15
+#define FUNCTIONS 16
+#define SMART 17
+
+#define SEN_CASE 18
+#define SEN_E1 19
+#define SEN_E2 20
+
+#define SHORTCUTS 21
+#define SHORTS_EXT_1 22
+#define SHORTS_EXT_2 23
+
+#define CUSTOM 24
+
+#define PLAIN1 25
+#define PLAIN2 26
+
+#define NAV 27
+
+#define LOW_CP 28
+#define RAI_CP 29
+
+#define MEDIA 30
+
+#define NAV_F 31
+
 
 #define TAPPING_TERM 175
 #define TD_TAPPING_TERM 225

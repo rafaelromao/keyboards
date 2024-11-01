@@ -54,14 +54,6 @@
             bindings = <&macro_tap SYMBOLS>; \
         };
 
-    #define TAPDANCE_SYMBOL(NAME, TAPHOLD, DTAP, TTAP) \
-         NAME: NAME { \
-            compatible = "zmk,behavior-tap-dance"; \
-            #binding-cells = <0>; \
-            tapping-term-ms = <TD_TAPPING_TERM>; \
-            bindings = <TAPHOLD>, <DTAP>, <TTAP>; \
-        };
-
     symbols {
 
         // Base
@@ -194,9 +186,11 @@
 
         SYMBOL(mc_noteq,           &kp EXCL &kp EQUAL)
 
+        SYMBOL(mc_zero,            &kp N0)
         SYMBOL(mc_caret,           &kp CARET &kp SPACE)
         SYMBOL(mc_end_caret,       &kp END &kp CARET &kp SPACE)
         TAPHOLD_SYMBOL(th_caret,   &mc_caret, &mc_end_caret)
+        TAPHOLD_SYMBOL(th_caret_z, &mc_caret, &mc_zero)
 
         SYMBOL(mc_degree,          &kp LS(LA(N8)))
 

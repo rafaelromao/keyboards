@@ -14,25 +14,28 @@ The following pages explain how this layout works and which features are impleme
 
 - [Alphas](docs/base.md)
 - [Symbols and Numbers](docs/symbols.md)
-- [Shortcuts and Macros](docs/shortcuts.md) 
 - [Navigation and Media](docs/navigation.md)
-- [System](docs/system.md)
+- [Shortcuts and Software](docs/shortcuts.md) 
+- [Smartcases and Functions](docs/smartcases.md)
 
-### Main Features
+### Special Features
 
-- [Smart Modifiers](docs/modifiers.md)
-- [Smart Thumb Keys](docs/base.md#smart-thumb-keys)
-- [Smart Shift / Caps Word](docs/base.md#smart-thumb-keys)
-- [Smart Cases](docs/modifiers.md#smart-cases)
-- [Sentence Case](docs/base.md#sentence-case)
-- [Repeat Key](docs/base.md#repeat-key)
+- [Two Alpha Layers](docs/base.md)
+- [Thumb Shift](docs/base.md)
+- [Sentence Case](docs/base.md)
+- [Caps Word](docs/base.md)
 - [Magic Key](docs/base.md#magic-key)
-- [Shortcut Combos](docs/base.md#base-layer-combos)
-- [NumWord](docs/symbols.md#numword)
-- [Leader Key](docs/shortcuts.md#leader-key)
-- [Swapper](docs/shortcuts.md#swapper)
+- [Repeat Key](docs/base.md#repeat-key)
+- [Num Word](docs/symbols.md#numword)
+- [Optimized Symbol Layers](docs/base.md)
+- [Coding Macros](docs/base.md)
+- [Smart Cases](docs/base.md)
+- [VIM Remaps](docs/base.md)
 - [Select Word](docs/shortcuts.md#select-word-and-select-line)
+- [Shortcut Combos](docs/base.md)
+- [Leader Key](docs/shortcuts.md#leader-key)
 - [Mouse Keys](docs/navigation.md#mouse-keys)
+- [Contextual App Shortcuts](docs/base.md)
 
 ## About this repo
 
@@ -125,7 +128,8 @@ Most features implemented here were based on the work referenced below.
 
 ## Resouces
 
-- [KLE](http://www.keyboard-layout-editor.com/#/gists/38f4435ff9a10256d9a7e1a0645c2fec)
+- [Keymap Drawer](https://github.com/caksoylar/keymap-drawer)
+- [KLE](http://www.keyboard-layout-editor.com)
 - [Keymap DB](https://keymapdb.com/rafaelromao/)
 - [QMK Docs](https://docs.qmk.fm)
 - [ZMK Docs](https://zmk.dev/docs)

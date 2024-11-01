@@ -1,0 +1,448 @@
+layout:
+  cols_thumbs_notation: "1333+2> 2<+3331"
+layers:
+  alpha1:
+    - [b, m, g, l, o, u]
+    - [
+        { t: d, h: shortcuts },
+        { h: $$mdi:apple-keyboard-shift$$, t: n },
+        { h: $$mdi:apple-keyboard-control$$, t: s },
+        { h: $$mdi:apple-keyboard-command$$, t: t },
+        { h: $$mdi:apple-keyboard-command$$, t: r },
+        { h: $$mdi:apple-keyboard-control$$, t: a },
+        { h: $$mdi:apple-keyboard-shift$$, t: e },
+        { t: i, h: shortcuts },
+      ]
+    - [
+        { h: $$mdi:apple-keyboard-option$$, t: f },
+        { t: c, h: functions },
+        { h: $$mdi:apple-keyboard-option$$, t: p },
+        { h: $$mdi:apple-keyboard-option$$, t: "h|v", s: magic },
+        { t: ",", h: smartcases },
+        { t: . },
+      ]
+    - { t: $$mdi:repeat$$, s: repeat, h: nav }
+    - { t: $$mdi:keyboard-space$$, h: lower }
+    - { t: alpha2, s: sticky, h: raise }
+    - { t: $$mdi:apple-keyboard-shift$$, s: sticky, h: media }
+  alpha2:
+    - [q, qu, k, ô, ó, ú]
+    - [y, z, x, w, ã, á, é, í]
+    - [
+        j,
+        { t: ç, s: auto-sticky, h: ç-extension },
+        { t: "v|h", s: magic },
+        õ,
+        â,
+        ê,
+      ]
+    - { t: $$mdi:repeat$$, s: repeat }
+    - { t: $$mdi:keyboard-space$$ }
+    - { t: $$mdi:keyboard-space$$, type: "held" }
+    - "'"
+  ç-extension:
+    - ["", "", "", "", "", ""]
+    - ["", "", "", ão, ã, "", "", ""]
+    - ["", { t: "", type: "held alternate" }, ões, õ, "", ""]
+    - ""
+    - ""
+    - ""
+    - ""
+  vim_remap:
+    - [{t: b, s: vim}, {t: w, s: vim}, {t: e, s: vim}, {t: g, s: vim}, "", ""]
+    - ["", "", "", "", {t: h, s: vim}, {t: j, s: vim}, {t: k, s: vim}, {t: l, s: vim}]
+    - ["", "", "", {t: r, s: vim}, "", ""]
+    - ""
+    - ""
+    - ""
+    - ""
+  lower:
+    - ["{", "}", "\\", 7, 8, 9]
+    - [{ t: "@", h: custom }, "(", ")", "&", 4, 5, 6, "."]
+    - ["[", "]", "|", 1, 2, 3]
+    - null
+    - { t: $$mdi:keyboard-space$$, type: held }
+    - { t: $$mdi:keyboard-space$$ }
+    - 0
+  raise:
+    - ["^", "#", "$", "%", "=", ":"]
+    - ["°", "`", "'", '"', "?", "-", "+", { t: ",", h: custom }]
+    - ["<", ">", "~", "!", "/", "*"]
+    - { t: $$mdi:repeat$$, s: repeat }
+    - { t: $$mdi:keyboard-space$$ }
+    - { type: held }
+    - null
+  functions:
+    - [
+        { t: $$mdi:restart$$, h: "reset" },
+        "",
+        { t: $$mdi:lock$$, h: "lock" },
+        "F7",
+        "F8",
+        "F9",
+      ]
+    - [
+        null,
+        { t: $$mdi:flash$$, h: "boot" },
+        "",
+        { t: $$mdi:power-sleep$$, h: "sleep" },
+        "F4",
+        "F5",
+        "F6",
+        null,
+      ]
+    - [
+        "",
+        { type: held },
+        { t: $$mdi:ray-start-arrow$$, h: "leader" },
+        "F1",
+        "F2",
+        "F3",
+      ]
+    - h: plain1
+    - null
+    - null
+    - h: plain1
+  smartcases:
+    - [
+        "slash/ case",
+        "CAPS LINE",
+        "kebad- case",
+        { t: $$mdi:lock$$, h: "lock" },
+        "",
+        { t: $$mdi:restart$$, h: "reset" },
+      ]
+    - [
+        "",
+        "camel Case",
+        "CAPS word",
+        "snake_ case",
+        { t: $$mdi:power-sleep$$, h: "sleep" },
+        "",
+        { t: $$mdi:flash$$, h: "boot" },
+        null,
+      ]
+    - [
+        { t: $$mdi:bluetooth$$, h: $$tabler:arrow-left$$ },
+        { t: $$mdi:bluetooth$$, h: $$tabler:arrow-right$$ },
+        { t: $$mdi:bluetooth-off$$, h: $$mdi:delete$$ },
+        { t: $$mdi:ray-start-arrow$$, h: "leader" },
+        { type: held },
+        "",
+      ]
+    - h: plain1
+    - null
+    - null
+    - h: plain1
+  shortcuts:
+    - [
+        "⎋",
+        { t: $$mdi:folder-open$$, h: files, s: meh 0 },
+        { t: $$mdi:file-find$$, h: preview, s: meh 1 },
+        { h: sel word, t: ⎅ ⓦ },
+        $$mdi:keyboard-return$$,
+        "⎋",
+      ]
+    - [
+        { type: held },
+        { t: $$mdi:loupe$$, h: zoom },
+        { t: $$mdi:apps$$, h: swapper },
+        { t: $$mdi:tab-search$$, h: tabs, s: meh 2 },
+        { h: sel line, t: ⎅ ⎯ },
+        $$mdi:arrow-down$$,
+        $$mdi:arrow-up$$,
+        { type: held },
+      ]
+    - [
+        { t: $$mdi:console$$, h: term, s: meh 3 },
+        { t: $$mdi:calculator$$, h: calc, s: meh 4 },
+        { t: $$mdi:magnify$$, h: spotlight, s: meh 5 },
+        { h: sel home, t: ⎅ ⇤ },
+        { t: $$mdi:refresh$$, s: refresh, h: close },
+        { t: $$mdi:content-cut$$, h: clip, s: meh 6 },
+      ]
+    - null
+    - { t: $$mdi:keyboard-space$$, h: custom }
+    - { t: $$mdi:keyboard-space$$, h: custom }
+    - null
+  custom:
+    - [meh b, meh m, meh g, meh l, meh o, meh u]
+    - [
+        type: held,
+        { t: meh n, h: $$mdi:apple-keyboard-command$$ },
+        meh s,
+        meh t,
+        meh r,
+        meh a,
+        { t: meh e, h: $$mdi:apple-keyboard-command$$ },
+        type: held,
+      ]
+    - [meh f, meh c, meh p, meh h, "meh ,", "meh ."]
+    - { t: meh k, h: nav }
+    - { t: meh w, type: held }
+    - { t: meh z, type: held }
+    - { t: meh j, h: nav }
+  plain1:
+    - [b, m, g, l, o, u]
+    - [d, n, s, t, r, a, e, i]
+    - [f, c, p, h, ",", "."]
+    - { t: $$mdi:repeat$$, s: repeat, h: nav, type: held }
+    - { t: $$mdi:keyboard-space$$, h: lower }
+    - { t: plain2, s: sticky, h: raise }
+    - { t: $$mdi:apple-keyboard-shift$$, s: sticky, h: media, type: held }
+  plain2:
+    - [q, qu, k, ô, ó, ú]
+    - [y, z, x, w, ã, á, é, í]
+    - [j, ç, v, õ, â, ê]
+    - { t: $$mdi:repeat$$, s: repeat }
+    - { t: $$mdi:keyboard-space$$ }
+    - { t: $$mdi:keyboard-space$$, type: "held alternate" }
+    - "'"
+  nav:
+    - [
+        { h: prev word, t: ← ⓦ },
+        $$tabler:arrow-big-up-lines$$,
+        { h: next word, t: → ⓦ },
+        $$tabler:arrows-left-right$$,
+        $$mdi:keyboard-return$$,
+        "⎋",
+      ]
+    - [
+        null,
+        $$mdi:apple-keyboard-shift$$,
+        $$mdi:apple-keyboard-control$$,
+        $$mdi:apple-keyboard-command$$,
+        $$mdi:arrow-left$$,
+        $$mdi:arrow-down$$,
+        $$mdi:arrow-up$$,
+        $$mdi:arrow-right$$,
+      ]
+    - [
+        $$mdi:apple-keyboard-option$$,
+        $$tabler:arrow-big-down-lines$$,
+        $$mdi:apple-keyboard-option$$,
+        $$mdi:backspace-reverse-outline$$,
+        $$tabler:arrow-bar-to-left$$,
+        $$tabler:arrow-bar-to-right$$,
+      ]
+    - { type: held }
+    - null
+    - { t: $$mdi:keyboard-space$$ }
+    - null
+  media:
+    - [
+        "⎋",
+        $$mdi:mouse-left-click$$,
+        $$mdi:mouse-right-click$$,
+        $$tabler:arrows-left-right$$,
+        $$mdi:keyboard-return$$,
+        "⎋",
+      ]
+    - [
+        null,
+        $$mdi:arrow-left-circle$$,
+        $$mdi:arrow-up-circle$$,
+        $$mdi:arrow-right-circle$$,
+        { t: $$mdi:microphone$$, s: meh x },
+        $$mdi:volume-medium$$,
+        $$mdi:volume-high$$,
+        { t: $$mdi:camera$$, s: meh y },
+      ]
+    - [
+        $$mdi:arrow-down-circle-outline$$,
+        $$mdi:arrow-down-circle$$,
+        $$mdi:arrow-up-circle-outline$$,
+        $$mdi:play-pause$$,
+        $$mdi:skip-backward$$,
+        $$mdi:skip-forward$$,
+      ]
+    - null
+    - { t: $$mdi:keyboard-space$$ }
+    - null
+    - { type: held }
+combos:
+  - {
+      p: [0, 1],
+      k: "⎋",
+      a: mid,
+      layers:
+        [alpha1, alpha2, ç-extension, shortcuts, nav, media, lower, custom],
+    }
+  - {
+      p: [4, 5],
+      k: $$mdi:backspace-outline$$,
+      a: mid,
+      layers: [alpha1, alpha2, ç-extension, nav, media, lower, raise],
+    }
+  - {
+      p: [0, 1, 2],
+      k: "alpha1",
+      a: top,
+      h: 15,
+      w: 90,
+      layers: [alpha2, ç-extension, plain1, plain2, lower, nav, custom],
+    }
+
+  - { p: [1, 2], k: "k", a: mid, layers: [alpha1, plain1] }
+  - { p: [3, 4], k: "x", a: mid, layers: [alpha1, plain1] }
+  - { p: [3, 4, 5], k: "d", a: top, layers: [alpha1, plain1] }
+  - { p: [7, 8], k: "q", a: mid, layers: [alpha1, plain1] }
+  - { p: [8, 9], k: "w", a: mid, layers: [alpha1, plain1] }
+  - { p: [10, 11], k: "z", a: mid, layers: [alpha1, plain1] }
+  - { p: [11, 12], k: "y", a: mid, layers: [alpha1, plain1] }
+  - { p: [10, 11, 12], k: "p", a: top, layers: [alpha1, plain1] }
+  - { p: [15, 16], k: "v", a: mid, layers: [alpha1, plain1] }
+  - { p: [17, 18], k: "j", a: mid, layers: [alpha1, plain1] }
+
+  - { p: [1, 2], k: { t: "z", s: vim }, a: mid, layers: [vim_remap] }
+  - { p: [3, 4], k: { t: "x", s: vim }, a: mid, layers: [vim_remap] }
+  - { p: [3, 4, 5], k: { t: "d", s: vim }, a: top, layers: [vim_remap] }
+  - { p: [7, 8], k: { t: "q", s: vim }, a: mid, layers: [vim_remap] }
+  - { p: [8, 9], k: { t: "m", s: vim }, a: mid, layers: [vim_remap] }
+  - { p: [10, 11], k: { t: "i", s: vim }, a: mid, layers: [vim_remap] }
+  - { p: [11, 12], k: { t: "y", s: vim }, a: mid, layers: [vim_remap] }
+  - { p: [10, 11, 12], k: { t: "p", s: vim }, a: bottom, layers: [vim_remap] }
+  - { p: [15, 16], k: { t: "v", s: vim }, a: mid, layers: [vim_remap] }
+  - { p: [17, 18], k: { t: "a", s: vim }, a: mid, layers: [vim_remap] }
+
+  - { p: [18, 19], k: ";", a: mid, layers: [alpha1, plain1] }
+
+  - { p: [1, 2], k: 'dead "', a: mid, layers: [alpha2, plain2] }
+  - { p: [3, 4], k: "-", a: mid, layers: [alpha2, plain2] }
+  - { p: [3, 4, 5], k: '"', a: top, layers: [alpha2, plain2] }
+  - { p: [7, 8], k: "dead ^", a: mid, layers: [alpha2, plain2] }
+  - { p: [8, 9], k: "dead '", a: mid, layers: [alpha2, plain2] }
+  - { p: [10, 11], k: "?", a: mid, layers: [alpha2, plain2] }
+  - { p: [11, 12], k: "à", a: mid, layers: [alpha2, plain2] }
+  - { p: [10, 11, 12], k: "(", a: top, layers: [alpha2, plain2] }
+  - { p: [14, 15], k: "dead `", a: mid, layers: [alpha2, plain2] }
+  - { p: [15, 16], k: "dead ~", a: mid, layers: [alpha2, plain2] }
+  - { p: [17, 18], k: "!", a: mid, layers: [alpha2, plain2] }
+  - { p: [18, 19], k: "_", a: mid, layers: [alpha2, plain2] }
+  - { p: [17, 18, 19], k: ")", a: top, layers: [alpha2, plain2] }
+
+  - {
+      p: [14, 15],
+      k: { t: "lower", s: "auto-layer" },
+      w: 48,
+      a: mid,
+      layers: [alpha1],
+    }
+
+  - { p: [1, 2], k: "plain1", a: mid, w: 48, h: 20, layers: [shortcuts] }
+  - { p: [8, 9], k: "media", a: mid, w: 48, h: 20, layers: [shortcuts] }
+  - { p: [15, 16], k: "custom", a: mid, w: 48, h: 20, layers: [shortcuts] }
+  - { p: [3, 4], k: "lower", a: mid, w: 48, h: 20, layers: [shortcuts] }
+  - { p: [10, 11], k: "nav", a: mid, w: 48, h: 20, layers: [shortcuts] }
+  - { p: [17, 18], k: "custom", a: mid, w: 48, h: 20, layers: [shortcuts] }
+
+  - { p: [0, 1, 21], k: "⎋ save", layers: [alpha1], draw_separate: true }
+  - { p: [7, 8, 21], k: "save", layers: [alpha1], draw_separate: true }
+  - { p: [14, 15, 21], k: "undo", layers: [alpha1], draw_separate: true }
+  - { p: [17, 18, 19], k: "⇥ ; ⏎", layers: [alpha1], draw_separate: true }
+
+  - { p: [8, 9, 21], k: "full screen", layers: [alpha1], draw_separate: true }
+  - { p: [15, 16, 21], k: "find", layers: [alpha1], draw_separate: true }
+
+  - { p: [4, 5, 22], k: "tab", layers: [alpha1], draw_separate: true }
+  - { p: [11, 12, 22], k: "enter", layers: [alpha1], draw_separate: true }
+
+  - { p: [10, 11, 22], k: "copy", layers: [alpha1], draw_separate: true }
+  - { p: [17, 18, 22], k: "paste", layers: [alpha1], draw_separate: true }
+  - {
+      p: [10, 11, 12, 22],
+      k: "select all copy",
+      layers: [alpha1],
+      draw_separate: true,
+    }
+  - {
+      p: [17, 18, 19, 22],
+      k: "select all paste",
+      layers: [alpha1],
+      draw_separate: true,
+    }
+
+  - { p: [3, 4, 5], k: "US$", a: top, w: 90, h: 15, layers: [lower] }
+  - { p: [3, 4], k: "G", a: mid, layers: [lower] }
+  - { p: [14, 15], k: "nav", a: mid, layers: [lower] }
+  - { p: [10, 11, 12], k: "R$", a: top, w: 90, h: 15, layers: [lower] }
+  - { p: [10, 11], k: "j", a: mid, layers: [lower] }
+  - { p: [11, 12], k: "k", a: mid, layers: [lower] }
+  - { p: [17, 18, 19], k: "€", a: top, w: 90, h: 15, layers: [lower] }
+  - { p: [17, 18], k: "|", a: mid, layers: [lower] }
+  - { p: [18, 19], k: ";", a: mid, layers: [lower] }
+  - { p: [7, 8], k: "()", a: mid, layers: [lower] }
+  - { p: [8, 9], k: "&&", a: mid, layers: [lower] }
+  - { p: [15, 16], k: "||", a: mid, layers: [lower] }
+
+  - { p: [0, 1], k: "⇥{ ⏎", a: mid, layers: [raise] }
+  - { p: [7, 8], k: "⇥(); ⏎", a: mid, layers: [raise] }
+  - { p: [14, 15], k: "⇥[]; ⏎", a: mid, layers: [raise] }
+  - { p: [8, 9], k: "->", a: mid, layers: [raise] }
+  - { p: [15, 16], k: "=>", a: mid, layers: [raise] }
+
+  - { p: [3, 4, 5], k: "!=", a: top, w: 90, h: 15, layers: [raise] }
+  - { p: [3, 4], k: "==", a: mid, layers: [raise] }
+  - { p: [10, 11, 12], k: "../", a: top, w: 90, h: 15, layers: [raise] }
+  - { p: [10, 11], k: { s: vim, t: ^, h: 0 }, a: mid, layers: [raise] }
+  - { p: [11, 12], k: { s: vim, t: "$" }, a: mid, layers: [raise] }
+  - { p: [17, 18, 19], k: "~/", a: top, w: 90, h: 15, layers: [raise] }
+  - { p: [17, 18], k: { t: "q", s: vim }, a: mid, layers: [raise] }
+  - { p: [18, 19], k: { t: "@", s: vim }, a: mid, layers: [raise] }
+
+  - { p: [3, 4], k: "F12", a: mid, layers: [functions] }
+  - { p: [10, 11], k: "F11", a: mid, layers: [functions] }
+  - { p: [11, 12], k: "F14", a: mid, layers: [functions] }
+  - { p: [4, 5], k: "F15", a: mid, layers: [functions] }
+  - { p: [17, 18], k: "F10", a: mid, layers: [functions] }
+  - { p: [18, 19], k: "F13", a: mid, layers: [functions] }
+
+  - { p: [0, 1], k: "CAPS SLASH/CASE", a: top, w: 50, layers: [smartcases] }
+  - { p: [1, 2], k: "CAPS KEBAB-CASE", a: top, w: 50, layers: [smartcases] }
+  - { p: [7, 8], k: "Pascal Case", a: bottom, w: 50, layers: [smartcases] }
+  - { p: [8, 9], k: "CAPS SNAKE_CASE", a: bottom, w: 50, layers: [smartcases] }
+
+  - { p: [14, 15], k: "lower", a: mid, layers: [nav] }
+
+  - { p: [3, 4, 5], k: "insert", a: top, w: 90, h: 15, layers: [nav] }
+  - { p: [3, 4], k: "↑⇥ ⌦", a: mid, layers: [nav] }
+  - { p: [10, 11], k: "↑⇥ ⏎", a: mid, layers: [nav] }
+  - { p: [11, 12], k: "⇥ ⏎", a: mid, layers: [nav] }
+  - { p: [17, 18], k: "↓ ⇤", a: mid, layers: [nav] }
+  - { p: [18, 19], k: "↓ ⇥", a: mid, layers: [nav] }
+
+  - { p: [10, 11, 12], k: { t: '"0p', s: vim }, a: top, layers: [media] }
+  - { p: [10, 11], k: { t: "⎋o", s: vim }, a: mid, layers: [media] }
+  - { p: [11, 12], k: { t: "⎋O", s: vim }, a: mid, layers: [media] }
+  - { p: [17, 18, 19], k: { t: "⌃v", s: vim }, a: top, layers: [media] }
+  - { p: [17, 18], k: { t: "r", s: vim }, a: mid, layers: [media] }
+  - { p: [18, 19], k: { t: "V", s: vim }, a: mid, layers: [media] }
+
+  - { p: [3, 4, 5], k: "alpha1", a: top, h: 15, w: 90, layers: [custom] }
+  - { p: [4, 5], k: "⎋", a: mid, layers: [custom] }
+  - {
+      p: [8, 9],
+      k: { t: "plain1", s: "auto-layer" },
+      a: top,
+      w: 90,
+      layers: [custom],
+    }
+  - {
+      p: [10, 11],
+      k: { t: "plain1", s: "auto-layer" },
+      a: top,
+      w: 90,
+      layers: [custom],
+    }
+  - {
+      p: [7, 8],
+      k: { h: $$mdi:apple-keyboard-command$$, s: sticky },
+      a: mid,
+      layers: [custom],
+    }
+  - {
+      p: [11, 12],
+      k: { h: $$mdi:apple-keyboard-command$$, s: sticky },
+      a: mid,
+      layers: [custom],
+    }
