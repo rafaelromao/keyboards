@@ -119,5 +119,10 @@ archive_diamond_central_left="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f buil
 archive_diamond_peripheral_left="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/diamond_peripheral_left/zephyr/zmk.uf2 ] && mv build/diamond_peripheral_left/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/diamond_peripheral_left-zmk.uf2"
 archive_diamond_peripheral_right="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/diamond_peripheral_right/zephyr/zmk.uf2 ] && mv build/diamond_peripheral_right/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/diamond_peripheral_right-zmk.uf2"
 alias build_diamond_all="cd ${ZMK_HOME} && ${build_diamond_central_left} && ${archive_diamond_central_left} && ${build_diamond_central_dongle} && ${archive_diamond_central_dongle} && ${build_diamond_peripheral_left} && ${archive_diamond_peripheral_left} && ${build_diamond_peripheral_right} && ${archive_diamond_peripheral_right} && cd ${KEYBOARD_HOME}"
-alias build_diamond="cd ${ZMK_HOME} && ${build_diamond_central_dongle} && ${archive_diamond_central_dongle} && ${build_diamond_central_left} && ${archive_diamond_central_left} && cd $KEYBOARD_HOME"
+alias build_diamond="cd ${ZMK_HOME} && ${build_diamond_central_left} && ${archive_diamond_central_left} && cd $KEYBOARD_HOME"
 #alias build_diamond="cd ${ZMK_HOME} && ${build_diamond_central_left} && ${archive_diamond_central_left} && cd $KEYBOARD_HOME"
+
+echo "Creating Keymap Drawer alias..."
+generate_diagram="keymap -c ./docs/keymap-drawer-config.yaml draw ./docs/keymap-drawer.yaml > ./img/overview.svg"
+convert_diagram="inkscape --export-type png --export-filename ./img/overview.png --export-dpi 300 --export-background=white './img/overview.svg'"
+alias build_diagram="${generate_diagram} ; ${convert_diagram}"
