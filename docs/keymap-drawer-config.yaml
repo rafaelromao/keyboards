@@ -28,7 +28,7 @@ draw_config:
     rel_h: 12.0
     rx: 4.0
     ry: 4.0
-  svg_extra_style: ''
+  svg_extra_style: 'rect.held.alternate { fill: #ffe6f2; }'
   footer_text: Created with <a href="https://github.com/caksoylar/keymap-drawer">keymap-drawer</a>
   shrink_wide_legends: 7
   style_layer_activators: true
@@ -46,7 +46,7 @@ parse_config:
   trans_legend:
     t: ▽
     type: trans
-  mark_alternate_layer_activators: false
+  mark_alternate_layer_activators: true
   modifier_fn_map:
     left_ctrl: Ctl
     right_ctrl: Ctl

@@ -38,20 +38,36 @@ layers:
       ]
     - { t: $$mdi:repeat$$, s: repeat }
     - { t: $$mdi:keyboard-space$$ }
-    - { t: $$mdi:keyboard-space$$, type: "held" }
+    - { t: $$mdi:keyboard-space$$ }
     - "'"
   ç-extension:
     - ["", "", "", "", "", ""]
     - ["", "", "", ão, ã, "", "", ""]
-    - ["", { t: "", type: "held alternate" }, ões, õ, "", ""]
+    - ["", t: "", ões, õ, "", ""]
     - ""
     - ""
     - ""
     - ""
   vim_remap:
-    - [{t: b, s: vim}, {t: w, s: vim}, {t: e, s: vim}, {t: g, s: vim}, "", ""]
-    - ["", "", "", "", {t: h, s: vim}, {t: j, s: vim}, {t: k, s: vim}, {t: l, s: vim}]
-    - ["", "", "", {t: r, s: vim}, "", ""]
+    - [
+        { t: b, s: vim },
+        { t: w, s: vim },
+        { t: e, s: vim },
+        { t: g, s: vim },
+        "",
+        "",
+      ]
+    - [
+        "",
+        "",
+        "",
+        "",
+        { t: h, s: vim },
+        { t: j, s: vim },
+        { t: k, s: vim },
+        { t: l, s: vim },
+      ]
+    - ["", "", "", { t: r, s: vim }, "", ""]
     - ""
     - ""
     - ""
@@ -62,14 +78,14 @@ layers:
     - ["[", "]", "|", 1, 2, 3]
     - null
     - { t: $$mdi:keyboard-space$$, type: held }
-    - { t: $$mdi:keyboard-space$$ }
+    - { t: $$mdi:keyboard-space$$, h: raise }
     - 0
   raise:
     - ["^", "#", "$", "%", "=", ":"]
     - ["°", "`", "'", '"', "?", "-", "+", { t: ",", h: custom }]
     - ["<", ">", "~", "!", "/", "*"]
     - { t: $$mdi:repeat$$, s: repeat }
-    - { t: $$mdi:keyboard-space$$ }
+    - { t: $$mdi:keyboard-space$$, h: lower }
     - { type: held }
     - null
   functions:
@@ -151,7 +167,7 @@ layers:
         { h: sel line, t: ⎅ ⎯ },
         $$mdi:arrow-down$$,
         $$mdi:arrow-up$$,
-        { type: held },
+        { type: held alternate },
       ]
     - [
         { t: $$mdi:console$$, h: term, s: meh 3 },
@@ -175,12 +191,12 @@ layers:
         meh r,
         meh a,
         { t: meh e, h: $$mdi:apple-keyboard-command$$ },
-        type: held,
+        type: held alternate,
       ]
     - [meh f, meh c, meh p, meh h, "meh ,", "meh ."]
     - { t: meh k, h: nav }
     - { t: meh w, type: held }
-    - { t: meh z, type: held }
+    - { t: meh z, type: held alternate}
     - { t: meh j, h: nav }
   plain1:
     - [b, m, g, l, o, u]
@@ -189,14 +205,14 @@ layers:
     - { t: $$mdi:repeat$$, s: repeat, h: nav, type: held }
     - { t: $$mdi:keyboard-space$$, h: lower }
     - { t: plain2, s: sticky, h: raise }
-    - { t: $$mdi:apple-keyboard-shift$$, s: sticky, h: media, type: held }
+    - { t: $$mdi:apple-keyboard-shift$$, s: sticky, h: media, type: held alternate}
   plain2:
     - [q, qu, k, ô, ó, ú]
     - [y, z, x, w, ã, á, é, í]
     - [j, ç, v, õ, â, ê]
     - { t: $$mdi:repeat$$, s: repeat }
     - { t: $$mdi:keyboard-space$$ }
-    - { t: $$mdi:keyboard-space$$, type: "held alternate" }
+    - { t: $$mdi:keyboard-space$$ }
     - "'"
   nav:
     - [
@@ -228,7 +244,7 @@ layers:
     - { type: held }
     - null
     - { t: $$mdi:keyboard-space$$ }
-    - null
+    - h: media
   media:
     - [
         "⎋",
@@ -256,7 +272,7 @@ layers:
         $$mdi:skip-backward$$,
         $$mdi:skip-forward$$,
       ]
-    - null
+    - h: nav
     - { t: $$mdi:keyboard-space$$ }
     - null
     - { type: held }
