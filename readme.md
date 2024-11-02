@@ -12,30 +12,30 @@ The following pages explain how this layout works and which features are impleme
 
 ### Layers
 
-- [Alphas](docs/base.md)
+- [Alphas](docs/alphas.md)
 - [Symbols and Numbers](docs/symbols.md)
 - [Navigation and Media](docs/navigation.md)
-- [Shortcuts and Software](docs/shortcuts.md) 
+- [Shortcuts and Custom](docs/shortcuts.md) 
 - [Smartcases and Functions](docs/smartcases.md)
 
 ### Special Features
 
-- [Two Alpha Layers](docs/base.md)
-- [Thumb Shift](docs/base.md)
-- [Sentence Case](docs/base.md)
-- [Caps Word](docs/base.md)
-- [Magic Key](docs/base.md#magic-key)
-- [Repeat Key](docs/base.md#repeat-key)
+- [Two Alpha Layers](docs/alphas.md)
+- [Thumb Shift](docs/alphas.md)
+- [Sentence Case](docs/alphas.md)
+- [Caps Word](docs/alphas.md)
+- [Magic Key](docs/alphas.md#magic-key)
+- [Repeat Key](docs/alphas.md#repeat-key)
+- [VIM Remaps](docs/alphas.md)
+- [Shortcut Combos](docs/alphas.md)
 - [Num Word](docs/symbols.md#numword)
-- [Optimized Symbol Layers](docs/base.md)
-- [Coding Macros](docs/base.md)
-- [Smart Cases](docs/base.md)
-- [VIM Remaps](docs/base.md)
+- [Optimized Symbol Layers](docs/symbols.md)
+- [Coding Macros](docs/symbols.md)
+- [Smart Cases](docs/smartcases.md)
 - [Select Word](docs/shortcuts.md#select-word-and-select-line)
-- [Shortcut Combos](docs/base.md)
 - [Leader Key](docs/shortcuts.md#leader-key)
+- [Custom Shortcuts](docs/shortcuts.md)
 - [Mouse Keys](docs/navigation.md#mouse-keys)
-- [Contextual App Shortcuts](docs/base.md)
 
 ## About this repo
 

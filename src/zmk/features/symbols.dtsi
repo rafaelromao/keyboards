@@ -66,17 +66,9 @@
         SYMBOL(mc_end_semi_ent,    &kp END &kp SEMI &kp ENTER)
         TAPHOLD_SYMBOL(th_epa,     &mc_epa, &mc_end_semi_ent)
 
-        SHIFTED_SYMBOL(mm_unds,    &kp UNDERSCORE, &kp MINUS)
-
         SYMBOL(mc_dot,             &kp DOT &sl SEN_CASE)
         SYMBOL(mc_end_dot,         &kp END &kp DOT &sl SEN_CASE)
         TAPHOLD_SYMBOL(th_dot,     &mc_dot, &mc_end_dot)
-
-        SYMBOL(mc_c,               &kp C)
-        LAYERTAP_SYMBOL(th_c,      &mc_c)
-
-        SYMBOL(mc_comma,           &kp COMMA)
-        LAYERTAP_SYMBOL(th_comma,  &mc_comma)
 
         // Lower
 
@@ -97,18 +89,32 @@
         SYMBOL(mc_br,              &kp LS(R) &kp DOLLAR)
         SYMBOL(mc_euro,            &kp LS(LA(N2)))
 
-        // SYMBOL(mc_sqo,             &kp SQT &kp SPACE &kp SQUO_TERM)
-        // SYMBOL(mc_sqo_c,           &kp SQT &kp SPACE &kp C_SQUO_TERM)
-        SYMBOL(mc_sqo,             &kp SQT &kp SPACE)
-        SYMBOL(mc_sqo_c,           &kp SQT &kp SPACE)
+        SYMBOL(mc_sqo,             &kp SQT &kp SPACE &kp SQUO_TERM)
+        SYMBOL(mc_end_sqo,         &kp END &kp SQT &kp SQUO_TERM)
+        TAPHOLD_SYMBOL(th_sqo,     &mc_sqo, &mc_end_sqo)
+
+        SYMBOL(mc_sqo_c,           &kp SQT &kp SPACE &kp C_SQUO_TERM)
+        SYMBOL(mc_end_sqo_c,       &kp END &kp SQT &kp C_SQUO_TERM)
+        TAPHOLD_SYMBOL(th_sqo_c,   &mc_sqo_c, &mc_end_sqo_c)
+
         SYMBOL(mc_dqo,             &kp DQT &kp SPACE)
+        SYMBOL(mc_end_dqo,         &kp END &kp DQT)
+        TAPHOLD_SYMBOL(th_dqo,     &mc_dqo, &mc_end_dqo)
+
         SYMBOL(mc_bti,             &kp GRAVE &kp SPACE)
+        SYMBOL(mc_end_bti,         &kp END &kp GRAVE)
+        TAPHOLD_SYMBOL(th_bti,     &mc_bti, &mc_end_bti)
 
         SYMBOL(mc_tilde,           &kp TILDE &kp SPACE)
         LAYERTAP_SYMBOL(th_tilde,  &mc_tilde)
 
         SYMBOL(mc_and,             &kp AMPS &kp AMPS)
+        SYMBOL(mc_right_and,       &kp RIGHT &kp AMPS &kp AMPS)
+        TAPHOLD_SYMBOL(th_and,     &mc_and, &mc_right_and)
+
         SYMBOL(mc_or,              &kp PIPE &kp PIPE)
+        SYMBOL(mc_right_or,        &kp RIGHT &kp PIPE &kp PIPE)
+        TAPHOLD_SYMBOL(th_or,      &mc_or, &mc_right_or)
 
         SYMBOL(mc_rpar,            &kp RPAR)
         SYMBOL(mc_end_rpar,        &kp END &kp RPAR)
@@ -164,12 +170,7 @@
         SYMBOL(mc_star,            &kp STAR)
 
         SYMBOL(mc_lt,              &kp LT)
-        SYMBOL(mc_end_lt,          &kp END &kp LT)
-        TAPHOLD_SYMBOL(th_lt,      &mc_lt, &mc_end_lt)
-
         SYMBOL(mc_gt,              &kp GT)
-        SYMBOL(mc_end_gt,          &kp END &kp GT)
-        TAPHOLD_SYMBOL(th_gt,      &mc_gt, &mc_end_gt)
 
         SYMBOL(mc_excl,            &kp EXCL &sl SEN_CASE)
         SYMBOL(mc_end_excl,        &kp END &kp EXCL &sl SEN_CASE)

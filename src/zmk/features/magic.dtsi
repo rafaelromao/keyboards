@@ -33,7 +33,7 @@
                            >;                                                                                                  
             bindings =    <                                                                                                    
                             &tc_h                 &ac_ecir     &mc_qu        &kp V          &kp Y       &ac_aacu    &sl ALPHA2     &kp X          &kp X          &kp X      \
-                            &kp LS(A)  &mc_sqo    &ac_ecir_c   &mc_qu_c      &kp V          &kp LS(Y)   &ac_aacu_c  &sl ALPHA2     &kp LS(X)      &kp LS(X)      &kp LS(X)  \
+                            &kp LS(A)  &mc_sqo    &ac_ecir_c   &mc_qu_c      &kp LS(V)      &kp LS(Y)   &ac_aacu_c  &sl ALPHA2     &kp LS(X)      &kp LS(X)      &kp LS(X)  \
                             &kp A      &mc_sqo    &ac_ecir_s   &mc_qu        &kp A          &kp Y       &ac_aacu    &sl ALPHA2     &kp X          &kp X          &kp X      \
                             &kp A      &kp D      &kp LS(D)    &kp D         \
                            >;

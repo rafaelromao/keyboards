@@ -123,6 +123,6 @@ alias build_diamond="cd ${ZMK_HOME} && ${build_diamond_central_left} && ${archiv
 #alias build_diamond="cd ${ZMK_HOME} && ${build_diamond_central_left} && ${archive_diamond_central_left} && cd $KEYBOARD_HOME"
 
 echo "Creating Keymap Drawer alias..."
-generate_diagram="keymap -c ./docs/keymap-drawer-config.yaml draw ./docs/keymap-drawer.yaml > ./img/overview.svg"
+draw_diagram="keymap -c ./docs/keymap-drawer-config.yaml draw ./docs/keymap-drawer.yaml > ./img/overview.svg"
 convert_diagram="inkscape --export-type png --export-filename ./img/overview.png --export-dpi 300 --export-background=white './img/overview.svg'"
-alias build_diagram="${generate_diagram} ; ${convert_diagram}"
+alias build_diagram="${draw_diagram} ; ${convert_diagram}"
