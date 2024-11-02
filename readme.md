@@ -15,8 +15,8 @@ The following pages explain how this layout works and which features are impleme
 - [Alphas](docs/alphas.md)
 - [Symbols and Numbers](docs/symbols.md)
 - [Navigation and Media](docs/navigation.md)
+- [SmartCases and Functions](docs/smartcases.md)
 - [Shortcuts and Custom](docs/shortcuts.md) 
-- [Smartcases and Functions](docs/smartcases.md)
 
 ### Special Features
 
