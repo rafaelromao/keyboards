@@ -24,18 +24,18 @@ The following pages explain how this layout works and which features are impleme
 - [Thumb Shift](docs/alphas.md)
 - [Sentence Case](docs/alphas.md)
 - [Caps Word](docs/alphas.md)
-- [Magic Key](docs/alphas.md#magic-key)
-- [Repeat Key](docs/alphas.md#repeat-key)
+- [Magic Key](docs/alphas.md)
+- [Repeat Key](docs/alphas.md)
 - [VIM Remaps](docs/alphas.md)
 - [Shortcut Combos](docs/alphas.md)
-- [Num Word](docs/symbols.md#numword)
+- [Num Word](docs/symbols.md)
 - [Optimized Symbol Layers](docs/symbols.md)
 - [Coding Macros](docs/symbols.md)
 - [Smart Cases](docs/smartcases.md)
-- [Select Word](docs/shortcuts.md#select-word-and-select-line)
-- [Leader Key](docs/shortcuts.md#leader-key)
+- [Select Word](docs/shortcuts.md)
+- [Leader Key](docs/shortcuts.md)
 - [Custom Shortcuts](docs/shortcuts.md)
-- [Mouse Keys](docs/navigation.md#mouse-keys)
+- [Mouse Keys](docs/navigation.md)
 
 ## About this repo
 
@@ -51,14 +51,12 @@ There is an outdated QMK version of this keymap, available in a separate [qmk_us
 
 ### ZMK
 
-The zmk version used for this keymap is the one available in [this fork](https://github.com/rafaelromao/zmk), which contains some experimental code from [Nick Conway](https://github.com/nickconway/zmk-config), [Cem Aksoylar](https://github.com/caksoylar/zmk-config ), [Robert U](https://github.com/urob/zmk-config), [VoidYourWarranty2](https://github.com/voidyourwarranty2/zmk) and [Alexander Krikun](https://github.com/krikun98), to implement features like:
-- [Swapper](https://github.com/zmkfirmware/zmk/pull/1366)
-- [Smart Word](https://github.com/zmkfirmware/zmk/pull/1451)
+The zmk version used for this keymap is the one available in [this fork](https://github.com/rafaelromao/zmk), which contains some experimental to implement features like:
+- [Auto Layer](https://github.com/zmkfirmware/zmk/pull/1451)
 - [Leader Key](https://github.com/zmkfirmware/zmk/pull/1380)
-- [Dynamic Macros](https://github.com/zmkfirmware/zmk/pull/1351)
-- [Adaptive Keys](https://github.com/zmkfirmware/zmk/pull/2042)
+- [Antecedent Morph](https://github.com/zmkfirmware/zmk/pull/2042)
 - [Mouse Keys](https://github.com/zmkfirmware/zmk/pull/778)
-- [Some improvements for the Corne-ish Zen display](https://gist.github.com/caksoylar/c411313990978e1903c244f03039187a)
+- [Corne-ish Zen display improvements](https://gist.github.com/caksoylar/c411313990978e1903c244f03039187a)
 
 This fork is also updated to Zephyr 3.5.
 
@@ -71,12 +69,23 @@ The keyboards that run the ZMK implementation of this Keymap are listed below:
 
 Some features might not be available in ZMK. [This readme file](src/zmk/rafaelromao/readme.md) will indicate what features are missing.
 
+## Diagram
+
+The Diagram for my keymap was created using [Keymap Drawer](https://github.com/caksoylar/keymap-drawer). The source and config files can be found in the docs folder and the commands below can be used to generate an `svg` diagram and convert it to `png`, using Inkscape:
+
+```
+keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw ./docs/keymap-drawer/keymap-drawer.yaml > ./img/overview.svg
+inkscape --export-type png --export-filename ./img/overview.png --export-dpi 300 --export-background=white ./img/overview.svg
+```
+
 ## Building
 
 ### ZMK
 
 The script [init_zmk.sh](init_zmk.sh) will clone [the ZMK firmware](https://github.com/rafaelromao/zmk) and configure the toolchain.
 After [installing ZMK](https://zmk.dev/docs/development/setup) and running the init script above, [west cli](https://zmk.dev/docs/development/build-flash) should be working to compile and flash.
+
+The init script will also create some aliases to build the keyboards more easily, like `build_rommana`, for exemple. See more details in the specifict keyboard pages, liked above.
 
 ## References
 
@@ -129,8 +138,7 @@ Most features implemented here were based on the work referenced below.
 ## Resouces
 
 - [Keymap Drawer](https://github.com/caksoylar/keymap-drawer)
-- [KLE](http://www.keyboard-layout-editor.com)
-- [Keymap DB](https://keymapdb.com/rafaelromao/)
+- [Keymap DB](https://keymapdb.com/keymaps/rafaelromao/)
 - [QMK Docs](https://docs.qmk.fm)
 - [ZMK Docs](https://zmk.dev/docs)
 - [Keyboard Tester](https://config.qmk.fm/#/test)
