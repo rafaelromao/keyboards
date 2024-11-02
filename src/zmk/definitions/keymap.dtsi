@@ -5,15 +5,13 @@
 *
 */
 
-#include <dt-bindings/zmk/dynamic-macros.h>
-#include <dt-bindings/zmk/mouse.h>
 #include "keycodes.h"
 #include "config.dtsi"
 
+#include "../features/mouse.dtsi"
 #include "../features/accents.dtsi"
-#include "../features/thumbs.dtsi"
+#include "../features/smart.dtsi"
 #include "../features/magic.dtsi"
-#include "../features/swapper.dtsi"
 #include "../features/symbols.dtsi"
 #include "../features/shortcuts.dtsi"
 #include "../features/combos.dtsi"
@@ -30,8 +28,8 @@
                      bindings = <
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp Y
    &lt SHORTCUTS D     &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp W               &kp Z               &mt RGUI R          &mt RCTRL A         &mt RSHFT E         &lt SHORTCUTS I      
-   &kp Q               &mt RALT F          &th_c 0 0           &mt LALT P          &kp V               &kp J               &ht_magic RALT 0    &th_comma 0 0       &th_dot 0 0         &kp Y
-                                           &none               &ht_repeat NAV 0    &ltn LOWER SPACE    &msl_raise_smart    &ht_shift MEDIA 0   &none
+   &kp Q               &mt RALT F          &lt FUNCTIONS C     &mt LALT P          &kp V               &kp J               &ht_magic RALT 0    &lt SMART COMMA     &th_dot 0 0         &kp Y
+                                           &none               &ht_repeat NAV 0    &ltn LOWER SPACE    &msl_a2 RAISE 0     &ht_shift MEDIA 0   &none
                         >;
                 };
                 camel_case_layer {
@@ -48,8 +46,8 @@
                      bindings = <
    &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y)
    &lt SHORTCUTS RS(D) &mt LSHFT RS(N)     &mt LCTRL RS(S)     &mt LGUI RS(T)      &kp RS(W)           &kp RS(Z)           &mt RGUI RS(R)      &mt RCTRL RS(A)     &mt RSHFT RS(E)     &lt SHORTCUTS RS(I) 
-   &trans              &mt RALT RS(F)      &kp RS(C)           &mt LALT RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c RALT 0  &th_comma 0 0       &th_dot 0 0         &trans
-                                           &trans              &trans              &msk_spc LOWER 0    &th_sft_a2 RAISE 0  &ht_caps MEDIA 0    &trans
+   &trans              &mt RALT RS(F)      &lt FUNCTIONS RS(C) &mt LALT RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c RALT 0  &lt SMART COMMA     &th_dot 0 0         &trans
+                                           &trans              &tc_smart_line      &msk_spc LOWER 0    &th_sft_a2 RAISE 0  &ht_caps MEDIA 0    &trans
                         >;
                 };
 
@@ -89,122 +87,22 @@
                                            &trans              &trans              &msk_spcb LOWER 0   &trans              &trans              &trans
                            >;
                 };
-
                 capsword_layer {
                      display-name = "CASE";
                      bindings = <
    &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &kp LS(Y)
    &lt SHORTCUTS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTCUTS LS(I) 
-   &trans              &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c RALT 0  &th_comma 0 0       &th_dot 0 0         &trans
+   &trans              &mt RALT LS(F)      &lt FUNCTIONS LS(C) &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c RALT 0  &lt SMART COMMA     &th_dot 0 0         &trans
                                            &trans              &trans              &trans              &th_case_a2 RAISE 0 &th_cancel MEDIA 0  &trans
                         >;
                 };
-                capslock_layer {
+                capsline_layer {
                      display-name = "CASE";
                      bindings = <
    &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &kp LS(Y)
    &lt SHORTCUTS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTCUTS LS(I) 
-   &trans              &mt RALT LS(F)      &kp LS(C)           &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c RALT 0  &th_comma 0 0       &th_dot 0 0         &trans
+   &trans              &mt RALT LS(F)      &lt FUNCTIONS LS(C) &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c RALT 0  &lt SMART COMMA     &th_dot 0 0         &trans
                                            &trans              &trans              &th_sp_caps LOWER 0 &th_case_a2 RAISE 0 &th_cancel MEDIA 0  &trans
-                           >;
-                };
-                lower_layer {
-                     display-name = "LOWER";
-                     bindings = <
-   &trans              &td_lbrc            &td_rbrc            &th_bsl 0 0         &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
-   &lt NAV AT          &td_lpar            &td_rpar            &th_dqo 0 0         &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
-   &trans              &td_lbkt            &td_rbkt            &th_qmark 0 0       &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
-                                           &trans              &sl RAISE           &trans              &lt RAISE SPACE     &th_n0 MEDIA 0      &trans
-                           >;
-                };
-                raise_layer {
-                     display-name = "RAISE";
-                     bindings = <
-   &none               &kp F9              &kp F8              &kp F7              &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
-   &none               &kp F6              &kp F5              &kp F4              &none               &none               &th_mins 0 0        &th_plus 0 0        &th_slash 0 0       &lt CODING STAR  
-   &none               &kp F3              &kp F2              &kp F1              &none               &none               &th_excl 0 0        &th_lt 0 0          &th_gt 0 0          &trans
-                                           &trans              &key_repeat         &lt LOW_CP SPACE    &trans              &trans              &trans       
-                           >;
-                };
-                sentence_case_layer {
-                     display-name = "CASE";
-                     bindings = <
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
-                                           &trans              &trans              &th_sp_ns LOW_CP 0  &trans              &th_nsen MEDIA 0    &trans
-                           >;
-                };
-                sentence_case_ext1_layer {
-                     display-name = "CASE";
-                     bindings = <
-   &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y) 
-   &kp RS(D)           &mt LSHFT RS(N)     &mt LCTRL RS(S)     &mt LGUI RS(T)      &kp RS(W)           &kp RS(Z)           &mt RGUI RS(R)      &mt RCTRL RS(A)     &mt RSHFT RS(E)     &kp RS(I) 
-   &trans              &mt RALT RS(F)      &kp RS(C)           &mt LALT RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c RALT 0  &th_comma 0 0       &th_dot 0 0         &trans
-                                           &trans              &th_cancel NAV 0    &th_sp_ns LOW_CP 0  &msl RAI_CP SEN_E2  &th_nsen MEDIA 0    &trans
-                           >;
-                };
-                sentence_case_ext2_layer {
-                     display-name = "CASE";
-                     bindings = <
-   &none               &kp RS(Q)           &mc_qu_s            &kp RS(K)           &none               &none               &ac_ocir_s          &ac_oacu_s          &ac_uacu_s          &none
-   &kp RS(Y)           &kp RS(Z)           &kp RS(X)           &kp RS(W)           &none               &none               &ac_atil_s          &ac_aacu_s          &ac_eacu_s          &ac_iacu_s 
-   &trans              &kp RS(J)           &mc_ced_s           &reversed_magic_c   &none               &none               &ac_otil_s          &ac_acir_s          &ac_ecir_s          &trans
-                                           &trans              &kp RS(H)           &th_sp_ns LOW_CP 0  &msl RAI_CP SEN_E2  &th_nsen MEDIA 0    &trans
-                           >;
-                };
-                shortcuts_layer {
-                     display-name = "SHORTCUTS";
-                     bindings = <
-   &none               &kp ESC             &mc_files           &mc_preview         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &none    
-   &mo SYSTEM          &th_zoom RGUI 0     &mc_app_swapper     &th_tabs LGUI 0     &none               &none               &mc_seln            &mm_down_minus      &mm_up_plus         &mo SYSTEM
-   &none               &mc_term            &mc_calc            &mc_launch          &none               &none               &mc_selh            &ht_ref_clo_z0 0 0  &mc_clip            &trans
-                                           &trans              &mst FUSION FUSION  &mst NMODS NMODS    &mst CODING CODING  &mst NAV NAV_F      &trans
-                           >;
-                };
-                shortcuts_ext_1_layer {
-                     display-name = "SHORTCUTS";
-                     bindings = <
-   &trans              &trans              &trans              &trans              &trans              &trans              &mc_ext_sel         &trans              &trans              &trans    
-   &trans              &trans              &trans              &trans              &trans              &trans              &th_ext_sel LGUI 0  &trans              &trans              &trans  
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
-                                           &trans              &trans              &trans              &trans              &trans              &trans
-                           >;
-                };
-                shortcuts_ext_2_layer {
-                     display-name = "SHORTCUTS";
-                     bindings = <
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &sw_win_b           &sw_win_f           &trans  
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &mc_app_quit        &trans              &trans 
-                                           &trans              &trans              &trans              &trans              &trans              &trans
-                           >;
-                };
-                coding_layer {
-                     display-name = "CODING";
-                     bindings = <
-   &none               &kp ESC             &mm_build           &mm_break           &none               &none               &mm_typematch       &kp ENTER           &kp ESC             &none    
-   &mm_project         &th_find LSHFT 0    &mm_run             &mm_debug           &none               &none               &mm_actions         &mm_down            &mt RSHFT UP        &none
-   &trans              &mm_recent          &mm_swapper         &mm_usages          &none               &none               &mm_docs            &mm_refac           &mc_comment         &none
-                                           &trans              &th_step_into NAV 0 &mm_step_over       &trans              &trans              &trans
-                           >;
-                };
-                no_mods_layer {
-                     display-name = "NO MODS";
-                     bindings = <
-   &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp Y
-   &kp D               &kp N               &kp S               &kp T               &kp W               &kp Z               &kp R               &kp A               &kp E               &kp I 
-   &trans              &kp F               &kp C               &kp P               &kp V               &kp J               &kp H               &kp COMMA           &kp DOT             &trans
-                                           &none               &key_repeat         &trans              &msl NMODS2 NMODS2  &sk LSHFT           &none
-                           >;
-                };
-                no_mods_alpha2_layer {
-                     display-name = "NO MODS";
-                     bindings = <
-   &none               &kp Q               &mc_qu              &kp K               &none               &none               &ac_ocir            &ac_oacu            &ac_uacu            &none
-   &kp Y               &kp Z               &kp X               &kp W               &none               &none               &ac_atil            &ac_aacu            &ac_eacu            &ac_iacu 
-   &trans              &kp J               &mc_ced             &kp V               &none               &none               &ac_otil            &ac_acir            &ac_ecir            &trans
-                                           &none               &key_repeat         &trans              &none               &sk LSHFT           &none
                            >;
                 };
                 alpha2_layer {
@@ -213,7 +111,7 @@
    &none               &kp Q               &mc_qu              &kp K               &none               &none               &ac_ocir            &ac_oacu            &ac_uacu            &none
    &kp Y               &kp Z               &kp X               &kp W               &none               &none               &ac_atil            &ac_aacu            &ac_eacu            &ac_iacu 
    &trans              &kp J               &mc_ced             &reversed_magic     &none               &none               &ac_otil            &ac_acir            &ac_ecir            &trans
-                                           &trans              &trans              &kp SPACE           &kp SPACE           &mc_sqo             &trans
+                                           &none               &mc_sqo              &kp SPACE           &kp SPACE           &mc_sqo             &none
                            >;
                 };
                 ccedil_layer {
@@ -231,7 +129,7 @@
    &none               &kp RS(Q)           &mc_qu_s            &kp RS(K)           &none               &none               &ac_ocir_s          &ac_oacu_s          &ac_uacu_s          &none
    &kp RS(Y)           &kp RS(Z)           &kp RS(X)           &kp RS(W)           &none               &none               &ac_atil_s          &ac_aacu_s          &ac_eacu_s          &ac_iacu_s 
    &trans              &kp RS(J)           &mc_ced_s           &reversed_magic_c   &none               &none               &ac_otil_s          &ac_acir_s          &ac_ecir_s          &trans 
-                                           &trans              &trans              &kp SPACE           &kp SPACE           &mc_dqo             &trans
+                                           &trans              &mc_dqo             &kp SPACE           &kp SPACE           &mc_dqo             &trans
                            >;
                 };
                 case_alpha2_layer {
@@ -240,7 +138,7 @@
    &none               &kp LS(Q)           &mc_qu_c            &kp LS(K)           &none               &none               &ac_ocir_c          &ac_oacu_c          &ac_uacu_c          &none
    &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &none               &none               &ac_atil_c          &ac_aacu_c          &ac_eacu_c          &ac_iacu_c 
    &trans              &kp LS(J)           &mc_ced_c           &reversed_magic_c   &none               &none               &ac_otil_c          &ac_acir_c          &ac_ecir_c          &trans
-                                           &trans              &trans              &kp SPACE           &kp SPACE           &mc_sqo_c           &trans
+                                           &trans              &mc_sqo_c           &kp SPACE           &kp SPACE           &mc_sqo_c           &trans
                            >;
                 };
                 case_ccedil_layer {
@@ -252,68 +150,192 @@
                                            &trans              &trans              &trans              &kp BACKSPACE       &trans              &trans
                            >;
                 };
-                fusion360_layer {
-                     display-name = "FUSION";
+
+
+
+                lower_layer {
+                     display-name = "LOWER";
                      bindings = <
-   &trans              &trans              &trans              &trans              &trans              &none               &kp L               &kp O               &kp M               &none
-   &trans              &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp W               &kp Z               &mt RGUI R          &mt RCTRL A         &mt RSHFT E         &lt NAV I
-   &trans              &mt RALT F          &trans              &mt LALT P          &trans              &none               &mt RALT H          &kp C               &kp F               &none
-                                           &trans              &trans              &lt LOW_CP SPACE    &th_orbit RAI_CP 0  &th_pan MEDIA 0     &none
+   &trans              &th_lbrc 0 0        &th_rbrc 0 0        &kp BSLH            &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
+   &lt CUSTOM AT       &th_lpar 0 0        &th_rpar 0 0        &kp AMPS            &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
+   &trans              &th_lbkt 0 0        &th_rbkt 0 0        &kp PIPE            &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
+                                           &trans              &sl RAISE           &trans              &lt RAISE SPACE     &th_n0 MEDIA 0      &trans
                            >;
                 };
+                raise_layer {
+                     display-name = "RAISE";
+                     bindings = <
+   &none               &mc_caret           &kp HASH            &kp DOLLAR          &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
+   &mc_degree          &th_bti 0 0         &th_sqo 0 0         &th_dqo 0 0         &none               &none               &th_qmark 0 0       &mc_minus           &mc_plus            &lt CUSTOM COMMA
+   &none               &mc_lt              &mc_gt              &mc_tilde           &none               &none               &th_excl 0 0        &mc_slash           &mc_star            &trans
+                                           &trans              &key_repeat         &lt LOW_CP SPACE    &trans              &trans              &trans       
+                           >;
+                };
+                functions_layer {
+                     display-name = "FUN";
+                     bindings = <
+   &none               &sys_reset          &none               &mc_lock            &none               &none               &kp F7             &kp F8               &kp F9              &none 
+   &none               &bootloader         &none               &kp C_SLEEP         &none               &none               &kp F4             &kp F5               &kp F6              &none      
+   &none               &none               &none               &leader             &none               &none               &kp F1             &kp F2               &kp F3              &none
+                                           &none               &mo PLAIN1          &none               &none               &mo PLAIN1          &none
+                        >;
+                };
+                smartcases_layer {
+                     display-name = "SMART";
+                     bindings = <
+   &none               &to SLASH_CASE      &tc_smart_line      &to KEBAB_CASE      &none               &none               &mc_lock           &none                &sys_reset          &none 
+   &none               &to CAMEL_CASE      &tc_smart_word      &to SNAKE_CASE      &none               &none               &kp C_SLEEP        &none                &bootloader         &none      
+   &none               &bt BT_PRV          &bt BT_NXT          &bt BT_CLR          &none               &none               &leader            &none                &none               &none
+                                           &none               &mo PLAIN1          &none               &none               &mo PLAIN1          &none
+                        >;
+                };
+
+
+
+                sentence_case_layer {
+                     display-name = "CASE";
+                     bindings = <
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
+                                           &trans              &trans              &th_sp_ns LOW_CP 0  &trans              &th_nsen MEDIA 0    &trans
+                           >;
+                };
+                sentence_case_ext1_layer {
+                     display-name = "CASE";
+                     bindings = <
+   &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y) 
+   &kp RS(D)           &mt LSHFT RS(N)     &mt LCTRL RS(S)     &mt LGUI RS(T)      &kp RS(W)           &kp RS(Z)           &mt RGUI RS(R)      &mt RCTRL RS(A)     &mt RSHFT RS(E)     &kp RS(I) 
+   &trans              &mt RALT RS(F)      &lt FUNCTIONS RS(C) &mt LALT RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c RALT 0  &lt SMART COMMA     &th_dot 0 0         &trans
+                                           &trans              &th_cancel NAV 0    &th_sp_ns LOW_CP 0  &msl RAI_CP SEN_E2  &th_nsen MEDIA 0    &trans
+                           >;
+                };
+                sentence_case_ext2_layer {
+                     display-name = "CASE";
+                     bindings = <
+   &none               &kp RS(Q)           &mc_qu_s            &kp RS(K)           &none               &none               &ac_ocir_s          &ac_oacu_s          &ac_uacu_s          &none
+   &kp RS(Y)           &kp RS(Z)           &kp RS(X)           &kp RS(W)           &none               &none               &ac_atil_s          &ac_aacu_s          &ac_eacu_s          &ac_iacu_s 
+   &trans              &kp RS(J)           &mc_ced_s           &reversed_magic_c   &none               &none               &ac_otil_s          &ac_acir_s          &ac_ecir_s          &trans
+                                           &trans              &kp RS(H)           &th_sp_ns LOW_CP 0  &msl RAI_CP SEN_E2  &th_nsen MEDIA 0    &trans
+                           >;
+                };
+
+
+
+                shortcuts_layer {
+                     display-name = "SHORTCUTS";
+                     bindings = <
+   &none               &kp ESC             &mc_files           &mc_preview         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &none    
+   &none               &th_zoom RGUI 0     &mc_app_swapper     &th_tabs LGUI 0     &none               &none               &mc_seln            &mm_down_minus      &mm_up_plus         &none
+   &none               &mc_term            &mc_calc            &mc_apps            &none               &none               &mc_selh            &ht_ref_clo_z0 0 0  &mc_clip            &trans
+                                           &trans              &trans              &lt CUSTOM SPACE    &lt CUSTOM SPACE    &trans              &trans
+                           >;
+                };
+                shortcuts_ext_1_layer {
+                     display-name = "SHORTCUTS";
+                     bindings = <
+   &trans              &trans              &trans              &trans              &trans              &trans              &mc_ext_sel         &trans              &trans              &trans    
+   &trans              &trans              &trans              &trans              &trans              &trans              &th_ext_sel LGUI 0  &trans              &trans              &trans  
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
+                                           &trans              &trans              &trans              &trans              &trans              &trans
+                           >;
+                };
+                shortcuts_ext_2_layer {
+                     display-name = "SHORTCUTS";
+                     bindings = <
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &mc_win_b           &mc_win_f           &trans  
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &mc_app_quit        &trans              &trans 
+                                           &trans              &trans              &trans              &trans              &trans              &trans
+                           >;
+                };
+                custom_layer {
+                     display-name = "CUSTOM";
+                     bindings = <
+   &none               &mc_meh_b           &mc_meh_m           &mc_meh_g           &none               &none               &mc_meh_l           &mc_meh_o           &mc_meh_u           &none    
+   &none               &th_meh_n LGUI 0    &mc_meh_s           &mc_meh_t           &none               &none               &mc_meh_r           &mc_meh_a           &th_meh_e RGUI 0    &none
+   &trans              &mc_meh_f           &mc_meh_c           &mc_meh_p           &none               &none               &mc_meh_h           &mc_meh_comma       &mc_meh_dot         &none
+                                           &trans              &th_meh_k NAV 0     &mc_meh_w           &mc_meh_z           &th_meh_j NAV 0     &trans
+                           >;
+                };
+
+
+                plain1_layer {
+                     display-name = "PLAIN 1";
+                     bindings = <
+   &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp Y
+   &kp D               &kp N               &kp S               &kp T               &kp W               &kp Z               &kp R               &kp A               &kp E               &kp I 
+   &trans              &kp F               &kp C               &kp P               &kp V               &kp J               &kp H               &kp COMMA           &kp DOT             &trans
+                                           &none               &ht_repeat NAV 0    &lt LOW_CP SPACE    &msl_p2 RAI_CP 0    &mo MEDIA           &none
+                           >;
+                };
+                plain2_layer {
+                     display-name = "PLAIN 2";
+                     bindings = <
+   &none               &kp Q               &mc_qu              &kp K               &none               &none               &ac_ocir            &ac_oacu            &ac_uacu            &none
+   &kp Y               &kp Z               &kp X               &kp W               &none               &none               &ac_atil            &ac_aacu            &ac_eacu            &ac_iacu 
+   &trans              &kp J               &mc_ced             &kp V               &none               &none               &ac_otil            &ac_acir            &ac_ecir            &trans
+                                           &none               &mc_sqo             &lt LOW_CP SPACE    &lt RAI_CP SPACE    &mc_sqo             &none
+                           >;
+                };
+
+
+
                 navigation_layer {
                      display-name = "NAV";
                      bindings = <
    &none               &mc_prevword        &kp PAGE_UP         &mc_nextword        &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
-   &mo LOW_CP          &kp LSHFT           &kp LCTRL           &kp LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &none               &kp LSHFT           &kp LCTRL           &kp LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
    &none               &kp RALT            &kp PAGE_DOWN       &kp LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &trans
                                            &trans              &trans              &trans              &kp SPACE           &mo MEDIA           &trans
                         >;
                 };
+
+
+
                 lower_copy_layer {
                      display-name = "LOWER";
                      bindings = <
-   &trans              &td_lbrc            &td_rbrc            &th_bsl 0 0         &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
-   &lt NAV_F AT        &td_lpar            &td_rpar            &th_dqo 0 0         &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
-   &trans              &td_lbkt            &td_rbkt            &th_qmark 0 0       &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
+   &trans              &th_lbrc 0 0        &th_rbrc 0 0        &kp BSLH            &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
+   &kp AT              &th_lpar 0 0        &th_rpar 0 0        &kp AMPS            &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
+   &trans              &th_lbkt 0 0        &th_rbkt 0 0        &kp PIPE            &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
                                            &trans              &sl RAI_CP          &trans              &lt RAI_CP SPACE    &th_n0 MEDIA 0      &trans
                            >;
                 };
                 raise_copy_layer {
                      display-name = "RAISE";
                      bindings = <
-   &none               &kp F9              &kp F8              &kp F7              &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
-   &none               &kp F6              &kp F5              &kp F4              &none               &none               &th_mins 0 0        &th_plus 0 0        &th_slash 0 0       &lt CODING STAR  
-   &none               &kp F3              &kp F2              &kp F1              &none               &none               &th_excl 0 0        &th_lt 0 0          &th_gt 0 0          &trans
+   &none               &mc_caret           &kp HASH            &kp DOLLAR          &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
+   &mc_degree          &th_bti 0 0         &th_sqo 0 0         &th_dqo 0 0         &none               &none               &th_qmark 0 0       &mc_minus           &mc_plus            &kp STAR  
+   &none               &mc_lt              &mc_gt              &mc_tilde           &none               &none               &th_excl 0 0        &mc_slash           &mc_star            &trans
                                            &trans              &key_repeat         &kp SPACE           &kp SPACE           &trans              &trans       
                            >;
                 };
+
+
+
                 media_layer {
-                     display-name = "MEDIA";
-                     bindings = <
-   &none               &kp ESC             &mkp LCLK           &mkp RCLK           &none               &none               &kp TAB             &kp ENTER           &kp BACKSPACE       &none
+                    display-name = "MEDIA";
+                    bindings = <
+   &none               &kp ESC             &mkp LCLK           &mkp RCLK           &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
    &none               &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &none               &mc_mic             &mt C_MUTE C_VOL_DN &kp C_VOL_UP        &mc_cam
    &none               &msc SCRL_DOWN      &mmv MOVE_DOWN      &msc SCRL_UP        &none               &none               &kp C_PP            &kp C_PREV          &kp C_NEXT          &trans
-                                           &trans              &mo NAV_F           &kp SPACE           &trans              &trans              &trans
-                           >;
+                                           &trans              &mo NAV_F           &kp SPACE           &trans              &trans              &trans                           >;
                 };
+
+
+
                 fixed_navigation_layer {
                      display-name = "NAV";
                      bindings = <
-   &none               &kp ESC             &mkp LCLK           &mkp RCLK           &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
-   &mc_shortcuts       &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
-   &none               &msc SCRL_DOWN      &mmv MOVE_DOWN      &msc SCRL_UP        &none               &none               &kp DEL             &kp HOME            &kp END             &trans
-                                           &trans              &mo NAV_F           &trans              &trans              &to ALPHA1          &trans
+   &none               &mc_prevword        &kp PAGE_UP         &mc_nextword        &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
+   &none               &kp LSHFT           &kp LCTRL           &kp LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &none               &kp RALT            &kp PAGE_DOWN       &kp LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &trans
+                                           &trans              &trans              &trans              &kp SPACE           &trans              &trans
                            >;
                 };
-                system_layer {
-                     display-name = "SYSTEM";
-                     bindings = <
-   &none               &none               &none               &sys_reset          &none               &none               &sys_reset          &none               &none               &none 
-   &none               &none               &none               &bootloader         &none               &none               &bootloader         &kp C_SLEEP         &none               &none      
-   &none               &none               &none               &none               &none               &none               &none               &mc_lock            &none               &none
-                                           &trans              &bt BT_CLR          &bt BT_SEL 0        &bt BT_PRV          &bt BT_NXT          &trans
-                        >;
-                };
+
+
+
         };
 };

@@ -39,31 +39,13 @@
         LEADER_MACRO(mc_section, &kp LA(N6))
         LEADER_MACRO(mc_orda,    &kp LA(N0))
         LEADER_MACRO(mc_ordo,    &kp LA(N9))
-        LEADER_MACRO(mc_deg,     &kp LS(LA(N8)))
 	};
 
 	leader_sequences {
 		compatible = "zmk,leader-sequences";
 
-		LEADER_SEQ(ld_sect, RBR LHM , &mc_section, ALPHA1)
-		LEADER_SEQ(ld_orda, RBR RTM , &mc_orda, ALPHA1)
-		LEADER_SEQ(ld_ordo, RBR RHM , &mc_ordo, ALPHA1)
-		LEADER_SEQ(ld_deg,  RBR LHI , &mc_deg, ALPHA1)
+		LEADER_SEQ(ld_sect, RBR LHM , &mc_section, ALPHA1 SMART FUNCTIONS)
+		LEADER_SEQ(ld_orda, RBR RTM , &mc_orda, ALPHA1 SMART FUNCTIONS)
+		LEADER_SEQ(ld_ordo, RBR RHM , &mc_ordo, ALPHA1 SMART FUNCTIONS)
 	};
-
-    dynamic_macros {
-        dynmacro: dynmacro {
-            compatible = "zmk,behavior-dynamic-macro";
-            label = "dynmacro";
-            #binding-cells = <1>;
-            wait-ms = <1>;
-        };
-
-        td_dynmacro: td_dynmacro {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <TD_TAPPING_TERM>;
-            bindings = <&dynmacro PLAY>, <&dynmacro RECORD>, <&none>;
-        };
-    };
 };

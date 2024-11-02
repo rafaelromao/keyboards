@@ -1,7 +1,7 @@
 ## lowprokb.ca/corneish-zen
 ### A premium split keyboard, based on the Corne
 
-![img](../../../../../img/zen.jpeg)
+![img](../../../../../img/zen/zen.jpeg)
 
 ### Tenting Base
 

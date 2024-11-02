@@ -6,10 +6,10 @@
 Rommana, a handwired board built using a [Seeeduino Xiao RP2040](https://pt.aliexpress.com/item/4000131085893.html).
 
 This board has a programmable LED, used for layer and other statuses indication.
-Some build pictures can be found [here](../../../../../../docs/rommana.md).
+Some build pictures can be found [here](../../../../../../docs/builds/rommana.md).
 
 ### Rommana
-![img](../../../../../../../img/rommana.jpeg)
+![img](../../../../../../../img/rommana/rommana.jpeg)
 
 Parts:
 - 30 MX 5-pin switches.

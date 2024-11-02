@@ -6,7 +6,7 @@
 Dactyl Cygnus is a handwired board originally designed by @juhakaup and available at [https://github.com/juhakaup/keyboards](https://github.com/juhakaup/keyboards).
 
 ### Dactyl Cygnus
-![img](../../../../../../../img/cygnus.jpeg)
+![img](../../../../../../../img/cygnus/cygnus.jpeg)
 
 Parts:
 - 36 MX switches (Gateron Oil Kings).
@@ -27,7 +27,7 @@ Parts for the dongle:
 - [1 Supermini NRF52840](https://www.aliexpress.com/item/1005006035267231.html).
 - [1 500mAh 3.7v battery - 752035](https://www.aliexpress.com/item/1005005984848543.html)
 
-[Here](../../../../../../../docs/cygnus.md) you can see some build images.
+[Here](../../../../../../../docs/builds/cygnus.md) you can see some build images.
 
 ### ZMK
 

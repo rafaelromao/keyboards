@@ -39,6 +39,11 @@ noremap kk zz
 noremap ll gg
 ```
         
+#### Standard Mods
+
+- Standard modifiers are available in Navigation the layer.
+- These modifiers do not have one-shot or mod-tap behaviors, so they can be used in situations which a tap or multi tap in a modifier key is required.
+
 ### Media
 - The Media layer gives access to [Standard Modifiers](modifiers.md#standard-modifiers), Media controls, Esc and a Save shortcut.
 
@@ -47,14 +52,4 @@ noremap ll gg
 
 #### Fixed Navigation Layer
 - A fixed version of the Navigation layer can be toggled on permanently using the Shortcuts layer.
-- In this layer, the left side is replaced by the left side of the Media layer, giving access to Mouse Keys.
 - This clone works the same way as the original Navigation layer, but the outer right thumb key will activate the Media layer instead of the System layer.
-
-##
-[Home](../readme.md) | 
-[Base](base.md) |
-[Modifiers](modifiers.md) |
-[Accents and Macros](macros.md) |
-[Symbols and Numbers](symbols.md) |
-Navigation and Media |
-[System](system.md)

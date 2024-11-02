@@ -12,30 +12,29 @@ The following pages explain how this layout works and which features are impleme
 
 ### Layers
 
-- [Alphas](docs/base.md)
+- [Alphas](docs/alphas.md)
 - [Symbols and Numbers](docs/symbols.md)
-- [Shortcuts and Macros](docs/shortcuts.md) 
 - [Navigation and Media](docs/navigation.md)
-- [System](docs/system.md)
+- [Shortcuts and Custom](docs/shortcuts.md) 
+- [Smartcases and Functions](docs/smartcases.md)
 
-### Main Features
+### Special Features
 
-- [Smart Modifiers](docs/modifiers.md)
-- [Smart Thumb Keys](docs/base.md#smart-thumb-keys)
-- [Smart Shift / Caps Word](docs/base.md#smart-thumb-keys)
-- [Smart Cases](docs/modifiers.md#smart-cases)
-- [Sentence Case](docs/base.md#sentence-case)
-- [Repeat Key](docs/base.md#repeat-key)
-- [Magic Key](docs/base.md#magic-key)
-- [Shortcut Combos](docs/base.md#base-layer-combos)
-- [NumWord](docs/symbols.md#numword)
-- [Leader Key](docs/shortcuts.md#leader-key)
-- [Swapper](docs/shortcuts.md#swapper)
+- [Two Alpha Layers](docs/alphas.md)
+- [Thumb Shift](docs/alphas.md)
+- [Sentence Case](docs/alphas.md)
+- [Caps Word](docs/alphas.md)
+- [Magic Key](docs/alphas.md#magic-key)
+- [Repeat Key](docs/alphas.md#repeat-key)
+- [VIM Remaps](docs/alphas.md)
+- [Shortcut Combos](docs/alphas.md)
+- [Num Word](docs/symbols.md#numword)
+- [Optimized Symbol Layers](docs/symbols.md)
+- [Coding Macros](docs/symbols.md)
+- [Smart Cases](docs/smartcases.md)
 - [Select Word](docs/shortcuts.md#select-word-and-select-line)
-- [Dynamic Macros](docs/shortcuts.md#dynamic-macros)
-- [Coding Dancing](docs/symbols.md#coding-dancing)
-- [Coding Shortcuts](docs/shortcuts.md#coding-shortcuts)
-- [Fusion 360 Shortcuts](docs/shortcuts.md#fusion-360)
+- [Leader Key](docs/shortcuts.md#leader-key)
+- [Custom Shortcuts](docs/shortcuts.md)
 - [Mouse Keys](docs/navigation.md#mouse-keys)
 
 ## About this repo
@@ -112,12 +111,13 @@ Most features implemented here were based on the work referenced below.
 - [Thomas Baart](https://thomasbaart.nl/category/mechanical-keyboards/firmware/qmk)
 
 ### ZMK
-- [Nick Conway](https://github.com/nickconway/zmk-config)
-- [Cem Aksoylar](https://github.com/caksoylar/zmk-config )
-- [Robert U](https://github.com/urob/zmk-config)
-- [Alexander Krikun](https://github.com/krikun98)
-- [Void Your Warranty](https://github.com/voidyourwarranty2/zmk)
-- [SSBB](https://github.com/ssbb/awesome-zmk) 
+- [petejohanson](https://github.com/petejohanson/)
+- [bravekarma](https://github.com/caksoylar)
+- [nickconway](https://github.com/nickconway)
+- [urob](https://github.com/urob)
+- [ssbb](https://github.com/ssbb)
+- [krikun98](https://github.com/krikun98)
+- [voidyourwarranty2](https://github.com/voidyourwarranty2/zmk)
 
 ### 3D Printing and Handwiring
 - [Jan Lunge](https://m.youtube.com/@JanLunge)
@@ -128,7 +128,8 @@ Most features implemented here were based on the work referenced below.
 
 ## Resouces
 
-- [KLE](http://www.keyboard-layout-editor.com/#/gists/38f4435ff9a10256d9a7e1a0645c2fec)
+- [Keymap Drawer](https://github.com/caksoylar/keymap-drawer)
+- [KLE](http://www.keyboard-layout-editor.com)
 - [Keymap DB](https://keymapdb.com/rafaelromao/)
 - [QMK Docs](https://docs.qmk.fm)
 - [ZMK Docs](https://zmk.dev/docs)
