@@ -6,7 +6,7 @@
 Diamond is a handwired board originally designed by me but heavily inspired by the [Rommana](https://github.com/AlaaSaadAbdo/Rommana) and using the switch holders of the [Dactyl Cygnus](https://github.com/juhakaup/keyboards).
 
 ### Diamond
-![img](../../../../../../../img/diamond.jpeg)
+![img](../../../../../../../img/diamond/diamond.jpeg)
 
 Parts for the keyboard:
 - 24 MX switches (Boba U4).
@@ -32,7 +32,7 @@ Parts for the dongle:
 - [1 Supermini NRF52840](https://www.aliexpress.com/item/1005006035267231.html).
 - [1 500mAh 3.7v battery - 752035](https://www.aliexpress.com/item/1005005984848543.html)
 
-[Here](../../../../../../../docs/diamond.md) you can see some build images.
+[Here](../../../../../../../docs/builds/diamond.md) you can see some build images.
 
 ### ZMK
 
