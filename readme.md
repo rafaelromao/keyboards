@@ -85,7 +85,7 @@ inkscape --export-type png --export-filename ./img/overview.png --export-dpi 300
 The script [init_zmk.sh](init_zmk.sh) will clone [the ZMK firmware](https://github.com/rafaelromao/zmk) and configure the toolchain.
 After [installing ZMK](https://zmk.dev/docs/development/setup) and running the init script above, [west cli](https://zmk.dev/docs/development/build-flash) should be working to compile and flash.
 
-The init script will also create some aliases to build the keyboards more easily, like `build_rommana`, for exemple. See more details in the specifict keyboard pages, liked above.
+The init script will also create some aliases to build the keyboards more easily, like `build_rommana`, for example. See more details in the specifict keyboard pages, liked above.
 
 ## References
 
