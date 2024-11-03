@@ -1,7 +1,7 @@
 # rafaelromao's keyboard layout
 
 ## Two Alpha Layers
-- This is split keyboard layout that goes from 24 to 34 keys, from the formats 1333+2 to 3x5+2. Most of the time I use boards in the 23332+2 format, like the Rommana and Hummingbird, but with the 1333+2 keymap.
+- This is split keyboard layout with 24  keys, in the formats 1333+2.
 - This layout works well with the OS configured for US International keyboards.
 - It was designed mostly for coding and typing in Portuguese and English.
 - It reduces the usage of pinkies and indexes and considers the right hand as dominant.
