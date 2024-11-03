@@ -269,7 +269,7 @@ layers:
     - { t: $$mdi:repeat$$, s: repeat, h: nav, type: held }
     - { t: $$mdi:keyboard-space$$, h: lower }
     - { t: plain2, s: sticky, h: raise }
-    - { t: $$mdi:apple-keyboard-shift$$, type: held alternate }
+    - { t: $$mdi:apple-keyboard-shift$$, s: sticky, h: media, type: held alternate }
   plain2:
     - [q, qu, k, ô, ó, ú]
     - [y, z, x, w, ã, á, é, í]

@@ -90,11 +90,11 @@
         SYMBOL(mc_euro,            &kp LS(LA(N2)))
 
         SYMBOL(mc_sqo,             &kp SQT &kp SPACE &kp SQUO_TERM)
-        SYMBOL(mc_end_sqo,         &kp END &kp SQT &kp SQUO_TERM)
+        SYMBOL(mc_end_sqo,         &kp END &kp SQT &kp SPACE &kp SQUO_TERM)
         TAPHOLD_SYMBOL(th_sqo,     &mc_sqo, &mc_end_sqo)
 
         SYMBOL(mc_sqo_c,           &kp SQT &kp SPACE &kp C_SQUO_TERM)
-        SYMBOL(mc_end_sqo_c,       &kp END &kp SQT &kp C_SQUO_TERM)
+        SYMBOL(mc_end_sqo_c,       &kp END &kp SQT &kp SPACE &kp C_SQUO_TERM)
         TAPHOLD_SYMBOL(th_sqo_c,   &mc_sqo_c, &mc_end_sqo_c)
 
         SYMBOL(mc_dqo,             &kp DQT &kp SPACE)

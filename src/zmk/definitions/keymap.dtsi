@@ -271,9 +271,9 @@
                 shifted_plain2_layer {
                      display-name = "PLAIN 2";
                      bindings = <
-   &none               &kp LS(Q)           &mc_qu_s            &kp LS(K)           &none               &none               &ac_ocir_s            &ac_oacu_s            &ac_uacu_s            &none
-   &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &none               &none               &ac_atil_s            &ac_aacu_s            &ac_eacu_s            &ac_iacu_s 
-   &trans              &kp LS(J)           &mc_ced_s           &kp LS(V)           &none               &none               &ac_otil_s            &ac_acir_s            &ac_ecir_s            &trans
+   &none               &kp RS(Q)           &mc_qu_s            &kp RS(K)           &none               &none               &ac_ocir_s            &ac_oacu_s            &ac_uacu_s            &none
+   &kp RS(Y)           &kp RS(Z)           &kp RS(X)           &kp RS(W)           &none               &none               &ac_atil_s            &ac_aacu_s            &ac_eacu_s            &ac_iacu_s 
+   &trans              &kp RS(J)           &mc_ced_s           &kp RS(V)           &none               &none               &ac_otil_s            &ac_acir_s            &ac_ecir_s            &trans
                                            &none               &mc_sqo             &lt LOW_CP SPACE    &lt RAI_CP SPACE    &mc_sqo             &none
                            >;
                 };

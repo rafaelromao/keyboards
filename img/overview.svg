@@ -2436,6 +2436,9 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 <g transform="translate(450, 238)" class="key held alternate keypos-23">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key held alternate"/>
 <use href="#mdi:apple-keyboard-shift" xlink:href="#mdi:apple-keyboard-shift" x="-7" y="-7" height="14" width="14.0" class="key held alternate tap glyph mdi:apple-keyboard-shift"/>
+<a href="#media">
+<text x="0" y="30" class="key held alternate hold layer-activator">media</text>
+</a><text x="0" y="-30" class="key held alternate shifted">sticky</text>
 </g>
 <g class="combo combopos-0">
 <path d="M175,-1 h-64 a6.0,6.0 0 0 0 -6.0,6.0 v6" class="combo"/>
