@@ -67,8 +67,6 @@ The keyboards that run the ZMK implementation of this Keymap are listed below:
 - [Rommana](src/zmk/boards/handwired/boards/shields/rommana/readme.md)
 - [Corne-ish Zen](src/zmk/boards/lowprokb.ca/corneish-zen/readme.md)
 
-Some features might not be available in ZMK. [This readme file](src/zmk/rafaelromao/readme.md) will indicate what features are missing.
-
 ## Diagram
 
 The Diagram for my keymap was created using [Keymap Drawer](https://github.com/caksoylar/keymap-drawer). The source and config files can be found in the docs folder and the commands below can be used to generate an `svg` diagram and convert it to `png`, using Inkscape:
