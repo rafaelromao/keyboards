@@ -51,7 +51,7 @@ There is an outdated QMK version of this keymap, available in a separate [qmk_us
 
 ### ZMK
 
-The zmk version used for this keymap is the one available in [this fork](https://github.com/rafaelromao/zmk), which contains some experimental to implement features like:
+The zmk version used for this keymap is the one available in [this fork](https://github.com/rafaelromao/zmk), which contains some experimental code to implement features like:
 - [Auto Layer](https://github.com/zmkfirmware/zmk/pull/1451)
 - [Leader Key](https://github.com/zmkfirmware/zmk/pull/1380)
 - [Antecedent Morph](https://github.com/zmkfirmware/zmk/pull/2042)
