@@ -41,16 +41,6 @@
                                            &trans              &trans              &msk_sft LOWER 0    &trans              &trans              &trans
                            >;
                 };
-                shifted_alpha1_layer {
-                     display-name = "CASE";
-                     bindings = <
-   &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y)
-   &lt SHORTCUTS RS(D) &mt LSHFT RS(N)     &mt LCTRL RS(S)     &mt LGUI RS(T)      &kp RS(W)           &kp RS(Z)           &mt RGUI RS(R)      &mt RCTRL RS(A)     &mt RSHFT RS(E)     &lt SHORTCUTS RS(I) 
-   &trans              &mt RALT RS(F)      &lt FUNCTIONS RS(C) &mt LALT RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c RALT 0  &lt SMART COMMA     &th_dot 0 0         &trans
-                                           &trans              &tc_smart_line      &msk_spc LOWER 0    &th_sft_a2 RAISE 0  &ht_caps MEDIA 0    &trans
-                        >;
-                };
-
                 snake_case_layer {
                      display-name = "SNAKE";
                      bindings = <
@@ -266,7 +256,7 @@
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp Y
    &kp D               &kp N               &kp S               &kp T               &kp W               &kp Z               &kp R               &kp A               &kp E               &kp I 
    &trans              &kp F               &kp C               &kp P               &kp V               &kp J               &kp H               &kp COMMA           &kp DOT             &trans
-                                           &none               &ht_repeat NAV 0    &lt LOW_CP SPACE    &msl_p2 RAI_CP 0    &mo MEDIA           &none
+                                           &none               &ht_repeat NAV 0    &lt LOW_CP SPACE    &msl_p2 RAI_CP 0    &ht_sft_p2 MEDIA    &none
                            >;
                 };
                 plain2_layer {
@@ -278,7 +268,15 @@
                                            &none               &mc_sqo             &lt LOW_CP SPACE    &lt RAI_CP SPACE    &mc_sqo             &none
                            >;
                 };
-
+                shifted_plain2_layer {
+                     display-name = "PLAIN 2";
+                     bindings = <
+   &none               &kp LS(Q)           &mc_qu_s            &kp LS(K)           &none               &none               &ac_ocir_s            &ac_oacu_s            &ac_uacu_s            &none
+   &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &none               &none               &ac_atil_s            &ac_aacu_s            &ac_eacu_s            &ac_iacu_s 
+   &trans              &kp LS(J)           &mc_ced_s           &kp LS(V)           &none               &none               &ac_otil_s            &ac_acir_s            &ac_ecir_s            &trans
+                                           &none               &mc_sqo             &lt LOW_CP SPACE    &lt RAI_CP SPACE    &mc_sqo             &none
+                           >;
+                };
 
 
                 navigation_layer {

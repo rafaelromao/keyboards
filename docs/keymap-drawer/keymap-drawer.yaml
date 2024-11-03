@@ -269,7 +269,7 @@ layers:
     - { t: $$mdi:repeat$$, s: repeat, h: nav, type: held }
     - { t: $$mdi:keyboard-space$$, h: lower }
     - { t: plain2, s: sticky, h: raise }
-    - { h: media, type: held alternate }
+    - { t: $$mdi:apple-keyboard-shift$$, type: held alternate }
   plain2:
     - [q, qu, k, ô, ó, ú]
     - [y, z, x, w, ã, á, é, í]
@@ -312,26 +312,26 @@ layers:
   media:
     - [
         { t: "⎋" },
-        { t: $$mdi:mouse-left-click$$, h: left click },
-        { t: $$mdi:mouse-right-click$$, h: right click },
+        { t: $$mdi:mouse-left-click$$, h: left },
+        { t: $$mdi:mouse-right-click$$, h: right },
         { t: $$mdi:keyboard-tab$$ },
         { t: $$mdi:keyboard-return$$ },
         { t: "⎋" },
       ]
     - [
         null,
-        { t: $$mdi:arrow-left-circle$$, h: move left },
-        { t: $$mdi:arrow-up-circle$$, h: move up },
-        { t: $$mdi:arrow-right-circle$$, h: move right },
+        { t: $$mdi:arrow-left-circle$$, h: mouse },
+        { t: $$mdi:arrow-up-circle$$, h: mouse },
+        { t: $$mdi:arrow-right-circle$$, h: mouse },
         { t: $$mdi:microphone$$, s: meh x },
         { t: $$mdi:volume-medium$$ },
         { t: $$mdi:volume-high$$ },
         { t: $$mdi:camera$$, s: meh y },
       ]
     - [
-        { t: $$mdi:arrow-down-circle-outline$$, h: scroll down },
-        { t: $$mdi:arrow-down-circle$$, h: move down },
-        { t: $$mdi:arrow-up-circle-outline$$, h: scroll up },
+        { t: $$mdi:arrow-down-circle-outline$$, h: scroll },
+        { t: $$mdi:arrow-down-circle$$, h: mouse },
+        { t: $$mdi:arrow-up-circle-outline$$, h: scroll },
         { t: $$mdi:play-pause$$ },
         { t: $$mdi:skip-backward$$ },
         { t: $$mdi:skip-forward$$ },

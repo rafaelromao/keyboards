@@ -45,7 +45,7 @@
             tapping-term-ms = <QUICK_TAP_TERM>;
             flavor = "tap-preferred";
             quick-tap-ms = <0>;
-            bindings = <&mo>, <&alternate_repeat_key>;
+            bindings = <&mo>, <&mm_repeat>;
         };
 
         // ******************** MAGIC KEY ******************** //

@@ -2435,9 +2435,8 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 </g>
 <g transform="translate(450, 238)" class="key held alternate keypos-23">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key held alternate"/>
-<a href="#media">
-<text x="0" y="30" class="key held alternate hold layer-activator">media</text>
-</a></g>
+<use href="#mdi:apple-keyboard-shift" xlink:href="#mdi:apple-keyboard-shift" x="-7" y="-7" height="14" width="14.0" class="key held alternate tap glyph mdi:apple-keyboard-shift"/>
+</g>
 <g class="combo combopos-0">
 <path d="M175,-1 h-64 a6.0,6.0 0 0 0 -6.0,6.0 v6" class="combo"/>
 <path d="M175,-1 l0,21" class="combo"/>
@@ -2869,12 +2868,12 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 <g transform="translate(175, 34)" class="key keypos-1">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
 <use href="#mdi:mouse-left-click" xlink:href="#mdi:mouse-left-click" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:mouse-left-click"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 70%">left click</tspan></text>
+<text x="0" y="30" class="key hold">left</text>
 </g>
 <g transform="translate(245, 34)" class="key keypos-2">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
 <use href="#mdi:mouse-right-click" xlink:href="#mdi:mouse-right-click" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:mouse-right-click"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 64%">right click</tspan></text>
+<text x="0" y="30" class="key hold">right</text>
 </g>
 <g transform="translate(415, 34)" class="key keypos-3">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
@@ -2894,17 +2893,17 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 <g transform="translate(105, 102)" class="key keypos-7">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
 <use href="#mdi:arrow-left-circle" xlink:href="#mdi:arrow-left-circle" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:arrow-left-circle"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 78%">move left</tspan></text>
+<text x="0" y="30" class="key hold">mouse</text>
 </g>
 <g transform="translate(175, 102)" class="key keypos-8">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
 <use href="#mdi:arrow-up-circle" xlink:href="#mdi:arrow-up-circle" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:arrow-up-circle"/>
-<text x="0" y="30" class="key hold">move up</text>
+<text x="0" y="30" class="key hold">mouse</text>
 </g>
 <g transform="translate(245, 102)" class="key keypos-9">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
 <use href="#mdi:arrow-right-circle" xlink:href="#mdi:arrow-right-circle" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:arrow-right-circle"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 70%">move right</tspan></text>
+<text x="0" y="30" class="key hold">mouse</text>
 </g>
 <g transform="translate(415, 102)" class="key keypos-10">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
@@ -2927,17 +2926,17 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 <g transform="translate(105, 170)" class="key keypos-14">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
 <use href="#mdi:arrow-down-circle-outline" xlink:href="#mdi:arrow-down-circle-outline" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:arrow-down-circle-outline"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 64%">scroll down</tspan></text>
+<text x="0" y="30" class="key hold">scroll</text>
 </g>
 <g transform="translate(175, 170)" class="key keypos-15">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
 <use href="#mdi:arrow-down-circle" xlink:href="#mdi:arrow-down-circle" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:arrow-down-circle"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 78%">move down</tspan></text>
+<text x="0" y="30" class="key hold">mouse</text>
 </g>
 <g transform="translate(245, 170)" class="key keypos-16">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
 <use href="#mdi:arrow-up-circle-outline" xlink:href="#mdi:arrow-up-circle-outline" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:arrow-up-circle-outline"/>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 78%">scroll up</tspan></text>
+<text x="0" y="30" class="key hold">scroll</text>
 </g>
 <g transform="translate(415, 170)" class="key keypos-17">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>

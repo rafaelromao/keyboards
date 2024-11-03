@@ -25,6 +25,14 @@
             bindings = <&macro_tap BINDINGS>; \
         };
 
+    #define SMART_MORPH(NAME, MODS, MODDED, UNMODDED) \
+        NAME: NAME { \
+            compatible = "zmk,behavior-mod-morph"; \
+            #binding-cells = <0>; \
+            bindings = <UNMODDED>, <MODDED>; \
+            mods = <(MODS)>; \
+        };
+
     smart {
         
         // ********************** CUSTOM HOLD TAPS ********************** //
@@ -97,7 +105,9 @@
             bindings = <&macro_tap &smart_plain1>;
         };
 
-        SMART_MACRO(mc_sl_plain2, &sl PLAIN2)
+        SMART_MACRO(mc_plain2, &sl PLAIN2)
+        SMART_MACRO(mc_shifted_plain2, &sl SFT_PLAIN2)
+        SMART_MORPH(mm_plain2_sft_plain2, MOD_LSFT|MOD_RSFT, &mc_shifted_plain2, &mc_plain2)
 
         msl_p2: msl_p2 {
             compatible = "zmk,behavior-hold-tap";
@@ -105,7 +115,7 @@
             tapping-term-ms = <QUICK_TAP_TERM>;
             flavor = "tap-preferred";
             quick-tap-ms = <0>;
-            bindings = <&mo>, <&mc_sl_plain2>;
+            bindings = <&mo>, <&mm_plain2_sft_plain2>;
         };
 
         // ********************** NUM WORD ********************** //
@@ -170,7 +180,11 @@
         //     bindings = <&macro_tap &kp CAPSWORD_TERM &smart_word CASE_A1>;
         // };
 
-        SMART_MACRO(tc_shift_layer, &sl SHIFT_A1)
+        SMART_MACRO(tc_shift, &sk RSHFT)
+        SMART_MORPH(mm_shift, MOD_LSFT|MOD_RSFT, &smart_word, &tc_shift)
+
+        SMART_MORPH(mm_repeat, MOD_LSFT|MOD_RSFT, &smart_line, &alternate_repeat_key)
+
         SMART_MACRO(tc_sp_caps,     &kp LS(SPACE))
         SMART_LAYERTAP(th_sp_caps,  &tc_sp_caps)
 
@@ -180,7 +194,7 @@
             tapping-term-ms = <QUICK_TAP_TERM>;
             flavor = "tap-preferred";
             quick-tap-ms = <0>;
-            bindings = <&mo>, <&tc_shift_layer>;
+            bindings = <&mo>, <&mm_shift>;
         };
 
         // SMART_MACRO(tc_smart_word, &smart_word CASE_A1)
@@ -198,8 +212,10 @@
 
         // ******************** SMART CASES ******************** //
 
-        SMART_MACRO(mc_sl_alpha2,  &sl ALPHA2)
-        SMART_MACRO(mc_sft_a2,     &sl SHIFT_A2)
+        SMART_MACRO(mc_alpha2, &sl ALPHA2)
+        SMART_MACRO(mc_sft_a2, &sl SHIFT_A2)
+        SMART_MORPH(mm_alpha2_shifted2, MOD_LSFT|MOD_RSFT, &mc_sft_a2, &mc_alpha2)
+
         SMART_MACRO(mc_case_a2,    &sl CASE_A2)
         SMART_LAYERTAP(th_sft_a2,  &mc_sft_a2)
         SMART_LAYERTAP(th_case_a2, &mc_case_a2)
@@ -210,15 +226,24 @@
             tapping-term-ms = <QUICK_TAP_TERM>;
             flavor = "tap-preferred";
             quick-tap-ms = <0>;
-            bindings = <&mo>, <&mc_sl_alpha2>;
+            bindings = <&mo>, <&mm_alpha2_shifted2>;
+        };
+        ht_sft_p2: ht_sft_p2 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <QUICK_TAP_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <0>;
+            bindings = <&mo>, <&tc_shift>;
         };
 
-        SMART_MACRO(tc_pascal_case,  &to CAMEL_CASE &sl SHIFT_A1)
+
+        SMART_MACRO(tc_pascal_case,  &to CAMEL_CASE &sk LSHFT)
         SMART_MACRO(tc_s_snakecase,  &tog CASE_A1 &tog SNAKE_CASE)
         SMART_MACRO(tc_s_kebabcase,  &tog CASE_A1 &tog KEBAB_CASE)
         SMART_MACRO(tc_s_slashcase,  &tog CASE_A1 &tog SLASH_CASE)
 
-        SMART_MACRO(mc_msk_camel, &sl SHIFT_A1)
+        SMART_MACRO(mc_msk_camel, &sk LSHFT)
         SMART_MACRO(mc_msk_snake, &kp UNDERSCORE &sl SPACING)
         SMART_MACRO(mc_msk_kebab, &kp MINUS &sl SPACING)
         SMART_MACRO(mc_msk_slash, &kp SLASH &sl SPACING)
