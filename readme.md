@@ -55,7 +55,7 @@ The zmk version used for this keymap is the one available in [this fork](https:/
 - [Auto Layer](https://github.com/zmkfirmware/zmk/pull/1451)
 - [Leader Key](https://github.com/zmkfirmware/zmk/pull/1380)
 - [Antecedent Morph](https://github.com/zmkfirmware/zmk/pull/2042)
-- [Mouse Keys] (https://github.com/zmkfirmware/zmk/pull/2027)
+- [Mouse Keys](https://github.com/zmkfirmware/zmk/pull/2027)
 - [Corne-ish Zen display improvements](https://gist.github.com/caksoylar/c411313990978e1903c244f03039187a)
 
 This fork is also updated to Zephyr 3.5.
