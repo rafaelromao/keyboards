@@ -245,7 +245,7 @@
    &none               &mc_meh_b           &mc_meh_m           &mc_meh_g           &none               &none               &mc_meh_l           &mc_meh_o           &mc_meh_u           &none    
    &none               &th_meh_n LGUI 0    &mc_meh_s           &mc_meh_t           &none               &none               &mc_meh_r           &mc_meh_a           &th_meh_e RGUI 0    &none
    &trans              &mc_meh_f           &mc_meh_c           &mc_meh_p           &none               &none               &mc_meh_h           &mc_meh_comma       &mc_meh_dot         &none
-                                           &trans              &th_meh_k NAV 0     &mc_meh_w           &mc_meh_z           &th_meh_j NAV 0     &trans
+                                           &trans              &th_meh_w NAV 0     &mc_meh_v           &mc_meh_z           &th_meh_j NAV 0     &trans
                            >;
                 };
 

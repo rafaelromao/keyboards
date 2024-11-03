@@ -258,8 +258,8 @@ layers:
         type: held alternate,
       ]
     - [meh f, meh c, meh p, meh h, "meh ,", "meh ."]
-    - { t: meh k, h: nav }
-    - { t: meh w, type: held }
+    - { t: meh w, h: nav }
+    - { t: meh v, type: held }
     - { t: meh z, type: held alternate }
     - { t: meh j, h: nav }
   plain1:
@@ -323,10 +323,10 @@ layers:
         { t: $$mdi:arrow-left-circle$$, h: mouse },
         { t: $$mdi:arrow-up-circle$$, h: mouse },
         { t: $$mdi:arrow-right-circle$$, h: mouse },
-        { t: $$mdi:microphone$$, s: meh x },
+        { t: $$mdi:microphone$$, s: meh 8 },
         { t: $$mdi:volume-medium$$ },
         { t: $$mdi:volume-high$$ },
-        { t: $$mdi:camera$$, s: meh y },
+        { t: $$mdi:camera$$, s: meh 9 },
       ]
     - [
         { t: $$mdi:arrow-down-circle-outline$$, h: scroll },
@@ -530,12 +530,14 @@ combos:
   - { p: [10, 11, 12], k: { t: '"0p', s: vim }, a: bottom, layers: [media] }
   - { p: [10, 11], k: { t: "⎋o", s: vim }, a: mid, layers: [media] }
   - { p: [11, 12], k: { t: "⎋O", s: vim }, a: mid, layers: [media] }
-  - { p: [17, 18, 19], k: { t: "⌃v", s: vim }, a: bottom, layers: [media] }
-  - { p: [17, 18], k: { t: "r", s: vim }, a: mid, layers: [media] }
+  - { p: [17, 18, 19], k: { t: "v", s: vim }, a: bottom, layers: [media] }
+  - { p: [17, 18], k: { t: "⌃v", s: vim }, a: mid, layers: [media] }
   - { p: [18, 19], k: { t: "V", s: vim }, a: mid, layers: [media] }
 
   - { p: [3, 4, 5], k: "alpha1", a: top, w: 48, layers: [custom] }
   - { p: [4, 5], k: "⎋", a: mid, layers: [custom] }
+  - { p: [15, 16], k: meh k, a: mid, layers: [custom] }
+  - { p: [17, 18], k: meh x, a: mid, layers: [custom] }
   - {
       p: [8, 9],
       k: { t: "plain1", s: "auto-layer" },

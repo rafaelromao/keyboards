@@ -90,8 +90,6 @@
         SHORTCUT(mc_sft_o_esc,              &macro_tap &kp LS(O) &kp ESC)
         SHORTCUT(mc_shift_tab,              &macro_tap &kp LS(TAB))
 
-        SHORTCUT(mc_cam,                    &macro_tap &kp LC(LA(LS(X))))
-        SHORTCUT(mc_mic,                    &macro_tap &kp LC(LA(LS(Y))))
         SHORTCUT(mc_files,                  &macro_tap &kp LC(LA(LS(N0))))
         SHORTCUT(mc_preview,                &macro_tap &kp LC(LA(LS(N1))))
         SHORTCUT(mc_tabs,                   &macro_tap &kp LC(LA(LS(N2))))
@@ -99,6 +97,8 @@
         SHORTCUT(mc_calc,                   &macro_tap &kp LC(LA(LS(N4))))
         SHORTCUT(mc_apps,                   &macro_tap &kp LC(LA(LS(N5))))
         SHORTCUT(mc_clip,                   &macro_tap &kp LC(LA(LS(N6))))
+        SHORTCUT(mc_mic,                    &macro_tap &kp LC(LA(LS(N8))))
+        SHORTCUT(mc_cam,                    &macro_tap &kp LC(LA(LS(N9))))
 
         MODTAP_SHORTCUT(th_tabs,            &mc_tabs)
 
@@ -123,8 +123,10 @@
         SHORTCUT(mc_meh_comma,              &macro_tap &kp LC(LA(LS(COMMA))))
         SHORTCUT(mc_meh_dot,                &macro_tap &kp LC(LA(LS(DOT))))
         SHORTCUT(mc_meh_k,                  &macro_tap &kp LC(LA(LS(K))))
-        LAYERTAP_SHORTCUT(th_meh_k,         &mc_meh_k)
         SHORTCUT(mc_meh_w,                  &macro_tap &kp LC(LA(LS(W))))
+        LAYERTAP_SHORTCUT(th_meh_w,         &mc_meh_w)
+        SHORTCUT(mc_meh_v,                  &macro_tap &kp LC(LA(LS(V))))
+        SHORTCUT(mc_meh_x,                  &macro_tap &kp LC(LA(LS(X))))
         SHORTCUT(mc_meh_z,                  &macro_tap &kp LC(LA(LS(Z))))
         SHORTCUT(mc_meh_j,                  &macro_tap &kp LC(LA(LS(J))))
         LAYERTAP_SHORTCUT(th_meh_j,         &mc_meh_j)
