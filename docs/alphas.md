@@ -1,7 +1,7 @@
 # rafaelromao's keyboard layout
 
 ## Two Alpha Layers
-- This is split keyboard layout with 24  keys, in the formats 1333+2.
+- This is a split keyboard layout with 24  keys, in the formats 1333+2.
 - This layout works well with the OS configured for US International keyboards.
 - It was designed mostly for coding and typing in Portuguese and English.
 - It reduces the usage of pinkies and indexes and considers the right hand as dominant.
