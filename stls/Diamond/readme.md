@@ -1,4 +1,5 @@
 # Diamond
+
 ## A 24 keys handwired split keyboard.
 
 Diamond is a handwired board originally designed by me but heavily inspired by the [Rommana](https://github.com/AlaaSaadAbdo/Rommana) and using the switch holders of the [Dactyl Cygnus](https://github.com/juhakaup/keyboards).
@@ -8,10 +9,10 @@ Diamond is a handwired board originally designed by me but heavily inspired by t
 - These components should be mounted upside down, under this cover.
 - The cables for column and rows will pass through 3 holes in the cover and can be tightened in the end of the assembling to make them less visible in the final build. 
 
-
 [Here](../../docs/diamond.md) you can see some build images.
 
 ## Diamond
+
 ![img](../../img/diamond.jpeg)
 
 ### Diamond v1
@@ -31,8 +32,10 @@ For the second version, the following improvements were implemented:
 - Included a variation of the thumb cluster, with the keys inclined instead of flat.
 - Included a variation of the switch holders, using Choc switches instead of MX switches.
 - Remove the bottom hole for the magnet, to simplify printing.
+- Add an unibody base, with OLED support, compatible with all body versions.
 
 #### STL Files
+
 The STL files are provided for the right side. To print the left side, just mirror them.
 
 - [Base Right](../Diamond/v2/base_right.stl)
@@ -41,3 +44,5 @@ The STL files are provided for the right side. To print the left side, just mirr
 - [MX Body Right - Inclined Thumbs](../Diamond/v2/body_right_inclined.stl)
 - [Choc Body Right](../Diamond/v2/choc_body_right.stl)
 - [Choc Body Right - Inclined Thumbs](../Diamond/v2/choc_body_right_inclined.stl)
+- [Unibody Base](../Diamond/v2/unibody_base.stl)
+- [Unibody Base Cover](../Diamond/v2/unibody_base_cover.stl)
