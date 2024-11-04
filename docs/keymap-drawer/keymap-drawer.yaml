@@ -258,10 +258,10 @@ layers:
         type: held alternate,
       ]
     - [meh f, meh c, meh p, meh h, "meh ,", "meh ."]
-    - { t: meh w, h: nav }
-    - { t: meh v, type: held }
-    - { t: meh z, type: held alternate }
-    - { t: meh j, h: nav }
+    - { t: "plain1", s: "auto-layer", h: nav }
+    - { t: $$mdi:apple-keyboard-command$$, s: sticky, type: held }
+    - { t: $$mdi:apple-keyboard-command$$, s: sticky, type: held alternate }
+    - { t: "plain1", s: "auto-layer", h: nav }
   plain1:
     - [b, m, g, l, o, u]
     - [d, n, s, t, r, a, e, i]
@@ -537,33 +537,33 @@ combos:
 
   - { p: [3, 4, 5], k: "alpha1", a: top, w: 48, layers: [custom] }
   - { p: [4, 5], k: "⎋", a: mid, layers: [custom] }
-  - { p: [14, 15], k: meh q, a: mid, layers: [custom] }
-  - { p: [15, 16], k: meh k, a: mid, layers: [custom] }
-  - { p: [17, 18], k: meh x, a: mid, layers: [custom] }
-  - { p: [18, 19], k: meh y, a: mid, layers: [custom] }
+  - { p: [1, 2], k: meh k, a: mid, layers: [custom] }
+  - { p: [3, 4], k: meh x, a: mid, layers: [custom] }
+  - { p: [14, 15], k: meh d, a: mid, layers: [custom] }
+  - { p: [15, 16], k: meh v, a: mid, layers: [custom] }
+  - { p: [17, 18], k: meh j, a: mid, layers: [custom] }
+  - { p: [18, 19], k: meh i, a: mid, layers: [custom] }
   - {
       p: [8, 9],
-      k: { t: "plain1", s: "auto-layer" },
-      a: top,
-      w: 48,
+      k: meh w,
+      a: mid,
       layers: [custom],
     }
   - {
       p: [10, 11],
-      k: { t: "plain1", s: "auto-layer" },
-      a: top,
-      w: 48,
+      k: meh z,
+      a: mid,
       layers: [custom],
     }
   - {
       p: [7, 8],
-      k: { h: $$mdi:apple-keyboard-command$$, s: sticky },
+      k: meh q,
       a: mid,
       layers: [custom],
     }
   - {
       p: [11, 12],
-      k: { h: $$mdi:apple-keyboard-command$$, s: sticky },
+      k: meh y,
       a: mid,
       layers: [custom],
     }
