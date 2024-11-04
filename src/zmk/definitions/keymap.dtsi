@@ -101,7 +101,7 @@
    &none               &kp Q               &mc_qu              &kp K               &none               &none               &ac_ocir            &ac_oacu            &ac_uacu            &none
    &kp Y               &kp Z               &kp X               &kp W               &none               &none               &ac_atil            &ac_aacu            &ac_eacu            &ac_iacu 
    &trans              &kp J               &mc_ced             &reversed_magic     &none               &none               &ac_otil            &ac_acir            &ac_ecir            &trans
-                                           &none               &mc_sqo              &kp SPACE           &kp SPACE           &mc_sqo             &none
+                                           &none               &mc_sqo             &trans              &kp SPACE           &mc_sqo             &none
                            >;
                 };
                 ccedil_layer {
