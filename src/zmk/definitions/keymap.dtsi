@@ -167,7 +167,7 @@
    &none               &sys_reset          &none               &mc_lock            &none               &none               &kp F7             &kp F8               &kp F9              &none 
    &none               &bootloader         &none               &kp C_SLEEP         &none               &none               &kp F4             &kp F5               &kp F6              &none      
    &none               &none               &none               &leader             &none               &none               &kp F1             &kp F2               &kp F3              &none
-                                           &none               &mo PLAIN1          &none               &none               &mo PLAIN1          &none
+                                           &none               &none               &none               &mo PLAIN1          &none               &none
                         >;
                 };
                 smartcases_layer {
@@ -176,7 +176,7 @@
    &none               &to SLASH_CASE      &tc_smart_line      &to KEBAB_CASE      &none               &none               &mc_lock           &none                &sys_reset          &none 
    &none               &to CAMEL_CASE      &tc_smart_word      &to SNAKE_CASE      &none               &none               &kp C_SLEEP        &none                &bootloader         &none      
    &none               &bt BT_PRV          &bt BT_NXT          &bt BT_CLR          &none               &none               &leader            &none                &none               &none
-                                           &none               &mo PLAIN1          &none               &none               &mo PLAIN1          &none
+                                           &none               &none               &mo PLAIN1          &none               &none               &none
                         >;
                 };
 

@@ -159,6 +159,7 @@
         SYMBOL(mc_brackets_new,    &kp END &kp LBKT &kp RBKT &kp SEMI &kp ENTER)
         SYMBOL(mc_sarrow,          &kp MINUS &kp GT)
         SYMBOL(mc_darrow,          &kp EQUAL &kp GT)
+        SYMBOL(mc_colon_colon,     &kp COLON &kp COLON)
 
         SYMBOL(mc_perc,            &kp PERCENT)
         SYMBOL(mc_end_perc,        &kp END &kp PERCENT)

@@ -179,10 +179,10 @@ layers:
         "F2",
         "F3",
       ]
-    - h: plain1
     - null
     - null
     - h: plain1
+    - null
   smartcases:
     - [
         "slash/ case",
@@ -210,10 +210,10 @@ layers:
         { type: held },
         "",
       ]
-    - h: plain1
     - null
     - null
     - h: plain1
+    - null
   shortcuts:
     - [
         "⎋",
@@ -372,8 +372,7 @@ combos:
           ç-extension,
           nav,
           media,
-          lower,
-          raise,
+          lower
         ],
     }
   - {
@@ -494,10 +493,11 @@ combos:
   - { p: [0, 1], k: "⇥{ ⏎", a: mid, layers: [raise] }
   - { p: [7, 8], k: "⇥(); ⏎", a: mid, layers: [raise] }
   - { p: [14, 15], k: "⇥[]; ⏎", a: mid, layers: [raise] }
+  - { p: [3, 4], k: "::", a: mid, layers: [raise] }
   - { p: [8, 9], k: "->", a: mid, layers: [raise] }
   - { p: [15, 16], k: "=>", a: mid, layers: [raise] }
 
-  - { p: [3, 4, 5], k: "!=", a: top, layers: [raise] }
+  - { p: [4, 5], k: "!=", a: top, layers: [raise] }
   - { p: [3, 4], k: "==", a: mid, layers: [raise] }
   - { p: [10, 11, 12], k: "../", a: bottom, layers: [raise] }
   - { p: [10, 11], k: { s: vim, t: ^, h: 0 }, a: mid, layers: [raise] }

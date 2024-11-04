@@ -1620,26 +1620,26 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
 </g>
 <g class="combo combopos-0">
-<rect rx="6" ry="6" x="503" y="19" width="34" height="30" class="combo"/>
-<use href="#mdi:backspace-outline" xlink:href="#mdi:backspace-outline" x="513" y="27" height="14" width="14.0" class="combo tap glyph mdi:backspace-outline"/>
-</g>
-<g class="combo combopos-1">
 <rect rx="6" ry="6" x="123" y="19" width="34" height="30" class="combo"/>
 <text x="140" y="34" class="combo tap">
 <tspan x="140" dy="-0.6em">⇥{</tspan><tspan x="140" dy="1.2em">⏎</tspan>
 </text>
 </g>
-<g class="combo combopos-2">
+<g class="combo combopos-1">
 <rect rx="6" ry="6" x="123" y="87" width="34" height="30" class="combo"/>
 <text x="140" y="102" class="combo tap">
 <tspan x="140" dy="-0.6em">⇥();</tspan><tspan x="140" dy="1.2em">⏎</tspan>
 </text>
 </g>
-<g class="combo combopos-3">
+<g class="combo combopos-2">
 <rect rx="6" ry="6" x="123" y="155" width="34" height="30" class="combo"/>
 <text x="140" y="170" class="combo tap">
 <tspan x="140" dy="-0.6em">⇥[];</tspan><tspan x="140" dy="1.2em">⏎</tspan>
 </text>
+</g>
+<g class="combo combopos-3">
+<rect rx="6" ry="6" x="433" y="19" width="34" height="30" class="combo"/>
+<text x="450" y="34" class="combo tap">::</text>
 </g>
 <g class="combo combopos-4">
 <rect rx="6" ry="6" x="193" y="87" width="34" height="30" class="combo"/>
@@ -1650,11 +1650,10 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 <text x="210" y="170" class="combo tap">=&gt;</text>
 </g>
 <g class="combo combopos-6">
-<path d="M485,-1 h-64 a6.0,6.0 0 0 0 -6.0,6.0 v6" class="combo"/>
-<path d="M485,-1 l0,21" class="combo"/>
-<path d="M485,-1 h64 a6.0,6.0 0 0 1 6.0,6.0 v6" class="combo"/>
-<rect rx="6" ry="6" x="468" y="-16" width="34" height="30" class="combo"/>
-<text x="485" y="-1" class="combo tap">!=</text>
+<path d="M520,-1 h-29 a6.0,6.0 0 0 0 -6.0,6.0 v6" class="combo"/>
+<path d="M520,-1 h29 a6.0,6.0 0 0 1 6.0,6.0 v6" class="combo"/>
+<rect rx="6" ry="6" x="503" y="-16" width="34" height="30" class="combo"/>
+<text x="520" y="-1" class="combo tap">!=</text>
 </g>
 <g class="combo combopos-7">
 <rect rx="6" ry="6" x="433" y="19" width="34" height="30" class="combo"/>
@@ -1781,20 +1780,18 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 </g>
 <g transform="translate(210, 238)" class="key keypos-20">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
-<a href="#plain1">
-<text x="0" y="30" class="key hold layer-activator">plain1</text>
-</a></g>
+</g>
 <g transform="translate(280, 238)" class="key keypos-21">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
 </g>
 <g transform="translate(380, 238)" class="key keypos-22">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
-</g>
-<g transform="translate(450, 238)" class="key keypos-23">
-<rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
 <a href="#plain1">
 <text x="0" y="30" class="key hold layer-activator">plain1</text>
 </a></g>
+<g transform="translate(450, 238)" class="key keypos-23">
+<rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
+</g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="433" y="19" width="34" height="30" class="combo"/>
 <text x="450" y="34" class="combo tap">F12</text>
@@ -1920,20 +1917,18 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 </g>
 <g transform="translate(210, 238)" class="key keypos-20">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
-<a href="#plain1">
-<text x="0" y="30" class="key hold layer-activator">plain1</text>
-</a></g>
+</g>
 <g transform="translate(280, 238)" class="key keypos-21">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
 </g>
 <g transform="translate(380, 238)" class="key keypos-22">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
-</g>
-<g transform="translate(450, 238)" class="key keypos-23">
-<rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
 <a href="#plain1">
 <text x="0" y="30" class="key hold layer-activator">plain1</text>
 </a></g>
+<g transform="translate(450, 238)" class="key keypos-23">
+<rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
+</g>
 <g class="combo combopos-0">
 <path d="M140,-1 h-29 a6.0,6.0 0 0 0 -6.0,6.0 v6" class="combo"/>
 <path d="M140,-1 h29 a6.0,6.0 0 0 1 6.0,6.0 v6" class="combo"/>
