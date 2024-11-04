@@ -537,8 +537,10 @@ combos:
 
   - { p: [3, 4, 5], k: "alpha1", a: top, w: 48, layers: [custom] }
   - { p: [4, 5], k: "⎋", a: mid, layers: [custom] }
+  - { p: [14, 15], k: meh q, a: mid, layers: [custom] }
   - { p: [15, 16], k: meh k, a: mid, layers: [custom] }
   - { p: [17, 18], k: meh x, a: mid, layers: [custom] }
+  - { p: [18, 19], k: meh y, a: mid, layers: [custom] }
   - {
       p: [8, 9],
       k: { t: "plain1", s: "auto-layer" },

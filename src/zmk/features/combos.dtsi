@@ -106,6 +106,10 @@
         COMBO(cb_sk_rgui,       RHM RHR,     &sk RGUI,           CUSTOM)
         COMBO(cb_auto_nmods_l,  LHM LHR,     &tc_smart_plain1,   CUSTOM)
         COMBO(cb_auto_nmods_r,  RHM RHR,     &tc_smart_plain1,   CUSTOM)
+        COMBO(cb_meh_q,         LBR LBM,     &mc_meh_q,          CUSTOM)
+        COMBO(cb_meh_k,         LBM LBI,     &mc_meh_k,          CUSTOM)
+        COMBO(cb_meh_x,         RBM RBI,     &mc_meh_x,          CUSTOM)
+        COMBO(cb_meh_y,         RBR RBM,     &mc_meh_y,          CUSTOM)
 
         COMBO(cb_nav_lower,     LBR LBM,     &mo NAV,            LOWER_LAYERS)
 

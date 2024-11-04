@@ -123,14 +123,16 @@
         SHORTCUT(mc_meh_h,                  &macro_tap &kp LC(LA(LS(H))))
         SHORTCUT(mc_meh_comma,              &macro_tap &kp LC(LA(LS(COMMA))))
         SHORTCUT(mc_meh_dot,                &macro_tap &kp LC(LA(LS(DOT))))
-        SHORTCUT(mc_meh_k,                  &macro_tap &kp LC(LA(LS(K))))
         SHORTCUT(mc_meh_w,                  &macro_tap &kp LC(LA(LS(W))))
         LAYERTAP_SHORTCUT(th_meh_w,         &mc_meh_w)
         SHORTCUT(mc_meh_v,                  &macro_tap &kp LC(LA(LS(V))))
-        SHORTCUT(mc_meh_x,                  &macro_tap &kp LC(LA(LS(X))))
         SHORTCUT(mc_meh_z,                  &macro_tap &kp LC(LA(LS(Z))))
         SHORTCUT(mc_meh_j,                  &macro_tap &kp LC(LA(LS(J))))
         LAYERTAP_SHORTCUT(th_meh_j,         &mc_meh_j)
+        SHORTCUT(mc_meh_q,                  &macro_tap &kp LC(LA(LS(Q))))
+        SHORTCUT(mc_meh_k,                  &macro_tap &kp LC(LA(LS(K))))
+        SHORTCUT(mc_meh_x,                  &macro_tap &kp LC(LA(LS(X))))
+        SHORTCUT(mc_meh_y,                  &macro_tap &kp LC(LA(LS(Y))))
 
         // Macros
 
