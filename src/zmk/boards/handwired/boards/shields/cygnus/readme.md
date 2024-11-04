@@ -25,7 +25,7 @@ Parts for the dongle:
 - [1 6x6x6 switch](https://www.aliexpress.com/item/4001166999847.html).
 - [1 SS12F15 switch](https://www.aliexpress.com/item/4000699324084.html).
 - [1 Supermini NRF52840](https://www.aliexpress.com/item/1005006035267231.html).
-- [1 500mAh 3.7v battery - 752035](https://www.aliexpress.com/item/1005005984848543.html)
+- [1 250mAh 3.7v battery - 752025](https://www.aliexpress.com/item/1005005984848543.html)
 
 [Here](../../../../../../../docs/builds/cygnus.md) you can see some build images.
 
