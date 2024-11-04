@@ -87,6 +87,9 @@
 <svg id="mdi:format-horizontal-align-right">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-format-horizontal-align-right" viewBox="0 0 24 24"><path d="M13,8V11H3V13H13V16L17,12L13,8M19,20H21V4H19V20Z" /></svg>
 </svg>
+<svg id="mdi:hand-back-right-outline">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-hand-back-right-outline" viewBox="0 0 24 24"><path d="M21 7C21 5.62 19.88 4.5 18.5 4.5C18.33 4.5 18.16 4.5 18 4.55V4C18 2.62 16.88 1.5 15.5 1.5C15.27 1.5 15.04 1.53 14.83 1.59C14.46 .66 13.56 0 12.5 0C11.27 0 10.25 .89 10.04 2.06C9.87 2 9.69 2 9.5 2C8.12 2 7 3.12 7 4.5V10.39C6.66 10.08 6.24 9.85 5.78 9.73L5 9.5C4.18 9.29 3.31 9.61 2.82 10.35C2.44 10.92 2.42 11.66 2.67 12.3L5.23 18.73C6.5 21.91 9.57 24 13 24C17.42 24 21 20.42 21 16V7M19 16C19 19.31 16.31 22 13 22C10.39 22 8.05 20.41 7.09 18L4.5 11.45L5 11.59C5.5 11.71 5.85 12.05 6 12.5L7 15H9V4.5C9 4.22 9.22 4 9.5 4S10 4.22 10 4.5V12H12V2.5C12 2.22 12.22 2 12.5 2S13 2.22 13 2.5V12H15V4C15 3.72 15.22 3.5 15.5 3.5S16 3.72 16 4V12H18V7C18 6.72 18.22 6.5 18.5 6.5S19 6.72 19 7V16Z" /></svg>
+</svg>
 <svg id="mdi:keyboard-return">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-keyboard-return" viewBox="0 0 24 24"><path d="M19,7V11H5.83L9.41,7.41L8,6L2,12L8,18L9.41,16.58L5.83,13H21V7H19Z" /></svg>
 </svg>
@@ -2982,6 +2985,11 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 <use href="#mdi:backspace-outline" xlink:href="#mdi:backspace-outline" x="513" y="27" height="14" width="14.0" class="combo tap glyph mdi:backspace-outline"/>
 </g>
 <g class="combo combopos-2">
+<rect rx="6" ry="6" x="433" y="19" width="34" height="30" class="combo"/>
+<use href="#mdi:hand-back-right-outline" xlink:href="#mdi:hand-back-right-outline" x="443" y="27" height="14" width="14.0" class="combo tap glyph mdi:hand-back-right-outline"/>
+<text x="450" y="21" class="combo shifted">meh 7</text>
+</g>
+<g class="combo combopos-3">
 <path d="M485,137 h-64 a6.0,6.0 0 0 1 -6.0,-6.0 v-6" class="combo"/>
 <path d="M485,137 l0,-21" class="combo"/>
 <path d="M485,137 h64 a6.0,6.0 0 0 0 6.0,-6.0 v-6" class="combo"/>
@@ -2989,17 +2997,17 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 <text x="485" y="137" class="combo tap">&quot;0p</text>
 <text x="485" y="124" class="combo shifted">vim</text>
 </g>
-<g class="combo combopos-3">
+<g class="combo combopos-4">
 <rect rx="6" ry="6" x="433" y="87" width="34" height="30" class="combo"/>
 <text x="450" y="102" class="combo tap">⎋o</text>
 <text x="450" y="89" class="combo shifted">vim</text>
 </g>
-<g class="combo combopos-4">
+<g class="combo combopos-5">
 <rect rx="6" ry="6" x="503" y="87" width="34" height="30" class="combo"/>
 <text x="520" y="102" class="combo tap">⎋O</text>
 <text x="520" y="89" class="combo shifted">vim</text>
 </g>
-<g class="combo combopos-5">
+<g class="combo combopos-6">
 <path d="M485,205 h-64 a6.0,6.0 0 0 1 -6.0,-6.0 v-6" class="combo"/>
 <path d="M485,205 l0,-21" class="combo"/>
 <path d="M485,205 h64 a6.0,6.0 0 0 0 6.0,-6.0 v-6" class="combo"/>
@@ -3007,12 +3015,12 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 <text x="485" y="205" class="combo tap">v</text>
 <text x="485" y="192" class="combo shifted">vim</text>
 </g>
-<g class="combo combopos-6">
+<g class="combo combopos-7">
 <rect rx="6" ry="6" x="433" y="155" width="34" height="30" class="combo"/>
 <text x="450" y="170" class="combo tap">⌃v</text>
 <text x="450" y="157" class="combo shifted">vim</text>
 </g>
-<g class="combo combopos-7">
+<g class="combo combopos-8">
 <rect rx="6" ry="6" x="503" y="155" width="34" height="30" class="combo"/>
 <text x="520" y="170" class="combo tap">V</text>
 <text x="520" y="157" class="combo shifted">vim</text>

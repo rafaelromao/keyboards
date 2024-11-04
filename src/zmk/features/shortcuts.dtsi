@@ -97,6 +97,7 @@
         SHORTCUT(mc_calc,                   &macro_tap &kp LC(LA(LS(N4))))
         SHORTCUT(mc_apps,                   &macro_tap &kp LC(LA(LS(N5))))
         SHORTCUT(mc_clip,                   &macro_tap &kp LC(LA(LS(N6))))
+        SHORTCUT(mc_raise,                  &macro_tap &kp LC(LA(LS(N7))))
         SHORTCUT(mc_mic,                    &macro_tap &kp LC(LA(LS(N8))))
         SHORTCUT(mc_cam,                    &macro_tap &kp LC(LA(LS(N9))))
 

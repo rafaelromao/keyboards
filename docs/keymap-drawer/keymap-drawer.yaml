@@ -527,6 +527,7 @@ combos:
   - { p: [17, 18], k: "↓ ⇤", a: mid, layers: [nav] }
   - { p: [18, 19], k: "↓ ⇥", a: mid, layers: [nav] }
 
+  - { p: [3, 4], k: { t: $$mdi:hand-back-right-outline$$, s: meh 7}, a: mid, layers: [media] }
   - { p: [10, 11, 12], k: { t: '"0p', s: vim }, a: bottom, layers: [media] }
   - { p: [10, 11], k: { t: "⎋o", s: vim }, a: mid, layers: [media] }
   - { p: [11, 12], k: { t: "⎋O", s: vim }, a: mid, layers: [media] }
