@@ -380,17 +380,17 @@ combos:
       k: "alpha1",
       a: top,
       w: 48,
-      layers: [alpha2, ç-extension, plain1, plain2, lower, nav, custom],
+      layers: [plain1, lower, nav, media, custom],
     }
 
   - { p: [1, 2], k: "k", a: mid, layers: [alpha1, plain1] }
   - { p: [3, 4], k: "x", a: mid, layers: [alpha1, plain1] }
-  - { p: [3, 4, 5], k: "d", a: top, layers: [alpha1, plain1] }
+  - { p: [3, 4, 5], k: "d", a: top, layers: [alpha1] }
   - { p: [7, 8], k: "q", a: mid, layers: [alpha1, plain1] }
   - { p: [8, 9], k: "w", a: mid, layers: [alpha1, plain1] }
   - { p: [10, 11], k: "z", a: mid, layers: [alpha1, plain1] }
   - { p: [11, 12], k: "y", a: mid, layers: [alpha1, plain1] }
-  - { p: [10, 11, 12], k: "p", a: top, layers: [alpha1, plain1] }
+  - { p: [10, 11, 12], k: "p", a: top, layers: [alpha1] }
   - { p: [15, 16], k: "v", a: mid, layers: [alpha1, plain1] }
   - { p: [17, 18], k: "j", a: mid, layers: [alpha1, plain1] }
   - {
@@ -458,13 +458,13 @@ combos:
   - { p: [4, 5, 22], k: "tab", layers: [alpha1], draw_separate: true }
   - { p: [11, 12, 22], k: "enter", layers: [alpha1], draw_separate: true }
  
+  - { p: [14, 15, 21], k: "undo", layers: [alpha1], draw_separate: true }
   - { p: [8, 9, 21], k: "full screen", layers: [alpha1], draw_separate: true }
-  - { p: [15, 16, 21], k: "find", layers: [alpha1], draw_separate: true }
- 
+
   - { p: [10, 11, 22], k: "copy", layers: [alpha1], draw_separate: true }
   - { p: [17, 18, 22], k: "paste", layers: [alpha1], draw_separate: true }
   
-  - { p: [14, 15, 21], k: "undo", layers: [alpha1], draw_separate: true }
+  - { p: [15, 16, 21], k: "find", layers: [alpha1], draw_separate: true }
   - { p: [17, 18, 19], k: "⇥ ; ⏎", layers: [alpha1], draw_separate: true }
   
   - {
@@ -480,13 +480,13 @@ combos:
       draw_separate: true,
     }
  
-  - { p: [3, 4, 5], k: "US$", a: top, layers: [lower] }
+  - { p: [1, 2], k: "€", a: mid, layers: [lower] }
   - { p: [3, 4], k: "G", a: mid, layers: [lower] }
   - { p: [14, 15], k: "nav", a: mid, layers: [lower] }
   - { p: [10, 11, 12], k: "R$", a: top, layers: [lower] }
+  - { p: [17, 18, 19], k: "US$", a: top, layers: [lower] }
   - { p: [10, 11], k: "j", a: mid, layers: [lower] }
   - { p: [11, 12], k: "k", a: mid, layers: [lower] }
-  - { p: [17, 18, 19], k: "€", a: top, layers: [lower] }
   - { p: [17, 18], k: "|", a: mid, layers: [lower] }
   - { p: [7, 8], k: { t: "()", h: "⇥ ()" }, a: mid, layers: [lower] }
   - { p: [8, 9], k: { t: "&&", h: "→ &&" }, a: mid, layers: [lower] }
@@ -537,7 +537,7 @@ combos:
   - { p: [17, 18], k: { t: "⌃v", s: vim }, a: mid, layers: [media] }
   - { p: [18, 19], k: { t: "V", s: vim }, a: mid, layers: [media] }
 
-  - { p: [3, 4, 5], k: "alpha1", a: top, w: 48, layers: [custom] }
+  - { p: [3, 4, 5], k: "alpha1", a: top, w: 48, layers: [lower, custom, nav, media, plain1] }
   - { p: [4, 5], k: "⎋", a: mid, layers: [custom] }
   - { p: [1, 2], k: meh k, a: mid, layers: [custom] }
   - { p: [3, 4], k: meh x, a: mid, layers: [custom] }
