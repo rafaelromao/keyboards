@@ -308,7 +308,7 @@ layers:
     - { type: held }
     - null
     - { t: $$mdi:keyboard-space$$ }
-    - h: media
+    - { h: media, type: held alternate }
   media:
     - [
         { t: "⎋" },
@@ -454,17 +454,19 @@ combos:
 
   - { p: [0, 1, 21], k: "⎋ save", layers: [alpha1], draw_separate: true }
   - { p: [7, 8, 21], k: "save", layers: [alpha1], draw_separate: true }
-  - { p: [14, 15, 21], k: "undo", layers: [alpha1], draw_separate: true }
-  - { p: [17, 18, 19], k: "⇥ ; ⏎", layers: [alpha1], draw_separate: true }
-
-  - { p: [8, 9, 21], k: "full screen", layers: [alpha1], draw_separate: true }
-  - { p: [15, 16, 21], k: "find", layers: [alpha1], draw_separate: true }
-
+  
   - { p: [4, 5, 22], k: "tab", layers: [alpha1], draw_separate: true }
   - { p: [11, 12, 22], k: "enter", layers: [alpha1], draw_separate: true }
-
+ 
+  - { p: [8, 9, 21], k: "full screen", layers: [alpha1], draw_separate: true }
+  - { p: [15, 16, 21], k: "find", layers: [alpha1], draw_separate: true }
+ 
   - { p: [10, 11, 22], k: "copy", layers: [alpha1], draw_separate: true }
   - { p: [17, 18, 22], k: "paste", layers: [alpha1], draw_separate: true }
+  
+  - { p: [14, 15, 21], k: "undo", layers: [alpha1], draw_separate: true }
+  - { p: [17, 18, 19], k: "⇥ ; ⏎", layers: [alpha1], draw_separate: true }
+  
   - {
       p: [10, 11, 12, 22],
       k: "select all copy",
@@ -477,7 +479,7 @@ combos:
       layers: [alpha1],
       draw_separate: true,
     }
-
+ 
   - { p: [3, 4, 5], k: "US$", a: top, layers: [lower] }
   - { p: [3, 4], k: "G", a: mid, layers: [lower] }
   - { p: [14, 15], k: "nav", a: mid, layers: [lower] }
