@@ -2074,7 +2074,9 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 </g>
 <g transform="translate(210, 238)" class="key keypos-20">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
-</g>
+<a href="#nav">
+<text x="0" y="30" class="key hold layer-activator">nav</text>
+</a></g>
 <g transform="translate(280, 238)" class="key keypos-21">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
 <use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:keyboard-space"/>
@@ -2089,7 +2091,9 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 </a></g>
 <g transform="translate(450, 238)" class="key keypos-23">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
-</g>
+<a href="#nav">
+<text x="0" y="30" class="key hold layer-activator">nav</text>
+</a></g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="123" y="19" width="34" height="30" class="combo"/>
 <text x="140" y="34" class="combo tap">⎋</text>

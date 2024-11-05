@@ -218,7 +218,7 @@
    &none               &kp ESC             &mc_files           &mc_preview         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &none    
    &none               &th_zoom RGUI 0     &mc_app_swapper     &th_tabs LGUI 0     &none               &none               &mc_seln            &mm_down_minus      &mm_up_plus         &none
    &none               &mc_term            &mc_calc            &mc_apps            &none               &none               &mc_selh            &ht_ref_clo_z0 0 0  &mc_clip            &trans
-                                           &trans              &trans              &lt CUSTOM SPACE    &lt CUSTOM SPACE    &trans              &trans
+                                           &trans              &mo NAV             &lt CUSTOM SPACE    &lt CUSTOM SPACE    &mo NAV             &trans
                            >;
                 };
                 shortcuts_ext_1_layer {

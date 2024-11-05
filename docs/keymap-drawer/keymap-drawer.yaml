@@ -241,10 +241,10 @@ layers:
         { t: $$mdi:refresh$$, s: refresh, h: close },
         { t: $$mdi:content-cut$$, h: clip, s: meh 6 },
       ]
-    - null
+    - h: nav
     - { t: $$mdi:keyboard-space$$, h: custom }
     - { t: $$mdi:keyboard-space$$, h: custom }
-    - null
+    - h: nav
   custom:
     - [meh b, meh m, meh g, meh l, meh o, meh u]
     - [
