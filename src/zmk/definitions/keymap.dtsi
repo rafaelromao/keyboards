@@ -110,7 +110,7 @@
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
    &trans              &trans              &trans              &mc_aotil           &trans              &trans              &ac_atil            &trans              &trans              &trans  
    &trans              &trans              &trans              &mc_otiles          &trans              &trans              &ac_otil            &trans              &trans              &trans 
-                                           &trans              &trans              &trans              &kp BACKSPACE       &trans              &trans
+                                           &trans              &trans              &trans              &trans              &trans              &trans
                            >;
                 };
                 shifted_alpha2_layer {
