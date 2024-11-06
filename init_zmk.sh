@@ -123,6 +123,40 @@ alias build_diamond="cd ${ZMK_HOME} && ${build_diamond_central_left} && ${archiv
 #alias build_diamond="cd ${ZMK_HOME} && ${build_diamond_central_left} && ${archive_diamond_central_left} && cd $KEYBOARD_HOME"
 
 echo "Creating Keymap Drawer alias..."
-draw_diagram="keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw ./docs/keymap-drawer/keymap-drawer.yaml > ./img/overview.svg"
-convert_diagram="inkscape --export-type png --export-filename ./img/overview.png --export-dpi 300 --export-background=white ./img/overview.svg"
-alias build_diagram="${draw_diagram} ; ${convert_diagram}"
+prepare_tmp="mkdir -p ./tmp ; mkdir -p ./tmp"
+prepare_no_separate_combos="\cp ./docs/keymap-drawer/keymap-drawer.yaml ./tmp/keymap-drawer-noseparatecombos.yaml"
+prepare_only_separate_combos="\cp ./docs/keymap-drawer/keymap-drawer.yaml ./tmp/keymap-drawer-onlyseparatecombos.yaml"
+prepare_only_vim_combos="\cp ./docs/keymap-drawer/keymap-drawer.yaml ./tmp/keymap-drawer-onlyvimcombos.yaml"
+write_no_separate_combos="yq -i 'del(.combos[] | select(.draw_separate == true))' ./tmp/keymap-drawer-noseparatecombos.yaml"
+write_only_separate_combos="yq -i 'del(.combos[] | select(.draw_separate != true))' ./tmp/keymap-drawer-onlyseparatecombos.yaml"
+write_only_vim_combos="yq -i 'del(.combos[] | select(.k.s != \"vim\"))' ./tmp/keymap-drawer-onlyvimcombos.yaml"
+draw_overview="keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -o ./tmp/overview.svg ./docs/keymap-drawer/keymap-drawer.yaml"
+draw_separate_combos="keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s alpha1 --combos-only -o ./tmp/separatecombos.svg ./tmp/keymap-drawer-onlyseparatecombos.yaml"
+draw_alphas="keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s alpha1 alpha2 ç-extension -o ./tmp/alphas.svg ./tmp/keymap-drawer-noseparatecombos.yaml"
+draw_shifted="keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s shifted1 shifted2 -o ./tmp/shifted.svg ./tmp/keymap-drawer-noseparatecombos.yaml"
+draw_symbols="keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s lower raise -o ./tmp/symbols.svg ./tmp/keymap-drawer-noseparatecombos.yaml"
+draw_functions="keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s functions smartcases -o ./tmp/functions.svg ./tmp/keymap-drawer-noseparatecombos.yaml"
+draw_shortcuts="keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s shortcuts custom -o ./tmp/shortcuts.svg ./tmp/keymap-drawer-noseparatecombos.yaml"
+draw_vim="keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s alpha1_vim_bindings lower media -o ./tmp/vim.svg ./tmp/keymap-drawer-onlyvimcombos.yaml"
+convert_overview="inkscape --export-type png --export-filename ./img/overview.png --export-dpi 300 --export-background=white ./tmp/overview.svg"
+convert_separate_combos="inkscape --export-type png --export-filename ./img/separatecombos.png --export-dpi 300 --export-background=white ./tmp/separatecombos.svg"
+convert_alphas="inkscape --export-type png --export-filename ./img/alphas.png --export-dpi 300 --export-background=white ./tmp/alphas.svg"
+convert_shifted="inkscape --export-type png --export-filename ./img/shifted.png --export-dpi 300 --export-background=white ./tmp/shifted.svg"
+convert_symbols="inkscape --export-type png --export-filename ./img/symbols.png --export-dpi 300 --export-background=white ./tmp/symbols.svg"
+convert_functions="inkscape --export-type png --export-filename ./img/functions.png --export-dpi 300 --export-background=white ./tmp/functions.svg"
+convert_shortcuts="inkscape --export-type png --export-filename ./img/shortcuts.png --export-dpi 300 --export-background=white ./tmp/shortcuts.svg"
+convert_vim="inkscape --export-type png --export-filename ./img/vim.png --export-dpi 300 --export-background=white ./tmp/vim.svg"
+prepare="\
+${prepare_tmp} ; 
+${prepare_no_separate_combos} ; ${prepare_only_separate_combos} ; ${prepare_only_vim_combos} ; \
+${write_no_separate_combos} ; ${write_only_separate_combos} ; ${write_only_vim_combos}\
+"
+draw="\
+${draw_overview} ; ${draw_separate_combos} ; ${draw_alphas} ; ${draw_shifted} ; \
+${draw_symbols} ; ${draw_functions} ; ${draw_shortcuts} ; ${draw_vim}\
+"
+convert="\
+${convert_overview} ; ${convert_separate_combos} ; ${convert_alphas} ; ${convert_shifted} ; \
+${convert_symbols} ; ${convert_functions} ; ${convert_shortcuts} ; ${convert_vim} \
+"
+alias build_diagram="${prepare} ; ${draw} ; ${convert}"

@@ -60,10 +60,10 @@ layers:
         { t: ",", h: smartcases },
         { t: ., h: "⇥ ." },
       ]
-    - { t: CAPS LINE }
+    - { t: CAPS LINE, h: nav }
     - { t: $$mdi:keyboard-space$$, h: lower }
     - { t: shifted2, s: sticky, h: raise }
-    - { t: CAPS word }
+    - { t: CAPS word, h: media }
   shifted2:
     - [Q, Qu, K, Ô, Ó, Ú]
     - [Y, Z, X, W, Ã, Á, É, Í]
@@ -87,7 +87,7 @@ layers:
     - ""
     - ""
     - ""
-  vim_remap:
+  alpha1_vim_bindings:
     - [
         { t: b, s: vim },
         { t: w, s: vim },
@@ -385,12 +385,10 @@ combos:
 
   - { p: [1, 2], k: "k", a: mid, layers: [alpha1, plain1] }
   - { p: [3, 4], k: "x", a: mid, layers: [alpha1, plain1] }
-  - { p: [3, 4, 5], k: "d", a: top, layers: [alpha1] }
   - { p: [7, 8], k: "q", a: mid, layers: [alpha1, plain1] }
   - { p: [8, 9], k: "w", a: mid, layers: [alpha1, plain1] }
   - { p: [10, 11], k: "z", a: mid, layers: [alpha1, plain1] }
   - { p: [11, 12], k: "y", a: mid, layers: [alpha1, plain1] }
-  - { p: [10, 11, 12], k: "p", a: top, layers: [alpha1] }
   - { p: [15, 16], k: "v", a: mid, layers: [alpha1, plain1] }
   - { p: [17, 18], k: "j", a: mid, layers: [alpha1, plain1] }
   - {
@@ -399,29 +397,29 @@ combos:
       a: mid,
       layers: [alpha1, plain1, lower],
     }
+  - { p: [3, 4, 5], k: { t: "d", s: vim }, a: top, layers: [alpha1] }
+  - { p: [10, 11, 12], k: { t: "p", s: vim }, a: top, layers: [alpha1] }
 
   - { p: [1, 2], k: "K", a: mid, layers: [shifted1] }
   - { p: [3, 4], k: "X", a: mid, layers: [shifted1] }
-  - { p: [3, 4, 5], k: "D", a: top, layers: [shifted1] }
   - { p: [7, 8], k: "Q", a: mid, layers: [shifted1] }
   - { p: [8, 9], k: "W", a: mid, layers: [shifted1] }
   - { p: [10, 11], k: "Z", a: mid, layers: [shifted1] }
   - { p: [11, 12], k: "Y", a: mid, layers: [shifted1] }
-  - { p: [10, 11, 12], k: "P", a: top, layers: [shifted1] }
   - { p: [15, 16], k: "V", a: mid, layers: [shifted1] }
   - { p: [17, 18], k: "J", a: mid, layers: [shifted1] }
   - { p: [18, 19], k: { t: ":", h: "⇥ :" }, a: mid, layers: [shifted1] }
 
-  - { p: [1, 2], k: { t: "z", s: vim }, a: mid, layers: [vim_remap] }
-  - { p: [3, 4], k: { t: "x", s: vim }, a: mid, layers: [vim_remap] }
-  - { p: [3, 4, 5], k: { t: "d", s: vim }, a: top, layers: [vim_remap] }
-  - { p: [7, 8], k: { t: "q", s: vim }, a: mid, layers: [vim_remap] }
-  - { p: [8, 9], k: { t: "m", s: vim }, a: mid, layers: [vim_remap] }
-  - { p: [10, 11], k: { t: "i", s: vim }, a: mid, layers: [vim_remap] }
-  - { p: [11, 12], k: { t: "y", s: vim }, a: mid, layers: [vim_remap] }
-  - { p: [10, 11, 12], k: { t: "p", s: vim }, a: bottom, layers: [vim_remap] }
-  - { p: [15, 16], k: { t: "v", s: vim }, a: mid, layers: [vim_remap] }
-  - { p: [17, 18], k: { t: "a", s: vim }, a: mid, layers: [vim_remap] }
+  - { p: [1, 2], k: { t: "z", s: vim }, a: mid, layers: [alpha1_vim_bindings] }
+  - { p: [3, 4], k: { t: "x", s: vim }, a: mid, layers: [alpha1_vim_bindings] }
+  - { p: [3, 4, 5], k: { t: "d", s: vim }, a: top, layers: [alpha1_vim_bindings] }
+  - { p: [7, 8], k: { t: "q", s: vim }, a: mid, layers: [alpha1_vim_bindings] }
+  - { p: [8, 9], k: { t: "m", s: vim }, a: mid, layers: [alpha1_vim_bindings] }
+  - { p: [10, 11], k: { t: "i", s: vim }, a: mid, layers: [alpha1_vim_bindings] }
+  - { p: [11, 12], k: { t: "y", s: vim }, a: mid, layers: [alpha1_vim_bindings] }
+  - { p: [10, 11, 12], k: { t: "p", s: vim }, a: bottom, layers: [alpha1_vim_bindings] }
+  - { p: [15, 16], k: { t: "v", s: vim }, a: mid, layers: [alpha1_vim_bindings] }
+  - { p: [17, 18], k: { t: "a", s: vim }, a: mid, layers: [alpha1_vim_bindings] }
 
   - { p: [1, 2], k: 'dead "', a: mid, layers: [alpha2, plain2, shifted2] }
   - { p: [3, 4], k: "-", a: mid, layers: [alpha2, plain2, shifted2] }
@@ -429,7 +427,8 @@ combos:
   - { p: [7, 8], k: "dead ^", a: mid, layers: [alpha2, plain2, shifted2] }
   - { p: [8, 9], k: "dead '", a: mid, layers: [alpha2, plain2, shifted2] }
   - { p: [10, 11], k: "?", a: mid, layers: [alpha2, plain2, shifted2] }
-  - { p: [11, 12], k: "à", a: mid, layers: [alpha2, plain2, shifted2] }
+  - { p: [11, 12], k: "à", a: mid, layers: [alpha2, plain2] }
+  - { p: [11, 12], k: "À", a: mid, layers: [shifted2] }
   - { p: [10, 11, 12], k: "(", a: top, layers: [alpha2, plain2, shifted2] }
   - { p: [14, 15], k: "dead `", a: mid, layers: [alpha2, plain2, shifted2] }
   - { p: [15, 16], k: "dead ~", a: mid, layers: [alpha2, plain2, shifted2] }
@@ -481,13 +480,13 @@ combos:
     }
  
   - { p: [1, 2], k: "€", a: mid, layers: [lower] }
-  - { p: [3, 4], k: "G", a: mid, layers: [lower] }
+  - { p: [3, 4], k: { t: "G", s: "vim" }, a: mid, layers: [lower] }
   - { p: [14, 15], k: "nav", a: mid, layers: [lower] }
   - { p: [10, 11, 12], k: "R$", a: top, layers: [lower] }
   - { p: [17, 18, 19], k: "US$", a: top, layers: [lower] }
-  - { p: [10, 11], k: "j", a: mid, layers: [lower] }
-  - { p: [11, 12], k: "k", a: mid, layers: [lower] }
-  - { p: [17, 18], k: "|", a: mid, layers: [lower] }
+  - { p: [10, 11], k: { t: "j", s: "vim" }, a: mid, layers: [lower] }
+  - { p: [11, 12], k: { t: "k", s: "vim" }, a: mid, layers: [lower] }
+  - { p: [17, 18],  k: { t: "|", s: "vim" }, a: mid, layers: [lower] }
   - { p: [7, 8], k: { t: "()", h: "⇥ ()" }, a: mid, layers: [lower] }
   - { p: [8, 9], k: { t: "&&", h: "→ &&" }, a: mid, layers: [lower] }
   - { p: [15, 16], k: { t: "||", h: "→ ||" }, a: mid, layers: [lower] }
