@@ -1,5 +1,7 @@
 # rafaelromao's keyboard layout
 
+![img](../img/alphas.png)
+
 ## Two Alpha Layers
 - This is a split keyboard layout with 24  keys, in the formats 1333+2.
 - This layout works well with the OS configured for US International keyboards.
