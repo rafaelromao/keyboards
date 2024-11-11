@@ -1,0 +1,106 @@
+layout:
+  cols_thumbs_notation: "1333+2> 2<+3331"
+layers:
+ coding-meh:
+    - [{s: project, t: $$mdi:file-multiple$$},
+       {s: build, t: $$mdi:wrench$$},
+       {s: breakpoint, t: $$mdi:circle$$},
+       {s: step out, t: $$mdi:debug-step-out$$},
+       {s: step over, t: $$mdi:debug-step-over$$},
+       {s: step into, t: $$mdi:debug-step-into$$}]
+    - [type: held,
+       {s: scheme, h: $$mdi:apple-keyboard-command$$, t: $$mdi:view-array$$},
+       {s: run, t: $$mdi:play$$},
+       {s: debug, t: $$mdi:bug-play$$},
+       {s: type match, t: $$mdi:code-block-braces$$},
+       {s: actions, t: $$mdi:flash-alert$$},
+       {s: statement, h: $$mdi:apple-keyboard-command$$, t: "()"},
+       type: held]
+    - [{s: history, t: $$mdi:history$$},
+       {s: switcher, t: $$mdi:apps$$},
+       {s: usages, t: $$mdi:book-open-variant-outline$$},
+       {s: quick docs, t: $$mdi:book-open-outline$$},
+       {s: comment, t: "//"},
+       {s: evaluate, t: $$mdi:variable$$}]
+    - {h: nav}
+    - {type: held}
+    - {type: held}
+    - {h: nav}
+ coding-hyper:
+    - [{s: select in, t: $$mdi:form-select$$},
+       {s: rebuild, t: $$mdi:wrench-outline$$},
+       {s: breakpoints, t: $$mdi:circle-multiple$$},
+       {s: everything, t: $$mdi:database-search-outline$$l},
+       {s: symbols, t: $$mdi:text-box-search-outline$$},
+       {s: actions, t: $$mdi:feature-search-outline$$}]
+    - [type: held,
+       {type: held},
+       {s: stop, t: $$mdi:stop$$},
+       {s: resume, t: $$mdi:play-pause$$},
+       {s: complete, t: $$mdi:code-block-parentheses$$},
+       {s: refactor, t: $$mdi:file-code-outline$$},
+       {type: held},
+       type: held]
+    - [{s: prev error, t: $$mdi:page-previous-outline$$},
+       {s: next error, t: $$mdi:page-next-outline$$},
+       {s: definition, t: $$mdi:feather$$},
+       {s: params, t: $$mdi:dots-horizontal$$},
+       {s: format, t: $$mdi:format-indent-increase$$},
+       {s: generate, t: $$mdi:code-json$$}]
+    - {h: nav}
+    - {type: held}
+    - {type: held}
+    - {h: nav}
+ fusion360-meh:
+    - [null,
+       null,
+       null,
+       {s: line, t: $$mdi:vector-line$$},
+       {s: offset, t: $$mdi:tally-mark-2$$},
+       draft]
+    - [null,
+       null,
+       null,
+       null,
+       {s: rectangle, t: $$mdi:rectangle-outline$$},
+       {s: search, t: $$mdi:magnify$$},
+       {s: extrude, t: $$mdi:plus-box-multiple$$, h: $$mdi:apple-keyboard-command$$},
+       {t: measure, type: held}]
+    - [null,
+       null,
+       null,
+       {s: hole, t: $$mdi:music-note-whole$$},
+       {s: circle, t: $$mdi:circle-outline$$},
+       {s: fillet, t: $$mdi:rounded-corner$$}]
+    - null
+    - null
+    - {type: held}
+    - null
+ fusion360-hyper:
+    - [null,
+       null,
+       null,
+       toggle visibility,
+       move,
+       press pull]
+    - [null,
+       null,
+       null,
+       null,
+       trim,
+       appearance,
+       {t: toggle colors, type: held},
+       {t: sketch dimensions, type: held}]
+    - [null,
+       null,
+       null,
+       project,
+       chamfer,
+       joint]
+    - null
+    - null
+    - type: held
+    - null
+combos:
+  - { p: [11, 12], k: "orbit", a: mid, layers: [fusion360-meh] }
+  - { p: [18, 19], k: "pan", a: mid, layers: [fusion360-meh] }
