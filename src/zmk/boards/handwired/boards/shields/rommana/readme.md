@@ -13,8 +13,8 @@ Some build pictures can be found [here](../../../../../../docs/builds/rommana.md
 
 Parts:
 - 30 MX 5-pin switches.
-- 28 1u MX keycaps (leftovers from a MT3 3277 Ergodox Set).
-- 2 1.5u MX keycaps (leftovers from a MT3 3277 Engodox Set).
+- 28 1u MX keycaps.
+- 2 1.5u MX keycaps.
 - Rommana 15 degree tent [case](https://github.com/AlaaSaadAbdo/Rommana).
 - [Seeeduino Xiao RP2040](https://aliexpress.com/item/4000131085893.html).
 - [1n4148 diodes](https://aliexpress.com/item/1005003540554760.html).
