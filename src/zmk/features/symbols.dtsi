@@ -148,18 +148,25 @@
         SYMBOL(mc_end_pars,        &kp END &kp LPAR &kp RPAR)
         TAPHOLD_SYMBOL(th_pars,    &mc_pars, &mc_end_pars)
 
-        SYMBOL(mc_brackets,         &kp LBKT &kp RBKT)
-        SYMBOL(mc_end_brackets,     &kp END &kp LBKT &kp RBKT)
-        TAPHOLD_SYMBOL(th_brackets, &mc_brackets, &mc_end_brackets)
+        SYMBOL(mc_brackets,          &kp LBKT &kp RBKT)
+        LAYERTAP_SYMBOL(th_brackets, &mc_brackets)
 
         // Raise
 
+        SYMBOL(mc_dhash,           &kp HASH &kp HASH)
+        SYMBOL(mc_str,             &kp RS(S) &kp RS(T) &kp RS(R) &kp DOT)
+        SYMBOL(mc_thash,           &kp HASH &kp HASH &kp HASH)
+        SYMBOL(mc_tdqo,            &mc_dqo &mc_dqo &mc_dqo)
+        SYMBOL(mc_tbti,            &mc_bti &mc_bti &mc_bti)
+        SYMBOL(mc_dsqo,            &mc_sqo &mc_sqo &kp LEFT)
+        SYMBOL(mc_ddqo,            &mc_dqo &mc_dqo &kp LEFT)
+        SYMBOL(mc_dbti,            &mc_bti &mc_bti &kp LEFT)
+
         SYMBOL(mc_braces_new,      &kp END &kp LBRC &kp ENTER)
-        SYMBOL(mc_parens_new,      &kp END &kp LPAR &kp RPAR &kp SEMI &kp ENTER)
-        SYMBOL(mc_brackets_new,    &kp END &kp LBKT &kp RBKT &kp SEMI &kp ENTER)
         SYMBOL(mc_sarrow,          &kp MINUS &kp GT)
-        SYMBOL(mc_darrow,          &kp EQUAL &kp GT)
-        SYMBOL(mc_colon_colon,     &kp COLON &kp COLON)
+        SYMBOL(mc_dcolon,          &kp COLON &kp COLON)
+        SYMBOL(mc_end_dcolon,      &kp END &kp COLON &kp COLON)
+        TAPHOLD_SYMBOL(th_dcolon,  &mc_dcolon, &mc_end_dcolon)
 
         SYMBOL(mc_perc,            &kp PERCENT)
         SYMBOL(mc_end_perc,        &kp END &kp PERCENT)

@@ -155,9 +155,9 @@
                 raise_layer {
                      display-name = "RAISE";
                      bindings = <
-   &none               &mc_caret           &kp HASH            &kp DOLLAR          &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
-   &mc_degree          &th_bti 0 0         &th_sqo 0 0         &th_dqo 0 0         &none               &none               &th_qmark 0 0       &mc_minus           &mc_plus            &lt CUSTOM COMMA
-   &none               &mc_lt              &mc_gt              &mc_tilde           &none               &none               &th_excl 0 0        &mc_slash           &mc_star            &trans
+   &none               &mc_tilde           &kp HASH            &th_sqo 0 0         &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
+   &mc_degree          &mc_caret           &kp DOLLAR          &th_dqo 0 0         &none               &none               &th_qmark 0 0       &mc_minus           &mc_plus            &lt CUSTOM COMMA
+   &none               &mc_lt              &mc_gt              &th_bti 0 0         &none               &none               &th_excl 0 0        &mc_slash           &mc_star            &trans
                                            &trans              &key_repeat         &lt LOW_CP SPACE    &trans              &trans              &trans       
                            >;
                 };
@@ -303,9 +303,9 @@
                 raise_copy_layer {
                      display-name = "RAISE";
                      bindings = <
-   &none               &mc_caret           &kp HASH            &kp DOLLAR          &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
-   &mc_degree          &th_bti 0 0         &th_sqo 0 0         &th_dqo 0 0         &none               &none               &th_qmark 0 0       &mc_minus           &mc_plus            &kp STAR  
-   &none               &mc_lt              &mc_gt              &mc_tilde           &none               &none               &th_excl 0 0        &mc_slash           &mc_star            &trans
+   &none               &mc_tilde           &kp HASH            &th_sqo 0 0         &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
+   &mc_degree          &mc_caret           &kp DOLLAR          &th_dqo 0 0         &none               &none               &th_qmark 0 0       &mc_minus           &mc_plus            &kp STAR  
+   &none               &mc_lt              &mc_gt              &th_bti 0 0         &none               &none               &th_excl 0 0        &mc_slash           &mc_star            &trans
                                            &trans              &key_repeat         &kp SPACE           &kp SPACE           &trans              &trans       
                            >;
                 };
