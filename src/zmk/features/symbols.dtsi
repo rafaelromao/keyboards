@@ -55,7 +55,6 @@
         };
 
     symbols {
-
         // Base
 
         SHIFTED_SYMBOL(mm_semi,    &kp SEMI, &kp COLON)

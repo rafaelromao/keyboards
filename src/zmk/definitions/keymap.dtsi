@@ -283,8 +283,8 @@
                      display-name = "NAV";
                      bindings = <
    &none               &mc_prevword        &kp PAGE_UP         &mc_nextword        &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
-   &none               &kp LSHFT           &kp LCTRL           &kp LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
-   &none               &kp RALT            &kp PAGE_DOWN       &kp LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &trans
+   &none               &td_LSHFT           &td_LCTRL           &td_LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &none               &td_RALT            &kp PAGE_DOWN       &td_LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &trans
                                            &trans              &trans              &trans              &kp SPACE           &mo MEDIA           &trans
                         >;
                 };
@@ -327,8 +327,8 @@
                      display-name = "NAV";
                      bindings = <
    &none               &mc_prevword        &kp PAGE_UP         &mc_nextword        &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
-   &none               &kp LSHFT           &kp LCTRL           &kp LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
-   &none               &kp RALT            &kp PAGE_DOWN       &kp LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &trans
+   &none               &td_LSHFT           &td_LCTRL           &td_LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &none               &td_RALT            &kp PAGE_DOWN       &td_LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &trans
                                            &trans              &trans              &trans              &kp SPACE           &trans              &trans
                            >;
                 };
