@@ -46,10 +46,10 @@ noremap kk zz
 noremap ll gg
 ```
         
-#### Standard Mods
+#### One Shot Mods
 
-- Standard modifiers are available in Navigation the layer.
-- These modifiers do not have one-shot or mod-tap behaviors, so they can be used in situations which a tap or multi tap in a modifier key is required.
+- One Shot modifiers are available in Navigation the layer.
+- Double tapping any of these modifiers will send a double tap instead of activating the one shot behavior. This is useful for some shortcuts like Shift+Shift or Ctrl+Ctrl in IntelliJ, for example.
 
 ### Media
 - The Media layer gives access to [Standard Modifiers](modifiers.md#standard-modifiers), Media controls, Esc and a Save shortcut.
@@ -60,3 +60,6 @@ noremap ll gg
 #### Fixed Navigation Layer
 - A fixed version of the Navigation layer can be toggled on permanently using the Shortcuts layer.
 - This clone works the same way as the original Navigation layer, but the outer right thumb key will activate the Media layer instead of the System layer.
+
+### Panic Mode Combo
+- All fixable layers have a Panic Mode combo that returns the keyboard to the base layer. This combo is formed by the top three keys in the left side of the keyboard.
