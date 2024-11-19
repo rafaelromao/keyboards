@@ -57,7 +57,7 @@ layers:
        null,
        {s: line, t: $$mdi:vector-line$$},
        {s: offset, t: $$mdi:tally-mark-2$$},
-       draft]
+       {s: draft}]
     - [null,
        null,
        null,
@@ -65,7 +65,7 @@ layers:
        {s: rectangle, t: $$mdi:rectangle-outline$$},
        {s: search, t: $$mdi:magnify$$},
        {s: extrude, t: $$mdi:plus-box-multiple$$, h: $$mdi:apple-keyboard-command$$},
-       {t: measure, type: held}]
+       {type: held}]
     - [null,
        null,
        null,
@@ -80,27 +80,32 @@ layers:
     - [null,
        null,
        null,
-       toggle visibility,
-       move,
-       press pull]
+       {s: visibility},
+       {s: move},
+       {s: press pull}]
     - [null,
        null,
        null,
        null,
-       trim,
-       appearance,
-       {t: toggle colors, type: held},
-       {t: sketch dimensions, type: held}]
+       {s: trim},
+       {s: appearance},
+       {type: held},
+       {type: held}]
     - [null,
        null,
        null,
-       project,
-       chamfer,
-       joint]
+       {s: project},
+       {s: chamfer},
+       {s: joint}]
     - null
     - null
     - type: held
     - null
 combos:
-  - { p: [11, 12], k: "orbit", a: mid, layers: [fusion360-meh] }
-  - { p: [18, 19], k: "pan", a: mid, layers: [fusion360-meh] }
+  - { p: [11, 12], k: orbit, a: mid, w: 50, layers: [fusion360-meh] }
+  - { p: [18, 19], k: pan, a: mid, w: 50, layers: [fusion360-meh] }
+  - { p: [3, 4], k: loft, a: mid, w: 50, layers: [fusion360-meh] }
+  - { p: [10, 11], k: measure, a: mid, w: 50, layers: [fusion360-meh] }
+  - { p: [17, 18], k: sketch dimensions, a: mid, w: 50, layers: [fusion360-meh] }
+  - { p: [3, 4], k: mode, a: mid, w: 50, layers: [fusion360-hyper] }
+  - { p: [10, 11], k: toggle colors, a: mid, w: 50, layers: [fusion360-hyper] }
