@@ -123,8 +123,8 @@ alias build_diamond="cd ${ZMK_HOME} && ${build_diamond_central_left} && ${archiv
 #alias build_diamond="cd ${ZMK_HOME} && ${build_diamond_central_left} && ${archive_diamond_central_left} && cd $KEYBOARD_HOME"
 
 echo "Creating Wired Diamond build alias..."
-build_wired_diamond_left="west build -s app -b seeeduino_xiao_rp2040 --build-dir build/wired_diamond_left -- -DSHIELD='wired_diamond_left' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/boards/handwired -DZMK_EXTRA_MODULES='$BEHAVIOR_MODULES'"
-build_wired_diamond_right="west build -s app -b seeeduino_xiao_rp2040 --build-dir build/wired_diamond_right -- -DSHIELD='wired_diamond_right' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/boards/handwired -DZMK_EXTRA_MODULES='$BEHAVIOR_MODULES'"
+build_wired_diamond_left="west build -p -s app -b seeeduino_xiao_rp2040 --build-dir build/wired_diamond_left -- -DSHIELD='wired_diamond_left' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/boards/handwired -DZMK_EXTRA_MODULES='$BEHAVIOR_MODULES'"
+build_wired_diamond_right="west build -p -s app -b seeeduino_xiao_rp2040 --build-dir build/wired_diamond_right -- -DSHIELD='wired_diamond_right' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/boards/handwired -DZMK_EXTRA_MODULES='$BEHAVIOR_MODULES'"
 archive_wired_diamond_left="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/wired_diamond_left/zephyr/zmk.uf2 ] && mv build/wired_diamond_left/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/wired_diamond_left-zmk.uf2"
 archive_wired_diamond_right="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/wired_diamond_right/zephyr/zmk.uf2 ] && mv build/wired_diamond_right/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/wired_diamond_right-zmk.uf2"
 alias build_wired_diamond_all="cd ${ZMK_HOME} && ${build_wired_diamond_left} && ${archive_wired_diamond_left} && ${build_wired_diamond_right} && ${archive_wired_diamond_right} && cd ${KEYBOARD_HOME}"

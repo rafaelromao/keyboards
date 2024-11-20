@@ -11,43 +11,15 @@ config ZMK_SPLIT_ROLE_CENTRAL
 
 endif
 
-
-if ZMK_DISPLAY
-
-config I2C
-    default y
-
-config SSD1306
-    default y
-
-choice ZMK_DISPLAY_WORK_QUEUE
-    default ZMK_DISPLAY_WORK_QUEUE_DEDICATED
-endchoice
-
-endif
-
-
-if LVGL
-
-config LV_Z_VDB_SIZE
-    default 64
-
-config LV_DPI_DEF
-    default 148
-
-config LV_Z_BITS_PER_PIXEL
-    default 1
-
-choice LV_COLOR_DEPTH
-    default LV_COLOR_DEPTH_1
-endchoice
-
-endif
-
-
 if SHIELD_WIRED_DIAMOND_LEFT || SHIELD_WIRED_DIAMOND_RIGHT
 
 config ZMK_SPLIT
+    default y
+
+config ZMK_SPLIT_SERIAL
+	default y
+
+config SERIAL
     default y
 
 endif
