@@ -148,7 +148,7 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-            // bindings = <&macro_tap &to ALPHA1 &smart_num LOWER>;
+            // bindings = <&macro_tap &to ALPHA1 &smart_num LOW_CP>;
             bindings = <&macro_tap &smart_num_cp>;
         };
 

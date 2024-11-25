@@ -29,7 +29,7 @@
     #define ALL_LAYERS                  ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS SMARTCASE_LAYERS LOWER_LAYERS SHORTCUT_LAYERS MEDIA_LAYERS NAV_LAYERS RAISE_LAYERS SYSTEM_LAYERS 
     #define ALL_LAYERS_WITH_BACKSPACE   ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS SMARTCASE_LAYERS LOWER_LAYERS SHORTCUT_LAYERS MEDIA_LAYERS NAV_LAYERS RAISE_LAYERS        
     #define ALL_LAYERS_WITH_ESC         ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS SMARTCASE_LAYERS              SHORTCUT_LAYERS MEDIA_LAYERS NAV_LAYERS                     
-    #define FIXABLE_LAYERS              PLAIN1 LOWER CUSTOM MEDIA NAV_F
+    #define FIXABLE_LAYERS              PLAIN1 LOWER_LAYERS MEDIA_LAYERS NAV_LAYERS CUSTOM
 
     #define COMBO_TERM 50
 
@@ -110,10 +110,10 @@
         COMBO(cb_meh_x,         RTI RTM,     &mc_meh_x,          CUSTOM)
         COMBO(cb_meh_z,         RHI RHM,     &mc_meh_z,          CUSTOM)
         COMBO(cb_meh_j,         RBI RBM,     &mc_meh_j,          CUSTOM)
-        COMBO(cb_lower_cl,      LBM LBR,     &tc_num_word,       CUSTOM)
-        COMBO(cb_lower_cr,      RBM RBR,     &tc_num_word,       CUSTOM)
         COMBO(cb_meh_q,         LHR LHM,     &mc_meh_q,          CUSTOM)
         COMBO(cb_meh_y,         RHR RHM,     &mc_meh_y,          CUSTOM)
+        COMBO(cb_lower_cl,      LBM LBR,     &tc_num_word_cp,    CUSTOM)
+        COMBO(cb_lower_cr,      RBM RBR,     &tc_num_word_cp,    CUSTOM)
 
         COMBO(cb_comm,          RHP R0,      &kp COMMA,          LOWER_LAYERS)
         COMBO(cb_sfl,           RTI RTM,     &kp LS(L),          LOWER_LAYERS)
