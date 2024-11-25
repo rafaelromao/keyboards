@@ -110,8 +110,8 @@
         COMBO(cb_meh_x,         RTI RTM,     &mc_meh_x,          CUSTOM)
         COMBO(cb_meh_z,         RHI RHM,     &mc_meh_z,          CUSTOM)
         COMBO(cb_meh_j,         RBI RBM,     &mc_meh_j,          CUSTOM)
-        COMBO(cb_meh_d,         LBM LBR,     &mc_meh_d,          CUSTOM)
-        COMBO(cb_meh_i,         RBM RBR,     &mc_meh_i,          CUSTOM)
+        COMBO(cb_lower_cl,      LBM LBR,     &tc_num_word,       CUSTOM)
+        COMBO(cb_lower_cr,      RBM RBR,     &tc_num_word,       CUSTOM)
         COMBO(cb_meh_q,         LHR LHM,     &mc_meh_q,          CUSTOM)
         COMBO(cb_meh_y,         RHR RHM,     &mc_meh_y,          CUSTOM)
 
