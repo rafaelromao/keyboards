@@ -20,6 +20,9 @@
 #### Ç Extension
 - There is an extension to the Secondary Alpha Layer, which I call *Ç Extension*. It activates an one-shot layer just after `ç` is typed, to allow easy access to `ã`, `õ` and macros for `ão` and `ões`.
 
+### Pontuation Hold
+- Holding a pontuation key (dot, comma or semicolon) will add it to the end of the current line.
+
 ### Magic Key
 - The Bottom Row Index Key, in the right hand, is programmed to act as a Magic Key. It will behave like `H` after consonants and like `V` after vowels. To see more about that, check the [Magic Romak](https://github.com/rafaelromao/romak/tree/main?tab=readme-ov-file#magic-romak) page.
 
@@ -54,9 +57,6 @@
 ### Sentence Case
 - Tapping Space after `.`, `?` or `!` will trigger ONESHOT SHIFT when the next key is pressed, so that it gets capitalized. Repeat key can be used to cancel this behavior, and it will also expire after one second if no other key is pressed.
 - The implementation was based on [Pascal's](https://github.com/getreuer/qmk-keymap) implementation, but it does not work the same way.
-
-### Panic Mode Combo
-- All fixable layers have a Panic Mode combo that returns the keyboard to the base layer. This combo is formed by the top three keys in the left side of the keyboard.
 
 ### Secrets
 - Secret combos and leader sequencies can be included in the files [secret.h](https://gist.github.com/rafaelromao/29b444b8b0bdec5402067beb35c2bcda) and [secret.c](https://gist.github.com/rafaelromao/76be290d7d58176699b8e20859c15618). These files are not part of the repo, for obvious reasons, so these two gists are provided as templates.
