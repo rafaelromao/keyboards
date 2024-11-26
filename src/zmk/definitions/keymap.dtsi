@@ -136,7 +136,7 @@
                      bindings = <
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
    &trans              &trans              &trans              &mc_aotil_c         &trans              &trans              &ac_atil_c          &trans              &trans              &trans  
-   &trans              &trans              &trans              &mc_otiles_c        &trans              &trans              &ac_otil_c          &trans              &trans              &trans              &trans 
+   &trans              &trans              &trans              &mc_otiles_c        &trans              &trans              &ac_otil_c          &trans              &trans              &trans
                                            &trans              &trans              &trans              &kp BACKSPACE       &trans              &trans
                            >;
                 };
