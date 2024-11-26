@@ -9,11 +9,11 @@ Diamond is a handwired board originally designed by me but heavily inspired by t
 - These components should be mounted upside down, under this cover.
 - The cables for column and rows will pass through 3 holes in the cover and can be tightened in the end of the assembling to make them less visible in the final build. 
 
-[Here](../../docs/diamond.md) you can see some build images.
+[Here](../../docs/builds/diamond.md) you can see some build images.
 
 ## Diamond
 
-![img](../../img/diamond.jpeg)
+![img](../../img/diamond/diamond.jpeg)
 
 ### Diamond v1
 
