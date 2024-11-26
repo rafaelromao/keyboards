@@ -12,6 +12,7 @@ DONGLE_HOME="$KEYBOARD_HOME/$DONGLE_MODULE"
 AUTOLAYER_HOME="$KEYBOARD_HOME/$AUTOLAYER_MODULE"
 ANTECEDENT_HOME="$KEYBOARD_HOME/$ANTECEDENT_MODULE"
 BEHAVIOR_MODULES=""
+ZMK_DEFAULT_BRANCH="20240328/rafaelromao/main"
 
 if [[ ! -d "$DONGLE_HOME" ]]
 then
@@ -49,12 +50,9 @@ echo "Update git sub-modules..."
 git submodule sync --recursive
 git submodule update --init --recursive --progress
 
-echo "Checking out zmk..."
-cd $ZMK_HOME
-git fetch
-git checkout 20240328/rafaelromao/main
-git pull
-cd $KEYBOARD_HOME
+alias build_cleanup="rm -rf $KEYBOARD_HOME/modules/rafaelromao/zmk/build; ZMK_BRANCH=$ZMK_DEFAULT_BRANCH"
+alias build_checkout="build_cleanup; echo 'Checking out zmk...'; cd $ZMK_HOME; git fetch; git checkout $ZMK_BRANCH; git pull; cd $KEYBOARD_HOME;"
+build_checkout
 
 if [[ "${INIT}" == "true" ]]
 then
@@ -107,7 +105,6 @@ archive_cygnus_peripheral_left="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f bu
 archive_cygnus_peripheral_right="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/cygnus_peripheral_right/zephyr/zmk.uf2 ] && mv build/cygnus_peripheral_right/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/cygnus_peripheral_right-zmk.uf2"
 alias build_cygnus_all="cd ${ZMK_HOME} && ${build_cygnus_central_left} && ${archive_cygnus_central_left} && ${build_cygnus_central_dongle} && ${archive_cygnus_central_dongle} && ${build_cygnus_peripheral_left} && ${archive_cygnus_peripheral_left} && ${build_cygnus_peripheral_right} && ${archive_cygnus_peripheral_right} && cd ${KEYBOARD_HOME}"
 alias build_cygnus="cd ${ZMK_HOME} && ${build_cygnus_central_dongle} && ${archive_cygnus_central_dongle} && ${build_cygnus_central_left} && ${archive_cygnus_central_left} && cd $KEYBOARD_HOME"
-#alias build_cygnus="cd ${ZMK_HOME} && ${build_cygnus_central_left} && ${archive_cygnus_central_left} && cd $KEYBOARD_HOME"
 
 echo "Creating Diamond build alias..."
 build_diamond_central_dongle="west build -s app -b nice_nano_v2 --build-dir build/diamond_central_dongle -- -DSHIELD='diamond_central_dongle dongle_display' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/boards/handwired -DZMK_EXTRA_MODULES='$DONGLE_HOME;$BEHAVIOR_MODULES'"
@@ -120,7 +117,6 @@ archive_diamond_peripheral_left="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f b
 archive_diamond_peripheral_right="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/diamond_peripheral_right/zephyr/zmk.uf2 ] && mv build/diamond_peripheral_right/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/diamond_peripheral_right-zmk.uf2"
 alias build_diamond_all="cd ${ZMK_HOME} && ${build_diamond_central_left} && ${archive_diamond_central_left} && ${build_diamond_central_dongle} && ${archive_diamond_central_dongle} && ${build_diamond_peripheral_left} && ${archive_diamond_peripheral_left} && ${build_diamond_peripheral_right} && ${archive_diamond_peripheral_right} && cd ${KEYBOARD_HOME}"
 alias build_diamond="cd ${ZMK_HOME} && ${build_diamond_central_left} && ${archive_diamond_central_left} && cd $KEYBOARD_HOME"
-#alias build_diamond="cd ${ZMK_HOME} && ${build_diamond_central_left} && ${archive_diamond_central_left} && cd $KEYBOARD_HOME"
 
 echo "Creating Keymap Drawer alias..."
 prepare_tmp="mkdir -p ./tmp ; mkdir -p ./tmp"
