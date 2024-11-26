@@ -23,7 +23,7 @@ Parts for the keyboard:
 - [28 AWG Wires](https://www.aliexpress.com/item/1005006249194665.html).
 - [1n4148 diodes + diode legs](https://www.aliexpress.com/item/1005003540554760.html).
 
-[Here](../../../../../../../docs/builds/wired-diamond.md) you can see some build images.
+[Here](../../../../../../../docs/builds/wired_diamond.md) you can see some build images.
 
 ### ZMK
 
