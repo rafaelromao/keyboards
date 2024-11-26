@@ -66,7 +66,7 @@ The keyboards that run the ZMK implementation of this Keymap are listed below:
 - [Wired Diamond](src/zmk/keyboards/wired_diamond/boards/shields/wired_diamond/readme.md)
 - [Dactyl Cygnus](src/zmk/keyboards/cygnus/boards/shields/cygnus/readme.md)
 - [Rommana](src/zmk/keyboards/rommana/boards/shields/rommana/readme.md)
-- [Corne-ish Zen](src/zmk/boards/lowprokb.ca/corneish-zen/readme.md)
+- [Corne-ish Zen](src/zmk/keyboards/lowprokb.ca/corneish-zen/readme.md)
 
 ## Diagram
 
