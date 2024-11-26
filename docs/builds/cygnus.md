@@ -1,7 +1,7 @@
 # Dactyl Cygnus
 ### A 36 keys handwired split keyboard.
 
-For the complete documentation and source files, go to [this page](../src/zmk/boards/handwired/boards/shields/cygnus).
+For the complete documentation and source files, go to [this page](../src/zmk/keyboards/cygnus/boards/shields/cygnus).
 
 ## The pictures below show some steps in the handwiring process of this board.
 

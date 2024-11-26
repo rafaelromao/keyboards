@@ -1,7 +1,7 @@
 # Diamond
 ### A 24 keys handwired split keyboard.
 
-For the complete documentation and source files, go to [this page](../src/zmk/boards/handwired/boards/shields/diamond).
+For the complete documentation and source files, go to [this page](../src/zmk/keyboards/diamond/boards/shields/diamond).
 
 ## Some build pictures:
 

@@ -62,10 +62,10 @@ This fork is also updated to Zephyr 3.5.
 
 The keyboards that run the ZMK implementation of this Keymap are listed below:
 
-- [Diamond](src/zmk/boards/handwired/boards/shields/diamond/readme.md)
-- [Wired Diamond](src/zmk/boards/handwired/boards/shields/wired-diamond/readme.md)
-- [Dactyl Cygnus](src/zmk/boards/handwired/boards/shields/cygnus/readme.md)
-- [Rommana](src/zmk/boards/handwired/boards/shields/rommana/readme.md)
+- [Diamond](src/zmk/keyboards/diamond/boards/shields/diamond/readme.md)
+- [Wired Diamond](src/zmk/keyboards/wired-diamond/boards/shields/wired-diamond/readme.md)
+- [Dactyl Cygnus](src/zmk/keyboards/cygnus/boards/shields/cygnus/readme.md)
+- [Rommana](src/zmk/keyboards/rommana/boards/shields/rommana/readme.md)
 - [Corne-ish Zen](src/zmk/boards/lowprokb.ca/corneish-zen/readme.md)
 
 ## Diagram
