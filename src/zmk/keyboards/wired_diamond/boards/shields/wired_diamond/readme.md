@@ -10,7 +10,7 @@ Wired Diamond is a variant of this keyboard that uses two Xiao RP2040 connected 
 For more information about how this wired split PR works for this MCU, check this other repo: https://github.com/rafaelromao/wired-zmk-config.
 
 ### Wired Diamond
-![img](../../../../../../../img/wired-diamond/wired-diamond.jpeg)
+![img](../../../../../../../img/wired_diamond/wired_diamond.jpeg)
 
 Parts for the keyboard:
 - 24 MX switches.

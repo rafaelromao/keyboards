@@ -1,7 +1,7 @@
 # rommana
 ### A 30 keys handwired split keyboard.
 
-For the complete documentation and source files, go to [this page](../src/qmk/keykeyboards/rommana/rafaelromao/rommana).
+For the complete documentation and source files, go to [this page](../../src/qmk/keykeyboards/rommana/rafaelromao/rommana).
 
 ## The pictures below show some steps in the handwiring process of this board.
 
