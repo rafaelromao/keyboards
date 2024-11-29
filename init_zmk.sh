@@ -82,8 +82,8 @@ archive_reset_unibody="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/reset
 alias build_reset="${checkout_main_zmk} && cd ${ZMK_HOME} && ${build_reset_unibody} && ${archive_reset_unibody} && cd $KEYBOARD_HOME"
 
 echo "Creating Zen build alias..."
-build_zen_left="west build -s app -b corneish_zen_v2_left --build-dir build/corneish_zen_left -- -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/boards/lowprokb.ca/corneish-zen -DZMK_EXTRA_MODULES='$BEHAVIOR_MODULES'"
-build_zen_right="west build -s app -b corneish_zen_v2_right --build-dir build/corneish_zen_right -- -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/boards/lowprokb.ca/corneish-zen -DZMK_EXTRA_MODULES='$BEHAVIOR_MODULES'"
+build_zen_left="west build -s app -b corneish_zen_v2_left --build-dir build/corneish_zen_left -- -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/keyboards/lowprokb.ca/corneish-zen -DZMK_EXTRA_MODULES='$BEHAVIOR_MODULES'"
+build_zen_right="west build -s app -b corneish_zen_v2_right --build-dir build/corneish_zen_right -- -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/keyboards/lowprokb.ca/corneish-zen -DZMK_EXTRA_MODULES='$BEHAVIOR_MODULES'"
 archive_zen_left="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/corneish_zen_left/zephyr/zmk.uf2 ] && mv build/corneish_zen_left/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/corneish_zen_v2_left-zmk.uf2"
 archive_zen_right="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/corneish_zen_right/zephyr/zmk.uf2 ] && mv build/corneish_zen_right/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/corneish_zen_v2_right-zmk.uf2"
 alias build_zen_all="cd ${ZMK_HOME} && ${build_zen_left} && ${archive_zen_left} && ${build_zen_right} && ${archive_zen_right} && cd ${KEYBOARD_HOME}"
