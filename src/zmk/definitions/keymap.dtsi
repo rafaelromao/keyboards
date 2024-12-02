@@ -27,8 +27,8 @@
                      display-name = "ROMAK";
                      bindings = <
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp Y
-   &lt SHORTCUTS D     &mt LSHFT N         &mt LCTRL S         &mt LGUI T          &kp W               &kp Z               &mt RGUI R          &mt RCTRL A         &mt RSHFT E         &lt SHORTCUTS I      
-   &kp Q               &mt RALT F          &lt FUNCTIONS C     &mt LALT P          &kp V               &kp J               &ht_magic RALT 0    &lt SMART COMMA     &th_dot 0 0         &kp Y
+   &lt SHORTCUTS D     &mt LSHFT N         &mt LCTRL S         &mt LALT T          &kp W               &kp Z               &mt RALT R          &mt RCTRL A         &mt RSHFT E         &lt SHORTCUTS I      
+   &kp Q               &mt LGUI F          &mt LGUI C          &mt LGUI P          &kp V               &kp J               &ht_magic RGUI 0    &lt SMART COMMA     &th_dot 0 0         &kp Y
                                            &none               &ht_repeat NAV 0    &ltn LOWER SPACE    &msl_a2 RAISE 0     &ht_shift MEDIA 0   &none
                         >;
                 };
@@ -81,8 +81,8 @@
                      display-name = "CASE";
                      bindings = <
    &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &kp LS(Y)
-   &lt SHORTCUTS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTCUTS LS(I) 
-   &trans              &mt RALT LS(F)      &lt FUNCTIONS LS(C) &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c RALT 0  &lt SMART COMMA     &th_dot 0 0         &trans
+   &lt SHORTCUTS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LALT LS(T)      &kp LS(W)           &kp LS(Z)           &mt RALT LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTCUTS LS(I) 
+   &trans              &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c RGUI 0  &lt SMART COMMA     &th_dot 0 0         &trans
                                            &trans              &trans              &trans              &th_case_a2 RAISE 0 &th_cancel MEDIA 0  &trans
                         >;
                 };
@@ -90,8 +90,8 @@
                      display-name = "CASE";
                      bindings = <
    &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &kp LS(Y)
-   &lt SHORTCUTS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LGUI LS(T)      &kp LS(W)           &kp LS(Z)           &mt RGUI LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTCUTS LS(I) 
-   &trans              &mt RALT LS(F)      &lt FUNCTIONS LS(C) &mt LALT LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c RALT 0  &lt SMART COMMA     &th_dot 0 0         &trans
+   &lt SHORTCUTS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LALT LS(T)      &kp LS(W)           &kp LS(Z)           &mt RALT LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTCUTS LS(I) 
+   &trans              &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c RGUI 0  &lt SMART COMMA     &th_dot 0 0         &trans
                                            &trans              &trans              &th_sp_caps LOWER 0 &th_case_a2 RAISE 0 &th_cancel MEDIA 0  &trans
                            >;
                 };
@@ -161,24 +161,6 @@
                                            &trans              &key_repeat         &lt LOW_CP SPACE    &trans              &trans              &trans       
                            >;
                 };
-                functions_layer {
-                     display-name = "FUN";
-                     bindings = <
-   &none               &sys_reset          &none               &mc_lock            &none               &none               &kp F7              &kp F8              &kp F9              &none 
-   &none               &bootloader         &none               &kp C_SLEEP         &none               &none               &kp F4              &kp F5              &kp F6              &none      
-   &none               &none               &none               &leader             &none               &none               &kp F1              &kp F2              &kp F3              &none
-                                           &none               &none               &none               &mo PLAIN1          &none               &none
-                        >;
-                };
-                smartcases_layer {
-                     display-name = "SMART";
-                     bindings = <
-   &none               &to SLASH_CASE      &tc_smart_line      &to KEBAB_CASE      &none               &none               &mc_lock            &none               &sys_reset          &none 
-   &none               &to CAMEL_CASE      &tc_smart_word      &to SNAKE_CASE      &none               &none               &kp C_SLEEP         &none               &bootloader         &none      
-   &none               &bt BT_PRV          &bt BT_NXT          &bt BT_CLR          &none               &none               &leader             &none               &none               &none
-                                           &none               &none               &mo PLAIN1          &none               &none               &none
-                        >;
-                };
 
 
 
@@ -195,8 +177,8 @@
                      display-name = "CASE";
                      bindings = <
    &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y) 
-   &kp RS(D)           &mt LSHFT RS(N)     &mt LCTRL RS(S)     &mt LGUI RS(T)      &kp RS(W)           &kp RS(Z)           &mt RGUI RS(R)      &mt RCTRL RS(A)     &mt RSHFT RS(E)     &kp RS(I) 
-   &trans              &mt RALT RS(F)      &lt FUNCTIONS RS(C) &mt LALT RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c RALT 0  &lt SMART COMMA     &th_dot 0 0         &trans
+   &kp RS(D)           &mt LSHFT RS(N)     &mt LCTRL RS(S)     &mt LALT RS(T)      &kp RS(W)           &kp RS(Z)           &mt RALT RS(R)      &mt RCTRL RS(A)     &mt RSHFT RS(E)     &kp RS(I) 
+   &trans              &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c RGUI 0  &lt SMART COMMA     &th_dot 0 0         &trans
                                            &trans              &th_cancel NAV 0    &th_sp_ns LOW_CP 0  &msl RAI_CP SEN_E2  &th_nsen MEDIA 0    &trans
                            >;
                 };
@@ -218,14 +200,14 @@
    &none               &kp ESC             &mc_files           &mc_preview         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &none    
    &none               &th_zoom RGUI 0     &mc_app_swapper     &th_tabs LGUI 0     &none               &none               &mc_seln            &mm_down_minus      &mm_up_plus         &none
    &none               &mc_term            &mc_calc            &mc_apps            &none               &none               &mc_selh            &ht_ref_clo_z0 0 0  &mc_clip            &trans
-                                           &trans              &mo NAV             &lt CUSTOM SPACE    &lt CUSTOM SPACE    &mo NAV             &trans
+                                           &trans              &mo FUNCTIONS       &lt CUSTOM SPACE    &lt CUSTOM SPACE    &mo NAV             &trans
                            >;
                 };
                 shortcuts_ext_1_layer {
                      display-name = "SHORTCUTS";
                      bindings = <
    &trans              &trans              &trans              &trans              &trans              &trans              &mc_ext_sel         &trans              &trans              &trans    
-   &trans              &trans              &trans              &trans              &trans              &trans              &th_ext_sel LGUI 0  &trans              &trans              &trans  
+   &trans              &trans              &trans              &trans              &trans              &trans              &th_ext_sel LALT 0  &trans              &trans              &trans  
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
                                            &trans              &trans              &trans              &trans              &trans              &trans
                            >;
@@ -243,8 +225,8 @@
                      display-name = "CUSTOM";
                      bindings = <
    &none               &mc_meh_b           &mc_meh_m           &mc_meh_g           &none               &none               &mc_meh_l           &mc_meh_o           &mc_meh_u           &none    
-   &mc_meh_d           &th_meh_n LGUI 0    &mc_meh_s           &mc_meh_t           &none               &none               &mc_meh_r           &mc_meh_a           &th_meh_e RGUI 0    &mc_meh_i
-   &trans              &mc_meh_f           &mc_meh_c           &mc_meh_p           &none               &none               &mc_meh_h           &mc_meh_comma       &mc_meh_dot         &none
+   &mc_meh_d           &mc_meh_n           &mc_meh_s           &mc_meh_t           &none               &none               &mc_meh_r           &mc_meh_a           &mc_meh_e           &mc_meh_i
+   &trans              &th_meh_f LGUI 0    &th_meh_c LGUI 0    &th_meh_p LGUI 0    &none               &none               &th_meh_h LGUI 0    &th_meh_comm LGUI 0 &th_meh_dot LGUI 0  &none
                                            &trans              &th_plain1 NAV 0    &sk LGUI            &sk RGUI            &th_plain1 NAV 0    &trans
                            >;
                 };
@@ -282,10 +264,10 @@
                 navigation_layer {
                      display-name = "NAV";
                      bindings = <
-   &none               &mc_prevword        &kp PAGE_UP         &mc_nextword        &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
-   &none               &td_LSHFT           &td_LCTRL           &td_LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
-   &none               &td_RALT            &kp PAGE_DOWN       &td_LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &trans
-                                           &trans              &trans              &trans              &kp SPACE           &mo MEDIA           &trans
+   &none               &mc_word_start      &mc_word_end        &mc_word_next       &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
+   &sl FUNCTIONS       &td_LSHFT           &td_LCTRL           &td_LALT            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &none               &td_LGUI            &td_LGUI            &td_LGUI            &none               &none               &kp DEL             &kp HOME            &kp END             &trans
+                                           &trans              &trans              &bootloader         &kp SPACE           &mo MEDIA           &trans
                         >;
                 };
 
@@ -318,18 +300,37 @@
    &none               &kp ESC             &mkp LCLK           &mkp RCLK           &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
    &none               &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &none               &mc_mic             &mt C_MUTE C_VOL_DN &kp C_VOL_UP        &mc_cam
    &none               &msc SCRL_DOWN      &mmv MOVE_DOWN      &msc SCRL_UP        &none               &none               &kp C_PP            &kp C_PREV          &kp C_NEXT          &trans
-                                           &trans              &mo NAV_F           &kp SPACE           &trans              &trans              &trans
+                                           &trans              &mo NAV_F           &kp SPACE           &bootloader         &trans              &trans
                            >;
                 };
 
+
+                functions_layer {
+                     display-name = "FUN";
+                     bindings = <
+   &none               &bt BT_PRV          &bt BT_NXT          &bt BT_CLR          &none               &none               &kp F7              &kp F8              &kp F9              &none 
+   &none               &td_LSHFT           &td_LCTRL           &td_LALT            &none               &none               &kp F4              &kp F5              &kp F6              &none      
+   &none               &td_LGUI            &td_LGUI            &td_LGUI            &none               &none               &kp F1              &kp F2              &kp F3              &none
+                                           &none               &none               &none               &none               &none               &none
+                        >;
+                };
+                smartcases_layer {
+                     display-name = "SMART";
+                     bindings = <
+   &none               &to SLASH_CASE      &tc_smart_line      &to KEBAB_CASE      &none               &none               &mc_lock            &none               &none               &none 
+   &none               &to CAMEL_CASE      &tc_smart_word      &to SNAKE_CASE      &none               &none               &kp C_SLEEP         &none               &none               &none      
+   &none               &none               &none               &none               &none               &none               &leader             &none               &none               &none
+                                           &none               &none               &none               &none               &none               &none
+                        >;
+                };
 
 
                 fixed_navigation_layer {
                      display-name = "NAV";
                      bindings = <
-   &none               &mc_prevword        &kp PAGE_UP         &mc_nextword        &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
-   &none               &td_LSHFT           &td_LCTRL           &td_LGUI            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
-   &none               &td_RALT            &kp PAGE_DOWN       &td_LALT            &none               &none               &kp DEL             &kp HOME            &kp END             &trans
+   &none               &mc_word_start      &mc_word_end        &mc_word_next       &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
+   &none               &td_LSHFT           &td_LCTRL           &td_LALT            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &none               &td_LGUI            &td_LGUI            &td_LGUI            &none               &none               &kp DEL             &kp HOME            &kp END             &trans
                                            &trans              &trans              &trans              &kp SPACE           &trans              &trans
                            >;
                 };

@@ -206,11 +206,10 @@
         SYMBOL(mc_tisl,            &kp TILDE &kp SPACE &kp SLASH)
 
         SYMBOL(mc_up_end_del,      &kp UP &kp END &kp DEL)
-        SYMBOL(mc_up_end_ent,      &kp UP &kp END &kp ENTER)
-        SYMBOL(mc_end_ent,         &kp END &kp ENTER)
         SYMBOL(mc_down_home,       &kp DOWN &kp HOME)
         SYMBOL(mc_down_end,        &kp DOWN &kp END)
-
-        SYMBOL(mc_zz,              &kp Z &kp Z)
+        SYMBOL(mc_word_start,      &kp LA(LEFT))
+        SYMBOL(mc_word_next,       &kp LA(RIGHT) &kp LEFT)
+        SYMBOL(mc_word_end,        &kp LA(RIGHT) &kp LA(RIGHT) &kp LA(LEFT))
     };
 };

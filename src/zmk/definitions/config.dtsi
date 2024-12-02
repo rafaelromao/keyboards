@@ -22,29 +22,30 @@
 
 #define LOWER 13
 #define RAISE 14
-#define FUNCTIONS 15
-#define SMART 16
 
-#define SEN_CASE 17
-#define SEN_E1 18
-#define SEN_E2 19
+#define SEN_CASE 15
+#define SEN_E1 16
+#define SEN_E2 17
 
-#define SHORTCUTS 20
-#define SHORTS_EXT_1 21
-#define SHORTS_EXT_2 22
+#define SHORTCUTS 18
+#define SHORTS_EXT_1 19
+#define SHORTS_EXT_2 20
 
-#define CUSTOM 23
+#define CUSTOM 21
 
-#define PLAIN1 24
-#define PLAIN2 25
-#define SFT_PLAIN2 26
+#define PLAIN1 22
+#define PLAIN2 23
+#define SFT_PLAIN2 24
 
-#define NAV 27
+#define NAV 25
 
-#define LOW_CP 28
-#define RAI_CP 29
+#define LOW_CP 26
+#define RAI_CP 27
 
-#define MEDIA 30
+#define MEDIA 28
+
+#define FUNCTIONS 29
+#define SMART 30
 
 #define NAV_F 31
 

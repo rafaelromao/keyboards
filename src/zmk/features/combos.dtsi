@@ -63,10 +63,11 @@
         COMBO(cb_selcopy,       RHI RHM RHR R0,  &mc_selcopy,    ALL_LAYERS)
         COMBO(cb_selpaste,      RBI RBM RBR R0,  &mc_selpaste,   ALL_LAYERS)
 
-        COMBO(cb_numword,       LBR LBM,     &tc_num_word,       ALPHA1_LAYERS)
-        COMBO(cd_sc_nav,        LHR LHM L1,  &mc_sc_nav,         ALPHA1_LAYERS)
-        COMBO(cd_cg_nav,        LHM LHI L1,  &mc_cg_nav,         ALPHA1_LAYERS)
-        COMBO(cd_ag_nav,        LBR LHM L1,  &mc_ag_nav,         ALPHA1_LAYERS)
+        COMBO(cb_numword,       LBR LBM,         &tc_num_word,   ALPHA1_LAYERS)
+        COMBO(cd_sc_nav,        LHR LHM L1,      &mc_sc_nav,     ALPHA1_LAYERS)
+        COMBO(cd_ca_nav,        LHM LHI L1,      &mc_ca_nav,     ALPHA1_LAYERS)
+        COMBO(cd_gca_nav,       LBR LHM LHI L1,  &mc_gca_nav,    ALPHA1_LAYERS)
+        COMBO(cd_sca_nav,       LHR LHM LHI L1,  &mc_sca_nav,    ALPHA1_LAYERS)
 
         COMBO(cb_esc_save,      LTR LTM L0,  &mc_save_esc,       ALPHA1_LAYERS)
 
@@ -194,8 +195,8 @@
         COMBO(cb_down_home,     RBI RBM,     &mc_down_home,      NAV_LAYERS)
         COMBO(cb_down_end,      RBR RBM,     &mc_down_end,       NAV_LAYERS)
         COMBO(cb_up_end_del,    RTM RTI,     &mc_up_end_del,     NAV_LAYERS)
-        COMBO(cb_up_end_ent,    RHM RHI,     &mc_up_end_ent,     NAV_LAYERS)
-        COMBO(cb_end_ent,       RHM RHR,     &mc_end_ent,        NAV_LAYERS)
+        COMBO(cb_pg_down,       RHM RHI,     &kp PAGE_DOWN,      NAV_LAYERS)
+        COMBO(cb_pg_up,         RHM RHR,     &kp PAGE_UP,        NAV_LAYERS)
     };
 
     #define COMBO_MUST_TAP(NAME, HOLD, TAP) \
@@ -226,10 +227,10 @@
         };
 
     combo_must_tap {
-        COMBO_MUST_TAP(ht_w     , &kp LCTL  &kp LGUI                   , &kp W)
+        COMBO_MUST_TAP(ht_w     , &kp LCTL  &kp LALT                   , &kp W)
         COMBO_MUST_TAP(ht_q     , &kp LSHFT &kp LCTL                   , &kp Q)
-        COMBO_MUST_TAP(ht_z     , &kp RCTL  &kp RGUI                   , &kp Z)
+        COMBO_MUST_TAP(ht_z     , &kp RCTL  &kp RALT                   , &kp Z)
         COMBO_MUST_TAP(ht_y     , &kp RCTL  &kp RSFT                   , &kp Y)
-        COMBO_MUST_TAP(ht_p     , &kp RSHFT &kp RCTL &kp RGUI          , &kp P)
+        COMBO_MUST_TAP(ht_p     , &kp RSHFT &kp RCTL &kp RALT          , &kp P)
     };
 };

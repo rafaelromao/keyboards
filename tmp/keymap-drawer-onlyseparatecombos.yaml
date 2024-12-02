@@ -3,8 +3,8 @@ layout:
 layers:
   alpha1:
     - [b, m, g, l, o, u]
-    - [{t: d, h: shortcuts}, {h: '$$mdi:apple-keyboard-shift$$', t: n}, {h: '$$mdi:apple-keyboard-control$$', t: s}, {h: '$$mdi:apple-keyboard-command$$', t: t}, {h: '$$mdi:apple-keyboard-command$$', t: r}, {h: '$$mdi:apple-keyboard-control$$', t: a}, {h: '$$mdi:apple-keyboard-shift$$', t: e}, {t: i, h: shortcuts}]
-    - [{h: '$$mdi:apple-keyboard-option$$', t: f}, {t: c, h: functions}, {h: '$$mdi:apple-keyboard-option$$', t: p}, {h: '$$mdi:apple-keyboard-option$$', t: "h|v", s: magic}, {t: ",", h: smartcases}, {t: ., h: "⇥ ."}]
+    - [{t: d, h: shortcuts}, {h: '$$mdi:apple-keyboard-shift$$', t: n}, {h: '$$mdi:apple-keyboard-control$$', t: s}, {h: '$$mdi:apple-keyboard-option$$', t: t}, {h: '$$mdi:apple-keyboard-option$$', t: r}, {h: '$$mdi:apple-keyboard-control$$', t: a}, {h: '$$mdi:apple-keyboard-shift$$', t: e}, {t: i, h: shortcuts}]
+    - [{h: '$$mdi:apple-keyboard-command$$', t: f}, {t: c, h: '$$mdi:apple-keyboard-command$$'}, {h: '$$mdi:apple-keyboard-command$$', t: p}, {h: '$$mdi:apple-keyboard-command$$', t: "h|v", s: magic}, {t: ",", h: smartcases}, {t: ., h: "⇥ ."}]
     - {t: '$$mdi:repeat$$', s: repeat, h: nav}
     - {t: '$$mdi:keyboard-space$$', h: lower}
     - {t: alpha2, s: sticky, h: raise}
@@ -19,8 +19,8 @@ layers:
     - "'"
   shifted1:
     - [B, M, G, L, O, U]
-    - [{t: D, h: shortcuts}, {h: '$$mdi:apple-keyboard-shift$$', t: N}, {h: '$$mdi:apple-keyboard-control$$', t: S}, {h: '$$mdi:apple-keyboard-command$$', t: T}, {h: '$$mdi:apple-keyboard-command$$', t: R}, {h: '$$mdi:apple-keyboard-control$$', t: A}, {h: '$$mdi:apple-keyboard-shift$$', t: E}, {t: I, h: shortcuts}]
-    - [{h: '$$mdi:apple-keyboard-option$$', t: F}, {t: C, h: functions}, {h: '$$mdi:apple-keyboard-option$$', t: P}, {h: '$$mdi:apple-keyboard-option$$', t: "H|V", s: magic}, {t: ",", h: smartcases}, {t: ., h: "⇥ ."}]
+    - [{t: D, h: shortcuts}, {h: '$$mdi:apple-keyboard-shift$$', t: N}, {h: '$$mdi:apple-keyboard-control$$', t: S}, {h: '$$mdi:apple-keyboard-option$$', t: T}, {h: '$$mdi:apple-keyboard-option$$', t: R}, {h: '$$mdi:apple-keyboard-control$$', t: A}, {h: '$$mdi:apple-keyboard-shift$$', t: E}, {t: I, h: shortcuts}]
+    - [{h: '$$mdi:apple-keyboard-command$$', t: F}, {t: C, h: '$$mdi:apple-keyboard-command$$'}, {h: '$$mdi:apple-keyboard-command$$', t: P}, {h: '$$mdi:apple-keyboard-command$$', t: "H|V", s: magic}, {t: ",", h: smartcases}, {t: ., h: "⇥ ."}]
     - {t: CAPS LINE, h: nav}
     - {t: '$$mdi:keyboard-space$$', h: lower}
     - {t: shifted2, s: sticky, h: raise}
@@ -65,38 +65,22 @@ layers:
     - {t: '$$mdi:keyboard-space$$', h: lower}
     - {type: held}
     - null
-  functions:
-    - [{t: '$$mdi:restart$$', h: "reset"}, "", {t: '$$mdi:lock$$', h: "lock"}, "F7", "F8", "F9"]
-    - [null, {t: '$$mdi:flash$$', h: "boot"}, "", {t: '$$mdi:power-sleep$$', h: "sleep"}, "F4", "F5", "F6", null]
-    - ["", {type: held}, {t: '$$mdi:ray-start-arrow$$', h: "leader"}, "F1", "F2", "F3"]
-    - null
-    - h: plain1
-    - null
-    - null
-  smartcases:
-    - ["slash/ case", "CAPS LINE", "kebad- case", {t: '$$mdi:lock$$', h: "lock"}, "", {t: '$$mdi:restart$$', h: "reset"}]
-    - ["", "camel Case", "CAPS word", "snake_ case", {t: '$$mdi:power-sleep$$', h: "sleep"}, "", {t: '$$mdi:flash$$', h: "boot"}, null]
-    - [{t: '$$mdi:bluetooth$$', h: '$$mdi:arrow-left$$'}, {t: '$$mdi:bluetooth$$', h: '$$mdi:arrow-right$$'}, {t: '$$mdi:bluetooth-off$$', h: '$$mdi:delete$$'}, {t: '$$mdi:ray-start-arrow$$', h: "leader"}, {type: held}, ""]
-    - null
-    - null
-    - h: plain1
-    - null
   shortcuts:
     - ["⎋", {t: '$$mdi:folder-open$$', h: files, s: meh 0}, {t: '$$mdi:file-find$$', h: preview, s: meh 1}, {h: sel word, t: ⎅ ⓦ}, '$$mdi:keyboard-return$$', "⎋"]
     - [{type: held}, {t: '$$mdi:loupe$$', h: zoom}, {t: '$$mdi:apps$$', h: swapper}, {t: '$$mdi:tab-search$$', h: tabs, s: meh 2}, {h: sel line, t: ⎅ ⎯}, '$$mdi:arrow-down$$', '$$mdi:arrow-up$$', {type: held alternate}]
     - [{t: '$$mdi:console$$', h: term, s: meh 3}, {t: '$$mdi:calculator$$', h: calc, s: meh 4}, {t: '$$mdi:magnify$$', h: spotlight, s: meh 5}, {h: sel home, t: ⎅ ⇤}, {t: '$$mdi:refresh$$', s: refresh, h: close}, {t: '$$mdi:content-cut$$', h: clip, s: meh 6}]
-    - h: nav
+    - h: functions
     - {t: '$$mdi:keyboard-space$$', h: custom}
     - {t: '$$mdi:keyboard-space$$', h: custom}
     - h: nav
   custom:
     - [meh b, meh m, meh g, meh l, meh o, meh u]
-    - [{t: meh d, type: held}, {t: meh n, h: '$$mdi:apple-keyboard-command$$'}, meh s, meh t, meh r, meh a, {t: meh e, h: '$$mdi:apple-keyboard-command$$'}, {t: meh i, type: held alternate}]
-    - [meh f, meh c, meh p, meh h, "meh ,", "meh ."]
-    - {t: "plain1", s: "auto-layer", h: nav}
+    - [{t: meh d, type: held}, {t: meh n}, meh s, meh t, meh r, meh a, {t: meh e}, {t: meh i, type: held alternate}]
+    - [{t: meh f, h: '$$mdi:apple-keyboard-command$$'}, {t: meh c, h: '$$mdi:apple-keyboard-command$$'}, {t: meh p, h: '$$mdi:apple-keyboard-command$$'}, {t: meh h, h: '$$mdi:apple-keyboard-command$$'}, {t: ",", h: '$$mdi:apple-keyboard-command$$'}, {t: ".", h: '$$mdi:apple-keyboard-command$$'}]
+    - {t: plain1, s: "auto-layer", h: nav}
     - {t: '$$mdi:apple-keyboard-command$$', s: sticky, h: '$$mdi:apple-keyboard-command$$', type: held}
     - {t: '$$mdi:apple-keyboard-command$$', s: sticky, h: '$$mdi:apple-keyboard-command$$', type: held alternate}
-    - {t: "plain1", s: "auto-layer", h: nav}
+    - {t: plain1, s: "auto-layer", h: nav}
   plain1:
     - [b, m, g, l, o, u]
     - [d, n, s, t, r, a, e, i]
@@ -114,11 +98,11 @@ layers:
     - {t: '$$mdi:keyboard-space$$'}
     - "'"
   nav:
-    - [{h: prev word, t: ← ⓦ}, {t: '$$tabler:arrow-big-up-lines$$', h: pg up}, {h: next word, t: → ⓦ}, {t: '$$mdi:keyboard-tab$$', h: tab}, {t: '$$mdi:keyboard-return$$', h: enter}, {t: "⎋", h: esc}]
-    - [null, {t: '$$mdi:apple-keyboard-shift$$', s: sticky, h: shift}, {t: '$$mdi:apple-keyboard-control$$', s: sticky, h: ctrl}, {t: '$$mdi:apple-keyboard-command$$', s: sticky, h: cmd}, {t: '$$mdi:arrow-left$$', h: left}, {t: '$$mdi:arrow-down$$', h: down}, {t: '$$mdi:arrow-up$$', h: up}, {t: '$$mdi:arrow-right$$', h: right}]
-    - [{t: '$$mdi:apple-keyboard-option$$', s: sticky, h: alt}, {t: '$$tabler:arrow-big-down-lines$$', h: pg down}, {t: '$$mdi:apple-keyboard-option$$', s: sticky, h: alt}, {t: '$$mdi:backspace-reverse-outline$$', h: del}, {t: '$$mdi:format-horizontal-align-left$$', h: home}, {t: '$$mdi:format-horizontal-align-right$$', h: end}]
+    - [{h: "start", t: ⓦ}, {h: "next", t: ⓦ}, {h: "end", t: ⓦ}, {t: '$$mdi:keyboard-tab$$', h: tab}, {t: '$$mdi:keyboard-return$$', h: enter}, {t: "⎋", h: esc}]
+    - [{t: functions, s: sticky}, {t: '$$mdi:apple-keyboard-shift$$', s: sticky}, {t: '$$mdi:apple-keyboard-control$$', s: sticky}, {t: '$$mdi:apple-keyboard-option$$', s: sticky}, {t: '$$mdi:arrow-left$$', h: left}, {t: '$$mdi:arrow-down$$', h: down}, {t: '$$mdi:arrow-up$$', h: up}, {t: '$$mdi:arrow-right$$', h: right}]
+    - [{t: '$$mdi:apple-keyboard-command$$', s: sticky}, {t: '$$mdi:apple-keyboard-command$$', s: sticky}, {t: '$$mdi:apple-keyboard-command$$', s: sticky}, {t: '$$mdi:backspace-reverse-outline$$', h: del}, {t: '$$mdi:format-horizontal-align-left$$', h: home}, {t: '$$mdi:format-horizontal-align-right$$', h: end}]
     - {type: held}
-    - null
+    - {t: '$$mdi:flash$$', h: "boot"}
     - {t: '$$mdi:keyboard-space$$'}
     - {h: media, type: held alternate}
   media:
@@ -127,8 +111,24 @@ layers:
     - [{t: '$$mdi:arrow-down-circle-outline$$', h: scroll}, {t: '$$mdi:arrow-down-circle$$', h: mouse}, {t: '$$mdi:arrow-up-circle-outline$$', h: scroll}, {t: '$$mdi:play-pause$$'}, {t: '$$mdi:skip-backward$$'}, {t: '$$mdi:skip-forward$$'}]
     - h: nav
     - {t: '$$mdi:keyboard-space$$'}
-    - null
+    - {t: '$$mdi:flash$$', h: "boot"}
     - {type: held}
+  functions:
+    - [{t: '$$mdi:bluetooth$$', h: '$$mdi:arrow-left$$'}, {t: '$$mdi:bluetooth$$', h: '$$mdi:arrow-right$$'}, {t: '$$mdi:bluetooth-off$$', h: '$$mdi:delete$$'}, "F7", "F8", "F9"]
+    - [{type: held}, {t: '$$mdi:apple-keyboard-shift$$', s: sticky}, {t: '$$mdi:apple-keyboard-control$$', s: sticky}, {t: '$$mdi:apple-keyboard-option$$', s: sticky}, "F4", "F5", "F6", null]
+    - [{t: '$$mdi:apple-keyboard-command$$', s: sticky}, {t: '$$mdi:apple-keyboard-command$$', s: sticky}, {t: '$$mdi:apple-keyboard-command$$', s: sticky}, "F1", "F2", "F3"]
+    - {type: held}
+    - null
+    - null
+    - null
+  smartcases:
+    - ["slash/ case", "CAPS LINE", "kebad- case", {t: '$$mdi:lock$$', h: "lock"}, null, null]
+    - ["", "camel Case", "CAPS word", "snake_ case", {t: '$$mdi:power-sleep$$', h: "sleep"}, "", null, null]
+    - [null, null, null, {t: '$$mdi:ray-start-arrow$$', h: "leader"}, {type: held}, ""]
+    - null
+    - null
+    - null
+    - null
 combos:
   - {p: [0, 1, 21], k: "⎋ save", layers: [alpha1], draw_separate: true}
   - {p: [7, 8, 21], k: "save", layers: [alpha1], draw_separate: true}

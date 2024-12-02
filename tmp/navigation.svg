@@ -132,9 +132,6 @@
 <svg id="mdi:repeat">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-repeat" viewBox="0 0 24 24"><path d="M17,17H7V14L3,18L7,22V19H19V13H17M7,7H17V10L21,6L17,2V5H5V11H7V7Z" /></svg>
 </svg>
-<svg id="mdi:restart">
-<svg xmlns="http://www.w3.org/2000/svg" id="mdi-restart" viewBox="0 0 24 24"><path d="M12,4C14.1,4 16.1,4.8 17.6,6.3C20.7,9.4 20.7,14.5 17.6,17.6C15.8,19.5 13.3,20.2 10.9,19.9L11.4,17.9C13.1,18.1 14.9,17.5 16.2,16.2C18.5,13.9 18.5,10.1 16.2,7.7C15.1,6.6 13.5,6 12,6V10.6L7,5.6L12,0.6V4M6.3,17.6C3.7,15 3.3,11 5.1,7.9L6.6,9.4C5.5,11.6 5.9,14.4 7.8,16.2C8.3,16.7 8.9,17.1 9.6,17.4L9,19.4C8,19 7.1,18.4 6.3,17.6Z" /></svg>
-</svg>
 <svg id="mdi:skip-backward">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-skip-backward" viewBox="0 0 24 24"><path d="M20,5V19L13,12M6,5V19H4V5M13,5V19L6,12" /></svg>
 </svg>
@@ -312,22 +309,18 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 <g transform="translate(0, 72)">
 <g transform="translate(105, 34)" class="key keypos-0">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em">←</tspan><tspan x="0" dy="1.2em">ⓦ</tspan>
-</text>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 78%">prev word</tspan></text>
+<text x="0" y="0" class="key tap">ⓦ</text>
+<text x="0" y="30" class="key hold">start</text>
 </g>
 <g transform="translate(175, 34)" class="key keypos-1">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
-<use href="#tabler:arrow-big-up-lines" xlink:href="#tabler:arrow-big-up-lines" x="-7" y="-7" height="14" width="14.0" class="key tap glyph tabler:arrow-big-up-lines"/>
-<text x="0" y="30" class="key hold">pg up</text>
+<text x="0" y="0" class="key tap">ⓦ</text>
+<text x="0" y="30" class="key hold">next</text>
 </g>
 <g transform="translate(245, 34)" class="key keypos-2">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-1.2em">→</tspan><tspan x="0" dy="1.2em">ⓦ</tspan>
-</text>
-<text x="0" y="30" class="key hold"><tspan style="font-size: 78%">next word</tspan></text>
+<text x="0" y="0" class="key tap">ⓦ</text>
+<text x="0" y="30" class="key hold">end</text>
 </g>
 <g transform="translate(415, 34)" class="key keypos-3">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
@@ -346,23 +339,22 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 </g>
 <g transform="translate(35, 102)" class="key keypos-6">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 78%">functions</tspan></text>
+<text x="0" y="-30" class="key shifted">sticky</text>
 </g>
 <g transform="translate(105, 102)" class="key keypos-7">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
 <use href="#mdi:apple-keyboard-shift" xlink:href="#mdi:apple-keyboard-shift" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:apple-keyboard-shift"/>
-<text x="0" y="30" class="key hold">shift</text>
 <text x="0" y="-30" class="key shifted">sticky</text>
 </g>
 <g transform="translate(175, 102)" class="key keypos-8">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
 <use href="#mdi:apple-keyboard-control" xlink:href="#mdi:apple-keyboard-control" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:apple-keyboard-control"/>
-<text x="0" y="30" class="key hold">ctrl</text>
 <text x="0" y="-30" class="key shifted">sticky</text>
 </g>
 <g transform="translate(245, 102)" class="key keypos-9">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
-<use href="#mdi:apple-keyboard-command" xlink:href="#mdi:apple-keyboard-command" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:apple-keyboard-command"/>
-<text x="0" y="30" class="key hold">cmd</text>
+<use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:apple-keyboard-option"/>
 <text x="0" y="-30" class="key shifted">sticky</text>
 </g>
 <g transform="translate(415, 102)" class="key keypos-10">
@@ -387,19 +379,17 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 </g>
 <g transform="translate(105, 170)" class="key keypos-14">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
-<use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:apple-keyboard-option"/>
-<text x="0" y="30" class="key hold">alt</text>
+<use href="#mdi:apple-keyboard-command" xlink:href="#mdi:apple-keyboard-command" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:apple-keyboard-command"/>
 <text x="0" y="-30" class="key shifted">sticky</text>
 </g>
 <g transform="translate(175, 170)" class="key keypos-15">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
-<use href="#tabler:arrow-big-down-lines" xlink:href="#tabler:arrow-big-down-lines" x="-7" y="-7" height="14" width="14.0" class="key tap glyph tabler:arrow-big-down-lines"/>
-<text x="0" y="30" class="key hold">pg down</text>
+<use href="#mdi:apple-keyboard-command" xlink:href="#mdi:apple-keyboard-command" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:apple-keyboard-command"/>
+<text x="0" y="-30" class="key shifted">sticky</text>
 </g>
 <g transform="translate(245, 170)" class="key keypos-16">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
-<use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:apple-keyboard-option"/>
-<text x="0" y="30" class="key hold">alt</text>
+<use href="#mdi:apple-keyboard-command" xlink:href="#mdi:apple-keyboard-command" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:apple-keyboard-command"/>
 <text x="0" y="-30" class="key shifted">sticky</text>
 </g>
 <g transform="translate(415, 170)" class="key keypos-17">
@@ -422,6 +412,8 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 </g>
 <g transform="translate(280, 238)" class="key keypos-21">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
+<use href="#mdi:flash" xlink:href="#mdi:flash" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:flash"/>
+<text x="0" y="30" class="key hold">boot</text>
 </g>
 <g transform="translate(380, 238)" class="key keypos-22">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
@@ -466,15 +458,15 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 </g>
 <g class="combo combopos-6">
 <rect rx="6" ry="6" x="433" y="87" width="34" height="30" class="combo"/>
-<text x="450" y="102" class="combo tap">
-<tspan x="450" dy="-0.6em">↑⇥</tspan><tspan x="450" dy="1.2em">⏎</tspan>
-</text>
+<use href="#tabler:arrow-big-down-lines" xlink:href="#tabler:arrow-big-down-lines" x="443" y="95" height="14" width="14.0" class="combo tap glyph tabler:arrow-big-down-lines"/>
+<text x="450" y="115" class="combo hold">down</text>
+<text x="450" y="89" class="combo shifted">page</text>
 </g>
 <g class="combo combopos-7">
 <rect rx="6" ry="6" x="503" y="87" width="34" height="30" class="combo"/>
-<text x="520" y="102" class="combo tap">
-<tspan x="520" dy="-0.6em">⇥</tspan><tspan x="520" dy="1.2em">⏎</tspan>
-</text>
+<use href="#tabler:arrow-big-up-lines" xlink:href="#tabler:arrow-big-up-lines" x="513" y="95" height="14" width="14.0" class="combo tap glyph tabler:arrow-big-up-lines"/>
+<text x="520" y="115" class="combo hold">up</text>
+<text x="520" y="89" class="combo shifted">page</text>
 </g>
 <g class="combo combopos-8">
 <rect rx="6" ry="6" x="433" y="155" width="34" height="30" class="combo"/>
@@ -593,6 +585,8 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 </g>
 <g transform="translate(380, 238)" class="key keypos-22">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
+<use href="#mdi:flash" xlink:href="#mdi:flash" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:flash"/>
+<text x="0" y="30" class="key hold">boot</text>
 </g>
 <g transform="translate(450, 238)" class="key held keypos-23">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key held"/>
