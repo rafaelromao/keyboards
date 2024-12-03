@@ -14,18 +14,18 @@ layers:
        {s: debug, t: $$mdi:bug-play$$},
        {s: type match, t: $$mdi:code-block-braces$$},
        {s: actions, t: $$mdi:flash-alert$$},
-       {s: statement, h: $$mdi:apple-keyboard-command$$, t: "()"},
-       type: held]
+       {s: statement, t: "()"},
+       type: held alternate]
     - [{s: history, t: $$mdi:history$$, h: hyper},
        {s: switcher, t: $$mdi:apps$$, h: hyper},
        {s: usages, t: $$mdi:book-open-variant-outline$$, h: hyper},
        {s: quick docs, t: $$mdi:book-open-outline$$, h: hyper},
        {s: comment, t: "//", h: hyper},
        {s: evaluate, t: $$mdi:variable$$, h: hyper}]
-    - {h: nav}
-    - {type: held}
-    - {type: held}
-    - {h: nav}
+    - {h: nav, t: plain1, s: sticky}
+    - {type: held, h: hyper, t: hyper, s: sticky}
+    - {type: held alternate, h: hyper, t: hyper, s: sticky}
+    - {h: nav, t: plain1, s: sticky}
  coding-hyper:
     - [{s: select in, t: $$mdi:form-select$$},
        {s: rebuild, t: $$mdi:wrench-outline$$},
@@ -40,17 +40,17 @@ layers:
        {s: complete, t: $$mdi:code-block-parentheses$$},
        {s: refactor, t: $$mdi:file-code-outline$$},
        null,
-       type: held]
+       type: held alternate]
     - [{s: prev error, t: $$mdi:page-previous-outline$$},
        {s: next error, t: $$mdi:page-next-outline$$},
        {s: definition, t: $$mdi:feather$$},
        {s: params, t: $$mdi:dots-horizontal$$},
        {s: format, t: $$mdi:format-indent-increase$$},
        {s: generate, t: $$mdi:code-json$$}]
-    - {h: nav}
+    - {h: nav, t: plain1, s: sticky}
     - {type: held}
-    - {type: held}
-    - {h: nav}
+    - {type: held alternate}
+    - {h: nav, t: plain1, s: sticky}
  fusion360-meh:
     - [null,
        null,
@@ -64,7 +64,7 @@ layers:
        null,
        {s: rectangle, t: $$mdi:rectangle-outline$$},
        {s: search, t: $$mdi:magnify$$},
-       {s: extrude, t: $$mdi:plus-box-multiple$$, h: $$mdi:apple-keyboard-command$$},
+       {s: extrude, t: $$mdi:plus-box-multiple$$},
        {s: measure }]
     - [null,
        null,
@@ -74,7 +74,7 @@ layers:
        {s: fillet, t: $$mdi:rounded-corner$$}]
     - null
     - null
-    - null
+    - {h: hyper, t: hyper, s: sticky}
     - null
  fusion360-hyper:
     - [null,

@@ -345,17 +345,14 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 <g transform="translate(105, 102)" class="key keypos-7">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
 <use href="#mdi:apple-keyboard-shift" xlink:href="#mdi:apple-keyboard-shift" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:apple-keyboard-shift"/>
-<text x="0" y="-30" class="key shifted">sticky</text>
 </g>
 <g transform="translate(175, 102)" class="key keypos-8">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
 <use href="#mdi:apple-keyboard-control" xlink:href="#mdi:apple-keyboard-control" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:apple-keyboard-control"/>
-<text x="0" y="-30" class="key shifted">sticky</text>
 </g>
 <g transform="translate(245, 102)" class="key keypos-9">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
 <use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:apple-keyboard-option"/>
-<text x="0" y="-30" class="key shifted">sticky</text>
 </g>
 <g transform="translate(415, 102)" class="key keypos-10">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
@@ -380,17 +377,14 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 <g transform="translate(105, 170)" class="key keypos-14">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
 <use href="#mdi:apple-keyboard-command" xlink:href="#mdi:apple-keyboard-command" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:apple-keyboard-command"/>
-<text x="0" y="-30" class="key shifted">sticky</text>
 </g>
 <g transform="translate(175, 170)" class="key keypos-15">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
 <use href="#mdi:apple-keyboard-command" xlink:href="#mdi:apple-keyboard-command" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:apple-keyboard-command"/>
-<text x="0" y="-30" class="key shifted">sticky</text>
 </g>
 <g transform="translate(245, 170)" class="key keypos-16">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
 <use href="#mdi:apple-keyboard-command" xlink:href="#mdi:apple-keyboard-command" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:apple-keyboard-command"/>
-<text x="0" y="-30" class="key shifted">sticky</text>
 </g>
 <g transform="translate(415, 170)" class="key keypos-17">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>

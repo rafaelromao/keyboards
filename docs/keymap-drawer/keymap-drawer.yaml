@@ -237,19 +237,19 @@ layers:
         { t: "⎋", h: esc },
       ]
     - [
-        { t: functions, s: sticky},
-        { t: $$mdi:apple-keyboard-shift$$, s: sticky},
-        { t: $$mdi:apple-keyboard-control$$, s: sticky },
-        { t: $$mdi:apple-keyboard-option$$, s: sticky },
+        { t: functions, s: sticky },
+        { t: $$mdi:apple-keyboard-shift$$ },
+        { t: $$mdi:apple-keyboard-control$$ },
+        { t: $$mdi:apple-keyboard-option$$ },
         { t: $$mdi:arrow-left$$, h: left },
         { t: $$mdi:arrow-down$$, h: down },
         { t: $$mdi:arrow-up$$, h: up },
         { t: $$mdi:arrow-right$$, h: right },
       ]
     - [
-        { t: $$mdi:apple-keyboard-command$$, s: sticky },
-        { t: $$mdi:apple-keyboard-command$$, s: sticky },
-        { t: $$mdi:apple-keyboard-command$$, s: sticky },
+        { t: $$mdi:apple-keyboard-command$$ },
+        { t: $$mdi:apple-keyboard-command$$ },
+        { t: $$mdi:apple-keyboard-command$$ },
         { t: $$mdi:backspace-reverse-outline$$, h: del },
         { t: $$mdi:format-horizontal-align-left$$, h: home },
         { t: $$mdi:format-horizontal-align-right$$, h: end },
