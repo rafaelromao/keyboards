@@ -16,12 +16,12 @@ layers:
        {s: actions, t: $$mdi:flash-alert$$},
        {s: statement, h: $$mdi:apple-keyboard-command$$, t: "()"},
        type: held]
-    - [{s: history, t: $$mdi:history$$},
-       {s: switcher, t: $$mdi:apps$$},
-       {s: usages, t: $$mdi:book-open-variant-outline$$},
-       {s: quick docs, t: $$mdi:book-open-outline$$},
-       {s: comment, t: "//"},
-       {s: evaluate, t: $$mdi:variable$$}]
+    - [{s: history, t: $$mdi:history$$, h: hyper},
+       {s: switcher, t: $$mdi:apps$$, h: hyper},
+       {s: usages, t: $$mdi:book-open-variant-outline$$, h: hyper},
+       {s: quick docs, t: $$mdi:book-open-outline$$, h: hyper},
+       {s: comment, t: "//", h: hyper},
+       {s: evaluate, t: $$mdi:variable$$, h: hyper}]
     - {h: nav}
     - {type: held}
     - {type: held}
@@ -34,12 +34,12 @@ layers:
        {s: symbols, t: $$mdi:text-box-search-outline$$},
        {s: actions, t: $$mdi:feature-search-outline$$}]
     - [type: held,
-       {type: held},
+       null,
        {s: stop, t: $$mdi:stop$$},
        {s: resume, t: $$mdi:play-pause$$},
        {s: complete, t: $$mdi:code-block-parentheses$$},
        {s: refactor, t: $$mdi:file-code-outline$$},
-       {type: held},
+       null,
        type: held]
     - [{s: prev error, t: $$mdi:page-previous-outline$$},
        {s: next error, t: $$mdi:page-next-outline$$},
@@ -65,7 +65,7 @@ layers:
        {s: rectangle, t: $$mdi:rectangle-outline$$},
        {s: search, t: $$mdi:magnify$$},
        {s: extrude, t: $$mdi:plus-box-multiple$$, h: $$mdi:apple-keyboard-command$$},
-       {type: held}]
+       {s: measure }]
     - [null,
        null,
        null,
@@ -74,13 +74,13 @@ layers:
        {s: fillet, t: $$mdi:rounded-corner$$}]
     - null
     - null
-    - {type: held}
+    - null
     - null
  fusion360-hyper:
     - [null,
        null,
        null,
-       {s: visibility},
+       {s: loft},
        {s: move},
        {s: press pull}]
     - [null,
@@ -89,8 +89,8 @@ layers:
        null,
        {s: trim},
        {s: appearance},
-       {type: held},
-       {type: held}]
+       {s: colors },
+       {s: dimensions }]
     - [null,
        null,
        null,
@@ -103,9 +103,8 @@ layers:
     - null
 combos:
   - { p: [11, 12], k: orbit, a: mid, w: 50, layers: [fusion360-meh] }
-  - { p: [18, 19], k: pan, a: mid, w: 50, layers: [fusion360-meh] }
-  - { p: [3, 4], k: loft, a: mid, w: 50, layers: [fusion360-meh] }
-  - { p: [10, 11], k: measure, a: mid, w: 50, layers: [fusion360-meh] }
-  - { p: [17, 18], k: sketch dimensions, a: mid, w: 50, layers: [fusion360-meh] }
-  - { p: [3, 4], k: mode, a: mid, w: 50, layers: [fusion360-hyper] }
-  - { p: [10, 11], k: toggle colors, a: mid, w: 50, layers: [fusion360-hyper] }
+  - { p: [18, 19], k: { t: lower, s: auto-layer}, a: mid, w: 50, layers: [fusion360-meh] }
+  - { p: [4, 5], k: esc, a: mid, w: 50, layers: [fusion360-meh] }
+  - { p: [10, 11], k: pan, a: mid, w: 50, layers: [fusion360-meh] }
+  - { p: [3, 4], k: mode, a: mid, w: 50, layers: [fusion360-meh] }
+  - { p: [17, 18], k: visibility, a: mid, w: 50, layers: [fusion360-meh] }
