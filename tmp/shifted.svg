@@ -568,7 +568,7 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 </g>
 <g transform="translate(210, 238)" class="key keypos-20">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
-<text x="0" y="0" class="key tap">&quot;</text>
+<text x="0" y="0" class="key tap">&#x27;</text>
 </g>
 <g transform="translate(280, 238)" class="key keypos-21">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
@@ -580,7 +580,7 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 </g>
 <g transform="translate(450, 238)" class="key keypos-23">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
-<text x="0" y="0" class="key tap">&quot;</text>
+<text x="0" y="0" class="key tap">&#x27;</text>
 </g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="123" y="19" width="34" height="30" class="combo"/>

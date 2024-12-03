@@ -75,10 +75,10 @@ layers:
         Â,
         Ê,
       ]
-    - '"'
+    - "'"
     - { t: $$mdi:keyboard-space$$ }
     - { t: $$mdi:keyboard-space$$ }
-    - '"'
+    - "'"
   ç-extension:
     - ["", "", "", "", "", ""]
     - ["", "", "", ão, ã, "", "", ""]

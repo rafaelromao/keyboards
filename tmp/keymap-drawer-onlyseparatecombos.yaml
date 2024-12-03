@@ -29,10 +29,10 @@ layers:
     - [Q, Qu, K, Ô, Ó, Ú]
     - [Y, Z, X, W, Ã, Á, É, Í]
     - [J, {t: Ç, s: auto-sticky, h: ç-extension}, {t: "V|H", s: magic}, Õ, Â, Ê]
-    - '"'
+    - "'"
     - {t: '$$mdi:keyboard-space$$'}
     - {t: '$$mdi:keyboard-space$$'}
-    - '"'
+    - "'"
   ç-extension:
     - ["", "", "", "", "", ""]
     - ["", "", "", ão, ã, "", "", ""]

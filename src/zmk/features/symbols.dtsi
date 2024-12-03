@@ -152,11 +152,18 @@
 
         // Raise
 
+        SYMBOL(mc_pars_semi_ent,   &kp END &kp LPAR &kp RPAR &kp SEMI &kp ENTER)
+
         SYMBOL(mc_dhash,           &kp HASH &kp HASH)
         SYMBOL(mc_str,             &kp RS(S) &kp RS(T) &kp RS(R) &kp DOT)
         SYMBOL(mc_thash,           &kp HASH &kp HASH &kp HASH)
         SYMBOL(mc_tdqo,            &mc_dqo &mc_dqo &mc_dqo)
+        SYMBOL(mc_tdqo_ent,        &mc_tdqo &kp ENTER)
+        TAPHOLD_SYMBOL(th_tdqo,    &mc_tdqo, &mc_tdqo_ent)
+
         SYMBOL(mc_tbti,            &mc_bti &mc_bti &mc_bti)
+        SYMBOL(mc_tbti_ent,        &mc_tbti &kp ENTER)
+        TAPHOLD_SYMBOL(th_tbti,    &mc_tbti, &mc_tbti_ent)
         SYMBOL(mc_dsqo,            &mc_sqo &mc_sqo &kp LEFT)
         SYMBOL(mc_ddqo,            &mc_dqo &mc_dqo &kp LEFT)
         SYMBOL(mc_dbti,            &mc_bti &mc_bti &kp LEFT)

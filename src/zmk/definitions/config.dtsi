@@ -50,8 +50,8 @@
 #define NAV_F 31
 
 
-#define COMBO_TERM 20
-#define TAPPING_TERM 200
+#define COMBO_TERM 30
+#define TAPPING_TERM 250
 #define QUICK_TAP_TERM 150
 #define ADAPTIVE_KEY_TIMEOUT 2000
 

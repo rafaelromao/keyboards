@@ -119,7 +119,7 @@
    &none               &kp RS(Q)           &mc_qu_s            &kp RS(K)           &none               &none               &ac_ocir_s          &ac_oacu_s          &ac_uacu_s          &none
    &kp RS(Y)           &kp RS(Z)           &kp RS(X)           &kp RS(W)           &none               &none               &ac_atil_s          &ac_aacu_s          &ac_eacu_s          &ac_iacu_s 
    &trans              &kp RS(J)           &mc_ced_s           &reversed_magic_c   &none               &none               &ac_otil_s          &ac_acir_s          &ac_ecir_s          &trans 
-                                           &trans              &mc_dqo             &kp SPACE           &kp SPACE           &mc_dqo             &trans
+                                           &trans              &mc_sqo             &kp SPACE           &kp SPACE           &mc_sqo             &trans
                            >;
                 };
                 case_alpha2_layer {
