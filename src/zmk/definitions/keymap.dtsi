@@ -265,8 +265,8 @@
                      display-name = "NAV";
                      bindings = <
    &none               &mc_word_start      &mc_word_end        &mc_word_next       &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
-   &sl FUNCTIONS       &td_LSHFT           &td_LCTRL           &td_LALT            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
-   &none               &td_LGUI            &td_LGUI            &td_LGUI            &none               &none               &kp DEL             &kp HOME            &kp END             &trans
+   &sl FUNCTIONS       &kp LSHFT           &kp LCTRL           &kp LALT            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &none               &kp LGUI            &kp LGUI            &kp LGUI            &none               &none               &kp DEL             &kp HOME            &kp END             &trans
                                            &trans              &trans              &bootloader         &kp SPACE           &mo MEDIA           &trans
                         >;
                 };
@@ -309,8 +309,8 @@
                      display-name = "FUN";
                      bindings = <
    &none               &bt BT_PRV          &bt BT_NXT          &bt BT_CLR          &none               &none               &kp F7              &kp F8              &kp F9              &none 
-   &none               &td_LSHFT           &td_LCTRL           &td_LALT            &none               &none               &kp F4              &kp F5              &kp F6              &none      
-   &none               &td_LGUI            &td_LGUI            &td_LGUI            &none               &none               &kp F1              &kp F2              &kp F3              &none
+   &none               &sk LSHFT           &sk LCTRL           &sk LALT            &none               &none               &kp F4              &kp F5              &kp F6              &none      
+   &none               &sk LGUI            &sk LGUI            &sk LGUI            &none               &none               &kp F1              &kp F2              &kp F3              &none
                                            &none               &none               &none               &none               &none               &none
                         >;
                 };
@@ -329,8 +329,8 @@
                      display-name = "NAV";
                      bindings = <
    &none               &mc_word_start      &mc_word_end        &mc_word_next       &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
-   &none               &td_LSHFT           &td_LCTRL           &td_LALT            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
-   &none               &td_LGUI            &td_LGUI            &td_LGUI            &none               &none               &kp DEL             &kp HOME            &kp END             &trans
+   &none               &kp LSHFT           &kp LCTRL           &kp LALT            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &none               &kp LGUI            &kp LGUI            &kp LGUI            &none               &none               &kp DEL             &kp HOME            &kp END             &trans
                                            &trans              &trans              &trans              &kp SPACE           &trans              &trans
                            >;
                 };

@@ -199,39 +199,5 @@
         SHORTCUT(mc_ralt_ralt,              &macro_tap &kp RALT &kp RALT)
         SHORTCUT(mc_lgui_lgui,              &macro_tap &kp LGUI &kp LGUI)
 
-        td_LSHFT: td_LSHFT {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <TD_TAPPING_TERM>;
-            bindings = <&sk LSHFT>, <&mc_lshift_lshift>;
-        }; 
-
-        td_LCTRL: td_CTRL {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <TD_TAPPING_TERM>;
-            bindings = <&sk LCTRL>, <&mc_lctrl_lctrl>;
-        }; 
-
-        td_LALT: td_LALT {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <TD_TAPPING_TERM>;
-            bindings = <&sk LALT>, <&mc_lalt_lalt>;
-        }; 
-
-        td_RALT: td_RALT {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <TD_TAPPING_TERM>;
-            bindings = <&sk RALT>, <&mc_ralt_ralt>;
-        }; 
-
-        td_LGUI: td_LGUI {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <TD_TAPPING_TERM>;
-            bindings = <&sk LGUI>, <&mc_lgui_lgui>;
-        }; 
    };
 };

@@ -46,10 +46,10 @@ noremap kk zz
 noremap ll gg
 ```
         
-#### One Shot Mods
+#### Standard Mods
 
-- One Shot modifiers are available in Navigation the layer.
-- Double tapping any of these modifiers will send a double tap instead of activating the one shot behavior. This is useful for some shortcuts like Shift+Shift or Ctrl+Ctrl in IntelliJ, for example.
+- Standard modifiers are available in Navigation the layer.
+- These are not one shot mods, which is useful to trigger some shortcuts like Shift+Shift or Ctrl+Ctrl in IntelliJ, for example.
 
 ### Media
 - The Media layer gives access to [Standard Modifiers](modifiers.md#standard-modifiers), Media controls, Esc and a Save shortcut.

@@ -4,8 +4,12 @@
 
 ## Functions
 
-The Functions layer is activated holding the C key in the base layer.
-- It will give access to the traditional Function keys, plus others behaviors described below.
+The Functions layer is activated holding the left home row pinky key in the Navigation layer or holding the left outer thumb key in the shortcut layer (or both these keys together in the base layer).
+- It will give access to the traditional Function keys, well as to one shot mods.
+
+#### One Shot Mods
+
+- One Shot modifiers are available in Functions the layer.
 
 ## Smart Cases
 
