@@ -446,9 +446,8 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 </g>
 <g class="combo combopos-3">
 <rect rx="6" ry="6" x="186" y="155" width="48" height="30" class="combo"/>
-<a href="#custom">
-<text x="210" y="170" class="combo tap layer-activator">custom</text>
-</a></g>
+<text x="210" y="170" class="combo tap"><tspan style="font-size: 78%">functions</tspan></text>
+</g>
 <g class="combo combopos-4">
 <rect rx="6" ry="6" x="426" y="19" width="48" height="30" class="combo"/>
 <text x="450" y="34" class="combo tap">lower</text>
@@ -581,12 +580,16 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 </g>
 <g transform="translate(485, 170)" class="key keypos-18">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
-<text x="0" y="0" class="key tap">,</text>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-1.2em">meh</tspan><tspan x="0" dy="1.2em">,</tspan>
+</text>
 <use href="#mdi:apple-keyboard-command" xlink:href="#mdi:apple-keyboard-command" x="-6" y="18" height="12" width="12.0" class="key hold glyph mdi:apple-keyboard-command"/>
 </g>
 <g transform="translate(555, 170)" class="key keypos-19">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
-<text x="0" y="0" class="key tap">.</text>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-1.2em">meh</tspan><tspan x="0" dy="1.2em">.</tspan>
+</text>
 <use href="#mdi:apple-keyboard-command" xlink:href="#mdi:apple-keyboard-command" x="-6" y="18" height="12" width="12.0" class="key hold glyph mdi:apple-keyboard-command"/>
 </g>
 <g transform="translate(210, 238)" class="key keypos-20">

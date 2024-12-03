@@ -428,6 +428,15 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 <text x="520" y="183" class="combo hold">⇥ ;</text>
 </g>
 <g class="combo combopos-3">
+<path d="M485,137 h-64 a6.0,6.0 0 0 1 -6.0,-6.0 v-6" class="combo"/>
+<path d="M485,137 l0,-21" class="combo"/>
+<path d="M485,137 h64 a6.0,6.0 0 0 0 6.0,-6.0 v-6" class="combo"/>
+<rect rx="6" ry="6" x="468" y="122" width="34" height="30" class="combo"/>
+<text x="485" y="137" class="combo tap">
+<tspan x="485" dy="-0.6em">⇥();</tspan><tspan x="485" dy="1.2em">⏎</tspan>
+</text>
+</g>
+<g class="combo combopos-4">
 <path d="M485,205 h-64 a6.0,6.0 0 0 1 -6.0,-6.0 v-6" class="combo"/>
 <path d="M485,205 l0,-21" class="combo"/>
 <path d="M485,205 h64 a6.0,6.0 0 0 0 6.0,-6.0 v-6" class="combo"/>
@@ -436,72 +445,72 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 <tspan x="485" dy="-0.6em">⇥;</tspan><tspan x="485" dy="1.2em">⏎</tspan>
 </text>
 </g>
-<g class="combo combopos-4">
+<g class="combo combopos-5">
 <rect rx="6" ry="6" x="123" y="19" width="34" height="30" class="combo"/>
 <text x="140" y="34" class="combo tap">
 <tspan x="140" dy="-0.6em">⇥{</tspan><tspan x="140" dy="1.2em">⏎</tspan>
 </text>
 </g>
-<g class="combo combopos-5">
+<g class="combo combopos-6">
 <rect rx="6" ry="6" x="193" y="19" width="34" height="30" class="combo"/>
 <text x="210" y="34" class="combo tap">::</text>
 <text x="210" y="47" class="combo hold">⇥ ::</text>
 </g>
-<g class="combo combopos-6">
+<g class="combo combopos-7">
 <rect rx="6" ry="6" x="433" y="19" width="34" height="30" class="combo"/>
 <text x="450" y="34" class="combo tap">G</text>
 <text x="450" y="21" class="combo shifted">vim</text>
 </g>
-<g class="combo combopos-7">
+<g class="combo combopos-8">
 <rect rx="6" ry="6" x="123" y="155" width="34" height="30" class="combo"/>
 <text x="140" y="170" class="combo tap">[]</text>
 <text x="140" y="183" class="combo hold">nav</text>
 </g>
-<g class="combo combopos-8">
+<g class="combo combopos-9">
 <rect rx="6" ry="6" x="433" y="87" width="34" height="30" class="combo"/>
 <text x="450" y="102" class="combo tap">j</text>
 <text x="450" y="89" class="combo shifted">vim</text>
 </g>
-<g class="combo combopos-9">
+<g class="combo combopos-10">
 <rect rx="6" ry="6" x="503" y="87" width="34" height="30" class="combo"/>
 <text x="520" y="102" class="combo tap">k</text>
 <text x="520" y="89" class="combo shifted">vim</text>
 </g>
-<g class="combo combopos-10">
+<g class="combo combopos-11">
 <rect rx="6" ry="6" x="433" y="155" width="34" height="30" class="combo"/>
 <text x="450" y="170" class="combo tap">|</text>
 <text x="450" y="157" class="combo shifted">vim</text>
 </g>
-<g class="combo combopos-11">
+<g class="combo combopos-12">
 <rect rx="6" ry="6" x="123" y="87" width="34" height="30" class="combo"/>
 <text x="140" y="102" class="combo tap">()</text>
 <text x="140" y="115" class="combo hold">⇥ ()</text>
 </g>
-<g class="combo combopos-12">
+<g class="combo combopos-13">
 <rect rx="6" ry="6" x="193" y="87" width="34" height="30" class="combo"/>
 <text x="210" y="102" class="combo tap">&amp;&amp;</text>
 <text x="210" y="115" class="combo hold">→ &amp;&amp;</text>
 </g>
-<g class="combo combopos-13">
+<g class="combo combopos-14">
 <rect rx="6" ry="6" x="193" y="155" width="34" height="30" class="combo"/>
 <text x="210" y="170" class="combo tap">||</text>
 <text x="210" y="183" class="combo hold">→ ||</text>
 </g>
-<g class="combo combopos-14">
+<g class="combo combopos-15">
 <path d="M245,-1 h-134 a6.0,6.0 0 0 0 -6.0,6.0 v6" class="combo"/>
 <path d="M245,-1 h-64 a6.0,6.0 0 0 0 -6.0,6.0 v6" class="combo"/>
 <path d="M245,-1 l0,21" class="combo"/>
 <rect rx="6" ry="6" x="228" y="-16" width="34" height="30" class="combo"/>
 <text x="245" y="-1" class="combo tap">US$</text>
 </g>
-<g class="combo combopos-15">
+<g class="combo combopos-16">
 <path d="M245,67 h-134 a6.0,6.0 0 0 0 -6.0,6.0 v6" class="combo"/>
 <path d="M245,67 h-64 a6.0,6.0 0 0 0 -6.0,6.0 v6" class="combo"/>
 <path d="M245,67 l0,21" class="combo"/>
 <rect rx="6" ry="6" x="228" y="52" width="34" height="30" class="combo"/>
 <text x="245" y="67" class="combo tap">R$</text>
 </g>
-<g class="combo combopos-16">
+<g class="combo combopos-17">
 <path d="M245,135 h-134 a6.0,6.0 0 0 0 -6.0,6.0 v6" class="combo"/>
 <path d="M245,135 h-64 a6.0,6.0 0 0 0 -6.0,6.0 v6" class="combo"/>
 <path d="M245,135 l0,21" class="combo"/>

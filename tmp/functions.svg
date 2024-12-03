@@ -306,7 +306,7 @@ path.combo {
 rect.held.alternate { fill: #ffe6f2; }</style>
 <g transform="translate(30, 0)" class="layer-functions">
 <text x="0" y="28" class="label" id="functions">functions:</text>
-<g transform="translate(0, 56)">
+<g transform="translate(0, 72)">
 <g transform="translate(105, 34)" class="key keypos-0">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
 <use href="#mdi:bluetooth" xlink:href="#mdi:bluetooth" x="-7" y="-7" height="14" width="14.0" class="key tap glyph mdi:bluetooth"/>
@@ -407,26 +407,33 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
 </g>
 <g class="combo combopos-0">
+<path d="M485,-1 h-64 a6.0,6.0 0 0 0 -6.0,6.0 v6" class="combo"/>
+<path d="M485,-1 l0,21" class="combo"/>
+<path d="M485,-1 h64 a6.0,6.0 0 0 1 6.0,6.0 v6" class="combo"/>
+<rect rx="6" ry="6" x="461" y="-16" width="48" height="30" class="combo"/>
+<text x="485" y="-1" class="combo tap">alpha1</text>
+</g>
+<g class="combo combopos-1">
 <rect rx="6" ry="6" x="433" y="19" width="34" height="30" class="combo"/>
 <text x="450" y="34" class="combo tap">F12</text>
 </g>
-<g class="combo combopos-1">
+<g class="combo combopos-2">
 <rect rx="6" ry="6" x="433" y="87" width="34" height="30" class="combo"/>
 <text x="450" y="102" class="combo tap">F11</text>
 </g>
-<g class="combo combopos-2">
+<g class="combo combopos-3">
 <rect rx="6" ry="6" x="503" y="87" width="34" height="30" class="combo"/>
 <text x="520" y="102" class="combo tap">F14</text>
 </g>
-<g class="combo combopos-3">
+<g class="combo combopos-4">
 <rect rx="6" ry="6" x="503" y="19" width="34" height="30" class="combo"/>
 <text x="520" y="34" class="combo tap">F15</text>
 </g>
-<g class="combo combopos-4">
+<g class="combo combopos-5">
 <rect rx="6" ry="6" x="433" y="155" width="34" height="30" class="combo"/>
 <text x="450" y="170" class="combo tap">F10</text>
 </g>
-<g class="combo combopos-5">
+<g class="combo combopos-6">
 <rect rx="6" ry="6" x="503" y="155" width="34" height="30" class="combo"/>
 <text x="520" y="170" class="combo tap">F13</text>
 </g>

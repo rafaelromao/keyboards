@@ -76,7 +76,7 @@ layers:
   custom:
     - [meh b, meh m, meh g, meh l, meh o, meh u]
     - [{t: meh d, type: held}, {t: meh n}, meh s, meh t, meh r, meh a, {t: meh e}, {t: meh i, type: held alternate}]
-    - [{t: meh f, h: '$$mdi:apple-keyboard-command$$'}, {t: meh c, h: '$$mdi:apple-keyboard-command$$'}, {t: meh p, h: '$$mdi:apple-keyboard-command$$'}, {t: meh h, h: '$$mdi:apple-keyboard-command$$'}, {t: ",", h: '$$mdi:apple-keyboard-command$$'}, {t: ".", h: '$$mdi:apple-keyboard-command$$'}]
+    - [{t: meh f, h: '$$mdi:apple-keyboard-command$$'}, {t: meh c, h: '$$mdi:apple-keyboard-command$$'}, {t: meh p, h: '$$mdi:apple-keyboard-command$$'}, {t: meh h, h: '$$mdi:apple-keyboard-command$$'}, {t: "meh ,", h: '$$mdi:apple-keyboard-command$$'}, {t: "meh .", h: '$$mdi:apple-keyboard-command$$'}]
     - {t: plain1, s: "auto-layer", h: nav}
     - {t: '$$mdi:apple-keyboard-command$$', s: sticky, h: '$$mdi:apple-keyboard-command$$', type: held}
     - {t: '$$mdi:apple-keyboard-command$$', s: sticky, h: '$$mdi:apple-keyboard-command$$', type: held alternate}
@@ -132,7 +132,7 @@ layers:
 combos:
   - {p: [0, 1], k: "⎋", a: mid, layers: [alpha1, alpha2, shifted1, shifted2, ç-extension, shortcuts, nav, media, custom]}
   - {p: [4, 5], k: '$$mdi:backspace-outline$$', a: mid, layers: [alpha1, alpha2, shifted1, shifted2, ç-extension, nav, media, lower, raise]}
-  - {p: [3, 4, 5], k: "alpha1", a: top, w: 48, layers: [lower, custom, nav, media, plain1]}
+  - {p: [3, 4, 5], k: "alpha1", a: top, w: 48, layers: [lower, custom, nav, media, plain1, functions]}
   - {p: [1, 2], k: "k", a: mid, layers: [alpha1, plain1]}
   - {p: [3, 4], k: "x", a: mid, layers: [alpha1, plain1]}
   - {p: [7, 8], k: "q", a: mid, layers: [alpha1, plain1]}
@@ -141,6 +141,7 @@ combos:
   - {p: [11, 12], k: "y", a: mid, layers: [alpha1, plain1]}
   - {p: [15, 16], k: "v", a: mid, layers: [alpha1, plain1]}
   - {p: [17, 18], k: "j", a: mid, layers: [alpha1, plain1]}
+  - {p: [7, 8, 9], k: "meh ␣", a: top, layers: [alpha1]}
   - {p: [18, 19], k: {t: ";", h: "⇥ ;"}, a: mid, layers: [alpha1, plain1, lower]}
   - {p: [3, 4, 5], k: {t: "d", s: vim}, a: top, layers: [alpha1]}
   - {p: [10, 11, 12], k: {t: "p", s: vim}, a: top, layers: [alpha1]}
@@ -180,10 +181,11 @@ combos:
   - {p: [14, 15], k: {t: "lower", s: "auto-layer"}, w: 48, a: mid, layers: [alpha1, shifted1]}
   - {p: [1, 2], k: "plain1", a: mid, w: 48, layers: [shortcuts]}
   - {p: [8, 9], k: "media", a: mid, w: 48, layers: [shortcuts]}
-  - {p: [15, 16], k: "custom", a: mid, w: 48, layers: [shortcuts]}
+  - {p: [15, 16], k: "functions", a: mid, w: 48, layers: [shortcuts]}
   - {p: [3, 4], k: "lower", a: mid, w: 48, layers: [shortcuts]}
   - {p: [10, 11], k: "nav", a: mid, w: 48, layers: [shortcuts]}
   - {p: [17, 18], k: "custom", a: mid, w: 48, layers: [shortcuts]}
+  - {p: [10, 11, 12], k: "⇥(); ⏎", layers: [lower], a: bottom}
   - {p: [17, 18, 19], k: "⇥; ⏎", layers: [lower], a: bottom}
   - {p: [0, 1], k: "⇥{ ⏎", a: mid, layers: [lower]}
   - {p: [1, 2], k: {t: "::", h: "⇥ ::"}, a: mid, layers: [lower]}
