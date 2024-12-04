@@ -195,11 +195,7 @@
 
         SMART_MACRO(tc_shift, &sk RSHFT)
         SMART_MORPH(mm_shift, MOD_LSFT|MOD_RSFT, &smart_word, &tc_shift)
-
         SMART_MORPH(mm_repeat, MOD_LSFT|MOD_RSFT, &smart_line, &alternate_repeat_key)
-
-        SMART_MACRO(tc_sp_caps,     &kp LS(SPACE))
-        SMART_LAYERTAP(th_sp_caps,  &tc_sp_caps)
 
         ht_shift: ht_shift {
             compatible = "zmk,behavior-hold-tap";
@@ -252,11 +248,11 @@
 
 
         SMART_MACRO(tc_pascal_case,  &to CAMEL_CASE &sk LSHFT)
-        SMART_MACRO(tc_s_snakecase,  &tog CASE_A1 &tog SNAKE_CASE)
-        SMART_MACRO(tc_s_kebabcase,  &tog CASE_A1 &tog KEBAB_CASE)
-        SMART_MACRO(tc_s_slashcase,  &tog CASE_A1 &tog SLASH_CASE)
+        SMART_MACRO(tc_s_snakecase,  &tog CPLK_A1 &tog SNAKE_CASE)
+        SMART_MACRO(tc_s_kebabcase,  &tog CPLK_A1 &tog KEBAB_CASE)
+        SMART_MACRO(tc_s_slashcase,  &tog CPLK_A1 &tog SLASH_CASE)
 
-        SMART_MACRO(mc_msk_camel, &sk LSHFT)
+        SMART_MACRO(mc_msk_camel, &sl CASE_A1)
         SMART_MACRO(mc_msk_snake, &kp UNDERSCORE &sl SPACING)
         SMART_MACRO(mc_msk_kebab, &kp MINUS &sl SPACING)
         SMART_MACRO(mc_msk_slash, &kp SLASH &sl SPACING)

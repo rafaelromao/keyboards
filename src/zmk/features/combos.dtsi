@@ -47,6 +47,7 @@
         COMBO(cb_boot_l,        LTR LBI,     &bootloader,        ALL_LAYERS)
         COMBO(cb_boot_r,        RTR RBI,     &bootloader,        ALL_LAYERS)
         COMBO(cb_alpha1,        RTM RTR RTI, &to ALPHA1,         FIXABLE_LAYERS)
+        COMBO(cb_cancel,        RTM RTR RTI, &kp K_CANCEL,       SMARTCASE_LAYERS CASE_A1 CPLK_A1)
 
         COMBO(cb_save,          LHR LHM L0,  &mc_save,           ALL_LAYERS)
         COMBO(cb_fullscr,       LHM LHI L0,  &mc_fullscr,        ALL_LAYERS)

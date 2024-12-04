@@ -83,7 +83,7 @@
    &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &kp LS(Y)
    &lt SHORTCUTS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LALT LS(T)      &kp LS(W)           &kp LS(Z)           &mt RALT LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTCUTS LS(I) 
    &trans              &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c RGUI 0  &lt SMART COMMA     &th_dot 0 0         &trans
-                                           &trans              &trans              &trans              &th_case_a2 RAISE 0 &th_cancel MEDIA 0  &trans
+                                           &trans              &trans              &msk_spc LOWER 0    &th_case_a2 RAISE 0 &mo MEDIA           &trans
                         >;
                 };
                 capsline_layer {
@@ -92,11 +92,11 @@
    &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &kp LS(Y)
    &lt SHORTCUTS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LALT LS(T)      &kp LS(W)           &kp LS(Z)           &mt RALT LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTCUTS LS(I) 
    &trans              &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c RGUI 0  &lt SMART COMMA     &th_dot 0 0         &trans
-                                           &trans              &trans              &th_sp_caps LOWER 0 &th_case_a2 RAISE 0 &th_cancel MEDIA 0  &trans
+                                           &trans              &trans              &trans              &th_case_a2 RAISE 0 &mo MEDIA           &trans
                            >;
                 };
                 alpha2_layer {
-                     display-name = "ALPHA2";
+                     display-name = "ROMAK";
                      bindings = <
    &none               &kp Q               &mc_qu              &kp K               &none               &none               &ac_ocir            &ac_oacu            &ac_uacu            &none
    &kp Y               &kp Z               &kp X               &kp W               &none               &none               &ac_atil            &ac_aacu            &ac_eacu            &ac_iacu 
@@ -114,7 +114,7 @@
                            >;
                 };
                 shifted_alpha2_layer {
-                     display-name = "CASE";
+                     display-name = "ROMAK";
                      bindings = <
    &none               &kp RS(Q)           &mc_qu_s            &kp RS(K)           &none               &none               &ac_ocir_s          &ac_oacu_s          &ac_uacu_s          &none
    &kp RS(Y)           &kp RS(Z)           &kp RS(X)           &kp RS(W)           &none               &none               &ac_atil_s          &ac_aacu_s          &ac_eacu_s          &ac_iacu_s 
@@ -195,7 +195,7 @@
 
 
                 shortcuts_layer {
-                     display-name = "SHORTCUTS";
+                     display-name = "SHORTS";
                      bindings = <
    &none               &kp ESC             &mc_files           &mc_preview         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &none    
    &none               &th_zoom RGUI 0     &mc_app_swapper     &th_tabs LGUI 0     &none               &none               &mc_seln            &mm_down_minus      &mm_up_plus         &none
@@ -204,7 +204,7 @@
                            >;
                 };
                 shortcuts_ext_1_layer {
-                     display-name = "SHORTCUTS";
+                     display-name = "SHORTS";
                      bindings = <
    &trans              &trans              &trans              &trans              &trans              &trans              &mc_ext_sel         &trans              &trans              &trans    
    &trans              &trans              &trans              &trans              &trans              &trans              &th_ext_sel LALT 0  &trans              &trans              &trans  
@@ -213,7 +213,7 @@
                            >;
                 };
                 shortcuts_ext_2_layer {
-                     display-name = "SHORTCUTS";
+                     display-name = "SHORTS";
                      bindings = <
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &mc_win_b           &mc_win_f           &trans  
@@ -233,7 +233,7 @@
 
 
                 plain1_layer {
-                     display-name = "PLAIN 1";
+                     display-name = "PLAIN";
                      bindings = <
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp Y
    &kp D               &kp N               &kp S               &kp T               &kp W               &kp Z               &kp R               &kp A               &kp E               &kp I 
@@ -242,7 +242,7 @@
                            >;
                 };
                 plain2_layer {
-                     display-name = "PLAIN 2";
+                     display-name = "PLAIN";
                      bindings = <
    &none               &kp Q               &mc_qu              &kp K               &none               &none               &ac_ocir            &ac_oacu            &ac_uacu            &none
    &kp Y               &kp Z               &kp X               &kp W               &none               &none               &ac_atil            &ac_aacu            &ac_eacu            &ac_iacu 
@@ -251,7 +251,7 @@
                            >;
                 };
                 shifted_plain2_layer {
-                     display-name = "PLAIN 2";
+                     display-name = "PLAIN";
                      bindings = <
    &none               &kp RS(Q)           &mc_qu_s            &kp RS(K)           &none               &none               &ac_ocir_s            &ac_oacu_s            &ac_uacu_s            &none
    &kp RS(Y)           &kp RS(Z)           &kp RS(X)           &kp RS(W)           &none               &none               &ac_atil_s            &ac_aacu_s            &ac_eacu_s            &ac_iacu_s 
