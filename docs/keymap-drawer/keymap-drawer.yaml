@@ -322,27 +322,27 @@ layers:
     - null
   smartcases:
     - [
-        "slash/ case",
+        null,
+        "CAPS word",
         "CAPS LINE",
-        "kebad- case",
         { t: $$mdi:lock$$, h: "lock" },
         null,
         null,
       ]
     - [
         "",
-        "camel Case",
-        "CAPS word",
         "snake_ case",
+        "CONSTANT_ CASE",
+        "kebab- case",
         { t: $$mdi:power-sleep$$, h: "sleep" },
         "",
         null,
         null,
       ]
     - [
-        null,
-        null,
-        null,
+        "slash/ case",
+        "Pascal Case",
+        "camel Case",
         { t: $$mdi:ray-start-arrow$$, h: "leader" },
         { type: held },
         "",
@@ -562,11 +562,6 @@ combos:
   - { p: [4, 5], k: "F15", a: mid, layers: [functions] }
   - { p: [17, 18], k: "F10", a: mid, layers: [functions] }
   - { p: [18, 19], k: "F13", a: mid, layers: [functions] }
-
-  - { p: [0, 1], k: "CAPS SLASH/CASE", a: top, w: 48, layers: [smartcases] }
-  - { p: [1, 2], k: "CAPS KEBAB-CASE", a: top, w: 48, layers: [smartcases] }
-  - { p: [7, 8], k: "Pascal Case", a: bottom, w: 48, layers: [smartcases] }
-  - { p: [8, 9], k: "CAPS SNAKE_CASE", a: bottom, w: 48, layers: [smartcases] }
 
   - { p: [14, 15], k: "lower", a: mid, layers: [nav] }
 

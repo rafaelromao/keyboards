@@ -160,11 +160,6 @@
         COMBO(cb_f14,           RHM RHR,     &kp F14,            FUNCTIONS)
         COMBO(cb_f15,           RTM RTR,     &kp F15,            FUNCTIONS)
 
-        COMBO(cb_pascal_case,   LHR LHM,     &tc_pascal_case,    SMART)
-        COMBO(cb_s_snakecase,   LHI LHM,     &tc_s_snakecase,    SMART)
-        COMBO(cb_s_kebabcase,   LTI LTM,     &tc_s_kebabcase,    SMART)
-        COMBO(cb_s_slashcase,   LTR LTM,     &tc_s_slashcase,    SMART)
-
         COMBO(cb_lpar,          RHI RHM RHR, &kp LPAR,           ALPHA2_LAYERS)
         COMBO(cb_rpar,          RBI RBM RBR, &kp RPAR,           ALPHA2_LAYERS)
         COMBO(cb_dqo,           RTI RTM RTR, &mc_dqo,            ALPHA2_LAYERS)

@@ -317,9 +317,9 @@
                 smartcases_layer {
                      display-name = "SMART";
                      bindings = <
-   &none               &to SLASH_CASE      &tc_smart_line      &to KEBAB_CASE      &none               &none               &mc_lock            &none               &none               &none 
-   &none               &to CAMEL_CASE      &tc_smart_word      &to SNAKE_CASE      &none               &none               &kp C_SLEEP         &none               &none               &none      
-   &none               &none               &none               &none               &none               &none               &leader             &none               &none               &none
+   &none               &none               &tc_smart_word      &tc_smart_line      &none               &none               &mc_lock            &none               &none               &none 
+   &none               &to SNAKE_CASE      &tc_s_snakecase     &to KEBAB_CASE      &none               &none               &kp C_SLEEP         &none               &none               &none      
+   &none               &to SLASH_CASE      &tc_pascal_case     &to CAMEL_CASE      &none               &none               &leader             &none               &none               &none
                                            &none               &none               &none               &none               &none               &none
                         >;
                 };

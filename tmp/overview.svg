@@ -2941,23 +2941,20 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 </g>
 <g transform="translate(750, 2408)" class="layer-smartcases">
 <text x="0" y="28" class="label" id="smartcases">smartcases:</text>
-<g transform="translate(0, 72)">
+<g transform="translate(0, 56)">
 <g transform="translate(105, 34)" class="key keypos-0">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">slash/</tspan><tspan x="0" dy="1.2em">case</tspan>
-</text>
 </g>
 <g transform="translate(175, 34)" class="key keypos-1">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">CAPS</tspan><tspan x="0" dy="1.2em">LINE</tspan>
+<tspan x="0" dy="-0.6em">CAPS</tspan><tspan x="0" dy="1.2em">word</tspan>
 </text>
 </g>
 <g transform="translate(245, 34)" class="key keypos-2">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">kebad-</tspan><tspan x="0" dy="1.2em">case</tspan>
+<tspan x="0" dy="-0.6em">CAPS</tspan><tspan x="0" dy="1.2em">LINE</tspan>
 </text>
 </g>
 <g transform="translate(415, 34)" class="key keypos-3">
@@ -2977,19 +2974,19 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 <g transform="translate(105, 102)" class="key keypos-7">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">camel</tspan><tspan x="0" dy="1.2em">Case</tspan>
+<tspan x="0" dy="-0.6em">snake_</tspan><tspan x="0" dy="1.2em">case</tspan>
 </text>
 </g>
 <g transform="translate(175, 102)" class="key keypos-8">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">CAPS</tspan><tspan x="0" dy="1.2em">word</tspan>
+<tspan x="0" dy="-0.6em" style="font-size: 78%">CONSTANT_</tspan><tspan x="0" dy="1.2em" style="font-size: 78%">CASE</tspan>
 </text>
 </g>
 <g transform="translate(245, 102)" class="key keypos-9">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">snake_</tspan><tspan x="0" dy="1.2em">case</tspan>
+<tspan x="0" dy="-0.6em">kebab-</tspan><tspan x="0" dy="1.2em">case</tspan>
 </text>
 </g>
 <g transform="translate(415, 102)" class="key keypos-10">
@@ -3008,12 +3005,21 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 </g>
 <g transform="translate(105, 170)" class="key keypos-14">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.6em">slash/</tspan><tspan x="0" dy="1.2em">case</tspan>
+</text>
 </g>
 <g transform="translate(175, 170)" class="key keypos-15">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.6em">Pascal</tspan><tspan x="0" dy="1.2em">Case</tspan>
+</text>
 </g>
 <g transform="translate(245, 170)" class="key keypos-16">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.6em">camel</tspan><tspan x="0" dy="1.2em">Case</tspan>
+</text>
 </g>
 <g transform="translate(415, 170)" class="key keypos-17">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
@@ -3037,38 +3043,6 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 </g>
 <g transform="translate(450, 238)" class="key keypos-23">
 <rect rx="6" ry="6" x="-33" y="-32" width="66" height="64" class="key"/>
-</g>
-<g class="combo combopos-0">
-<path d="M140,-1 h-29 a6.0,6.0 0 0 0 -6.0,6.0 v6" class="combo"/>
-<path d="M140,-1 h29 a6.0,6.0 0 0 1 6.0,6.0 v6" class="combo"/>
-<rect rx="6" ry="6" x="116" y="-16" width="48" height="30" class="combo"/>
-<text x="140" y="-1" class="combo tap">
-<tspan x="140" dy="-0.6em" style="font-size: 70%">CAPS</tspan><tspan x="140" dy="1.2em" style="font-size: 70%">SLASH/CASE</tspan>
-</text>
-</g>
-<g class="combo combopos-1">
-<path d="M210,-1 h-29 a6.0,6.0 0 0 0 -6.0,6.0 v6" class="combo"/>
-<path d="M210,-1 h29 a6.0,6.0 0 0 1 6.0,6.0 v6" class="combo"/>
-<rect rx="6" ry="6" x="186" y="-16" width="48" height="30" class="combo"/>
-<text x="210" y="-1" class="combo tap">
-<tspan x="210" dy="-0.6em" style="font-size: 70%">CAPS</tspan><tspan x="210" dy="1.2em" style="font-size: 70%">KEBAB-CASE</tspan>
-</text>
-</g>
-<g class="combo combopos-2">
-<path d="M140,137 h-29 a6.0,6.0 0 0 1 -6.0,-6.0 v-6" class="combo"/>
-<path d="M140,137 h29 a6.0,6.0 0 0 0 6.0,-6.0 v-6" class="combo"/>
-<rect rx="6" ry="6" x="116" y="122" width="48" height="30" class="combo"/>
-<text x="140" y="137" class="combo tap">
-<tspan x="140" dy="-0.6em">Pascal</tspan><tspan x="140" dy="1.2em">Case</tspan>
-</text>
-</g>
-<g class="combo combopos-3">
-<path d="M210,137 h-29 a6.0,6.0 0 0 1 -6.0,-6.0 v-6" class="combo"/>
-<path d="M210,137 h29 a6.0,6.0 0 0 0 6.0,-6.0 v-6" class="combo"/>
-<rect rx="6" ry="6" x="186" y="122" width="48" height="30" class="combo"/>
-<text x="210" y="137" class="combo tap">
-<tspan x="210" dy="-0.6em" style="font-size: 70%">CAPS</tspan><tspan x="210" dy="1.2em" style="font-size: 70%">SNAKE_CASE</tspan>
-</text>
 </g>
 </g>
 </g>

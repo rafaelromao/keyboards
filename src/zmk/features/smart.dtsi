@@ -249,8 +249,6 @@
 
         SMART_MACRO(tc_pascal_case,  &to CAMEL_CASE &sk LSHFT)
         SMART_MACRO(tc_s_snakecase,  &tog CPLK_A1 &tog SNAKE_CASE)
-        SMART_MACRO(tc_s_kebabcase,  &tog CPLK_A1 &tog KEBAB_CASE)
-        SMART_MACRO(tc_s_slashcase,  &tog CPLK_A1 &tog SLASH_CASE)
 
         SMART_MACRO(mc_msk_camel, &sl CASE_A1)
         SMART_MACRO(mc_msk_snake, &kp UNDERSCORE &sl SPACING)
