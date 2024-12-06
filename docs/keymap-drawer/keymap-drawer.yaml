@@ -533,9 +533,9 @@ combos:
   - { p: [7, 8], k: { t: "()", h: "⇥ ()" }, a: mid, layers: [lower] }
   - { p: [8, 9], k: { t: "&&", h: "→ &&" }, a: mid, layers: [lower] }
   - { p: [15, 16], k: { t: "||", h: "→ ||" }, a: mid, layers: [lower] }
-  - { p: [0, 1, 2], k: "US$", a: top, slide: 1, layers: [lower] }
+  - { p: [0, 1, 2], k: "€", a: top, slide: 1, layers: [lower] }
   - { p: [7, 8, 9], k: "R$", a: top, slide: 1, layers: [lower] }
-  - { p: [14, 15, 16], k: "€", a: top, slide: 1, layers: [lower] }
+  - { p: [14, 15, 16], k: "US$", a: top, slide: 1, layers: [lower] }
 
   - { p: [0, 1], k: "##", a: mid, layers: [raise] }
   - { p: [0, 1, 2], k: "###", a: top, layers: [raise] }

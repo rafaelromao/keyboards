@@ -1504,7 +1504,7 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 <path d="M245,-1 h-64 a6.0,6.0 0 0 0 -6.0,6.0 v6" class="combo"/>
 <path d="M245,-1 l0,21" class="combo"/>
 <rect rx="6" ry="6" x="228" y="-16" width="34" height="30" class="combo"/>
-<text x="245" y="-1" class="combo tap">US$</text>
+<text x="245" y="-1" class="combo tap">€</text>
 </g>
 <g class="combo combopos-16">
 <path d="M245,67 h-134 a6.0,6.0 0 0 0 -6.0,6.0 v6" class="combo"/>
@@ -1518,7 +1518,7 @@ rect.held.alternate { fill: #ffe6f2; }</style>
 <path d="M245,135 h-64 a6.0,6.0 0 0 0 -6.0,6.0 v6" class="combo"/>
 <path d="M245,135 l0,21" class="combo"/>
 <rect rx="6" ry="6" x="228" y="120" width="34" height="30" class="combo"/>
-<text x="245" y="135" class="combo tap">€</text>
+<text x="245" y="135" class="combo tap">US$</text>
 </g>
 </g>
 </g>
