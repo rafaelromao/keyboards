@@ -29,7 +29,7 @@
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp Y
    &lt SHORTCUTS D     &mt LSHFT N         &mt LCTRL S         &mt LALT T          &kp W               &kp Z               &mt RALT R          &mt RCTRL A         &mt RSHFT E         &lt SHORTCUTS I      
    &kp Q               &mt LGUI F          &mt LGUI C          &mt LGUI P          &kp V               &kp J               &ht_magic RGUI 0    &lt SMART COMMA     &th_dot 0 0         &kp Y
-                                           &none               &ht_repeat NAV 0    &ltn LOWER SPACE    &msl_a2 RAISE 0     &ht_shift MEDIA 0   &none
+                                           &kp Q               &ht_repeat NAV 0    &ltn LOWER SPACE    &msl_a2 RAISE 0     &ht_shift MEDIA 0   &kp Y
                         >;
                 };
                 camel_case_layer {

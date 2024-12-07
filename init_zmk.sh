@@ -95,16 +95,12 @@ archive_rommana_unibody="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/rom
 alias build_rommana="${checkout_main_zmk} && cd ${ZMK_HOME} && ${build_rommana_unibody} && ${archive_rommana_unibody} && cd $KEYBOARD_HOME"
 
 echo "Creating Cygnus build alias..."
-build_cygnus_central_dongle="west build -s app -b nice_nano_v2 --build-dir build/cygnus_central_dongle -- -DSHIELD='cygnus_central_dongle dongle_display' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/keyboards/cygnus -DZMK_EXTRA_MODULES='$DONGLE_HOME;$BEHAVIOR_MODULES'"
 build_cygnus_central_left="west build -s app -b nice_nano_v2 --build-dir build/cygnus_central_left -- -DSHIELD='cygnus_central_left' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/keyboards/cygnus -DZMK_EXTRA_MODULES='$BEHAVIOR_MODULES'"
-build_cygnus_peripheral_left="west build -s app -b nice_nano_v2 --build-dir build/cygnus_peripheral_left -- -DSHIELD='cygnus_peripheral_left' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/keyboards/cygnus -DZMK_EXTRA_MODULES='$BEHAVIOR_MODULES'"
 build_cygnus_peripheral_right="west build -s app -b nice_nano_v2 --build-dir build/cygnus_peripheral_right -- -DSHIELD='cygnus_peripheral_right' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/keyboards/cygnus -DZMK_EXTRA_MODULES='$BEHAVIOR_MODULES'"
-archive_cygnus_central_dongle="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/cygnus_central_dongle/zephyr/zmk.uf2 ] && mv build/cygnus_central_dongle/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/cygnus_central_dongle-zmk.uf2"
 archive_cygnus_central_left="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/cygnus_central_left/zephyr/zmk.uf2 ] && mv build/cygnus_central_left/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/cygnus_central_left-zmk.uf2"
-archive_cygnus_peripheral_left="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/cygnus_peripheral_left/zephyr/zmk.uf2 ] && mv build/cygnus_peripheral_left/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/cygnus_peripheral_left-zmk.uf2"
 archive_cygnus_peripheral_right="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/cygnus_peripheral_right/zephyr/zmk.uf2 ] && mv build/cygnus_peripheral_right/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/cygnus_peripheral_right-zmk.uf2"
-alias build_cygnus_all="${checkout_main_zmk} && cd ${ZMK_HOME} && ${build_cygnus_central_left} && ${archive_cygnus_central_left} && ${build_cygnus_central_dongle} && ${archive_cygnus_central_dongle} && ${build_cygnus_peripheral_left} && ${archive_cygnus_peripheral_left} && ${build_cygnus_peripheral_right} && ${archive_cygnus_peripheral_right} && cd ${KEYBOARD_HOME}"
-alias build_cygnus="${checkout_main_zmk} && cd ${ZMK_HOME} && ${build_cygnus_central_dongle} && ${archive_cygnus_central_dongle} && ${build_cygnus_central_left} && ${archive_cygnus_central_left} && cd $KEYBOARD_HOME"
+alias build_cygnus_all="${checkout_main_zmk} && cd ${ZMK_HOME} && ${build_cygnus_central_left} && ${archive_cygnus_central_left} && ${build_cygnus_peripheral_right} && ${archive_cygnus_peripheral_right} && cd ${KEYBOARD_HOME}"
+alias build_cygnus="${checkout_main_zmk} && cd ${ZMK_HOME} && ${build_cygnus_central_left} && ${archive_cygnus_central_left} && cd $KEYBOARD_HOME"
 
 echo "Creating Diamond build alias..."
 build_diamond_central_dongle="west build -s app -b nice_nano_v2 --build-dir build/diamond_central_dongle -- -DSHIELD='diamond_central_dongle dongle_display' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/keyboards/diamond -DZMK_EXTRA_MODULES='$DONGLE_HOME;$BEHAVIOR_MODULES'"
