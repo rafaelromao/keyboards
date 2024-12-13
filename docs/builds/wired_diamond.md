@@ -32,5 +32,8 @@ Right side completed
 Left side completed
 ![img](../../img/wired_diamond/09.jpeg)
 
+Leds
+![img](../../img/wired_diamond/10.jpeg)
+
 Final build
 ![img](../../img/wired_diamond/wired_diamond.jpeg)
