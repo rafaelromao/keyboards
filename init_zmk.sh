@@ -119,7 +119,7 @@ build_wired_diamond_left="west build -p -s app -b seeeduino_xiao_rp2040 --build-
 build_wired_diamond_right="west build -p -s app -b seeeduino_xiao_rp2040 --build-dir build/wired_diamond_right -- -DSHIELD='wired_diamond_right' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/keyboards/wired_diamond -DZMK_EXTRA_MODULES='$BEHAVIOR_MODULES'"
 archive_wired_diamond_left="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/wired_diamond_left/zephyr/zmk.uf2 ] && mv build/wired_diamond_left/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/wired_diamond_left-zmk.uf2"
 archive_wired_diamond_right="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/wired_diamond_right/zephyr/zmk.uf2 ] && mv build/wired_diamond_right/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/wired_diamond_right-zmk.uf2"
-alias build_wired_diamond_all="${checkout_wired_zmk} && cd ${ZMK_HOME} && ${build_wired_diamond_left} && ${archive_wired_diamond_left} && ${build_wired_diamond_right} && ${archive_wired_diamond_right} && cd ${KEYBOARD_HOME} && ${checkout_zmk}"
+alias build_wired_diamond_all="${checkout_wired_zmk} && cd ${ZMK_HOME} && ${build_wired_diamond_left} && ${archive_wired_diamond_left} && ${build_wired_diamond_right} && ${archive_wired_diamond_right} && cd ${KEYBOARD_HOME}"
 alias build_wired_diamond="${checkout_wired_zmk} && cd ${ZMK_HOME} && ${build_wired_diamond_left} && ${archive_wired_diamond_left} && cd $KEYBOARD_HOME"
 
 echo "Creating Keymap Drawer alias..."
