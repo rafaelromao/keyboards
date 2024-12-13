@@ -147,7 +147,7 @@
                      display-name = "LOWER";
                      bindings = <
    &trans              &th_lbrc 0 0        &th_rbrc 0 0        &kp BSLH            &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
-   &lt CUSTOM AT       &th_lpar 0 0        &th_rpar 0 0        &kp AMPS            &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
+   &th_deg CUSTOM 0    &th_lpar 0 0        &th_rpar 0 0        &kp AMPS            &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
    &trans              &th_lbkt 0 0        &th_rbkt 0 0        &kp PIPE            &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
                                            &trans              &trans              &trans              &lt RAISE SPACE     &th_n0 MEDIA 0      &trans
                            >;
@@ -156,8 +156,8 @@
                      display-name = "RAISE";
                      bindings = <
    &none               &mc_tilde           &kp HASH            &th_sqo 0 0         &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
-   &mc_degree          &mc_caret           &kp DOLLAR          &th_dqo 0 0         &none               &none               &th_qmark 0 0       &mc_minus           &mc_plus            &lt CUSTOM COMMA
-   &none               &mc_lt              &mc_gt              &th_bti 0 0         &none               &none               &th_excl 0 0        &mc_slash           &mc_star            &trans
+   &kp AT              &mc_caret           &kp DOLLAR          &th_dqo 0 0         &none               &none               &th_qmark 0 0       &kp MINUS           &kp PLUS            &lt CUSTOM COMMA
+   &none               &mc_lt              &mc_gt              &th_bti 0 0         &none               &none               &th_excl 0 0        &kp SLASH           &kp STAR            &trans
                                            &trans              &key_repeat         &lt LOW_CP SPACE    &trans              &trans              &trans       
                            >;
                 };
@@ -277,7 +277,7 @@
                      display-name = "LOWER";
                      bindings = <
    &trans              &th_lbrc 0 0        &th_rbrc 0 0        &kp BSLH            &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
-   &kp AT              &th_lpar 0 0        &th_rpar 0 0        &kp AMPS            &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
+   &mc_deg             &th_lpar 0 0        &th_rpar 0 0        &kp AMPS            &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
    &trans              &th_lbkt 0 0        &th_rbkt 0 0        &kp PIPE            &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
                                            &trans              &trans              &trans              &lt RAI_CP SPACE    &th_n0 MEDIA 0      &trans
                            >;
@@ -286,8 +286,8 @@
                      display-name = "RAISE";
                      bindings = <
    &none               &mc_tilde           &kp HASH            &th_sqo 0 0         &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
-   &mc_degree          &mc_caret           &kp DOLLAR          &th_dqo 0 0         &none               &none               &th_qmark 0 0       &mc_minus           &mc_plus            &kp STAR  
-   &none               &mc_lt              &mc_gt              &th_bti 0 0         &none               &none               &th_excl 0 0        &mc_slash           &mc_star            &trans
+   &kp AT              &mc_caret           &kp DOLLAR          &th_dqo 0 0         &none               &none               &th_qmark 0 0       &kp MINUS           &kp PLUS            &kp STAR  
+   &none               &mc_lt              &mc_gt              &th_bti 0 0         &none               &none               &th_excl 0 0        &kp SLASH           &kp STAR            &trans
                                            &trans              &key_repeat         &kp SPACE           &kp SPACE           &trans              &trans
                            >;
                 };

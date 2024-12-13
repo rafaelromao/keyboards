@@ -85,8 +85,14 @@
         LAYERTAP_SYMBOL(th_n0,     &mc_n0)
 
         SYMBOL(mc_us,              &kp LS(U) &kp LS(S) &kp DOLLAR)
+        SYMBOL(mc_usd,             &kp LS(U) &kp LS(S) &kp LS(D))
+        TAPHOLD_SYMBOL(th_us,      &mc_us, &mc_usd)
         SYMBOL(mc_br,              &kp LS(R) &kp DOLLAR)
+        SYMBOL(mc_brl,             &kp LS(B) &kp LS(R) &kp LS(L))
+        TAPHOLD_SYMBOL(th_br,      &mc_br, &mc_brl)
         SYMBOL(mc_euro,            &kp LS(LA(N2)))
+        SYMBOL(mc_eur,             &kp LS(E) &kp LS(U) &kp LS(R))
+        TAPHOLD_SYMBOL(th_eur,     &mc_euro, &mc_eur)
 
         SYMBOL(mc_sqo,             &kp SQT &kp SPACE &kp SQUO_TERM)
         SYMBOL(mc_end_sqo,         &kp END &kp SQT &kp SPACE &kp SQUO_TERM)
@@ -150,12 +156,14 @@
         SYMBOL(mc_brackets,          &kp LBKT &kp RBKT)
         LAYERTAP_SYMBOL(th_brackets, &mc_brackets)
 
+        SYMBOL(mc_deg,               &kp LS(LA(N8)))
+        LAYERTAP_SYMBOL(th_deg,      &mc_deg)
+
         // Raise
 
         SYMBOL(mc_pars_semi_ent,   &kp END &kp LPAR &kp RPAR &kp SEMI &kp ENTER)
 
         SYMBOL(mc_dhash,           &kp HASH &kp HASH)
-        SYMBOL(mc_str,             &kp RS(S) &kp RS(T) &kp RS(R) &kp DOT)
         SYMBOL(mc_thash,           &kp HASH &kp HASH &kp HASH)
         SYMBOL(mc_tdqo,            &mc_dqo &mc_dqo &mc_dqo)
         SYMBOL(mc_tdqo_ent,        &mc_tdqo &kp ENTER)
@@ -170,6 +178,7 @@
 
         SYMBOL(mc_braces_new,      &kp END &kp LBRC &kp ENTER)
         SYMBOL(mc_sarrow,          &kp MINUS &kp GT)
+        SYMBOL(mc_darrow,          &kp EQUAL &kp GT)
         SYMBOL(mc_dcolon,          &kp COLON &kp COLON)
         SYMBOL(mc_end_dcolon,      &kp END &kp COLON &kp COLON)
         TAPHOLD_SYMBOL(th_dcolon,  &mc_dcolon, &mc_end_dcolon)
@@ -177,11 +186,6 @@
         SYMBOL(mc_perc,            &kp PERCENT)
         SYMBOL(mc_end_perc,        &kp END &kp PERCENT)
         TAPHOLD_SYMBOL(th_perc,    &mc_perc, &mc_end_perc)
-
-        SYMBOL(mc_minus,           &kp MINUS)
-        SYMBOL(mc_plus,            &kp PLUS)
-        SYMBOL(mc_slash,           &kp SLASH)
-        SYMBOL(mc_star,            &kp STAR)
 
         SYMBOL(mc_lt,              &kp LT)
         SYMBOL(mc_gt,              &kp GT)
@@ -206,8 +210,6 @@
         SYMBOL(mc_end_caret,       &kp END &kp CARET &kp SPACE)
         TAPHOLD_SYMBOL(th_caret,   &mc_caret, &mc_end_caret)
         TAPHOLD_SYMBOL(th_caret_z, &mc_caret, &mc_zero)
-
-        SYMBOL(mc_degree,          &kp LS(LA(N8)))
 
         SYMBOL(mc_dds,             &kp DOT &kp DOT &kp SLASH)
         SYMBOL(mc_tisl,            &kp TILDE &kp SPACE &kp SLASH)

@@ -129,14 +129,14 @@
         COMBO(cb_and,           LHI LHM,     &th_and 0 0,        LOWER_LAYERS)
         COMBO(cb_or,            LBI LBM,     &th_or 0 0,         LOWER_LAYERS)
 
-        COMBO(cb_eu,            LTR LTM LTI, &mc_euro,           LOWER_LAYERS)
-        COMBO(cb_br,            LHR LHM LHI, &mc_br,             LOWER_LAYERS)
-        COMBO(cb_us,            LBR LBM LBI, &mc_us,             LOWER_LAYERS)
+        COMBO(cb_us,            LTR LTM LTI, &th_us 0 0,         LOWER_LAYERS)
+        COMBO(cb_br,            LHR LHM LHI, &th_br 0 0,         LOWER_LAYERS)
+        COMBO(cb_eu,            LBR LBM LBI, &th_eur 0 0,        LOWER_LAYERS)
         COMBO(cb_par_semi,      RHR RHM RHI, &mc_pars_semi_ent,  LOWER_LAYERS)
 
         COMBO(cb_dhash,         LTR LTM,     &mc_dhash,          RAISE_LAYERS)
         COMBO(cb_sarrow,        LHR LHM,     &mc_sarrow,         RAISE_LAYERS)
-        COMBO(cb_str,           LBR LBM,     &mc_str,            RAISE_LAYERS)
+        COMBO(cb_darrow,        LBR LBM,     &mc_darrow,         RAISE_LAYERS)
         COMBO(cb_thash,         LTR LTM LTI, &mc_thash,          RAISE_LAYERS)
         COMBO(cb_tdqo,          LHR LHM LHI, &th_tdqo 0 0,       RAISE_LAYERS)
         COMBO(cb_tbti,          LBR LBM LBI, &th_tbti 0 0,       RAISE_LAYERS)
