@@ -41,3 +41,5 @@ Bottom View
 Final Build
 ![img](../../img/diamond/12.jpeg)
 
+Final build
+![img](../../img/diamond/diamond.jpeg)
