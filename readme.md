@@ -47,7 +47,7 @@ This layout was tested with the keyboards listed below, but can be easily adapte
 
 ### QMK
 
-There is an outdated QMK version of this keymap, available in the branch [last_qmk](https://github.com/rafaelromao/keyboards/blob/last_qmk/readme.md).
+There is an outdated QMK version of this keymap, available in the branch [last_qmk] (https://github.com/rafaelromao/keyboards/tree/last_qmk).
 
 ### ZMK
 
