@@ -220,5 +220,9 @@
         SYMBOL(mc_word_start,      &kp LA(LEFT))
         SYMBOL(mc_word_next,       &kp LA(RIGHT) &kp LEFT)
         SYMBOL(mc_word_end,        &kp LA(RIGHT) &kp LA(RIGHT) &kp LA(LEFT))
+
+        // SMARTCASES
+
+        SYMBOL(mc_comma_space,     &kp COMMA &kp SPACE)
     };
 };

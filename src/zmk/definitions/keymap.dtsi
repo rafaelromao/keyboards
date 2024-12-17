@@ -28,7 +28,7 @@
                      bindings = <
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp Y
    &lt SHORTCUTS D     &mt LSHFT N         &mt LCTRL S         &mt LALT T          &kp W               &kp Z               &mt RALT R          &mt RCTRL A         &mt RSHFT E         &lt SHORTCUTS I      
-   &kp Q               &mt LGUI F          &mt LGUI C          &mt LGUI P          &kp V               &kp J               &ht_magic RGUI 0    &lt SMART COMMA     &th_dot 0 0         &kp Y
+   &kp Q               &mt LGUI F          &mt LGUI C          &mt LGUI P          &kp V               &kp J               &ht_magic RGUI 0    &hlt SMART COMMA    &th_dot 0 0         &kp Y
                                            &kp Q               &ht_repeat NAV 0    &ltn LOWER SPACE    &msl_a2 RAISE 0     &ht_shift MEDIA 0   &kp Y
                         >;
                 };
@@ -82,7 +82,7 @@
                      bindings = <
    &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &kp LS(Y)
    &lt SHORTCUTS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LALT LS(T)      &kp LS(W)           &kp LS(Z)           &mt RALT LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTCUTS LS(I) 
-   &trans              &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c RGUI 0  &lt SMART COMMA     &th_dot 0 0         &trans
+   &trans              &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c RGUI 0  &hlt SMART COMMA    &th_dot 0 0         &trans
                                            &trans              &trans              &msk_spc LOWER 0    &th_case_a2 RAISE 0 &mo MEDIA           &trans
                         >;
                 };
@@ -91,7 +91,7 @@
                      bindings = <
    &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &kp LS(Y)
    &lt SHORTCUTS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LALT LS(T)      &kp LS(W)           &kp LS(Z)           &mt RALT LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTCUTS LS(I) 
-   &trans              &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c RGUI 0  &lt SMART COMMA     &th_dot 0 0         &trans
+   &trans              &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c RGUI 0  &hlt SMART COMMA    &th_dot 0 0         &trans
                                            &trans              &trans              &trans              &th_case_a2 RAISE 0 &mo MEDIA           &trans
                            >;
                 };
@@ -149,7 +149,7 @@
    &trans              &th_lbrc 0 0        &th_rbrc 0 0        &kp BSLH            &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
    &th_deg CUSTOM 0    &th_lpar 0 0        &th_rpar 0 0        &kp AMPS            &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
    &trans              &th_lbkt 0 0        &th_rbkt 0 0        &kp PIPE            &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
-                                           &trans              &trans              &trans              &lt RAISE SPACE     &th_n0 MEDIA 0      &trans
+                                           &trans              &trans              &trans              &hlt RAISE SPACE    &th_n0 MEDIA 0      &trans
                            >;
                 };
                 raise_layer {
@@ -158,7 +158,7 @@
    &none               &mc_tilde           &kp HASH            &th_sqo 0 0         &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
    &kp AT              &mc_caret           &kp DOLLAR          &th_dqo 0 0         &none               &none               &th_qmark 0 0       &kp MINUS           &kp PLUS            &lt CUSTOM COMMA
    &none               &mc_lt              &mc_gt              &th_bti 0 0         &none               &none               &th_excl 0 0        &kp SLASH           &kp STAR            &trans
-                                           &trans              &key_repeat         &lt LOW_CP SPACE    &trans              &trans              &trans       
+                                           &trans              &key_repeat         &hlt LOW_CP SPACE   &trans              &trans              &trans       
                            >;
                 };
 
@@ -178,7 +178,7 @@
                      bindings = <
    &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y) 
    &kp RS(D)           &mt LSHFT RS(N)     &mt LCTRL RS(S)     &mt LALT RS(T)      &kp RS(W)           &kp RS(Z)           &mt RALT RS(R)      &mt RCTRL RS(A)     &mt RSHFT RS(E)     &kp RS(I) 
-   &trans              &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c RGUI 0  &lt SMART COMMA     &th_dot 0 0         &trans
+   &trans              &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c RGUI 0  &hlt SMART COMMA    &th_dot 0 0         &trans
                                            &trans              &th_cancel NAV 0    &th_sp_ns LOW_CP 0  &msl RAI_CP SEN_E2  &th_nsen MEDIA 0    &trans
                            >;
                 };
@@ -253,9 +253,9 @@
                 shifted_plain2_layer {
                      display-name = "PLAIN";
                      bindings = <
-   &none               &kp RS(Q)           &mc_qu_s            &kp RS(K)           &none               &none               &ac_ocir_s            &ac_oacu_s            &ac_uacu_s            &none
-   &kp RS(Y)           &kp RS(Z)           &kp RS(X)           &kp RS(W)           &none               &none               &ac_atil_s            &ac_aacu_s            &ac_eacu_s            &ac_iacu_s 
-   &trans              &kp RS(J)           &mc_ced_s           &kp RS(V)           &none               &none               &ac_otil_s            &ac_acir_s            &ac_ecir_s            &trans
+   &none               &kp RS(Q)           &mc_qu_s            &kp RS(K)           &none               &none               &ac_ocir_s          &ac_oacu_s          &ac_uacu_s            &none
+   &kp RS(Y)           &kp RS(Z)           &kp RS(X)           &kp RS(W)           &none               &none               &ac_atil_s          &ac_aacu_s          &ac_eacu_s            &ac_iacu_s 
+   &trans              &kp RS(J)           &mc_ced_s           &kp RS(V)           &none               &none               &ac_otil_s          &ac_acir_s          &ac_ecir_s            &trans
                                            &none               &mc_sqo             &lt LOW_CP SPACE    &lt RAI_CP SPACE    &mc_sqo             &none
                            >;
                 };
@@ -279,7 +279,7 @@
    &trans              &th_lbrc 0 0        &th_rbrc 0 0        &kp BSLH            &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
    &mc_deg             &th_lpar 0 0        &th_rpar 0 0        &kp AMPS            &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
    &trans              &th_lbkt 0 0        &th_rbkt 0 0        &kp PIPE            &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
-                                           &trans              &trans              &trans              &lt RAI_CP SPACE    &th_n0 MEDIA 0      &trans
+                                           &trans              &trans              &trans              &hlt RAI_CP SPACE   &th_n0 MEDIA 0      &trans
                            >;
                 };
                 raise_copy_layer {
@@ -320,7 +320,7 @@
    &none               &none               &tc_smart_word      &tc_smart_line      &none               &none               &mc_lock            &none               &none               &none 
    &none               &to SNAKE_CASE      &tc_s_snakecase     &to KEBAB_CASE      &none               &none               &kp C_SLEEP         &none               &none               &none      
    &none               &to SLASH_CASE      &tc_pascal_case     &to CAMEL_CASE      &none               &none               &leader             &none               &none               &none
-                                           &none               &none               &none               &none               &none               &none
+                                           &none               &none               &mc_comma_space     &none               &none               &none
                         >;
                 };
 
