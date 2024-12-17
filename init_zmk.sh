@@ -95,12 +95,12 @@ archive_rommana_unibody="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/rom
 alias build_rommana="${checkout_main_zmk} && cd ${ZMK_HOME} && ${build_rommana_unibody} && ${archive_rommana_unibody} && cd $KEYBOARD_HOME"
 
 echo "Creating Cygnus build alias..."
-build_cygnus_central_left="west build -s app -b nice_nano_v2 --build-dir build/cygnus_central_left -- -DSHIELD='cygnus_central_left' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/keyboards/cygnus -DZMK_EXTRA_MODULES='$BEHAVIOR_MODULES'"
-build_cygnus_peripheral_right="west build -s app -b nice_nano_v2 --build-dir build/cygnus_peripheral_right -- -DSHIELD='cygnus_peripheral_right' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/keyboards/cygnus -DZMK_EXTRA_MODULES='$BEHAVIOR_MODULES'"
-archive_cygnus_central_left="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/cygnus_central_left/zephyr/zmk.uf2 ] && mv build/cygnus_central_left/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/cygnus_central_left-zmk.uf2"
-archive_cygnus_peripheral_right="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/cygnus_peripheral_right/zephyr/zmk.uf2 ] && mv build/cygnus_peripheral_right/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/cygnus_peripheral_right-zmk.uf2"
-alias build_cygnus_all="${checkout_main_zmk} && cd ${ZMK_HOME} && ${build_cygnus_central_left} && ${archive_cygnus_central_left} && ${build_cygnus_peripheral_right} && ${archive_cygnus_peripheral_right} && cd ${KEYBOARD_HOME}"
-alias build_cygnus="${checkout_main_zmk} && cd ${ZMK_HOME} && ${build_cygnus_central_left} && ${archive_cygnus_central_left} && cd $KEYBOARD_HOME"
+build_cygnus_left="west build -s app -b nice_nano_v2 --build-dir build/cygnus_left -- -DSHIELD='cygnus_left' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/keyboards/cygnus -DZMK_EXTRA_MODULES='$BEHAVIOR_MODULES'"
+build_cygnus_right="west build -s app -b nice_nano_v2 --build-dir build/cygnus_right -- -DSHIELD='cygnus_right' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/keyboards/cygnus -DZMK_EXTRA_MODULES='$BEHAVIOR_MODULES'"
+archive_cygnus_left="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/cygnus_left/zephyr/zmk.uf2 ] && mv build/cygnus_left/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/cygnus_left-zmk.uf2"
+archive_cygnus_right="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/cygnus_right/zephyr/zmk.uf2 ] && mv build/cygnus_right/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/cygnus_right-zmk.uf2"
+alias build_cygnus_all="${checkout_main_zmk} && cd ${ZMK_HOME} && ${build_cygnus_left} && ${archive_cygnus_left} && ${build_cygnus_right} && ${archive_cygnus_right} && cd ${KEYBOARD_HOME}"
+alias build_cygnus="${checkout_main_zmk} && cd ${ZMK_HOME} && ${build_cygnus_left} && ${archive_cygnus_left} && cd $KEYBOARD_HOME"
 
 echo "Creating Diamond build alias..."
 build_diamond_central_dongle="west build -s app -b nice_nano_v2 --build-dir build/diamond_central_dongle -- -DSHIELD='diamond_central_dongle dongle_display' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/keyboards/diamond -DZMK_EXTRA_MODULES='$DONGLE_HOME;$BEHAVIOR_MODULES'"
@@ -127,9 +127,12 @@ prepare_tmp="mkdir -p ./tmp ; mkdir -p ./tmp"
 prepare_no_separate_combos="\cp ./docs/keymap-drawer/keymap-drawer.yaml ./tmp/keymap-drawer-noseparatecombos.yaml"
 prepare_only_separate_combos="\cp ./docs/keymap-drawer/keymap-drawer.yaml ./tmp/keymap-drawer-onlyseparatecombos.yaml"
 prepare_only_vim_combos="\cp ./docs/keymap-drawer/keymap-drawer.yaml ./tmp/keymap-drawer-onlyvimcombos.yaml"
+prepare_custom="\cp ./docs/keymap-drawer/keymap-drawer-custom.yaml ./tmp/keymap-drawer-custom.yaml"
+
 write_no_separate_combos="yq -i 'del(.combos[] | select(.draw_separate == true))' ./tmp/keymap-drawer-noseparatecombos.yaml"
 write_only_separate_combos="yq -i 'del(.combos[] | select(.draw_separate != true))' ./tmp/keymap-drawer-onlyseparatecombos.yaml"
 write_only_vim_combos="yq -i 'del(.combos[] | select(.k.s != \"vim\"))' ./tmp/keymap-drawer-onlyvimcombos.yaml"
+
 draw_overview="keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -o ./tmp/overview.svg ./docs/keymap-drawer/keymap-drawer.yaml"
 draw_separate_combos="keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s alpha1 --combos-only -o ./tmp/separatecombos.svg ./tmp/keymap-drawer-onlyseparatecombos.yaml"
 draw_alphas="keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s alpha1 alpha2 ç-extension -o ./tmp/alphas.svg ./tmp/keymap-drawer-noseparatecombos.yaml"
@@ -139,6 +142,8 @@ draw_functions="keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s
 draw_shortcuts="keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s shortcuts custom -o ./tmp/shortcuts.svg ./tmp/keymap-drawer-noseparatecombos.yaml"
 draw_navigation="keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s nav media -o ./tmp/navigation.svg ./tmp/keymap-drawer-noseparatecombos.yaml"
 draw_vim="keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s alpha1_vim_bindings lower media -o ./tmp/vim.svg ./tmp/keymap-drawer-onlyvimcombos.yaml"
+draw_custom="keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -o ./tmp/custom.svg ./tmp/keymap-drawer-custom.yaml"
+
 convert_overview="inkscape --export-type png --export-filename ./img/overview.png --export-dpi 300 --export-background=white ./tmp/overview.svg"
 convert_separate_combos="inkscape --export-type png --export-filename ./img/separatecombos.png --export-dpi 300 --export-background=white ./tmp/separatecombos.svg"
 convert_alphas="inkscape --export-type png --export-filename ./img/alphas.png --export-dpi 300 --export-background=white ./tmp/alphas.svg"
@@ -148,17 +153,20 @@ convert_functions="inkscape --export-type png --export-filename ./img/functions.
 convert_shortcuts="inkscape --export-type png --export-filename ./img/shortcuts.png --export-dpi 300 --export-background=white ./tmp/shortcuts.svg"
 convert_navigation="inkscape --export-type png --export-filename ./img/navigation.png --export-dpi 300 --export-background=white ./tmp/navigation.svg"
 convert_vim="inkscape --export-type png --export-filename ./img/vim.png --export-dpi 300 --export-background=white ./tmp/vim.svg"
+convert_custom="inkscape --export-type png --export-filename ./img/custom.png --export-dpi 300 --export-background=white ./tmp/custom.svg"
+
 prepare="\
 ${prepare_tmp} ; 
-${prepare_no_separate_combos} ; ${prepare_only_separate_combos} ; ${prepare_only_vim_combos} ; \
+${prepare_no_separate_combos} ; ${prepare_only_separate_combos} ; ${prepare_only_vim_combos} ; ${prepare_custom} ; \
 ${write_no_separate_combos} ; ${write_only_separate_combos} ; ${write_only_vim_combos}\
 "
 draw="\
 ${draw_overview} ; ${draw_separate_combos} ; ${draw_alphas} ; ${draw_shifted} ; \
-${draw_symbols} ; ${draw_functions} ; ${draw_shortcuts} ;  ${draw_navigation} ; ${draw_vim}\
+${draw_symbols} ; ${draw_functions} ; ${draw_shortcuts} ;  ${draw_navigation} ; ${draw_vim} ; ${draw_custom} \
 "
 convert="\
 ${convert_overview} ; ${convert_separate_combos} ; ${convert_alphas} ; ${convert_shifted} ; \
-${convert_symbols} ; ${convert_functions} ; ${convert_shortcuts} ;  ${convert_navigation} ; ${convert_vim} \
+${convert_symbols} ; ${convert_functions} ; ${convert_shortcuts} ;  ${convert_navigation} ; ${convert_vim} ; ${convert_custom} \
 "
+
 alias build_diagram="${prepare} ; ${draw} ; ${convert}"
