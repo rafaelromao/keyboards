@@ -9,22 +9,22 @@ layers:
        {s: step over, t: $$mdi:debug-step-over$$},
        {s: step into, t: $$mdi:debug-step-into$$}]
     - [type: held,
-       {s: scheme, h: $$mdi:apple-keyboard-command$$, t: $$mdi:view-array$$},
+       {s: view modes, t: $$mdi:view-array$$},
        {s: run, t: $$mdi:play$$},
        {s: debug, t: $$mdi:bug-play$$},
        {s: type match, t: $$mdi:code-block-braces$$},
        {s: actions, t: $$mdi:flash-alert$$},
        {s: statement, t: "()"},
        type: held alternate]
-    - [{s: history, t: $$mdi:history$$, h: hyper},
-       {s: switcher, t: $$mdi:apps$$, h: hyper},
-       {s: usages, t: $$mdi:book-open-variant-outline$$, h: hyper},
-       {s: quick docs, t: $$mdi:book-open-outline$$, h: hyper},
-       {s: comment, t: "//", h: hyper},
-       {s: evaluate, t: $$mdi:variable$$, h: hyper}]
+    - [{s: prev error, t: $$mdi:page-previous-outline$$, h: $$mdi:apple-keyboard-command$$},
+       {s: next error, t: $$mdi:page-next-outline$$, h: $$mdi:apple-keyboard-command$$},
+       {s: usages, t: $$mdi:book-open-variant-outline$$, h: $$mdi:apple-keyboard-command$$},
+       {s: params, t: $$mdi:dots-horizontal$$, h: $$mdi:apple-keyboard-command$$},
+       {s: comment, t: "//", h: $$mdi:apple-keyboard-command$$},
+       {s: evaluate, t: $$mdi:variable$$, h: $$mdi:apple-keyboard-command$$}]
     - {h: nav, t: plain1, s: sticky}
-    - {type: held, h: hyper, t: hyper, s: sticky}
-    - {type: held alternate, h: hyper, t: hyper, s: sticky}
+    - {type: held, h: $$mdi:apple-keyboard-command$$, t: $$mdi:apple-keyboard-command$$, s: sticky}
+    - {type: held alternate, h: $$mdi:apple-keyboard-command$$, t: $$mdi:apple-keyboard-command$$, s: sticky}
     - {h: nav, t: plain1, s: sticky}
  coding-hyper:
     - [{s: select in, t: $$mdi:form-select$$},
@@ -34,17 +34,17 @@ layers:
        {s: symbols, t: $$mdi:text-box-search-outline$$},
        {s: actions, t: $$mdi:feature-search-outline$$}]
     - [type: held,
-       null,
+       {s: scheme, t: $$mdi:view-compact$$},
        {s: stop, t: $$mdi:stop$$},
        {s: resume, t: $$mdi:play-pause$$},
        {s: complete, t: $$mdi:code-block-parentheses$$},
        {s: refactor, t: $$mdi:file-code-outline$$},
-       null,
+       {s: analyze, t: $$mdi:sine-wave$$},
        type: held alternate]
-    - [{s: prev error, t: $$mdi:page-previous-outline$$},
-       {s: next error, t: $$mdi:page-next-outline$$},
+    - [{s: history, t: $$mdi:history$$},
+       {s: switcher, t: $$mdi:apps$$},
        {s: definition, t: $$mdi:feather$$},
-       {s: params, t: $$mdi:dots-horizontal$$},
+       {s: quick docs, t: $$mdi:book-open-outline$$},
        {s: format, t: $$mdi:format-indent-increase$$},
        {s: generate, t: $$mdi:code-json$$}]
     - {h: nav, t: plain1, s: sticky}
@@ -57,54 +57,54 @@ layers:
        null,
        {s: line, t: $$mdi:vector-line$$},
        {s: offset, t: $$mdi:tally-mark-2$$},
-       {s: draft}]
+       {s: draft, t: $$mdi:angle-obtuse$$}]
     - [null,
        null,
        null,
        null,
        {s: rectangle, t: $$mdi:rectangle-outline$$},
        {s: search, t: $$mdi:magnify$$},
-       {s: extrude, t: $$mdi:plus-box-multiple$$},
-       {s: measure }]
+       {s: extrude, t: $$mdi:cube-outline$$},
+       {s: measure, t: $$mdi:ruler$$ }]
     - [null,
        null,
        null,
-       {s: hole, t: $$mdi:music-note-whole$$},
-       {s: circle, t: $$mdi:circle-outline$$},
-       {s: fillet, t: $$mdi:rounded-corner$$}]
+       {s: hole, t: $$mdi:music-note-whole$$, h: $$mdi:apple-keyboard-command$$},
+       {s: circle, t: $$mdi:circle-outline$$, h: $$mdi:apple-keyboard-command$$},
+       {s: fillet, t: $$mdi:rounded-corner$$, h: $$mdi:apple-keyboard-command$$}]
     - null
     - null
-    - {h: hyper, t: hyper, s: sticky}
+    - {h: $$mdi:apple-keyboard-command$$, t: $$mdi:apple-keyboard-command$$, s: sticky}
     - null
  fusion360-hyper:
     - [null,
        null,
        null,
-       {s: loft},
-       {s: move},
-       {s: press pull}]
+       {s: loft, t: $$mdi:bridge$$},
+       {s: move, t: $$mdi:arrow-all$$},
+       {s: colors, t: $$mdi:palette$$ }]
     - [null,
        null,
        null,
        null,
-       {s: trim},
-       {s: appearance},
-       {s: colors },
-       {s: dimensions }]
+       {s: trim, t: $$mdi:box-cutter$$},
+       {s: appearance, t: $$mdi:invert-colors$$},
+       {s: press pull, t: $$mdi:cube$$ },
+       {s: dimensions, t: $$mdi:pencil-ruler$$ }]
     - [null,
        null,
        null,
-       {s: project},
-       {s: chamfer},
-       {s: joint}]
+       {s: project, t: $$mdi:projector$$},
+       {s: chamfer, t: $$mdi:triangle$$},
+       {s: joint, t: $$mdi:set-all$$}]
     - null
     - null
     - type: held
     - null
 combos:
-  - { p: [11, 12], k: orbit, a: mid, w: 50, layers: [fusion360-meh] }
-  - { p: [18, 19], k: { t: lower, s: auto-layer}, a: mid, w: 50, layers: [fusion360-meh] }
-  - { p: [4, 5], k: esc, a: mid, w: 50, layers: [fusion360-meh] }
-  - { p: [10, 11], k: pan, a: mid, w: 50, layers: [fusion360-meh] }
-  - { p: [3, 4], k: mode, a: mid, w: 50, layers: [fusion360-meh] }
-  - { p: [17, 18], k: visibility, a: mid, w: 50, layers: [fusion360-meh] }
+  - { p: [11, 12], k: orbit, a: mid, w: 40, layers: [fusion360-meh] }
+  - { p: [18, 19], k: { t: lower, s: auto-layer}, a: mid, w: 40, layers: [fusion360-meh] }
+  - { p: [4, 5], k: esc, a: mid, w: 40, layers: [fusion360-meh] }
+  - { p: [10, 11], k: pan, a: mid, w: 40, layers: [fusion360-meh] }
+  - { p: [3, 4], k: mode, a: mid, w: 40, layers: [fusion360-meh] }
+  - { p: [17, 18], k: show hide, a: mid, w: 40, layers: [fusion360-meh] }

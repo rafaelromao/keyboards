@@ -57,13 +57,23 @@
     symbols {
         // Base
 
+        mc_hyper: mc_hyper {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_press &kp LS(LC(LA(LGUI))) &macro_pause_for_release &macro_release &kp LS(LC(LA(LGUI)))>;
+        };
+
         SHIFTED_SYMBOL(mm_semi,    &kp SEMI, &kp COLON)
         SYMBOL(mc_end_semi,        &kp END &kp SEMI)
         TAPHOLD_SYMBOL(th_semi,    &mm_semi, &mc_end_semi)
 
-        SYMBOL(mc_epa,             &macro_tap &kp ESC &kp P &kp J)
-        SYMBOL(mc_end_semi_ent,    &kp END &kp SEMI &kp ENTER)
-        TAPHOLD_SYMBOL(th_epa,     &mc_epa, &mc_end_semi_ent)
+        SYMBOL(mc_hyper_space,           &kp LS(LC(LA(LG(SPACE)))))
+        TAPHOLD_SYMBOL(th_hyper_space,   &mc_hyper_space, &mc_hyper)
+
+        SYMBOL(mc_end_semi_ent,          &kp END &kp SEMI &kp ENTER)
+        TAPHOLD_SYMBOL(th_end_semi_ent,  &mc_end_semi_ent, &mc_hyper)
 
         SYMBOL(mc_dot,             &kp DOT &sl SEN_CASE)
         SYMBOL(mc_end_dot,         &kp END &kp DOT &sl SEN_CASE)

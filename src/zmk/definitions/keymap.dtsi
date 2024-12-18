@@ -200,7 +200,7 @@
    &none               &kp ESC             &mc_files           &mc_preview         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &none    
    &none               &th_zoom RGUI 0     &mc_app_swapper     &th_tabs LGUI 0     &none               &none               &mc_seln            &mm_down_minus      &mm_up_plus         &none
    &none               &mc_term            &mc_calc            &mc_apps            &none               &none               &mc_selh            &ht_ref_clo_z0 0 0  &mc_clip            &trans
-                                           &trans              &mo FUNCTIONS       &lt CUSTOM SPACE    &lt CUSTOM SPACE    &mo NAV             &trans
+                                           &trans              &mo FUN             &lt CUSTOM SPACE    &lt CUSTOM SPACE    &mo NAV             &trans
                            >;
                 };
                 shortcuts_ext_1_layer {
@@ -227,7 +227,7 @@
    &none               &mc_meh_b           &mc_meh_m           &mc_meh_g           &none               &none               &mc_meh_l           &mc_meh_o           &mc_meh_u           &none    
    &mc_meh_d           &mc_meh_n           &mc_meh_s           &mc_meh_t           &none               &none               &mc_meh_r           &mc_meh_a           &mc_meh_e           &mc_meh_i
    &trans              &th_meh_f LGUI 0    &th_meh_c LGUI 0    &th_meh_p LGUI 0    &none               &none               &th_meh_h LGUI 0    &th_meh_comm LGUI 0 &th_meh_dot LGUI 0  &none
-                                           &trans              &th_plain1 NAV 0    &sk LGUI            &sk RGUI            &th_plain1 NAV 0    &trans
+                                           &trans              &th_plain1 NAV 0    &hsk LGUI LGUI      &hsk RGUI RGUI      &th_plain1 NAV 0    &trans
                            >;
                 };
 
@@ -265,7 +265,7 @@
                      display-name = "NAV";
                      bindings = <
    &none               &mc_word_start      &mc_word_end        &mc_word_next       &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
-   &sl FUNCTIONS       &kp LSHFT           &kp LCTRL           &kp LALT            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &msl FUN FUN        &kp LSHFT           &kp LCTRL           &kp LALT            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
    &none               &kp LGUI            &kp LGUI            &kp LGUI            &none               &none               &kp DEL             &kp HOME            &kp END             &trans
                                            &trans              &trans              &bootloader         &kp SPACE           &mo MEDIA           &trans
                         >;
@@ -309,8 +309,8 @@
                      display-name = "FUN";
                      bindings = <
    &none               &bt BT_PRV          &bt BT_NXT          &bt BT_CLR          &none               &none               &kp F7              &kp F8              &kp F9              &none 
-   &none               &sk LSHFT           &sk LCTRL           &sk LALT            &none               &none               &kp F4              &kp F5              &kp F6              &none      
-   &none               &sk LGUI            &sk LGUI            &sk LGUI            &none               &none               &kp F1              &kp F2              &kp F3              &none
+   &none               &hsk LSHFT LSHFT    &hsk LCTRL LCTRL    &hsk LALT LALT      &none               &none               &kp F4              &kp F5              &kp F6              &none      
+   &none               &hsk LGUI LGUI      &hsk LGUI LGUI      &hsk LGUI LGUI      &none               &none               &kp F1              &kp F2              &kp F3              &none
                                            &none               &none               &none               &none               &none               &none
                         >;
                 };

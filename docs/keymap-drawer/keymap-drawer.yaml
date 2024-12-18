@@ -402,16 +402,13 @@ combos:
   - { p: [11, 12], k: "y", a: mid, layers: [alpha1, plain1] }
   - { p: [15, 16], k: "v", a: mid, layers: [alpha1, plain1] }
   - { p: [17, 18], k: "j", a: mid, layers: [alpha1, plain1] }
-  - { p: [7, 8, 9], k: "meh ␣", a: top, layers: [alpha1] }
   - {
       p: [18, 19],
       k: { t: ";", h: "⇥ ;" },
       a: mid,
       layers: [alpha1, plain1, lower],
     }
-  - { p: [3, 4, 5], k: { t: "d", s: vim }, a: top, layers: [alpha1] }
-  - { p: [10, 11, 12], k: { t: "p", s: vim }, a: top, layers: [alpha1] }
-
+  
   - { p: [1, 2], k: "K", a: mid, layers: [shifted1] }
   - { p: [3, 4], k: "X", a: mid, layers: [shifted1] }
   - { p: [7, 8], k: "Q", a: mid, layers: [shifted1] }
@@ -493,6 +490,12 @@ combos:
   - { p: [10, 11], k: "nav", a: mid, w: 48, layers: [shortcuts] }
   - { p: [17, 18], k: "custom", a: mid, w: 48, layers: [shortcuts] }
 
+  - { p: [7, 8, 9], k: { t: "meh ␣", h: "meh" }, layers: [alpha1], draw_separate: true }
+  - { p: [10, 11, 12], k: { s: "vim", t: "p", h: "meh" }, layers: [alpha1], draw_separate: true }
+  
+  - { p: [14, 15, 16], k: { t: "hyper ␣", h: "hyper" }, layers: [alpha1], draw_separate: true }
+  - { p: [17, 18, 19], k: { t: "⇥; ⏎", h: "hyper" }, layers: [alpha1], draw_separate: true }
+
   - { p: [0, 1, 21], k: "⎋ save", layers: [alpha1], draw_separate: true }
   - { p: [7, 8, 21], k: "save", layers: [alpha1], draw_separate: true }
 
@@ -506,9 +509,7 @@ combos:
   - { p: [17, 18, 22], k: "paste", layers: [alpha1], draw_separate: true }
 
   - { p: [15, 16, 21], k: "find", layers: [alpha1], draw_separate: true }
-  - { p: [17, 18, 19], k: "⇥; ⏎", layers: [alpha1], draw_separate: true }
-  - { p: [10, 11, 12], k: "⇥(); ⏎", layers: [lower], a: bottom }
-  - { p: [17, 18, 19], k: "⇥; ⏎", layers: [lower], a: bottom }
+  - { p: [18, 19, 22], k: "select all", layers: [alpha1], draw_separate: true }
 
   - {
       p: [10, 11, 12, 22],
@@ -536,6 +537,8 @@ combos:
   - { p: [0, 1, 2], k: { t: "US$", h: "USD" }, a: top, slide: 1, layers: [lower] }
   - { p: [7, 8, 9], k: { t: "R$", h: "BRL" }, a: top, slide: 1, layers: [lower] }
   - { p: [14, 15, 16], k: { t: "€", h: "EUR" }, a: top, slide: 1, layers: [lower] }
+  - { p: [10, 11, 12], k: "⇥(); ⏎", layers: [lower], a: bottom }
+  - { p: [17, 18, 19], k: "⇥; ⏎", layers: [lower], a: bottom }
 
   - { p: [0, 1], k: "##", a: mid, layers: [raise] }
   - { p: [0, 1, 2], k: "###", a: top, layers: [raise] }

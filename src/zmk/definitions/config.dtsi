@@ -44,7 +44,7 @@
 
 #define MEDIA 28
 
-#define FUNCTIONS 29
+#define FUN 29
 #define SMART 30
 
 #define NAV_F 31
@@ -175,6 +175,15 @@
             flavor = "tap-preferred";
             quick-tap-ms = <QUICK_TAP_TERM>;
             bindings = <&mo>, <&sk>;
+        };
+
+        hsk: mod-tap-with-stick-key {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            flavor = "hold-preferred";
+            quick-tap-ms = <QUICK_TAP_TERM>;
+            bindings = <&kp>, <&sk>;
         };
 
     };
