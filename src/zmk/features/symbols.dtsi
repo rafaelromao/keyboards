@@ -94,16 +94,6 @@
 
         LAYERTAP_SYMBOL(th_n0,     &mc_n0)
 
-        SYMBOL(mc_us,              &kp LS(U) &kp LS(S) &kp DOLLAR)
-        SYMBOL(mc_usd,             &kp LS(U) &kp LS(S) &kp LS(D))
-        TAPHOLD_SYMBOL(th_us,      &mc_us, &mc_usd)
-        SYMBOL(mc_br,              &kp LS(R) &kp DOLLAR)
-        SYMBOL(mc_brl,             &kp LS(B) &kp LS(R) &kp LS(L))
-        TAPHOLD_SYMBOL(th_br,      &mc_br, &mc_brl)
-        SYMBOL(mc_euro,            &kp LS(LA(N2)))
-        SYMBOL(mc_eur,             &kp LS(E) &kp LS(U) &kp LS(R))
-        TAPHOLD_SYMBOL(th_eur,     &mc_euro, &mc_eur)
-
         SYMBOL(mc_sqo,             &kp SQT &kp SPACE &kp SQUO_TERM)
         SYMBOL(mc_end_sqo,         &kp END &kp SQT &kp SPACE &kp SQUO_TERM)
         TAPHOLD_SYMBOL(th_sqo,     &mc_sqo, &mc_end_sqo)
@@ -171,6 +161,16 @@
 
         // Raise
 
+        SYMBOL(mc_us,              &kp LS(U) &kp LS(S) &kp DOLLAR)
+        SYMBOL(mc_usd,             &kp LS(U) &kp LS(S) &kp LS(D))
+        TAPHOLD_SYMBOL(th_us,      &mc_us, &mc_usd)
+        SYMBOL(mc_br,              &kp LS(R) &kp DOLLAR)
+        SYMBOL(mc_brl,             &kp LS(B) &kp LS(R) &kp LS(L))
+        TAPHOLD_SYMBOL(th_br,      &mc_br, &mc_brl)
+        SYMBOL(mc_euro,            &kp LS(LA(N2)))
+        SYMBOL(mc_eur,             &kp LS(E) &kp LS(U) &kp LS(R))
+        TAPHOLD_SYMBOL(th_eur,     &mc_euro, &mc_eur)
+
         SYMBOL(mc_pars_semi_ent,   &kp END &kp LPAR &kp RPAR &kp SEMI &kp ENTER)
 
         SYMBOL(mc_dhash,           &kp HASH &kp HASH)
@@ -217,10 +217,12 @@
 
         SYMBOL(mc_zero,            &kp N0)
         SYMBOL(mc_caret,           &kp CARET &kp SPACE)
-        SYMBOL(mc_end_caret,       &kp END &kp CARET &kp SPACE)
-        TAPHOLD_SYMBOL(th_caret,   &mc_caret, &mc_end_caret)
         TAPHOLD_SYMBOL(th_caret_z, &mc_caret, &mc_zero)
 
+        SYMBOL(mc_q,               &kp Q)
+        SYMBOL(mc_at,              &kp AT)
+        TAPHOLD_SYMBOL(th_at_q,    &mc_at, &mc_q)
+        
         SYMBOL(mc_dds,             &kp DOT &kp DOT &kp SLASH)
         SYMBOL(mc_tisl,            &kp TILDE &kp SPACE &kp SLASH)
 

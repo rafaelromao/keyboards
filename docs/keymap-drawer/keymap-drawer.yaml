@@ -139,7 +139,7 @@ layers:
       ]
     - [
         "@",
-        "^",
+        { t: "^", h: "0"},
         t: "$",
         { t: '"', h: '⇥ "' },
         { t: "?", h: "⇥ ?" },
@@ -534,9 +534,6 @@ combos:
   - { p: [7, 8], k: { t: "()", h: "⇥ ()" }, a: mid, layers: [lower] }
   - { p: [8, 9], k: { t: "&&", h: "→ &&" }, a: mid, layers: [lower] }
   - { p: [15, 16], k: { t: "||", h: "→ ||" }, a: mid, layers: [lower] }
-  - { p: [0, 1, 2], k: { t: "US$", h: "USD" }, a: top, slide: 1, layers: [lower] }
-  - { p: [7, 8, 9], k: { t: "R$", h: "BRL" }, a: top, slide: 1, layers: [lower] }
-  - { p: [14, 15, 16], k: { t: "€", h: "EUR" }, a: top, slide: 1, layers: [lower] }
   - { p: [10, 11, 12], k: "⇥(); ⏎", layers: [lower], a: bottom }
   - { p: [17, 18, 19], k: "⇥; ⏎", layers: [lower], a: bottom }
 
@@ -549,15 +546,15 @@ combos:
   - { p: [7, 8, 9], k: '"""', a: top, layers: [raise] }
   - { p: [15, 16], k: "``←", a: mid, layers: [raise] }
   - { p: [14, 15, 16], k: "```", a: top, layers: [raise] }
-  - { p: [10, 11, 12], k: "../", a: bottom, layers: [raise] }
-  - { p: [17, 18, 19], k: "~/", a: bottom, layers: [raise] }
+  - { p: [3, 4], k: { h: "q", s: vim, t: "@" }, a: mid, layers: [raise] }
+  - { p: [10, 11], k: "../", a: mid, layers: [raise] }
+  - { p: [11, 12], k: "==", a: mid, layers: [raise] }
+  - { p: [17, 18], k: "~/", a: mid, layers: [raise] }
+  - { p: [18, 19], k: "!=", a: mid, layers: [raise] }
+  - { p: [3, 4, 5], k: { t: "US$", h: "USD" }, a: top, layers: [raise] }
+  - { p: [10, 11, 12], k: { t: "R$", h: "BRL" }, a: bottom, layers: [raise] }
+  - { p: [17, 18, 19], k: { t: "€", h: "EUR" }, a: bottom, layers: [raise] }
 
-  - { p: [3, 4, 5], k: "!=", a: top, layers: [raise] }
-  - { p: [3, 4], k: "==", a: mid, layers: [raise] }
-  - { p: [10, 11], k: { s: vim, t: ^, h: 0 }, a: mid, layers: [raise] }
-  - { p: [11, 12], k: { s: vim, t: "$" }, a: mid, layers: [raise] }
-  - { p: [17, 18], k: { t: "q", s: vim }, a: mid, layers: [raise] }
-  - { p: [18, 19], k: { t: "@", s: vim }, a: mid, layers: [raise] }
 
   - { p: [3, 4], k: "F12", a: mid, layers: [functions] }
   - { p: [10, 11], k: "F11", a: mid, layers: [functions] }

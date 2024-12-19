@@ -103,7 +103,7 @@
 
         COMBO(cb_tog_nomods,    LTM LTI,     &to PLAIN1,         SHORTCUTS)
         COMBO(cb_tog_media,     LHM LHI,     &to MEDIA,          SHORTCUTS)
-        COMBO(cb_tog_functions, LBM LBI,     &to FUN,      SHORTCUTS)
+        COMBO(cb_tog_functions, LBM LBI,     &to FUN,            SHORTCUTS)
         COMBO(cb_tog_lower,     RTM RTI,     &to LOWER,          SHORTCUTS)
         COMBO(cb_tog_nav,       RHM RHI,     &to NAV_F,          SHORTCUTS)
         COMBO(cb_tog_software,  RBM RBI,     &to CUSTOM,         SHORTCUTS)
@@ -131,10 +131,6 @@
         COMBO(cb_colon_colon,   LTM LTI,     &th_dcolon 0 0,     LOWER_LAYERS)
         COMBO(cb_and,           LHI LHM,     &th_and 0 0,        LOWER_LAYERS)
         COMBO(cb_or,            LBI LBM,     &th_or 0 0,         LOWER_LAYERS)
-
-        COMBO(cb_us,            LTR LTM LTI, &th_us 0 0,         LOWER_LAYERS)
-        COMBO(cb_br,            LHR LHM LHI, &th_br 0 0,         LOWER_LAYERS)
-        COMBO(cb_eu,            LBR LBM LBI, &th_eur 0 0,        LOWER_LAYERS)
         COMBO(cb_par_semi,      RHR RHM RHI, &mc_pars_semi_ent,  LOWER_LAYERS)
 
         COMBO(cb_dhash,         LTR LTM,     &mc_dhash,          RAISE_LAYERS)
@@ -146,15 +142,15 @@
         COMBO(cb_dsqo,          LTM LTI,     &mc_dsqo,           RAISE_LAYERS)
         COMBO(cb_ddqo,          LHM LHI,     &mc_ddqo,           RAISE_LAYERS)
         COMBO(cb_dbti,          LBM LBI,     &mc_dbti,           RAISE_LAYERS)
+        COMBO(cb_us,            RTR RTM RTI, &th_us 0 0,         RAISE_LAYERS)
+        COMBO(cb_br,            RHR RHM RHI, &th_br 0 0,         RAISE_LAYERS)
+        COMBO(cb_eu,            RBR RBM RBI, &th_eur 0 0,        RAISE_LAYERS)
 
-        COMBO(cb_eqeq,          RTI RTM,     &mc_eqeq,           RAISE_LAYERS)
-        COMBO(cb_noteq,         RTR RTI RTM, &mc_noteq,          RAISE_LAYERS)
-        COMBO(cb_caret_zero,    RHI RHM,     &th_caret_z 0 0,    RAISE_LAYERS)
-        COMBO(cb_dol,           RHM RHR,     &kp DOLLAR,         RAISE_LAYERS)
-        COMBO(cb_dds,           RHI RHM RHR, &mc_dds,            RAISE_LAYERS)
-        COMBO(cb_q_r,           RBI RBM,     &kp Q,              RAISE_LAYERS)
-        COMBO(cb_at,            RBM RBR,     &kp AT,             RAISE_LAYERS)
-        COMBO(cb_tisl,          RBI RBM RBR, &mc_tisl,           RAISE_LAYERS)
+        COMBO(cb_at_q,          RTI RTM,     &th_at_q 0 0,       RAISE_LAYERS)
+        COMBO(cb_eqeq,          RHM RHR,     &mc_eqeq,           RAISE_LAYERS)
+        COMBO(cb_noteq,         RBM RBR,     &mc_noteq,          RAISE_LAYERS)
+        COMBO(cb_dds,           RHI RHM,     &mc_dds,            RAISE_LAYERS)
+        COMBO(cb_tisl,          RBI RBM,     &mc_tisl,           RAISE_LAYERS)
 
         COMBO(cb_f10,           RBM RBI,     &kp F10,            FUN)
         COMBO(cb_f11,           RHM RHI,     &kp F11,            FUN)
