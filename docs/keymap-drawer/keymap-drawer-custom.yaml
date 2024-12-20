@@ -9,12 +9,12 @@ layers:
        {s: step over, t: $$mdi:debug-step-over$$},
        {s: step into, t: $$mdi:debug-step-into$$}]
     - [type: held,
-       {s: view modes, t: $$mdi:view-array$$},
+       {s: views, t: $$mdi:view-array$$},
        {s: run, t: $$mdi:play$$},
        {s: debug, t: $$mdi:bug-play$$},
        {s: type match, t: $$mdi:code-block-braces$$},
-       {s: actions, t: $$mdi:flash-alert$$},
        {s: statement, t: "()"},
+       {s: format, t: $$mdi:format-indent-increase$$},
        type: held alternate]
     - [{s: prev error, t: $$mdi:page-previous-outline$$, h: $$mdi:apple-keyboard-command$$},
        {s: next error, t: $$mdi:page-next-outline$$, h: $$mdi:apple-keyboard-command$$},
@@ -45,8 +45,8 @@ layers:
        {s: switcher, t: $$mdi:apps$$},
        {s: definition, t: $$mdi:feather$$},
        {s: quick docs, t: $$mdi:book-open-outline$$},
-       {s: format, t: $$mdi:format-indent-increase$$},
-       {s: generate, t: $$mdi:code-json$$}]
+       {s: comment, t: "/**/"},
+       {s: generate, t: $$mdi:code-array$$}]
     - {h: nav, t: plain1, s: sticky}
     - {type: held}
     - {type: held alternate}
@@ -102,6 +102,8 @@ layers:
     - type: held
     - null
 combos:
+  - { p: [7, 8, 9], k: {s: actions, h: $$mdi:flash-alert$$}, a: top, w: 36, slide: -0.5, layers: [coding-meh] }
+  - { p: [14, 15, 16], k: {s: codeium, h: $$mdi:code-json$$}, a: bottom, w: 36, slide: -0.5, layers: [coding-meh] }
   - { p: [11, 12], k: orbit, a: mid, w: 40, layers: [fusion360-meh] }
   - { p: [18, 19], k: { t: lower, s: auto-layer}, a: mid, w: 40, layers: [fusion360-meh] }
   - { p: [4, 5], k: esc, a: mid, w: 40, layers: [fusion360-meh] }
