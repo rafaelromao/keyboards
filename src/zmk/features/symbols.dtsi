@@ -69,6 +69,7 @@
         SYMBOL(mc_end_semi,        &kp END &kp SEMI)
         TAPHOLD_SYMBOL(th_semi,    &mm_semi, &mc_end_semi)
 
+        SYMBOL(mc_meh_space,             &kp LS(LC(LA(SPACE))))
         SYMBOL(mc_hyper_space,           &kp LS(LC(LA(LG(SPACE)))))
         TAPHOLD_SYMBOL(th_hyper_space,   &mc_hyper_space, &mc_hyper)
 

@@ -98,6 +98,8 @@
             bindings = <&macro_tap &smart_num>;
         };
 
+        SMART_LAYERTAP(ht_num_word, &tc_num_word)
+
         smart_num_cp: smart_num_cp {
             // compatible = "zmk,behavior-auto-layer";
             compatible = "zmk,behavior-caps-word";
