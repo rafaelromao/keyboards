@@ -477,7 +477,7 @@ combos:
 
   - {
       p: [14, 15],
-      k: { t: "lower", s: "auto-layer" },
+      k: { t: "lower", s: "auto-layer", h: "nav" },
       w: 48,
       a: mid,
       layers: [alpha1, shifted1],

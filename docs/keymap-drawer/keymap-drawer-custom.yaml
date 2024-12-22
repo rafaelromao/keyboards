@@ -4,14 +4,14 @@ layers:
  coding-meh:
     - [{s: project, t: $$mdi:file-multiple$$},
        {s: build, t: $$mdi:wrench$$},
-       {s: breakpoint, t: $$mdi:circle$$},
+       {s: toggle, h: breakpoint, t: $$mdi:circle$$},
        {s: step, h: out, t: $$mdi:debug-step-out$$},
        {s: step, h: over, t: $$mdi:debug-step-over$$},
        {s: step, h: into, t: $$mdi:debug-step-into$$}]
     - [type: held,
        {s: recent, h: files, t: $$mdi:history$$},
-       {s: run, t: $$mdi:play$$},
-       {s: debug, t: $$mdi:bug-play$$},
+       {h: run, t: $$mdi:play$$},
+       {h: debug, t: $$mdi:bug-play$$},
        {s: type, h: match, t: $$mdi:code-block-braces$$},
        {s: complete, h: statement, t: "()"},
        {s: format, h: code, t: $$mdi:format-indent-increase$$},
@@ -29,12 +29,12 @@ layers:
  coding-hyper:
     - [{s: select in, t: $$mdi:form-select$$},
        {s: rebuild, t: $$mdi:wrench-outline$$},
-       {s: breakpoints, t: $$mdi:circle-multiple$$},
+       {s: view, h: breakpoints, t: $$mdi:circle-multiple$$},
        {s: search, h: everything, t: $$mdi:database-search-outline$$l},
-       {s: go to, h: symbols, t: $$mdi:text-box-search-outline$$},
-       {s: find, h: actions, t: $$mdi:feature-search-outline$$}]
+       {s: go to, h: symbol, t: $$mdi:text-box-search-outline$$},
+       {s: find, h: action, t: $$mdi:feature-search-outline$$}]
     - [type: held,
-       {s: scheme, t: $$mdi:view-compact$$},
+       {s: switch, h: scheme, t: $$mdi:view-compact$$},
        {s: stop, t: $$mdi:stop$$},
        {s: resume, t: $$mdi:play-pause$$},
        {s: code, h: complete, t: $$mdi:code-block-parentheses$$},
@@ -90,7 +90,7 @@ layers:
        {s: trim, t: $$mdi:box-cutter$$},
        {s: appearance, t: $$mdi:invert-colors$$},
        {s: press pull, t: $$mdi:cube$$ },
-       {s: dimensions, t: $$mdi:pencil-ruler$$ }]
+       {s: sketch, h: dimensions, t: $$mdi:pencil-ruler$$ }]
     - [null,
        null,
        null,
