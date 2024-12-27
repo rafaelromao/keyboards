@@ -6,8 +6,6 @@
 
 // clang-format off
 
-#define C_CEDIL (LA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_C)))
-
 // #define CAPSWORD_TERM 0x070100
 
 #define QU_TERM       0x070101
@@ -49,4 +47,8 @@
 #define S_OCIR_TERM   0x070124
 #define S_ATIL_TERM   0x070125
 #define S_OTIL_TERM   0x070126
-#define S_AGRV_TERM   0x070127
+#define S_AGRV_TERM   0x070127  // This is the last code available
+
+#define CCED_TERM     ATIL_TERM    // Reusing codes that will not conflict
+#define C_CCED_TERM   C_ATIL_TERM
+#define S_CCED_TERM   S_ATIL_TERM

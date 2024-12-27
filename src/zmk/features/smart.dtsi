@@ -44,8 +44,8 @@
             tap-ms = <10>;
             bindings = <&macro_tap &kp K_CANCEL &to ALPHA1>;
         };
-        SMART_MACRO(tc_sp_ns,         &kp SPACE &sl SEN_E1)
-        SMART_MACRO(tc_nsen,          &sl SEN_E1)
+        SMART_MACRO(tc_sp_ns,         &kp SPACE &sl SEN_EXT)
+        SMART_MACRO(tc_nsen,          &sl SEN_EXT)
         SMART_LAYERTAP(th_sp_ns,      &tc_sp_ns)
         SMART_LAYERTAP(th_cancel,     &tc_cancel)
         SMART_LAYERTAP(th_nsen,       &tc_nsen)

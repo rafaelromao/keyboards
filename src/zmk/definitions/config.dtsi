@@ -6,6 +6,7 @@
  */
 
 #define ALPHA1 0
+
 #define CAMEL_CASE 1
 #define SNAKE_CASE 2
 #define KEBAB_CASE 3
@@ -15,39 +16,39 @@
 #define CPLK_A1 7
 
 #define ALPHA2 8
-#define CCEDIL 9
-#define SHIFT_A2 10
-#define CASE_A2 11
-#define CASE_CCEDIL 12
 
-#define LOWER 13
-#define RAISE 14
+#define LOWER 9
+#define RAISE 10
 
-#define SEN_CASE 15
-#define SEN_E1 16
-#define SEN_E2 17
+#define SEN_CASE 11
+#define SEN_EXT 12
 
-#define SHORTCUTS 18
-#define SHORTS_EXT_1 19
-#define SHORTS_EXT_2 20
+#define CCEDIL 13
+#define SHIFT_A2 14
+#define CASE_A2 15
+#define CASE_CCEDIL 16
 
-#define CUSTOM 21
+#define SHORTCUTS 17
+#define SHORTS_EXT_1 18
+#define SHORTS_EXT_2 19
 
-#define PLAIN1 22
-#define PLAIN2 23
-#define SFT_PLAIN2 24
+#define CUSTOM 20
 
-#define NAV 25
+#define PLAIN1 21
+#define PLAIN2 22
+#define SFT_PLAIN2 23
 
-#define LOW_CP 26
-#define RAI_CP 27
+#define NAV 24
 
-#define MEDIA 28
+#define LOW_CP 25
+#define RAI_CP 26
 
-#define FUN 29
-#define SMART 30
+#define MEDIA 27
 
-#define NAV_F 31
+#define FUN 28
+#define SMART 29
+
+#define NAV_F 30
 
 
 #define COMBO_TERM 30

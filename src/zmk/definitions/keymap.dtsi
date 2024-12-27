@@ -32,6 +32,7 @@
                                            &kp Q               &ht_repeat NAV 0    &ltn LOWER SPACE    &msl_a2 RAISE 0     &ht_shift MEDIA 0   &kp Y
                         >;
                 };
+
                 camel_case_layer {
                      display-name = "CAMEL";
                      bindings = <
@@ -95,6 +96,9 @@
                                            &trans              &trans              &trans              &th_case_a2 RAISE 0 &mo MEDIA           &trans
                            >;
                 };
+
+
+
                 alpha2_layer {
                      display-name = "ROMAK";
                      bindings = <
@@ -104,6 +108,51 @@
                                            &none               &mc_sqo             &trans              &kp SPACE           &mc_sqo             &none
                            >;
                 };
+
+
+
+                lower_layer {
+                     display-name = "LOWER";
+                     bindings = <
+   &trans              &th_lbrc 0 0        &th_rbrc 0 0        &kp BSLH            &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
+   &th_deg CUSTOM 0    &th_lpar 0 0        &th_rpar 0 0        &kp AMPS            &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
+   &trans              &th_lbkt 0 0        &th_rbkt 0 0        &kp PIPE            &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
+                                           &trans              &trans              &trans              &hlt RAISE SPACE    &th_n0 MEDIA 0      &trans
+                           >;
+                };
+                raise_layer {
+                     display-name = "RAISE";
+                     bindings = <
+   &none               &mc_tilde           &kp HASH            &th_sqo 0 0         &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
+   &kp AT              &th_caret_z 0 0     &kp DOLLAR          &th_dqo 0 0         &none               &none               &th_qmark 0 0       &kp MINUS           &kp PLUS            &lt CUSTOM COMMA
+   &none               &mc_lt              &mc_gt              &th_bti 0 0         &none               &none               &th_excl 0 0        &kp SLASH           &kp STAR            &trans
+                                           &trans              &key_repeat         &hlt LOW_CP SPACE   &trans              &trans              &trans       
+                           >;
+                };
+
+
+
+                sentence_case_layer {
+                     display-name = "CASE";
+                     bindings = <
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
+                                           &trans              &trans              &th_sp_ns LOWER 0   &trans              &th_nsen MEDIA 0    &trans
+                           >;
+                };
+                sentence_case_ext_layer {
+                     display-name = "CASE";
+                     bindings = <
+   &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y) 
+   &kp RS(D)           &mt LSHFT RS(N)     &mt LCTRL RS(S)     &mt LALT RS(T)      &kp RS(W)           &kp RS(Z)           &mt RALT RS(R)      &mt RCTRL RS(A)     &mt RSHFT RS(E)     &kp RS(I) 
+   &trans              &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c RGUI 0  &hlt SMART COMMA    &th_dot 0 0         &trans
+                                           &trans              &th_cancel NAV 0    &th_sp_ns LOW_CP 0  &msl RAI_CP CASE_A2 &th_nsen MEDIA 0    &trans
+                           >;
+                };
+
+
+
                 ccedil_layer {
                      display-name = "Ç EXT";
                      bindings = <
@@ -138,57 +187,6 @@
    &trans              &trans              &trans              &mc_aotil_c         &trans              &trans              &ac_atil_c          &trans              &trans              &trans  
    &trans              &trans              &trans              &mc_otiles_c        &trans              &trans              &ac_otil_c          &trans              &trans              &trans
                                            &trans              &trans              &trans              &kp BACKSPACE       &trans              &trans
-                           >;
-                };
-
-
-
-                lower_layer {
-                     display-name = "LOWER";
-                     bindings = <
-   &trans              &th_lbrc 0 0        &th_rbrc 0 0        &kp BSLH            &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
-   &th_deg CUSTOM 0    &th_lpar 0 0        &th_rpar 0 0        &kp AMPS            &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
-   &trans              &th_lbkt 0 0        &th_rbkt 0 0        &kp PIPE            &none               &none               &mc_n1              &mc_n2              &mc_n3              &trans
-                                           &trans              &trans              &trans              &hlt RAISE SPACE    &th_n0 MEDIA 0      &trans
-                           >;
-                };
-                raise_layer {
-                     display-name = "RAISE";
-                     bindings = <
-   &none               &mc_tilde           &kp HASH            &th_sqo 0 0         &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
-   &kp AT              &th_caret_z 0 0     &kp DOLLAR          &th_dqo 0 0         &none               &none               &th_qmark 0 0       &kp MINUS           &kp PLUS            &lt CUSTOM COMMA
-   &none               &mc_lt              &mc_gt              &th_bti 0 0         &none               &none               &th_excl 0 0        &kp SLASH           &kp STAR            &trans
-                                           &trans              &key_repeat         &hlt LOW_CP SPACE   &trans              &trans              &trans       
-                           >;
-                };
-
-
-
-                sentence_case_layer {
-                     display-name = "CASE";
-                     bindings = <
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
-                                           &trans              &trans              &th_sp_ns LOW_CP 0  &trans              &th_nsen MEDIA 0    &trans
-                           >;
-                };
-                sentence_case_ext1_layer {
-                     display-name = "CASE";
-                     bindings = <
-   &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y) 
-   &kp RS(D)           &mt LSHFT RS(N)     &mt LCTRL RS(S)     &mt LALT RS(T)      &kp RS(W)           &kp RS(Z)           &mt RALT RS(R)      &mt RCTRL RS(A)     &mt RSHFT RS(E)     &kp RS(I) 
-   &trans              &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c RGUI 0  &hlt SMART COMMA    &th_dot 0 0         &trans
-                                           &trans              &th_cancel NAV 0    &th_sp_ns LOW_CP 0  &msl RAI_CP SEN_E2  &th_nsen MEDIA 0    &trans
-                           >;
-                };
-                sentence_case_ext2_layer {
-                     display-name = "CASE";
-                     bindings = <
-   &none               &kp RS(Q)           &mc_qu_s            &kp RS(K)           &none               &none               &ac_ocir_s          &ac_oacu_s          &ac_uacu_s          &none
-   &kp RS(Y)           &kp RS(Z)           &kp RS(X)           &kp RS(W)           &none               &none               &ac_atil_s          &ac_aacu_s          &ac_eacu_s          &ac_iacu_s 
-   &trans              &kp RS(J)           &mc_ced_s           &reversed_magic_c   &none               &none               &ac_otil_s          &ac_acir_s          &ac_ecir_s          &trans
-                                           &trans              &kp RS(H)           &th_sp_ns LOW_CP 0  &msl RAI_CP SEN_E2  &th_nsen MEDIA 0    &trans
                            >;
                 };
 

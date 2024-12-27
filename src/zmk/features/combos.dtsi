@@ -15,7 +15,7 @@
           ╰─────────────╯ ╰─────────────╯ */
 
 / {
-    #define SENTENCE_CASE_LAYERS        SEN_CASE SEN_E1 SEN_E2 
+    #define SENTENCE_CASE_LAYERS        SEN_CASE SEN_EXT
     #define ALPHA1_LAYERS               ALPHA1 CASE_A1 PLAIN1 CPLK_A1 SENTENCE_CASE_LAYERS 
     #define CCEDIL_LAYERS               CCEDIL CASE_CCEDIL 
     #define ALPHA2_LAYERS               ALPHA2 CASE_A2 PLAIN2 SHIFT_A2
@@ -80,10 +80,10 @@
         COMBO(cb_v,             LBI LBM,     &kp V,              ALPHA1 PLAIN1 SEN_CASE)
         COMBO(cb_q,             LHR LHM,     &ht_q 0 0,          ALPHA1 PLAIN1 SEN_CASE)
 
-        COMBO(cb_kc,            LTM LTI,     &kp LS(K),          CASE_A1 SEN_E1 CPLK_A1)
-        COMBO(cb_wc,            LHM LHI,     &kp LS(W),          CASE_A1 SEN_E1 CPLK_A1)
-        COMBO(cb_vc,            LBI LBM,     &kp LS(V),          CASE_A1 SEN_E1 CPLK_A1)
-        COMBO(cb_qc,            LHR LHM,     &kp LS(Q),          CASE_A1 SEN_E1 CPLK_A1)
+        COMBO(cb_kc,            LTM LTI,     &kp LS(K),          CASE_A1 SEN_EXT CPLK_A1)
+        COMBO(cb_wc,            LHM LHI,     &kp LS(W),          CASE_A1 SEN_EXT CPLK_A1)
+        COMBO(cb_vc,            LBI LBM,     &kp LS(V),          CASE_A1 SEN_EXT CPLK_A1)
+        COMBO(cb_qc,            LHR LHM,     &kp LS(Q),          CASE_A1 SEN_EXT CPLK_A1)
 
         COMBO(cb_x,             RTI RTM,     &kp X,              ALPHA1 PLAIN1 SEN_CASE)
         COMBO(cb_z,             RHI RHM,     &ht_z 0 0,          ALPHA1 PLAIN1 SEN_CASE)
@@ -94,12 +94,12 @@
 
         COMBO(cd_ht_meh_spc,    LHR LHM LHI, &ht_meh_spc 0 0,    ALPHA1_LAYERS)
 
-        COMBO(cb_xc,            RTI RTM,     &kp LS(X),          CASE_A1 SEN_E1 CPLK_A1)
-        COMBO(cb_zc,            RHI RHM,     &kp LS(Z),          CASE_A1 SEN_E1 CPLK_A1)
-        COMBO(cb_jc,            RBI RBM,     &kp LS(J),          CASE_A1 SEN_E1 CPLK_A1)
-        COMBO(cb_yc,            RHM RHR,     &kp LS(Y),          CASE_A1 SEN_E2 CPLK_A1)
-        COMBO(cb_dc,            RTI RTM RTR, &kp LS(D),          CASE_A1 SEN_E1 CPLK_A1)
-        COMBO(cb_pc,            RHI RHM RHR, &kp LS(P),          CASE_A1 SEN_E1 CPLK_A1)
+        COMBO(cb_xc,            RTI RTM,     &kp LS(X),          CASE_A1 SEN_EXT CPLK_A1)
+        COMBO(cb_zc,            RHI RHM,     &kp LS(Z),          CASE_A1 SEN_EXT CPLK_A1)
+        COMBO(cb_jc,            RBI RBM,     &kp LS(J),          CASE_A1 SEN_EXT CPLK_A1)
+        COMBO(cb_yc,            RHM RHR,     &kp LS(Y),          CASE_A1 SEN_EXT CPLK_A1)
+        COMBO(cb_dc,            RTI RTM RTR, &kp LS(D),          CASE_A1 SEN_EXT CPLK_A1)
+        COMBO(cb_pc,            RHI RHM RHR, &kp LS(P),          CASE_A1 SEN_EXT CPLK_A1)
 
         COMBO(cb_tog_nomods,    LTM LTI,     &to PLAIN1,         SHORTCUTS)
         COMBO(cb_tog_media,     LHM LHI,     &to MEDIA,          SHORTCUTS)
@@ -174,8 +174,8 @@
         COMBO(cb_excl,          RBI RBM,     &mc_excl,           ALPHA2_LAYERS)
         COMBO(cb_unds,          RBM RBR,     &kp UNDERSCORE,     ALPHA2_LAYERS)
 
-        COMBO(cb_grva,          RHM RHR,     &ac_agrv,           ALPHA2 SEN_E2)
-        COMBO(cb_grvac,         RHM RHR,     &ac_agrv_c,         CASE_A2 SEN_E2 SHIFT_A2)
+        COMBO(cb_grva,          RHM RHR,     &ac_agrv,           ALPHA2)
+        COMBO(cb_grvac,         RHM RHR,     &ac_agrv_c,         CASE_A2 SHIFT_A2)
 
         COMBO(cb_o_esc,         RHI RHM,     &mc_o_esc,          MEDIA_LAYERS)
         COMBO(cb_sft_o_esc,     RHM RHR,     &mc_sft_o_esc,      MEDIA_LAYERS)
