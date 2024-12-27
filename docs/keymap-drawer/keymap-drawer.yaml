@@ -567,8 +567,8 @@ combos:
 
   - { p: [0, 1, 2], k: "insert", a: top, w: 48, layers: [nav] }
   - { p: [3, 4], k: "↑⇥ ⌦", a: mid, layers: [nav] }
-  - { p: [10, 11], k: { t: $$tabler:arrow-big-down-lines$$, s: page, h: down }, a: mid, layers: [nav] }
-  - { p: [11, 12], k: { t: $$tabler:arrow-big-up-lines$$, s: page, h: up }, a: mid, layers: [nav] }
+  - { p: [10, 11], k: { t: $$mdi:arrow-down-bold-outline$$, s: page, h: down }, a: mid, layers: [nav] }
+  - { p: [11, 12], k: { t: $$mdi:arrow-up-bold-outline$$, s: page, h: up }, a: mid, layers: [nav] }
   - { p: [17, 18], k: "↓ ⇤", a: mid, layers: [nav] }
   - { p: [18, 19], k: "↓ ⇥", a: mid, layers: [nav] }
 
