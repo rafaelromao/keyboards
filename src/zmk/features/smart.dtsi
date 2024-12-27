@@ -213,9 +213,48 @@
             bindings = <&mo>, <&tc_shift>;
         };
 
+        tc_snake_case: tc_snake_case {
+            // compatible = "zmk,behavior-auto-layer";
+            compatible = "zmk,behavior-caps-word";
+            ignore-alphas;
+            ignore-modifiers;
+            layers = <SNAKE_CASE>;
+			#binding-cells = <0>;  
+            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
+        };
 
-        SMART_MACRO(tc_pascal_case,  &to CAMEL_CASE &sk LSHFT)
-        SMART_MACRO(tc_s_snakecase,  &tog CPLK_A1 &tog SNAKE_CASE)
+        tc_kebab_case: tc_kebab_case {
+            // compatible = "zmk,behavior-auto-layer";
+            compatible = "zmk,behavior-caps-word";
+            ignore-alphas;
+            ignore-modifiers;
+            layers = <KEBAB_CASE>;
+			#binding-cells = <0>;  
+            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
+        };
+
+        tc_camel_case: tc_camel_case {
+            // compatible = "zmk,behavior-auto-layer";
+            compatible = "zmk,behavior-caps-word";
+            ignore-alphas;
+            ignore-modifiers;
+            layers = <CAMEL_CASE>;
+			#binding-cells = <0>;  
+            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
+        };
+
+        tc_slash_case: tc_slash_case {
+            // compatible = "zmk,behavior-auto-layer";
+            compatible = "zmk,behavior-caps-word";
+            ignore-alphas;
+            ignore-modifiers;
+            layers = <SLASH_CASE>;
+			#binding-cells = <0>;  
+            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SLASH>;
+        };
+
+        SMART_MACRO(tc_pascal_case,  &tc_camel_case &sk LSHFT)
+        SMART_MACRO(tc_constant_case,  &tog CPLK_A1 &tog SNAKE_CASE)
 
         SMART_MACRO(mc_msk_camel, &sl CASE_A1)
         SMART_MACRO(mc_msk_snake, &kp UNDERSCORE &sl SPACING)

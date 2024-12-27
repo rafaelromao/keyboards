@@ -318,8 +318,8 @@
                      display-name = "SMART";
                      bindings = <
    &none               &none               &tc_smart_word      &tc_smart_line      &none               &none               &mc_lock            &none               &none               &none 
-   &none               &to SNAKE_CASE      &tc_s_snakecase     &to KEBAB_CASE      &none               &none               &kp C_SLEEP         &none               &none               &none      
-   &none               &to SLASH_CASE      &tc_pascal_case     &to CAMEL_CASE      &none               &none               &leader             &none               &none               &none
+   &none               &tc_snake_case      &tc_constant_case   &tc_kebab_case      &none               &none               &kp C_SLEEP         &none               &none               &none      
+   &none               &tc_slash_case      &tc_pascal_case     &tc_camel_case      &none               &none               &leader             &none               &none               &none
                                            &none               &none               &mc_comma_space     &none               &none               &none
                         >;
                 };
