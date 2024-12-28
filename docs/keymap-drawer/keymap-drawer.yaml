@@ -37,7 +37,7 @@ layers:
         ê,
       ]
     - "'"
-    - { t: $$mdi:keyboard-space$$ }
+    - { t: ▽ }
     - { t: $$mdi:keyboard-space$$ }
     - "'"
   shifted1:
@@ -76,41 +76,48 @@ layers:
         Ê,
       ]
     - "'"
-    - { t: $$mdi:keyboard-space$$ }
+    - { t: ▽ }
     - { t: $$mdi:keyboard-space$$ }
     - "'"
   ç-extension:
-    - ["", "", "", "", "", ""]
-    - ["", "", "", ão, ã, "", "", ""]
-    - ["", t: "", ões, õ, "", ""]
+    - ["", "", "", "", { t: ▽ }, { t: ▽ }]
+    - ["", "", "", ão, ã, { t: ▽ }, { t: ▽ }, ""]
+    - ["", "", ões, õ, "", ""]
     - ""
     - ""
-    - ""
+    - { t: ▽ }
     - ""
   alpha1_vim_bindings:
     - [
-        { t: b, s: vim },
-        { t: w, s: vim },
-        { t: e, s: vim },
-        { t: g, s: vim },
-        "",
-        "",
+        { t: b, s: vim, type: ghost },
+        { t: w, s: vim, type: ghost },
+        { t: e, s: vim, type: ghost },
+        { t: g, s: vim, type: ghost },
+        { type: ghost },
+        { type: ghost },
       ]
     - [
-        "",
-        "",
-        "",
-        "",
-        { t: h, s: vim },
-        { t: j, s: vim },
-        { t: k, s: vim },
-        { t: l, s: vim },
+        { type: ghost },
+        { type: ghost },
+        { type: ghost },
+        { type: ghost },
+        { t: h, s: vim, type: ghost },
+        { t: j, s: vim, type: ghost },
+        { t: k, s: vim, type: ghost },
+        { t: l, s: vim, type: ghost },
       ]
-    - ["", "", "", { t: r, s: vim }, "", ""]
-    - ""
-    - ""
-    - ""
-    - ""
+    - [
+         { type: ghost }, 
+         { type: ghost }, 
+         { type: ghost }, 
+         { t: r, s: vim, type: ghost }, 
+         { type: ghost }, 
+         { type: ghost }
+      ]
+    - { type: ghost }
+    - { type: ghost }
+    - { type: ghost }
+    - { type: ghost }
   lower:
     - [{ t: "{", h: "⇥ {" }, { t: "}", h: "⇥ }" }, "\\", 7, 8, 9]
     - [
@@ -124,8 +131,8 @@ layers:
         ".",
       ]
     - [{ t: "[", h: "⇥ [" }, { t: "]", h: "⇥ ]" }, "|", 1, 2, 3]
-    - null
-    - { t: $$mdi:keyboard-space$$, type: held }
+    - { t: ▽ }
+    - { t: ▽, type: held }
     - { t: $$mdi:keyboard-space$$, h: raise }
     - 0
   raise:
@@ -224,8 +231,8 @@ layers:
     - [y, z, x, w, ã, á, é, í]
     - [j, ç, v, õ, â, ê]
     - "'"
-    - { t: $$mdi:keyboard-space$$ }
-    - { t: $$mdi:keyboard-space$$ }
+    - { t: $$mdi:keyboard-space$$, h: lower }
+    - { t: $$mdi:keyboard-space$$, h: raise }
     - "'"
   nav:
     - [
@@ -254,7 +261,7 @@ layers:
         { t: $$mdi:format-horizontal-align-left$$, h: home },
         { t: $$mdi:format-horizontal-align-right$$, h: end },
       ]
-    - { type: held }
+    - { t: ▽, type: held }
     - { t: $$mdi:flash$$, h: "boot" }
     - { t: $$mdi:keyboard-space$$ }
     - { h: media, type: held alternate }
@@ -288,7 +295,7 @@ layers:
     - h: nav
     - { t: $$mdi:keyboard-space$$ }
     - { t: $$mdi:flash$$, h: "boot" }
-    - { type: held }
+    - { t: ▽, type: held }
   functions:
     - [
         { t: $$mdi:bluetooth$$, h: $$mdi:arrow-left$$ },
@@ -323,26 +330,26 @@ layers:
   smartcases:
     - [
         null,
-        "CAPS word",
-        "CAPS LINE",
+        { t: "CAPS word", s: auto-layer },
+        { t: "CAPS LINE", s: auto-layer },
         { t: $$mdi:lock$$, h: "lock" },
         null,
         null,
       ]
     - [
         "",
-        "snake_ case",
-        "CONSTANT_ CASE",
-        "kebab- case",
+        { t: "snake_ case", s: auto-layer },
+        { t: "CONSTANT_ CASE", s: auto-layer },
+        { t: "kebab- case", s: auto-layer },
         { t: $$mdi:power-sleep$$, h: "sleep" },
         "",
         null,
         null,
       ]
     - [
-        "slash/ case",
-        "Pascal Case",
-        "camel Case",
+        { t: "slash/ case", s: auto-layer },
+        { t: "Pascal Case", s: auto-layer },
+        { t: "camel Case", s: auto-layer },
         { t: $$mdi:ray-start-arrow$$, h: "leader" },
         { type: held },
         "",
@@ -419,43 +426,43 @@ combos:
   - { p: [17, 18], k: "J", a: mid, layers: [shifted1] }
   - { p: [18, 19], k: { t: ":", h: "⇥ :" }, a: mid, layers: [shifted1] }
 
-  - { p: [1, 2], k: { t: "z", s: vim }, a: mid, layers: [alpha1_vim_bindings] }
-  - { p: [3, 4], k: { t: "x", s: vim }, a: mid, layers: [alpha1_vim_bindings] }
+  - { p: [1, 2], k: { t: "z", s: vim, type: ghost }, a: mid, layers: [alpha1_vim_bindings] }
+  - { p: [3, 4], k: { t: "x", s: vim, type: ghost }, a: mid, layers: [alpha1_vim_bindings] }
   - {
       p: [3, 4, 5],
-      k: { t: "d", s: vim },
+      k: { t: "d", s: vim, type: ghost },
       a: top,
       layers: [alpha1_vim_bindings],
     }
-  - { p: [7, 8], k: { t: "q", s: vim }, a: mid, layers: [alpha1_vim_bindings] }
-  - { p: [8, 9], k: { t: "m", s: vim }, a: mid, layers: [alpha1_vim_bindings] }
+  - { p: [7, 8], k: { t: "q", s: vim, type: ghost }, a: mid, layers: [alpha1_vim_bindings] }
+  - { p: [8, 9], k: { t: "m", s: vim, type: ghost }, a: mid, layers: [alpha1_vim_bindings] }
   - {
       p: [10, 11],
-      k: { t: "i", s: vim },
+      k: { t: "i", s: vim, type: ghost },
       a: mid,
       layers: [alpha1_vim_bindings],
     }
   - {
       p: [11, 12],
-      k: { t: "y", s: vim },
+      k: { t: "y", s: vim, type: ghost },
       a: mid,
       layers: [alpha1_vim_bindings],
     }
   - {
       p: [10, 11, 12],
-      k: { t: "p", s: vim },
+      k: { t: "p", s: vim, type: ghost },
       a: bottom,
       layers: [alpha1_vim_bindings],
     }
   - {
       p: [15, 16],
-      k: { t: "v", s: vim },
+      k: { t: "v", s: vim, type: ghost },
       a: mid,
       layers: [alpha1_vim_bindings],
     }
   - {
       p: [17, 18],
-      k: { t: "a", s: vim },
+      k: { t: "a", s: vim, type: ghost },
       a: mid,
       layers: [alpha1_vim_bindings],
     }
