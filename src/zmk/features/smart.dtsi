@@ -223,6 +223,16 @@
             continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
         };
 
+        tc_constant_case: tc_constant_case {
+            // compatible = "zmk,behavior-auto-layer";
+            compatible = "zmk,behavior-caps-word";
+            ignore-alphas;
+            ignore-modifiers;
+            layers = <CONST_CASE>;
+			#binding-cells = <0>;  
+            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
+        };
+
         tc_kebab_case: tc_kebab_case {
             // compatible = "zmk,behavior-auto-layer";
             compatible = "zmk,behavior-caps-word";
@@ -254,7 +264,6 @@
         };
 
         SMART_MACRO(tc_pascal_case,  &tc_camel_case &sk LSHFT)
-        SMART_MACRO(tc_constant_case,  &tog CPLK_A1 &tog SNAKE_CASE)
 
         SMART_MACRO(mc_msk_camel, &sl CASE_A1)
         SMART_MACRO(mc_msk_snake, &kp UNDERSCORE &sl SPACING)

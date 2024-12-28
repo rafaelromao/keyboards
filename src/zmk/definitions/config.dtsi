@@ -9,46 +9,47 @@
 
 #define CAMEL_CASE 1
 #define SNAKE_CASE 2
-#define KEBAB_CASE 3
-#define SLASH_CASE 4
-#define SPACING 5
-#define CASE_A1 6
-#define CPLK_A1 7
+#define CONST_CASE 3
+#define KEBAB_CASE 4
+#define SLASH_CASE 5
+#define SPACING 6
+#define CASE_A1 7
+#define CPLK_A1 8
 
-#define ALPHA2 8
+#define ALPHA2 9
 
-#define LOWER 9
-#define RAISE 10
+#define LOWER 10
+#define RAISE 11
 
-#define SEN_CASE 11
-#define SEN_EXT 12
+#define SEN_CASE 12
+#define SEN_EXT 13
 
-#define CCEDIL 13
-#define SHIFT_A2 14
-#define CASE_A2 15
-#define CASE_CCEDIL 16
+#define CCEDIL 14
+#define SHIFT_A2 15
+#define CASE_A2 16
+#define CASE_CCEDIL 17
 
-#define SHORTCUTS 17
-#define SHORTS_EXT_1 18
-#define SHORTS_EXT_2 19
+#define SHORTCUTS 18
+#define SHORTS_EXT_1 19
+#define SHORTS_EXT_2 20
 
-#define CUSTOM 20
+#define CUSTOM 21
 
-#define PLAIN1 21
-#define PLAIN2 22
-#define SFT_PLAIN2 23
+#define PLAIN1 22
+#define PLAIN2 23
+#define SFT_PLAIN2 24
 
-#define NAV 24
+#define NAV 25
 
-#define LOW_CP 25
-#define RAI_CP 26
+#define LOW_CP 26
+#define RAI_CP 27
 
-#define MEDIA 27
+#define MEDIA 28
 
-#define FUN 28
-#define SMART 29
+#define FUN 29
+#define SMART 30
 
-#define NAV_F 30
+#define NAV_F 31
 
 
 #define COMBO_TERM 30
