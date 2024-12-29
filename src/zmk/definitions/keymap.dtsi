@@ -135,7 +135,7 @@
    &none               &mc_tilde           &kp HASH            &th_sqo 0 0         &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
    &kp AT              &th_caret_z 0 0     &kp DOLLAR          &th_dqo 0 0         &none               &none               &th_qmark 0 0       &kp MINUS           &kp PLUS            &lt CUSTOM COMMA
    &none               &mc_lt              &mc_gt              &th_bti 0 0         &none               &none               &th_excl 0 0        &kp SLASH           &kp STAR            &none 
-                                           &none               &key_repeat         &hlt LOW_CP SPACE   &none               &none               &none        
+                                           &none               &key_repeat         &hlt LOW_CP SPACE   &none               &kp LNLCK            &none        
                            >;
                 };
 
@@ -295,7 +295,7 @@
    &none               &mc_tilde           &kp HASH            &th_sqo 0 0         &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
    &kp AT              &th_caret_z 0 0     &kp DOLLAR          &th_dqo 0 0         &none               &none               &th_qmark 0 0       &kp MINUS           &kp PLUS            &kp STAR  
    &none               &mc_lt              &mc_gt              &th_bti 0 0         &none               &none               &th_excl 0 0        &kp SLASH           &kp STAR            &none 
-                                           &none               &key_repeat         &kp SPACE           &kp SPACE           &none               &none 
+                                           &none               &key_repeat         &kp SPACE           &kp SPACE           &kp LNLCK           &none 
                            >;
                 };
 
