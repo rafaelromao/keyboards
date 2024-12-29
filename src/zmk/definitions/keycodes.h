@@ -6,8 +6,6 @@
 
 // clang-format off
 
-// #define CAPSWORD_TERM 0x070100
-
 #define QU_TERM       0x070101
 #define AACU_TERM     0x070102
 #define EACU_TERM     0x070103
@@ -49,6 +47,7 @@
 #define S_OTIL_TERM   0x070126
 #define S_AGRV_TERM   0x070127  // This is the last code available
 
-#define CCED_TERM     ATIL_TERM    // Reusing codes that will not conflict
-#define C_CCED_TERM   C_ATIL_TERM
-#define S_CCED_TERM   S_ATIL_TERM
+#define CCED_TERM     ACIR_TERM     // Reuse codes that does not conflict
+#define C_CCED_TERM   C_ACIR_TERM
+#define S_CCED_TERM   S_ACIR_TERM
+

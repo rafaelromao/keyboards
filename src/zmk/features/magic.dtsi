@@ -26,14 +26,18 @@
             max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
             defaults = <&labeled_key_repeat>;
             antecedents = <
-                            A          I          QU_TERM      AGRV_TERM     SQUO_TERM      J           CCED_TERM      AACU_TERM      EACU_TERM      OACU_TERM   \
-                            H          Y          C_QU_TERM    C_AGRV_TERM   C_SQUO_TERM    LS(J)       C_CCED_TERM    C_AACU_TERM    C_EACU_TERM    C_OACU_TERM \
-                            LS(Y)      RS(Y)      S_QU_TERM    S_AGRV_TERM   X              RS(J)       S_CCED_TERM    S_AACU_TERM    S_EACU_TERM    S_OACU_TERM \
+                            A            I            QU_TERM      AGRV_TERM     SQUO_TERM      J            CCED_TERM      AACU_TERM      EACU_TERM      OACU_TERM   \
+                            H            Y            C_QU_TERM    C_AGRV_TERM   C_SQUO_TERM    LS(J)        C_CCED_TERM    C_AACU_TERM    C_EACU_TERM    C_OACU_TERM \
+                            LS(Y)        RS(Y)        S_QU_TERM    S_AGRV_TERM   X              RS(J)        S_CCED_TERM    S_AACU_TERM    S_EACU_TERM    S_OACU_TERM \
+                            OCIR_TERM    C_OCIR_TERM  S_OCIR_TERM  ATIL_TERM     C_ATIL_TERM    S_ATIL_TERM  OTIL_TERM      C_OTIL_TERM    S_OTIL_TERM    ECIR_TERM   \
+                            C_ECIR_TERM  S_ECIR_TERM  UACU_TERM    C_UACU_TERM   S_UACU_TERM    IACU_TERM    C_IACU_TERM    S_IACU_TERM    LS(X)          RS(X)       \
                            >;                                                                                      
             bindings =    <                                                                                        
-                            &tc_h      &mc_sqo    &ac_ecir     &mc_qu        &kp V          &ac_aacu    &sl ALPHA2     &kp X          &kp X          &kp X      \
-                            &kp A      &kp D      &ac_ecir_c   &mc_qu_c      &kp LS(V)      &ac_aacu_c  &sl ALPHA2     &kp LS(X)      &kp LS(X)      &kp LS(X)  \
-                            &kp LS(D)  &kp D      &ac_ecir_s   &mc_qu        &kp Y          &ac_aacu    &sl ALPHA2     &kp X          &kp X          &kp X      \
+                            &tc_h        &mc_sqo      &ac_ecir     &mc_qu        &kp V          &ac_aacu     &sl ALPHA2     &kp X          &kp X          &kp X       \
+                            &kp A        &kp D        &ac_ecir_c   &mc_qu_c      &kp LS(V)      &ac_aacu_c   &sl ALPHA2     &kp LS(X)      &kp LS(X)      &kp LS(X)   \
+                            &kp LS(D)    &kp D        &ac_ecir     &mc_qu        &kp Y          &ac_aacu     &sl ALPHA2     &kp X          &kp X          &kp X       \
+                            &kp L        &kp LS(L)    &kp RS(L)    &kp O         &kp LS(O)      &kp RS(O)    &kp E          &kp LS(E)      &kp RS(E)      &kp DOT     \
+                            &kp DOT      &kp DOT      &kp V        &kp LS(V)     &kp RS(V)      &kp V        &kp LS(V)      &kp RS(V)      &kp LS(Y)      &kp RS(Y)   \
                            >;
         };
 
