@@ -166,9 +166,9 @@
                      display-name = "Ç EXT";
                      bindings = <
    &none               &none               &none               &none               &none               &none               &none               &trans              &trans              &none     
-   &none               &none               &none               &mc_aotil           &none               &none               &ac_atil            &trans              &trans              &none   
-   &none               &none               &none               &mc_otiles          &none               &none               &ac_otil            &none               &none               &none  
-                                           &none               &none               &none               &trans              &none               &none
+   &none               &none               &none               &mc_aotil           &none               &none               &ac_atil            &trans              &none               &none   
+   &none               &none               &none               &mc_otiles          &none               &none               &ac_otil            &trans              &trans              &none  
+                                           &none               &trans              &trans              &trans              &trans              &none
                            >;
                 };
                 shifted_alpha2_layer {
@@ -193,9 +193,9 @@
                      display-name = "CASE";
                      bindings = <
    &none               &none               &none               &none               &none               &none               &none               &trans              &trans              &none     
-   &none               &none               &none               &mc_aotil_c         &none               &none               &ac_atil_c          &trans              &trans              &none   
-   &none               &none               &none               &mc_otiles_c        &none               &none               &ac_otil_c          &none               &none               &none 
-                                           &none               &none               &none               &trans              &none               &none 
+   &none               &none               &none               &mc_aotil_c         &none               &none               &ac_atil_c          &trans              &none               &none   
+   &none               &none               &none               &mc_otiles_c        &none               &none               &ac_otil_c          &trans              &trans              &none 
+                                           &none               &trans              &trans              &trans              &trans              &none 
                            >;
                 };
 
