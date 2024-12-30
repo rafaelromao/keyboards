@@ -18,7 +18,7 @@
     #define SENTENCE_CASE_LAYERS        SEN_CASE SEN_EXT
     #define ALPHA1_LAYERS               ALPHA1 CASE_A1 PLAIN1 CPLK_A1 SENTENCE_CASE_LAYERS 
     #define CCEDIL_LAYERS               CCEDIL CASE_CCEDIL 
-    #define ALPHA2_LAYERS               ALPHA2 CASE_A2 PLAIN2 SHIFT_A2
+    #define ALPHA2_LAYERS               ALPHA2 CASE_A2 PLAIN2 SFT_A2
     #define SMARTCASE_LAYERS            CAMEL_CASE SNAKE_CASE CONST_CASE KEBAB_CASE SLASH_CASE SPACING 
     #define LOWER_LAYERS                LOWER LOW_CP  
     #define RAISE_LAYERS                RAISE RAI_CP   
@@ -175,7 +175,7 @@
         COMBO(cb_unds,          RBM RBR,     &kp UNDERSCORE,     ALPHA2_LAYERS)
 
         COMBO(cb_grva,          RHM RHR,     &ac_agrv,           ALPHA2)
-        COMBO(cb_grvac,         RHM RHR,     &ac_agrv_c,         CASE_A2 SHIFT_A2)
+        COMBO(cb_grvac,         RHM RHR,     &ac_agrv_c,         CASE_A2 SFT_A2)
 
         COMBO(cb_o_esc,         RHI RHM,     &mc_o_esc,          MEDIA_LAYERS)
         COMBO(cb_sft_o_esc,     RHM RHR,     &mc_sft_o_esc,      MEDIA_LAYERS)

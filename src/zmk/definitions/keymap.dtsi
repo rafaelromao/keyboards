@@ -156,7 +156,7 @@
    &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y) 
    &kp RS(D)           &mt LSHFT RS(N)     &mt LCTRL RS(S)     &mt LALT RS(T)      &kp RS(W)           &kp RS(Z)           &mt RALT RS(R)      &mt RCTRL RS(A)     &mt RSHFT RS(E)     &kp RS(I) 
    &mc_qu_s            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c RGUI 0  &hlt SMART COMMA    &th_dot 0 0         &kp RS(H) 
-                                           &trans              &th_cancel NAV 0    &th_sp_ns LOW_CP 0  &msl RAI_CP CASE_A2 &th_nsen MEDIA 0    &trans
+                                           &trans              &th_cancel NAV 0    &th_sp_ns LOW_CP 0  &msl RAI_CP SFT_A2  &th_nsen MEDIA 0    &trans
                            >;
                 };
 

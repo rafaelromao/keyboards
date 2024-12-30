@@ -189,7 +189,7 @@
         // ******************** SMART CASES ******************** //
 
         SMART_MACRO(mc_alpha2, &sl ALPHA2)
-        SMART_MACRO(mc_sft_a2, &sl SHIFT_A2)
+        SMART_MACRO(mc_sft_a2, &sl SFT_A2)
         SMART_MORPH(mm_alpha2_shifted2, MOD_LSFT|MOD_RSFT, &mc_sft_a2, &mc_alpha2)
 
         SMART_MACRO(mc_case_a2,    &sl CASE_A2)

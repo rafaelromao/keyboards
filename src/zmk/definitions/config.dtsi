@@ -25,7 +25,7 @@
 #define SEN_EXT 13
 
 #define CCEDIL 14
-#define SHIFT_A2 15
+#define SFT_A2 15
 #define CASE_A2 16
 #define CASE_CCEDIL 17
 
