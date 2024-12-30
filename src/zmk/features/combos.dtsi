@@ -175,7 +175,8 @@
         COMBO(cb_unds,          RBM RBR,     &kp UNDERSCORE,     ALPHA2_LAYERS)
 
         COMBO(cb_grva,          RHM RHR,     &ac_agrv,           ALPHA2)
-        COMBO(cb_grvac,         RHM RHR,     &ac_agrv_c,         CASE_A2 SFT_A2)
+        COMBO(cb_grvas,         RHM RHR,     &ac_agrv_s,         SFT_A2)
+        COMBO(cb_grvac,         RHM RHR,     &ac_agrv_c,         CASE_A2)
 
         COMBO(cb_o_esc,         RHI RHM,     &mc_o_esc,          MEDIA_LAYERS)
         COMBO(cb_sft_o_esc,     RHM RHR,     &mc_sft_o_esc,      MEDIA_LAYERS)
