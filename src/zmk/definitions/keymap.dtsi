@@ -28,8 +28,8 @@
                      bindings = <
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp Y
    &lt SHORTCUTS D     &mt LSHFT N         &mt LCTRL S         &mt LALT T          &kp W               &kp Z               &mt RALT R          &mt RCTRL A         &mt RSHFT E         &lt SHORTCUTS I      
-   &kp Q               &mt LGUI F          &mt LGUI C          &mt LGUI P          &kp V               &kp J               &ht_magic RGUI 0    &hlt SMART COMMA    &th_dot 0 0         &kp Y
-                                           &kp Q               &ht_repeat NAV 0    &ltn LOWER SPACE    &msl_a2 RAISE 0     &ht_shift MEDIA 0   &kp Y
+   &mc_qu              &mt LGUI F          &mt LGUI C          &mt LGUI P          &kp V               &kp J               &ht_magic RGUI 0    &hlt SMART COMMA    &th_dot 0 0         &kp H
+                                           &key_repeat         &ht_repeat NAV 0    &ltn LOWER SPACE    &msl_a2 RAISE 0     &ht_shift MEDIA 0   &key_repeat
                         >;
                 };
 
@@ -56,7 +56,7 @@
                      bindings = <
    &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &kp LS(Y)
    &lt SHORTCUTS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LALT LS(T)      &kp LS(W)           &kp LS(Z)           &mt RALT LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTCUTS LS(I) 
-   &trans              &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c RGUI 0  &hlt SMART COMMA    &th_dot 0 0         &trans
+   &mc_qu_c            &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c RGUI 0  &hlt SMART COMMA    &th_dot 0 0         &trans
                                            &trans              &trans              &msk_unds LOWER 0   &th_case_a2 RAISE 0 &trans              &trans
                            >;
                 };
@@ -92,7 +92,7 @@
                      bindings = <
    &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &kp LS(Y)
    &lt SHORTCUTS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LALT LS(T)      &kp LS(W)           &kp LS(Z)           &mt RALT LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTCUTS LS(I) 
-   &trans              &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c RGUI 0  &hlt SMART COMMA    &th_dot 0 0         &trans
+   &mc_qu_c            &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c RGUI 0  &hlt SMART COMMA    &th_dot 0 0         &kp LS(H)
                                            &trans              &trans              &msk_spc LOWER 0    &th_case_a2 RAISE 0 &mo MEDIA           &trans
                         >;
                 };
@@ -101,7 +101,7 @@
                      bindings = <
    &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &kp LS(Y)
    &lt SHORTCUTS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LALT LS(T)      &kp LS(W)           &kp LS(Z)           &mt RALT LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTCUTS LS(I) 
-   &trans              &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c RGUI 0  &hlt SMART COMMA    &th_dot 0 0         &trans
+   &mc_qu_c            &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c RGUI 0  &hlt SMART COMMA    &th_dot 0 0         &kp LS(H)
                                            &trans              &trans              &trans              &th_case_a2 RAISE 0 &mo MEDIA           &trans
                            >;
                 };
@@ -155,8 +155,8 @@
                      bindings = <
    &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y) 
    &kp RS(D)           &mt LSHFT RS(N)     &mt LCTRL RS(S)     &mt LALT RS(T)      &kp RS(W)           &kp RS(Z)           &mt RALT RS(R)      &mt RCTRL RS(A)     &mt RSHFT RS(E)     &kp RS(I) 
-   &none               &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c RGUI 0  &hlt SMART COMMA    &th_dot 0 0         &none 
-                                           &none               &th_cancel NAV 0    &th_sp_ns LOW_CP 0  &msl RAI_CP CASE_A2 &th_nsen MEDIA 0    &none
+   &mc_qu_s            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c RGUI 0  &hlt SMART COMMA    &th_dot 0 0         &kp RS(H) 
+                                           &trans              &th_cancel NAV 0    &th_sp_ns LOW_CP 0  &msl RAI_CP CASE_A2 &th_nsen MEDIA 0    &trans
                            >;
                 };
 
