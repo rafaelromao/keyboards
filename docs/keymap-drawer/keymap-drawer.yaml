@@ -161,30 +161,30 @@ layers:
     - { t: "Num Lock" }
   shortcuts:
     - [
-        "⎋",
-        { t: $$mdi:folder-open$$, h: files, s: meh 0 },
-        { t: $$mdi:file-find$$, h: preview, s: meh 1 },
-        { h: sel word, t: ⎅ ⓦ },
+        { t: $$mdi:content-cut$$, h: clip, s: meh 9 },
+        { t: $$mdi:folder-open$$, h: files, s: meh 8 },
+        { t: $$mdi:apps$$, h: windows, s: meh 7 },
+        { s: select, h: word, t: ⎅ ⓦ },
         $$mdi:keyboard-return$$,
         "⎋",
       ]
     - [
         { type: held },
-        { t: $$mdi:loupe$$, h: zoom },
-        { t: $$mdi:apps$$, h: swapper },
-        { t: $$mdi:tab-search$$, h: tabs, s: meh 2 },
-        { h: sel line, t: ⎅ ⎯ },
+        { t: $$mdi:magnify-minus-outline$$, h: zoom -, s: meh 6 },
+        { t: $$mdi:magnify-plus-outline$$, h: zoom +, s: meh 5 },
+        { t: $$mdi:tab-search$$, h: tabs, s: meh 4 },
+        { s: select, h: line, t: ⎅ ⎯ },
         $$mdi:arrow-down$$,
         $$mdi:arrow-up$$,
         { type: held alternate },
       ]
     - [
-        { t: $$mdi:console$$, h: term, s: meh 3 },
-        { t: $$mdi:calculator$$, h: calc, s: meh 4 },
-        { t: $$mdi:magnify$$, h: spotlight, s: meh 5 },
-        { h: sel home, t: ⎅ ⇤ },
-        { t: $$mdi:refresh$$, s: refresh, h: close },
-        { t: $$mdi:content-cut$$, h: clip, s: meh 6 },
+        { t: $$mdi:file-find$$, h: preview, s: meh 3 },
+        { t: $$mdi:calculator$$, h: calc, s: meh 2 },
+        { t: $$mdi:magnify$$, h: apps, s: meh 1 },
+        { s: select, h: home, t: ⎅ ⇤ },
+        { t: $$mdi:refresh$$, h: refresh, s: hyper 2 },
+        { t: $$mdi:close$$, h: close, s: hyper 3 },
       ]
     - h: functions
     - { t: $$mdi:keyboard-space$$, h: custom }
@@ -279,10 +279,10 @@ layers:
         { t: $$mdi:arrow-left-circle$$, h: mouse },
         { t: $$mdi:arrow-up-circle$$, h: mouse },
         { t: $$mdi:arrow-right-circle$$, h: mouse },
-        { t: $$mdi:microphone$$, s: meh 8 },
+        { t: $$mdi:microphone$$, s: hyper 4 },
         { t: $$mdi:volume-medium$$ },
         { t: $$mdi:volume-high$$ },
-        { t: $$mdi:camera$$, s: meh 9 },
+        { t: $$mdi:camera$$, s: hyper 0 },
       ]
     - [
         { t: $$mdi:arrow-down-circle-outline$$, h: scroll },
@@ -581,7 +581,7 @@ combos:
 
   - {
       p: [3, 4],
-      k: { t: $$mdi:hand-back-right-outline$$, s: meh 7 },
+      k: { t: $$mdi:hand-back-right-outline$$, s: hyper - },
       a: mid,
       layers: [media],
     }

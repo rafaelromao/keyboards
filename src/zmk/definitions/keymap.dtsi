@@ -204,27 +204,18 @@
                 shortcuts_layer {
                      display-name = "SHORTS";
                      bindings = <
-   &none               &kp ESC             &mc_files           &mc_preview         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &none    
-   &none               &th_zoom RGUI 0     &mc_app_swapper     &th_tabs LGUI 0     &none               &none               &mc_seln            &mm_down_minus      &mm_up_plus         &none
-   &none               &mc_term            &mc_calc            &mc_apps            &none               &none               &mc_selh            &ht_ref_clo_z0 0 0  &mc_clip            &none 
+   &none               &mc_clip            &mc_files           &mc_windows         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &none    
+   &none               &mc_zoom_out        &mc_zoom_in         &mc_tabs            &none               &none               &mc_seln            &kp DOWN            &kp UP              &none
+   &none               &mc_preview         &mc_calc            &mc_apps            &none               &none               &mc_selh            &mc_refresh         &mc_close           &none 
                                            &none               &mo FUN             &lt CUSTOM SPACE    &lt CUSTOM SPACE    &mo NAV             &none 
                            >;
                 };
-                shortcuts_ext_1_layer {
+                shortcuts_ext_layer {
                      display-name = "SHORTS";
                      bindings = <
    &trans              &trans              &trans              &trans              &trans              &trans              &mc_ext_sel         &trans              &trans              &trans    
    &trans              &trans              &trans              &trans              &trans              &trans              &th_ext_sel LALT 0  &trans              &trans              &trans  
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
-                                           &trans              &trans              &trans              &trans              &trans              &trans
-                           >;
-                };
-                shortcuts_ext_2_layer {
-                     display-name = "SHORTS";
-                     bindings = <
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &mc_win_b           &mc_win_f           &trans  
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &mc_app_quit        &trans              &trans 
                                            &trans              &trans              &trans              &trans              &trans              &trans
                            >;
                 };
