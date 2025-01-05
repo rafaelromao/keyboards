@@ -1,0 +1,79 @@
+/*
+*
+* Copyright (c) 2022 Rafael Romão
+* SPDX-License-Identifier: MIT
+*
+*/
+
+/ {
+    select {
+        
+        // Select Home
+
+        select_home: select_home {
+			compatible = "zmk,behavior-macro";
+            label = "select_home";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_tap &kp LS(HOME)>;
+        };
+
+        // Select Word
+
+        mc_sel1w: mc_sel1w {
+			compatible = "zmk,behavior-macro";
+            label = "mc_sel1w";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_tap &kp LA(RIGHT) &kp LA(LS(LEFT))>;
+        };
+        mc_selpw: mc_selpw {
+			compatible = "zmk,behavior-macro";
+            label = "mc_selpw";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_tap &kp LA(LS(LEFT))>;
+        };
+        select_word: select_word {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "select_word";
+            #binding-cells = <0>;
+            max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
+            defaults = <&mc_sel1w>;
+            antecedents = <LA(LS(LEFT))>;
+            bindings = <&mc_selpw>;
+        };
+
+        //Select Line
+
+        mc_sel1ln: mc_sel1ln {
+			compatible = "zmk,behavior-macro";
+            label = "mc_sel1ln";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_tap &kp HOME &kp HOME &kp LS(END)>;
+        };
+        mc_selnln: mc_selnln {
+			compatible = "zmk,behavior-macro";
+            label = "mc_selnln";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_tap &kp LS(DOWN) &kp LS(END)>;
+        };
+        select_line: select_line {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "select_line";
+            #binding-cells = <0>;
+            max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
+            defaults = <&mc_sel1ln>;
+            antecedents = <LS(END)>;
+            bindings = <&mc_selnln>;
+        };
+
+   };
+};

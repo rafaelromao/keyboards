@@ -14,6 +14,7 @@
 #include "../features/magic.dtsi"
 #include "../features/symbols.dtsi"
 #include "../features/shortcuts.dtsi"
+#include "../features/select.dtsi"
 #include "../features/combos.dtsi"
 #include "../features/leader.dtsi"
 #if __has_include("../secret.dtsi")
@@ -204,21 +205,14 @@
                 shortcuts_layer {
                      display-name = "SHORTS";
                      bindings = <
-   &none               &mc_clip            &mc_files           &mc_windows         &none               &none               &mc_selw            &kp ENTER           &kp ESC             &none    
-   &none               &mc_zoom_out        &mc_zoom_in         &mc_tabs            &none               &none               &mc_seln            &kp DOWN            &kp UP              &none
-   &none               &mc_preview         &mc_calc            &mc_apps            &none               &none               &mc_selh            &mc_refresh         &mc_close           &none 
+   &none               &mc_clip            &mc_files           &mc_windows         &none               &none               &select_word        &kp ENTER           &kp ESC             &none    
+   &none               &mc_zoom_out        &mc_zoom_in         &mc_tabs            &none               &none               &select_line        &kp DOWN            &kp UP              &none
+   &none               &mc_preview         &mc_calc            &mc_apps            &none               &none               &select_home        &mc_refresh         &mc_close           &none 
                                            &none               &mo FUN             &lt CUSTOM SPACE    &lt CUSTOM SPACE    &mo NAV             &none 
                            >;
                 };
-                shortcuts_ext_layer {
-                     display-name = "SHORTS";
-                     bindings = <
-   &trans              &trans              &trans              &trans              &trans              &trans              &mc_ext_sel         &trans              &trans              &trans    
-   &trans              &trans              &trans              &trans              &trans              &trans              &th_ext_sel LALT 0  &trans              &trans              &trans  
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
-                                           &trans              &trans              &trans              &trans              &trans              &trans
-                           >;
-                };
+
+
                 custom_layer {
                      display-name = "CUSTOM";
                      bindings = <
@@ -228,6 +222,7 @@
                                            &none               &th_plain1 NAV 0    &hsk LGUI LGUI      &hsk RGUI RGUI      &th_plain1 NAV 0    &none 
                            >;
                 };
+
 
 
                 plain1_layer {

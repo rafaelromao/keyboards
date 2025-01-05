@@ -30,25 +30,24 @@
 #define CASE_CCEDIL 17
 
 #define SHORTCUTS 18
-#define SHORTS_EXT 19
 
-#define CUSTOM 20
+#define CUSTOM 19
 
-#define PLAIN1 21
-#define PLAIN2 22
-#define SFT_PLAIN2 23
+#define PLAIN1 20
+#define PLAIN2 21
+#define SFT_PLAIN2 22
 
-#define NAV 24
+#define NAV 23
 
-#define LOW_CP 25
-#define RAI_CP 26
+#define LOW_CP 24
+#define RAI_CP 25
 
-#define MEDIA 27
+#define MEDIA 26
 
-#define FUN 28
-#define SMART 29
+#define FUN 27
+#define SMART 28
 
-#define NAV_F 30
+#define NAV_F 29
 
 
 #define COMBO_TERM 30

@@ -144,26 +144,6 @@
 
         // Macros
 
-        SHORTCUT(mc_selh,                   &macro_tap &kp LS(HOME))
-        
-        SHORTCUT(mc_selw,                   &macro_tap &kp LA(LEFT) &kp LA(RIGHT) \
-                                            &macro_press &kp LA(LS(LEFT)) \
-                                            &macro_pause_for_release \
-                                            &macro_release &kp LA(LS(LEFT)) \
-                                            &macro_tap &sl SHORTS_EXT)
-        
-        SHORTCUT(mc_seln,                   &macro_tap &kp HOME &kp HOME \
-                                            &macro_press &kp LS(DOWN) \
-                                            &macro_pause_for_release \
-                                            &macro_release &kp LS(DOWN) \
-                                            &macro_tap &sl SHORTS_EXT)
-        
-        SHORTCUT(mc_ext_sel,                &macro_press &key_repeat \
-                                            &macro_pause_for_release \
-                                            &macro_release &key_repeat \
-                                            &macro_tap &sl SHORTS_EXT)
-        MODTAP_SHORTCUT(th_ext_sel,         &mc_ext_sel)
-
         SHORTCUT(mc_lock,                   &macro_tap &kp LC(LG(Q)))
 
         SHORTCUT(mc_dqt0p,                  &macro_tap &kp DQT &kp N0 &kp P)
