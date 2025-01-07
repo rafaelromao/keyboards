@@ -490,6 +490,7 @@ combos:
       layers: [alpha1, shifted1],
     }
 
+  - { p: [7, 8], k: { t: $$mdi:loupe$$, s: reset, h: zoom }, a: mid, w: 48, layers: [shortcuts] }
   - { p: [1, 2], k: "plain1", a: mid, w: 48, layers: [shortcuts] }
   - { p: [8, 9], k: "media", a: mid, w: 48, layers: [shortcuts] }
   - { p: [15, 16], k: "functions", a: mid, w: 48, layers: [shortcuts] }
@@ -585,6 +586,8 @@ combos:
       a: mid,
       layers: [media],
     }
+
+  - { p: [10, 11, 12], k: { t: '"0p', s: vim }, a: bottom, layers: [media] }
   - { p: [10, 11, 12], k: { t: '"0p', s: vim }, a: bottom, layers: [media] }
   - { p: [10, 11], k: { t: "⎋o", s: vim }, a: mid, layers: [media] }
   - { p: [11, 12], k: { t: "⎋O", s: vim }, a: mid, layers: [media] }
