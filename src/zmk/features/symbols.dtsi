@@ -220,12 +220,10 @@
         SYMBOL(mc_caret,           &kp CARET &kp SPACE)
         TAPHOLD_SYMBOL(th_caret_z, &mc_caret, &mc_zero)
 
-        SYMBOL(mc_q,               &kp Q)
-        SYMBOL(mc_at,              &kp AT)
-        TAPHOLD_SYMBOL(th_at_q,    &mc_at, &mc_q)
-        
-        SYMBOL(mc_dds,             &kp DOT &kp DOT &kp SLASH)
         SYMBOL(mc_tisl,            &kp TILDE &kp SPACE &kp SLASH)
+        SYMBOL(mc_dds,             &kp DOT &kp DOT &kp SLASH)
+        SYMBOL(mc_ds,              &kp DOT &kp SLASH)
+        SYMBOL(mc_spc_esc,         &kp J &kp SPACE &kp ESC)
 
         SYMBOL(mc_up_end_del,      &kp UP &kp END &kp DEL)
         SYMBOL(mc_down_home,       &kp DOWN &kp HOME)

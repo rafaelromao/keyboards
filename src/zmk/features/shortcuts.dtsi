@@ -99,12 +99,14 @@
         SHORTCUT(mc_preview,                &macro_tap &kp LC(LA(LS(N3))))
         SHORTCUT(mc_calc,                   &macro_tap &kp LC(LA(LS(N2))))
         SHORTCUT(mc_apps,                   &macro_tap &kp LC(LA(LS(N1))))
+        SHORTCUT(mc_reset_zoom,             &macro_tap &kp LC(LA(LS(N0))))
 
-        SHORTCUT(mc_mic,                    &macro_tap &kp LG(LC(LA(LS(N4)))))
         SHORTCUT(mc_cam,                    &macro_tap &kp LG(LC(LA(LS(N0)))))
-        SHORTCUT(mc_raise,                  &macro_tap &kp LG(LC(LA(LS(MINUS)))))
+        SHORTCUT(mc_reopen,                 &macro_tap &kp LG(LC(LA(LS(N1)))))
         SHORTCUT(mc_refresh,                &macro_tap &kp LG(LC(LA(LS(N2)))))
         SHORTCUT(mc_close,                  &macro_tap &kp LG(LC(LA(LS(N3)))))
+        SHORTCUT(mc_mic,                    &macro_tap &kp LG(LC(LA(LS(N4)))))
+        SHORTCUT(mc_hand,                   &macro_tap &kp LG(LC(LA(LS(N7)))))
 
         SHORTCUT(mc_meh_b,                  &macro_tap &kp LC(LA(LS(B))))
         SHORTCUT(mc_meh_m,                  &macro_tap &kp LC(LA(LS(M))))

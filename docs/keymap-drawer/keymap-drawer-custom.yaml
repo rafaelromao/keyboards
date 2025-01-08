@@ -9,9 +9,9 @@ layers:
        {s: step, h: over, t: $$mdi:debug-step-over$$},
        {s: step, h: into, t: $$mdi:debug-step-into$$}]
     - [type: held,
-       {s: recent, h: files, t: $$mdi:history$$},
        {h: run, t: $$mdi:play$$},
        {h: debug, t: $$mdi:bug-play$$},
+       {s: recent, h: files, t: $$mdi:history$$},
        {s: type, h: match, t: $$mdi:code-block-braces$$},
        {s: complete, h: statement, t: "()"},
        {s: format, h: code, t: $$mdi:format-indent-increase$$},
@@ -34,9 +34,9 @@ layers:
        {s: go to, h: symbol, t: $$mdi:text-box-search-outline$$},
        {s: find, h: action, t: $$mdi:feature-search-outline$$}]
     - [type: held,
-       {s: switch, h: scheme, t: $$mdi:view-compact$$},
        {s: stop, t: $$mdi:stop$$},
        {s: resume, t: $$mdi:play-pause$$},
+       {s: switch, h: scheme, t: $$mdi:view-compact$$},
        {s: code, h: complete, t: $$mdi:code-block-parentheses$$},
        {s: refactor, h: this, t: $$mdi:file-code-outline$$},
        {s: analyze, h: code, t: $$mdi:sine-wave$$},
@@ -102,8 +102,8 @@ layers:
     - type: held
     - {h: nav, t: plain1, s: sticky}
 combos:
-  - { p: [7, 8, 9], k: {s: actions, h: $$mdi:flash-alert$$}, a: top, w: 36, slide: -0.5, layers: [coding-meh] }
-  - { p: [14, 15, 16], k: {s: chat, h: $$mdi:code-json$$}, a: bottom, w: 36, slide: -0.5, layers: [coding-meh] }
+  - { p: [7, 8, 9], k: {h: actions, t: $$mdi:flash-alert$$}, a: top, w: 36, slide: -0.5, layers: [coding-meh] }
+  - { p: [14, 15, 16], k: {h: chat, t: $$mdi:code-json$$}, a: bottom, w: 36, slide: -0.5, layers: [coding-meh] }
   - { p: [11, 12], k: orbit, a: mid, w: 40, layers: [fusion360-meh] }
   - { p: [18, 19], k: { t: lower, s: auto-layer}, a: mid, w: 40, layers: [fusion360-meh] }
   - { p: [4, 5], k: esc, a: mid, w: 40, layers: [fusion360-meh] }
