@@ -223,7 +223,7 @@
         SYMBOL(mc_tisl,            &kp TILDE &kp SPACE &kp SLASH)
         SYMBOL(mc_dds,             &kp DOT &kp DOT &kp SLASH)
         SYMBOL(mc_ds,              &kp DOT &kp SLASH)
-        SYMBOL(mc_spc_esc,         &kp J &kp SPACE &kp ESC)
+        SYMBOL(mc_spc_esc,         &kp J &macro_press &kp SPACE &macro_pause_for_release &macro_release &kp SPACE &macro_tap &kp ESC)
 
         SYMBOL(mc_up_end_del,      &kp UP &kp END &kp DEL)
         SYMBOL(mc_down_home,       &kp DOWN &kp HOME)
