@@ -293,7 +293,7 @@ layers:
         { t: $$mdi:skip-forward$$ },
       ]
     - h: nav
-    - { t: "i␣⎋", s: vim }
+    - { t: $$mdi:keyboard-space$$, h: normal, s: vim }
     - { t: $$mdi:flash$$, h: "boot" }
     - { t: ▽, type: held }
   functions:
