@@ -293,7 +293,7 @@ layers:
         { t: $$mdi:skip-forward$$ },
       ]
     - h: nav
-    - { t: "i␣⎋" }
+    - { t: "i␣⎋", s: vim }
     - { t: $$mdi:flash$$, h: "boot" }
     - { t: ▽, type: held }
   functions:
@@ -386,6 +386,8 @@ combos:
           alpha2,
           shifted1,
           shifted2,
+          plain1,
+          plain2,
           ç-extension,
           nav,
           media,
@@ -581,17 +583,11 @@ combos:
   - { p: [17, 18], k: "↓ ⇤", a: mid, layers: [nav] }
   - { p: [18, 19], k: "↓ ⇥", a: mid, layers: [nav] }
 
-  - {
-      p: [3, 4],
-      k: { t: $$mdi:hand-back-right-outline$$, s: hyper - },
-      a: mid,
-      layers: [media],
-    }
-
   - { p: [3, 4], k: { t: 'q', s: vim }, a: mid, layers: [media] }
   - { p: [4, 5], k: { t: '@', s: vim }, a: mid, layers: [media] }
   - { p: [10, 11], k: { t: "⎋o", s: vim }, a: mid, layers: [media] }
   - { p: [11, 12], k: { t: "⎋O", s: vim }, a: mid, layers: [media] }
+  - { p: [10, 11, 12], k: { t: '"0p', s: vim }, a: bottom, layers: [media] }
   - { p: [17, 18, 19], k: { t: "v", s: vim }, a: bottom, layers: [media] }
   - { p: [17, 18], k: { t: "⌃v", s: vim }, a: mid, layers: [media] }
   - { p: [18, 19], k: { t: "V", s: vim }, a: mid, layers: [media] }
