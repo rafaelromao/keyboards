@@ -6,6 +6,8 @@
 
 // clang-format off
 
+#define CARET_TERM    0x070100
+
 #define QU_TERM       0x070101
 #define AACU_TERM     0x070102
 #define EACU_TERM     0x070103
@@ -50,4 +52,3 @@
 #define CCED_TERM     ACIR_TERM     // Reuse codes that does not conflict
 #define C_CCED_TERM   C_ACIR_TERM
 #define S_CCED_TERM   S_ACIR_TERM
-
