@@ -31,6 +31,7 @@
                             LS(Y)        RS(Y)        S_QU_TERM    S_AGRV_TERM   X              RS(J)        S_CCED_TERM    S_AACU_TERM    S_EACU_TERM    S_OACU_TERM \
                             OCIR_TERM    C_OCIR_TERM  S_OCIR_TERM  ATIL_TERM     C_ATIL_TERM    S_ATIL_TERM  OTIL_TERM      C_OTIL_TERM    S_OTIL_TERM    ECIR_TERM   \
                             C_ECIR_TERM  S_ECIR_TERM  UACU_TERM    C_UACU_TERM   S_UACU_TERM    IACU_TERM    C_IACU_TERM    S_IACU_TERM    LS(X)          RS(X)       \
+                            CARET_TERM   \
                            >;                                                                                      
             bindings =    <                                                                                        
                             &tc_h        &mc_sqo      &ac_ecir     &mc_qu        &kp V          &ac_aacu     &sl ALPHA2     &kp X          &kp X          &kp X       \
@@ -38,6 +39,7 @@
                             &kp LS(D)    &kp D        &ac_ecir     &mc_qu        &kp Y          &ac_aacu     &sl ALPHA2     &kp X          &kp X          &kp X       \
                             &kp L        &kp LS(L)    &kp RS(L)    &kp O         &kp LS(O)      &kp RS(O)    &kp E          &kp LS(E)      &kp RS(E)      &kp DOT     \
                             &kp DOT      &kp DOT      &kp V        &kp LS(V)     &kp RS(V)      &kp V        &kp LS(V)      &kp RS(V)      &kp LS(Y)      &kp RS(Y)   \
+                            &mc_caret    \
                            >;
         };
 

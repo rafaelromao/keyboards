@@ -256,7 +256,7 @@
             compatible = "zmk,behavior-antecedent-morph";
             label = "vim_home";
             #binding-cells = <0>;
-            max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
+            max-delay-ms = <600>;
             defaults = <&mc_caret>;
             antecedents = <CARET_TERM>;
             bindings = <&mc_zero>;
