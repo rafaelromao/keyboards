@@ -96,19 +96,19 @@
         LAYERTAP_SYMBOL(th_n0,     &mc_n0)
 
         SYMBOL(mc_sqo,             &kp SQT &kp SPACE &kp SQUO_TERM)
-        SYMBOL(mc_end_sqo,         &kp END &kp SQT &kp SPACE &kp SQUO_TERM)
+        SYMBOL(mc_end_sqo,         &kp END &mc_sqo)
         TAPHOLD_SYMBOL(th_sqo,     &mc_sqo, &mc_end_sqo)
 
         SYMBOL(mc_sqo_c,           &kp SQT &kp SPACE &kp C_SQUO_TERM)
-        SYMBOL(mc_end_sqo_c,       &kp END &kp SQT &kp SPACE &kp C_SQUO_TERM)
+        SYMBOL(mc_end_sqo_c,       &kp END &mc_sqo_c)
         TAPHOLD_SYMBOL(th_sqo_c,   &mc_sqo_c, &mc_end_sqo_c)
 
         SYMBOL(mc_dqo,             &kp DQT &kp SPACE)
-        SYMBOL(mc_end_dqo,         &kp END &kp DQT)
+        SYMBOL(mc_end_dqo,         &kp END &mc_dqo)
         TAPHOLD_SYMBOL(th_dqo,     &mc_dqo, &mc_end_dqo)
 
         SYMBOL(mc_bti,             &kp GRAVE &kp SPACE)
-        SYMBOL(mc_end_bti,         &kp END &kp GRAVE)
+        SYMBOL(mc_end_bti,         &kp END &mc_bti)
         TAPHOLD_SYMBOL(th_bti,     &mc_bti, &mc_end_bti)
 
         SYMBOL(mc_tilde,           &kp TILDE &kp SPACE)
