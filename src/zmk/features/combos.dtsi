@@ -26,7 +26,7 @@
     #define MEDIA_LAYERS                MEDIA
     #define NAV_LAYERS                  NAV NAV_F  
     #define ALL_LAYERS                  ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS SMARTCASE_LAYERS LOWER_LAYERS SHORTCUT_LAYERS MEDIA_LAYERS NAV_LAYERS RAISE_LAYERS SMART 
-    #define ALL_LAYERS_WITH_BACKSPACE   ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS SMARTCASE_LAYERS LOWER_LAYERS SHORTCUT_LAYERS              NAV_LAYERS RAISE_LAYERS        
+    #define ALL_LAYERS_WITH_BACKSPACE   ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS SMARTCASE_LAYERS LOWER_LAYERS                              NAV_LAYERS RAISE_LAYERS        
     #define ALL_LAYERS_WITH_ESC         ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS SMARTCASE_LAYERS              SHORTCUT_LAYERS MEDIA_LAYERS NAV_LAYERS                     
     #define FIXABLE_LAYERS              CPLK_A1 CASE_A1 SMARTCASE_LAYERS PLAIN1 LOWER_LAYERS MEDIA_LAYERS NAV_LAYERS CUSTOM FUN
 
@@ -102,6 +102,7 @@
         COMBO(cb_pc,            RHI RHM RHR, &kp LS(P),          CASE_A1 SEN_EXT CPLK_A1)
 
         COMBO(cb_reset_zoom,    LHR LHM,     &mc_reset_zoom,     SHORTCUTS)
+        COMBO(cb_pomodoro,      LBR LBM,     &mc_pomodoro,       SHORTCUTS)
         COMBO(cb_tog_nomods,    LTM LTI,     &to PLAIN1,         SHORTCUTS)
         COMBO(cb_tog_media,     LHM LHI,     &to MEDIA,          SHORTCUTS)
         COMBO(cb_tog_functions, LBM LBI,     &to FUN,            SHORTCUTS)
@@ -109,6 +110,8 @@
         COMBO(cb_tog_nav,       RHM RHI,     &to NAV_F,          SHORTCUTS)
         COMBO(cb_tog_software,  RBM RBI,     &to CUSTOM,         SHORTCUTS)
         COMBO(cb_reopen,        RBM RBR,     &mc_reopen,         SHORTCUTS)
+        COMBO(cb_shortcat,      RHM RHR,     &mc_shortcat,       SHORTCUTS)
+        COMBO(cb_del_word,      RTM RTR,     &mc_del_word,       SHORTCUTS)
 
         COMBO(cb_meh_k,         LTI LTM,     &mc_meh_k,          CUSTOM)
         COMBO(cb_meh_w,         LHI LHM,     &mc_meh_w,          CUSTOM)
@@ -129,9 +132,12 @@
         COMBO(cb_pipev,         RBI RBM,     &kp PIPE,           LOWER_LAYERS)
         COMBO(cb_kv,            RHM RHR,     &kp E,              LOWER_LAYERS)
 
+        COMBO(cb_emoji,         LTI LTR LTM, &mc_emoji,          LOWER_LAYERS)
         COMBO(cb_braces_new,    LTR LTM,     &mc_braces_new,     LOWER_LAYERS)
         COMBO(cb_pars,          LHR LHM,     &th_pars 0 0,       LOWER_LAYERS)
+        COMBO(cb_ord_o,         LHI LHR LHM, &mc_ord_o,          LOWER_LAYERS)
         COMBO(cb_brackets,      LBR LBM,     &th_brackets NAV 0, LOWER_LAYERS)
+        COMBO(cb_ord_a,         LBI LBR LBM, &mc_ord_a,          LOWER_LAYERS)
         COMBO(cb_colon_colon,   LTM LTI,     &th_dcolon 0 0,     LOWER_LAYERS)
         COMBO(cb_and,           LHI LHM,     &th_and 0 0,        LOWER_LAYERS)
         COMBO(cb_or,            LBI LBM,     &th_or 0 0,         LOWER_LAYERS)

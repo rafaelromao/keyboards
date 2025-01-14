@@ -37,15 +37,11 @@
 
 	macros {
         LEADER_MACRO(mc_section, &kp LA(N6))
-        LEADER_MACRO(mc_orda,    &kp LA(N0))
-        LEADER_MACRO(mc_ordo,    &kp LA(N9))
 	};
 
 	leader_sequences {
 		compatible = "zmk,leader-sequences";
 
 		LEADER_SEQ(ld_sect, RBR LHM , &mc_section, ALPHA1 SMART FUN)
-		LEADER_SEQ(ld_orda, RBR RTM , &mc_orda, ALPHA1 SMART FUN)
-		LEADER_SEQ(ld_ordo, RBR RHM , &mc_ordo, ALPHA1 SMART FUN)
 	};
 };

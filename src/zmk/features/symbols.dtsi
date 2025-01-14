@@ -220,13 +220,10 @@
         SYMBOL(mc_dds,             &kp DOT &kp DOT &kp SLASH)
         SYMBOL(mc_ds,              &kp DOT &kp SLASH)
         SYMBOL(mc_spc_esc,         &kp J &macro_press &kp SPACE &macro_pause_for_release &macro_release &kp SPACE &macro_tap &kp ESC)
+        SYMBOL(mc_dqt0p,           &kp DQT &kp N0 &kp P)
 
-        SYMBOL(mc_up_end_del,      &kp UP &kp END &kp DEL)
-        SYMBOL(mc_down_home,       &kp DOWN &kp HOME)
-        SYMBOL(mc_down_end,        &kp DOWN &kp END)
-        SYMBOL(mc_word_start,      &kp LA(LEFT))
-        SYMBOL(mc_word_next,       &kp LA(RIGHT) &kp LEFT)
-        SYMBOL(mc_word_end,        &kp LA(RIGHT) &kp LA(RIGHT) &kp LA(LEFT))
+        SYMBOL(mc_ord_o,           &kp LA(N0))
+        SYMBOL(mc_ord_a,           &kp LA(N9))
 
         // SMARTCASES
 
