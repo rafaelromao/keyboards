@@ -131,10 +131,6 @@
         MODTAP_SHORTCUT(th_meh_p,           &mc_meh_p)
         SHORTCUT(mc_meh_h,                  &macro_tap &kp LC(LA(LS(H))))
         MODTAP_SHORTCUT(th_meh_h,           &mc_meh_h)
-        SHORTCUT(mc_meh_comma,              &macro_tap &kp LC(LA(LS(COMMA))))
-        MODTAP_SHORTCUT(th_meh_comm,        &mc_meh_comma)
-        SHORTCUT(mc_meh_dot,                &macro_tap &kp LC(LA(LS(DOT))))
-        MODTAP_SHORTCUT(th_meh_dot,         &mc_meh_dot)
         SHORTCUT(mc_meh_w,                  &macro_tap &kp LC(LA(LS(W))))
         SHORTCUT(mc_meh_v,                  &macro_tap &kp LC(LA(LS(V))))
         SHORTCUT(mc_meh_z,                  &macro_tap &kp LC(LA(LS(Z))))
@@ -145,6 +141,7 @@
         SHORTCUT(mc_meh_y,                  &macro_tap &kp LC(LA(LS(Y))))
         SHORTCUT(mc_meh_d,                  &macro_tap &kp LC(LA(LS(D))))
         SHORTCUT(mc_meh_i,                  &macro_tap &kp LC(LA(LS(I))))
+
         LAYERTAP_SHORTCUT(th_plain1,        &tc_smart_plain1)
 
         // Macros
@@ -172,5 +169,12 @@
         SHORTCUT(mc_word_end,               &macro_tap &kp LA(RIGHT) &kp LA(RIGHT) &kp LA(LEFT))
         SHORTCUT(mc_del_word,               &macro_press &kp LA(BACKSPACE) &macro_pause_for_release &macro_release &kp LA(BACKSPACE))
 
+        SHORTCUT(mc_meh_comma,              &macro_tap &kp LC(LA(LS(LBKT))))
+        MODTAP_SHORTCUT(th_meh_comm,        &mc_meh_comma)
+        SHORTCUT(mc_meh_dot,                &macro_tap &kp LC(LA(LS(RBKT))))
+        MODTAP_SHORTCUT(th_meh_dot,         &mc_meh_dot)
+
+        MORPHED_SHORTCUT_KM(mm_comma_meh,   &mc_comma, &mc_meh_comma, LSHFT|LCTRL|LALT)
+        MORPHED_SHORTCUT_KM(mm_dot_meh,     &mc_dot, &mc_meh_dot, LSHFT|LCTRL|LALT)
    };
 };

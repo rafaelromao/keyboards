@@ -207,8 +207,8 @@ layers:
       { t: meh c, h: $$mdi:apple-keyboard-command$$}, 
       { t: meh p, h: $$mdi:apple-keyboard-command$$}, 
       { t: meh h, h: $$mdi:apple-keyboard-command$$},
-      { t: "meh ,", h: $$mdi:apple-keyboard-command$$},
-      { t: "meh .", h: $$mdi:apple-keyboard-command$$}]
+      { t: "meh [", h: $$mdi:apple-keyboard-command$$},
+      { t: "meh ]", h: $$mdi:apple-keyboard-command$$}]
     - { t: plain1, s: "auto-layer", h: nav }
     - { t: $$mdi:apple-keyboard-command$$, s: sticky, h: $$mdi:apple-keyboard-command$$ , type: held }
     - { t: $$mdi:apple-keyboard-command$$, s: sticky, h: $$mdi:apple-keyboard-command$$ , type: held alternate }
