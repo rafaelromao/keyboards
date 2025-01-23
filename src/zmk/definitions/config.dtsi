@@ -30,8 +30,7 @@
 #define CASE_CCEDIL 17
 
 #define SHORTCUTS 18
-
-#define CUSTOM 19
+#define MEHS 19
 
 #define PLAIN1 20
 #define PLAIN2 21

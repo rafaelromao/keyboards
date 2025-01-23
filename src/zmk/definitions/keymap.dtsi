@@ -125,7 +125,7 @@
                      display-name = "LOWER";
                      bindings = <
    &none               &th_lbrc 0 0        &th_rbrc 0 0        &kp BSLH            &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
-   &th_deg CUSTOM 0    &th_lpar 0 0        &th_rpar 0 0        &kp AMPS            &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
+   &th_deg FUN 0       &th_lpar 0 0        &th_rpar 0 0        &kp AMPS            &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
    &none               &th_lbkt 0 0        &th_rbkt 0 0        &kp PIPE            &none               &none               &mc_n1              &mc_n2              &mc_n3              &none 
                                            &none               &trans              &trans              &hlt RAISE SPACE    &th_n0 MEDIA 0      &none 
                            >;
@@ -134,7 +134,7 @@
                      display-name = "RAISE";
                      bindings = <
    &none               &mc_tilde           &kp HASH            &th_sqo 0 0         &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
-   &kp AT              &th_caret_z 0 0     &kp DOLLAR          &th_dqo 0 0         &none               &none               &th_qmark 0 0       &kp MINUS           &kp PLUS            &lt CUSTOM COMMA
+   &kp AT              &th_caret_z 0 0     &kp DOLLAR          &th_dqo 0 0         &none               &none               &th_qmark 0 0       &kp MINUS           &kp PLUS            &lt FUN COMMA
    &none               &mc_lt              &mc_gt              &th_bti 0 0         &none               &none               &th_excl 0 0        &kp SLASH           &kp STAR            &none 
                                            &none               &key_repeat         &hlt LOW_CP SPACE   &none               &kp LNLCK           &none        
                            >;
@@ -208,13 +208,13 @@
    &none               &mc_clip            &mc_files           &mc_windows         &none               &none               &select_word        &kp ENTER           &kp ESC             &none    
    &none               &mc_zoom_out        &mc_zoom_in         &mc_tabs            &none               &none               &select_line        &kp DOWN            &kp UP              &none
    &none               &mc_preview         &mc_calc            &mc_apps            &none               &none               &select_home        &mc_refresh         &mc_close           &none 
-                                           &none               &mo NAV             &lt CUSTOM SPACE    &lt CUSTOM SPACE    &mo NAV             &none 
+                                           &none               &mo NAV             &lt FUN SPACE       &lt FUN SPACE       &mo NAV             &none 
                            >;
                 };
 
 
-                custom_layer {
-                     display-name = "CUSTOM";
+                mehs_layer {
+                     display-name = "MEHS";
                      bindings = <
    &none               &mc_meh_b           &mc_meh_m           &mc_meh_g           &none               &none               &mc_meh_l           &mc_meh_o           &mc_meh_u           &none    
    &mc_meh_d           &mc_meh_n           &mc_meh_s           &mc_meh_t           &none               &none               &mc_meh_r           &mc_meh_a           &mc_meh_e           &mc_meh_i
@@ -258,7 +258,7 @@
                      display-name = "NAV";
                      bindings = <
    &none               &mc_word_start      &mc_word_end        &mc_word_next       &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
-   &msl FUN FUN        &kp LSHFT           &kp LCTRL           &kp LALT            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &kp INS             &kp LSHFT           &kp LCTRL           &kp LALT            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
    &none               &kp LGUI            &kp LGUI            &kp LGUI            &none               &none               &kp DEL             &kp HOME            &kp END             &none 
                                            &none               &trans              &bootloader         &kp SPACE           &mo MEDIA           &none 
                         >;

@@ -13,12 +13,12 @@
 - These macros are also OS aware and works the same way on Windows, Linux and MacOS.
 - The implementation was based on [Pascal's](https://github.com/getreuer/qmk-keymap) implementation, but it does not work the same way.
 
-## Custom
+## Mehs
 
-The custom layer is dedicated to trigger custom shortcuts for specific apps using the Meh (Shift+Ctrl+Alt) and Hyper (Shift+Ctrl+Alt+Gui).
+The Mehs layer is dedicated to trigger custom shortcuts for specific apps using the Meh (Shift+Ctrl+Alt) and Hyper (Shift+Ctrl+Alt+Gui).
 These custom shortcuts could be mapped to actions in softwares like VSCode, IntelliJ or Fusion-360, or intercepted by proxies like BetterTouchTool or Keyboard Maestro to trigger the shortcut sequences expected by this apps.
 This layer can be fixed or momentarily activated using a single hand, either of them, which makes it an easy way to extend and customize this keymap without the need for new layers or a new version of the firmware. 
 
 The custom layer will be mapped for VSCode/IntelliJ and Fusion 360 as follows:
 
-![img](../img/custom.png)
+![img](../img/mehs.png)
