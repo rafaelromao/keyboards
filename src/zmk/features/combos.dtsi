@@ -135,13 +135,16 @@
         COMBO(cb_emoji,         LTI LTR LTM, &mc_emoji,          LOWER_LAYERS)
         COMBO(cb_braces_new,    LTR LTM,     &mc_braces_new,     LOWER_LAYERS)
         COMBO(cb_pars,          LHR LHM,     &th_pars 0 0,       LOWER_LAYERS)
-        COMBO(cb_ord_o,         LHI LHR LHM, &mc_ord_o,          LOWER_LAYERS)
         COMBO(cb_brackets,      LBR LBM,     &th_brackets NAV 0, LOWER_LAYERS)
-        COMBO(cb_ord_a,         LBI LBR LBM, &mc_ord_a,          LOWER_LAYERS)
         COMBO(cb_colon_colon,   LTM LTI,     &th_dcolon 0 0,     LOWER_LAYERS)
         COMBO(cb_and,           LHI LHM,     &th_and 0 0,        LOWER_LAYERS)
         COMBO(cb_or,            LBI LBM,     &th_or 0 0,         LOWER_LAYERS)
         COMBO(cb_par_semi,      RHR RHM RHI, &mc_pars_semi_ent,  LOWER_LAYERS)
+
+        COMBO(cd_meh_l,         LHR LHM LHI, &th_ord_o 0 0,      LOWER_LAYERS)
+        COMBO(cd_hyper_n,       LBR LBM LBI, &th_ord_a 0 0,      LOWER_LAYERS)
+
+        COMBO(cd_hyper_f,       LBR LBM LBI, &mc_hyper,          FUN)
 
         COMBO(cb_dhash,         LTR LTM,     &mc_dhash,          RAISE_LAYERS)
         COMBO(cb_sarrow,        LHR LHM,     &mc_sarrow,         RAISE_LAYERS)

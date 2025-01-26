@@ -161,30 +161,30 @@ layers:
     - { t: "Num Lock" }
   shortcuts:
     - [
-        { t: $$mdi:content-cut$$, h: clip, s: meh 9 },
-        { t: $$mdi:folder-open$$, h: files, s: meh 8 },
-        { t: $$mdi:apps$$, h: windows, s: meh 7 },
+        { t: $$mdi:content-cut$$, h: clip, s: "meh 9" },
+        { t: $$mdi:folder-open$$, h: files, s: "meh 8" },
+        { t: $$mdi:apps$$, h: windows, s: "meh 7" },
         { s: select, h: word, t: ⎅ ⓦ },
         $$mdi:keyboard-return$$,
         "⎋",
       ]
     - [
         { type: held },
-        { t: $$mdi:magnify-minus-outline$$, h: zoom -, s: meh 6 },
-        { t: $$mdi:magnify-plus-outline$$, h: zoom +, s: meh 5 },
-        { t: $$mdi:tab-search$$, h: tabs, s: meh 4 },
+        { t: $$mdi:magnify-minus-outline$$, h: zoom -, s: "meh 6" },
+        { t: $$mdi:magnify-plus-outline$$, h: zoom +, s: "meh 5" },
+        { t: $$mdi:tab-search$$, h: tabs, s: "meh 4" },
         { s: select, h: line, t: ⎅ ⎯ },
         $$mdi:arrow-down$$,
         $$mdi:arrow-up$$,
         { type: held alternate },
       ]
     - [
-        { t: $$mdi:file-find$$, h: preview, s: meh 3 },
-        { t: $$mdi:calculator$$, h: calc, s: meh 2 },
-        { t: $$mdi:magnify$$, h: apps, s: meh 1 },
+        { t: $$mdi:file-find$$, h: preview, s: "meh 3" },
+        { t: $$mdi:calculator$$, h: calc, s: "meh 2" },
+        { t: $$mdi:magnify$$, h: apps, s: "meh 1" },
         { s: select, h: home, t: ⎅ ⇤ },
-        { t: $$mdi:refresh$$, h: refresh, s: hyper 2 },
-        { t: $$mdi:close$$, h: close, s: hyper 3 },
+        { t: $$mdi:refresh$$, h: refresh, s: "hyper #2" },
+        { t: $$mdi:close$$, h: close, s: "hyper #3" },
       ]
     - h: nav
     - { t: $$mdi:keyboard-space$$, h: functions }
@@ -207,8 +207,8 @@ layers:
       { t: meh c}, 
       { t: meh p}, 
       { t: meh h},
-      { t: "meh ["},
-      { t: "meh ]"}
+      { t: "meh '"},
+      { t: "meh \\"}
       ]
     - { t: plain1, s: "auto-layer", h: nav }
     - { t: $$mdi:apple-keyboard-command$$, s: sticky, h: $$mdi:apple-keyboard-command$$ , type: held }
@@ -271,7 +271,7 @@ layers:
         null,
         { t: $$mdi:mouse-left-click$$, h: left },
         { t: $$mdi:mouse-right-click$$, h: right },
-        { t: $$mdi:hand-back-right-outline$$, h: hand, s: hyper 7 },
+        { t: $$mdi:hand-back-right-outline$$, h: hand, s: "hyper #7" },
         { t: $$mdi:keyboard-return$$ },
         { t: "⎋" },
       ]
@@ -280,10 +280,10 @@ layers:
         { t: $$mdi:arrow-left-circle$$, h: mouse },
         { t: $$mdi:arrow-up-circle$$, h: mouse },
         { t: $$mdi:arrow-right-circle$$, h: mouse },
-        { t: $$mdi:microphone$$, s: hyper 4 },
+        { t: $$mdi:microphone$$, s: "hyper #4" },
         { t: $$mdi:volume-medium$$ },
         { t: $$mdi:volume-high$$ },
-        { t: $$mdi:camera$$, s: hyper 0 },
+        { t: $$mdi:camera$$, s: "hyper #0" },
       ]
     - [
         { t: $$mdi:arrow-down-circle-outline$$, h: scroll },
@@ -309,8 +309,8 @@ layers:
     - [
         { type: held },
         { t: $$mdi:apple-keyboard-shift$$, s: sticky },
-        { t: $$mdi:apple-keyboard-control$$, s: sticky },
-        { t: $$mdi:apple-keyboard-option$$, s: sticky },
+        { t: $$mdi:apple-keyboard-control$$,  s: sticky },
+        { t: $$mdi:apple-keyboard-option$$,  s: sticky },
         "F4",
         "F5",
         "F6",
@@ -495,18 +495,18 @@ combos:
 
   - { p: [1, 2], k: "plain1", a: mid, w: 48, layers: [shortcuts] }
   - { p: [4, 5], k: { t: "⌫ⓦ", s: delete, h: word }, a: mid, w: 48, layers: [shortcuts] }
-  - { p: [7, 8], k: { t: $$mdi:loupe$$, s: meh 0, h: 100% }, a: mid, w: 48, layers: [shortcuts] }
+  - { p: [7, 8], k: { t: $$mdi:loupe$$, s: "meh -", h: 100% }, a: mid, w: 48, layers: [shortcuts] }
   - { p: [8, 9], k: "media", a: mid, w: 48, layers: [shortcuts] }
   - { p: [15, 16], k: "functions", a: mid, w: 48, layers: [shortcuts] }
-  - { p: [11, 12], k: { t: "$$mdi:cat$$", s: hyper 5, h: shortcat }, a: mid, w: 48, layers: [shortcuts] }
+  - { p: [11, 12], k: { t: "$$mdi:cat$$", s: "hyper -", h: shortcat }, a: mid, w: 48, layers: [shortcuts] }
   - { p: [3, 4], k: "lower", a: mid, w: 48, layers: [shortcuts] }
   - { p: [10, 11], k: "nav", a: mid, w: 48, layers: [shortcuts] }
-  - { p: [14, 15], k: { t: "$$mdi:clock-time-four-outline$$", s: meh +, h: pomodoro }, a: mid, w: 48, layers: [shortcuts] }
+  - { p: [14, 15], k: { t: "$$mdi:clock-time-four-outline$$", s: "meh =", h: pomodoro }, a: mid, w: 48, layers: [shortcuts] }
   - { p: [17, 18], k: "mehs", a: mid, w: 48, layers: [shortcuts] }
-  - { p: [18, 19], k: { t: $$mdi:backup-restore$$, s: hyper 1, h: reopen }, a: mid, w: 48, layers: [shortcuts] }
+  - { p: [18, 19], k: { t: $$mdi:backup-restore$$, s: "hyper =", h: reopen }, a: mid, w: 48, layers: [shortcuts] }
 
-  - { p: [7, 8, 9], k: { t: "meh ␣", h: "mehs" }, layers: [alpha1], draw_separate: true }
-  - { p: [10, 11, 12], k: { s: "vim", t: "p", h: "mehs" }, layers: [alpha1], draw_separate: true }
+  - { p: [7, 8, 9], k: { t: "meh ␣", h: "meh" }, layers: [alpha1], draw_separate: true }
+  - { p: [10, 11, 12], k: { s: "vim", t: "p", h: "meh" }, layers: [alpha1], draw_separate: true }
   
   - { p: [14, 15, 16], k: { t: "hyper ␣", h: "hyper" }, layers: [alpha1], draw_separate: true }
   - { p: [17, 18, 19], k: { t: "⇥; ⏎", h: "hyper" }, layers: [alpha1], draw_separate: true }
@@ -542,16 +542,16 @@ combos:
   - { p: [0, 1], k: "⇥{ ⏎", a: mid, layers: [lower] }
   - { p: [1, 2], k: { t: "::", h: "⇥ ::" }, a: mid, layers: [lower] }
   - { p: [3, 4], k: { t: "G", s: "vim" }, a: mid, layers: [lower] }
-  - { p: [0, 1, 2], k: { t: "$$mdi:emoticon-happy-outline$$", s: "meh -", h: "Emojis" }, a: top, w: 40, layers: [lower] }
+  - { p: [0, 1, 2], k: { t: "$$mdi:emoticon-happy-outline$$", s: "meh `", h: "Emojis" }, a: top, w: 40, layers: [lower] }
   - { p: [14, 15], k: { t: "[]", h: "nav" }, a: mid, layers: [lower] }
   - { p: [10, 11], k: { t: "j", s: "vim" }, a: mid, layers: [lower] }
   - { p: [11, 12], k: { t: "k", s: "vim" }, a: mid, layers: [lower] }
   - { p: [17, 18], k: { t: "|", s: "vim" }, a: mid, layers: [lower] }
-  - { p: [7, 8, 9], k: { t: "º" }, a: bottom, w: 20, h: 30, slide: -0.5, layers: [lower] }
+  - { p: [7, 8, 9], k: { t: "º", h: "meh" }, a: bottom, slide: -0.5, layers: [lower] }
   - { p: [7, 8], k: { t: "()", h: "⇥ ()" }, a: mid, layers: [lower] }
   - { p: [8, 9], k: { t: "&&", h: "→ &&" }, a: mid, layers: [lower] }
   - { p: [15, 16], k: { t: "||", h: "→ ||" }, a: mid, layers: [lower] }
-  - { p: [14, 15, 16], k: { t: "ª" }, a: bottom, w: 20, h: 30, slide: -0.5, layers: [lower] }
+  - { p: [14, 15, 16], k: { t: "ª", h: "hyper" }, a: bottom, slide: -0.5, layers: [lower] }
   - { p: [10, 11, 12], k: "⇥(); ⏎", layers: [lower], a: bottom }
   - { p: [17, 18, 19], k: "⇥; ⏎", layers: [lower], a: bottom }
 

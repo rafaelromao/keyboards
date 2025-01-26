@@ -23,6 +23,15 @@
             mods = <(MOD_LSFT|MOD_RSFT)>; \
         };
 
+    #define SHIFTED_NUM(NAME, UNSHIFTED, SHIFTED) \
+        NAME: NAME { \
+            compatible = "zmk,behavior-mod-morph"; \
+            #binding-cells = <0>; \
+            bindings = <UNSHIFTED>, <SHIFTED>; \
+            mods = <(MOD_LSFT|MOD_RSFT)>; \
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>; \
+        };
+
     #define TAPHOLD_SYMBOL(NAME, TAP, HOLD) \
          NAME: NAME { \
             compatible = "zmk,behavior-hold-tap"; \
@@ -67,14 +76,6 @@
     symbols {
         // Base
 
-        mc_hyper: mc_hyper {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings = <&macro_press &kp LS(LC(LA(LGUI))) &macro_pause_for_release &macro_release &kp LS(LC(LA(LGUI)))>;
-        };
-
         SHIFTED_SYMBOL(mm_semi,    &kp SEMI, &kp COLON)
         SYMBOL(mc_end_semi,        &kp END &kp SEMI)
         TAPHOLD_SYMBOL(th_semi,    &mm_semi, &mc_end_semi)
@@ -95,16 +96,16 @@
 
         // Lower
 
-        SHIFTED_SYMBOL(mc_n0,      &kp N0, &kp KP_N0)
-        SHIFTED_SYMBOL(mc_n1,      &kp N1, &kp KP_N1)
-        SHIFTED_SYMBOL(mc_n2,      &kp N2, &kp KP_N2)
-        SHIFTED_SYMBOL(mc_n3,      &kp N3, &kp KP_N3)
-        SHIFTED_SYMBOL(mc_n4,      &kp N4, &kp KP_N4)
-        SHIFTED_SYMBOL(mc_n5,      &kp N5, &kp KP_N5)
-        SHIFTED_SYMBOL(mc_n6,      &kp N6, &kp KP_N6)
-        SHIFTED_SYMBOL(mc_n7,      &kp N7, &kp KP_N7)
-        SHIFTED_SYMBOL(mc_n8,      &kp N8, &kp KP_N8)
-        SHIFTED_SYMBOL(mc_n9,      &kp N9, &kp KP_N9)
+        SHIFTED_NUM(mc_n0,      &kp N0, &kp KP_N0)
+        SHIFTED_NUM(mc_n1,      &kp N1, &kp KP_N1)
+        SHIFTED_NUM(mc_n2,      &kp N2, &kp KP_N2)
+        SHIFTED_NUM(mc_n3,      &kp N3, &kp KP_N3)
+        SHIFTED_NUM(mc_n4,      &kp N4, &kp KP_N4)
+        SHIFTED_NUM(mc_n5,      &kp N5, &kp KP_N5)
+        SHIFTED_NUM(mc_n6,      &kp N6, &kp KP_N6)
+        SHIFTED_NUM(mc_n7,      &kp N7, &kp KP_N7)
+        SHIFTED_NUM(mc_n8,      &kp N8, &kp KP_N8)
+        SHIFTED_NUM(mc_n9,      &kp N9, &kp KP_N9)
 
         LAYERTAP_SYMBOL(th_n0,     &mc_n0)
 
@@ -237,6 +238,8 @@
 
         SYMBOL(mc_ord_o,           &kp LA(N0))
         SYMBOL(mc_ord_a,           &kp LA(N9))
+        TAPHOLD_SYMBOL(th_ord_o,     &mc_ord_o, &mc_meh)
+        TAPHOLD_SYMBOL(th_ord_a,     &mc_ord_a, &mc_hyper)
 
         // SMARTCASES
 
