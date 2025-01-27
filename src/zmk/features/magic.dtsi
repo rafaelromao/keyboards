@@ -27,19 +27,19 @@
             defaults = <&labeled_key_repeat>;
             antecedents = <
                             A            I            QU_TERM      AGRV_TERM     SQUO_TERM      J            CCED_TERM      AACU_TERM      EACU_TERM      OACU_TERM   \
-                            H            Y            C_QU_TERM    C_AGRV_TERM   C_SQUO_TERM    LS(J)        C_CCED_TERM    C_AACU_TERM    C_EACU_TERM    C_OACU_TERM \
+                                         Y            C_QU_TERM    C_AGRV_TERM   C_SQUO_TERM    LS(J)        C_CCED_TERM    C_AACU_TERM    C_EACU_TERM    C_OACU_TERM \
                             LS(Y)        RS(Y)        S_QU_TERM    S_AGRV_TERM   X              RS(J)        S_CCED_TERM    S_AACU_TERM    S_EACU_TERM    S_OACU_TERM \
                             OCIR_TERM    C_OCIR_TERM  S_OCIR_TERM  ATIL_TERM     C_ATIL_TERM    S_ATIL_TERM  OTIL_TERM      C_OTIL_TERM    S_OTIL_TERM    ECIR_TERM   \
                             C_ECIR_TERM  S_ECIR_TERM  UACU_TERM    C_UACU_TERM   S_UACU_TERM    IACU_TERM    C_IACU_TERM    S_IACU_TERM    LS(X)          RS(X)       \
-                            CARET_TERM   \
+                            CARET_TERM   H_TERM       S_H_TERM     V_TERM        S_V_TERM       \
                            >;                                                                                      
             bindings =    <                                                                                        
                             &tc_h        &mc_sqo      &ac_ecir     &mc_qu        &kp V          &ac_aacu     &sl ALPHA2     &kp X          &kp X          &kp X       \
-                            &kp A        &kp D        &ac_ecir_c   &mc_qu_c      &kp LS(V)      &ac_aacu_c   &sl ALPHA2     &kp LS(X)      &kp LS(X)      &kp LS(X)   \
+                                         &kp D        &ac_ecir_c   &mc_qu_c      &kp LS(V)      &ac_aacu_c   &sl ALPHA2     &kp LS(X)      &kp LS(X)      &kp LS(X)   \
                             &kp LS(D)    &kp D        &ac_ecir     &mc_qu        &kp Y          &ac_aacu     &sl ALPHA2     &kp X          &kp X          &kp X       \
                             &kp L        &kp LS(L)    &kp RS(L)    &kp O         &kp LS(O)      &kp RS(O)    &kp E          &kp LS(E)      &kp RS(E)      &kp DOT     \
                             &kp DOT      &kp DOT      &kp V        &kp LS(V)     &kp RS(V)      &kp V        &kp LS(V)      &kp RS(V)      &kp LS(Y)      &kp RS(Y)   \
-                            &mc_caret    \
+                            &mc_caret    &mc_bs_v     &mc_bs_s_v   &mc_bs_h      &mc_bs_s_h     \
                            >;
         };
 
@@ -54,7 +54,8 @@
 
         // ******************** MAGIC KEY ******************** //
 
-        SMART_MACRO(tc_h, &kp H)
+        SMART_MACRO(tc_h, &kp H &kp H_TERM)
+        SMART_MACRO(mc_bs_v, &kp BACKSPACE &kp V &kp V_TERM)
         
         labeled_h: labeled_h {
 			compatible = "zmk,behavior-macro";
@@ -93,7 +94,8 @@
                            >; 
         };
 
-        SMART_MACRO(tc_h_c, &kp LS(H))
+        SMART_MACRO(tc_h_c, &kp LS(H) &kp S_H_TERM)
+        SMART_MACRO(mc_bs_s_v, &kp BACKSPACE &kp LS(V) &kp S_V_TERM)
 
         labeled_h_c: labeled_h_c {
 			compatible = "zmk,behavior-macro";
@@ -152,7 +154,8 @@
 
         // ******************** REVERSED MAGIC KEY ******************** //
 
-        SMART_MACRO(tc_v, &kp V)
+        SMART_MACRO(tc_v, &kp V &kp V_TERM)
+        SMART_MACRO(mc_bs_h, &kp BACKSPACE &kp H &kp H_TERM)
 
         labeled_v: labeled_v {
 			compatible = "zmk,behavior-macro";
@@ -189,7 +192,8 @@
                            >;
         };
 
-        SMART_MACRO(tc_v_c, &kp LS(V))
+        SMART_MACRO(tc_v_c, &kp LS(V) &kp S_V_TERM)
+        SMART_MACRO(mc_bs_s_h, &kp BACKSPACE &kp LS(H) &kp S_H_TERM)
 
         labeled_v_c: labeled_v_c {
 			compatible = "zmk,behavior-macro";
