@@ -23,13 +23,33 @@
             mods = <(MOD_LSFT|MOD_RSFT)>; \
         };
 
-    #define SHIFTED_NUM(NAME, UNSHIFTED, SHIFTED) \
+    #define MORPHED_NUM_MEH(NAME, UNMORPHED, MORPHED) \
+        NAME##num: NAME##num { \
+            compatible = "zmk,behavior-mod-morph"; \
+            #binding-cells = <0>; \
+            bindings = <UNMORPHED>, <MORPHED>; \
+            mods = <(MOD_LSFT|MOD_RSFT)>; \
+        }; \
+        NAME##sft: NAME##sft { \
+            compatible = "zmk,behavior-mod-morph"; \
+            #binding-cells = <0>; \
+            bindings = <&NAME##num>, <MORPHED>; \
+            mods = <(MOD_LSFT)>; \
+            keep-mods = <(MOD_LSFT)>; \
+        }; \
+        NAME##ctl: NAME##clt { \
+            compatible = "zmk,behavior-mod-morph"; \
+            #binding-cells = <0>; \
+            bindings = <&NAME##num>, <&NAME##sft>; \
+            mods = <(MOD_LCTL)>; \
+            keep-mods = <(MOD_LCTL)>; \
+        }; \
         NAME: NAME { \
             compatible = "zmk,behavior-mod-morph"; \
             #binding-cells = <0>; \
-            bindings = <UNSHIFTED>, <SHIFTED>; \
-            mods = <(MOD_LSFT|MOD_RSFT)>; \
-            keep-mods = <(MOD_LSFT|MOD_RSFT)>; \
+            bindings = <&NAME##num>, <&NAME##ctl>; \
+            mods = <(MOD_LALT)>; \
+            keep-mods = <(MOD_LALT)>; \
         };
 
     #define TAPHOLD_SYMBOL(NAME, TAP, HOLD) \
@@ -96,16 +116,16 @@
 
         // Lower
 
-        SHIFTED_NUM(mc_n0,      &kp N0, &kp KP_N0)
-        SHIFTED_NUM(mc_n1,      &kp N1, &kp KP_N1)
-        SHIFTED_NUM(mc_n2,      &kp N2, &kp KP_N2)
-        SHIFTED_NUM(mc_n3,      &kp N3, &kp KP_N3)
-        SHIFTED_NUM(mc_n4,      &kp N4, &kp KP_N4)
-        SHIFTED_NUM(mc_n5,      &kp N5, &kp KP_N5)
-        SHIFTED_NUM(mc_n6,      &kp N6, &kp KP_N6)
-        SHIFTED_NUM(mc_n7,      &kp N7, &kp KP_N7)
-        SHIFTED_NUM(mc_n8,      &kp N8, &kp KP_N8)
-        SHIFTED_NUM(mc_n9,      &kp N9, &kp KP_N9)
+        MORPHED_NUM_MEH(mc_n0,      &kp N0, &kp KP_N0)
+        MORPHED_NUM_MEH(mc_n1,      &kp N1, &kp KP_N1)
+        MORPHED_NUM_MEH(mc_n2,      &kp N2, &kp KP_N2)
+        MORPHED_NUM_MEH(mc_n3,      &kp N3, &kp KP_N3)
+        MORPHED_NUM_MEH(mc_n4,      &kp N4, &kp KP_N4)
+        MORPHED_NUM_MEH(mc_n5,      &kp N5, &kp KP_N5)
+        MORPHED_NUM_MEH(mc_n6,      &kp N6, &kp KP_N6)
+        MORPHED_NUM_MEH(mc_n7,      &kp N7, &kp KP_N7)
+        MORPHED_NUM_MEH(mc_n8,      &kp N8, &kp KP_N8)
+        MORPHED_NUM_MEH(mc_n9,      &kp N9, &kp KP_N9)
 
         LAYERTAP_SYMBOL(th_n0,     &mc_n0)
 
