@@ -181,7 +181,7 @@ layers:
     - [
         { t: $$mdi:file-find$$, h: preview, s: "meh 3" },
         { t: $$mdi:calculator$$, h: calc, s: "meh 2" },
-        { t: $$mdi:magnify$$, h: apps, s: "meh 1" },
+        { t: $$mdi:menu-open$$, h: menu bar, s: "meh 1" },
         { s: select, h: home, t: ⎅ ⇤ },
         { t: $$mdi:refresh$$, h: refresh, s: "hyper #2" },
         { t: $$mdi:close$$, h: close, s: "hyper #3" },
