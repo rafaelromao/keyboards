@@ -105,7 +105,9 @@
         TAPHOLD_SYMBOL(th_hyper_space,   &mc_hyper_space, &mc_hyper)
 
         SYMBOL(mc_end_semi_ent,          &kp END &kp SEMI &kp ENTER)
-        TAPHOLD_SYMBOL(th_end_semi_ent,  &mc_end_semi_ent, &mc_hyper)
+
+        SYMBOL(mc_h,                &kp H)
+        TAPHOLD_SYMBOL(th_hyper_h,  &mc_h, &mc_hyper)
 
         SYMBOL(mc_comma,            &kp COMMA)
         LAYERTAP_HP_SYMBOL(th_comma, &mm_comma_meh)

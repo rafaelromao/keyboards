@@ -68,7 +68,7 @@
         COMBO(cd_sca_nav,       LHR LHM LHI L1,  &mc_sca_nav,    ALPHA1_LAYERS)
 
         COMBO(cd_hyper_l,       LBR LBM LBI, &th_hyper_space 0 0,    ALPHA1_LAYERS)
-        COMBO(cb_hyper_r,       RBI RBM RBR, &th_end_semi_ent 0 0,   ALPHA1_LAYERS)
+        COMBO(cb_hyper_r,       RBI RBM RBR, &th_hyper_h 0 0,        ALPHA1_LAYERS)
 
         COMBO(cb_esc_save,      LTR LTM L0,  &mc_save_esc,       ALPHA1_LAYERS)
 

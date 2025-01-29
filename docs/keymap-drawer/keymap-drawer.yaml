@@ -110,7 +110,7 @@ layers:
          { type: ghost }, 
          { type: ghost }, 
          { type: ghost }, 
-         { t: r, s: vim, type: ghost }, 
+         { type: ghost }, 
          { type: ghost }, 
          { type: ghost }
       ]
@@ -469,6 +469,13 @@ combos:
       a: mid,
       layers: [alpha1_vim_bindings],
     }
+  - {
+      p: [17, 18, 19],
+      k: { t: "r", s: vim, type: ghost },
+      a: bottom,
+      layers: [alpha1_vim_bindings],
+    }
+
 
   - { p: [1, 2], k: 'dead "', a: mid, layers: [alpha2, plain2, shifted2] }
   - { p: [3, 4], k: "-", a: mid, layers: [alpha2, plain2, shifted2] }
@@ -509,7 +516,7 @@ combos:
   - { p: [10, 11, 12], k: { s: "vim", t: "p", h: "meh" }, layers: [alpha1], draw_separate: true }
   
   - { p: [14, 15, 16], k: { t: "hyper ␣", h: "hyper" }, layers: [alpha1], draw_separate: true }
-  - { p: [17, 18, 19], k: { t: "⇥; ⏎", h: "hyper" }, layers: [alpha1], draw_separate: true }
+  - { p: [17, 18, 19], k: { s: "vim", t: "r", h: "hyper" }, layers: [alpha1], draw_separate: true }
 
   - { p: [0, 1, 21], k: "⎋ save", layers: [alpha1], draw_separate: true }
   - { p: [7, 8, 21], k: "save", layers: [alpha1], draw_separate: true }
