@@ -5,19 +5,19 @@ layers:
     - [
         { s: project, t: $$mdi:file-multiple$$ },
         { s: build, t: $$mdi:wrench$$ },
-        { s: toggle, h: breakpoint, t: $$mdi:circle$$ },
+        { s: format, h: code, t: $$mdi:format-indent-increase$$ },
         { s: step, h: out, t: $$mdi:debug-step-out$$ },
         { s: step, h: over, t: $$mdi:debug-step-over$$ },
         { s: step, h: into, t: $$mdi:debug-step-into$$ },
       ]
     - [
         type: held,
-        { h: run, t: $$mdi:play$$ },
-        { h: debug, t: $$mdi:bug-play$$ },
-        { s: recent, h: files, t: $$mdi:history$$ },
         { s: type, h: match, t: $$mdi:code-block-braces$$ },
         { s: complete, h: statement, t: "()" },
-        { s: format, h: code, t: $$mdi:format-indent-increase$$ },
+        { s: recent, h: files, t: $$mdi:history$$ },
+        { h: run, t: $$mdi:play$$ },
+        { h: debug, t: $$mdi:bug-play$$ },
+        { s: toggle, h: breakpoint, t: $$mdi:circle$$ },
         type: held alternate,
       ]
     - [
@@ -46,19 +46,19 @@ layers:
     - [
         { s: select in, t: $$mdi:form-select$$ },
         { s: rebuild, t: $$mdi:wrench-outline$$ },
-        { s: view, h: breakpoints, t: $$mdi:circle-multiple$$ },
+        { s: analyze, h: code, t: $$mdi:sine-wave$$ },
         { s: search, h: everything, t: $$mdi:database-search-outline$$l },
         { s: go to, h: symbol, t: $$mdi:text-box-search-outline$$ },
         { s: find, h: action, t: $$mdi:feature-search-outline$$ },
       ]
     - [
         type: held,
-        { s: stop, t: $$mdi:stop$$ },
-        { s: resume, t: $$mdi:play-pause$$ },
-        { s: switch, h: scheme, t: $$mdi:view-compact$$ },
         { s: code, h: complete, t: $$mdi:code-block-parentheses$$ },
         { s: refactor, h: this, t: $$mdi:file-code-outline$$ },
-        { s: analyze, h: code, t: $$mdi:sine-wave$$ },
+        { s: switch, h: scheme, t: $$mdi:view-compact$$ },
+        { s: stop, t: $$mdi:stop$$ },
+        { s: resume, t: $$mdi:play-pause$$ },
+        { s: view, h: breakpoints, t: $$mdi:circle-multiple$$ },
         type: held alternate,
       ]
     - [
@@ -143,7 +143,7 @@ combos:
   - {
       p: [7, 8, 9],
       k: { h: actions, t: $$mdi:flash-alert$$ },
-      a: top,
+      a: mid,
       w: 36,
       slide: -0.5,
       layers: [coding-meh],
@@ -151,7 +151,7 @@ combos:
   - {
       p: [14, 15, 16],
       k: { h: chat, t: $$mdi:code-json$$ },
-      a: bottom,
+      a: mid,
       w: 36,
       slide: -0.5,
       layers: [coding-meh],
