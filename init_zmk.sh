@@ -135,19 +135,17 @@ write_only_vim_combos="yq -i 'del(.combos[] | select(.k.s != \"vim\"))' ./tmp/ke
 
 draw_overview="keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -o ./tmp/overview.svg ./docs/keymap-drawer/keymap-drawer.yaml"
 draw_separate_combos="keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s alpha1 --combos-only -o ./tmp/separatecombos.svg ./tmp/keymap-drawer-onlyseparatecombos.yaml"
-draw_alphas="keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s alpha1 alpha2 ç-extension -o ./tmp/alphas.svg ./tmp/keymap-drawer-noseparatecombos.yaml"
-draw_shifted="keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s shifted1 shifted2 -o ./tmp/shifted.svg ./tmp/keymap-drawer-noseparatecombos.yaml"
+draw_alphas="keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s alpha1 alpha2 ç-extension shifted1 shifted2 -o ./tmp/alphas.svg ./tmp/keymap-drawer-noseparatecombos.yaml"
 draw_symbols="keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s lower raise -o ./tmp/symbols.svg ./tmp/keymap-drawer-noseparatecombos.yaml"
 draw_functions="keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s functions smartcases -o ./tmp/functions.svg ./tmp/keymap-drawer-noseparatecombos.yaml"
-draw_shortcuts="keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s shortcuts mehs -o ./tmp/shortcuts.svg ./tmp/keymap-drawer-noseparatecombos.yaml"
+draw_shortcuts="keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s shortcuts mehs left_meh_morphs right_meh_morphs -o ./tmp/shortcuts.svg ./tmp/keymap-drawer-noseparatecombos.yaml"
 draw_navigation="keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s nav media -o ./tmp/navigation.svg ./tmp/keymap-drawer-noseparatecombos.yaml"
-draw_vim="keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s alpha1_vim_bindings lower media -o ./tmp/vim.svg ./tmp/keymap-drawer-onlyvimcombos.yaml"
+draw_vim="keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s vim_remaps lower media -o ./tmp/vim.svg ./tmp/keymap-drawer-onlyvimcombos.yaml"
 draw_mehs="keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -o ./tmp/mehs.svg ./tmp/keymap-drawer-mehs.yaml"
 
 convert_overview="inkscape --export-type png --export-filename ./img/overview.png --export-dpi 300 --export-background=white ./tmp/overview.svg"
 convert_separate_combos="inkscape --export-type png --export-filename ./img/separatecombos.png --export-dpi 300 --export-background=white ./tmp/separatecombos.svg"
 convert_alphas="inkscape --export-type png --export-filename ./img/alphas.png --export-dpi 300 --export-background=white ./tmp/alphas.svg"
-convert_shifted="inkscape --export-type png --export-filename ./img/shifted.png --export-dpi 300 --export-background=white ./tmp/shifted.svg"
 convert_symbols="inkscape --export-type png --export-filename ./img/symbols.png --export-dpi 300 --export-background=white ./tmp/symbols.svg"
 convert_functions="inkscape --export-type png --export-filename ./img/functions.png --export-dpi 300 --export-background=white ./tmp/functions.svg"
 convert_shortcuts="inkscape --export-type png --export-filename ./img/shortcuts.png --export-dpi 300 --export-background=white ./tmp/shortcuts.svg"
@@ -161,11 +159,11 @@ ${prepare_no_separate_combos} ; ${prepare_only_separate_combos} ; ${prepare_only
 ${write_no_separate_combos} ; ${write_only_separate_combos} ; ${write_only_vim_combos}\
 "
 draw="\
-${draw_overview} ; ${draw_separate_combos} ; ${draw_alphas} ; ${draw_shifted} ; \
+${draw_overview} ; ${draw_separate_combos} ; ${draw_alphas} ; \
 ${draw_symbols} ; ${draw_functions} ; ${draw_shortcuts} ;  ${draw_navigation} ; ${draw_vim} ; ${draw_mehs} \
 "
 convert="\
-${convert_overview} ; ${convert_separate_combos} ; ${convert_alphas} ; ${convert_shifted} ; \
+${convert_overview} ; ${convert_separate_combos} ; ${convert_alphas} ; \
 ${convert_symbols} ; ${convert_functions} ; ${convert_shortcuts} ;  ${convert_navigation} ; ${convert_vim} ; ${convert_mehs} \
 "
 
