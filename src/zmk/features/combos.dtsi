@@ -63,9 +63,9 @@
 
         COMBO(cb_numword,       LBR LBM,         &ht_num_word NAV 0,   ALPHA1_LAYERS)
         COMBO(cd_sc_nav,        LHR LHM L1,      &mc_sc_nav,     ALPHA1_LAYERS)
-        COMBO(cd_ca_nav,        LHM LHI L1,      &mc_ca_nav,     ALPHA1_LAYERS)
-        COMBO(cd_gca_nav,       LBR LHM LHI L1,  &mc_gca_nav,    ALPHA1_LAYERS)
-        COMBO(cd_sca_nav,       LHR LHM LHI L1,  &mc_sca_nav,    ALPHA1_LAYERS)
+        COMBO(cd_gsa_nav,       LBR LHM LHI L1,  &mc_gsa_nav,    ALPHA1_LAYERS)
+        COMBO(cd_scg_nav,       LHR LHM LBI L1,  &mc_scg_nav,    ALPHA1_LAYERS)
+        COMBO(cd_sca_spc,       LHR LHM LHI L0,  &mc_sca_spc,    ALPHA1_LAYERS)
 
         COMBO(cd_hyper_l,       LBR LBM LBI, &th_hyper_space 0 0,    ALPHA1_LAYERS)
         COMBO(cb_hyper_r,       RBI RBM RBR, &th_hyper_h 0 0,        ALPHA1_LAYERS)
@@ -239,7 +239,7 @@
         COMBO_MUST_TAP(ht_q       , &kp LSHFT &kp LCTL          , &kp Q)
         COMBO_MUST_TAP(ht_z       , &kp RCTL  &kp RALT          , &kp Z)
         COMBO_MUST_TAP(ht_y       , &kp RCTL  &kp RSFT          , &kp Y)
-        COMBO_MUST_TAP(ht_meh_spc , &kp LSHFT &kp LCTL &kp LALT , &kp LS(LC(LA(SPC))))
+        COMBO_MUST_TAP(ht_meh_spc , &kp LSHFT &kp LCTL &kp LALT , &mc_meh_space)
         COMBO_MUST_TAP(ht_p       , &kp RSHFT &kp RCTL &kp RALT , &kp P)
     };
 };

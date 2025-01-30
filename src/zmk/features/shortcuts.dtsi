@@ -151,9 +151,9 @@
         SHORTCUT(mc_lock,                   &macro_tap &kp LC(LG(Q)))
 
         SHORTCUT(mc_sc_nav,                 &macro_press &kp LSHFT &kp LCTL &mo NAV &macro_pause_for_release &macro_release &mo NAV &kp LSHFT &kp LCTL)
-        SHORTCUT(mc_ca_nav,                 &macro_press &kp LCTL &kp LALT &mo NAV &macro_pause_for_release &macro_release &mo NAV &kp LCTL &kp LALT)
-        SHORTCUT(mc_gca_nav,                &macro_press &kp LGUI &kp LCTL &kp LALT &mo NAV &macro_pause_for_release &macro_release &mo NAV &kp LGUI &kp LCTL &kp LALT)
-        SHORTCUT(mc_sca_nav,                &macro_press &kp LSHFT &kp LCTL &kp LALT &mo NAV &macro_pause_for_release &macro_release &mo NAV &kp LSHFT &kp LCTL &kp LALT)
+        SHORTCUT(mc_gsa_nav,                &macro_press &kp LGUI &kp LSFT &kp LALT &mo NAV &macro_pause_for_release &macro_release &mo NAV &kp LGUI &kp LSFT &kp LALT)
+        SHORTCUT(mc_scg_nav,                &macro_press &kp LSHFT &kp LCTL &kp LGUI &mo NAV &macro_pause_for_release &macro_release &mo NAV &kp LSHFT &kp LCTL &kp LGUI)
+        SHORTCUT(mc_sca_spc,                &macro_press &kp LSHFT &kp LCTL &kp LALT &mo LOWER &macro_pause_for_release &macro_release &mo LOWER &kp LSHFT &kp LCTL &kp LALT)
 
         // Navigation
 
@@ -183,6 +183,10 @@
         SMART_MORPH_KM(mm_dot_meh, MOD_LSFT, &mc_meh_dot, &mc_dot)
         SMART_MORPH_KM(mm_dot_meh_lctl, MOD_LCTL, &mm_dot_meh, &mc_dot)
         SMART_MORPH_KM(mm_dot_meh_lalt, MOD_LALT, &mm_dot_meh_lctl, &mc_dot)
+
+        SHORTCUT(mc_meh_space,             &kp LS(LC(LA(SPACE))))
+        SHORTCUT(mc_hyper_space,           &kp LS(LC(LA(LG(SPACE)))))
+        TAPHOLD_SHORTCUT(th_hyper_space,   &mc_hyper_space, &mc_hyper)
 
         mc_meh: mc_meh {
             compatible = "zmk,behavior-macro";
