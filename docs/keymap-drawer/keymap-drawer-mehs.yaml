@@ -21,12 +21,12 @@ layers:
         type: held alternate,
       ]
     - [
+        { s: evaluate, h: expression, t: $$mdi:variable$$ },
+        { s: comment, h: line, t: "//" },
+        { s: quick, h: def, t: $$mdi:feather$$ },
+        { s: quick, h: docs, t: $$mdi:book-open-outline$$ },
         { s: previous, h: error, t: $$mdi:page-previous-outline$$ },
         { s: next, h: error, t: $$mdi:page-next-outline$$ },
-        { s: find, h: usages, t: $$mdi:book-open-variant-outline$$ },
-        { s: quick, h: def, t: $$mdi:feather$$ },
-        { s: comment, h: line, t: "//" },
-        { s: evaluate, h: expression, t: $$mdi:variable$$ },
       ]
     - { h: nav, t: plain1, s: sticky }
     - {
@@ -62,12 +62,12 @@ layers:
         type: held alternate,
       ]
     - [
+        { s: generate, h: code, t: $$mdi:code-array$$ },
+        { s: comment, h: block, t: "/**/" },
+        { s: find, h: usages, t: $$mdi:book-open-variant-outline$$ },
+        { s: toggle, h: bookmark, t: $$mdi:bookmark-box$$ },
         { s: previous, h: bookmark, t: $$mdi:page-previous$$ },
         { s: next, h: bookmark, t: $$mdi:page-next$$ },
-        { s: toggle, h: bookmark, t: $$mdi:bookmark-box$$ },
-        { s: quick, h: docs, t: $$mdi:book-open-outline$$ },
-        { s: comment, h: block, t: "/**/" },
-        { s: generate, h: code, t: $$mdi:code-array$$ },
       ]
     - { h: nav, t: plain1, s: sticky }
     - { type: held }
@@ -142,17 +142,19 @@ layers:
 combos:
   - {
       p: [7, 8, 9],
-      k: { h: actions, t: $$mdi:flash-alert$$ },
-      a: mid,
-      w: 36,
+      k: { t: actions },
+      a: top,
+      h: 10,
+      w: 45,
       slide: -0.5,
       layers: [coding-meh],
     }
   - {
       p: [14, 15, 16],
-      k: { h: chat, t: $$mdi:code-json$$ },
-      a: mid,
-      w: 36,
+      k: { t: chat },
+      a: bottom,
+      h: 10,
+      w: 45,
       slide: -0.5,
       layers: [coding-meh],
     }

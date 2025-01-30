@@ -52,8 +52,3 @@
 #define CCED_TERM     ACIR_TERM     // Reuse codes that does not conflict
 #define C_CCED_TERM   C_ACIR_TERM
 #define S_CCED_TERM   S_ACIR_TERM
-
-#define H_TERM        F21
-#define S_H_TERM      F22
-#define V_TERM        F23
-#define S_V_TERM      F24
