@@ -186,10 +186,10 @@ layers:
         { t: $$mdi:refresh$$, h: refresh, s: "hyper #2" },
         { t: $$mdi:close$$, h: close, s: "hyper #3" },
       ]
-    - h: nav
+    - { h: nav, s: repeat, t: $$mdi:repeat$$ }
     - { t: $$mdi:keyboard-space$$, h: functions }
     - { t: $$mdi:keyboard-space$$, h: functions }
-    - h: nav
+    - { h: nav, s: repeat, t: $$mdi:repeat$$ }
   mehs:
     - [meh b, meh m, meh g, meh l, meh o, meh u]
     - [

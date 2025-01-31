@@ -208,7 +208,7 @@
    &none               &mc_clip            &mc_files           &mc_windows         &none               &none               &select_word        &kp ENTER           &kp ESC             &none    
    &none               &mc_zoom_out        &mc_zoom_in         &mc_tabs            &none               &none               &select_line        &kp DOWN            &kp UP              &none
    &none               &mc_preview         &mc_calc            &mc_apps            &none               &none               &select_home        &mc_refresh         &mc_close           &none 
-                                           &none               &mo NAV             &lt FUN SPACE       &lt FUN SPACE       &mo NAV             &none 
+                                           &none               &ht_repeat NAV 0    &lt FUN SPACE       &lt FUN SPACE       &ht_repeat NAV 0    &none 
                            >;
                 };
 
