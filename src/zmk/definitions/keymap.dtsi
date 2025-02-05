@@ -94,7 +94,7 @@
    &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &kp LS(Y)
    &lt SHORTCUTS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LALT LS(T)      &kp LS(W)           &kp LS(Z)           &mt RALT LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTCUTS LS(I) 
    &mc_qu_c            &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c RGUI 0  &th_comma SMART 0  &th_dot 0 0         &kp LS(H)
-                                           &trans              &trans              &msk_spc LOWER 0    &th_case_a2 RAISE 0 &mo MEDIA           &trans
+                                           &trans              &trans              &msk_spc LOWER 0    &th_case_a2 RAISE 0 &th_cancel MEDIA 0  &trans
                         >;
                 };
                 capsline_layer {
@@ -103,7 +103,8 @@
    &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &kp LS(Y)
    &lt SHORTCUTS LS(D) &mt LSHFT LS(N)     &mt LCTRL LS(S)     &mt LALT LS(T)      &kp LS(W)           &kp LS(Z)           &mt RALT LS(R)      &mt RCTRL LS(A)     &mt RSHFT LS(E)     &lt SHORTCUTS LS(I) 
    &mc_qu_c            &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c RGUI 0  &th_comma SMART 0  &th_dot 0 0         &kp LS(H)
-                                           &trans              &trans              &trans              &th_case_a2 RAISE 0 &mo MEDIA           &trans
+                                           &trans              &trans              &trans              &th_case_a2 RAISE 0 &th_cancel MEDIA 0  &trans
+                                           
                            >;
                 };
 
