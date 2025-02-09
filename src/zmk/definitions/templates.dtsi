@@ -147,7 +147,7 @@
                 , <&macro_release &kp LSHFT> \
                 , <&macro_tap &kp S_TERM> \
                 ; \
-        }; \
+        };
 
     /*  COMBOS  */
     
@@ -198,7 +198,7 @@
         NAME##sft_meh: NAME##sft_meh { \
             compatible = "zmk,behavior-mod-morph"; \
             #binding-cells = <0>; \
-            bindings = <&NAME##sft>, <REGULAR>; \
+            bindings = <&NAME##sft>, <SHIFTED>; \
             mods = <(MOD_LSFT)>; \
             keep-mods = <(MOD_LSFT)>; \
         }; \

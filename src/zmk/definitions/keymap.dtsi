@@ -5,19 +5,44 @@
 *
 */
 
+#define MACOS
+
 #include "templates.dtsi"
 #include "keycodes.h"
 #include "config.dtsi"
 
 #include "../features/mouse.dtsi"
+
 #include "../features/accents.dtsi"
+#ifdef MACOS
+#include "../features/accents_macos.dtsi"
+#endif
+#ifdef WINDOWS
+#include "../features/accents_windows.dtsi"
+#endif
+#ifdef ANDROID
+#include "../features/accents_android.dtsi"
+#endif
+
 #include "../features/smart.dtsi"
 #include "../features/magic.dtsi"
 #include "../features/symbols.dtsi"
+
 #include "../features/shortcuts.dtsi"
+#ifdef MACOS
+#include "../features/shortcuts_macos.dtsi"
+#endif
+#ifdef WINDOWS
+#include "../features/shortcuts_windows.dtsi"
+#endif
+#ifdef ANDROID
+#include "../features/shortcuts_android.dtsi"
+#endif
+
 #include "../features/select.dtsi"
 #include "../features/combos.dtsi"
 #include "../features/leader.dtsi"
+
 #if __has_include("../secret.dtsi")
 #include "../secret.dtsi"
 #endif

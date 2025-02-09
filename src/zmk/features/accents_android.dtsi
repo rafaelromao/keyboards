@@ -1,0 +1,18 @@
+/*
+*
+* Copyright (c) 2022 Rafael Romão
+* SPDX-License-Identifier: MIT
+*
+*/
+
+/ {
+    accents {
+        MACRO(ac_cced, &kp RA(COMMA))
+        MACRO(ac_cced_c, &kp RA(RS(COMMA)))
+        MACRO(ac_cced_s, &kp RA(RS(COMMA)))
+
+        MACRO(mc_ced,      &ac_cced &sl CCEDIL)
+        MACRO(mc_ced_c,    &ac_cced_c &sl CASE_CCEDIL)
+        MACRO(mc_ced_s,    &ac_cced_s &sl CCEDIL)
+    };
+};

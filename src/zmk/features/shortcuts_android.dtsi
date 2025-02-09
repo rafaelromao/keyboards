@@ -1,0 +1,35 @@
+/*
+*
+* Copyright (c) 2022 Rafael Romão
+* SPDX-License-Identifier: MIT
+*
+*/
+
+/ {
+    shortcuts {
+        
+        // Common
+
+        MACRO(mc_fullscr,                &macro_tap &kp F11)
+        MACRO(mc_find,                   &macro_tap &kp LC(F))
+        MACRO(mc_selall,                 &macro_tap &kp LC(A))
+        MACRO(mc_undo,                   &macro_tap &kp LC(Z))
+        MACRO(mc_copy,                   &macro_tap &kp LC(C))
+        MACRO(mc_selcopy,                &macro_tap &kp LC(A) &kp LC(C))
+        MACRO(mc_paste,                  &macro_tap &kp LC(V))
+        MACRO(mc_selpaste,               &macro_tap &kp LC(A) &kp LC(V))
+        MACRO(mc_save,                   &macro_tap &kp LC(S))
+        MACRO(mc_save_esc,               &macro_tap &kp LC(S) &kp ESC)
+
+        // Macros
+
+        MACRO(mc_lock,                   &macro_tap &kp LG(L))
+
+        // Navigation
+
+        MACRO(mc_word_start,             &macro_tap &kp LC(LEFT))
+        MACRO(mc_word_next,              &macro_tap &kp LC(RIGHT) &kp LEFT)
+        MACRO(mc_word_end,               &macro_tap &kp LC(RIGHT) &kp LC(RIGHT) &kp LC(LEFT))
+        MACRO(mc_del_word,               &macro_press &kp LC(BACKSPACE) &macro_pause_for_release &macro_release &kp LC(BACKSPACE))
+   };
+};
