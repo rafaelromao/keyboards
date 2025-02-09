@@ -1,3 +1,37 @@
+    /* LAYER TAPS */    
+
+    #define LAYERTAP_TP(NAME, BINDINGS) \
+         NAME: NAME { \
+            compatible = "zmk,behavior-hold-tap"; \
+            #binding-cells = <2>; \
+            tapping-term-ms = <TAPPING_TERM>; \
+            quick-tap-ms = <QUICK_TAP_TERM>; \
+            require-prior-idle-ms = <QUICK_TAP_TERM>; \
+            bindings = <&mo>, <BINDINGS>; \
+            flavor = "tap-preferred"; \
+        };
+    
+    #define SMART_LAYERTAP(NAME, BINDINGS) \
+         NAME: NAME { \
+            compatible = "zmk,behavior-hold-tap"; \
+            #binding-cells = <2>; \
+            tapping-term-ms = <QUICK_TAP_TERM>; \
+            flavor = "tap-preferred"; \
+            quick-tap-ms = <0>; \
+            bindings = <&mo>, <BINDINGS>; \
+        };
+
+    #define LAYERTAP_HP_SYMBOL(NAME, BINDINGS) \
+         NAME: NAME { \
+            compatible = "zmk,behavior-hold-tap"; \
+            #binding-cells = <2>; \
+            tapping-term-ms = <TAPPING_TERM>; \
+            flavor = "hold-preferred"; \
+            quick-tap-ms = <QUICK_TAP_TERM>; \
+            bindings = <&mo>, <BINDINGS>; \
+        };
+
+
     /*  ACCENTS  */
     
     #define ACCENT(NAME, KEY, DEAD_KEY, TERM, C_TERM, S_TERM) \
@@ -158,36 +192,9 @@
             bindings = <HOLD>, <TAP>; \
         };
 
-    #define LAYERTAP_SHORTCUT(NAME, BINDINGS) \
-         NAME: NAME { \
-            compatible = "zmk,behavior-hold-tap"; \
-            #binding-cells = <2>; \
-            tapping-term-ms = <TAPPING_TERM>; \
-            quick-tap-ms = <QUICK_TAP_TERM>; \
-            require-prior-idle-ms = <QUICK_TAP_TERM>; \
-            bindings = <&mo>, <BINDINGS>; \
-        };
-    
     /*  SMARTCASES  */
 
-    #define SMART_LAYERTAP(NAME, BINDINGS) \
-         NAME: NAME { \
-            compatible = "zmk,behavior-hold-tap"; \
-            #binding-cells = <2>; \
-            tapping-term-ms = <QUICK_TAP_TERM>; \
-            flavor = "tap-preferred"; \
-            quick-tap-ms = <0>; \
-            bindings = <&mo>, <BINDINGS>; \
-        };
-
-    #define SMART_MACRO(NAME, BINDINGS) \
-        NAME: NAME { \
-			compatible = "zmk,behavior-macro"; \
-            #binding-cells = <0>; \
-            wait-ms = <10>; \
-            tap-ms = <10>; \
-            bindings = <&macro_tap BINDINGS>; \
-        };
+    #define SMART_MACRO MACRO_TAP
 
     #define SMART_MORPH(NAME, MODS, MODDED, UNMODDED) \
         NAME: NAME { \
@@ -256,25 +263,4 @@
             quick-tap-ms = <QUICK_TAP_TERM>; \
             require-prior-idle-ms = <QUICK_TAP_TERM>; \
             bindings = <HOLD>, <TAP>; \
-        };
-
-    #define LAYERTAP_HP_SYMBOL(NAME, BINDINGS) \
-         NAME: NAME { \
-            compatible = "zmk,behavior-hold-tap"; \
-            #binding-cells = <2>; \
-            tapping-term-ms = <TAPPING_TERM>; \
-            flavor = "hold-preferred"; \
-            quick-tap-ms = <QUICK_TAP_TERM>; \
-            bindings = <&mo>, <BINDINGS>; \
-        };
-
-    #define LAYERTAP_SYMBOL(NAME, BINDINGS) \
-         NAME: NAME { \
-            compatible = "zmk,behavior-hold-tap"; \
-            #binding-cells = <2>; \
-            tapping-term-ms = <TAPPING_TERM>; \
-            flavor = "tap-preferred"; \
-            quick-tap-ms = <QUICK_TAP_TERM>; \
-            require-prior-idle-ms = <QUICK_TAP_TERM>; \
-            bindings = <&mo>, <BINDINGS>; \
         };

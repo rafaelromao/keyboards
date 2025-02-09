@@ -78,7 +78,7 @@
         SHORTCUT(mc_meh_d,                  &macro_tap &kp LC(LA(LS(D))))
         SHORTCUT(mc_meh_i,                  &macro_tap &kp LC(LA(LS(I))))
 
-        LAYERTAP_SHORTCUT(th_plain1,        &tc_smart_plain1)
+        LAYERTAP_TP(th_plain1,        &tc_smart_plain1)
 
         // Macros
 
