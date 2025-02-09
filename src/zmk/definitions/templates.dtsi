@@ -184,8 +184,6 @@
 
     /*  SMARTCASES  */
 
-    #define SMART_MACRO MACRO_TAP
-
     #define SMART_MORPH(NAME, MODS, MODDED, UNMODDED) \
         NAME: NAME { \
             compatible = "zmk,behavior-mod-morph"; \
