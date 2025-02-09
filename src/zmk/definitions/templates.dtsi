@@ -48,6 +48,26 @@
             bindings = <HOLD>, <TAP>; \
         };
 
+    /*  MACROS  */
+    
+    #define MACRO(NAME, BINDINGS) \
+        NAME: NAME { \
+			compatible = "zmk,behavior-macro"; \
+            #binding-cells = <0>; \
+            wait-ms = <0>; \
+            tap-ms = <0>; \
+            bindings = <BINDINGS>; \
+        };
+
+    #define MACRO_TAP(NAME, BINDINGS) \
+        NAME: NAME { \
+			compatible = "zmk,behavior-macro"; \
+            #binding-cells = <0>; \
+            wait-ms = <0>; \
+            tap-ms = <0>; \
+            bindings = <&macro_tap BINDINGS>; \
+        };
+
     /*  MOD MORPHS  */
 
     #define MOD_MORPH(NAME, MODS, MODDED, UNMODDED) \
@@ -65,6 +85,16 @@
             bindings = <UNMODDED>, <MODDED>; \
             mods = <(MODS)>; \
             keep-mods = <(MODS)>; \
+        };
+
+    /*  SHIFT_MORPH  */
+
+    #define SHIFT_MORPH(NAME, UNSHIFTED, SHIFTED) \
+        NAME: NAME { \
+            compatible = "zmk,behavior-mod-morph"; \
+            #binding-cells = <0>; \
+            bindings = <UNSHIFTED>, <SHIFTED>; \
+            mods = <(MOD_LSFT|MOD_RSFT)>; \
         };
 
     /*  LEADER  */
@@ -119,26 +149,6 @@
                 ; \
         }; \
 
-    /*  MACROS  */
-    
-    #define MACRO(NAME, BINDINGS) \
-        NAME: NAME { \
-			compatible = "zmk,behavior-macro"; \
-            #binding-cells = <0>; \
-            wait-ms = <0>; \
-            tap-ms = <0>; \
-            bindings = <BINDINGS>; \
-        };
-
-    #define MACRO_TAP(NAME, BINDINGS) \
-        NAME: NAME { \
-			compatible = "zmk,behavior-macro"; \
-            #binding-cells = <0>; \
-            wait-ms = <0>; \
-            tap-ms = <0>; \
-            bindings = <&macro_tap BINDINGS>; \
-        };
-
     /*  COMBOS  */
     
     #define COMBO(NAME, KEYS, BINDINGS, LAYERS) \
@@ -176,29 +186,7 @@
             bindings = <&NAME##hold>, <&NAME##tap>; \
         };
 
-    /*  SHORTCUTS  */
-
-    #define SHORTCUT MACRO
-
-    #define SHIFTED_SHORTCUT(NAME, UNSHIFTED, SHIFTED) \
-        NAME: NAME { \
-            compatible = "zmk,behavior-mod-morph"; \
-            #binding-cells = <0>; \
-            bindings = <UNSHIFTED>, <SHIFTED>; \
-            mods = <(MOD_LSFT|MOD_RSFT)>; \
-        };
-
     /*  SYMBOLS  */
-
-    #define SYMBOL MACRO_TAP
-
-    #define SHIFTED_SYMBOL(NAME, UNSHIFTED, SHIFTED) \
-        NAME: NAME { \
-            compatible = "zmk,behavior-mod-morph"; \
-            #binding-cells = <0>; \
-            bindings = <UNSHIFTED>, <SHIFTED>; \
-            mods = <(MOD_LSFT|MOD_RSFT)>; \
-        };
 
     #define MORPHED_NUM_MEH(NAME, UNMORPHED, MORPHED) \
         NAME##num: NAME##num { \
