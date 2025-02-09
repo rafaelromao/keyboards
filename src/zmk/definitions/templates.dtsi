@@ -186,33 +186,33 @@
             bindings = <&NAME##hold>, <&NAME##tap>; \
         };
 
-    /*  SYMBOLS  */
+    /*  MEH  */
 
-    #define MORPHED_NUM_MEH(NAME, UNMORPHED, MORPHED) \
-        NAME##num: NAME##num { \
-            compatible = "zmk,behavior-mod-morph"; \
-            #binding-cells = <0>; \
-            bindings = <UNMORPHED>, <MORPHED>; \
-            mods = <(MOD_LSFT|MOD_RSFT)>; \
-        }; \
+    #define SHIFT_MEH(NAME, REGULAR, SHIFTED) \
         NAME##sft: NAME##sft { \
             compatible = "zmk,behavior-mod-morph"; \
             #binding-cells = <0>; \
-            bindings = <&NAME##num>, <MORPHED>; \
+            bindings = <REGULAR>, <SHIFTED>; \
+            mods = <(MOD_LSFT|MOD_RSFT)>; \
+        }; \
+        NAME##sft_meh: NAME##sft_meh { \
+            compatible = "zmk,behavior-mod-morph"; \
+            #binding-cells = <0>; \
+            bindings = <&NAME##sft>, <REGULAR>; \
             mods = <(MOD_LSFT)>; \
             keep-mods = <(MOD_LSFT)>; \
         }; \
-        NAME##ctl: NAME##clt { \
+        NAME##ctl_meh: NAME##clt_meh { \
             compatible = "zmk,behavior-mod-morph"; \
             #binding-cells = <0>; \
-            bindings = <&NAME##num>, <&NAME##sft>; \
+            bindings = <&NAME##sft>, <&NAME##sft_meh>; \
             mods = <(MOD_LCTL)>; \
             keep-mods = <(MOD_LCTL)>; \
         }; \
-        NAME: NAME { \
+        NAME##alt_meh: NAME##alt_meh { \
             compatible = "zmk,behavior-mod-morph"; \
             #binding-cells = <0>; \
-            bindings = <&NAME##num>, <&NAME##ctl>; \
+            bindings = <&NAME##sft>, <&NAME##ctl_meh>; \
             mods = <(MOD_LALT)>; \
             keep-mods = <(MOD_LALT)>; \
         };

@@ -27,16 +27,16 @@
 
         // Lower
 
-        MORPHED_NUM_MEH(mc_n0,      &kp N0, &kp KP_N0)
-        MORPHED_NUM_MEH(mc_n1,      &kp N1, &kp KP_N1)
-        MORPHED_NUM_MEH(mc_n2,      &kp N2, &kp KP_N2)
-        MORPHED_NUM_MEH(mc_n3,      &kp N3, &kp KP_N3)
-        MORPHED_NUM_MEH(mc_n4,      &kp N4, &kp KP_N4)
-        MORPHED_NUM_MEH(mc_n5,      &kp N5, &kp KP_N5)
-        MORPHED_NUM_MEH(mc_n6,      &kp N6, &kp KP_N6)
-        MORPHED_NUM_MEH(mc_n7,      &kp N7, &kp KP_N7)
-        MORPHED_NUM_MEH(mc_n8,      &kp N8, &kp KP_N8)
-        MORPHED_NUM_MEH(mc_n9,      &kp N9, &kp KP_N9)
+        SHIFT_MEH(mc_n0,      &kp N0, &kp KP_N0)
+        SHIFT_MEH(mc_n1,      &kp N1, &kp KP_N1)
+        SHIFT_MEH(mc_n2,      &kp N2, &kp KP_N2)
+        SHIFT_MEH(mc_n3,      &kp N3, &kp KP_N3)
+        SHIFT_MEH(mc_n4,      &kp N4, &kp KP_N4)
+        SHIFT_MEH(mc_n5,      &kp N5, &kp KP_N5)
+        SHIFT_MEH(mc_n6,      &kp N6, &kp KP_N6)
+        SHIFT_MEH(mc_n7,      &kp N7, &kp KP_N7)
+        SHIFT_MEH(mc_n8,      &kp N8, &kp KP_N8)
+        SHIFT_MEH(mc_n9,      &kp N9, &kp KP_N9)
 
         LAYERTAP_TP(th_n0,     &mc_n0)
 
