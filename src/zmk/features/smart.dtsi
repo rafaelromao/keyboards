@@ -39,7 +39,7 @@
 
         MACRO_TAP(mc_plain2, &sl PLAIN2)
         MACRO_TAP(mc_shifted_plain2, &sl SFT_PLAIN2)
-        SMART_MORPH(mm_plain2_sft_plain2, MOD_LSFT|MOD_RSFT, &mc_shifted_plain2, &mc_plain2)
+        MOD_MORPH(mm_plain2_sft_plain2, MOD_LSFT|MOD_RSFT, &mc_shifted_plain2, &mc_plain2)
 
         msl_p2: msl_p2 {
             compatible = "zmk,behavior-hold-tap";
@@ -134,8 +134,8 @@
         // };
 
         MACRO_TAP(tc_shift, &sk RSHFT)
-        SMART_MORPH(mm_shift, MOD_LSFT|MOD_RSFT, &smart_word, &tc_shift)
-        SMART_MORPH(mm_repeat, MOD_LSFT|MOD_RSFT, &smart_line, &alternate_repeat_key)
+        MOD_MORPH(mm_shift, MOD_LSFT|MOD_RSFT, &smart_word, &tc_shift)
+        MOD_MORPH(mm_repeat, MOD_LSFT|MOD_RSFT, &smart_line, &alternate_repeat_key)
 
         ht_shift: ht_shift {
             compatible = "zmk,behavior-hold-tap";
@@ -163,7 +163,7 @@
 
         MACRO_TAP(mc_alpha2, &sl ALPHA2)
         MACRO_TAP(mc_sft_a2, &sl SFT_A2)
-        SMART_MORPH(mm_alpha2_shifted2, MOD_LSFT|MOD_RSFT, &mc_sft_a2, &mc_alpha2)
+        MOD_MORPH(mm_alpha2_shifted2, MOD_LSFT|MOD_RSFT, &mc_sft_a2, &mc_alpha2)
 
         MACRO_TAP(mc_case_a2,    &sl CASE_A2)
         LAYERTAP_TP(th_sft_a2,  &mc_sft_a2)
@@ -172,12 +172,12 @@
         MACRO_TAP(mc_sk_rgui, &sk RGUI)
         MACRO_TAP(mc_hold_raise, &macro_press &mo RAISE &macro_pause_for_release &macro_release &mo RAISE)
         MACRO_TAP(mc_hold_rgui, &macro_press &kp RGUI &macro_pause_for_release &macro_release &kp RGUI)
-        SMART_MORPH_KM(mm_hold_sft_rai_gui, MOD_LSFT, &mc_hold_rgui, &mc_hold_raise)
-        SMART_MORPH_KM(mm_hold_ctl_rai_gui, MOD_LCTL, &mm_hold_sft_rai_gui, &mc_hold_raise)
-        SMART_MORPH_KM(mm_hold_alt_gui, MOD_LALT, &mm_hold_ctl_rai_gui, &mc_hold_raise)
-        SMART_MORPH_KM(mm_tap_sft_a2_gui, MOD_LSFT, &mc_sk_rgui, &mm_alpha2_shifted2)
-        SMART_MORPH_KM(mm_tap_ctl_a2_gui, MOD_LCTL, &mm_tap_sft_a2_gui, &mm_alpha2_shifted2)
-        SMART_MORPH_KM(mm_tap_alt_a2_gui, MOD_LALT, &mm_tap_ctl_a2_gui, &mm_alpha2_shifted2)
+        MOD_MORPH_KM(mm_hold_sft_rai_gui, MOD_LSFT, &mc_hold_rgui, &mc_hold_raise)
+        MOD_MORPH_KM(mm_hold_ctl_rai_gui, MOD_LCTL, &mm_hold_sft_rai_gui, &mc_hold_raise)
+        MOD_MORPH_KM(mm_hold_alt_gui, MOD_LALT, &mm_hold_ctl_rai_gui, &mc_hold_raise)
+        MOD_MORPH_KM(mm_tap_sft_a2_gui, MOD_LSFT, &mc_sk_rgui, &mm_alpha2_shifted2)
+        MOD_MORPH_KM(mm_tap_ctl_a2_gui, MOD_LCTL, &mm_tap_sft_a2_gui, &mm_alpha2_shifted2)
+        MOD_MORPH_KM(mm_tap_alt_a2_gui, MOD_LALT, &mm_tap_ctl_a2_gui, &mm_alpha2_shifted2)
 
         msl_rai_a2: msl_rai_a2 {
             compatible = "zmk,behavior-hold-tap";
@@ -192,12 +192,12 @@
         MACRO_TAP(mc_sk_lgui, &sk LGUI)
         MACRO_TAP(mc_hold_lower, &macro_press &mo LOWER &macro_pause_for_release &macro_release &mo LOWER)
         MACRO_TAP(mc_hold_lgui, &macro_press &kp LGUI &macro_pause_for_release &macro_release &kp LGUI)
-        SMART_MORPH_KM(mm_hold_sft_low_gui, MOD_RSFT, &mc_hold_lgui, &mc_hold_lower)
-        SMART_MORPH_KM(mm_hold_ctl_low_gui, MOD_RCTL, &mm_hold_sft_low_gui, &mc_hold_lower)
-        SMART_MORPH_KM(mm_hold_alt_low_gui, MOD_RALT, &mm_hold_ctl_low_gui, &mc_hold_lower)
-        SMART_MORPH_KM(mm_tap_sft_space_gui, MOD_RSFT, &mc_sk_lgui, &mc_space)
-        SMART_MORPH_KM(mm_tap_ctl_space_gui, MOD_RCTL, &mm_tap_sft_space_gui, &mc_space)
-        SMART_MORPH_KM(mm_tap_alt_space_gui, MOD_RALT, &mm_tap_ctl_space_gui, &mc_space)
+        MOD_MORPH_KM(mm_hold_sft_low_gui, MOD_RSFT, &mc_hold_lgui, &mc_hold_lower)
+        MOD_MORPH_KM(mm_hold_ctl_low_gui, MOD_RCTL, &mm_hold_sft_low_gui, &mc_hold_lower)
+        MOD_MORPH_KM(mm_hold_alt_low_gui, MOD_RALT, &mm_hold_ctl_low_gui, &mc_hold_lower)
+        MOD_MORPH_KM(mm_tap_sft_space_gui, MOD_RSFT, &mc_sk_lgui, &mc_space)
+        MOD_MORPH_KM(mm_tap_ctl_space_gui, MOD_RCTL, &mm_tap_sft_space_gui, &mc_space)
+        MOD_MORPH_KM(mm_tap_alt_space_gui, MOD_RALT, &mm_tap_ctl_space_gui, &mc_space)
 
         ltn_low_spc: ltn_low_spc {
             compatible = "zmk,behavior-hold-tap";

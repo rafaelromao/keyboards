@@ -54,8 +54,8 @@
 
         // ******************** MAGIC KEY ******************** //
 
-        SMART_MACRO(tc_h, &kp H)
-        SMART_MACRO(mc_bs_v, &kp BACKSPACE &kp V)
+        MACRO_TAP(tc_h, &kp H)
+        MACRO_TAP(mc_bs_v, &kp BACKSPACE &kp V)
         
         labeled_h: labeled_h {
 			compatible = "zmk,behavior-macro";
@@ -94,9 +94,9 @@
                            >; 
         };
 
-        SMART_MACRO(tc_h_c, &kp LS(H))
-        SMART_MACRO(mc_bs_c_v, &kp BACKSPACE &kp LS(V))
-        SMART_MACRO(mc_bs_s_v, &kp BACKSPACE &kp RS(V))
+        MACRO_TAP(tc_h_c, &kp LS(H))
+        MACRO_TAP(mc_bs_c_v, &kp BACKSPACE &kp LS(V))
+        MACRO_TAP(mc_bs_s_v, &kp BACKSPACE &kp RS(V))
 
         labeled_h_c: labeled_h_c {
 			compatible = "zmk,behavior-macro";
@@ -155,8 +155,8 @@
 
         // ******************** REVERSED MAGIC KEY ******************** //
 
-        SMART_MACRO(tc_v, &kp V)
-        SMART_MACRO(mc_bs_h, &kp BACKSPACE &kp H)
+        MACRO_TAP(tc_v, &kp V)
+        MACRO_TAP(mc_bs_h, &kp BACKSPACE &kp H)
 
         labeled_v: labeled_v {
 			compatible = "zmk,behavior-macro";
@@ -193,9 +193,9 @@
                            >;
         };
 
-        SMART_MACRO(tc_v_c, &kp LS(V))
-        SMART_MACRO(mc_bs_c_h, &kp BACKSPACE &kp LS(H))
-        SMART_MACRO(mc_bs_s_h, &kp BACKSPACE &kp RS(H))
+        MACRO_TAP(tc_v_c, &kp LS(V))
+        MACRO_TAP(mc_bs_c_h, &kp BACKSPACE &kp LS(H))
+        MACRO_TAP(mc_bs_s_h, &kp BACKSPACE &kp RS(H))
 
         labeled_v_c: labeled_v_c {
 			compatible = "zmk,behavior-macro";

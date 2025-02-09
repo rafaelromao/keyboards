@@ -22,6 +22,60 @@
         };
 
 
+    /*  MOD TAPS  */
+
+    #define MODTAP_TP(NAME, BINDINGS) \
+         NAME: NAME { \
+            compatible = "zmk,behavior-hold-tap"; \
+            flavor = "tap-preferred"; \
+            #binding-cells = <2>; \
+            tapping-term-ms = <TAPPING_TERM>; \
+            quick-tap-ms = <QUICK_TAP_TERM>; \
+            require-prior-idle-ms = <QUICK_TAP_TERM>; \
+            bindings = <&kp>, <BINDINGS>; \
+        };
+
+    /*  TAP HOLDS  */
+
+    #define TAPHOLD_TP(NAME, TAP, HOLD) \
+         NAME: NAME { \
+            compatible = "zmk,behavior-hold-tap"; \
+            flavor = "tap-preferred"; \
+            #binding-cells = <2>; \
+            tapping-term-ms = <TAPPING_TERM>; \
+            quick-tap-ms = <QUICK_TAP_TERM>; \
+            require-prior-idle-ms = <QUICK_TAP_TERM>; \
+            bindings = <HOLD>, <TAP>; \
+        };
+
+    /*  MOD MORPHS  */
+
+    #define MOD_MORPH(NAME, MODS, MODDED, UNMODDED) \
+        NAME: NAME { \
+            compatible = "zmk,behavior-mod-morph"; \
+            #binding-cells = <0>; \
+            bindings = <UNMODDED>, <MODDED>; \
+            mods = <(MODS)>; \
+        };
+
+    #define MOD_MORPH_KM(NAME, MODS, MODDED, UNMODDED) \
+        NAME: NAME { \
+            compatible = "zmk,behavior-mod-morph"; \
+            #binding-cells = <0>; \
+            bindings = <UNMODDED>, <MODDED>; \
+            mods = <(MODS)>; \
+            keep-mods = <(MODS)>; \
+        };
+
+    /*  LEADER  */
+
+	#define LEADER_SEQ(NAME, KEYS, BINDINGS, LAYERS) \
+		NAME { \
+			key-positions = <KEYS>; \
+			bindings = <BINDINGS>; \
+			layers = <LAYERS>; \
+		};
+
     /*  ACCENTS  */
     
     #define ACCENT(NAME, KEY, DEAD_KEY, TERM, C_TERM, S_TERM) \
@@ -122,15 +176,6 @@
             bindings = <&NAME##hold>, <&NAME##tap>; \
         };
 
-    /*  LEADER  */
-
-	#define LEADER_SEQ(NAME, KEYS, BINDINGS, LAYERS) \
-		NAME { \
-			key-positions = <KEYS>; \
-			bindings = <BINDINGS>; \
-			layers = <LAYERS>; \
-		};
-
     /*  SHORTCUTS  */
 
     #define SHORTCUT MACRO
@@ -141,64 +186,6 @@
             #binding-cells = <0>; \
             bindings = <UNSHIFTED>, <SHIFTED>; \
             mods = <(MOD_LSFT|MOD_RSFT)>; \
-        };
-
-    #define MORPHED_SHORTCUT(NAME, UNMORPHED, MORPHED, MODS) \
-        NAME: NAME { \
-            compatible = "zmk,behavior-mod-morph"; \
-            #binding-cells = <0>; \
-            bindings = <UNMORPHED>, <MORPHED>; \
-            mods = <(MODS)>; \
-        };
-
-    #define MORPHED_SHORTCUT_KM(NAME, UNMORPHED, MORPHED, MODS) \
-        NAME: NAME { \
-            compatible = "zmk,behavior-mod-morph"; \
-            #binding-cells = <0>; \
-            bindings = <UNMORPHED>, <MORPHED>; \
-            mods = <(MODS)>; \
-            keep-mods = <(MODS)>; \
-        };
-
-    #define MODTAP_SHORTCUT(NAME, BINDINGS) \
-         NAME: NAME { \
-            compatible = "zmk,behavior-hold-tap"; \
-            #binding-cells = <2>; \
-            tapping-term-ms = <TAPPING_TERM>; \
-            flavor = "tap-preferred"; \
-            quick-tap-ms = <QUICK_TAP_TERM>; \
-            require-prior-idle-ms = <QUICK_TAP_TERM>; \
-            bindings = <&kp>, <BINDINGS>; \
-        };
-
-    #define TAPHOLD_SHORTCUT(NAME, TAP, HOLD) \
-         NAME: NAME { \
-            compatible = "zmk,behavior-hold-tap"; \
-            #binding-cells = <2>; \
-            tapping-term-ms = <TAPPING_TERM>; \
-            flavor = "tap-preferred"; \
-            quick-tap-ms = <QUICK_TAP_TERM>; \
-            require-prior-idle-ms = <QUICK_TAP_TERM>; \
-            bindings = <HOLD>, <TAP>; \
-        };
-
-    /*  SMARTCASES  */
-
-    #define SMART_MORPH(NAME, MODS, MODDED, UNMODDED) \
-        NAME: NAME { \
-            compatible = "zmk,behavior-mod-morph"; \
-            #binding-cells = <0>; \
-            bindings = <UNMODDED>, <MODDED>; \
-            mods = <(MODS)>; \
-        };
-
-    #define SMART_MORPH_KM(NAME, MODS, MODDED, UNMODDED) \
-        NAME: NAME { \
-            compatible = "zmk,behavior-mod-morph"; \
-            #binding-cells = <0>; \
-            bindings = <UNMODDED>, <MODDED>; \
-            mods = <(MODS)>; \
-            keep-mods = <(MODS)>; \
         };
 
     /*  SYMBOLS  */
@@ -240,15 +227,4 @@
             bindings = <&NAME##num>, <&NAME##ctl>; \
             mods = <(MOD_LALT)>; \
             keep-mods = <(MOD_LALT)>; \
-        };
-
-    #define TAPHOLD_SYMBOL(NAME, TAP, HOLD) \
-         NAME: NAME { \
-            compatible = "zmk,behavior-hold-tap"; \
-            #binding-cells = <2>; \
-            tapping-term-ms = <TAPPING_TERM>; \
-            flavor = "tap-preferred"; \
-            quick-tap-ms = <QUICK_TAP_TERM>; \
-            require-prior-idle-ms = <QUICK_TAP_TERM>; \
-            bindings = <HOLD>, <TAP>; \
         };

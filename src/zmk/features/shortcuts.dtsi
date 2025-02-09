@@ -60,13 +60,13 @@
         SHORTCUT(mc_meh_a,                  &macro_tap &kp LC(LA(LS(A))))
         SHORTCUT(mc_meh_e,                  &macro_tap &kp LC(LA(LS(E))))
         SHORTCUT(mc_meh_f,                  &macro_tap &kp LC(LA(LS(F))))
-        MODTAP_SHORTCUT(th_meh_f,           &mc_meh_f)
+        MODTAP_TP(th_meh_f,           &mc_meh_f)
         SHORTCUT(mc_meh_c,                  &macro_tap &kp LC(LA(LS(C))))
-        MODTAP_SHORTCUT(th_meh_c,           &mc_meh_c)
+        MODTAP_TP(th_meh_c,           &mc_meh_c)
         SHORTCUT(mc_meh_p,                  &macro_tap &kp LC(LA(LS(P))))
-        MODTAP_SHORTCUT(th_meh_p,           &mc_meh_p)
+        MODTAP_TP(th_meh_p,           &mc_meh_p)
         SHORTCUT(mc_meh_h,                  &macro_tap &kp LC(LA(LS(H))))
-        MODTAP_SHORTCUT(th_meh_h,           &mc_meh_h)
+        MODTAP_TP(th_meh_h,           &mc_meh_h)
         SHORTCUT(mc_meh_w,                  &macro_tap &kp LC(LA(LS(W))))
         SHORTCUT(mc_meh_v,                  &macro_tap &kp LC(LA(LS(V))))
         SHORTCUT(mc_meh_z,                  &macro_tap &kp LC(LA(LS(Z))))
@@ -106,21 +106,21 @@
         SHORTCUT(mc_del_word,               &macro_press &kp LA(BACKSPACE) &macro_pause_for_release &macro_release &kp LA(BACKSPACE))
 
         SHORTCUT(mc_meh_comma,              &macro_tap &kp LC(LA(LS(SQT))))
-        MODTAP_SHORTCUT(th_meh_comm,        &mc_meh_comma)
+        MODTAP_TP(th_meh_comm,        &mc_meh_comma)
         SHORTCUT(mc_meh_dot,                &macro_tap &kp LC(LA(LS(BACKSLASH))))
-        MODTAP_SHORTCUT(th_meh_dot,         &mc_meh_dot)
+        MODTAP_TP(th_meh_dot,         &mc_meh_dot)
 
-        SMART_MORPH_KM(mm_comma_meh, MOD_LSFT, &mc_meh_comma, &mc_comma)
-        SMART_MORPH_KM(mm_comma_meh_lctl, MOD_LCTL, &mm_comma_meh, &mc_comma)
-        SMART_MORPH_KM(mm_comma_meh_lalt, MOD_LALT, &mm_comma_meh_lctl, &mc_comma)
+        MOD_MORPH_KM(mm_comma_meh, MOD_LSFT, &mc_meh_comma, &mc_comma)
+        MOD_MORPH_KM(mm_comma_meh_lctl, MOD_LCTL, &mm_comma_meh, &mc_comma)
+        MOD_MORPH_KM(mm_comma_meh_lalt, MOD_LALT, &mm_comma_meh_lctl, &mc_comma)
 
-        SMART_MORPH_KM(mm_dot_meh, MOD_LSFT, &mc_meh_dot, &mc_dot)
-        SMART_MORPH_KM(mm_dot_meh_lctl, MOD_LCTL, &mm_dot_meh, &mc_dot)
-        SMART_MORPH_KM(mm_dot_meh_lalt, MOD_LALT, &mm_dot_meh_lctl, &mc_dot)
+        MOD_MORPH_KM(mm_dot_meh, MOD_LSFT, &mc_meh_dot, &mc_dot)
+        MOD_MORPH_KM(mm_dot_meh_lctl, MOD_LCTL, &mm_dot_meh, &mc_dot)
+        MOD_MORPH_KM(mm_dot_meh_lalt, MOD_LALT, &mm_dot_meh_lctl, &mc_dot)
 
         SHORTCUT(mc_meh_space,             &kp LS(LC(LA(SPACE))))
         SHORTCUT(mc_hyper_space,           &kp LS(LC(LA(LG(SPACE)))))
-        TAPHOLD_SHORTCUT(th_hyper_space,   &mc_hyper_space, &mc_hyper)
+        TAPHOLD_TP(th_hyper_space,   &mc_hyper_space, &mc_hyper)
 
         mc_meh: mc_meh {
             compatible = "zmk,behavior-macro";
