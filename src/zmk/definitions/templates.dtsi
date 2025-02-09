@@ -1,6 +1,6 @@
     /*  ACCENTS  */
     
-    #define ACCENTED_KEY(NAME, KEY, DEAD_KEY, TERM, C_TERM, S_TERM) \
+    #define ACCENT(NAME, KEY, DEAD_KEY, TERM, C_TERM, S_TERM) \
         NAME: NAME { \
             wait-ms = <0>; \
             tap-ms = <0>; \
@@ -41,7 +41,7 @@
                 ; \
         }; \
     
-    #define MACRO_KEY(NAME, BINDINGS) \
+    #define MACRO(NAME, BINDINGS) \
         NAME: NAME { \
 			compatible = "zmk,behavior-macro"; \
             #binding-cells = <0>; \
