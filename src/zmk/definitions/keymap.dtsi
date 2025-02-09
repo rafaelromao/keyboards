@@ -5,6 +5,7 @@
 *
 */
 
+#include "templates.dtsi"
 #include "keycodes.h"
 #include "config.dtsi"
 

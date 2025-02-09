@@ -6,42 +6,6 @@
 */
 
 / {
-    #define SMART_LAYERTAP(NAME, BINDINGS) \
-         NAME: NAME { \
-            compatible = "zmk,behavior-hold-tap"; \
-            #binding-cells = <2>; \
-            tapping-term-ms = <QUICK_TAP_TERM>; \
-            flavor = "tap-preferred"; \
-            quick-tap-ms = <0>; \
-            bindings = <&mo>, <BINDINGS>; \
-        };
-
-    #define SMART_MACRO(NAME, BINDINGS) \
-        NAME: NAME { \
-			compatible = "zmk,behavior-macro"; \
-            #binding-cells = <0>; \
-            wait-ms = <10>; \
-            tap-ms = <10>; \
-            bindings = <&macro_tap BINDINGS>; \
-        };
-
-    #define SMART_MORPH(NAME, MODS, MODDED, UNMODDED) \
-        NAME: NAME { \
-            compatible = "zmk,behavior-mod-morph"; \
-            #binding-cells = <0>; \
-            bindings = <UNMODDED>, <MODDED>; \
-            mods = <(MODS)>; \
-        };
-
-    #define SMART_MORPH_KM(NAME, MODS, MODDED, UNMODDED) \
-        NAME: NAME { \
-            compatible = "zmk,behavior-mod-morph"; \
-            #binding-cells = <0>; \
-            bindings = <UNMODDED>, <MODDED>; \
-            mods = <(MODS)>; \
-            keep-mods = <(MODS)>; \
-        };
-
     smart {
         
         // ********************** SENTENCE CASE ********************** //

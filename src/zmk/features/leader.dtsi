@@ -18,23 +18,6 @@
 };
 
 / {
-
-    #define LEADER_MACRO(NAME, BINDINGS) \
-        NAME: NAME { \
-			compatible = "zmk,behavior-macro"; \
-            #binding-cells = <0>; \
-            wait-ms = <10>; \
-            tap-ms = <10>; \
-            bindings = <&macro_tap BINDINGS>; \
-        };
-
-	#define LEADER_SEQ(NAME, KEYS, BINDINGS, LAYERS) \
-		NAME { \
-			key-positions = <KEYS>; \
-			bindings = <BINDINGS>; \
-			layers = <LAYERS>; \
-		};
-
 	macros {
         LEADER_MACRO(mc_section, &kp LA(N6))
 	};

@@ -4,6 +4,8 @@
 #include <dt-bindings/zmk/hid_usage_pages.h>
 #include <dt-bindings/zmk/modifiers.h>
 
+#define WINDOWS
+
 // clang-format off
 
 #define CARET_TERM    0x070100
