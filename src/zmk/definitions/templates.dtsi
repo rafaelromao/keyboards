@@ -209,7 +209,7 @@
             mods = <(MOD_LCTL)>; \
             keep-mods = <(MOD_LCTL)>; \
         }; \
-        NAME##alt_meh: NAME##alt_meh { \
+        NAME: NAME { \
             compatible = "zmk,behavior-mod-morph"; \
             #binding-cells = <0>; \
             bindings = <&NAME##sft>, <&NAME##ctl_meh>; \
