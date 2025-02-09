@@ -3,30 +3,20 @@
     #define LAYERTAP_TP(NAME, BINDINGS) \
          NAME: NAME { \
             compatible = "zmk,behavior-hold-tap"; \
+            flavor = "tap-preferred"; \
             #binding-cells = <2>; \
             tapping-term-ms = <TAPPING_TERM>; \
             quick-tap-ms = <QUICK_TAP_TERM>; \
             require-prior-idle-ms = <QUICK_TAP_TERM>; \
             bindings = <&mo>, <BINDINGS>; \
-            flavor = "tap-preferred"; \
         };
     
-    #define SMART_LAYERTAP(NAME, BINDINGS) \
+    #define LAYERTAP_HP(NAME, BINDINGS) \
          NAME: NAME { \
             compatible = "zmk,behavior-hold-tap"; \
-            #binding-cells = <2>; \
-            tapping-term-ms = <QUICK_TAP_TERM>; \
-            flavor = "tap-preferred"; \
-            quick-tap-ms = <0>; \
-            bindings = <&mo>, <BINDINGS>; \
-        };
-
-    #define LAYERTAP_HP_SYMBOL(NAME, BINDINGS) \
-         NAME: NAME { \
-            compatible = "zmk,behavior-hold-tap"; \
+            flavor = "hold-preferred"; \
             #binding-cells = <2>; \
             tapping-term-ms = <TAPPING_TERM>; \
-            flavor = "hold-preferred"; \
             quick-tap-ms = <QUICK_TAP_TERM>; \
             bindings = <&mo>, <BINDINGS>; \
         };

@@ -19,7 +19,7 @@
         TAPHOLD_SYMBOL(th_hyper_h,  &mc_h, &mc_hyper)
 
         SYMBOL(mc_comma,            &kp COMMA)
-        LAYERTAP_HP_SYMBOL(th_comma, &mm_comma_meh)
+        LAYERTAP_HP(th_comma, &mm_comma_meh)
 
         SYMBOL(mc_dot,             &kp DOT &sl SEN_CASE)
         SYMBOL(mc_end_dot,         &kp END &kp DOT &sl SEN_CASE)

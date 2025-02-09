@@ -19,9 +19,9 @@
         };
         SMART_MACRO(tc_sp_ns,         &kp SPACE &sl SEN_EXT)
         SMART_MACRO(tc_nsen,          &sl SEN_EXT)
-        SMART_LAYERTAP(th_sp_ns,      &tc_sp_ns)
-        SMART_LAYERTAP(th_cancel,     &tc_cancel)
-        SMART_LAYERTAP(th_nsen,       &tc_nsen)
+        LAYERTAP_TP(th_sp_ns,      &tc_sp_ns)
+        LAYERTAP_TP(th_cancel,     &tc_cancel)
+        LAYERTAP_TP(th_nsen,       &tc_nsen)
 
         // ********************** SMART PLAIN ALPHAS ********************** //
 
@@ -71,7 +71,7 @@
             bindings = <&macro_tap &smart_num>;
         };
 
-        SMART_LAYERTAP(ht_num_word, &tc_num_word)
+        LAYERTAP_TP(ht_num_word, &tc_num_word)
 
         smart_num_cp: smart_num_cp {
             // compatible = "zmk,behavior-auto-layer";
@@ -166,8 +166,8 @@
         SMART_MORPH(mm_alpha2_shifted2, MOD_LSFT|MOD_RSFT, &mc_sft_a2, &mc_alpha2)
 
         SMART_MACRO(mc_case_a2,    &sl CASE_A2)
-        SMART_LAYERTAP(th_sft_a2,  &mc_sft_a2)
-        SMART_LAYERTAP(th_case_a2, &mc_case_a2)
+        LAYERTAP_TP(th_sft_a2,  &mc_sft_a2)
+        LAYERTAP_TP(th_case_a2, &mc_case_a2)
 
         SMART_MACRO(mc_sk_rgui, &sk RGUI)
         SMART_MACRO(mc_hold_raise, &macro_press &mo RAISE &macro_pause_for_release &macro_release &mo RAISE)
