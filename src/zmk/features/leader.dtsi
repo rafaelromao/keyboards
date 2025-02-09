@@ -19,7 +19,7 @@
 
 / {
 	macros {
-        LEADER_MACRO(mc_section, &kp LA(N6))
+        MACRO_TAP(mc_section, &kp LA(N6))
 	};
 
 	leader_sequences {

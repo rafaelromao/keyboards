@@ -40,6 +40,8 @@
                 , <&macro_tap &kp S_TERM> \
                 ; \
         }; \
+
+    /*  MACROS  */
     
     #define MACRO(NAME, BINDINGS) \
         NAME: NAME { \
@@ -48,6 +50,15 @@
             wait-ms = <0>; \
             tap-ms = <0>; \
             bindings = <BINDINGS>; \
+        };
+
+    #define MACRO_TAP(NAME, BINDINGS) \
+        NAME: NAME { \
+			compatible = "zmk,behavior-macro"; \
+            #binding-cells = <0>; \
+            wait-ms = <0>; \
+            tap-ms = <0>; \
+            bindings = <&macro_tap BINDINGS>; \
         };
 
     /*  COMBOS  */
@@ -89,15 +100,6 @@
 
     /*  LEADER  */
 
-    #define LEADER_MACRO(NAME, BINDINGS) \
-        NAME: NAME { \
-			compatible = "zmk,behavior-macro"; \
-            #binding-cells = <0>; \
-            wait-ms = <10>; \
-            tap-ms = <10>; \
-            bindings = <&macro_tap BINDINGS>; \
-        };
-
 	#define LEADER_SEQ(NAME, KEYS, BINDINGS, LAYERS) \
 		NAME { \
 			key-positions = <KEYS>; \
@@ -107,14 +109,7 @@
 
     /*  SHORTCUTS  */
 
-    #define SHORTCUT(NAME, BINDINGS) \
-        NAME: NAME { \
-            compatible = "zmk,behavior-macro"; \
-            #binding-cells = <0>; \
-            wait-ms = <10>; \
-            tap-ms = <10>; \
-            bindings = <BINDINGS>; \
-        };
+    #define SHORTCUT MACRO
 
     #define SHIFTED_SHORTCUT(NAME, UNSHIFTED, SHIFTED) \
         NAME: NAME { \
@@ -213,14 +208,7 @@
 
     /*  SYMBOLS  */
 
-    #define SYMBOL(NAME, SYMBOLS) \
-        NAME: NAME { \
-            compatible = "zmk,behavior-macro"; \
-            #binding-cells = <0>; \
-            wait-ms = <0>; \
-            tap-ms = <0>; \
-            bindings = <&macro_tap SYMBOLS>; \
-        };
+    #define SYMBOL MACRO_TAP
 
     #define SHIFTED_SYMBOL(NAME, UNSHIFTED, SHIFTED) \
         NAME: NAME { \
@@ -290,17 +278,3 @@
             require-prior-idle-ms = <QUICK_TAP_TERM>; \
             bindings = <&mo>, <BINDINGS>; \
         };
-
-    #define MACRO_SYMBOL(NAME, SYMBOLS) \
-        NAME: NAME { \
-			compatible = "zmk,behavior-macro"; \
-            #binding-cells = <0>; \
-            wait-ms = <10>; \
-            tap-ms = <10>; \
-            bindings = <&macro_tap SYMBOLS>; \
-        };
-
-    /*    */
-    /*    */
-    /*    */
-    /*    */
