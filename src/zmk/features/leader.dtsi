@@ -20,11 +20,15 @@
 / {
 	macros {
         MACRO_TAP(mc_section, &kp LA(N6))
+        MACRO_TAP(mc_tmux, &kp T &kp M &kp U &kp X)
+        MACRO_TAP(mc_exit, &kp E &kp X &kp I &kp T &kp ENTER)
 	};
 
 	leader_sequences {
 		compatible = "zmk,leader-sequences";
 
-		LEADER_SEQ(ld_sect, RBR LHM , &mc_section, ALPHA1 SMART FUN)
+		LEADER_SEQ(ld_sect, LHM , &mc_section, ALPHA1 SMART FUN)
+		LEADER_SEQ(ld_tmux, LHI , &mc_tmux, ALPHA1 SMART FUN)
+		LEADER_SEQ(ld_exit, RBR , &mc_exit, ALPHA1 SMART FUN)
 	};
 };
