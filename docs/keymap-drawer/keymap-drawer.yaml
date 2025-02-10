@@ -437,10 +437,10 @@ layers:
         { type: held },
         "",
       ]
-    - null
+    - { t: ▽ }
     - { t: ",␣" }
-    - null
-    - null
+    - { t: ▽ }
+    - { t: ▽ }
 combos:
   - {
       p: [0, 1],
