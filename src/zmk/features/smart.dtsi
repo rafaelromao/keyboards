@@ -133,7 +133,7 @@
         //     bindings = <&macro_tap &kp CAPSWORD_TERM &smart_word CASE_A1>;
         // };
 
-        MACRO_TAP(tc_shift, &sk RSHFT)
+        MACRO_TAP(tc_shift, &sk LSHFT)
         MOD_MORPH(mm_shift, MOD_LSFT|MOD_RSFT, &smart_word, &tc_shift)
         MOD_MORPH(mm_repeat, MOD_LSFT|MOD_RSFT, &smart_line, &alternate_repeat_key)
 

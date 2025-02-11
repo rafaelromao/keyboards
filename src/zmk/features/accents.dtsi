@@ -23,8 +23,8 @@
         MACRO(mc_qu_c,     &macro_press &kp LSHFT &macro_tap &kp Q &macro_wait_time 10 &macro_tap &kp U &kp C_QU_TERM &macro_release &kp LSHFT)
         MACRO(mc_qu_s,     &macro_press &kp LSHFT &macro_tap &kp Q &macro_wait_time 10 &macro_release &kp LSHFT &macro_tap &kp U &kp S_QU_TERM)
         MACRO(mc_aotil,    &macro_tap &macro_wait_time 10 &macro_tap &ac_atil &kp O)
-        MACRO(mc_aotil_c,  &macro_tap &macro_wait_time 10 &macro_tap &ac_atil_c &kp LS(O))
+        MACRO(mc_aotil_c,  &macro_tap &macro_wait_time 10 &macro_tap &ac_atil_c &kp RS(O))
         MACRO(mc_otiles,   &macro_tap &ac_otil &macro_wait_time 10 &kp E &kp S)
-        MACRO(mc_otiles_c, &macro_tap &ac_otil_c &macro_wait_time 10 &kp LS(E) &kp LS(S))
+        MACRO(mc_otiles_c, &macro_tap &ac_otil_c &macro_wait_time 10 &kp RS(E) &kp RS(S))
     };
 };
