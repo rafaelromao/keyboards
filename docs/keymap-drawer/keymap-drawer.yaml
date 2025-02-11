@@ -155,7 +155,7 @@ layers:
         { t: ",", h: functions },
       ]
     - ["<", ">", { t: "`", h: "⇥ `" }, { t: "!", h: "⇥ !" }, "/", "*"]
-    - { t: $$mdi:repeat$$, s: repeat }
+    - { t: ▽ }
     - { t: $$mdi:keyboard-space$$, h: lower }
     - { type: held }
     - { t: "Num Lock" }
@@ -406,10 +406,10 @@ layers:
         "F2",
         "F3",
       ]
-    - null
+    - { t: $$mdi:repeat$$, s: repeat }
     - { type: held }
     - { type: held alternate }
-    - null
+    - { t: $$mdi:repeat$$, s: repeat }
   smartcases:
     - [
         null,
