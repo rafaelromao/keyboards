@@ -52,13 +52,13 @@
         MACRO(mc_meh_a,                  &macro_tap &kp LC(LA(LS(A))))
         MACRO(mc_meh_e,                  &macro_tap &kp LC(LA(LS(E))))
         MACRO(mc_meh_f,                  &macro_tap &kp LC(LA(LS(F))))
-        MODTAP_TP(th_meh_f,           &mc_meh_f)
+        MODTAP_TP(th_meh_f,              &mc_meh_f)
         MACRO(mc_meh_c,                  &macro_tap &kp LC(LA(LS(C))))
-        MODTAP_TP(th_meh_c,           &mc_meh_c)
+        MODTAP_TP(th_meh_c,              &mc_meh_c)
         MACRO(mc_meh_p,                  &macro_tap &kp LC(LA(LS(P))))
-        MODTAP_TP(th_meh_p,           &mc_meh_p)
+        MODTAP_TP(th_meh_p,              &mc_meh_p)
         MACRO(mc_meh_h,                  &macro_tap &kp LC(LA(LS(H))))
-        MODTAP_TP(th_meh_h,           &mc_meh_h)
+        MODTAP_TP(th_meh_h,              &mc_meh_h)
         MACRO(mc_meh_w,                  &macro_tap &kp LC(LA(LS(W))))
         MACRO(mc_meh_v,                  &macro_tap &kp LC(LA(LS(V))))
         MACRO(mc_meh_z,                  &macro_tap &kp LC(LA(LS(Z))))
@@ -79,9 +79,9 @@
         MACRO(mc_down_end,               &macro_tap &kp DOWN &kp END)
 
         MACRO(mc_meh_comma,              &macro_tap &kp LC(LA(LS(SQT))))
-        MODTAP_TP(th_meh_comm,        &mc_meh_comma)
+        MODTAP_TP(th_meh_comm,           &mc_meh_comma)
         MACRO(mc_meh_dot,                &macro_tap &kp LC(LA(LS(BACKSLASH))))
-        MODTAP_TP(th_meh_dot,         &mc_meh_dot)
+        MODTAP_TP(th_meh_dot,            &mc_meh_dot)
 
         // Meh and Hyper
 

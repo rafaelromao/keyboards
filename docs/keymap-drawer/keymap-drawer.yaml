@@ -5,12 +5,12 @@ layers:
     - [b, m, g, l, o, u]
     - [
         { t: d, h: shortcuts },
-        { h: $$mdi:apple-keyboard-shift$$, t: n },
-        { h: $$mdi:apple-keyboard-control$$, t: s },
-        { h: $$mdi:apple-keyboard-option$$, t: t },
-        { h: $$mdi:apple-keyboard-option$$, t: r },
-        { h: $$mdi:apple-keyboard-control$$, t: a },
-        { h: $$mdi:apple-keyboard-shift$$, t: e },
+        { h: $$mdi:apple-keyboard-control$$, t: n },
+        { h: $$mdi:apple-keyboard-option$$, t: s },
+        { h: $$mdi:apple-keyboard-shift$$, t: t },
+        { h: $$mdi:apple-keyboard-shift$$, t: r },
+        { h: $$mdi:apple-keyboard-option$$, t: a },
+        { h: $$mdi:apple-keyboard-control$$, t: e },
         { t: i, h: shortcuts },
       ]
     - [
@@ -44,12 +44,12 @@ layers:
     - [B, M, G, L, O, U]
     - [
         { t: D, h: shortcuts },
-        { h: $$mdi:apple-keyboard-shift$$, t: N },
-        { h: $$mdi:apple-keyboard-control$$, t: S },
-        { h: $$mdi:apple-keyboard-option$$, t: T },
-        { h: $$mdi:apple-keyboard-option$$, t: R },
-        { h: $$mdi:apple-keyboard-control$$, t: A },
-        { h: $$mdi:apple-keyboard-shift$$, t: E },
+        { h: $$mdi:apple-keyboard-control$$, t: N },
+        { h: $$mdi:apple-keyboard-option$$, t: S },
+        { h: $$mdi:apple-keyboard-shift$$, t: T },
+        { h: $$mdi:apple-keyboard-shift$$, t: R },
+        { h: $$mdi:apple-keyboard-option$$, t: A },
+        { h: $$mdi:apple-keyboard-control$$, t: E },
         { t: I, h: shortcuts },
       ]
     - [
@@ -235,9 +235,9 @@ layers:
       ]
     - [
         { type: ghost },
-        { type: held, t: $$mdi:apple-keyboard-shift$$ },
         { type: held, t: $$mdi:apple-keyboard-control$$ },
         { type: held, t: $$mdi:apple-keyboard-option$$ },
+        { type: held, t: $$mdi:apple-keyboard-shift$$ },
         { type: ghost },
         { type: ghost },
         { type: ghost },
@@ -275,8 +275,8 @@ layers:
         { type: ghost },
         { type: ghost },
         { type: held, t: $$mdi:apple-keyboard-shift$$ },
-        { type: held, t: $$mdi:apple-keyboard-control$$ },
         { type: held, t: $$mdi:apple-keyboard-option$$ },
+        { type: held, t: $$mdi:apple-keyboard-control$$ },
         { type: ghost },
       ]
     - [
@@ -328,9 +328,9 @@ layers:
       ]
     - [
         { t: "⎀", h: insert },
-        { t: $$mdi:apple-keyboard-shift$$ },
         { t: $$mdi:apple-keyboard-control$$ },
         { t: $$mdi:apple-keyboard-option$$ },
+        { t: $$mdi:apple-keyboard-shift$$ },
         { t: $$mdi:arrow-left$$, h: left },
         { t: $$mdi:arrow-down$$, h: down },
         { t: $$mdi:arrow-up$$, h: up },
@@ -390,9 +390,9 @@ layers:
       ]
     - [
         { type: held },
-        { t: $$mdi:apple-keyboard-shift$$, s: sticky },
         { t: $$mdi:apple-keyboard-control$$, s: sticky },
         { t: $$mdi:apple-keyboard-option$$, s: sticky },
+        { t: $$mdi:apple-keyboard-shift$$, s: sticky },
         "F4",
         "F5",
         "F6",

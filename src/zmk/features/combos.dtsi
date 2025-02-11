@@ -54,10 +54,10 @@
         COMBO(cb_selpaste,      RBI RBM RBR R0,  &mc_selpaste,   ALL_LAYERS)
 
         COMBO(cb_numword,       LBR LBM,         &ht_num_word NAV 0,   ALPHA1_LAYERS)
-        COMBO(cd_sc_nav,        LHR LHM L1,      &mc_sc_nav,     ALPHA1_LAYERS)
-        COMBO(cd_gsa_nav,       LBR LHM LHI L1,  &mc_gsa_nav,    ALPHA1_LAYERS)
-        COMBO(cd_scg_nav,       LHR LHM LBI L1,  &mc_scg_nav,    ALPHA1_LAYERS)
-        COMBO(cd_sca_spc,       LHR LHM LHI L0,  &mc_sca_spc,    ALPHA1_LAYERS)
+        COMBO(cd_ca_nav,        LHR LHM L1,      &mc_ca_nav,     ALPHA1_LAYERS)
+        COMBO(cd_gcs_nav,       LBR LHM LHI L1,  &mc_gcs_nav,    ALPHA1_LAYERS)
+        COMBO(cd_cag_nav,       LHR LHM LBI L1,  &mc_cag_nav,    ALPHA1_LAYERS)
+        COMBO(cd_cas_spc,       LHR LHM LHI L0,  &mc_cas_spc,    ALPHA1_LAYERS)
 
         COMBO(cd_hyper_l,       LBR LBM LBI, &th_hyper_space 0 0,    ALPHA1_LAYERS)
         COMBO(cb_hyper_r,       RBI RBM RBR, &th_hyper_h 0 0,        ALPHA1_LAYERS)
@@ -206,16 +206,16 @@
         MACRO(mc_ralt_ralt        , &macro_tap &kp RALT &kp RALT)
         MACRO(mc_lgui_lgui        , &macro_tap &kp LGUI &kp LGUI)
 
-        MACRO(mc_sc_nav           , &macro_press &kp LSHFT &kp LCTL &mo NAV &macro_pause_for_release &macro_release &mo NAV &kp LSHFT &kp LCTL)
-        MACRO(mc_gsa_nav          , &macro_press &kp LGUI &kp LSFT &kp LALT &mo NAV &macro_pause_for_release &macro_release &mo NAV &kp LGUI &kp LSFT &kp LALT)
-        MACRO(mc_scg_nav          , &macro_press &kp LSHFT &kp LCTL &kp LGUI &mo NAV &macro_pause_for_release &macro_release &mo NAV &kp LSHFT &kp LCTL &kp LGUI)
-        MACRO(mc_sca_spc          , &macro_press &kp LSHFT &kp LCTL &kp LALT &mo LOWER &macro_pause_for_release &macro_release &mo LOWER &kp LSHFT &kp LCTL &kp LALT)
+        MACRO(mc_ca_nav           , &macro_press &kp LCTL &kp LALT &mo NAV &macro_pause_for_release &macro_release &mo NAV &kp LCTL &kp LALT)
+        MACRO(mc_gcs_nav          , &macro_press &kp LGUI &kp LCTL &kp LSHFT &mo NAV &macro_pause_for_release &macro_release &mo NAV &kp LGUI &kp LCTL &kp LSHFT)
+        MACRO(mc_cag_nav          , &macro_press &kp LCTL &kp LALT &kp LGUI &mo NAV &macro_pause_for_release &macro_release &mo NAV &kp LCTL &kp LALT &kp LGUI)
+        MACRO(mc_cas_spc          , &macro_press &kp LCTL &kp LALT &kp LSHFT &mo LOWER &macro_pause_for_release &macro_release &mo LOWER &kp LCTL &kp LALT &kp LSHFT)
 
-        COMBO_MUST_TAP(ht_w       , &kp LCTL  &kp LALT          , &kp W)
-        COMBO_MUST_TAP(ht_q       , &kp LSHFT &kp LCTL          , &kp Q)
-        COMBO_MUST_TAP(ht_z       , &kp RCTL  &kp RALT          , &kp Z)
-        COMBO_MUST_TAP(ht_y       , &kp RCTL  &kp RSFT          , &kp Y)
-        COMBO_MUST_TAP(ht_meh_spc , &kp LSHFT &kp LCTL &kp LALT , &mc_meh_space)
-        COMBO_MUST_TAP(ht_p       , &kp RSHFT &kp RCTL &kp RALT , &kp P)
+        COMBO_MUST_TAP(ht_w       , &kp LSFT  &kp LALT          , &kp W)
+        COMBO_MUST_TAP(ht_q       , &kp LCTL  &kp LALT          , &kp Q)
+        COMBO_MUST_TAP(ht_z       , &kp RSFT  &kp RALT          , &kp Z)
+        COMBO_MUST_TAP(ht_y       , &kp RALT  &kp RCTL          , &kp Y)
+        COMBO_MUST_TAP(ht_meh_spc , &kp LCTL &kp LALT &kp LSHFT , &mc_meh_space)
+        COMBO_MUST_TAP(ht_p       , &kp RCTL &kp RALT &kp RSHFT , &kp P)
     };
 };
