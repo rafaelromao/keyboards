@@ -25,16 +25,24 @@
         MACRO_TAP(mc_lazygit, &kp L &kp A &kp Z &kp Y &kp G &kp I &kp T &kp ENTER)
         MACRO_TAP(mc_keyboards, &kp K &kp E &kp Y &kp B &kp O &kp A &kp R &kp D &kp S)
         MACRO_TAP(mc_exit, &kp E &kp X &kp I &kp T &kp ENTER)
+        MACRO_TAP(mc_haha, &kp H &kp A &kp H &kp A)
+        MACRO_TAP(mc_hehe, &kp H &kp E &kp H &kp E)
+        MACRO_TAP(mc_kkkk, &kp K &kp K &kp K &kp K)
+        MACRO_TAP(mc_hugs,  &kp LBKT &kp RBKT &kp SQT &kp S)
 	};
 
 	leader_sequences {
 		compatible = "zmk,leader-sequences";
 
-		LEADER_SEQ(ld_sect      , LHM , &mc_section   , ALPHA1 SMART FUN)
-		LEADER_SEQ(ld_tmux      , LHI , &mc_tmux      , ALPHA1 SMART FUN)
-		LEADER_SEQ(ld_nvim      , LHR , &mc_nvim      , ALPHA1 SMART FUN)
-		LEADER_SEQ(ld_lazygit   , LTI , &mc_lazygit   , ALPHA1 SMART FUN)
-		LEADER_SEQ(ld_keyboards , R0 LTI , &mc_keyboards , ALPHA1 SMART FUN)
-		LEADER_SEQ(ld_exit      , RBR , &mc_exit      , ALPHA1 SMART FUN)
+		LEADER_SEQ(ld_sect      , LHM     , &mc_section   , ALPHA1 SMART FUN)
+		LEADER_SEQ(ld_tmux      , LHI     , &mc_tmux      , ALPHA1 SMART FUN)
+		LEADER_SEQ(ld_nvim      , LHR     , &mc_nvim      , ALPHA1 SMART FUN)
+		LEADER_SEQ(ld_lazygit   , LTI     , &mc_lazygit   , ALPHA1 SMART FUN)
+		LEADER_SEQ(ld_keyboards , R0 LTI  , &mc_keyboards , ALPHA1 SMART FUN)
+		LEADER_SEQ(ld_exit      , RBR     , &mc_exit      , ALPHA1 SMART FUN)
+		LEADER_SEQ(ld_haha      , RTM     , &mc_haha      , ALPHA1 SMART FUN)
+		LEADER_SEQ(ld_hehe      , RTR     , &mc_hehe      , ALPHA1 SMART FUN)
+		LEADER_SEQ(ld_kkkk      , RHP     , &mc_kkkk      , ALPHA1 SMART FUN)
+        LEADER_SEQ(ld_hugs      , LBM LBR , &mc_hugs      , ALPHA1 SMART FUN)
 	};
 };
