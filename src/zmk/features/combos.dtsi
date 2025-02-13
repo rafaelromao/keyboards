@@ -59,8 +59,8 @@
         COMBO(cd_cag_nav,       LHR LHM LBI L1,  &mc_cag_nav,          ALPHA1_LAYERS)
         COMBO(cd_cas_spc,       LHR LHM LHI L0,  &mc_cas_spc,          ALPHA1_LAYERS)
 
-        COMBO(cd_ht_meh_spc,    LHR LHM LHI, &ht_meh_spc 0 0,        ALPHA1_LAYERS FUN NAV)
-        COMBO(cd_hyper_l,       LBR LBM LBI, &th_hyper_space 0 0,    ALPHA1_LAYERS FUN NAV)
+        COMBO(cd_ht_meh_spc,    LHR LHM LHI, &ht_meh_spc 0 0,        ALPHA1_LAYERS FUN NAV_LAYERS)
+        COMBO(cd_hyper_l,       LBR LBM LBI, &th_hyper_space 0 0,    ALPHA1_LAYERS FUN NAV_LAYERS)
         COMBO(cb_hyper_r,       RBI RBM RBR, &th_hyper_h 0 0,        ALPHA1_LAYERS)
 
         COMBO(cb_esc_save,      LTR LTM L0,  &mc_save_esc,       ALPHA1_LAYERS)
@@ -188,6 +188,7 @@
         COMBO(cb_q_vim,         RTM RTI,     &kp Q,              MEDIA_LAYERS)
 
         COMBO(cb_lower_nav,     LBR LBM,     &mo LOW_CP,         NAV_LAYERS)
+        COMBO(cd_ca,            LHR LHM,     &kp LC(LALT),       NAV_LAYERS)
 
         COMBO(cb_down_home,     RBI RBM,     &mc_down_home,      NAV_LAYERS)
         COMBO(cb_down_end,      RBR RBM,     &mc_down_end,       NAV_LAYERS)
