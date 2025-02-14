@@ -1,6 +1,78 @@
 layout:
   cols_thumbs_notation: "1333+2> 2<+3331"
 layers:
+  left-meh-morphs:
+    - [
+        { type: ghost },
+        { type: ghost },
+        { type: ghost },
+        { type: ghost },
+        { type: ghost },
+        { type: ghost },
+      ]
+    - [
+        { type: ghost },
+        { type: held, t: $$mdi:apple-keyboard-control$$ },
+        { type: held, t: $$mdi:apple-keyboard-option$$ },
+        { type: held, t: $$mdi:apple-keyboard-shift$$ },
+        { type: ghost },
+        { type: ghost },
+        { type: ghost },
+        { type: ghost },
+      ]
+    - [
+        { type: ghost },
+        { type: ghost },
+        { type: ghost },
+        { type: ghost },
+        { type: ghost },
+        { type: ghost },
+      ]
+    - { type: ghost }
+    - { type: ghost, t: ▽ }
+    - {
+        type: ghost,
+        s: sticky,
+        h: $$mdi:apple-keyboard-command$$,
+        t: $$mdi:apple-keyboard-command$$,
+      }
+    - { type: ghost }
+  right-meh-morphs:
+    - [
+        { type: ghost },
+        { type: ghost },
+        { type: ghost },
+        { type: ghost },
+        { type: ghost },
+        { type: ghost },
+      ]
+    - [
+        { type: ghost },
+        { type: ghost },
+        { type: ghost },
+        { type: ghost },
+        { type: held, t: $$mdi:apple-keyboard-shift$$ },
+        { type: held, t: $$mdi:apple-keyboard-option$$ },
+        { type: held, t: $$mdi:apple-keyboard-control$$ },
+        { type: ghost },
+      ]
+    - [
+        { type: ghost },
+        { type: ghost },
+        { type: ghost },
+        { type: ghost },
+        { type: ghost },
+        { type: ghost },
+      ]
+    - { type: ghost }
+    - {
+        type: ghost,
+        s: sticky,
+        h: $$mdi:apple-keyboard-command$$,
+        t: $$mdi:apple-keyboard-command$$,
+      }
+    - { type: ghost, t: ▽ }
+    - { type: ghost }
   coding-meh:
     - [
         { s: project, t: $$mdi:file-multiple$$ },
@@ -139,7 +211,79 @@ layers:
     - null
     - type: held
     - { h: nav, t: plain1, s: sticky }
+  desktop-management:
+    - [
+        null,
+        null,
+        null,
+        { s: mission, h: control, t: $$mdi:monitor-shimmer$$ },
+        { s: prev, h: window, t: $$mdi:dock-window$$ },
+        { s: next, h: window, t: $$mdi:dock-window$$ },
+      ]
+    - [
+        null,
+        type: held,
+        type: held,
+        null,
+        { s: prev, h: space, t: $$mdi:remote-desktop$$ },
+        { s: prev, h: display, t: $$mdi:monitor$$ },
+        { s: next, h: display, t: $$mdi:monitor$$ },
+        { s: next, h: space, t: $$mdi:remote-desktop$$ },
+      ]
+    - [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+      ]
+    - type: held
+    - null
+    - null
+    - null
+  window-management:
+    - [
+        null,
+        null,
+        null,
+        { s: app, h: windows, t: $$mdi:monitor-star$$ },
+        { s: full screen, h: "on", t: $$mdi:fullscreen$$ },
+        { s: full screen, h: "off", t: $$mdi:fullscreen-exit$$ },
+      ]
+    - [
+        null,
+        type: held,
+        type: held,
+        null,
+        { s: prev, h: space, t: $$mdi:remote-desktop$$ },
+        { s: prev, h: display, t: $$mdi:monitor$$ },
+        { s: next, h: display, t: $$mdi:monitor$$ },
+        { s: next, h: space, t: $$mdi:remote-desktop$$ },
+      ]
+    - [
+        null,
+        null,
+        type: held,
+        null,
+        null,
+        null,
+      ]
+    - type: held
+    - null
+    - null
+    - null
 combos:
+  - {
+      p: [10, 11],
+      k: { t: yabai off },
+      layers: [desktop-management],
+    }
+  - {
+      p: [11, 12],
+      k: { t: yabai on },
+      layers: [desktop-management],
+    }
   - {
       p: [7, 8, 9],
       k: { t: actions },

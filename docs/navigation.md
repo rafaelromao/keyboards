@@ -61,5 +61,10 @@ noremap ll gg
 - A fixed version of the Navigation layer can be toggled on permanently using the Shortcuts layer.
 - This clone works the same way as the original Navigation layer, but the outer right thumb key will activate the Media layer instead of the System layer.
 
+#### Window Management
+- The Navigation layer is also used for Desktop and Window management, in conjunction with Mission Control, BetterTouchTool, RayCast nad yabai.
+
+![img](../img/window.png)
+
 ### Panic Mode Combo
 - All fixable layers have a Panic Mode combo that returns the keyboard to the base layer. This combo is formed by the top three keys in the left side of the keyboard.

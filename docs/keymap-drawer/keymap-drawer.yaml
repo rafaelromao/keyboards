@@ -87,7 +87,7 @@ layers:
     - { t: ▽ }
     - { t: ▽ }
     - { t: ▽ }
-  vim_remaps:
+  vim-remaps:
     - [
         { t: b, s: vim, type: ghost },
         { t: w, s: vim, type: ghost },
@@ -224,78 +224,6 @@ layers:
         type: held alternate,
       }
     - { t: plain1, s: "auto-layer", h: nav }
-  left_meh_morphs:
-    - [
-        { type: ghost },
-        { type: ghost },
-        { type: ghost },
-        { type: ghost },
-        { type: ghost },
-        { type: ghost },
-      ]
-    - [
-        { type: ghost },
-        { type: held, t: $$mdi:apple-keyboard-control$$ },
-        { type: held, t: $$mdi:apple-keyboard-option$$ },
-        { type: held, t: $$mdi:apple-keyboard-shift$$ },
-        { type: ghost },
-        { type: ghost },
-        { type: ghost },
-        { type: ghost },
-      ]
-    - [
-        { type: ghost },
-        { type: ghost },
-        { type: ghost },
-        { type: ghost },
-        { type: ghost },
-        { type: ghost },
-      ]
-    - { type: ghost }
-    - { type: ghost, t: ▽ }
-    - {
-        type: ghost,
-        s: sticky,
-        h: $$mdi:apple-keyboard-command$$,
-        t: $$mdi:apple-keyboard-command$$,
-      }
-    - { type: ghost }
-  right_meh_morphs:
-    - [
-        { type: ghost },
-        { type: ghost },
-        { type: ghost },
-        { type: ghost },
-        { type: ghost },
-        { type: ghost },
-      ]
-    - [
-        { type: ghost },
-        { type: ghost },
-        { type: ghost },
-        { type: ghost },
-        { type: held, t: $$mdi:apple-keyboard-shift$$ },
-        { type: held, t: $$mdi:apple-keyboard-option$$ },
-        { type: held, t: $$mdi:apple-keyboard-control$$ },
-        { type: ghost },
-      ]
-    - [
-        { type: ghost },
-        { type: ghost },
-        { type: ghost },
-        { type: ghost },
-        { type: ghost },
-        { type: ghost },
-      ]
-    - { type: ghost }
-    - {
-        type: ghost,
-        s: sticky,
-        h: $$mdi:apple-keyboard-command$$,
-        t: $$mdi:apple-keyboard-command$$,
-      }
-    - { type: ghost, t: ▽ }
-    - { type: ghost }
   plain1:
     - [b, m, g, l, o, u]
     - [d, n, s, t, r, a, e, i]
@@ -515,67 +443,67 @@ combos:
       p: [1, 2],
       k: { t: "z", s: vim, type: ghost },
       a: mid,
-      layers: [vim_remaps],
+      layers: [vim-remaps],
     }
   - {
       p: [3, 4],
       k: { t: "x", s: vim, type: ghost },
       a: mid,
-      layers: [vim_remaps],
+      layers: [vim-remaps],
     }
   - {
       p: [3, 4, 5],
       k: { t: "d", s: vim, type: ghost },
       a: top,
-      layers: [vim_remaps],
+      layers: [vim-remaps],
     }
   - {
       p: [7, 8],
       k: { t: "q", s: vim, type: ghost },
       a: mid,
-      layers: [vim_remaps],
+      layers: [vim-remaps],
     }
   - {
       p: [8, 9],
       k: { t: "m", s: vim, type: ghost },
       a: mid,
-      layers: [vim_remaps],
+      layers: [vim-remaps],
     }
   - {
       p: [10, 11],
       k: { t: "i", s: vim, type: ghost },
       a: mid,
-      layers: [vim_remaps],
+      layers: [vim-remaps],
     }
   - {
       p: [11, 12],
       k: { t: "y", s: vim, type: ghost },
       a: mid,
-      layers: [vim_remaps],
+      layers: [vim-remaps],
     }
   - {
       p: [10, 11, 12],
       k: { t: "p", s: vim, type: ghost },
       a: bottom,
-      layers: [vim_remaps],
+      layers: [vim-remaps],
     }
   - {
       p: [15, 16],
       k: { t: "v", s: vim, type: ghost },
       a: mid,
-      layers: [vim_remaps],
+      layers: [vim-remaps],
     }
   - {
       p: [17, 18],
       k: { t: "a", s: vim, type: ghost },
       a: mid,
-      layers: [vim_remaps],
+      layers: [vim-remaps],
     }
   - {
       p: [17, 18, 19],
       k: { t: "r", s: vim, type: ghost },
       a: bottom,
-      layers: [vim_remaps],
+      layers: [vim-remaps],
     }
 
   - { p: [1, 2], k: 'dead "', a: mid, layers: [alpha2, plain2, shifted2] }
