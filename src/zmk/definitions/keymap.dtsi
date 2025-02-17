@@ -329,7 +329,7 @@
                      display-name = "FUN";
                      bindings = <
    &none               &bt BT_PRV          &bt BT_NXT          &bt BT_CLR          &none               &none               &kp F7              &kp F8              &kp F9              &none 
-   &none               &hsk LSFT LSFT      &hsk LCTL LCTL      &hsk LALT LALT      &none               &none               &kp F4              &kp F5              &kp F6              &none      
+   &none               &hsk LCTL LCTL      &hsk LALT LALT      &hsk LSFT LSFT      &none               &none               &kp F4              &kp F5              &kp F6              &none      
    &none               &hsk LGUI LGUI      &hsk LGUI LGUI      &hsk LGUI LGUI      &none               &none               &kp F1              &kp F2              &kp F3              &none
                                            &none               &key_repeat         &none               &none               &key_repeat         &none
                         >;
