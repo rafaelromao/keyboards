@@ -12,32 +12,8 @@
 
         MACRO(mc_o_esc,                  &macro_tap &kp O &kp ESC)
         MACRO(mc_sft_o_esc,              &macro_tap &kp LS(O) &kp ESC)
-        MACRO(mc_shift_tab,              &macro_tap &kp LS(TAB))
 
         // Shortcuts
-
-        MACRO(mc_clip,                   &macro_tap &kp LC(LA(LS(N9))))
-        MACRO(mc_files,                  &macro_tap &kp LC(LA(LS(N8))))
-        MACRO(mc_windows,                &macro_tap &kp LC(LA(LS(N7))))
-        MACRO(mc_zoom_out,               &macro_tap &kp LC(LA(LS(N6))))
-        MACRO(mc_zoom_in,                &macro_tap &kp LC(LA(LS(N5))))
-        MACRO(mc_tabs,                   &macro_tap &kp LC(LA(LS(N4))))
-        MACRO(mc_preview,                &macro_tap &kp LC(LA(LS(N3))))
-        MACRO(mc_calc,                   &macro_tap &kp LC(LA(LS(N2))))
-        MACRO(mc_apps,                   &macro_tap &kp LC(LA(LS(N1))))
-        MACRO(mc_reset_zoom,             &macro_tap &kp LC(LA(LS(MINUS))))
-        MACRO(mc_emoji,                  &macro_tap &kp LC(LA(LS(GRAVE))))
-        MACRO(mc_pomodoro,               &macro_tap &kp LC(LA(LS(EQUAL))))
-
-        MACRO(mc_refresh,                &macro_tap &kp LG(LC(LA(LS(N2)))))
-        MACRO(mc_close,                  &macro_tap &kp LG(LC(LA(LS(N3)))))
-
-        MACRO(mc_shortcat,               &macro_tap &kp LG(LC(LA(LS(MINUS)))))
-        MACRO(mc_reopen,                 &macro_tap &kp LG(LC(LA(LS(EQUAL)))))
-
-        MACRO(mc_hand,                   &macro_tap &kp LG(LC(LA(LS(N7)))))
-        MACRO(mc_mic,                    &macro_tap &kp LG(LC(LA(LS(N4)))))
-        MACRO(mc_cam,                    &macro_tap &kp LG(LC(LA(LS(N0)))))
 
         MACRO(mc_meh_b,                  &macro_tap &kp LC(LA(LS(B))))
         MACRO(mc_meh_m,                  &macro_tap &kp LC(LA(LS(M))))

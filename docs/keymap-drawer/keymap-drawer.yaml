@@ -161,30 +161,30 @@ layers:
     - { t: "Num Lock" }
   shortcuts:
     - [
-        { t: $$mdi:content-cut$$, h: clip, s: "meh 9" },
-        { t: $$mdi:folder-open$$, h: files, s: "meh 8" },
-        { t: $$mdi:apps$$, h: contexts, s: "meh 7" },
+        { t: "⎋", h: esc },
+        { t: $$mdi:folder-open$$, h: files},
+        { t: $$mdi:apps$$, h: swapper},
         { s: select, h: word, t: ⎅ ⓦ },
         $$mdi:keyboard-return$$,
         "⎋",
       ]
     - [
         { type: held },
-        { t: $$mdi:magnify-minus-outline$$, h: zoom -, s: "meh 6" },
-        { t: $$mdi:magnify-plus-outline$$, h: zoom +, s: "meh 5" },
-        { t: $$mdi:tab-search$$, h: tabs, s: "meh 4" },
+        { t: $$mdi:magnify-minus-outline$$, h: zoom -},
+        { t: $$mdi:magnify-plus-outline$$, h: zoom +},
+        { t: $$mdi:tab-search$$, h: tabs},
         { s: select, h: line, t: ⎅ ⎯ },
         $$mdi:arrow-down$$,
         $$mdi:arrow-up$$,
         { type: held alternate },
       ]
     - [
-        { t: $$mdi:file-find$$, h: preview, s: "meh 3" },
-        { t: $$mdi:menu-open$$, h: menu bar, s: "meh 2" },
-        { t: $$mdi:layers-search-outline$$, h: raycast, s: "meh 1" },
+        { t: $$mdi:menu-open$$, h: menu bar},
+        { t: $$mdi:content-cut$$, h: clip},
+        { t: $$mdi:layers-search-outline$$, h: launcher},
         { s: select, h: home, t: ⎅ ⇤ },
-        { t: $$mdi:refresh$$, h: refresh, s: "hyper #2" },
-        { t: $$mdi:close$$, h: close, s: "hyper #3" },
+        { t: $$mdi:refresh$$, h: refresh},
+        { t: $$mdi:close$$, h: close},
       ]
     - { h: nav, s: repeat, t: $$mdi:repeat$$ }
     - { t: $$mdi:keyboard-space$$, h: functions }
@@ -281,7 +281,7 @@ layers:
         null,
         { t: $$mdi:mouse-left-click$$, h: left },
         { t: $$mdi:mouse-right-click$$, h: right },
-        { t: $$mdi:hand-back-right-outline$$, h: hand, s: "hyper #7" },
+        { t: $$mdi:hand-back-right-outline$$, h: hand},
         { t: $$mdi:keyboard-return$$ },
         { t: "⎋" },
       ]
@@ -290,10 +290,10 @@ layers:
         { t: $$mdi:arrow-left-circle$$, h: mouse },
         { t: $$mdi:arrow-up-circle$$, h: mouse },
         { t: $$mdi:arrow-right-circle$$, h: mouse },
-        { t: $$mdi:microphone$$, s: "hyper #4" },
+        { t: $$mdi:microphone$$},
         { t: $$mdi:volume-medium$$ },
         { t: $$mdi:volume-high$$ },
-        { t: $$mdi:camera$$, s: "hyper #0" },
+        { t: $$mdi:camera$$},
       ]
     - [
         { t: $$mdi:arrow-down-circle-outline$$, h: scroll },
@@ -539,7 +539,7 @@ combos:
     }
   - {
       p: [7, 8],
-      k: { t: $$mdi:loupe$$, s: "meh -", h: 100% },
+      k: { t: $$mdi:loupe$$, h: 100% },
       a: mid,
       w: 48,
       layers: [shortcuts],
@@ -548,7 +548,7 @@ combos:
   - { p: [15, 16], k: "functions", a: mid, w: 48, layers: [shortcuts] }
   - {
       p: [11, 12],
-      k: { t: "$$mdi:cat$$", s: "hyper -", h: shortcat },
+      k: { t: "$$mdi:note-multiple-outline$$", h: notes },
       a: mid,
       w: 48,
       layers: [shortcuts],
@@ -557,7 +557,7 @@ combos:
   - { p: [10, 11], k: "nav", a: mid, w: 48, layers: [shortcuts] }
   - {
       p: [14, 15],
-      k: { t: "$$mdi:clock-time-four-outline$$", s: "meh =", h: pomodoro },
+      k: { t: "$$mdi:clock-time-four-outline$$", h: timer },
       a: mid,
       w: 48,
       layers: [shortcuts],
@@ -565,7 +565,7 @@ combos:
   - { p: [17, 18], k: "mehs", a: mid, w: 48, layers: [shortcuts] }
   - {
       p: [18, 19],
-      k: { t: $$mdi:backup-restore$$, s: "hyper =", h: reopen },
+      k: { t: $$mdi:backup-restore$$, h: reopen },
       a: mid,
       w: 48,
       layers: [shortcuts],
@@ -630,7 +630,7 @@ combos:
   - { p: [3, 4], k: { t: "G", s: "vim" }, a: mid, layers: [lower] }
   - {
       p: [0, 1, 2],
-      k: { t: "$$mdi:emoticon-happy-outline$$", s: "meh `", h: "Emojis" },
+      k: { t: "$$mdi:emoticon-happy-outline$$", s: "⌃⌘J", h: "Emojis" },
       a: top,
       w: 40,
       layers: [lower],

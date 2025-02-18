@@ -21,9 +21,33 @@
         MACRO(mc_save,                   &macro_tap &kp LG(S))
         MACRO(mc_save_esc,               &macro_tap &kp LG(S) &kp ESC)
 
-        // Macros
+        // Custom
 
         MACRO(mc_lock,                   &macro_tap &kp LC(LG(Q)))
+
+        MACRO(mc_refresh,                &macro_tap &kp LG(R))
+        MACRO(mc_close,                  &macro_tap &kp LG(W))
+        MACRO(mc_reopen,                 &macro_tap &kp LG(LS(W)))
+
+        MACRO(mc_zoom_out,               &macro_tap &kp LG(MINUS))
+        MACRO(mc_zoom_in,                &macro_tap &kp LG(PLUS))
+        MACRO(mc_reset_zoom,             &macro_tap &kp LG(N0))
+
+        MACRO(mc_hand,                   &macro_tap &kp LG(LS(H)))
+        MACRO(mc_mic,                    &macro_tap &kp LG(D))
+        MACRO(mc_cam,                    &macro_tap &kp LG(E))
+
+        MACRO(mc_swapper,                &macro_tap &kp LG(TAB))
+        MACRO(mc_launcher,               &macro_tap &kp LA(SPACE))
+        MACRO(mc_menubar,                &macro_tap &kp LC(SPACE))
+
+        MACRO(mc_tabs,                   &macro_tap &kp LG(LS(A)))
+
+        MACRO(mc_screenshot,             &macro_tap &kp LC(LA(S)))
+        MACRO(mc_files,                  &macro_tap &kp LC(LA(F)))
+        MACRO(mc_emoji,                  &macro_tap &kp LC(LA(E)))
+        MACRO(mc_timer,                  &macro_tap &kp LC(LA(T)))
+        MACRO(mc_notes,                  &macro_tap &kp LC(LA(N)))
 
         // Navigation
 

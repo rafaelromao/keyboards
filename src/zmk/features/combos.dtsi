@@ -93,7 +93,7 @@
         COMBO(cb_pc,            RHI RHM RHR, &kp LS(P),          CASE_A1 SEN_EXT CPLK_A1)
 
         COMBO(cb_reset_zoom,    LHR LHM,     &mc_reset_zoom,     SHORTCUTS)
-        COMBO(cb_pomodoro,      LBR LBM,     &mc_pomodoro,       SHORTCUTS)
+        COMBO(cb_timer,         LBR LBM,     &mc_timer,          SHORTCUTS)
         COMBO(cb_tog_nomods,    LTM LTI,     &to PLAIN1,         SHORTCUTS)
         COMBO(cb_tog_media,     LHM LHI,     &to MEDIA,          SHORTCUTS)
         COMBO(cb_tog_functions, LBM LBI,     &to FUN,            SHORTCUTS)
@@ -101,7 +101,7 @@
         COMBO(cb_tog_nav,       RHM RHI,     &to NAV_F,          SHORTCUTS)
         COMBO(cb_tog_software,  RBM RBI,     &to MEHS,           SHORTCUTS)
         COMBO(cb_reopen,        RBM RBR,     &mc_reopen,         SHORTCUTS)
-        COMBO(cb_shortcat,      RHM RHR,     &mc_shortcat,       SHORTCUTS)
+        COMBO(cb_notes,         RHM RHR,     &mc_notes,          SHORTCUTS)
         COMBO(cb_del_word,      RTM RTR,     &mc_del_word,       SHORTCUTS)
 
         COMBO(cb_meh_k,         LTI LTM,     &mc_meh_k,          MEHS)
