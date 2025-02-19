@@ -5,7 +5,7 @@
 *
 */
 
-#define WINDOWS
+#define MACOS
 
 #include "templates.dtsi"
 #include "keycodes.h"
@@ -54,8 +54,8 @@
                      display-name = "ROMAK";
                      bindings = <
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp Y
-   &lt SHORTCUTS D     &mt LCTL N          &mt LALT S          &mt LSFT T          &kp W               &kp Z               &mt RSFT R          &mt RALT A          &mt RCTL E          &lt SHORTCUTS I      
-   &mc_qu              &mt LGUI F          &mt LGUI C          &mt LGUI P          &kp V               &kp J               &ht_magic RGUI 0    &th_comma SMART 0   &th_dot 0 0         &kp H
+   &lt SHORTCUTS D     &mt LCTL N          &mt LALT S          &mt LSFT T          &kp W               &kp Z               &mt LSFT R          &mt LALT A          &mt LCTL E          &lt SHORTCUTS I      
+   &mc_qu              &mt LGUI F          &mt LGUI C          &mt LGUI P          &kp V               &kp J               &ht_magic LGUI 0    &th_comma SMART 0   &th_dot 0 0         &kp H
                                            &key_repeat         &ht_repeat NAV 0    &ltn_low_spc 0 0    &msl_rai_a2 0 0     &ht_shift MEDIA 0   &key_repeat
                         >;
                 };
@@ -82,8 +82,8 @@
                      display-name = "CONST";
                      bindings = <
    &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y)
-   &lt SHORTCUTS RS(D) &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt RSFT RS(R)      &mt RALT RS(A)      &mt RCTL RS(E)      &lt SHORTCUTS RS(I) 
-   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c RGUI 0  &th_comma SMART 0   &th_dot 0 0         &trans
+   &lt SHORTCUTS RS(D) &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt LSFT RS(R)      &mt LALT RS(A)      &mt LCTL RS(E)      &lt SHORTCUTS RS(I) 
+   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma SMART 0   &th_dot 0 0         &trans
                                            &trans              &trans              &msk_unds LOWER 0   &th_case_a2 RAISE 0 &trans              &trans
                            >;
                 };
@@ -118,8 +118,8 @@
                      display-name = "CASE";
                      bindings = <
    &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y)
-   &lt SHORTCUTS RS(D) &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt RSFT RS(R)      &mt RALT RS(A)      &mt RCTL RS(E)      &lt SHORTCUTS RS(I) 
-   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c RGUI 0  &th_comma SMART 0   &th_dot 0 0         &kp RS(H)
+   &lt SHORTCUTS RS(D) &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt LSFT RS(R)      &mt LALT RS(A)      &mt LCTL RS(E)      &lt SHORTCUTS RS(I) 
+   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma SMART 0   &th_dot 0 0         &kp RS(H)
                                            &trans              &trans              &msk_spc LOWER 0    &th_case_a2 RAISE 0 &th_cancel MEDIA 0  &trans
                         >;
                 };
@@ -127,8 +127,8 @@
                      display-name = "CASE";
                      bindings = <
    &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y)
-   &lt SHORTCUTS RS(D) &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt RSFT RS(R)      &mt RALT RS(A)      &mt RCTL RS(E)      &lt SHORTCUTS RS(I) 
-   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c RGUI 0  &th_comma SMART 0   &th_dot 0 0         &kp RS(H)
+   &lt SHORTCUTS RS(D) &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt LSFT RS(R)      &mt LALT RS(A)      &mt LCTL RS(E)      &lt SHORTCUTS RS(I) 
+   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma SMART 0   &th_dot 0 0         &kp RS(H)
                                            &trans              &trans              &trans              &th_case_a2 RAISE 0 &th_cancel MEDIA 0  &trans
                                            
                            >;
@@ -182,8 +182,8 @@
                      display-name = "CASE";
                      bindings = <
    &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &kp LS(Y) 
-   &kp LS(D)           &mt LCTL LS(N)      &mt LALT LS(S)      &mt LSFT LS(T)      &kp LS(W)           &kp LS(Z)           &mt RSFT LS(R)      &mt RALT LS(A)      &mt RCTL LS(E)      &kp LS(I) 
-   &mc_qu_s            &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c RGUI 0  &th_comma SMART 0   &th_dot 0 0         &kp LS(H) 
+   &kp LS(D)           &mt LCTL LS(N)      &mt LALT LS(S)      &mt LSFT LS(T)      &kp LS(W)           &kp LS(Z)           &mt LSFT LS(R)      &mt LALT LS(A)      &mt LCTL LS(E)      &kp LS(I) 
+   &mc_qu_s            &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c LGUI 0  &th_comma SMART 0   &th_dot 0 0         &kp LS(H) 
                                            &trans              &th_cancel NAV 0    &th_sp_ns LOW_CP 0  &msl RAI_CP SFT_A2  &th_nsen MEDIA 0    &trans
                            >;
                 };
@@ -246,7 +246,7 @@
    &none               &mc_meh_b           &mc_meh_m           &mc_meh_g           &none               &none               &mc_meh_l           &mc_meh_o           &mc_meh_u           &none    
    &mc_meh_d           &mc_meh_n           &mc_meh_s           &mc_meh_t           &none               &none               &mc_meh_r           &mc_meh_a           &mc_meh_e           &mc_meh_i
    &none               &th_meh_f LGUI 0    &th_meh_c LGUI 0    &th_meh_p LGUI 0    &none               &none               &th_meh_h LGUI 0    &th_meh_comm LGUI 0 &th_meh_dot LGUI 0  &none
-                                           &none               &th_plain1 NAV 0    &hsk LGUI LGUI      &hsk RGUI RGUI      &th_plain1 NAV 0    &none 
+                                           &none               &th_plain1 NAV 0    &hsk LGUI LGUI      &hsk LGUI LGUI      &th_plain1 NAV 0    &none 
                            >;
                 };
 
@@ -285,7 +285,7 @@
                      display-name = "NAV";
                      bindings = <
    &none               &mc_word_start      &mc_word_end        &mc_word_next       &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
-   &kp INS             &kp LCTL            &kp LALT            &kp LSFT            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &lt RMODS INS       &kp LCTL            &kp LALT            &kp LSFT            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
    &none               &kp LGUI            &kp LGUI            &kp LGUI            &none               &none               &kp DEL             &kp HOME            &kp END             &none 
                                            &none               &trans              &bootloader         &kp SPACE           &mo MEDIA           &none 
                         >;
@@ -349,9 +349,19 @@
                      display-name = "NAV";
                      bindings = <
    &none               &mc_word_start      &mc_word_end        &mc_word_next       &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
-   &none               &kp LCTL            &kp LALT            &kp LSFT            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &lt RMODS INS       &kp LCTL            &kp LALT            &kp LSFT            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
    &none               &kp LGUI            &kp LGUI            &kp LGUI            &none               &none               &kp DEL             &kp HOME            &kp END             &none 
                                            &none               &trans              &trans              &kp SPACE           &trans              &none 
+                           >;
+                };
+
+                right_mods_layer {
+                     display-name = "RMODS";
+                     bindings = <
+   &none               &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &none
+   &trans              &hsk RCTL RCTL      &hsk RALT RALT      &hsk RSFT RSFT      &trans              &trans              &trans              &trans              &trans              &trans
+   &none               &hsk RGUI RGUI      &hsk RGUI RGUI      &hsk RGUI RGUI      &trans              &trans              &trans              &trans              &trans              &none 
+                                           &none               &trans              &trans              &trans              &trans              &none 
                            >;
                 };
 

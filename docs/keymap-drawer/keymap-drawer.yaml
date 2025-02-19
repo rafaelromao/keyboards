@@ -161,30 +161,30 @@ layers:
     - { t: "Num Lock" }
   shortcuts:
     - [
-        { t: "⎋", h: esc },
-        { t: $$mdi:folder-open$$, h: files},
-        { t: $$mdi:apps$$, h: swapper},
+        { t: "⎋", s: esc },
+        { t: $$mdi:folder-open$$, s: files},
+        { t: $$mdi:apps$$, s: swapper},
         { s: select, h: word, t: ⎅ ⓦ },
         $$mdi:keyboard-return$$,
         "⎋",
       ]
     - [
         { type: held },
-        { t: $$mdi:magnify-minus-outline$$, h: zoom -},
-        { t: $$mdi:magnify-plus-outline$$, h: zoom +},
-        { t: $$mdi:tab-search$$, h: tabs},
+        { t: $$mdi:magnify-minus-outline$$, s: zoom -},
+        { t: $$mdi:magnify-plus-outline$$, s: zoom +},
+        { t: $$mdi:tab-search$$, s: tabs},
         { s: select, h: line, t: ⎅ ⎯ },
         $$mdi:arrow-down$$,
         $$mdi:arrow-up$$,
         { type: held alternate },
       ]
     - [
-        { t: $$mdi:menu-open$$, h: menu bar},
-        { t: $$mdi:content-cut$$, h: clip},
-        { t: $$mdi:layers-search-outline$$, h: launcher},
+        { t: $$mdi:menu-open$$, s: menu bar},
+        { t: $$mdi:content-cut$$, s: clip},
+        { t: $$mdi:layers-search-outline$$, s: launcher},
         { s: select, h: home, t: ⎅ ⇤ },
-        { t: $$mdi:refresh$$, h: refresh},
-        { t: $$mdi:close$$, h: close},
+        { t: $$mdi:refresh$$, s: refresh},
+        { t: $$mdi:close$$, s: close},
       ]
     - { h: nav, s: repeat, t: $$mdi:repeat$$ }
     - { t: $$mdi:keyboard-space$$, h: functions }
@@ -247,65 +247,65 @@ layers:
     - "'"
   nav:
     - [
-        { h: "start", t: ⓦ },
-        { h: "next", t: ⓦ },
-        { h: "end", t: ⓦ },
-        { t: $$mdi:keyboard-tab$$, h: tab },
-        { t: $$mdi:keyboard-return$$, h: enter },
-        { t: "⎋", h: esc },
+        { s: "start", t: ⓦ },
+        { s: "next", t: ⓦ },
+        { s: "end", t: ⓦ },
+        { t: $$mdi:keyboard-tab$$, s: tab },
+        { t: $$mdi:keyboard-return$$, s: enter },
+        { t: "⎋", s: esc },
       ]
     - [
-        { t: "⎀", h: insert },
+        { t: "⎀", s: insert, h: right-mods},
         { t: $$mdi:apple-keyboard-control$$ },
         { t: $$mdi:apple-keyboard-option$$ },
         { t: $$mdi:apple-keyboard-shift$$ },
-        { t: $$mdi:arrow-left$$, h: left },
-        { t: $$mdi:arrow-down$$, h: down },
-        { t: $$mdi:arrow-up$$, h: up },
-        { t: $$mdi:arrow-right$$, h: right },
+        { t: $$mdi:arrow-left$$, s: left },
+        { t: $$mdi:arrow-down$$, s: down },
+        { t: $$mdi:arrow-up$$, s: up },
+        { t: $$mdi:arrow-right$$, s: right },
       ]
     - [
         { t: $$mdi:apple-keyboard-command$$ },
         { t: $$mdi:apple-keyboard-command$$ },
         { t: $$mdi:apple-keyboard-command$$ },
-        { t: $$mdi:backspace-reverse-outline$$, h: del },
-        { t: $$mdi:format-horizontal-align-left$$, h: home },
-        { t: $$mdi:format-horizontal-align-right$$, h: end },
+        { t: $$mdi:backspace-reverse-outline$$, s: del },
+        { t: $$mdi:format-horizontal-align-left$$, s: home },
+        { t: $$mdi:format-horizontal-align-right$$, s: end },
       ]
     - { t: ▽, type: held }
-    - { t: $$mdi:flash$$, h: "boot" }
+    - { t: $$mdi:flash$$, s: "boot" }
     - { t: $$mdi:keyboard-space$$ }
     - { h: media, type: held alternate }
   media:
     - [
         null,
-        { t: $$mdi:mouse-left-click$$, h: left },
-        { t: $$mdi:mouse-right-click$$, h: right },
-        { t: $$mdi:hand-back-right-outline$$, h: hand},
+        { t: $$mdi:mouse-left-click$$, s: left },
+        { t: $$mdi:mouse-right-click$$, s: right },
+        { t: $$mdi:hand-back-right-outline$$, s: hand},
         { t: $$mdi:keyboard-return$$ },
         { t: "⎋" },
       ]
     - [
         null,
-        { t: $$mdi:arrow-left-circle$$, h: mouse },
-        { t: $$mdi:arrow-up-circle$$, h: mouse },
-        { t: $$mdi:arrow-right-circle$$, h: mouse },
+        { t: $$mdi:arrow-left-circle$$, s: mouse },
+        { t: $$mdi:arrow-up-circle$$, s: mouse },
+        { t: $$mdi:arrow-right-circle$$, s: mouse },
         { t: $$mdi:microphone$$},
         { t: $$mdi:volume-medium$$ },
         { t: $$mdi:volume-high$$ },
         { t: $$mdi:camera$$},
       ]
     - [
-        { t: $$mdi:arrow-down-circle-outline$$, h: scroll },
-        { t: $$mdi:arrow-down-circle$$, h: mouse },
-        { t: $$mdi:arrow-up-circle-outline$$, h: scroll },
+        { t: $$mdi:arrow-down-circle-outline$$, s: scroll },
+        { t: $$mdi:arrow-down-circle$$, s: mouse },
+        { t: $$mdi:arrow-up-circle-outline$$, s: scroll },
         { t: $$mdi:play-pause$$ },
         { t: $$mdi:skip-backward$$ },
         { t: $$mdi:skip-forward$$ },
       ]
     - h: nav
     - { t: $$mdi:keyboard-space$$, h: normal, s: vim }
-    - { t: $$mdi:flash$$, h: "boot" }
+    - { t: $$mdi:flash$$, s: "boot" }
     - { t: ▽, type: held }
   functions:
     - [
@@ -343,7 +343,7 @@ layers:
         null,
         { t: "CAPS word", s: auto-layer },
         { t: "CAPS LINE", s: auto-layer },
-        { t: $$mdi:lock$$, h: "lock" },
+        { t: $$mdi:lock$$, s: "lock" },
         null,
         null,
       ]
@@ -352,7 +352,7 @@ layers:
         { t: "snake_ case", s: auto-layer },
         { t: "CONSTANT_ CASE", s: auto-layer },
         { t: "kebab- case", s: auto-layer },
-        { t: $$mdi:power-sleep$$, h: "sleep" },
+        { t: $$mdi:power-sleep$$, s: "sleep" },
         "",
         null,
         null,
@@ -361,12 +361,43 @@ layers:
         { t: "slash/ case", s: auto-layer },
         { t: "Pascal Case", s: auto-layer },
         { t: "camel Case", s: auto-layer },
-        { t: $$mdi:ray-start-arrow$$, h: "leader" },
+        { t: $$mdi:ray-start-arrow$$, s: "leader" },
         { type: held },
         "",
       ]
     - { t: ▽ }
     - { t: ",␣" }
+    - { t: ▽ }
+    - { t: ▽ }
+  right-mods:
+    - [
+        { t: ▽ },
+        { t: ▽ },
+        { t: ▽ },
+        { t: ▽ },
+        { t: ▽ },
+        { t: ▽ },
+      ]
+    - [
+        { type: held },
+        { t: $$mdi:apple-keyboard-control$$, s: sticky, h: right },
+        { t: $$mdi:apple-keyboard-option$$, s: sticky, h: right },
+        { t: $$mdi:apple-keyboard-shift$$, s: sticky, h: right },
+        { t: ▽ },
+        { t: ▽ },
+        { t: ▽ },
+        { t: ▽ },
+      ]
+    - [
+        { t: $$mdi:apple-keyboard-command$$, s: sticky, h: right },
+        { t: $$mdi:apple-keyboard-command$$, s: sticky, h: right },
+        { t: $$mdi:apple-keyboard-command$$, s: sticky, h: right },
+        { t: ▽ },
+        { t: ▽ },
+        { t: ▽ },
+      ]
+    - { type: held }
+    - { t: ▽ }
     - { t: ▽ }
     - { t: ▽ }
 combos:
@@ -532,14 +563,14 @@ combos:
   - { p: [1, 2], k: "plain1", a: mid, w: 48, layers: [shortcuts] }
   - {
       p: [4, 5],
-      k: { t: "⌫ⓦ", s: delete, h: word },
+      k: { t: ⌫ ⓦ },
       a: mid,
       w: 48,
       layers: [shortcuts],
     }
   - {
       p: [7, 8],
-      k: { t: $$mdi:loupe$$, h: 100% },
+      k: { t: $$mdi:loupe$$, s: 100% },
       a: mid,
       w: 48,
       layers: [shortcuts],
@@ -548,7 +579,7 @@ combos:
   - { p: [15, 16], k: "functions", a: mid, w: 48, layers: [shortcuts] }
   - {
       p: [11, 12],
-      k: { t: "$$mdi:note-multiple-outline$$", h: notes },
+      k: { t: "$$mdi:note-multiple-outline$$", s: notes },
       a: mid,
       w: 48,
       layers: [shortcuts],
@@ -557,7 +588,7 @@ combos:
   - { p: [10, 11], k: "nav", a: mid, w: 48, layers: [shortcuts] }
   - {
       p: [14, 15],
-      k: { t: "$$mdi:clock-time-four-outline$$", h: timer },
+      k: { t: "$$mdi:clock-time-four-outline$$", s: timer },
       a: mid,
       w: 48,
       layers: [shortcuts],
@@ -565,7 +596,7 @@ combos:
   - { p: [17, 18], k: "mehs", a: mid, w: 48, layers: [shortcuts] }
   - {
       p: [18, 19],
-      k: { t: $$mdi:backup-restore$$, h: reopen },
+      k: { t: $$mdi:backup-restore$$, s: reopen },
       a: mid,
       w: 48,
       layers: [shortcuts],
@@ -630,7 +661,7 @@ combos:
   - { p: [3, 4], k: { t: "G", s: "vim" }, a: mid, layers: [lower] }
   - {
       p: [0, 1, 2],
-      k: { t: "$$mdi:emoticon-happy-outline$$", s: "⌃⌘J", h: "Emojis" },
+      k: { t: "$$mdi:emoticon-happy-outline$$", s: "emojis" },
       a: top,
       w: 40,
       layers: [lower],
@@ -689,13 +720,13 @@ combos:
   - { p: [3, 4], k: "↑⇥ ⌦", a: mid, layers: [nav] }
   - {
       p: [10, 11],
-      k: { t: $$mdi:arrow-down-bold-outline$$, s: page, h: down },
+      k: { t: $$mdi:arrow-down-bold-outline$$, s: page },
       a: mid,
       layers: [nav],
     }
   - {
       p: [11, 12],
-      k: { t: $$mdi:arrow-up-bold-outline$$, s: page, h: up },
+      k: { t: $$mdi:arrow-up-bold-outline$$, s: page },
       a: mid,
       layers: [nav],
     }

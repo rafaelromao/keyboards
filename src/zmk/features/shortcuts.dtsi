@@ -54,11 +54,6 @@
         MACRO(mc_down_home,              &macro_tap &kp DOWN &kp HOME)
         MACRO(mc_down_end,               &macro_tap &kp DOWN &kp END)
 
-        MACRO(mc_meh_comma,              &macro_tap &kp LC(LA(LS(SQT))))
-        MODTAP_TP(th_meh_comm,           &mc_meh_comma)
-        MACRO(mc_meh_dot,                &macro_tap &kp LC(LA(LS(BACKSLASH))))
-        MODTAP_TP(th_meh_dot,            &mc_meh_dot)
-
         // Meh and Hyper
 
         MOD_MORPH_KM(mm_comma_meh, MOD_LSFT, &mc_meh_comma, &mc_comma)

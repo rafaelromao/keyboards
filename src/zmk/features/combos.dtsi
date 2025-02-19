@@ -25,7 +25,7 @@
     #define SHORTCUT_LAYERS             SHORTCUTS MEHS  
     #define MEDIA_LAYERS                MEDIA
     #define NAV_LAYERS                  NAV NAV_F  
-    #define ALL_LAYERS                  ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS LOWER_LAYERS SHORTCUT_LAYERS MEDIA_LAYERS NAV_LAYERS RAISE_LAYERS SMART 
+    #define ALL_LAYERS                  ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS LOWER_LAYERS SHORTCUT_LAYERS MEDIA_LAYERS NAV_LAYERS RAISE_LAYERS SMART RMODS
     #define ALL_LAYERS_WITH_BACKSPACE   ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS LOWER_LAYERS                              NAV_LAYERS RAISE_LAYERS        
     #define ALL_LAYERS_WITH_ESC         ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS              SHORTCUT_LAYERS MEDIA_LAYERS NAV_LAYERS                     
     #define FIXABLE_LAYERS              CPLK_A1 CASE_A1 SMARTCASE_LAYERS PLAIN1 LOWER_LAYERS MEDIA_LAYERS NAV_LAYERS MEHS FUN
@@ -201,7 +201,7 @@
         MACRO(mc_lshift_lshift    , &macro_tap &kp LSFT &kp LSFT)
         MACRO(mc_lctrl_lctrl      , &macro_tap &kp LCTL &kp LCTL)
         MACRO(mc_lalt_lalt        , &macro_tap &kp LALT &kp LALT)
-        MACRO(mc_ralt_ralt        , &macro_tap &kp RALT &kp RALT)
+        MACRO(mc_ralt_ralt        , &macro_tap &kp LALT &kp LALT)
         MACRO(mc_lgui_lgui        , &macro_tap &kp LGUI &kp LGUI)
 
         MACRO(mc_ca_nav           , &macro_press &kp LCTL &kp LALT &mo NAV &macro_pause_for_release &macro_release &mo NAV &kp LCTL &kp LALT)
@@ -211,9 +211,9 @@
 
         COMBO_MUST_TAP(ht_w       , &kp LSFT  &kp LALT          , &kp W)
         COMBO_MUST_TAP(ht_q       , &kp LCTL  &kp LALT          , &kp Q)
-        COMBO_MUST_TAP(ht_z       , &kp RSFT  &kp RALT          , &kp Z)
-        COMBO_MUST_TAP(ht_y       , &kp RALT  &kp RCTL          , &kp Y)
+        COMBO_MUST_TAP(ht_z       , &kp LSFT  &kp LALT          , &kp Z)
+        COMBO_MUST_TAP(ht_y       , &kp LALT  &kp LCTL          , &kp Y)
         COMBO_MUST_TAP(ht_meh_spc , &kp LCTL &kp LALT &kp LSFT  , &mc_meh_space)
-        COMBO_MUST_TAP(ht_p       , &kp RCTL &kp RALT &kp RSFT  , &kp P)
+        COMBO_MUST_TAP(ht_p       , &kp LCTL &kp LALT &kp LSFT  , &kp P)
     };
 };

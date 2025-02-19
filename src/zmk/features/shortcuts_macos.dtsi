@@ -56,5 +56,11 @@
         MACRO(mc_word_end,               &macro_tap &kp LA(RIGHT) &kp LA(RIGHT) &kp LA(LEFT))
         MACRO(mc_del_word,               &macro_press &kp LA(BACKSPACE) &macro_pause_for_release &macro_release &kp LA(BACKSPACE))
 
+        // Meh and Hyper
+
+        MACRO(mc_meh_comma,              &macro_tap &kp LC(LA(LS(SQT))))
+        MODTAP_TP(th_meh_comm,           &mc_meh_comma)
+        MACRO(mc_meh_dot,                &macro_tap &kp LC(LA(LS(BACKSLASH))))
+        MODTAP_TP(th_meh_dot,            &mc_meh_dot)
    };
 };

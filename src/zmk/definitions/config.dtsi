@@ -48,6 +48,8 @@
 
 #define NAV_F 29
 
+#define RMODS 30
+
 
 #define COMBO_TERM 30
 #define TAPPING_TERM 250
