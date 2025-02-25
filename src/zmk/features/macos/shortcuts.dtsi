@@ -27,7 +27,7 @@
 
         MACRO(mc_refresh,                &macro_tap &kp LG(R))
         MACRO(mc_close,                  &macro_tap &kp LG(W))
-        MACRO(mc_reopen,                 &macro_tap &kp LG(LS(W)))
+        MACRO(mc_reopen,                 &macro_tap &kp LG(LS(T)))
 
         MACRO(mc_zoom_out,               &macro_tap &kp LG(MINUS))
         MACRO(mc_zoom_in,                &macro_tap &kp LG(PLUS))
