@@ -28,7 +28,7 @@
                 MACRO_TAP(mc_haha, &kp H &kp A &kp H &kp A)
                 MACRO_TAP(mc_hehe, &kp H &kp E &kp H &kp E)
                 MACRO_TAP(mc_kkkk, &kp K &kp K &kp K &kp K)
-                MACRO_TAP(mc_hugs,  &kp LBKT &kp RBKT &kp SQT &kp S)
+                MACRO_TAP(mc_hugs, &kp LBKT &kp RBKT &kp SQT &kp S)
 	};
 
 	leader_sequences {

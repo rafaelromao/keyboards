@@ -3,20 +3,20 @@
 KEYBOARD_HOME="$(pwd)"
 ZMK_MODULE="modules/rafaelromao/zmk"
 RGBWIDGET_MODULE="modules/caksoylar/zmk-rgbled-widget"
-DONGLE_MODULE="modules/englmaxi/zmk-dongle-display"
+DONGLE_DISPLAY_MODULE="modules/englmaxi/zmk-dongle-display"
 AUTOLAYER_MODULE="modules/urob/zmk-auto-layer"
 ANTECEDENT_MODULE="modules/ssbb/zmk-antecedent-morph"
 export ZMK_HOME="$KEYBOARD_HOME/$ZMK_MODULE"
 RGBWIDGET_HOME="$KEYBOARD_HOME/$RGBWIDGET_MODULE"
-DONGLE_HOME="$KEYBOARD_HOME/$DONGLE_MODULE"
+DONGLE_DISPLAY_HOME="$KEYBOARD_HOME/$DONGLE_DISPLAY_MODULE"
 AUTOLAYER_HOME="$KEYBOARD_HOME/$AUTOLAYER_MODULE"
 ANTECEDENT_HOME="$KEYBOARD_HOME/$ANTECEDENT_MODULE"
 BEHAVIOR_MODULES=""
 
-if [[ ! -d "$DONGLE_HOME" ]]
+if [[ ! -d "$DONGLE_DISPLAY_HOME" ]]
 then
     echo "Add git sub-modules..."
-    git submodule add -f https://github.com/englmaxi/zmk-dongle-display $DONGLE_MODULE
+    git submodule add -f https://github.com/englmaxi/zmk-dongle-display $DONGLE_DISPLAY_MODULE
 fi
 
 if [[ ! -d "$RGBWIDGET_HOME" ]]
@@ -76,18 +76,33 @@ build_testpad_unibody="west build -s app -b seeeduino_xiao_ble --build-dir build
 archive_testpad_unibody="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/testpad/zephyr/zmk.uf2 ] && mv -f build/testpad/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/testpad-zmk.uf2"
 alias build_testpad="cd ${ZMK_HOME} && ${build_testpad_unibody} && ${archive_testpad_unibody} && cd $KEYBOARD_HOME"
 
-echo "Creating Reset build alias..."
-build_reset_unibody="west build -s app -b nice_nano_v2 --build-dir build/reset -- -DSHIELD='settings_reset'"
-archive_reset_unibody="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/reset/zephyr/zmk.uf2 ] && mv -f build/reset/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/reset-zmk.uf2"
-alias build_reset="${checkout_main_zmk} && cd ${ZMK_HOME} && ${build_reset_unibody} && ${archive_reset_unibody} && cd $KEYBOARD_HOME"
+echo "Creating Reset Nice Nano build alias..."
+build_reset_nicenano="west build -s app -b nice_nano_v2 --build-dir build/reset_nicenano -- -DSHIELD='settings_reset'"
+archive_reset_nicenano="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/reset_nicenano/zephyr/zmk.uf2 ] && mv -f build/reset_nicenano/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/reset-nicenano-zmk.uf2"
+alias build_reset_nicenano="${checkout_main_zmk} && cd ${ZMK_HOME} && ${build_reset_nicenano} && ${archive_reset_nicenano} && cd $KEYBOARD_HOME"
+
+echo "Creating Reset Zen build alias..."
+build_reset_zen="west build -s app -b corneish_zen_v2_left --build-dir build/reset_zen -- -DCONFIG_ZMK_DISPLAY=n -DSHIELD='settings_reset'"
+archive_reset_zen="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/reset_zen/zephyr/zmk.uf2 ] && mv -f build/reset_zen/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/reset-zen-zmk.uf2"
+alias build_reset_zen="${checkout_main_zmk} && cd ${ZMK_HOME} && ${build_reset_zen} && ${archive_reset_zen} && cd $KEYBOARD_HOME"
 
 echo "Creating Zen build alias..."
 build_zen_left="west build -s app -b corneish_zen_v2_left --build-dir build/corneish_zen_left -- -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/keyboards/lowprokb.ca/corneish-zen -DZMK_EXTRA_MODULES='$BEHAVIOR_MODULES'"
 build_zen_right="west build -s app -b corneish_zen_v2_right --build-dir build/corneish_zen_right -- -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/keyboards/lowprokb.ca/corneish-zen -DZMK_EXTRA_MODULES='$BEHAVIOR_MODULES'"
 archive_zen_left="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/corneish_zen_left/zephyr/zmk.uf2 ] && mv -f build/corneish_zen_left/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/corneish_zen_v2_left-zmk.uf2"
 archive_zen_right="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/corneish_zen_right/zephyr/zmk.uf2 ] && mv -f build/corneish_zen_right/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/corneish_zen_v2_right-zmk.uf2"
-alias build_zen_all="cd ${ZMK_HOME} && ${build_zen_left} && ${archive_zen_left} && ${build_zen_right} && ${archive_zen_right} && cd ${KEYBOARD_HOME}"
+alias build_zen_all="${checkout_main_zmk} && cd ${ZMK_HOME} && ${build_zen_left} && ${archive_zen_left} && ${build_zen_right} && ${archive_zen_right} && cd ${KEYBOARD_HOME}"
 alias build_zen="${checkout_main_zmk} && cd ${ZMK_HOME} && ${build_zen_left} && ${archive_zen_left} && cd ${KEYBOARD_HOME}"
+
+echo "Creating Zen With Dongle build alias..."
+build_zen_dongle="west build -s app -b nice_nano_v2 --build-dir build/corneish_zen_dongle -- -DSHIELD='corneish_zen_dongle' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/keyboards/lowprokb.ca/corneish-zen-with-dongle -DZMK_EXTRA_MODULES='$BEHAVIOR_MODULES'"
+build_zen_peripheral_left="west build -s app -b corneish_zen_v2_left --build-dir build/corneish_zen_peripheral_left -- -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/keyboards/lowprokb.ca/corneish-zen-with-dongle -DZMK_EXTRA_MODULES='$BEHAVIOR_MODULES'"
+build_zen_peripheral_right="west build -s app -b corneish_zen_v2_right --build-dir build/corneish_zen_peripheral_right -- -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/keyboards/lowprokb.ca/corneish-zen-with-dongle -DZMK_EXTRA_MODULES='$BEHAVIOR_MODULES'"
+archive_zen_dongle="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/corneish_zen_dongle/zephyr/zmk.uf2 ] && mv -f build/corneish_zen_dongle/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/corneish_zen_dongle-zmk.uf2"
+archive_zen_peripheral_left="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/corneish_zen_peripheral_left/zephyr/zmk.uf2 ] && mv -f build/corneish_zen_peripheral_left/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/corneish_zen_v2_peripheral_left-zmk.uf2"
+archive_zen_peripheral_right="mkdir -p $KEYBOARD_HOME/build/artifacts; [ -f build/corneish_zen_peripheral_right/zephyr/zmk.uf2 ] && mv -f build/corneish_zen_peripheral_right/zephyr/zmk.uf2 $KEYBOARD_HOME/build/artifacts/corneish_zen_v2_peripheral_right-zmk.uf2"
+alias build_zen_with_dongle_all="${checkout_main_zmk} && cd ${ZMK_HOME} && ${build_zen_dongle} && ${archive_zen_dongle} && ${build_zen_peripheral_left} && ${archive_zen_peripheral_left} && ${build_zen_peripheral_right} && ${archive_zen_peripheral_right} && cd ${KEYBOARD_HOME}"
+alias build_zen_with_dongle="${checkout_main_zmk} && cd ${ZMK_HOME} && ${build_zen_dongle} && ${archive_zen_dongle} && cd ${KEYBOARD_HOME}"
 
 echo "Creating Rommana build alias..."
 build_rommana_unibody="west build -s app -b seeeduino_xiao_rp2040 --build-dir build/rommana -- -DSHIELD='rommana' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/keyboards/rommana -DZMK_EXTRA_MODULES='$BEHAVIOR_MODULES'"
@@ -103,7 +118,7 @@ alias build_cygnus_all="${checkout_main_zmk} && cd ${ZMK_HOME} && ${build_cygnus
 alias build_cygnus="${checkout_main_zmk} && cd ${ZMK_HOME} && ${build_cygnus_left} && ${archive_cygnus_left} && cd $KEYBOARD_HOME"
 
 echo "Creating Diamond build alias..."
-build_diamond_central_dongle="west build -s app -b nice_nano_v2 --build-dir build/diamond_central_dongle -- -DSHIELD='diamond_central_dongle dongle_display' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/keyboards/diamond -DZMK_EXTRA_MODULES='$DONGLE_HOME;$BEHAVIOR_MODULES'"
+build_diamond_central_dongle="west build -s app -b nice_nano_v2 --build-dir build/diamond_central_dongle -- -DSHIELD='diamond_central_dongle dongle_display' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/keyboards/diamond -DZMK_EXTRA_MODULES='$DONGLE_DISPLAY_HOME;$BEHAVIOR_MODULES'"
 build_diamond_central_left="west build -s app -b nice_nano_v2 --build-dir build/diamond_central_left -- -DSHIELD='diamond_central_left' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/keyboards/diamond -DZMK_EXTRA_MODULES='$BEHAVIOR_MODULES'"
 build_diamond_peripheral_left="west build -s app -b nice_nano_v2 --build-dir build/diamond_peripheral_left -- -DSHIELD='diamond_peripheral_left' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/keyboards/diamond -DZMK_EXTRA_MODULES='$BEHAVIOR_MODULES'"
 build_diamond_peripheral_right="west build -s app -b nice_nano_v2 --build-dir build/diamond_peripheral_right -- -DSHIELD='diamond_peripheral_right' -DZMK_CONFIG=$KEYBOARD_HOME/src/zmk/keyboards/diamond -DZMK_EXTRA_MODULES='$BEHAVIOR_MODULES'"
