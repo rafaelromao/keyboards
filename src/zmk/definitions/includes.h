@@ -1,6 +1,6 @@
 #pragma once
 
-#define MACOS
+#define LINUX
 
 #include <dt-bindings/zmk/hid_usage.h>
 #include <dt-bindings/zmk/hid_usage_pages.h>
