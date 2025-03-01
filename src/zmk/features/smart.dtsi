@@ -101,7 +101,7 @@
             ignore-modifiers;
 			#binding-cells = <0>;  
             layers = <CPLK_A1>;
-            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT TILDE CARET GRAVE SPACE>;
+            continue-list = <UNDERSCORE MINUS COMMA BACKSPACE DELETE SQT TILDE CARET GRAVE SPACE>;
         };
         // terminated_caps_lock: terminated_caps_lock {
 		// 	compatible = "zmk,behavior-macro";
@@ -123,7 +123,7 @@
             ignore-modifiers;
             layers = <CASE_A1>;
 			#binding-cells = <0>;  
-            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT TILDE CARET GRAVE>;
+            continue-list = <UNDERSCORE MINUS COMMA BACKSPACE DELETE SQT TILDE CARET GRAVE>;
         };
         // terminated_caps_word: terminated_caps_word {
 		// 	compatible = "zmk,behavior-macro";

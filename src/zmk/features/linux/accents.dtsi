@@ -7,7 +7,9 @@
 
 / {
     accents {
-        ACCENT(ac_cced, C, SQT  , CCED_TERM, C_CCED_TERM, S_CCED_TERM)
+        MACRO(ac_cced, &kp RA(COMMA))
+        MACRO(ac_cced_c, &kp RA(RS(COMMA)))
+        MACRO(ac_cced_s, &kp RA(RS(COMMA)))
 
         MACRO(mc_ced,      &ac_cced &sl CCEDIL)
         MACRO(mc_ced_c,    &ac_cced_c &sl CASE_CCEDIL)
