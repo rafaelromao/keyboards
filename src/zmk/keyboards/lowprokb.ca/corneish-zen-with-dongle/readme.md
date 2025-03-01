@@ -3,22 +3,13 @@
 
 ![img](../../../../../img/zen/zen_with_dongle.jpeg)
 
-### Tenting Base
-
-- The tenting base can be built using the items bellow:
-  - 2x [3D printed frames](ZenTent.stl).
-  - 2x [45x65mm magnetic stickers](https://www.aliexpress.com/item/4000152137062.html).
-  - 4x [45x65mm metal plates](https://www.aliexpress.com/item/1005005883276929.html).
-    - 2 of them must be superglued to the back of the Zen (a single drop in the center of the metal plate, to make it possible to remove if necessary).
-    - 2 of them must be glued to the adhesive side of the magnet, to give it stability (the built in adhesive is enough).
-  - 4x [Nillkin laptop stands](https://www.aliexpress.com/item/1005004603358207.html).
-  - More details can be found [here](https://imgur.com/gallery/ktgfP37).
+For more details, see my main [Corne-ish Zen](../corneish-zen/readme.md) build.
 
 ### ZMK
 
 #### Compile
 
-- Run the script `build_zen_with_dongle` to build the firmware for the central left side (use it without a dongle) and the dongle only.
+- Run the script `build_zen_with_dongle` to build the firmware for the dongle only.
 - Run the script `build_zen_with_dongle_all` to build the firmware for both sides and the dongle.
 
 #### Flash
