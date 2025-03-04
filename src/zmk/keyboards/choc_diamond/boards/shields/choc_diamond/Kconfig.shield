@@ -1,0 +1,14 @@
+# Copyright (c) 2021 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+config SHIELD_CHOC_DIAMOND_CENTRAL_DONGLE
+    def_bool $(shields_list_contains,choc_diamond_central_dongle)
+
+config SHIELD_CHOC_DIAMOND_CENTRAL_LEFT
+    def_bool $(shields_list_contains,choc_diamond_central_left)
+
+config SHIELD_CHOC_DIAMOND_PERIPHERAL_LEFT
+    def_bool $(shields_list_contains,choc_diamond_peripheral_left)
+
+config SHIELD_CHOC_DIAMOND_PERIPHERAL_RIGHT
+    def_bool $(shields_list_contains,choc_diamond_peripheral_right)
