@@ -38,13 +38,13 @@
         MACRO(mc_cam,                    &macro_tap &kp LC(E))
 
         MACRO(mc_swapper,                &macro_tap &kp LA(TAB))
-        MACRO(mc_launcher,               &macro_tap &kp LA(SPACE))
-        MACRO(mc_menubar,                &macro_tap &kp LC(SPACE))
-
+        MACRO(mc_launcher,               &macro_tap &kp LC(SPACE))
         MACRO(mc_tabs,                   &macro_tap &kp LC(LS(A)))
 
+        MACRO(mc_files,                  &macro_tap &kp LG(E))
+
+        MACRO(mc_menubar,                &macro_tap &kp LC(LA(J)))
         MACRO(mc_screenshot,             &macro_tap &kp LC(LA(S)))
-        MACRO(mc_files,                  &macro_tap &kp LC(LA(F)))
         MACRO(mc_emoji,                  &macro_tap &kp LC(LA(E)))
         MACRO(mc_timer,                  &macro_tap &kp LC(LA(T)))
         MACRO(mc_notes,                  &macro_tap &kp LC(LA(N)))
