@@ -189,6 +189,8 @@
 
         COMBO(cb_lower_nav,     LBR LBM,     &mo LOW_CP,         NAV_LAYERS)
         COMBO(cd_ca,            LHR LHM,     &kp LC(LALT),       NAV_LAYERS)
+        COMBO(cb_lclick,        RHI RHM RHR, &mkp LCLK,          NAV_LAYERS)
+        COMBO(cb_rclick,        RBI RBM RBR, &mkp RCLK,          NAV_LAYERS)
 
         COMBO(cb_down_home,     RBI RBM,     &mc_down_home,      NAV_LAYERS)
         COMBO(cb_down_end,      RBR RBM,     &mc_down_end,       NAV_LAYERS)

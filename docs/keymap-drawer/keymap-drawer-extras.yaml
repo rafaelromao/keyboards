@@ -294,6 +294,16 @@ combos:
       layers: [coding-meh],
     }
   - {
+      p: [11, 12],
+      k: { t: impl },
+      layers: [coding-meh],
+    }
+  - {
+      p: [11, 12],
+      k: { t: go to },
+      layers: [coding-hyper],
+    }
+  - {
       p: [14, 15, 16],
       k: { t: chat },
       a: bottom,

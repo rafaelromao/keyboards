@@ -730,6 +730,8 @@ combos:
       a: mid,
       layers: [nav],
     }
+  - { p: [10, 11, 12], k: { t: $$mdi:mouse-left-click$$, s: left }, slide: 0.5, layers: [nav], a: bottom }
+  - { p: [17, 18, 19], k: { t: $$mdi:mouse-right-click$$, s: right }, slide: 0.5, layers: [nav], a: bottom }
   - { p: [17, 18], k: "↓ ⇤", a: mid, layers: [nav] }
   - { p: [18, 19], k: "↓ ⇥", a: mid, layers: [nav] }
 
