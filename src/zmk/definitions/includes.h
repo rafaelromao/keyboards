@@ -27,11 +27,6 @@
 #include "../features/linux/shortcuts.dtsi"
 #include "../features/linux/select.dtsi"
 #endif
-#ifdef ANDROID
-#include "../features/android/accents.dtsi"
-#include "../features/android/shortcuts.dtsi"
-#include "../features/android/select.dtsi"
-#endif
 
 #include "../features/smart.dtsi"
 #include "../features/magic.dtsi"
