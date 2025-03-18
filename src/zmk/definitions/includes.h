@@ -7,20 +7,23 @@
 #include "keycodes.h"
 #include "config.dtsi"
 
+#if __has_include("flags.h")
+#include "flags.h"
+#endif
+
 #include "../features/mouse.dtsi"
 
 #include "../features/accents.dtsi"
 #include "../features/shortcuts.dtsi"
 #include "../features/select.dtsi"
 
-#define USE_MACOS
-
-#ifdef USE_MACOS
+#ifdef MACOS
 #include "../features/macos/accents.dtsi"
 #include "../features/macos/shortcuts.dtsi"
 #include "../features/macos/select.dtsi"
 #endif
-#ifdef USE_LINUX
+
+#ifdef LINUX
 #include "../features/linux/accents.dtsi"
 #include "../features/linux/shortcuts.dtsi"
 #include "../features/linux/select.dtsi"

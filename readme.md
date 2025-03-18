@@ -68,6 +68,15 @@ The keyboards that run the ZMK implementation of this Keymap are listed below:
 - [Rommana](src/zmk/keyboards/rommana/boards/shields/rommana/readme.md)
 - [Corne-ish Zen](src/zmk/keyboards/lowprokb.ca/corneish-zen/readme.md)
 
+#### Initializing the local build environment
+
+The script [init.sh](init.sh) will clone [the ZMK firmware](https://github.com/rafaelromao/zmk) and configure the toolchain.
+After [installing ZMK](https://zmk.dev/docs/development/setup) and running the init script above, [west cli](https://zmk.dev/docs/development/build-flash) should be working to compile and flash.
+
+## Building
+
+The script [build.sh](build.sh) can be used to build the firmware for any of my boards. Run `build --help` for more details.
+
 ## Diagram
 
 The Diagram for my keymap was created using [Keymap Drawer](https://github.com/caksoylar/keymap-drawer). The source and config files can be found in the docs folder and the commands below can be used to generate an `svg` diagram and convert it to `png`, using Inkscape:
@@ -77,14 +86,7 @@ keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw ./docs/keymap-draw
 inkscape --export-type png --export-filename ./img/overview.png --export-dpi 300 --export-background=white ./img/overview.svg
 ```
 
-## Building
-
-### ZMK
-
-The script [init_zmk.sh](init_zmk.sh) will clone [the ZMK firmware](https://github.com/rafaelromao/zmk) and configure the toolchain.
-After [installing ZMK](https://zmk.dev/docs/development/setup) and running the init script above, [west cli](https://zmk.dev/docs/development/build-flash) should be working to compile and flash.
-
-The init script will also create some aliases to build the keyboards more easily, like `build_rommana`, for example. See more details in the specifict keyboard pages, liked above.
+The script [draw.sh](draw.sh) is used to draw all diagrams in my keymap using commands like the example above.
 
 ## References
 
