@@ -1,7 +1,3 @@
-#pragma once
-
-#define MACOS
-
 #include <dt-bindings/zmk/hid_usage.h>
 #include <dt-bindings/zmk/hid_usage_pages.h>
 #include <dt-bindings/zmk/modifiers.h>
@@ -17,12 +13,14 @@
 #include "../features/shortcuts.dtsi"
 #include "../features/select.dtsi"
 
-#ifdef MACOS
+#define USE_MACOS
+
+#ifdef USE_MACOS
 #include "../features/macos/accents.dtsi"
 #include "../features/macos/shortcuts.dtsi"
 #include "../features/macos/select.dtsi"
 #endif
-#ifdef LINUX
+#ifdef USE_LINUX
 #include "../features/linux/accents.dtsi"
 #include "../features/linux/shortcuts.dtsi"
 #include "../features/linux/select.dtsi"
