@@ -99,6 +99,35 @@ elif [[ "$BRANCH" == "main" ]]; then
     BRANCH="20240328/rafaelromao/main"
 fi
 
+if [[ -n "$SHIELD" && -n "$CONFIG" ]]; then
+    if [[ "$CONFIG" == */* ]]; then
+        BASENAME="${CONFIG##*/}"
+    else
+        BASENAME="$CONFIG" 
+    fi
+    if [[ "$SHIELD" == "l" ]]; then
+        SHIELD="${BASENAME}_left"
+    fi 
+    if [[ "$SHIELD" == "cl" ]]; then
+        SHIELD="${BASENAME}_central_left"
+    fi 
+    if [[ "$SHIELD" == "pl" ]]; then
+        SHIELD="${BASENAME}_peripheral_left"
+    fi 
+    if [[ "$SHIELD" == "r" ]]; then
+        SHIELD="${BASENAME}_right"
+    fi 
+    if [[ "$SHIELD" == "cr" ]]; then
+        SHIELD="${BASENAME}_central_right"
+    fi 
+    if [[ "$SHIELD" == "pr" ]]; then
+        SHIELD="${BASENAME}_peripheral_right"
+    fi 
+    if [[ "$SHIELD" == "cd" ]]; then
+        SHIELD="${BASENAME}_central_dongle"
+    fi 
+fi
+
 # Print the parameters for verification
 echo "Config: $CONFIG"
 echo "Shield: $SHIELD"
