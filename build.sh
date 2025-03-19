@@ -13,7 +13,7 @@ EXTRA_FLAGS=()
 
 # Function to display usage
 usage() {
-    echo "Usage: build [<config> <shield> <operating_system=MACOS>] [-k <config>] [-s <shield>] [-e <extra_shield1,extra_shield2,...>] [-b <board=nice_nano_v2>] [-z <branch [wired|main]=main>] [-m <module1,module2,...>] [-h | --help]"
+    echo "Usage: build [<config> <shield> <operating_system=MACOS>] [-k <config>] [-s <shield>] [-e <extra_shield1,extra_shield2,...>] [-b <board=nice_nano_v2>] [-z <branch [wired|main]=main>] [-d <extra_flag1,extra_flag2,...>] [-m <module1,module2,...>] [-h | --help]"
     echo
     echo "Parameters:"
     echo "  <config>               Specify the zmk config."
@@ -22,10 +22,10 @@ usage() {
     echo "  -k, --config           Specify the zmk config."
     echo "  -s, --shield           Specify a single shield."
     echo "  -o, --operating_system Specify the operating system (default: MACOS)."
-    echo "  -e, --extra_shields    Specify additional shields as a comma-separated list (default: empty)."
+    echo "  -e, --extra_shields    Specify a comma-separated list of additional shields (default: empty)."
     echo "  -b, --board            Specify the board (default: nice_nano_v2)."
     echo "  -z, --branch           Specify the branch (default: main, options: wired|main)."
-    echo "  -d, --extra_flags      Specify extra flags (can be specified multiple times)."
+    echo "  -d, --extra_flags      Specify a comma-separated list of extra flags (default: empty)."
     echo "  -m, --modules          Specify a comma-separated list of modules (default: empty)."
     echo "  -h, --help             Display this help message."
     exit 1
@@ -76,11 +76,7 @@ while getopts "k:s:e:o:b:z:m:d:" opt; do
             IFS=',' read -r -a MODULES <<< "$OPTARG"
             ;;
         d)
-            EXTRA_FLAGS+=("$OPTARG")
-            while [[ "$OPTIND" -le "$#" && "${!OPTIND}" != -* ]]; do
-                EXTRA_FLAGS+=("${!OPTIND}")
-                OPTIND=$((OPTIND + 1))
-            done
+            IFS=',' read -r -a EXTRA_FLAGS <<< "$OPTARG"
             ;;
         *)
             usage
