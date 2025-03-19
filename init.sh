@@ -48,11 +48,6 @@ echo "Update git sub-modules..."
 git submodule sync --recursive
 git submodule update --init --recursive --progress
 
-clean_zmk="rm -rf $KEYBOARD_HOME/modules/rafaelromao/zmk/build"
-
-checkout_main_zmk="echo 'Cleaning zmk...'; ${clean_zmk} ; echo 'Checking out main zmk...'; cd $ZMK_HOME; git fetch; git checkout -f 20240328/rafaelromao/main; git pull; cd $KEYBOARD_HOME"
-checkout_wired_zmk="echo 'Cleaning zmk...'; ${clean_zmk} ; echo 'Checking out wired zmk...'; cd $ZMK_HOME; git fetch; git checkout -f 20240328/rafaelromao/wired-split; git pull; cd $KEYBOARD_HOME"
-
 if [[ "${INIT}" == "true" ]]
 then
     echo "Initializing West..."
