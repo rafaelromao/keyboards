@@ -165,6 +165,19 @@ else
     ARTIFACT="${SHIELD:-$BOARD}"
 fi
 
+# Fix the modules list
+
+PREFIX="$PROJECT_DIR/modules/"
+NEW_MODULES=""
+IFS=',' read -ra ADDR <<< "$MODULES"
+for module in "${ADDR[@]}"; do
+    NEW_MODULES+="${PREFIX}${module},"
+done
+NEW_MODULES="${NEW_MODULES%,}"
+MODULES=$NEW_MODULES
+
+# Build the west command
+
 command="west build -s app -b \$BOARD --build-dir build/\"\$ARTIFACT\" --"
 for flag in "${EXTRA_FLAGS[@]}"; do
     command+=" -D$flag"
