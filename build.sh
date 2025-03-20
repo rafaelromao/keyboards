@@ -7,32 +7,32 @@ SHIELD=""
 OPERATING_SYSTEM="MACOS"
 BOARD="nice_nano_v2"
 BRANCH="main"
-MODULES=()
 EXTRA_SHIELDS=()
-EXTRA_FLAGS=()
+FLAGS=()
+MODULES=()
 
 # Function to display usage
 usage() {
-    echo "Usage: build [<config> <shield> <operating_system=MACOS>] [-k <config>] [-s <shield>] [-e <extra_shield1,extra_shield2,...>] [-b <board=nice_nano_v2>] [-z <branch [wired|main]=main>] [-d <extra_flag1,extra_flag2,...>] [-m <module1,module2,...>] [-h | --help]"
+    echo "Usage: build [<config> <shield> <operating_system=MACOS>] [-k <config>] [-s <shield>] [-b <board=nice_nano_v2>] [-z <branch [wired|main]=main>] [-e <extra_shield1,extra_shield2,...>] [-d <flag1,flag2,...>] [-m <module1,module2,...>] [-h | --help]"
     echo
     echo "Parameters:"
     echo "  <config>               Specify the zmk config."
-    echo "  <shield>               Specify a single shield."
+    echo "  <shield>               Specify the shield."
     echo "  <operating_system>     Specify the operating system."
     echo "  -k, --config           Specify the zmk config."
-    echo "  -s, --shield           Specify a single shield."
+    echo "  -s, --shield           Specify the shield."
     echo "  -o, --operating_system Specify the operating system (default: MACOS)."
-    echo "  -e, --extra_shields    Specify a comma-separated list of additional shields (default: empty)."
     echo "  -b, --board            Specify the board (default: nice_nano_v2)."
     echo "  -z, --branch           Specify the branch (default: main, options: wired|main)."
-    echo "  -d, --extra_flags      Specify a comma-separated list of extra flags (default: empty)."
+    echo "  -e, --extra_shields    Specify a comma-separated list of additional shields (default: empty)."
+    echo "  -d, --flags            Specify a comma-separated list of extra flags (default: empty)."
     echo "  -m, --modules          Specify a comma-separated list of modules (default: empty)."
     echo "  -h, --help             Display this help message."
     exit 1
 }
 
 # Check for help flags or insufficient parameters
-if [[ "$1" == "-h" || "$1" == "--help" || "$#" == 0 ]]; then
+if [[ "$1" == "-h" || "$1" == "--help" || "$#" -lt 2 ]]; then
     usage
 fi
 
@@ -76,7 +76,7 @@ while getopts "k:s:e:o:b:z:m:d:" opt; do
             IFS=',' read -r -a MODULES <<< "$OPTARG"
             ;;
         d)
-            IFS=',' read -r -a EXTRA_FLAGS <<< "$OPTARG"
+            IFS=',' read -r -a FLAGS <<< "$OPTARG"
             ;;
         *)
             usage
@@ -128,10 +128,10 @@ fi
 echo "Config: $CONFIG"
 echo "Shield: $SHIELD"
 echo "Operating System: $OPERATING_SYSTEM"
-echo "Extra Shields: ${EXTRA_SHIELDS[*]}"
 echo "Board: $BOARD"
 echo "Branch: $BRANCH"
-echo "Extra Flags: ${EXTRA_FLAGS[*]}"
+echo "Extra Shields: ${EXTRA_SHIELDS[*]}"
+echo "Flags: ${FLAGS[*]}"
 echo "Modules: ${MODULES[*]}"
 
 # Create a new flags.h file
@@ -175,7 +175,7 @@ MODULES=$NEW_MODULES
 # Build the west command
 
 command="west build -s app -b \$BOARD --build-dir build/\"\$ARTIFACT\" --"
-for flag in "${EXTRA_FLAGS[@]}"; do
+for flag in "${FLAGS[@]}"; do
     command+=" -D$flag"
 done
 if [ -n "$SHIELD" ]; then
