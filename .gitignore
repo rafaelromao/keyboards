@@ -6,4 +6,5 @@ zmk
 !src/zmk
 build
 build.log
+.venv/
 tmp/

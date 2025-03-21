@@ -34,19 +34,18 @@
         MACRO(mc_zoom_in,                &macro_tap &kp LG(PLUS))
         MACRO(mc_reset_zoom,             &macro_tap &kp LG(N0))
 
-        MACRO(mc_hand,                   &macro_tap &kp LG(LS(H)))
-        MACRO(mc_mic,                    &macro_tap &kp LG(D))
-        MACRO(mc_cam,                    &macro_tap &kp LG(E))
-
-        MACRO(mc_swapper,                &macro_tap &kp LG(TAB))
-        MACRO(mc_launcher,               &macro_tap &kp LC(SPACE))
+        MACRO(mc_swapper,                &macro_tap &kp LA(TAB))
+        MACRO(mc_launcher,               &macro_tap &kp LA(SPACE))
         MACRO(mc_tabs,                   &macro_tap &kp LG(LS(A)))
 
-        MACRO(mc_files,                  &macro_tap &kp LC(LA(F)))
+        MACRO(mc_files,                   &macro_tap &kp LC(LA(F)))
 
-        MACRO(mc_menubar,                &macro_tap &kp LC(LA(J)))
+        MACRO(mc_hand,                   &macro_tap &kp LC(LA(H)))
+        MACRO(mc_mic,                    &macro_tap &kp LC(LA(D)))
+        MACRO(mc_cam,                    &macro_tap &kp LC(LA(E)))
+        MACRO(mc_menubar,                &macro_tap &kp LC(LA(B)))
         MACRO(mc_screenshot,             &macro_tap &kp LC(LA(S)))
-        MACRO(mc_emoji,                  &macro_tap &kp LC(LA(E)))
+        MACRO(mc_emoji,                  &macro_tap &kp LC(LA(J)))
         MACRO(mc_timer,                  &macro_tap &kp LC(LA(T)))
         MACRO(mc_notes,                  &macro_tap &kp LC(LA(N)))
 
