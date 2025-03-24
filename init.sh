@@ -67,3 +67,6 @@ cd $KEYBOARD_HOME
 
 alias build=./build.sh
 alias draw=./draw.sh
+
+python3 -m venv .venv
+source .venv/bin/activate
