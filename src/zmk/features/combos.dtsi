@@ -118,7 +118,7 @@
         COMBO(cd_hyp_spc,       LBR LBM LBI, &mc_hyper_space,    MEHS)
 
         COMBO(cb_comm,          RHP R0,      &kp COMMA,          LOWER_LAYERS)
-        COMBO(cb_sfl,           RTI RTM,     &kp LS(L),          LOWER_LAYERS)
+        COMBO(cb_sfl,            RTI RTM,     &kp LS(L),          LOWER_LAYERS)
         COMBO(cb_jv,            RHI RHM,     &kp A,              LOWER_LAYERS)
         COMBO(cb_pipev,         RBI RBM,     &kp PIPE,           LOWER_LAYERS)
         COMBO(cb_kv,            RHM RHR,     &kp E,              LOWER_LAYERS)
@@ -148,10 +148,10 @@
         COMBO(cb_br,            RHR RHM RHI, &th_br 0 0,         RAISE_LAYERS)
         COMBO(cb_eu,            RBR RBM RBI, &th_eur 0 0,        RAISE_LAYERS)
 
-        COMBO(cb_tisl,          RTI RTM,     &mc_tisl,           RAISE_LAYERS)
+        COMBO(cb_dds,           RTI RTM,     &mc_dds,            RAISE_LAYERS)
         COMBO(cb_eqeq,          RHM RHR,     &mc_eqeq,           RAISE_LAYERS)
         COMBO(cb_noteq,         RBM RBR,     &mc_noteq,          RAISE_LAYERS)
-        COMBO(cb_dds,           RHI RHM,     &mc_dds,            RAISE_LAYERS)
+        COMBO(cb_tisl,          RHI RHM,     &mc_tisl,           RAISE_LAYERS)
         COMBO(cb_ds,            RBI RBM,     &mc_ds,             RAISE_LAYERS)
 
         COMBO(cb_f10,           RBM RBI,     &kp F10,            FUN)

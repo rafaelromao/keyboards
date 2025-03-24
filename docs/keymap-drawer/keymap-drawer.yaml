@@ -699,8 +699,8 @@ combos:
   - { p: [7, 8, 9], k: '"""', a: top, layers: [raise] }
   - { p: [15, 16], k: "``←", a: mid, layers: [raise] }
   - { p: [14, 15, 16], k: "```", a: top, layers: [raise] }
-  - { p: [3, 4], k: "~/", a: mid, layers: [raise] }
-  - { p: [10, 11], k: "../", a: mid, layers: [raise] }
+  - { p: [3, 4], k: "../", a: mid, layers: [raise] }
+  - { p: [10, 11], k: "~/", a: mid, layers: [raise] }
   - { p: [11, 12], k: "==", a: mid, layers: [raise] }
   - { p: [17, 18], k: "./", a: mid, layers: [raise] }
   - { p: [18, 19], k: "!=", a: mid, layers: [raise] }
