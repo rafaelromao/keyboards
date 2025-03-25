@@ -43,7 +43,7 @@ This repository contains the keymap files that are used to customize my keyboard
 
 ## Compatibility
 
-This layout was tested with the keyboards listed in the `src/keyboards` folder, but can be easily adapted to most ortholinear or column staggered keyboards with at least 24 keys, with 2 of them on each thumb.
+This layout can be easily adapted to most ortholinear or column staggered keyboards with at least 24 keys, with 2 of them on each thumb.
 
 ### QMK
 
