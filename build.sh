@@ -151,9 +151,7 @@ git fetch
 git checkout -f $BRANCH
 git pull
 
-# Build the project
 cd "$PROJECT_DIR"
-cd "$PROJECT_DIR/modules/rafaelromao/zmk"
 
 if [ -z "$CONFIG" ]; then
     ARTIFACT="$BOARD-$SHIELD"
@@ -164,13 +162,26 @@ fi
 # Fix the modules list
 
 PREFIX="$PROJECT_DIR/modules/"
-NEW_MODULES=""
+TEMP=""
 IFS=',' read -ra ADDR <<< "$MODULES"
-for module in "${ADDR[@]}"; do
-    NEW_MODULES+="${PREFIX}${module},"
+for MODULE in "${ADDR[@]}"; do
+
+    MODULE_HOME=${PREFIX}${MODULE}
+    # Download the module if necessary
+    if [[ ! -d "$MODULE_HOME" ]]
+    then
+        echo "Add git sub-module: $MODULE"
+        git submodule add -f "git@github.com:$MODULE" "modules/$MODULE"
+    fi
+
+    # Prefix the module name with the path
+    TEMP+="${MODULE_HOME},"
 done
-NEW_MODULES="${NEW_MODULES%,}"
-MODULES=$NEW_MODULES
+TEMP="${TEMP%,}"
+MODULES=$TEMP
+
+# Build the project
+cd "$PROJECT_DIR/modules/rafaelromao/zmk"
 
 # Build the west command
 
