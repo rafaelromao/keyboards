@@ -60,14 +60,6 @@ The zmk version used for this keymap is the one available in [this fork](https:/
 
 This fork is also updated to Zephyr 3.5.
 
-The keyboards that run the ZMK implementation of this Keymap are listed below:
-
-- [Diamond](src/zmk/keyboards/diamond/boards/shields/diamond/readme.md)
-- [Wired Diamond](src/zmk/keyboards/wired_diamond/boards/shields/wired_diamond/readme.md)
-- [Dactyl Cygnus](src/zmk/keyboards/cygnus/boards/shields/cygnus/readme.md)
-- [Rommana](src/zmk/keyboards/rommana/boards/shields/rommana/readme.md)
-- [Corne-ish Zen](src/zmk/keyboards/lowprokb.ca/corneish-zen/readme.md)
-
 #### Initializing the local build environment
 
 The script [init.sh](init.sh) will clone [the ZMK firmware](https://github.com/rafaelromao/zmk) and configure the toolchain.
