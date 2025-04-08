@@ -275,16 +275,6 @@ layers:
     - null
 combos:
   - {
-      p: [10, 11],
-      k: { t: yabai off },
-      layers: [desktop-management],
-    }
-  - {
-      p: [11, 12],
-      k: { t: yabai on },
-      layers: [desktop-management],
-    }
-  - {
       p: [7, 8, 9],
       k: { t: actions },
       a: top,
