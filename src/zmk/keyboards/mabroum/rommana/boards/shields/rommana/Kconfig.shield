@@ -1,0 +1,14 @@
+# Copyright (c) 2021 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+config SHIELD_ROMMANA_CENTRAL_DONGLE
+    def_bool $(shields_list_contains,rommana_central_dongle)
+
+config SHIELD_ROMMANA_CENTRAL_LEFT
+    def_bool $(shields_list_contains,rommana_central_left)
+
+config SHIELD_ROMMANA_PERIPHERAL_LEFT
+    def_bool $(shields_list_contains,rommana_peripheral_left)
+
+config SHIELD_ROMMANA_PERIPHERAL_RIGHT
+    def_bool $(shields_list_contains,rommana_peripheral_right)
