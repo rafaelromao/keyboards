@@ -45,6 +45,12 @@ This repository contains the keymap files that are used to customize my keyboard
 
 This layout can be easily adapted to most ortholinear or column staggered keyboards with at least 24 keys, with 2 of them on each thumb.
 
+#### My Keyboards
+
+- [Diamond](https://github.com/rafaelromao/diamond)
+- [Rommana-Remix](https://github.com/rafaelromao/rommana-remix)
+- [Corne-ish Zen](https://lowprokb.ca/collections/keyboards/products/corne-ish-zen)
+
 ### QMK
 
 There is an outdated QMK version of this keymap, available in the branch [last_qmk](https://github.com/rafaelromao/keyboards/tree/last_qmk).
