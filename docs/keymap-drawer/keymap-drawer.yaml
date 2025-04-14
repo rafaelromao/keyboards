@@ -282,7 +282,7 @@ layers:
         { t: $$mdi:mouse-left-click$$, s: left },
         { t: $$mdi:mouse-right-click$$, s: right },
         { t: $$mdi:hand-back-right-outline$$, s: hand},
-        { t: $$mdi:keyboard-return$$ },
+        { t: $$mdi:keyboard-return$$, s: enter },
         { t: "⎋" },
       ]
     - [
@@ -290,18 +290,18 @@ layers:
         { t: $$mdi:arrow-left-circle$$, s: mouse },
         { t: $$mdi:arrow-up-circle$$, s: mouse },
         { t: $$mdi:arrow-right-circle$$, s: mouse },
-        { t: $$mdi:microphone$$},
-        { t: $$mdi:volume-medium$$ },
-        { t: $$mdi:volume-high$$ },
-        { t: $$mdi:camera$$},
+        { t: $$mdi:microphone$$, s: mic},
+        { t: $$mdi:volume-medium$$, s: vol- },
+        { t: $$mdi:volume-high$$, s: vol+ },
+        { t: $$mdi:camera$$, h: nav, s: cam},
       ]
     - [
         { t: $$mdi:arrow-down-circle-outline$$, s: scroll },
         { t: $$mdi:arrow-down-circle$$, s: mouse },
         { t: $$mdi:arrow-up-circle-outline$$, s: scroll },
-        { t: $$mdi:play-pause$$ },
-        { t: $$mdi:skip-backward$$ },
-        { t: $$mdi:skip-forward$$ },
+        { t: $$mdi:play-pause$$, s: play },
+        { t: $$mdi:skip-backward$$, s: backward },
+        { t: $$mdi:skip-forward$$, s: forward },
       ]
     - h: nav
     - { t: $$mdi:keyboard-space$$, h: normal, s: vim }
@@ -584,7 +584,7 @@ combos:
       w: 48,
       layers: [shortcuts],
     }
-  - { p: [3, 4], k: "lower", a: mid, w: 48, layers: [shortcuts] }
+  - { p: [3, 4], k: "mehs", a: mid, w: 48, layers: [shortcuts] }
   - { p: [10, 11], k: "nav", a: mid, w: 48, layers: [shortcuts] }
   - {
       p: [14, 15],
@@ -593,7 +593,7 @@ combos:
       w: 48,
       layers: [shortcuts],
     }
-  - { p: [17, 18], k: "mehs", a: mid, w: 48, layers: [shortcuts] }
+  - { p: [17, 18], k: "lower", a: mid, w: 48, layers: [shortcuts] }
   - {
       p: [18, 19],
       k: { t: $$mdi:backup-restore$$, s: reopen },
@@ -699,10 +699,10 @@ combos:
   - { p: [7, 8, 9], k: '"""', a: top, layers: [raise] }
   - { p: [15, 16], k: "``←", a: mid, layers: [raise] }
   - { p: [14, 15, 16], k: "```", a: top, layers: [raise] }
-  - { p: [3, 4], k: "../", a: mid, layers: [raise] }
+  - { p: [3, 4], k: "./", a: mid, layers: [raise] }
   - { p: [10, 11], k: "~/", a: mid, layers: [raise] }
   - { p: [11, 12], k: "==", a: mid, layers: [raise] }
-  - { p: [17, 18], k: "./", a: mid, layers: [raise] }
+  - { p: [17, 18], k: "../", a: mid, layers: [raise] }
   - { p: [18, 19], k: "!=", a: mid, layers: [raise] }
   - { p: [3, 4, 5], k: { t: "US$", h: "USD" }, a: top, layers: [raise] }
   - { p: [10, 11, 12], k: { t: "R$", h: "BRL" }, a: bottom, layers: [raise] }

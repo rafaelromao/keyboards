@@ -46,7 +46,7 @@
         MACRO(mc_meh_d,                  &macro_tap &kp LC(LA(LS(D))))
         MACRO(mc_meh_i,                  &macro_tap &kp LC(LA(LS(I))))
 
-        LAYERTAP_TP(th_plain1,        &tc_smart_plain1)
+        LAYERTAP_TP(th_plain1,           &tc_smart_plain1)
 
         // Navigation
 
@@ -66,7 +66,9 @@
 
         MACRO(mc_meh_space,             &kp LS(LC(LA(SPACE))))
         MACRO(mc_hyper_space,           &kp LS(LC(LA(LG(SPACE)))))
-        TAPHOLD_TP(th_hyper_space,   &mc_hyper_space, &mc_hyper)
+        TAPHOLD_TP(th_hyper_space,      &mc_hyper_space, &mc_hyper)
+
+        LAYERTAP_TP(th_cam,             &mc_cam)
 
         mc_meh: mc_meh {
             compatible = "zmk,behavior-macro";
