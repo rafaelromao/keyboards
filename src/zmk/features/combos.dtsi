@@ -43,7 +43,7 @@
 
         COMBO(cb_save,          LHR LHM L0,  &mc_save,           ALL_LAYERS)
         COMBO(cb_fullscr,       LHM LHI L0,  &mc_fullscr,        ALL_LAYERS)
-        COMBO(cb_find,          LBM LBI L0,  &mc_find,           ALL_LAYERS)
+        COMBO(cb_find,           LBM LBI L0,  &mc_find,            ALL_LAYERS)
         COMBO(cb_undo,          LBR LBM L0,  &mc_undo,           ALL_LAYERS)
         COMBO(cb_enter,         RHM RHR R0,  &kp ENTER,          ALL_LAYERS)
         COMBO(cb_tab,           RTM RTR R0,  &kp TAB,            ALL_LAYERS)

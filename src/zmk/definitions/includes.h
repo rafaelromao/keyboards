@@ -4,7 +4,6 @@
 #include <dt-bindings/zmk/mouse.h>
 
 #include "templates.dtsi"
-#include "keycodes.h"
 #include "config.dtsi"
 
 #if __has_include("flags.h")

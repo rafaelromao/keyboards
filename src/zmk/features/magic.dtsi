@@ -26,20 +26,20 @@
             max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
             defaults = <&labeled_key_repeat>;
             antecedents = <
-                            A            I            QU_TERM      AGRV_TERM     SQUO_TERM      J            CCED_TERM      AACU_TERM      EACU_TERM      OACU_TERM   \
-                                         Y            C_QU_TERM    C_AGRV_TERM   C_SQUO_TERM    RS(J)        C_CCED_TERM    C_AACU_TERM    C_EACU_TERM    C_OACU_TERM \
-                            RS(Y)        LS(Y)        S_QU_TERM    S_AGRV_TERM   X              LS(J)        S_CCED_TERM    S_AACU_TERM    S_EACU_TERM    S_OACU_TERM \
-                            OCIR_TERM    C_OCIR_TERM  S_OCIR_TERM  ATIL_TERM     C_ATIL_TERM    S_ATIL_TERM  OTIL_TERM      C_OTIL_TERM    S_OTIL_TERM    ECIR_TERM   \
-                            C_ECIR_TERM  S_ECIR_TERM  UACU_TERM    C_UACU_TERM   S_UACU_TERM    IACU_TERM    C_IACU_TERM    S_IACU_TERM    RS(X)          LS(X)       \
-                            CARET_TERM   H            RS(H)        V             RS(V)          LS(V)        LS(H)          \
+                            A            I            SPACE       \
+                            J            Y            RS(J)       \
+                            RS(Y)        LS(Y)        X           \
+                            LS(J)        RS(X)        LS(X)       \
+                            H            RS(H)        V           \
+                            LS(V)        LS(H)        RS(V)       \
                            >;                                                                                      
             bindings =    <                                                                                        
-                            &tc_h        &mc_sqo      &ac_ecir     &mc_qu        &kp V          &ac_aacu     &sl ALPHA2     &kp X          &kp X          &kp X       \
-                                         &kp D        &ac_ecir_c   &mc_qu_c      &kp RS(V)      &ac_aacu_c   &sl ALPHA2     &kp RS(X)      &kp RS(X)      &kp RS(X)   \
-                            &kp RS(D)    &kp D        &ac_ecir     &mc_qu        &kp Y          &ac_aacu     &sl ALPHA2     &kp X          &kp X          &kp X       \
-                            &kp L        &kp RS(L)    &kp LS(L)    &kp O         &kp RS(O)      &kp LS(O)    &kp E          &kp RS(E)      &kp LS(E)      &kp DOT     \
-                            &kp DOT      &kp DOT      &kp V        &kp RS(V)     &kp LS(V)      &kp V        &kp RS(V)      &kp LS(V)      &kp RS(Y)      &kp LS(Y)   \
-                            &mc_caret    &mc_bs_v     &mc_bs_c_v   &mc_bs_h      &mc_bs_c_h     &mc_bs_s_v   &mc_bs_s_h\
+                            &tc_h        &mc_sqo      &kp V       \
+                            &ac_aacu     &kp D        &ac_aacu_c  \
+                            &kp RS(D)    &kp D        &kp Y       \
+                            &ac_aacu     &kp RS(Y)    &kp LS(Y)   \
+                            &mc_bs_v     &mc_bs_c_v   &mc_bs_h    \
+                            &mc_bs_s_v   &mc_bs_s_h   &mc_bs_c_h  \
                            >;
         };
 
@@ -73,22 +73,10 @@
             max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
             defaults = <&labeled_h>;
             antecedents = <
-                           A             AACU_TERM     ATIL_TERM     ACIR_TERM     AGRV_TERM       \
-                           E             EACU_TERM     ECIR_TERM     I             IACU_TERM       \
-                           O             OACU_TERM     OTIL_TERM     OCIR_TERM                     \
-                           U             UACU_TERM                                                 \
-
-                           LS(A)         S_AACU_TERM   S_ATIL_TERM   S_ACIR_TERM   S_AGRV_TERM     \
-                           LS(E)         S_EACU_TERM   S_ECIR_TERM   LS(I)         S_IACU_TERM     \
-                           LS(O)         S_OACU_TERM   S_OTIL_TERM   S_OCIR_TERM   S_UACU_TERM     \
+                           A             E             I             O             U               \
+                           LS(A)         LS(E)         LS(I)         LS(O)         LS(U)           \
                            >;
             bindings =    <
-                           &tc_v         &tc_v         &tc_v         &tc_v         &tc_v           \
-                           &tc_v         &tc_v         &tc_v         &tc_v         &tc_v           \
-                           &tc_v         &tc_v         &tc_v         &tc_v                         \
-                           &tc_v         &tc_v                                                     \
-
-                           &tc_v         &tc_v         &tc_v         &tc_v         &tc_v           \
                            &tc_v         &tc_v         &tc_v         &tc_v         &tc_v           \
                            &tc_v         &tc_v         &tc_v         &tc_v         &tc_v           \
                            >; 
@@ -114,24 +102,10 @@
             max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
             defaults = <&labeled_h_c>;
             antecedents = <
-                           RS(A)         C_AACU_TERM   C_ATIL_TERM   C_ACIR_TERM   C_AGRV_TERM     \
-                           RS(E)         C_EACU_TERM   C_ECIR_TERM   RS(I)         C_IACU_TERM     \
-                           RS(O)         C_OACU_TERM   C_OTIL_TERM   C_OCIR_TERM                   \
-                           RS(U)         C_UACU_TERM                                               \
-
-                           LS(A)         S_AACU_TERM   S_ATIL_TERM   S_ACIR_TERM   S_AGRV_TERM     \
-                           LS(E)         S_EACU_TERM   S_ECIR_TERM   LS(I)         S_IACU_TERM     \
-                           LS(O)         S_OACU_TERM   S_OTIL_TERM   S_OCIR_TERM   S_UACU_TERM     \
+                           RS(A)         RS(E)         RS(I)         RS(O)         RS(U)           \
                            >;
             bindings =    <
                            &kp RS(V)     &kp RS(V)     &kp RS(V)     &kp RS(V)     &kp RS(V)       \
-                           &kp RS(V)     &kp RS(V)     &kp RS(V)     &kp RS(V)     &kp RS(V)       \
-                           &kp RS(V)     &kp RS(V)     &kp RS(V)     &kp RS(V)                     \
-                           &kp RS(V)     &kp RS(V)                                                 \
-
-                           &kp LS(V)     &kp LS(V)     &kp LS(V)     &kp LS(V)     &kp LS(V)       \
-                           &kp LS(V)     &kp LS(V)     &kp LS(V)     &kp LS(V)     &kp LS(V)       \
-                           &kp LS(V)     &kp LS(V)     &kp LS(V)     &kp LS(V)     &kp LS(V)       \
                            >;
         };
 
@@ -174,22 +148,12 @@
             max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
             defaults = <&labeled_v>;
             antecedents = <
-                           A             AACU_TERM     E             EACU_TERM     ECIR_TERM   \
-                           I             IACU_TERM     O             OACU_TERM                 \
-                           U             UACU_TERM                                             \
-
-                           LS(A)         S_AACU_TERM   LS(E)         S_EACU_TERM   S_ECIR_TERM \
-                           LS(I)         S_IACU_TERM   LS(O)         S_OACU_TERM               \
-                           LS(U)         S_UACU_TERM                                           \
+                           A             E             I             O             U           \
+                           LS(A)         LS(E)         LS(I)         LS(O)         LS(U)       \
                            >;
             bindings =    <
                            &tc_h         &tc_h         &tc_h         &tc_h         &tc_h       \
-                           &tc_h         &tc_h         &tc_h         &tc_h                     \
-                           &tc_h         &tc_h                                                 \
-
                            &tc_h         &tc_h         &tc_h         &tc_h         &tc_h       \
-                           &tc_h         &tc_h         &tc_h         &tc_h         &tc_h       \
-                           &tc_h         &tc_h                                                 \
                            >;
         };
 
@@ -213,23 +177,11 @@
             max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
             defaults = <&labeled_v_c>;
             antecedents = <
-                           RS(A)         C_AACU_TERM   RS(E)         C_EACU_TERM   C_ECIR_TERM \
-                           RS(I)         C_IACU_TERM   RS(O)         C_OACU_TERM   C_OCIR_TERM \
-                           RS(U)         C_UACU_TERM                                           \
-
-                           LS(A)         S_AACU_TERM   LS(E)         S_EACU_TERM   S_ECIR_TERM \
-                           LS(I)         S_IACU_TERM   LS(O)         S_OACU_TERM               \
-                           LS(U)         S_UACU_TERM                                           \
-                           >;
+                           RS(A)         RS(E)         RS(I)         RS(O)         RS(U)       \
+                          >;
             bindings =    <
                            &kp RS(H)     &kp RS(H)     &kp RS(H)     &kp RS(H)     &kp RS(H)   \
-                           &kp RS(H)     &kp RS(H)     &kp RS(H)     &kp RS(H)     &kp RS(H)   \
-                           &kp RS(H)     &kp RS(H)                                             \
-
-                           &kp LS(H)     &kp LS(H)     &kp LS(H)     &kp LS(H)     &kp LS(H)   \
-                           &kp LS(H)     &kp LS(H)     &kp LS(H)     &kp LS(H)     &kp LS(H)   \
-                           &kp LS(H)     &kp LS(H)                                             \
-                           >;
+                          >;
         };
 
     };

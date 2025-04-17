@@ -40,11 +40,11 @@
 
         LAYERTAP_TP(th_n0,     &mc_n0)
 
-        MACRO_TAP(mc_sqo,             &kp SQT &kp SPACE &kp SQUO_TERM)
+        MACRO_TAP(mc_sqo,             &kp SQT &kp SPACE)
         MACRO_TAP(mc_end_sqo,         &kp END &mc_sqo)
         TAPHOLD_TP(th_sqo,     &mc_sqo, &mc_end_sqo)
 
-        MACRO_TAP(mc_sqo_c,           &kp SQT &kp SPACE &kp C_SQUO_TERM)
+        MACRO_TAP(mc_sqo_c,           &kp SQT &kp SPACE)
         MACRO_TAP(mc_end_sqo_c,       &kp END &mc_sqo_c)
         TAPHOLD_TP(th_sqo_c,   &mc_sqo_c, &mc_end_sqo_c)
 
@@ -184,7 +184,7 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-            bindings = <&macro_tap &kp CARET &kp SPACE &kp CARET_TERM>;
+            bindings = <&macro_tap &kp CARET &kp SPACE>;
         };
 
         mc_zero: mc_zero {
@@ -202,7 +202,7 @@
             #binding-cells = <0>;
             max-delay-ms = <600>;
             defaults = <&mc_caret>;
-            antecedents = <CARET_TERM>;
+            antecedents = <SPACE>;
             bindings = <&mc_zero>;
         };
 

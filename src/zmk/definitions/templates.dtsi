@@ -108,7 +108,7 @@
 
     /*  ACCENTS  */
     
-    #define ACCENT(NAME, KEY, DEAD_KEY, TERM, C_TERM, S_TERM) \
+    #define ACCENT(NAME, KEY, DEAD_KEY) \
         NAME: NAME { \
             wait-ms = <0>; \
             tap-ms = <0>; \
@@ -117,7 +117,6 @@
             bindings \
                 = <&macro_tap &kp DEAD_KEY> \
                 , <&macro_tap &kp KEY> \
-                , <&macro_tap &kp TERM> \
                 ; \
         }; \
         NAME##_c: NAME##_c { \
@@ -131,7 +130,6 @@
                 , <&macro_press &kp RSHFT> \
                 , <&macro_tap &kp KEY> \
                 , <&macro_release &kp RSHFT> \
-                , <&macro_tap &kp C_TERM> \
                 ; \
         }; \
         NAME##_s: NAME##_s { \
@@ -145,7 +143,6 @@
                 , <&macro_press &kp LSHFT> \
                 , <&macro_tap &kp KEY> \
                 , <&macro_release &kp LSHFT> \
-                , <&macro_tap &kp S_TERM> \
                 ; \
         };
 
