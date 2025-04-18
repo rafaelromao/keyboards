@@ -1,15 +1,15 @@
-[submodule "modules/rafaelromao/zmk"]
-	path = modules/rafaelromao/zmk
-	url = https://github.com/rafaelromao/zmk
 [submodule "modules/englmaxi/zmk-dongle-display"]
 	path = modules/englmaxi/zmk-dongle-display
 	url = git@github.com:englmaxi/zmk-dongle-display
 [submodule "modules/urob/zmk-leader-key"]
 	path = modules/urob/zmk-leader-key
 	url = git@github.com:urob/zmk-leader-key
-[submodule "modules/urob/zmk-adaptive-key"]
-	path = modules/urob/zmk-adaptive-key
-	url = git@github.com:urob/zmk-adaptive-key
 [submodule "modules/urob/zmk-auto-layer"]
 	path = modules/urob/zmk-auto-layer
 	url = git@github.com:urob/zmk-auto-layer
+[submodule "modules/ssbb/zmk-antecedent-morph"]
+	path = modules/ssbb/zmk-antecedent-morph
+	url = git@github.com:ssbb/zmk-antecedent-morph
+[submodule "modules/urob/zmk"]
+	path = modules/urob/zmk
+	url = https://github.com/urob/zmk

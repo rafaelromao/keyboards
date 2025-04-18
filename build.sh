@@ -9,11 +9,12 @@ BOARD="nice_nano_v2"
 BRANCH="main"
 EXTRA_SHIELDS=()
 FLAGS=()
-MODULES=(urob/zmk-leader-key,urob/zmk-adaptive-key,urob/zmk-auto-layer)
+MODULES=(urob/zmk-leader-key,urob/zmk-auto-layer,ssbb/zmk-antecedent-morph)
+ZMK_MODULE=modules/urob/zmk
 
 # Function to display usage
 usage() {
-    echo "Usage: build [<config> <shield> <operating_system=MACOS>] [-k <config>] [-s <shield>] [-b <board=nice_nano_v2>] [-z <branch [zen|main]=main>] [-e <extra_shield1,extra_shield2,...>] [-d <flag1,flag2,...>] [-m <module1,module2,...>] [-h | --help]"
+    echo "Usage: build [<config> <shield> <operating_system=MACOS>] [-k <config>] [-s <shield>] [-b <board=nice_nano_v2>] [-z <branch [main]=main>] [-e <extra_shield1,extra_shield2,...>] [-d <flag1,flag2,...>] [-m <module1,module2,...>] [-h | --help]"
     echo
     echo "Parameters:"
     echo "  <config>               Specify the zmk config."
@@ -87,14 +88,6 @@ done
 # Shift processed options away
 shift $((OPTIND - 1))
 
-# Set the ZMK branch
-
-if [[ "$BRANCH" == "zen" ]]; then
-    BRANCH="20250418/caksoylar/zen-v1+v2"
-elif [[ "$BRANCH" == "main" ]]; then
-    BRANCH="main"
-fi
-
 if [[ -n "$SHIELD" && -n "$CONFIG" ]]; then
     if [[ "$CONFIG" == */* ]]; then
         BASENAME="${CONFIG##*/}"
@@ -142,11 +135,11 @@ echo "#define $OPERATING_SYSTEM" >> "$OUTPUT_FILE"
 
 # Clean ZMK build directory
 echo 'Cleaning zmk...'
-rm -rf "$PROJECT_DIR/modules/rafaelromao/zmk/build"
+rm -rf "$PROJECT_DIR/$ZMK_MODULE/build"
 
 # Check out the main ZMK branch
 echo 'Checking out zmk...'
-cd "$PROJECT_DIR/modules/rafaelromao/zmk"
+cd "$PROJECT_DIR/$ZMK_MODULE"
 git fetch
 git checkout -f $BRANCH
 git pull
@@ -181,7 +174,7 @@ TEMP="${TEMP%,}"
 MODULES=$TEMP
 
 # Build the project
-cd "$PROJECT_DIR/modules/rafaelromao/zmk"
+cd "$PROJECT_DIR/$ZMK_MODULE"
 
 # Build the west command
 
