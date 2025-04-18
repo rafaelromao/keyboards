@@ -9,11 +9,11 @@ BOARD="nice_nano_v2"
 BRANCH="main"
 EXTRA_SHIELDS=()
 FLAGS=()
-MODULES=()
+MODULES=(urob/zmk-leader-key,urob/zmk-adaptive-key,urob/zmk-auto-layer)
 
 # Function to display usage
 usage() {
-    echo "Usage: build [<config> <shield> <operating_system=MACOS>] [-k <config>] [-s <shield>] [-b <board=nice_nano_v2>] [-z <branch [wired|main]=main>] [-e <extra_shield1,extra_shield2,...>] [-d <flag1,flag2,...>] [-m <module1,module2,...>] [-h | --help]"
+    echo "Usage: build [<config> <shield> <operating_system=MACOS>] [-k <config>] [-s <shield>] [-b <board=nice_nano_v2>] [-z <branch [zen|main]=main>] [-e <extra_shield1,extra_shield2,...>] [-d <flag1,flag2,...>] [-m <module1,module2,...>] [-h | --help]"
     echo
     echo "Parameters:"
     echo "  <config>               Specify the zmk config."
@@ -89,10 +89,10 @@ shift $((OPTIND - 1))
 
 # Set the ZMK branch
 
-if [[ "$BRANCH" == "wired" ]]; then
-    BRANCH="20240328/rafaelromao/wired-split"
+if [[ "$BRANCH" == "zen" ]]; then
+    BRANCH="20250418/caksoylar/zen-v1+v2"
 elif [[ "$BRANCH" == "main" ]]; then
-    BRANCH="20240328/rafaelromao/main"
+    BRANCH="main"
 fi
 
 if [[ -n "$SHIELD" && -n "$CONFIG" ]]; then
@@ -159,7 +159,7 @@ else
     ARTIFACT="${SHIELD:-$BOARD}-$OPERATING_SYSTEM"
 fi
 
-# Fix the modules list
+# Rewrite the modules list
 
 PREFIX="$PROJECT_DIR/modules/"
 TEMP=""
@@ -175,7 +175,7 @@ for MODULE in "${ADDR[@]}"; do
     fi
 
     # Prefix the module name with the path
-    TEMP+="${MODULE_HOME},"
+    TEMP+="${MODULE_HOME};"
 done
 TEMP="${TEMP%,}"
 MODULES=$TEMP

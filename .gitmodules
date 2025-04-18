@@ -4,3 +4,12 @@
 [submodule "modules/englmaxi/zmk-dongle-display"]
 	path = modules/englmaxi/zmk-dongle-display
 	url = git@github.com:englmaxi/zmk-dongle-display
+[submodule "modules/urob/zmk-leader-key"]
+	path = modules/urob/zmk-leader-key
+	url = git@github.com:urob/zmk-leader-key
+[submodule "modules/urob/zmk-adaptive-key"]
+	path = modules/urob/zmk-adaptive-key
+	url = git@github.com:urob/zmk-adaptive-key
+[submodule "modules/urob/zmk-auto-layer"]
+	path = modules/urob/zmk-auto-layer
+	url = git@github.com:urob/zmk-auto-layer
