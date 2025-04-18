@@ -154,9 +154,9 @@ git pull
 cd "$PROJECT_DIR"
 
 if [ -z "$CONFIG" ]; then
-    ARTIFACT="$BOARD-$SHIELD"
+    ARTIFACT="$BOARD-$SHIELD-$OPERATING_SYSTEM"
 else
-    ARTIFACT="${SHIELD:-$BOARD}"
+    ARTIFACT="${SHIELD:-$BOARD}-$OPERATING_SYSTEM"
 fi
 
 # Fix the modules list
