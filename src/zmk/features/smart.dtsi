@@ -26,16 +26,14 @@
         // ********************** SMART PLAIN ALPHAS ********************** //
 
         smart_plain1: smart_plain1 {
-            // compatible = "zmk,behavior-auto-layer";
-            compatible = "zmk,behavior-caps-word";
+            compatible = "zmk,behavior-auto-layer";
             ignore-alphas;
             ignore-modifiers;
-			#binding-cells = <0>;
-            layers = <PLAIN1>;
+			#binding-cells = <1>;
             continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT TILDE CARET GRAVE SPACE>;
         };
 
-        MACRO_TAP(tc_smart_plain1, &smart_plain1)
+        MACRO_TAP(tc_smart_plain1, &smart_plain1 PLAIN1)
 
         MACRO_TAP(mc_plain2, &sl PLAIN2)
         MACRO_TAP(mc_shifted_plain2, &sl SFT_PLAIN2)
@@ -53,11 +51,9 @@
         // ********************** NUM WORD ********************** //
 
         smart_num: smart_num {
-            // compatible = "zmk,behavior-auto-layer";
-            compatible = "zmk,behavior-caps-word";
+            compatible = "zmk,behavior-auto-layer";
             ignore-numbers;
-			#binding-cells = <0>;
-            layers = <LOWER>;
+			#binding-cells = <1>;
             continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL AMPS PIPE HASH TILDE CARET LEFT RIGHT HOME END 
                              LBRC RBRC BACKSLASH DOLLAR AT LPAR RPAR DQT SQT LBKT RBKT QMARK GRAVE>;
         };
@@ -67,18 +63,15 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-            // bindings = <&macro_tap &to ALPHA1 &smart_num LOWER>;
-            bindings = <&macro_tap &smart_num>;
+            bindings = <&macro_tap &to ALPHA1 &smart_num LOWER>;
         };
 
         LAYERTAP_TP(ht_num_word, &tc_num_word)
 
         smart_num_cp: smart_num_cp {
-            // compatible = "zmk,behavior-auto-layer";
-            compatible = "zmk,behavior-caps-word";
+            compatible = "zmk,behavior-auto-layer";
             ignore-numbers;
-			#binding-cells = <0>;
-            layers = <LOW_CP>;
+			#binding-cells = <1>;
             continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL AMPS PIPE HASH TILDE CARET
                              LBRC RBRC BACKSLASH DOLLAR AT LPAR RPAR DQT SQT LBKT RBKT QMARK GRAVE>;
         };
@@ -88,54 +81,36 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-            // bindings = <&macro_tap &to ALPHA1 &smart_num LOW_CP>;
-            bindings = <&macro_tap &smart_num_cp>;
+            bindings = <&macro_tap &to ALPHA1 &smart_num LOW_CP>;
         };
 
         // ******************* CAPS LINE ******************* //
 
         smart_line: smart_line {
-            // compatible = "zmk,behavior-auto-layer";
-            compatible = "zmk,behavior-caps-word";
+            compatible = "zmk,behavior-auto-layer";
             ignore-alphas;
             ignore-modifiers;
-			#binding-cells = <0>;  
-            layers = <CPLK_A1>;
+			#binding-cells = <1>;  
             continue-list = <UNDERSCORE MINUS COMMA BACKSPACE DELETE SQT TILDE CARET GRAVE SPACE>;
         };
-        // terminated_caps_lock: terminated_caps_lock {
-		// 	compatible = "zmk,behavior-macro";
-        //     #binding-cells = <0>;
-        //     wait-ms = <0>;
-        //     tap-ms = <0>;
-        //     bindings = <&macro_tap &kp CAPSWORD_TERM &smart_line CPLK_A1>;
-        // };
-
-        // MACRO_TAP(tc_smart_line, &smart_line CPLK_A1)
-        MACRO_TAP(tc_smart_line, &smart_line)
+        MACRO_TAP(tc_smart_line, &smart_line CPLK_A1)
 
         // ******************* CAPS WORD ******************* //
 
         smart_word: smart_word {
-            // compatible = "zmk,behavior-auto-layer";
-            compatible = "zmk,behavior-caps-word";
+            compatible = "zmk,behavior-auto-layer";
             ignore-alphas;
             ignore-modifiers;
-            layers = <CASE_A1>;
-			#binding-cells = <0>;  
+			#binding-cells = <1>;  
             continue-list = <UNDERSCORE MINUS COMMA BACKSPACE DELETE SQT TILDE CARET GRAVE>;
         };
-        // terminated_caps_word: terminated_caps_word {
-		// 	compatible = "zmk,behavior-macro";
-        //     #binding-cells = <0>;
-        //     wait-ms = <0>;
-        //     tap-ms = <0>;
-        //     bindings = <&macro_tap &kp CAPSWORD_TERM &smart_word CASE_A1>;
-        // };
+        MACRO_TAP(tc_smart_word, &smart_word CASE_A1)
+
+        // ******************* SMART SHIFT ******************* //
 
         MACRO_TAP(tc_shift, &sk LSHFT)
-        MOD_MORPH(mm_shift, MOD_LSFT|MOD_RSFT, &smart_word, &tc_shift)
-        MOD_MORPH(mm_repeat, MOD_LSFT|MOD_RSFT, &smart_line, &alternate_repeat_key)
+        MOD_MORPH(mm_shift, MOD_LSFT|MOD_RSFT, &tc_smart_word, &tc_shift)
+        MOD_MORPH(mm_repeat, MOD_LSFT|MOD_RSFT, &tc_smart_line, &alternate_repeat_key)
 
         ht_shift: ht_shift {
             compatible = "zmk,behavior-hold-tap";
@@ -146,20 +121,41 @@
             bindings = <&mo>, <&mm_shift>;
         };
 
-        // MACRO_TAP(tc_smart_word, &smart_word CASE_A1)
-        MACRO_TAP(tc_smart_word, &smart_word)
-
         ht_caps: ht_caps {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <QUICK_TAP_TERM>;
             flavor = "tap-preferred";
             quick-tap-ms = <0>;
-            // bindings = <&mo>, <&terminated_caps_word>;
             bindings = <&mo>, <&tc_smart_word>;
         };
 
         // ******************** SMART CASES ******************** //
+
+        smart_case: smart_case {
+            compatible = "zmk,behavior-auto-layer";
+            ignore-alphas;
+            ignore-modifiers;
+			#binding-cells = <1>;  
+            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
+        };
+        MACRO_TAP(tc_constant_case, &smart_case CONST_CASE)
+        MACRO_TAP(tc_snake_case, &smart_case SNAKE_CASE)
+        MACRO_TAP(tc_kebab_case, &smart_case KEBAB_CASE)
+        MACRO_TAP(tc_camel_case, &smart_case CAMEL_CASE)
+        MACRO_TAP(tc_slash_case, &smart_case SLASH_CASE)
+        MACRO_TAP(tc_pascal_case,  &tc_camel_case &sk LSHFT)
+
+
+
+
+
+        MACRO_TAP(mc_msk_camel, &sl CASE_A1)
+        MACRO_TAP(mc_msk_snake, &kp UNDERSCORE &sl SPACING)
+        MACRO_TAP(mc_msk_kebab, &kp MINUS &sl SPACING)
+        MACRO_TAP(mc_msk_slash, &kp SLASH &sl SPACING)
+        MACRO_TAP(mc_msk_space, &kp SPACE &to ALPHA1)
+        MACRO_TAP(mc_msk_space_b, &kp BACKSPACE &kp SPACE &to ALPHA1)
 
         MACRO_TAP(mc_alpha2, &sl ALPHA2)
         MACRO_TAP(mc_sft_a2, &sl SFT_A2)
@@ -216,65 +212,6 @@
             quick-tap-ms = <0>;
             bindings = <&mo>, <&tc_shift>;
         };
-
-        tc_snake_case: tc_snake_case {
-            // compatible = "zmk,behavior-auto-layer";
-            compatible = "zmk,behavior-caps-word";
-            ignore-alphas;
-            ignore-modifiers;
-            layers = <SNAKE_CASE>;
-			#binding-cells = <0>;  
-            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
-        };
-
-        tc_constant_case: tc_constant_case {
-            // compatible = "zmk,behavior-auto-layer";
-            compatible = "zmk,behavior-caps-word";
-            ignore-alphas;
-            ignore-modifiers;
-            layers = <CONST_CASE>;
-			#binding-cells = <0>;  
-            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
-        };
-
-        tc_kebab_case: tc_kebab_case {
-            // compatible = "zmk,behavior-auto-layer";
-            compatible = "zmk,behavior-caps-word";
-            ignore-alphas;
-            ignore-modifiers;
-            layers = <KEBAB_CASE>;
-			#binding-cells = <0>;  
-            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
-        };
-
-        tc_camel_case: tc_camel_case {
-            // compatible = "zmk,behavior-auto-layer";
-            compatible = "zmk,behavior-caps-word";
-            ignore-alphas;
-            ignore-modifiers;
-            layers = <CAMEL_CASE>;
-			#binding-cells = <0>;  
-            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
-        };
-
-        tc_slash_case: tc_slash_case {
-            // compatible = "zmk,behavior-auto-layer";
-            compatible = "zmk,behavior-caps-word";
-            ignore-alphas;
-            ignore-modifiers;
-            layers = <SLASH_CASE>;
-			#binding-cells = <0>;  
-            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SLASH>;
-        };
-
-        MACRO_TAP(tc_pascal_case,  &tc_camel_case &sk LSHFT)
-
-        MACRO_TAP(mc_msk_camel, &sl CASE_A1)
-        MACRO_TAP(mc_msk_snake, &kp UNDERSCORE &sl SPACING)
-        MACRO_TAP(mc_msk_kebab, &kp MINUS &sl SPACING)
-        MACRO_TAP(mc_msk_slash, &kp SLASH &sl SPACING)
-        MACRO_TAP(mc_msk_space, &kp SPACE &to ALPHA1)
-        MACRO_TAP(mc_msk_space_b, &kp BACKSPACE &kp SPACE &to ALPHA1)
 
         msk_unds: msk_unds {
             compatible = "zmk,behavior-hold-tap";

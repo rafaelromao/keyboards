@@ -13,10 +13,6 @@
   ╰───────╮ L2  L1  L0  │ │ R0  R1  R2  ╭───────╯
           ╰─────────────╯ ╰─────────────╯ */
 
-&leader {
-	timeout-ms = <500>;
-};
-
 / {
 	macros {
                 MACRO_TAP(mc_section, &kp LA(N6))
