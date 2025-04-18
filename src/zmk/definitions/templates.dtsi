@@ -97,15 +97,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>; \
         };
 
-    /*  LEADER  */
-
-	#define LEADER_SEQ(NAME, KEYS, BINDINGS, LAYERS) \
-		NAME { \
-			key-positions = <KEYS>; \
-			bindings = <BINDINGS>; \
-			layers = <LAYERS>; \
-		};
-
     /*  ACCENTS  */
     
     #define ACCENT(NAME, KEY, DEAD_KEY) \

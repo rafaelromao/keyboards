@@ -26,16 +26,16 @@
                 MACRO_TAP(mc_kkkk, &kp K &kp K &kp K &kp K)
                 MACRO_TAP(mc_hugs, &kp LBKT &kp RBKT &kp SQT &kp S)
 	};
-
-	leader_sequences {
-		compatible = "zmk,leader-sequences";
-
-		LEADER_SEQ(ld_sect      , LHM     , &mc_section   , ALPHA1 SMART FUN)
-		LEADER_SEQ(ld_exit      , RBR     , &mc_exit      , ALPHA1 SMART FUN)
-		LEADER_SEQ(ld_haha      , RTM     , &mc_haha      , ALPHA1 SMART FUN)
-		LEADER_SEQ(ld_hehe      , RTR     , &mc_hehe      , ALPHA1 SMART FUN)
-		LEADER_SEQ(ld_kkkk      , RHP     , &mc_kkkk      , ALPHA1 SMART FUN)
-                LEADER_SEQ(ld_hugs      , LBM LBR , &mc_hugs      , ALPHA1 SMART FUN)
-                LEADER_SEQ(ld_os        , LHP     , &mc_os        , ALPHA1 SMART FUN)
-	};
+        
+        leader: leader {
+            compatible = "zmk,behavior-leader-key";
+            #binding-cells = <0>;
+            ld_section { sequence = <S>    ; bindings = <&mc_section>; };
+            ld_exit    { sequence = <DOT>  ; bindings = <&mc_exit>; };
+            ld_haha    { sequence = <O>    ; bindings = <&mc_haha>; };
+            ld_hehe    { sequence = <U>    ; bindings = <&mc_hehe>; };
+            ld_kkkk    { sequence = <I>    ; bindings = <&mc_kkkk>; };
+            ld_hugs    { sequence = <C F>  ; bindings = <&mc_hugs>; };
+            ld_os      { sequence = <D>    ; bindings = <&mc_os>; };
+        };
 };
