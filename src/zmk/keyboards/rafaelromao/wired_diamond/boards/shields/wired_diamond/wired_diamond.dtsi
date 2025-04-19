@@ -47,6 +47,10 @@
             ;
     };
 
+    wired_split {
+        compatible = "zmk,wired-split";
+        device = <&xiao_serial>;
+    };
 };
 
 &xiao_serial { status = "okay"; };

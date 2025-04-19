@@ -6,15 +6,15 @@ CONFIG=""
 SHIELD=""
 OPERATING_SYSTEM="MACOS"
 BOARD="nice_nano_v2"
+ZMK="rafaelromao/zmk"
 BRANCH="main"
 EXTRA_SHIELDS=()
 FLAGS=()
 MODULES=(urob/zmk-leader-key,urob/zmk-auto-layer,ssbb/zmk-antecedent-morph)
-ZMK_MODULE=modules/urob/zmk
 
 # Function to display usage
 usage() {
-    echo "Usage: build [<config> <shield> <operating_system=MACOS>] [-k <config>] [-s <shield>] [-b <board=nice_nano_v2>] [-z <branch [main]=main>] [-e <extra_shield1,extra_shield2,...>] [-d <flag1,flag2,...>] [-m <module1,module2,...>] [-h | --help]"
+    echo "Usage: build [<config> <shield> <operating_system=MACOS>] [-k <config>] [-s <shield>] [-b <board=nice_nano_v2>] [-z <zmk=rafaelromao/zmk>] [-n <branch [main]=main>] [-e <extra_shield1,extra_shield2,...>] [-d <flag1,flag2,...>] [-m <module1,module2,...>] [-h | --help]"
     echo
     echo "Parameters:"
     echo "  <config>               Specify the zmk config."
@@ -24,7 +24,8 @@ usage() {
     echo "  -s, --shield           Specify the shield."
     echo "  -o, --operating_system Specify the operating system (default: MACOS)."
     echo "  -b, --board            Specify the board (default: nice_nano_v2)."
-    echo "  -z, --branch           Specify the branch (default: main, options: wired|main)."
+    echo "  -z, --zmk              Specify the zmk repo (default: rafaelromao/zmk)."
+    echo "  -n, --branch           Specify the branch (default: main)."
     echo "  -e, --extra_shields    Specify a comma-separated list of additional shields (default: empty)."
     echo "  -d, --flags            Specify a comma-separated list of extra flags (default: empty)."
     echo "  -m, --modules          Specify a comma-separated list of modules (default: empty)."
@@ -53,7 +54,7 @@ if [[ $# -gt 0 ]] && [[ ! $1 =~ ^- ]]; then
     shift
 fi
 
-while getopts "k:s:e:o:b:z:m:d:" opt; do
+while getopts "k:s:e:o:b:n:z:m:d:" opt; do
     case $opt in
         k)
             CONFIG="$OPTARG"
@@ -70,8 +71,11 @@ while getopts "k:s:e:o:b:z:m:d:" opt; do
         b)
             BOARD="$OPTARG"
             ;;
-        z)
+        n)
             BRANCH="$OPTARG"
+            ;;
+        z)
+            ZMK="$OPTARG"
             ;;
         m)
             IFS=',' read -r -a MODULES <<< "$OPTARG"
@@ -117,15 +121,24 @@ if [[ -n "$SHIELD" && -n "$CONFIG" ]]; then
     fi 
 fi
 
+ZMK_MODULE=modules/$ZMK
+
 # Print the parameters for verification
 echo "Config: $CONFIG"
 echo "Shield: $SHIELD"
 echo "Operating System: $OPERATING_SYSTEM"
 echo "Board: $BOARD"
+echo "ZMK: $ZMK"
 echo "Branch: $BRANCH"
 echo "Extra Shields: ${EXTRA_SHIELDS[*]}"
 echo "Flags: ${FLAGS[*]}"
 echo "Modules: ${MODULES[*]}"
+
+
+# Init the zmk repo 
+export ZMK_HOME="$PROJECT_DIR/$ZMK_MODULE"
+echo "Initializing zmk..."
+source ./init.sh $ZMK
 
 # Create a new flags.h file
 OUTPUT_FILE="$PROJECT_DIR/src/zmk/definitions/flags.h"

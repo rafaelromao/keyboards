@@ -13,3 +13,9 @@
 [submodule "modules/urob/zmk"]
 	path = modules/urob/zmk
 	url = https://github.com/urob/zmk
+[submodule "modules/rafaelromao/zmk"]
+	path = modules/rafaelromao/zmk
+	url = https://github.com/rafaelromao/zmk
+[submodule "modules/zmkfirmware/zmk"]
+	path = modules/zmkfirmware/zmk
+	url = https://github.com/zmkfirmware/zmk

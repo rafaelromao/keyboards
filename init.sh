@@ -1,7 +1,8 @@
 #!/bin/bash
 
 KEYBOARD_HOME="$(pwd)"
-ZMK_MODULE="modules/urob/zmk"
+ZMK="${1:-rafaelromao/zmk}"
+ZMK_MODULE="modules/$ZMK"
 export ZMK_HOME="$KEYBOARD_HOME/$ZMK_MODULE"
 
 INIT=false
@@ -9,7 +10,7 @@ if [[ ! -d "$ZMK_HOME/.west" ]]
 then
     INIT=true
     echo "Add git sub-modules..."
-    git submodule add -f https://github.com/urob/zmk $ZMK_MODULE
+    git submodule add -f https://github.com/$ZMK $ZMK_MODULE
 fi
 
 echo "Update git sub-modules..."
