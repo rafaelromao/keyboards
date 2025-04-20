@@ -11,7 +11,8 @@ ZMK="rafaelromao/zmk"
 BRANCH="main"
 EXTRA_SHIELDS=()
 FLAGS=()
-MODULES=(urob/zmk-leader-key,urob/zmk-auto-layer,ssbb/zmk-antecedent-morph)
+MODULES=()
+DEF_MODULES=(urob/zmk-leader-key,urob/zmk-auto-layer,ssbb/zmk-antecedent-morph)
 
 # Function to display usage
 usage() {
@@ -126,7 +127,16 @@ if [[ -n "$SHIELD" && -n "$CONFIG" ]]; then
     fi 
 fi
 
+# Define zmk module
 ZMK_MODULE=modules/$ZMK
+
+# Add default modules
+for DEF_MODULE in "${DEF_MODULES[@]}"; do
+    if [[ -n "$MODULES" ]]; then
+        MODULES+=","
+    fi
+    MODULES+="${DEF_MODULE}"
+done
 
 # Print the parameters for verification
 echo "Config: $CONFIG"
