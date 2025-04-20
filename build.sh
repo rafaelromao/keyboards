@@ -207,6 +207,18 @@ fi
 
 eval "$command"
 
+# Show applied KConfig
+
+DOTCONFIG=build/$ARTIFACT/zephyr/.config
+
+if [ -f "$DOTCONFIG" ]
+then
+    echo "Kconfig:"
+    grep -v -e "^#" -e "^$" "$DOTCONFIG" | sort
+else
+    echo "No Kconfig output"
+fi
+
 # Move the built file to artifacts directory
 mkdir -p "$PROJECT_DIR/build/artifacts"
 [ -f build/$ARTIFACT/zephyr/zmk.uf2 ] && \

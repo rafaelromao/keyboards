@@ -13,10 +13,6 @@ endif
 
 if SHIELD_WIRED_DIAMOND_LEFT || SHIELD_WIRED_DIAMOND_RIGHT
 
-config ZMK_BLE
-    default n
-config ZMK_SPLIT_BLE
-    default n
 config ZMK_SPLIT_WIRED
     default y
 

@@ -11,7 +11,6 @@
     chosen {
         zmk,kscan = &default_kscan;
         zmk,matrix_transform = &default_transform;
-        zmk,split-uart = &uart0;
         zmk,underglow = &led_strip;
     };
 
