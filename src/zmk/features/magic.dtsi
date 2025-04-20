@@ -10,21 +10,18 @@
         
         // ******************** REPEAT KEY ******************** //
 
-        labeled_key_repeat: labeled_key_repeat {
-			compatible = "zmk,behavior-macro";
-            label = "labeled_key_repeat";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&macro_tap &key_repeat>;
-        };
-
+        MACRO_TAP(mc_bs_h, &kp BACKSPACE &kp H)
+        MACRO_TAP(mc_bs_v, &kp BACKSPACE &kp V)
+        MACRO_TAP(mc_bs_c_h, &kp BACKSPACE &kp RS(H))
+        MACRO_TAP(mc_bs_s_h, &kp BACKSPACE &kp LS(H))
+        MACRO_TAP(mc_bs_c_v, &kp BACKSPACE &kp RS(V))
+        MACRO_TAP(mc_bs_s_v, &kp BACKSPACE &kp LS(V))
+        
         alternate_repeat_key: alternate_repeat_key {
             compatible = "zmk,behavior-antecedent-morph";
-            label = "alternate_repeat_key";
             #binding-cells = <0>;
             max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
-            defaults = <&labeled_key_repeat>;
+            defaults = <&key_repeat>;
             antecedents = <
                             A            I            SPACE       \
                             J            Y            RS(J)       \
@@ -34,7 +31,7 @@
                             LS(V)        LS(H)        RS(V)       \
                            >;                                                                                      
             bindings =    <                                                                                        
-                            &tc_h        &mc_sqo      &kp V       \
+                            &kp H        &mc_sqo      &kp V       \
                             &ac_aacu     &kp D        &ac_aacu_c  \
                             &kp RS(D)    &kp D        &kp Y       \
                             &ac_aacu     &kp RS(Y)    &kp LS(Y)   \
@@ -54,53 +51,26 @@
 
         // ******************** MAGIC KEY ******************** //
 
-        MACRO_TAP(tc_h, &kp H)
-        MACRO_TAP(mc_bs_v, &kp BACKSPACE &kp V)
-        
-        labeled_h: labeled_h {
-			compatible = "zmk,behavior-macro";
-            label = "labeled_h";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&tc_h>;
-        };
-
         magic_key: magic_key {
             compatible = "zmk,behavior-antecedent-morph";
-            label = "magic_key";
             #binding-cells = <0>;
             max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
-            defaults = <&labeled_h>;
+            defaults = <&kp H>;
             antecedents = <
                            A             E             I             O             U               \
                            LS(A)         LS(E)         LS(I)         LS(O)         LS(U)           \
                            >;
             bindings =    <
-                           &tc_v         &tc_v         &tc_v         &tc_v         &tc_v           \
-                           &tc_v         &tc_v         &tc_v         &tc_v         &tc_v           \
+                           &kp V         &kp V         &kp V         &kp V         &kp V           \
+                           &kp V         &kp V         &kp V         &kp V         &kp V           \
                            >; 
-        };
-
-        MACRO_TAP(tc_h_c, &kp RS(H))
-        MACRO_TAP(mc_bs_c_v, &kp BACKSPACE &kp RS(V))
-        MACRO_TAP(mc_bs_s_v, &kp BACKSPACE &kp LS(V))
-
-        labeled_h_c: labeled_h_c {
-			compatible = "zmk,behavior-macro";
-            label = "labeled_h_c";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&macro_tap &tc_h_c>;
         };
 
         magic_key_c: magic_key_c {
             compatible = "zmk,behavior-antecedent-morph";
-            label = "magic_key_c";
             #binding-cells = <0>;
             max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
-            defaults = <&labeled_h_c>;
+            defaults = <&kp RS(H)>;
             antecedents = <
                            RS(A)         RS(E)         RS(I)         RS(O)         RS(U)           \
                            >;
@@ -129,53 +99,26 @@
 
         // ******************** REVERSED MAGIC KEY ******************** //
 
-        MACRO_TAP(tc_v, &kp V)
-        MACRO_TAP(mc_bs_h, &kp BACKSPACE &kp H)
-
-        labeled_v: labeled_v {
-			compatible = "zmk,behavior-macro";
-            label = "labeled_v";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&tc_v>;
-        };
-
         reversed_magic: reversed_magic {
             compatible = "zmk,behavior-antecedent-morph";
-            label = "reversed_magic";
             #binding-cells = <0>;
             max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
-            defaults = <&labeled_v>;
+            defaults = <&kp V>;
             antecedents = <
                            A             E             I             O             U           \
                            LS(A)         LS(E)         LS(I)         LS(O)         LS(U)       \
                            >;
             bindings =    <
-                           &tc_h         &tc_h         &tc_h         &tc_h         &tc_h       \
-                           &tc_h         &tc_h         &tc_h         &tc_h         &tc_h       \
+                           &kp H         &kp H         &kp H         &kp H         &kp H       \
+                           &kp H         &kp H         &kp H         &kp H         &kp H       \
                            >;
-        };
-
-        MACRO_TAP(tc_v_c, &kp RS(V))
-        MACRO_TAP(mc_bs_c_h, &kp BACKSPACE &kp RS(H))
-        MACRO_TAP(mc_bs_s_h, &kp BACKSPACE &kp LS(H))
-
-        labeled_v_c: labeled_v_c {
-			compatible = "zmk,behavior-macro";
-            label = "labeled_v_c";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&macro_tap &tc_v_c>;
         };
 
         reversed_magic_c: reversed_magic_c {
             compatible = "zmk,behavior-antecedent-morph";
-            label = "reversed_magic_c";
             #binding-cells = <0>;
             max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
-            defaults = <&labeled_v_c>;
+            defaults = <&kp RS(V)>;
             antecedents = <
                            RS(A)         RS(E)         RS(I)         RS(O)         RS(U)       \
                           >;
