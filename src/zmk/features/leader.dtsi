@@ -14,14 +14,20 @@
           ╰─────────────╯ ╰─────────────╯ */
 
 / {
+        MACRO(md_exit, &kp E &kp X &kp I &kp T &kp ENTER)
+        MACRO(md_haha, &kp H &kp A &kp H &kp A)
+        MACRO(md_hehe, &kp H &kp E &kp H &kp E)
+        MACRO(md_kkkk, &kp K &kp K &kp K &kp K)
+        MACRO(md_hugs, &kp LBKT &kp RBKT &kp SQT &kp S)
+
         leader: leader {
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
             ld_section { sequence = <S>    ; bindings = <&kp LA(N6)>; };
-            ld_exit    { sequence = <DOT>  ; bindings = <&kp E &kp X &kp I &kp T &kp ENTER>; };
-            ld_haha    { sequence = <O>    ; bindings = <&kp H &kp A &kp H &kp A>; };
-            ld_hehe    { sequence = <U>    ; bindings = <&kp H &kp E &kp H &kp E>; };
-            ld_kkkk    { sequence = <I>    ; bindings = <&kp K &kp K &kp K &kp K>; };
-            ld_hugs    { sequence = <C F>  ; bindings = <&kp LBKT &kp RBKT &kp SQT &kp S>; };
+            ld_exit    { sequence = <DOT>  ; bindings = <&md_exit>; };
+            ld_haha    { sequence = <O>    ; bindings = <&md_haha>; };
+            ld_hehe    { sequence = <U>    ; bindings = <&md_hehe>; };
+            ld_kkkk    { sequence = <I>    ; bindings = <&md_kkkk>; };
+            ld_hugs    { sequence = <C F>  ; bindings = <&md_hugs>; };
         };
 };
