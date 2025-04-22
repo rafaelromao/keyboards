@@ -156,7 +156,7 @@
    &none               &none               &none               &none               &none               &none               &none               &trans              &trans              &none     
    &none               &none               &none               &mc_aotil           &none               &none               &ac_atil            &trans              &none               &none   
    &none               &none               &none               &mc_otiles          &none               &none               &ac_otil            &trans              &trans              &none  
-                                           &none               &trans              &trans              &trans              &trans              &none
+                                           &none               &sl ALPHA2          &trans              &trans              &trans              &none
                            >;
                 };
                 shifted_alpha2_layer {
@@ -183,7 +183,16 @@
    &none               &none               &none               &none               &none               &none               &none               &trans              &trans              &none     
    &none               &none               &none               &mc_aotil_c         &none               &none               &ac_atil_c          &trans              &none               &none   
    &none               &none               &none               &mc_otiles_c        &none               &none               &ac_otil_c          &trans              &trans              &none 
-                                           &none               &trans              &trans              &trans              &trans              &none 
+                                           &none               &sl CASE_A2         &trans              &trans              &trans              &none 
+                           >;
+                };
+                secondary_alternate_repeat_layer {
+                     display-name = "ROMAK";
+                     bindings = <
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
+                                           &trans              &sec_alt_rep        &trans              &trans              &trans              &trans
                            >;
                 };
 
@@ -192,7 +201,7 @@
                 shortcuts_layer {
                      display-name = "SHORTS";
                      bindings = <
-   &none               &kp ESC             &mc_files           &mc_swapper         &none               &none               &select_word        &kp ENTER           &kp ESC             &none    
+   &none               &kp ESC             &mc_files            &mc_swapper         &none               &none               &select_word        &kp ENTER           &kp ESC             &none    
    &none               &mc_zoom_out        &mc_zoom_in         &mc_tabs            &none               &none               &select_line        &kp DOWN            &kp UP              &none
    &none               &mc_menubar         &mc_screenshot      &mc_launcher        &none               &none               &select_home        &mc_refresh         &mc_close           &none 
                                            &none               &ht_repeat NAV 0    &lt FUN SPACE       &lt FUN SPACE       &ht_repeat NAV 0    &none 

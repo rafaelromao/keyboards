@@ -23,7 +23,7 @@
             max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
             defaults = <&key_repeat>;
             antecedents = <
-                            A            I            SPACE       \
+                            A            LS(I)        SPACE       \
                             J            Y            RS(J)       \
                             RS(Y)        LS(Y)        X           \
                             LS(J)        RS(X)        LS(X)       \
@@ -37,6 +37,21 @@
                             &ac_aacu     &kp RS(Y)    &kp LS(Y)   \
                             &mc_bs_v     &mc_bs_c_v   &mc_bs_h    \
                             &mc_bs_s_v   &mc_bs_s_h   &mc_bs_c_h  \
+                           >;
+        };
+
+        sec_alt_rep: sec_alt_rep {
+            compatible = "zmk,behavior-antecedent-morph";
+            #binding-cells = <0>;
+            max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
+            defaults = <&alternate_repeat_key>;
+            antecedents = <
+                            A            E           O            I            U           \
+                            RS(A)        RS(E)       RS(O)        RS(I)        RS(U)       \
+                           >;                                                              
+            bindings =    <                                                                
+                            &kp X        &kp X       &kp X        &kp E        &ac_ecir    \
+                            &kp RS(X)    &kp RS(X)   &kp RS(X)    &kp RS(E)    &ac_ecir_c  \
                            >;
         };
 
