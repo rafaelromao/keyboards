@@ -9,172 +9,172 @@
     symbols {
         // Base
 
-        SHIFT_MORPH(mm_semi,    &kp SEMI, &kp COLON)
-        MACRO_TAP(mc_end_semi,        &kp END &kp SEMI)
-        TAPHOLD_TP(th_semi,    &mm_semi, &mc_end_semi)
+        SHIFT_MORPH(mm_semi,          &kp SEMI, &kp COLON)
+        MACRO(mc_end_semi,        &kp END &kp SEMI)
+        TAPHOLD_TP(th_semi,           &mm_semi, &mc_end_semi)
 
-        MACRO_TAP(mc_end_semi_ent,          &kp END &kp SEMI &kp ENTER)
+        MACRO(mc_end_semi_ent,    &kp END &kp SEMI &kp ENTER)
 
-        MACRO_TAP(mc_h,                &kp H)
-        TAPHOLD_TP(th_hyper_h,  &mc_h, &mc_hyper)
+        MACRO(mc_h,               &kp H)
+        TAPHOLD_TP(th_hyper_h,        &mc_h, &mc_hyper)
 
-        MACRO_TAP(mc_comma,            &kp COMMA)
-        LAYERTAP_HP(th_comma, &mm_comma_meh)
+        MACRO(mc_comma,           &kp COMMA)
+        LAYERTAP_HP(th_comma,         &mm_comma_meh)
 
-        MACRO_TAP(mc_dot,             &kp DOT &sl SEN_CASE)
-        MACRO_TAP(mc_end_dot,         &kp END &kp DOT &sl SEN_CASE)
-        TAPHOLD_TP(th_dot,     &mm_dot_meh, &mc_end_dot)
+        MACRO(mc_dot,             &kp DOT &sl SEN_CASE)
+        MACRO(mc_end_dot,         &kp END &kp DOT &sl SEN_CASE)
+        TAPHOLD_TP(th_dot,            &mm_dot_meh, &mc_end_dot)
 
         // Lower
 
-        SHIFT_MEH(mc_n0,      &kp N0, &kp KP_N0)
-        SHIFT_MEH(mc_n1,      &kp N1, &kp KP_N1)
-        SHIFT_MEH(mc_n2,      &kp N2, &kp KP_N2)
-        SHIFT_MEH(mc_n3,      &kp N3, &kp KP_N3)
-        SHIFT_MEH(mc_n4,      &kp N4, &kp KP_N4)
-        SHIFT_MEH(mc_n5,      &kp N5, &kp KP_N5)
-        SHIFT_MEH(mc_n6,      &kp N6, &kp KP_N6)
-        SHIFT_MEH(mc_n7,      &kp N7, &kp KP_N7)
-        SHIFT_MEH(mc_n8,      &kp N8, &kp KP_N8)
-        SHIFT_MEH(mc_n9,      &kp N9, &kp KP_N9)
+        SHIFT_MEH(mc_n0,              &kp N0, &kp KP_N0)
+        SHIFT_MEH(mc_n1,              &kp N1, &kp KP_N1)
+        SHIFT_MEH(mc_n2,              &kp N2, &kp KP_N2)
+        SHIFT_MEH(mc_n3,              &kp N3, &kp KP_N3)
+        SHIFT_MEH(mc_n4,              &kp N4, &kp KP_N4)
+        SHIFT_MEH(mc_n5,              &kp N5, &kp KP_N5)
+        SHIFT_MEH(mc_n6,              &kp N6, &kp KP_N6)
+        SHIFT_MEH(mc_n7,              &kp N7, &kp KP_N7)
+        SHIFT_MEH(mc_n8,              &kp N8, &kp KP_N8)
+        SHIFT_MEH(mc_n9,              &kp N9, &kp KP_N9)
 
-        LAYERTAP_TP(th_n0,     &mc_n0)
+        LAYERTAP_TP(th_n0,            &mc_n0)
 
-        MACRO_TAP(mc_sqo,             &kp SQT &kp SPACE)
-        MACRO_TAP(mc_end_sqo,         &kp END &mc_sqo)
-        TAPHOLD_TP(th_sqo,     &mc_sqo, &mc_end_sqo)
+        MACRO(mc_sqo,             &kp SQT &kp SPACE)
+        MACRO(mc_end_sqo,         &kp END &mc_sqo)
+        TAPHOLD_TP(th_sqo,            &mc_sqo, &mc_end_sqo)
 
-        MACRO_TAP(mc_sqo_c,           &kp SQT &kp SPACE)
-        MACRO_TAP(mc_end_sqo_c,       &kp END &mc_sqo_c)
-        TAPHOLD_TP(th_sqo_c,   &mc_sqo_c, &mc_end_sqo_c)
+        MACRO(mc_sqo_c,           &kp SQT &kp SPACE)
+        MACRO(mc_end_sqo_c,       &kp END &mc_sqo_c)
+        TAPHOLD_TP(th_sqo_c,          &mc_sqo_c, &mc_end_sqo_c)
 
-        MACRO_TAP(mc_dqo,             &kp DQT &kp SPACE)
-        MACRO_TAP(mc_end_dqo,         &kp END &mc_dqo)
-        TAPHOLD_TP(th_dqo,     &mc_dqo, &mc_end_dqo)
+        MACRO(mc_dqo,             &kp DQT &kp SPACE)
+        MACRO(mc_end_dqo,         &kp END &mc_dqo)
+        TAPHOLD_TP(th_dqo,            &mc_dqo, &mc_end_dqo)
 
-        MACRO_TAP(mc_bti,             &kp GRAVE &kp SPACE)
-        MACRO_TAP(mc_end_bti,         &kp END &mc_bti)
-        TAPHOLD_TP(th_bti,     &mc_bti, &mc_end_bti)
+        MACRO(mc_bti,             &kp GRAVE &kp SPACE)
+        MACRO(mc_end_bti,         &kp END &mc_bti)
+        TAPHOLD_TP(th_bti,            &mc_bti, &mc_end_bti)
 
-        MACRO_TAP(mc_tilde,           &kp TILDE &kp SPACE)
-        LAYERTAP_TP(th_tilde,  &mc_tilde)
+        MACRO(mc_tilde,           &kp TILDE &kp SPACE)
+        LAYERTAP_TP(th_tilde,         &mc_tilde)
 
-        MACRO_TAP(mc_and,             &kp AMPS &kp AMPS)
-        MACRO_TAP(mc_right_and,       &kp RIGHT &kp AMPS &kp AMPS)
-        TAPHOLD_TP(th_and,     &mc_and, &mc_right_and)
+        MACRO(mc_and,             &kp AMPS &kp AMPS)
+        MACRO(mc_right_and,       &kp RIGHT &kp AMPS &kp AMPS)
+        TAPHOLD_TP(th_and,            &mc_and, &mc_right_and)
 
-        MACRO_TAP(mc_or,              &kp PIPE &kp PIPE)
-        MACRO_TAP(mc_right_or,        &kp RIGHT &kp PIPE &kp PIPE)
-        TAPHOLD_TP(th_or,      &mc_or, &mc_right_or)
+        MACRO(mc_or,              &kp PIPE &kp PIPE)
+        MACRO(mc_right_or,        &kp RIGHT &kp PIPE &kp PIPE)
+        TAPHOLD_TP(th_or,             &mc_or, &mc_right_or)
 
-        MACRO_TAP(mc_rpar,            &kp RPAR)
-        MACRO_TAP(mc_end_rpar,        &kp END &kp RPAR)
-        TAPHOLD_TP(th_rpar,    &mc_rpar, &mc_end_rpar)
+        MACRO(mc_rpar,            &kp RPAR)
+        MACRO(mc_end_rpar,        &kp END &kp RPAR)
+        TAPHOLD_TP(th_rpar,           &mc_rpar, &mc_end_rpar)
 
-        MACRO_TAP(mc_lpar,            &kp LPAR)
-        MACRO_TAP(mc_end_lpar,        &kp END &kp LPAR)
-        TAPHOLD_TP(th_lpar,    &mc_lpar, &mc_end_lpar)
+        MACRO(mc_lpar,            &kp LPAR)
+        MACRO(mc_end_lpar,        &kp END &kp LPAR)
+        TAPHOLD_TP(th_lpar,           &mc_lpar, &mc_end_lpar)
 
-        MACRO_TAP(mc_rbkt,            &kp RBKT)
-        MACRO_TAP(mc_end_rbkt,        &kp END &kp RBKT)
-        TAPHOLD_TP(th_rbkt,    &mc_rbkt, &mc_end_rbkt)
+        MACRO(mc_rbkt,            &kp RBKT)
+        MACRO(mc_end_rbkt,        &kp END &kp RBKT)
+        TAPHOLD_TP(th_rbkt,           &mc_rbkt, &mc_end_rbkt)
 
-        MACRO_TAP(mc_lbkt,            &kp LBKT)
-        MACRO_TAP(mc_end_lbkt,        &kp END &kp LBKT)
-        TAPHOLD_TP(th_lbkt,    &mc_lbkt, &mc_end_lbkt)
+        MACRO(mc_lbkt,            &kp LBKT)
+        MACRO(mc_end_lbkt,        &kp END &kp LBKT)
+        TAPHOLD_TP(th_lbkt,           &mc_lbkt, &mc_end_lbkt)
 
-        MACRO_TAP(mc_qmark,           &kp QMARK &sl SEN_CASE)
-        MACRO_TAP(mc_end_qmark,       &kp END &kp QMARK &sl SEN_CASE)
-        TAPHOLD_TP(th_qmark,   &mc_qmark, &mc_end_qmark)
+        MACRO(mc_qmark,           &kp QMARK &sl SEN_CASE)
+        MACRO(mc_end_qmark,       &kp END &kp QMARK &sl SEN_CASE)
+        TAPHOLD_TP(th_qmark,          &mc_qmark, &mc_end_qmark)
 
-        MACRO_TAP(mc_rbrc,            &kp RBRC)
-        MACRO_TAP(mc_end_rbrc,        &kp END &kp RBRC)
-        TAPHOLD_TP(th_rbrc,    &mc_rbrc, &mc_end_rbrc)
+        MACRO(mc_rbrc,            &kp RBRC)
+        MACRO(mc_end_rbrc,        &kp END &kp RBRC)
+        TAPHOLD_TP(th_rbrc,           &mc_rbrc, &mc_end_rbrc)
 
-        MACRO_TAP(mc_lbrc,            &kp LBRC)
-        MACRO_TAP(mc_end_lbrc,        &kp END &kp LBRC)
-        TAPHOLD_TP(th_lbrc,    &mc_lbrc, &mc_end_lbrc)
+        MACRO(mc_lbrc,            &kp LBRC)
+        MACRO(mc_end_lbrc,        &kp END &kp LBRC)
+        TAPHOLD_TP(th_lbrc,           &mc_lbrc, &mc_end_lbrc)
 
-        MACRO_TAP(mc_pars,            &kp LPAR &kp RPAR)
-        MACRO_TAP(mc_end_pars,        &kp END &kp LPAR &kp RPAR)
-        TAPHOLD_TP(th_pars,    &mc_pars, &mc_end_pars)
+        MACRO(mc_pars,            &kp LPAR &kp RPAR)
+        MACRO(mc_end_pars,        &kp END &kp LPAR &kp RPAR)
+        TAPHOLD_TP(th_pars,           &mc_pars, &mc_end_pars)
 
-        MACRO_TAP(mc_brackets,          &kp LBKT &kp RBKT)
-        LAYERTAP_TP(th_brackets, &mc_brackets)
+        MACRO(mc_brackets,        &kp LBKT &kp RBKT)
+        LAYERTAP_TP(th_brackets,      &mc_brackets)
 
-        MACRO_TAP(mc_deg,               &kp LS(LA(N8)))
-        LAYERTAP_TP(th_deg,      &mc_deg)
+        MACRO(mc_deg,             &kp LS(LA(N8)))
+        LAYERTAP_TP(th_deg,           &mc_deg)
 
         // Raise
 
-        MACRO_TAP(mc_us,              &kp LS(U) &kp LS(S) &kp DOLLAR)
-        MACRO_TAP(mc_usd,             &kp LS(U) &kp LS(S) &kp LS(D))
-        TAPHOLD_TP(th_us,      &mc_us, &mc_usd)
-        MACRO_TAP(mc_br,              &kp LS(R) &kp DOLLAR)
-        MACRO_TAP(mc_brl,             &kp LS(B) &kp LS(R) &kp LS(L))
-        TAPHOLD_TP(th_br,      &mc_br, &mc_brl)
-        MACRO_TAP(mc_euro,            &kp LS(LA(N2)))
-        MACRO_TAP(mc_eur,             &kp LS(E) &kp LS(U) &kp LS(R))
-        TAPHOLD_TP(th_eur,     &mc_euro, &mc_eur)
+        MACRO(mc_us,              &kp LS(U) &kp LS(S) &kp DOLLAR)
+        MACRO(mc_usd,             &kp LS(U) &kp LS(S) &kp LS(D))
+        TAPHOLD_TP(th_us,             &mc_us, &mc_usd)
+        MACRO(mc_br,              &kp LS(R) &kp DOLLAR)
+        MACRO(mc_brl,             &kp LS(B) &kp LS(R) &kp LS(L))
+        TAPHOLD_TP(th_br,             &mc_br, &mc_brl)
+        MACRO(mc_euro,            &kp LS(LA(N2)))
+        MACRO(mc_eur,             &kp LS(E) &kp LS(U) &kp LS(R))
+        TAPHOLD_TP(th_eur,            &mc_euro, &mc_eur)
 
-        MACRO_TAP(mc_pars_semi_ent,   &kp END &kp LPAR &kp RPAR &kp SEMI &kp ENTER)
+        MACRO(mc_pars_semi_ent,   &kp END &kp LPAR &kp RPAR &kp SEMI &kp ENTER)
 
-        MACRO_TAP(mc_dhash,           &kp HASH &kp HASH)
-        MACRO_TAP(mc_thash,           &kp HASH &kp HASH &kp HASH)
-        MACRO_TAP(mc_tdqo,            &mc_dqo &mc_dqo &mc_dqo)
-        MACRO_TAP(mc_tdqo_ent,        &mc_tdqo &kp ENTER)
-        TAPHOLD_TP(th_tdqo,    &mc_tdqo, &mc_tdqo_ent)
+        MACRO(mc_dhash,           &kp HASH &kp HASH)
+        MACRO(mc_thash,           &kp HASH &kp HASH &kp HASH)
+        MACRO(mc_tdqo,            &mc_dqo &mc_dqo &mc_dqo)
+        MACRO(mc_tdqo_ent,        &mc_tdqo &kp ENTER)
+        TAPHOLD_TP(th_tdqo,           &mc_tdqo, &mc_tdqo_ent)
 
-        MACRO_TAP(mc_tbti,            &mc_bti &mc_bti &mc_bti)
-        MACRO_TAP(mc_tbti_ent,        &mc_tbti &kp ENTER)
-        TAPHOLD_TP(th_tbti,    &mc_tbti, &mc_tbti_ent)
-        MACRO_TAP(mc_dsqo,            &mc_sqo &mc_sqo &kp LEFT)
-        MACRO_TAP(mc_ddqo,            &mc_dqo &mc_dqo &kp LEFT)
-        MACRO_TAP(mc_dbti,            &mc_bti &mc_bti &kp LEFT)
+        MACRO(mc_tbti,            &mc_bti &mc_bti &mc_bti)
+        MACRO(mc_tbti_ent,        &mc_tbti &kp ENTER)
+        TAPHOLD_TP(th_tbti,           &mc_tbti, &mc_tbti_ent)
+        MACRO(mc_dsqo,            &mc_sqo &mc_sqo &kp LEFT)
+        MACRO(mc_ddqo,            &mc_dqo &mc_dqo &kp LEFT)
+        MACRO(mc_dbti,            &mc_bti &mc_bti &kp LEFT)
 
-        MACRO_TAP(mc_braces_new,      &kp END &kp LBRC &kp ENTER)
-        MACRO_TAP(mc_sarrow,          &kp MINUS &kp GT)
-        MACRO_TAP(mc_darrow,          &kp EQUAL &kp GT)
-        MACRO_TAP(mc_dcolon,          &kp COLON &kp COLON)
-        MACRO_TAP(mc_end_dcolon,      &kp END &kp COLON &kp COLON)
-        TAPHOLD_TP(th_dcolon,  &mc_dcolon, &mc_end_dcolon)
+        MACRO(mc_braces_new,      &kp END &kp LBRC &kp ENTER)
+        MACRO(mc_sarrow,          &kp MINUS &kp GT)
+        MACRO(mc_darrow,          &kp EQUAL &kp GT)
+        MACRO(mc_dcolon,          &kp COLON &kp COLON)
+        MACRO(mc_end_dcolon,      &kp END &kp COLON &kp COLON)
+        TAPHOLD_TP(th_dcolon,         &mc_dcolon, &mc_end_dcolon)
 
-        MACRO_TAP(mc_perc,            &kp PERCENT)
-        MACRO_TAP(mc_end_perc,        &kp END &kp PERCENT)
-        TAPHOLD_TP(th_perc,    &mc_perc, &mc_end_perc)
+        MACRO(mc_perc,            &kp PERCENT)
+        MACRO(mc_end_perc,        &kp END &kp PERCENT)
+        TAPHOLD_TP(th_perc,           &mc_perc, &mc_end_perc)
 
-        MACRO_TAP(mc_lt,              &kp LT)
-        MACRO_TAP(mc_gt,              &kp GT)
+        MACRO(mc_lt,              &kp LT)
+        MACRO(mc_gt,              &kp GT)
 
-        MACRO_TAP(mc_excl,            &kp EXCL &sl SEN_CASE)
-        MACRO_TAP(mc_end_excl,        &kp END &kp EXCL &sl SEN_CASE)
-        TAPHOLD_TP(th_excl,    &mc_excl, &mc_end_excl)
+        MACRO(mc_excl,            &kp EXCL &sl SEN_CASE)
+        MACRO(mc_end_excl,        &kp END &kp EXCL &sl SEN_CASE)
+        TAPHOLD_TP(th_excl,           &mc_excl, &mc_end_excl)
 
-        MACRO_TAP(mc_colon,           &kp COLON)
-        MACRO_TAP(mc_end_colon,       &kp END &kp COLON)
-        TAPHOLD_TP(th_colon,   &mc_colon, &mc_end_colon)
+        MACRO(mc_colon,           &kp COLON)
+        MACRO(mc_end_colon,       &kp END &kp COLON)
+        TAPHOLD_TP(th_colon,          &mc_colon, &mc_end_colon)
 
-        MACRO_TAP(mc_eql,             &kp EQUAL)
-        MACRO_TAP(mc_end_eql,         &kp END &kp EQUAL)
-        TAPHOLD_TP(th_eql,     &mc_eql, &mc_end_eql)
-        MACRO_TAP(mc_eqeq,            &kp EQUAL &kp EQUAL)
+        MACRO(mc_eql,             &kp EQUAL)
+        MACRO(mc_end_eql,         &kp END &kp EQUAL)
+        TAPHOLD_TP(th_eql,            &mc_eql, &mc_end_eql)
+        MACRO(mc_eqeq,            &kp EQUAL &kp EQUAL)
 
-        MACRO_TAP(mc_noteq,           &kp EXCL &kp EQUAL)
+        MACRO(mc_noteq,           &kp EXCL &kp EQUAL)
 
-        MACRO_TAP(mc_tisl,            &kp TILDE &kp SPACE &kp SLASH)
-        MACRO_TAP(mc_dds,             &kp DOT &kp DOT &kp SLASH)
-        MACRO_TAP(mc_ds,              &kp DOT &kp SLASH)
-        MACRO_TAP(mc_spc_esc,         &kp J &macro_press &kp SPACE &macro_pause_for_release &macro_release &kp SPACE &macro_tap &kp ESC)
-        MACRO_TAP(mc_dqt0p,           &kp DQT &kp N0 &kp P)
+        MACRO(mc_tisl,            &kp TILDE &kp SPACE &kp SLASH)
+        MACRO(mc_dds,             &kp DOT &kp DOT &kp SLASH)
+        MACRO(mc_ds,              &kp DOT &kp SLASH)
+        MACRO(mc_spc_esc,         &kp J &macro_press &kp SPACE &macro_pause_for_release &macro_release &kp SPACE &macro_tap &kp ESC)
+        MACRO(mc_dqt0p,           &kp DQT &kp N0 &kp P)
 
-        MACRO_TAP(mc_ord_o,           &kp LA(N0))
-        MACRO_TAP(mc_ord_a,           &kp LA(N9))
-        TAPHOLD_TP(th_ord_o,     &mc_ord_o, &mc_meh)
-        TAPHOLD_TP(th_ord_a,     &mc_ord_a, &mc_hyper)
+        MACRO(mc_ord_o,           &kp LA(N0))
+        MACRO(mc_ord_a,           &kp LA(N9))
+        TAPHOLD_TP(th_ord_o,          &mc_ord_o, &mc_meh)
+        TAPHOLD_TP(th_ord_a,          &mc_ord_a, &mc_hyper)
 
         // SMARTCASES
 
-        MACRO_TAP(mc_comma_space,     &kp COMMA &kp SPACE)
+        MACRO(mc_comma_space,     &kp COMMA &kp SPACE)
 
         // Vim home home
 
@@ -195,12 +195,11 @@
         };
 
         vim_home: vim_home {
-            compatible = "zmk,behavior-antecedent-morph";
+            compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            max-delay-ms = <600>;
-            defaults = <&mc_caret>;
-            antecedents = <SPACE>;
-            bindings = <&mc_zero>;
+            bindings = <&mc_caret>;
+
+            ADAPTIVE(caret_zero, &mc_zero, SPACE)
         };
 
         TAPHOLD_TP(th_caret_z, &vim_home, &mc_zero)

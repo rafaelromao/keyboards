@@ -51,20 +51,12 @@ This layout can be easily adapted to most ortholinear or column staggered keyboa
 - [Rommana-Remix](https://github.com/rafaelromao/rommana-remix)
 - [Corne-ish Zen](https://lowprokb.ca/collections/keyboards/products/corne-ish-zen)
 
-### QMK
-
-There is an outdated QMK version of this keymap, available in the branch [last_qmk](https://github.com/rafaelromao/keyboards/tree/last_qmk).
-
 ### ZMK
 
-The zmk version used for this keymap is the one available in [this fork](https://github.com/rafaelromao/zmk), which contains some experimental code to implement features like:
-- [Auto Layer](https://github.com/zmkfirmware/zmk/pull/1451)
-- [Leader Key](https://github.com/zmkfirmware/zmk/pull/1380)
-- [Antecedent Morph](https://github.com/zmkfirmware/zmk/pull/2042)
-- [Mouse Keys](https://github.com/zmkfirmware/zmk/pull/2027)
-- [Corne-ish Zen display improvements](https://gist.github.com/caksoylar/c411313990978e1903c244f03039187a)
-
-This fork is also updated to Zephyr 3.5.
+This keymap is implemented in ZMK, with the following external modules:
+- [Auto Layer](https://github.com/urob/zmk-auto-layer)
+- [Adaptive Key](https://github.com/zurob/zmk-adaptive-key)
+- [Leader Key](https://github.com/urob/zmk-leader-key)
 
 #### Initializing the local build environment
 

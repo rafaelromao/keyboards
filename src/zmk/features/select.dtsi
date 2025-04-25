@@ -35,12 +35,11 @@
             bindings = <&macro_tap &kp LS(DOWN) &kp LS(END)>;
         };
         select_line: select_line {
-            compatible = "zmk,behavior-antecedent-morph";
+            compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
-            defaults = <&mc_sel1ln>;
-            antecedents = <LS(END)>;
-            bindings = <&mc_selnln>;
+            bindings = <&mc_sel1ln>;
+
+            ADAPTIVE(cont_sel_line, &mc_selnln, LS(END))
         };
 
    };

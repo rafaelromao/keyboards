@@ -12,17 +12,17 @@ BRANCH="main"
 EXTRA_SHIELDS=()
 FLAGS=()
 MODULES=()
-DEF_MODULES=(urob/zmk-leader-key,urob/zmk-auto-layer,ssbb/zmk-antecedent-morph)
+DEF_MODULES=(urob/zmk-leader-key,urob/zmk-auto-layer,urob/zmk-adaptive-key)
 
 # Function to display usage
 usage() {
     echo "Usage: build [<config> <shield> <operating_system=MACOS>] [-k <config>] [-s <shield>] [-b <board=nice_nano_v2>] [-v <verbose>] [-z <zmk=rafaelromao/zmk>] [-n <branch [main]=main>] [-e <extra_shield1,extra_shield2,...>] [-d <flag1,flag2,...>] [-m <module1,module2,...>] [-h | --help]"
     echo
     echo "Parameters:"
-    echo "  <config>               Specify the zmk config."
+    echo "  <config>                Specify the zmk config."
     echo "  <shield>               Specify the shield."
     echo "  <operating_system>     Specify the operating system."
-    echo "  -k, --config           Specify the zmk config."
+    echo "  -k, --config            Specify the zmk config."
     echo "  -s, --shield           Specify the shield."
     echo "  -o, --operating_system Specify the operating system (default: MACOS)."
     echo "  -b, --board            Specify the board (default: nice_nano_v2)."
@@ -30,7 +30,7 @@ usage() {
     echo "  -z, --zmk              Specify the zmk repo (default: rafaelromao/zmk)."
     echo "  -n, --branch           Specify the branch (default: main)."
     echo "  -e, --extra_shields    Specify a comma-separated list of additional shields (default: empty)."
-    echo "  -d, --flags            Specify a comma-separated list of extra flags (default: empty)."
+    echo "  -d, --flags             Specify a comma-separated list of extra flags (default: empty)."
     echo "  -m, --modules          Specify a comma-separated list of modules (default: empty)."
     echo "  -h, --help             Display this help message."
     exit 1

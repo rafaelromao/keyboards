@@ -25,12 +25,11 @@
             bindings = <&macro_press &kp LA(LS(LEFT)) &macro_pause_for_release &macro_release &kp LA(LS(LEFT))>;
         };
         select_word: select_word {
-            compatible = "zmk,behavior-antecedent-morph";
+            compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
-            defaults = <&mc_sel1w>;
-            antecedents = <LA(LS(LEFT))>;
-            bindings = <&mc_selpw>;
+            bindings = <&mc_sel1w>;
+
+            ADAPTIVE(cont_sel_word, &mc_selpw, LA(LS(LEFT)))
         };
    };
 };

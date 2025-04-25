@@ -59,15 +59,6 @@
             bindings = <BINDINGS>; \
         };
 
-    #define MACRO_TAP(NAME, BINDINGS) \
-        NAME: NAME { \
-			compatible = "zmk,behavior-macro"; \
-            #binding-cells = <0>; \
-            wait-ms = <5>; \
-            tap-ms = <5>; \
-            bindings = <&macro_tap BINDINGS>; \
-        };
-
     /*  MOD MORPHS  */
 
     #define MOD_MORPH(NAME, MODS, MODDED, UNMODDED) \
@@ -117,7 +108,7 @@
             compatible = "zmk,behavior-macro"; \
             #binding-cells = <0>; \
             bindings \
-                = <&macro_release &kp RSHFT> \
+                = <&macro_release &kp LSHIFT &kp RSHFT> \
                 , <&macro_tap &kp DEAD_KEY> \
                 , <&macro_press &kp RSHFT> \
                 , <&macro_tap &kp KEY> \
@@ -131,7 +122,7 @@
             compatible = "zmk,behavior-macro"; \
             #binding-cells = <0>; \
             bindings \
-                = <&macro_release &kp LSHFT> \
+                = <&macro_release &kp LSHFT &kp RSHFT> \
                 , <&macro_tap &kp DEAD_KEY> \
                 , <&macro_press &kp LSHFT> \
                 , <&macro_tap &kp KEY> \
@@ -207,3 +198,15 @@
             mods = <(MOD_LALT)>; \
             keep-mods = <(MOD_LALT)>; \
         };
+
+    /*  ADAPTIVE KEYS  */
+
+    #define ADAPTIVE(NAME, BINDINGS, TRIGGERS) \
+        magic_##NAME: magic_##NAME { \
+            trigger-keys = <TRIGGERS>; \
+            bindings = <BINDINGS>; \
+            max-prior-idle-ms = <ADAPTIVE_KEY_TIMEOUT>; \
+            strict-modifiers; \
+        };
+
+    /*  END  */

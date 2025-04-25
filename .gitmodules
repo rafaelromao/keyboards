@@ -7,9 +7,6 @@
 [submodule "modules/urob/zmk-auto-layer"]
 	path = modules/urob/zmk-auto-layer
 	url = git@github.com:urob/zmk-auto-layer
-[submodule "modules/ssbb/zmk-antecedent-morph"]
-	path = modules/ssbb/zmk-antecedent-morph
-	url = git@github.com:ssbb/zmk-antecedent-morph
 [submodule "modules/urob/zmk"]
 	path = modules/urob/zmk
 	url = https://github.com/urob/zmk
@@ -19,3 +16,6 @@
 [submodule "modules/zmkfirmware/zmk"]
 	path = modules/zmkfirmware/zmk
 	url = https://github.com/zmkfirmware/zmk
+[submodule "modules/urob/zmk-adaptive-key"]
+	path = modules/urob/zmk-adaptive-key
+	url = git@github.com:urob/zmk-adaptive-key
