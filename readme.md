@@ -55,7 +55,7 @@ This layout can be easily adapted to most ortholinear or column staggered keyboa
 
 This keymap is implemented in ZMK, with the following external modules:
 - [Auto Layer](https://github.com/urob/zmk-auto-layer)
-- [Adaptive Key](https://github.com/zurob/zmk-adaptive-key)
+- [Adaptive Key](https://github.com/urob/zmk-adaptive-key)
 - [Leader Key](https://github.com/urob/zmk-leader-key)
 
 #### Initializing the local build environment
