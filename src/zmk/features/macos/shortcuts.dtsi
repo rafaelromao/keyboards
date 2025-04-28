@@ -51,9 +51,8 @@
 
         // Navigation
 
-        MACRO(mc_word_start,             &macro_tap &kp LA(LEFT))
-        MACRO(mc_word_next,              &macro_tap &kp LA(RIGHT))
-        MACRO(mc_word_end,               &macro_tap &kp LA(RIGHT) &kp LA(RIGHT) &kp LA(LEFT))
+        MACRO(mc_prev_word,              &macro_tap &kp LA(LEFT))
+        MACRO(mc_next_word,              &macro_tap &kp LA(RIGHT))
         MACRO(mc_del_word,               &macro_press &kp LA(BACKSPACE) &macro_pause_for_release &macro_release &kp LA(BACKSPACE))
 
         // Meh and Hyper

@@ -38,18 +38,18 @@
 #define SFT_PLAIN2 23
 
 #define NAV 24
+#define TEXT 25
 
-#define LOW_CP 25
-#define RAI_CP 26
+#define LOW_CP 26
+#define RAI_CP 27
 
-#define MEDIA 27
+#define MEDIA 28
 
-#define FUN 28
-#define SMART 29
+#define FUN 29
+#define SMART 30
 
-#define NAV_F 30
+#define NAV_F 31
 
-#define RMODS 31
 
 
 #define COMBO_TERM 30

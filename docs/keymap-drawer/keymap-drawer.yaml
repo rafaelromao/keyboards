@@ -84,7 +84,7 @@ layers:
     - ["", "", "", ão, ã, { t: ▽ }, "", ""]
     - ["", "", ões, õ, { t: ▽ }, { t: ▽ }]
     - { t: ▽ }
-    - { t: ▽ }
+    - { t: alpha2, s: sticky }
     - { t: ▽ }
     - { t: ▽ }
   vim-remaps:
@@ -174,8 +174,8 @@ layers:
         { t: $$mdi:magnify-plus-outline$$, s: zoom +},
         { t: $$mdi:tab-search$$, s: tabs},
         { s: select, h: line, t: ⎅ ⎯ },
-        $$mdi:arrow-down$$,
-        $$mdi:arrow-up$$,
+        { t: $$mdi:arrow-down$$ },
+        { t: $$mdi:arrow-up$$ },
         { type: held alternate },
       ]
     - [
@@ -186,7 +186,7 @@ layers:
         { t: $$mdi:refresh$$, s: refresh},
         { t: $$mdi:close$$, s: close},
       ]
-    - { h: nav, s: repeat, t: $$mdi:repeat$$ }
+    - { h: text, s: repeat, t: $$mdi:repeat$$ }
     - { t: $$mdi:keyboard-space$$, h: functions }
     - { t: $$mdi:keyboard-space$$, h: functions }
     - { h: nav, s: repeat, t: $$mdi:repeat$$ }
@@ -255,7 +255,7 @@ layers:
         { t: "⎋", s: esc },
       ]
     - [
-        { t: "⎀", s: insert, h: right-mods},
+        { t: "⎀", s: insert, h: text},
         { t: $$mdi:apple-keyboard-control$$ },
         { t: $$mdi:apple-keyboard-option$$ },
         { t: $$mdi:apple-keyboard-shift$$ },
@@ -276,6 +276,37 @@ layers:
     - { t: $$mdi:flash$$, s: "boot" }
     - { t: $$mdi:keyboard-space$$ }
     - { h: media, type: held alternate }
+  text:
+    - [
+        null,
+        null,
+        null,
+        { t: "$$mdi:emoticon-happy-outline$$", s: "emojis" },
+        { t: $$mdi:keyboard-return$$, s: enter },
+        { t: "⎋", s: esc },
+      ]
+    - [
+        { type: held },
+        { t: $$mdi:apple-keyboard-control$$, s: sticky, h: right },
+        { t: $$mdi:apple-keyboard-option$$, s: sticky, h: right },
+        { t: $$mdi:apple-keyboard-shift$$, s: sticky, h: right },
+        { t: ← ⓦ , s: prev, h: word},
+        { t: $$mdi:arrow-down-bold-outline$$, s: page, h: down },
+        { t: $$mdi:arrow-up-bold-outline$$, s: page, h: up },
+        { t: → ⓦ , s: next, h: word},
+      ]
+    - [
+        { t: $$mdi:apple-keyboard-command$$, s: sticky, h: right },
+        { t: $$mdi:apple-keyboard-command$$, s: sticky, h: right },
+        { t: $$mdi:apple-keyboard-command$$, s: sticky, h: right },
+        { t: ⌫ ⓦ, s: delete, h: word },
+        { t: $$mdi:format-horizontal-align-left$$, s: home },
+        { t: $$mdi:format-horizontal-align-right$$, s: end },
+      ]
+    - { type: held }
+    - { t: $$mdi:keyboard-space$$ }
+    - { t: $$mdi:keyboard-space$$ }
+    - h: nav
   media:
     - [
         null,
@@ -300,8 +331,8 @@ layers:
         { t: $$mdi:arrow-down-circle$$, s: mouse },
         { t: $$mdi:arrow-up-circle-outline$$, s: scroll },
         { t: $$mdi:play-pause$$, s: play },
-        { t: $$mdi:skip-backward$$, s: backward },
-        { t: $$mdi:skip-forward$$, s: forward },
+        { t: $$mdi:skip-backward$$ },
+        { t: $$mdi:skip-forward$$ },
       ]
     - h: nav
     - { t: $$mdi:keyboard-space$$, h: normal, s: vim }
@@ -369,37 +400,6 @@ layers:
     - { t: ",␣" }
     - { t: ▽ }
     - { t: ▽ }
-  right-mods:
-    - [
-        { t: ▽ },
-        { t: ▽ },
-        { t: ▽ },
-        { t: ▽ },
-        { t: ▽ },
-        { t: ▽ },
-      ]
-    - [
-        { type: held },
-        { t: $$mdi:apple-keyboard-control$$, s: sticky, h: right },
-        { t: $$mdi:apple-keyboard-option$$, s: sticky, h: right },
-        { t: $$mdi:apple-keyboard-shift$$, s: sticky, h: right },
-        { t: ▽ },
-        { t: ▽ },
-        { t: ▽ },
-        { t: ▽ },
-      ]
-    - [
-        { t: $$mdi:apple-keyboard-command$$, s: sticky, h: right },
-        { t: $$mdi:apple-keyboard-command$$, s: sticky, h: right },
-        { t: $$mdi:apple-keyboard-command$$, s: sticky, h: right },
-        { t: ▽ },
-        { t: ▽ },
-        { t: ▽ },
-      ]
-    - { type: held }
-    - { t: ▽ }
-    - { t: ▽ }
-    - { t: ▽ }
 combos:
   - {
       p: [0, 1],
@@ -435,6 +435,7 @@ combos:
           media,
           lower,
           raise,
+          shortcuts,
         ],
     }
   - {
@@ -562,13 +563,6 @@ combos:
 
   - { p: [1, 2], k: "plain1", a: mid, w: 48, layers: [shortcuts] }
   - {
-      p: [4, 5],
-      k: { t: ⌫ ⓦ },
-      a: mid,
-      w: 48,
-      layers: [shortcuts],
-    }
-  - {
       p: [7, 8],
       k: { t: $$mdi:loupe$$, s: 100% },
       a: mid,
@@ -659,13 +653,6 @@ combos:
   - { p: [0, 1], k: "⇥{ ⏎", a: mid, layers: [lower] }
   - { p: [1, 2], k: { t: "::", h: "⇥ ::" }, a: mid, layers: [lower] }
   - { p: [3, 4], k: { t: "G", s: "vim" }, a: mid, layers: [lower] }
-  - {
-      p: [0, 1, 2],
-      k: { t: "$$mdi:emoticon-happy-outline$$", s: "emojis" },
-      a: top,
-      w: 40,
-      layers: [lower],
-    }
   - { p: [14, 15], k: { t: "[]", h: "nav" }, a: mid, layers: [lower] }
   - { p: [10, 11], k: { t: "j", s: "vim" }, a: mid, layers: [lower] }
   - { p: [11, 12], k: { t: "k", s: "vim" }, a: mid, layers: [lower] }
@@ -720,18 +707,16 @@ combos:
   - { p: [3, 4], k: "↑⇥ ⌦", a: mid, layers: [nav] }
   - {
       p: [10, 11],
-      k: { t: $$mdi:arrow-down-bold-outline$$, s: page },
+      k: { t: $$mdi:mouse-left-click$$, s: left },
       a: mid,
       layers: [nav],
     }
   - {
       p: [11, 12],
-      k: { t: $$mdi:arrow-up-bold-outline$$, s: page },
+      k: { t: $$mdi:mouse-right-click$$, s: right },
       a: mid,
       layers: [nav],
     }
-  - { p: [10, 11, 12], k: { t: $$mdi:mouse-left-click$$, s: left }, slide: 0.5, layers: [nav], a: bottom }
-  - { p: [17, 18, 19], k: { t: $$mdi:mouse-right-click$$, s: right }, slide: 0.5, layers: [nav], a: bottom }
   - { p: [17, 18], k: "↓ ⇤", a: mid, layers: [nav] }
   - { p: [18, 19], k: "↓ ⇥", a: mid, layers: [nav] }
 
