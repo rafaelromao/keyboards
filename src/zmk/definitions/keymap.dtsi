@@ -156,7 +156,7 @@
    &none               &none               &none               &none               &none               &none               &none               &trans              &trans              &none     
    &none               &none               &none               &mc_aotil           &none               &none               &ac_atil            &trans              &none               &none   
    &none               &none               &none               &mc_otiles          &none               &none               &ac_otil            &trans              &trans              &none  
-                                           &none               &trans              &trans              &trans              &trans              &none
+                                           &none               &sl ALPHA2          &trans              &trans              &trans              &none
                            >;
                 };
                 shifted_alpha2_layer {
@@ -183,7 +183,16 @@
    &none               &none               &none               &none               &none               &none               &none               &trans              &trans              &none     
    &none               &none               &none               &mc_aotil_c         &none               &none               &ac_atil_c          &trans              &none               &none   
    &none               &none               &none               &mc_otiles_c        &none               &none               &ac_otil_c          &trans              &trans              &none 
-                                           &none               &trans              &trans              &trans              &trans              &none 
+                                           &none               &sl CASE_A2         &trans              &trans              &trans              &none 
+                           >;
+                };
+                secondary_alternate_repeat_layer {
+                     display-name = "ROMAK";
+                     bindings = <
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
+                                           &trans              &a2_alt_repeat      &trans              &trans              &trans              &trans
                            >;
                 };
 
@@ -192,10 +201,10 @@
                 shortcuts_layer {
                      display-name = "SHORTS";
                      bindings = <
-   &none               &kp ESC             &mc_files           &mc_swapper         &none               &none               &select_word        &kp ENTER           &kp ESC             &none    
+   &none               &kp ESC             &mc_files            &mc_swapper         &none               &none               &select_word        &kp ENTER           &kp ESC             &none    
    &none               &mc_zoom_out        &mc_zoom_in         &mc_tabs            &none               &none               &select_line        &kp DOWN            &kp UP              &none
    &none               &mc_menubar         &mc_screenshot      &mc_launcher        &none               &none               &select_home        &mc_refresh         &mc_close           &none 
-                                           &none               &ht_repeat NAV 0    &lt FUN SPACE       &lt FUN SPACE       &ht_repeat NAV 0    &none 
+                                           &none               &ht_repeat TEXT 0   &lt FUN SPACE       &lt FUN SPACE       &ht_repeat NAV 0    &none 
                            >;
                 };
 
@@ -244,13 +253,22 @@
                 navigation_layer {
                      display-name = "NAV";
                      bindings = <
-   &none               &mc_word_start      &mc_word_end        &mc_word_next       &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
-   &lt RMODS INS       &kp LCTL            &kp LALT            &kp LSFT            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &none               &none               &none               &none               &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
+   &lt TEXT INS        &kp LCTL            &kp LALT            &kp LSFT            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
    &none               &kp LGUI            &kp LGUI            &kp LGUI            &none               &none               &kp DEL             &kp HOME            &kp END             &none 
                                            &none               &trans              &bootloader         &kp SPACE           &mo MEDIA           &none 
                         >;
                 };
 
+                text_layer {
+                     display-name = "TEXT";
+                     bindings = <
+   &none               &none               &none               &none               &trans              &trans              &mc_emoji           &kp ENTER           &kp ESC             &none
+   &none               &hsk RCTL RCTL      &hsk RALT RALT      &hsk RSFT RSFT      &trans              &trans              &mc_prev_word       &kp PAGE_DOWN       &kp PAGE_UP         &mc_next_word
+   &none               &hsk RGUI RGUI      &hsk RGUI RGUI      &hsk RGUI RGUI      &trans              &trans              &mc_del_word        &kp HOME            &kp END             &none 
+                                           &none               &none               &kp SPACE           &kp SPACE           &mo NAV_F           &none 
+                           >;
+                };
 
 
                 lower_copy_layer {
@@ -278,7 +296,7 @@
                     display-name = "MEDIA";
                     bindings = <
    &none               &none               &mkp LCLK           &mkp RCLK           &none               &none               &mc_hand            &kp ENTER           &kp ESC             &none
-   &none               &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &none               &mc_mic             &mt C_MUTE C_VOL_DN &kp C_VOL_UP        &th_cam NAV 0
+   &none               &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &none               &mc_mic             &mt C_MUTE C_VOL_DN &kp C_VOL_UP        &th_cam NAV_F 0
    &none               &msc SCRL_DOWN      &mmv MOVE_DOWN      &msc SCRL_UP        &none               &none               &kp C_PP            &kp C_PREV          &kp C_NEXT          &none 
                                            &none               &mo NAV_F           &mc_spc_esc         &bootloader         &trans              &none 
                            >;
@@ -308,20 +326,10 @@
                 fixed_navigation_layer {
                      display-name = "NAV";
                      bindings = <
-   &none               &mc_word_start      &mc_word_end        &mc_word_next       &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
-   &lt RMODS INS       &kp LCTL            &kp LALT            &kp LSFT            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &none               &none               &none               &none               &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
+   &lt TEXT INS        &kp LCTL            &kp LALT            &kp LSFT            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
    &none               &kp LGUI            &kp LGUI            &kp LGUI            &none               &none               &kp DEL             &kp HOME            &kp END             &none 
                                            &none               &trans              &trans              &kp SPACE           &trans              &none 
-                           >;
-                };
-
-                right_mods_layer {
-                     display-name = "RMODS";
-                     bindings = <
-   &none               &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &none
-   &trans              &hsk RCTL RCTL      &hsk RALT RALT      &hsk RSFT RSFT      &trans              &trans              &trans              &trans              &trans              &trans
-   &none               &hsk RGUI RGUI      &hsk RGUI RGUI      &hsk RGUI RGUI      &trans              &trans              &trans              &trans              &trans              &none 
-                                           &none               &trans              &trans              &trans              &trans              &none 
                            >;
                 };
 

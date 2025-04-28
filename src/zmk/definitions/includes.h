@@ -3,7 +3,7 @@
 #include <dt-bindings/zmk/modifiers.h>
 #include <dt-bindings/zmk/mouse.h>
 
-#include "templates.dtsi"
+#include "helpers.h"
 #include "config.dtsi"
 
 #if __has_include("flags.h")
@@ -29,7 +29,7 @@
 #endif
 
 #include "../features/smart.dtsi"
-#include "../features/magic.dtsi"
+#include "../features/adaptive.dtsi"
 #include "../features/symbols.dtsi"
 
 #include "../features/combos.dtsi"

@@ -59,15 +59,6 @@
             bindings = <BINDINGS>; \
         };
 
-    #define MACRO_TAP(NAME, BINDINGS) \
-        NAME: NAME { \
-			compatible = "zmk,behavior-macro"; \
-            #binding-cells = <0>; \
-            wait-ms = <5>; \
-            tap-ms = <5>; \
-            bindings = <&macro_tap BINDINGS>; \
-        };
-
     /*  MOD MORPHS  */
 
     #define MOD_MORPH(NAME, MODS, MODDED, UNMODDED) \
@@ -97,15 +88,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>; \
         };
 
-    /*  LEADER  */
-
-	#define LEADER_SEQ(NAME, KEYS, BINDINGS, LAYERS) \
-		NAME { \
-			key-positions = <KEYS>; \
-			bindings = <BINDINGS>; \
-			layers = <LAYERS>; \
-		};
-
     /*  ACCENTS  */
     
     #define ACCENT(NAME, KEY, DEAD_KEY) \
@@ -117,6 +99,7 @@
             bindings \
                 = <&macro_tap &kp DEAD_KEY> \
                 , <&macro_tap &kp KEY> \
+                , <&macro_tap &sl ALTREP2> \
                 ; \
         }; \
         NAME##_c: NAME##_c { \
@@ -125,11 +108,12 @@
             compatible = "zmk,behavior-macro"; \
             #binding-cells = <0>; \
             bindings \
-                = <&macro_release &kp RSHFT> \
+                = <&macro_release &kp LSHIFT &kp RSHFT> \
                 , <&macro_tap &kp DEAD_KEY> \
                 , <&macro_press &kp RSHFT> \
                 , <&macro_tap &kp KEY> \
                 , <&macro_release &kp RSHFT> \
+                , <&macro_tap &sl ALTREP2> \
                 ; \
         }; \
         NAME##_s: NAME##_s { \
@@ -138,11 +122,12 @@
             compatible = "zmk,behavior-macro"; \
             #binding-cells = <0>; \
             bindings \
-                = <&macro_release &kp LSHFT> \
+                = <&macro_release &kp LSHFT &kp RSHFT> \
                 , <&macro_tap &kp DEAD_KEY> \
                 , <&macro_press &kp LSHFT> \
                 , <&macro_tap &kp KEY> \
                 , <&macro_release &kp LSHFT> \
+                , <&macro_tap &sl ALTREP2> \
                 ; \
         };
 
@@ -213,3 +198,15 @@
             mods = <(MOD_LALT)>; \
             keep-mods = <(MOD_LALT)>; \
         };
+
+    /*  ADAPTIVE KEYS  */
+
+    #define ADAPTIVE(NAME, BINDINGS, TRIGGERS) \
+        magic_##NAME: magic_##NAME { \
+            trigger-keys = <TRIGGERS>; \
+            bindings = <BINDINGS>; \
+            max-prior-idle-ms = <ADAPTIVE_KEY_TIMEOUT>; \
+            strict-modifiers; \
+        };
+
+    /*  END  */

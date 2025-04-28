@@ -12,7 +12,6 @@
 
         select_home: select_home {
 			compatible = "zmk,behavior-macro";
-            label = "select_home";
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <0>;
@@ -23,7 +22,6 @@
 
         mc_sel1ln: mc_sel1ln {
 			compatible = "zmk,behavior-macro";
-            label = "mc_sel1ln";
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
@@ -31,20 +29,17 @@
         };
         mc_selnln: mc_selnln {
 			compatible = "zmk,behavior-macro";
-            label = "mc_selnln";
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
             bindings = <&macro_tap &kp LS(DOWN) &kp LS(END)>;
         };
         select_line: select_line {
-            compatible = "zmk,behavior-antecedent-morph";
-            label = "select_line";
+            compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>;
-            defaults = <&mc_sel1ln>;
-            antecedents = <LS(END)>;
-            bindings = <&mc_selnln>;
+            bindings = <&mc_sel1ln>;
+
+            ADAPTIVE(cont_sel_line, &mc_selnln, LS(END))
         };
 
    };

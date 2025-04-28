@@ -17,16 +17,16 @@
 / {
     #define SENTENCE_CASE_LAYERS        SEN_CASE SEN_EXT
     #define SMARTCASE_LAYERS            CAMEL_CASE SNAKE_CASE CONST_CASE KEBAB_CASE SLASH_CASE SPACING 
-    #define ALPHA1_LAYERS               ALPHA1 CASE_A1 PLAIN1 CPLK_A1 SENTENCE_CASE_LAYERS SMARTCASE_LAYERS
+    #define ALPHA1_LAYERS               ALPHA1 CASE_A1 PLAIN1 CPLK_A1 SENTENCE_CASE_LAYERS SMARTCASE_LAYERS ALTREP2
     #define CCEDIL_LAYERS               CCEDIL CASE_CCEDIL 
     #define ALPHA2_LAYERS               ALPHA2 CASE_A2 PLAIN2 SFT_A2
     #define LOWER_LAYERS                LOWER LOW_CP  
     #define RAISE_LAYERS                RAISE RAI_CP   
     #define SHORTCUT_LAYERS             SHORTCUTS MEHS  
     #define MEDIA_LAYERS                MEDIA
-    #define NAV_LAYERS                  NAV NAV_F  
-    #define ALL_LAYERS                  ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS LOWER_LAYERS SHORTCUT_LAYERS MEDIA_LAYERS NAV_LAYERS RAISE_LAYERS SMART RMODS
-    #define ALL_LAYERS_WITH_BACKSPACE   ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS LOWER_LAYERS                              NAV_LAYERS RAISE_LAYERS        
+    #define NAV_LAYERS                  NAV NAV_F 
+    #define ALL_LAYERS                  ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS LOWER_LAYERS SHORTCUT_LAYERS MEDIA_LAYERS NAV_LAYERS RAISE_LAYERS SMART TEXT
+    #define ALL_LAYERS_WITH_BACKSPACE   ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS LOWER_LAYERS SHORTCUT_LAYERS              NAV_LAYERS RAISE_LAYERS        
     #define ALL_LAYERS_WITH_ESC         ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS              SHORTCUT_LAYERS MEDIA_LAYERS NAV_LAYERS                     
     #define FIXABLE_LAYERS              CPLK_A1 CASE_A1 SMARTCASE_LAYERS PLAIN1 LOWER_LAYERS MEDIA_LAYERS NAV_LAYERS MEHS FUN
 
@@ -102,7 +102,6 @@
         COMBO(cb_tog_mehs,      RTM RTI,     &to MEHS,           SHORTCUTS)
         COMBO(cb_reopen,        RBM RBR,     &mc_reopen,         SHORTCUTS)
         COMBO(cb_notes,         RHM RHR,     &mc_notes,          SHORTCUTS)
-        COMBO(cb_del_word,      RTM RTR,     &mc_del_word,       SHORTCUTS)
 
         COMBO(cb_meh_k,         LTI LTM,     &mc_meh_k,          MEHS)
         COMBO(cb_meh_w,         LHI LHM,     &mc_meh_w,          MEHS)
@@ -123,7 +122,6 @@
         COMBO(cb_pipev,         RBI RBM,     &kp PIPE,           LOWER_LAYERS)
         COMBO(cb_kv,            RHM RHR,     &kp E,              LOWER_LAYERS)
 
-        COMBO(cb_emoji,         LTI LTR LTM, &mc_emoji,          LOWER_LAYERS)
         COMBO(cb_braces_new,    LTR LTM,     &mc_braces_new,     LOWER_LAYERS)
         COMBO(cb_pars,          LHR LHM,     &th_pars 0 0,       LOWER_LAYERS)
         COMBO(cb_brackets,      LBR LBM,     &th_brackets NAV 0, LOWER_LAYERS)
@@ -189,14 +187,12 @@
 
         COMBO(cb_lower_nav,     LBR LBM,     &mo LOW_CP,         NAV_LAYERS)
         COMBO(cd_ca,            LHR LHM,     &kp LC(LALT),       NAV_LAYERS)
-        COMBO(cb_lclick,        RHI RHM RHR, &mkp LCLK,          NAV_LAYERS)
-        COMBO(cb_rclick,        RBI RBM RBR, &mkp RCLK,          NAV_LAYERS)
 
         COMBO(cb_down_home,     RBI RBM,     &mc_down_home,      NAV_LAYERS)
         COMBO(cb_down_end,      RBR RBM,     &mc_down_end,       NAV_LAYERS)
         COMBO(cb_up_end_del,    RTM RTI,     &mc_up_end_del,     NAV_LAYERS)
-        COMBO(cb_pg_down,       RHM RHI,     &kp PAGE_DOWN,      NAV_LAYERS)
-        COMBO(cb_pg_up,         RHM RHR,     &kp PAGE_UP,        NAV_LAYERS)
+        COMBO(cb_lclick,        RHM RHI,     &mkp LCLK,          NAV_LAYERS)
+        COMBO(cb_rclick,        RHM RHR,     &mkp RCLK,          NAV_LAYERS)
     };
 
     combo_must_tap {

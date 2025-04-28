@@ -6,26 +6,31 @@ CONFIG=""
 SHIELD=""
 OPERATING_SYSTEM="MACOS"
 BOARD="nice_nano_v2"
+VERBOSE=""
+ZMK="rafaelromao/zmk"
 BRANCH="main"
 EXTRA_SHIELDS=()
 FLAGS=()
 MODULES=()
+DEF_MODULES=(urob/zmk-leader-key,urob/zmk-auto-layer,urob/zmk-adaptive-key)
 
 # Function to display usage
 usage() {
-    echo "Usage: build [<config> <shield> <operating_system=MACOS>] [-k <config>] [-s <shield>] [-b <board=nice_nano_v2>] [-z <branch [wired|main]=main>] [-e <extra_shield1,extra_shield2,...>] [-d <flag1,flag2,...>] [-m <module1,module2,...>] [-h | --help]"
+    echo "Usage: build [<config> <shield> <operating_system=MACOS>] [-k <config>] [-s <shield>] [-b <board=nice_nano_v2>] [-v <verbose>] [-z <zmk=rafaelromao/zmk>] [-n <branch [main]=main>] [-e <extra_shield1,extra_shield2,...>] [-d <flag1,flag2,...>] [-m <module1,module2,...>] [-h | --help]"
     echo
     echo "Parameters:"
-    echo "  <config>               Specify the zmk config."
+    echo "  <config>                Specify the zmk config."
     echo "  <shield>               Specify the shield."
     echo "  <operating_system>     Specify the operating system."
-    echo "  -k, --config           Specify the zmk config."
+    echo "  -k, --config            Specify the zmk config."
     echo "  -s, --shield           Specify the shield."
     echo "  -o, --operating_system Specify the operating system (default: MACOS)."
     echo "  -b, --board            Specify the board (default: nice_nano_v2)."
-    echo "  -z, --branch           Specify the branch (default: main, options: wired|main)."
+    echo "  -v, --verbose          Enable verbose mode."
+    echo "  -z, --zmk              Specify the zmk repo (default: rafaelromao/zmk)."
+    echo "  -n, --branch           Specify the branch (default: main)."
     echo "  -e, --extra_shields    Specify a comma-separated list of additional shields (default: empty)."
-    echo "  -d, --flags            Specify a comma-separated list of extra flags (default: empty)."
+    echo "  -d, --flags             Specify a comma-separated list of extra flags (default: empty)."
     echo "  -m, --modules          Specify a comma-separated list of modules (default: empty)."
     echo "  -h, --help             Display this help message."
     exit 1
@@ -52,7 +57,7 @@ if [[ $# -gt 0 ]] && [[ ! $1 =~ ^- ]]; then
     shift
 fi
 
-while getopts "k:s:e:o:b:z:m:d:" opt; do
+while getopts "k:s:e:o:b:n:z:m:d:v" opt; do
     case $opt in
         k)
             CONFIG="$OPTARG"
@@ -69,8 +74,14 @@ while getopts "k:s:e:o:b:z:m:d:" opt; do
         b)
             BOARD="$OPTARG"
             ;;
-        z)
+        n)
             BRANCH="$OPTARG"
+            ;;
+        v)
+            VERBOSE="true"
+            ;;
+        z)
+            ZMK="$OPTARG"
             ;;
         m)
             IFS=',' read -r -a MODULES <<< "$OPTARG"
@@ -86,14 +97,6 @@ done
 
 # Shift processed options away
 shift $((OPTIND - 1))
-
-# Set the ZMK branch
-
-if [[ "$BRANCH" == "wired" ]]; then
-    BRANCH="20240328/rafaelromao/wired-split"
-elif [[ "$BRANCH" == "main" ]]; then
-    BRANCH="20240328/rafaelromao/main"
-fi
 
 if [[ -n "$SHIELD" && -n "$CONFIG" ]]; then
     if [[ "$CONFIG" == */* ]]; then
@@ -124,15 +127,33 @@ if [[ -n "$SHIELD" && -n "$CONFIG" ]]; then
     fi 
 fi
 
+# Define zmk module
+ZMK_MODULE=modules/$ZMK
+
+# Add default modules
+for DEF_MODULE in "${DEF_MODULES[@]}"; do
+    if [[ -n "$MODULES" ]]; then
+        MODULES+=","
+    fi
+    MODULES+="${DEF_MODULE}"
+done
+
 # Print the parameters for verification
 echo "Config: $CONFIG"
 echo "Shield: $SHIELD"
 echo "Operating System: $OPERATING_SYSTEM"
 echo "Board: $BOARD"
+echo "Verbose: $VERBOSE"
+echo "ZMK: $ZMK"
 echo "Branch: $BRANCH"
 echo "Extra Shields: ${EXTRA_SHIELDS[*]}"
 echo "Flags: ${FLAGS[*]}"
 echo "Modules: ${MODULES[*]}"
+
+# Init the zmk repo 
+export ZMK_HOME="$PROJECT_DIR/$ZMK_MODULE"
+echo "Initializing zmk..."
+source ./init.sh $ZMK
 
 # Create a new flags.h file
 OUTPUT_FILE="$PROJECT_DIR/src/zmk/definitions/flags.h"
@@ -142,11 +163,11 @@ echo "#define $OPERATING_SYSTEM" >> "$OUTPUT_FILE"
 
 # Clean ZMK build directory
 echo 'Cleaning zmk...'
-rm -rf "$PROJECT_DIR/modules/rafaelromao/zmk/build"
+rm -rf "$PROJECT_DIR/$ZMK_MODULE/build"
 
 # Check out the main ZMK branch
 echo 'Checking out zmk...'
-cd "$PROJECT_DIR/modules/rafaelromao/zmk"
+cd "$PROJECT_DIR/$ZMK_MODULE"
 git fetch
 git checkout -f $BRANCH
 git pull
@@ -159,7 +180,7 @@ else
     ARTIFACT="${SHIELD:-$BOARD}-$OPERATING_SYSTEM"
 fi
 
-# Fix the modules list
+# Rewrite the modules list
 
 PREFIX="$PROJECT_DIR/modules/"
 TEMP=""
@@ -175,13 +196,13 @@ for MODULE in "${ADDR[@]}"; do
     fi
 
     # Prefix the module name with the path
-    TEMP+="${MODULE_HOME},"
+    TEMP+="${MODULE_HOME};"
 done
 TEMP="${TEMP%,}"
 MODULES=$TEMP
 
 # Build the project
-cd "$PROJECT_DIR/modules/rafaelromao/zmk"
+cd "$PROJECT_DIR/$ZMK_MODULE"
 
 # Build the west command
 
@@ -200,6 +221,20 @@ if [ -n "$MODULES" ]; then
 fi
 
 eval "$command"
+
+
+if [[ -n "$VERBOSE" ]]; then
+    # Show applied KConfig
+    DOTCONFIG=build/$ARTIFACT/zephyr/.config
+
+    if [ -f "$DOTCONFIG" ]
+    then
+        echo "Kconfig:"
+        grep -v -e "^#" -e "^$" "$DOTCONFIG" | sort
+    else
+        echo "No Kconfig output"
+    fi
+fi
 
 # Move the built file to artifacts directory
 mkdir -p "$PROJECT_DIR/build/artifacts"

@@ -19,9 +19,9 @@
         ACCENT(ac_ocir, O, CARET)
         ACCENT(ac_uacu, U, SQT  )
 
-        MACRO(mc_qu,       &macro_tap &kp Q &macro_wait_time 10 &macro_tap &kp U)
-        MACRO(mc_qu_c,     &macro_press &kp LSHFT &macro_tap &kp Q &macro_wait_time 10 &macro_tap &kp U &macro_release &kp LSHFT)
-        MACRO(mc_qu_s,     &macro_press &kp LSHFT &macro_tap &kp Q &macro_wait_time 10 &macro_release &kp LSHFT &macro_tap &kp U)
+        MACRO(mc_qu,       &kp Q &kp U &sl ALTREP2)
+        MACRO(mc_qu_s,     &kp LS(Q) &kp U &sl ALTREP2)
+        MACRO(mc_qu_c,     &kp RS(Q) &kp RS(U) &sl ALTREP2)
         MACRO(mc_aotil,    &macro_tap &macro_wait_time 10 &macro_tap &ac_atil &kp O)
         MACRO(mc_aotil_c,  &macro_tap &macro_wait_time 10 &macro_tap &ac_atil_c &kp RS(O))
         MACRO(mc_otiles,   &macro_tap &ac_otil &macro_wait_time 10 &kp E &kp S)

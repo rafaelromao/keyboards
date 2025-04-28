@@ -28,27 +28,28 @@
 #define SFT_A2 15
 #define CASE_A2 16
 #define CASE_CCEDIL 17
+#define ALTREP2 18
 
-#define SHORTCUTS 18
-#define MEHS 19
+#define SHORTCUTS 19
+#define MEHS 20
 
-#define PLAIN1 20
-#define PLAIN2 21
-#define SFT_PLAIN2 22
+#define PLAIN1 21
+#define PLAIN2 22
+#define SFT_PLAIN2 23
 
-#define NAV 23
+#define NAV 24
+#define TEXT 25
 
-#define LOW_CP 24
-#define RAI_CP 25
+#define LOW_CP 26
+#define RAI_CP 27
 
-#define MEDIA 26
+#define MEDIA 28
 
-#define FUN 27
-#define SMART 28
+#define FUN 29
+#define SMART 30
 
-#define NAV_F 29
+#define NAV_F 31
 
-#define RMODS 30
 
 
 #define COMBO_TERM 30

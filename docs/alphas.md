@@ -13,7 +13,7 @@
 - The Alpha1 layer is the base layer, which contains the most common alphas of Portuguese and English, plus comma and period. It is extended by the Alpha2 layer.
 
 ### Secondary Alpha Layer
-- The Alpha2 layer has common Portuguese accentuated letters, readily available with a single tap on the right inner thumb key, along with the alphas that are missing in the base layer.
+- The Alpha2 layer has common Portuguese accented letters, readily available with a single tap on the right inner thumb key, along with the alphas that are missing in the base layer.
 - There are dedicated keys for `à` `á` `â` `é` `ê` `ó` `ô` `ú` `í` and `ç`, as well, which is all that is needed for Portuguese.
 - This two alpha layers approach is based on [Ben Vallack's keymap](https://youtu.be/5RN_4PQ0j1A?si=f9OkOvNdL3jE4seR).
 
