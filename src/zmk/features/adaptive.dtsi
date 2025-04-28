@@ -23,19 +23,19 @@
             bindings = <&key_repeat>;
 
             ADAPTIVE(a_h      , &kp H       , A          )
-            ADAPTIVE(a_h_s    , &kp LS(H)   , LS(A)      )
+            ADAPTIVE(a_h_s    , &kp H       , LS(A)      )
             ADAPTIVE(a_h_c    , &kp RS(H)   , RS(A)      )
             ADAPTIVE(i_sqo_s  , &mc_sqo     , LS(I)      )
             ADAPTIVE(i_sqo_c  , &mc_sqo     , RS(I)      )
             ADAPTIVE(space_v  , &kp V       , SPACE      )
             ADAPTIVE(j_aacu   , &ac_aacu    , J          )
-            ADAPTIVE(j_aacu_s , &ac_aacu_s  , LS(J)      )
+            ADAPTIVE(j_aacu_s , &ac_aacu    , LS(J)      )
             ADAPTIVE(j_aacu_c , &ac_aacu_c  , RS(J)      )
             ADAPTIVE(y_d      , &kp D       , Y          )
-            ADAPTIVE(y_d_s    , &kp LS(D)   , LS(Y)      )
+            ADAPTIVE(y_d_s    , &kp D       , LS(Y)      )
             ADAPTIVE(y_d_c    , &kp RS(D)   , RS(Y)      )
             ADAPTIVE(x_iacu   , &ac_iacu    , X          )
-            ADAPTIVE(x_iacu_s , &ac_iacu_s  , LS(X)      )
+            ADAPTIVE(x_iacu_s , &ac_iacu    , LS(X)      )
             ADAPTIVE(x_iacu_c , &ac_iacu_c  , RS(X)      )
             ADAPTIVE(h_v      , &mc_bs_v    , H          )
             ADAPTIVE(h_v_s    , &mc_bs_s_v  , LS(H)      )
@@ -79,7 +79,7 @@
             bindings = <&kp H>;
 
             ADAPTIVE(v      , &kp V      , A     E     I     O     U     )
-            ADAPTIVE(v_s    , &kp LS(V)  , LS(A) LS(E) LS(I) LS(O) LS(U) )
+            ADAPTIVE(v_s    , &kp V      , LS(A) LS(E) LS(I) LS(O) LS(U) )
         };
 
         magic_key_c: magic_key_c {
@@ -116,7 +116,7 @@
             bindings = <&kp V>;
 
             ADAPTIVE(h      , &kp H      , A     E     I     O     U     )
-            ADAPTIVE(h_s    , &kp LS(H)  , LS(A) LS(E) LS(I) LS(O) LS(U) )
+            ADAPTIVE(h_s    , &kp H      , LS(A) LS(E) LS(I) LS(O) LS(U) )
         };
 
         reversed_magic_c: reversed_magic_c {
