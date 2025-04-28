@@ -83,8 +83,8 @@ layers:
     - ["", "", "", "", { t: ▽ }, { t: ▽ }]
     - ["", "", "", ão, ã, { t: ▽ }, "", ""]
     - ["", "", ões, õ, { t: ▽ }, { t: ▽ }]
-    - { t: ▽ }
     - { t: alpha2, s: sticky }
+    - { t: ▽ }
     - { t: ▽ }
     - { t: ▽ }
   vim-remaps:
@@ -247,9 +247,9 @@ layers:
     - "'"
   nav:
     - [
-        { s: "start", t: ⓦ },
-        { s: "next", t: ⓦ },
-        { s: "end", t: ⓦ },
+        null,
+        null,
+        null,
         { t: $$mdi:keyboard-tab$$, s: tab },
         { t: $$mdi:keyboard-return$$, s: enter },
         { t: "⎋", s: esc },
