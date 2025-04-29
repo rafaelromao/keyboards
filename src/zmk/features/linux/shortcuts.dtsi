@@ -46,8 +46,6 @@
         MACRO(mc_menubar,                &macro_tap &kp LC(LA(B)))
         MACRO(mc_screenshot,             &macro_tap &kp LC(LA(S)))
         MACRO(mc_emoji,                  &macro_tap &kp LC(LA(J)))
-        MACRO(mc_timer,                  &macro_tap &kp LC(LA(T)))
-        MACRO(mc_notes,                  &macro_tap &kp LC(LA(N)))
 
         // Navigation
 
