@@ -291,7 +291,7 @@ layers:
         { t: $$mdi:microphone$$, s: mic},
         { t: $$mdi:volume-medium$$, s: vol- },
         { t: $$mdi:volume-high$$, s: vol+ },
-        { t: $$mdi:camera$$, h: nav, s: cam},
+        { t: $$mdi:camera$$, h: text, s: cam},
       ]
     - [
         { t: $$mdi:arrow-down-circle-outline$$, s: scroll },
@@ -307,9 +307,9 @@ layers:
     - { t: ▽, type: held }
   functions:
     - [
-        { t: $$mdi:bluetooth$$, h: $$mdi:arrow-left$$ },
-        { t: $$mdi:bluetooth$$, h: $$mdi:arrow-right$$ },
-        { t: $$mdi:bluetooth-off$$, h: $$mdi:delete$$ },
+        null,
+        null,
+        null,
         "F7",
         "F8",
         "F9",
@@ -374,7 +374,7 @@ layers:
         { t: "CAPS LINE", s: auto-layer },
         { t: $$mdi:lock$$, s: "lock" },
         null,
-        null,
+        { t: $$mdi:bluetooth$$, h: $$mdi:arrow-left$$ },
       ]
     - [
         "",
@@ -383,7 +383,7 @@ layers:
         { t: "kebab- case", s: auto-layer },
         { t: $$mdi:power-sleep$$, s: "sleep" },
         "",
-        null,
+        { t: $$mdi:bluetooth$$, h: $$mdi:arrow-right$$ },
         null,
       ]
     - [
@@ -392,7 +392,7 @@ layers:
         { t: "camel Case", s: auto-layer },
         { t: $$mdi:ray-start-arrow$$, s: "leader" },
         { type: held },
-        "",
+        { t: $$mdi:bluetooth-off$$, h: $$mdi:delete$$ },
       ]
     - { t: ▽ }
     - { t: ",␣" }

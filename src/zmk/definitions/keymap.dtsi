@@ -294,7 +294,7 @@
                 functions_layer {
                      display-name = "FUN";
                      bindings = <
-   &none               &bt BT_PRV          &bt BT_NXT          &bt BT_CLR          &none               &none               &kp F7              &kp F8              &kp F9              &none 
+   &none               &none               &none               &none               &none               &none               &kp F7              &kp F8              &kp F9              &none 
    &none               &hsk LCTL LCTL      &hsk LALT LALT      &hsk LSFT LSFT      &none               &none               &kp F4              &kp F5              &kp F6              &none      
    &none               &hsk LGUI LGUI      &hsk LGUI LGUI      &hsk LGUI LGUI      &none               &none               &kp F1              &kp F2              &kp F3              &none
                                            &none               &key_repeat         &none               &none               &key_repeat         &none
@@ -314,9 +314,9 @@
                 smartcases_layer {
                      display-name = "SMART";
                      bindings = <
-   &none               &none               &tc_smart_word      &tc_smart_line      &none               &none               &mc_lock            &none               &none               &none 
-   &none               &tc_snake_case      &tc_constant_case   &tc_kebab_case      &none               &none               &kp C_SLEEP         &none               &none               &none      
-   &none               &tc_slash_case      &tc_pascal_case     &tc_camel_case      &none               &none               &leader             &none               &none               &none
+   &none               &none               &tc_smart_word      &tc_smart_line      &none               &none               &mc_lock            &bt BT_PRV          &none               &none 
+   &none               &tc_snake_case      &tc_constant_case   &tc_kebab_case      &none               &none               &kp C_SLEEP         &bt BT_NXT          &none               &none      
+   &none               &tc_slash_case      &tc_pascal_case     &tc_camel_case      &none               &none               &leader             &bt BT_CLR          &none               &none
                                            &none               &trans              &mc_comma_space     &trans              &trans              &none
                         >;
                 };
