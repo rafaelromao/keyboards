@@ -21,13 +21,13 @@ keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s alpha1 alpha2 Ã
 
 keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s lower raise -o ./tmp/symbols.svg ./tmp/keymap-drawer-noseparatecombos.yaml
 
-keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s functions smartcases -o ./tmp/functions.svg ./tmp/keymap-drawer-noseparatecombos.yaml
+keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s functions system -o ./tmp/functions.svg ./tmp/keymap-drawer-noseparatecombos.yaml
 
 keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s shortcuts mehs -o ./tmp/shortcuts.svg ./tmp/keymap-drawer-noseparatecombos.yaml
 
-keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s nav media -o ./tmp/navigation.svg ./tmp/keymap-drawer-noseparatecombos.yaml
+keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s nav text media -o ./tmp/navigation.svg ./tmp/keymap-drawer-noseparatecombos.yaml
 
-keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s vim-remaps lower media -o ./tmp/vim.svg ./tmp/keymap-drawer-onlyvimcombos.yaml
+keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s vim-remaps lower text -o ./tmp/vim.svg ./tmp/keymap-drawer-onlyvimcombos.yaml
 
 keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s left-meh-morphs right-meh-morphs coding-meh coding-hyper fusion360-meh fusion360-hyper -o ./tmp/mehs.svg ./tmp/keymap-drawer-mehs.yaml
 

@@ -15,7 +15,7 @@
                      bindings = <
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp Y
    &lt SHORTCUTS D     &mt LCTL N          &mt LALT S          &mt LSFT T          &kp W               &kp Z               &mt LSFT R          &mt LALT A          &mt LCTL E          &lt SHORTCUTS I      
-   &mc_qu              &mt LGUI F          &mt LGUI C          &mt LGUI P          &kp V               &kp J               &ht_magic LGUI 0    &th_comma SMART 0   &th_dot 0 0         &kp H
+   &mc_qu              &mt LGUI F          &mt LGUI C          &mt LGUI P          &kp V               &kp J               &ht_magic LGUI 0    &th_comma SYSTEM 0  &th_dot 0 0         &kp H
                                            &key_repeat         &ht_repeat NAV 0    &ltn_low_spc 0 0    &msl_rai_a2 0 0     &ht_shift MEDIA 0   &key_repeat
                         >;
                 };
@@ -43,7 +43,7 @@
                      bindings = <
    &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y)
    &lt SHORTCUTS RS(D) &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt LSFT RS(R)      &mt LALT RS(A)      &mt LCTL RS(E)      &lt SHORTCUTS RS(I) 
-   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma SMART 0   &th_dot 0 0         &trans
+   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma SYSTEM 0  &th_dot 0 0         &trans
                                            &trans              &trans              &msk_unds LOWER 0   &th_case_a2 RAISE 0 &trans              &trans
                            >;
                 };
@@ -79,7 +79,7 @@
                      bindings = <
    &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y)
    &lt SHORTCUTS RS(D) &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt LSFT RS(R)      &mt LALT RS(A)      &mt LCTL RS(E)      &lt SHORTCUTS RS(I) 
-   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma SMART 0   &th_dot 0 0         &kp RS(H)
+   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma SYSTEM 0  &th_dot 0 0         &kp RS(H)
                                            &trans              &trans              &msk_spc LOWER 0    &th_case_a2 RAISE 0 &th_cancel MEDIA 0  &trans
                         >;
                 };
@@ -88,7 +88,7 @@
                      bindings = <
    &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y)
    &lt SHORTCUTS RS(D) &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt LSFT RS(R)      &mt LALT RS(A)      &mt LCTL RS(E)      &lt SHORTCUTS RS(I) 
-   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma SMART 0   &th_dot 0 0         &kp RS(H)
+   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma SYSTEM 0  &th_dot 0 0         &kp RS(H)
                                            &trans              &trans              &trans              &th_case_a2 RAISE 0 &th_cancel MEDIA 0  &trans
                                            
                            >;
@@ -143,7 +143,7 @@
                      bindings = <
    &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &kp LS(Y) 
    &kp LS(D)           &mt LCTL LS(N)      &mt LALT LS(S)      &mt LSFT LS(T)      &kp LS(W)           &kp LS(Z)           &mt LSFT LS(R)      &mt LALT LS(A)      &mt LCTL LS(E)      &kp LS(I) 
-   &mc_qu_s            &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c LGUI 0  &th_comma SMART 0   &th_dot 0 0         &kp LS(H) 
+   &mc_qu_s            &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c LGUI 0  &th_comma SYSTEM 0  &th_dot 0 0         &kp LS(H) 
                                            &trans              &th_cancel NAV 0    &th_sp_ns LOW_CP 0  &msl RAI_CP SFT_A2  &th_nsen MEDIA 0    &trans
                            >;
                 };
@@ -174,7 +174,7 @@
    &none               &kp RS(Q)           &mc_qu_c            &kp RS(K)           &none               &none               &ac_ocir_c          &ac_oacu_c          &ac_uacu_c          &none
    &kp RS(Y)           &kp RS(Z)           &kp RS(X)           &kp RS(W)           &none               &none               &ac_atil_c          &ac_aacu_c          &ac_eacu_c          &ac_iacu_c 
    &none               &kp RS(J)           &mc_ced_c           &reversed_magic_c   &none               &none               &ac_otil_c          &ac_acir_c          &ac_ecir_c          &none 
-                                           &none               &mc_sqo_c           &trans              &kp SPACE           &mc_sqo_c           &none 
+                                           &none               &mc_sqo             &trans              &kp SPACE           &mc_sqo             &none 
                            >;
                 };
                 case_ccedil_layer {
@@ -286,7 +286,7 @@
    &none               &none               &mkp LCLK           &mkp RCLK           &none               &none               &mc_hand            &kp ENTER           &kp ESC             &none
    &none               &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &none               &mc_mic             &mt C_MUTE C_VOL_DN &kp C_VOL_UP        &th_cam TEXT 0
    &none               &msc SCRL_DOWN      &mmv MOVE_DOWN      &msc SCRL_UP        &none               &none               &kp C_PP            &kp C_PREV          &kp C_NEXT          &none 
-                                           &none               &mo NAV_F           &mc_spc_esc         &bootloader         &trans              &none 
+                                           &none               &mo NAV_F           &kp SPACE           &bootloader         &trans              &none 
                            >;
                 };
 
@@ -294,7 +294,7 @@
                 functions_layer {
                      display-name = "FUN";
                      bindings = <
-   &none               &none               &none               &none               &none               &none               &kp F7              &kp F8              &kp F9              &none 
+   &none               &mc_zoom_out        &mc_zoom_in         &mc_reset_zoom      &none               &none               &kp F7              &kp F8              &kp F9              &none 
    &none               &hsk LCTL LCTL      &hsk LALT LALT      &hsk LSFT LSFT      &none               &none               &kp F4              &kp F5              &kp F6              &none      
    &none               &hsk LGUI LGUI      &hsk LGUI LGUI      &hsk LGUI LGUI      &none               &none               &kp F1              &kp F2              &kp F3              &none
                                            &none               &key_repeat         &none               &none               &key_repeat         &none
@@ -303,20 +303,20 @@
                 text_layer {
                      display-name = "TEXT";
                      bindings = <
-   &none               &mc_zoom_out        &mc_zoom_in         &mc_reset_zoom      &trans              &trans              &select_word        &select_line        &select_home        &none
-   &none               &hsk RCTL RCTL      &hsk RALT RALT      &hsk RSFT RSFT      &trans              &trans              &mc_prev_word       &kp PAGE_DOWN       &kp PAGE_UP         &mc_next_word
+   &none               &kp Q               &kp H               &kp AT              &trans              &trans              &select_word        &select_line        &select_home        &none
+   &none               &hsk RCTL RCTL      &hsk RALT RALT      &hsk RSFT RSFT      &trans              &trans              &mc_prev_word       &kp DOWN            &kp UP              &mc_next_word
    &none               &hsk RGUI RGUI      &hsk RGUI RGUI      &hsk RGUI RGUI      &trans              &trans              &mc_del_word        &kp HOME            &kp END             &none 
-                                           &none               &none               &kp SPACE           &kp SPACE           &none               &none 
+                                           &none               &mo NAV_F           &mc_spc_esc         &mc_spc_esc         &mo NAV_F           &none 
                            >;
                 };
 
 
-                smartcases_layer {
-                     display-name = "SMART";
+                system_layer {
+                     display-name = "SYSTEM";
                      bindings = <
-   &none               &none               &tc_smart_word      &tc_smart_line      &none               &none               &mc_lock            &bt BT_PRV          &none               &none 
-   &none               &tc_snake_case      &tc_constant_case   &tc_kebab_case      &none               &none               &kp C_SLEEP         &bt BT_NXT          &none               &none      
-   &none               &tc_slash_case      &tc_pascal_case     &tc_camel_case      &none               &none               &leader             &bt BT_CLR          &none               &none
+   &none               &none               &tc_smart_word      &tc_smart_line      &none               &none               &mc_lock            &none               &bt BT_PRV          &none 
+   &none               &tc_snake_case      &tc_constant_case   &tc_kebab_case      &none               &none               &kp C_SLEEP         &none               &bt BT_NXT          &bt BT_CLR      
+   &none               &tc_slash_case      &tc_pascal_case     &tc_camel_case      &none               &none               &leader             &none               &bt BT_SEL 0        &none
                                            &none               &trans              &mc_comma_space     &trans              &trans              &none
                         >;
                 };

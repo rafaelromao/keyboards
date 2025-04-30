@@ -29,12 +29,12 @@ The following pages explain how this layout works and which features are impleme
 - [VIM Remaps](docs/navigation.md)
 - [Shortcut Combos](docs/alphas.md)
 - [Num Word](docs/symbols.md)
-- [Optimized Symbol Layers](docs/symbols.md)
+- [Symbol Layers](docs/symbols.md)
 - [Coding Macros](docs/symbols.md)
 - [Smart Cases](docs/functions.md)
 - [Select Word](docs/shortcuts.md)
 - [Leader Key](docs/shortcuts.md)
-- [Custom Shortcuts](docs/shortcuts.md)
+- [Shortcuts](docs/shortcuts.md)
 - [Mouse Keys](docs/navigation.md)
 
 ## About this repo

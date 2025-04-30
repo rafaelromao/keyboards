@@ -44,10 +44,6 @@
         MACRO(mc_end_sqo,         &kp END &mc_sqo)
         TAPHOLD_TP(th_sqo,            &mc_sqo, &mc_end_sqo)
 
-        MACRO(mc_sqo_c,           &kp SQT &kp SPACE)
-        MACRO(mc_end_sqo_c,       &kp END &mc_sqo_c)
-        TAPHOLD_TP(th_sqo_c,          &mc_sqo_c, &mc_end_sqo_c)
-
         MACRO(mc_dqo,             &kp DQT &kp SPACE)
         MACRO(mc_end_dqo,         &kp END &mc_dqo)
         TAPHOLD_TP(th_dqo,            &mc_dqo, &mc_end_dqo)
