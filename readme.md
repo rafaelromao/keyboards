@@ -15,7 +15,7 @@ The following pages explain how this layout works and which features are impleme
 - [Alphas](docs/alphas.md)
 - [Symbols and Numbers](docs/symbols.md)
 - [Navigation and Media](docs/navigation.md)
-- [Functions and Smart Cases](docs/functions.md)
+- [Functions and System](docs/functions.md)
 - [Shortcuts and Mehs](docs/shortcuts.md) 
 
 ### Special Features
