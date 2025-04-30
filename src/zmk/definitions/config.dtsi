@@ -28,14 +28,14 @@
 #define SFT_A2 15
 #define CASE_A2 16
 #define CASE_CCEDIL 17
-#define ALTREP2 18
 
-#define SHORTCUTS 19
-#define MEHS 20
+#define SHORTCUTS 18
+#define MEHS 19
 
-#define PLAIN1 21
-#define PLAIN2 22
-#define SFT_PLAIN2 23
+#define PLAIN1 20
+#define PLAIN2 21
+#define SFT_PLAIN2 22
+#define ALTREP2 23
 
 #define NAV 24
 
