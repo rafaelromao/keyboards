@@ -6,7 +6,7 @@
 */
 
 / {
-    magic {
+    adaptive_keys {
         
         // ******************** REPEAT KEY ******************** //
 
@@ -88,6 +88,7 @@
             bindings = <&kp RS(H)>;
 
             ADAPTIVE(v_c    , &kp RS(V)  , RS(A) RS(E) RS(I) RS(O) RS(U) )
+            ADAPTIVE(h_spc  , &kp LS(H)  , SPACE )
         };
 
         ht_magic: ht_magic {
@@ -122,9 +123,10 @@
         reversed_magic_c: reversed_magic_c {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            bindings = <&kp V>;
+            bindings = <&kp RS(V)>;
 
             ADAPTIVE(h_c    , &kp RS(H)  , RS(A) RS(E) RS(I) RS(O) RS(U) )
+            ADAPTIVE(v_spc  , &kp LS(V)  , SPACE )
         };
 
     };
