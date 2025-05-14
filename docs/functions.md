@@ -11,7 +11,7 @@ The Functions layer is activated holding the left home row pinky key in the Navi
 
 - One Shot modifiers are available in Functions the layer.
 
-## System
+## Smart
 
 The Sytem layer is activated holding the Comma key in the base layer.
 

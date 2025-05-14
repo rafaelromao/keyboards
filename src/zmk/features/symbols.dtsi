@@ -160,19 +160,22 @@
         MACRO(mc_tisl,            &kp TILDE &kp SPACE &kp SLASH)
         MACRO(mc_dds,             &kp DOT &kp DOT &kp SLASH)
         MACRO(mc_ds,              &kp DOT &kp SLASH)
-        MACRO(mc_spc_esc,         &kp J &macro_press &kp SPACE &macro_pause_for_release &macro_release &kp SPACE &macro_tap &kp ESC)
-        MACRO(mc_dqt0p,           &kp DQT &kp N0 &kp P)
 
         MACRO(mc_ord_o,           &kp LA(N0))
         MACRO(mc_ord_a,           &kp LA(N9))
         TAPHOLD_TP(th_ord_o,          &mc_ord_o, &mc_meh)
         TAPHOLD_TP(th_ord_a,          &mc_ord_a, &mc_hyper)
 
-        // SMARTCASES
 
-        MACRO(mc_comma_space,     &kp COMMA &kp SPACE)
+        MACRO(mc_bks_leader,      &kp BACKSPACE &leader)
 
         // Vim home home
+
+        MACRO(mc_spc_esc,         &kp J &macro_press &kp SPACE &macro_pause_for_release &macro_release &kp SPACE &macro_tap &kp ESC)
+        MACRO(mc_dqt0p,           &kp DQT &kp N0 &kp P)
+        MACRO(mc_dqtplusp,        &kp DQT &kp PLUS &kp P)
+        MACRO(mc_dqtplusy,        &kp DQT &kp PLUS &kp Y)
+        MACRO(mc_vim_replace,     &kp COLON &kp PERCENT &kp S &kp SLASH)
 
         mc_caret: mc_caret {
             compatible = "zmk,behavior-macro";

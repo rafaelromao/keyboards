@@ -43,7 +43,6 @@
         MACRO(mc_hand,                   &macro_tap &kp LC(LA(H)))
         MACRO(mc_mic,                    &macro_tap &kp LC(LA(D)))
         MACRO(mc_cam,                    &macro_tap &kp LC(LA(E)))
-        MACRO(mc_menubar,                &macro_tap &kp LC(LA(B)))
         MACRO(mc_screenshot,             &macro_tap &kp LC(LA(S)))
         MACRO(mc_emoji,                  &macro_tap &kp LC(LA(J)))
 

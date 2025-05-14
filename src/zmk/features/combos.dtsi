@@ -146,9 +146,6 @@
         COMBO(cb_f14,           RHM RHR,         &kp F14,                FUN)
         COMBO(cb_f15,           RTM RTR,         &kp F15,                FUN)
 
-        COMBO(cb_lpar,          RHI RHM RHR,     &kp LPAR,               ALPHA2_LAYERS)
-        COMBO(cb_rpar,          RBI RBM RBR,     &kp RPAR,               ALPHA2_LAYERS)
-        COMBO(cb_dqo,           RTI RTM RTR,     &mc_dqo,                ALPHA2_LAYERS)
         COMBO(cb_minus,         RTI RTM,         &kp MINUS,              ALPHA2_LAYERS)
         COMBO(cb_dqo_s,         LTM LTI,         &kp DQT,                ALPHA2_LAYERS)
         COMBO(cb_sqo_s,         LHM LHI,         &kp SQT,                ALPHA2_LAYERS)

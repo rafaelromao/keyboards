@@ -21,32 +21,34 @@
 #define LOWER 10
 #define RAISE 11
 
-#define CCEDIL 12
-#define SFT_A2 13
-#define CASE_A2 14
-#define CASE_CCEDIL 15
+#define SEN_CASE 12
+#define CCEDIL 13
+#define SFT_A2 14
+#define CASE_A2 15
+#define CASE_CCEDIL 16
 
-#define SHORTCUTS 16
-#define MEHS 17
+#define SHORTCUTS 17
+#define MEHS 18
 
-#define PLAIN1 18
-#define PLAIN2 19
-#define SFT_PLAIN2 20
-#define ALTREP2 21
+#define PLAIN1 19
+#define PLAIN2 20
+#define SFT_PLAIN2 21
+#define ALTREP2 22
 
-#define NAV 22
+#define NAV 23
 
-#define LOW_CP 23
-#define RAI_CP 24
+#define LOW_CP 24
+#define RAI_CP 25
 
-#define MEDIA 25
+#define MEDIA 26
 
-#define FUN 26
 #define TEXT 27
+#define FUN 28
 
-#define SYSTEM 28
+#define SMART 29
+#define SYSTEM 30
 
-#define NAV_F 29
+#define NAV_F 31
 
 
 
