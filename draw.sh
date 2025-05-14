@@ -21,13 +21,13 @@ keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s alpha1 alpha2 Ã
 
 keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s lower raise -o ./tmp/symbols.svg ./tmp/keymap-drawer-noseparatecombos.yaml
 
-keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s functions system -o ./tmp/functions.svg ./tmp/keymap-drawer-noseparatecombos.yaml
+keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s func smart system -o ./tmp/func.svg ./tmp/keymap-drawer-noseparatecombos.yaml
 
 keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s shortcuts mehs -o ./tmp/shortcuts.svg ./tmp/keymap-drawer-noseparatecombos.yaml
 
-keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s nav text media -o ./tmp/navigation.svg ./tmp/keymap-drawer-noseparatecombos.yaml
+keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s nav text-nav media -o ./tmp/navigation.svg ./tmp/keymap-drawer-noseparatecombos.yaml
 
-keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s vim-remaps lower text -o ./tmp/vim.svg ./tmp/keymap-drawer-onlyvimcombos.yaml
+keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s vim-remaps lower smart -o ./tmp/vim.svg ./tmp/keymap-drawer-onlyvimcombos.yaml
 
 keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s left-meh-morphs right-meh-morphs coding-meh coding-hyper fusion360-meh fusion360-hyper -o ./tmp/mehs.svg ./tmp/keymap-drawer-mehs.yaml
 
@@ -38,7 +38,7 @@ inkscape --export-type png --export-filename ./img/overview.png --export-dpi 300
 inkscape --export-type png --export-filename ./img/separatecombos.png --export-dpi 300 --export-background=white ./tmp/separatecombos.svg
 inkscape --export-type png --export-filename ./img/alphas.png --export-dpi 300 --export-background=white ./tmp/alphas.svg
 inkscape --export-type png --export-filename ./img/symbols.png --export-dpi 300 --export-background=white ./tmp/symbols.svg
-inkscape --export-type png --export-filename ./img/functions.png --export-dpi 300 --export-background=white ./tmp/functions.svg
+inkscape --export-type png --export-filename ./img/func.png --export-dpi 300 --export-background=white ./tmp/func.svg
 inkscape --export-type png --export-filename ./img/shortcuts.png --export-dpi 300 --export-background=white ./tmp/shortcuts.svg
 inkscape --export-type png --export-filename ./img/navigation.png --export-dpi 300 --export-background=white ./tmp/navigation.svg
 inkscape --export-type png --export-filename ./img/vim.png --export-dpi 300 --export-background=white ./tmp/vim.svg

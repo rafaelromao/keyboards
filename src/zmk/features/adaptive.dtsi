@@ -45,7 +45,8 @@
             ADAPTIVE(v_h_c    , &mc_bs_c_h  , RS(V)      )
         };
 
-        // Alt repeat key for accented vowels and macros from the secondary alpha layer. Only the last char in the macro is considered
+        // Alt repeat key for accented vowels and macros from the secondary alpha layer.
+        // Only the last char in the macro is considered
         a2_alt_repeat: alpha2_alternate_repeat_key {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;

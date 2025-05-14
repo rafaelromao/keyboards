@@ -129,27 +129,6 @@
 
 
 
-                sentence_case_layer {
-                     display-name = "CASE";
-                     bindings = <
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
-                                           &trans              &trans              &th_sp_ns LOWER 0   &trans              &th_nsen MEDIA 0    &trans
-                           >;
-                };
-                sentence_case_ext_layer {
-                     display-name = "CASE";
-                     bindings = <
-   &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &kp LS(Y) 
-   &kp LS(D)           &mt LCTL LS(N)      &mt LALT LS(S)      &mt LSFT LS(T)      &kp LS(W)           &kp LS(Z)           &mt LSFT LS(R)      &mt LALT LS(A)      &mt LCTL LS(E)      &kp LS(I) 
-   &mc_qu_s            &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c LGUI 0  &th_comma SYSTEM 0  &th_dot 0 0         &kp LS(H) 
-                                           &trans              &th_cancel NAV 0    &th_sp_ns LOW_CP 0  &msl RAI_CP SFT_A2  &th_nsen MEDIA 0    &trans
-                           >;
-                };
-
-
-
                 ccedil_layer {
                      display-name = "Ç EXT";
                      bindings = <

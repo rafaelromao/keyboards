@@ -8,7 +8,7 @@
 / {
     smart {
         
-        // ********************** SENTENCE CASE ********************** //
+        // ********************** CANCEL ********************** //
 
         tc_cancel: tc_cancel {
 			compatible = "zmk,behavior-macro";
@@ -17,11 +17,7 @@
             tap-ms = <10>;
             bindings = <&macro_tap &kp K_CANCEL &to ALPHA1>;
         };
-        MACRO(tc_sp_ns,        &kp SPACE &sl SEN_EXT)
-        MACRO(tc_nsen,         &sl SEN_EXT)
-        LAYERTAP_TP(th_sp_ns,      &tc_sp_ns)
         LAYERTAP_TP(th_cancel,     &tc_cancel)
-        LAYERTAP_TP(th_nsen,       &tc_nsen)
 
         // ********************** SMART PLAIN ALPHAS ********************** //
 
@@ -184,7 +180,7 @@
             bindings = <&mm_hold_alt_gui>, <&mm_tap_alt_a2_gui>;
         };
 
-        MACRO(mc_space, &kp SPACE)
+        MACRO(mc_space, &ak_space)
         MACRO(mc_sk_lgui, &sk LGUI)
         MACRO(mc_hold_lower, &macro_press &mo LOWER &macro_pause_for_release &macro_release &mo LOWER)
         MACRO(mc_hold_lgui, &macro_press &kp LGUI &macro_pause_for_release &macro_release &kp LGUI)
