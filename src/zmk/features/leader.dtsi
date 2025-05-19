@@ -19,12 +19,10 @@
         MACRO(md_hehe, &kp H &kp E &kp H &kp E)
         MACRO(md_kkkk, &kp K &kp K &kp K &kp K)
         MACRO(md_hugs, &kp LBKT &kp RBKT &kp SQT &kp S)
-        MACRO(md_comma_h, &kp COMMA &kp H)
 
         leader: leader {
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
-            ld_h       { sequence = <H>    ; bindings = <&md_comma_h>; };
             ld_section { sequence = <S>    ; bindings = <&kp LA(N6)>; };
             ld_exit    { sequence = <DOT>  ; bindings = <&md_exit>; };
             ld_haha    { sequence = <O>    ; bindings = <&md_haha>; };

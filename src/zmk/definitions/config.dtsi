@@ -44,11 +44,9 @@
 
 #define TEXT 27
 #define FUN 28
-
 #define SMART 29
-#define SYSTEM 30
 
-#define NAV_F 31
+#define NAV_F 30
 
 
 
