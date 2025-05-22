@@ -1,0 +1,87 @@
+
+## Introduction
+
+This keymap is a result of a few years of iteractive improvements, targeting what is best for my workflows. And as such, it probably won't be a good fit for most people. Feel free to get inspiration from it anyway.
+
+In the sections below, you can see my most common workflows and how this keymap is used for them.
+
+## Directives
+
+The following directives drove my choices when defining how this keymap should look like:
+#### The basics: Ergonomic, Split, Columnar Stagger
+This keymap is designed for ergonomic keyboards. It means, split, wireless or not, and columnar stagger, with at least 4 columns and 3 rows, plus 2 thumb keys on each side. It is also implemented on top of ZMK, using features like home row mods, sticky shift on a thumb key, caps word, macros, adaptive keys, and plenty of layers and combos.
+#### No lateral movements or uncomfortable stretches
+The main objective of this keymap, and the keyboards that I've built to use with it, is the comfort when typing. Lateral movements with the pinky or index fingers are not comfortable to me, as well as using the pinky finger to reach keys in the top or bottom rows. As a result, such keys were removed and the keyboards, layout and keymap evolved to have only 24 keys, in the format 1333+2.
+#### Trackball in the left hand, heavy load in the right hand
+Although I'm not a left-handed person, I got used to drive a Kensington Expert Mouse (actually a trackball) with my left hand, so I got my right hand free for most of the time, to take notes, drink some coffee or perform common actions, like copy and paste, using only the right side of the keyboard.
+#### English, but also Portuguese, plus VIM and Spreadsheets
+I type in English for at least a few hours per day, but Brazilian Portuguese is my home language, so I had to find, or design, an alpha layout that would work well for both languages. I also use VIM in all my editors (VSCode, Windsurf, IntelliJ and Obsidian), so it also has a huge influence in this keymap. I don't code very often today, but I write some Java code eventually, so good bindings for IntelliJ is also important. And finally, spreadsheets should be easy to use, since I had to work with them for a big portion of my week.
+
+## Typing
+
+Typing is obviously the most basic function of any keyboard, and there should be no surprises here, but given the directives above, it is not so simple. This keymap uses the Magic Romak layout, which uses two alpha layers. Other features like adaptive and repeat keys, sticky shift, caps word and sentence case will make the typing experience with this keymap pretty unique.
+
+### Two Alpha Layers
+
+The concept of two alpha layers for typing got famous with the [Ben Vallack](https://www.youtube.com/watch?v=dg2TT1OJlQs&list=PLCZYyvXAdQpsEWfa6OEBOhHn48SWgneoD) videos, which shows the concept as an alternative for typing with tiny boards, in his case, 16 keys only.
+
+This approach is based on the idea of using a sticky layer to get access to alphas that are least common, like q, z and j, for example. The alpha layout is divided into two layers and when tapping a home thumb key in the base layer, the secondary alpha layer is activated for one shot, which means the keyboard will return to the base layer automatically after the next key is released.
+
+The alternative to this approach is using combos for these uncommon letters, but it only works when you have just a few of them and it is far less fluid, which may break the typing flow or cause other problems like unintended triggers.
+
+In practice, using a sticky layer is not much different than using a dead key. With a dead key, pretty common in Portuguese, we type `'` and then `a` to get `á`, for example. With two alpha layers, I can have a macro that produces `á` in the secondary alpha layer, so that to get `á`, I also have to tap just two keys, the first one would be the home thumb key that activates the secondary alpha layer, and the second one could be the same key used to type `a`. This familiarity with dead keys made the transition to two alpha layers pretty easy for me.
+
+### Magic Romak
+
+#### Adaptive Keys
+
+#### Repeat Keys
+
+### Sticky Shift
+
+### CAPS Word and CAPS LINE
+
+### Sentense Case
+
+### Punctuation
+
+### Leader Key
+
+## Numbers
+
+### NumPad
+
+### NumWord
+
+### Brackets
+
+### Math Operators
+
+## Navigation
+
+### Enter, Tab, Esc
+
+### Copy, Paste, Select
+
+### Text Navigation
+
+### App Navigation
+
+### Window Management
+
+## Programming
+
+### VIM
+
+### Java
+
+### Smart Cases
+
+### Markdown
+
+### IntelliJ IDEA
+
+## Modeling
+
+### Fusion 360
+
