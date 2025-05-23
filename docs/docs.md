@@ -21,6 +21,8 @@ I type in English for at least a few hours per day, but Brazilian Portuguese is 
 
 Typing is obviously the most basic function of any keyboard, and there should be no surprises here, but given the directives above, it is not so simple. This keymap uses the Magic Romak layout, which uses two alpha layers. Other features like adaptive and repeat keys, sticky shift, caps word and sentence case will make the typing experience with this keymap pretty unique.
 
+![img](../img/alphas.png)
+
 ### Two Alpha Layers
 
 The concept of two alpha layers for typing got famous with the [Ben Vallack](https://www.youtube.com/watch?v=dg2TT1OJlQs&list=PLCZYyvXAdQpsEWfa6OEBOhHn48SWgneoD) videos, which shows the concept as an alternative for typing with tiny boards, in his case, 16 keys only.
@@ -33,9 +35,23 @@ In practice, using a sticky layer is not much different than using a dead key. W
 
 ### Magic Romak
 
+[Romak](https://github.com/rafaelromao/romak) is an alpha layout designed from scratch to be easy to use for both English and Portuguese, aiming to minimize the use of the inner index columns and pinky keys. As a result, it became easy to port it to 24 keys, using two alpha layers. As a further enhancement, adaptive keys where used to make V and H easier to type in both languages, since V is more common in Portuguese while H is more common in English. The end result is [Magic Romak](https://github.com/rafaelromao/romak/blob/main/MagicRomak.md).
+
 #### Adaptive Keys
 
+Adaptive Keys send different outputs depending on the previous typed keycode. For example, if the last keycode is a vowel, it outputs V, but if the last keycode is a consonant, it outputs H.
+
+The example above is exactly what the main Magic Key does in Magic Romak. This key replaces the H key in regular Romak, and makes it easier to type most words containing V or H, since V is predominant after vowels while H is predominant after consonants.
+
+In Magic Romak, there is also Reversed Magic Key, which does the oposite, H after vowels and V after consonants. This key replaces the V key in regular Romak.
+
+These Adaptive Keys are implemented using the [zmk-adaptive-key](https://github.com/urob/zmk-adaptive-key) module, and can be found in some other places in this keymap, to implement other smart behahiors, like the Alternate Repeat Key.
+
 #### Repeat Keys
+
+Repeat Key is [available in ZMK](https://zmk.dev/docs/keymaps/behaviors/key-repeat) as a behavior that repeats the last typed key or shortcut. It is super helpful to avoid [SFBs](https://semilin.github.io/blog/2023/layout_quality.html#h:e46323dd-62d8-4361-a0f9-039b31efe7aa) when typing words that contain repeated keys. But it can be made even more powerful if implemented as an adaptive key that will repeat the last key or shortcut by default, but that will produce another output when repeating the last one dose not make sense. Example, if tapped after `I`, the repeat key will produce `'` instead. To see more about the Adaptive Repeat Key in this keymap, check the [Magic Romak](https://github.com/rafaelromao/romak/blob/main/MagicRomak.md) page. 
+
+### Ç-Extensions
 
 ### Sticky Shift
 
@@ -58,6 +74,8 @@ In practice, using a sticky layer is not much different than using a dead key. W
 ### Math Operators
 
 ## Navigation
+
+### Modifiers
 
 ### Enter, Tab, Esc
 
