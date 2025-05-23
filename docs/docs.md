@@ -51,7 +51,13 @@ These Adaptive Keys are implemented using the [zmk-adaptive-key](https://github.
 
 Repeat Key is [available in ZMK](https://zmk.dev/docs/keymaps/behaviors/key-repeat) as a behavior that repeats the last typed key or shortcut. It is super helpful to avoid [SFBs](https://semilin.github.io/blog/2023/layout_quality.html#h:e46323dd-62d8-4361-a0f9-039b31efe7aa) when typing words that contain repeated keys. But it can be made even more powerful if implemented as an adaptive key that will repeat the last key or shortcut by default, but that will produce another output when repeating the last one dose not make sense. Example, if tapped after `I`, the repeat key will produce `'` instead. To see more about the Adaptive Repeat Key in this keymap, check the [Magic Romak](https://github.com/rafaelromao/romak/blob/main/MagicRomak.md) page. 
 
-### Ç-Extensions
+#### Ç-Extensions
+
+Cedila `Ç` is pretty common in Portuguese, but always comes before a vowel, usually `ã` or `õ`. Both are available as macros in the secondary alpha layer, as well as `ç`, so normally it would require two consecutive activations of the secondary alpha layer to type `çã` or `çõ`.
+
+To avoid that, a third alpha layer, containing macros for these two accented vowels, is automatically activated for one shot after `ç`. This is what I call the Ç-Extension layer. The keys for all other vowels are transparent in this layer, so it is still possible to type words like `açude` without any problem. For words like `açúcar`, on the other hand, a secondary activation of the secondary alpha layer would still be required though.
+
+It is also quite common to have it followed by either `ão` or `ões`, so macros can be used to type these two sentences easier as ç extentions.
 
 ### Sticky Shift
 
@@ -73,13 +79,19 @@ Repeat Key is [available in ZMK](https://zmk.dev/docs/keymaps/behaviors/key-repe
 
 ### Math Operators
 
-## Navigation
+## Shortcuts
 
 ### Modifiers
 
-### Enter, Tab, Esc
+### Shortcut Combos
 
-### Copy, Paste, Select
+### Common Apps
+
+### Meh and Hyper
+
+## Navigation
+
+### Enter, Tab, Esc
 
 ### Text Navigation
 
