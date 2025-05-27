@@ -50,7 +50,7 @@
 
         MACRO(mc_prev_word,              &macro_tap &kp LA(LEFT))
         MACRO(mc_next_word,              &macro_tap &kp LA(RIGHT))
-        MACRO(mc_del_word,               &macro_press &kp LA(DELETE) &macro_pause_for_release &macro_release &kp LA(BACKSPACE))
+        MACRO(mc_del_word,               &macro_press &kp LA(DELETE) &macro_pause_for_release &macro_release &kp LA(DELETE))
         MACRO(mc_bsp_word,               &macro_press &kp LA(BACKSPACE) &macro_pause_for_release &macro_release &kp LA(BACKSPACE))
 
         // Meh and Hyper

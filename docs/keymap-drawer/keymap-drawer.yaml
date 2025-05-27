@@ -295,7 +295,7 @@ layers:
       ]
     - { t: ▽, type: held }
     - { t: $$mdi:flash$$, s: "boot" }
-    - { t: $$mdi:keyboard-space$$ }
+    - { t: $$mdi:keyboard-space$$, h: raise }
     - { h: media, type: held alternate }
   media:
     - [

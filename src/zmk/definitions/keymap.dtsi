@@ -243,7 +243,7 @@
    &none               &mc_swapper         &mc_tabs            &mc_launcher        &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
    &lt TEXT INS        &kp LCTL            &kp LALT            &kp LSFT            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
    &none               &kp LGUI            &kp LGUI            &kp LGUI            &none               &none               &kp DEL             &kp HOME            &kp END             &none 
-                                           &none               &trans              &bootloader         &kp SPACE           &mo MEDIA           &none 
+                                           &none               &trans              &bootloader         &hlt RAI_CP SPACE   &mo MEDIA           &none 
                         >;
                 };
 
