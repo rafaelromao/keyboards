@@ -81,8 +81,6 @@
 
             ADAPTIVE(v      , &kp V      , A     E     I     O     U     )
             ADAPTIVE(v_s    , &kp V      , LS(A) LS(E) LS(I) LS(O) LS(U) )
-
-            ADAPTIVE(comma  , &mc_bks_leader    , COMMA)
         };
 
         magic_key_c: magic_key_c {
