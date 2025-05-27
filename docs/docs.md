@@ -54,16 +54,26 @@ Repeat Key is [available in ZMK](https://zmk.dev/docs/keymaps/behaviors/key-repe
 #### Ç-Extensions
 
 Cedila `Ç` is pretty common in Portuguese, but always comes before a vowel, usually `ã` or `õ`. Both are available as macros in the secondary alpha layer, as well as `ç`, so normally it would require two consecutive activations of the secondary alpha layer to type `çã` or `çõ`.
-
-To avoid that, a third alpha layer, containing macros for these two accented vowels, is automatically activated for one shot after `ç`. This is what I call the Ç-Extension layer. The keys for all other vowels are transparent in this layer, so it is still possible to type words like `açude` without any problem. For words like `açúcar`, on the other hand, a secondary activation of the secondary alpha layer would still be required though.
+i
+To avoid that, a third alpha layer, containing macros for these two accented vowels, is automatically activated for one shot after `ç`. This is what I call the *Ç-Extension* layer. The keys for all other vowels are transparent in this layer, so it is still possible to type words like `açude` without any problem. For words like `açúcar`, on the other hand, a secondary activation of the secondary alpha layer would still be required though.
 
 It is also quite common to have it followed by either `ão` or `ões`, so macros can be used to type these two sentences easier as ç extentions.
 
 ### Sticky Shift
 
-### CAPS Word and CAPS LINE
+*Sticky Shift*, also known as One Shot Shift, is a shift key that is activated tapping, instead of holding. It works like a dead key, we tap it and the next key we tap will be capitalized. It is much fluid and fast than holding shift down.
 
-### Sentense Case
+In this keymap, the Sticky Shift is present in a thumb key, in the right side of the board.
+
+### CAPS word and CAPS LINE
+
+*CAPS word* is a behavior that works like traditional Caps Lock, but it will be automatically deactivated when the current word ends. It can be activated double tapping the Sticky Shift key or through the Smart Layer.
+
+*CAPS LINE* is between *CAPS word* and the traditional Caps Lock, since it will also be automatically deactivated but only when the current line ends, usually with the Return key.
+
+### Sentence Case
+
+*Sentence Case* is a feature that automatically capitalize the next word after `space` in case it is preceeded by `.`, `?` or `!`. In case the *Sticky Shift* is tapped after this `space`, it will be ignored. This feature makes it much easier to start new sentences and reduce a lot the use of the *Sticky Shift* key.
 
 ### Punctuation
 
