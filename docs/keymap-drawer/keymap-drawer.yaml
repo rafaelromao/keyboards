@@ -721,8 +721,8 @@ combos:
       a: mid,
       layers: [nav],
     }
-  - { p: [17, 18], k: "↓ ⇤", a: mid, layers: [nav] }
-  - { p: [18, 19], k: "↓ ⇥", a: mid, layers: [nav] }
+  - { p: [17, 18], k: "↓ ⇥", a: mid, layers: [nav] }
+  - { p: [18, 19], k: { h: lower }, a: mid, layers: [nav] }
 
   - { p: [4, 5], k: "⎋", a: mid, layers: [mehs] }
   - { p: [1, 2], k: meh k, a: mid, layers: [mehs] }

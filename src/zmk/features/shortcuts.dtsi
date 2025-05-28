@@ -51,7 +51,6 @@
         // Navigation
 
         MACRO(mc_up_end_del,             &macro_tap &kp UP &kp END &kp DEL)
-        MACRO(mc_down_home,              &macro_tap &kp DOWN &kp HOME)
         MACRO(mc_down_end,               &macro_tap &kp DOWN &kp END)
 
         // Meh and Hyper
