@@ -27,7 +27,7 @@
 #define CASE_A2 15
 #define CASE_CCEDIL 16
 
-#define SHORTCUTS 17
+#define SHORTS 17
 #define MEHS 18
 
 #define PLAIN1 19

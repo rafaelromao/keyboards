@@ -33,6 +33,10 @@ The alternative to this approach is using combos for these uncommon letters, but
 
 In practice, using a sticky layer is not much different than using a dead key. With a dead key, pretty common in Portuguese, we type `'` and then `a` to get `á`, for example. With two alpha layers, I can have a macro that produces `á` in the secondary alpha layer, so that to get `á`, I also have to tap just two keys, the first one would be the home thumb key that activates the secondary alpha layer, and the second one could be the same key used to type `a`. This familiarity with dead keys made the transition to two alpha layers pretty easy for me.
 
+### Alpha Combos
+
+All alphas moved to the secondary alpha layer are also available as combos in the base layer, but they are not usually used for typing, but for commands instead, like VIM bindings for example.
+
 ### Magic Romak
 
 [Romak](https://github.com/rafaelromao/romak) is an alpha layout designed from scratch to be easy to use for both English and Portuguese, aiming to minimize the use of the inner index columns and pinky keys. As a result, it became easy to port it to 24 keys, using two alpha layers. As a further enhancement, adaptive keys where used to make V and H easier to type in both languages, since V is more common in Portuguese while H is more common in English. The end result is [Magic Romak](https://github.com/rafaelromao/romak/blob/main/MagicRomak.md).
@@ -71,15 +75,22 @@ In this keymap, the Sticky Shift is present in a thumb key, in the right side of
 
 *CAPS LINE* is between *CAPS word* and the traditional Caps Lock, since it will also be automatically deactivated but only when the current line ends, usually with the Return key.
 
+### Punctuation
+
+`.` and `,` are available in the base layer, while `?`, `!` and `:` are easily reachable in the *raise* layer, accessed only with the right hand. `;` is available in a combo of `,` and `.`.
+There also combos in the secondary alpha layer for `_`, `?`, `!`, `-` too. Brakets are available in the *lower* layer. More on that later.
+
 ### Sentence Case
 
-*Sentence Case* is a feature that automatically capitalize the next word after `space` in case it is preceeded by `.`, `?` or `!`. In case the *Sticky Shift* is tapped after this `space`, it will be ignored. This feature makes it much easier to start new sentences and reduce a lot the use of the *Sticky Shift* key.
-
-### Punctuation
+*Sentence Case* is a feature that automatically capitalize the next word after `space` in case it is preceeded by `.`, `?` or `!`. In case the *Sticky Shift* is tapped after this `space`, it will be ignored. This feature makes it much easier to start new sentences and reduce a lot the use of the *Sticky Shift* key. This feature is implemented using adaptive keys to trigger it and a layer to execute the capitalization.
 
 ### Leader Key
 
+*Leader Key* is available through an external module, [zmk-leader-key](https://github.com/urob/zmk-leader-key) and allow macros to be triggered through a sequence of key strokes. The leader key is available in the *Shortcuts* layer and is used to type sequences of characters that are too frequent and not always easy to type.
+
 ## Numbers
+
+![img](../img/numbers.png)
 
 ### NumPad
 

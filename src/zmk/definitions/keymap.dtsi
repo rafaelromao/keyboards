@@ -14,8 +14,8 @@
                      display-name = "ROMAK";
                      bindings = <
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp Y
-   &lt SHORTCUTS D     &mt LCTL N          &mt LALT S          &mt LSFT T          &kp W               &kp Z               &mt LSFT R          &mt LALT A          &mt LCTL E          &lt SHORTCUTS I      
-   &mc_qu              &mt LGUI F          &mt LGUI C          &mt LGUI P          &kp V               &kp J               &ht_magic LGUI 0    &kp COMMA           &th_dot 0 0         &kp H
+   &lt SHORTS D        &mt LCTL N          &mt LALT S          &mt LSFT T          &kp W               &kp Z               &mt LSFT R          &mt LALT A          &mt LCTL E          &lt SHORTS I      
+   &mc_qu              &mt LGUI F          &mt LGUI C          &mt LGUI P          &kp V               &kp J               &ht_magic LGUI 0    &th_comma SHORTS 0  &th_dot 0 0         &kp H
                                            &key_repeat         &ht_repeat NAV 0    &ltn_low_spc 0 0    &msl_rai_a2 0 0     &ht_shift MEDIA 0   &key_repeat
                         >;
                 };
@@ -42,8 +42,8 @@
                      display-name = "CONST";
                      bindings = <
    &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y)
-   &lt SHORTCUTS RS(D) &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt LSFT RS(R)      &mt LALT RS(A)      &mt LCTL RS(E)      &lt SHORTCUTS RS(I) 
-   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &kp COMMA           &th_dot 0 0         &trans
+   &lt SHORTS RS(D)    &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt LSFT RS(R)      &mt LALT RS(A)      &mt LCTL RS(E)      &lt SHORTS RS(I) 
+   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma SHORTS 0  &th_dot 0 0         &trans
                                            &trans              &trans              &msk_unds LOWER 0   &th_case_a2 RAISE 0 &trans              &trans
                            >;
                 };
@@ -78,8 +78,8 @@
                      display-name = "CASE";
                      bindings = <
    &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y)
-   &lt SHORTCUTS RS(D) &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt LSFT RS(R)      &mt LALT RS(A)      &mt LCTL RS(E)      &lt SHORTCUTS RS(I) 
-   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &kp COMMA           &th_dot 0 0         &kp RS(H)
+   &lt SHORTS RS(D)    &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt LSFT RS(R)      &mt LALT RS(A)      &mt LCTL RS(E)      &lt SHORTS RS(I) 
+   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma SHORTS 0  &th_dot 0 0         &kp RS(H)
                                            &trans              &trans              &msk_spc LOWER 0    &th_case_a2 RAISE 0 &th_cancel MEDIA 0  &trans
                         >;
                 };
@@ -87,8 +87,8 @@
                      display-name = "CASE";
                      bindings = <
    &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y)
-   &lt SHORTCUTS RS(D) &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt LSFT RS(R)      &mt LALT RS(A)      &mt LCTL RS(E)      &lt SHORTCUTS RS(I) 
-   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &kp COMMA           &th_dot 0 0         &kp RS(H)
+   &lt SHORTS RS(D)    &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt LSFT RS(R)      &mt LALT RS(A)      &mt LCTL RS(E)      &lt SHORTS RS(I) 
+   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma SHORTS 0  &th_dot 0 0         &kp RS(H)
                                            &trans              &trans              &trans              &th_case_a2 RAISE 0 &th_cancel MEDIA 0  &trans
                                            
                            >;
@@ -134,7 +134,7 @@
                      bindings = <
    &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &kp LS(Y) 
    &kp LS(D)           &mt LCTL LS(N)      &mt LALT LS(S)      &mt LSFT LS(T)      &kp LS(W)           &kp LS(Z)           &mt LSFT LS(R)      &mt LALT LS(A)      &mt LCTL LS(E)      &kp LS(I) 
-   &mc_qu_s            &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c LGUI 0  &kp COMMA           &th_dot 0 0         &kp LS(H) 
+   &mc_qu_s            &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c LGUI 0  &th_comma SHORTS 0  &th_dot 0 0         &kp LS(H) 
                                            &trans              &trans              &trans              &trans              &trans              &trans
                            >;
                 };
@@ -183,7 +183,7 @@
    &none              &mc_emoji           &mc_files            &mc_screenshot      &none               &none               &kp C_SLEEP         &to LOWER             &to PLAIN1         &none    
    &none              &mc_zoom_out        &mc_zoom_in         &mc_reset_zoom      &none               &none               &mc_lock            &to NAV_F             &to MEDIA          &none
    &none              &mc_close           &mc_refresh         &mc_reopen          &none               &none               &leader             &to FUN               &to MEHS           &none 
-                                          &none               &ht_repeat TEXT 0   &lt FUN SPACE       &lt SMART SPACE     &ht_repeat TEXT 0   &none 
+                                          &none               &ht_repeat TEXT 0   &th_comma_spc FUN 0 &lt SMART SPACE     &ht_repeat TEXT 0   &none 
                            >;
                 };
 

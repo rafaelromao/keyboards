@@ -10,19 +10,21 @@
         // Base
 
         SHIFT_MORPH(mm_semi,          &kp SEMI, &kp COLON)
-        MACRO(mc_end_semi,        &kp END &kp SEMI)
+        MACRO(mc_end_semi,            &kp END &kp SEMI)
         TAPHOLD_TP(th_semi,           &mm_semi, &mc_end_semi)
 
-        MACRO(mc_end_semi_ent,    &kp END &kp SEMI &kp ENTER)
+        MACRO(mc_end_semi_ent,        &kp END &kp SEMI &kp ENTER)
 
-        MACRO(mc_h,               &kp H)
+        MACRO(mc_h,                   &kp H)
         TAPHOLD_TP(th_hyper_h,        &mc_h, &mc_hyper)
 
-        MACRO(mc_comma,           &kp COMMA)
+        MACRO(mc_comma,               &kp COMMA)
+        MACRO(mc_comma_spc,           &kp COMMA &kp SPACE)
         LAYERTAP_HP(th_comma,         &mm_comma_meh)
+        LAYERTAP_TP(th_comma_spc,     &mc_comma_spc)
 
-        MACRO(mc_dot,             &kp DOT )
-        MACRO(mc_end_dot,         &kp END &kp DOT )
+        MACRO(mc_dot,                 &kp DOT )
+        MACRO(mc_end_dot,             &kp END &kp DOT )
         TAPHOLD_TP(th_dot,            &mm_dot_meh, &mc_end_dot)
 
         // Lower

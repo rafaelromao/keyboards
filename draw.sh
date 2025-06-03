@@ -21,6 +21,8 @@ keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s alpha1 --combos
 
 keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s alpha1 alpha2 ç-extension shifted1 shifted2 -o ./tmp/alphas.svg ./tmp/keymap-drawer-noseparatecombos.yaml
 
+keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s lower -o ./tmp/numbers.svg ./tmp/keymap-drawer-noseparatecombos.yaml
+
 keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s lower raise -o ./tmp/symbols.svg ./tmp/keymap-drawer-noseparatecombos.yaml
 
 keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s func -o ./tmp/functions.svg ./tmp/keymap-drawer-noseparatecombos.yaml
@@ -39,6 +41,7 @@ keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s desktop-managem
 inkscape --export-type png --export-filename ./img/overview.png --export-dpi 300 --export-background=white ./tmp/overview.svg
 inkscape --export-type png --export-filename ./img/separatecombos.png --export-dpi 300 --export-background=white ./tmp/separatecombos.svg
 inkscape --export-type png --export-filename ./img/alphas.png --export-dpi 300 --export-background=white ./tmp/alphas.svg
+inkscape --export-type png --export-filename ./img/numbers.png --export-dpi 300 --export-background=white ./tmp/numbers.svg
 inkscape --export-type png --export-filename ./img/symbols.png --export-dpi 300 --export-background=white ./tmp/symbols.svg
 inkscape --export-type png --export-filename ./img/functions.png --export-dpi 300 --export-background=white ./tmp/functions.svg
 inkscape --export-type png --export-filename ./img/shortcuts.png --export-dpi 300 --export-background=white ./tmp/shortcuts.svg

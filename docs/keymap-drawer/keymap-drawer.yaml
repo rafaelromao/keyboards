@@ -18,7 +18,7 @@ layers:
         { t: c, h: $$mdi:apple-keyboard-command$$ },
         { h: $$mdi:apple-keyboard-command$$, t: p },
         { h: $$mdi:apple-keyboard-command$$, t: "h|v", s: magic },
-        { t: "," },
+        { t: ",", h: shortcuts },
         { t: ., h: "⇥ ." },
       ]
     - { t: $$mdi:repeat$$, s: repeat, h: nav }
@@ -206,11 +206,11 @@ layers:
         { t: $$mdi:refresh$$, s: refresh},
         { t: $$mdi:backup-restore$$, s: reopen },
         { t: $$mdi:ray-start-arrow$$, s: "leader" },
-        { t: func },
+        { t: func, type: held alternate },
         { t: mehs },
       ]
     - { h: text, s: repeat, t: $$mdi:repeat$$ }
-    - { t: $$mdi:keyboard-space$$, h: func }
+    - { t: ",␣", h: func }
     - { t: $$mdi:keyboard-space$$, h: smart }
     - { h: text, s: repeat, t: $$mdi:repeat$$ }
   mehs:
