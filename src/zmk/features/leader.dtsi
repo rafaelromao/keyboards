@@ -31,6 +31,6 @@
             ld_kkkk    { sequence = <I>    ; bindings = <&md_kkkk>; };
             ld_hugs    { sequence = <C F>  ; bindings = <&md_hugs>; };
             ld_otask   { sequence = <S T>  ; bindings = <&md_otask>; };
-            ld_oref    { sequence = <S N>  ; bindings = <&md_oref>; };
+            ld_oref    { sequence = <S P>  ; bindings = <&md_oref>; };
         };
 };
