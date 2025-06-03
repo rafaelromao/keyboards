@@ -19,15 +19,18 @@
         MACRO(md_hehe, &kp H &kp E &kp H &kp E)
         MACRO(md_kkkk, &kp K &kp K &kp K &kp K)
         MACRO(md_hugs, &kp LBKT &kp RBKT &kp SQT &kp S)
+        MACRO(md_otask, &kp MINUS &kp SPACE &kp LBKT &kp SPACE &kp RBKT &kp SPACE)
+        MACRO(md_oref, &kp LBKT &kp LBKT)
 
         leader: leader {
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
-            ld_section { sequence = <S>    ; bindings = <&kp LA(N6)>; };
             ld_exit    { sequence = <DOT>  ; bindings = <&md_exit>; };
             ld_haha    { sequence = <O>    ; bindings = <&md_haha>; };
             ld_hehe    { sequence = <U>    ; bindings = <&md_hehe>; };
             ld_kkkk    { sequence = <I>    ; bindings = <&md_kkkk>; };
             ld_hugs    { sequence = <C F>  ; bindings = <&md_hugs>; };
+            ld_otask   { sequence = <S T>  ; bindings = <&md_otask>; };
+            ld_oref    { sequence = <S N>  ; bindings = <&md_oref>; };
         };
 };
