@@ -41,12 +41,11 @@
 #define RAI_CP 25
 
 #define MEDIA 26
+#define NAV_CP 27
 
-#define TEXT 27
-#define FUN 28
-#define SMART 29
-
-#define NAV_F 30
+#define TEXT 28
+#define FUN 29
+#define SMART 30
 
 
 
