@@ -135,7 +135,7 @@
    &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &kp LS(Y) 
    &kp LS(D)           &mt LCTL LS(N)      &mt LALT LS(S)      &mt LSFT LS(T)      &kp LS(W)           &kp LS(Z)           &mt LSFT LS(R)      &mt LALT LS(A)      &mt LCTL LS(E)      &kp LS(I) 
    &mc_qu_s            &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c LGUI 0  &th_comma SHORTS 0  &th_dot 0 0         &kp LS(H) 
-                                           &trans              &trans              &trans              &trans              &trans              &trans
+                                           &trans              &trans              &trans              &th_sft_a2 RAI_CP 0 &trans              &trans
                            >;
                 };
                 ccedil_layer {
