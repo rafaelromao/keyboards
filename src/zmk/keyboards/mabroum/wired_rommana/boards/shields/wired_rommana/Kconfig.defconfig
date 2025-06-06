@@ -1,0 +1,19 @@
+# Copyright (c) 2021 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if SHIELD_WIRED_ROMMANA_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "Wired Rommana"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_WIRED_ROMMANA_LEFT || SHIELD_WIRED_ROMMANA_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif

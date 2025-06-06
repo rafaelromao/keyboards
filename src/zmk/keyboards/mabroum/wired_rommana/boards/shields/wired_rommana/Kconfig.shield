@@ -1,0 +1,8 @@
+# Copyright (c) 2021 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+config SHIELD_WIRED_ROMMANA_LEFT
+    def_bool $(shields_list_contains,wired_rommana_left)
+
+config SHIELD_WIRED_ROMMANA_RIGHT
+    def_bool $(shields_list_contains,wired_rommana_right)

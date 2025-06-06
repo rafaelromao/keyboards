@@ -90,11 +90,19 @@ There also combos in the secondary alpha layer for `_`, `?`, `!`, `-` too. Brake
 
 ## Numbers
 
+The first *Symbol* layer in this keymap is the *lower* layer, that along with the *raise* layer 
+
 ![img](../img/numbers.png)
 
 ### NumPad
 
+Numbers are arranged as a classic numpad, with 0 in the thumb. It might not be the optimal configuration, considering what numbers are the most frequent, but allows me to use my 20+ years of muscle memory.
+
 ### NumWord
+
+NumWord is a smart behavior that allows me to type a sequence of numbers and automatically return to the base layer after pressing a word breaking key, like space or enter.
+
+It is triggered using a combo in the base layer, so it is quite fast to activate. 
 
 ### Brackets
 
