@@ -15,7 +15,7 @@ yq -i 'del(.combos[] | select(.k.s != "vim"))' ./tmp/keymap-drawer-onlyvimcombos
 # Generate SVG files using keymap
 keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -o ./tmp/all.svg ./docs/keymap-drawer/keymap-drawer.yaml
 
-keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s alpha1 alpha2 lower raise shortcuts mehs plain1 plain2 nav media text smart func -o ./tmp/overview.svg ./docs/keymap-drawer/keymap-drawer.yaml
+keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s alpha1 alpha2 lower raise shortcuts nav media text smart func -o ./tmp/overview.svg ./docs/keymap-drawer/keymap-drawer.yaml
 
 keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s alpha1 --combos-only -o ./tmp/separatecombos.svg ./tmp/keymap-drawer-onlyseparatecombos.yaml
 

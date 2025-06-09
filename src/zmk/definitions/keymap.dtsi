@@ -243,7 +243,7 @@
    &none               &mc_swapper         &mc_tabs            &mc_launcher        &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
    &lt TEXT INS        &kp LCTL            &kp LALT            &kp LSFT            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
    &none               &kp LGUI            &kp LGUI            &kp LGUI            &none               &none               &kp DEL             &kp HOME            &kp END             &none 
-                                           &none               &trans              &bootloader         &hlt RAI_CP SPACE   &mo MEDIA           &none 
+                                           &none               &trans              &none               &hlt RAI_CP SPACE   &mo MEDIA           &none 
                         >;
                 };
 
@@ -272,7 +272,7 @@
    &none               &none               &mkp LCLK           &mkp RCLK           &none               &none               &mc_hand            &kp ENTER           &kp ESC             &none
    &none               &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &none               &mc_mic             &mt C_MUTE C_VOL_DN &kp C_VOL_UP        &th_cam TEXT 0
    &none               &msc SCRL_DOWN      &mmv MOVE_DOWN      &msc SCRL_UP        &none               &none               &kp C_PP            &kp C_PREV          &kp C_NEXT          &none 
-                                           &none               &mo NAV_CP          &kp SPACE           &bootloader         &trans              &none 
+                                           &none               &mo NAV_CP          &kp SPACE           &none               &trans              &none 
                            >;
                 };
                 navigation_copy_layer {
@@ -300,7 +300,7 @@
    &none               &bt BT_PRV          &bt BT_NXT          &bt BT_SEL 0        &none               &none               &kp F7              &kp F8              &kp F9              &none 
    &none               &hsk RCTL LCTL      &hsk RALT LALT      &hsk RSFT LSFT      &none               &none               &kp F4              &kp F5              &kp F6              &none      
    &none               &hsk RGUI LGUI      &hsk RGUI LGUI      &hsk RGUI LGUI      &none               &none               &kp F1              &kp F2              &kp F3              &none
-                                           &none               &none               &none               &none               &key_repeat         &none
+                                           &none               &bootloader         &none               &none               &key_repeat         &none
                         >;
                 };
 
@@ -311,7 +311,7 @@
    &none               &none               &tc_smart_word      &tc_smart_line      &none               &none               &mc_vim_replace     &mc_o_esc           &mc_sft_o_esc       &none 
    &none               &tc_snake_case      &tc_constant_case   &tc_kebab_case      &none               &none               &kp LS(V)           &kp V               &kp LC(V)           &none
    &none               &tc_slash_case      &tc_pascal_case     &tc_camel_case      &none               &none               &mc_dqt0p           &mc_dqtplusp        &mc_dqtplusy        &none
-                                           &none               &key_repeat         &mc_spc_esc         &none               &none               &none
+                                           &none               &key_repeat         &mc_spc_esc         &none               &bootloader         &none
                         >;
                 };
 

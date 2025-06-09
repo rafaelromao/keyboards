@@ -189,7 +189,7 @@ layers:
         { t: $$mdi:content-cut$$, s: clip },
         { t: $$mdi:power-sleep$$, s: "sleep" },
         { t: lower },
-        { t: plain1 },
+        { t: alpha1, h: plain },
       ]
     - [
         { type: held },
@@ -294,7 +294,7 @@ layers:
         { t: $$mdi:format-horizontal-align-right$$, s: end },
       ]
     - { t: ▽, type: held }
-    - { t: $$mdi:flash$$, s: "boot" }
+    - null
     - { t: $$mdi:keyboard-space$$, h: raise }
     - { h: media, type: held alternate }
   media:
@@ -326,7 +326,7 @@ layers:
       ]
     - { h: nav }
     - { t: $$mdi:keyboard-space$$ }
-    - { t: $$mdi:flash$$, s: "boot" }
+    - null
     - { type: held }
   text:
     - [
@@ -386,7 +386,7 @@ layers:
         "F2",
         "F3",
       ]
-    - null
+    - { t: $$mdi:flash$$, s: "boot" }
     - type: held
     - null
     - { t: $$mdi:repeat$$, s: repeat  }
@@ -420,7 +420,7 @@ layers:
     - { t: $$mdi:repeat$$, s: repeat  }
     - { t: $$mdi:keyboard-space$$, h: normal, s: vim }
     - type: held
-    - null
+    - { t: $$mdi:flash$$, s: "boot" }
 combos:
   - {
       p: [0, 1],
