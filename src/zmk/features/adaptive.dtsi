@@ -10,39 +10,32 @@
         
         // ******************** REPEAT KEY ******************** //
 
-        MACRO(mc_bs_h, &kp BACKSPACE &kp H)
-        MACRO(mc_bs_v, &kp BACKSPACE &kp V)
-        MACRO(mc_bs_c_h, &kp BACKSPACE &kp RS(H))
-        MACRO(mc_bs_s_h, &kp BACKSPACE &kp LS(H))
-        MACRO(mc_bs_c_v, &kp BACKSPACE &kp RS(V))
-        MACRO(mc_bs_s_v, &kp BACKSPACE &kp LS(V))
-        
         alternate_repeat_key: alternate_repeat_key {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             bindings = <&key_repeat>;
 
-            ADAPTIVE(a_h      , &kp H       , A          )
-            ADAPTIVE(a_h_s    , &kp H       , LS(A)      )
-            ADAPTIVE(a_h_c    , &kp RS(H)   , RS(A)      )
-            ADAPTIVE(i_sqo_s  , &mc_sqo     , LS(I)      )
-            ADAPTIVE(i_sqo_c  , &mc_sqo     , RS(I)      )
-            ADAPTIVE(space_v  , &kp V       , SPACE      )
-            ADAPTIVE(j_aacu   , &ac_aacu    , J          )
-            ADAPTIVE(j_aacu_s , &ac_aacu    , LS(J)      )
-            ADAPTIVE(j_aacu_c , &ac_aacu_c  , RS(J)      )
-            ADAPTIVE(y_d      , &kp D       , Y          )
-            ADAPTIVE(y_d_s    , &kp D       , LS(Y)      )
-            ADAPTIVE(y_d_c    , &kp RS(D)   , RS(Y)      )
-            ADAPTIVE(x_iacu   , &ac_iacu    , X          )
-            ADAPTIVE(x_iacu_s , &ac_iacu    , LS(X)      )
-            ADAPTIVE(x_iacu_c , &ac_iacu_c  , RS(X)      )
-            ADAPTIVE(h_v      , &mc_bs_v    , H          )
-            ADAPTIVE(h_v_s    , &mc_bs_s_v  , LS(H)      )
-            ADAPTIVE(h_v_c    , &mc_bs_c_v  , RS(H)      )
-            ADAPTIVE(v_h      , &mc_bs_h    , V          )
-            ADAPTIVE(v_h_s    , &mc_bs_s_h  , LS(V)      )
-            ADAPTIVE(v_h_c    , &mc_bs_c_h  , RS(V)      )
+            ADAPTIVE(a_h      , &kp H        , A          )
+            ADAPTIVE(a_h_s    , &kp H        , LS(A)      )
+            ADAPTIVE(a_h_c    , &kp RS(H)    , RS(A)      )
+            ADAPTIVE(i_sqo_s  , &mc_sqo      , LS(I)      )
+            ADAPTIVE(i_sqo_c  , &mc_sqo      , RS(I)      )
+            ADAPTIVE(space_v  , &kp V        , SPACE      )
+            ADAPTIVE(j_aacu   , &ac_aacu     , J          )
+            ADAPTIVE(j_aacu_s , &ac_aacu     , LS(J)      )
+            ADAPTIVE(j_aacu_c , &ac_aacu_c   , RS(J)      )
+            ADAPTIVE(y_d      , &kp D        , Y          )
+            ADAPTIVE(y_d_s    , &kp D        , LS(Y)      )
+            ADAPTIVE(y_d_c    , &kp RS(D)    , RS(Y)      )
+            ADAPTIVE(x_iacu   , &ac_iacu     , X          )
+            ADAPTIVE(x_iacu_s , &ac_iacu     , LS(X)      )
+            ADAPTIVE(x_iacu_c , &ac_iacu_c   , RS(X)      )
+            ADAPTIVE(h_os2    , &mc_otiles   , H          )
+            ADAPTIVE(h_os2_s  , &mc_otiles   , LS(H)      )
+            ADAPTIVE(h_os2_c  , &mc_otiles_c , RS(H)      )
+            ADAPTIVE(v_os2    , &sl ALPHA2   , V          )
+            ADAPTIVE(v_os2_s  , &sl SFT_A2   , LS(V)      )
+            ADAPTIVE(v_os2_c  , &sl CASE_A2  , RS(V)      )
         };
 
         // Alt repeat key for accented vowels and macros from the secondary alpha layer.
