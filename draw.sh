@@ -49,3 +49,4 @@ inkscape --export-type png --export-filename ./img/navigation.png --export-dpi 3
 inkscape --export-type png --export-filename ./img/vim.png --export-dpi 300 --export-background=white ./tmp/vim.svg
 inkscape --export-type png --export-filename ./img/mehs.png --export-dpi 300 --export-background=white ./tmp/mehs.svg
 inkscape --export-type png --export-filename ./img/window.png --export-dpi 300 --export-background=white ./tmp/window.svg
+inkscape --export-type png --export-filename ./img/all.png --export-dpi 300 --export-background=white ./tmp/all.svg
