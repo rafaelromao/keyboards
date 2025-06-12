@@ -640,6 +640,11 @@ combos:
       draw_separate: true,
     }
 
+  - { p: [17, 11], k: { t: $$mdi:arrow-right$$ }, layers: [alpha1], draw_separate: true }
+  - { p: [17, 11, 12], k: { t: $$mdi:format-horizontal-align-right$$ }, layers: [alpha1], draw_separate: true }
+  - { p: [10, 4], k: { t: $$mdi:arrow-left$$ }, layers: [alpha1], draw_separate: true }
+  - { p: [10, 4, 5], k: { t: $$mdi:format-horizontal-align-left$$ }, layers: [alpha1], draw_separate: true }
+
   - { p: [0, 1], k: "⇥{ ⏎", a: mid, layers: [numbers] }
   - { p: [1, 2], k: { t: "::", h: "⇥ ::" }, a: mid, layers: [numbers] }
   - { p: [3, 4], k: { t: "G", s: "vim" }, a: mid, layers: [numbers] }

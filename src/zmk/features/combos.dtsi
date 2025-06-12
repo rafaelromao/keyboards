@@ -49,6 +49,10 @@
         COMBO(cb_selall,        RBM RBR R0,      &mc_selall,             ALL_LAYERS)
         COMBO(cb_selcopy,       RHI RHM RHR R0,  &mc_selcopy,            ALL_LAYERS)
         COMBO(cb_selpaste,      RBI RBM RBR R0,  &mc_selpaste,           ALL_LAYERS)
+        COMBO(cb_right,         RBI RHM,         &kp RIGHT,              ALL_LAYERS)
+        COMBO(cb_end,           RBI RHM RHR,     &kp END,                ALL_LAYERS)
+        COMBO(cb_left,          RHI RTM,         &kp LEFT,               ALL_LAYERS)
+        COMBO(cb_home,          RHI RTM RTR,     &kp HOME,               ALL_LAYERS)
 
         COMBO(cb_numword,       LBR LBM,         &lt_num_word NAV 0,     ALPHA1_LAYERS)
         COMBO(cd_ca_nav,        LHR LHM L1,      &mc_ca_nav,             ALPHA1_LAYERS)
