@@ -305,7 +305,7 @@ combos:
   - { p: [11, 12], k: orbit, a: mid, w: 40, layers: [fusion360-meh] }
   - {
       p: [18, 19],
-      k: { t: lower, s: auto-layer },
+      k: { t: numbers, s: auto-layer },
       a: mid,
       w: 40,
       layers: [fusion360-meh],

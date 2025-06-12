@@ -56,8 +56,8 @@
         // Meh and Hyper
 
         MACRO(mc_meh_comma,              &macro_tap &kp LC(LA(LS(SQT))))
-        MODTAP_TP(th_meh_comm,           &mc_meh_comma)
+        MODTAP_TP(mt_meh_comm,           &mc_meh_comma)
         MACRO(mc_meh_dot,                &macro_tap &kp LC(LA(LS(BACKSLASH))))
-        MODTAP_TP(th_meh_dot,            &mc_meh_dot)
+        MODTAP_TP(mt_meh_dot,            &mc_meh_dot)
    };
 };

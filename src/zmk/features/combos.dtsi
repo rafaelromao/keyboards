@@ -50,7 +50,7 @@
         COMBO(cb_selcopy,       RHI RHM RHR R0,  &mc_selcopy,            ALL_LAYERS)
         COMBO(cb_selpaste,      RBI RBM RBR R0,  &mc_selpaste,           ALL_LAYERS)
 
-        COMBO(cb_numword,       LBR LBM,         &ht_num_word NAV 0,     ALPHA1_LAYERS)
+        COMBO(cb_numword,       LBR LBM,         &lt_num_word NAV 0,     ALPHA1_LAYERS)
         COMBO(cd_ca_nav,        LHR LHM L1,      &mc_ca_nav,             ALPHA1_LAYERS)
         COMBO(cd_gcs_nav,       LBR LHM LHI L1,  &mc_gcs_nav,            ALPHA1_LAYERS)
         COMBO(cd_cag_nav,       LHR LHM LBI L1,  &mc_cag_nav,            ALPHA1_LAYERS)
@@ -97,8 +97,8 @@
         COMBO(cb_meh_j,         RBI RBM,         &mc_meh_j,              MEHS)
         COMBO(cb_meh_q,         LHR LHM,         &mc_meh_q,              MEHS)
         COMBO(cb_meh_y,         RHR RHM,         &mc_meh_y,              MEHS)
-        COMBO(cb_lower_cl,      LBM LBR,         &tc_num_word_cp,        MEHS)
-        COMBO(cb_lower_cr,      RBM RBR,         &tc_num_word_cp,        MEHS)
+        COMBO(cb_numbers_cl,    LBM LBR,         &tc_num_word_cp,        MEHS)
+        COMBO(cb_numbers_cr,    RBM RBR,         &tc_num_word_cp,        MEHS)
         COMBO(cd_meh_spc,       LHR LHM LHI,     &mc_meh_space,          MEHS)
         COMBO(cd_hyp_spc,       LBR LBM LBI,     &mc_hyper_space,        MEHS)
 
@@ -110,7 +110,7 @@
 
         COMBO(cb_braces_new,    LTR LTM,         &mc_braces_new,         NUM_LAYERS)
         COMBO(cb_pars,          LHR LHM,         &th_pars 0 0,           NUM_LAYERS)
-        COMBO(cb_brackets,      LBR LBM,         &th_brackets NAV 0,     NUM_LAYERS)
+        COMBO(cb_brackets,      LBR LBM,         &lt_brackets NAV 0,     NUM_LAYERS)
         COMBO(cb_colon_colon,   LTM LTI,         &th_dcolon 0 0,         NUM_LAYERS)
         COMBO(cb_and,           LHI LHM,         &th_and 0 0,            NUM_LAYERS)
         COMBO(cb_or,            LBI LBM,         &th_or 0 0,             NUM_LAYERS)
@@ -168,11 +168,11 @@
         COMBO(cb_shiftv,        RBM RBR,         &kp LS(V),              TEXT)
         COMBO(cb_ctrlv,         RBI RBM,         &kp LC(V),              TEXT)
 
-        COMBO(cb_lower_nav,     LBR LBM,         &mo NUM_CP,             NAV_LAYERS)
+        COMBO(cb_numbers_nav,   LBR LBM,         &mo NUM_CP,             NAV_LAYERS)
         COMBO(cd_ca,            LHR LHM,         &kp LC(LALT),           NAV_LAYERS)
 
         COMBO(cb_down_end,      RBI RBM,         &mc_down_end,           NAV_LAYERS)
-        COMBO(cb_lower,         RBM RBR,         &mo NUM_CP,             NAV_LAYERS)
+        COMBO(cb_numbers,       RBM RBR,         &mo NUM_CP,             NAV_LAYERS)
         COMBO(cb_up_end_del,    RTM RTI,         &mc_up_end_del,         NAV_LAYERS)
         COMBO(cb_page_down,     RHM RHI,         &kp PAGE_DOWN,          NAV_LAYERS)
         COMBO(cb_page_up,       RHM RHR,         &kp PAGE_UP,            NAV_LAYERS)

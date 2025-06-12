@@ -15,7 +15,7 @@
                      bindings = <
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp Y
    &lt SHORTS D        &mt LCTL N          &mt LALT S          &mt LSFT T          &kp W               &kp Z               &mt LSFT R          &mt LALT A          &mt LCTL E          &lt SHORTS I      
-   &mc_qu              &mt LGUI F          &mt LGUI C          &mt LGUI P          &kp V               &kp J               &ht_magic LGUI 0    &th_comma SHORTS 0  &th_dot 0 0         &kp H
+   &mc_qu              &mt LGUI F          &mt LGUI C          &mt LGUI P          &kp V               &kp J               &ht_magic LGUI 0    &lt_comma SHORTS 0  &th_dot 0 0         &kp H
                                            &key_repeat         &ht_repeat NAV 0    &ltn_num_spc 0 0    &msl_sym_a2 0 0     &ht_shift MEDIA 0   &key_repeat
                         >;
                 };
@@ -43,8 +43,8 @@
                      bindings = <
    &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y)
    &lt SHORTS RS(D)    &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt LSFT RS(R)      &mt LALT RS(A)      &mt LCTL RS(E)      &lt SHORTS RS(I) 
-   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma SHORTS 0  &th_dot 0 0         &trans
-                                           &trans              &trans              &msk_unds NUM 0     &th_case_a2 SYM 0 &trans              &trans
+   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &lt_comma SHORTS 0  &th_dot 0 0         &trans
+                                           &trans              &trans              &msk_unds NUM 0     &lt_case_a2 SYM 0 &trans              &trans
                            >;
                 };
                 kebab_case_layer {
@@ -79,8 +79,8 @@
                      bindings = <
    &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y)
    &lt SHORTS RS(D)    &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt LSFT RS(R)      &mt LALT RS(A)      &mt LCTL RS(E)      &lt SHORTS RS(I) 
-   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma SHORTS 0  &th_dot 0 0         &kp RS(H)
-                                           &trans              &trans              &msk_spc NUM 0      &th_case_a2 SYM 0 &th_cancel MEDIA 0  &trans
+   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &lt_comma SHORTS 0  &th_dot 0 0         &kp RS(H)
+                                           &trans              &trans              &msk_spc NUM 0      &lt_case_a2 SYM 0 &lt_cancel MEDIA 0  &trans
                         >;
                 };
                 capsline_layer {
@@ -88,8 +88,8 @@
                      bindings = <
    &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y)
    &lt SHORTS RS(D)    &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt LSFT RS(R)      &mt LALT RS(A)      &mt LCTL RS(E)      &lt SHORTS RS(I) 
-   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma SHORTS 0  &th_dot 0 0         &kp RS(H)
-                                           &trans              &trans              &trans              &th_case_a2 SYM 0 &th_cancel MEDIA 0  &trans
+   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &lt_comma SHORTS 0  &th_dot 0 0         &kp RS(H)
+                                           &trans              &trans              &trans              &lt_case_a2 SYM 0 &lt_cancel MEDIA 0  &trans
                                            
                            >;
                 };
@@ -108,16 +108,16 @@
 
 
 
-                lower_layer {
+                numbers_layer {
                      display-name = "NUM";
                      bindings = <
    &none               &th_lbrc 0 0        &th_rbrc 0 0        &kp BSLH            &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
-   &th_deg FUN 0       &th_lpar 0 0        &th_rpar 0 0        &kp AMPS            &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
+   &lt_deg FUN 0       &th_lpar 0 0        &th_rpar 0 0        &kp AMPS            &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
    &none               &th_lbkt 0 0        &th_rbkt 0 0        &kp PIPE            &none               &none               &mc_n1              &mc_n2              &mc_n3              &none 
-                                           &none               &trans              &trans              &hlt SYM SPACE    &th_n0 MEDIA 0      &none 
+                                           &none               &trans              &trans              &hlt SYM SPACE    &lt_n0 MEDIA 0      &none 
                            >;
                 };
-                raise_layer {
+                symbols_layer {
                      display-name = "SYM";
                      bindings = <
    &none               &mc_tilde           &kp HASH            &th_sqo 0 0         &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
@@ -134,8 +134,8 @@
                      bindings = <
    &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &kp LS(Y) 
    &kp LS(D)           &mt LCTL LS(N)      &mt LALT LS(S)      &mt LSFT LS(T)      &kp LS(W)           &kp LS(Z)           &mt LSFT LS(R)      &mt LALT LS(A)      &mt LCTL LS(E)      &kp LS(I) 
-   &mc_qu_s            &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c LGUI 0  &th_comma SHORTS 0  &th_dot 0 0         &kp LS(H) 
-                                           &trans              &trans              &trans              &th_sft_a2 SYM_CP 0 &trans              &trans
+   &mc_qu_s            &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c LGUI 0  &lt_comma SHORTS 0  &th_dot 0 0         &kp LS(H) 
+                                           &trans              &trans              &trans              &lt_sft_a2 SYM_CP 0 &trans              &trans
                            >;
                 };
                 ccedil_layer {
@@ -183,7 +183,7 @@
    &none              &mc_emoji           &mc_files            &mc_screenshot      &none               &none               &kp C_SLEEP         &to NUM             &to PLAIN1         &none    
    &none              &mc_zoom_out        &mc_zoom_in         &mc_reset_zoom      &none               &none               &mc_lock            &to NAV               &to MEDIA          &none
    &none              &mc_close           &mc_refresh         &mc_reopen          &none               &none               &leader             &to FUN               &to MEHS           &none 
-                                          &none               &ht_repeat TEXT 0   &th_comma_spc FUN 0 &lt SMART SPACE     &ht_repeat TEXT 0   &none 
+                                          &none               &ht_repeat TEXT 0   &lt_comma_spc FUN 0 &lt SMART SPACE     &ht_repeat TEXT 0   &none 
                            >;
                 };
 
@@ -192,8 +192,8 @@
                      bindings = <
    &none               &mc_meh_b           &mc_meh_m           &mc_meh_g           &none               &none               &mc_meh_l           &mc_meh_o           &mc_meh_u           &none    
    &mc_meh_d           &mc_meh_n           &mc_meh_s           &mc_meh_t           &none               &none               &mc_meh_r           &mc_meh_a           &mc_meh_e           &mc_meh_i
-   &none               &th_meh_f LGUI 0    &th_meh_c LGUI 0    &th_meh_p LGUI 0    &none               &none               &th_meh_h LGUI 0    &th_meh_comm LGUI 0 &th_meh_dot LGUI 0  &none
-                                           &none               &th_plain1 NAV 0    &hsk LGUI LGUI      &hsk LGUI LGUI      &th_plain1 NAV 0    &none 
+   &none               &mt_meh_f LGUI 0    &mt_meh_c LGUI 0    &mt_meh_p LGUI 0    &none               &none               &mt_meh_h LGUI 0    &mt_meh_comm LGUI 0 &mt_meh_dot LGUI 0  &none
+                                           &none               &lt_plain1 NAV 0    &hsk LGUI LGUI      &hsk LGUI LGUI      &lt_plain1 NAV 0    &none 
                            >;
                 };
 
@@ -247,16 +247,16 @@
                         >;
                 };
 
-                lower_copy_layer {
+                numbers_copy_layer {
                      display-name = "NUM";
                      bindings = <
    &none               &th_lbrc 0 0        &th_rbrc 0 0        &kp BSLH            &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
    &mc_deg             &th_lpar 0 0        &th_rpar 0 0        &kp AMPS            &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
    &none               &th_lbkt 0 0        &th_rbkt 0 0        &kp PIPE            &none               &none               &mc_n1              &mc_n2              &mc_n3              &none 
-                                           &none               &trans              &trans              &hlt SYM_CP SPACE   &th_n0 MEDIA 0      &none 
+                                           &none               &trans              &trans              &hlt SYM_CP SPACE   &lt_n0 MEDIA 0      &none 
                            >;
                 };
-                raise_copy_layer {
+                symbols_copy_layer {
                      display-name = "SYM";
                      bindings = <
    &none               &mc_tilde           &kp HASH            &th_sqo 0 0         &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
@@ -270,7 +270,7 @@
                     display-name = "MOUSE";
                     bindings = <
    &none               &none               &mkp LCLK           &mkp RCLK           &none               &none               &mc_hand            &kp ENTER           &kp ESC             &none
-   &none               &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &none               &mc_mic             &mt C_MUTE C_VOL_DN &kp C_VOL_UP        &th_cam TEXT 0
+   &none               &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &none               &mc_mic             &mt C_MUTE C_VOL_DN &kp C_VOL_UP        &lt_cam TEXT 0
    &none               &msc SCRL_DOWN      &mmv MOVE_DOWN      &msc SCRL_UP        &none               &none               &kp C_PP            &kp C_PREV          &kp C_NEXT          &none 
                                            &none               &mo NAV_CP          &kp SPACE           &none               &trans              &none 
                            >;

@@ -17,7 +17,7 @@
             tap-ms = <10>;
             bindings = <&macro_tap &kp K_CANCEL &to ALPHA1>;
         };
-        LAYERTAP_TP(th_cancel,     &tc_cancel)
+        LAYERTAP_TP(lt_cancel,     &tc_cancel)
 
         // ********************** SMART PLAIN ALPHAS ********************** //
 
@@ -62,7 +62,7 @@
             bindings = <&macro_tap &to ALPHA1 &smart_num NUM>;
         };
 
-        LAYERTAP_TP(ht_num_word, &tc_num_word)
+        LAYERTAP_TP(lt_num_word, &tc_num_word)
 
         smart_num_cp: smart_num_cp {
             compatible = "zmk,behavior-auto-layer";
@@ -158,15 +158,15 @@
         MOD_MORPH(mm_alpha2_shifted2, MOD_LSFT|MOD_RSFT, &mc_sft_a2, &mc_alpha2)
 
         MACRO(mc_case_a2,    &sl CASE_A2)
-        LAYERTAP_TP(th_sft_a2,  &mc_sft_a2)
-        LAYERTAP_TP(th_case_a2, &mc_case_a2)
+        LAYERTAP_TP(lt_sft_a2,  &mc_sft_a2)
+        LAYERTAP_TP(lt_case_a2, &mc_case_a2)
 
         MACRO(mc_sk_rgui, &sk RGUI)
-        MACRO(mc_hold_raise, &macro_press &mo SYM &macro_pause_for_release &macro_release &mo SYM)
+        MACRO(mc_hold_symbols, &macro_press &mo SYM &macro_pause_for_release &macro_release &mo SYM)
         MACRO(mc_hold_rgui, &macro_press &kp RGUI &macro_pause_for_release &macro_release &kp RGUI)
-        MOD_MORPH_KM(mm_hold_sft_sym_gui, MOD_LSFT, &mc_hold_rgui, &mc_hold_raise)
-        MOD_MORPH_KM(mm_hold_ctl_sym_gui, MOD_LCTL, &mm_hold_sft_sym_gui, &mc_hold_raise)
-        MOD_MORPH_KM(mm_hold_alt_gui, MOD_LALT, &mm_hold_ctl_sym_gui, &mc_hold_raise)
+        MOD_MORPH_KM(mm_hold_sft_sym_gui, MOD_LSFT, &mc_hold_rgui, &mc_hold_symbols)
+        MOD_MORPH_KM(mm_hold_ctl_sym_gui, MOD_LCTL, &mm_hold_sft_sym_gui, &mc_hold_symbols)
+        MOD_MORPH_KM(mm_hold_alt_gui, MOD_LALT, &mm_hold_ctl_sym_gui, &mc_hold_symbols)
         MOD_MORPH_KM(mm_tap_sft_a2_gui, MOD_LSFT, &mc_sk_rgui, &mm_alpha2_shifted2)
         MOD_MORPH_KM(mm_tap_ctl_a2_gui, MOD_LCTL, &mm_tap_sft_a2_gui, &mm_alpha2_shifted2)
         MOD_MORPH_KM(mm_tap_alt_a2_gui, MOD_LALT, &mm_tap_ctl_a2_gui, &mm_alpha2_shifted2)
@@ -182,11 +182,11 @@
 
         MACRO(mc_space, &ak_space)
         MACRO(mc_sk_lgui, &sk LGUI)
-        MACRO(mc_hold_lower, &macro_press &mo NUM &macro_pause_for_release &macro_release &mo NUM)
+        MACRO(mc_hold_numbers, &macro_press &mo NUM &macro_pause_for_release &macro_release &mo NUM)
         MACRO(mc_hold_lgui, &macro_press &kp LGUI &macro_pause_for_release &macro_release &kp LGUI)
-        MOD_MORPH_KM(mm_hold_sft_num_gui, MOD_RSFT, &mc_hold_lgui, &mc_hold_lower)
-        MOD_MORPH_KM(mm_hold_ctl_num_gui, MOD_RCTL, &mm_hold_sft_num_gui, &mc_hold_lower)
-        MOD_MORPH_KM(mm_hold_alt_num_gui, MOD_RALT, &mm_hold_ctl_num_gui, &mc_hold_lower)
+        MOD_MORPH_KM(mm_hold_sft_num_gui, MOD_RSFT, &mc_hold_lgui, &mc_hold_numbers)
+        MOD_MORPH_KM(mm_hold_ctl_num_gui, MOD_RCTL, &mm_hold_sft_num_gui, &mc_hold_numbers)
+        MOD_MORPH_KM(mm_hold_alt_num_gui, MOD_RALT, &mm_hold_ctl_num_gui, &mc_hold_numbers)
         MOD_MORPH_KM(mm_tap_sft_space_gui, MOD_RSFT, &mc_sk_lgui, &mc_space)
         MOD_MORPH_KM(mm_tap_ctl_space_gui, MOD_RCTL, &mm_tap_sft_space_gui, &mc_space)
         MOD_MORPH_KM(mm_tap_alt_space_gui, MOD_RALT, &mm_tap_ctl_space_gui, &mc_space)

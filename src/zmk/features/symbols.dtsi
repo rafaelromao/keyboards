@@ -20,8 +20,8 @@
 
         MACRO(mc_comma,               &kp COMMA)
         MACRO(mc_comma_spc,           &kp COMMA &kp SPACE)
-        LAYERTAP_HP(th_comma,         &mm_comma_meh)
-        LAYERTAP_TP(th_comma_spc,     &mc_comma_spc)
+        LAYERTAP_HP(lt_comma,         &mm_comma_meh)
+        LAYERTAP_TP(lt_comma_spc,     &mc_comma_spc)
 
         MACRO(mc_dot,                 &kp DOT )
         MACRO(mc_end_dot,             &kp END &kp DOT )
@@ -40,7 +40,7 @@
         SHIFT_MEH(mc_n8,              &kp N8, &kp KP_N8)
         SHIFT_MEH(mc_n9,              &kp N9, &kp KP_N9)
 
-        LAYERTAP_TP(th_n0,            &mc_n0)
+        LAYERTAP_TP(lt_n0,            &mc_n0)
 
         MACRO(mc_sqo,                 &kp SQT &kp SPACE)
         MACRO(mc_end_sqo,             &kp END &mc_sqo)
@@ -55,7 +55,7 @@
         TAPHOLD_TP(th_bti,            &mc_bti, &mc_end_bti)
 
         MACRO(mc_tilde,               &kp TILDE &kp SPACE)
-        LAYERTAP_TP(th_tilde,         &mc_tilde)
+        LAYERTAP_TP(lt_tilde,         &mc_tilde)
 
         MACRO(mc_and,                 &kp AMPS &kp AMPS)
         MACRO(mc_right_and,           &kp RIGHT &kp AMPS &kp AMPS)
@@ -98,10 +98,10 @@
         TAPHOLD_TP(th_pars,           &mc_pars, &mc_end_pars)
 
         MACRO(mc_brackets,            &kp LBKT &kp RBKT)
-        LAYERTAP_TP(th_brackets,      &mc_brackets)
+        LAYERTAP_TP(lt_brackets,      &mc_brackets)
 
         MACRO(mc_deg,                 &kp LS(LA(N8)))
-        LAYERTAP_TP(th_deg,           &mc_deg)
+        LAYERTAP_TP(lt_deg,           &mc_deg)
 
         // Symbols
 

@@ -77,8 +77,8 @@ In this keymap, the Sticky Shift is present in a thumb key, in the right side of
 
 ### Punctuation
 
-`.` and `,` are available in the base layer, while `?`, `!` and `:` are easily reachable in the *raise* layer, accessed only with the right hand. `;` is available in a combo of `,` and `.`.
-There also combos in the secondary alpha layer for `_`, `?`, `!`, `-` too. Brakets are available in the *lower* layer. More on that later.
+`.` and `,` are available in the base layer, while `?`, `!` and `:` are easily reachable in the *symbols* layer, accessed only with the right hand. `;` is available in a combo of `,` and `.`.
+There also combos in the secondary alpha layer for `_`, `?`, `!`, `-` too. Brakets are available in the *numbers* layer. More on that later.
 
 ### Sentence Case
 
@@ -90,7 +90,7 @@ There also combos in the secondary alpha layer for `_`, `?`, `!`, `-` too. Brake
 
 ## Numbers
 
-The first *Symbol* layer in this keymap is the *lower* layer, that along with the *raise* layer 
+The first *Symbol* layer in this keymap is the *numbers* layer, that along with the *symbols* layer 
 
 ![img](../img/numbers.png)
 
