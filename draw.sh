@@ -15,15 +15,15 @@ yq -i 'del(.combos[] | select(.k.s != "vim"))' ./tmp/keymap-drawer-onlyvimcombos
 # Generate SVG files using keymap
 keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -o ./tmp/all.svg ./docs/keymap-drawer/keymap-drawer.yaml
 
-keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s alpha1 alpha2 lower raise shortcuts nav media text smart func -o ./tmp/overview.svg ./docs/keymap-drawer/keymap-drawer.yaml
+keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s alpha1 alpha2 numbers symbols shortcuts nav media text smart func -o ./tmp/overview.svg ./docs/keymap-drawer/keymap-drawer.yaml
 
 keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s alpha1 --combos-only -o ./tmp/separatecombos.svg ./tmp/keymap-drawer-onlyseparatecombos.yaml
 
 keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s alpha1 alpha2 ç-extension shifted1 shifted2 -o ./tmp/alphas.svg ./tmp/keymap-drawer-noseparatecombos.yaml
 
-keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s lower -o ./tmp/numbers.svg ./tmp/keymap-drawer-noseparatecombos.yaml
+keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s numbers -o ./tmp/numbers.svg ./tmp/keymap-drawer-noseparatecombos.yaml
 
-keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s lower raise -o ./tmp/symbols.svg ./tmp/keymap-drawer-noseparatecombos.yaml
+keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s numbers symbols -o ./tmp/symbols.svg ./tmp/keymap-drawer-noseparatecombos.yaml
 
 keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s func -o ./tmp/functions.svg ./tmp/keymap-drawer-noseparatecombos.yaml
 
@@ -31,7 +31,7 @@ keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s shortcuts mehs 
 
 keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s nav text media -o ./tmp/navigation.svg ./tmp/keymap-drawer-noseparatecombos.yaml
 
-keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s vim-remaps lower smart -o ./tmp/vim.svg ./tmp/keymap-drawer-onlyvimcombos.yaml
+keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s vim-remaps numbers smart -o ./tmp/vim.svg ./tmp/keymap-drawer-onlyvimcombos.yaml
 
 keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s left-meh-morphs right-meh-morphs coding-meh coding-hyper fusion360-meh fusion360-hyper -o ./tmp/mehs.svg ./tmp/keymap-drawer-mehs.yaml
 

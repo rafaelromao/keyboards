@@ -18,8 +18,8 @@
 
 #define ALPHA2 9
 
-#define LOWER 10
-#define RAISE 11
+#define NUM 10
+#define SYM 11
 
 #define SEN_CASE 12
 #define CCEDIL 13
@@ -37,8 +37,8 @@
 
 #define NAV 23
 
-#define LOW_CP 24
-#define RAI_CP 25
+#define NUM_CP 24
+#define SYM_CP 25
 
 #define MEDIA 26
 #define NAV_CP 27
@@ -50,7 +50,7 @@
 
 
 #define COMBO_TERM 30
-#define TAPPING_TERM 250
+#define TAPPING_TERM 200
 #define QUICK_TAP_TERM 150
 #define ADAPTIVE_KEY_TIMEOUT 2000
 

@@ -22,8 +22,8 @@ layers:
         { t: ., h: "⇥ ." },
       ]
     - { t: $$mdi:repeat$$, s: repeat, h: nav }
-    - { t: $$mdi:keyboard-space$$, h: lower }
-    - { t: alpha2, s: sticky, h: raise }
+    - { t: $$mdi:keyboard-space$$, h: numbers }
+    - { t: alpha2, s: sticky, h: symbols }
     - { t: shifted1, s: sticky, h: media }
   alpha2:
     - [q, qu, k, ô, ó, ú]
@@ -61,8 +61,8 @@ layers:
         { t: ., h: "⇥ ." },
       ]
     - { t: CAPS LINE, h: nav }
-    - { t: $$mdi:keyboard-space$$, h: lower }
-    - { t: shifted2, s: sticky, h: raise }
+    - { t: $$mdi:keyboard-space$$, h: numbers }
+    - { t: shifted2, s: sticky, h: symbols }
     - { t: CAPS word, h: media }
   shifted2:
     - [Q, Qu, K, Ô, Ó, Ú]
@@ -141,7 +141,7 @@ layers:
     - { type: ghost }
     - { type: ghost }
     - { type: ghost }
-  lower:
+  numbers:
     - [{ t: "{", h: "⇥ {" }, { t: "}", h: "⇥ }" }, "\\", 7, 8, 9]
     - [
         { t: "°", h: func },
@@ -156,9 +156,9 @@ layers:
     - [{ t: "[", h: "⇥ [" }, { t: "]", h: "⇥ ]" }, "|", 1, 2, 3]
     - { t: ▽ }
     - { t: ▽, type: held }
-    - { t: $$mdi:keyboard-space$$, h: raise }
+    - { t: $$mdi:keyboard-space$$, h: symbols }
     - 0
-  raise:
+  symbols:
     - [
         "~",
         "#",
@@ -179,7 +179,7 @@ layers:
       ]
     - ["<", ">", { t: "`", h: "⇥ `" }, { t: "!", h: "⇥ !" }, "/", "*"]
     - { t: ▽ }
-    - { t: $$mdi:keyboard-space$$, h: lower }
+    - { t: $$mdi:keyboard-space$$, h: numbers }
     - { type: held }
     - { t: ▽ }
   shortcuts:
@@ -188,7 +188,7 @@ layers:
         { t: $$mdi:folder-open$$, s: files},
         { t: $$mdi:content-cut$$, s: clip },
         { t: $$mdi:power-sleep$$, s: "sleep" },
-        { t: lower },
+        { t: numbers },
         { t: alpha1, h: plain },
       ]
     - [
@@ -250,8 +250,8 @@ layers:
     - [d, n, s, t, r, a, e, i]
     - [f, c, p, h, ",", "."]
     - { t: $$mdi:repeat$$, s: repeat, h: nav, type: held }
-    - { t: $$mdi:keyboard-space$$, h: lower }
-    - { t: plain2, s: sticky, h: raise }
+    - { t: $$mdi:keyboard-space$$, h: numbers }
+    - { t: plain2, s: sticky, h: symbols }
     - {
         t: $$mdi:apple-keyboard-shift$$,
         s: sticky,
@@ -263,8 +263,8 @@ layers:
     - [y, z, x, w, ã, á, é, í]
     - [j, ç, v, õ, â, ê]
     - "'"
-    - { t: $$mdi:keyboard-space$$, h: lower }
-    - { t: $$mdi:keyboard-space$$, h: raise }
+    - { t: $$mdi:keyboard-space$$, h: numbers }
+    - { t: $$mdi:keyboard-space$$, h: symbols }
     - "'"
   nav:
     - [
@@ -295,7 +295,7 @@ layers:
       ]
     - { t: ▽, type: held }
     - null
-    - { t: $$mdi:keyboard-space$$, h: raise }
+    - { t: $$mdi:keyboard-space$$, h: symbols }
     - { h: media, type: held alternate }
   media:
     - [
@@ -453,8 +453,8 @@ combos:
           ç-extension,
           nav,
           media,
-          lower,
-          raise,
+          numbers,
+          symbols,
         ],
     }
   - {
@@ -471,7 +471,7 @@ combos:
       k: "alpha1",
       a: top,
       w: 48,
-      layers: [lower, mehs, nav, media, plain1, func],
+      layers: [numbers, mehs, nav, media, plain1, func],
     }
 
   - { p: [1, 2], k: "k", a: mid, layers: [alpha1, plain1] }
@@ -486,7 +486,7 @@ combos:
       p: [18, 19],
       k: { t: ";", h: "⇥ ;" },
       a: mid,
-      layers: [alpha1, plain1, lower],
+      layers: [alpha1, plain1, numbers],
     }
 
   - { p: [1, 2], k: "K", a: mid, layers: [shifted1] }
@@ -580,7 +580,7 @@ combos:
 
   - {
       p: [14, 15],
-      k: { t: "lower", s: "auto-layer", h: "nav" },
+      k: { t: "numbers", s: "auto-layer", h: "nav" },
       w: 48,
       a: mid,
       layers: [alpha1, shifted1],
@@ -640,50 +640,50 @@ combos:
       draw_separate: true,
     }
 
-  - { p: [0, 1], k: "⇥{ ⏎", a: mid, layers: [lower] }
-  - { p: [1, 2], k: { t: "::", h: "⇥ ::" }, a: mid, layers: [lower] }
-  - { p: [3, 4], k: { t: "G", s: "vim" }, a: mid, layers: [lower] }
-  - { p: [14, 15], k: { t: "[]", h: "nav" }, a: mid, layers: [lower] }
-  - { p: [10, 11], k: { t: "j", s: "vim" }, a: mid, layers: [lower] }
-  - { p: [11, 12], k: { t: "k", s: "vim" }, a: mid, layers: [lower] }
-  - { p: [17, 18], k: { t: "|", s: "vim" }, a: mid, layers: [lower] }
+  - { p: [0, 1], k: "⇥{ ⏎", a: mid, layers: [numbers] }
+  - { p: [1, 2], k: { t: "::", h: "⇥ ::" }, a: mid, layers: [numbers] }
+  - { p: [3, 4], k: { t: "G", s: "vim" }, a: mid, layers: [numbers] }
+  - { p: [14, 15], k: { t: "[]", h: "nav" }, a: mid, layers: [numbers] }
+  - { p: [10, 11], k: { t: "j", s: "vim" }, a: mid, layers: [numbers] }
+  - { p: [11, 12], k: { t: "k", s: "vim" }, a: mid, layers: [numbers] }
+  - { p: [17, 18], k: { t: "|", s: "vim" }, a: mid, layers: [numbers] }
   - {
       p: [7, 8, 9],
       k: { t: "º", h: "meh" },
       a: bottom,
       slide: -0.5,
-      layers: [lower],
+      layers: [numbers],
     }
-  - { p: [7, 8], k: { t: "()", h: "⇥ ()" }, a: mid, layers: [lower] }
-  - { p: [8, 9], k: { t: "&&", h: "→ &&" }, a: mid, layers: [lower] }
-  - { p: [15, 16], k: { t: "||", h: "→ ||" }, a: mid, layers: [lower] }
+  - { p: [7, 8], k: { t: "()", h: "⇥ ()" }, a: mid, layers: [numbers] }
+  - { p: [8, 9], k: { t: "&&", h: "→ &&" }, a: mid, layers: [numbers] }
+  - { p: [15, 16], k: { t: "||", h: "→ ||" }, a: mid, layers: [numbers] }
   - {
       p: [14, 15, 16],
       k: { t: "ª", h: "hyper" },
       a: bottom,
       slide: -0.5,
-      layers: [lower],
+      layers: [numbers],
     }
-  - { p: [10, 11, 12], k: "⇥(); ⏎", layers: [lower], a: bottom }
-  - { p: [17, 18, 19], k: "⇥; ⏎", layers: [lower], a: bottom }
+  - { p: [10, 11, 12], k: "⇥(); ⏎", layers: [numbers], a: bottom }
+  - { p: [17, 18, 19], k: "⇥; ⏎", layers: [numbers], a: bottom }
 
-  - { p: [0, 1], k: "##", a: mid, layers: [raise] }
-  - { p: [0, 1, 2], k: "###", a: top, layers: [raise] }
-  - { p: [7, 8], k: "->", a: mid, layers: [raise] }
-  - { p: [14, 15], k: "=>", a: mid, layers: [raise] }
-  - { p: [1, 2], k: "''←", a: mid, layers: [raise] }
-  - { p: [8, 9], k: '""←', a: mid, layers: [raise] }
-  - { p: [7, 8, 9], k: '"""', a: top, layers: [raise] }
-  - { p: [15, 16], k: "``←", a: mid, layers: [raise] }
-  - { p: [14, 15, 16], k: "```", a: top, layers: [raise] }
-  - { p: [3, 4], k: "./", a: mid, layers: [raise] }
-  - { p: [10, 11], k: "~/", a: mid, layers: [raise] }
-  - { p: [11, 12], k: "==", a: mid, layers: [raise] }
-  - { p: [17, 18], k: "../", a: mid, layers: [raise] }
-  - { p: [18, 19], k: "!=", a: mid, layers: [raise] }
-  - { p: [3, 4, 5], k: { t: "US$", h: "USD" }, a: top, layers: [raise] }
-  - { p: [10, 11, 12], k: { t: "R$", h: "BRL" }, a: bottom, layers: [raise] }
-  - { p: [17, 18, 19], k: { t: "€", h: "EUR" }, a: bottom, layers: [raise] }
+  - { p: [0, 1], k: "##", a: mid, layers: [symbols] }
+  - { p: [0, 1, 2], k: "###", a: top, layers: [symbols] }
+  - { p: [7, 8], k: "->", a: mid, layers: [symbols] }
+  - { p: [14, 15], k: "=>", a: mid, layers: [symbols] }
+  - { p: [1, 2], k: "''←", a: mid, layers: [symbols] }
+  - { p: [8, 9], k: '""←', a: mid, layers: [symbols] }
+  - { p: [7, 8, 9], k: '"""', a: top, layers: [symbols] }
+  - { p: [15, 16], k: "``←", a: mid, layers: [symbols] }
+  - { p: [14, 15, 16], k: "```", a: top, layers: [symbols] }
+  - { p: [3, 4], k: "./", a: mid, layers: [symbols] }
+  - { p: [10, 11], k: "~/", a: mid, layers: [symbols] }
+  - { p: [11, 12], k: "==", a: mid, layers: [symbols] }
+  - { p: [17, 18], k: "../", a: mid, layers: [symbols] }
+  - { p: [18, 19], k: "!=", a: mid, layers: [symbols] }
+  - { p: [3, 4, 5], k: { t: "US$", h: "USD" }, a: top, layers: [symbols] }
+  - { p: [10, 11, 12], k: { t: "R$", h: "BRL" }, a: bottom, layers: [symbols] }
+  - { p: [17, 18, 19], k: { t: "€", h: "EUR" }, a: bottom, layers: [symbols] }
 
   - { p: [0, 1, 2], k: { t: $$mdi:bluetooth-off$$, h: $$mdi:delete$$ }, a: top, layers: [func] }
   - { p: [3, 4], k: "F12", a: mid, layers: [func] }
@@ -706,7 +706,7 @@ combos:
       layers: [media],
     }
 
-  - { p: [14, 15], k: { h: lower }, a: mid, layers: [nav] }
+  - { p: [14, 15], k: { h: numbers }, a: mid, layers: [nav] }
 
   - { p: [3, 4], k: "↑⇥ ⌦", a: mid, layers: [nav] }
   - {
@@ -722,14 +722,14 @@ combos:
       layers: [nav],
     }
   - { p: [17, 18], k: "↓ ⇥", a: mid, layers: [nav] }
-  - { p: [18, 19], k: { h: lower }, a: mid, layers: [nav] }
+  - { p: [18, 19], k: { h: numbers }, a: mid, layers: [nav] }
 
   - { p: [4, 5], k: "⎋", a: mid, layers: [mehs] }
   - { p: [1, 2], k: meh k, a: mid, layers: [mehs] }
   - { p: [3, 4], k: meh x, a: mid, layers: [mehs] }
   - {
       p: [14, 15],
-      k: { t: "lower", s: "auto-layer" },
+      k: { t: "numbers", s: "auto-layer" },
       w: 40,
       a: mid,
       layers: [mehs],
@@ -738,7 +738,7 @@ combos:
   - { p: [17, 18], k: meh j, a: mid, layers: [mehs] }
   - {
       p: [18, 19],
-      k: { t: "lower", s: "auto-layer" },
+      k: { t: "numbers", s: "auto-layer" },
       w: 40,
       a: mid,
       layers: [mehs],

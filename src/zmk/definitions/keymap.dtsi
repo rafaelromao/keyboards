@@ -16,7 +16,7 @@
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp Y
    &lt SHORTS D        &mt LCTL N          &mt LALT S          &mt LSFT T          &kp W               &kp Z               &mt LSFT R          &mt LALT A          &mt LCTL E          &lt SHORTS I      
    &mc_qu              &mt LGUI F          &mt LGUI C          &mt LGUI P          &kp V               &kp J               &ht_magic LGUI 0    &th_comma SHORTS 0  &th_dot 0 0         &kp H
-                                           &key_repeat         &ht_repeat NAV 0    &ltn_low_spc 0 0    &msl_rai_a2 0 0     &ht_shift MEDIA 0   &key_repeat
+                                           &key_repeat         &ht_repeat NAV 0    &ltn_num_spc 0 0    &msl_sym_a2 0 0     &ht_shift MEDIA 0   &key_repeat
                         >;
                 };
 
@@ -26,7 +26,7 @@
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
-                                           &trans              &trans              &msk_sft LOWER 0    &trans              &trans              &trans
+                                           &trans              &trans              &msk_sft NUM 0      &trans              &trans              &trans
                            >;
                 };
                 snake_case_layer {
@@ -35,7 +35,7 @@
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
-                                           &trans              &trans              &msk_unds LOWER 0   &trans              &trans              &trans
+                                           &trans              &trans              &msk_unds NUM 0     &trans              &trans              &trans
                            >;
                 };
                 constant_layer {
@@ -44,7 +44,7 @@
    &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y)
    &lt SHORTS RS(D)    &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt LSFT RS(R)      &mt LALT RS(A)      &mt LCTL RS(E)      &lt SHORTS RS(I) 
    &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma SHORTS 0  &th_dot 0 0         &trans
-                                           &trans              &trans              &msk_unds LOWER 0   &th_case_a2 RAISE 0 &trans              &trans
+                                           &trans              &trans              &msk_unds NUM 0     &th_case_a2 SYM 0 &trans              &trans
                            >;
                 };
                 kebab_case_layer {
@@ -53,7 +53,7 @@
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
-                                           &trans              &trans              &msk_dash LOWER 0   &trans              &trans              &trans
+                                           &trans              &trans              &msk_dash NUM 0     &trans              &trans              &trans
                            >;
                 };
                 slash_case_layer {
@@ -62,7 +62,7 @@
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
-                                           &trans              &trans              &msk_slash LOWER 0  &trans              &trans              &trans
+                                           &trans              &trans              &msk_slash NUM 0    &trans              &trans              &trans
                            >;
                 };
                 spacing_layer {
@@ -71,7 +71,7 @@
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
-                                           &trans              &trans              &msk_spcb LOWER 0   &trans              &trans              &trans
+                                           &trans              &trans              &msk_spcb NUM 0     &trans              &trans              &trans
                            >;
                 };
                 capsword_layer {
@@ -80,7 +80,7 @@
    &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y)
    &lt SHORTS RS(D)    &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt LSFT RS(R)      &mt LALT RS(A)      &mt LCTL RS(E)      &lt SHORTS RS(I) 
    &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma SHORTS 0  &th_dot 0 0         &kp RS(H)
-                                           &trans              &trans              &msk_spc LOWER 0    &th_case_a2 RAISE 0 &th_cancel MEDIA 0  &trans
+                                           &trans              &trans              &msk_spc NUM 0      &th_case_a2 SYM 0 &th_cancel MEDIA 0  &trans
                         >;
                 };
                 capsline_layer {
@@ -89,7 +89,7 @@
    &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y)
    &lt SHORTS RS(D)    &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt LSFT RS(R)      &mt LALT RS(A)      &mt LCTL RS(E)      &lt SHORTS RS(I) 
    &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma SHORTS 0  &th_dot 0 0         &kp RS(H)
-                                           &trans              &trans              &trans              &th_case_a2 RAISE 0 &th_cancel MEDIA 0  &trans
+                                           &trans              &trans              &trans              &th_case_a2 SYM 0 &th_cancel MEDIA 0  &trans
                                            
                            >;
                 };
@@ -109,21 +109,21 @@
 
 
                 lower_layer {
-                     display-name = "LOWER";
+                     display-name = "NUM";
                      bindings = <
    &none               &th_lbrc 0 0        &th_rbrc 0 0        &kp BSLH            &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
    &th_deg FUN 0       &th_lpar 0 0        &th_rpar 0 0        &kp AMPS            &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
    &none               &th_lbkt 0 0        &th_rbkt 0 0        &kp PIPE            &none               &none               &mc_n1              &mc_n2              &mc_n3              &none 
-                                           &none               &trans              &trans              &hlt RAISE SPACE    &th_n0 MEDIA 0      &none 
+                                           &none               &trans              &trans              &hlt SYM SPACE    &th_n0 MEDIA 0      &none 
                            >;
                 };
                 raise_layer {
-                     display-name = "RAISE";
+                     display-name = "SYM";
                      bindings = <
    &none               &mc_tilde           &kp HASH            &th_sqo 0 0         &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
    &kp AT              &th_caret_z 0 0     &kp DOLLAR          &th_dqo 0 0         &none               &none               &th_qmark 0 0       &kp MINUS           &kp PLUS            &lt SMART COMMA
    &none               &mc_lt              &mc_gt              &th_bti 0 0         &none               &none               &th_excl 0 0        &kp SLASH           &kp STAR            &none 
-                                           &none               &trans              &hlt LOW_CP SPACE   &none               &trans              &none        
+                                           &none               &trans              &hlt NUM_CP SPACE   &none               &trans              &none        
                            >;
                 };
 
@@ -135,7 +135,7 @@
    &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &kp LS(Y) 
    &kp LS(D)           &mt LCTL LS(N)      &mt LALT LS(S)      &mt LSFT LS(T)      &kp LS(W)           &kp LS(Z)           &mt LSFT LS(R)      &mt LALT LS(A)      &mt LCTL LS(E)      &kp LS(I) 
    &mc_qu_s            &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c LGUI 0  &th_comma SHORTS 0  &th_dot 0 0         &kp LS(H) 
-                                           &trans              &trans              &trans              &th_sft_a2 RAI_CP 0 &trans              &trans
+                                           &trans              &trans              &trans              &th_sft_a2 SYM_CP 0 &trans              &trans
                            >;
                 };
                 ccedil_layer {
@@ -180,7 +180,7 @@
                 shortcuts_layer {
                      display-name = "SHORTS";
                      bindings = <
-   &none              &mc_emoji           &mc_files            &mc_screenshot      &none               &none               &kp C_SLEEP         &to LOWER             &to PLAIN1         &none    
+   &none              &mc_emoji           &mc_files            &mc_screenshot      &none               &none               &kp C_SLEEP         &to NUM             &to PLAIN1         &none    
    &none              &mc_zoom_out        &mc_zoom_in         &mc_reset_zoom      &none               &none               &mc_lock            &to NAV               &to MEDIA          &none
    &none              &mc_close           &mc_refresh         &mc_reopen          &none               &none               &leader             &to FUN               &to MEHS           &none 
                                           &none               &ht_repeat TEXT 0   &th_comma_spc FUN 0 &lt SMART SPACE     &ht_repeat TEXT 0   &none 
@@ -205,7 +205,7 @@
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp Y
    &kp D               &kp N               &kp S               &kp T               &kp W               &kp Z               &kp R               &kp A               &kp E               &kp I 
    &none               &kp F               &kp C               &kp P               &kp V               &kp J               &kp H               &kp COMMA           &kp DOT             &none 
-                                           &none               &ht_repeat NAV 0    &lt LOW_CP SPACE    &msl_p2 RAI_CP 0    &ht_sft_p2 MEDIA    &none
+                                           &none               &ht_repeat NAV 0    &lt NUM_CP SPACE    &msl_p2 SYM_CP 0    &ht_sft_p2 MEDIA    &none
                            >;
                 };
                 plain2_layer {
@@ -214,7 +214,7 @@
    &none               &kp Q               &mc_qu              &kp K               &none               &none               &ac_ocir            &ac_oacu            &ac_uacu            &none
    &kp Y               &kp Z               &kp X               &kp W               &none               &none               &ac_atil            &ac_aacu            &ac_eacu            &ac_iacu 
    &none               &kp J               &mc_ced             &kp V               &none               &none               &ac_otil            &ac_acir            &ac_ecir            &none 
-                                           &none               &mc_sqo             &lt LOW_CP SPACE    &lt RAI_CP SPACE    &mc_sqo             &none
+                                           &none               &mc_sqo             &lt NUM_CP SPACE    &lt SYM_CP SPACE    &mc_sqo             &none
                            >;
                 };
                 shifted_plain2_layer {
@@ -223,7 +223,7 @@
    &none               &kp LS(Q)           &mc_qu_s            &kp LS(K)           &none               &none               &ac_ocir_s          &ac_oacu_s          &ac_uacu_s            &none
    &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &none               &none               &ac_atil_s          &ac_aacu_s          &ac_eacu_s            &ac_iacu_s 
    &none               &kp LS(J)           &mc_ced_s           &kp LS(V)           &none               &none               &ac_otil_s          &ac_acir_s          &ac_ecir_s            &none 
-                                           &none               &mc_sqo             &lt LOW_CP SPACE    &lt RAI_CP SPACE    &mc_sqo             &none
+                                           &none               &mc_sqo             &lt NUM_CP SPACE    &lt SYM_CP SPACE    &mc_sqo             &none
                            >;
                 };
                 secondary_alternate_repeat_layer {
@@ -243,21 +243,21 @@
    &none               &mc_swapper         &mc_tabs            &mc_launcher        &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
    &lt TEXT INS        &kp LCTL            &kp LALT            &kp LSFT            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
    &none               &kp LGUI            &kp LGUI            &kp LGUI            &none               &none               &kp DEL             &kp HOME            &kp END             &none 
-                                           &none               &trans              &none               &hlt RAI_CP SPACE   &mo MEDIA           &none 
+                                           &none               &trans              &none               &hlt SYM_CP SPACE   &mo MEDIA           &none 
                         >;
                 };
 
                 lower_copy_layer {
-                     display-name = "LOWER";
+                     display-name = "NUM";
                      bindings = <
    &none               &th_lbrc 0 0        &th_rbrc 0 0        &kp BSLH            &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
    &mc_deg             &th_lpar 0 0        &th_rpar 0 0        &kp AMPS            &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
    &none               &th_lbkt 0 0        &th_rbkt 0 0        &kp PIPE            &none               &none               &mc_n1              &mc_n2              &mc_n3              &none 
-                                           &none               &trans              &trans              &hlt RAI_CP SPACE   &th_n0 MEDIA 0      &none 
+                                           &none               &trans              &trans              &hlt SYM_CP SPACE   &th_n0 MEDIA 0      &none 
                            >;
                 };
                 raise_copy_layer {
-                     display-name = "RAISE";
+                     display-name = "SYM";
                      bindings = <
    &none               &mc_tilde           &kp HASH            &th_sqo 0 0         &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
    &kp AT              &th_caret_z 0 0     &kp DOLLAR          &th_dqo 0 0         &none               &none               &th_qmark 0 0       &kp MINUS           &kp PLUS            &kp STAR  

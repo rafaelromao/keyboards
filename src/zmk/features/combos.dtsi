@@ -19,13 +19,13 @@
     #define ALPHA1_LAYERS               ALPHA1 CASE_A1 PLAIN1 CPLK_A1 SMARTCASE_LAYERS ALTREP2
     #define CCEDIL_LAYERS               CCEDIL CASE_CCEDIL 
     #define ALPHA2_LAYERS               ALPHA2 CASE_A2 PLAIN2 SFT_A2
-    #define LOWER_LAYERS                LOWER LOW_CP  
-    #define RAISE_LAYERS                RAISE RAI_CP   
+    #define NUM_LAYERS                  NUM NUM_CP  
+    #define SYM_LAYERS                  SYM SYM_CP   
     #define NAV_LAYERS                  NAV NAV_CP
-    #define ALL_LAYERS                  ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS LOWER_LAYERS SHORTS MEHS NAV_LAYERS RAISE_LAYERS MEDIA TEXT
-    #define ALL_LAYERS_WITH_BACKSPACE   ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS LOWER_LAYERS        MEHS NAV_LAYERS RAISE_LAYERS
+    #define ALL_LAYERS                  ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS SHORTS MEHS NAV_LAYERS SYM_LAYERS MEDIA TEXT
+    #define ALL_LAYERS_WITH_BACKSPACE   ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS        MEHS NAV_LAYERS SYM_LAYERS
     #define ALL_LAYERS_WITH_ESC         ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS                     MEHS NAV_LAYERS              MEDIA        
-    #define FIXABLE_LAYERS              CPLK_A1 CASE_A1 SMARTCASE_LAYERS PLAIN1 LOWER_LAYERS MEDIA NAV_LAYERS MEHS FUN
+    #define FIXABLE_LAYERS              CPLK_A1 CASE_A1 SMARTCASE_LAYERS PLAIN1 NUM_LAYERS MEDIA NAV_LAYERS MEHS FUN
 
     combos {
         compatible = "zmk,combos";
@@ -62,8 +62,8 @@
 
         COMBO(cb_esc_save,      LTR LTM L0,      &mc_save_esc,           ALPHA1_LAYERS)
 
-        COMBO(cb_semi,          RBM RBR,         &th_semi 0 0,           ALPHA1_LAYERS LOWER_LAYERS)
-        COMBO(cb_sent,          RBI RBM RBR,     &mc_end_semi_ent,       LOWER_LAYERS)
+        COMBO(cb_semi,          RBM RBR,         &th_semi 0 0,           ALPHA1_LAYERS NUM_LAYERS)
+        COMBO(cb_sent,          RBI RBM RBR,     &mc_end_semi_ent,       NUM_LAYERS)
 
         COMBO(cb_k,             LTM LTI,         &kp K,                  ALPHA1 PLAIN1)
         COMBO(cb_w,             LHM LHI,         &ht_w 0 0,              ALPHA1 PLAIN1)
@@ -102,41 +102,41 @@
         COMBO(cd_meh_spc,       LHR LHM LHI,     &mc_meh_space,          MEHS)
         COMBO(cd_hyp_spc,       LBR LBM LBI,     &mc_hyper_space,        MEHS)
 
-        COMBO(cb_comm,          RHP R0,          &kp COMMA,              LOWER_LAYERS)
-        COMBO(cb_sfl,            RTI RTM,         &kp LS(L),              LOWER_LAYERS)
-        COMBO(cb_jv,            RHI RHM,         &kp A,                  LOWER_LAYERS)
-        COMBO(cb_pipev,         RBI RBM,         &kp PIPE,               LOWER_LAYERS)
-        COMBO(cb_kv,            RHM RHR,         &kp E,                  LOWER_LAYERS)
+        COMBO(cb_comm,          RHP R0,          &kp COMMA,              NUM_LAYERS)
+        COMBO(cb_sfl,            RTI RTM,         &kp LS(L),              NUM_LAYERS)
+        COMBO(cb_jv,            RHI RHM,         &kp A,                  NUM_LAYERS)
+        COMBO(cb_pipev,         RBI RBM,         &kp PIPE,               NUM_LAYERS)
+        COMBO(cb_kv,            RHM RHR,         &kp E,                  NUM_LAYERS)
 
-        COMBO(cb_braces_new,    LTR LTM,         &mc_braces_new,         LOWER_LAYERS)
-        COMBO(cb_pars,          LHR LHM,         &th_pars 0 0,           LOWER_LAYERS)
-        COMBO(cb_brackets,      LBR LBM,         &th_brackets NAV 0,     LOWER_LAYERS)
-        COMBO(cb_colon_colon,   LTM LTI,         &th_dcolon 0 0,         LOWER_LAYERS)
-        COMBO(cb_and,           LHI LHM,         &th_and 0 0,            LOWER_LAYERS)
-        COMBO(cb_or,            LBI LBM,         &th_or 0 0,             LOWER_LAYERS)
-        COMBO(cb_par_semi,      RHR RHM RHI,     &mc_pars_semi_ent,      LOWER_LAYERS)
+        COMBO(cb_braces_new,    LTR LTM,         &mc_braces_new,         NUM_LAYERS)
+        COMBO(cb_pars,          LHR LHM,         &th_pars 0 0,           NUM_LAYERS)
+        COMBO(cb_brackets,      LBR LBM,         &th_brackets NAV 0,     NUM_LAYERS)
+        COMBO(cb_colon_colon,   LTM LTI,         &th_dcolon 0 0,         NUM_LAYERS)
+        COMBO(cb_and,           LHI LHM,         &th_and 0 0,            NUM_LAYERS)
+        COMBO(cb_or,            LBI LBM,         &th_or 0 0,             NUM_LAYERS)
+        COMBO(cb_par_semi,      RHR RHM RHI,     &mc_pars_semi_ent,      NUM_LAYERS)
 
-        COMBO(cd_meh_l,         LHR LHM LHI,     &th_ord_o 0 0,          LOWER_LAYERS)
-        COMBO(cd_hyper_n,       LBR LBM LBI,     &th_ord_a 0 0,          LOWER_LAYERS)
+        COMBO(cd_meh_l,         LHR LHM LHI,     &th_ord_o 0 0,          NUM_LAYERS)
+        COMBO(cd_hyper_n,       LBR LBM LBI,     &th_ord_a 0 0,          NUM_LAYERS)
 
-        COMBO(cb_dhash,         LTR LTM,         &mc_dhash,              RAISE_LAYERS)
-        COMBO(cb_sarrow,        LHR LHM,         &mc_sarrow,             RAISE_LAYERS)
-        COMBO(cb_darrow,        LBR LBM,         &mc_darrow,             RAISE_LAYERS)
-        COMBO(cb_thash,         LTR LTM LTI,     &mc_thash,              RAISE_LAYERS)
-        COMBO(cb_tdqo,          LHR LHM LHI,     &th_tdqo 0 0,           RAISE_LAYERS)
-        COMBO(cb_tbti,          LBR LBM LBI,     &th_tbti 0 0,           RAISE_LAYERS)
-        COMBO(cb_dsqo,          LTM LTI,         &mc_dsqo,               RAISE_LAYERS)
-        COMBO(cb_ddqo,          LHM LHI,         &mc_ddqo,               RAISE_LAYERS)
-        COMBO(cb_dbti,          LBM LBI,         &mc_dbti,               RAISE_LAYERS)
-        COMBO(cb_us,            RTR RTM RTI,     &th_us 0 0,             RAISE_LAYERS)
-        COMBO(cb_br,            RHR RHM RHI,     &th_br 0 0,             RAISE_LAYERS)
-        COMBO(cb_eu,            RBR RBM RBI,     &th_eur 0 0,            RAISE_LAYERS)
+        COMBO(cb_dhash,         LTR LTM,         &mc_dhash,              SYM_LAYERS)
+        COMBO(cb_sarrow,        LHR LHM,         &mc_sarrow,             SYM_LAYERS)
+        COMBO(cb_darrow,        LBR LBM,         &mc_darrow,             SYM_LAYERS)
+        COMBO(cb_thash,         LTR LTM LTI,     &mc_thash,              SYM_LAYERS)
+        COMBO(cb_tdqo,          LHR LHM LHI,     &th_tdqo 0 0,           SYM_LAYERS)
+        COMBO(cb_tbti,          LBR LBM LBI,     &th_tbti 0 0,           SYM_LAYERS)
+        COMBO(cb_dsqo,          LTM LTI,         &mc_dsqo,               SYM_LAYERS)
+        COMBO(cb_ddqo,          LHM LHI,         &mc_ddqo,               SYM_LAYERS)
+        COMBO(cb_dbti,          LBM LBI,         &mc_dbti,               SYM_LAYERS)
+        COMBO(cb_us,            RTR RTM RTI,     &th_us 0 0,             SYM_LAYERS)
+        COMBO(cb_br,            RHR RHM RHI,     &th_br 0 0,             SYM_LAYERS)
+        COMBO(cb_eu,            RBR RBM RBI,     &th_eur 0 0,            SYM_LAYERS)
 
-        COMBO(cb_ds,            RTI RTM,         &mc_ds,                 RAISE_LAYERS)
-        COMBO(cb_eqeq,          RHM RHR,         &mc_eqeq,               RAISE_LAYERS)
-        COMBO(cb_noteq,         RBM RBR,         &mc_noteq,              RAISE_LAYERS)
-        COMBO(cb_tisl,          RHI RHM,         &mc_tisl,               RAISE_LAYERS)
-        COMBO(cb_dds,           RBI RBM,         &mc_dds,                RAISE_LAYERS)
+        COMBO(cb_ds,            RTI RTM,         &mc_ds,                 SYM_LAYERS)
+        COMBO(cb_eqeq,          RHM RHR,         &mc_eqeq,               SYM_LAYERS)
+        COMBO(cb_noteq,         RBM RBR,         &mc_noteq,              SYM_LAYERS)
+        COMBO(cb_tisl,          RHI RHM,         &mc_tisl,               SYM_LAYERS)
+        COMBO(cb_dds,           RBI RBM,         &mc_dds,                SYM_LAYERS)
 
         COMBO(cb_btclr,         LTI LTM LTR,     &bt BT_CLR,             FUN)
         COMBO(cb_f10,           RBM RBI,         &kp F10,                FUN)
@@ -168,11 +168,11 @@
         COMBO(cb_shiftv,        RBM RBR,         &kp LS(V),              TEXT)
         COMBO(cb_ctrlv,         RBI RBM,         &kp LC(V),              TEXT)
 
-        COMBO(cb_lower_nav,     LBR LBM,         &mo LOW_CP,             NAV_LAYERS)
+        COMBO(cb_lower_nav,     LBR LBM,         &mo NUM_CP,             NAV_LAYERS)
         COMBO(cd_ca,            LHR LHM,         &kp LC(LALT),           NAV_LAYERS)
 
         COMBO(cb_down_end,      RBI RBM,         &mc_down_end,           NAV_LAYERS)
-        COMBO(cb_lower,         RBM RBR,         &mo LOW_CP,             NAV_LAYERS)
+        COMBO(cb_lower,         RBM RBR,         &mo NUM_CP,             NAV_LAYERS)
         COMBO(cb_up_end_del,    RTM RTI,         &mc_up_end_del,         NAV_LAYERS)
         COMBO(cb_page_down,     RHM RHI,         &kp PAGE_DOWN,          NAV_LAYERS)
         COMBO(cb_page_up,       RHM RHR,         &kp PAGE_UP,            NAV_LAYERS)
@@ -191,7 +191,7 @@
         MACRO(mc_ca_nav           , &macro_press &kp LCTL &kp LALT &mo NAV &macro_pause_for_release &macro_release &mo NAV &kp LCTL &kp LALT)
         MACRO(mc_gcs_nav          , &macro_press &kp LGUI &kp LCTL &kp LSFT &mo NAV &macro_pause_for_release &macro_release &mo NAV &kp LGUI &kp LCTL &kp LSFT)
         MACRO(mc_cag_nav          , &macro_press &kp LCTL &kp LALT &kp LGUI &mo NAV &macro_pause_for_release &macro_release &mo NAV &kp LCTL &kp LALT &kp LGUI)
-        MACRO(mc_cas_spc          , &macro_press &kp LCTL &kp LALT &kp LSFT &mo LOWER &macro_pause_for_release &macro_release &mo LOWER &kp LCTL &kp LALT &kp LSFT)
+        MACRO(mc_cas_spc          , &macro_press &kp LCTL &kp LALT &kp LSFT &mo NUM &macro_pause_for_release &macro_release &mo NUM &kp LCTL &kp LALT &kp LSFT)
 
         COMBO_MUST_TAP(ht_w       , &kp LSFT  &kp LALT          , &kp W)
         COMBO_MUST_TAP(ht_q       , &kp LCTL  &kp LALT          , &kp Q)

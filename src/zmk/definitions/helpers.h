@@ -7,7 +7,6 @@
             #binding-cells = <2>; \
             tapping-term-ms = <TAPPING_TERM>; \
             quick-tap-ms = <QUICK_TAP_TERM>; \
-            require-prior-idle-ms = <QUICK_TAP_TERM>; \
             bindings = <&mo>, <BINDINGS>; \
         };
     
