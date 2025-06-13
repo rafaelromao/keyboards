@@ -85,7 +85,7 @@
             bindings = <&macro_press &kp LS(LC(LA(LGUI))) &macro_pause_for_release &macro_release &kp LS(LC(LA(LGUI)))>;
         };
 
-        MACRO(mc_bks_leader,      &kp BACKSPACE &leader)
+        MACRO(mc_end_ent,         &kp END &kp ENTER)
 
         // Vim home home
 
