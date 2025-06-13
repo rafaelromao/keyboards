@@ -68,6 +68,9 @@
         TAPHOLD_TP(th_hyper_space,      &mc_hyper_space, &mc_hyper)
 
         LAYERTAP_TP(lt_cam,             &mc_cam)
+        
+        MACRO(mc_right,                 &kp RIGHT)
+        LAYERTAP_TP(lt_right,           &mc_right)
 
         mc_meh: mc_meh {
             compatible = "zmk,behavior-macro";
