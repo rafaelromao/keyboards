@@ -86,13 +86,13 @@ There also combos in the secondary alpha layer for `_`, `?`, `!`, `-` too. Brake
 
 ### Leader Key
 
-*Leader Key* is available through an external module, [zmk-leader-key](https://github.com/urob/zmk-leader-key) and allow macros to be triggered through a sequence of key strokes. The leader key is available in the *Shortcuts* layer and is used to type sequences of characters that are too frequent and not always easy to type.
+*Leader Key* is available through an external module, [zmk-leader-key](https://github.com/urob/zmk-leader-key) and allow macros to be triggered through a sequence of key strokes. The leader key is available in the *shortcuts* layer and is used to type sequences of characters that are too frequent and not always easy to type.
 
 ## Numbers
 
-The first *Symbol* layer in this keymap is the *numbers* layer, that along with the *symbols* layer 
+The *numbers* layer contains not only numbers but also some symbols commonly used along with numbers.
 
-![img](../img/numbers.png)
+![img](../img/symbols.png)
 
 ### NumPad
 
@@ -106,19 +106,55 @@ It is triggered using a combo in the base layer, so it is quite fast to activate
 
 ### Brackets
 
+Brackets are commonly used for two different workflows, working with numbers and programming. Placing them in the left side of the *numbers* layer makes it easier to work with spreadsheets.
+
 ### Math Operators
+
+Math Operators must be easily accessible from the *numbers* layer, and I find it particularly helpful if I can do it using only my right hand, so I put them in the right side of my *symbols* layer.
 
 ## Shortcuts
 
-### Modifiers
+### Home Row Mods
 
-### Shortcut Combos
+[Home Row Mods](https://precondition.github.io/home-row-mods) are well know by most keyboard enthusiants and are also available in this keymap. Their disposition is: Ctrl, Alt and Shift in the home row, and Gui (Command / Windows) in the bottom row index key, mirrored in the right side.
 
-### Common Apps
+To make combinations of Ctrl, Alt and/or Shift with Gui easier, Gui is replicated for the middle and ring  fingers in the left side.
 
 ### Meh and Hyper
 
+Meh and Hyper are special modidifers, triggered by the combination of three or four of them: Meh = Ctrl + Alt + Shift, and Hyper : Meh + Gui (Command / Windows).
+
+Meh can be triggered holding the 3 mods in the home row, while holding the 3 equivalent keys in the bottom row will trigger Hyper.
+
+Meh and Hyper shortcuts are mapped in software to make custom actions easier to trigger and memorize, for coding, as an example.
+
+![img](../img/mehs.png)
+
+In some cases, like while debugging, a lot of consecutive uses of Mehs and Hyper shortcuts are necessary, and for this reason there is a *mehs* layer that can be toggled on as well. In this layer, accessing the Hyper version of the shortcut is as simple as holding a thumb key before pressing it.
+
+### Common Apps
+
+Holding any of the pinky keys will activate the *shortcuts* layer, which gives access to common shortcuts like open the file explorer, take a screenshot, manage zoom and tabs in a browser.
+
+It will also allow some layers to be toggled on permanently, like the *numbers*, *nav* and *media* layers.
+
+![img](../img/shortcuts.png)
+
+### Leader Key
+
+The *Leader Key* is placed in the bottom row index finger in the *shortcuts* layer, besides the key that types *comma* in the base layer. Holding *comma* will also give access to the *shortcuts* layers, making it easier to activate the *Leader Key*, with an inroll bigram, and since *comma* is almost always followed by *space*, this hold action can the preferred behavior, which means that the hold action is easier to trigger than the tap action, making this roll even easier to trigger. The key that contains *space*, in the *shortcuts* layer, will type *comma + space*, to migitate eventual missfire of the hold action when a tap is desired.
+
+### Shortcut Combos
+
+Common shortcuts can also be activated using combos, in most layers. These combos are designed to be easy to trigger and hard to misfire.
+
+They allow actions like, copy, paste, select all, enter, tab and navigation keys, among others.
+
+![img](../img/separatecombos.png)
+
 ## Navigation
+
+### Modifiers
 
 ### Enter, Tab, Esc
 
