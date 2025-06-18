@@ -84,10 +84,6 @@ There also combos in the secondary alpha layer for `_`, `?`, `!`, `-` too. Brake
 
 *Sentence Case* is a feature that automatically capitalize the next word after `space` in case it is preceeded by `.`, `?` or `!`. In case the *Sticky Shift* is tapped after this `space`, it will be ignored. This feature makes it much easier to start new sentences and reduce a lot the use of the *Sticky Shift* key. This feature is implemented using adaptive keys to trigger it and a layer to execute the capitalization.
 
-### Leader Key
-
-*Leader Key* is available through an external module, [zmk-leader-key](https://github.com/urob/zmk-leader-key) and allow macros to be triggered through a sequence of key strokes. The leader key is available in the *shortcuts* layer and is used to type sequences of characters that are too frequent and not always easy to type.
-
 ## Numbers
 
 The *numbers* layer contains not only numbers but also some symbols commonly used along with numbers.
@@ -132,7 +128,7 @@ Meh and Hyper shortcuts are mapped in software to make custom actions easier to 
 
 In some cases, like while debugging, a lot of consecutive uses of Mehs and Hyper shortcuts are necessary, and for this reason there is a *mehs* layer that can be toggled on as well. In this layer, accessing the Hyper version of the shortcut is as simple as holding a thumb key before pressing it.
 
-### Common Apps
+### Common Apps Shortcuts
 
 Holding any of the pinky keys will activate the *shortcuts* layer, which gives access to common shortcuts like open the file explorer, take a screenshot, manage zoom and tabs in a browser.
 
@@ -140,17 +136,33 @@ It will also allow some layers to be toggled on permanently, like the *numbers*,
 
 ![img](../img/shortcuts.png)
 
-### Leader Key
-
-The *Leader Key* is placed in the bottom row index finger in the *shortcuts* layer, besides the key that types *comma* in the base layer. Holding *comma* will also give access to the *shortcuts* layers, making it easier to activate the *Leader Key*, with an inroll bigram, and since *comma* is almost always followed by *space*, this hold action can the preferred behavior, which means that the hold action is easier to trigger than the tap action, making this roll even easier to trigger. The key that contains *space*, in the *shortcuts* layer, will type *comma + space*, to migitate eventual missfire of the hold action when a tap is desired.
-
-### Shortcut Combos
+### Common Shortcuts Combos
 
 Common shortcuts can also be activated using combos, in most layers. These combos are designed to be easy to trigger and hard to misfire.
 
 They allow actions like, copy, paste, select all, enter, tab and navigation keys, among others.
 
 ![img](../img/separatecombos.png)
+
+### Leader Key
+
+*Leader Key* is available through an external module, [zmk-leader-key](https://github.com/urob/zmk-leader-key) and allow macros to be triggered through a sequence of key strokes.
+
+The *Leader Key* is placed in the bottom row index finger in the *shortcuts* layer, beside the key that types *comma* in the base layer. 
+
+Holding *comma* will also give access to the *shortcuts* layers, making it easier to activate the *Leader Key*, with an inroll bigram. And since *comma* is almost always followed by *space*, this hold action can be the preferred behavior, which means that the hold action is easier to trigger than the tap action, making this roll even easier. 
+
+The key that contains *space*, in the *shortcuts* layer, will type *comma + space*, to migitate eventual missfire of the hold action when a tap is desired.
+
+### Navigation Shortcuts
+
+There are three special navigation shortcuts, available in the *nav* layer to allow me to use the arrow keys along with them.
+
+The first one is usually known as swapper, and allows switching between the current running apps. The actual implementation depends on the Operating System. For example, in MacOS, I use Raycast's *Switch to Windows* function to implement this functionality.
+
+The second navigation shortcut allows me to open a new app by searching for its name. I also use Raycast to implement it in MacOS.
+
+The third navigation shortcut depends on the context of the currently running app. It will list the currently open files or tabs and allow me to search and switch between them. It is implemented for apps like Microsoft Edge, VS Code, IntelliJ and Obsidian.
 
 ## Navigation
 
@@ -179,4 +191,6 @@ They allow actions like, copy, paste, select all, enter, tab and navigation keys
 ## Modeling
 
 ### Fusion 360
+
+## Operating System
 
