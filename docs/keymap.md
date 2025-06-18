@@ -94,6 +94,8 @@ The *numbers* layer contains not only numbers but also some symbols commonly use
 
 Numbers are arranged as a classic numpad, with 0 in the thumb. It might not be the optimal configuration, considering what numbers are the most frequent, but allows me to use my 20+ years of muscle memory.
 
+The *numbers* layer can be toggled on permanently using the *shortcuts* layer.
+
 ### NumWord
 
 NumWord is a smart behavior that allows me to type a sequence of numbers and automatically return to the base layer after pressing a word breaking key, like space or enter.
@@ -166,17 +168,27 @@ The third navigation shortcut depends on the context of the currently running ap
 
 ## Navigation
 
-### Modifiers
+![img](../img/navigation.png)
 
-### Enter, Tab, Esc
+Arrow keys are available in the 4 home row keys in the right side, in the *navigation* layer, in a VIM style. Del, Home, End and Tab complement the right side of this layer.
 
-### Text Navigation
+On the left side, there are modifier keys, the rarely usefull Insert key, and the *navigation shortcuts* mentioned before.
 
-### App Navigation
+The *navigation* layer can also be toggled on permanently using the *shortcuts* layer.
 
 ### Window Management
 
+### Text Navigation
+
+#### Sticky Mods
+
+### Mouse Emulation
+
 ## Programming
+
+### Function Keys
+
+#### Sticky Right Mods
 
 ### VIM
 
@@ -192,5 +204,11 @@ The third navigation shortcut depends on the context of the currently running ap
 
 ### Fusion 360
 
+## Panic Mode
+
+A combo with the 3 top row keys in the right side can be used anytime to return to the base layer.
+
 ## Operating System
+
+All shortcuts and macros in this keymap are Operating System aware, but a different version of the firmware must be build for MACOS and LINUX. The LINUX version can also be used for ANDROID and WINDOWS.
 
