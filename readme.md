@@ -16,7 +16,7 @@ The ratiaonale behind the decisions that led to this keymap can be found in the 
 
 What are the directives that drive most of my decisions?
 
-- [Ergonomics, Split, Columnar Stagger](docs/keymap.md#ergonomic-split-columnar-stagger.)
+- [Ergonomic, Split, Columnar Stagger](docs/keymap.md#ergonomic-split-columnar-stagger)
 - [No lateral movements or uncomfortable stretches](docs/keymap.md#no-lateral-movements-or-uncomfortable-stretches)
 - [Trackball in the left hand, heavy load in the right hand](docs/keymap.md#trackball-in-the-left-hand-heavy-load-in-the-right-hand)
 - [English, but also Portuguese, plus VIM and Spreadsheets](docs/keymap.md#english-but-also-portuguese-plus-vim-and-spreadsheets)
