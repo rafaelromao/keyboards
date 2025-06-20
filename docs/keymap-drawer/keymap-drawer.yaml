@@ -41,29 +41,36 @@ layers:
     - { t: $$mdi:keyboard-space$$ }
     - "'"
   shifted1:
-    - [B, M, G, L, O, U]
     - [
-        { t: D, h: shortcuts },
-        { h: $$mdi:apple-keyboard-control$$, t: N },
-        { h: $$mdi:apple-keyboard-option$$, t: S },
-        { h: $$mdi:apple-keyboard-shift$$, t: T },
-        { h: $$mdi:apple-keyboard-shift$$, t: R },
-        { h: $$mdi:apple-keyboard-option$$, t: A },
-        { h: $$mdi:apple-keyboard-control$$, t: E },
-        { t: I, h: shortcuts },
+        {t: B, type: ghost },
+        {t: M, type: ghost },
+        {t: G, type: ghost },
+        {t: L, type: ghost },
+        {t: O, type: ghost },
+        {t: U, type: ghost },
       ]
     - [
-        { h: $$mdi:apple-keyboard-command$$, t: F },
-        { t: C, h: $$mdi:apple-keyboard-command$$ },
-        { h: $$mdi:apple-keyboard-command$$, t: P },
-        { h: $$mdi:apple-keyboard-command$$, t: "H|V", s: magic },
-        { t: ",", h: smartcases },
-        { t: ., h: "⇥ ." },
+        { t: D, h: shortcuts, type: ghost },
+        { h: $$mdi:apple-keyboard-control$$, t: N, type: ghost },
+        { h: $$mdi:apple-keyboard-option$$, t: S, type: ghost },
+        { h: $$mdi:apple-keyboard-shift$$, t: T, type: ghost },
+        { h: $$mdi:apple-keyboard-shift$$, t: R, type: ghost },
+        { h: $$mdi:apple-keyboard-option$$, t: A, type: ghost },
+        { h: $$mdi:apple-keyboard-control$$, t: E, type: ghost },
+        { t: I, h: shortcuts, type: ghost },
       ]
-    - { t: CAPS LINE, h: nav }
-    - { t: $$mdi:keyboard-space$$, h: numbers }
-    - { t: shifted2, s: sticky, h: symbols }
-    - { t: CAPS word, h: media }
+    - [
+        { h: $$mdi:apple-keyboard-command$$, t: F, type: ghost },
+        { t: C, h: $$mdi:apple-keyboard-command$$, type: ghost },
+        { h: $$mdi:apple-keyboard-command$$, t: P, type: ghost },
+        { h: $$mdi:apple-keyboard-command$$, t: "H|V", s: magic, type: ghost },
+        { t: ",", h: smartcases, type: ghost },
+        { t: ., h: "⇥ .", type: ghost },
+      ]
+    - { t: CAPS LINE, h: nav, type: ghost }
+    - { t: $$mdi:keyboard-space$$, h: numbers, type: ghost }
+    - { t: shifted2, s: sticky, h: symbols, type: ghost }
+    - { t: CAPS word, h: media, type: ghost }
   shifted2:
     - [Q, Qu, K, Ô, Ó, Ú]
     - [Y, Z, X, W, Ã, Á, É, Í]
@@ -81,35 +88,35 @@ layers:
     - "'"
   ç-extension:
     - [
-        { type: ghost }, 
-        { type: ghost }, 
-        { type: ghost }, 
-        { type: ghost }, 
-        { type: ghost }, 
-        { type: ghost }
+        null,
+        null,
+        null,
+        null,
+        { t: ▽ },
+        { t: ▽ }
       ]
     - [
-        { type: ghost }, 
-        { type: ghost }, 
-        { type: ghost }, 
-        { t: ão, type: ghost },
-        { t: ã, type: ghost }, 
-        { type: ghost }, 
-        { type: ghost }, 
-        { type: ghost }
+        null,
+        null,
+        null,
+        { t: ão },
+        { t: ã }, 
+        { t: ▽ },
+        null,
+        null
       ] 
     - [
-        { type: ghost }, 
-        { type: ghost }, 
-        { t: ões, type: ghost }, 
-        { t: õ, type: ghost }, 
-        { type: ghost }, 
-        { type: ghost }
+        null,
+        null,
+        { t: ões }, 
+        { t: õ }, 
+        { t: ▽ },
+        { t: ▽ }
       ]
-    - { type: ghost }
-    - { type: ghost }
-    - { type: ghost }
-    - { type: ghost }
+    - null
+    - { t: alpha2, s: sticky }
+    - null
+    - null
   vim-remaps:
     - [
         { t: b, s: vim, type: ghost },

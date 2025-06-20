@@ -21,7 +21,7 @@ I type in English for at least a few hours per day, but Brazilian Portuguese is 
 
 Typing is obviously the most basic function of any keyboard, and there should be no surprises here, but given the directives above, it is not so simple. This keymap uses the Magic Romak layout, which uses two alpha layers. Other features like adaptive and repeat keys, sticky shift, caps word and sentence case will make the typing experience with this keymap pretty unique.
 
-![img](../img/alphas.png)
+![img](../img/alpha-layers.png)
 
 ### Two Alpha Layers
 
@@ -88,7 +88,7 @@ There also combos in the secondary alpha layer for `_`, `?`, `!`, `-` too. Brake
 
 The *numbers* layer contains not only numbers but also some symbols commonly used along with numbers.
 
-![img](../img/symbols.png)
+![img](../img/numbers.png)
 
 ### NumPad
 
@@ -113,6 +113,8 @@ Math Operators must be easily accessible from the *numbers* layer, and I find it
 ## Shortcuts
 
 ### Home Row Mods
+
+![img](../img/alpha1.png)
 
 [Home Row Mods](https://precondition.github.io/home-row-mods) are well know by most keyboard enthusiants and are also available in this keymap. Their disposition is: Ctrl, Alt and Shift in the home row, and Gui (Command / Windows) in the bottom row index key, mirrored in the right side.
 
@@ -166,9 +168,15 @@ The second navigation shortcut allows me to open a new app by searching for its 
 
 The third navigation shortcut depends on the context of the currently running app. It will list the currently open files or tabs and allow me to search and switch between them. It is implemented for apps like Microsoft Edge, VS Code, IntelliJ and Obsidian.
 
+### Shortcut Redirection
+
+Whenever possible, I use the standart shortcuts in my keyboards, but in some cases it is necessary to send a different shortcut to the host, intercept it with some software and redirect in using a different shortcut to the target app.
+
+In MacOS, I use a combination of [Hammerspoon](https://www.hammerspoon.org/) and [Better Touch Tool](https://folivora.ai/) to intercept the shortcuts sent by my keyboards to the host. Linux and Windows are less used, so I only map a few shortcuts there.
+
 ## Navigation
 
-![img](../img/navigation.png)
+![img](../img/nav.png)
 
 Arrow keys are available in the 4 home row keys in the right side, in the *navigation* layer, in a VIM style. Del, Home, End and Tab complement the right side of this layer.
 
@@ -178,9 +186,19 @@ The *navigation* layer can also be toggled on permanently using the *shortcuts* 
 
 ### Window Management
 
+![img](../img/window.png)
+
+Window Management in performed using a combination of modifiers and navigation keys, so there is no need for custom shortcut bindings. The combination of modifiers was selected based on how easy they become to activate, and sometimes holding more than one modifier key is actually easier than holding a single one.
+
 ### Text Navigation
 
+![img](../img/text.png)
+
+Text Navigation in an extremely important workflow. Navigating between words, selecting a whole word or line and having a consistent way to do it in any OS is key. For that reason, there is a dedicated layer for that. Holding the pinky key while on the Navigation layer will activate it and send the appropriate shortcut for the desired action.
+
 #### Sticky Mods
+
+The same modifiers available in the *navigation* layer are also available in the *text* layer, but in their *sticky* version. They also work as standard modifiers if held.
 
 ### Mouse Emulation
 

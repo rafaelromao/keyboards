@@ -216,7 +216,7 @@ layers:
         null,
         null,
         null,
-        { s: mission, h: control, t: $$mdi:monitor-shimmer$$ },
+        { s: show, h: desktops, t: $$mdi:monitor-shimmer$$ },
         { s: prev, h: window, t: $$mdi:dock-window$$ },
         { s: next, h: window, t: $$mdi:dock-window$$ },
       ]
@@ -225,10 +225,10 @@ layers:
         type: held,
         type: held,
         null,
-        { s: prev, h: space, t: $$mdi:remote-desktop$$ },
+        { s: prev, h: desktop, t: $$mdi:remote-desktop$$ },
         { s: prev, h: display, t: $$mdi:monitor$$ },
         { s: next, h: display, t: $$mdi:monitor$$ },
-        { s: next, h: space, t: $$mdi:remote-desktop$$ },
+        { s: next, h: desktop, t: $$mdi:remote-desktop$$ },
       ]
     - [
         null,
@@ -247,7 +247,7 @@ layers:
         null,
         null,
         null,
-        { s: app, h: windows, t: $$mdi:monitor-star$$ },
+        { s: show app, h: windows, t: $$mdi:monitor-star$$ },
         { s: full screen, h: "on", t: $$mdi:fullscreen$$ },
         { s: full screen, h: "off", t: $$mdi:fullscreen-exit$$ },
       ]
@@ -256,10 +256,10 @@ layers:
         type: held,
         type: held,
         null,
-        { s: prev, h: space, t: $$mdi:remote-desktop$$ },
-        { s: prev, h: display, t: $$mdi:monitor$$ },
-        { s: next, h: display, t: $$mdi:monitor$$ },
-        { s: next, h: space, t: $$mdi:remote-desktop$$ },
+        { s: to prev, h: desktop, t: $$mdi:remote-desktop$$ },
+        { s: to prev, h: display, t: $$mdi:monitor$$ },
+        { s: to next, h: display, t: $$mdi:monitor$$ },
+        { s: to next, h: desktop, t: $$mdi:remote-desktop$$ },
       ]
     - [
         null,

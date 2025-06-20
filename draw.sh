@@ -2,6 +2,7 @@
 mkdir -p ./tmp
 
 # Separate target files
+cp ./docs/keymap-drawer/keymap-drawer.yaml ./tmp/keymap-drawer.yaml
 cp ./docs/keymap-drawer/keymap-drawer.yaml ./tmp/keymap-drawer-noseparatecombos.yaml
 cp ./docs/keymap-drawer/keymap-drawer.yaml ./tmp/keymap-drawer-onlyseparatecombos.yaml
 cp ./docs/keymap-drawer/keymap-drawer.yaml ./tmp/keymap-drawer-onlyvimcombos.yaml
@@ -13,40 +14,27 @@ yq -i 'del(.combos[] | select(.draw_separate != true))' ./tmp/keymap-drawer-only
 yq -i 'del(.combos[] | select(.k.s != "vim"))' ./tmp/keymap-drawer-onlyvimcombos.yaml
 
 # Generate SVG files using keymap
-keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -o ./tmp/all.svg ./docs/keymap-drawer/keymap-drawer.yaml
+# "Usage: draw-image <input_file> <image_name> [--combos-only] [<source_param>]"
 
-keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s alpha1 alpha2 numbers symbols shortcuts nav media text smart func -o ./tmp/overview.svg ./docs/keymap-drawer/keymap-drawer.yaml
+./draw-image.sh keymap-drawer.yaml all --2cols
+./draw-image.sh keymap-drawer.yaml overview --2cols alpha1 alpha2 numbers symbols shortcuts nav media text smart func 
+./draw-image.sh keymap-drawer-onlyseparatecombos.yaml separatecombos --combos-only --2cols alpha1 
 
-keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s alpha1 --combos-only -o ./tmp/separatecombos.svg ./tmp/keymap-drawer-onlyseparatecombos.yaml
+./draw-image.sh keymap-drawer-noseparatecombos.yaml alpha-layers --2cols alpha1 alpha2 ç-extension shifted1 shifted2 
+./draw-image.sh keymap-drawer-noseparatecombos.yaml symbol-layers --2cols numbers symbols 
+./draw-image.sh keymap-drawer-noseparatecombos.yaml shortcuts-layers --2cols shortcuts mehs 
+./draw-image.sh keymap-drawer-noseparatecombos.yaml nav-layers --2cols nav text media 
+./draw-image.sh keymap-drawer-noseparatecombos.yaml vim-layers --2cols vim-remaps numbers smart 
 
-keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s alpha1 alpha2 ç-extension shifted1 shifted2 -o ./tmp/alphas.svg ./tmp/keymap-drawer-noseparatecombos.yaml
+./draw-image.sh keymap-drawer-noseparatecombos.yaml alpha1 alpha1
+./draw-image.sh keymap-drawer-noseparatecombos.yaml numbers numbers
+./draw-image.sh keymap-drawer-noseparatecombos.yaml symbols symbols 
+./draw-image.sh keymap-drawer-noseparatecombos.yaml functions func
+./draw-image.sh keymap-drawer-noseparatecombos.yaml shortcuts shortcuts
+./draw-image.sh keymap-drawer-noseparatecombos.yaml mehs mehs 
+./draw-image.sh keymap-drawer-noseparatecombos.yaml nav nav 
+./draw-image.sh keymap-drawer-noseparatecombos.yaml text text 
+./draw-image.sh keymap-drawer-noseparatecombos.yaml media media 
 
-keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s numbers -o ./tmp/numbers.svg ./tmp/keymap-drawer-noseparatecombos.yaml
-
-keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s numbers symbols -o ./tmp/symbols.svg ./tmp/keymap-drawer-noseparatecombos.yaml
-
-keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s func -o ./tmp/functions.svg ./tmp/keymap-drawer-noseparatecombos.yaml
-
-keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s shortcuts mehs -o ./tmp/shortcuts.svg ./tmp/keymap-drawer-noseparatecombos.yaml
-
-keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s nav text media -o ./tmp/navigation.svg ./tmp/keymap-drawer-noseparatecombos.yaml
-
-keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s vim-remaps numbers smart -o ./tmp/vim.svg ./tmp/keymap-drawer-onlyvimcombos.yaml
-
-keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s left-meh-morphs right-meh-morphs coding-meh coding-hyper fusion360-meh fusion360-hyper -o ./tmp/mehs.svg ./tmp/keymap-drawer-mehs.yaml
-
-keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw -s desktop-management window-management -o ./tmp/window.svg ./tmp/keymap-drawer-window.yaml
-
-# Convert SVG files to PNG using Inkscape
-inkscape --export-type png --export-filename ./img/overview.png --export-dpi 300 --export-background=white ./tmp/overview.svg
-inkscape --export-type png --export-filename ./img/separatecombos.png --export-dpi 300 --export-background=white ./tmp/separatecombos.svg
-inkscape --export-type png --export-filename ./img/alphas.png --export-dpi 300 --export-background=white ./tmp/alphas.svg
-inkscape --export-type png --export-filename ./img/numbers.png --export-dpi 300 --export-background=white ./tmp/numbers.svg
-inkscape --export-type png --export-filename ./img/symbols.png --export-dpi 300 --export-background=white ./tmp/symbols.svg
-inkscape --export-type png --export-filename ./img/functions.png --export-dpi 300 --export-background=white ./tmp/functions.svg
-inkscape --export-type png --export-filename ./img/shortcuts.png --export-dpi 300 --export-background=white ./tmp/shortcuts.svg
-inkscape --export-type png --export-filename ./img/navigation.png --export-dpi 300 --export-background=white ./tmp/navigation.svg
-inkscape --export-type png --export-filename ./img/vim.png --export-dpi 300 --export-background=white ./tmp/vim.svg
-inkscape --export-type png --export-filename ./img/mehs.png --export-dpi 300 --export-background=white ./tmp/mehs.svg
-inkscape --export-type png --export-filename ./img/window.png --export-dpi 300 --export-background=white ./tmp/window.svg
-inkscape --export-type png --export-filename ./img/all.png --export-dpi 300 --export-background=white ./tmp/all.svg
+./draw-image.sh keymap-drawer-mehs.yaml mehs --2cols left-meh-morphs right-meh-morphs coding-meh coding-hyper fusion360-meh fusion360-hyper 
+./draw-image.sh keymap-drawer-window.yaml window --2cols desktop-management window-management
