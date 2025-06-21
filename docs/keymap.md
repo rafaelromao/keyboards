@@ -21,11 +21,11 @@ I type in English for at least a few hours per day, but Brazilian Portuguese is 
 
 Typing is obviously the most basic function of any keyboard, and there should be no surprises here, but given the directives above, it is not so simple. This keymap uses the Magic Romak layout, which uses two alpha layers. Other features like adaptive and repeat keys, sticky shift, caps word and sentence case will make the typing experience with this keymap pretty unique.
 
-![img](../img/alpha-layers.png)
-
 ### Two Alpha Layers
 
 The concept of two alpha layers for typing got famous with the [Ben Vallack](https://www.youtube.com/watch?v=dg2TT1OJlQs&list=PLCZYyvXAdQpsEWfa6OEBOhHn48SWgneoD) videos, which shows the concept as an alternative for typing with tiny boards, in his case, 16 keys only.
+
+![img](../img/alphas.png)
 
 This approach is based on the idea of using a sticky layer to get access to alphas that are least common, like q, z and j, for example. The alpha layout is divided into two layers and when tapping a home thumb key in the base layer, the secondary alpha layer is activated for one shot, which means the keyboard will return to the base layer automatically after the next key is released.
 
@@ -34,6 +34,8 @@ The alternative to this approach is using combos for these uncommon letters, but
 In practice, using a sticky layer is not much different than using a dead key. With a dead key, pretty common in Portuguese, we type `'` and then `a` to get `á`, for example. With two alpha layers, I can have a macro that produces `á` in the secondary alpha layer, so that to get `á`, I also have to tap just two keys, the first one would be the home thumb key that activates the secondary alpha layer, and the second one could be the same key used to type `a`. This familiarity with dead keys made the transition to two alpha layers pretty easy for me.
 
 ### Alpha Combos
+
+![img](../img/alpha1.png)
 
 All alphas moved to the secondary alpha layer are also available as combos in the base layer, but they are not usually used for typing, but for commands instead, like VIM bindings for example.
 
@@ -98,7 +100,7 @@ The *numbers* layer can be toggled on permanently using the *shortcuts* layer.
 
 ### NumWord
 
-NumWord is a smart behavior that allows me to type a sequence of numbers and automatically return to the base layer after pressing a word breaking key, like space or enter.
+NumWord, a.k.a. *auto-layer numbers*, is a smart behavior that allows me to type a sequence of numbers and automatically return to the base layer after pressing a word breaking key, like space or enter.
 
 It is triggered using a combo in the base layer, so it is quite fast to activate. 
 
@@ -109,6 +111,8 @@ Brackets are commonly used for two different workflows, working with numbers and
 ### Math Operators
 
 Math Operators must be easily accessible from the *numbers* layer, and I find it particularly helpful if I can do it using only my right hand, so I put them in the right side of my *symbols* layer.
+
+![img](../img/symbols.png)
 
 ## Shortcuts
 
@@ -128,9 +132,16 @@ Meh can be triggered holding the 3 mods in the home row, while holding the 3 equ
 
 Meh and Hyper shortcuts are mapped in software to make custom actions easier to trigger and memorize, for coding, as an example.
 
+![img](../img/coding-mehs.png)
+
+In some cases, like while debugging, a lot of consecutive uses of Mehs and Hyper shortcuts are necessary, and for this reason there is a *mehs* layer that can be toggled on as well. 
+
+
 ![img](../img/mehs.png)
 
-In some cases, like while debugging, a lot of consecutive uses of Mehs and Hyper shortcuts are necessary, and for this reason there is a *mehs* layer that can be toggled on as well. In this layer, accessing the Hyper version of the shortcut is as simple as holding a thumb key before pressing it.
+In this layer, or while holding *meh* in the base layer, accessing the Hyper version of the shortcut is as simple as holding a thumb key before pressing it.
+
+![img](../img/meh-morphs.png)
 
 ### Common Apps Shortcuts
 
@@ -162,6 +173,8 @@ The key that contains *space*, in the *shortcuts* layer, will type *comma + spac
 
 There are three special navigation shortcuts, available in the *nav* layer to allow me to use the arrow keys along with them.
 
+![img](../img/nav.png)
+
 The first one is usually known as swapper, and allows switching between the current running apps. The actual implementation depends on the Operating System. For example, in MacOS, I use Raycast's *Switch to Windows* function to implement this functionality.
 
 The second navigation shortcut allows me to open a new app by searching for its name. I also use Raycast to implement it in MacOS.
@@ -176,9 +189,9 @@ In MacOS, I use a combination of [Hammerspoon](https://www.hammerspoon.org/) and
 
 ## Navigation
 
-![img](../img/nav.png)
-
 Arrow keys are available in the 4 home row keys in the right side, in the *navigation* layer, in a VIM style. Del, Home, End and Tab complement the right side of this layer.
+
+![img](../img/nav.png)
 
 On the left side, there are modifier keys, the rarely usefull Insert key, and the *navigation shortcuts* mentioned before.
 
@@ -186,15 +199,15 @@ The *navigation* layer can also be toggled on permanently using the *shortcuts* 
 
 ### Window Management
 
-![img](../img/window.png)
-
 Window Management in performed using a combination of modifiers and navigation keys, so there is no need for custom shortcut bindings. The combination of modifiers was selected based on how easy they become to activate, and sometimes holding more than one modifier key is actually easier than holding a single one.
+
+![img](../img/window.png)
 
 ### Text Navigation
 
-![img](../img/text.png)
-
 Text Navigation in an extremely important workflow. Navigating between words, selecting a whole word or line and having a consistent way to do it in any OS is key. For that reason, there is a dedicated layer for that. Holding the pinky key while on the Navigation layer will activate it and send the appropriate shortcut for the desired action.
+
+![img](../img/text.png)
 
 #### Sticky Mods
 
@@ -202,11 +215,56 @@ The same modifiers available in the *navigation* layer are also available in the
 
 ### Mouse Emulation
 
+On the left side of the *media* layer, I can control the mouse movement, scroll and clicks.
+
+![img](../img/media.png)
+
+### Media Controls
+
+On the right side of the *media* layer, I have my media controls, which includes custom shortcuts to toggle my Microfone and Camera during calls and also to Raise My Hand. These shortcuts are mapped in software to both Google Meet and Microsoft Teams, using [Better Touch Tool](https://folivora.ai/).
+
 ## Programming
+
+Although I'm not a software developer anymore, I spend 20+ years of my life programming, and I still do some coding eventually, so having my keyboard optimized for that was also one of my goals.
+
+![img](../img/numbers.png)
+
+### Brackets
+
+If the left side of my *numbers* layer, I have parenthesis, square brackets and curly braces, and there are many optimization on how they can be used:
+- Holding any of them will append it to the current line.
+- A combo of open and close curly braces will append the opening one and add a new row, which is used to add a new block of code.
+- A combo of open and close parenthesis or brackets will add both symbols in order.
+- Holding the combo for open and close parenthesis will append both symbols to the current line.
+- A combo with the index, middle and ring fingers in the home row of the right side will append open and close parenthesis to the current line and add a new line.
+
+### Semicolon
+
+Semicolon is extremely important in C-like languages, and it is available as a primery combo in the base layer, tapping both comma and dot at the same time.
+
+Holding these two keys will append it to the current line, which also works in the *numbers* layer. Also in the *numbers* layer, a combo with the 3 bottom row keys of the right side will append a semicolon and add a new line.
+
+### Conditional Operators
+
+On the left side of the *numbers* layer are the two symbols used for conditional operatiors, `&` and `|`. Comboing the keys that types them with their neighbor key will add a pair of these symbols instead. Holding the combo will append the pair to the current line.
+
+### Strings and Arrows
+
+![img](../img/symbols.png)
+
+Quotes are available in the left side of the *symbols* layer, and there are combos for typing a pair of them, moving the cursor to the middle.
+
+Conditional operators are also placed in this layer, and there are combos for typing `->` and `=>`, usually used in lambda expressions, as well as some symbols and commons commonly used in *markdown* notation.
 
 ### Function Keys
 
+![img](../img/functions.png)
+
+Function keys are commonly used for debugging, and they are available in a dedicated layer, but since most IDE shortcuts will be mapped to Meh and Hyper shortcuts, function keys are rarely necessary.
+
 #### Sticky Right Mods
+
+The *func* layer will also have *right side* versions of the modifiers, in their sticky variant, in case they are eventually needed.
 
 ### VIM
 
@@ -214,19 +272,23 @@ The same modifiers available in the *navigation* layer are also available in the
 
 ### Smart Cases
 
-### Markdown
-
 ### IntelliJ IDEA
 
 ## Modeling
 
 ### Fusion 360
 
-## Panic Mode
+## General
+
+### Panic Mode
 
 A combo with the 3 top row keys in the right side can be used anytime to return to the base layer.
 
-## Operating System
+### Bluetooth
+
+### Bootloader
+
+### Operating System
 
 All shortcuts and macros in this keymap are Operating System aware, but a different version of the firmware must be build for MACOS and LINUX. The LINUX version can also be used for ANDROID and WINDOWS.
 

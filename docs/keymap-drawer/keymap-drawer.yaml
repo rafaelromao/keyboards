@@ -315,9 +315,9 @@ layers:
       ]
     - [
         null,
-        { t: $$mdi:arrow-left-circle$$, s: media },
-        { t: $$mdi:arrow-up-circle$$, s: media },
-        { t: $$mdi:arrow-right-circle$$, s: media },
+        { t: $$mdi:arrow-left-circle$$, s: mouse },
+        { t: $$mdi:arrow-up-circle$$, s: mouse },
+        { t: $$mdi:arrow-right-circle$$, s: mouse },
         { t: $$mdi:microphone$$, s: mic},
         { t: $$mdi:volume-medium$$, s: vol- },
         { t: $$mdi:volume-high$$, s: vol+ },
@@ -325,7 +325,7 @@ layers:
       ]
     - [
         { t: $$mdi:arrow-down-circle-outline$$, s: scroll },
-        { t: $$mdi:arrow-down-circle$$, s: media },
+        { t: $$mdi:arrow-down-circle$$, s: mouse },
         { t: $$mdi:arrow-up-circle-outline$$, s: scroll },
         { t: $$mdi:play-pause$$, s: play },
         { t: $$mdi:skip-backward$$, s: previous },
