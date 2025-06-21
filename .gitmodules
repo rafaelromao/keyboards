@@ -19,3 +19,6 @@
 [submodule "modules/urob/zmk-adaptive-key"]
 	path = modules/urob/zmk-adaptive-key
 	url = git@github.com:urob/zmk-adaptive-key
+[submodule "modules/petejohanson/cirque-input-module"]
+	path = modules/petejohanson/cirque-input-module
+	url = git@github.com:petejohanson/cirque-input-module

@@ -5,9 +5,12 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <dt-bindings/zmk/input_transform.h>
+#include <input/processors.dtsi>
 
 / {
     chosen {
+        zephyr,display = &oled;
         zmk,kscan = &default_kscan;
         zmk,matrix_transform = &default_transform;
     };
@@ -34,5 +37,53 @@
             , <&pro_micro 20 GPIO_ACTIVE_HIGH>
             , <&pro_micro 18 GPIO_ACTIVE_HIGH>
             ;
+    };
+
+    split_inputs {
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        glidepoint_split: glidepoint_split@0 {
+            compatible = "zmk,input-split";
+            reg = <0>;
+        };
+    };
+
+    glidepoint_listener: glidepoint_listener {
+        compatible = "zmk,input-listener";
+        status = "disabled";
+        device = <&glidepoint>;
+    };
+};
+
+&pro_micro_i2c {
+    status = "okay";
+
+    oled: ssd1306@3c {
+        compatible = "solomon,ssd1306fb";
+        status = "disabled";
+        reg = <0x3c>;
+        width = <128>;
+        height = <32>;
+        segment-offset = <0>;
+        page-offset = <0>;
+        display-offset = <0>;
+        multiplex-ratio = <31>;
+        segment-remap;
+        com-invdir;
+        com-sequential;
+        inversion-on;
+        prechargep = <0x22>;
+    };
+
+    glidepoint: glidepoint@2a {
+        compatible = "cirque,pinnacle";
+        reg = <0x2a>;
+        status = "disabled";
+        dr-gpios = <&pro_micro 1 (GPIO_ACTIVE_HIGH)>;
+
+        sensitivity = "4x";
+        sleep; 
+        no-taps;
     };
 };
