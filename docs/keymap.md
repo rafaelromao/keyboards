@@ -308,9 +308,19 @@ A combo with the 3 top row keys in the right side can be used anytime to return 
 
 ### Bluetooth
 
+Bluetooth controls are available in the functions layer and allow to swap between profiles, return to the first one and clear the current one.
+
+![img](../img/functions.png)
+
 ### Bootloader
+
+Most of my boards have an easily accessible physical reset button, but not all of them. And even for those, sometimes it will be easier to use a shortcut to put the board in boatloader mode to updates its keymap (something I do a few times in a week).
+
+This bootloader shortcut must be available independently in both halves of the board and should not be easier to trigger by accident, so I put them in a second thumb of a layer that is activated holding both the other thumb and the pinky key on the same side. Those layers are the *func* and *smart* layers.
+
+![img](../img/boot.png)
 
 ### Operating System
 
-All shortcuts and macros in this keymap are Operating System aware, but a different version of the firmware must be build for MACOS and LINUX. The LINUX version can also be used for ANDROID and WINDOWS.
+All shortcuts and macros in this keymap are Operating System aware, but a different version of the firmware must be built for MACOS and LINUX. The LINUX version can also be used for ANDROID and WINDOWS.
 
