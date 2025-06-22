@@ -196,7 +196,7 @@ layers:
         { t: $$mdi:content-cut$$, s: clip },
         { t: $$mdi:power-sleep$$, s: "sleep" },
         { t: numbers },
-        { t: alpha1, h: plain },
+        { t: plain1 },
       ]
     - [
         { type: held },

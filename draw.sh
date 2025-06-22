@@ -18,9 +18,13 @@ yq -yi 'del(.combos[] | select(.draw_separate != true))' ./tmp/keymap-drawer-onl
 
 ./draw-image.sh keymap-drawer.yaml all --2cols
 ./draw-image.sh keymap-drawer.yaml overview --2cols alpha1 alpha2 numbers symbols shortcuts nav media text smart func 
+
 ./draw-image.sh keymap-drawer-onlyseparatecombos.yaml separatecombos --combos-only --2cols alpha1 
 
+./draw-image.sh keymap-drawer-noseparatecombos.yaml overview-nocombos --2cols alpha1 alpha2 numbers symbols shortcuts nav media text smart func 
 ./draw-image.sh keymap-drawer-noseparatecombos.yaml alphas alpha1 alpha2 ç-extension
+./draw-image.sh keymap-drawer-noseparatecombos.yaml plain --2cols plain1 plain2
+./draw-image.sh keymap-drawer-noseparatecombos.yaml shifted --2cols shifted1 shifted2
 ./draw-image.sh keymap-drawer-noseparatecombos.yaml vim vim-remaps numbers smart 
 
 ./draw-image.sh keymap-drawer-noseparatecombos.yaml alpha1 alpha1

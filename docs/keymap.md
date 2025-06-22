@@ -5,16 +5,26 @@ This keymap is a result of a few years of iteractive improvements, targeting wha
 
 In the sections below, you can see my most common workflows and how this keymap is used for them.
 
+![img](../img/overview-nocombos.png)
+
 ## Directives
 
 The following directives drove my choices when defining how this keymap should look like:
+
 #### Ergonomic, Split, Columnar Stagger
+
 This keymap is designed for ergonomic keyboards. It means, split, wireless or not, and columnar stagger, with at least 4 columns and 3 rows, plus 2 thumb keys on each side. It is also implemented on top of ZMK, using features like home row mods, sticky shift on a thumb key, caps word, macros, adaptive keys, and plenty of layers and combos.
+
 #### No lateral movements or uncomfortable stretches
+
 The main objective of this keymap, and the keyboards that I've built to use with it, is the comfort when typing. Lateral movements with the pinky or index fingers are not comfortable to me, as well as using the pinky finger to reach keys in the top or bottom rows. As a result, such keys were removed and the keyboards, layout and keymap evolved to have only 24 keys, in the format 1333+2.
+
 #### Trackball in the left hand, heavy load in the right hand
+
 Although I'm not a left-handed person, I got used to drive a Kensington Expert Mouse (actually a trackball) with my left hand, so I got my right hand free for most of the time, to take notes, drink some coffee or perform common actions, like copy and paste, using only the right side of the keyboard.
+
 #### English, but also Portuguese, plus VIM and Spreadsheets
+
 I type in English for at least a few hours per day, but Brazilian Portuguese is my home language, so I had to find, or design, an alpha layout that would work well for both languages. I also use VIM in all my editors (VSCode, Windsurf, IntelliJ and Obsidian), so it also has a huge influence in this keymap. I don't code very often today, but I write some Java code eventually, so good bindings for IntelliJ is also important. And finally, spreadsheets should be easy to use, since I had to work with them for a big portion of my week.
 
 ## Typing
@@ -23,7 +33,7 @@ Typing is obviously the most basic function of any keyboard, and there should be
 
 ### Two Alpha Layers
 
-The concept of two alpha layers for typing got famous with the [Ben Vallack](https://www.youtube.com/watch?v=dg2TT1OJlQs&list=PLCZYyvXAdQpsEWfa6OEBOhHn48SWgneoD) videos, which shows the concept as an alternative for typing with tiny boards, in his case, 16 keys only.
+The concept of two alpha layers for typing got famous with [Ben Vallack](https://www.youtube.com/watch?v=dg2TT1OJlQs&list=PLCZYyvXAdQpsEWfa6OEBOhHn48SWgneoD) videos, which show the concept as an alternative for typing with tiny boards, in his case, 16 keys only.
 
 ![img](../img/alphas.png)
 
@@ -70,6 +80,12 @@ It is also quite common to have it followed by either `ão` or `ões`, so macros
 *Sticky Shift*, also known as One Shot Shift, is a shift key that is activated tapping, instead of holding. It works like a dead key, we tap it and the next key we tap will be capitalized. It is much fluid and fast than holding shift down.
 
 In this keymap, the Sticky Shift is present in a thumb key, in the right side of the board.
+
+#### Shifted layers
+
+Due to a limitation of ZMK, a *sticky layer* does not work well in conjunction with a *sticky shift*, so I had to use a layer to bypass this limitation. For capitalizing the *alpha1* layer, the regular *sticky shift* is used, but for capitalizing the *alpha2* layer, I used a separate layer where all alphas are alreay capitalized. This was also necessary to implement some other captalization behaviors, like CAPS word and CAPS LINE.
+
+![img](../img/shifted.png)
 
 ### CAPS word and CAPS LINE
 
@@ -123,6 +139,12 @@ Math Operators must be easily accessible from the *numbers* layer, and I find it
 [Home Row Mods](https://precondition.github.io/home-row-mods) are well know by most keyboard enthusiants and are also available in this keymap. Their disposition is: Ctrl, Alt and Shift in the home row, and Gui (Command / Windows) in the bottom row index key, mirrored in the right side.
 
 To make combinations of Ctrl, Alt and/or Shift with Gui easier, Gui is replicated for the middle and ring  fingers in the left side.
+
+#### Plain Layers
+
+For the rare cases when Home Row Mods cause problems, there is a pair of alpha layers called *plain1* and *plain2* that does not have home row mods or any other tap-hold behaviors. This layers are also used for bringing and alpha layer on top of the *mehs* layer, for inputing text while this layer is fixed.
+
+![img](../img/plain.png)
 
 ### Meh and Hyper
 
