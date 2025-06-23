@@ -73,6 +73,8 @@ Cedila `Ç` is pretty common in Portuguese, but always comes before a vowel, usu
 i
 To avoid that, a third alpha layer, containing macros for these two accented vowels, is automatically activated for one shot after `ç`. This is what I call the *Ç-Extension* layer. The keys for all other vowels are transparent in this layer, so it is still possible to type words like `açude` without any problem. For words like `açúcar`, on the other hand, a secondary activation of the secondary alpha layer would still be required though.
 
+![img](../img/cedil.png)
+
 It is also quite common to have it followed by either `ão` or `ões`, so macros can be used to type these two sentences easier as ç extentions.
 
 ### Sticky Shift
