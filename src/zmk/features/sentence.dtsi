@@ -1,0 +1,22 @@
+/*
+*
+* Copyright (c) 2022 Rafael Romão
+* SPDX-License-Identifier: MIT
+*
+*/
+
+/ {
+    sentense_case {
+
+        MACRO(mc_space_sentence, &kp SPACE &sl SEN_CASE)
+        
+        ak_space: ak_space {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>;
+
+            ADAPTIVE(punct_space , &mc_space_sentence , QMARK EXCL DOT)
+        };
+
+    };
+};

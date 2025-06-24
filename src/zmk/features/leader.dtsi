@@ -4,30 +4,25 @@
 * SPDX-License-Identifier: MIT
 *
 */
-/*                KEY POSITIONS
-
-  ╭─────────────────────╮ ╭─────────────────────╮
-  │ LTP LTR LTM LTI LTC │ │ RTC RTI RTM RTR RTP │
-  │ LHP LHR LHM LHI LHC │ │ RHC RHI RHM RHR RHP │
-  │ LBP LBR LBM LBI LBC │ │ RBC RBI RBM RBR RBP │
-  ╰───────╮ L2  L1  L0  │ │ R0  R1  R2  ╭───────╯
-          ╰─────────────╯ ╰─────────────╯ */
 
 / {
-        MACRO(md_exit, &kp E &kp X &kp I &kp T &kp ENTER)
-        MACRO(md_haha, &kp H &kp A &kp H &kp A)
-        MACRO(md_hehe, &kp H &kp E &kp H &kp E)
-        MACRO(md_kkkk, &kp K &kp K &kp K &kp K)
-        MACRO(md_hugs, &kp LBKT &kp RBKT &kp SQT &kp S)
+        MACRO(md_exit,  &kp E &kp X &kp I &kp T &kp ENTER)
+        MACRO(md_haha,  &kp H &kp A &kp H &kp A)
+        MACRO(md_hehe,  &kp H &kp E &kp H &kp E)
+        MACRO(md_kkkk,  &kp K &kp K &kp K &kp K)
+        MACRO(md_hugs,  &kp LBKT &kp RBKT &kp SQT &kp S)
+        MACRO(md_otask, &kp MINUS &kp SPACE &kp LBKT &kp SPACE &kp RBKT &kp SPACE)
+        MACRO(md_oref,  &kp LBKT &kp LBKT)
 
         leader: leader {
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
-            ld_section { sequence = <S>    ; bindings = <&kp LA(N6)>; };
-            ld_exit    { sequence = <DOT>  ; bindings = <&md_exit>; };
-            ld_haha    { sequence = <O>    ; bindings = <&md_haha>; };
-            ld_hehe    { sequence = <U>    ; bindings = <&md_hehe>; };
-            ld_kkkk    { sequence = <I>    ; bindings = <&md_kkkk>; };
-            ld_hugs    { sequence = <C F>  ; bindings = <&md_hugs>; };
+            ld_exit    { sequence = <DOT> ; bindings = <&md_exit>; };
+            ld_haha    { sequence = <O>   ; bindings = <&md_haha>; };
+            ld_hehe    { sequence = <U>   ; bindings = <&md_hehe>; };
+            ld_kkkk    { sequence = <I>   ; bindings = <&md_kkkk>; };
+            ld_hugs    { sequence = <C>   ; bindings = <&md_hugs>; };
+            ld_otask   { sequence = <T>   ; bindings = <&md_otask>; };
+            ld_oref    { sequence = <S>   ; bindings = <&md_oref>; };
         };
 };

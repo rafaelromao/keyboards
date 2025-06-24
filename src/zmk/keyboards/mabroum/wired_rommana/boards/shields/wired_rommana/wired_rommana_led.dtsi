@@ -1,0 +1,59 @@
+#include <dt-bindings/led/led.h>
+
+&pinctrl {
+    pio0_spi0_default: pio0_spi0_default {
+        group1 {
+            pinmux = <PIO0_P12>;
+        };
+    };
+};
+
+&pio0 {
+    status = "okay";
+
+    pio0_spi0: pio0_spi0 {
+        pinctrl-0 = <&pio0_spi0_default>;
+        pinctrl-names = "default";
+
+        compatible = "raspberrypi,pico-spi-pio";
+        #address-cells = <1>;
+        #size-cells = <0>;
+        clocks = <&system_clk>;
+        clock-frequency = <4000000>;
+
+        clk-gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>;     /* Must be defined. Select a pin that is not used elsewhere. */
+        mosi-gpios = <&gpio0 12 GPIO_ACTIVE_HIGH>; /* Data In pin. */
+        miso-gpios = <&gpio0 12 GPIO_ACTIVE_HIGH>; /* Must be defined. Re-using the DI pin is OK for WS2812. */
+
+        led_strip: ws2812@0 {
+            compatible = "worldsemi,ws2812-spi";
+
+            /* SPI */
+            reg = <0>; /* ignored, but necessary for SPI bindings */
+            spi-max-frequency = <4000000>;
+
+            /* WS2812 */
+            chain-length = <10>; /* number of LEDs */
+            spi-one-frame = <0x70>;
+            spi-zero-frame = <0x40>;
+            color-mapping = <LED_COLOR_ID_GREEN
+                             LED_COLOR_ID_RED
+                             LED_COLOR_ID_BLUE>;
+        };
+    };
+};
+
+&gpio0 {
+	status = "okay";
+
+	/*
+	 * The neopixel on this board has its positive side hooked up to a GPIO pin
+	 * rather than a positive voltage rail to save on power. This will enable
+	 * the LED on board initialization.
+	 */
+	neopixel-power-enable {
+		gpio-hog;
+		gpios = <11 GPIO_ACTIVE_HIGH>;
+		output-high;
+	};
+};

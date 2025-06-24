@@ -1,7 +1,7 @@
 #!/bin/bash
 
 KEYBOARD_HOME="$(pwd)"
-ZMK="${1:-rafaelromao/zmk}"
+ZMK="${1:-zmkfirmware/zmk}"
 ZMK_MODULE="modules/$ZMK"
 export ZMK_HOME="$KEYBOARD_HOME/$ZMK_MODULE"
 

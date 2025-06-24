@@ -5,6 +5,8 @@
  *
  */
 
+ // Layers
+
 #define ALPHA1 0
 
 #define CAMEL_CASE 1
@@ -18,44 +20,40 @@
 
 #define ALPHA2 9
 
-#define LOWER 10
-#define RAISE 11
+#define NUM 10
+#define SYM 11
 
 #define SEN_CASE 12
-#define SEN_EXT 13
+#define CCEDIL 13
+#define SFT_A2 14
+#define CASE_A2 15
+#define CASE_CCEDIL 16
 
-#define CCEDIL 14
-#define SFT_A2 15
-#define CASE_A2 16
-#define CASE_CCEDIL 17
+#define SHORTS 17
+#define MEHS 18
 
-#define SHORTCUTS 18
-#define MEHS 19
+#define PLAIN1 19
+#define PLAIN2 20
+#define SFT_PLAIN2 21
+#define ALTREP2 22
 
-#define PLAIN1 20
-#define PLAIN2 21
-#define SFT_PLAIN2 22
-#define ALTREP2 23
+#define NAV 23
 
-#define NAV 24
+#define NUM_CP 24
+#define SYM_CP 25
 
-#define LOW_CP 25
-#define RAI_CP 26
+#define MEDIA 26
+#define NAV_CP 27
 
-#define MEDIA 27
+#define TEXT 28
+#define FUN 29
+#define SMART 30
 
-#define FUN 28
-#define TEXT 29
-
-#define SYSTEM 30
-
-#define NAV_F 31
-
-
+// Settings
 
 #define COMBO_TERM 30
 #define TAPPING_TERM 250
-#define QUICK_TAP_TERM 150
+#define QUICK_TAP_TERM 175
 #define ADAPTIVE_KEY_TIMEOUT 2000
 
 /*                KEY POSITIONS

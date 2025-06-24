@@ -43,7 +43,6 @@
         MACRO(mc_hand,                   &macro_tap &kp LC(LA(H)))
         MACRO(mc_mic,                    &macro_tap &kp LC(LA(D)))
         MACRO(mc_cam,                    &macro_tap &kp LC(LA(E)))
-        MACRO(mc_menubar,                &macro_tap &kp LC(LA(B)))
         MACRO(mc_screenshot,             &macro_tap &kp LC(LA(S)))
         MACRO(mc_emoji,                  &macro_tap &kp LC(LA(J)))
 
@@ -51,13 +50,14 @@
 
         MACRO(mc_prev_word,              &macro_tap &kp LC(LEFT))
         MACRO(mc_next_word,              &macro_tap &kp LC(RIGHT))
-        MACRO(mc_del_word,               &macro_press &kp LC(BACKSPACE) &macro_pause_for_release &macro_release &kp LC(BACKSPACE))
+        MACRO(mc_del_word,               &macro_press &kp LC(DELETE) &macro_pause_for_release &macro_release &kp LC(DELETE))
+        MACRO(mc_bsp_word,               &macro_press &kp LC(BACKSPACE) &macro_pause_for_release &macro_release &kp LC(BACKSPACE))
 
         // Meh and Hyper
 
         MACRO(mc_meh_comma,              &macro_tap &kp LC(LA(LS(COMMA))))
-        MODTAP_TP(th_meh_comm,           &mc_meh_comma)
+        MODTAP_TP(mt_meh_comm,           &mc_meh_comma)
         MACRO(mc_meh_dot,                &macro_tap &kp LC(LA(LS(DOT))))
-        MODTAP_TP(th_meh_dot,            &mc_meh_dot)
+        MODTAP_TP(mt_meh_dot,            &mc_meh_dot)
    };
 };

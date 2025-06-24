@@ -6,40 +6,31 @@ A split keyboard layout optimized for Portuguese, English, working with numbers 
 
 ![img](img/overview.png)
 
+The image above shows just the most relevant layers. To see the full diagram, click [here](./img/all.png).
+
 ## How this layout works?
 
-The following pages explain how this layout works and which features are implemented.
+The ratiaonale behind the decisions that led to this keymap can be found in the links below:
 
-### Layers
+### Directives
 
-- [Alphas](docs/alphas.md)
-- [Symbols and Numbers](docs/symbols.md)
-- [Navigation and Media](docs/navigation.md)
-- [Functions and System](docs/functions.md)
-- [Shortcuts and Mehs](docs/shortcuts.md) 
+What are the directives that drive most of my decisions?
 
-### Special Features
+- [Ergonomic, Split, Columnar Stagger](docs/keymap.md#ergonomic-split-columnar-stagger)
+- [No lateral movements or uncomfortable stretches](docs/keymap.md#no-lateral-movements-or-uncomfortable-stretches)
+- [Trackball in the left hand, heavy load in the right hand](docs/keymap.md#trackball-in-the-left-hand-heavy-load-in-the-right-hand)
+- [English, but also Portuguese, plus VIM and Spreadsheets](docs/keymap.md#english-but-also-portuguese-plus-vim-and-spreadsheets)
 
-- [Two Alpha Layers](docs/alphas.md)
-- [Thumb Shift](docs/alphas.md)
-- [Sentence Case](docs/alphas.md)
-- [Caps Word](docs/alphas.md)
-- [Magic Key](docs/alphas.md)
-- [Repeat Key](docs/alphas.md)
-- [VIM Remaps](docs/navigation.md)
-- [Shortcut Combos](docs/alphas.md)
-- [Num Word](docs/symbols.md)
-- [Symbol Layers](docs/symbols.md)
-- [Coding Macros](docs/symbols.md)
-- [Smart Cases](docs/functions.md)
-- [Select Word](docs/shortcuts.md)
-- [Leader Key](docs/shortcuts.md)
-- [Shortcuts](docs/shortcuts.md)
-- [Mouse Keys](docs/navigation.md)
+### Workflows
 
-## About this repo
+What are the workflows that I need to execute with my keyboards?
 
-This repository contains the keymap files that are used to customize my keyboards. The firmware files are included as submodules or external references.
+- [Typing](docs/keymap.md#typing): The most basic and essential workflow.
+- [Numbers](docs/keymap.md#numbers): How this keymap makes it easy to work with numbers.
+- [Shortcuts](docs/keymap.md#shortcuts): How to work with so many shortcuts in such minimal keyboards.
+- [Navigation](docs/keymap.md#navigation): Navigating in text, presentations, window management and mouse emulation.
+- [Programming](docs/keymap.md#programming): Optimizations to make programming easier.
+- [Modeling](docs/keymap.md#modeling): How do I use Fusion 360.
 
 ## Compatibility
 
@@ -111,13 +102,12 @@ Most features implemented here were based on the work referenced below.
 - [Thomas Baart](https://thomasbaart.nl/category/mechanical-keyboards/firmware/qmk)
 
 ### ZMK
-- [petejohanson](https://github.com/petejohanson/)
-- [bravekarma](https://github.com/caksoylar)
-- [nickconway](https://github.com/nickconway)
-- [urob](https://github.com/urob)
-- [ssbb](https://github.com/ssbb)
-- [krikun98](https://github.com/krikun98)
-- [voidyourwarranty2](https://github.com/voidyourwarranty2/zmk)
+- [Pete Johanson](https://github.com/petejohanson/)
+- [Cen Aksoylar](https://github.com/caksoylar)
+- [Nick Conway](https://github.com/nickconway)
+- [Robert U](https://github.com/urob)
+- [Sviatoslav Bulbakha](https://github.com/ssbb)
+- [Alexander Krikun](https://github.com/krikun98)
 
 ### 3D Printing and Handwiring
 - [Jan Lunge](https://m.youtube.com/@JanLunge)
@@ -127,7 +117,6 @@ Most features implemented here were based on the work referenced below.
 - [Peter Elliot](https://github.com/PJE66)
 
 ## Resouces
-
 - [Keymap Drawer](https://github.com/caksoylar/keymap-drawer)
 - [Keymap DB](https://keymapdb.com/keymaps/rafaelromao/)
 - [QMK Docs](https://docs.qmk.fm)
