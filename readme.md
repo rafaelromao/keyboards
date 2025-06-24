@@ -30,7 +30,6 @@ What are the workflows that I need to execute with my keyboards?
 - [Shortcuts](docs/keymap.md#shortcuts): How to work with so many shortcuts in such minimal keyboards.
 - [Navigation](docs/keymap.md#navigation): Navigating in text, presentations, window management and mouse emulation.
 - [Programming](docs/keymap.md#programming): Optimizations to make programming easier.
-- [Modeling](docs/keymap.md#modeling): How do I use Fusion 360.
 
 ## Compatibility
 
