@@ -135,11 +135,18 @@
 			#binding-cells = <1>;  
             continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
         };
+        slash_case: slash_case {
+            compatible = "zmk,behavior-auto-layer";
+            ignore-alphas;
+            ignore-modifiers;
+			#binding-cells = <1>;  
+            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SLASH>;
+        };
         MACRO(tc_constant_case, &smart_case CONST_CASE)
         MACRO(tc_snake_case, &smart_case SNAKE_CASE)
         MACRO(tc_kebab_case, &smart_case KEBAB_CASE)
         MACRO(tc_camel_case, &smart_case CAMEL_CASE)
-        MACRO(tc_slash_case, &smart_case SLASH_CASE)
+        MACRO(tc_slash_case, &slash_case SLASH_CASE)
         MACRO(tc_pascal_case,  &tc_camel_case &sk LSHFT)
 
 

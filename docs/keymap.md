@@ -154,12 +154,9 @@ Meh and Hyper are special modidifers, triggered by the combination of three or f
 
 Meh can be triggered holding the 3 mods in the home row, while holding the 3 equivalent keys in the bottom row will trigger Hyper.
 
-Meh and Hyper shortcuts are mapped in software to make custom actions easier to trigger and memorize, for coding, as an example.
+Meh and Hyper shortcuts are mapped in software to make custom actions easier to trigger and memorize.
 
-![img](../img/coding-mehs.png)
-
-In some cases, like while debugging, a lot of consecutive uses of Mehs and Hyper shortcuts are necessary, and for this reason there is a *mehs* layer that can be toggled on as well. 
-
+In some cases, a lot of consecutive uses of Mehs and Hyper shortcuts are necessary, and for this reason there is a *mehs* layer that can be toggled on as well. 
 
 ![img](../img/mehs.png)
 
@@ -308,13 +305,28 @@ And finally, there are a few macros defined specifically for VIM in my *smart* l
 
 ### Java
 
-### Smart Cases
+Java is may main programming language today and most of my *symbols* and *numbers* layer were designed with Java in mind.
+
+#### Directory Navigation
+
+In this *symbols* layer, there are also some macros used to navigate directories in a terminal shell.
+
+![img](../img/symbols.png)
+![img](../img/numbers.png)
 
 ### IntelliJ IDEA
 
-## Modeling
+My most used shortcuts in IntelliJ IDEA were remapped to use Meh and Hyper shortcuts too.
 
-### Fusion 360
+![img](../img/coding-mehs.png)
+
+### Smart Cases
+
+Smart Cases are special typing modes where the `space` is replaced by `-` or `_`, for example, to type things like method names, variable names, constant names and so on, supporting the most common casings, like CONSTANT_CASE, kebab-case, camelCase, PascalCase and slash/case.
+
+Smart Cases are available through the 
+
+![img](../img/smart.png)
 
 ## General
 
