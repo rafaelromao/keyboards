@@ -27,7 +27,7 @@ yq -i 'del(.combos[] | select(.draw_separate != true))' ./tmp/keymap-drawer-only
 ./draw-image.sh keymap-drawer-noseparatecombos.yaml boot --2cols func smart
 ./draw-image.sh keymap-drawer-noseparatecombos.yaml plain --2cols plain1 plain2
 ./draw-image.sh keymap-drawer-noseparatecombos.yaml shifted --2cols shifted1 shifted2
-./draw-image.sh keymap-drawer-noseparatecombos.yaml vim vim-remaps numbers smart 
+./draw-image.sh keymap-drawer-noseparatecombos.yaml vim vim-remaps
 
 ./draw-image.sh keymap-drawer-noseparatecombos.yaml alpha1 alpha1
 ./draw-image.sh keymap-drawer-noseparatecombos.yaml numbers numbers
@@ -38,6 +38,7 @@ yq -i 'del(.combos[] | select(.draw_separate != true))' ./tmp/keymap-drawer-only
 ./draw-image.sh keymap-drawer-noseparatecombos.yaml nav nav 
 ./draw-image.sh keymap-drawer-noseparatecombos.yaml text text 
 ./draw-image.sh keymap-drawer-noseparatecombos.yaml media media 
+./draw-image.sh keymap-drawer-noseparatecombos.yaml smart smart 
 
 ./draw-image.sh keymap-drawer-mehs.yaml coding-mehs coding-meh coding-hyper
 ./draw-image.sh keymap-drawer-mehs.yaml meh-morphs --2cols left-meh-morphs right-meh-morphs

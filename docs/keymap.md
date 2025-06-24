@@ -292,6 +292,20 @@ The *func* layer will also have *right side* versions of the modifiers, in their
 
 ### VIM
 
+I use VIM since 2017 and it is an essential plugin for all my text editors. I do not use advanced features though, and could easily remap my keybindings to work well with my custom layout.
+
+![img](../img/vim.png)
+
+I also make use of base layer combos to trigger some keybindings easier, like `y`, `p`, `x` and `d`, as well as `r`, `i` and `a`, which would not be so easy otherwise, due to how my layout and remaps place them.
+
+In my *numbers* layer, I also have some combos to make it easier to move between rows and columns without changing layer.
+
+![img](../img/numbers.png)
+
+And finally, there are a few macros defined specifically for VIM in my *smart* layer, also easy to trigger using only my right hand.
+
+![img](../img/smart.png)
+
 ### Java
 
 ### Smart Cases
