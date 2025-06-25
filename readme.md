@@ -10,7 +10,7 @@ The image above shows just the most relevant layers. To see the full diagram, cl
 
 ## How this layout works?
 
-The ratiaonale behind the decisions that led to this keymap can be found in the links below:
+The ratiaonale behind the decisions that led to this keymap can be found in [this document](docs/keymap.md), but here is a summary:
 
 ### Directives
 

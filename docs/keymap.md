@@ -1,4 +1,3 @@
-
 ## Introduction
 
 This keymap is a result of a few years of iteractive improvements, targeting what is best for my workflows. And as such, it probably won't be a good fit for most people. Feel free to get inspiration from it anyway.
@@ -131,6 +130,11 @@ Brackets are commonly used for two different workflows, working with numbers and
 Math Operators must be easily accessible from the *numbers* layer, and I find it particularly helpful if I can do it using only my right hand, so I put them in the right side of my *symbols* layer.
 
 ![img](../img/symbols.png)
+
+
+### Currencies
+
+In the *symbols* layer, there are also combos to type the 3 most common currency symbols for me, `R$`, `US$` and `€`, as well as their nominal versions, `BRL`, `USD` and `EUR` by holding the same combos.
 
 ## Shortcuts
 
@@ -273,9 +277,15 @@ On the left side of the *numbers* layer are the two symbols used for conditional
 
 ![img](../img/symbols.png)
 
-Quotes are available in the left side of the *symbols* layer, and there are combos for typing a pair of them, moving the cursor to the middle.
+Quotes are available in the left side of the *symbols* layer, and there are combos for typing a pair of them, moving the cursor to the middle. There is also a combo for `"""`, used to delimit text blocks in Java.
 
-Conditional operators are also placed in this layer, and there are combos for typing `->` and `=>`, usually used in lambda expressions, as well as some symbols and commons commonly used in *markdown* notation.
+Conditional operators are also placed in this layer, as well as combos for typing `->` and `=>`, used in lambda expressions in Java and C# respectively.
+
+### Markdown
+
+Symbols used in markdown notation, like `#`, `##`, `###` and ` ``` `, are also present in the *symbols* layer.
+
+Leader sequences are used to complement, typing symbols like `- [ ] ` and `[[]]`, commonly used in Obsidian notes.
 
 ### Function Keys
 
@@ -299,17 +309,21 @@ In my *numbers* layer, I also have some combos to make it easier to move between
 
 ![img](../img/numbers.png)
 
+In the *symbols* layer, many symbols were positioned considering how they are used in VIM. See the `^` and `$` as an example. They are positioned side by side and holding or double tapping `^` will actually type `0`, to allow easy transition between the two `beginning of line` options.
+
+![img](../img/symbols.png)
+
 And finally, there are a few macros defined specifically for VIM in my *smart* layer, also easy to trigger using only my right hand.
 
 ![img](../img/smart.png)
 
+### Directory Navigation
+
+In the *symbols* layer, there are also some macros used to navigate directories in a terminal shell, like `~/`, `./` an `../`.
+
 ### Java
 
-Java is may main programming language today and most of my *symbols* and *numbers* layer were designed with Java in mind.
-
-#### Directory Navigation
-
-In this *symbols* layer, there are also some macros used to navigate directories in a terminal shell.
+Java is may main programming language today and most of my *symbols* and *numbers* layer were designed with Java in mind, in addition to combos to type `==`, `!=`, `->` and `::`, for example.
 
 ![img](../img/symbols.png)
 ![img](../img/numbers.png)
@@ -324,7 +338,9 @@ My most used shortcuts in IntelliJ IDEA were remapped to use Meh and Hyper short
 
 Smart Cases are special typing modes where the `space` is replaced by `-` or `_`, for example, to type things like method names, variable names, constant names and so on, supporting the most common casings, like CONSTANT_CASE, kebab-case, camelCase, PascalCase and slash/case.
 
-Smart Cases are available through the 
+Smart Cases are available through the *smart* layer and can be activated holding both right home thumb key and right pinky key and tapping the equivalent key in the left side. It is designed to be fast to activate.
+
+When an Smart Case is activated, tapping space twice in a row will deactivate it and the second space will be ignored.
 
 ![img](../img/smart.png)
 
