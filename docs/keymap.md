@@ -4,7 +4,7 @@ This keymap is a result of a few years of iteractive improvements, targeting wha
 
 In the sections below, you can see my most common workflows and how this keymap is used for them.
 
-![img](../img/overview-nocombos.png)
+![img](../img/overview.png)
 
 ## Directives
 
@@ -180,9 +180,9 @@ It will also allow some layers to be toggled on permanently, like the *numbers*,
 
 Common shortcuts can also be activated using combos, in most layers. These combos are designed to be easy to trigger and hard to misfire.
 
-They allow actions like, copy, paste, select all, enter, tab and navigation keys, among others.
+They allow actions like, copy, paste, select all, enter, tab, among others.
 
-![img](../img/separatecombos.png)
+![img](../img/shortcutcombos.png)
 
 ### Leader Key
 
@@ -222,6 +222,12 @@ On the left side, there are modifier keys, the rarely usefull Insert key, and th
 
 The *navigation* layer can also be toggled on permanently using the *shortcuts* layer.
 
+#### Navigation Combos
+
+All navigation bindings can be activated from any layer using the same key combined with the right home thumb key.
+
+![img](../img/navcombos.png)
+
 ### Window Management
 
 Window Management in performed using a combination of modifiers and navigation keys, so there is no need for custom shortcut bindings. The combination of modifiers was selected based on how easy they become to activate, and sometimes holding more than one modifier key is actually easier than holding a single one.
@@ -243,6 +249,12 @@ The same modifiers available in the *navigation* layer are also available in the
 On the left side of the *media* layer, I can control the mouse movement, scroll and clicks.
 
 ![img](../img/media.png)
+
+#### Mouse Emulation Combos
+
+All mouse emulation bindings can be activated from any layer using the same key combined with the left home thumb key.
+
+![img](../img/mediacombos.png)
 
 ### Media Controls
 

@@ -58,6 +58,15 @@
         COMBO(cb_end,           RBR R0,          &kp END,                ALL_LAYERS)
         COMBO(cb_end_enter,     RHI RHM RHR RHP, &mc_end_ent,            ALL_LAYERS)
 
+        COMBO(cb_mleft,         LHR L0,          &mmv MOVE_LEFT,         ALL_LAYERS)
+        COMBO(cb_mup,           LHM L0,          &mmv MOVE_UP,           ALL_LAYERS)
+        COMBO(cb_mright,        LHI L0,          &mmv MOVE_RIGHT,        ALL_LAYERS)
+        COMBO(cb_mdown,         LBM L0,          &mmv MOVE_DOWN,         ALL_LAYERS)
+        COMBO(cb_sdown,         LBR L0,          &msc SCRL_DOWN,         ALL_LAYERS)
+        COMBO(cb_sup,           LBI L0,          &msc SCRL_UP,           ALL_LAYERS)
+        COMBO(cb_mlclk,         LTM L0,          &mkp LCLK,              ALL_LAYERS)
+        COMBO(cb_mrclk,         LTI L0,          &mkp RCLK,              ALL_LAYERS)
+
         COMBO(cb_numword,       LBR LBM,         &lt_num_word NAV 0,     ALPHA1_LAYERS)
         COMBO(cd_ca_nav,        LHR LHM L1,      &mc_ca_nav,             ALPHA1_LAYERS)
         COMBO(cd_gcs_nav,       LBR LHM LHI L1,  &mc_gcs_nav,            ALPHA1_LAYERS)

@@ -596,65 +596,74 @@ combos:
   - {
       p: [7, 8, 9],
       k: { t: "meh ␣", h: "meh" },
-      layers: [alpha1],
+      layers: [shortcuts],
       draw_separate: true,
     }
   - {
       p: [10, 11, 12],
       k: { s: "vim", t: "p", h: "meh" },
-      layers: [alpha1],
+      layers: [shortcuts],
       draw_separate: true,
     }
 
   - {
       p: [14, 15, 16],
       k: { t: "hyper ␣", h: "hyper" },
-      layers: [alpha1],
+      layers: [shortcuts],
       draw_separate: true,
     }
   - {
       p: [17, 18, 19],
       k: { s: "vim", t: "r", h: "hyper" },
-      layers: [alpha1],
+      layers: [shortcuts],
       draw_separate: true,
     }
 
-  - { p: [0, 1, 21], k: "⎋ save", layers: [alpha1], draw_separate: true }
-  - { p: [7, 8, 21], k: "save", layers: [alpha1], draw_separate: true }
+  - { p: [0, 1, 21], k: "⎋ save", layers: [shortcuts], draw_separate: true }
+  - { p: [7, 8, 21], k: "save", layers: [shortcuts], draw_separate: true }
 
-  - { p: [4, 5, 22], k: "tab", layers: [alpha1], draw_separate: true }
-  - { p: [11, 12, 22], k: "enter", layers: [alpha1], draw_separate: true }
+  - { p: [4, 5, 22], k: "tab", layers: [shortcuts], draw_separate: true }
+  - { p: [11, 12, 22], k: "enter", layers: [shortcuts], draw_separate: true }
 
-  - { p: [14, 15, 21], k: "undo", layers: [alpha1], draw_separate: true }
-  - { p: [8, 9, 21], k: "full screen", layers: [alpha1], draw_separate: true }
+  - { p: [14, 15, 21], k: "undo", layers: [shortcuts], draw_separate: true }
+  - { p: [8, 9, 21], k: "full screen", layers: [shortcuts], draw_separate: true }
 
-  - { p: [10, 11, 22], k: "copy", layers: [alpha1], draw_separate: true }
-  - { p: [17, 18, 22], k: "paste", layers: [alpha1], draw_separate: true }
+  - { p: [10, 11, 22], k: "copy", layers: [shortcuts], draw_separate: true }
+  - { p: [17, 18, 22], k: "paste", layers: [shortcuts], draw_separate: true }
 
-  - { p: [15, 16, 21], k: "find", layers: [alpha1], draw_separate: true }
-  - { p: [18, 19, 22], k: "select all", layers: [alpha1], draw_separate: true }
+  - { p: [15, 16, 21], k: "find", layers: [shortcuts], draw_separate: true }
+  - { p: [18, 19, 22], k: "select all", layers: [shortcuts], draw_separate: true }
 
   - {
       p: [10, 11, 12, 22],
       k: "select all copy",
-      layers: [alpha1],
+      layers: [shortcuts],
       draw_separate: true,
     }
   - {
       p: [17, 18, 19, 22],
       k: "select all paste",
-      layers: [alpha1],
+      layers: [shortcuts],
       draw_separate: true,
     }
 
-  - { p: [10, 22], k: { t: $$mdi:arrow-left$$ }, layers: [alpha1], draw_separate: true }
-  - { p: [11, 22], k: { t: $$mdi:arrow-down$$ }, layers: [alpha1], draw_separate: true }
-  - { p: [12, 22], k: { t: $$mdi:arrow-up$$ }, layers: [alpha1], draw_separate: true }
-  - { p: [13, 22], k: { t: $$mdi:arrow-right$$ }, layers: [alpha1], draw_separate: true }
-  - { p: [17, 22], k: { t: $$mdi:backspace-reverse-outline$$ }, layers: [alpha1], draw_separate: true }
-  - { p: [18, 22], k: { t: $$mdi:format-horizontal-align-left$$ }, layers: [alpha1], draw_separate: true }
-  - { p: [19, 22], k: { t: $$mdi:format-horizontal-align-right$$ }, layers: [alpha1], draw_separate: true }
-  - { p: [10, 11, 12, 13], k: { t: "⇥ ⏎" }, layers: [alpha1], draw_separate: true }
+  - { p: [7, 21], k: { t: $$mdi:arrow-left-circle$$, s: mouse, h: left }, layers: [media], draw_separate: true }
+  - { p: [8, 21], k: { t: $$mdi:arrow-up-circle$$, s: mouse, h: up }, layers: [media], draw_separate: true }
+  - { p: [15, 21], k: { t: $$mdi:arrow-down-circle$$, s: mouse, h: down }, layers: [media], draw_separate: true }
+  - { p: [9, 21], k: { t: $$mdi:arrow-right-circle$$, s: mouse, h: right }, layers: [media], draw_separate: true }
+  - { p: [1, 21], k: { t: $$mdi:mouse-left-click$$, s: left, h: click }, layers: [media], draw_separate: true }
+  - { p: [2, 21], k: { t: $$mdi:mouse-right-click$$, s: right, h: click }, layers: [media], draw_separate: true }
+  - { p: [14, 21], k: { t: $$mdi:arrow-down-circle-outline$$, s: scroll, h: down }, layers: [media], draw_separate: true }
+  - { p: [16, 21], k: { t: $$mdi:arrow-up-circle-outline$$, s: scroll, h: up }, layers: [media], draw_separate: true }
+
+  - { p: [10, 22], k: { t: $$mdi:arrow-left$$, h: left }, layers: [nav], draw_separate: true }
+  - { p: [11, 22], k: { t: $$mdi:arrow-down$$, h: down }, layers: [nav], draw_separate: true }
+  - { p: [12, 22], k: { t: $$mdi:arrow-up$$, h: up }, layers: [nav], draw_separate: true }
+  - { p: [13, 22], k: { t: $$mdi:arrow-right$$, h: right }, layers: [nav], draw_separate: true }
+  - { p: [17, 22], k: { t: $$mdi:backspace-reverse-outline$$, h: del }, layers: [nav], draw_separate: true }
+  - { p: [18, 22], k: { t: $$mdi:format-horizontal-align-left$$, h: home }, layers: [nav], draw_separate: true }
+  - { p: [19, 22], k: { t: $$mdi:format-horizontal-align-right$$, h: end }, layers: [nav], draw_separate: true }
+  - { p: [10, 11, 12, 13], k: { t: "⇥ ⏎", s: end, h: enter }, layers: [nav], draw_separate: true }
 
   - { p: [0, 1], k: "⇥{ ⏎", a: mid, layers: [numbers] }
   - { p: [1, 2], k: { t: "::", h: "⇥ ::" }, a: mid, layers: [numbers] }

@@ -2,7 +2,7 @@
 
 # Check if the output parameter is provided
 if [ -z "$1" ] || [ -z "$2" ]; then
-    echo "Usage: draw-image <input_file> <image_name> [--combos-only] [--2cols][<source_param>]"
+    echo "Usage: draw-image <input_file> <image_name> [--combos-only] [--2cols] [<layer1 layer2 layerN>]"
     exit 1
 fi
 
