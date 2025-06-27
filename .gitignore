@@ -7,4 +7,5 @@ zmk
 build
 build.log
 .venv/
+.gemini/
 tmp/
