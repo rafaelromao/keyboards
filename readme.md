@@ -102,7 +102,7 @@ Most features implemented here were based on the work referenced below.
 
 ### ZMK
 - [Pete Johanson](https://github.com/petejohanson/)
-- [Cen Aksoylar](https://github.com/caksoylar)
+- [Cem Aksoylar](https://github.com/caksoylar)
 - [Nick Conway](https://github.com/nickconway)
 - [Robert U](https://github.com/urob)
 - [Sviatoslav Bulbakha](https://github.com/ssbb)
