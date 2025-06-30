@@ -156,7 +156,7 @@ echo "Initializing zmk..."
 source ./init.sh $ZMK
 
 # Create a new flags.h file
-OUTPUT_FILE="$PROJECT_DIR/src/zmk/definitions/flags.h"
+OUTPUT_FILE="$PROJECT_DIR/src/definitions/flags.h"
 [ -f "$OUTPUT_FILE" ] && rm "$OUTPUT_FILE"
 touch "$OUTPUT_FILE"
 echo "#define $OPERATING_SYSTEM" >> "$OUTPUT_FILE"
@@ -214,7 +214,7 @@ if [ -n "$SHIELD" ]; then
     command+=" -DSHIELD=\"\$SHIELD \$EXTRA_SHIELDS\""
 fi
 if [ -n "$CONFIG" ]; then
-    command+=" -DZMK_CONFIG=\"\$PROJECT_DIR/src/zmk/keyboards/\$CONFIG\""
+    command+=" -DZMK_CONFIG=\"\$PROJECT_DIR/src/keyboards/\$CONFIG\""
 fi
 if [ -n "$MODULES" ]; then
     command+=" -DZMK_EXTRA_MODULES=\"\$MODULES\""
