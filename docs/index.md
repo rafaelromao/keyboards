@@ -4,9 +4,9 @@ A split keyboard layout optimized for Portuguese, English, working with numbers 
 
 This keymap is the result of a few years of iterative improvements with my keyboard layout, targeting what is best for my workflows.
 
-![img](../img/diagrams/overview.png)
+![img](img/diagrams/overview.png)
 
-To see the implementation of this keymap, using ZMK, check the GitHub Repo: https://github.com/rafaelromao/keyboards.
+To see the implementation of this keymap, using ZMK, check the GitHub Repo: [https://github.com/rafaelromao/keyboards](https://github.com/rafaelromao/keyboards).
 
 # Directives
 
@@ -40,7 +40,7 @@ Typing is obviously the most basic function of any keyboard, and there should be
 
 The concept of two alpha layers for typing became famous with [Ben Vallack's](https://www.youtube.com/watch?v=dg2TT1OJlQs&list=PLCZYyvXAdQpsEWfa6OEBOhHn48SWgneoD) videos, which show the concept as an alternative for typing with tiny boards, in his case, with only 16 keys.
 
-![img](../img/diagrams/alphas.png)
+![img](img/diagrams/alphas.png)
 
 This approach is based on the idea of using a sticky layer to get access to alphas that are least common, like q, z, and j, for example. The alpha layout is divided into two layers, and when tapping a home thumb key in the base layer, the secondary alpha layer is activated for one shot, which means the keyboard will return to the base layer automatically after the next key is released.
 
@@ -50,7 +50,7 @@ In practice, using a sticky layer is not much different than using a dead key. W
 
 ### Alpha Combos
 
-![img](../img/diagrams/alpha1.png)
+![img](img/diagrams/alpha1.png)
 
 All alphas moved to the secondary alpha layer are also available as combos in the base layer, but they are not usually used for typing, but for commands instead, like VIM bindings, for example.
 
@@ -78,7 +78,7 @@ Cedilla `Ç` is pretty common in Portuguese, but it always comes before a vowel,
 
 To avoid that, a third alpha layer, containing macros for these two accented vowels, is automatically activated for one shot after `ç`. This is what I call the *Ç-Extension* layer. The keys for all other vowels are transparent in this layer, so it is still possible to type words like `açude` without any problem. For words like `açúcar`, on the other hand, a secondary activation of the secondary alpha layer would still be required.
 
-![img](../img/diagrams/cedil.png)
+![img](img/diagrams/cedil.png)
 
 It is also quite common to have it followed by either `ão` or `ões`, so macros can be used to type these two sentences easier as ç extensions.
 
@@ -92,7 +92,7 @@ In this keymap, the Sticky Shift is present in a thumb key, on the right side of
 
 Due to a limitation of ZMK, a *sticky layer* does not work well in conjunction with a *sticky shift*, so I had to use a layer to bypass this limitation. For capitalizing the *alpha1* layer, the regular *sticky shift* is used, but for capitalizing the *alpha2* layer, I used a separate layer where all alphas are already capitalized. This was also necessary to implement some other capitalization behaviors, like CAPS word and CAPS LINE.
 
-![img](../img/diagrams/shifted.png)
+![img](img/diagrams/shifted.png)
 
 ### CAPS word and CAPS LINE
 
@@ -113,7 +113,7 @@ There are also combos in the secondary alpha layer for `_`, `?`, `!`, and `-` to
 
 The *numbers* layer contains not only numbers but also some symbols commonly used along with numbers.
 
-![img](../img/diagrams/numbers.png)
+![img](img/diagrams/numbers.png)
 
 ### NumPad
 
@@ -135,7 +135,7 @@ Brackets are commonly used for two different workflows: working with numbers and
 
 Math Operators must be easily accessible from the *numbers* layer, and I find it particularly helpful if I can do it using only my right hand, so I put them on the right side of my *symbols* layer.
 
-![img](../img/diagrams/symbols.png)
+![img](img/diagrams/symbols.png)
 
 ### Currencies
 
@@ -145,7 +145,7 @@ In the *symbols* layer, there are also combos to type the 3 most common currency
 
 ### Home Row Mods
 
-![img](../img/diagrams/alpha1.png)
+![img](img/diagrams/alpha1.png)
 
 [Home Row Mods](https://precondition.github.io/home-row-mods) are well known by most keyboard enthusiasts and are also available in this keymap. Their disposition is: Ctrl, Alt, and Shift in the home row, and Gui (Command / Windows) in the bottom row index key, mirrored on the right side.
 
@@ -155,7 +155,7 @@ To make combinations of Ctrl, Alt, and/or Shift with Gui easier, Gui is replicat
 
 For the rare cases when Home Row Mods cause problems, there is a pair of alpha layers called *plain1* and *plain2* that do not have home row mods or any other tap-hold behaviors. These layers are also used for bringing an alpha layer on top of the *mehs* layer, for inputting text while this layer is fixed.
 
-![img](../img/diagrams/plain.png)
+![img](img/diagrams/plain.png)
 
 ### Meh and Hyper
 
@@ -167,11 +167,11 @@ Meh and Hyper shortcuts are mapped in software to make custom actions easier to 
 
 In some cases, a lot of consecutive uses of Mehs and Hyper shortcuts are necessary, and for this reason, there is a *mehs* layer that can be toggled on as well.
 
-![img](../img/diagrams/mehs.png)
+![img](img/diagrams/mehs.png)
 
 In this layer, or while holding *meh* in the base layer, accessing the Hyper version of the shortcut is as simple as holding a thumb key before pressing it.
 
-![img](../img/diagrams/meh-morphs.png)
+![img](img/diagrams/meh-morphs.png)
 
 ### Common Apps Shortcuts
 
@@ -179,7 +179,7 @@ Holding any of the pinky keys will activate the *shortcuts* layer, which gives a
 
 It will also allow some layers to be toggled on permanently, like the *numbers*, *nav*, and *media* layers.
 
-![img](../img/diagrams/shortcuts.png)
+![img](img/diagrams/shortcuts.png)
 
 ### Common Shortcuts Combos
 
@@ -187,7 +187,7 @@ Common shortcuts can also be activated using combos, in most layers. These combo
 
 They allow actions like copy, paste, select all, enter, tab, among others.
 
-![img](../img/diagrams/shortcutcombos.png)
+![img](img/diagrams/shortcutcombos.png)
 
 ### Leader Key
 
@@ -203,7 +203,7 @@ The key that contains *space*, in the *shortcuts* layer, will type *comma + spac
 
 There are three special navigation shortcuts, available in the *nav* layer to allow me to use the arrow keys along with them.
 
-![img](../img/diagrams/nav.png)
+![img](img/diagrams/nav.png)
 
 The first one is usually known as swapper, and it allows switching between the current running apps. The actual implementation depends on the Operating System. For example, in MacOS, I use Raycast's *Switch to Windows* function to implement this functionality.
 
@@ -221,7 +221,7 @@ In MacOS, I use a combination of [Hammerspoon](https://www.hammerspoon.org/) and
 
 Arrow keys are available in the 4 home row keys on the right side, in the *navigation* layer, in a VIM style. Del, Home, End, and Tab complement the right side of this layer.
 
-![img](../img/diagrams/nav.png)
+![img](img/diagrams/nav.png)
 
 On the left side, there are modifier keys, the rarely useful Insert key, and the *navigation shortcuts* mentioned before.
 
@@ -231,19 +231,19 @@ The *navigation* layer can also be toggled on permanently using the *shortcuts* 
 
 All navigation bindings can be activated from any layer using the same key combined with the right home thumb key.
 
-![img](../img/diagrams/navcombos.png)
+![img](img/diagrams/navcombos.png)
 
 ### Window Management
 
 Window Management is performed using a combination of modifiers and navigation keys, so there is no need for custom shortcut bindings. The combination of modifiers was selected based on how easy they become to activate, and sometimes holding more than one modifier key is actually easier than holding a single one.
 
-![img](../img/diagrams/window.png)
+![img](img/diagrams/window.png)
 
 ### Text Navigation
 
 Text Navigation is an extremely important workflow. Navigating between words, selecting a whole word or line, and having a consistent way to do it in any OS is key. For that reason, there is a dedicated layer for that. Holding the pinky key while on the Navigation layer will activate it and send the appropriate shortcut for the desired action.
 
-![img](../img/diagrams/text.png)
+![img](img/diagrams/text.png)
 
 #### Sticky Mods
 
@@ -253,13 +253,13 @@ The same modifiers available in the *navigation* layer are also available in the
 
 On the left side of the *media* layer, I can control the mouse movement, scroll, and clicks.
 
-![img](../img/diagrams/media.png)
+![img](img/diagrams/media.png)
 
 #### Mouse Emulation Combos
 
 All mouse emulation bindings can be activated from any layer using the same key combined with the left home thumb key.
 
-![img](../img/diagrams/mediacombos.png)
+![img](img/diagrams/mediacombos.png)
 
 ### Media Controls
 
@@ -269,7 +269,7 @@ On the right side of the *media* layer, I have my media controls, which include 
 
 Although I'm not a software developer anymore, I spent 20+ years of my life programming, and I still do some coding eventually, so having my keyboard optimized for that was also one of my goals.
 
-![img](../img/diagrams/numbers.png)
+![img](img/diagrams/numbers.png)
 
 ### Brackets
 
@@ -292,7 +292,7 @@ On the left side of the *numbers* layer are the two symbols used for conditional
 
 ### Strings and Arrows
 
-![img](../img/diagrams/symbols.png)
+![img](img/diagrams/symbols.png)
 
 Quotes are available on the left side of the *symbols* layer, and there are combos for typing a pair of them, moving the cursor to the middle. There is also a combo for `"""`, used to delimit text blocks in Java.
 
@@ -306,7 +306,7 @@ Leader sequences are used to complement, typing symbols like `- [ ] ` and `[[]]`
 
 ### Function Keys
 
-![img](../img/diagrams/functions.png)
+![img](img/diagrams/functions.png)
 
 Function keys are commonly used for debugging, and they are available in a dedicated layer, but since most IDE shortcuts will be mapped to Meh and Hyper shortcuts, function keys are rarely necessary.
 
@@ -318,21 +318,21 @@ The *func* layer will also have *right side* versions of the modifiers, in their
 
 I have used VIM since 2017, and it is an essential plugin for all my text editors. I do not use advanced features though, and I could easily remap my keybindings to work well with my custom layout.
 
-![img](../img/diagrams/vim.png)
+![img](img/diagrams/vim.png)
 
 I also make use of base layer combos to trigger some keybindings easier, like `y`, `p`, `x`, and `d`, as well as `r`, `i`, and `a`, which would not be so easy otherwise, due to how my layout and remaps place them.
 
 In my *numbers* layer, I also have some combos to make it easier to move between rows and columns without changing the layer.
 
-![img](../img/diagrams/numbers.png)
+![img](img/diagrams/numbers.png)
 
 In the *symbols* layer, many symbols were positioned considering how they are used in VIM. See the `^` and `$` as an example. They are positioned side by side, and holding or double-tapping `^` will actually type `0`, to allow easy transition between the two `beginning of line` options.
 
-![img](../img/diagrams/symbols.png)
+![img](img/diagrams/symbols.png)
 
 And finally, there are a few macros defined specifically for VIM in my *smart* layer, also easy to trigger using only my right hand.
 
-![img](../img/diagrams/smart.png)
+![img](img/diagrams/smart.png)
 
 ### Directory Navigation
 
@@ -342,14 +342,14 @@ In the *symbols* layer, there are also some macros used to navigate directories 
 
 Java is my main programming language today, and most of my *symbols* and *numbers* layers were designed with Java in mind, in addition to combos to type `==`, `!=`, `->`, and `::`, for example.
 
-![img](../img/diagrams/symbols.png)
-![img](../img/diagrams/numbers.png)
+![img](img/diagrams/symbols.png)
+![img](img/diagrams/numbers.png)
 
 ### IntelliJ IDEA
 
 My most used shortcuts in IntelliJ IDEA were remapped to use Meh and Hyper shortcuts too.
 
-![img](../img/diagrams/coding-mehs.png)
+![img](img/diagrams/coding-mehs.png)
 
 ### Smart Cases
 
@@ -359,7 +359,7 @@ Smart Cases are available through the *smart* layer and can be activated by hold
 
 When a Smart Case is activated, tapping space twice in a row will deactivate it, and the second space will be ignored.
 
-![img](../img/diagrams/smart.png)
+![img](img/diagrams/smart.png)
 
 # General
 
@@ -371,7 +371,7 @@ A combo with the 3 top row keys on the right side can be used anytime to return 
 
 Bluetooth controls are available in the functions layer and allow swapping between profiles, returning to the first one, and clearing the current one.
 
-![img](../img/diagrams/functions.png)
+![img](img/diagrams/functions.png)
 
 ## Bootloader
 
@@ -379,7 +379,7 @@ Most of my boards have an easily accessible physical reset button, but not all o
 
 This bootloader shortcut must be available independently in both halves of the board and should not be easy to trigger by accident, so I put them in a second thumb of a layer that is activated by holding both the other thumb and the pinky key on the same side. Those layers are the *func* and *smart* layers.
 
-![img](../img/diagrams/boot.png)
+![img](img/diagrams/boot.png)
 
 ## Operating System
 

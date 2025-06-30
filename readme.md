@@ -4,9 +4,9 @@
 
 A split keyboard layout optimized for Portuguese, English, working with numbers and software programming with VIM plugins.
 
-![img](img/diagrams/overview.png)
+![img](docs/img/diagrams/overview.png)
 
-The image above shows just the most relevant layers. To see the full diagram, click [here](img/diagrams/all.png).
+The image above shows just the most relevant layers. To see the full diagram, click [here](docs/img/diagrams/all.png).
 
 ## How this layout works?
 
