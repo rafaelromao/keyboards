@@ -2,11 +2,11 @@
 mkdir -p ./tmp
 
 # Separate target files
-cp ./docs/keymap-drawer/keymap-drawer.yaml ./tmp/keymap-drawer.yaml
-cp ./docs/keymap-drawer/keymap-drawer.yaml ./tmp/keymap-drawer-noseparatecombos.yaml
-cp ./docs/keymap-drawer/keymap-drawer.yaml ./tmp/keymap-drawer-onlyseparatecombos.yaml
-cp ./docs/keymap-drawer/keymap-drawer-extras.yaml ./tmp/keymap-drawer-mehs.yaml
-cp ./docs/keymap-drawer/keymap-drawer-extras.yaml ./tmp/keymap-drawer-window.yaml
+cp ./img/diagrams/keymap-drawer/keymap-drawer.yaml ./tmp/keymap-drawer.yaml
+cp ./img/diagrams/keymap-drawer/keymap-drawer.yaml ./tmp/keymap-drawer-noseparatecombos.yaml
+cp ./img/diagrams/keymap-drawer/keymap-drawer.yaml ./tmp/keymap-drawer-onlyseparatecombos.yaml
+cp ./img/diagrams/keymap-drawer/keymap-drawer-extras.yaml ./tmp/keymap-drawer-mehs.yaml
+cp ./img/diagrams/keymap-drawer/keymap-drawer-extras.yaml ./tmp/keymap-drawer-window.yaml
 
 yq -i 'del(.combos[] | select(.draw_separate == true))' ./tmp/keymap-drawer-noseparatecombos.yaml
 yq -i 'del(.combos[] | select(.draw_separate != true))' ./tmp/keymap-drawer-onlyseparatecombos.yaml

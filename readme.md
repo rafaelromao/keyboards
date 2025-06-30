@@ -62,8 +62,8 @@ The script [build.sh](build.sh) can be used to build the firmware for any of my 
 The Diagram for my keymap was created using [Keymap Drawer](https://github.com/caksoylar/keymap-drawer). The source and config files can be found in the docs folder and the commands below can be used to generate an `svg` diagram and convert it to `png`, using Inkscape:
 
 ```
-keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw ./docs/keymap-drawer/keymap-drawer.yaml >../img/diagrams/overview.svg
-inkscape --export-type png --export-filename../img/diagrams/overview.png --export-dpi 300 --export-background=white../img/diagrams/overview.svg
+keymap -c keymap-drawer-config.yaml draw keymap-drawer.yaml > overview.svg
+inkscape --export-type png --export-filename overview.png --export-dpi 300 --export-background=white overview.svg
 ```
 
 The script [draw.sh](draw.sh) is used to draw all diagrams in my keymap using commands like the example above.

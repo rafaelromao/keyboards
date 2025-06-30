@@ -20,9 +20,9 @@ if [ "$3" == "--combos-only" ]; then
 fi
 
 # Check if --2cols is provided
-config="./docs/keymap-drawer/keymap-drawer-config-1col.yaml"
+config="./img/diagrams/keymap-drawer/keymap-drawer-config-1col.yaml"
 if [ "$3" == "--2cols" ]; then
-    config="./docs/keymap-drawer/keymap-drawer-config-2cols.yaml"
+    config="./img/diagrams/keymap-drawer/keymap-drawer-config-2cols.yaml"
     shift 1
 fi
 
