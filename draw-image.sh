@@ -35,4 +35,4 @@ fi
 
 # Execute the command
 keymap -c $config draw $source_param $combos_only -o "./tmp/$image_name.svg" "$input_file"
-inkscape --export-type png --export-filename "./img/$image_name.png" --export-dpi 300 --export-background=white "./tmp/$image_name.svg"
+inkscape --export-type png --export-filename "./img/diagrams/$image_name.png" --export-dpi 300 --export-background=white "./tmp/$image_name.svg"

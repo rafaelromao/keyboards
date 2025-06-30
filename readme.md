@@ -4,13 +4,13 @@
 
 A split keyboard layout optimized for Portuguese, English, working with numbers and software programming with VIM plugins.
 
-![img](img/overview.png)
+![img](img/diagrams/overview.png)
 
-The image above shows just the most relevant layers. To see the full diagram, click [here](./img/all.png).
+The image above shows just the most relevant layers. To see the full diagram, click [here]../img/diagrams/all.png).
 
 ## How this layout works?
 
-The ratiaonale behind the decisions that led to this keymap can be found in [this document](docs/keymap.md), but here is a summary:
+The ratiaonale behind the decisions that led to this keymap can be found in [this page](docs/keymap.md), but here is a summary:
 
 ### Directives
 
@@ -62,8 +62,8 @@ The script [build.sh](build.sh) can be used to build the firmware for any of my 
 The Diagram for my keymap was created using [Keymap Drawer](https://github.com/caksoylar/keymap-drawer). The source and config files can be found in the docs folder and the commands below can be used to generate an `svg` diagram and convert it to `png`, using Inkscape:
 
 ```
-keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw ./docs/keymap-drawer/keymap-drawer.yaml > ./img/overview.svg
-inkscape --export-type png --export-filename ./img/overview.png --export-dpi 300 --export-background=white ./img/overview.svg
+keymap -c ./docs/keymap-drawer/keymap-drawer-config.yaml draw ./docs/keymap-drawer/keymap-drawer.yaml >../img/diagrams/overview.svg
+inkscape --export-type png --export-filename../img/diagrams/overview.png --export-dpi 300 --export-background=white../img/diagrams/overview.svg
 ```
 
 The script [draw.sh](draw.sh) is used to draw all diagrams in my keymap using commands like the example above.
