@@ -4,6 +4,9 @@ A split keyboard layout optimized for Portuguese, English, working with numbers 
 
 This keymap is the result of a few years of iterative improvements with my keyboard layout, targeting what is best for my workflows.
 
+<a href="https://github.com/rafaelromao/keyboards" class="github-button" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star rafaelromao/keyboards on GitHub">Star</a>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
 ![img](img/diagrams/overview.png)
 
 To see the implementation of this keymap, using ZMK, check the GitHub Repo: [https://github.com/rafaelromao/keyboards](https://github.com/rafaelromao/keyboards).
