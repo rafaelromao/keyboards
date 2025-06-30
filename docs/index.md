@@ -1,30 +1,36 @@
-## Introduction
+# rafaelromao's keyboard layout
+ 
+A split keyboard layout optimized for Portuguese, English, working with numbers and software programming with VIM plugins.
 
-This keymap is a result of a few years of iterative improvements, targeting what is best for my workflows. As such, it may not be a good fit for everyone. Feel free to get inspiration from it anyway.
-
-In the sections below, you can see my most common workflows and how this keymap is used for them.
+This keymap is the result of a few years of iterative improvements with my keyboard layout, targeting what is best for my workflows.
 
 ![img](../img/diagrams/overview.png)
 
-## Directives
+To see the implementation of this keymap, using ZMK, check the GitHub Repo: https://github.com/rafaelromao/keyboards.
+
+# Directives
 
 The following directives guided my choices when defining how this keymap should look:
 
-#### Ergonomic, Split, Columnar Stagger
+## Ergonomic, Split, Columnar Stagger
 
 This keymap is designed for ergonomic keyboards. This means split, wireless or not, and columnar stagger, with at least 4 columns and 3 rows, plus 2 thumb keys on each side. It is also implemented on top of ZMK, using features like home row mods, sticky shift on a thumb key, caps word, macros, adaptive keys, and plenty of layers and combos.
 
-#### No lateral movements or uncomfortable stretches
+## No lateral movements or uncomfortable stretches
 
 The main objective of this keymap, and the keyboards I've built to use with it, is comfort when typing. Lateral movements with the pinky or index fingers are not comfortable for me, as well as using the pinky finger to reach keys in the top or bottom rows. As a result, such keys were removed and the keyboards, layout, and keymap evolved to have only 24 keys, in the format 1333+2.
 
-#### Trackball in the left hand, heavy load in the right hand
+## Trackball in the left hand, heavy load in the right hand
 
 Although I'm not a left-handed person, I got used to using a Kensington Expert Mouse (actually a trackball) with my left hand, so my right hand is free most of the time to take notes, drink some coffee, or perform common actions, like copy and paste, using only the right side of the keyboard.
 
-#### English, but also Portuguese, plus VIM and Spreadsheets
+## English, but also Portuguese, plus VIM and Spreadsheets
 
 I type in English for at least a few hours per day, but Brazilian Portuguese is my home language, so I had to find, or design, an alpha layout that would work well for both languages. I also use VIM in all my editors (VSCode, Windsurf, IntelliJ, and Obsidian), so it also has a huge influence in this keymap. I don't code very often today, but I write some Java code eventually, so good bindings for IntelliJ are also important. And finally, spreadsheets should be easy to use, since I had to work with them for a significant portion of my week.
+
+# Workflows
+
+In the sections below, you can see my most common workflows and how this keymap is used for them.
 
 ## Typing
 
@@ -355,19 +361,19 @@ When a Smart Case is activated, tapping space twice in a row will deactivate it,
 
 ![img](../img/diagrams/smart.png)
 
-## General
+# General
 
-### Panic Mode
+## Panic Mode
 
 A combo with the 3 top row keys on the right side can be used anytime to return to the base layer.
 
-### Bluetooth
+## Bluetooth
 
 Bluetooth controls are available in the functions layer and allow swapping between profiles, returning to the first one, and clearing the current one.
 
 ![img](../img/diagrams/functions.png)
 
-### Bootloader
+## Bootloader
 
 Most of my boards have an easily accessible physical reset button, but not all of them. And even for those, sometimes it will be easier to use a shortcut to put the board in bootloader mode to update its keymap (something I do a few times a week).
 
@@ -375,7 +381,7 @@ This bootloader shortcut must be available independently in both halves of the b
 
 ![img](../img/diagrams/boot.png)
 
-### Operating System
+## Operating System
 
 All shortcuts and macros in this keymap are Operating System aware, but a different version of the firmware must be built for MACOS and LINUX. The LINUX version can also be used for ANDROID and WINDOWS.
 
