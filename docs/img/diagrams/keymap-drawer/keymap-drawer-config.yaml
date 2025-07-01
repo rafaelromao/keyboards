@@ -1,0 +1,38 @@
+draw_config:
+  key_w: 70
+  key_h: 68
+  split_gap: 30.0
+  combo_w: 34
+  combo_h: 30
+  key_rx: 6.0
+  key_ry: 6.0
+  dark_mode: false
+  n_columns: 1
+  separate_combo_diagrams: false
+  combo_diagrams_scale: 2
+  inner_pad_w: 2.0
+  inner_pad_h: 2.0
+  outer_pad_w: 30.0
+  outer_pad_h: 56.0
+  line_spacing: 1.2
+  arc_radius: 6.0
+  append_colon_to_layer_header: true
+  small_pad: 2.0
+  legend_rel_x: 0.0
+  legend_rel_y: 0.0
+  draw_key_sides: false
+  key_side_pars:
+    rel_x: 0.0
+    rel_y: 4.0
+    rel_w: 12.0
+    rel_h: 12.0
+    rx: 4.0
+    ry: 4.0
+  svg_extra_style: 'rect.held.alternate { fill: #ffe6f2; }'
+  footer_text: Created with <a href="https://github.com/caksoylar/keymap-drawer">keymap-drawer</a>
+  shrink_wide_legends: 7
+  style_layer_activators: true
+  glyph_tap_size: 14
+  glyph_hold_size: 12
+  glyph_shifted_size: 10
+  glyphs: {}

@@ -2,34 +2,37 @@
  
 A split keyboard layout optimized for Portuguese, English, working with numbers and software programming with VIM plugins.
 
+To see the implementation of this keymap, using ZMK, check the [GitHub Repo](https://github.com/rafaelromao/keyboards). 
+
+# Overview
+
 This keymap is the result of a few years of iterative improvements with my keyboard layout, targeting what is best for my workflows.
 
-<a href="https://github.com/rafaelromao/keyboards" class="github-button" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star rafaelromao/keyboards on GitHub">Star</a>
-<script async defer src="https://buttons.github.io/buttons.js"></script>
-
 ![img](img/diagrams/overview.png)
-
-To see the implementation of this keymap, using ZMK, check the GitHub Repo: [https://github.com/rafaelromao/keyboards](https://github.com/rafaelromao/keyboards).
 
 # Directives
 
 The following directives guided my choices when defining how this keymap should look:
 
-## Ergonomic, Split, Columnar Stagger
+## Ergonomics
 
-This keymap is designed for ergonomic keyboards. This means split, wireless or not, and columnar stagger, with at least 4 columns and 3 rows, plus 2 thumb keys on each side. It is also implemented on top of ZMK, using features like home row mods, sticky shift on a thumb key, caps word, macros, adaptive keys, and plenty of layers and combos.
+**Split and Columnar Stagger**: This keymap is designed for ergonomic keyboards. This means split, wireless or not, and columnar stagger, with at least 4 columns and 3 rows, plus 2 thumb keys on each side. It is also implemented on top of ZMK, using features like home row mods, sticky shift on a thumb key, caps word, macros, adaptive keys, and plenty of layers and combos.
 
-## No lateral movements or uncomfortable stretches
+## Finger Effort
 
-The main objective of this keymap, and the keyboards I've built to use with it, is comfort when typing. Lateral movements with the pinky or index fingers are not comfortable for me, as well as using the pinky finger to reach keys in the top or bottom rows. As a result, such keys were removed and the keyboards, layout, and keymap evolved to have only 24 keys, in the format 1333+2.
+**No lateral movements or uncomfortable stretches**: The main objective of this keymap, and the keyboards I've built to use with it, is comfort when typing. Lateral movements with the pinky or index fingers are not comfortable for me, as well as using the pinky finger to reach keys in the top or bottom rows. As a result, such keys were removed and the keyboards, layout, and keymap evolved to have only 24 keys, in the format 1333+2.
 
-## Trackball in the left hand, heavy load in the right hand
+## Easy of Use
 
-Although I'm not a left-handed person, I got used to using a Kensington Expert Mouse (actually a trackball) with my left hand, so my right hand is free most of the time to take notes, drink some coffee, or perform common actions, like copy and paste, using only the right side of the keyboard.
+**If it is frequent, it should be easy**: Symbols and commands that are frequently used should be easy to type. This also applies to sequences of symbols or commands. Combos and macros can be used to facilitate this. For example, a macro can be created to type `:%s/`, or a combo can be used to type `~/`.
 
-## English, but also Portuguese, plus VIM and Spreadsheets
+## Handness
 
-I type in English for at least a few hours per day, but Brazilian Portuguese is my home language, so I had to find, or design, an alpha layout that would work well for both languages. I also use VIM in all my editors (VSCode, Windsurf, IntelliJ, and Obsidian), so it also has a huge influence in this keymap. I don't code very often today, but I write some Java code eventually, so good bindings for IntelliJ are also important. And finally, spreadsheets should be easy to use, since I had to work with them for a significant portion of my week.
+**Trackball in the left hand, heavy load in the right hand**: Although I'm not a left-handed person, I got used to using a Kensington Expert Mouse (actually a trackball) with my left hand, so my right hand is free most of the time to take notes, drink some coffee, or perform common actions, like copy and paste, using only the right side of the keyboard.
+
+## Use Cases
+
+**English, but also Portuguese, plus VIM and Spreadsheets**: I type in English for at least a few hours per day, but Brazilian Portuguese is my home language, so I had to find, or design, an alpha layout that would work well for both languages. I also use VIM in all my editors (VSCode, Windsurf, IntelliJ, and Obsidian), so it also has a huge influence in this keymap. I don't code very often today, but I write some Java code eventually, so good bindings for IntelliJ are also important. And finally, spreadsheets should be easy to use, since I had to work with them for a significant portion of my week.
 
 # Workflows
 

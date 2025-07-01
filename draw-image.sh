@@ -7,7 +7,7 @@ if [ -z "$1" ] || [ -z "$2" ]; then
 fi
 
 # Assign the input file parameter
-input_file="./tmp/$1"
+input_file="tmp/$1"
 
 # Assign the output image name
 image_name="$2"
@@ -20,9 +20,10 @@ if [ "$3" == "--combos-only" ]; then
 fi
 
 # Check if --2cols is provided
-config="./img/diagrams/keymap-drawer/keymap-drawer-config-1col.yaml"
+config="docs/img/diagrams/keymap-drawer/keymap-drawer-config.yaml"
+yq eval '.draw_config.n_columns = 1' -i $config
 if [ "$3" == "--2cols" ]; then
-    config="./img/diagrams/keymap-drawer/keymap-drawer-config-2cols.yaml"
+    yq eval '.draw_config.n_columns = 2' -i $config
     shift 1
 fi
 
@@ -34,5 +35,5 @@ if [ ! -z "$3" ]; then
 fi
 
 # Execute the command
-keymap -c $config draw $source_param $combos_only -o "./tmp/$image_name.svg" "$input_file"
-inkscape --export-type png --export-filename "./img/diagrams/$image_name.png" --export-dpi 300 --export-background=white "./tmp/$image_name.svg"
+keymap -c $config draw $source_param $combos_only -o "tmp/$image_name.svg" "$input_file"
+inkscape --export-type png --export-filename "docs/img/diagrams/$image_name.png" --export-dpi 300 --export-background=white "tmp/$image_name.svg"

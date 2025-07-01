@@ -185,6 +185,11 @@
         COMBO(cb_shiftv,        RBM RBR,         &kp LS(V),              TEXT)
         COMBO(cb_ctrlv,         RBI RBM,         &kp LC(V),              TEXT)
 
+        COMBO(cb_vim_q,         RTI RTM,         &kp Q,                  SMART)
+        COMBO(cb_vim_atat,      RTM RTR,         &mc_atat,               SMART)
+        COMBO(cb_vim_qr,        RHI RHM,         &mc_qr,                 SMART)
+        COMBO(cb_vim_atr,       RHM RHR,         &mc_atr,                SMART)
+
         COMBO(cb_numbers_nav,   LBR LBM,         &mo NUM_CP,             NAV_LAYERS)
         COMBO(cd_ca,            LHR LHM,         &kp LC(LALT),           NAV_LAYERS)
 

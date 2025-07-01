@@ -6,7 +6,7 @@ A split keyboard layout optimized for Portuguese, English, working with numbers 
 
 ![img](docs/img/diagrams/overview.png)
 
-The image above shows just the most relevant layers. To see the full diagram, click [here](docs/img/diagrams/all.png).
+The image above shows just the most relevant layers. You can see the full diagram [here](docs/img/diagrams/all.png).
 
 ## How this layout works?
 
@@ -16,63 +16,96 @@ The ratiaonale behind the decisions that led to this keymap can be found in [thi
 
 What are the directives that drive most of my decisions?
 
-- [Ergonomic, Split, Columnar Stagger](docs/keymap.md#ergonomic-split-columnar-stagger)
-- [No lateral movements or uncomfortable stretches](docs/keymap.md#no-lateral-movements-or-uncomfortable-stretches)
-- [Trackball in the left hand, heavy load in the right hand](docs/keymap.md#trackball-in-the-left-hand-heavy-load-in-the-right-hand)
-- [English, but also Portuguese, plus VIM and Spreadsheets](docs/keymap.md#english-but-also-portuguese-plus-vim-and-spreadsheets)
+- [Ergonomics](docs/index.md#ergonomics): Split and Columnar Stagger.
+- [Finger Effort](docs/index.md#finger-effort): No lateral movements or uncomfortable stretches.
+- [Easy of Use](docs/index.md#easy-of-use): If it is frequent, it should be easy.
+- [Handness](docs/index.md#handness): Trackball in the left hand, heavy load in the right hand.
+- [Use Cases](docs/index.md#use-cases): English, but also Portuguese, plus VIM and Spreadsheets.
 
 ### Workflows
 
 What are the workflows that I need to execute with my keyboards?
 
-- [Typing](docs/keymap.md#typing): The most basic and essential workflow.
-- [Numbers](docs/keymap.md#numbers): How this keymap makes it easy to work with numbers.
-- [Shortcuts](docs/keymap.md#shortcuts): How to work with so many shortcuts in such minimal keyboards.
-- [Navigation](docs/keymap.md#navigation): Navigating in text, presentations, window management and mouse emulation.
-- [Programming](docs/keymap.md#programming): Optimizations to make programming easier.
+- [Typing](docs/index.md#typing): The most basic and essential workflow.
+- [Numbers](docs/index.md#numbers): How this keymap makes it easy to work with numbers.
+- [Shortcuts](docs/index.md#shortcuts): How to work with so many shortcuts in such minimal keyboards.
+- [Navigation](docs/index.md#navigation): Navigating in text, presentations, window management and mouse emulation.
+- [Programming](docs/index.md#programming): Optimizations to make programming easier.
 
-## Compatibility
+## My Keyboards
 
-This layout can be easily adapted to most ortholinear or column staggered keyboards with at least 24 keys, with 2 of them on each thumb.
+<table>
+  <tr>
+    <td><a href="https://github.com/rafaelromao/diamond">Diamond</a></td>
+    <td><a href="https://github.com/rafaelromao/diamond">Wired Diamond</a></td>
+    <td><a href="https://github.com/rafaelromao/diamond">Choc Diamond</a></td>
+  </tr>
+  <tr>
+    <td><a href="docs/img/builds/Diamond.jpeg"><img src="docs/img/builds/Diamond.jpeg" width="150" /></a></td>
+    <td><a href="docs/img/builds/Wired%20Diamond.jpeg"><img src="docs/img/builds/Wired%20Diamond.jpeg" width="150" /></a></td>
+    <td><a href="docs/img/builds/Choc%20Diamond.jpeg"><img src="docs/img/builds/Choc%20Diamond.jpeg" width="150" /></a></td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/rafaelromao/rommana-remix">Rommana Remix</a></td>
+    <td><a href="https://github.com/AlaaSaadAbdo/Rommana">Wired Rommana</a></td>
+    <td><a href="https://lowprokb.ca/collections/keyboards/products/corne-ish-zen">Corne-ish Zen</a></td>
+  </tr>
+  <tr>
+    <td><a href="docs/img/builds/Rommana.jpeg"><img src="docs/img/builds/Rommana.jpeg" width="150" /></a></td>
+    <td><a href="docs/img/builds/Wired%20Rommana.jpeg"><img src="docs/img/builds/Wired%20Rommana.jpeg" width="150" /></a></td>
+    <td><a href="docs/img/builds/Corne-ish%20Zen.jpeg"><img src="docs/img/builds/Corne-ish%20Zen.jpeg" width="150" /></a></td>
+  </tr>
+</table>
 
-#### My Keyboards
+## ZMK
 
-- [Diamond](https://github.com/rafaelromao/diamond)
-- [Rommana-Remix](https://github.com/rafaelromao/rommana-remix)
-- [Corne-ish Zen](https://lowprokb.ca/collections/keyboards/products/corne-ish-zen)
-
-### ZMK
-
-This keymap is implemented in ZMK, with the following external modules:
+This keymap is implemented using ZMK, with the following external modules:
 - [Auto Layer](https://github.com/urob/zmk-auto-layer)
 - [Adaptive Key](https://github.com/urob/zmk-adaptive-key)
 - [Leader Key](https://github.com/urob/zmk-leader-key)
 
-#### Initializing the local build environment
+## Local Build
 
-The script [init.sh](init.sh) will clone [the ZMK firmware](https://github.com/rafaelromao/zmk) and configure the toolchain.
-After [installing ZMK](https://zmk.dev/docs/development/setup) and running the init script above, [west cli](https://zmk.dev/docs/development/build-flash) should be working to compile and flash.
+Unlike most ZMK users, I don't use GitHub Actions to build the firmware for my keyboards, and since I come from a legacy repo structure, from the time I used QMK and when they didn't even support external userspaces, I use git submodules to import ZMK and everything else I need into my repo, then I build the firmware using a custom script. 
 
-## Building
+[This script](build.sh) will assume the [toolchain](https://zmk.dev/docs/development/setup) is already installed, but other than that, it will do its best to keep the build process as simple as possible.
 
-The script [build.sh](build.sh) can be used to build the firmware for any of my boards. Run `build --help` for more details.
+Here are some usage examples:
+
+```bash
+# Builds the central left side shield of the Rommana, assuming nice_nano_v2 as board and MACOS as target operating system
+build mabroum/rommana cl
+
+# Builds the left side shield of the Wired Diamond, specifying the board and ZMK fork to be used instead of the default
+build rafaelromao/wired_diamond l LINUX -b seeeduino_xiao_rp2040 -z rafaelromao/zmk
+
+# Builds the central dongle shield of the Choc Diamond, specifying an extra shield and an external module to handle the display
+build rafaelromao/choc_diamond cd MACOS -e dongle_display -m englmaxi/zmk-dongle-display
+```
+
+I also need to initialize my terminal with the following script before using the `build` command:
+
+```bash
+cd ~/keyboards ; source ./init.sh
+```
 
 ## Diagram
 
-The Diagram for my keymap was created using [Keymap Drawer](https://github.com/caksoylar/keymap-drawer). The source and config files can be found in the docs folder and the commands below can be used to generate an `svg` diagram and convert it to `png`, using Inkscape:
+The diagrams for my keymap were created using [Keymap Drawer](https://github.com/caksoylar/keymap-drawer).
 
-```
+Here are some examples of the commands I use to draw the `svg` files and convert them to `png`:
+
+```bash
 keymap -c keymap-drawer-config.yaml draw keymap-drawer.yaml > overview.svg
 inkscape --export-type png --export-filename overview.png --export-dpi 300 --export-background=white overview.svg
 ```
-
-The script [draw.sh](draw.sh) is used to draw all diagrams in my keymap using commands like the example above.
 
 ## References
 
 Most features implemented here were based on the work referenced below.
 
 ### Layouts
+
 - [Romak](https://github.com/rafaelromao/romak)
 - [Colemak](https://colemak.org)
 - [BEAKL](https://deskthority.net/wiki/BEAKL)
@@ -91,6 +124,7 @@ Most features implemented here were based on the work referenced below.
 - [Sartak](https://github.com/sartak/keyboard)
 
 ### QMK
+
 - [Pascal Getreuer](https://github.com/getreuer/qmk-keymap)
 - [Precondition](https://github.com/precondition/dactyl-manuform-keymap)
 - [Drashna](https://github.com/drashna/qmk_userspace)
@@ -101,6 +135,7 @@ Most features implemented here were based on the work referenced below.
 - [Thomas Baart](https://thomasbaart.nl/category/mechanical-keyboards/firmware/qmk)
 
 ### ZMK
+
 - [Pete Johanson](https://github.com/petejohanson/)
 - [Cem Aksoylar](https://github.com/caksoylar)
 - [Nick Conway](https://github.com/nickconway)
@@ -109,13 +144,15 @@ Most features implemented here were based on the work referenced below.
 - [Alexander Krikun](https://github.com/krikun98)
 
 ### 3D Printing and Handwiring
+
 - [Jan Lunge](https://m.youtube.com/@JanLunge)
 - [Sadek Baroudi](https://github.com/sadekbaroudi)
 - [Joe Scotto](https://github.com/joe-scotto)
 - [Alaa Saad Mansour](https://github.com/AlaaSaadAbdo)
 - [Peter Elliot](https://github.com/PJE66)
 
-## Resouces
+## Resources
+
 - [Keymap Drawer](https://github.com/caksoylar/keymap-drawer)
 - [Keymap DB](https://keymapdb.com/keymaps/rafaelromao/)
 - [QMK Docs](https://docs.qmk.fm)

@@ -2,22 +2,22 @@
 mkdir -p ./tmp
 
 # Separate target files
-cp ./img/diagrams/keymap-drawer/keymap-drawer.yaml ./tmp/keymap-drawer.yaml
-cp ./img/diagrams/keymap-drawer/keymap-drawer.yaml ./tmp/keymap-drawer-noseparatecombos.yaml
-cp ./img/diagrams/keymap-drawer/keymap-drawer.yaml ./tmp/keymap-drawer-onlyseparatecombos.yaml
-cp ./img/diagrams/keymap-drawer/keymap-drawer-extras.yaml ./tmp/keymap-drawer-mehs.yaml
-cp ./img/diagrams/keymap-drawer/keymap-drawer-extras.yaml ./tmp/keymap-drawer-window.yaml
+cp docs/img/diagrams/keymap-drawer/keymap-drawer.yaml tmp/keymap-drawer.yaml
+cp docs/img/diagrams/keymap-drawer/keymap-drawer.yaml tmp/keymap-drawer-noseparatecombos.yaml
+cp docs/img/diagrams/keymap-drawer/keymap-drawer.yaml tmp/keymap-drawer-onlyseparatecombos.yaml
+cp docs/img/diagrams/keymap-drawer/keymap-drawer.yaml tmp/keymap-drawer-mehs.yaml
+cp docs/img/diagrams/keymap-drawer/keymap-drawer.yaml tmp/keymap-drawer-window.yaml
 
-yq -i 'del(.combos[] | select(.draw_separate == true))' ./tmp/keymap-drawer-noseparatecombos.yaml
-yq -i 'del(.combos[] | select(.draw_separate != true))' ./tmp/keymap-drawer-onlyseparatecombos.yaml
+yq -i 'del(.combos[] | select(.draw_separate == true))' tmp/keymap-drawer-noseparatecombos.yaml
+yq -i 'del(.combos[] | select(.draw_separate != true))' tmp/keymap-drawer-onlyseparatecombos.yaml
 
-cp ./tmp/keymap-drawer-onlyseparatecombos.yaml ./tmp/keymap-drawer-onlyshortcutcombos.yaml
-cp ./tmp/keymap-drawer-onlyseparatecombos.yaml ./tmp/keymap-drawer-onlynavcombos.yaml
-cp ./tmp/keymap-drawer-onlyseparatecombos.yaml ./tmp/keymap-drawer-onlymediacombos.yaml
+cp tmp/keymap-drawer-onlyseparatecombos.yaml tmp/keymap-drawer-onlyshortcutcombos.yaml
+cp tmp/keymap-drawer-onlyseparatecombos.yaml tmp/keymap-drawer-onlynavcombos.yaml
+cp tmp/keymap-drawer-onlyseparatecombos.yaml tmp/keymap-drawer-onlymediacombos.yaml
 
-yq -i 'del(.combos[] | select(.layers | contains(["shortcuts"]) | not))' ./tmp/keymap-drawer-onlyshortcutcombos.yaml
-yq -i 'del(.combos[] | select(.layers | contains(["nav"]) | not))' ./tmp/keymap-drawer-onlynavcombos.yaml
-yq -i 'del(.combos[] | select(.layers | contains(["media"]) | not))' ./tmp/keymap-drawer-onlymediacombos.yaml
+yq -i 'del(.combos[] | select(.layers | contains(["shortcuts"]) | not))' tmp/keymap-drawer-onlyshortcutcombos.yaml
+yq -i 'del(.combos[] | select(.layers | contains(["nav"]) | not))' tmp/keymap-drawer-onlynavcombos.yaml
+yq -i 'del(.combos[] | select(.layers | contains(["media"]) | not))' tmp/keymap-drawer-onlymediacombos.yaml
 
 # Generate SVG files using keymap
 
@@ -33,8 +33,8 @@ yq -i 'del(.combos[] | select(.layers | contains(["media"]) | not))' ./tmp/keyma
 ./draw-image.sh keymap-drawer-noseparatecombos.yaml alphas alpha1 alpha2
 ./draw-image.sh keymap-drawer-noseparatecombos.yaml cedil ç-extension
 ./draw-image.sh keymap-drawer-noseparatecombos.yaml boot --2cols func smart
-./draw-image.sh keymap-drawer-noseparatecombos.yaml plain --2cols plain1 plain2
-./draw-image.sh keymap-drawer-noseparatecombos.yaml shifted --2cols shifted1 shifted2
+./draw-image.sh keymap-drawer-noseparatecombos.yaml plain plain1 plain2
+./draw-image.sh keymap-drawer-noseparatecombos.yaml shifted shifted1 shifted2
 ./draw-image.sh keymap-drawer-noseparatecombos.yaml vim vim-remaps
 
 ./draw-image.sh keymap-drawer-noseparatecombos.yaml alpha1 alpha1

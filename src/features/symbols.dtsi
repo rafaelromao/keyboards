@@ -167,5 +167,9 @@
         MACRO(mc_ord_a,               &kp LA(N9))
         TAPHOLD_TP(th_ord_o,          &mc_ord_o, &mc_meh)
         TAPHOLD_TP(th_ord_a,          &mc_ord_a, &mc_hyper)
+
+        MACRO(mc_qr,                  &kp Q &kp R)
+        MACRO(mc_atr,                 &kp AT &kp R)
+        MACRO(mc_atat,                &kp AT &kp AT)
     };
 };
