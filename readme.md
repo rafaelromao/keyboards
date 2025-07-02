@@ -68,7 +68,7 @@ This keymap is implemented using ZMK, with the following external modules:
 
 Unlike most ZMK users, I don't use GitHub Actions to build the firmware for my keyboards, and since I come from a legacy repo structure, from the time I used QMK and when they didn't even support external userspaces, I use git submodules to import ZMK and everything else I need into my repo, then I build the firmware using a custom script. 
 
-[This script](build.sh) will assume the [toolchain](https://zmk.dev/docs/development/setup) is already installed, but other than that, it will do its best to keep the build process as simple as possible.
+[This script](scripts/build.sh) will assume the [toolchain](https://zmk.dev/docs/development/setup) is already installed, but other than that, it will do its best to keep the build process as simple as possible.
 
 Here are some usage examples:
 
@@ -86,7 +86,7 @@ build rafaelromao/choc_diamond cd MACOS -e dongle_display -m englmaxi/zmk-dongle
 I also need to initialize my terminal with the following script before using the `build` command:
 
 ```bash
-cd ~/keyboards ; source ./init.sh
+cd ~/keyboards ; source ./scripts/init.sh
 ```
 
 ## Diagram

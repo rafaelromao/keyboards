@@ -34,8 +34,8 @@ unset GNUARMEMB_TOOLCHAIN_PATH
 export ZEPHYR_SDK_INSTALL_DIR=~/zephyr-sdk-0.16.3
 cd $KEYBOARD_HOME
 
-alias build=./build.sh
-alias draw=./draw.sh
+alias build=./scripts/build.sh
+alias draw=./scripts/draw.sh
 
 python3 -m venv .venv
 source .venv/bin/activate

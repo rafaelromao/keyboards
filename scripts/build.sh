@@ -153,7 +153,7 @@ echo "Modules: ${MODULES[*]}"
 # Init the zmk repo 
 export ZMK_HOME="$PROJECT_DIR/$ZMK_MODULE"
 echo "Initializing zmk..."
-source ./init.sh $ZMK
+source ./scripts/init.sh $ZMK
 
 # Create a new flags.h file
 OUTPUT_FILE="$PROJECT_DIR/src/definitions/flags.h"
