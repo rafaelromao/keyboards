@@ -10,7 +10,7 @@ The image above shows just the most relevant layers. You can see the full diagra
 
 ## How this layout works?
 
-The ratiaonale behind the decisions that led to this keymap can be found in [this page](docs/index.md), but here is a summary:
+The ratiaonale behind the decisions that led to this keymap can be found in [this page](https://rafaelromao.github.io/keyboards), but here is a summary:
 
 ### Directives
 
@@ -20,7 +20,7 @@ What are the directives that drive most of my decisions?
 - [Finger Effort](docs/index.md#finger-effort): No lateral movements or uncomfortable stretches.
 - [Easy of Use](docs/index.md#easy-of-use): If it is frequent, it should be easy.
 - [Handness](docs/index.md#handness): Trackball in the left hand, heavy load in the right hand.
-- [Use Cases](docs/index.md#use-cases): English, but also Portuguese, plus VIM and Spreadsheets.
+- [Workflows](docs/index.md#workflows): English, but also Portuguese, plus VIM and Spreadsheets.
 
 ### Workflows
 

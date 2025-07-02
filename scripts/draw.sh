@@ -5,8 +5,6 @@ mkdir -p ./tmp
 cp docs/img/diagrams/keymap-drawer/keymap-drawer.yaml tmp/keymap-drawer.yaml
 cp docs/img/diagrams/keymap-drawer/keymap-drawer.yaml tmp/keymap-drawer-noseparatecombos.yaml
 cp docs/img/diagrams/keymap-drawer/keymap-drawer.yaml tmp/keymap-drawer-onlyseparatecombos.yaml
-cp docs/img/diagrams/keymap-drawer/keymap-drawer.yaml tmp/keymap-drawer-mehs.yaml
-cp docs/img/diagrams/keymap-drawer/keymap-drawer.yaml tmp/keymap-drawer-window.yaml
 
 yq -i 'del(.combos[] | select(.draw_separate == true))' tmp/keymap-drawer-noseparatecombos.yaml
 yq -i 'del(.combos[] | select(.draw_separate != true))' tmp/keymap-drawer-onlyseparatecombos.yaml
@@ -48,6 +46,6 @@ yq -i 'del(.combos[] | select(.layers | contains(["media"]) | not))' tmp/keymap-
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml media media 
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml smart smart 
 
-./scripts/draw-image.sh keymap-drawer-mehs.yaml coding-mehs coding-meh coding-hyper
-./scripts/draw-image.sh keymap-drawer-mehs.yaml meh-morphs --2cols left-meh-morphs right-meh-morphs
-./scripts/draw-image.sh keymap-drawer-window.yaml window desktop-management window-management
+./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml coding-mehs coding-meh coding-hyper
+./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml meh-morphs --2cols left-meh-morphs right-meh-morphs
+./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml window desktop-management window-management

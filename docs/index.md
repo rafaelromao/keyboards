@@ -30,7 +30,7 @@ The following directives guided my choices when defining how this keymap should 
 
 **Trackball in the left hand, heavy load in the right hand**: Although I'm not a left-handed person, I got used to using a Kensington Expert Mouse (actually a trackball) with my left hand, so my right hand is free most of the time to take notes, drink some coffee, or perform common actions, like copy and paste, using only the right side of the keyboard.
 
-## Use Cases
+## Workflows
 
 **English, but also Portuguese, plus VIM and Spreadsheets**: I type in English for at least a few hours per day, but Brazilian Portuguese is my home language, so I had to find, or design, an alpha layout that would work well for both languages. I also use VIM in all my editors (VSCode, Windsurf, IntelliJ, and Obsidian), so it also has a huge influence in this keymap. I don't code very often today, but I write some Java code eventually, so good bindings for IntelliJ are also important. And finally, spreadsheets should be easy to use, since I had to work with them for a significant portion of my week.
 
