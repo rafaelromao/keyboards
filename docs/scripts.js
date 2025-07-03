@@ -69,4 +69,13 @@ fetch('index.md')
           sidebar.classList.toggle('collapsed');
           body.classList.toggle('sidebar-collapsed');
         });
+
+        // Scroll to top when banner title is clicked
+        const bannerTitle = document.querySelector('#banner h1');
+        if (bannerTitle) {
+          bannerTitle.style.cursor = 'pointer'; // Indicate it's clickable
+          bannerTitle.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          });
+        }
       });
