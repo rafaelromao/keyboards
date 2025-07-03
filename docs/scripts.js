@@ -54,6 +54,9 @@ fetch('index.md')
             document.querySelector(this.getAttribute('href')).scrollIntoView({
               behavior: 'smooth'
             });
+            // Collapse sidebar after clicking a link
+            sidebar.classList.add('collapsed');
+            body.classList.add('sidebar-collapsed');
           });
         });
 
