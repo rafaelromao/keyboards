@@ -10,7 +10,7 @@
       --link-color: #9b83c2;
       --sidebar-width: 250px;
       --sidebar-bg: #f4f4f4;
-      --banner-height: 4em; /* Defined height for the fixed banner */
+      --banner-height: 6em; /* Increased height for the fixed banner */
     }
 
     @media (prefers-color-scheme: dark) {
@@ -59,9 +59,9 @@
     }
     #banner h1 {
       margin: 0;
-      font-size: 1.5em;
+      font-size: 2.5em; /* Match main h1 font size */
       border-bottom: none;
-      color: var(--text-color);
+      color: var(--h1-color); /* Match main h1 color */
     }
 
     #main-layout {
