@@ -17,6 +17,7 @@
       --h1-color: #6c91c3;
       --h2-color: #7ba78b;
       --h3-color: #c39b6c;
+      --link-color: #9b83c2;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -29,6 +30,7 @@
         --h1-color: #a8c8f8;
         --h2-color: #a8f8c8;
         --h3-color: #f8c8a8;
+        --link-color: #c8b3e8;
       }
     }
 
@@ -98,6 +100,13 @@
       padding: 1em;
       border-radius: 5px;
       overflow-x: auto;
+    }
+    #content a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+    #content a:hover {
+      text-decoration: underline;
     }
   </style>
   <script async defer src="https://buttons.github.io/buttons.js"></script>
