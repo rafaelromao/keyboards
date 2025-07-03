@@ -38,12 +38,16 @@
       font-size: 1.5em;
     }
     #banner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
       padding: 1em 2em;
       background-color: #f8f8f8;
       border-bottom: 1px solid #eee;
+    }
+    .banner-content {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
     #banner h1 {
       margin: 0;
@@ -70,10 +74,12 @@
 </head>
 <body>
   <div id="banner">
-    <h1>Rafael Romão's Keyboard Layout</h1>
-    <a href="https://github.com/rafaelromao/keyboards" class="github-button"
-       data-icon="octicon-star" data-size="large" data-show-count="true" 
-       aria-label="Star rafaelromao/keyboards on GitHub">Star</a>
+    <div class="banner-content">
+      <h1>Rafael Romão's Keyboard Layout</h1>
+      <a href="https://github.com/rafaelromao/keyboards" class="github-button"
+         data-icon="octicon-star" data-size="large" data-show-count="true" 
+         aria-label="Star rafaelromao/keyboards on GitHub">Star</a>
+    </div>
   </div>
   <div id="content"></div>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
