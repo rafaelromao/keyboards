@@ -128,6 +128,12 @@
 
     img {
       max-width: 100%;
+      border-radius: 10px; /* Adjust as needed for desired roundness */
+      /* For a mask effect, you can use mask-image, but border-radius is usually sufficient for rounded corners */
+      /* If a more complex mask is needed, consider SVG masks or more advanced CSS mask properties */
+      /* Example of a simple gradient mask (can be adjusted) */
+      /* mask-image: linear-gradient(to bottom, black 80%, transparent 100%); */
+      /* -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); */
     }
     code {
       background-color: var(--code-bg);
