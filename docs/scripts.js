@@ -82,4 +82,19 @@ fetch('index.md')
             window.scrollTo({ top: 0, behavior: 'smooth' });
           });
         }
+
+        // Dark theme image inversion logic
+        const applyTheme = () => {
+          if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.body.classList.add('dark-theme');
+          } else {
+            document.body.classList.remove('dark-theme');
+          }
+        };
+
+        // Apply theme on initial load
+        applyTheme();
+
+        // Listen for changes in color scheme preference
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme);
       });
