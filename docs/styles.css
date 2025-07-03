@@ -192,4 +192,30 @@
       z-index: 1000;
       border-radius: 5px;
     }
+
+    /* Scrollbar styles for WebKit browsers */
+    #sidebar::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    #sidebar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    #sidebar::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.2); /* Translucent black */
+      border-radius: 10px;
+      border: 2px solid transparent; /* Creates a flat look */
+      background-clip: padding-box; /* Ensures border doesn't cover thumb */
+    }
+
+    #sidebar::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    /* Scrollbar styles for Firefox (less customizable) */
+    #sidebar {
+      scrollbar-width: thin; /* "auto" or "thin" */
+      scrollbar-color: rgba(0, 0, 0, 0.2) transparent; /* thumb and track color */
+    }
   </style>
