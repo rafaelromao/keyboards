@@ -28,7 +28,7 @@
             ADAPTIVE(h_os2_s  , &mc_otiles   , LS(H)             )
             ADAPTIVE(h_os2_c  , &mc_otiles_c , RS(H)             )
             ADAPTIVE(v_os2    , &sl ALPHA2   , V X J             )
-            ADAPTIVE(v_os2_s  , &sl SFT_A2   , LS(V) LS(X) LS(J) )
+            ADAPTIVE(v_os2_s  , &sl ALPHA2   , LS(V) LS(X) LS(J) )
             ADAPTIVE(v_os2_c  , &sl CASE_A2  , RS(V) RS(X) RS(J) )
         };
 
