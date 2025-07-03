@@ -21,13 +21,13 @@ yq -i 'del(.combos[] | select(.layers | contains(["media"]) | not))' tmp/keymap-
 
 # "Usage: draw-image <input_file> <image_name> [--combos-only] [--2cols] [<layer1 layer2 layerN>]"
 
-./scripts/draw-image.sh keymap-drawer.yaml all --2cols
+./scripts/draw-image.sh keymap-drawer.yaml all --2cols --footernote
 
 ./scripts/draw-image.sh keymap-drawer-onlyshortcutcombos.yaml shortcutcombos --combos-only --2cols alpha1 
 ./scripts/draw-image.sh keymap-drawer-onlynavcombos.yaml navcombos --combos-only --2cols nav
 ./scripts/draw-image.sh keymap-drawer-onlymediacombos.yaml mediacombos --combos-only --2cols media
 
-./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml overview --2cols alpha1 alpha2 numbers symbols shortcuts nav media text smart func 
+./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml overview --2cols --footernote alpha1 alpha2 numbers symbols shortcuts nav media text smart func 
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml alphas alpha1 alpha2
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml cedil ç-extension
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml boot --2cols func smart

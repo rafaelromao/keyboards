@@ -2,7 +2,7 @@
 
 # Check if the output parameter is provided
 if [ -z "$1" ] || [ -z "$2" ]; then
-    echo "Usage: draw-image <input_file> <image_name> [--combos-only] [--2cols] [<layer1 layer2 layerN>]"
+    echo "Usage: draw-image <input_file> <image_name> [--combos-only] [--2cols] [--footernote] [<layer1 layer2 layerN>]"
     exit 1
 fi
 
@@ -19,11 +19,19 @@ if [ "$3" == "--combos-only" ]; then
     shift 1
 fi
 
-# Check if --2cols is provided
 config="docs/img/diagrams/keymap-drawer/keymap-drawer-config.yaml"
+
+# Check if --2cols is provided
 yq eval '.draw_config.n_columns = 1' -i $config
 if [ "$3" == "--2cols" ]; then
     yq eval '.draw_config.n_columns = 2' -i $config
+    shift 1
+fi
+
+# Check if footernote is requested
+yq eval '.draw_config.footer_text = "" ' -i $config
+if [ "$3" == "--footernote" ]; then
+    yq eval '.draw_config.footer_text = "Created with keymap-drawer"' -i $config
     shift 1
 fi
 

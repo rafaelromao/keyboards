@@ -29,7 +29,7 @@ draw_config:
     rx: 4.0
     ry: 4.0
   svg_extra_style: 'rect.held.alternate { fill: #ffe6f2; }'
-  footer_text: Created with <a href="https://github.com/caksoylar/keymap-drawer">keymap-drawer</a>
+  footer_text: ""
   shrink_wide_legends: 7
   style_layer_activators: true
   glyph_tap_size: 14
