@@ -11,7 +11,8 @@
       --link-color: #9b83c2;
       --sidebar-width: 250px;
       --sidebar-bg: #f4f4f4;
-      --banner-height: 6em; /* Increased height for the fixed banner */
+      --banner-height: 3.5em;
+        /* Reduced height for the fixed banner */
     }
 
     body[data-theme="dark"] {
@@ -44,7 +45,7 @@
       top: 0; /* Stick to the top */
       width: 100%; /* Span full width */
       z-index: 100; /* Ensure it's above other content */
-      padding: 1em 2em;
+      padding: 0.5em 2em;
       background-color: var(--header-bg);
       border-bottom: 1px solid var(--border-color);
       height: var(--banner-height); /* Explicit height */
@@ -59,7 +60,8 @@
     }
     #banner h1 {
       margin: 0;
-      font-size: 2.5em; /* Match main h1 font size */
+      font-size: 1.5em;
+        /* Match main h1 font size */
       border-bottom: none;
       color: var(--h1-color); /* Match main h1 color */
     }
@@ -193,7 +195,7 @@
       font-size: 1.5em; /* Increased font size for icon */
       cursor: pointer;
       position: fixed;
-      top: 1em;
+      top: 0.3em;
       left: 1em;
       z-index: 1000;
       border-radius: 5px;
