@@ -18,6 +18,9 @@
       --h2-color: #7ba78b;
       --h3-color: #c39b6c;
       --link-color: #9b83c2;
+      --sidebar-width: 250px;
+      --sidebar-bg: #f4f4f4;
+      --banner-height: 4em; /* Defined height for the fixed banner */
     }
 
     @media (prefers-color-scheme: dark) {
@@ -31,6 +34,7 @@
         --h2-color: #a8f8c8;
         --h3-color: #f8c8a8;
         --link-color: #c8b3e8;
+        --sidebar-bg: #282828;
       }
     }
 
@@ -39,12 +43,76 @@
       line-height: 1.6;
       color: var(--text-color);
       background-color: var(--bg-color);
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
-    #content {
+
+    #banner {
+      position: fixed; /* Make it fixed */
+      top: 0; /* Stick to the top */
+      width: 100%; /* Span full width */
+      z-index: 100; /* Ensure it's above other content */
+      padding: 1em 2em;
+      background-color: var(--header-bg);
+      border-bottom: 1px solid var(--border-color);
+      height: var(--banner-height); /* Explicit height */
+      box-sizing: border-box; /* Include padding in height */
+    }
+    .banner-content {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #banner h1 {
+      margin: 0;
+      font-size: 1.5em;
+      border-bottom: none;
+      color: var(--text-color);
+    }
+
+    #main-layout {
+      display: flex;
+      flex-grow: 1;
+      margin-top: var(--banner-height); /* Push content down below fixed banner */
+    }
+
+    #sidebar {
+      position: fixed; /* Make it fixed */
+      top: var(--banner-height); /* Start below the banner */
+      bottom: 0; /* Extend to the bottom of the viewport */
+      width: var(--sidebar-width);
+      background-color: var(--sidebar-bg);
+      padding: 2em 1em;
+      border-right: 1px solid var(--border-color);
+      overflow-y: auto;
+      flex-shrink: 0;
+      transition: transform 0.3s ease-in-out;
+      height: calc(100vh - var(--banner-height)); /* Calculate height */
+    }
+
+    #sidebar.collapsed {
+      width: 0;
+      padding: 0;
+      border-right: none;
+      overflow: hidden;
+    }
+
+    #main-content {
+      flex-grow: 1;
       padding: 2em;
       max-width: 800px;
       margin: 0 auto;
+      transition: margin-left 0.3s ease-in-out;
     }
+
+    #content {
+      /* Original content styles, now applied within #main-content */
+    }
+
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Roboto Slab', serif;
       font-weight: 700;
@@ -67,24 +135,7 @@
       font-size: 1.5em;
       color: var(--h3-color);
     }
-    #banner {
-      padding: 1em 2em;
-      background-color: var(--header-bg);
-      border-bottom: 1px solid var(--border-color);
-    }
-    .banner-content {
-      max-width: 800px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    #banner h1 {
-      margin: 0;
-      font-size: 1.5em;
-      border-bottom: none;
-      color: var(--text-color);
-    }
+
     img {
       max-width: 100%;
     }
@@ -108,6 +159,48 @@
     #content a:hover {
       text-decoration: underline;
     }
+
+    /* TOC specific styles */
+    #table-of-contents h2 {
+      font-size: 1.2em;
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-top: 0;
+      color: var(--text-color);
+    }
+    #table-of-contents ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    #table-of-contents ul ul {
+      padding-left: 1em;
+    }
+    #table-of-contents li {
+      margin-bottom: 0.5em;
+    }
+    #table-of-contents a {
+      display: block;
+      color: var(--text-color);
+      text-decoration: none;
+    }
+    #table-of-contents a:hover {
+      color: var(--link-color);
+      text-decoration: underline;
+    }
+
+    /* Sidebar toggle button */
+    #sidebar-toggle {
+      background-color: var(--header-bg);
+      border: 1px solid var(--border-color);
+      color: var(--text-color);
+      padding: 0.5em 1em;
+      cursor: pointer;
+      position: fixed;
+      top: 1em;
+      left: 1em;
+      z-index: 1000;
+      border-radius: 5px;
+    }
   </style>
   <script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
@@ -116,18 +209,92 @@
     <div class="banner-content">
       <h1>Rafael Romão's Keyboard Layout</h1>
       <a href="https://github.com/rafaelromao/keyboards" class="github-button"
-         data-icon="octicon-star" data-size="large" data-show-count="true" 
+         data-icon="octicon-star" data-size="large" data-show-count="true"
          aria-label="Star rafaelromao/keyboards on GitHub">Star</a>
     </div>
   </div>
-  <div id="content"></div>
+
+  <button id="sidebar-toggle">Toggle Sidebar</button>
+
+  <div id="main-layout">
+    <aside id="sidebar">
+      <div id="table-of-contents"></div>
+    </aside>
+    <main id="main-content">
+      <div id="content"></div>
+    </main>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
     fetch('index.md')
       .then(response => response.text())
       .then(text => {
-        document.getElementById('content').innerHTML =
-          marked.parse(text);
+        const contentDiv = document.getElementById('content');
+        contentDiv.innerHTML = marked.parse(text);
+
+        const tocDiv = document.getElementById('table-of-contents');
+        const headers = contentDiv.querySelectorAll('h1, h2, h3');
+        let tocHtml = '<h2>Table of Contents</h2><ul>';
+        let currentH1 = null;
+        let currentH2 = null;
+
+        headers.forEach((header, index) => {
+          const id = header.id || `section-${index}`;
+          header.id = id;
+
+          const link = `<a href="#${id}">${header.textContent}</a>`;
+
+          if (header.tagName === 'H1') {
+            if (currentH1) {
+              if (currentH2) {
+                tocHtml += '</ul></li>';
+                currentH2 = null;
+              }
+              tocHtml += '</ul></li>';
+            }
+            tocHtml += `<li>${link}<ul>`;
+            currentH1 = header;
+            currentH2 = null;
+          } else if (header.tagName === 'H2') {
+            if (currentH2) {
+              tocHtml += '</ul></li>';
+            }
+            tocHtml += `<li>${link}<ul>`;
+            currentH2 = header;
+          } else if (header.tagName === 'H3') {
+            tocHtml += `<li>${link}</li>`;
+          }
+        });
+
+        if (currentH2) {
+          tocHtml += '</ul></li>';
+        }
+        if (currentH1) {
+          tocHtml += '</ul></li>';
+        }
+        tocHtml += '</ul>';
+        tocDiv.innerHTML = tocHtml;
+
+        // Smooth scrolling
+        document.querySelectorAll('#table-of-contents a').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+            });
+          });
+        });
+
+        // Sidebar toggle logic
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+        const sidebar = document.getElementById('sidebar');
+        const body = document.body;
+
+        sidebarToggle.addEventListener('click', () => {
+          sidebar.classList.toggle('collapsed');
+          body.classList.toggle('sidebar-collapsed');
+        });
       });
   </script>
 </body>
