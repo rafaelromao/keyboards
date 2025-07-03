@@ -1,5 +1,3 @@
-# rafaelromao's keyboard layout
- 
 A split keyboard layout optimized for Portuguese, English, working with numbers and software programming with VIM plugins.
 
 To see the implementation of this keymap, using ZMK, check the [GitHub Repo](https://github.com/rafaelromao/keyboards). 
