@@ -1,0 +1,194 @@
+:root {
+      --bg-color: #fff;
+      --text-color: #333;
+      --header-bg: #f8f8f8;
+      --border-color: #eee;
+      --code-bg: #f0f0f0;
+      --h1-color: #6c91c3;
+      --h2-color: #7ba78b;
+      --h3-color: #c39b6c;
+      --link-color: #9b83c2;
+      --sidebar-width: 250px;
+      --sidebar-bg: #f4f4f4;
+      --banner-height: 4em; /* Defined height for the fixed banner */
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-color: #121212;
+        --text-color: #eee;
+        --header-bg: #1e1e1e;
+        --border-color: #333;
+        --code-bg: #282828;
+        --h1-color: #a8c8f8;
+        --h2-color: #a8f8c8;
+        --h3-color: #f8c8a8;
+        --link-color: #c8b3e8;
+        --sidebar-bg: #282828;
+      }
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      background-color: var(--bg-color);
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    #banner {
+      position: fixed; /* Make it fixed */
+      top: 0; /* Stick to the top */
+      width: 100%; /* Span full width */
+      z-index: 100; /* Ensure it's above other content */
+      padding: 1em 2em;
+      background-color: var(--header-bg);
+      border-bottom: 1px solid var(--border-color);
+      height: var(--banner-height); /* Explicit height */
+      box-sizing: border-box; /* Include padding in height */
+    }
+    .banner-content {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #banner h1 {
+      margin: 0;
+      font-size: 1.5em;
+      border-bottom: none;
+      color: var(--text-color);
+    }
+
+    #main-layout {
+      display: flex;
+      flex-grow: 1;
+      margin-top: var(--banner-height); /* Push content down below fixed banner */
+    }
+
+    #sidebar {
+      position: fixed; /* Make it fixed */
+      top: var(--banner-height); /* Start below the banner */
+      bottom: 0; /* Extend to the bottom of the viewport */
+      width: var(--sidebar-width);
+      background-color: var(--sidebar-bg);
+      padding: 2em 1em;
+      border-right: 1px solid var(--border-color);
+      overflow-y: auto;
+      flex-shrink: 0;
+      transition: transform 0.3s ease-in-out;
+      height: calc(100vh - var(--banner-height)); /* Calculate height */
+    }
+
+    #sidebar.collapsed {
+      width: 0;
+      padding: 0;
+      border-right: none;
+      overflow: hidden;
+    }
+
+    #main-content {
+      flex-grow: 1;
+      padding: 2em;
+      max-width: 800px;
+      margin: 0 auto;
+      transition: margin-left 0.3s ease-in-out;
+    }
+
+    #content {
+      /* Original content styles, now applied within #main-content */
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Roboto Slab', serif;
+      font-weight: 700;
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+    }
+    h1 {
+      font-size: 2.5em;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 0.3em;
+      color: var(--h1-color);
+    }
+    h2 {
+      font-size: 2em;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.3em;
+      color: var(--h2-color);
+    }
+    h3 {
+      font-size: 1.5em;
+      color: var(--h3-color);
+    }
+
+    img {
+      max-width: 100%;
+    }
+    code {
+      background-color: var(--code-bg);
+      padding: 0.2em 0.4em;
+      border-radius: 3px;
+      font-family: 'Fira Code', monospace;
+      color: var(--text-color);
+    }
+    pre {
+      background-color: var(--code-bg);
+      padding: 1em;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    #content a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+    #content a:hover {
+      text-decoration: underline;
+    }
+
+    /* TOC specific styles */
+    #table-of-contents h2 {
+      font-size: 1.2em;
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-top: 0;
+      color: var(--text-color);
+    }
+    #table-of-contents ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    #table-of-contents ul ul {
+      padding-left: 1em;
+    }
+    #table-of-contents li {
+      margin-bottom: 0.5em;
+    }
+    #table-of-contents a {
+      display: block;
+      color: var(--text-color);
+      text-decoration: none;
+    }
+    #table-of-contents a:hover {
+      color: var(--link-color);
+      text-decoration: underline;
+    }
+
+    /* Sidebar toggle button */
+    #sidebar-toggle {
+      background-color: var(--header-bg);
+      border: 1px solid var(--border-color);
+      color: var(--text-color);
+      padding: 0.5em 1em;
+      cursor: pointer;
+      position: fixed;
+      top: 1em;
+      left: 1em;
+      z-index: 1000;
+      border-radius: 5px;
+    }
+  </style>
