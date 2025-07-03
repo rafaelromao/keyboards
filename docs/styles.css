@@ -183,7 +183,8 @@
       background-color: var(--header-bg);
       border: 1px solid var(--border-color);
       color: var(--text-color);
-      padding: 0.5em 1em;
+      padding: 0.2em 0.5em; /* Adjusted padding */
+      font-size: 1.5em; /* Increased font size for icon */
       cursor: pointer;
       position: fixed;
       top: 1em;
