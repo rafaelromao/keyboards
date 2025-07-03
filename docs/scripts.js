@@ -83,18 +83,46 @@ fetch('index.md')
           });
         }
 
-        // Dark theme image inversion logic
-        const applyTheme = () => {
-          if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.body.classList.add('dark-theme');
+        // Theme toggle logic
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIconLight = document.getElementById('theme-icon-light');
+        const themeIconDark = document.getElementById('theme-icon-dark');
+        const starIconLight = document.getElementById('star-button-light');
+        const starIconDark = document.getElementById('star-button-dark');
+
+        const setTheme = (theme) => {
+          body.setAttribute('data-theme', theme);
+          localStorage.setItem('theme', theme);
+          if (theme === 'dark') {
+            starIconLight.style.display = 'none';
+            starIconDark.style.display = 'inline-block';
+            themeIconLight.style.display = 'none';
+            themeIconDark.style.display = 'inline-block';
           } else {
-            document.body.classList.remove('dark-theme');
+            starIconLight.style.display = 'inline-block';
+            starIconDark.style.display = 'none';
+            themeIconLight.style.display = 'inline-block';
+            themeIconDark.style.display = 'none';
           }
+          sidebar.classList.add('collapsed');
+          body.classList.add('sidebar-collapsed');
         };
 
-        // Apply theme on initial load
-        applyTheme();
+        const toggleTheme = () => {
+          const currentTheme = body.getAttribute('data-theme');
+          const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+          setTheme(newTheme);
+        };
 
-        // Listen for changes in color scheme preference
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme);
+        // Set initial theme based on localStorage or system preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+          setTheme(savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          setTheme('dark');
+        } else {
+          setTheme('light');
+        }
+
+        themeToggle.addEventListener('click', toggleTheme);
       });

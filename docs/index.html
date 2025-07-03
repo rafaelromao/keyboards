@@ -14,9 +14,16 @@
   <div id="banner">
     <div class="banner-content">
       <h1>Rafael Romão's Keyboard Layout</h1>
-      <a href="https://github.com/rafaelromao/keyboards" class="github-button"
-         data-icon="octicon-star" data-size="large" data-show-count="true"
-         aria-label="Star rafaelromao/keyboards on GitHub">Star</a>
+      <div id="star-button-light">
+        <a class="github-button" href="https://github.com/rafaelromao/keyboards"
+          data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-star" data-size="large"
+        data-show-count="true" aria-label="Star rafaelromao/keyboards on GitHub">Star</a>
+      </div>
+      <div id="star-button-dark">
+        <a class="github-button" href="https://github.com/rafaelromao/keyboards"
+          data-color-scheme="no-preference: dark_dimmed; light: dark_dimmed; dark: dark_dimmed;" data-icon="octicon-star"
+          data-size="large" data-show-count="true" aria-label="Star rafaelromao/keyboards on GitHub">Star</a>
+      </div>
     </div>
   </div>
 
@@ -24,6 +31,11 @@
 
   <div id="main-layout">
     <aside id="sidebar">
+      <button id="theme-toggle">
+        <img id="theme-icon-light" src="img/sun.svg" alt="Light Mode" style="display: none;">
+        <img id="theme-icon-dark" src="img/moon.svg" alt="Dark Mode" style="display: none;">
+        <span>Toggle Theme</span>
+      </button>
       <div id="table-of-contents"></div>
     </aside>
     <main id="main-content">

@@ -1,4 +1,5 @@
 :root {
+      /* Default Light Theme Variables */
       --bg-color: #fff;
       --text-color: #333;
       --header-bg: #f8f8f8;
@@ -13,19 +14,18 @@
       --banner-height: 6em; /* Increased height for the fixed banner */
     }
 
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg-color: #121212;
-        --text-color: #eee;
-        --header-bg: #1e1e1e;
-        --border-color: #333;
-        --code-bg: #282828;
-        --h1-color: #a8c8f8;
-        --h2-color: #a8f8c8;
-        --h3-color: #f8c8a8;
-        --link-color: #c8b3e8;
-        --sidebar-bg: #282828;
-      }
+    body[data-theme="dark"] {
+      --bg-color: #121212;
+      --text-color: #eee;
+      --header-bg: #1e1e1e;
+      --border-color: #333;
+      --code-bg: #282828;
+      --h1-color: #a8c8f8;
+      --h2-color: #a8f8c8;
+      --h3-color: #f8c8a8;
+      --link-color: #c8b3e8;
+      --sidebar-bg: #282828;
+      --text-color-invert: 1;
     }
 
     body {
@@ -82,6 +82,7 @@
       flex-shrink: 0;
       transition: transform 0.3s ease-in-out;
       height: calc(100vh - var(--banner-height)); /* Calculate height */
+      z-index: 9999;
     }
 
     #sidebar.collapsed {
@@ -128,15 +129,10 @@
 
     img {
       max-width: 100%;
-      border-radius: 10px; /* Adjust as needed for desired roundness */
-      /* For a mask effect, you can use mask-image, but border-radius is usually sufficient for rounded corners */
-      /* If a more complex mask is needed, consider SVG masks or more advanced CSS mask properties */
-      /* Example of a simple gradient mask (can be adjusted) */
-      /* mask-image: linear-gradient(to bottom, black 80%, transparent 100%); */
-      /* -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); */
+      border-radius: 10px;
     }
 
-    body.dark-theme img {
+    body[data-theme="dark"] img {
       filter: invert(0.8);
     }
     code {
@@ -201,6 +197,30 @@
       left: 1em;
       z-index: 1000;
       border-radius: 5px;
+    }
+
+    /* Theme toggle button */
+    #theme-toggle {
+      background-color: var(--header-bg);
+      border: 1px solid var(--border-color);
+      color: var(--text-color);
+      padding: 0.5em 1em;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 1em;
+      width: 100%; /* Make it full width */
+      box-sizing: border-box; /* Include padding and border in the width */
+      margin-bottom: 1em; /* Add some space below the button */
+      display: flex; /* Enable flexbox for alignment */
+      align-items: center; /* Vertically align items */
+      justify-content: center; /* Horizontally center items */
+    }
+
+    #theme-toggle img {
+      width: 1.2em; /* Adjust icon size */
+      height: 1.2em; /* Adjust icon size */
+      margin-right: 0.5em; /* Space between icon and text */
+      filter: invert(var(--text-color-invert)); /* Invert icon color based on theme */
     }
 
     /* Scrollbar styles for WebKit browsers */
