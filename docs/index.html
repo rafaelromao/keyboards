@@ -8,10 +8,35 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@6.2/distr/fira_code.css">
   <style>
+    :root {
+      --bg-color: #fff;
+      --text-color: #333;
+      --header-bg: #f8f8f8;
+      --border-color: #eee;
+      --code-bg: #f0f0f0;
+      --h1-color: #6c91c3;
+      --h2-color: #7ba78b;
+      --h3-color: #c39b6c;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-color: #121212;
+        --text-color: #eee;
+        --header-bg: #1e1e1e;
+        --border-color: #333;
+        --code-bg: #282828;
+        --h1-color: #a8c8f8;
+        --h2-color: #a8f8c8;
+        --h3-color: #f8c8a8;
+      }
+    }
+
     body {
       font-family: 'Roboto', sans-serif;
       line-height: 1.6;
-      color: #333;
+      color: var(--text-color);
+      background-color: var(--bg-color);
     }
     #content {
       padding: 2em;
@@ -26,21 +51,24 @@
     }
     h1 {
       font-size: 2.5em;
-      border-bottom: 2px solid #eee;
+      border-bottom: 2px solid var(--border-color);
       padding-bottom: 0.3em;
+      color: var(--h1-color);
     }
     h2 {
       font-size: 2em;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid var(--border-color);
       padding-bottom: 0.3em;
+      color: var(--h2-color);
     }
     h3 {
       font-size: 1.5em;
+      color: var(--h3-color);
     }
     #banner {
       padding: 1em 2em;
-      background-color: #f8f8f8;
-      border-bottom: 1px solid #eee;
+      background-color: var(--header-bg);
+      border-bottom: 1px solid var(--border-color);
     }
     .banner-content {
       max-width: 800px;
@@ -53,18 +81,20 @@
       margin: 0;
       font-size: 1.5em;
       border-bottom: none;
+      color: var(--text-color);
     }
     img {
       max-width: 100%;
     }
     code {
-      background-color: #f0f0f0;
+      background-color: var(--code-bg);
       padding: 0.2em 0.4em;
       border-radius: 3px;
       font-family: 'Fira Code', monospace;
+      color: var(--text-color);
     }
     pre {
-      background-color: #f0f0f0;
+      background-color: var(--code-bg);
       padding: 1em;
       border-radius: 5px;
       overflow-x: auto;
