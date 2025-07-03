@@ -65,6 +65,10 @@ fetch('index.md')
         const sidebar = document.getElementById('sidebar');
         const body = document.body;
 
+        // Set initial state to collapsed
+        sidebar.classList.add('collapsed');
+        body.classList.add('sidebar-collapsed');
+
         sidebarToggle.addEventListener('click', () => {
           sidebar.classList.toggle('collapsed');
           body.classList.toggle('sidebar-collapsed');
