@@ -80,6 +80,8 @@
       background-color: var(--sidebar-bg);
       padding: 2em 1em;
       border-right: 1px solid var(--border-color);
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
       overflow-y: auto;
       flex-shrink: 0;
       transition: transform 0.3s ease-in-out;
