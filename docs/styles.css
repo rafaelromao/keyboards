@@ -46,8 +46,8 @@
       width: 100%; /* Span full width */
       z-index: 100; /* Ensure it's above other content */
       padding: 0.5em 2em;
-      background-color: transparent;
-      border-bottom: none;
+      background-color: var(--sidebar-bg);
+      border-bottom: 1px solid var(--border-color);
       height: var(--banner-height); /* Explicit height */
       box-sizing: border-box; /* Include padding in height */
     }
