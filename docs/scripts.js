@@ -51,9 +51,17 @@ fetch('index.md')
         document.querySelectorAll('#table-of-contents a').forEach(anchor => {
           anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            const headerOffset = document.getElementById('banner').offsetHeight;
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+              top: offsetPosition,
               behavior: 'smooth'
             });
+
             // Collapse sidebar after clicking a link
             sidebar.classList.add('collapsed');
             body.classList.add('sidebar-collapsed');
