@@ -4,6 +4,12 @@ fetch('index.md')
         const contentDiv = document.getElementById('content');
         contentDiv.innerHTML = marked.parse(text);
 
+        // Dynamically set the document title from the first heading of the markdown
+        const firstHeading = contentDiv.querySelector('h1');
+        if (firstHeading) {
+          document.title = firstHeading.textContent;
+        }
+
         const tocDiv = document.getElementById('table-of-contents');
         const headers = contentDiv.querySelectorAll('h1, h2, h3');
         let tocHtml = '<h2>Table of Contents</h2><ul>';
