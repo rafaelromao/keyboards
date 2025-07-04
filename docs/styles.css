@@ -250,3 +250,10 @@
       scrollbar-width: thin; /* "auto" or "thin" */
       scrollbar-color: rgba(0, 0, 0, 0.2) transparent; /* thumb and track color */
     }
+
+    #star-buttons {
+      position: fixed;
+      top: 0.8em;
+      right: 1em;
+      z-index: 1000;
+    }
