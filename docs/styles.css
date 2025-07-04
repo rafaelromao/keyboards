@@ -189,20 +189,30 @@
     }
 
     /* Sidebar toggle button */
-    #sidebar-toggle {
+        #sidebar-toggle, #home-button {
       background-color: var(--header-bg);
       border: 1px solid var(--border-color);
       color: var(--text-color);
-      padding: 0.2em 0.5em; /* Adjusted padding */
-      font-size: 1.5em; /* Increased font size for icon */
+      width: 2em;
+      height: 2em;
+      font-size: 1.2em;
       cursor: pointer;
       position: fixed;
-      top: 0.3em;
-      left: 1em;
+      top: 0.5em;
       z-index: 1000;
       border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
+    #sidebar-toggle {
+      left: 0.5em;
+    }
+
+    #home-button {
+      left: 3em;
+    }
     /* Theme toggle button */
     #theme-toggle {
       background-color: var(--header-bg);

@@ -74,14 +74,11 @@ fetch('index.md')
           body.classList.toggle('sidebar-collapsed');
         });
 
-        // Scroll to top when banner title is clicked
-        const bannerTitle = document.querySelector('#banner h1');
-        if (bannerTitle) {
-          bannerTitle.style.cursor = 'pointer'; // Indicate it's clickable
-          bannerTitle.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          });
-        }
+        // Scroll to top when home button is clicked
+        const homeButton = document.getElementById('home-button');
+        homeButton.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
 
         // Theme toggle logic
         const themeToggle = document.getElementById('theme-toggle');
