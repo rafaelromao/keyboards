@@ -69,9 +69,20 @@ fetch('index.md')
         sidebar.classList.add('collapsed');
         body.classList.add('sidebar-collapsed');
 
-        sidebarToggle.addEventListener('click', () => {
+        sidebarToggle.addEventListener('click', (event) => {
+          event.stopPropagation();
           sidebar.classList.toggle('collapsed');
           body.classList.toggle('sidebar-collapsed');
+        });
+
+        document.addEventListener('click', (event) => {
+          const isClickInsideSidebar = sidebar.contains(event.target);
+          const isSidebarToggle = sidebarToggle.contains(event.target);
+
+          if (!isClickInsideSidebar && !isSidebarToggle && !sidebar.classList.contains('collapsed')) {
+            sidebar.classList.add('collapsed');
+            body.classList.add('sidebar-collapsed');
+          }
         });
 
         // Scroll to top when home button is clicked
