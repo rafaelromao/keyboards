@@ -62,7 +62,7 @@ All alphas moved to the secondary alpha layer are also available as combos in th
 
 ### Magic Romak
 
-[Romak](https://github.com/rafaelromao/romak) is an alpha layout designed from scratch to be easy to use for both English and Portuguese, aiming to minimize the use of the inner index columns and pinky keys. As a result, it became easy to port it to 24 keys, using two alpha layers. As a further enhancement, adaptive keys were used to make V and H easier to type in both languages, since V is more common in Portuguese while H is more common in English. The end result is [Magic Romak](https://github.com/rafaelromao/romak/blob/main/MagicRomak.md).
+[Romak](https://rafaelromao.github.io/romak) is an alpha layout designed from scratch to be easy to use for both English and Portuguese, aiming to minimize the use of the inner index columns and pinky keys. As a result, it became easy to port it to 24 keys, using two alpha layers. As a further enhancement, adaptive keys were used to make V and H easier to type in both languages, since V is more common in Portuguese while H is more common in English. The end result is [Magic Romak](https://rafaelromao.github.io/romak).
 
 #### Adaptive Keys
 
