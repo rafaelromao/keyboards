@@ -137,11 +137,10 @@
     }
 
     body[data-theme="dark"] img {
-      filter: invert(0.8);
+      filter: invert(0.9);
     }
     code {
       background-color: var(--code-bg);
-      padding: 0.2em 0.4em;
       border-radius: 3px;
       font-family: 'Fira Code', monospace;
       color: var(--text-color);
@@ -161,35 +160,83 @@
     }
 
     /* TOC specific styles */
-    #table-of-contents h2 {
-      font-size: 1.2em;
-      border-bottom: none;
-      padding-bottom: 0;
-      margin-top: 0;
-      color: var(--text-color);
+    .sidebar-top-buttons {
+      display: flex;
+      gap: 10px; /* Add a gap between the buttons */
+      margin-bottom: 20px;
     }
+
+    .sidebar-button {
+      background: none;
+      border: 1px solid #ccc;
+      color: #333;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      border-radius: 5px;
+      height: 40px;
+    }
+
+    .sidebar-button:hover {
+      background: #f0f0f0;
+    }
+
+    [data-theme="dark"] .sidebar-button {
+      border-color: #555;
+      color: #ccc;
+    }
+
+    [data-theme="dark"] .sidebar-button:hover {
+      background: #333;
+    }
+
+    #theme-toggle.sidebar-button {
+      width: 40px;
+      padding: 0;
+    }
+
+    #language-toggle.sidebar-button {
+      padding: 0 10px;
+    }
+
+    #language-toggle .active {
+      font-weight: bold;
+    }
+
+    #theme-toggle img {
+      width: 1.2em;
+      height: 1.2em;
+      filter: invert(var(--text-color-invert));
+    }
+
     #table-of-contents ul {
       list-style: none;
       padding-left: 0;
     }
+
     #table-of-contents ul ul {
       padding-left: 1em;
     }
+
     #table-of-contents li {
       margin-bottom: 0.5em;
     }
+
     #table-of-contents a {
       display: block;
       color: var(--text-color);
       text-decoration: none;
     }
+
     #table-of-contents a:hover {
       color: var(--link-color);
       text-decoration: underline;
     }
 
     /* Sidebar toggle button */
-        #sidebar-toggle, #home-button {
+    #sidebar-toggle, #home-button {
       background-color: var(--header-bg);
       border: 1px solid var(--border-color);
       color: var(--text-color);
@@ -212,29 +259,6 @@
 
     #home-button {
       left: 3em;
-    }
-    /* Theme toggle button */
-    #theme-toggle {
-      background-color: var(--header-bg);
-      border: 1px solid var(--border-color);
-      color: var(--text-color);
-      padding: 0.5em 1em;
-      cursor: pointer;
-      border-radius: 5px;
-      font-size: 1em;
-      width: 100%; /* Make it full width */
-      box-sizing: border-box; /* Include padding and border in the width */
-      margin-bottom: 1em; /* Add some space below the button */
-      display: flex; /* Enable flexbox for alignment */
-      align-items: center; /* Vertically align items */
-      justify-content: center; /* Horizontally center items */
-    }
-
-    #theme-toggle img {
-      width: 1.2em; /* Adjust icon size */
-      height: 1.2em; /* Adjust icon size */
-      margin-right: 0.5em; /* Space between icon and text */
-      filter: invert(var(--text-color-invert)); /* Invert icon color based on theme */
     }
 
     /* Scrollbar styles for WebKit browsers */
@@ -268,4 +292,34 @@
       top: 0.8em;
       right: 1em;
       z-index: 1000;
+    }
+
+    /* Table Styles */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2em 0;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    th {
+      background-color: var(--sidebar-bg);
+      font-weight: bold;
+      color: var(--h2-color);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover {
+      background-color: var(--code-bg);
     }

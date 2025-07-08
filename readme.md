@@ -16,21 +16,21 @@ The ratiaonale behind the decisions that led to this keymap can be found in [thi
 
 What are the directives that drive most of my decisions?
 
-- [Ergonomics](docs/index.md#ergonomics): Split and Columnar Stagger.
-- [Finger Effort](docs/index.md#finger-effort): No lateral movements or uncomfortable stretches.
-- [Easy of Use](docs/index.md#easy-of-use): If it is frequent, it should be easy.
-- [Handness](docs/index.md#handness): Trackball in the left hand, heavy load in the right hand.
-- [Workflows](docs/index.md#workflows): English, but also Portuguese, plus VIM and Spreadsheets.
+- **Ergonomics**: Split and Columnar Stagger.
+- **Finger Effort**: No lateral movements or uncomfortable stretches.
+- **Easy of Use**: If it is frequent, it should be easy.
+- **Handness**: Trackball in the left hand, heavy load in the right hand.
+- **Workflows**: English, but also Portuguese, plus VIM and Spreadsheets.
 
 ### Workflows
 
 What are the workflows that I need to execute with my keyboards?
 
-- [Typing](docs/index.md#typing): The most basic and essential workflow.
-- [Numbers](docs/index.md#numbers): How this keymap makes it easy to work with numbers.
-- [Shortcuts](docs/index.md#shortcuts): How to work with so many shortcuts in such minimal keyboards.
-- [Navigation](docs/index.md#navigation): Navigating in text, presentations, window management and mouse emulation.
-- [Programming](docs/index.md#programming): Optimizations to make programming easier.
+- **Typing**: The most basic and essential workflow.
+- **Numbers**: How this keymap makes it easy to work with numbers.
+- **Shortcut**s: How to work with so many shortcuts in such minimal keyboards.
+- **Navigation**: Navigating in text, presentations, window management and mouse emulation.
+- **Programming**: Optimizations to make programming easier.
 
 ## My Keyboards
 
