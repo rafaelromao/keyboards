@@ -16,11 +16,11 @@ As seguintes diretrizes guiaram minhas escolhas ao definir como este keymap deve
 
 ## Ergonomia
 
-**Dividido e Colunar Stagger**: Este keymap foi projetado para teclados ergonômicos. Isso significa dividido, sem fio ou não, e colunar stagger, com pelo menos 4 colunas e 3 linhas, mais 2 teclas de polegar de cada lado. Ele também é implementado em cima do ZMK, usando recursos como home row mods, sticky shift em uma tecla de polegar, caps word, macros, teclas adaptativas e muitas camadas e combos.
+**Dividido e com colunas paralelas**: Este keymap foi projetado para teclados ergonômicos. Isso significa dividido, sem fio ou não, com colunas paralelas (columnar stagger), com pelo menos 4 colunas e 3 linhas, mais 2 teclas de polegar de cada lado. Ele também é implementado em cima do ZMK, usando recursos como home row mods, *Shift Aderente* em uma tecla de polegar, caps word, macros, teclas adaptativas e muitas camadas e combos.
 
-## Esforço dos Dedos
+## Esforço
 
-**Sem movimentos laterais ou alongamentos desconfortáveis**: O principal objetivo deste keymap, e dos teclados que construí para usá-lo, é o conforto ao digitar. Movimentos laterais com os dedos mindinhos ou indicadores não são confortáveis para mim, assim como usar o dedo mindinho para alcançar teclas nas linhas superior ou inferior. Como resultado, tais teclas foram removidas e os teclados, layout e keymap evoluíram para ter apenas 24 teclas, no formato 1333+2.
+**Sem movimentos laterais ou desconfortáveis**: O principal objetivo deste keymap, e dos teclados que construí para usá-lo, é o conforto ao digitar. Movimentos laterais com os dedos mindinhos ou indicadores não são confortáveis para mim, assim como usar o dedo mindinho para alcançar teclas nas linhas superior ou inferior. Como resultado, tais teclas foram removidas e os teclados, layout e keymap evoluíram para ter apenas 24 teclas, no formato 1333+2.
 
 ## Facilidade de Uso
 
@@ -32,7 +32,7 @@ As seguintes diretrizes guiaram minhas escolhas ao definir como este keymap deve
 
 ## Fluxos de Trabalho
 
-**Inglês, mas também português, mais VIM e planilhas**: Eu digito em inglês por pelo menos algumas horas por dia, mas o português brasileiro é minha língua nativa, então tive que encontrar, ou projetar, um layout alfa que funcionasse bem para ambos os idiomas. Eu também uso o VIM em todos os meus editores (VSCode, IntelliJ e Obsidian), então ele também tem uma grande influência neste keymap. Eu não programo com muita frequência hoje em dia, mas escrevo algum código Java eventualmente, então bons atalhos para o IntelliJ também são importantes. E, finalmente, as planilhas devem ser fáceis de usar, já que tive que trabalhar com elas por uma parte significativa da minha semana.
+**Inglês, mas também português, VIM e planilhas**: Eu digito em inglês por pelo menos algumas horas por dia, mas o português brasileiro é minha língua nativa, então tive que encontrar, ou projetar, um layout de letras que funcionasse bem para ambos os idiomas. Eu também uso o VIM em todos os meus editores (VSCode, IntelliJ e Obsidian), então ele também tem uma grande influência neste keymap. Eu não programo com muita frequência hoje em dia, mas escrevo algum código Java eventualmente, então bons atalhos para o IntelliJ também são importantes. E, finalmente, as planilhas devem ser fáceis de usar, já que tive que trabalhar com elas por uma parte significativa da minha semana.
 
 # Fluxos de Trabalho
 
@@ -40,29 +40,29 @@ Nas seções abaixo, você pode ver meus fluxos de trabalho mais comuns e como e
 
 ## Digitação
 
-A digitação é obviamente a função mais básica de qualquer teclado, e não deveria haver surpresas aqui, mas dadas as diretrizes acima, não é tão simples. Este keymap usa o layout Magic Romak, que usa duas camadas alfa. Outros recursos como teclas adaptativas e de repetição, sticky shift, caps word e sentence case tornarão a experiência de digitação com este keymap bastante única.
+A digitação é obviamente a função mais básica de qualquer teclado, e não deveria haver surpresas aqui, mas dadas as diretrizes acima, não é tão simples. Este keymap usa o layout Magic Romak, que usa duas camadas de letras. Outros recursos como teclas adaptativas e de repetição, *Shift Aderente*, caps word e sentence case tornarão a experiência de digitação com este keymap bastante única.
 
-### Duas Camadas Alfa
+### Duas Camadas de Letras
 
-O conceito de duas camadas alfa para digitação ficou famoso com os vídeos de [Ben Vallack](https://www.youtube.com/watch?v=dg2TT1OJlQs&list=PLCZYyvXAdQpsEWfa6OEBOhHn48SWgneoD), que mostram o conceito como uma alternativa para digitar com teclados minúsculos, no caso dele, com apenas 16 teclas.
+O conceito de duas camadas de letras para digitação ficou famoso com os vídeos de [Ben Vallack](https://www.youtube.com/watch?v=dg2TT1OJlQs&list=PLCZYyvXAdQpsEWfa6OEBOhHn48SWgneoD), que mostram o conceito como uma alternativa para digitar com teclados minúsculos, no caso dele, com apenas 16 teclas.
 
 ![img](img/diagrams/alphas.png)
 
-Essa abordagem é baseada na ideia de usar uma camada "pegajosa" (sticky) para obter acesso a alfas que são menos comuns, como q, z e j, por exemplo. O layout alfa é dividido em duas camadas, e ao tocar em uma tecla de polegar na camada base, a camada alfa secundária é ativada por um toque, o que significa que o teclado retornará à camada base automaticamente após a próxima tecla ser liberada.
+Essa abordagem é baseada na ideia de usar uma camada aderente para obter acesso a letras que são menos comuns, como q, z e j, por exemplo. O layout de letras é dividido em duas camadas, e ao tocar em uma tecla de polegar na camada base, a camada de letras secundária é ativada por um toque, o que significa que o teclado retornará à camada base automaticamente após a próxima tecla ser liberada.
 
 A alternativa a essa abordagem é usar combos para essas letras incomuns, mas só funciona quando você tem apenas algumas delas, e é muito menos fluido, o que pode quebrar o fluxo de digitação ou causar outros problemas como acionamentos não intencionais.
 
-Na prática, usar uma camada "pegajosa" não é muito diferente de usar uma tecla morta. Com uma tecla morta, que é muito comum em português, digitamos `´` e depois `a` para obter `á`, por exemplo. Com duas camadas alfa, posso ter uma macro que produz `á` na camada alfa secundária, de modo que para obter `á`, também tenho que tocar em apenas duas teclas. A primeira seria a tecla do polegar que ativa a camada alfa secundária, e a segunda poderia ser a mesma tecla usada para digitar `a`. Essa familiaridade com as teclas mortas tornou a transição para duas camadas alfa bastante fácil para mim.
+Na prática, usar uma camada aderente não é muito diferente de usar uma tecla morta. Com uma tecla morta, que é muito comum em português, digitamos `´` e depois `a` para obter `á`, por exemplo. Com duas camadas de letras, posso ter uma macro que produz `á` na camada de letras secundária, de modo que para obter `á`, também tenho que tocar em apenas duas teclas. A primeira seria a tecla do polegar que ativa a camada de letras secundária, e a segunda poderia ser a mesma tecla usada para digitar `a`. Essa familiaridade com as teclas mortas tornou a transição para duas camadas de letras bastante fácil para mim.
 
-### Combos Alfa
+### Combos de Letras
 
 ![img](img/diagrams/alpha1.png)
 
-Todos os alfas movidos para a camada alfa secundária também estão disponíveis como combos na camada base, mas geralmente não são usados para digitação, mas sim para comandos, como atalhos do VIM, por exemplo.
+Todos as letras movidos para a camada de letras secundária também estão disponíveis como combos na camada base, mas geralmente não são usados para digitação, mas sim para comandos, como atalhos do VIM, por exemplo.
 
 ### Magic Romak
 
-[Romak](https://rafaelromao.github.io/romak) é um layout alfa projetado do zero para ser fácil de usar tanto em inglês quanto em português, visando minimizar o uso das colunas internas do indicador e das teclas mindinhas. Como resultado, tornou-se fácil portá-lo para 24 teclas, usando duas camadas alfa. Como um aprimoramento adicional, teclas adaptativas foram usadas para tornar V e H mais fáceis de digitar em ambos os idiomas, já que V é mais comum em português, enquanto H é mais comum em inglês. O resultado final é o [Magic Romak](https://rafaelromao.github.io/romak).
+[Romak](https://rafaelromao.github.io/romak) é um layout de letras projetado do zero para ser fácil de usar tanto em inglês quanto em português, visando minimizar o uso das colunas internas do indicador e das teclas mindinhas. Como resultado, tornou-se fácil portá-lo para 24 teclas, usando duas camadas de letras. Como um aprimoramento adicional, teclas adaptativas foram usadas para tornar V e H mais fáceis de digitar em ambos os idiomas, já que V é mais comum em português, enquanto H é mais comum em inglês. O resultado final é o [Magic Romak](https://rafaelromao.github.io/romak).
 
 #### Teclas Adaptativas
 
@@ -72,48 +72,48 @@ O exemplo acima é exatamente o que a Tecla Mágica principal faz no Magic Romak
 
 No Magic Romak, há também uma Tecla Mágica Invertida, que faz o oposto, H após vogais e V após consoantes. Essa tecla substitui a tecla V no Romak regular.
 
-Essas Teclas Adaptativas são implementadas usando o módulo [zmk-adaptive-key](https://github.com/urob/zmk-adaptive-key) e podem ser encontradas em alguns outros lugares neste keymap para implementar outros comportamentos inteligentes, como a Tecla de Repetição Alternada.
+Essas Teclas Adaptativas são implementadas usando o módulo [zmk-adaptive-key](https://github.com/urob/zmk-adaptive-key) e podem ser encontradas em alguns outros lugares neste keymap para implementar outros comportamentos inteligentes, como a Tecla de Repetição Alternativa.
 
 #### Teclas de Repetição
 
 A Tecla de Repetição está [disponível no ZMK](https://zmk.dev/docs/keymaps/behaviors/key-repeat) como um comportamento que repete a última tecla ou atalho digitado. É super útil para evitar [SFBs](https://semilin.github.io/blog/2023/layout_quality.html#h:e46323dd-62d8-4361-a0f9-039b31efe7aa) ao digitar palavras que contêm teclas repetidas. Mas pode ser ainda mais poderosa se implementada como uma tecla adaptativa que repetirá a última tecla ou atalho por padrão, mas produzirá outra saída quando repetir a última não fizer sentido. Por exemplo, se tocada após `I`, a tecla de repetição produzirá `´` em vez disso. Para saber mais sobre a Tecla de Repetição Adaptativa neste keymap, consulte a página [Magic Romak](https://github.com/rafaelromao/romak/blob/main/MagicRomak.md).
 
-#### Extensão Ç
+#### Extensão do Ç
 
-A cedilha `Ç` é muito comum em português, mas sempre vem antes de uma vogal, geralmente `ã` ou `õ`. Ambas estão disponíveis como macros na camada alfa secundária, assim como `ç`, então normalmente exigiria duas ativações consecutivas da camada alfa secundária para digitar `çã` ou `çõ`.
+A cedilha `Ç` é muito comum em português, mas sempre vem antes de uma vogal, geralmente `ã` ou `õ`. Ambas estão disponíveis como macros na camada de letras secundária, assim como `ç`, então normalmente exigiria duas ativações consecutivas da camada de letras secundária para digitar `çã` ou `çõ`.
 
-Para evitar isso, uma terceira camada alfa, contendo macros para essas duas vogais acentuadas, é ativada automaticamente por um toque após `ç`. É o que eu chamo de camada de *Extensão Ç*. As teclas para todas as outras vogais são transparentes nesta camada, então ainda é possível digitar palavras como `açude` sem nenhum problema. Para palavras como `açúcar`, por outro lado, uma ativação secundária da camada alfa secundária ainda seria necessária.
+Para evitar isso, uma terceira camada de letras, contendo macros para essas duas vogais acentuadas, é ativada automaticamente por um toque após `ç`. É o que eu chamo de camada de *Extensão do Ç*. As teclas para todas as outras vogais são transparentes nesta camada, então ainda é possível digitar palavras como `açude` sem nenhum problema. Para palavras como `açúcar`, por outro lado, uma ativação secundária da camada de letras secundária ainda seria necessária.
 
 ![img](img/diagrams/cedil.png)
 
 Também é muito comum que seja seguido por `ão` ou `ões`, então macros podem ser usadas para digitar essas duas sentenças mais facilmente como extensões de ç.
 
-### Sticky Shift
+### Shift Aderente
 
-*Sticky Shift*, também conhecido como One Shot Shift, é uma tecla shift que é ativada tocando, em vez de segurar. Funciona como uma tecla morta: nós a tocamos e a próxima tecla que tocarmos será maiúscula. É muito mais fluido e rápido do que segurar o shift.
+*Shift Aderente*, também conhecido como One Shot Shift ou Sticky Shift, é uma tecla shift que é ativada apertando, em vez de segurar. Funciona como uma tecla morta: nós a tocamos e a próxima tecla que tocarmos será maiúscula. É muito mais fluido e rápido do que segurar o shift.
 
-Neste keymap, o Sticky Shift está presente em uma tecla de polegar, no lado direito do teclado.
+Neste keymap, o Shift Aderente está presente em uma tecla de polegar, no lado direito do teclado.
 
 #### Camadas com Shift
 
-Devido a uma limitação do ZMK, uma *camada pegajosa* não funciona bem em conjunto com um *sticky shift*, então tive que usar uma camada para contornar essa limitação. Para capitalizar a camada *alpha1*, o *sticky shift* regular é usado, mas para capitalizar a camada *alpha2*, usei uma camada separada onde todos os alfas já estão em maiúsculas. Isso também foi necessário para implementar alguns outros comportamentos de capitalização, como CAPS word e CAPS LINE.
+Devido a uma limitação do ZMK, uma *camada aderente* não funciona bem em conjunto com um *Shift Aderente*, então tive que usar uma camada para contornar essa limitação. Para capitalizar a camada *alpha1*, o *Shift Aderente* regular é usado, mas para capitalizar a camada *alpha2*, usei uma camada separada onde todos as letras já estão em maiúsculas. Isso também foi necessário para implementar alguns outros comportamentos de capitalização, como CAPS word e CAPS LINE.
 
 ![img](img/diagrams/shifted.png)
 
 ### CAPS word e CAPS LINE
 
-*CAPS word* é um comportamento que funciona como o Caps Lock tradicional, mas será desativado automaticamente quando a palavra atual terminar. Pode ser ativado tocando duas vezes na tecla Sticky Shift ou através da Camada Inteligente.
+*CAPS word* é um comportamento que funciona como o Caps Lock tradicional, mas será desativado automaticamente quando a palavra atual terminar. Pode ser ativado apertando duas vezes na tecla *Shift Aderente* ou através da Camada Inteligente.
 
 *CAPS LINE* está entre o *CAPS word* e o Caps Lock tradicional, pois também será desativado automaticamente, mas apenas quando a linha atual terminar, geralmente com a tecla Enter.
 
 ### Pontuação
 
 `.` e `,` estão disponíveis na camada base, enquanto `?`, `!` e `:` são facilmente alcançáveis na camada de *símbolos*, acessada apenas com a mão direita. `;` está disponível em um combo de `,` e `.`.
-Também existem combos na camada alfa secundária para `_`, `?`, `!` e `-`. Colchetes estão disponíveis na camada de *números*. Mais sobre isso depois.
+Também existem combos na camada de letras secundária para `_`, `?`, `!` e `-`. Colchetes estão disponíveis na camada de *números*. Mais sobre isso depois.
 
 ### Sentence Case
 
-*Sentence Case* é um recurso que capitaliza automaticamente a próxima palavra após `espaço` se for precedida por `.`, `?` ou `!`. Se o *Sticky Shift* for tocado após este `espaço`, ele será ignorado. Este recurso torna muito mais fácil iniciar novas frases e reduz muito o uso da tecla *Sticky Shift*. Este recurso é implementado usando teclas adaptativas para acioná-lo e uma camada para executar a capitalização.
+*Sentence Case* é um recurso que capitaliza automaticamente a próxima palavra após `espaço` se for precedida por `.`, `?` ou `!`. Se o *Shift Aderente* for tocado após este `espaço`, ele será ignorado. Este recurso torna muito mais fácil iniciar novas frases e reduz muito o uso da tecla *Shift Aderente*. Este recurso é implementado usando teclas adaptativas para acioná-lo e uma camada para executar a capitalização.
 
 ## Números
 
@@ -159,7 +159,7 @@ Para facilitar as combinações de Ctrl, Alt e/ou Shift com Gui, o Gui é replic
 
 #### Camadas Simples
 
-Para os casos raros em que os Home Row Mods causam problemas, existe um par de camadas alfa chamadas *plain1* e *plain2* que não possuem home row mods ou quaisquer outros comportamentos de tocar-segurar. Essas camadas também são usadas para trazer uma camada alfa sobre a camada *mehs*, para inserir texto enquanto esta camada está fixa.
+Para os casos raros em que os Home Row Mods causam problemas, existe um par de camadas de letras chamadas *plain1* e *plain2* que não possuem home row mods ou quaisquer outros comportamentos de tocar-segurar. Essas camadas também são usadas para trazer uma camada de letras sobre a camada *mehs*, para inserir texto enquanto esta camada está fixa.
 
 ![img](img/diagrams/plain.png)
 
@@ -251,9 +251,9 @@ A navegação de texto é um fluxo de trabalho extremamente importante. Navegar 
 
 ![img](img/diagrams/text.png)
 
-#### Mods Pegajosos
+#### Modificadores Aderentes
 
-Os mesmos modificadores disponíveis na camada de *navegação* também estão disponíveis na camada de *texto*, mas em sua versão *pegajosa*. Eles também funcionam como modificadores padrão se forem segurados.
+Os mesmos modificadores disponíveis na camada de *navegação* também estão disponíveis na camada de *texto*, mas em sua versão *aderentes*. Eles também funcionam como modificadores padrão se forem segurados.
 
 ### Emulação de Mouse
 
@@ -288,7 +288,7 @@ No lado esquerdo da minha camada de *números*, tenho parênteses, colchetes e c
 
 ### Ponto e vírgula
 
-O ponto e vírgula é extremamente importante em linguagens do tipo C e está disponível como um combo primário na camada base, tocando vírgula e ponto ao mesmo tempo.
+O ponto e vírgula é extremamente importante em linguagens do tipo C e está disponível como um combo primário na camada base, apertando vírgula e ponto ao mesmo tempo.
 
 Segurar essas duas teclas o anexará à linha atual, o que também funciona na camada de *números*. Também na camada de *números*, um combo com as 3 teclas da linha inferior do lado direito anexará um ponto e vírgula e adicionará uma nova linha.
 
@@ -316,9 +316,9 @@ Sequências de líder são usadas para complementar, digitando símbolos como `-
 
 As teclas de função são comumente usadas para depuração e estão disponíveis em uma camada dedicada, mas como a maioria dos atalhos do IDE será mapeada para atalhos Meh e Hyper, as teclas de função raramente são necessárias.
 
-#### Mods Pegajosos à Direita
+#### Modificadores Persintentes da Direita
 
-A camada *func* também terá versões do *lado direito* dos modificadores, em sua variante pegajosa, caso sejam eventualmente necessários.
+A camada *func* também terá versões do *lado direito* dos modificadores, em sua variante aderente caso sejam eventualmente necessários.
 
 ### VIM
 
@@ -361,7 +361,7 @@ Meus atalhos mais usados no IntelliJ IDEA foram remapeados para usar também os 
 
 Casos Inteligentes são modos de digitação especiais onde o `espaço` é substituído por `-` ou `_`, por exemplo, para digitar coisas como nomes de métodos, nomes de variáveis, nomes de constantes e assim por diante, suportando os casos mais comuns, como CONSTANT_CASE, kebab-case, camelCase, PascalCase e slash/case.
 
-Os Casos Inteligentes estão disponíveis através da camada *inteligente* e podem ser ativados segurando a tecla do polegar direito e a tecla mindinha direita e tocando na tecla equivalente do lado esquerdo. Ele foi projetado para ser rápido de ativar.
+Os Casos Inteligentes estão disponíveis através da camada *inteligente* e podem ser ativados segurando a tecla do polegar direito e a tecla mindinha direita e apertando na tecla equivalente do lado esquerdo. Ele foi projetado para ser rápido de ativar.
 
 Quando um Caso Inteligente é ativado, tocar espaço duas vezes seguidas o desativará, e o segundo espaço será ignorado.
 
