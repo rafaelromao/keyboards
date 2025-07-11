@@ -48,11 +48,11 @@ O conceito de duas camadas de letras para digitação ficou famoso com os vídeo
 
 ![img](img/diagrams/alphas.png)
 
-Essa abordagem é baseada na ideia de usar uma camada aderente para obter acesso a letras que são menos comuns, como q, z e j, por exemplo. O layout de letras é dividido em duas camadas, e ao tocar em uma tecla de polegar na camada base, a camada de letras secundária é ativada por um toque, o que significa que o teclado retornará à camada base automaticamente após a próxima tecla ser liberada.
+Essa abordagem é baseada na ideia de usar uma camada aderente para obter acesso a letras que são menos comuns, como q, z e j, por exemplo. O layout de letras é dividido em duas camadas, e ao pressionar uma tecla de polegar na camada base, a camada de letras secundária é ativada por um toque, o que significa que o teclado retornará à camada base automaticamente após a próxima tecla ser liberada.
 
 A alternativa a essa abordagem é usar combos para essas letras incomuns, mas só funciona quando você tem apenas algumas delas, e é muito menos fluido, o que pode quebrar o fluxo de digitação ou causar outros problemas como acionamentos não intencionais.
 
-Na prática, usar uma camada aderente não é muito diferente de usar uma tecla morta. Com uma tecla morta, que é muito comum em português, digitamos `´` e depois `a` para obter `á`, por exemplo. Com duas camadas de letras, posso ter uma macro que produz `á` na camada de letras secundária, de modo que para obter `á`, também tenho que tocar em apenas duas teclas. A primeira seria a tecla do polegar que ativa a camada de letras secundária, e a segunda poderia ser a mesma tecla usada para digitar `a`. Essa familiaridade com as teclas mortas tornou a transição para duas camadas de letras bastante fácil para mim.
+Na prática, usar uma camada aderente não é muito diferente de usar uma tecla morta. Com uma tecla morta, que é muito comum em português, digitamos `´` e depois `a` para obter `á`, por exemplo. Com duas camadas de letras, posso ter uma macro que produz `á` na camada de letras secundária, de modo que para obter `á`, também tenho que pressionar apenas duas teclas. A primeira seria a tecla do polegar que ativa a camada de letras secundária, e a segunda poderia ser a mesma tecla usada para digitar `a`. Essa familiaridade com as teclas mortas tornou a transição para duas camadas de letras bastante fácil para mim.
 
 ### Combos de Letras
 
@@ -76,7 +76,7 @@ Essas Teclas Adaptativas são implementadas usando o módulo [zmk-adaptive-key](
 
 #### Teclas de Repetição
 
-A Tecla de Repetição está [disponível no ZMK](https://zmk.dev/docs/keymaps/behaviors/key-repeat) como um comportamento que repete a última tecla ou atalho digitado. É super útil para evitar [SFBs](https://semilin.github.io/blog/2023/layout_quality.html#h:e46323dd-62d8-4361-a0f9-039b31efe7aa) ao digitar palavras que contêm teclas repetidas. Mas pode ser ainda mais poderosa se implementada como uma tecla adaptativa que repetirá a última tecla ou atalho por padrão, mas produzirá outra saída quando repetir a última não fizer sentido. Por exemplo, se tocada após `I`, a tecla de repetição produzirá `´` em vez disso. Para saber mais sobre a Tecla de Repetição Adaptativa neste keymap, consulte a página [Magic Romak](https://github.com/rafaelromao/romak/blob/main/MagicRomak.md).
+A Tecla de Repetição está [disponível no ZMK](https://zmk.dev/docs/keymaps/behaviors/key-repeat) como um comportamento que repete a última tecla ou atalho digitado. É super útil para evitar [SFBs](https://semilin.github.io/blog/2023/layout_quality.html#h:e46323dd-62d8-4361-a0f9-039b31efe7aa) ao digitar palavras que contêm teclas repetidas. Mas pode ser ainda mais poderosa se implementada como uma tecla adaptativa que repetirá a última tecla ou atalho por padrão, mas produzirá outra saída quando repetir a última não fizer sentido. Por exemplo, se pressionada após `I`, a tecla de repetição produzirá `´` em vez disso. Para saber mais sobre a Tecla de Repetição Adaptativa neste keymap, consulte a página [Magic Romak](https://github.com/rafaelromao/romak/blob/main/MagicRomak.md).
 
 #### Extensão do Ç
 
@@ -90,11 +90,11 @@ Também é muito comum que seja seguido por `ão` ou `ões`, então macros podem
 
 ### Shift Aderente
 
-*Shift Aderente*, também conhecido como One Shot Shift ou Sticky Shift, é uma tecla shift que é ativada apertando, em vez de segurar. Funciona como uma tecla morta: nós a tocamos e a próxima tecla que tocarmos será maiúscula. É muito mais fluido e rápido do que segurar o shift.
+*Shift Aderente*, também conhecido como One Shot Shift ou Sticky Shift, é uma tecla shift que é ativada apertando, em vez de segurar. Funciona como uma tecla morta: após apertá-la, a próxima tecla que apertarmos será maiúscula. É muito mais fluido e rápido do que segurar o shift.
 
 Neste keymap, o Shift Aderente está presente em uma tecla de polegar, no lado direito do teclado.
 
-#### Camadas com Shift
+#### Camadas Shiftadas
 
 Devido a uma limitação do ZMK, uma *camada aderente* não funciona bem em conjunto com um *Shift Aderente*, então tive que usar uma camada para contornar essa limitação. Para capitalizar a camada *alpha1*, o *Shift Aderente* regular é usado, mas para capitalizar a camada *alpha2*, usei uma camada separada onde todos as letras já estão em maiúsculas. Isso também foi necessário para implementar alguns outros comportamentos de capitalização, como CAPS word e CAPS LINE.
 
@@ -113,7 +113,7 @@ Também existem combos na camada de letras secundária para `_`, `?`, `!` e `-`.
 
 ### Sentence Case
 
-*Sentence Case* é um recurso que capitaliza automaticamente a próxima palavra após `espaço` se for precedida por `.`, `?` ou `!`. Se o *Shift Aderente* for tocado após este `espaço`, ele será ignorado. Este recurso torna muito mais fácil iniciar novas frases e reduz muito o uso da tecla *Shift Aderente*. Este recurso é implementado usando teclas adaptativas para acioná-lo e uma camada para executar a capitalização.
+*Sentence Case* é um recurso que capitaliza automaticamente a próxima palavra após `espaço` se for precedida por `.`, `?` ou `!`. Se o *Shift Aderente* for pressionado após este `espaço`, ele será ignorado. Este recurso torna muito mais fácil iniciar novas frases e reduz muito o uso da tecla *Shift Aderente*. Este recurso é implementado usando teclas adaptativas para acioná-lo e uma camada para executar a capitalização.
 
 ## Números
 
@@ -157,9 +157,9 @@ Na camada de *símbolos*, também há combos para digitar os 3 símbolos de moed
 
 Para facilitar as combinações de Ctrl, Alt e/ou Shift com Gui, o Gui é replicado para os dedos médio e anelar do lado esquerdo.
 
-#### Camadas Simples
+#### Camadas de Letras Simplificadas
 
-Para os casos raros em que os Home Row Mods causam problemas, existe um par de camadas de letras chamadas *plain1* e *plain2* que não possuem home row mods ou quaisquer outros comportamentos de tocar-segurar. Essas camadas também são usadas para trazer uma camada de letras sobre a camada *mehs*, para inserir texto enquanto esta camada está fixa.
+Para os casos raros em que os Home Row Mods causam problemas, existe um par de camadas de letras chamadas *plain1* e *plain2* que não possuem home row mods ou quaisquer outros comportamentos de hold-tap. Essas camadas também são usadas para trazer uma camada de letras sobre a camada *mehs*, para inserir texto enquanto esta camada está fixa.
 
 ![img](img/diagrams/plain.png)
 
@@ -201,7 +201,7 @@ A *Leader Key* está disponível através de um módulo externo, [zmk-leader-key
 
 A *Leader Key* é colocada no dedo indicador da linha inferior na camada de *atalhos*, ao lado da tecla que digita *vírgula* na camada base.
 
-Segurar a *vírgula* também dará acesso às camadas de *atalhos*, tornando mais fácil ativar a *Leader Key*, com um bigrama in-roll. E como a *vírgula* é quase sempre seguida por *espaço*, essa ação de segurar pode ser o comportamento preferido, o que significa que a ação de segurar é mais fácil de acionar do que a ação de tocar, tornando esse roll ainda mais fácil.
+Segurar a *vírgula* também dará acesso às camadas de *atalhos*, tornando mais fácil ativar a *Leader Key*, com um bigrama in-roll. E como a *vírgula* é quase sempre seguida por *espaço*, essa ação de segurar pode ser o comportamento preferido, o que significa que a ação de segurar é mais fácil de acionar do que a ação de pressionar, tornando esse roll ainda mais fácil.
 
 A tecla que contém *espaço*, na camada de *atalhos*, digitará *vírgula + espaço*, para mitigar eventuais disparos acidentais da ação de segurar quando um toque é desejado.
 
@@ -332,7 +332,7 @@ Na minha camada de *números*, também tenho alguns combos para facilitar a movi
 
 ![img](img/diagrams/numbers.png)
 
-Na camada de *símbolos*, muitos símbolos foram posicionados considerando como são usados no VIM. Veja o `^` e `$` como exemplo. Eles estão posicionados lado a lado, e segurar ou tocar duas vezes em `^` na verdade digitará `0`, para permitir uma transição fácil entre as duas opções de `início de linha`.
+Na camada de *símbolos*, muitos símbolos foram posicionados considerando como são usados no VIM. Veja o `^` e `$` como exemplo. Eles estão posicionados lado a lado, e segurar ou pressionar duas vezes em `^` na verdade digitará `0`, para permitir uma transição fácil entre as duas opções de `início de linha`.
 
 ![img](img/diagrams/symbols.png)
 
@@ -363,7 +363,7 @@ Casos Inteligentes são modos de digitação especiais onde o `espaço` é subst
 
 Os Casos Inteligentes estão disponíveis através da camada *inteligente* e podem ser ativados segurando a tecla do polegar direito e a tecla mindinha direita e apertando na tecla equivalente do lado esquerdo. Ele foi projetado para ser rápido de ativar.
 
-Quando um Caso Inteligente é ativado, tocar espaço duas vezes seguidas o desativará, e o segundo espaço será ignorado.
+Quando um Caso Inteligente é ativado, pressionar espaço duas vezes seguidas o desativará, e o segundo espaço será ignorado.
 
 ![img](img/diagrams/smart.png)
 
