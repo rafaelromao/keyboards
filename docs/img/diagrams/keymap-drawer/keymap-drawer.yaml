@@ -113,8 +113,8 @@ layers:
         { t: ▽ },
         { t: ▽ }
       ]
-    - null
     - { t: alpha2, s: sticky }
+    - null
     - null
     - null
   vim-remaps:
