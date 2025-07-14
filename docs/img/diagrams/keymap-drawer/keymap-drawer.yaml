@@ -24,7 +24,7 @@ layers:
     - { t: $$mdi:repeat$$, s: repeat, h: nav }
     - { t: $$mdi:keyboard-space$$, h: numbers }
     - { t: alpha2, s: sticky, h: symbols }
-    - { t: shifted1, s: sticky, h: media }
+    - { t: $$mdi:apple-keyboard-shift$$, s: sticky, h: media }
   alpha2:
     - [q, qu, k, ô, ó, ú]
     - [y, z, x, w, ã, á, é, í]

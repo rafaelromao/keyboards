@@ -102,7 +102,7 @@ Devido a uma limitação do ZMK, uma *camada aderente* não funciona bem em conj
 
 ### CAPS word e CAPS LINE
 
-*CAPS word* é um comportamento que funciona como o Caps Lock tradicional, mas será desativado automaticamente quando a palavra atual terminar. Pode ser ativado apertando duas vezes na tecla *Shift Aderente* ou através da Camada Inteligente.
+*CAPS word* é um comportamento que funciona como o Caps Lock tradicional, mas será desativado automaticamente quando a palavra atual terminar. Pode ser ativado apertando duas vezes na tecla *Shift Aderente* ou através da Camada *smart*.
 
 *CAPS LINE* está entre o *CAPS word* e o Caps Lock tradicional, pois também será desativado automaticamente, mas apenas quando a linha atual terminar, geralmente com a tecla Enter.
 
@@ -336,7 +336,7 @@ Na camada de *símbolos*, muitos símbolos foram posicionados considerando como 
 
 ![img](img/diagrams/symbols.png)
 
-E, finalmente, existem algumas macros definidas especificamente para o VIM na minha camada *inteligente*, também fáceis de acionar usando apenas a mão direita.
+E, finalmente, existem algumas macros definidas especificamente para o VIM na minha camada *smart*, também fáceis de acionar usando apenas a mão direita.
 
 ![img](img/diagrams/smart.png)
 
@@ -357,13 +357,13 @@ Meus atalhos mais usados no IntelliJ IDEA foram remapeados para usar também os 
 
 ![img](img/diagrams/coding-mehs.png)
 
-### Casos Inteligentes
+### Capitalização Inteligente
 
-Casos Inteligentes são modos de digitação especiais onde o `espaço` é substituído por `-` ou `_`, por exemplo, para digitar coisas como nomes de métodos, nomes de variáveis, nomes de constantes e assim por diante, suportando os casos mais comuns, como CONSTANT_CASE, kebab-case, camelCase, PascalCase e slash/case.
+Capitalizações Inteligentes são modos de digitação especiais onde o `espaço` é substituído por `-` ou `_`, por exemplo, para digitar coisas como nomes de métodos, nomes de variáveis, nomes de constantes e assim por diante, suportando as capitalizações mais comuns, como CONSTANT_CASE, kebab-case, camelCase, PascalCase e slash/case.
 
-Os Casos Inteligentes estão disponíveis através da camada *inteligente* e podem ser ativados segurando a tecla do polegar direito e a tecla mindinha direita e apertando na tecla equivalente do lado esquerdo. Ele foi projetado para ser rápido de ativar.
+As Capitalizações Inteligentes estão disponíveis através da camada *smart* e podem ser ativadas segurando a principal tecla do polegar direito e a tecla mindinha direita e apertando na tecla equivalente do lado esquerdo. Esses comportamentos foram projetados para serem rápidos de ativar.
 
-Quando um Caso Inteligente é ativado, pressionar espaço duas vezes seguidas o desativará, e o segundo espaço será ignorado.
+Quando uma Capitalização Inteligente está ativa, pressionar espaço duas vezes seguidas a desativará, e o segundo espaço será ignorado.
 
 ![img](img/diagrams/smart.png)
 
