@@ -44,7 +44,7 @@ A digitação é obviamente a função mais básica de qualquer teclado, e não 
 
 ### Duas Camadas de Letras
 
-O conceito de duas camadas de letras para digitação ficou famoso com os vídeos de [Ben Vallack](https://www.youtube.com/watch?v=dg2TT1OJlQs&list=PLCZYyvXAdQpsEWfa6OEBOhHn48SWgneoD), que mostram o conceito como uma alternativa para digitar com teclados minúsculos, no caso dele, com apenas 16 teclas.
+O conceito de duas camadas de letras (Two Alpha Layers) para digitação ficou famoso com os vídeos de [Ben Vallack](https://www.youtube.com/watch?v=dg2TT1OJlQs&list=PLCZYyvXAdQpsEWfa6OEBOhHn48SWgneoD), que mostram o conceito como uma alternativa para digitar com teclados minúsculos, no caso dele, com apenas 16 teclas.
 
 ![img](img/diagrams/alphas.png)
 
@@ -66,7 +66,7 @@ Todos as letras movidos para a camada de letras secundária também estão dispo
 
 #### Teclas Adaptativas
 
-As Teclas Adaptativas enviam saídas diferentes dependendo do código da tecla digitada anteriormente. Por exemplo, se o último código de tecla for uma vogal, ele produz V, mas se o último código de tecla for uma consoante, ele produz H.
+As Teclas Adaptativas (Adaptive Keys) enviam saídas diferentes dependendo do código da tecla digitada anteriormente. Por exemplo, se o último código de tecla for uma vogal, ele produz V, mas se o último código de tecla for uma consoante, ele produz H.
 
 O exemplo acima é exatamente o que a Tecla Mágica principal faz no Magic Romak. Essa tecla substitui a tecla H no Romak regular e torna mais fácil digitar a maioria das palavras que contêm V ou H, já que V é predominante após vogais, enquanto H é predominante após consoantes.
 
@@ -76,7 +76,7 @@ Essas Teclas Adaptativas são implementadas usando o módulo [zmk-adaptive-key](
 
 #### Teclas de Repetição
 
-A Tecla de Repetição está [disponível no ZMK](https://zmk.dev/docs/keymaps/behaviors/key-repeat) como um comportamento que repete a última tecla ou atalho digitado. É super útil para evitar [SFBs](https://semilin.github.io/blog/2023/layout_quality.html#h:e46323dd-62d8-4361-a0f9-039b31efe7aa) ao digitar palavras que contêm teclas repetidas. Mas pode ser ainda mais poderosa se implementada como uma tecla adaptativa que repetirá a última tecla ou atalho por padrão, mas produzirá outra saída quando repetir a última não fizer sentido. Por exemplo, se pressionada após `I`, a tecla de repetição produzirá `´` em vez disso. Para saber mais sobre a Tecla de Repetição Adaptativa neste keymap, consulte a página [Magic Romak](https://github.com/rafaelromao/romak/blob/main/MagicRomak.md).
+A Tecla de Repetição (Repeat Key) está [disponível no ZMK](https://zmk.dev/docs/keymaps/behaviors/key-repeat) como um comportamento que repete a última tecla ou atalho digitado. É super útil para evitar [SFBs](https://semilin.github.io/blog/2023/layout_quality.html#h:e46323dd-62d8-4361-a0f9-039b31efe7aa) ao digitar palavras que contêm teclas repetidas. Mas pode ser ainda mais poderosa se implementada como uma tecla adaptativa que repetirá a última tecla ou atalho por padrão, mas produzirá outra saída quando repetir a última não fizer sentido. Por exemplo, se pressionada após `I`, a tecla de repetição produzirá `´` em vez disso. Para saber mais sobre a Tecla de Repetição Adaptativa neste keymap, consulte a página [Magic Romak](https://github.com/rafaelromao/romak/blob/main/MagicRomak.md).
 
 #### Extensão do Ç
 
@@ -111,9 +111,9 @@ Devido a uma limitação do ZMK, uma *camada aderente* não funciona bem em conj
 `.` e `,` estão disponíveis na camada base, enquanto `?`, `!` e `:` são facilmente alcançáveis na camada de *símbolos*, acessada apenas com a mão direita. `;` está disponível em um combo de `,` e `.`.
 Também existem combos na camada de letras secundária para `_`, `?`, `!` e `-`. Colchetes estão disponíveis na camada de *números*. Mais sobre isso depois.
 
-### Sentence Case
+### Shift Automático
 
-*Sentence Case* é um recurso que capitaliza automaticamente a próxima palavra após `espaço` se for precedida por `.`, `?` ou `!`. Se o *Shift Aderente* for pressionado após este `espaço`, ele será ignorado. Este recurso torna muito mais fácil iniciar novas frases e reduz muito o uso da tecla *Shift Aderente*. Este recurso é implementado usando teclas adaptativas para acioná-lo e uma camada para executar a capitalização.
+*Shift Automático*, (Sentence Case) é um recurso que capitaliza automaticamente a próxima palavra após `espaço` se for precedida por `.`, `?` ou `!`. Se o *Shift Aderente* for pressionado após este `espaço`, ele será ignorado. Este recurso torna muito mais fácil iniciar novas frases e reduz muito o uso da tecla *Shift Aderente*. Este recurso é implementado usando teclas adaptativas para acioná-lo e uma camada para executar a capitalização.
 
 ## Números
 
