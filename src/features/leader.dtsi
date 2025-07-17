@@ -21,8 +21,8 @@
             ld_haha    { sequence = <O>   ; bindings = <&md_haha>; };
             ld_hehe    { sequence = <U>   ; bindings = <&md_hehe>; };
             ld_kkkk    { sequence = <I>   ; bindings = <&md_kkkk>; };
-            ld_hugs    { sequence = <C>   ; bindings = <&md_hugs>; };
-            ld_otask   { sequence = <T>   ; bindings = <&md_otask>; };
-            ld_oref    { sequence = <S>   ; bindings = <&md_oref>; };
+            ld_hugs    { sequence = <A C> ; bindings = <&md_hugs>; };
+            ld_otask   { sequence = <A T> ; bindings = <&md_otask>; };
+            ld_oref    { sequence = <A S>   ; bindings = <&md_oref>; };
         };
 };
