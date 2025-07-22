@@ -19,10 +19,10 @@ usage() {
     echo "Usage: build [<config> <shield> <operating_system=$OPERATING_SYSTEM>] [-k <config>] [-s <shield>] [-b <board=$BOARD>] [-v <verbose>] [-z <zmk=$ZMK>] [-n <branch=$BRANCH>] [-e <extra_shield1,extra_shield2,...>] [-d <flag1,flag2,...>] [-m <module1,module2,...>] [-h | --help]"
     echo
     echo "Parameters:"
-    echo "  <config>                Specify the zmk config."
+    echo "  <config>               Specify the zmk config."
     echo "  <shield>               Specify the shield."
     echo "  <operating_system>     Specify the operating system."
-    echo "  -k, --config            Specify the zmk config."
+    echo "  -k, --config           Specify the zmk config."
     echo "  -s, --shield           Specify the shield."
     echo "  -o, --operating_system Specify the operating system (default: $OPERATING_SYSTEM)."
     echo "  -b, --board            Specify the board (default: $BOARD)."
@@ -30,7 +30,7 @@ usage() {
     echo "  -z, --zmk              Specify the zmk repo (default: $ZMK)."
     echo "  -n, --branch           Specify the branch (default: $BRANCH)."
     echo "  -e, --extra_shields    Specify a comma-separated list of additional shields (default: empty)."
-    echo "  -d, --flags             Specify a comma-separated list of extra flags (default: empty)."
+    echo "  -d, --flags            Specify a comma-separated list of extra flags (default: empty)."
     echo "  -m, --modules          Specify a comma-separated list of modules (default: empty)."
     echo "  -h, --help             Display this help message."
     exit 1

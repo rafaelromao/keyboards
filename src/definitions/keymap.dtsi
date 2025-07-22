@@ -14,8 +14,8 @@
                      display-name = "ROMAK";
                      bindings = <
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &mc_qu
-   &lt SHORTS D        &mt LCTL N          &mt LALT S          &mt LSFT T          &kp W               &kp Z               &mt LSFT R          &mt LALT A          &mt LCTL E          &lt SHORTS I      
-   &kp Y               &mt LGUI F          &mt LGUI C          &mt LGUI P          &kp V               &kp J               &ht_magic LGUI 0    &lt_comma SHORTS 0  &th_dot 0 0         &kp H
+   &lt SHORTS D        &mt LCTL N          &mt LALT S          &mt LSFT T          &kp W               &kp Z               &mt LSFT R          &mt LALT A          &mt LCTL E          &lt SHORTS I
+   &kp Y               &mt LGUI F          &mt LGUI C          &mt LGUI P          &kp V               &kp J               &ht_magic LGUI 0    &th_comma 0 0       &th_dot 0 0         &kp H
                                            &key_repeat         &ht_repeat NAV 0    &ltn_num_spc 0 0    &msl_sym_a2 0 0     &ht_shift MEDIA 0   &key_repeat
                         >;
                 };
@@ -43,7 +43,7 @@
                      bindings = <
    &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &mc_qu_c
    &lt SHORTS RS(D)    &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt LSFT RS(R)      &mt LALT RS(A)      &mt LCTL RS(E)      &lt SHORTS RS(I) 
-   &kp RS(Y)           &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &lt_comma SHORTS 0  &th_dot 0 0         &trans
+   &kp RS(Y)           &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma 0 0       &th_dot 0 0         &trans
                                            &trans              &trans              &msk_unds NUM 0     &lt_case_a2 SYM 0 &trans              &trans
                            >;
                 };
@@ -79,7 +79,7 @@
                      bindings = <
    &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y)
    &lt SHORTS RS(D)    &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt LSFT RS(R)      &mt LALT RS(A)      &mt LCTL RS(E)      &lt SHORTS RS(I) 
-   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &lt_comma SHORTS 0  &th_dot 0 0         &kp RS(H)
+   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma 0 0       &th_dot 0 0         &kp RS(H)
                                            &trans              &trans              &msk_spc NUM 0      &lt_case_a2 SYM 0 &lt_cancel MEDIA 0  &trans
                         >;
                 };
@@ -88,7 +88,7 @@
                      bindings = <
    &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y)
    &lt SHORTS RS(D)    &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt LSFT RS(R)      &mt LALT RS(A)      &mt LCTL RS(E)      &lt SHORTS RS(I) 
-   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &lt_comma SHORTS 0  &th_dot 0 0         &kp RS(H)
+   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma 0 0       &th_dot 0 0         &kp RS(H)
                                            &trans              &trans              &trans              &lt_case_a2 SYM 0 &lt_cancel MEDIA 0  &trans
                                            
                            >;
@@ -134,7 +134,7 @@
                      bindings = <
    &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &mc_qu_s
    &kp LS(D)           &mt LCTL LS(N)      &mt LALT LS(S)      &mt LSFT LS(T)      &kp LS(W)           &kp LS(Z)           &mt LSFT LS(R)      &mt LALT LS(A)      &mt LCTL LS(E)      &kp LS(I) 
-   &kp LS(Y)           &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c LGUI 0  &lt_comma SHORTS 0  &th_dot 0 0         &kp LS(H) 
+   &kp LS(Y)           &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c LGUI 0  &th_comma 0 0       &th_dot 0 0         &kp LS(H) 
                                            &trans              &trans              &trans              &lt_sft_a2 SYM_CP 0 &trans              &trans
                            >;
                 };
@@ -180,10 +180,10 @@
                 shortcuts_layer {
                      display-name = "SHORTS";
                      bindings = <
-   &none              &mc_emoji           &mc_files            &mc_screenshot      &none               &none               &kp C_SLEEP         &to NUM             &to PLAIN1         &none    
-   &none              &mc_zoom_out        &mc_zoom_in         &mc_reset_zoom      &none               &none               &mc_lock            &to NAV               &to MEDIA          &none
-   &none              &mc_close           &mc_refresh         &mc_reopen          &none               &none               &leader             &to FUN               &to MEHS           &none 
-                                          &none               &ht_repeat TEXT 0   &lt_comma_spc FUN 0 &lt SMART SPACE     &ht_repeat TEXT 0   &none 
+   &none              &mc_emoji           &mc_files            &mc_screenshot      &none               &none               &mc_lock            &to NUM               &to PLAIN1         &none    
+   &none              &mc_zoom_out        &mc_zoom_in         &mc_reset_zoom      &none               &none               &mc_leader          &to NAV               &to MEDIA          &none
+   &none              &mc_close           &mc_refresh         &mc_reopen          &none               &none               &kp C_SLEEP         &to FUN               &to MEHS           &none 
+                                          &none               &ht_repeat TEXT 0   &lt SPACE FUN       &lt SMART SPACE     &ht_repeat TEXT 0   &none 
                            >;
                 };
 

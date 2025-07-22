@@ -18,7 +18,7 @@ layers:
         { t: c, h: $$mdi:apple-keyboard-command$$ },
         { h: $$mdi:apple-keyboard-command$$, t: p },
         { h: $$mdi:apple-keyboard-command$$, t: "h|v", s: magic },
-        { t: ",", h: shortcuts },
+        { t: ",", h: "⇥ ,"  },
         { t: ., h: "⇥ ." },
       ]
     - { t: $$mdi:repeat$$, s: repeat, h: nav }
@@ -194,7 +194,7 @@ layers:
         { t: "$$mdi:emoticon-happy-outline$$", s: "emojis" },
         { t: $$mdi:folder-open$$, s: files},
         { t: $$mdi:content-cut$$, s: clip },
-        { t: $$mdi:power-sleep$$, s: "sleep" },
+        { t: $$mdi:lock$$, s: "lock" },
         { t: numbers },
         { t: plain1 },
       ]
@@ -203,7 +203,7 @@ layers:
         { t: $$mdi:magnify-minus-outline$$, s: zoom -},
         { t: $$mdi:magnify-plus-outline$$, s: zoom +},
         { t: $$mdi:loupe$$, s: 100% },
-        { t: $$mdi:lock$$, s: "lock" },
+        { t: $$mdi:ray-start-arrow$$, s: "leader" },
         { t: nav },
         { t: media },
         { type: held alternate},
@@ -212,12 +212,12 @@ layers:
         { t: $$mdi:close$$, s: close},
         { t: $$mdi:refresh$$, s: refresh},
         { t: $$mdi:backup-restore$$, s: reopen },
-        { t: $$mdi:ray-start-arrow$$, s: "leader" },
-        { t: func, type: held alternate },
+        { t: $$mdi:power-sleep$$, s: "sleep" },
+        { t: func },
         { t: mehs },
       ]
     - { h: text, s: repeat, t: $$mdi:repeat$$ }
-    - { t: ",␣", h: func }
+    - { t: $$mdi:keyboard-space$$, h: func }
     - { t: $$mdi:keyboard-space$$, h: smart }
     - { h: text, s: repeat, t: $$mdi:repeat$$ }
   mehs:
@@ -428,6 +428,37 @@ layers:
     - { t: $$mdi:keyboard-space$$, h: normal, s: vim }
     - type: held
     - { t: $$mdi:flash$$, s: "boot" }
+  leader-sequences:
+    - [
+        { type: ghost, t: "exit⏎"},
+        { type: ghost, s: work, t: e-mail },
+        { type: ghost, s: personal, t: e-mail },
+        { type: ghost },
+        { type: ghost },
+        { type: ghost },
+      ]
+    - [
+        { type: ghost },
+        { type: ghost, t: "kkkk⏎" },
+        { type: ghost, t: "[[" },
+        { type: ghost, t: "-␣[␣]␣" },
+        { type: ghost held },
+        { type: ghost },
+        { type: ghost },
+        { type: ghost },
+      ]
+    - [
+        { type: ghost, t: "hehe⏎" },
+        { type: ghost, t: "[]'s" },
+        { type: ghost, t: "haha⏎" },
+        { type: ghost },
+        { type: ghost },
+        { type: ghost },
+      ]
+    - { type: ghost }
+    - { type: ghost }
+    - { type: ghost }
+    - { type: ghost }
   left-meh-morphs:
     - [
         { type: ghost },

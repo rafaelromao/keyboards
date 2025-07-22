@@ -67,6 +67,8 @@
         COMBO(cb_mlclk,         LTM L0,          &mkp LCLK,              ALL_LAYERS)
         COMBO(cb_mrclk,         LTI L0,          &mkp RCLK,              ALL_LAYERS)
 
+        COMBO(cb_leader,        RHI RHP,         &mc_leader,             ALPHA1_LAYERS)
+
         COMBO(cb_numword,       LBR LBM,         &lt_num_word NAV 0,     ALPHA1_LAYERS)
         COMBO(cd_ca_nav,        LHR LHM L1,      &mc_ca_nav,             ALPHA1_LAYERS)
         COMBO(cd_gcs_nav,       LBR LHM LHI L1,  &mc_gcs_nav,            ALPHA1_LAYERS)

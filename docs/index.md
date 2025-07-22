@@ -199,11 +199,7 @@ They allow actions like copy, paste, select all, enter, tab, among others.
 
 *Leader Key* is available through an external module, [zmk-leader-key](https://github.com/urob/zmk-leader-key), and allows macros to be triggered through a sequence of keystrokes.
 
-The *Leader Key* is placed in the bottom row index finger in the *shortcuts* layer, beside the key that types *comma* in the base layer.
-
-Holding *comma* will also give access to the *shortcuts* layers, making it easier to activate the *Leader Key*, with an in-roll bigram. And since *comma* is almost always followed by *space*, this hold action can be the preferred behavior, which means that the hold action is easier to trigger than the tap action, making this roll even easier.
-
-The key that contains *space*, in the *shortcuts* layer, will type *comma + space*, to mitigate eventual misfire of the hold action when a tap is desired.
+The *Leader Key* is placed in the home row index finger in the *shortcuts* layer and can be tapped or held to activate the key.
 
 ### Navigation Shortcuts
 

@@ -199,11 +199,7 @@ Eles permitem ações como copiar, colar, selecionar tudo, enter, tab, entre out
 
 A *Leader Key* está disponível através de um módulo externo, [zmk-leader-key](https://github.com/urob/zmk-leader-key), e permite que macros sejam acionadas através de uma sequência de toques de tecla.
 
-A *Leader Key* é colocada no dedo indicador da linha inferior na camada de *atalhos*, ao lado da tecla que digita *vírgula* na camada base.
-
-Segurar a *vírgula* também dará acesso às camadas de *atalhos*, tornando mais fácil ativar a *Leader Key*, com um bigrama in-roll. E como a *vírgula* é quase sempre seguida por *espaço*, essa ação de segurar pode ser o comportamento preferido, o que significa que a ação de segurar é mais fácil de acionar do que a ação de pressionar, tornando esse roll ainda mais fácil.
-
-A tecla que contém *espaço*, na camada de *atalhos*, digitará *vírgula + espaço*, para mitigar eventuais disparos acidentais da ação de segurar quando um toque é desejado.
+A *Leader Key* é colocada no dedo indicador da linha principal na camada de *atalhos* e pode ser ativada apertando ou segurando a tecla.
 
 ### Atalhos de Navegação
 

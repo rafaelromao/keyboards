@@ -123,5 +123,7 @@
         };
 
         TAPHOLD_TP(th_caret_z, &vim_home, &mc_zero)
+
+        MACRO(mc_leader, &leader &to ALPHA1)
    };
 };

@@ -7,9 +7,9 @@
 
 / {
         MACRO(md_exit,  &kp E &kp X &kp I &kp T &kp ENTER)
-        MACRO(md_haha,  &kp H &kp A &kp H &kp A)
-        MACRO(md_hehe,  &kp H &kp E &kp H &kp E)
-        MACRO(md_kkkk,  &kp K &kp K &kp K &kp K)
+        MACRO(md_haha,  &kp H &kp A &kp H &kp A &kp ENTER)
+        MACRO(md_hehe,  &kp H &kp E &kp H &kp E &kp ENTER)
+        MACRO(md_kkkk,  &kp K &kp K &kp K &kp K &kp ENTER)
         MACRO(md_hugs,  &kp LBKT &kp RBKT &kp SQT &kp S)
         MACRO(md_otask, &kp MINUS &kp SPACE &kp LBKT &kp SPACE &kp RBKT &kp SPACE)
         MACRO(md_oref,  &kp LBKT &kp LBKT)
@@ -17,12 +17,12 @@
         leader: leader {
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
-            ld_exit    { sequence = <DOT> ; bindings = <&md_exit>; };
-            ld_haha    { sequence = <O>   ; bindings = <&md_haha>; };
-            ld_hehe    { sequence = <U>   ; bindings = <&md_hehe>; };
-            ld_kkkk    { sequence = <I>   ; bindings = <&md_kkkk>; };
-            ld_hugs    { sequence = <A C> ; bindings = <&md_hugs>; };
-            ld_otask   { sequence = <A T> ; bindings = <&md_otask>; };
-            ld_oref    { sequence = <A S>   ; bindings = <&md_oref>; };
+            ld_exit    { sequence = <B> ; bindings = <&md_exit>; };
+            ld_haha    { sequence = <P> ; bindings = <&md_haha>; };
+            ld_hehe    { sequence = <F> ; bindings = <&md_hehe>; };
+            ld_kkkk    { sequence = <N> ; bindings = <&md_kkkk>; };
+            ld_hugs    { sequence = <C> ; bindings = <&md_hugs>; };
+            ld_otask   { sequence = <T> ; bindings = <&md_otask>; };
+            ld_oref    { sequence = <S> ; bindings = <&md_oref>; };
         };
 };
