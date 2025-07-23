@@ -10,6 +10,31 @@ Este keymap é o resultado de alguns anos de melhorias iterativas com meu layout
 
 ![img](img/diagrams/overview.png)
 
+## Meus Teclados
+
+<table>
+  <tr>
+    <td><a href="https://github.com/rafaelromao/diamond">Diamond</a></td>
+    <td><a href="https://github.com/rafaelromao/diamond">Wired Diamond</a></td>
+    <td><a href="https://github.com/rafaelromao/diamond">Choc Diamond</a></td>
+  </tr>
+  <tr>
+    <td><a href="img/builds/Diamond.jpeg"><img src="img/builds/Diamond.jpeg" width="150" /></a></td>
+    <td><a href="img/builds/Wired%20Diamond.jpeg"><img src="img/builds/Wired%20Diamond.jpeg" width="150" /></a></td>
+    <td><a href="img/builds/Choc%20Diamond.jpeg"><img src="img/builds/Choc%20Diamond.jpeg" width="150" /></a></td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/rafaelromao/rommana-remix">Rommana Remix</a></td>
+    <td><a href="https://github.com/AlaaSaadAbdo/Rommana">Wired Rommana</a></td>
+    <td><a href="https://lowprokb.ca/collections/keyboards/products/corne-ish-zen">Corne-ish Zen</a></td>
+  </tr>
+  <tr>
+    <td><a href="img/builds/Rommana.jpeg"><img src="img/builds/Rommana.jpeg" width="150" /></a></td>
+    <td><a href="img/builds/Wired%20Rommana.jpeg"><img src="img/builds/Wired%20Rommana.jpeg" width="150" /></a></td>
+    <td><a href="img/builds/Corne-ish%20Zen.jpeg"><img src="img/builds/Corne-ish%20Zen.jpeg" width="150" /></a></td>
+  </tr>
+</table>
+
 # Diretrizes
 
 As seguintes diretrizes guiaram minhas escolhas ao definir como este keymap deveria ser:
