@@ -19,5 +19,12 @@
 // Oled
 
 &oled {
+	status = "okay";
+};
+
+// Cirque Trackpad
+
+&glidepoint_listener  {
     status = "okay";
+    device = <&glidepoint_split>;
 };

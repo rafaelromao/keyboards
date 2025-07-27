@@ -22,10 +22,10 @@
 
 // Cirque Trackpad
 
-&glidepoint  {
-    status = "okay";
+&glidepoint {
+	status = "okay";
 };
 
 &glidepoint_split {
-    device = <&glidepoint>;
+	device = <&glidepoint>;
 };

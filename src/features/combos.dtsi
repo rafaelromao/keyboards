@@ -8,10 +8,10 @@
 /*                KEY POSITIONS
 
   ╭─────────────────────╮ ╭─────────────────────╮
-  │ LTP LTR LTM LTI     │ │     RTI RTM RTR RTP │
+  │ LTP LTR LTM LTI LTC │ │ RTC RTI RTM RTR RTP │
   │ LHP LHR LHM LHI LHC │ │ RHC RHI RHM RHR RHP │
   │     LBR LBM LBI LBC │ │ RBC RBI RBM RBR     │
-  ╰───────╮     L1  L0  │ │ R0  R1      ╭───────╯
+  ╰───────╮ L2  L1  L0  │ │ R0  R1  R2  ╭───────╯
           ╰─────────────╯ ╰─────────────╯ */
 
 / {
@@ -65,7 +65,9 @@
         COMBO(cb_sdown,         LBR L0,          &msc SCRL_DOWN,         ALL_LAYERS)
         COMBO(cb_sup,           LBI L0,          &msc SCRL_UP,           ALL_LAYERS)
         COMBO(cb_mlclk,         LTM L0,          &mkp LCLK,              ALL_LAYERS)
+        COMBO(cb_mlclk2,        LTC L2,          &mkp LCLK,              ALL_LAYERS)
         COMBO(cb_mrclk,         LTI L0,          &mkp RCLK,              ALL_LAYERS)
+        COMBO(cb_mrclk2,        RTC R2,          &mkp RCLK,              ALL_LAYERS)
 
         COMBO(cb_leader,        RHI RHP,         &mc_leader,             ALPHA1_LAYERS)
 

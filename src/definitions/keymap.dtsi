@@ -13,10 +13,10 @@
                 default_layer {
                      display-name = "ROMAK";
                      bindings = <
-   &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &mc_qu
+   &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp SEMICOLON
    &lt SHORTS D        &mt LCTL N          &mt LALT S          &mt LSFT T          &kp W               &kp Z               &mt LSFT R          &mt LALT A          &mt LCTL E          &lt SHORTS I
-   &kp Y               &mt LGUI F          &mt LGUI C          &mt LGUI P          &kp V               &kp J               &ht_magic LGUI 0    &th_comma 0 0       &th_dot 0 0         &kp H
-                                           &key_repeat         &ht_repeat NAV 0    &ltn_num_spc 0 0    &msl_sym_a2 0 0     &ht_shift MEDIA 0   &key_repeat
+   &kp Y               &mt LGUI F          &mt LGUI C          &mt LGUI P          &kp V               &kp J               &ht_magic LGUI 0    &th_comma 0 0       &th_dot 0 0         &kp SLASH
+                                           &mkp RCLK           &ht_repeat NAV 0    &ltn_num_spc 0 0    &msl_sym_a2 0 0     &ht_shift MEDIA 0   &mkp LCLK
                         >;
                 };
 
@@ -41,7 +41,7 @@
                 constant_layer {
                      display-name = "CONST";
                      bindings = <
-   &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &mc_qu_c
+   &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &trans
    &lt SHORTS RS(D)    &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt LSFT RS(R)      &mt LALT RS(A)      &mt LCTL RS(E)      &lt SHORTS RS(I) 
    &kp RS(Y)           &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma 0 0       &th_dot 0 0         &trans
                                            &trans              &trans              &msk_unds NUM 0     &lt_case_a2 SYM 0 &trans              &trans
@@ -77,18 +77,18 @@
                 capsword_layer {
                      display-name = "CASE";
                      bindings = <
-   &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y)
+   &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &trans
    &lt SHORTS RS(D)    &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt LSFT RS(R)      &mt LALT RS(A)      &mt LCTL RS(E)      &lt SHORTS RS(I) 
-   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma 0 0       &th_dot 0 0         &kp RS(H)
-                                           &trans              &trans              &msk_spc NUM 0      &lt_case_a2 SYM 0 &lt_cancel MEDIA 0  &trans
+   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma 0 0       &th_dot 0 0         &trans
+                                           &trans              &trans              &msk_spc NUM 0      &lt_case_a2 SYM 0   &lt_cancel MEDIA 0  &trans
                         >;
                 };
                 capsline_layer {
                      display-name = "CASE";
                      bindings = <
-   &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &kp RS(Y)
+   &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &trans
    &lt SHORTS RS(D)    &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt LSFT RS(R)      &mt LALT RS(A)      &mt LCTL RS(E)      &lt SHORTS RS(I) 
-   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma 0 0       &th_dot 0 0         &kp RS(H)
+   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma 0 0       &th_dot 0 0         &trans
                                            &trans              &trans              &trans              &lt_case_a2 SYM 0 &lt_cancel MEDIA 0  &trans
                                            
                            >;
@@ -132,9 +132,9 @@
                sentence_case_layer {
                      display-name = "CASE";
                      bindings = <
-   &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &mc_qu_s
+   &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &trans
    &kp LS(D)           &mt LCTL LS(N)      &mt LALT LS(S)      &mt LSFT LS(T)      &kp LS(W)           &kp LS(Z)           &mt LSFT LS(R)      &mt LALT LS(A)      &mt LCTL LS(E)      &kp LS(I) 
-   &kp LS(Y)           &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c LGUI 0  &th_comma 0 0       &th_dot 0 0         &kp LS(H) 
+   &kp LS(Y)           &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c LGUI 0  &th_comma 0 0       &th_dot 0 0         &trans
                                            &trans              &trans              &trans              &lt_sft_a2 SYM_CP 0 &trans              &trans
                            >;
                 };
@@ -202,9 +202,9 @@
                 plain1_layer {
                      display-name = "PLAIN";
                      bindings = <
-   &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp Y
+   &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &trans
    &kp D               &kp N               &kp S               &kp T               &kp W               &kp Z               &kp R               &kp A               &kp E               &kp I 
-   &none               &kp F               &kp C               &kp P               &kp V               &kp J               &kp H               &kp COMMA           &kp DOT             &none 
+   &kp Y               &kp F               &kp C               &kp P               &kp V               &kp J               &kp H               &kp COMMA           &kp DOT             &trans 
                                            &none               &ht_repeat NAV 0    &lt NUM_CP SPACE    &msl_p2 SYM_CP 0    &ht_sft_p2 MEDIA    &none
                            >;
                 };
@@ -229,9 +229,9 @@
                 secondary_alternate_repeat_layer {
                      display-name = "ROMAK";
                      bindings = <
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans               &trans    
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans               &trans  
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans               &trans 
                                            &trans              &a2_alt_repeat      &trans              &trans              &trans              &trans
                            >;
                 };
@@ -240,9 +240,9 @@
                 navigation_layer {
                      display-name = "NAV";
                      bindings = <
-   &none               &mc_swapper         &mc_tabs            &mc_launcher        &none               &none               &kp TAB             &kp ENTER           &kp ESC             &none
-   &lt TEXT INS        &kp LCTL            &kp LALT            &kp LSFT            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
-   &none               &kp LGUI            &kp LGUI            &kp LGUI            &none               &none               &kp DEL             &kp HOME            &kp END             &none 
+   &none               &mc_swapper         &mc_tabs            &mc_launcher        &none               &none               &kp TAB             &kp ENTER           &kp ESC              &none
+   &lt TEXT INS        &kp LCTL            &kp LALT            &kp LSFT            &none               &none               &kp LEFT            &kp DOWN            &kp UP               &kp RIGHT
+   &none               &kp LGUI            &kp LGUI            &kp LGUI            &none               &none               &kp DEL             &kp HOME            &kp END              &none 
                                            &none               &trans              &none               &hlt SYM_CP SPACE   &mo MEDIA           &none 
                         >;
                 };
@@ -250,18 +250,18 @@
                 numbers_copy_layer {
                      display-name = "NUM";
                      bindings = <
-   &none               &th_lbrc 0 0        &th_rbrc 0 0        &kp BSLH            &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
-   &mc_deg             &th_lpar 0 0        &th_rpar 0 0        &kp AMPS            &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
-   &none               &th_lbkt 0 0        &th_rbkt 0 0        &kp PIPE            &none               &none               &mc_n1              &mc_n2              &mc_n3              &none 
+   &none               &th_lbrc 0 0        &th_rbrc 0 0        &kp BSLH            &none               &none               &mc_n7              &mc_n8              &mc_n9               &none
+   &mc_deg             &th_lpar 0 0        &th_rpar 0 0        &kp AMPS            &none               &none               &mc_n4              &mc_n5              &mc_n6               &kp DOT  
+   &none               &th_lbkt 0 0        &th_rbkt 0 0        &kp PIPE            &none               &none               &mc_n1              &mc_n2              &mc_n3               &none 
                                            &none               &trans              &trans              &hlt SYM_CP SPACE   &lt_n0 MEDIA 0      &none 
                            >;
                 };
                 symbols_copy_layer {
                      display-name = "SYM";
                      bindings = <
-   &none               &mc_tilde           &kp HASH            &th_sqo 0 0         &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
-   &kp AT              &th_caret_z 0 0     &kp DOLLAR          &th_dqo 0 0         &none               &none               &th_qmark 0 0       &kp MINUS           &kp PLUS            &kp STAR  
-   &none               &mc_lt              &mc_gt              &th_bti 0 0         &none               &none               &th_excl 0 0        &kp SLASH           &kp STAR            &none 
+   &none               &mc_tilde           &kp HASH            &th_sqo 0 0         &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0        &none
+   &kp AT              &th_caret_z 0 0     &kp DOLLAR          &th_dqo 0 0         &none               &none               &th_qmark 0 0       &kp MINUS           &kp PLUS             &kp STAR  
+   &none               &mc_lt              &mc_gt              &th_bti 0 0         &none               &none               &th_excl 0 0        &kp SLASH           &kp STAR             &none 
                                            &none               &trans              &kp SPACE           &kp SPACE           &trans              &none 
                            >;
                 };
