@@ -22,3 +22,6 @@
 [submodule "modules/rafaelromao/zmk"]
 	path = modules/rafaelromao/zmk
 	url = https://github.com/rafaelromao/zmk
+[submodule "modules/rafaelromao/zmk-dongle-display"]
+	path = modules/rafaelromao/zmk-dongle-display
+	url = git@github.com:rafaelromao/zmk-dongle-display
