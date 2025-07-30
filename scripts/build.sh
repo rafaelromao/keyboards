@@ -12,25 +12,27 @@ BRANCH="main"
 EXTRA_SHIELDS=()
 FLAGS=()
 MODULES=()
+SNIPPETS=()
 DEF_MODULES=(urob/zmk-leader-key,urob/zmk-auto-layer,urob/zmk-adaptive-key)
 
 # Function to display usage
 usage() {
-    echo "Usage: build [<config> <shield> <operating_system=$OPERATING_SYSTEM>] [-k <config>] [-s <shield>] [-b <board=$BOARD>] [-v <verbose>] [-z <zmk=$ZMK>] [-n <branch=$BRANCH>] [-e <extra_shield1,extra_shield2,...>] [-d <flag1,flag2,...>] [-m <module1,module2,...>] [-h | --help]"
+    echo "Usage: build [<config> <shield> <operating_system=$OPERATING_SYSTEM>] [-k <config>] [-s <shield>] [-b <board=$BOARD>] [-z <zmk=$ZMK>] [-n <branch=$BRANCH>] [-v <verbose>] [-e <extra_shield1,extra_shield2,...>] [-d <flag1,flag2,...>] [-m <module1,module2,...>] [-h | --help]"
     echo
     echo "Parameters:"
-    echo "  <config>               Specify the zmk config."
+    echo "  <config>                Specify the zmk config."
     echo "  <shield>               Specify the shield."
     echo "  <operating_system>     Specify the operating system."
-    echo "  -k, --config           Specify the zmk config."
+    echo "  -k, --config            Specify the zmk config."
     echo "  -s, --shield           Specify the shield."
     echo "  -o, --operating_system Specify the operating system (default: $OPERATING_SYSTEM)."
     echo "  -b, --board            Specify the board (default: $BOARD)."
-    echo "  -v, --verbose          Enable verbose mode."
     echo "  -z, --zmk              Specify the zmk repo (default: $ZMK)."
     echo "  -n, --branch           Specify the branch (default: $BRANCH)."
+    echo "  -v, --verbose          Enable verbose mode."
+    echo "  -p, --snippets         Specify a comma-separated list of snippets (default: empty)."
     echo "  -e, --extra_shields    Specify a comma-separated list of additional shields (default: empty)."
-    echo "  -d, --flags            Specify a comma-separated list of extra flags (default: empty)."
+    echo "  -d, --flags             Specify a comma-separated list of extra flags (default: empty)."
     echo "  -m, --modules          Specify a comma-separated list of modules (default: empty)."
     echo "  -h, --help             Display this help message."
     exit 1
@@ -57,7 +59,7 @@ if [[ $# -gt 0 ]] && [[ ! $1 =~ ^- ]]; then
     shift
 fi
 
-while getopts "k:s:e:o:b:n:z:m:d:v" opt; do
+while getopts "k:s:e:o:b:n:z:p:m:d:v" opt; do
     case $opt in
         k)
             CONFIG="$OPTARG"
@@ -77,11 +79,14 @@ while getopts "k:s:e:o:b:n:z:m:d:v" opt; do
         n)
             BRANCH="$OPTARG"
             ;;
+        z)
+            ZMK="$OPTARG"
+            ;;
         v)
             VERBOSE="true"
             ;;
-        z)
-            ZMK="$OPTARG"
+        p)
+            IFS=',' read -r -a SNIPPETS <<< "$OPTARG"
             ;;
         m)
             IFS=',' read -r -a MODULES <<< "$OPTARG"
@@ -146,6 +151,7 @@ echo "Board: $BOARD"
 echo "Verbose: $VERBOSE"
 echo "ZMK: $ZMK"
 echo "Branch: $BRANCH"
+echo "Snippets: ${SNIPPETS[*]}"
 echo "Extra Shields: ${EXTRA_SHIELDS[*]}"
 echo "Flags: ${FLAGS[*]}"
 echo "Modules: ${MODULES[*]}"
@@ -206,7 +212,11 @@ cd "$PROJECT_DIR/$ZMK_MODULE"
 
 # Build the west command
 
-command="west build -s app -b \$BOARD --build-dir build/\"\$ARTIFACT\" --"
+command="west build -s app -b \$BOARD "
+if [ -n "$SNIPPETS" ]; then
+    command+=" -S \"\$SNIPPETS\" "
+fi
+command+="--build-dir build/\"\$ARTIFACT\" --"
 for flag in "${FLAGS[@]}"; do
     command+=" -D$flag"
 done
