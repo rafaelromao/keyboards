@@ -22,7 +22,7 @@
 	status = "okay";
 };
 
-// Cirque Trackpad
+// Cirque Trackpad if the Left side is central, comment otherwise
 
 &glidepoint_listener  {
     status = "okay";

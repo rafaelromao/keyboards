@@ -39,6 +39,7 @@
             ;
     };
 
+    // Cirque Trackpad if the Left side is central, comment otherwise
     split_inputs {
         #address-cells = <1>;
         #size-cells = <0>;
