@@ -5,6 +5,7 @@
  */
 
 #include "dilemma.dtsi"
+#include "dilemma_left_glidepoint.dtsi"
 
 &default_kscan {
 	col-gpios
@@ -20,11 +21,4 @@
 
 &oled {
 	status = "okay";
-};
-
-// Cirque Trackpad if the Left side is central, comment otherwise
-
-&glidepoint_listener  {
-    status = "okay";
-    device = <&glidepoint_split>;
 };

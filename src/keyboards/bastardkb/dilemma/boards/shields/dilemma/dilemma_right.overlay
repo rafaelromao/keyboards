@@ -5,6 +5,7 @@
  */
 
 #include "dilemma.dtsi"
+#include "dilemma_right_glidepoint.dtsi"
 
 &default_transform {
     col-offset = <5>;
@@ -19,21 +20,3 @@
 		, <&pro_micro 8  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 		;
 };
-
-// Cirque Trackpad on the Right side
-
-&glidepoint {
-	status = "okay";
-};
-
-// Cirque Trackpad, if the Left side is central, comment otherwise
-
-&glidepoint_split {
-	device = <&glidepoint>;
-};
-
-// Cirtque Trackpad, if the Right side is central, comment otherwise
-
-// &glidepoint_listener {
-//     status = "okay";
-// };

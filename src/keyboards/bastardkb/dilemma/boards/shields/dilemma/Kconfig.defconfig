@@ -1,7 +1,7 @@
 # Copyright (c) 2021 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_DILEMMA_LEFT
+if SHIELD_DILEMMA_RIGHT
 
 config ZMK_KEYBOARD_NAME
     default "Dilemma"
