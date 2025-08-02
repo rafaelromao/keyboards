@@ -37,5 +37,38 @@
             , <&pro_micro 18 GPIO_ACTIVE_HIGH>
             ;
     };
+};
 
+&pro_micro_i2c {
+    status = "okay";
+
+    oled: ssd1306@3c {
+        compatible = "solomon,ssd1306fb";
+        status = "disabled";
+        reg = <0x3c>;
+        width = <128>;
+        height = <32>;
+        segment-offset = <0>;
+        page-offset = <0>;
+        display-offset = <0>;
+        multiplex-ratio = <31>;
+        segment-remap;
+        com-invdir;
+        com-sequential;
+        inversion-on;
+        prechargep = <0x22>;
+    };
+
+    glidepoint: glidepoint@2a {
+        compatible = "cirque,pinnacle";
+        reg = <0x2a>;
+        status = "disabled";
+        // Pin marked as Serial in the Dilemma PCB (008/D0) is connected to the S pin in the TRRS footprint, 
+        // so connecting this S pin to the DR pin in the Cirque, 
+        // will make the MCU be notified when there is data ready in the cirque
+        dr-gpios = <&pro_micro 0 (GPIO_ACTIVE_HIGH)>;
+        sensitivity = "4x";
+        sleep; 
+        no-taps;
+    };
 };

@@ -1,0 +1,35 @@
+/*
+ * Copyright (c) 2021 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <input/processors.dtsi>
+#include "dilemma.dtsi"
+
+// Oled
+
+&oled {
+	status = "okay";
+};
+
+// Cirque Trackpad if the Left side is central, comment otherwise
+
+/ {
+    split_inputs {
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        glidepoint_split: glidepoint_split@0 {
+            compatible = "zmk,input-split";
+			device = <&glidepoint>;
+            reg = <0>;
+        };
+    };
+
+    glidepoint_listener: glidepoint_listener {
+        compatible = "zmk,input-listener";
+        status = "okay";
+        device = <&glidepoint_split>;
+    };
+};

@@ -5,7 +5,7 @@
  */
 
 #include "dilemma.dtsi"
-#include "dilemma_left_glidepoint.dtsi"
+#include "dilemma_left_i2c.dtsi"
 
 &default_kscan {
 	col-gpios
@@ -15,10 +15,4 @@
 		, <&pro_micro 6  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 		, <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 		;
-};
-
-// Oled
-
-&oled {
-	status = "okay";
 };

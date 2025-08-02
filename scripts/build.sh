@@ -8,7 +8,7 @@ OPERATING_SYSTEM="MACOS"
 BOARD="nice_nano_v2"
 VERBOSE=""
 ZMK="rafaelromao/zmk"
-BRANCH="main"
+REVISION="0.2"
 EXTRA_SHIELDS=()
 FLAGS=()
 MODULES=()
@@ -17,7 +17,7 @@ DEF_MODULES=(urob/zmk-leader-key,urob/zmk-auto-layer,urob/zmk-adaptive-key)
 
 # Function to display usage
 usage() {
-    echo "Usage: build [<config> <shield> <operating_system=$OPERATING_SYSTEM>] [-k <config>] [-s <shield>] [-b <board=$BOARD>] [-z <zmk=$ZMK>] [-n <branch=$BRANCH>] [-v <verbose>] [-e <extra_shield1,extra_shield2,...>] [-d <flag1,flag2,...>] [-m <module1,module2,...>] [-h | --help]"
+    echo "Usage: build [<config> <shield> <operating_system=$OPERATING_SYSTEM>] [-k <config>] [-s <shield>] [-b <board=$BOARD>] [-z <zmk=$ZMK>] [-r <revision=$REVISION>] [-v <verbose>] [-e <extra_shield1,extra_shield2,...>] [-d <flag1,flag2,...>] [-m <module1,module2,...>] [-h | --help]"
     echo
     echo "Parameters:"
     echo "  <config>                Specify the zmk config."
@@ -28,7 +28,7 @@ usage() {
     echo "  -o, --operating_system Specify the operating system (default: $OPERATING_SYSTEM)."
     echo "  -b, --board            Specify the board (default: $BOARD)."
     echo "  -z, --zmk              Specify the zmk repo (default: $ZMK)."
-    echo "  -n, --branch           Specify the branch (default: $BRANCH)."
+    echo "  -r, --revision         Specify the zmk revision (default: $REVISION)."
     echo "  -v, --verbose          Enable verbose mode."
     echo "  -p, --snippets         Specify a comma-separated list of snippets (default: empty)."
     echo "  -e, --extra_shields    Specify a comma-separated list of additional shields (default: empty)."
@@ -59,7 +59,7 @@ if [[ $# -gt 0 ]] && [[ ! $1 =~ ^- ]]; then
     shift
 fi
 
-while getopts "k:s:e:o:b:n:z:p:m:d:v" opt; do
+while getopts "k:s:e:o:b:r:z:p:m:d:v" opt; do
     case $opt in
         k)
             CONFIG="$OPTARG"
@@ -77,7 +77,7 @@ while getopts "k:s:e:o:b:n:z:p:m:d:v" opt; do
             BOARD="$OPTARG"
             ;;
         n)
-            BRANCH="$OPTARG"
+            REVISION="$OPTARG"
             ;;
         z)
             ZMK="$OPTARG"
@@ -150,7 +150,7 @@ echo "Operating System: $OPERATING_SYSTEM"
 echo "Board: $BOARD"
 echo "Verbose: $VERBOSE"
 echo "ZMK: $ZMK"
-echo "Branch: $BRANCH"
+echo "Revision: $REVISION"
 echo "Snippets: ${SNIPPETS[*]}"
 echo "Extra Shields: ${EXTRA_SHIELDS[*]}"
 echo "Flags: ${FLAGS[*]}"
@@ -171,11 +171,11 @@ echo "#define $OPERATING_SYSTEM" >> "$OUTPUT_FILE"
 echo 'Cleaning zmk...'
 rm -rf "$PROJECT_DIR/$ZMK_MODULE/build"
 
-# Check out the main ZMK branch
+# Check out the main ZMK revision
 echo 'Checking out zmk...'
 cd "$PROJECT_DIR/$ZMK_MODULE"
 git fetch
-git checkout -f $BRANCH
+git checkout -f $REVISION
 git pull
 
 cd "$PROJECT_DIR"

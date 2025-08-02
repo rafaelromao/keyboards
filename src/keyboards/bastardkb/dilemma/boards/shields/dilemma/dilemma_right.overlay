@@ -5,7 +5,7 @@
  */
 
 #include "dilemma.dtsi"
-#include "dilemma_right_glidepoint.dtsi"
+#include "dilemma_right_i2c.dtsi"
 
 &default_transform {
     col-offset = <5>;
