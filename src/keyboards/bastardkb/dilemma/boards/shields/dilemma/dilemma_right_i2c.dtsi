@@ -65,11 +65,13 @@ cirque_pinnacle_i2c: &i2c0 {
 	status = "okay";
 };
 
-// Cirque Trackpad, if the Right side is central, comment otherwise
+// Cirque Trackpad, if the Left side is central, comment otherwise
 
 &glidepoint_split {
 	device = <&glidepoint>;
 };
+
+// Cirque Trackpad, if the Right side is central, comment otherwise
 
 // / {
 // 	glidepoint_listener: glidepoint_listener {
