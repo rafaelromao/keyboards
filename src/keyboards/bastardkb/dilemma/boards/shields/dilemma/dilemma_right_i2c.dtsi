@@ -15,6 +15,7 @@
         group1 {
             psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
                 <NRF_PSEL(TWIM_SCL, 0, 20)>;
+			bias-pull-up;
         };
     };
 
@@ -23,6 +24,7 @@
             psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
                 <NRF_PSEL(TWIM_SCL, 0, 20)>;
             low-power-enable;
+			bias-pull-up;
         };
     };
 };
@@ -46,11 +48,15 @@ cirque_pinnacle_i2c: &i2c0 {
 
     glidepoint: glidepoint@2a {
         compatible = "cirque,pinnacle";
-        status = "okay";
         reg = <0x2a>;
-        dr-gpios = <&gpio0 0 GPIO_ACTIVE_HIGH>;
-
-        sleep;
+        status = "okay";
+        // Pin marked as Serial in the Dilemma PCB (008/D0) is connected to the S pin in the TRRS footprint, 
+        // so connecting this S pin to the DR pin in the Cirque, 
+        // will make the MCU be notified when there is data ready in the cirque
+        dr-gpios = <&pro_micro 0 (GPIO_ACTIVE_HIGH)>;
+        sensitivity = "4x";
+        sleep; 
+        no-taps;
     };
 };
 
