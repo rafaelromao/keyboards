@@ -10,7 +10,6 @@
 // Configure custom i2c for the Right side
 
 &pinctrl {
-    /* configuration for i2c0 device, default state */
     i2c0_default: i2c0_default {
         group1 {
             psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
@@ -68,10 +67,14 @@ cirque_pinnacle_i2c: &i2c0 {
 
 // Cirque Trackpad, if the Right side is central, comment otherwise
 
-/ {
-	glidepoint_listener: glidepoint_listener {
-		compatible = "zmk,input-listener";
-		status = "okay";
-		device = <&glidepoint>;
-	};
+&glidepoint_split {
+	device = <&glidepoint>;
 };
+
+// / {
+// 	glidepoint_listener: glidepoint_listener {
+// 		compatible = "zmk,input-listener";
+// 		status = "okay";
+// 		device = <&glidepoint>;
+// 	};
+// };
