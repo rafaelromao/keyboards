@@ -9,6 +9,10 @@
 
 // Oled
 
+&pro_micro_i2c {
+    status = "okay";
+}
+
 &oled {
 	status = "okay";
 };

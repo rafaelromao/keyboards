@@ -7,33 +7,52 @@
 #include <input/processors.dtsi>
 #include "dilemma.dtsi"
 
-// &pinctrl {
-//     /* configuration for i2c0 device, default state */
-//     i2c0_default: i2c0_default {
-//         group1 {
-//             psels = <NRF_PSEL(TWIM_SDA, 0, 7)>,
-//                 <NRF_PSEL(TWIM_SCL, 0, 27)>;
-//         };
-//     };
+// Configure custom i2c for the Right side
 
-//     i2c0_sleep: i2c0_sleep {
-//         group1 {
-//             psels = <NRF_PSEL(TWIM_SDA, 0, 7)>,
-//                 <NRF_PSEL(TWIM_SCL, 0, 27)>;
-//             low-power-enable;
-//         };
-//     };
-// };
+&pinctrl {
+    /* configuration for i2c0 device, default state */
+    i2c0_default: i2c0_default {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
+                <NRF_PSEL(TWIM_SCL, 0, 20)>;
+        };
+    };
 
-// // Custom I2C config
-// &i2c0 {
-//     compatible = "nordic,nrf-twim"; // I2C controller instead of generic
-//     status = "okay";
-//     pinctrl-0 = <&i2c0_default>;
-//     pinctrl-1 = <&i2c0_sleep>;
-//     pinctrl-names = "default", "sleep";
-//     clock-frequency = <I2C_BITRATE_FAST>;
-// };
+    i2c0_sleep: i2c0_sleep {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
+                <NRF_PSEL(TWIM_SCL, 0, 20)>;
+            low-power-enable;
+        };
+    };
+};
+
+cirque_pinnacle_i2c: &i2c0 {
+    compatible = "nordic,nrf-twim";
+    pinctrl-0 = <&i2c0_default>;
+    pinctrl-1 = <&i2c0_sleep>;
+    pinctrl-names = "default", "sleep";
+    clock-frequency = <I2C_BITRATE_FAST>;
+};
+
+// Enable custom i2c for the Right side
+
+&gpio0 {
+    status = "okay";
+};
+
+&cirque_pinnacle_i2c {
+    status = "okay";
+
+    glidepoint: glidepoint@2a {
+        compatible = "cirque,pinnacle";
+        status = "okay";
+        reg = <0x2a>;
+        dr-gpios = <&gpio0 0 GPIO_ACTIVE_HIGH>;
+
+        sleep;
+    };
+};
 
 // Cirque Trackpad
 
