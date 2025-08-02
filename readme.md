@@ -142,6 +142,7 @@ Most features implemented here were based on the work referenced below.
 - [Robert U](https://github.com/urob)
 - [Sviatoslav Bulbakha](https://github.com/ssbb)
 - [Alexander Krikun](https://github.com/krikun98)
+- [ShiniNet](https://github.com/ShiniNet)
 
 ### 3D Printing and Handwiring
 

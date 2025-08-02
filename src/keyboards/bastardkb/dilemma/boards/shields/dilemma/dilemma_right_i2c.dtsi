@@ -41,12 +41,12 @@
 	status = "okay";
 };
 
-// // Cirque Trackpad, if the Right side is central, comment otherwise
+// Cirque Trackpad, if the Right side is central, comment otherwise
 
-// / {
-// 	glidepoint_listener: glidepoint_listener {
-// 		compatible = "zmk,input-listener";
-// 		status = "okay";
-// 		device = <&glidepoint>;
-// 	};
-// };
+/ {
+	glidepoint_listener: glidepoint_listener {
+		compatible = "zmk,input-listener";
+		status = "okay";
+		device = <&glidepoint>;
+	};
+};
