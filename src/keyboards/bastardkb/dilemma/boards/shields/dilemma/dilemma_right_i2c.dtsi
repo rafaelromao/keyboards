@@ -5,6 +5,7 @@
  */
 
 #include <input/processors.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
 #include "dilemma.dtsi"
 
 // Configure custom i2c for the Right side
@@ -14,7 +15,7 @@
         group1 {
             psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
                 <NRF_PSEL(TWIM_SCL, 0, 20)>;
-			bias-pull-up;
+			// bias-pull-up; //replaced by physical resistors, since it was not stable
         };
     };
 
@@ -23,7 +24,7 @@
             psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
                 <NRF_PSEL(TWIM_SCL, 0, 20)>;
             low-power-enable;
-			bias-pull-up;
+			// bias-pull-up; //replaced by physical resistors, since it was not stable
         };
     };
 };
@@ -38,10 +39,6 @@ cirque_pinnacle_i2c: &i2c0 {
 
 // Enable custom i2c for the Right side
 
-&gpio0 {
-    status = "okay";
-};
-
 &cirque_pinnacle_i2c {
     status = "okay";
 
@@ -53,7 +50,7 @@ cirque_pinnacle_i2c: &i2c0 {
         // so connecting this S pin to the DR pin in the Cirque, 
         // will make the MCU be notified when there is data ready in the cirque
         dr-gpios = <&pro_micro 0 (GPIO_ACTIVE_HIGH)>;
-        sensitivity = "4x";
+        sensitivity = "2x";
         sleep; 
         no-taps;
     };
@@ -78,5 +75,6 @@ cirque_pinnacle_i2c: &i2c0 {
 // 		compatible = "zmk,input-listener";
 // 		status = "okay";
 // 		device = <&glidepoint>;
+//         input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 3 2>;
 // 	};
 // };
