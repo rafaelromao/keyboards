@@ -12,7 +12,7 @@
         // Common
 
         MACRO(mc_fullscr,                &macro_tap &kp LC(LG(F)))
-        MACRO(mc_find,                   &macro_tap &kp LG(F))
+        MACRO(mc_find,                    &macro_tap &kp LG(F))
         MACRO(mc_selall,                 &macro_tap &kp LG(A))
         MACRO(mc_undo,                   &macro_tap &kp LG(Z))
         MACRO(mc_copy,                   &macro_tap &kp LG(C))
@@ -21,6 +21,7 @@
         MACRO(mc_selpaste,               &macro_tap &kp LG(A) &kp LG(V))
         MACRO(mc_save,                   &macro_tap &kp LG(S))
         MACRO(mc_save_esc,               &macro_tap &kp LG(S) &kp ESC)
+        MACRO(mc_comment,                &macro_tap &kp LG(SLASH))
 
         // Custom
 

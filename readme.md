@@ -106,14 +106,14 @@ Most features implemented here were based on the work referenced below.
 
 ### Layouts
 
-- [Romak](https://github.com/rafaelromao/romak)
+- [Romak](https://rafaelromao.github.io/romak)
 - [Colemak](https://colemak.org)
-- [BEAKL](https://deskthority.net/wiki/BEAKL)
+- [BEAKL](https://web.archive.org/web/20210801204805/https://ieants.cc/beakl/)
 - [Hands Down](https://sites.google.com/alanreiser.com/handsdown/home)
 - [Engram](https://engram.dev)
 - [Miryoku](https://github.com/manna-harbour/miryoku)
 - [Seniply](https://stevep99.github.io/seniply)
-- [Thinqu](https://microexploitation.com/2018/06/04/thinqu/)
+- [Thinqu](https://web.archive.org/web/20230604081244/https://microexploitation.com/2018/06/04/thinqu/)
 - [Suraj Kurapati](https://sunaku.github.io/moergo-glove80-keyboard.html)
 - [bmijanovich](https://github.com/bmijanovich/zmk-config)
 - [DreymaR](https://dreymar.colemak.org)

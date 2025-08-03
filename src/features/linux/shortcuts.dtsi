@@ -21,6 +21,7 @@
         MACRO(mc_selpaste,               &macro_tap &kp LC(A) &kp LC(V))
         MACRO(mc_save,                   &macro_tap &kp LC(S))
         MACRO(mc_save_esc,               &macro_tap &kp LC(S) &kp ESC)
+        MACRO(mc_comment,                &macro_tap &kp LC(SLASH))
 
         // Custom
 

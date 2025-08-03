@@ -430,7 +430,7 @@ layers:
     - { t: $$mdi:flash$$, s: "boot" }
   leader-sequences:
     - [
-        { type: ghost, t: "exit⏎"},
+        { type: ghost, t: "exit⏎", s: "terminal"},
         { type: ghost, s: work, t: e-mail },
         { type: ghost, s: personal, t: e-mail },
         { type: ghost },
@@ -438,19 +438,19 @@ layers:
         { type: ghost },
       ]
     - [
-        { type: ghost },
-        { type: ghost, t: "kkkk⏎" },
-        { type: ghost, t: "[[" },
-        { type: ghost, t: "-␣[␣]␣" },
+        { type: ghost, t: "⌘C|⌃C", s: "comment" },
+        { type: ghost, t: "kkkk⏎", s: "launch" },
+        { type: ghost, t: "[[", s: "open ref" },
+        { type: ghost, t: "-␣[␣]␣", s: "new task" },
         { type: ghost held },
         { type: ghost },
         { type: ghost },
         { type: ghost },
       ]
     - [
-        { type: ghost, t: "hehe⏎" },
-        { type: ghost, t: "[]'s" },
-        { type: ghost, t: "haha⏎" },
+        { type: ghost, t: "hehe⏎", s: "launch" },
+        { type: ghost, t: "[]'s", s: "hugs" },
+        { type: ghost, t: "haha⏎", s: "launch" },
         { type: ghost },
         { type: ghost },
         { type: ghost },

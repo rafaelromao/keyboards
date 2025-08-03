@@ -24,5 +24,6 @@
             ld_hugs    { sequence = <C> ; bindings = <&md_hugs>; };
             ld_otask   { sequence = <T> ; bindings = <&md_otask>; };
             ld_oref    { sequence = <S> ; bindings = <&md_oref>; };
+            ld_comment { sequence = <D> ; bindings = <&mc_comment>; };
         };
 };
