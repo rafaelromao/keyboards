@@ -438,7 +438,7 @@ layers:
         { type: ghost },
       ]
     - [
-        { type: ghost, t: "⌘C|⌃C", s: "comment" },
+        { type: ghost, t: "⌘/|⌃/", s: "comment" },
         { type: ghost, t: "kkkk⏎", s: "launch" },
         { type: ghost, t: "[[", s: "open ref" },
         { type: ghost, t: "-␣[␣]␣", s: "new task" },
