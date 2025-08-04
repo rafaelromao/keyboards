@@ -34,6 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
           const id = slugify(header.textContent);
           header.id = id;
 
+          header.style.cursor = 'pointer';
+          header.addEventListener('click', () => {
+            const targetId = `#${id}`;
+            history.pushState(null, null, targetId);
+            scrollToTarget(targetId);
+            sidebar.classList.add('collapsed');
+            body.classList.add('sidebar-collapsed');
+          });
+
           const link = `<a href="#${id}">${header.textContent}</a>`;
 
           if (header.tagName === 'H1') {
