@@ -107,6 +107,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.location.hash) {
           setTimeout(() => scrollToTarget(window.location.hash, false), 100);
         }
+
+        // Add no-invert class to build images
+        const images = contentDiv.querySelectorAll('img');
+        images.forEach(img => {
+          if (img.src.includes('img/builds')) {
+            img.classList.add('no-invert');
+          }
+        });
       });
   };
 

@@ -139,6 +139,10 @@
     body[data-theme="dark"] img {
       filter: invert(0.9);
     }
+
+    body[data-theme="dark"] img.no-invert {
+      filter: none;
+    }
     code {
       background-color: var(--code-bg);
       border-radius: 3px;
