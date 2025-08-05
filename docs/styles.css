@@ -193,11 +193,12 @@
     }
 
     #theme-toggle.sidebar-button {
-      width: 40px;
+      width: 80px;
       padding: 0;
     }
 
     #language-toggle.sidebar-button {
+      width: 80px;
       padding: 0 10px;
     }
 
@@ -240,7 +241,7 @@
       background-color: var(--header-bg);
       border: 1px solid var(--border-color);
       color: var(--text-color);
-      width: 2em;
+      width: 4em;
       height: 2em;
       font-size: 1.2em;
       cursor: pointer;
@@ -258,7 +259,7 @@
     }
 
     #home-button {
-      left: 3em;
+      left: 5em;
     }
 
     /* Scrollbar styles for WebKit browsers */
