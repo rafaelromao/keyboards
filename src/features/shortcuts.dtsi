@@ -125,8 +125,9 @@
         TAPHOLD_TP(th_caret_z, &vim_home, &mc_zero)
 
         MACRO(mc_leader, &leader &to ALPHA1)
-        SHIFT_MORPH(mm_leader, &mo SHORTS, &mc_leader)
+
+        SHIFT_MORPH(mm_cases, &mo SHORTS, &sl CASES)
         MACRO(mc_i, &kp I)
-        TAPHOLD_TP(th_lead, &mc_i, &mm_leader)
+        TAPHOLD_TP(th_cases, &mc_i, &mm_cases)
    };
 };

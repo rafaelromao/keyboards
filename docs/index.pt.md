@@ -127,7 +127,7 @@ Devido a uma limitação do ZMK, uma *camada aderente* não funciona bem em conj
 
 ### CAPS word e CAPS LINE
 
-*CAPS word* é um comportamento que funciona como o Caps Lock tradicional, mas será desativado automaticamente quando a palavra atual terminar. Pode ser ativado apertando duas vezes na tecla *Shift Aderente* ou através da Camada *smart*.
+*CAPS word* é um comportamento que funciona como o Caps Lock tradicional, mas será desativado automaticamente quando a palavra atual terminar. Pode ser ativado apertando duas vezes na tecla *Shift Aderente* ou através da Camada *cases*.
 
 *CAPS LINE* está entre o *CAPS word* e o Caps Lock tradicional, pois também será desativado automaticamente, mas apenas quando a linha atual terminar, geralmente com a tecla Enter.
 
@@ -220,12 +220,6 @@ Eles permitem ações como copiar, colar, selecionar tudo, enter, tab, entre out
 
 ![img](img/diagrams/shortcutcombos.png)
 
-### Leader Key
-
-A *Leader Key* está disponível através de um módulo externo, [zmk-leader-key](https://github.com/urob/zmk-leader-key), e permite que macros sejam acionadas através de uma sequência de toques de tecla.
-
-A *Leader Key* é colocada no dedo indicador da linha principal na camada de *atalhos* e pode ser ativada apertando ou segurando a tecla.
-
 ### Atalhos de Navegação
 
 Existem três atalhos de navegação especiais, disponíveis na camada de *navegação* para me permitir usar as teclas de seta junto com eles.
@@ -243,6 +237,20 @@ O terceiro atalho de navegação depende do contexto do aplicativo em execução
 Sempre que possível, uso os atalhos padrão em meus teclados, mas em alguns casos, é necessário enviar um atalho diferente para o host, interceptá-lo com algum software e redirecioná-lo usando um atalho diferente para o aplicativo de destino.
 
 No MacOS, eu uso uma combinação de [Hammerspoon](https://www.hammerspoon.org/) e [Better Touch Tool](https://folivora.ai/) para interceptar os atalhos enviados pelos meus teclados para o host. Linux e Windows são menos usados, então eu apenas mapeio alguns atalhos lá.
+
+### Macros
+
+Há uma camada *macros*, dedicada a Macros que dão acesso a blocos de texto e comandos recorrentes.
+
+![img](img/diagrams/macros.png)
+
+### Leader Key
+
+A *Leader Key* está disponível através de um módulo externo, [zmk-leader-key](https://github.com/urob/zmk-leader-key), e permite que macros sejam acionadas através de uma sequência de tecla.
+
+A *Leader Key* está disponível na camada de *cases*.
+
+![img](img/diagrams/cases.png)
 
 ## Navegação
 
@@ -357,9 +365,9 @@ Na camada de *símbolos*, muitos símbolos foram posicionados considerando como 
 
 ![img](img/diagrams/symbols.png)
 
-E, finalmente, existem algumas macros definidas especificamente para o VIM na minha camada *smart*, também fáceis de acionar usando apenas a mão direita.
+E, finalmente, existem algumas macros definidas especificamente para o VIM na minha camada *cases*, também fáceis de acionar usando apenas a mão direita.
 
-![img](img/diagrams/smart.png)
+![img](img/diagrams/cases.png)
 
 ### Navegação de Diretório
 
@@ -382,11 +390,11 @@ Meus atalhos mais usados no IntelliJ IDEA foram remapeados para usar também os 
 
 Capitalizações Inteligentes são modos de digitação especiais onde o `espaço` é substituído por `-` ou `_`, por exemplo, para digitar coisas como nomes de métodos, nomes de variáveis, nomes de constantes e assim por diante, suportando as capitalizações mais comuns, como CONSTANT_CASE, kebab-case, camelCase, PascalCase e slash/case.
 
-As Capitalizações Inteligentes estão disponíveis através da camada *smart* e podem ser ativadas segurando a principal tecla do polegar direito e a tecla mindinha direita e apertando na tecla equivalente do lado esquerdo. Esses comportamentos foram projetados para serem rápidos de ativar.
+As Capitalizações Inteligentes estão disponíveis através da camada *cases* e podem ser ativadas segurando a principal tecla do polegar direito e a tecla mindinha direita e apertando na tecla equivalente do lado esquerdo. Esses comportamentos foram projetados para serem rápidos de ativar.
 
 Quando uma Capitalização Inteligente está ativa, pressionar espaço duas vezes seguidas a desativará, e o segundo espaço será ignorado.
 
-![img](img/diagrams/smart.png)
+![img](img/diagrams/cases.png)
 
 # Geral
 
@@ -404,7 +412,7 @@ Os controles de Bluetooth estão disponíveis na camada de funções e permitem 
 
 A maioria das minhas placas tem um botão de reset físico de fácil acesso, mas nem todas. E mesmo para aquelas, às vezes será mais fácil usar um atalho para colocar a placa em modo bootloader para atualizar seu keymap (algo que faço algumas vezes por semana).
 
-Este atalho do bootloader deve estar disponível independentemente em ambas as metades da placa e não deve ser fácil de acionar por acidente, então eu os coloquei em um segundo polegar de uma camada que é ativada segurando o outro polegar e a tecla mindinha do mesmo lado. Essas camadas são as camadas *func* e *smart*.
+Este atalho do bootloader deve estar disponível independentemente em ambas as metades da placa e não deve ser fácil de acionar por acidente, então eu os coloquei em um segundo polegar de uma camada que é ativada segurando o outro polegar e a tecla mindinha do mesmo lado. Essas camadas são as camadas *func* e *cases*.
 
 ![img](img/diagrams/boot.png)
 

@@ -14,7 +14,7 @@
                      display-name = "ROMAK";
                      bindings = <
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp SEMICOLON
-   &lt SHORTS D        &mt LCTL N          &mt LALT S          &mt LSFT T          &kp W               &kp Z               &mt LSFT R          &mt LALT A          &mt LCTL E          &th_lead 0 0
+   &lt SHORTS D        &mt LCTL N          &mt LALT S          &mt LSFT T          &kp W               &kp Z               &mt LSFT R          &mt LALT A          &mt LCTL E          &th_cases 0 0
    &kp Y               &mt LGUI F          &mt LGUI C          &mt LGUI P          &kp V               &kp J               &ht_magic LGUI 0    &th_comma 0 0       &th_dot 0 0         &kp SLASH
                                            &mkp RCLK           &ht_repeat NAV 0    &ltn_num_spc 0 0    &msl_sym_a2 0 0     &ht_shift MEDIA 0   &mkp LCLK
                         >;
@@ -89,7 +89,7 @@
    &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &trans
    &lt SHORTS RS(D)    &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt LSFT RS(R)      &mt LALT RS(A)      &mt LCTL RS(E)      &lt SHORTS RS(I) 
    &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma 0 0       &th_dot 0 0         &trans
-                                           &trans              &trans              &trans              &lt_case_a2 SYM 0 &lt_cancel MEDIA 0  &trans
+                                           &trans              &trans              &trans              &lt_case_a2 SYM 0   &lt_cancel MEDIA 0  &trans
                                            
                            >;
                 };
@@ -114,14 +114,14 @@
    &none               &th_lbrc 0 0        &th_rbrc 0 0        &kp BSLH            &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
    &lt_deg FUN 0       &th_lpar 0 0        &th_rpar 0 0        &kp AMPS            &none               &none               &mc_n4              &mc_n5              &mc_n6              &kp DOT  
    &none               &th_lbkt 0 0        &th_rbkt 0 0        &kp PIPE            &none               &none               &mc_n1              &mc_n2              &mc_n3              &none 
-                                           &none               &trans              &trans              &hlt SYM SPACE    &lt_n0 MEDIA 0      &none 
+                                           &none               &trans              &trans              &hlt SYM SPACE      &lt_n0 MEDIA 0      &none 
                            >;
                 };
                 symbols_layer {
                      display-name = "SYM";
                      bindings = <
    &none               &mc_tilde           &kp HASH            &th_sqo 0 0         &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
-   &kp AT              &th_caret_z 0 0     &kp DOLLAR          &th_dqo 0 0         &none               &none               &th_qmark 0 0       &kp MINUS           &kp PLUS            &lt SMART COMMA
+   &kp AT              &th_caret_z 0 0     &kp DOLLAR          &th_dqo 0 0         &none               &none               &th_qmark 0 0       &kp MINUS           &kp PLUS            &lt MACROS COMMA
    &none               &mc_lt              &mc_gt              &th_bti 0 0         &none               &none               &th_excl 0 0        &kp SLASH           &kp STAR            &none 
                                            &none               &trans              &hlt NUM_CP SPACE   &none               &trans              &none        
                            >;
@@ -176,14 +176,13 @@
                 };
 
 
-
                 shortcuts_layer {
                      display-name = "SHORTS";
                      bindings = <
    &none              &mc_emoji           &mc_files            &mc_screenshot      &none               &none               &mc_lock            &to NUM               &to PLAIN1         &none    
-   &none              &mc_zoom_out        &mc_zoom_in         &mc_reset_zoom      &none               &none               &mc_leader          &to NAV               &to MEDIA          &none
+   &none              &mc_zoom_out        &mc_zoom_in         &mc_reset_zoom      &none               &none               &msl CASES CASES    &to NAV               &to MEDIA          &none
    &none              &mc_close           &mc_refresh         &mc_reopen          &none               &none               &kp C_SLEEP         &to FUN               &to MEHS           &none 
-                                          &none               &ht_repeat TEXT 0   &lt FUN SPACE       &lt SMART SPACE     &ht_repeat TEXT 0   &none 
+                                          &none               &ht_repeat TEXT 0   &lt FUN SPACE       &lt MACROS SPACE    &ht_repeat TEXT 0   &none 
                            >;
                 };
 
@@ -305,13 +304,22 @@
                 };
 
 
-                smart_layer {
-                     display-name = "SMART";
+                macros_layer {
+                     display-name = "MACROS";
                      bindings = <
-   &none               &none               &tc_smart_word      &tc_smart_line      &none               &none               &mc_vim_replace     &mc_o_esc           &mc_sft_o_esc       &none 
-   &none               &tc_snake_case      &tc_constant_case   &tc_kebab_case      &none               &none               &kp LS(V)           &kp V               &kp LC(V)           &none
-   &none               &tc_slash_case      &tc_pascal_case     &tc_camel_case      &none               &none               &mc_dqt0p           &mc_dqtplusp        &mc_dqtplusy        &none
+   &none               &none               &mc_haha            &none               &none               &none               &mc_vim_replace     &mc_o_esc           &mc_sft_o_esc       &none 
+   &mc_exit            &mc_comment         &mc_oref            &mc_otask           &none               &none               &kp LS(V)           &kp V               &kp LC(V)           &none
+   &none               &none               &mc_hugs            &none               &none               &none               &mc_dqt0p           &mc_dqtplusp        &mc_dqtplusy        &none
                                            &none               &key_repeat         &mc_spc_esc         &none               &bootloader         &none
+                        >;
+                };
+                cases_layer {
+                     display-name = "CASES";
+                     bindings = <
+   &none               &none               &tc_smart_word      &tc_smart_line      &none               &none               &none               &none               &none               &none 
+   &mc_leader          &tc_snake_case      &tc_constant_case   &tc_kebab_case      &none               &none               &none               &none               &none               &none
+   &none               &tc_slash_case      &tc_pascal_case     &tc_camel_case      &none               &none               &none               &none               &none               &none
+                                           &none               &none               &none               &none               &none               &none
                         >;
                 };
 

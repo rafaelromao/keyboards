@@ -127,7 +127,7 @@ Due to a limitation of ZMK, a *sticky layer* does not work well in conjunction w
 
 ### CAPS word and CAPS LINE
 
-*CAPS word* is a behavior that works like traditional Caps Lock, but it will be automatically deactivated when the current word ends. It can be activated by double-tapping the Sticky Shift key or through the Smart Layer.
+*CAPS word* is a behavior that works like traditional Caps Lock, but it will be automatically deactivated when the current word ends. It can be activated by double-tapping the Sticky Shift key or through the Cases Layer.
 
 *CAPS LINE* is between *CAPS word* and the traditional Caps Lock, since it will also be automatically deactivated but only when the current line ends, usually with the Return key.
 
@@ -220,12 +220,6 @@ They allow actions like copy, paste, select all, enter, tab, among others.
 
 ![img](img/diagrams/shortcutcombos.png)
 
-### Leader Key
-
-*Leader Key* is available through an external module, [zmk-leader-key](https://github.com/urob/zmk-leader-key), and allows macros to be triggered through a sequence of keystrokes.
-
-The *Leader Key* is placed in the home row index finger in the *shortcuts* layer and can be tapped or held to activate the key.
-
 ### Navigation Shortcuts
 
 There are three special navigation shortcuts, available in the *nav* layer to allow me to use the arrow keys along with them.
@@ -243,6 +237,20 @@ The third navigation shortcut depends on the context of the currently running ap
 Whenever possible, I use the standard shortcuts in my keyboards, but in some cases, it is necessary to send a different shortcut to the host, intercept it with some software, and redirect it using a different shortcut to the target app.
 
 In MacOS, I use a combination of [Hammerspoon](https://www.hammerspoon.org/) and [Better Touch Tool](https://folivora.ai/) to intercept the shortcuts sent by my keyboards to the host. Linux and Windows are less used, so I only map a few shortcuts there.
+
+### Macros
+
+There is a *macros* layer dedicated to Macros, which will give access to recurrent text blocks and commands.
+
+![img](img/diagrams/macros.png)
+
+### Leader Key
+
+*Leader Key* is available through an external module, [zmk-leader-key](https://github.com/urob/zmk-leader-key), and allows macros to be triggered through a sequence of keystrokes.
+
+The *Leader Key* is placed in the *cases* layer.
+
+![img](img/diagrams/cases.png)
 
 ## Navigation
 
@@ -329,7 +337,7 @@ Conditional operators are also placed in this layer, as well as combos for typin
 
 Symbols used in markdown notation, like `#`, `##`, `###`, and ` ``` `, are also present in the *symbols* layer.
 
-Leader sequences are used to complement, typing symbols like `- [ ] ` and `[[]]`, commonly used in Obsidian notes.
+Macros are used to complement, typing symbols like `- [ ] ` and `[[]]`, commonly used in Obsidian notes.
 
 ### Function Keys
 
@@ -357,9 +365,9 @@ In the *symbols* layer, many symbols were positioned considering how they are us
 
 ![img](img/diagrams/symbols.png)
 
-And finally, there are a few macros defined specifically for VIM in my *smart* layer, also easy to trigger using only my right hand.
+And finally, there are a few macros defined specifically for VIM in my *cases* layer, also easy to trigger using only my right hand.
 
-![img](img/diagrams/smart.png)
+![img](img/diagrams/cases.png)
 
 ### Directory Navigation
 
@@ -382,11 +390,11 @@ My most used shortcuts in IntelliJ IDEA were remapped to use Meh and Hyper short
 
 Smart Cases are special typing modes where the `space` is replaced by `-` or `_`, for example, to type things like method names, variable names, constant names, and so on, supporting the most common casings, like CONSTANT_CASE, kebab-case, camelCase, PascalCase, and slash/case.
 
-Smart Cases are available through the *smart* layer and can be activated by holding both the right home thumb key and the right pinky key and tapping the equivalent key on the left side. It is designed to be fast to activate.
+Smart Cases are available through the *cases* layer and can be activated by holding both the right home thumb key and the right pinky key and tapping the equivalent key on the left side. It is designed to be fast to activate.
 
 When a Smart Case is activated, tapping space twice in a row will deactivate it, and the second space will be ignored.
 
-![img](img/diagrams/smart.png)
+![img](img/diagrams/cases.png)
 
 # General
 
@@ -404,7 +412,7 @@ Bluetooth controls are available in the functions layer and allow swapping betwe
 
 Most of my boards have an easily accessible physical reset button, but not all of them. And even for those, sometimes it will be easier to use a shortcut to put the board in bootloader mode to update its keymap (something I do a few times a week).
 
-This bootloader shortcut must be available independently in both halves of the board and should not be easy to trigger by accident, so I put them in a second thumb of a layer that is activated by holding both the other thumb and the pinky key on the same side. Those layers are the *func* and *smart* layers.
+This bootloader shortcut must be available independently in both halves of the board and should not be easy to trigger by accident, so I put them in a second thumb of a layer that is activated by holding both the other thumb and the pinky key on the same side. Those layers are the *func* and *cases* layers.
 
 ![img](img/diagrams/boot.png)
 

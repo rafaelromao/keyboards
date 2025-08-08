@@ -24,7 +24,7 @@
     #define NAV_LAYERS                  NAV NAV_CP
     #define ALL_LAYERS                  ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS SHORTS MEHS NAV_LAYERS SYM_LAYERS MEDIA TEXT
     #define ALL_LAYERS_WITH_BACKSPACE   ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS        MEHS NAV_LAYERS SYM_LAYERS
-    #define ALL_LAYERS_WITH_ESC         ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS                     MEHS NAV_LAYERS              MEDIA        
+    #define ALL_LAYERS_WITH_ESC         ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS                   MEHS NAV_LAYERS            MEDIA        
     #define FIXABLE_LAYERS              CPLK_A1 CASE_A1 SMARTCASE_LAYERS PLAIN1 NUM_LAYERS MEDIA NAV_LAYERS MEHS FUN
 
     combos {
@@ -52,7 +52,7 @@
         COMBO(cb_left,          RHI R0,          &kp LEFT,               ALL_LAYERS)
         COMBO(cb_down,          RHM R0,          &kp DOWN,               ALL_LAYERS)
         COMBO(cb_up,            RHR R0,          &kp UP,                 ALL_LAYERS)
-        COMBO(cb_right,         RHP R0,          &lt_right SMART 0,      ALL_LAYERS)
+        COMBO(cb_right,         RHP R0,          &lt_right MACROS 0,     ALL_LAYERS)
         COMBO(cb_del,           RBI R0,          &kp DELETE,             ALL_LAYERS)
         COMBO(cb_home,          RBM R0,          &kp HOME,               ALL_LAYERS)
         COMBO(cb_end,           RBR R0,          &kp END,                ALL_LAYERS)
@@ -189,10 +189,10 @@
         COMBO(cb_shiftv,        RBM RBR,         &kp LS(V),              TEXT)
         COMBO(cb_ctrlv,         RBI RBM,         &kp LC(V),              TEXT)
 
-        COMBO(cb_vim_q,         RTI RTM,         &kp Q,                  SMART)
-        COMBO(cb_vim_atat,      RTM RTR,         &mc_atat,               SMART)
-        COMBO(cb_vim_qr,        RHI RHM,         &mc_qr,                 SMART)
-        COMBO(cb_vim_atr,       RHM RHR,         &mc_atr,                SMART)
+        COMBO(cb_vim_q,         RTI RTM,         &kp Q,                  MACROS)
+        COMBO(cb_vim_atat,      RTM RTR,         &mc_atat,               MACROS)
+        COMBO(cb_vim_qr,        RHI RHM,         &mc_qr,                 MACROS)
+        COMBO(cb_vim_atr,       RHM RHR,         &mc_atr,                MACROS)
 
         COMBO(cb_numbers_nav,   LBR LBM,         &mo NUM_CP,             NAV_LAYERS)
         COMBO(cd_ca,            LHR LHM,         &kp LC(LALT),           NAV_LAYERS)
