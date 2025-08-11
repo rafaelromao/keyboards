@@ -31,7 +31,12 @@ build_choc_diamond() {
 
 build_zen() {
     echo "--- Building Corneish Zen ---"
-    ./scripts/build.sh "lowprokb.ca/corneish-zen-with-dongle" "corneish_zen_dongle" "LINUX" "-z" "rafaelromao/zmk" "$@"
+    ./scripts/build.sh "lowprokb.ca/corneish-zen-with-dongle" "corneish_zen_dongle" "LINUX" "$@"
+}
+
+build_dilemma() {
+    echo "--- Building Dilemma ---"
+    ./scripts/build.sh "bastardkb/dilemma" "l" "MACOS" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
 }
 
 # --- Main Script ---
@@ -43,7 +48,7 @@ if [[ $# -lt 1 || "$1" == "-h" || "$1" == "--help" ]]; then
     echo "build.sh script with the correct parameters."
     echo "Additional arguments are passed to the underlying build.sh script."
     echo
-    echo "Available keyboards: all, rommana, wired_rommana, diamond, wired_diamond, choc_diamond, zen"
+    echo "Available keyboards: all, rommana, wired_rommana, diamond, wired_diamond, choc_diamond, zen, dilemma"
     echo
     echo "Examples:"
     echo "  $(basename "$0") rommana"
@@ -62,6 +67,7 @@ case "$KEYBOARD" in
         build_wired_diamond "$@"
         build_choc_diamond "$@"
         build_zen "$@"
+        build_dilemma "$@"
         ;;
     rommana|r)
         build_rommana "$@"
@@ -80,6 +86,9 @@ case "$KEYBOARD" in
         ;;
     zen|z)
         build_zen "$@"
+        ;;
+    dilemma|m)
+        build_dilemma "$@"
         ;;
     *)
         echo "Unknown Keyboard: '$KEYBOARD'"

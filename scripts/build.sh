@@ -7,7 +7,8 @@ SHIELD=""
 OPERATING_SYSTEM="MACOS"
 BOARD="nice_nano_v2"
 VERBOSE=""
-ZMK="rafaelromao/zmk"
+PRISTINE=""
+ZMK="zmkfirmware/zmk"
 REVISION="v0.3"
 EXTRA_SHIELDS=()
 FLAGS=()
@@ -17,22 +18,23 @@ DEF_MODULES=(urob/zmk-leader-key,urob/zmk-auto-layer,urob/zmk-adaptive-key)
 
 # Function to display usage
 usage() {
-    echo "Usage: build [<config> <shield> <operating_system=$OPERATING_SYSTEM>] [-k <config>] [-s <shield>] [-b <board=$BOARD>] [-z <zmk=$ZMK>] [-r <revision=$REVISION>] [-v <verbose>] [-e <extra_shield1,extra_shield2,...>] [-d <flag1,flag2,...>] [-m <module1,module2,...>] [-h | --help]"
+    echo "Usage: build [<config> <shield> <operating_system=$OPERATING_SYSTEM>] [-k <config>] [-s <shield>] [-b <board=$BOARD>] [-z <zmk=$ZMK>] [-r <revision=$REVISION>] [-v <verbose>] [-p <pristine>] [-e <extra_shield1,extra_shield2,...>] [-d <flag1,flag2,...>] [-m <module1,module2,...>] [-n <snippet1,snippet2,...>] [-h | --help]"
     echo
     echo "Parameters:"
-    echo "  <config>                Specify the zmk config."
+    echo "  <config>               Specify the zmk config."
     echo "  <shield>               Specify the shield."
     echo "  <operating_system>     Specify the operating system."
-    echo "  -k, --config            Specify the zmk config."
+    echo "  -k, --config           Specify the zmk config."
     echo "  -s, --shield           Specify the shield."
     echo "  -o, --operating_system Specify the operating system (default: $OPERATING_SYSTEM)."
     echo "  -b, --board            Specify the board (default: $BOARD)."
     echo "  -z, --zmk              Specify the zmk repo (default: $ZMK)."
     echo "  -r, --revision         Specify the zmk revision (default: $REVISION)."
     echo "  -v, --verbose          Enable verbose mode."
-    echo "  -p, --snippets         Specify a comma-separated list of snippets (default: empty)."
+    echo "  -p, --pristine         Enable pristine mode."
+    echo "  -n, --snippets         Specify a comma-separated list of snippets (default: empty)."
     echo "  -e, --extra_shields    Specify a comma-separated list of additional shields (default: empty)."
-    echo "  -d, --flags             Specify a comma-separated list of extra flags (default: empty)."
+    echo "  -d, --flags            Specify a comma-separated list of extra flags (default: empty)."
     echo "  -m, --modules          Specify a comma-separated list of modules (default: empty)."
     echo "  -h, --help             Display this help message."
     exit 1
@@ -59,7 +61,7 @@ if [[ $# -gt 0 ]] && [[ ! $1 =~ ^- ]]; then
     shift
 fi
 
-while getopts "k:s:e:o:b:r:z:p:m:d:v" opt; do
+while getopts "k:s:o:b:z:r:n:e:d:m:pv" opt; do
     case $opt in
         k)
             CONFIG="$OPTARG"
@@ -67,32 +69,35 @@ while getopts "k:s:e:o:b:r:z:p:m:d:v" opt; do
         s)
             SHIELD="$OPTARG"
             ;;
-        e)
-            IFS=',' read -r -a EXTRA_SHIELDS <<< "$OPTARG"
-            ;;
         o)
             OPERATING_SYSTEM="$OPTARG"
             ;;
         b)
             BOARD="$OPTARG"
             ;;
-        n)
-            REVISION="$OPTARG"
-            ;;
         z)
             ZMK="$OPTARG"
+            ;;
+        r)
+            REVISION="$OPTARG"
+            ;;
+        n)
+            IFS=',' read -r -a SNIPPETS <<< "$OPTARG"
+            ;;
+        e)
+            IFS=',' read -r -a EXTRA_SHIELDS <<< "$OPTARG"
+            ;;
+        d)
+            IFS=',' read -r -a FLAGS <<< "$OPTARG"
+            ;;
+        m)
+            IFS=',' read -r -a MODULES <<< "$OPTARG"
             ;;
         v)
             VERBOSE="true"
             ;;
         p)
-            IFS=',' read -r -a SNIPPETS <<< "$OPTARG"
-            ;;
-        m)
-            IFS=',' read -r -a MODULES <<< "$OPTARG"
-            ;;
-        d)
-            IFS=',' read -r -a FLAGS <<< "$OPTARG"
+            PRISTINE="true"
             ;;
         *)
             usage
@@ -149,6 +154,7 @@ echo "Shield: $SHIELD"
 echo "Operating System: $OPERATING_SYSTEM"
 echo "Board: $BOARD"
 echo "Verbose: $VERBOSE"
+echo "Pristine: $PRISTINE"
 echo "ZMK: $ZMK"
 echo "Revision: $REVISION"
 echo "Snippets: ${SNIPPETS[*]}"
@@ -213,6 +219,9 @@ cd "$PROJECT_DIR/$ZMK_MODULE"
 # Build the west command
 
 command="west build -s app -b \$BOARD "
+if [ -n "$PRISTINE" ]; then
+    command+=" -p "
+fi
 if [ -n "$SNIPPETS" ]; then
     command+=" -S \"\$SNIPPETS\" "
 fi
@@ -230,8 +239,10 @@ if [ -n "$MODULES" ]; then
     command+=" -DZMK_EXTRA_MODULES=\"\$MODULES\""
 fi
 
+echo "Executing West:"
+echo "$command"
+echo ""
 eval "$command"
-
 
 if [[ -n "$VERBOSE" ]]; then
     # Show applied KConfig
