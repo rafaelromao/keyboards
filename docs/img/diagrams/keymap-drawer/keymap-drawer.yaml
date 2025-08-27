@@ -431,7 +431,7 @@ layers:
   macros:
     - [
         null,
-        { t: "haha⏎", s: "launch" },
+        { t: "haha⏎", s: "laugh" },
         null,
         { t: ":%s/", s: vim },
         { t: "o⎋", s: vim },
