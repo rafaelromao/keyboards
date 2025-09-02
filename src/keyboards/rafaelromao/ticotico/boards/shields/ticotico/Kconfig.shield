@@ -1,0 +1,8 @@
+# Copyright (c) 2021 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+config SHIELD_TICOTICO_HEAD
+    def_bool $(shields_list_contains,ticotico_head)
+
+config SHIELD_TICOTICO_BODY
+    def_bool $(shields_list_contains,ticotico_body)

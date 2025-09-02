@@ -1,0 +1,45 @@
+/*
+ * Copyright (c) 2021 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "ticotico.dtsi"
+
+&default_transform {
+    col-offset = <5>;
+};
+
+&default_kscan {
+    input-gpios
+        = <&pro_micro 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        ;
+};
+
+wired_split {
+    compatible = "zmk,wired-split";
+    device = <&pro_micro_serial>;
+};

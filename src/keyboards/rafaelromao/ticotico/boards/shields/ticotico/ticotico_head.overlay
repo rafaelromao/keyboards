@@ -1,0 +1,76 @@
+/*
+ * Copyright (c) 2021 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+ #include <input/processors.dtsi>
+ #include <dt-bindings/zmk/matrix_transform.h>
+ #include <dt-bindings/zmk/input_transform.h>
+
+/ {
+    chosen {
+        zmk,kscan = &default_kscan;
+        zmk,matrix_transform = &default_transform;
+    };
+
+    default_transform: keymap_transform_0 {
+        compatible = "zmk,matrix-transform";
+        columns = <36>;
+        rows = <1>;
+        map = <
+        RC(1,0)  RC(1,1) 
+        RC(1,2)  RC(1,4)
+
+                 RC(1,5)  RC(1,6)  RC(1,7)                       RC(1,8)  RC(1,9)  RC(1,10) 
+        RC(1,11) RC(1,12) RC(1,13) RC(1,14)                      RC(1,15) RC(1,16) RC(1,17) RC(1,18) 
+                 RC(1,19) RC(1,20) RC(1,21)                      RC(1,22) RC(1,23) RC(1,24) 
+                                   RC(1,25) RC(1,26)    RC(1,27) RC(1,28)     
+
+
+
+        >;
+    };
+
+    default_kscan: kscan_0 {
+        compatible = "zmk,kscan-gpio-direct";
+        wakeup-source;
+        input-gpios
+            = <&xiao_d 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&xiao_d 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            ;
+    };
+
+    wired_split {
+        compatible = "zmk,wired-split";
+        device = <&xiao_serial>;
+    };
+};
+
+// Cirque Trackpad
+
+&xiao_i2c {
+    status = "okay";
+
+    glidepoint: glidepoint@2a {
+        compatible = "cirque,pinnacle";
+        reg = <0x2a>;
+        status = "okay";
+        // Pin marked as Serial in the Dilemma PCB (008/D0) is connected to the S pin in the TRRS footprint, 
+        // so connecting this S pin to the DR pin in the Cirque, 
+        // will make the MCU be notified when there is data ready in the cirque
+        dr-gpios = <&xiao_d 0 (GPIO_ACTIVE_HIGH)>;
+        sensitivity = "2x";
+        sleep; 
+        no-taps;
+    };
+};
+
+/ {
+	glidepoint_listener: glidepoint_listener {
+		compatible = "zmk,input-listener";
+		status = "okay";
+		device = <&glidepoint>;
+        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 3 2>;
+	};
+};

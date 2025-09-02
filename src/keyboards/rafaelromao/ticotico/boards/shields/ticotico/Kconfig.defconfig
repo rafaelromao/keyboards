@@ -1,0 +1,22 @@
+# Copyright (c) 2021 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if SHIELD_TICOTICO_HEAD
+
+config ZMK_KEYBOARD_NAME
+    default "TicoTico"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_TICOTICO_HEAD || SHIELD_TICOTICO_BODY
+
+config ZMK_SPLIT
+    default y
+
+config I2C
+    default y
+
+endif
