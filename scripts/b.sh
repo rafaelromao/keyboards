@@ -4,6 +4,11 @@ set -euo pipefail
 
 # --- Build Functions ---
 
+build_reset() {
+    echo "--- Building Reset ---"
+    ./scripts/build.sh "-s settings_reset" "$@"
+}
+
 build_rommana() {
     echo "--- Building Rommana ---"
     ./scripts/build.sh "mabroum/rommana" "cl" "$@"
@@ -31,6 +36,11 @@ build_choc_diamond() {
 
 build_zen() {
     echo "--- Building Corneish Zen ---"
+    ./scripts/build.sh "lowprokb.ca/corneish-zen" "-b corneish_zen_v2_left" "-o LINUX" "-z caksoylar/zmk" "-r caksoylar/zen-v1+v2" "$@"
+}
+
+build_zen_dongle() {
+    echo "--- Building Corneish Zen Dongle ---"
     ./scripts/build.sh "lowprokb.ca/corneish-zen-with-dongle" "corneish_zen_dongle" "LINUX" "$@"
 }
 
@@ -61,13 +71,18 @@ shift # The rest of the arguments are passed to build.sh
 
 case "$KEYBOARD" in
     all|a)
+        build_reset "$@"
         build_rommana "$@"
         build_wired_rommana "$@"
         build_diamond "$@"
         build_wired_diamond "$@"
         build_choc_diamond "$@"
         build_zen "$@"
+        build_zen_dongle "$@"
         build_dilemma "$@"
+        ;;
+    rommana|rs)
+        build_resest "$@"
         ;;
     rommana|r)
         build_rommana "$@"
@@ -83,6 +98,9 @@ case "$KEYBOARD" in
         ;;
     choc_diamond|cd|c)
         build_choc_diamond "$@"
+        ;;
+    zen_dongle|zd)
+        build_zen_dongle "$@"
         ;;
     zen|z)
         build_zen "$@"

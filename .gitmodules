@@ -22,3 +22,6 @@
 [submodule "modules/rafaelromao/zmk"]
 	path = modules/rafaelromao/zmk
 	url = https://github.com/rafaelromao/zmk
+[submodule "modules/caksoylar/zmk"]
+	path = modules/caksoylar/zmk
+	url = https://github.com/caksoylar/zmk
