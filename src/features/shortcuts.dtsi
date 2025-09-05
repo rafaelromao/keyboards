@@ -8,6 +8,9 @@
 / {
     shortcuts {
         
+        MACRO(mc_caps,                   &macro_tap_time 100 &macro_tap &kp CAPS)
+        MODTAP_TP(mt_caps,               &mc_caps)
+
         // Vim
 
         MACRO(mc_o_esc,                  &macro_tap &kp O &kp ESC)

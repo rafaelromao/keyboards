@@ -20,7 +20,6 @@
             ADAPTIVE(a_h_c    , &kp RS(H)    , RS(A)             )
             ADAPTIVE(i_sqo_s  , &mc_sqo      , LS(I)             )
             ADAPTIVE(i_sqo_c  , &mc_sqo      , RS(I)             )
-            ADAPTIVE(space_v  , &kp V        , SPACE             )
             ADAPTIVE(y_d      , &kp D        , Y                 )
             ADAPTIVE(y_d_s    , &kp D        , LS(Y)             )
             ADAPTIVE(y_d_c    , &kp RS(D)    , RS(Y)             )

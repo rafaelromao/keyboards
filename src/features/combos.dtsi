@@ -40,7 +40,7 @@
 
         COMBO(cb_save,          LHR LHM L0,      &mc_save,               ALL_LAYERS)
         COMBO(cb_fullscr,       LHM LHI L0,      &mc_fullscr,            ALL_LAYERS)
-        COMBO(cb_find,           LBM LBI L0,      &mc_find,                ALL_LAYERS)
+        COMBO(cb_find,          LBM LBI L0,      &mc_find,               ALL_LAYERS)
         COMBO(cb_undo,          LBR LBM L0,      &mc_undo,               ALL_LAYERS)
         COMBO(cb_enter,         RHM RHR R0,      &kp ENTER,              ALL_LAYERS)
         COMBO(cb_tab,           RTM RTR R0,      &kp TAB,                ALL_LAYERS)
@@ -124,7 +124,7 @@
         COMBO(cd_hyp_spc,       LBR LBM LBI,     &mc_hyper_space,        MEHS)
 
         COMBO(cb_comm,          RHP R0,          &kp COMMA,              NUM_LAYERS)
-        COMBO(cb_sfl,            RTI RTM,         &kp LS(L),              NUM_LAYERS)
+        COMBO(cb_sfl,           RTI RTM,         &kp LS(L),              NUM_LAYERS)
         COMBO(cb_jv,            RHI RHM,         &kp A,                  NUM_LAYERS)
         COMBO(cb_pipev,         RBI RBM,         &kp PIPE,               NUM_LAYERS)
         COMBO(cb_kv,            RHM RHR,         &kp E,                  NUM_LAYERS)
@@ -203,6 +203,7 @@
         COMBO(cb_page_down,     RHM RHI,         &kp PAGE_DOWN,          NAV_LAYERS)
         COMBO(cb_page_up,       RHM RHR,         &kp PAGE_UP,            NAV_LAYERS)
 
+        COMBO(cb_hand,          RTM RTI,         &mc_hand,               MEDIA)
         COMBO(cb_lclick,        RHM RHI,         &mkp LCLK,              MEDIA)
         COMBO(cb_rclick,        RHM RHR,         &mkp RCLK,              MEDIA)
     };

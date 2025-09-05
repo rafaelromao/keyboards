@@ -199,14 +199,14 @@ layers:
         { t: plain1 },
       ]
     - [
-        { type: held },
+        { t: $$mdi:ray-start-arrow$$, h: "leader-key", type: held },
         { t: $$mdi:magnify-minus-outline$$, s: zoom -},
         { t: $$mdi:magnify-plus-outline$$, s: zoom +},
         { t: $$mdi:loupe$$, s: 100% },
         { t: $$mdi:format-letter-case$$, s: "smart", h: "cases" },
         { t: nav },
         { t: media },
-        { type: held alternate},
+        { t: $$mdi:ray-start-arrow$$, h: "leader-key", type: held alternate},
       ]
     - [
         { t: $$mdi:close$$, s: close},
@@ -222,7 +222,7 @@ layers:
     - { h: text, s: repeat, t: $$mdi:repeat$$ }
   cases:
     - [
-        null,
+        { t: "CAPS LOCK", h: "NUM LOCK" },
         { t: "CAPS word", s: auto-layer },
         { t: "CAPS LINE", s: auto-layer },
         null,
@@ -230,7 +230,7 @@ layers:
         null,
       ]
     - [
-        { t: $$mdi:ray-start-arrow$$, h: "leader-key" },
+        null,
         { t: "snake_ case", s: auto-layer },
         { t: "CONSTANT_ CASE", s: auto-layer },
         { t: "kebab- case", s: auto-layer },
@@ -305,10 +305,10 @@ layers:
     - { h: media, type: held alternate }
   media:
     - [
-        null,
+        { t: $$mdi:mouse-scroll-wheel$$, s: middle },
         { t: $$mdi:mouse-left-click$$, s: left },
         { t: $$mdi:mouse-right-click$$, s: right },
-        { t: $$mdi:hand-back-right-outline$$, s: hand},
+        { t: $$mdi:keyboard-tab$$, s: tab },
         { t: $$mdi:keyboard-return$$, s: enter },
         { t: "⎋" },
       ]
@@ -948,6 +948,21 @@ combos:
       draw_separate: true,
     }
 
+  - { p: [3, 4], k: { t: $$mdi:hand-back-right-outline$$, s: hand}, layers: [media] }
+  - {
+      p: [10, 11],
+      k: { t: $$mdi:mouse-left-click$$, s: left },
+      a: mid,
+      layers: [media],
+    }
+  - {
+      p: [11, 12],
+      k: { t: $$mdi:mouse-right-click$$, s: right },
+      a: mid,
+      layers: [media],
+    }
+
+
   - { p: [7, 21], k: { t: $$mdi:arrow-left-circle$$, s: mouse, h: left }, layers: [media], draw_separate: true }
   - { p: [8, 21], k: { t: $$mdi:arrow-up-circle$$, s: mouse, h: up }, layers: [media], draw_separate: true }
   - { p: [15, 21], k: { t: $$mdi:arrow-down-circle$$, s: mouse, h: down }, layers: [media], draw_separate: true }
@@ -1018,19 +1033,6 @@ combos:
   - { p: [4, 5], k: "F15", a: mid, layers: [func] }
   - { p: [17, 18], k: "F10", a: mid, layers: [func] }
   - { p: [18, 19], k: "F13", a: mid, layers: [func] }
-
-  - {
-      p: [10, 11],
-      k: { t: $$mdi:mouse-left-click$$, s: left },
-      a: mid,
-      layers: [media],
-    }
-  - {
-      p: [11, 12],
-      k: { t: $$mdi:mouse-right-click$$, s: right },
-      a: mid,
-      layers: [media],
-    }
 
   - { p: [14, 15], k: { h: numbers }, a: mid, layers: [nav] }
 
