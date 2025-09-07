@@ -23,7 +23,7 @@ yq -i 'del(.combos[] | select(.layers | contains(["media"]) | not))' tmp/keymap-
 
 ./scripts/draw-image.sh keymap-drawer.yaml all --2cols --footernote
 
-./scripts/draw-image.sh keymap-drawer-onlyshortcutcombos.yaml shortcutcombos --combos-only --2cols alpha1 
+./scripts/draw-image.sh keymap-drawer-onlyshortcutcombos.yaml shortcutcombos --combos-only --2cols shortcuts
 ./scripts/draw-image.sh keymap-drawer-onlynavcombos.yaml navcombos --combos-only --2cols nav
 ./scripts/draw-image.sh keymap-drawer-onlymediacombos.yaml mediacombos --combos-only --2cols media
 

@@ -12,13 +12,17 @@
         // Common
 
         MACRO(mc_fullscr,                &macro_tap &kp F11)
-        MACRO(mc_find,                    &macro_tap &kp LC(F))
+        MACRO(mc_find,                   &macro_tap &kp LC(F))
         MACRO(mc_selall,                 &macro_tap &kp LC(A))
         MACRO(mc_undo,                   &macro_tap &kp LC(Z))
         MACRO(mc_copy,                   &macro_tap &kp LC(C))
+        MACRO(mc_shift_copy,             &macro_tap &kp LS(LC(C)))
         MACRO(mc_selcopy,                &macro_tap &kp LC(A) &kp LC(C))
+        MACRO(mc_shift_selcopy,          &macro_tap &kp LS(LC(A)) &kp LS(LC(C)))
         MACRO(mc_paste,                  &macro_tap &kp LC(V))
+        MACRO(mc_shift_paste,            &macro_tap &kp LS(LC(V)))
         MACRO(mc_selpaste,               &macro_tap &kp LC(A) &kp LC(V))
+        MACRO(mc_shift_selpaste,         &macro_tap &kp LS(LC(A)) &kp LS(LC(V)))
         MACRO(mc_save,                   &macro_tap &kp LC(S))
         MACRO(mc_save_esc,               &macro_tap &kp LC(S) &kp ESC)
         MACRO(mc_comment,                &macro_tap &kp LC(SLASH))

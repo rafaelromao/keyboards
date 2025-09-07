@@ -269,15 +269,15 @@ layers:
     - [y, z, x, w, ã, á, é, í]
     - [j, ç, v, õ, â, ê]
     - "'"
-    - { t: $$mdi:keyboard-space$$, h: numbers }
-    - { t: $$mdi:keyboard-space$$, h: symbols }
+    - { t: $$mdi:keyboard-space$$ }
+    - { t: $$mdi:keyboard-space$$ }
     - "'"
   nav:
     - [
         { t: $$mdi:apps$$, s: swapper },
         { t: $$mdi:tab-search$$, s: tabs},
         { t: $$mdi:layers-search-outline$$, s: launcher },
-        { t: $$mdi:keyboard-tab$$ },
+        { t: "↹" },
         { t: $$mdi:keyboard-return$$ },
         { t: "⎋" },
       ]
@@ -308,8 +308,8 @@ layers:
         { t: $$mdi:mouse-scroll-wheel$$, s: middle },
         { t: $$mdi:mouse-left-click$$, s: left },
         { t: $$mdi:mouse-right-click$$, s: right },
-        { t: $$mdi:keyboard-tab$$, s: tab },
-        { t: $$mdi:keyboard-return$$, s: enter },
+        { t: "⇤ ↹" },
+        { t: "⇥ ↵" },
         { t: "⎋" },
       ]
     - [
@@ -336,10 +336,10 @@ layers:
     - { type: held }
   text:
     - [
-        { s: select, h: home, t: ⎅ ⇤ },
-        { s: select, h: word, t: ⎅ ⓦ },
-        { s: select, h: line, t: ⎅ ⎯ },
-        { t: $$mdi:keyboard-tab$$, s: tab },
+        { s: select, h: home, t: "⎅ ⇤" },
+        { s: select, h: word, t: "⎅ ⓦ"},
+        { s: select, h: line, t: "⎅ ⎯" },
+        { t: "↹", s: tab },
         { t: $$mdi:keyboard-return$$, s: enter },
         { t: "⎋", s: esc },
       ]
@@ -923,14 +923,14 @@ combos:
   - { p: [0, 1, 21], k: "⎋ save", layers: [shortcuts], draw_separate: true }
   - { p: [7, 8, 21], k: "save", layers: [shortcuts], draw_separate: true }
 
-  - { p: [4, 5, 22], k: "tab", layers: [shortcuts], draw_separate: true }
-  - { p: [11, 12, 22], k: "enter", layers: [shortcuts], draw_separate: true }
+  - { p: [4, 5, 22], k: { t: "tab" }, layers: [shortcuts], draw_separate: true }
+  - { p: [11, 12, 22], k: { t: "enter" }, layers: [shortcuts], draw_separate: true }
 
   - { p: [14, 15, 21], k: "undo", layers: [shortcuts], draw_separate: true }
   - { p: [8, 9, 21], k: "full screen", layers: [shortcuts], draw_separate: true }
 
-  - { p: [10, 11, 22], k: "copy", layers: [shortcuts], draw_separate: true }
-  - { p: [17, 18, 22], k: "paste", layers: [shortcuts], draw_separate: true }
+  - { p: [10, 11, 22], k: { t: "copy", h: "⇧ copy" }, layers: [shortcuts], draw_separate: true }
+  - { p: [17, 18, 22], k: { t: "paste", h: "⇧ paste" }, layers: [shortcuts], draw_separate: true }
 
   - { p: [15, 16, 21], k: "find", layers: [shortcuts], draw_separate: true }
   - { p: [18, 19, 22], k: "select all", layers: [shortcuts], draw_separate: true }
@@ -979,7 +979,6 @@ combos:
   - { p: [17, 22], k: { t: $$mdi:backspace-reverse-outline$$, h: del }, layers: [nav], draw_separate: true }
   - { p: [18, 22], k: { t: $$mdi:format-horizontal-align-left$$, h: home }, layers: [nav], draw_separate: true }
   - { p: [19, 22], k: { t: $$mdi:format-horizontal-align-right$$, h: end }, layers: [nav], draw_separate: true }
-  - { p: [10, 11, 12, 13], k: { t: "⇥ ⏎", s: end, h: enter }, layers: [nav], draw_separate: true }
 
   - { p: [0, 1], k: "⇥{ ⏎", a: mid, layers: [numbers] }
   - { p: [1, 2], k: { t: "::", h: "⇥ ::" }, a: mid, layers: [numbers] }

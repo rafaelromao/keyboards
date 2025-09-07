@@ -8,6 +8,8 @@
 / {
     shortcuts {
         
+        MACRO(mc_sleep,                  &macro_tap_time 400 &macro_tap &kp C_SLEEP)
+
         MACRO(mc_caps,                   &macro_tap_time 100 &macro_tap &kp CAPS)
         MODTAP_TP(mt_caps,               &mc_caps)
 
@@ -92,6 +94,12 @@
         };
 
         MACRO(mc_end_ent,         &kp END &kp ENTER)
+        MACRO(mc_home_tab,        &kp HOME &kp TAB)
+
+        TAPHOLD_TP(th_copy,       &mc_copy,     &mc_shift_copy)
+        TAPHOLD_TP(th_selcopy,    &mc_selcopy,  &mc_shift_selcopy)
+        TAPHOLD_TP(th_paste,      &mc_paste,    &mc_shift_paste)
+        TAPHOLD_TP(th_selpaste,   &mc_selpaste, &mc_shift_selpaste)
 
         // Vim home home
 
