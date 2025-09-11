@@ -165,8 +165,17 @@
         MOD_MORPH(mm_alpha2_shifted2, MOD_LSFT|MOD_RSFT, &mc_sft_a2, &mc_alpha2)
 
         MACRO(mc_case_a2,    &sl CASE_A2)
+        MACRO(mc_sym,        &mo SYM_CP)
         LAYERTAP_TP(lt_sft_a2,  &mc_sft_a2)
-        LAYERTAP_TP(lt_case_a2, &mc_case_a2)
+
+        msl_sym_case2: msl_sym_case2 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <QUICK_TAP_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <0>;
+            bindings = <&mc_sym>, <&mc_case_a2>;
+        };
 
         MACRO(mc_sk_rgui, &sk RGUI)
         MACRO(mc_hold_symbols, &macro_press &mo SYM &macro_pause_for_release &macro_release &mo SYM)
