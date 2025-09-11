@@ -248,9 +248,9 @@ There is a *macros* layer dedicated to Macros, which will give access to recurre
 
 *Leader Key* is available through an external module, [zmk-leader-key](https://github.com/urob/zmk-leader-key), and allows macros to be triggered through a sequence of keystrokes.
 
-The *Leader Key* is placed in the *cases* layer.
+The *Leader Key* is placed in the *shortcuts* layer.
 
-![img](img/diagrams/cases.png)
+![img](img/diagrams/shortcuts.png)
 
 ## Navigation
 

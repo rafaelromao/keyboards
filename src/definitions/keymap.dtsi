@@ -129,7 +129,7 @@
 
 
 
-               sentence_case_layer {
+                sentence_case_layer {
                      display-name = "CASE";
                      bindings = <
    &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &trans
@@ -231,7 +231,7 @@
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans               &trans    
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans               &trans  
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans               &trans 
-                                           &trans              &a2_alt_repeat      &trans              &trans              &trans              &trans
+                                           &trans              &ht_alt_rep NAV 0   &trans              &trans              &trans              &trans
                            >;
                 };
 

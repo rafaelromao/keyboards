@@ -49,6 +49,15 @@
             ADAPTIVE(u_ecir_c , &ac_ecir_c , RS(U)             )
         };
 
+        ht_alt_rep: ht_alt_rep {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <QUICK_TAP_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <0>;
+            bindings = <&mo>, <&a2_alt_repeat>;
+        };
+
         ht_repeat: ht_repeat {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;

@@ -246,11 +246,11 @@ Há uma camada *macros*, dedicada a Macros que dão acesso a blocos de texto e c
 
 ### Leader Key
 
-A *Leader Key* está disponível através de um módulo externo, [zmk-leader-key](https://github.com/urob/zmk-leader-key), e permite que macros sejam acionadas através de uma sequência de tecla.
+A *Leader Key* está disponível através de um módulo externo, [zmk-leader-key](https://github.com/urob/zmk-leader-key), e permite que macros sejam acionadas através de uma sequência de teclas.
 
-A *Leader Key* está disponível na camada de *cases*.
+A *Leader Key* está disponível na camada de *atalhos*.
 
-![img](img/diagrams/cases.png)
+![img](img/diagrams/shortcuts.png)
 
 ## Navegação
 
