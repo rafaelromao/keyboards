@@ -101,7 +101,7 @@ Essas Teclas Adaptativas são implementadas usando o módulo [zmk-adaptive-key](
 
 #### Teclas de Repetição
 
-A Tecla de Repetição (Repeat Key) está [disponível no ZMK](https://zmk.dev/docs/keymaps/behaviors/key-repeat) como um comportamento que repete a última tecla ou atalho digitado. É super útil para evitar [SFBs](https://semilin.github.io/blog/2023/layout_quality.html#h:e46323dd-62d8-4361-a0f9-039b31efe7aa) ao digitar palavras que contêm teclas repetidas. Mas pode ser ainda mais poderosa se implementada como uma tecla adaptativa que repetirá a última tecla ou atalho por padrão, mas produzirá outra saída quando repetir a última não fizer sentido. Por exemplo, se pressionada após `I`, a tecla de repetição produzirá `´` em vez disso. Para saber mais sobre a Tecla de Repetição Adaptativa neste keymap, consulte a página [Magic Romak](https://github.com/rafaelromao/romak/blob/main/MagicRomak.md).
+A Tecla de Repetição (Repeat Key) está [disponível no ZMK](https://zmk.dev/docs/keymaps/behaviors/key-repeat) como um comportamento que repete a última tecla ou atalho digitado. É super útil para evitar [SFBs](https://semilin.github.io/blog/2023/layout_quality.html#h:e46323dd-62d8-4361-a0f9-039b31efe7aa) ao digitar palavras que contêm teclas repetidas. Mas pode ser ainda mais poderosa se implementada como uma tecla adaptativa que repetirá a última tecla ou atalho por padrão, mas produzirá outra saída quando repetir a última não fizer sentido. Por exemplo, se pressionada após `I`, a tecla de repetição produzirá `´` em vez disso. Para saber mais sobre a Tecla de Repetição Adaptativa neste keymap, consulte a página [Magic Romak](https://rafaelromao.github.io/romak).
 
 #### Extensão do Ç
 
