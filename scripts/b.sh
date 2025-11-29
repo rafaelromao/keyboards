@@ -4,11 +4,6 @@ set -euo pipefail
 
 # --- Build Functions ---
 
-build_reset() {
-    echo "--- Building Reset ---"
-    ./scripts/build.sh "-s settings_reset" "$@"
-}
-
 build_rommana() {
     echo "--- Building Rommana ---"
     ./scripts/build.sh "mabroum/rommana" "cl" "$@"
@@ -46,7 +41,7 @@ build_zen_dongle() {
 
 build_dilemma() {
     echo "--- Building Dilemma ---"
-    ./scripts/build.sh "bastardkb/dilemma" "l" "MACOS" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
+    ./scripts/build.sh "bastardkb/dilemma" "l" "LINUX" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
 }
 
 # --- Main Script ---
@@ -71,7 +66,6 @@ shift # The rest of the arguments are passed to build.sh
 
 case "$KEYBOARD" in
     all|a)
-        build_reset "$@"
         build_rommana "$@"
         build_wired_rommana "$@"
         build_diamond "$@"
@@ -80,9 +74,6 @@ case "$KEYBOARD" in
         build_zen "$@"
         build_zen_dongle "$@"
         build_dilemma "$@"
-        ;;
-    rommana|rs)
-        build_resest "$@"
         ;;
     rommana|r)
         build_rommana "$@"

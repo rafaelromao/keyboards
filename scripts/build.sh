@@ -41,7 +41,7 @@ usage() {
 }
 
 # Check for help flags or insufficient parameters
-if [[ "$1" == "-h" || "$1" == "--help" || "$#" -lt 2 ]]; then
+if [[ "$1" == "-h" || "$1" == "--help" || "$#" -lt 1 ]]; then
     usage
 fi
 
