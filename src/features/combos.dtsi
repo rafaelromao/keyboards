@@ -141,7 +141,7 @@
 
         COMBO(cb_dhash,         LTR LTM,         &mc_dhash,              SYM_LAYERS)
         COMBO(cb_sarrow,        LHR LHM,         &mc_sarrow,             SYM_LAYERS)
-        COMBO(cb_darrow,        LBR LBM,         &mc_darrow,             SYM_LAYERS)
+        COMBO(cb_forward,       LBR LBM,         &mc_forward,            SYM_LAYERS)
         COMBO(cb_thash,         LTR LTM LTI,     &mc_thash,              SYM_LAYERS)
         COMBO(cb_tdqo,          LHR LHM LHI,     &th_tdqo 0 0,           SYM_LAYERS)
         COMBO(cb_tbti,          LBR LBM LBI,     &th_tbti 0 0,           SYM_LAYERS)

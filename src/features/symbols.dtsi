@@ -131,7 +131,7 @@
 
         MACRO(mc_braces_new,          &kp END &kp LBRC &kp ENTER)
         MACRO(mc_sarrow,              &kp MINUS &kp GT)
-        MACRO(mc_darrow,              &kp EQUAL &kp GT)
+        MACRO(mc_forward,             &kp PIPE &kp GT)
         MACRO(mc_dcolon,              &kp COLON &kp COLON)
         MACRO(mc_end_dcolon,          &kp END &kp COLON &kp COLON)
         TAPHOLD_TP(th_dcolon,         &mc_dcolon, &mc_end_dcolon)

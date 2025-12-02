@@ -1010,7 +1010,7 @@ combos:
   - { p: [0, 1], k: "##", a: mid, layers: [symbols] }
   - { p: [0, 1, 2], k: "###", a: top, layers: [symbols] }
   - { p: [7, 8], k: "->", a: mid, layers: [symbols] }
-  - { p: [14, 15], k: "=>", a: mid, layers: [symbols] }
+  - { p: [14, 15], k: "|>", a: mid, layers: [symbols] }
   - { p: [1, 2], k: "''←", a: mid, layers: [symbols] }
   - { p: [8, 9], k: '""←', a: mid, layers: [symbols] }
   - { p: [7, 8, 9], k: '"""', a: top, layers: [symbols] }
