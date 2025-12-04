@@ -371,11 +371,11 @@ E, finalmente, existem algumas macros definidas especificamente para o VIM na mi
 
 ### Navegação de Diretório
 
-Na camada de *símbolos*, também existem algumas macros usadas para navegar em diretórios em um shell de terminal, como `~/`, `./` e `../`.
+Na camada de *símbolos*, também existem algumas macros usadas para navegar em diretórios em um shell de terminal, como `~/` e `../`.
 
-### Java
+### Java e Elixir
 
-Java é minha principal linguagem de programação hoje, e a maioria das minhas camadas de *símbolos* e *números* foi projetada com Java em mente, além de combos para digitar `==`, `!=`, `->` e `::`, por exemplo.
+A maior parte das minhas camadas de *símbolos* e *números* foi projetada tendo Java e Elixir em mente, incluindo combos para `==`, `!=`, `->`, `::`, `|>`, `#{` e `%{`, por exemplo.
 
 ![img](img/diagrams/symbols.png)
 ![img](img/diagrams/numbers.png)

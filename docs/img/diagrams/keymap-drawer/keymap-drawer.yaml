@@ -1010,13 +1010,13 @@ combos:
   - { p: [0, 1], k: "##", a: mid, layers: [symbols] }
   - { p: [0, 1, 2], k: "###", a: top, layers: [symbols] }
   - { p: [7, 8], k: "->", a: mid, layers: [symbols] }
-  - { p: [14, 15], k: "|>", a: mid, layers: [symbols] }
-  - { p: [1, 2], k: "''←", a: mid, layers: [symbols] }
-  - { p: [8, 9], k: '""←', a: mid, layers: [symbols] }
+  - { p: [14, 15], k: "<>", a: mid, layers: [symbols] }
+  - { p: [1, 2], k: "#{", a: mid, layers: [symbols] }
+  - { p: [8, 9], k: '=>', a: mid, layers: [symbols] }
   - { p: [7, 8, 9], k: '"""', a: top, layers: [symbols] }
-  - { p: [15, 16], k: "``←", a: mid, layers: [symbols] }
+  - { p: [15, 16], k: "|>", a: mid, layers: [symbols] }
   - { p: [14, 15, 16], k: "```", a: top, layers: [symbols] }
-  - { p: [3, 4], k: "./", a: mid, layers: [symbols] }
+  - { p: [3, 4], k: "%{", a: mid, layers: [symbols] }
   - { p: [10, 11], k: "~/", a: mid, layers: [symbols] }
   - { p: [11, 12], k: "==", a: mid, layers: [symbols] }
   - { p: [17, 18], k: "../", a: mid, layers: [symbols] }
