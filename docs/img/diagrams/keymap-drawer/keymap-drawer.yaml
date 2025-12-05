@@ -186,7 +186,7 @@ layers:
       ]
     - ["<", ">", { t: "`", h: "⇥ `" }, { t: "!", h: "⇥ !" }, "/", "*"]
     - { t: ▽ }
-    - { t: _, h: numbers }
+    - { t: $$mdi:keyboard-space$$, h: numbers }
     - { type: held }
     - { t: ▽ }
   shortcuts:
