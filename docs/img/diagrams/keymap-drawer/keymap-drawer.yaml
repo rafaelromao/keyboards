@@ -37,7 +37,7 @@ layers:
         ê,
       ]
     - "'"
-    - { t: ▽ }
+    - { t: _ }
     - { t: $$mdi:keyboard-space$$ }
     - "'"
   shifted1:
@@ -186,7 +186,7 @@ layers:
       ]
     - ["<", ">", { t: "`", h: "⇥ `" }, { t: "!", h: "⇥ !" }, "/", "*"]
     - { t: ▽ }
-    - { t: $$mdi:keyboard-space$$, h: numbers }
+    - { t: _, h: numbers }
     - { type: held }
     - { t: ▽ }
   shortcuts:
@@ -884,7 +884,7 @@ combos:
   - { p: [14, 15], k: "dead `", a: mid, layers: [alpha2, plain2, shifted2] }
   - { p: [15, 16], k: "dead ~", a: mid, layers: [alpha2, plain2, shifted2] }
   - { p: [17, 18], k: "!", a: mid, layers: [alpha2, plain2, shifted2] }
-  - { p: [18, 19], k: "_", a: mid, layers: [alpha2, plain2, shifted2] }
+  - { p: [18, 19], k: ":", a: mid, layers: [alpha2, plain2, shifted2] }
 
   - {
       p: [14, 15],

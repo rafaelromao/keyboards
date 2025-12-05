@@ -174,7 +174,7 @@
         COMBO(cb_tilde_s,       LBI LBM,         &kp TILDE,              ALPHA2_LAYERS)
         COMBO(cb_ques,          RHI RHM,         &mc_qmark,              ALPHA2_LAYERS)
         COMBO(cb_excl,          RBI RBM,         &mc_excl,               ALPHA2_LAYERS)
-        COMBO(cb_unds,          RBM RBR,         &kp UNDERSCORE,         ALPHA2_LAYERS)
+        COMBO(cb_colon,         RBM RBR,         &kp COLON,              ALPHA2_LAYERS)
 
         COMBO(cb_grva,          RHM RHR,         &ac_agrv,               ALPHA2)
         COMBO(cb_grvas,         RHM RHR,         &ac_agrv_s,             SFT_A2)
