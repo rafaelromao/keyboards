@@ -194,63 +194,63 @@ layers:
         { t: "$$mdi:emoticon-happy-outline$$", s: "emojis" },
         { t: $$mdi:folder-open$$, s: files},
         { t: $$mdi:content-cut$$, s: clip },
-        { t: $$mdi:lock$$, s: "lock" },
-        { t: numbers },
-        { t: plain1 },
+        { t: "camel Case", s: auto-layer },
+        { t: "Pascal Case", s: auto-layer },
+        { t: "CAPS LINE", s: auto-layer },
       ]
     - [
         { t: $$mdi:ray-start-arrow$$, h: "leader-key", type: held },
-        { t: $$mdi:magnify-minus-outline$$, s: zoom -},
+        { t: $$mdi:magnify-minus-outline$$, s: zoom -, h: toggles },
         { t: $$mdi:magnify-plus-outline$$, s: zoom +},
         { t: $$mdi:loupe$$, s: 100% },
-        { t: $$mdi:format-letter-case$$, s: "smart", h: "cases" },
-        { t: nav },
-        { t: media },
+        { t: "snake_ case", s: auto-layer },
+        { t: "kebab- case", s: auto-layer },
+        { t: "CAPS LOCK", h: toggles },
         { t: $$mdi:ray-start-arrow$$, h: "leader-key", type: held alternate},
       ]
     - [
         { t: $$mdi:close$$, s: close},
         { t: $$mdi:refresh$$, s: refresh},
         { t: $$mdi:backup-restore$$, s: reopen },
-        { t: $$mdi:power-sleep$$, s: "sleep" },
-        { t: func },
-        { t: mehs },
+        { t: "CONSTANT_ CASE", s: auto-layer },
+        { t: "slash/ case", s: auto-layer },
+        { t: "NUM LOCK" },
       ]
     - { h: text, s: repeat, t: $$mdi:repeat$$ }
     - { t: $$mdi:keyboard-space$$, h: func }
     - { t: $$mdi:keyboard-space$$, h: macros }
-    - { h: text, s: repeat, t: $$mdi:repeat$$ }
-  cases:
+    - { h: text, t: "CAPS word", s: auto-layer }
+  toggles:
     - [
-        { t: "CAPS LOCK", h: "NUM LOCK" },
-        { t: "CAPS word", s: auto-layer },
-        { t: "CAPS LINE", s: auto-layer },
-        null,
-        null,
-        null,
+        { type: ghost },
+        { type: ghost },
+        { type: ghost },
+        { type: ghost, t: numbers },
+        { type: ghost, t: plain1 },
+        { type: ghost },
       ]
     - [
-        null,
-        { t: "snake_ case", s: auto-layer },
-        { t: "CONSTANT_ CASE", s: auto-layer },
-        { t: "kebab- case", s: auto-layer },
-        { type: held },
-        null,
-        null,
-        null,
+        { type: ghost held },
+        { type: ghost held },
+        { type: ghost },
+        { type: ghost },
+        { type: ghost, t: nav },
+        { type: ghost, t: media },
+        { type: ghost held alternate },
+        { type: ghost held alternate },
       ]
     - [
-        { t: "slash/ case", s: auto-layer },
-        { t: "Pascal Case", s: auto-layer },
-        { t: "camel Case", s: auto-layer },
-        null,
-        null,
-        null,
+        { type: ghost },
+        { type: ghost },
+        { type: ghost },
+        { type: ghost, t: func },
+        { type: ghost, t: mehs },
+        { type: ghost },
       ]
-    - null
-    - null
-    - null
-    - null
+    - { type: ghost }
+    - { type: ghost }
+    - { type: ghost, t: $$mdi:power-sleep$$, s: "sleep" }
+    - { type: ghost, t: $$mdi:lock$$, s: "lock" }
   plain1:
     - [b, m, g, l, o, u]
     - [d, n, s, t, r, a, e, i]

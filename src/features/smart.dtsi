@@ -142,16 +142,26 @@
 			#binding-cells = <1>;  
             continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SLASH>;
         };
-        MACRO(tc_constant_case, &smart_case CONST_CASE)
-        MACRO(tc_snake_case, &smart_case SNAKE_CASE)
-        MACRO(tc_kebab_case, &smart_case KEBAB_CASE)
-        MACRO(tc_camel_case, &smart_case CAMEL_CASE)
-        MACRO(tc_slash_case, &slash_case SLASH_CASE)
-        MACRO(tc_pascal_case,  &tc_camel_case &sk LSHFT)
+        MACRO(tc_constant_case , &smart_case CONST_CASE)
+        MACRO(tc_snake_case    , &smart_case SNAKE_CASE)
+        MACRO(tc_kebab_case    , &smart_case KEBAB_CASE)
+        MACRO(tc_camel_case    , &smart_case CAMEL_CASE)
+        MACRO(tc_slash_case    , &slash_case SLASH_CASE)
+        MACRO(tc_pascal_case   , &tc_camel_case &sk LSHFT)
 
-
-
-
+        MOD_MORPH(mm_camel_num     , MOD_LCTL|MOD_RCTL, &to NUM, &tc_camel_case)
+        MOD_MORPH(mm_pascal_plain1 , MOD_LCTL|MOD_RCTL, &to PLAIN1, &tc_pascal_case)
+        MOD_MORPH(mm_snake_nav     , MOD_LCTL|MOD_RCTL, &to NAV, &tc_snake_case)
+        MOD_MORPH(mm_kebab_media   , MOD_LCTL|MOD_RCTL, &to MEDIA, &tc_kebab_case)
+        MOD_MORPH(mm_constant_fun  , MOD_LCTL|MOD_RCTL, &to FUN, &tc_constant_case)
+        MOD_MORPH(mm_slash_mehs    , MOD_LCTL|MOD_RCTL, &to MEHS, &tc_slash_case)
+        MOD_MORPH(mm_space_sleep   , MOD_LCTL|MOD_RCTL, &mc_sleep, &kp SPACE)
+        MOD_MORPH(mm_capsword_lock , MOD_LCTL|MOD_RCTL, &mc_lock, &tc_smart_word)
+        
+        MACRO(mc_macros,    &mo MACROS)
+        MACRO(mc_text,      &mo TEXT)
+        TAPHOLD_TP(th_spc_slp_macros, &mm_space_sleep, &mc_macros)
+        TAPHOLD_TP(th_lock_caps_text, &mm_capsword_lock, &mc_text)
 
         MACRO(mc_msk_camel, &sl CASE_A1)
         MACRO(mc_msk_snake, &kp UNDERSCORE &sl SPACING)

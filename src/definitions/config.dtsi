@@ -48,7 +48,6 @@
 #define TEXT 28
 #define FUN 29
 #define MACROS 30
-#define CASES 31
 
 // Settings
 

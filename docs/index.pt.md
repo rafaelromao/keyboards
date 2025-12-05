@@ -127,7 +127,7 @@ Devido a uma limitação do ZMK, uma *camada aderente* não funciona bem em conj
 
 ### CAPS word e CAPS LINE
 
-*CAPS word* é um comportamento que funciona como o Caps Lock tradicional, mas será desativado automaticamente quando a palavra atual terminar. Pode ser ativado apertando duas vezes na tecla *Shift Aderente* ou através da Camada *cases*.
+*CAPS word* é um comportamento que funciona como o Caps Lock tradicional, mas será desativado automaticamente quando a palavra atual terminar. Pode ser ativado apertando duas vezes na tecla *Shift Aderente* ou através da Camada *shortcuts*.
 
 *CAPS LINE* está entre o *CAPS word* e o Caps Lock tradicional, pois também será desativado automaticamente, mas apenas quando a linha atual terminar, geralmente com a tecla Enter.
 
@@ -208,8 +208,6 @@ Nesta camada, ou enquanto segura *meh* na camada base, acessar a versão Hyper d
 
 Segurar qualquer uma das teclas mindinhas ativará a camada de *atalhos*, que dá acesso a atalhos comuns como abrir o explorador de arquivos, tirar uma captura de tela e gerenciar o zoom e as abas em um navegador.
 
-Também permitirá que algumas camadas sejam ativadas permanentemente, como as camadas de *números*, *navegação* e *mídia*.
-
 ![img](img/diagrams/shortcuts.png)
 
 ### Combos de Atalhos Comuns
@@ -219,6 +217,16 @@ Atalhos comuns também podem ser ativados usando combos, na maioria das camadas.
 Eles permitem ações como copiar, colar, selecionar tudo, enter, tab, entre outras.
 
 ![img](img/diagrams/shortcutcombos.png)
+
+### Capitalização Inteligente
+
+Capitalizações Inteligentes são modos de digitação especiais onde o `espaço` é substituído por `-` ou `_`, por exemplo, para digitar coisas como nomes de métodos, nomes de variáveis, nomes de constantes e assim por diante, suportando as capitalizações mais comuns, como CONSTANT_CASE, kebab-case, camelCase, PascalCase e slash/case.
+
+Quando uma Capitalização Inteligente está ativa, pressionar espaço duas vezes seguidas a desativará, e o segundo espaço será ignorado.
+
+As Capitalizações Inteligentes também estão disponíveis através da camada *shortcuts*.
+
+![img](img/diagrams/shortcuts.png)
 
 ### Atalhos de Navegação
 
@@ -238,12 +246,6 @@ Sempre que possível, uso os atalhos padrão em meus teclados, mas em alguns cas
 
 No MacOS, eu uso uma combinação de [Hammerspoon](https://www.hammerspoon.org/) e [Better Touch Tool](https://folivora.ai/) para interceptar os atalhos enviados pelos meus teclados para o host. Linux e Windows são menos usados, então eu apenas mapeio alguns atalhos lá.
 
-### Macros
-
-Há uma camada *macros*, dedicada a Macros que dão acesso a blocos de texto e comandos recorrentes.
-
-![img](img/diagrams/macros.png)
-
 ### Leader Key
 
 A *Leader Key* está disponível através de um módulo externo, [zmk-leader-key](https://github.com/urob/zmk-leader-key), e permite que macros sejam acionadas através de uma sequência de teclas.
@@ -251,6 +253,18 @@ A *Leader Key* está disponível através de um módulo externo, [zmk-leader-key
 A *Leader Key* está disponível na camada de *atalhos*.
 
 ![img](img/diagrams/shortcuts.png)
+
+## Toggles
+
+A partir da camada de *shortcuts*, a camada de *toggles* pode ser ativada. Ela permite que algumas camadas sejam ativadas permanentemente, como as camadas de *numbers*, *nav* e *media*.
+
+Esta camada também oferece atalhos convenientes para *lock* o computador ou colocá-lo em *sleep*.
+
+## Macros
+
+Há uma camada *macros*, dedicada a Macros que dão acesso a blocos de texto e comandos recorrentes.
+
+![img](img/diagrams/macros.png)
 
 ## Navegação
 
@@ -365,9 +379,9 @@ Na camada de *símbolos*, muitos símbolos foram posicionados considerando como 
 
 ![img](img/diagrams/symbols.png)
 
-E, finalmente, existem algumas macros definidas especificamente para o VIM na minha camada *cases*, também fáceis de acionar usando apenas a mão direita.
+E, finalmente, existem algumas macros definidas especificamente para o VIM na minha camada *macros*, também fáceis de acionar usando apenas a mão direita.
 
-![img](img/diagrams/cases.png)
+![img](img/diagrams/macros.png)
 
 ### Navegação de Diretório
 
@@ -386,16 +400,6 @@ Meus atalhos mais usados no IntelliJ IDEA foram remapeados para usar também os 
 
 ![img](img/diagrams/coding-mehs.png)
 
-### Capitalização Inteligente
-
-Capitalizações Inteligentes são modos de digitação especiais onde o `espaço` é substituído por `-` ou `_`, por exemplo, para digitar coisas como nomes de métodos, nomes de variáveis, nomes de constantes e assim por diante, suportando as capitalizações mais comuns, como CONSTANT_CASE, kebab-case, camelCase, PascalCase e slash/case.
-
-As Capitalizações Inteligentes estão disponíveis através da camada *cases* e podem ser ativadas segurando a principal tecla do polegar direito e a tecla mindinha direita e apertando na tecla equivalente do lado esquerdo. Esses comportamentos foram projetados para serem rápidos de ativar.
-
-Quando uma Capitalização Inteligente está ativa, pressionar espaço duas vezes seguidas a desativará, e o segundo espaço será ignorado.
-
-![img](img/diagrams/cases.png)
-
 # Geral
 
 ## Modo Pânico
@@ -412,7 +416,7 @@ Os controles de Bluetooth estão disponíveis na camada de funções e permitem 
 
 A maioria das minhas placas tem um botão de reset físico de fácil acesso, mas nem todas. E mesmo para aquelas, às vezes será mais fácil usar um atalho para colocar a placa em modo bootloader para atualizar seu keymap (algo que faço algumas vezes por semana).
 
-Este atalho do bootloader deve estar disponível independentemente em ambas as metades da placa e não deve ser fácil de acionar por acidente, então eu os coloquei em um segundo polegar de uma camada que é ativada segurando o outro polegar e a tecla mindinha do mesmo lado. Essas camadas são as camadas *func* e *cases*.
+Este atalho do bootloader deve estar disponível independentemente em ambas as metades da placa e não deve ser fácil de acionar por acidente, então eu os coloquei em um segundo polegar de uma camada que é ativada segurando o outro polegar e a tecla mindinha do mesmo lado. Essas camadas são as camadas *func* e *macros*.
 
 ![img](img/diagrams/boot.png)
 

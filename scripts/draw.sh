@@ -27,7 +27,7 @@ yq -i 'del(.combos[] | select(.layers | contains(["media"]) | not))' tmp/keymap-
 ./scripts/draw-image.sh keymap-drawer-onlynavcombos.yaml navcombos --combos-only --2cols nav
 ./scripts/draw-image.sh keymap-drawer-onlymediacombos.yaml mediacombos --combos-only --2cols media
 
-./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml overview --2cols --footernote alpha1 alpha2 numbers symbols shortcuts mehs nav media text macros func cases 
+./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml overview --2cols --footernote alpha1 alpha2 numbers symbols shortcuts mehs nav media text macros func toggles 
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml alphas alpha1 alpha2
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml cedil ç-extension
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml boot --2cols func macros
@@ -46,7 +46,7 @@ yq -i 'del(.combos[] | select(.layers | contains(["media"]) | not))' tmp/keymap-
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml media media 
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml macros macros 
 
-./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml cases cases 
+./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml toggles toggles 
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml coding-mehs coding-meh coding-hyper
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml meh-morphs --2cols left-meh-morphs right-meh-morphs
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml window desktop-management window-management
