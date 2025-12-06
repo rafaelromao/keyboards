@@ -171,7 +171,6 @@
         MACRO(mc_atr,                 &kp AT &kp R)
         MACRO(mc_atat,                &kp AT &kp AT)
 
-        
         // Macros
 
         MACRO(mc_exit,  &kp E &kp X &kp I &kp T &kp ENTER)
@@ -179,5 +178,6 @@
         MACRO(mc_hugs,  &kp LBKT &kp RBKT &kp SQT &kp S)
         MACRO(mc_otask, &kp MINUS &kp SPACE &kp LBKT &kp SPACE &kp RBKT &kp SPACE)
         MACRO(mc_oref,  &kp LBKT &kp LBKT)
+        MACRO(mc_end_do_ent, &kp END &kp D &kp O &kp ENTER)
     };
 };

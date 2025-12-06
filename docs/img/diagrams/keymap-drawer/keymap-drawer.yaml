@@ -249,8 +249,8 @@ layers:
       ]
     - { type: ghost }
     - { type: ghost }
-    - { type: ghost, t: $$mdi:power-sleep$$, s: "sleep" }
     - { type: ghost, t: $$mdi:lock$$, s: "lock" }
+    - { type: ghost, t: $$mdi:power-sleep$$, s: "sleep" }
   plain1:
     - [b, m, g, l, o, u]
     - [d, n, s, t, r, a, e, i]
@@ -432,7 +432,7 @@ layers:
     - [
         null,
         { t: "haha⏎", s: "laugh" },
-        null,
+        { t: "⇥ do ⏎"},
         { t: ":%s/", s: vim },
         { t: "o⎋", s: vim },
         { t: 'O⎋', s: vim },
