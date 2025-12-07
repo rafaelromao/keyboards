@@ -127,13 +127,27 @@
         TAPHOLD_TP(th_tbti,           &mc_tbti, &mc_tbti_ent)
 
         MACRO(mc_braces_new,          &kp END &kp LBRC &kp ENTER)
+
         MACRO(mc_sarrow,              &kp MINUS &kp GT)
+        MACRO(mc_end_sarrow,          &kp END &kp MINUS &kp GT)
+        TAPHOLD_TP(th_sarrow,         &mc_sarrow, &mc_end_sarrow)
+
         MACRO(mc_darrow,              &kp EQUAL &kp GT)
+        MACRO(mc_end_darrow,          &kp END &kp EQUAL &kp GT)
+        TAPHOLD_TP(th_darrow,         &mc_darrow, &mc_end_darrow)
+
         MACRO(mc_forward,             &kp PIPE &kp GT)
+        MACRO(mc_end_forward,         &kp END &kp ENTER &kp PIPE &kp GT)
+        TAPHOLD_TP(th_forward,        &mc_forward, &mc_end_forward)
+
         MACRO(mc_concat,              &kp LT &kp GT)
+        MACRO(mc_end_concat,          &kp END &kp LT &kp GT)
+        TAPHOLD_TP(th_concat,         &mc_concat, &mc_end_concat)
+
         MACRO(mc_hcurly,              &kp HASH &kp LBRC)
         MACRO(mc_pcurly,              &kp PERCENT &kp LBRC)
         MACRO(mc_dcolon,              &kp COLON &kp COLON)
+
         MACRO(mc_end_dcolon,          &kp END &kp COLON &kp COLON)
         TAPHOLD_TP(th_dcolon,         &mc_dcolon, &mc_end_dcolon)
 
@@ -155,9 +169,14 @@
         MACRO(mc_eql,                 &kp EQUAL)
         MACRO(mc_end_eql,             &kp END &kp EQUAL)
         TAPHOLD_TP(th_eql,            &mc_eql, &mc_end_eql)
+
         MACRO(mc_eqeq,                &kp EQUAL &kp EQUAL)
+        MACRO(mc_end_eqeq,            &kp END &kp EQUAL &kp EQUAL)
+        TAPHOLD_TP(th_eqeq,           &mc_eqeq, &mc_end_eqeq)
 
         MACRO(mc_noteq,               &kp EXCL &kp EQUAL)
+        MACRO(mc_end_noteq,           &kp END &kp EXCL &kp EQUAL)
+        TAPHOLD_TP(th_noteq,          &mc_noteq, &mc_end_noteq)
 
         MACRO(mc_tisl,                &kp TILDE &kp SPACE &kp SLASH)
         MACRO(mc_dds,                 &kp DOT &kp DOT &kp SLASH)
