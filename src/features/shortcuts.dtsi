@@ -104,9 +104,9 @@
         // Vim home home
 
         MACRO(mc_spc_esc,         &kp J &macro_press &kp SPACE &macro_pause_for_release &macro_release &kp SPACE &macro_tap &kp ESC)
-        MACRO(mc_dqt0p,           &kp DQT &kp N0 &kp P)
-        MACRO(mc_dqtplusp,        &kp DQT &kp PLUS &kp P)
-        MACRO(mc_dqtplusy,        &kp DQT &kp PLUS &kp Y)
+        MACRO(mc_dqt0p,           &kp DQT &kp SPACE &kp N0 &kp P)
+        MACRO(mc_dqtplusp,        &kp DQT &kp SPACE &kp PLUS &kp P)
+        MACRO(mc_dqtplusy,        &kp DQT &kp SPACE &kp PLUS &kp Y)
         MACRO(mc_vim_replace,     &kp COLON &kp PERCENT &kp S &kp SLASH)
 
         mc_caret: mc_caret {
