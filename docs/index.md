@@ -349,7 +349,7 @@ Conditional operators are also placed in this layer, as well as combos for typin
 
 ### Markdown
 
-Symbols used in markdown notation, like `#`, `##`, `###`, and ` ``` `, are also present in the *symbols* layer.
+Symbols used in markdown notation, like `#`, and ` ``` `, are also present in the *symbols* layer.
 
 Macros are used to complement, typing symbols like `- [ ] ` and `[[]]`, commonly used in Obsidian notes.
 
@@ -387,9 +387,9 @@ And finally, there are a few macros defined specifically for VIM in my *macros* 
 
 In the *symbols* layer, there are also some macros used to navigate directories in a terminal shell, like `~/`, and `../`.
 
-### Java and Elixir
+### Programming Symbols
 
-Most of my *symbols* and *numbers* layers were designed with Java and Elixir in mind, including combos for `==`, `!=`, `->`, `::`, `|>`, `#{`, and `%{` for example.
+Most of my *symbols* and *numbers* layers were designed with Java and Elixir in mind, but works well also for C#, Python and JavaScript, including combos for `==`, `!=`, `->`, `=>`, `::`, `|>`, `${`, `#{`, and `%{` for example.
 
 ![img](img/diagrams/symbols.png)
 ![img](img/diagrams/numbers.png)

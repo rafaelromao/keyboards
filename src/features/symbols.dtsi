@@ -116,8 +116,6 @@
 
         MACRO(mc_pars_semi_ent,       &kp END &kp LPAR &kp RPAR &kp SEMI &kp ENTER)
 
-        MACRO(mc_dhash,               &kp HASH &kp HASH)
-        MACRO(mc_thash,               &kp HASH &kp HASH &kp HASH)
         MACRO(mc_tdqo,                &mc_dqo &mc_dqo &mc_dqo)
         MACRO(mc_tdqo_ent,            &mc_tdqo &kp ENTER)
         TAPHOLD_TP(th_tdqo,           &mc_tdqo, &mc_tdqo_ent)
@@ -144,6 +142,7 @@
         MACRO(mc_end_concat,          &kp END &kp LT &kp GT)
         TAPHOLD_TP(th_concat,         &mc_concat, &mc_end_concat)
 
+        MACRO(mc_dcurly,              &kp DOLLAR &kp LBRC)
         MACRO(mc_hcurly,              &kp HASH &kp LBRC)
         MACRO(mc_pcurly,              &kp PERCENT &kp LBRC)
         MACRO(mc_dcolon,              &kp COLON &kp COLON)

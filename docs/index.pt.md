@@ -349,7 +349,7 @@ Operadores condicionais também são colocados nesta camada, bem como combos par
 
 ### Markdown
 
-Símbolos usados na notação markdown, como `#`, `##`, `###` e ` ``` `, também estão presentes na camada de *símbolos*.
+Símbolos usados na notação markdown, como `#` e ` ``` `, também estão presentes na camada de *símbolos*.
 
 Sequências de líder são usadas para complementar, digitando símbolos como `- [ ] ` e `[[]]`, comumente usados em notas do Obsidian.
 
@@ -387,9 +387,9 @@ E, finalmente, existem algumas macros definidas especificamente para o VIM na mi
 
 Na camada de *símbolos*, também existem algumas macros usadas para navegar em diretórios em um shell de terminal, como `~/` e `../`.
 
-### Java e Elixir
+### Símbolos para Programação
 
-A maior parte das minhas camadas de *símbolos* e *números* foi projetada tendo Java e Elixir em mente, incluindo combos para `==`, `!=`, `->`, `::`, `|>`, `#{` e `%{`, por exemplo.
+A maior parte das minhas camadas de *símbolos* e *números* foi projetada tendo Java e Elixir em mente, mas funcionam bem também para C#, Python e JavaScript, incluindo combos para `==`, `!=`, `->`, `=>`, `::`, `|>`, `${`, `#{` e `%{`, por exemplo.
 
 ![img](img/diagrams/symbols.png)
 ![img](img/diagrams/numbers.png)
