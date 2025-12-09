@@ -158,10 +158,8 @@
         MOD_MORPH(mm_space_lock    , MOD_LCTL|MOD_RCTL, &mc_lock, &kp SPACE)
         MOD_MORPH(mm_caps_sleep    , MOD_LCTL|MOD_RCTL, &mc_sleep, &tc_smart_word)
         
-        MACRO(mc_macros,    &mo MACROS)
-        MACRO(mc_text,      &mo TEXT)
-        TAPHOLD_TP(th_spc_lock_macros, &mm_space_lock, &mc_macros)
-        TAPHOLD_TP(th_caps_sleep_text, &mm_caps_sleep, &mc_text)
+        LAYERTAP_TP(th_spc_lck, &mm_space_lock)
+        LAYERTAP_TP(th_cps_slp, &mm_caps_sleep)
 
         MACRO(mc_msk_camel, &sl CASE_A1)
         MACRO(mc_msk_snake, &kp UNDERSCORE &sl SPACING)
