@@ -248,8 +248,6 @@ A *Leader Key* está disponível na camada de *atalhos*.
 
 A partir da camada de *shortcuts*, a camada de *toggles* pode ser ativada. Ela permite que algumas camadas sejam ativadas permanentemente, como as camadas de *numbers*, *nav* e *media*.
 
-Esta camada é na verdade implementada usando `mod-morphs` sobre as ações da camada de `shortcuts`.
-
 Aqui também temos atalhos convenientes para *lock* o computador ou colocá-lo em *sleep*.
 
 ![img](img/diagrams/toggles.png)

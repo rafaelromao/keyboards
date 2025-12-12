@@ -24,24 +24,25 @@
 #define CASE_CCEDIL 10
 
 #define SHORTS 11
-#define MEHS 12
+#define TOGS 12
+#define MEHS 13
 
-#define PLAIN1 13
-#define PLAIN2 14
-#define SFT_PLAIN2 15
-#define ALTREP2 16
+#define PLAIN1 14
+#define PLAIN2 15
+#define SFT_PLAIN2 16
+#define ALTREP2 17
 
-#define NAV 17
+#define NAV 18
 
-#define NUM_CP 18
-#define SYM_CP 19
+#define NUM_CP 19
+#define SYM_CP 20
 
-#define MEDIA 20
-#define NAV_CP 21
+#define MEDIA 21
+#define NAV_CP 22
 
-#define TEXT 22
-#define FUN 23
-#define MACROS 24
+#define TEXT 23
+#define FUN 24
+#define MACROS 25
 
 // Settings
 

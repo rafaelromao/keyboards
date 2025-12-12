@@ -119,19 +119,28 @@
                 shortcuts_layer {
                      display-name = "SHORTS";
                      bindings = <
-   &none              &kp CAPS            &tc_smart_line       &tc_smart_word      &none               &none               &tc_num_word        &mc_calc            &kp KP_NUM          &none    
-   &none              &ht_zoom_out LCTL 0 &mc_zoom_in          &mc_reset_zoom      &none               &none               &mc_leader          &mc_files           &mt_emoji LCTL 0    &none
-   &none              &mc_close           &mc_refresh          &mc_reopen          &none               &none               &mc_screenshot      &none               &none               &none 
-                                          &none                &ht_repeat TEXT 0   &lt FUN SPACE       &th_sp_lck MACROS 0 &th_rep_slp TEXT 0  &none 
+   &none              &kp CAPS             &tc_smart_line      &tc_smart_word      &none               &none               &tc_num_word        &mc_calc            &kp KP_NUM          &none    
+   &none              &lt_zoom_out TOGS 0  &mc_zoom_in         &mc_reset_zoom      &none               &none               &mc_leader          &mc_files           &lt_emoji TOGS 0    &none
+   &none              &mc_close            &mc_refresh         &mc_reopen          &none               &none               &mc_screenshot      &none               &none               &none 
+                                           &none               &ht_repeat TEXT 0   &lt FUN SPACE       &lt MACROS SPACE    &ht_repeat TEXT 0   &none 
+                           >;
+                };
+                toggles_layer {
+                     display-name = "TOGGLES";
+                     bindings = <
+   &none              &none                &to PLAIN1          &to NUM             &none               &none               &to NUM             &to PLAIN1          &none               &none     
+   &none              &none                &to MEDIA           &to NAV             &none               &none               &to NAV             &to MEDIA           &none               &none   
+   &none              &none                &to MEHS            &to FUN             &none               &none               &to FUN             &to MEHS            &none               &none  
+                                           &none               &mc_lock            &mc_sleep           &mc_lock            &mc_sleep           &none
                            >;
                 };
 
                 mehs_layer {
                      display-name = "MEHS";
                      bindings = <
-   &none               &mc_meh_b           &mc_meh_m           &mc_meh_g           &none               &none               &mc_meh_l           &mc_meh_o           &mc_meh_u           &none    
-   &mc_meh_d           &mc_meh_n           &mc_meh_s           &mc_meh_t           &none               &none               &mc_meh_r           &mc_meh_a           &mc_meh_e           &mc_meh_i
-   &none               &mt_meh_f LGUI 0    &mt_meh_c LGUI 0    &mt_meh_p LGUI 0    &none               &none               &mt_meh_h LGUI 0    &mt_meh_comm LGUI 0 &mt_meh_dot LGUI 0  &none
+   &none              &mc_meh_b            &mc_meh_m           &mc_meh_g           &none               &none               &mc_meh_l           &mc_meh_o           &mc_meh_u           &none    
+   &mc_meh_d          &mc_meh_n            &mc_meh_s           &mc_meh_t           &none               &none               &mc_meh_r           &mc_meh_a           &mc_meh_e           &mc_meh_i
+   &none              &mt_meh_f LGUI 0     &mt_meh_c LGUI 0    &mt_meh_p LGUI 0    &none               &none               &mt_meh_h LGUI 0    &mt_meh_comm LGUI 0 &mt_meh_dot LGUI 0  &none
                                            &none               &lt_plain1 NAV 0    &hsk LGUI LGUI      &hsk LGUI LGUI      &lt_plain1 NAV 0    &none 
                            >;
                 };
@@ -247,9 +256,9 @@
                 macros_layer {
                      display-name = "MACROS";
                      bindings = <
-   &none               &none               &mc_haha            &mc_end_do_ent      &none               &none               &mc_vim_replace     &mc_o_esc           &mc_sft_o_esc       &none 
-   &mc_exit            &mc_comment         &mc_oref            &mc_otask           &none               &none               &kp LS(V)           &kp V               &kp LC(V)           &none
-   &none               &none               &mc_hugs            &none               &none               &none               &mc_dqt0p           &mc_dqtplusp        &mc_dqtplusy        &none
+   &none               &mc_tisl            &mc_ds              &mc_dds             &none               &none               &mc_vim_replace     &mc_o_esc           &mc_sft_o_esc       &none 
+   &mc_exit            &mc_hugs            &mc_oref            &mc_otask           &none               &none               &kp LS(V)           &kp V               &kp LC(V)           &none
+   &none               &none               &mc_comment         &mc_haha            &none               &none               &mc_dqt0p           &mc_dqtplusp        &mc_dqtplusy        &none
                                            &none               &key_repeat         &mc_spc_esc         &none               &bootloader         &none
                         >;
                 };

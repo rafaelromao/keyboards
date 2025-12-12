@@ -248,8 +248,6 @@ The *Leader Key* is placed in the *shortcuts* layer.
 
 From the *shortcuts* layer, the *toggles* layer can be activated. It allows some layers to be toggled on permanently, like the *numbers*, *nav*, and *media* layers.
 
-This layer is actually implemented using `mod-morphs` over the actions in the `shortcuts` layer.
-
 Here we also have convenient shortcuts to *lock* the computer or put it to *sleep*.
 
 ![img](img/diagrams/toggles.png)

@@ -39,7 +39,7 @@
         MACRO(mc_zoom_in,                &macro_tap &kp LC(PLUS))
         MACRO(mc_reset_zoom,             &macro_tap &kp LC(N0))
 
-        MODTAP_TP(ht_zoom_out,           &mc_zoom_out)
+        LAYERTAP_TP(lt_zoom_out,         &mc_zoom_out)
         
         MACRO(mc_swapper,                &macro_tap &kp LA(TAB))
         MACRO(mc_launcher,               &macro_tap &kp LA(SPACE))

@@ -7,13 +7,12 @@
 
 / {
     shortcuts {
-        
         MACRO(mc_sleep,                  &macro_tap_time 400 &macro_tap &kp C_SLEEP)
 
         MACRO(mc_caps,                   &macro_tap_time 100 &macro_tap &kp CAPS)
         MODTAP_TP(mt_caps,               &mc_caps)
 
-        MODTAP_TP(mt_emoji,              &mc_emoji)
+        LAYERTAP_TP(lt_emoji,            &mc_emoji)
 
         // Vim
 
