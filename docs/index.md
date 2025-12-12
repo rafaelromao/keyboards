@@ -218,16 +218,6 @@ They allow actions like copy, paste, select all, enter, tab, among others.
 
 ![img](img/diagrams/shortcutcombos.png)
 
-### Smart Cases
-
-Smart Cases are special typing modes where the `space` is replaced by `-` or `_`, for example, to type things like method names, variable names, constant names, and so on, supporting the most common casings, like CONSTANT_CASE, kebab-case, camelCase, PascalCase, and slash/case.
-
-When a Smart Case is activated, tapping space twice in a row will deactivate it, and the second space will be ignored.
-
-Smart Cases are also available through the *shortcuts* layer.
-
-![img](img/diagrams/shortcuts.png)
-
 ### Navigation Shortcuts
 
 There are three special navigation shortcuts, available in the *nav* layer to allow me to use the arrow keys along with them.
@@ -258,7 +248,11 @@ The *Leader Key* is placed in the *shortcuts* layer.
 
 From the *shortcuts* layer, the *toggles* layer can be activated. It allows some layers to be toggled on permanently, like the *numbers*, *nav*, and *media* layers.
 
-This layer will also give convenient shortcuts to *lock* the computer or put it to *sleep*.
+This layer is actually implemented using `mod-morphs` over the actions in the `shortcuts` layer.
+
+Here we also have convenient shortcuts to *lock* the computer or put it to *sleep*.
+
+![img](img/diagrams/toggles.png)
 
 ## Macros
 

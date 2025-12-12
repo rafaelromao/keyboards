@@ -20,60 +20,6 @@
                         >;
                 };
 
-                camel_case_layer {
-                     display-name = "CAMEL";
-                     bindings = <
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
-                                           &trans              &trans              &msk_sft NUM 0      &trans              &tc_cancel          &trans
-                           >;
-                };
-                snake_case_layer {
-                     display-name = "SNAKE";
-                     bindings = <
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
-                                           &trans              &trans              &msk_unds NUM 0     &trans              &tc_cancel          &trans
-                           >;
-                };
-                constant_layer {
-                     display-name = "CONST";
-                     bindings = <
-   &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &trans
-   &lt SHORTS RS(D)    &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt LSFT RS(R)      &mt LALT RS(A)      &mt LCTL RS(E)      &lt SHORTS RS(I) 
-   &kp RS(Y)           &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma 0 0       &th_dot 0 0         &trans
-                                           &trans              &trans              &msk_unds NUM 0     &msl_sym_case2 0 0  &tc_cancel          &trans
-                           >;
-                };
-                kebab_case_layer {
-                     display-name = "KEBAB";
-                     bindings = <
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
-                                           &trans              &trans              &msk_dash NUM 0     &trans              &tc_cancel          &trans
-                           >;
-                };
-                slash_case_layer {
-                     display-name = "SLASH";
-                     bindings = <
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
-                                           &trans              &trans              &msk_slash NUM 0    &trans              &tc_cancel          &trans
-                           >;
-                };
-                spacing_layer {
-                     display-name = "SPACE";
-                     bindings = <
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
-                                           &trans              &trans              &msk_spcb NUM 0     &trans              &tc_cancel          &trans
-                           >;
-                };
                 capsword_layer {
                      display-name = "CASE";
                      bindings = <
@@ -94,8 +40,6 @@
                            >;
                 };
 
-
-
                 alpha2_layer {
                      display-name = "ROMAK";
                      bindings = <
@@ -105,8 +49,6 @@
                                            &none               &mc_sqo             &kp UNDER           &kp SPACE           &mc_sqo             &none
                            >;
                 };
-
-
 
                 numbers_layer {
                      display-name = "NUM";
@@ -177,9 +119,9 @@
                 shortcuts_layer {
                      display-name = "SHORTS";
                      bindings = <
-   &none              &mc_emoji           &mc_files            &mc_screenshot      &none               &none               &mm_camel_num       &mm_pascal_plain1      &tc_smart_line     &none    
-   &mc_leader         &ht_zoom_out LCTL 0 &mc_zoom_in          &mc_reset_zoom      &none               &none               &mm_snake_nav       &mm_kebab_media        &mt LCTL KP_NUM    &mc_leader
-   &none              &mc_close           &mc_refresh          &mc_reopen          &none               &none               &mm_constant_fun    &mm_slash_mehs         &kp CAPS           &none 
+   &none              &mc_emoji           &mc_files            &mc_screenshot      &none               &none               &none               &none               &none               &none    
+   &mc_leader         &ht_zoom_out LCTL 0 &mc_zoom_in          &mc_reset_zoom      &none               &none               &none               &none               &mt LCTL KP_NUM     &mc_leader
+   &none              &mc_close           &mc_refresh          &mc_reopen          &none               &none               &none               &none               &kp CAPS            &none 
                                           &none                &ht_repeat TEXT 0   &lt FUN SPACE       &th_spc_lck MACROS 0 &th_cps_slp TEXT 0 &none 
                            >;
                 };

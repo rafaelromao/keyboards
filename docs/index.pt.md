@@ -218,16 +218,6 @@ Eles permitem ações como copiar, colar, selecionar tudo, enter, tab, entre out
 
 ![img](img/diagrams/shortcutcombos.png)
 
-### Capitalização Inteligente
-
-Capitalizações Inteligentes são modos de digitação especiais onde o `espaço` é substituído por `-` ou `_`, por exemplo, para digitar coisas como nomes de métodos, nomes de variáveis, nomes de constantes e assim por diante, suportando as capitalizações mais comuns, como CONSTANT_CASE, kebab-case, camelCase, PascalCase e slash/case.
-
-Quando uma Capitalização Inteligente está ativa, pressionar espaço duas vezes seguidas a desativará, e o segundo espaço será ignorado.
-
-As Capitalizações Inteligentes também estão disponíveis através da camada *shortcuts*.
-
-![img](img/diagrams/shortcuts.png)
-
 ### Atalhos de Navegação
 
 Existem três atalhos de navegação especiais, disponíveis na camada de *navegação* para me permitir usar as teclas de seta junto com eles.
@@ -258,7 +248,11 @@ A *Leader Key* está disponível na camada de *atalhos*.
 
 A partir da camada de *shortcuts*, a camada de *toggles* pode ser ativada. Ela permite que algumas camadas sejam ativadas permanentemente, como as camadas de *numbers*, *nav* e *media*.
 
-Esta camada também oferece atalhos convenientes para *lock* o computador ou colocá-lo em *sleep*.
+Esta camada é na verdade implementada usando `mod-morphs` sobre as ações da camada de `shortcuts`.
+
+Aqui também temos atalhos convenientes para *lock* o computador ou colocá-lo em *sleep*.
+
+![img](img/diagrams/toggles.png)
 
 ## Macros
 
