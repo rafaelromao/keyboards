@@ -377,11 +377,11 @@ E, finalmente, existem algumas macros definidas especificamente para o VIM na mi
 
 ### Navegação de Diretório
 
-Na camada de *símbolos*, também existem algumas macros usadas para navegar em diretórios em um shell de terminal, como `~/` e `../`.
+Na camada de *macros*, também existem algumas macros usadas para navegar em diretórios em um shell de terminal, como `~/`, `./` e `../`.
 
 ### Símbolos para Programação
 
-A maior parte das minhas camadas de *símbolos* e *números* foi projetada tendo Java e Elixir em mente, mas funcionam bem também para C#, Python e JavaScript, incluindo combos para `==`, `!=`, `->`, `=>`, `::`, `|>`, `${`, `#{` e `%{`, por exemplo.
+A maior parte das minhas camadas de *símbolos* e *números* foi projetada tendo Java e Elixir em mente, mas funcionam bem também para C#, Python e JavaScript, incluindo combos para `==`, `!=`, `->`, `=>`, `::`, `|>`, `<-`, `${`, `#{` e `%{`, por exemplo.
 
 ![img](img/diagrams/symbols.png)
 ![img](img/diagrams/numbers.png)

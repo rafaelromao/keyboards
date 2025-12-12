@@ -28,7 +28,7 @@ What are the workflows that I need to execute with my keyboards?
 
 - **Typing**: The most basic and essential workflow.
 - **Numbers**: How this keymap makes it easy to work with numbers.
-- **Shortcut**s: How to work with so many shortcuts in such minimal keyboards.
+- **Shortcut**: How to work with so many shortcuts in such minimal keyboards.
 - **Navigation**: Navigating in text, presentations, window management and mouse emulation.
 - **Programming**: Optimizations to make programming easier.
 

@@ -1013,7 +1013,7 @@ combos:
   - { p: [8, 9], k: "${", a: mid, layers: [symbols] }
   - { p: [1, 2], k: "#{", a: mid, layers: [symbols] }
   - { p: [7, 8, 9], k: '"""', a: top, layers: [symbols] }
-  - { p: [15, 16], k: { t: "|>", h: "→ ⏎ |>" }, a: mid, layers: [symbols] }
+  - { p: [15, 16], k: { t: "|>", h: "⇥ ⏎ |>" }, a: mid, layers: [symbols] }
   - { p: [14, 15, 16], k: "```", a: top, layers: [symbols] }
   - { p: [3, 4], k: "%{", a: mid, layers: [symbols] }
   - { p: [10, 11], k: { t: "<-", h: "⇥ <-" }, a: mid, layers: [symbols] }
@@ -1032,7 +1032,7 @@ combos:
   - { p: [17, 18], k: "F10", a: mid, layers: [func] }
   - { p: [18, 19], k: "F13", a: mid, layers: [func] }
 
-  - { p: [14, 15], k: { h: numbers }, a: mid, layers: [nav] }
+  - { p: [14, 15], k: { t: $$mdi:numeric$$, h: numbers }, a: mid, layers: [nav] }
 
   - { p: [3, 4], k: "↑⇥ ⌦", a: mid, layers: [nav] }
   - {
@@ -1048,7 +1048,7 @@ combos:
       layers: [nav],
     }
   - { p: [17, 18], k: "↓ ⇥", a: mid, layers: [nav] }
-  - { p: [18, 19], k: { h: numbers }, a: mid, layers: [nav] }
+  - { p: [18, 19], k: { t: $$mdi:numeric$$, h: numbers }, a: mid, layers: [nav] }
 
   - { p: [3, 4], k: { t: "q", s: vim }, a: mid, layers: [macros] }
   - { p: [4, 5], k: { t: "@@", s: vim }, a: mid, layers: [macros] }

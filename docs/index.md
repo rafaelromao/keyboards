@@ -377,11 +377,11 @@ And finally, there are a few macros defined specifically for VIM in my *macros* 
 
 ### Directory Navigation
 
-In the *symbols* layer, there are also some macros used to navigate directories in a terminal shell, like `~/`, and `../`.
+In the *macros* layer, there are also some macros used to navigate directories in a terminal shell, like `~/`, `./` and `../`.
 
 ### Programming Symbols
 
-Most of my *symbols* and *numbers* layers were designed with Java and Elixir in mind, but works well also for C#, Python and JavaScript, including combos for `==`, `!=`, `->`, `=>`, `::`, `|>`, `${`, `#{`, and `%{` for example.
+Most of my *symbols* and *numbers* layers were designed with Java and Elixir in mind, but works well also for C#, Python and JavaScript, including combos for `==`, `!=`, `->`, `=>`, `::`, `|>`, `<-`, `${`, `#{`, and `%{` for example.
 
 ![img](img/diagrams/symbols.png)
 ![img](img/diagrams/numbers.png)
