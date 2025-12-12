@@ -52,6 +52,7 @@
         MACRO(mc_cam,                    &macro_tap &kp LC(LA(E)))
         MACRO(mc_screenshot,             &macro_tap &kp LC(LA(S)))
         MACRO(mc_emoji,                  &macro_tap &kp LC(LA(J)))
+        MACRO(mc_calc,                   &macro_tap &kp LC(LA(C)))
 
         // Navigation
 

@@ -138,6 +138,10 @@
         MACRO(mc_end_forward,         &kp END &kp ENTER &kp PIPE &kp GT)
         TAPHOLD_TP(th_forward,        &mc_forward, &mc_end_forward)
 
+        MACRO(mc_backward,            &kp LT &kp MINUS)
+        MACRO(mc_end_backward,        &kp END &kp ENTER &kp PIPE &kp GT)
+        TAPHOLD_TP(th_backward,       &mc_backward, &mc_end_backward)
+
         MACRO(mc_concat,              &kp LT &kp GT)
         MACRO(mc_end_concat,          &kp END &kp LT &kp GT)
         TAPHOLD_TP(th_concat,         &mc_concat, &mc_end_concat)
@@ -178,6 +182,7 @@
         TAPHOLD_TP(th_noteq,          &mc_noteq, &mc_end_noteq)
 
         MACRO(mc_tisl,                &kp TILDE &kp SPACE &kp SLASH)
+        MACRO(mc_ds,                  &kp DOT &kp SLASH)
         MACRO(mc_dds,                 &kp DOT &kp DOT &kp SLASH)
 
         MACRO(mc_ord_o,               &kp LA(N0))

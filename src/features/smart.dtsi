@@ -128,11 +128,11 @@
 
         // ******************** SMART THUMBS ******************** //
 
-        MOD_MORPH(mm_space_lock    , MOD_LCTL|MOD_RCTL, &mc_lock, &kp SPACE)
-        MOD_MORPH(mm_caps_sleep    , MOD_LCTL|MOD_RCTL, &mc_sleep, &tc_smart_word)
+        MOD_MORPH(mm_space_lock , MOD_LCTL|MOD_RCTL, &mc_lock, &kp SPACE)
+        MOD_MORPH(mm_rep_sleep  , MOD_LCTL|MOD_RCTL, &mc_sleep, &alternate_repeat_key)
         
-        LAYERTAP_TP(th_spc_lck, &mm_space_lock)
-        LAYERTAP_TP(th_cps_slp, &mm_caps_sleep)
+        LAYERTAP_TP(th_sp_lck , &mm_space_lock)
+        LAYERTAP_TP(th_rep_slp, &mm_rep_sleep)
 
         MACRO(mc_alpha2, &sl ALPHA2)
         MACRO(mc_sft_a2, &sl SFT_A2)
