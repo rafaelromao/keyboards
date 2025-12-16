@@ -2,8 +2,15 @@
 
 KEYBOARD_HOME="$(pwd)"
 ZMK="${1:-zmkfirmware/zmk}"
+REVISION="${2:-v0.3}"
+SDK="${3:-~/zephyr-sdk-0.16.3}"
 ZMK_MODULE="modules/$ZMK"
 export ZMK_HOME="$KEYBOARD_HOME/$ZMK_MODULE"
+
+echo "ZMK: $ZMK"
+echo "ZMK_HOME: $ZMK_HOME"
+echo "REVISION: $REVISION"
+echo "SDK: $SDK"
 
 INIT=false
 if [[ ! -d "$ZMK_HOME/.west" ]]
@@ -21,6 +28,7 @@ if [[ "${INIT}" == "true" ]]
 then
     echo "Initializing West..."
     cd $ZMK_HOME
+    git checkout $REVISION
     west init -l app/
     west update
     west zephyr-export
@@ -29,14 +37,18 @@ fi
 
 echo "Exporting Zephyr Toolchain..."
 cd $ZMK_HOME
+git checkout $REVISION
 unset ZEPHYR_TOOLCHAIN_VARIANT
 unset GNUARMEMB_TOOLCHAIN_PATH
-export ZEPHYR_SDK_INSTALL_DIR=~/zephyr-sdk-0.16.3
+export ZEPHYR_SDK_INSTALL_DIR=$SDK
+echo "ZEPHYR_SDK_INSTALL_DIR = $ZEPHYR_SDK_INSTALL_DIR"
 cd $KEYBOARD_HOME
 
+echo "Creating Aliases..."
 alias build=./scripts/build.sh
 alias draw=./scripts/draw.sh
 alias b=./scripts/b.sh
 
+echo "Configuring venv..."
 python3 -m venv .venv
 source .venv/bin/activate
