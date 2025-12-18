@@ -68,7 +68,9 @@ This keymap is implemented using ZMK, with the following external modules:
 
 Unlike most ZMK users, I don't use GitHub Actions to build the firmware for my keyboards, and since I come from a legacy repo structure, from the time I used QMK and when they didn't even support external userspaces, I use git submodules to import ZMK and everything else I need into my repo, then I build the firmware using a custom script. 
 
-[This script](scripts/build.sh) will assume the [toolchain](https://zmk.dev/docs/development/setup) is already installed, but other than that, it will do its best to keep the build process as simple as possible.
+To make the local build setup easier, I have a [Containerfile](Containerfile) that installs all the toolchain into a Ubuntu container. The [init](init.sh) script is then used to run this container.
+
+Into the container, I can use my custom [build](scripts/build.sh) script to build the firmware for all my keyboards.
 
 Here are some usage examples:
 
@@ -83,10 +85,14 @@ build rafaelromao/wired_diamond l LINUX -b seeeduino_xiao_rp2040 -z rafaelromao/
 build rafaelromao/choc_diamond cd MACOS -e dongle_display -m englmaxi/zmk-dongle-display
 ```
 
-I also need to initialize my terminal with the following script before using the `build` command:
+To make it even simpler, I have a [b](scripts/b.sh) script that can be used to build the central sides using default configurations. 
 
-```bash
-cd ~/keyboards ; source ./scripts/init.sh
+Example:
+
+```sh
+b wd # builds the left side of the wired diamond keyboard for Linux, equivalent to the command below
+
+build rafaelromao/wired_diamond l LINUX -b seeeduino_xiao_rp2040 -z rafaelromao/zmk
 ```
 
 ## Diagram

@@ -206,7 +206,7 @@ layers:
         { t: $$mdi:ray-start-arrow$$, s: "leader-key" },
         { t: $$mdi:folder-open$$, s: files},
         { t: "$$mdi:emoticon-happy-outline$$", s: "emojis", h: toggles },
-        { type: held },
+        { type: held alternate },
       ]
     - [
         { t: $$mdi:close$$, s: close},
