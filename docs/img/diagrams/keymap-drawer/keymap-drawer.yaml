@@ -117,37 +117,6 @@ layers:
     - null
     - null
     - null
-  vim-remaps:
-    - [
-        { t: b, s: vim, type: ghost },
-        { t: w, s: vim, type: ghost },
-        { t: e, s: vim, type: ghost },
-        { t: g, s: vim, type: ghost },
-        { type: ghost },
-        { type: ghost },
-      ]
-    - [
-        { type: ghost },
-        { type: ghost },
-        { type: ghost },
-        { type: ghost },
-        { t: h, s: vim, type: ghost },
-        { t: j, s: vim, type: ghost },
-        { t: k, s: vim, type: ghost },
-        { t: l, s: vim, type: ghost },
-      ]
-    - [
-        { type: ghost },
-        { type: ghost },
-        { type: ghost },
-        { type: ghost },
-        { type: ghost },
-        { type: ghost },
-      ]
-    - { type: ghost }
-    - { type: ghost }
-    - { type: ghost }
-    - { type: ghost }
   numbers:
     - [{ t: "{", h: "⇥ {" }, { t: "}", h: "⇥ }" }, "\\", 7, 8, 9]
     - [
@@ -199,14 +168,14 @@ layers:
         { t: "NUM LOCK" },
       ]
     - [
-        { type: held },
+        { type: held, t: $$mdi:ray-start-arrow$$, s: "leader-key" },
         { t: $$mdi:magnify-minus-outline$$, s: zoom -, h: toggles },
         { t: $$mdi:magnify-plus-outline$$, s: zoom +},
         { t: $$mdi:loupe$$, s: 100% },
-        { t: $$mdi:ray-start-arrow$$, s: "leader-key" },
+        { t: $$mdi:code-block-braces$$, s: vim, h: layer },
         { t: $$mdi:folder-open$$, s: files},
         { t: "$$mdi:emoticon-happy-outline$$", s: "emojis", h: toggles },
-        { type: held alternate },
+        { type: held alternate, t: $$mdi:ray-start-arrow$$, s: "leader-key" },
       ]
     - [
         { t: $$mdi:close$$, s: close},
@@ -220,6 +189,37 @@ layers:
     - { t: $$mdi:keyboard-space$$, h: func }
     - { t: $$mdi:keyboard-space$$, h: macros }
     - { h: text, s: repeat, t: $$mdi:repeat$$ }
+  vim-layer:
+    - [
+        { t: q },
+        { t: r },
+        { t: "@" },
+        { t: g },
+        { t: o, h: alpha1 },
+        { t: u },
+      ]
+    - [
+        null,
+        { h: $$mdi:apple-keyboard-control$$, t: n },
+        { t: s, h: alpha1 },
+        { t: i, h: alpha1 },
+        { t: h },
+        { t: j },
+        { h: $$mdi:apple-keyboard-control$$, t: k },
+        { t: l },
+      ]
+    - [
+        { t: f },
+        { t: c, h: alpha1 },
+        { t: t },
+        { t: b },
+        { t: w },
+        { t: e },
+      ]
+    - { t: ., h: nav }
+    - { t: $$mdi:keyboard-space$$, h: numbers }
+    - { t: ⇧v, h: symbols }
+    - { t: ⌃v, h: media }
   toggles:
     - [
         null,
@@ -732,7 +732,7 @@ layers:
 combos:
   - {
       p: [0, 1],
-      k: "⎋",
+      k: { t: "⎋", s: vim, h: layer },
       a: mid,
       layers:
         [
@@ -741,8 +741,14 @@ combos:
           shifted1,
           shifted2,
           ç-extension,
-          nav,
-          media,
+        ],
+    }
+  - {
+      p: [0, 1],
+      k: "⎋",
+      a: mid,
+      layers:
+        [
           mehs,
         ],
     }
@@ -808,70 +814,84 @@ combos:
   - { p: [18, 19], k: { t: ":", h: "⇥ :" }, a: mid, layers: [shifted1] }
 
   - {
-      p: [1, 2],
-      k: { t: "z", s: vim, type: ghost },
+      p: [0, 1],
+      k: { t: "alpha1" },
       a: mid,
-      layers: [vim-remaps],
+      w: 48,
+      layers: [vim-layer],
+    }
+  - {
+      p: [1, 2],
+      k: { t: "@@" },
+      a: mid,
+      layers: [vim-layer],
     }
   - {
       p: [3, 4],
-      k: { t: "x", s: vim, type: ghost },
+      k: { t: "x" },
       a: mid,
-      layers: [vim-remaps],
+      layers: [vim-layer],
     }
   - {
-      p: [3, 4, 5],
-      k: { t: "d", s: vim, type: ghost },
-      a: top,
-      layers: [vim-remaps],
+      p: [4, 5],
+      k: { t: "d" },
+      a: mid,
+      layers: [vim-layer],
     }
   - {
       p: [7, 8],
-      k: { t: "q", s: vim, type: ghost },
+      k: { t: "z" },
       a: mid,
-      layers: [vim-remaps],
+      layers: [vim-layer],
     }
   - {
       p: [8, 9],
-      k: { t: "m", s: vim, type: ghost },
+      k: { t: "m" },
       a: mid,
-      layers: [vim-remaps],
+      layers: [vim-layer],
     }
   - {
       p: [10, 11],
-      k: { t: "i", s: vim, type: ghost },
+      k: { t: "a", h: alpha1 },
       a: mid,
-      layers: [vim-remaps],
+      layers: [vim-layer],
     }
   - {
       p: [11, 12],
-      k: { t: "y", s: vim, type: ghost },
+      k: { t: "y" },
       a: mid,
-      layers: [vim-remaps],
+      layers: [vim-layer],
     }
   - {
       p: [10, 11, 12],
-      k: { t: "p", s: vim, type: ghost },
+      k: { t: "p" },
       a: bottom,
-      layers: [vim-remaps],
+      layers: [vim-layer],
+    }
+  - {
+      p: [14, 15],
+      k: { t: "numbers", s: auto-layer, h: nav },
+      a: mid,
+      w: 48,
+      layers: [vim-layer],
     }
   - {
       p: [15, 16],
-      k: { t: "v", s: vim, type: ghost },
+      k: { t: "`" },
       a: mid,
-      layers: [vim-remaps],
+      layers: [vim-layer],
     }
   - {
       p: [17, 18],
-      k: { t: "a", s: vim, type: ghost },
+      k: { t: "v" },
       a: mid,
-      layers: [vim-remaps],
+      layers: [vim-layer],
     }
   - {
-      p: [17, 18, 19],
-      k: { t: "r", s: vim, type: ghost },
-      a: bottom,
-      layers: [vim-remaps],
+      p: [18, 19],
+      k: { t: ";" },
+      a: mid,
+      layers: [vim-layer],
     }
 
   - { p: [1, 2], k: 'dead "', a: mid, layers: [alpha2, plain2, shifted2] }
