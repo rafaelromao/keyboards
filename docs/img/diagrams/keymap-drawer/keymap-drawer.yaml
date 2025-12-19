@@ -117,6 +117,37 @@ layers:
     - null
     - null
     - null
+  vim-layer:
+    - [
+        { t: b },
+        { t: w },
+        { t: e },
+        { t: g },
+        { t: o, h: alpha1 },
+        { t: u },
+      ]
+    - [
+        { h: shortcuts, t: q },
+        { h: $$mdi:apple-keyboard-control$$, t: c, h: alpha1 },
+        { t: s, h: alpha1 },
+        { t: r, h: alpha1 },
+        { t: h },
+        { t: j },
+        { h: $$mdi:apple-keyboard-control$$, t: k },
+        { h: shortcuts, t: l },
+      ]
+    - [
+        { t: f },
+        { t: t },
+        { t: n },
+        { t: i, h: alpha1 },
+        { t: a, h: alpha1 },
+        { t: "." },
+      ]
+    - { t: ., h: nav }
+    - { t: $$mdi:keyboard-space$$, h: numbers }
+    - { t: ⇧v, h: symbols }
+    - { t: ⌃v, h: media }
   numbers:
     - [{ t: "{", h: "⇥ {" }, { t: "}", h: "⇥ }" }, "\\", 7, 8, 9]
     - [
@@ -182,44 +213,13 @@ layers:
         { t: $$mdi:refresh$$, s: refresh},
         { t: $$mdi:backup-restore$$, s: reopen },
         { t: $$mdi:content-cut$$, s: clip },
-        null,
-        null
+        { t: $$mdi:note-multiple-outline$$, s: notes },
+        { t: $$mdi:console-line$$, s: term },
       ]
     - { h: text, s: repeat, t: $$mdi:repeat$$ }
     - { t: $$mdi:keyboard-space$$, h: func }
     - { t: $$mdi:keyboard-space$$, h: macros }
     - { h: text, s: repeat, t: $$mdi:repeat$$ }
-  vim-layer:
-    - [
-        { t: q },
-        { t: r },
-        { t: "@" },
-        { t: g },
-        { t: o, h: alpha1 },
-        { t: u },
-      ]
-    - [
-        null,
-        { h: $$mdi:apple-keyboard-control$$, t: n },
-        { t: s, h: alpha1 },
-        { t: i, h: alpha1 },
-        { t: h },
-        { t: j },
-        { h: $$mdi:apple-keyboard-control$$, t: k },
-        { t: l },
-      ]
-    - [
-        { t: f },
-        { t: c, h: alpha1 },
-        { t: t },
-        { t: b },
-        { t: w },
-        { t: e },
-      ]
-    - { t: ., h: nav }
-    - { t: $$mdi:keyboard-space$$, h: numbers }
-    - { t: ⇧v, h: symbols }
-    - { t: ⌃v, h: media }
   toggles:
     - [
         null,
@@ -822,7 +822,7 @@ combos:
     }
   - {
       p: [1, 2],
-      k: { t: "@@" },
+      k: { t: "`" },
       a: mid,
       layers: [vim-layer],
     }
@@ -852,7 +852,7 @@ combos:
     }
   - {
       p: [10, 11],
-      k: { t: "a", h: alpha1 },
+      k: { t: "p" },
       a: mid,
       layers: [vim-layer],
     }
@@ -860,12 +860,6 @@ combos:
       p: [11, 12],
       k: { t: "y" },
       a: mid,
-      layers: [vim-layer],
-    }
-  - {
-      p: [10, 11, 12],
-      k: { t: "p" },
-      a: bottom,
       layers: [vim-layer],
     }
   - {
@@ -877,7 +871,7 @@ combos:
     }
   - {
       p: [15, 16],
-      k: { t: "`" },
+      k: { t: "@" },
       a: mid,
       layers: [vim-layer],
     }

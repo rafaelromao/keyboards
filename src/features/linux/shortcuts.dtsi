@@ -53,6 +53,8 @@
         MACRO(mc_screenshot,             &macro_tap &kp LC(LA(S)))
         MACRO(mc_emoji,                  &macro_tap &kp LC(LA(J)))
         MACRO(mc_calc,                   &macro_tap &kp LC(LA(C)))
+        MACRO(mc_notes,                  &macro_tap &kp LC(LA(N)))
+        MACRO(mc_term,                   &macro_tap &kp LC(LA(T)))
 
         // Navigation
 

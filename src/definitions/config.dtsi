@@ -14,35 +14,37 @@
 
 #define ALPHA2 3
 
-#define NUM 4
-#define SYM 5
+#define VIM 4
 
-#define SEN_CASE 6
-#define CCEDIL 7
-#define SFT_A2 8
-#define CASE_A2 9
-#define CASE_CCEDIL 10
+#define NUM 5
+#define SYM 6
 
-#define SHORTS 11
-#define TOGS 12
-#define MEHS 13
+#define SEN_CASE 7
+#define CCEDIL 8
+#define SFT_A2 9
+#define CASE_A2 10
+#define CASE_CCEDIL 11
 
-#define PLAIN1 14
-#define PLAIN2 15
-#define SFT_PLAIN2 16
-#define ALTREP2 17
+#define SHORTS 12
+#define TOGS 13
+#define MEHS 14
 
-#define NAV 18
+#define PLAIN1 15
+#define PLAIN2 16
+#define SFT_PLAIN2 17
+#define ALTREP2 18
 
-#define NUM_CP 19
-#define SYM_CP 20
+#define NAV 19
 
-#define MEDIA 21
-#define NAV_CP 22
+#define NUM_CP 20
+#define SYM_CP 21
 
-#define TEXT 23
-#define FUN 24
-#define MACROS 25
+#define MEDIA 22
+#define NAV_CP 23
+
+#define TEXT 24
+#define FUN 25
+#define MACROS 26
 
 // Settings
 

@@ -202,5 +202,14 @@
         MACRO(mc_otask, &kp MINUS &kp SPACE &kp LBKT &kp SPACE &kp RBKT &kp SPACE)
         MACRO(mc_oref,  &kp LBKT &kp LBKT)
         MACRO(mc_end_do_ent, &kp END &kp D &kp O &kp ENTER)
+
+        // Vim
+
+        MACRO(mc_esc_vim,  &kp ESC &to VIM)
+
+        MACRO(mc_sft_v,  &kp LSFT(V))
+        MACRO(mc_ctl_v,  &kp LCTL(V))
+        LAYERTAP_TP(lt_sft_v,  &mc_sft_v)
+        LAYERTAP_TP(lt_ctl_v,  &mc_ctl_v)
     };
 };

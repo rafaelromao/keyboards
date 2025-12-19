@@ -162,11 +162,6 @@ echo "Extra Shields: ${EXTRA_SHIELDS[*]}"
 echo "Flags: ${FLAGS[*]}"
 echo "Modules: ${MODULES[*]}"
 
-# Init the zmk repo 
-export ZMK_HOME="$PROJECT_DIR/$ZMK_MODULE"
-echo "Initializing zmk..."
-source ./scripts/init.sh $ZMK
-
 # Create a new flags.h file
 OUTPUT_FILE="$PROJECT_DIR/src/definitions/flags.h"
 [ -f "$OUTPUT_FILE" ] && rm "$OUTPUT_FILE"
