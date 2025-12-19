@@ -163,7 +163,16 @@
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &trans
    &kp D               &kp N               &kp S               &kp T               &kp W               &kp Z               &kp R               &kp A               &kp E               &kp I 
    &kp Y               &kp F               &kp C               &kp P               &kp V               &kp J               &kp H               &kp COMMA           &kp DOT             &trans 
-                                           &none               &ht_repeat NAV 0    &lt NUM_CP SPACE    &msl_p2 SYM_CP 0    &ht_sft_p2 MEDIA    &none
+                                           &none               &ht_repeat NAV 0    &lt NUM_CP SPACE    &msl_p2 SYM_CP 0    &ht_sft_p1 MEDIA    &none
+                           >;
+                };
+                shifted_plain1_layer {
+                     display-name = "PLAIN";
+                     bindings = <
+   &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &trans
+   &kp LS(D)           &kp LS(N)           &kp LS(S)           &kp LS(T)           &kp LS(W)           &kp LS(Z)           &kp LS(R)           &kp LS(A)           &kp LS(E)           &kp LS(I)
+   &kp LS(Y)           &kp LS(F)           &kp LS(C)           &kp LS(P)           &kp LS(V)           &kp LS(J)           &kp LS(H)           &kp LS(COMMA)       &kp LS(DOT)         &trans 
+                                           &none               &ht_repeat NAV 0    &lt NUM_CP SPACE    &msl_p2 SYM_CP 0    &mo MEDIA           &none
                            >;
                 };
                 plain2_layer {

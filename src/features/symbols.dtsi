@@ -80,9 +80,8 @@
         MACRO(mc_end_lbkt,            &kp END &kp LBKT)
         TAPHOLD_TP(th_lbkt,           &mc_lbkt, &mc_end_lbkt)
 
-        MACRO(mc_qmark,               &kp QMARK )
-        MACRO(mc_end_qmark,           &kp END &kp QMARK )
-        TAPHOLD_TP(th_qmark,          &mc_qmark, &mc_end_qmark)
+        MACRO(mc_end_qmark,           &kp END &mc_qmark_a1 )
+        TAPHOLD_TP(th_qmark,          &mc_qmark_a1, &mc_end_qmark)
 
         MACRO(mc_rbrc,                &kp RBRC)
         MACRO(mc_end_rbrc,            &kp END &kp RBRC)
@@ -214,6 +213,8 @@
 
         MACRO(mc_colon_a1,  &kp COLON &to ALPHA1)
         MACRO(mc_slash_a1,  &kp SLASH &to ALPHA1)
+        MACRO(mc_qmark_a1,  &kp QMARK &to ALPHA1)
+
         MACRO(mc_o_a1,  &kp O &to ALPHA1)
         MACRO(mc_a_a1,  &kp A &to ALPHA1)
         MACRO(mc_i_a1,  &kp I &to ALPHA1)

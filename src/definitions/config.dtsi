@@ -30,21 +30,22 @@
 #define MEHS 14
 
 #define PLAIN1 15
-#define PLAIN2 16
-#define SFT_PLAIN2 17
-#define ALTREP2 18
+#define SFT_PLAIN1 16
+#define PLAIN2 17
+#define SFT_PLAIN2 18
+#define ALTREP2 19
 
-#define NAV 19
+#define NAV 20
 
-#define NUM_CP 20
-#define SYM_CP 21
+#define NUM_CP 21
+#define SYM_CP 22
 
-#define MEDIA 22
-#define NAV_CP 23
+#define MEDIA 23
+#define NAV_CP 24
 
-#define TEXT 24
-#define FUN 25
-#define MACROS 26
+#define TEXT 25
+#define FUN 26
+#define MACROS 27
 
 // Settings
 

@@ -184,13 +184,15 @@
             bindings = <&mm_hold_alt_num_gui>, <&mm_tap_alt_space_gui>;
         };
 
-        ht_sft_p2: ht_sft_p2 {
+        MACRO(mc_sft_p1, &sl SFT_PLAIN1)
+
+        ht_sft_p1: ht_sft_p1 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <QUICK_TAP_TERM>;
             flavor = "tap-preferred";
             quick-tap-ms = <0>;
-            bindings = <&mo>, <&tc_shift>;
+            bindings = <&mo>, <&mc_sft_p1>;
         };
 
         MACRO(mc_msk_space, &kp SPACE &to ALPHA1)
