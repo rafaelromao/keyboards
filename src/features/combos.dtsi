@@ -30,7 +30,7 @@
         compatible = "zmk,combos";
 
         COMBO(cb_backspace,     RTM RTR,         &kp BACKSPACE,          ALL_LAYERS_WITH_BACKSPACE)
-        COMBO(cb_esc,           LTR LTM,         &mc_esc_vim,            ALL_LAYERS_WITH_ESC_VIM)
+        COMBO(cb_esc_vim,       LTR LTM,         &mc_esc_vim,            ALL_LAYERS_WITH_ESC_VIM)
         COMBO(cb_esc,           LTR LTM,         &kp ESC,                MEHS)
 
         COMBO(cb_boot_l,        LTR LBI,         &bootloader,            ALL_LAYERS)

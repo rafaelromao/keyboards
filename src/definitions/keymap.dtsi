@@ -56,7 +56,7 @@
    &none               &kp B               &kp W               &kp E               &none               &none               &kp G               &kp O               &kp U               &none
    &lt SHORTS Q        &mt LCTL C          &kp S               &kp R               &none               &none               &kp H               &kp J               &kp K               &lt SHORTS L
    &none               &kp F               &kp T               &kp N               &none               &none               &kp I               &kp A               &kp DOT             &none
-                                           &none               &lt NAV DOT         &ltn_num_spc 0 0    &lt_sft_v SYM 0     &lt_clt_v MEDIA 0   &none
+                                           &none               &lt NAV DOT         &ltn_num_spc 0 0    &lt_sft_v SYM 0     &lt_ctl_v MEDIA 0   &none
                         >;
                 };
 

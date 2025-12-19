@@ -207,8 +207,8 @@
 
         MACRO(mc_esc_vim,  &kp ESC &to VIM)
 
-        MACRO(mc_sft_v,  &kp LSFT(V))
-        MACRO(mc_ctl_v,  &kp LCTL(V))
+        MACRO(mc_sft_v,  &kp LS(V))
+        MACRO(mc_ctl_v,  &kp LC(V))
         LAYERTAP_TP(lt_sft_v,  &mc_sft_v)
         LAYERTAP_TP(lt_ctl_v,  &mc_ctl_v)
     };
