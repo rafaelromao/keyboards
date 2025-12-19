@@ -211,5 +211,14 @@
         MACRO(mc_ctl_v,  &kp LC(V))
         LAYERTAP_TP(lt_sft_v,  &mc_sft_v)
         LAYERTAP_TP(lt_ctl_v,  &mc_ctl_v)
+
+        MACRO(mc_o_a1,  &kp O &to ALPHA1)
+        MACRO(mc_a_a1,  &kp A &to ALPHA1)
+        MACRO(mc_i_a1,  &kp I &to ALPHA1)
+        MACRO(mc_c_a1,  &kp C &to ALPHA1)
+        MACRO(mc_s_a1,  &kp S &to ALPHA1)
+
+        MODTAP_TP(lt_c_a1, mc_c_a1)
+        MODTAP_TP(lt_s_a1, mc_s_a1)
     };
 };

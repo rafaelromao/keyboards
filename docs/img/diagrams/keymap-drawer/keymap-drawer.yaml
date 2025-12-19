@@ -123,16 +123,16 @@ layers:
         { t: w },
         { t: e },
         { t: g },
-        { t: o, h: alpha1 },
+        { t: o, s: alpha1 },
         { t: u },
       ]
     - [
         { h: shortcuts, t: q },
-        { h: $$mdi:apple-keyboard-control$$, t: c, h: alpha1 },
-        { t: s, h: alpha1 },
-        { t: r, h: alpha1 },
-        { t: h },
-        { t: j },
+        { h: $$mdi:apple-keyboard-control$$, t: c, s: alpha1 },
+        { h: $$mdi:apple-keyboard-option$$, t: s, s: alpha1 },
+        { h: $$mdi:apple-keyboard-shift$$, t: r },
+        { h: $$mdi:apple-keyboard-shift$$, t: h },
+        { h: $$mdi:apple-keyboard-option$$, t: j },
         { h: $$mdi:apple-keyboard-control$$, t: k },
         { h: shortcuts, t: l },
       ]
@@ -140,8 +140,8 @@ layers:
         { t: f },
         { t: t },
         { t: n },
-        { t: i, h: alpha1 },
-        { t: a, h: alpha1 },
+        { t: i, s: alpha1 },
+        { t: a, s: alpha1 },
         { t: "." },
       ]
     - { t: ., h: nav }
