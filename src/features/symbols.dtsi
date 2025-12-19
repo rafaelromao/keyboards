@@ -165,9 +165,8 @@
         MACRO(mc_end_excl,            &kp END &kp EXCL )
         TAPHOLD_TP(th_excl,           &mc_excl, &mc_end_excl)
 
-        MACRO(mc_colon,               &kp COLON)
-        MACRO(mc_end_colon,           &kp END &kp COLON)
-        TAPHOLD_TP(th_colon,          &mc_colon, &mc_end_colon)
+        MACRO(mc_end_colon,           &kp END &mc_colon_a1)
+        TAPHOLD_TP(th_colon,          &mc_colon_a1, &mc_end_colon)
 
         MACRO(mc_eql,                 &kp EQUAL)
         MACRO(mc_end_eql,             &kp END &kp EQUAL)
@@ -205,6 +204,7 @@
 
         // Vim
 
+        MACRO(mc_ent_vim,  &kp ENTER &to VIM)
         MACRO(mc_esc_vim,  &kp ESC &to VIM)
 
         MACRO(mc_sft_v,  &kp LS(V))
@@ -212,13 +212,17 @@
         LAYERTAP_TP(lt_sft_v,  &mc_sft_v)
         LAYERTAP_TP(lt_ctl_v,  &mc_ctl_v)
 
+        MACRO(mc_colon_a1,  &kp COLON &to ALPHA1)
+        MACRO(mc_slash_a1,  &kp SLASH &to ALPHA1)
         MACRO(mc_o_a1,  &kp O &to ALPHA1)
         MACRO(mc_a_a1,  &kp A &to ALPHA1)
         MACRO(mc_i_a1,  &kp I &to ALPHA1)
         MACRO(mc_c_a1,  &kp C &to ALPHA1)
         MACRO(mc_s_a1,  &kp S &to ALPHA1)
+        MACRO(mc_r_p1,  &kp R &sl PLAIN1)
 
-        MODTAP_TP(lt_c_a1, mc_c_a1)
-        MODTAP_TP(lt_s_a1, mc_s_a1)
+        MODTAP_TP(mt_c_a1, &mc_c_a1)
+        MODTAP_TP(mt_s_a1, &mc_s_a1)
+        MODTAP_TP(mt_r_p1, &mc_r_p1)
     };
 };

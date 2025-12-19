@@ -130,7 +130,7 @@ layers:
         { h: shortcuts, t: q },
         { h: $$mdi:apple-keyboard-control$$, t: c, s: alpha1 },
         { h: $$mdi:apple-keyboard-option$$, t: s, s: alpha1 },
-        { h: $$mdi:apple-keyboard-shift$$, t: r },
+        { h: $$mdi:apple-keyboard-shift$$, t: r, s: plain1 },
         { h: $$mdi:apple-keyboard-shift$$, t: h },
         { h: $$mdi:apple-keyboard-option$$, t: j },
         { h: $$mdi:apple-keyboard-control$$, t: k },
@@ -191,12 +191,12 @@ layers:
     - { t: ▽ }
   shortcuts:
     - [
-        { t: "CAPS LOCK" },
-        { t: "CAPS LINE", s: auto-layer },
-        { t: "CAPS word", s: auto-layer },
-        { t: $$mdi:numeric$$, h: "numbers", s: "auto-layer" },
         { t: $$mdi:calculator$$, s: "calc" },
-        { t: "NUM LOCK" },
+        { t: $$mdi:microsoft-visual-studio-code$$, s: "editor" },
+        { t: $$mdi:chat-processing-outline$$, s: "ai" },
+        { t: $$mdi:numeric$$, h: "numbers", s: "auto-layer" },
+        { t: $$mdi:web$$, s: "browser" },
+        { t: $$mdi:calculator$$, s: "activity" },
       ]
     - [
         { type: held, t: $$mdi:ray-start-arrow$$, s: "leader-key" },
@@ -222,12 +222,12 @@ layers:
     - { h: text, s: repeat, t: $$mdi:repeat$$ }
   toggles:
     - [
-        null,
+        { t: CAPS LOCK },
         { t: plain1 },
         { t: numbers },
         { t: numbers },
         { t: plain1 },
-        null,
+        { t: NUM LOCK },
       ]
     - [
         { type: held },
@@ -916,7 +916,7 @@ combos:
     }
   - {
       p: [10, 11, 12],
-      k: { s: "vim", t: "p", h: "meh" },
+      k: { t: "meh ⏎", h: "meh" },
       layers: [shortcuts],
       draw_separate: true,
     }
@@ -929,7 +929,7 @@ combos:
     }
   - {
       p: [17, 18, 19],
-      k: { s: "vim", t: "r", h: "hyper" },
+      k: { t: "hyper ⏎", h: "hyper" },
       layers: [shortcuts],
       draw_separate: true,
     }
@@ -993,6 +993,8 @@ combos:
   - { p: [17, 22], k: { t: $$mdi:backspace-reverse-outline$$, h: del }, layers: [nav], draw_separate: true }
   - { p: [18, 22], k: { t: $$mdi:format-horizontal-align-left$$, h: home }, layers: [nav], draw_separate: true }
   - { p: [19, 22], k: { t: $$mdi:format-horizontal-align-right$$, h: end }, layers: [nav], draw_separate: true }
+
+  - { p: [11, 12, 22], k: { t: "enter", s: shortcuts, h: "vim-layer" }, layers: [shortcuts], draw_separate: true }
 
   - { p: [0, 1], k: "⇥{ ⏎", a: mid, layers: [numbers] }
   - { p: [1, 2], k: "⇥do ⏎", a: mid, layers: [numbers] }

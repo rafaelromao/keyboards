@@ -53,8 +53,12 @@
         MACRO(mc_screenshot,             &macro_tap &kp LC(LA(S)))
         MACRO(mc_emoji,                  &macro_tap &kp LC(LA(J)))
         MACRO(mc_calc,                   &macro_tap &kp LC(LA(C)))
-        MACRO(mc_notes,                  &macro_tap &kp LC(LA(N)))
+        MACRO(mc_notes,                  &macro_tap &kp LC(LA(O)))
         MACRO(mc_term,                   &macro_tap &kp LC(LA(T)))
+        MACRO(mc_browser,                &macro_tap &kp LC(LA(B)))
+        MACRO(mc_editor,                 &macro_tap &kp LC(LA(N)))
+        MACRO(mc_ai,                     &macro_tap &kp LC(LA(I)))
+        MACRO(mc_activity,               &macro_tap &kp LC(LA(A)))
 
         // Navigation
 

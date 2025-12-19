@@ -87,7 +87,7 @@
             ignore-alphas;
             ignore-modifiers;
 			#binding-cells = <1>;  
-            continue-list = <UNDERSCORE MINUS COMMA BACKSPACE DELETE SQT TILDE CARET GRAVE SPACE>;
+            continue-list = <UNDERSCORE MINUS COMMA BACKSPACE DELETE SQT TILDE CARET GRAVE LEFT RIGHT SPACE>;
         };
         MACRO(tc_smart_line, &smart_line CPLK_A1)
 
@@ -98,7 +98,7 @@
             ignore-alphas;
             ignore-modifiers;
 			#binding-cells = <1>;  
-            continue-list = <UNDERSCORE MINUS COMMA BACKSPACE DELETE SQT TILDE CARET GRAVE>;
+            continue-list = <UNDERSCORE MINUS COMMA BACKSPACE DELETE SQT TILDE CARET GRAVE LEFT RIGHT>;
         };
         MACRO(tc_smart_word, &smart_word CASE_A1)
 

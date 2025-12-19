@@ -54,7 +54,7 @@
                      display-name = "VIM";
                      bindings = <
    &none               &kp B               &kp W               &kp E               &none               &none               &kp G               &mc_o_a1            &kp U               &none
-   &lt SHORTS Q        &mt_c_a1 LCTL 0     &mt_s_a1 LALT 0     &mt LSFT R          &none               &none               &mt LSFT H          &mt LALT J          &mt LCTL K          &lt SHORTS L
+   &lt SHORTS Q        &mt_c_a1 LCTL 0     &mt_s_a1 LALT 0     &mt_r_p1 LSFT 0     &none               &none               &mt LSFT H          &mt LALT J          &mt LCTL K          &lt SHORTS L
    &none               &kp F               &kp T               &kp N               &none               &none               &mc_i_a1            &mc_a_a1            &kp DOT             &none
                                            &none               &lt NAV DOT         &ltn_num_spc 0 0    &lt_sft_v SYM 0     &lt_ctl_v MEDIA 0   &none
                         >;
@@ -74,7 +74,7 @@
                      bindings = <
    &none               &mc_tilde           &kp HASH            &th_sqo 0 0         &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon 0 0       &none
    &kp AT              &th_caret_z 0 0     &kp DOLLAR          &th_dqo 0 0         &none               &none               &th_qmark 0 0       &kp MINUS           &kp PLUS            &lt MACROS COMMA
-   &none               &mc_lt              &mc_gt              &th_bti 0 0         &none               &none               &th_excl 0 0        &kp SLASH           &kp STAR            &none 
+   &none               &mc_lt              &mc_gt              &th_bti 0 0         &none               &none               &th_excl 0 0        &mc_slash_a1        &kp STAR            &none 
                                            &none               &trans              &hlt NUM_CP SPACE   &none               &trans              &none        
                            >;
                 };
