@@ -117,7 +117,7 @@ layers:
     - null
     - null
     - null
-  vim-layer:
+  vim:
     - [
         { t: b },
         { t: w },
@@ -195,8 +195,8 @@ layers:
         { t: $$mdi:microsoft-visual-studio-code$$, s: "editor" },
         { t: $$mdi:chat-processing-outline$$, s: "ai" },
         { t: $$mdi:web$$, s: "browser" },
-        { t: $$mdi:keyboard-return$$, s: vim-layer },
-        { t: "⎋", s: vim-layer },
+        { t: $$mdi:keyboard-return$$, s: enter, h: vim },
+        { t: "⎋", s: esc, h: vim},
       ]
     - [
         { type: held, t: $$mdi:ray-start-arrow$$, s: "leader-key" },
@@ -242,8 +242,8 @@ layers:
     - [
         { t: plain1},
         { t: mehs },
-        { t: vim-layer },
-        { t: vim-layer },
+        { t: vim },
+        { t: vim },
         { t: mehs },
         { t: plain1 },
       ]
@@ -450,7 +450,7 @@ layers:
     - [
         null,
         { t: "⌘/|⌃/", s: "comment" },
-        { t: "haha⏎", s: "laugh" },
+        { t: "⏎", s: "laugh" },
         { t: '"0p', s: vim },
         { t: '"+p', s: vim },
         { t: '"+y', s: vim },
@@ -741,7 +741,7 @@ combos:
           shifted1,
           shifted2,
           ç-extension,
-          vim-layer
+          vim
         ],
     }
   - {
@@ -786,7 +786,7 @@ combos:
       k: "alpha1",
       a: top,
       w: 48,
-      layers: [numbers, mehs, nav, media, plain1, func, vim-layer],
+      layers: [numbers, mehs, nav, media, plain1, func, vim],
     }
 
   - { p: [1, 2], k: "k", a: mid, layers: [alpha1, plain1] }
@@ -819,74 +819,74 @@ combos:
       k: { t: "alpha1" },
       a: mid,
       w: 48,
-      layers: [vim-layer],
+      layers: [vim],
     }
   - {
       p: [1, 2],
       k: { t: "`" },
       a: mid,
-      layers: [vim-layer],
+      layers: [vim],
     }
   - {
       p: [3, 4],
       k: { t: "x" },
       a: mid,
-      layers: [vim-layer],
+      layers: [vim],
     }
   - {
       p: [4, 5],
       k: { t: "d" },
       a: mid,
-      layers: [vim-layer],
+      layers: [vim],
     }
   - {
       p: [7, 8],
       k: { t: "z" },
       a: mid,
-      layers: [vim-layer],
+      layers: [vim],
     }
   - {
       p: [8, 9],
       k: { t: "m" },
       a: mid,
-      layers: [vim-layer],
+      layers: [vim],
     }
   - {
       p: [10, 11],
       k: { t: "p" },
       a: mid,
-      layers: [vim-layer],
+      layers: [vim],
     }
   - {
       p: [11, 12],
       k: { t: "y" },
       a: mid,
-      layers: [vim-layer],
+      layers: [vim],
     }
   - {
       p: [14, 15],
       k: { t: "numbers", s: auto-layer, h: nav },
       a: mid,
       w: 48,
-      layers: [vim-layer],
+      layers: [vim],
     }
   - {
       p: [15, 16],
       k: { t: "@" },
       a: mid,
-      layers: [vim-layer],
+      layers: [vim],
     }
   - {
       p: [17, 18],
       k: { t: "v" },
       a: mid,
-      layers: [vim-layer],
+      layers: [vim],
     }
   - {
       p: [18, 19],
       k: { t: ";" },
       a: mid,
-      layers: [vim-layer],
+      layers: [vim],
     }
 
   - { p: [1, 2], k: 'dead "', a: mid, layers: [alpha2, plain2, shifted2] }
@@ -995,7 +995,7 @@ combos:
   - { p: [18, 22], k: { t: $$mdi:format-horizontal-align-left$$, h: home }, layers: [nav], draw_separate: true }
   - { p: [19, 22], k: { t: $$mdi:format-horizontal-align-right$$, h: end }, layers: [nav], draw_separate: true }
 
-  - { p: [11, 12, 22], k: { t: "enter", s: shortcuts, h: "vim-layer" }, layers: [shortcuts], draw_separate: true }
+  - { p: [11, 12, 22], k: { t: "enter", s: shortcuts, h: "vim" }, layers: [shortcuts], draw_separate: true }
 
   - { p: [0, 1], k: "⇥{ ⏎", a: mid, layers: [numbers] }
   - { p: [1, 2], k: "⇥do ⏎", a: mid, layers: [numbers] }
