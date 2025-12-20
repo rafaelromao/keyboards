@@ -40,7 +40,7 @@
 
         COMBO(cb_boot_l,        LTR LBI,         &bootloader,            ALL_LAYERS)
         COMBO(cb_boot_r,        RTR RBI,         &bootloader,            ALL_LAYERS)
-        COMBO(cb_cancel,        RHM RHR RHI,     &tc_cancel,             FIXABLE_LAYERS)
+        COMBO(cb_cancel,        RTM RTR RTI,     &tc_cancel,             FIXABLE_LAYERS)
 
         COMBO(cb_save,          LHR LHM L0,      &mc_save,               ALL_LAYERS)
         COMBO(cb_fullscr,       LHM LHI L0,      &mc_fullscr,            ALL_LAYERS)
