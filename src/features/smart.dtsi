@@ -9,7 +9,7 @@
     smart {
         
         // ********************** CANCEL ********************** //
-
+        
         tc_cancel: tc_cancel {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;

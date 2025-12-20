@@ -21,7 +21,7 @@
     #define NUM_LAYERS                  NUM NUM_CP
     #define SYM_LAYERS                  SYM SYM_CP
     #define NAV_LAYERS                  NAV NAV_CP
-    #define ALL_LAYERS                  ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS MEDIA TEXT SHORTS
+    #define ALL_LAYERS                  ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS MEDIA TEXT SHORTS VIM
     #define ALL_LAYERS_WITH_ENTER       ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS MEDIA TEXT
     #define ALL_LAYERS_WITH_BACKSPACE   ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS
     #define ALL_LAYERS_WITH_ESC_VIM     ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS VIM
@@ -38,7 +38,7 @@
 
         COMBO(cb_boot_l,        LTR LBI,         &bootloader,            ALL_LAYERS)
         COMBO(cb_boot_r,        RTR RBI,         &bootloader,            ALL_LAYERS)
-        COMBO(cb_cancel,        RTM RTR RTI,     &kp K_CANCEL,           ALL_LAYERS)
+        COMBO(cb_cancel,        RTM RTR RTI,     &tc_cancel,             ALL_LAYERS)
 
         COMBO(cb_save,          LHR LHM L0,      &mc_save,               ALL_LAYERS)
         COMBO(cb_fullscr,       LHM LHI L0,      &mc_fullscr,            ALL_LAYERS)
