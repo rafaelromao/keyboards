@@ -129,7 +129,7 @@
                 shortcuts_layer {
                      display-name = "SHORTS";
                      bindings = <
-   &none              &mc_calc             &mc_editor          &mc_ai              &none               &none               &mc_browser         &mc_ent_vim         &mc_esc_vim         &none    
+   &none              &mc_calc             &mc_editor          &mc_ai              &none               &none               &mc_browser         &mc_ent_vim         &mc_save_esc        &none    
    &mc_leader         &lt_zoom_out TOGS 0  &mc_zoom_in         &mc_reset_zoom      &none               &none               &tc_num_word        &mc_files           &lt_emoji TOGS 0    &mc_leader
    &none              &mc_close            &mc_refresh         &mc_reopen          &none               &none               &mc_screenshot      &mc_notes           &mc_term            &none 
                                            &none               &ht_repeat TEXT 0   &lt FUN SPACE       &lt MACROS SPACE    &ht_repeat TEXT 0   &none 
@@ -203,12 +203,11 @@
                            >;
                 };
 
-
                 navigation_layer {
                      display-name = "NAV";
                      bindings = <
-   &none               &mc_swapper         &mc_tabs            &mc_launcher        &none               &none               &kp TAB             &kp ENTER           &kp ESC              &none
-   &lt TEXT INS        &kp LCTL            &kp LALT            &kp LSFT            &none               &none               &kp LEFT            &kp DOWN            &kp UP               &kp RIGHT
+   &none               &mc_swapper         &mc_tabs            &mc_launcher        &none               &none               &kp TAB             &mm_enter_a1        &mm_esc_a1           &none
+   &lt TEXT INS        &kp LCTL            &kp LALT            &kp LSFT            &none               &none               &mm_left_a1         &kp DOWN            &kp UP               &mm_right_a1
    &none               &kp LGUI            &kp LGUI            &kp LGUI            &none               &none               &kp DEL             &kp HOME            &kp END              &none 
                                            &none               &trans              &none               &hlt SYM_CP SPACE   &mo MEDIA           &none 
                         >;

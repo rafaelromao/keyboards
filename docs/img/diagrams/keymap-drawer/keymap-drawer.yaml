@@ -731,20 +731,6 @@ layers:
     - null
 combos:
   - {
-      p: [0, 1, 2],
-      k: { t: "⎋", s: vim },
-      a: top,
-      layers:
-        [
-          alpha1,
-          alpha2,
-          shifted1,
-          shifted2,
-          ç-extension,
-          vim
-        ],
-    }
-  - {
       p: [0, 1],
       k: "⎋",
       a: mid,
@@ -934,7 +920,7 @@ combos:
       draw_separate: true,
     }
 
-  - { p: [0, 1, 21], k: "⎋ save", layers: [shortcuts], draw_separate: true }
+  - { p: [0, 1, 21], k: { h: "vim", t: ⎋, s: "save" }, layers: [shortcuts], draw_separate: true }
   - { p: [7, 8, 21], k: "save", layers: [shortcuts], draw_separate: true }
 
   - { p: [4, 5, 22], k: { t: "tab" }, layers: [shortcuts], draw_separate: true }

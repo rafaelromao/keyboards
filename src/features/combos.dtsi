@@ -34,12 +34,13 @@
         COMBO(cb_enter,         RHM RHR R0,      &kp ENTER,              ALL_LAYERS_WITH_ENTER)
         COMBO(cb_backspace,     RTM RTR,         &kp BACKSPACE,          ALL_LAYERS_WITH_BACKSPACE)
         COMBO(cb_esc,           LTR LTM,         &kp ESC,                ALL_LAYERS_WITH_ESC)
-        COMBO(cb_esc_vim,       LTR LTM LTI,     &mc_esc_vim,            ALL_LAYERS_WITH_ESC_VIM)
         COMBO(cb_enter_vim,     RHM RHR R0,      &mc_ent_vim,            SHORTS)
+        COMBO(cb_esc_save,      LTR LTM L0,      &mc_save_esc,           ALL_LAYERS_WITH_ESC_VIM)
+
 
         COMBO(cb_boot_l,        LTR LBI,         &bootloader,            ALL_LAYERS)
         COMBO(cb_boot_r,        RTR RBI,         &bootloader,            ALL_LAYERS)
-        COMBO(cb_cancel,        RTM RTR RTI,     &tc_cancel,             FIXABLE_LAYERS)
+        COMBO(cb_cancel,        RHM RHR RHI,     &tc_cancel,             FIXABLE_LAYERS)
 
         COMBO(cb_save,          LHR LHM L0,      &mc_save,               ALL_LAYERS)
         COMBO(cb_fullscr,       LHM LHI L0,      &mc_fullscr,            ALL_LAYERS)
@@ -80,8 +81,6 @@
         COMBO(cd_hyp_spc,       LBR LBM LBI,     &th_hyper_space 0 0,    ALPHA1_LAYERS)
         COMBO(cb_meh_ent,       RHI RHM RHR,     &ht_meh_ent 0 0,        ALPHA1_LAYERS)
         COMBO(cb_hyp_ent,       RBI RBM RBR,     &th_hyper_enter 0 0,    ALPHA1_LAYERS)
-
-        COMBO(cb_esc_save,      LTR LTM L0,      &mc_save_esc,           ALPHA1_LAYERS)
 
         COMBO(cb_semi,          RBM RBR,         &th_semi 0 0,           ALPHA1_LAYERS NUM_LAYERS VIM)
         COMBO(cb_sent,          RBI RBM RBR,     &mc_end_semi_ent,       NUM_LAYERS)
