@@ -722,8 +722,8 @@ layers:
         null,
         type: held,
         null,
-        { s: shrink, h: vertical, t: $$mdi:arrow-up-bold-outline$$ },
-        { s: expand, h: vertical, t: $$mdi:arrow-down-bold-outline$$ },
+        { s: shrink, h: vertical, t: $$mdi:arrow-down-bold-outline$$ },
+        { s: expand, h: vertical, t: $$mdi:arrow-up-bold-outline$$ },
       ]
     - type: held
     - null
