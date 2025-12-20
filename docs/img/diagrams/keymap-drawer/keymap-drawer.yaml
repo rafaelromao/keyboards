@@ -450,7 +450,7 @@ layers:
     - [
         null,
         { t: "⌘/|⌃/", s: "comment" },
-        { t: "⏎", s: "laugh" },
+        { t: "haha", s: "laugh" },
         { t: '"0p', s: vim },
         { t: '"+p', s: vim },
         { t: '"+y', s: vim },
