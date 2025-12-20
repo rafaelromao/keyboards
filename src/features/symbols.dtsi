@@ -206,11 +206,6 @@
         MACRO(mc_ent_vim,  &kp ENTER &to VIM)
         MACRO(mc_esc_vim,  &kp ESC &to VIM)
 
-        MACRO(mc_sft_v,  &kp LS(V))
-        MACRO(mc_ctl_v,  &kp LC(V))
-        LAYERTAP_TP(lt_sft_v,  &mc_sft_v)
-        LAYERTAP_TP(lt_ctl_v,  &mc_ctl_v)
-
         MACRO(mc_colon_a1,  &kp COLON &to ALPHA1)
         MACRO(mc_slash_a1,  &kp SLASH &to ALPHA1)
         MACRO(mc_qmark_a1,  &kp QMARK &to ALPHA1)
@@ -222,6 +217,7 @@
         MACRO(mc_s_a1,  &kp S &to ALPHA1)
         MACRO(mc_r_p1,  &kp R &sl PLAIN1)
 
+        MODTAP_TP(mt_i_a1, &mc_i_a1)
         MODTAP_TP(mt_c_a1, &mc_c_a1)
         MODTAP_TP(mt_s_a1, &mc_s_a1)
         MODTAP_TP(mt_r_p1, &mc_r_p1)

@@ -137,17 +137,17 @@ layers:
         { h: shortcuts, t: l },
       ]
     - [
-        { t: f },
-        { t: t },
-        { t: n },
-        { t: i, s: alpha1 },
+        { h: $$mdi:apple-keyboard-command$$, t: f },
+        { h: $$mdi:apple-keyboard-command$$, t: t },
+        { h: $$mdi:apple-keyboard-command$$, t: n },
+        { h: $$mdi:apple-keyboard-command$$, t: i, s: alpha1 },
         { t: a, s: alpha1 },
         { t: "." },
       ]
     - { t: ., h: nav }
     - { t: $$mdi:keyboard-space$$, h: numbers }
-    - { t: ⇧v, h: symbols }
-    - { t: ⌃v, h: media }
+    - { t: macros, s: sticky, h: symbols }
+    - { t: $$mdi:apple-keyboard-shift$$, s: sticky, h: media }
   numbers:
     - [{ t: "{", h: "⇥ {" }, { t: "}", h: "⇥ }" }, "\\", 7, 8, 9]
     - [
@@ -741,6 +741,7 @@ combos:
           shifted1,
           shifted2,
           ç-extension,
+          vim-layer
         ],
     }
   - {
@@ -785,7 +786,7 @@ combos:
       k: "alpha1",
       a: top,
       w: 48,
-      layers: [numbers, mehs, nav, media, plain1, func],
+      layers: [numbers, mehs, nav, media, plain1, func, vim-layer],
     }
 
   - { p: [1, 2], k: "k", a: mid, layers: [alpha1, plain1] }

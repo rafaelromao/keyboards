@@ -55,8 +55,8 @@
                      bindings = <
    &none               &kp B               &kp W               &kp E               &none               &none               &kp G               &mc_o_a1            &kp U               &none
    &lt SHORTS Q        &mt_c_a1 LCTL 0     &mt_s_a1 LALT 0     &mt_r_p1 LSFT 0     &none               &none               &mt LSFT H          &mt LALT J          &mt LCTL K          &lt SHORTS L
-   &none               &kp F               &kp T               &kp N               &none               &none               &mc_i_a1            &mc_a_a1            &kp DOT             &none
-                                           &none               &lt NAV DOT         &ltn_num_spc 0 0    &lt_sft_v SYM 0     &lt_ctl_v MEDIA 0   &none
+   &none               &mt LGUI F          &mt LGUI T          &mt LGUI N          &none               &none               &mt_i_a1 LGUI 0     &mc_a_a1            &kp DOT             &none
+                                           &none               &lt NAV DOT         &ltn_num_spc 0 0    &msl_sym_mac 0 0    &ht_shift MEDIA 0   &none
                         >;
                 };
 
@@ -172,7 +172,7 @@
    &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &trans
    &kp LS(D)           &kp LS(N)           &kp LS(S)           &kp LS(T)           &kp LS(W)           &kp LS(Z)           &kp LS(R)           &kp LS(A)           &kp LS(E)           &kp LS(I)
    &kp LS(Y)           &kp LS(F)           &kp LS(C)           &kp LS(P)           &kp LS(V)           &kp LS(J)           &kp LS(H)           &kp LS(COMMA)       &kp LS(DOT)         &trans 
-                                           &none               &ht_repeat NAV 0    &lt NUM_CP SPACE    &msl_p2 SYM_CP 0    &mo MEDIA           &none
+                                           &none               &ht_repeat NAV 0    &lt NUM_CP SPACE    &msl_sf_p2 SYM_CP 0 &mo MEDIA           &none
                            >;
                 };
                 plain2_layer {

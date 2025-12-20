@@ -73,6 +73,10 @@
         MACRO(mc_hyper_space,           &kp LS(LC(LA(LG(SPACE)))))
         TAPHOLD_TP(th_hyper_space,      &mc_hyper_space, &mc_hyper)
 
+        MACRO(mc_meh_enter,             &kp LS(LC(LA(ENTER))))
+        MACRO(mc_hyper_enter,           &kp LS(LC(LA(LG(ENTER)))))
+        TAPHOLD_TP(th_hyper_enter,      &mc_hyper_enter, &mc_enter)
+
         LAYERTAP_TP(lt_cam,             &mc_cam)
         
         MACRO(mc_right,                 &kp RIGHT)

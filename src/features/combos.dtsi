@@ -15,17 +15,14 @@
           ╰─────────────╯ ╰─────────────╯ */
 
 / {
-    #define ALPHA1_LAYERS               ALPHA1 CASE_A1 PLAIN1 CPLK_A1 ALTREP2
+    #define ALPHA1_LAYERS               ALPHA1 CASE_A1 PLAIN1 SFT_A1 CPLK_A1 ALTREP2
     #define CCEDIL_LAYERS               CCEDIL CASE_CCEDIL 
     #define ALPHA2_LAYERS               ALPHA2 CASE_A2 PLAIN2 SFT_A2
     #define NUM_LAYERS                  NUM NUM_CP  
     #define SYM_LAYERS                  SYM SYM_CP   
-    #define NAV_LAYERS                  NAV NAV_CP
-    #define ALL_LAYERS                  ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS SHORTS MEHS NAV_LAYERS SYM_LAYERS MEDIA TEXT
-    #define ALL_LAYERS_WITH_ENTER       ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS        MEHS NAV_LAYERS SYM_LAYERS MEDIA TEXT
-    #define ALL_LAYERS_WITH_BACKSPACE   ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS        MEHS NAV_LAYERS SYM_LAYERS
-    #define ALL_LAYERS_WITH_ESC_VIM     ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS
-    #define FIXABLE_LAYERS              CPLK_A1 CASE_A1 PLAIN1 NUM_LAYERS MEDIA NAV_LAYERS MEHS FUN VIM
+    #define ALL_LAYERS_WITH_ENTER       ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS MEDIA TEXT SHORTS
+    #define ALL_LAYERS_WITH_BACKSPACE   ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS
+    #define ALL_LAYERS_WITH_ESC_VIM     ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS VIM
 
     combos {
         compatible = "zmk,combos";
@@ -39,8 +36,7 @@
 
         COMBO(cb_boot_l,        LTR LBI,         &bootloader,            ALL_LAYERS)
         COMBO(cb_boot_r,        RTR RBI,         &bootloader,            ALL_LAYERS)
-        COMBO(cb_alpha1,        RTM RTR RTI,     &to ALPHA1,             FIXABLE_LAYERS)
-        COMBO(cb_cancel,        RTM RTR RTI,     &kp K_CANCEL,           FIXABLE_LAYERS)
+        COMBO(cb_cancel,        RTM RTR RTI,     &kp K_CANCEL,           ALL_LAYERS)
 
         COMBO(cb_save,          LHR LHM L0,      &mc_save,               ALL_LAYERS)
         COMBO(cb_fullscr,       LHM LHI L0,      &mc_fullscr,            ALL_LAYERS)
@@ -77,9 +73,10 @@
         COMBO(cd_cag_nav,       LHR LHM LBI L1,  &mc_cag_nav,            ALPHA1_LAYERS)
         COMBO(cd_cas_spc,       LHR LHM LHI L0,  &mc_cas_spc,            ALPHA1_LAYERS)
 
-        COMBO(cd_ht_meh_spc,    LHR LHM LHI,     &ht_meh_spc 0 0,        ALPHA1_LAYERS FUN NAV_LAYERS)
-        COMBO(cd_hyper_l,       LBR LBM LBI,     &th_hyper_space 0 0,    ALPHA1_LAYERS FUN NAV_LAYERS)
-        COMBO(cb_hyper_r,       RBI RBM RBR,     &th_hyper_h 0 0,        ALPHA1_LAYERS)
+        COMBO(cd_meh_spc,       LHR LHM LHI,     &ht_meh_spc 0 0,        ALPHA1_LAYERS)
+        COMBO(cd_hyper_l,       LBR LBM LBI,     &th_hyper_space 0 0,    ALPHA1_LAYERS)
+        COMBO(cb_meh_r,         RHI RHM RHR,     &ht_meh_enter 0 0,      ALPHA1_LAYERS)
+        COMBO(cb_hyper_r,       RBI RBM RBR,     &th_hyper_enter 0 0,    ALPHA1_LAYERS)
 
         COMBO(cb_esc_save,      LTR LTM L0,      &mc_save_esc,           ALPHA1_LAYERS)
 
@@ -131,6 +128,8 @@
         COMBO(cb_numbers_cr,    RBM RBR,         &tc_num_word_cp,        MEHS)
         COMBO(cd_meh_spc,       LHR LHM LHI,     &mc_meh_space,          MEHS)
         COMBO(cd_hyp_spc,       LBR LBM LBI,     &mc_hyper_space,        MEHS)
+        COMBO(cd_meh_ent,       RHR RHM RHI,     &mc_meh_enter,          MEHS)
+        COMBO(cd_hyp_ent,       RBR RBM RBI,     &mc_hyper_enter,        MEHS)
 
         COMBO(cb_comm,          RHP R0,          &kp COMMA,              NUM_LAYERS)
         COMBO(cb_sft_g,         RTI RTM,         &kp LS(G),              NUM_LAYERS)
@@ -228,11 +227,11 @@
         MACRO(mc_cag_nav          , &macro_press &kp LCTL &kp LALT &kp LGUI &mo NAV &macro_pause_for_release &macro_release &mo NAV &kp LCTL &kp LALT &kp LGUI)
         MACRO(mc_cas_spc          , &macro_press &kp LCTL &kp LALT &kp LSFT &mo NUM &macro_pause_for_release &macro_release &mo NUM &kp LCTL &kp LALT &kp LSFT)
 
-        COMBO_MUST_TAP(ht_w       , &kp LSFT  &kp LALT          , &kp W)
-        COMBO_MUST_TAP(ht_q       , &kp LCTL  &kp LALT          , &kp Q)
-        COMBO_MUST_TAP(ht_z       , &kp LSFT  &kp LALT          , &kp Z)
-        COMBO_MUST_TAP(ht_y       , &kp LALT  &kp LCTL          , &kp Y)
-        COMBO_MUST_TAP(ht_meh_spc , &kp LCTL &kp LALT &kp LSFT  , &mc_meh_space)
-        COMBO_MUST_TAP(ht_p       , &kp LCTL &kp LALT &kp LSFT  , &kp P)
+        COMBO_MUST_TAP(ht_w       , &kp LSFT &kp LALT                   , &kp W)
+        COMBO_MUST_TAP(ht_q       , &kp LCTL &kp LALT                   , &kp Q)
+        COMBO_MUST_TAP(ht_z       , &kp LSFT &kp LALT                   , &kp Z)
+        COMBO_MUST_TAP(ht_y       , &kp LALT &kp LCTL                   , &kp Y)
+        COMBO_MUST_TAP(ht_meh_spc , &kp LCTL &kp LALT &kp LSFT          , &mc_meh_space)
+        COMBO_MUST_TAP(ht_hyp_spc , &kp LCTL &kp LALT &kp LSFT &kp LGUI , &mc_hyper_space)
     };
 };
