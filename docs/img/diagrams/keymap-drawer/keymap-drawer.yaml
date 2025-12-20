@@ -194,16 +194,16 @@ layers:
         { t: $$mdi:calculator$$, s: "calc" },
         { t: $$mdi:microsoft-visual-studio-code$$, s: "editor" },
         { t: $$mdi:chat-processing-outline$$, s: "ai" },
-        { t: $$mdi:numeric$$, h: "numbers", s: "auto-layer" },
         { t: $$mdi:web$$, s: "browser" },
-        { t: $$mdi:calculator$$, s: "activity" },
+        { t: $$mdi:keyboard-return$$, s: vim-layer },
+        { t: "⎋", s: vim-layer },
       ]
     - [
         { type: held, t: $$mdi:ray-start-arrow$$, s: "leader-key" },
         { t: $$mdi:magnify-minus-outline$$, s: zoom -, h: toggles },
         { t: $$mdi:magnify-plus-outline$$, s: zoom +},
         { t: $$mdi:loupe$$, s: 100% },
-        { t: $$mdi:code-block-braces$$, s: vim, h: layer },
+        { t: $$mdi:numeric$$, h: "numbers", s: "auto-layer" },
         { t: $$mdi:folder-open$$, s: files},
         { t: "$$mdi:emoticon-happy-outline$$", s: "emojis", h: toggles },
         { type: held alternate, t: $$mdi:ray-start-arrow$$, s: "leader-key" },
@@ -223,10 +223,10 @@ layers:
   toggles:
     - [
         { t: CAPS LOCK },
-        { t: plain1 },
+        { t: func },
         { t: numbers },
         { t: numbers },
-        { t: plain1 },
+        { t: func },
         { t: NUM LOCK },
       ]
     - [
@@ -240,12 +240,12 @@ layers:
         { type: held alternate },
       ]
     - [
-        null,
+        { t: plain1},
         { t: mehs },
-        { t: func },
-        { t: func },
+        { t: vim-layer },
+        { t: vim-layer },
         { t: mehs },
-        null,
+        { t: plain1 },
       ]
     - { t: $$mdi:power-sleep$$, s: "sleep"}
     - { t: $$mdi:lock$$, s: "lock" }

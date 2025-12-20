@@ -75,7 +75,7 @@
 
         MACRO(mc_meh_enter,             &kp LS(LC(LA(ENTER))))
         MACRO(mc_hyper_enter,           &kp LS(LC(LA(LG(ENTER)))))
-        TAPHOLD_TP(th_hyper_enter,      &mc_hyper_enter, &mc_enter)
+        TAPHOLD_TP(th_hyper_enter,      &mc_hyper_enter, &mc_hyper)
 
         LAYERTAP_TP(lt_cam,             &mc_cam)
         
