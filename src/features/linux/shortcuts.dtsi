@@ -58,7 +58,6 @@
         MACRO(mc_browser,                &macro_tap &kp LC(LA(B)))
         MACRO(mc_editor,                 &macro_tap &kp LC(LA(N)))
         MACRO(mc_ai,                     &macro_tap &kp LC(LA(I)))
-        MACRO(mc_activity,               &macro_tap &kp LC(LA(A)))
 
         // Navigation
 
