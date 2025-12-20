@@ -138,8 +138,8 @@
                 toggles_layer {
                      display-name = "TOGGLES";
                      bindings = <
-   &none              &kp CAPS             &to FUN             &to NUM             &none               &none               &to NUM             &to FUN             &kp KP_NUM          &none     
-   &none              &to ALPHA1           &to MEDIA           &to NAV             &none               &none               &to NAV             &to MEDIA           &to ALPHA1          &none   
+   &none              &kp CAPS             &to FUN             &to NAV             &none               &none               &to NAV             &to FUN             &kp KP_NUM          &none     
+   &none              &to ALPHA1           &to MEDIA           &to NUM             &none               &none               &to NUM             &to MEDIA           &to ALPHA1          &none   
    &none              &to PLAIN1           &to MEHS            &to VIM             &none               &none               &to VIM             &to MEHS            &to PLAIN1          &none  
                                            &none               &mc_lock            &mc_sleep           &mc_lock            &mc_sleep           &none
                            >;

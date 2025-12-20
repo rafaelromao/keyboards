@@ -224,8 +224,8 @@ layers:
     - [
         { t: CAPS LOCK },
         { t: func },
-        { t: numbers },
-        { t: numbers },
+        { t: nav },
+        { t: nav },
         { t: func },
         { t: NUM LOCK },
       ]
@@ -233,8 +233,8 @@ layers:
         { type: held },
         { type: held, t: alpha1 },
         { t: media },
-        { t: nav },
-        { t: nav },
+        { t: numbers },
+        { t: numbers },
         { t: media },
         { type: held alternate, t: alpha1 },
         { type: held alternate },
