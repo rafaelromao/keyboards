@@ -231,12 +231,12 @@ layers:
       ]
     - [
         { type: held },
-        { type: held },
+        { type: held, t: alpha1 },
         { t: media },
         { t: nav },
         { t: nav },
         { t: media },
-        { type: held alternate },
+        { type: held alternate, t: alpha1 },
         { type: held alternate },
       ]
     - [
@@ -691,8 +691,8 @@ layers:
         null,
         null,
         null,
-        null,
-        null,
+        { s: shrink, h: horizontal, t: $$mdi:arrow-left-bold-outline$$ },
+        { s: expand, h: horizontal, t: $$mdi:arrow-right-bold-outline$$ },
       ]
     - type: held
     - null
@@ -722,8 +722,8 @@ layers:
         null,
         type: held,
         null,
-        null,
-        null,
+        { s: shrink, h: vertical, t: $$mdi:arrow-up-bold-outline$$ },
+        { s: expand, h: vertical, t: $$mdi:arrow-down-bold-outline$$ },
       ]
     - type: held
     - null
@@ -731,9 +731,9 @@ layers:
     - null
 combos:
   - {
-      p: [0, 1],
-      k: { t: "⎋", s: vim, h: layer },
-      a: mid,
+      p: [0, 1, 2],
+      k: { t: "⎋", s: vim },
+      a: top,
       layers:
         [
           alpha1,
@@ -750,6 +750,12 @@ combos:
       a: mid,
       layers:
         [
+          alpha1,
+          alpha2,
+          shifted1,
+          shifted2,
+          ç-extension,
+          vim,
           mehs,
         ],
     }
@@ -786,7 +792,7 @@ combos:
       k: "alpha1",
       a: top,
       w: 48,
-      layers: [numbers, mehs, nav, media, plain1, func, vim],
+      layers: [alpha1, alpha2, numbers, mehs, nav, media, plain1, func, vim],
     }
 
   - { p: [1, 2], k: "k", a: mid, layers: [alpha1, plain1] }
@@ -814,13 +820,6 @@ combos:
   - { p: [17, 18], k: "J", a: mid, layers: [shifted1] }
   - { p: [18, 19], k: { t: ":", h: "⇥ :" }, a: mid, layers: [shifted1] }
 
-  - {
-      p: [0, 1],
-      k: { t: "alpha1" },
-      a: mid,
-      w: 48,
-      layers: [vim],
-    }
   - {
       p: [1, 2],
       k: { t: "`" },
@@ -1078,7 +1077,7 @@ combos:
   - {
       p: [14, 15],
       k: { t: "numbers", s: "auto-layer" },
-      w: 40,
+      w: 50,
       a: mid,
       layers: [mehs],
     }
@@ -1087,7 +1086,7 @@ combos:
   - {
       p: [18, 19],
       k: { t: "numbers", s: "auto-layer" },
-      w: 40,
+      w: 50,
       a: mid,
       layers: [mehs],
     }
