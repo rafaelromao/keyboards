@@ -994,7 +994,7 @@ combos:
   - { p: [18, 22], k: { t: $$mdi:format-horizontal-align-left$$, h: home }, layers: [nav], draw_separate: true }
   - { p: [19, 22], k: { t: $$mdi:format-horizontal-align-right$$, h: end }, layers: [nav], draw_separate: true }
 
-  - { p: [11, 12, 22], k: { t: "enter", s: shortcuts, h: "vim" }, layers: [shortcuts], draw_separate: true }
+  - { p: [11, 12, 22], k: { t: "enter", h: "vim" }, layers: [shortcuts], draw_separate: true }
 
   - { p: [0, 1], k: "⇥{ ⏎", a: mid, layers: [numbers] }
   - { p: [1, 2], k: "⇥do ⏎", a: mid, layers: [numbers] }
