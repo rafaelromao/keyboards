@@ -142,26 +142,24 @@
 
         MACRO(mc_mac,        &sl MACROS)
         MACRO(mc_case_a2,    &sl CASE_A2)
-        MACRO(mc_sym,        &mo SYM)
-        MACRO(mc_sym_cp,     &mo SYM_CP)
         LAYERTAP_TP(lt_sft_a2,  &mc_sft_a2)
 
-        msl_sym_mac: msl_sym_mac {
+        msl_mac: msl_sym_mac {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <QUICK_TAP_TERM>;
             flavor = "tap-preferred";
             quick-tap-ms = <0>;
-            bindings = <&mc_sym>, <&mc_mac>;
+            bindings = <&mo>, <&mc_mac>;
         };
 
-        msl_sym_case2: msl_sym_case2 {
+        msl_case2: msl_sym_case2 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <QUICK_TAP_TERM>;
             flavor = "tap-preferred";
             quick-tap-ms = <0>;
-            bindings = <&mc_sym_cp>, <&mc_case_a2>;
+            bindings = <&mo>, <&mc_case_a2>;
         };
 
         MACRO(mc_sk_rgui, &sk RGUI)
