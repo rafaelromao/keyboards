@@ -138,6 +138,17 @@
 };
 
 / {
+    custom_behaviors {
+        tog_off: toggle_layer_off_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer Off";
+            toggle-mode = "off";
+        };
+    };
+};
+
+/ {
     custom_hold_taps {
 
         hlt: layer-tap-with-hold-preferred {
