@@ -690,7 +690,7 @@ layers:
         null,
         null,
         null,
-        null,
+        { s: toggle, h: scratchpad, t: $$mdi:monitor-eye$$ },
         { s: shrink, h: horizontal, t: $$mdi:arrow-left-bold-outline$$ },
         { s: expand, h: horizontal, t: $$mdi:arrow-right-bold-outline$$ },
       ]
@@ -704,8 +704,8 @@ layers:
         null,
         null,
         { s: show app, h: windows, t: $$mdi:monitor-star$$ },
-        { s: full screen, h: "toggle", t: $$mdi:fullscreen$$ },
-        { s: pop up, h: "toggle", t: $$mdi:fullscreen-exit$$ },
+        { s: toggle, h: full screen, t: $$mdi:fullscreen$$ },
+        { s: toggle, h: pop up, t: $$mdi:fullscreen-exit$$ },
       ]
     - [
         null,
@@ -721,7 +721,7 @@ layers:
         null,
         null,
         type: held,
-        null,
+        { s: move to, h: scratchpad, t: $$mdi:monitor-eye$$ },
         { s: shrink, h: vertical, t: $$mdi:arrow-down-bold-outline$$ },
         { s: expand, h: vertical, t: $$mdi:arrow-up-bold-outline$$ },
       ]
