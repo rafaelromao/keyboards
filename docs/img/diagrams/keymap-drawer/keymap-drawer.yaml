@@ -336,9 +336,9 @@ layers:
     - { type: held }
   text:
     - [
-        { s: select, h: home, t: "⎅ ⇤" },
-        { s: select, h: word, t: "⎅ ⓦ"},
-        { s: select, h: line, t: "⎅ ⎯" },
+        { s: select, h: home, t: $$mdi:select-compare$$ },
+        { s: select, h: word, t: $$mdi:select-compare$$ },
+        { s: select, h: line, t: $$mdi:select-compare$$ },
         { t: "↹", s: tab },
         { t: $$mdi:keyboard-return$$, s: enter },
         { t: "⎋", s: esc },
@@ -704,8 +704,8 @@ layers:
         null,
         null,
         { s: show app, h: windows, t: $$mdi:monitor-star$$ },
-        { s: full screen, h: "on", t: $$mdi:fullscreen$$ },
-        { s: full screen, h: "off", t: $$mdi:fullscreen-exit$$ },
+        { s: full screen, h: "toggle", t: $$mdi:fullscreen$$ },
+        { s: pop up, h: "toggle", t: $$mdi:fullscreen-exit$$ },
       ]
     - [
         null,
@@ -923,8 +923,8 @@ combos:
   - { p: [0, 1, 21], k: { h: "vim", t: ⎋, s: "save" }, layers: [shortcuts], draw_separate: true }
   - { p: [7, 8, 21], k: "save", layers: [shortcuts], draw_separate: true }
 
-  - { p: [4, 5, 22], k: { t: "tab" }, layers: [shortcuts], draw_separate: true }
-  - { p: [11, 12, 22], k: { t: "enter" }, layers: [shortcuts], draw_separate: true }
+  - { p: [4, 5, 22], k: { t: "↹", s: "tab" }, layers: [shortcuts], draw_separate: true }
+  - { p: [11, 12, 22], k: { t: "⏎", s: "enter" }, layers: [shortcuts], draw_separate: true }
 
   - { p: [14, 15, 21], k: "undo", layers: [shortcuts], draw_separate: true }
   - { p: [8, 9, 21], k: "full screen", layers: [shortcuts], draw_separate: true }
@@ -1063,7 +1063,7 @@ combos:
   - {
       p: [14, 15],
       k: { t: "numbers", s: "auto-layer" },
-      w: 50,
+      w: 48,
       a: mid,
       layers: [mehs],
     }
@@ -1072,7 +1072,7 @@ combos:
   - {
       p: [18, 19],
       k: { t: "numbers", s: "auto-layer" },
-      w: 50,
+      w: 48,
       a: mid,
       layers: [mehs],
     }
@@ -1083,10 +1083,10 @@ combos:
 
   - {
       p: [7, 8, 9],
-      k: { t: actions },
+      k: { t: "actions" },
       a: top,
       h: 10,
-      w: 45,
+      w: 48,
       slide: -0.5,
       layers: [coding-meh],
     }
@@ -1102,19 +1102,19 @@ combos:
     }
   - {
       p: [14, 15, 16],
-      k: { t: chat },
+      k: { t: "chat" },
       a: bottom,
       h: 10,
-      w: 45,
+      w: 48,
       slide: -0.5,
       layers: [coding-meh],
     }
   - { p: [11, 12], k: orbit, a: mid, w: 40, layers: [fusion360-meh] }
   - {
       p: [18, 19],
-      k: { t: numbers, s: auto-layer },
+      k: { t: "numbers", s: auto-layer },
       a: mid,
-      w: 40,
+      w: 48,
       layers: [fusion360-meh],
     }
   - { p: [4, 5], k: esc, a: mid, w: 40, layers: [fusion360-meh] }
