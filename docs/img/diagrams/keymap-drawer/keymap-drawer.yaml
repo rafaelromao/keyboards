@@ -123,7 +123,7 @@ layers:
         { t: w },
         { t: e },
         { t: g },
-        { t: o, s: alpha1 },
+        { t: o, h: alpha1 },
         { t: u },
       ]
     - [
