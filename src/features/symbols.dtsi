@@ -203,7 +203,8 @@
 
         // Vim
 
-        MACRO(mc_ent_vim,  &kp ENTER &to VIM)
+        MACRO(mc_o_esc,                  &macro_tap &kp O &kp ESC)
+        MACRO(mc_sft_o_esc,              &macro_tap &kp LS(O) &kp ESC)
 
         MACRO(mc_colon_a1,  &kp COLON &tog_off VIM)
         MACRO(mc_slash_a1,  &kp SLASH &tog_off VIM)

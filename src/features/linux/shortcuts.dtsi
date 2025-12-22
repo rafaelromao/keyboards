@@ -24,7 +24,8 @@
         MACRO(mc_selpaste,               &macro_tap &kp LC(A) &kp LC(V))
         MACRO(mc_shift_selpaste,         &macro_tap &kp LS(LC(A)) &kp LS(LC(V)))
         MACRO(mc_save,                   &macro_tap &kp LC(S))
-        MACRO(mc_save_esc,               &macro_tap &kp LC(S) &kp ESC &to VIM)
+        MACRO(mc_save_vim,               &macro_tap &kp LC(S) &kp ESC &to VIM)
+        MACRO(mc_ent_vim,                &macro_tap &kp LC(S) &kp ENTER &to VIM)
         MACRO(mc_comment,                &macro_tap &kp LC(SLASH))
 
         // Custom

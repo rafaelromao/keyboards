@@ -14,11 +14,6 @@
 
         LAYERTAP_TP(lt_emoji,            &mc_emoji)
 
-        // Vim
-
-        MACRO(mc_o_esc,                  &macro_tap &kp O &kp ESC)
-        MACRO(mc_sft_o_esc,              &macro_tap &kp LS(O) &kp ESC)
-
         // Shortcuts
 
         MACRO(mc_meh_b,                  &macro_tap &kp LC(LA(LS(B))))

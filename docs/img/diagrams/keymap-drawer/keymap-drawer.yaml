@@ -740,6 +740,8 @@ combos:
           alpha2,
           shifted1,
           shifted2,
+          plain1,
+          plain2,
           ç-extension,
           vim,
           mehs,
@@ -779,6 +781,13 @@ combos:
       a: top,
       w: 48,
       layers: [alpha1, alpha2, numbers, mehs, nav, media, plain1, func, vim],
+    }
+  - {
+      p: [ 4, 5],
+      k: "alpha1",
+      a: mid,
+      w: 48,
+      layers: [shortcuts],
     }
 
   - { p: [1, 2], k: "k", a: mid, layers: [alpha1, plain1] }
@@ -979,8 +988,6 @@ combos:
   - { p: [17, 22], k: { t: $$mdi:backspace-reverse-outline$$, h: del }, layers: [nav], draw_separate: true }
   - { p: [18, 22], k: { t: $$mdi:format-horizontal-align-left$$, h: home }, layers: [nav], draw_separate: true }
   - { p: [19, 22], k: { t: $$mdi:format-horizontal-align-right$$, h: end }, layers: [nav], draw_separate: true }
-
-  - { p: [11, 12, 22], k: { t: "enter", h: "vim" }, layers: [shortcuts], draw_separate: true }
 
   - { p: [0, 1], k: "⇥{ ⏎", a: mid, layers: [numbers] }
   - { p: [1, 2], k: "⇥do ⏎", a: mid, layers: [numbers] }

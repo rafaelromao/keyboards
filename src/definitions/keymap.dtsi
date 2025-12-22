@@ -129,7 +129,7 @@
                 shortcuts_layer {
                      display-name = "SHORTS";
                      bindings = <
-   &none              &mc_calc             &mc_editor          &mc_ai              &none               &none               &mc_browser         &mc_ent_vim         &mc_save_esc        &none    
+   &none              &mc_calc             &mc_editor          &mc_ai              &none               &none               &mc_browser         &mc_ent_vim         &mc_save_vim        &none    
    &mc_leader         &lt_zoom_out TOGS 0  &mc_zoom_in         &mc_reset_zoom      &none               &none               &tc_num_word        &mc_files           &lt_emoji TOGS 0    &mc_leader
    &none              &mc_close            &mc_refresh         &mc_reopen          &none               &none               &mc_screenshot      &mc_notes           &mc_term            &none 
                                            &none               &ht_repeat TEXT 0   &lt FUN SPACE       &lt MACROS SPACE    &ht_repeat TEXT 0   &none 
