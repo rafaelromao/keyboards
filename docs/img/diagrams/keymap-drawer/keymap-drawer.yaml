@@ -784,7 +784,14 @@ combos:
     }
   - {
       p: [ 4, 5],
-      k: "alpha1",
+      k: "save ⎋ vim",
+      a: mid,
+      w: 48,
+      layers: [shortcuts],
+    }
+  - {
+      p: [ 11, 12],
+      k: "exit vim",
       a: mid,
       w: 48,
       layers: [shortcuts],
