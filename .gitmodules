@@ -25,3 +25,6 @@
 [submodule "modules/caksoylar/zmk"]
 	path = modules/caksoylar/zmk
 	url = https://github.com/caksoylar/zmk
+[submodule "modules/rafaelromao/zmk-layer-morph"]
+	path = modules/rafaelromao/zmk-layer-morph
+	url = git@github.com:rafaelromao/zmk-layer-morph

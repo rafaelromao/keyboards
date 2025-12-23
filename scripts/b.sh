@@ -11,7 +11,7 @@ build_rommana() {
 
 build_wired_rommana() {
     echo "--- Building Wired Rommana ---"
-    ./scripts/build.sh "mabroum/wired_rommana" "l" "LINUX" "-b" "seeeduino_xiao_rp2040" "$@"
+    ./scripts/build.sh "mabroum/wired_rommana" "l" "LINUX" "-b" "seeeduino_xiao_rp2040" "-m" "rafaelromao/zmk-layer-morph" "$@"
 }
 
 build_diamond() {

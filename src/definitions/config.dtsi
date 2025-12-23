@@ -47,6 +47,8 @@
 #define FUN 26
 #define MACROS 27
 
+#define LINUX 28
+
 // Settings
 
 #define COMBO_TERM 30

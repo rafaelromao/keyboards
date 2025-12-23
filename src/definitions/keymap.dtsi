@@ -129,7 +129,7 @@
                 shortcuts_layer {
                      display-name = "SHORTS";
                      bindings = <
-   &none              &mc_calc             &mc_editor          &mc_ai              &none               &none               &mc_browser         &mc_ent_vim         &mc_esc_vim         &none    
+   &none              &mc_calc             &mc_editor          &mc_ai              &none               &none               &mc_browser         &mc_ent_vim         &mc_save_vim        &none    
    &mc_leader         &lt_zoom_out TOGS 0  &mc_zoom_in         &mc_reset_zoom      &none               &none               &tc_num_word        &mc_files           &lt_emoji TOGS 0    &mc_leader
    &none              &mc_close            &mc_refresh         &mc_reopen          &none               &none               &mc_screenshot      &mc_notes           &mc_term            &none 
                                            &none               &ht_repeat TEXT 0   &lt FUN SPACE       &lt MACROS SPACE    &ht_repeat TEXT 0   &none 
@@ -139,7 +139,7 @@
                      display-name = "TOGGLES";
                      bindings = <
    &none              &kp CAPS             &to FUN             &to NAV             &none               &none               &to NAV             &to FUN             &kp KP_NUM          &none     
-   &none              &to ALPHA1           &to MEDIA           &to NUM             &none               &none               &to NUM             &to MEDIA           &to ALPHA1          &none   
+   &tog LINUX         &to ALPHA1           &to MEDIA           &to NUM             &none               &none               &to NUM             &to MEDIA           &to ALPHA1          &tog LINUX   
    &none              &to PLAIN1           &to MEHS            &to VIM             &none               &none               &to VIM             &to MEHS            &to PLAIN1          &none  
                                            &none               &mc_lock            &mc_sleep           &mc_lock            &mc_sleep           &none
                            >;
@@ -276,11 +276,21 @@
                      bindings = <
    &none               &mc_tisl            &mc_ds              &mc_dds             &none               &none               &mc_vim_replace     &mc_o_esc           &mc_sft_o_esc       &none 
    &mc_exit            &mc_hugs            &mc_oref            &mc_otask           &none               &none               &kp LS(V)           &kp V               &kp LC(V)           &none
-   &none               &none               &mc_comment         &mc_haha            &none               &none               &mc_dqt0p           &mc_dqtplusp        &mc_dqtplusy        &none
+   &none               &lm_os              &mc_comment         &mc_haha            &none               &none               &mc_dqt0p           &mc_dqtplusp        &mc_dqtplusy        &none
                                            &none               &key_repeat         &mc_spc_esc         &none               &bootloader         &none
                         >;
                 };
 
+
+                linux_layer {
+                     display-name = "LINUX";
+                     bindings = <
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans               &trans    
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans               &trans  
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans               &trans 
+                                           &trans              &trans              &trans              &trans              &trans              &trans
+                           >;
+                };
 
 
         };
