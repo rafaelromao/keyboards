@@ -20,6 +20,17 @@
                         >;
                 };
 
+                linux_layer {
+                     display-name = "LINUX";
+                     bindings = <
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans               &trans    
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans               &trans  
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans               &trans 
+                                           &trans              &trans              &trans              &trans              &trans              &trans
+                           >;
+                };
+
+
                 capsword_layer {
                      display-name = "CASE";
                      bindings = <
@@ -279,17 +290,6 @@
    &none               &lm_os              &mc_comment         &mc_haha            &none               &none               &mc_dqt0p           &mc_dqtplusp        &mc_dqtplusy        &none
                                            &none               &key_repeat         &mc_spc_esc         &none               &bootloader         &none
                         >;
-                };
-
-
-                linux_layer {
-                     display-name = "LINUX";
-                     bindings = <
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans               &trans    
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans               &trans  
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans               &trans 
-                                           &trans              &trans              &trans              &trans              &trans              &trans
-                           >;
                 };
 
 

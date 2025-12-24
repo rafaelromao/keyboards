@@ -41,7 +41,7 @@
             #binding-cells = <0>;
             bindings = <&mc_sel1w>;
 
-            ADAPTIVE(cont_sel_word_l, &mc_selpw, LC(LS(LEFT)))
+            ADAPTIVE(cont_sel_word_l, &mc_selpw, LC(LS(LEFT)))_l
         };
 
         OS_MORPH(select_word, \
