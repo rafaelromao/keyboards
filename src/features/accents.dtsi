@@ -29,11 +29,11 @@
 
 
 
-        ACCENT(ac_cced_d, C, SQT)
+        ACCENT(ac_cced_m, C, SQT)
 
-        OS_MORPH(ac_cced,     &ac_cced_d, &kp RA(COMMA))
-        OS_MORPH(ac_cced_c,   &ac_cced_d, &kp RA(RS(COMMA)))
-        OS_MORPH(ac_cced_s,   &ac_cced_d, &kp RA(RS(COMMA)))
+        OS_MORPH(ac_cced,     &ac_cced_m, &kp RA(COMMA))
+        OS_MORPH(ac_cced_c,   &ac_cced_m, &kp RA(RS(COMMA)))
+        OS_MORPH(ac_cced_s,   &ac_cced_m, &kp RA(RS(COMMA)))
 
         MACRO(mc_ced,      &ac_cced &sl CCEDIL)
         MACRO(mc_ced_c,    &ac_cced_c &sl CASE_CCEDIL)

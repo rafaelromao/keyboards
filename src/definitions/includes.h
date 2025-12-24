@@ -16,18 +16,6 @@
 #include "../features/shortcuts.dtsi"
 #include "../features/select.dtsi"
 
-#ifdef MACOS
-#include "../features/macos/accents.dtsi"
-#include "../features/macos/shortcuts.dtsi"
-#include "../features/macos/select.dtsi"
-#endif
-
-#ifdef LINUX
-#include "../features/linux/accents.dtsi"
-#include "../features/linux/shortcuts.dtsi"
-#include "../features/linux/select.dtsi"
-#endif
-
 #include "../features/sentence.dtsi"
 #include "../features/smart.dtsi"
 #include "../features/adaptive.dtsi"

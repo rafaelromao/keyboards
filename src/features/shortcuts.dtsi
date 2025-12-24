@@ -178,7 +178,7 @@
         OS_MORPH(mc_zoom_in,           &macro_tap &kp LG(PLUS),                                                                     &macro_tap &kp LC(PLUS))
         OS_MORPH(mc_reset_zoom,        &macro_tap &kp LG(N0),                                                                       &macro_tap &kp LC(N0))
                                                                                                                              
-        LAYERTAP_TP(lt_zoom_out,    &mc_zoom_out,                                                                                &mc_zoom_out)
+        LAYERTAP_TP(lt_zoom_out,       &mc_zoom_out)
                                                                                                                              
         OS_MORPH(mc_swapper,           &macro_tap &kp LA(TAB),                                                                      &macro_tap &kp LA(TAB))
         OS_MORPH(mc_launcher,          &macro_tap &kp LA(SPACE),                                                                    &macro_tap &kp LA(SPACE))
@@ -210,7 +210,7 @@
         OS_MORPH(mc_meh_comma,         &macro_tap &kp LC(LA(LS(SQT))),                                                              &macro_tap &kp LC(LA(LS(COMMA))))
         OS_MORPH(mc_meh_dot,           &macro_tap &kp LC(LA(LS(BACKSLASH))),                                                        &macro_tap &kp LC(LA(LS(DOT))))
 
-        MODTAP_TP(mt_meh_comm,      &mc_meh_comma,                                                                               &mc_meh_comma)
-        MODTAP_TP(mt_meh_dot,       &mc_meh_dot,                                                                                 &mc_meh_dot)
+        MODTAP_TP(mt_meh_comm,         &mc_meh_comma)
+        MODTAP_TP(mt_meh_dot,          &mc_meh_dot)
    };
 };
