@@ -26,7 +26,7 @@ build_wired_diamond() {
 
 build_choc_diamond() {
     echo "--- Building Choc Diamond ---"
-    ./scripts/build.sh "rafaelromao/choc_diamond" "cd" "MACOS" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
+    ./scripts/build.sh "rafaelromao/choc_diamond" "cd" "LINUX" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
 }
 
 build_zen() {

@@ -139,17 +139,22 @@
 
 / {
     custom_behaviors {
+
         tog_off: toggle_layer_off_only {
             compatible = "zmk,behavior-toggle-layer";
             #binding-cells = <1>;
             display-name = "Toggle Layer Off";
             toggle-mode = "off";
         };
-    };
-};
 
-/ {
-    custom_hold_taps {
+        fsl: fast-stick-layer {
+            compatible = "zmk,behavior-sticky-key";
+            #binding-cells = <1>;
+            release-after-ms = <200>;
+            bindings = <&mo>;
+            quick-release;
+            display-name = "Fast Sticky Layer";
+        };
 
         hlt: layer-tap-with-hold-preferred {
             compatible = "zmk,behavior-hold-tap";

@@ -226,7 +226,7 @@
         MACRO(mc_o_a1,  &kp O &tog_off VIM)
         MACRO(mc_a_a1,  &kp A &tog_off VIM)
         MACRO(mc_i_a1,  &kp I &tog_off VIM)
-        MACRO(mc_c_a1,  &kp C &tog_off VIM)
+        MACRO(mc_c_a1,  &kp C &tog_off VIM &fsl VIM)
         MACRO(mc_s_a1,  &kp S &tog_off VIM)
         MACRO(mc_r_p1,  &kp R &sl PLAIN1)
 

@@ -128,7 +128,7 @@ layers:
       ]
     - [
         { h: shortcuts, t: q },
-        { h: $$mdi:apple-keyboard-control$$, t: c, s: alpha1 },
+        { h: $$mdi:apple-keyboard-control$$, t: n },
         { h: $$mdi:apple-keyboard-option$$, t: s, s: alpha1 },
         { h: $$mdi:apple-keyboard-shift$$, t: r, s: plain1 },
         { h: $$mdi:apple-keyboard-shift$$, t: h },
@@ -138,8 +138,8 @@ layers:
       ]
     - [
         { h: $$mdi:apple-keyboard-command$$, t: f },
+        { h: $$mdi:apple-keyboard-command$$, t: c, s: alpha1 },
         { h: $$mdi:apple-keyboard-command$$, t: t },
-        { h: $$mdi:apple-keyboard-command$$, t: n },
         { h: $$mdi:apple-keyboard-command$$, t: i, s: alpha1 },
         { t: a, s: alpha1 },
         { t: "." },
