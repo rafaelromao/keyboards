@@ -11,7 +11,7 @@
         keymap {
                 compatible = "zmk,keymap";
                 default_layer {
-                     display-name = "ROMAK";
+                     display-name = "MACOS";
                      bindings = <
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp SEMICOLON
    &lt SHORTS D        &mt LCTL N          &mt LALT S          &mt LSFT T          &kp W               &kp Z               &mt LSFT R          &mt LALT A          &mt LCTL E          &lt SHORTS I
@@ -41,7 +41,7 @@
                 };
 
                 alpha2_layer {
-                     display-name = "ROMAK";
+                     display-name = "ALPHA2";
                      bindings = <
    &none               &kp Q               &mc_qu              &kp K               &none               &none               &ac_ocir            &ac_oacu            &ac_uacu            &none
    &kp Y               &kp Z               &kp X               &kp W               &none               &none               &ac_atil            &ac_aacu            &ac_eacu            &ac_iacu 
@@ -98,7 +98,7 @@
                            >;
                 };
                 shifted_alpha2_layer {
-                     display-name = "ROMAK";
+                     display-name = "S ALPHA2";
                      bindings = <
    &none               &kp LS(Q)           &mc_qu_s            &kp LS(K)           &none               &none               &ac_ocir_s          &ac_oacu_s          &ac_uacu_s          &none
    &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &none               &none               &ac_atil_s          &ac_aacu_s          &ac_eacu_s          &ac_iacu_s 
@@ -107,7 +107,7 @@
                            >;
                 };
                 case_alpha2_layer {
-                     display-name = "CASE";
+                     display-name = "C ALPHA2";
                      bindings = <
    &none               &kp RS(Q)           &mc_qu_c            &kp RS(K)           &none               &none               &ac_ocir_c          &ac_oacu_c          &ac_uacu_c          &none
    &kp RS(Y)           &kp RS(Z)           &kp RS(X)           &kp RS(W)           &none               &none               &ac_atil_c          &ac_aacu_c          &ac_eacu_c          &ac_iacu_c 
@@ -116,7 +116,7 @@
                            >;
                 };
                 case_ccedil_layer {
-                     display-name = "CASE";
+                     display-name = "C Ç EXT";
                      bindings = <
    &none               &none               &none               &none               &none               &none               &none               &trans              &trans              &none     
    &none               &none               &none               &mc_aotil_c         &none               &none               &ac_atil_c          &trans              &none               &none   
@@ -158,7 +158,7 @@
 
 
                 plain1_layer {
-                     display-name = "PLAIN";
+                     display-name = "PLAIN 1";
                      bindings = <
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &trans
    &kp D               &kp N               &kp S               &kp T               &kp W               &kp Z               &kp R               &kp A               &kp E               &kp I 
@@ -167,7 +167,7 @@
                            >;
                 };
                 shifted_plain1_layer {
-                     display-name = "PLAIN";
+                     display-name = "S PLAIN 1";
                      bindings = <
    &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &trans
    &kp LS(D)           &kp LS(N)           &kp LS(S)           &kp LS(T)           &kp LS(W)           &kp LS(Z)           &kp LS(R)           &kp LS(A)           &kp LS(E)           &kp LS(I)
@@ -176,7 +176,7 @@
                            >;
                 };
                 plain2_layer {
-                     display-name = "PLAIN";
+                     display-name = "PLAIN 2";
                      bindings = <
    &none               &kp Q               &mc_qu              &kp K               &none               &none               &ac_ocir            &ac_oacu            &ac_uacu            &none
    &kp Y               &kp Z               &kp X               &kp W               &none               &none               &ac_atil            &ac_aacu            &ac_eacu            &ac_iacu 
@@ -185,7 +185,7 @@
                            >;
                 };
                 shifted_plain2_layer {
-                     display-name = "PLAIN";
+                     display-name = "S PLAIN 2";
                      bindings = <
    &none               &kp LS(Q)           &mc_qu_s            &kp LS(K)           &none               &none               &ac_ocir_s          &ac_oacu_s          &ac_uacu_s            &none
    &kp LS(Y)           &kp LS(Z)           &kp LS(X)           &kp LS(W)           &none               &none               &ac_atil_s          &ac_aacu_s          &ac_eacu_s            &ac_iacu_s 
@@ -194,7 +194,7 @@
                            >;
                 };
                 secondary_alternate_repeat_layer {
-                     display-name = "ROMAK";
+                     display-name = "ALT REP 2";
                      bindings = <
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans               &trans    
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans               &trans  
