@@ -61,15 +61,6 @@
     /* LAYER_MORPHS */
 
     #define OS_MORPH(NAME, MACOS_BINDING, LINUX_BINDING) \
-        NAME: NAME { \
-            compatible = "zmk,behavior-layer-morph"; \
-            #binding-cells = <0>; \
-            layer = <OS_LINUX> \
-            bindings \
-                = <&NAME##_m> \
-                , <&NAME##_l> \
-                ; \
-        }; \
         NAME##_m: NAME##_m { \
             wait-ms = <0>; \
             tap-ms = <0>; \
@@ -86,6 +77,15 @@
             #binding-cells = <0>; \
             bindings \
                 = <LINUX_BINDING> \
+                ; \
+        }; \
+        NAME: NAME { \
+            compatible = "zmk,behavior-layer-morph"; \
+            #binding-cells = <0>; \
+            layer = <OS_LINUX> \
+            bindings \
+                = <&NAME##_m> \
+                , <&NAME##_l> \
                 ; \
         };
 
