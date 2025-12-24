@@ -59,7 +59,8 @@
         };
 
     /* LAYER_MORPHS */
-    #define OS_MORPH(NAME, MACOS, LINUX) \
+
+    #define OS_MORPH(NAME, MACOS_BINDING, LINUX_BINDING) \
         NAME: NAME { \
             compatible = "zmk,behavior-layer-morph"; \
             #binding-cells = <0>; \
@@ -75,7 +76,7 @@
             compatible = "zmk,behavior-macro"; \
             #binding-cells = <0>; \
             bindings \
-                = <MACOS> \
+                = <MACOS_BINDING> \
                 ; \
         }; \
         NAME##_l: NAME##_l { \
@@ -84,7 +85,7 @@
             compatible = "zmk,behavior-macro"; \
             #binding-cells = <0>; \
             bindings \
-                = <LINUX> \
+                = <LINUX_BINDING> \
                 ; \
         };
 
