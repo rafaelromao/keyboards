@@ -10,7 +10,7 @@
         lm_os: lm_os {
             compatible = "zmk,behavior-layer-morph";
             #binding-cells = <0>;
-            layer = <LINUX>;
+            layer = <OS_LINUX>;
             bindings = <&kp M>, <&kp L>;
         };
 
