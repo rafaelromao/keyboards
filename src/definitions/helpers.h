@@ -51,7 +51,7 @@
     
     #define MACRO(NAME, BINDINGS) \
         NAME: NAME { \
-			compatible = "zmk,behavior-macro"; \
+            compatible = "zmk,behavior-macro"; \
             #binding-cells = <0>; \
             wait-ms = <5>; \
             tap-ms = <5>; \
@@ -82,7 +82,7 @@
         NAME: NAME { \
             compatible = "zmk,behavior-layer-morph"; \
             #binding-cells = <0>; \
-            layer = <OS_LINUX> \
+            layer = <OS_LINUX>; \
             bindings \
                 = <&NAME##_m> \
                 , <&NAME##_l> \
