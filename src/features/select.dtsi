@@ -28,18 +28,26 @@
             &macro_press &kp LA(LS(LEFT)) &macro_pause_for_release &macro_release &kp LA(LS(LEFT)), \
             &macro_press &kp LC(LS(LEFT)) &macro_pause_for_release &macro_release &kp LC(LS(LEFT))  \
         )
-        OS_MORPH(mc_selcw, \
-            LA(LS(LEFT)),  \
-            LC(LS(LEFT))   \
-        )
 
-        select_word: select_word {
+        mc_selword_m: mc_selword_m {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             bindings = <&mc_sel1w>;
 
-            ADAPTIVE(cont_sel_word, &mc_selpw, &mc_selcw)
+            ADAPTIVE(cont_sel_word_m, &mc_selpw, LA(LS(LEFT)))
         };
+        mc_selword_l: mc_selword_l {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&mc_sel1w>;
+
+            ADAPTIVE(cont_sel_word_l, &mc_selpw, LC(LS(LEFT)))
+        };
+
+        OS_MORPH(select_word, \
+            &mc_selword_m,    \
+            &mc_selword_l     \
+        )
 
         //Select Line
 
