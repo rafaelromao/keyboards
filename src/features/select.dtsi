@@ -22,15 +22,15 @@
 
         OS_MORPH(mc_sel1w, \
             &macro_tap &kp LA(LEFT) &kp LA(RIGHT) &macro_press &kp LA(LS(LEFT)) &macro_pause_for_release &macro_release &kp LA(LS(LEFT)), \
-            &macro_tap &kp LC(LEFT) &kp LC(RIGHT) &macro_press &kp LC(LS(LEFT)) &macro_pause_for_release &macro_release &kp LC(LS(LEFT))>
+            &macro_tap &kp LC(LEFT) &kp LC(RIGHT) &macro_press &kp LC(LS(LEFT)) &macro_pause_for_release &macro_release &kp LC(LS(LEFT))  \
         )
         OS_MORPH(mc_selpw, \
-            &macro_press &kp LA(LS(LEFT)) &macro_pause_for_release &macro_release &kp LA(LS(LEFT)),
-            &macro_press &kp LC(LS(LEFT)) &macro_pause_for_release &macro_release &kp LC(LS(LEFT))
+            &macro_press &kp LA(LS(LEFT)) &macro_pause_for_release &macro_release &kp LA(LS(LEFT)), \
+            &macro_press &kp LC(LS(LEFT)) &macro_pause_for_release &macro_release &kp LC(LS(LEFT))  \
         )
         OS_MORPH(mc_selcw, \
-            LA(LS(LEFT)),
-            LC(LS(LEFT))
+            LA(LS(LEFT)),  \
+            LC(LS(LEFT))   \
         )
 
         select_word: select_word {
