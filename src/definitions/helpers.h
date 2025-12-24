@@ -58,6 +58,37 @@
             bindings = <BINDINGS>; \
         };
 
+    /* LAYER_MORPHS */
+    #define OS_MORPH(NAME, MACOS, LINUX) \
+        NAME: NAME { \
+            compatible = "zmk,behavior-layer-morph"; \
+            #binding-cells = <0>; \
+            layer = <OS_LINUX> \
+            bindings \
+                = <&NAME##_m> \
+                , <&NAME##_l> \
+                ; \
+        }; \
+        NAME##_m: NAME##_m { \
+            wait-ms = <0>; \
+            tap-ms = <0>; \
+            compatible = "zmk,behavior-macro"; \
+            #binding-cells = <0>; \
+            bindings \
+                = <MACOS> \
+                ; \
+        }; \
+        NAME##_l: NAME##_l { \
+            wait-ms = <0>; \
+            tap-ms = <0>; \
+            compatible = "zmk,behavior-macro"; \
+            #binding-cells = <0>; \
+            bindings \
+                = <LINUX> \
+                ; \
+        };
+
+
     /*  MOD MORPHS  */
 
     #define MOD_MORPH(NAME, MODS, MODDED, UNMODDED) \

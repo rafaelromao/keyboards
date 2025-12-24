@@ -194,7 +194,7 @@
                            >;
                 };
                 secondary_alternate_repeat_layer {
-                     display-name = "ALT REP 2";
+                     display-name = "ALT REP";
                      bindings = <
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans               &trans    
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans               &trans  

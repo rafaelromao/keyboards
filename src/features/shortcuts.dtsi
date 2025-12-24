@@ -145,5 +145,72 @@
         TAPHOLD_TP(th_caret_z, &vim_home, &mc_zero)
 
         MACRO(mc_leader, &leader &to ALPHA1)
+        
+
+
+        // Common
+
+        OS_MORPH(mc_fullscr,           &macro_tap &kp LC(LG(F)),                                                                    &macro_tap &kp F11)
+        OS_MORPH(mc_find,              &macro_tap &kp LG(F),                                                                        &macro_tap &kp LC(F))
+        OS_MORPH(mc_selall,            &macro_tap &kp LG(A),                                                                        &macro_tap &kp LC(A))
+        OS_MORPH(mc_undo,              &macro_tap &kp LG(Z),                                                                        &macro_tap &kp LC(Z))
+        OS_MORPH(mc_copy,              &macro_tap &kp LG(C),                                                                        &macro_tap &kp LC(C))
+        OS_MORPH(mc_shift_copy,        &macro_tap &kp LS(LG(C)),                                                                    &macro_tap &kp LS(LC(C)))
+        OS_MORPH(mc_selcopy,           &macro_tap &kp LG(A) &kp LG(C),                                                              &macro_tap &kp LC(A) &kp LC(C))
+        OS_MORPH(mc_shift_selcopy,     &macro_tap &kp LS(LG(A)) &kp LS(LG(C)),                                                      &macro_tap &kp LS(LC(A)) &kp LS(LC(C)))
+        OS_MORPH(mc_paste,             &macro_tap &kp LG(V),                                                                        &macro_tap &kp LC(V))
+        OS_MORPH(mc_shift_paste,       &macro_tap &kp LS(LG(V)),                                                                    &macro_tap &kp LS(LC(V)))
+        OS_MORPH(mc_selpaste,          &macro_tap &kp LG(A) &kp LG(V),                                                              &macro_tap &kp LC(A) &kp LC(V))
+        OS_MORPH(mc_shift_selpaste,    &macro_tap &kp LS(LG(A)) &kp LS(LG(V)),                                                      &macro_tap &kp LS(LC(A)) &kp LS(LC(V)))
+        OS_MORPH(mc_save,              &macro_tap &kp LG(S),                                                                        &macro_tap &kp LC(S))
+        OS_MORPH(mc_save_esc,          &macro_tap &kp LG(S) &kp ESC &to VIM,                                                        &macro_tap &kp LC(S) &kp ESC &to VIM)
+        OS_MORPH(mc_comment,           &macro_tap &kp LG(SLASH),                                                                    &macro_tap &kp LC(SLASH))
+                                                                                                                             
+        // Custom                                                                                                            
+                                                                                                                             
+        OS_MORPH(mc_lock,              &macro_tap &kp LC(LG(Q)),                                                                    &macro_tap &kp LG(L))
+                                                                                                                             
+        OS_MORPH(mc_refresh,           &macro_tap &kp LG(R),                                                                        &macro_tap &kp F5)
+        OS_MORPH(mc_close,             &macro_tap &kp LG(W),                                                                        &macro_tap &kp LC(W))
+        OS_MORPH(mc_reopen,            &macro_tap &kp LG(LS(T)),                                                                    &macro_tap &kp LC(LS(T)))
+                                                                                                                             
+        OS_MORPH(mc_zoom_out,          &macro_tap &kp LG(MINUS),                                                                    &macro_tap &kp LC(MINUS))
+        OS_MORPH(mc_zoom_in,           &macro_tap &kp LG(PLUS),                                                                     &macro_tap &kp LC(PLUS))
+        OS_MORPH(mc_reset_zoom,        &macro_tap &kp LG(N0),                                                                       &macro_tap &kp LC(N0))
+                                                                                                                             
+        LAYERTAP_TP(lt_zoom_out,    &mc_zoom_out,                                                                                &mc_zoom_out)
+                                                                                                                             
+        OS_MORPH(mc_swapper,           &macro_tap &kp LA(TAB),                                                                      &macro_tap &kp LA(TAB))
+        OS_MORPH(mc_launcher,          &macro_tap &kp LA(SPACE),                                                                    &macro_tap &kp LA(SPACE))
+        OS_MORPH(mc_tabs,              &macro_tap &kp LG(LS(A)),                                                                    &macro_tap &kp LC(LS(A)))
+                                                                                                                             
+        OS_MORPH(mc_files,             &macro_tap &kp LC(LA(F)),                                                                    &macro_tap &kp LG(E))
+                                                                                                                             
+        OS_MORPH(mc_hand,              &macro_tap &kp LC(LA(H)),                                                                    &macro_tap &kp LC(LA(H)))
+        OS_MORPH(mc_mic,               &macro_tap &kp LC(LA(D)),                                                                    &macro_tap &kp LC(LA(D)))
+        OS_MORPH(mc_cam,               &macro_tap &kp LC(LA(E)),                                                                    &macro_tap &kp LC(LA(E)))
+        OS_MORPH(mc_screenshot,        &macro_tap &kp LC(LA(S)),                                                                    &macro_tap &kp LC(LA(S)))
+        OS_MORPH(mc_emoji,             &macro_tap &kp LC(LA(J)),                                                                    &macro_tap &kp LC(LA(J)))
+        OS_MORPH(mc_calc,              &macro_tap &kp LC(LA(C)),                                                                    &macro_tap &kp LC(LA(C)))
+        OS_MORPH(mc_notes,             &macro_tap &kp LC(LA(O)),                                                                    &macro_tap &kp LC(LA(O)))
+        OS_MORPH(mc_term,              &macro_tap &kp LC(LA(T)),                                                                    &macro_tap &kp LC(LA(T)))
+        OS_MORPH(mc_browser,           &macro_tap &kp LC(LA(B)),                                                                    &macro_tap &kp LC(LA(B)))
+        OS_MORPH(mc_editor,            &macro_tap &kp LC(LA(N)),                                                                    &macro_tap &kp LC(LA(N)))
+        OS_MORPH(mc_ai,                &macro_tap &kp LC(LA(I)),                                                                    &macro_tap &kp LC(LA(I)))
+                                                                                                                             
+        // Navigation                                                                                                        
+                                                                                                                             
+        OS_MORPH(mc_prev_word,         &macro_tap &kp LA(LEFT),                                                                     &macro_tap &kp LC(LEFT))
+        OS_MORPH(mc_next_word,         &macro_tap &kp LA(RIGHT),                                                                    &macro_tap &kp LC(RIGHT))
+        OS_MORPH(mc_del_word,          &macro_press &kp LA(DELETE) &macro_pause_for_release &macro_release &kp LA(DELETE),          &macro_press &kp LC(DELETE) &macro_pause_for_release &macro_release &kp LC(DELETE))
+        OS_MORPH(mc_bsp_word,          &macro_press &kp LA(BACKSPACE) &macro_pause_for_release &macro_release &kp LA(BACKSPACE),    &macro_press &kp LC(BACKSPACE) &macro_pause_for_release &macro_release &kp LC(BACKSPACE))
+                                                                                                                             
+        // Meh and Hyper                                                                                                     
+                                                                                                                             
+        OS_MORPH(mc_meh_comma,         &macro_tap &kp LC(LA(LS(SQT))),                                                              &macro_tap &kp LC(LA(LS(COMMA))))
+        OS_MORPH(mc_meh_dot,           &macro_tap &kp LC(LA(LS(BACKSLASH))),                                                        &macro_tap &kp LC(LA(LS(DOT))))
+
+        MODTAP_TP(mt_meh_comm,      &mc_meh_comma,                                                                               &mc_meh_comma)
+        MODTAP_TP(mt_meh_dot,       &mc_meh_dot,                                                                                 &mc_meh_dot)
    };
 };
