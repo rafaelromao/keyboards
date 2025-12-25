@@ -7,14 +7,7 @@
 
 / {
     shortcuts {
-        lm_os: lm_os {
-            compatible = "zmk,behavior-layer-morph";
-            #binding-cells = <0>;
-            layer = <ALT_OS>;
-            bindings = <&kp M>, <&kp L>;
-        };
-
-
+        OS_MORPH(lm_os, &kp M, &kp L)
 
         MACRO(mc_sleep,                  &macro_tap_time 400 &macro_tap &kp C_SLEEP)
 
