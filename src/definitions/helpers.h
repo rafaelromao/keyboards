@@ -90,7 +90,7 @@
         };
 
     #ifdef LINUX
-    #define OS_MORPH(NAME, ALT_BINDING, DEF_BINDING) \
+    #define OS_MORPH(NAME, DEF_BINDING, ALT_BINDING) \
         OS_MORPH_IMPL(NAME, ALT_BINDING, DEF_BINDING)
     #else
     #define OS_MORPH(NAME, DEF_BINDING, ALT_BINDING) \
