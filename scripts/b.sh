@@ -44,6 +44,11 @@ build_dilemma() {
     ./scripts/build.sh "bastardkb/dilemma" "l" "LINUX" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
 }
 
+build_dilemma_right() {
+    echo "--- Building Dilemma Right Side ---"
+    ./scripts/build.sh "bastardkb/dilemma" "r" "LINUX" "$@"
+}
+
 # --- Main Script ---
 
 if [[ $# -lt 1 || "$1" == "-h" || "$1" == "--help" ]]; then
@@ -74,6 +79,7 @@ case "$KEYBOARD" in
         build_zen "$@"
         build_zen_dongle "$@"
         build_dilemma "$@"
+        build_dilemma_right "$@"
         ;;
     rommana|r)
         build_rommana "$@"
@@ -98,6 +104,9 @@ case "$KEYBOARD" in
         ;;
     dilemma|m)
         build_dilemma "$@"
+        ;;
+    dilemma_right|mr)
+        build_dilemma_right "$@"
         ;;
     *)
         echo "Unknown Keyboard: '$KEYBOARD'"
