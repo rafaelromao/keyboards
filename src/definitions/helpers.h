@@ -58,25 +58,25 @@
             bindings = <BINDINGS>; \
         };
 
-    /* LAYER_MORPHS */
+    /* OS_MORPH */
 
-    #define OS_MORPH(NAME, MACOS_BINDING, LINUX_BINDING) \
-        NAME##_m: NAME##_m { \
+    #define OS_MORPH_IMPL(NAME, PARAM1, PARAM2) \
+        NAME##_d: NAME##_d { \
             wait-ms = <0>; \
             tap-ms = <0>; \
             compatible = "zmk,behavior-macro"; \
             #binding-cells = <0>; \
             bindings \
-                = <MACOS_BINDING> \
+                = <PARAM1> \
                 ; \
         }; \
-        NAME##_l: NAME##_l { \
+        NAME##_a: NAME##_a { \
             wait-ms = <0>; \
             tap-ms = <0>; \
             compatible = "zmk,behavior-macro"; \
             #binding-cells = <0>; \
             bindings \
-                = <LINUX_BINDING> \
+                = <PARAM2> \
                 ; \
         }; \
         NAME: NAME { \
@@ -84,11 +84,18 @@
             #binding-cells = <0>; \
             layer = <OS_LINUX>; \
             bindings \
-                = <&NAME##_m> \
-                , <&NAME##_l> \
+                = <&NAME##_d> \
+                , <&NAME##_a> \
                 ; \
         };
 
+    #if LINUX
+    #define OS_MORPH(NAME, ALT_BINDING, DEF_BINDING) \
+        OS_MORPH_IMPL(NAME, ALT_BINDING, DEF_BINDING)
+    #else
+    #define OS_MORPH(NAME, DEF_BINDING, ALT_BINDING) \
+        OS_MORPH_IMPL(NAME, DEF_BINDING, ALT_BINDING)
+    #endif
 
     /*  MOD MORPHS  */
 
