@@ -144,10 +144,10 @@ layers:
         { t: a, s: alpha1 },
         { t: "." },
       ]
-    - { t: $$mdi:repeat$$, s: repeat, h: nav }
-    - { t: $$mdi:keyboard-space$$, h: numbers }
-    - { t: macros, s: sticky, h: symbols }
-    - { t: $$mdi:apple-keyboard-shift$$, s: sticky, h: media }
+    - { t: ▽ }
+    - { t: ▽ }
+    - { t: ▽ }
+    - { t: ▽ }
   numbers:
     - [{ t: "{", h: "⇥ {" }, { t: "}", h: "⇥ }" }, "\\", 7, 8, 9]
     - [

@@ -56,7 +56,7 @@
    &none               &kp B               &kp W               &kp E               &none               &none               &kp G               &mc_o_a1            &kp U               &none
    &lt SHORTS Q        &mt LCTL N          &mt_s_a1 LALT 0     &mt_r_p1 LSFT 0     &none               &none               &mt LSFT H          &mt LALT J          &mt LCTL K          &lt SHORTS L
    &none               &mt LGUI F          &mt_c_a1 LGUI C     &mt LGUI T          &none               &none               &mt_i_a1 LGUI 0     &mc_a_a1            &kp DOT             &none
-                                           &none               &ht_repeat NAV 0    &ltn_num_spc 0 0    &msl_mac SYM 0      &ht_shift MEDIA 0   &none
+                                           &none               &ht_repeat NAV 0    &ltn_num_spc 0 0    &msl_sym_a2 0 0     &ht_shift MEDIA 0   &none
                         >;
                 };
 

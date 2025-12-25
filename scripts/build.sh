@@ -139,6 +139,16 @@ fi
 
 # Define zmk module
 ZMK_MODULE=modules/$ZMK
+ZMK_HOME="$PROJECT_DIR/$ZMK_MODULE"
+
+# Init West
+if [[ ! -d "$ZMK_HOME/.west" ]]
+then
+    echo "Initializing West..."
+    cd $ZMK_HOME
+    west init -l app/
+    cd $PROJECT_DIR
+fi
 
 # Add default modules
 for DEF_MODULE in "${DEF_MODULES[@]}"; do

@@ -144,15 +144,6 @@
         MACRO(mc_case_a2,    &sl CASE_A2)
         LAYERTAP_TP(lt_sft_a2,  &mc_sft_a2)
 
-        msl_mac: msl_sym_mac {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <QUICK_TAP_TERM>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <0>;
-            bindings = <&mo>, <&mc_mac>;
-        };
-
         msl_case2: msl_sym_case2 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
