@@ -448,7 +448,7 @@ layers:
         { type: held },
       ]
     - [
-        null,
+        { t: "Print OS" },
         { t: "⌘/|⌃/", s: "comment" },
         { t: "haha", s: "laugh" },
         { t: '"0p', s: vim },

@@ -40,6 +40,9 @@
         COMBO(cb_cancel_vim,    RHM RHR,         &tc_cancel,             SHORTS)
         COMBO(cb_enter_vim,     RHM RHR R0,      &mc_ent_vim,            SHORTS)
 
+        COMBO(cb_toggles_l,     LHI LHR,         &mo TOGS,               SHORTS)
+        COMBO(cb_toggles_r,     RHI RHR,         &mo TOGS,               SHORTS)
+
         COMBO(cb_boot_l,        LTR LBI,         &bootloader,            ALL_LAYERS)
         COMBO(cb_boot_r,        RTR RBI,         &bootloader,            ALL_LAYERS)
         COMBO(cb_cancel,        RTM RTR RTI,     &tc_cancel,             FIXABLE_LAYERS)
