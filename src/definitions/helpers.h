@@ -60,14 +60,14 @@
 
     /* OS_MORPH */
 
-    #define OS_MORPH_IMPL(NAME, PARAM1, PARAM2) \
+    #define OS_MORPH_IMPL(NAME, DEF_BINDING, ALT_BINDING) \
         NAME##_d: NAME##_d { \
             wait-ms = <0>; \
             tap-ms = <0>; \
             compatible = "zmk,behavior-macro"; \
             #binding-cells = <0>; \
             bindings \
-                = <PARAM1> \
+                = <DEF_BINDING> \
                 ; \
         }; \
         NAME##_a: NAME##_a { \
@@ -76,7 +76,7 @@
             compatible = "zmk,behavior-macro"; \
             #binding-cells = <0>; \
             bindings \
-                = <PARAM2> \
+                = <ALT_BINDING> \
                 ; \
         }; \
         NAME: NAME { \
@@ -89,7 +89,7 @@
                 ; \
         };
 
-    #if LINUX
+    #ifdef LINUX
     #define OS_MORPH(NAME, ALT_BINDING, DEF_BINDING) \
         OS_MORPH_IMPL(NAME, ALT_BINDING, DEF_BINDING)
     #else
