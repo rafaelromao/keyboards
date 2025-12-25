@@ -82,7 +82,7 @@
         NAME: NAME { \
             compatible = "zmk,behavior-layer-morph"; \
             #binding-cells = <0>; \
-            layer = <OS_LINUX>; \
+            layer = <ALT_OS>; \
             bindings \
                 = <&NAME##_d> \
                 , <&NAME##_a> \

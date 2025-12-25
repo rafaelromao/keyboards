@@ -8,7 +8,7 @@
  // Layers
 
 #define ALPHA1 0
-#define OS_LINUX 1
+#define ALT_OS 1
 
 #define CASE_A1 2
 #define CPLK_A1 3
