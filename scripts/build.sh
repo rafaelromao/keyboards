@@ -202,7 +202,15 @@ fi
 PREFIX="$PROJECT_DIR/modules/"
 TEMP=""
 IFS=',' read -ra ADDR <<< "$MODULES"
-for MODULE in "${ADDR[@]}"; do
+for ITEM in "${ADDR[@]}"; do
+    # separate module and revision
+    MODULE_REVISION=""
+    if [[ "$ITEM" == *":"* ]]; then
+        MODULE="$(echo "$ITEM" | cut -d':' -f1)"
+        MODULE_REVISION="$(echo "$ITEM" | cut -d':' -f2)"
+    else
+        MODULE="$ITEM"
+    fi
 
     MODULE_HOME=${PREFIX}${MODULE}
     # Download the module if necessary
@@ -210,6 +218,24 @@ for MODULE in "${ADDR[@]}"; do
     then
         echo "Add git sub-module: $MODULE"
         git submodule add -f "git@github.com:$MODULE" "modules/$MODULE"
+        # If submodule was just added, we need to cd into it to checkout the revision
+        # and then return to PROJECT_DIR before the main script proceeds.
+        if [ -n "$MODULE_REVISION" ]; then
+            echo "Checking out revision $MODULE_REVISION of $MODULE"
+            cd "$MODULE_HOME"
+            git fetch
+            git checkout -f "$MODULE_REVISION"
+            cd "$PROJECT_DIR"
+        fi
+    else
+        # If the module already exists and a revision is specified, check it out
+        if [ -n "$MODULE_REVISION" ]; then
+            echo "Module $MODULE already exists. Checking out revision $MODULE_REVISION."
+            cd "$MODULE_HOME"
+            git fetch
+            git checkout -f "$MODULE_REVISION"
+            cd "$PROJECT_DIR"
+        fi
     fi
 
     # Prefix the module name with the path
