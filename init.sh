@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Configuration
-IMAGE_NAME="zmk-toolchain:0.16.3"
+IMAGE_NAME="zmk-toolchain:0.17.0"
 VOL_CCACHE="zmk-ccache-data"
 VOL_MODULES="zmk-modules-cache"
 VOL_ZEPHYR="zmk-zephyr-data"

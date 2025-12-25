@@ -26,8 +26,8 @@ RUN git clone --depth 1 https://github.com/zephyrproject-rtos/zephyr.git /tmp/ze
     && pip3 install -r /tmp/zephyr/scripts/requirements.txt \
     && rm -rf /tmp/zephyr
 
-# 6. Install Zephyr SDK 0.16.3
-ARG SDK_VERSION=0.16.3
+# 6. Install Zephyr SDK 0.17.0
+ARG SDK_VERSION=0.17.0
 RUN wget -q https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v${SDK_VERSION}/zephyr-sdk-${SDK_VERSION}_linux-x86_64.tar.xz \
     && tar xf zephyr-sdk-${SDK_VERSION}_linux-x86_64.tar.xz -C /opt \
     && rm zephyr-sdk-${SDK_VERSION}_linux-x86_64.tar.xz
