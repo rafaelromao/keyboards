@@ -40,15 +40,18 @@
 
         TAPHOLD_TP(th_caret_z, &vim_home, &mc_zero)
 
-
         MACRO(mc_o_esc,         &macro_tap &kp O &kp ESC)
         MACRO(mc_sft_o_esc,     &macro_tap &kp LS(O) &kp ESC)
 
 
         /* Vim Mode */
                                 
-        MACRO(mc_vim_off,       &tog_off VIM_NORMAL &tog_off VIM_VISUAL &tog_off VIM_INSERT &tog_off VIM_REPLACE)
+        MACRO(mc_vim_off        , &tog_off VIM_NORMAL &tog_off VIM_VISUAL &tog_off VIM_INSERT &tog_off VIM_REPLACE &tog_off VIM_LEADER)
                                 
+        // MACRO(mc_spc_lead_vim   , &kp SPACE &sl VIM_LEADER)
+        MACRO(mc_spc_lead_vim   , &kp SPACE)
+        LAYERTAP_TP(lt_lead_vim , &mc_spc_lead_vim)
+
         MACRO(mc_slash_vim,     &mc_vim_off &tog_on VIM_INSERT &kp SLASH)
         MACRO(mc_qmark_vim,     &mc_vim_off &tog_on VIM_INSERT &kp QMARK)
 
@@ -67,7 +70,7 @@
         MACRO(mc_ent_vim,       &mc_vim_off &tog_on VIM_NORMAL &kp ENTER)
         MACRO(mc_esc_vim,       &mc_vim_off &tog_on VIM_NORMAL &kp ESC  )
         MACRO(mc_end_ent_vim,   &mc_vim_off &tog_on VIM_NORMAL &mc_end_ent)
-        MACRO(mc_save_esc_vim,  &mc_vim_off &tog_on VIM_NORMAL &mc_save_asc)
+        MACRO(mc_save_esc_vim,  &mc_vim_off &tog_on VIM_NORMAL &mc_save_esc)
 
         LAYER_MORPH(lm_ent_vim      , VIM_INSERT, &mc_ent_vim      , &kp ENTER)
         LAYER_MORPH(lm_esc_vim      , VIM_INSERT, &mc_esc_vim      , &kp ESC)
@@ -77,7 +80,7 @@
         MACRO(mc_o_vim,  &kp O &tog_off VIM_NORMAL &tog_on VIM_INSERT)
         MACRO(mc_a_vim,  &kp A &tog_off VIM_NORMAL &tog_on VIM_INSERT)
         MACRO(mc_i_vim,  &kp I &tog_off VIM_NORMAL &tog_on VIM_INSERT)
-        MACRO(mc_c_vim,  &kp C &tog_off VIM &fsl VIM)
+        MACRO(mc_c_vim,  &kp C &tog_off VIM_NORMAL &fsl VIM_NORMAL)
         MACRO(mc_s_vim,  &kp S &tog_off VIM_NORMAL &tog_on VIM_INSERT)
         MACRO(mc_r_vim,  &kp R &sl VIM_REPLACE)
 

@@ -49,7 +49,7 @@
    &none               &kp B               &kp W               &kp E               &none               &none               &kp G               &mc_o_vim           &kp U               &none
    &lt SHORTS Q        &mt LCTL N          &mt_s_vim LALT 0    &mt_r_vim LSFT 0    &none               &none               &mt LSFT H          &mt LALT J          &mt LCTL K          &lt SHORTS L
    &none               &mt LGUI F          &mt_c_vim LGUI C    &mt LGUI T          &none               &none               &mt_i_vim LGUI 0    &mc_a_vim           &kp DOT             &none
-                                           &none               &ht_repeat NAV 0    &ltn_num_spc 0 0    &msl_sym_a2 0 0     &ht_shift MEDIA 0   &none
+                                           &none               &ht_repeat NAV 0    &lt_lead_vim NUM 0  &msl_sym_a2 0 0     &ht_shift MEDIA 0   &none
                         >;
                 };
 
@@ -65,6 +65,16 @@
 
                 vim_visual_layer {
                      display-name = "VISUAL";
+                     bindings = <
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
+                                           &trans              &trans              &trans              &trans              &trans              &trans
+                        >;
+                };
+
+                vim_leader_layer {
+                     display-name = "LEADER";
                      bindings = <
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
