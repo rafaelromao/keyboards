@@ -119,30 +119,30 @@ layers:
     - null
   vim:
     - [
-        { t: b },
-        { t: w },
-        { t: e },
-        { t: g },
-        { t: o, h: alpha1 },
-        { t: u },
+        { t: b, h: begin },
+        { t: w, h: word },
+        { t: e, h: end },
+        { t: g, h: go to },
+        { t: o, h: new line },
+        { t: u, h: undo },
       ]
     - [
-        { h: shortcuts, t: q },
-        { h: $$mdi:apple-keyboard-control$$, t: n },
-        { h: $$mdi:apple-keyboard-option$$, t: s, s: alpha1 },
-        { h: $$mdi:apple-keyboard-shift$$, t: r, s: plain1 },
-        { h: $$mdi:apple-keyboard-shift$$, t: h },
-        { h: $$mdi:apple-keyboard-option$$, t: j },
-        { h: $$mdi:apple-keyboard-control$$, t: k },
-        { h: shortcuts, t: l },
+        { h: shortcuts, t: q, s: record },
+        { h: $$mdi:apple-keyboard-control$$, t: n, s: next },
+        { h: $$mdi:apple-keyboard-option$$, t: s, s: substitute },
+        { h: $$mdi:apple-keyboard-shift$$, t: r, s: replace },
+        { h: $$mdi:apple-keyboard-shift$$, t: h, s: left },
+        { h: $$mdi:apple-keyboard-option$$, t: j, s: down },
+        { h: $$mdi:apple-keyboard-control$$, t: k, s: up },
+        { h: shortcuts, t: l, s: right},
       ]
     - [
-        { h: $$mdi:apple-keyboard-command$$, t: f },
-        { h: $$mdi:apple-keyboard-command$$, t: c, s: alpha1 },
-        { h: $$mdi:apple-keyboard-command$$, t: t },
-        { h: $$mdi:apple-keyboard-command$$, t: i, s: alpha1 },
-        { t: a, s: alpha1 },
-        { t: "." },
+        { h: $$mdi:apple-keyboard-command$$, t: f, s: find },
+        { h: $$mdi:apple-keyboard-command$$, t: c, s: change },
+        { h: $$mdi:apple-keyboard-command$$, t: t, s: till},
+        { h: $$mdi:apple-keyboard-command$$, t: i, s: insert },
+        { t: a, s: append },
+        { t: ".", s: repeat },
       ]
     - { t: ▽ }
     - { t: ▽ }
@@ -191,22 +191,22 @@ layers:
     - { t: ▽ }
   shortcuts:
     - [
-        { t: $$mdi:calculator$$, s: "calc" },
-        { t: $$mdi:microsoft-visual-studio-code$$, s: "editor" },
-        { t: $$mdi:chat-processing-outline$$, s: "ai" },
-        { t: $$mdi:web$$, s: "browser" },
-        { t: $$mdi:keyboard-return$$, s: enter, h: vim },
-        { t: "⎋", s: esc, h: vim},
+        { t: $$mdi:calculator$$, s: calc },
+        { t: $$mdi:folder-open$$, s: files},
+        { t: $$mdi:chat-processing-outline$$, s: ai },
+        { t: $$mdi:web$$, s: browser },
+        { t: $$mdi:microsoft-visual-studio-code$$, s: editor },
+        { t: $$mdi:poll$$, s: activities},
       ]
     - [
-        { type: held, t: $$mdi:ray-start-arrow$$, s: "leader-key" },
+        { type: held, t: $$mdi:ray-start-arrow$$, s: leader-key },
         { t: $$mdi:magnify-minus-outline$$, s: zoom -, h: toggles },
         { t: $$mdi:magnify-plus-outline$$, s: zoom +},
         { t: $$mdi:loupe$$, s: 100% },
-        { t: $$mdi:numeric$$, h: "numbers", s: "auto-layer" },
-        { t: $$mdi:folder-open$$, s: files},
-        { t: "$$mdi:emoticon-happy-outline$$", s: "emojis", h: toggles },
-        { type: held alternate, t: $$mdi:ray-start-arrow$$, s: "leader-key" },
+        { t: $$mdi:numeric$$, h: "numbers", s: auto-layer },
+        { t: $$mdi:arch$$, s: omarchy},
+        { t: "$$mdi:emoticon-happy-outline$$", s: emojis, h: toggles },
+        { type: held alternate, t: $$mdi:ray-start-arrow$$, s: leader-key },
       ]
     - [
         { t: $$mdi:close$$, s: close},
@@ -230,48 +230,27 @@ layers:
         { t: NUM LOCK },
       ]
     - [
-        { type: held },
+        { type: held, t: OS toggle },
         { type: held, t: alpha1 },
         { t: media },
         { t: numbers },
         { t: numbers },
         { t: media },
         { type: held alternate, t: alpha1 },
-        { type: held alternate },
+        { type: held alternate, t: OS toggle },
       ]
     - [
-        { t: plain1},
+        null,
         { t: mehs },
         { t: vim },
         { t: vim },
         { t: mehs },
-        { t: plain1 },
+        null,
       ]
     - { t: $$mdi:power-sleep$$, s: "sleep"}
     - { t: $$mdi:lock$$, s: "lock" }
     - { t: $$mdi:lock$$, s: "lock" }
     - { t: $$mdi:power-sleep$$, s: "sleep"}
-  plain1:
-    - [b, m, g, l, o, u]
-    - [d, n, s, t, r, a, e, i]
-    - [f, c, p, h, ",", "."]
-    - { t: $$mdi:repeat$$, s: repeat, h: nav, type: held }
-    - { t: $$mdi:keyboard-space$$, h: numbers }
-    - { t: plain2, s: sticky, h: symbols }
-    - {
-        t: $$mdi:apple-keyboard-shift$$,
-        s: sticky,
-        h: media,
-        type: held alternate,
-      }
-  plain2:
-    - [q, qu, k, ô, ó, ú]
-    - [y, z, x, w, ã, á, é, í]
-    - [j, ç, v, õ, â, ê]
-    - "'"
-    - { t: $$mdi:keyboard-space$$ }
-    - { t: $$mdi:keyboard-space$$ }
-    - "'"
   nav:
     - [
         { t: $$mdi:apps$$, s: swapper },
@@ -385,7 +364,7 @@ layers:
         { t: "meh '" },
         { t: "meh \\" },
       ]
-    - { t: plain1, s: "auto-layer", h: nav }
+    - { t: alpha1, s: "auto-layer", h: nav }
     - {
         t: $$mdi:apple-keyboard-command$$,
         s: sticky,
@@ -396,7 +375,7 @@ layers:
         s: sticky,
         h: $$mdi:apple-keyboard-command$$,
       }
-    - { t: plain1, s: "auto-layer", h: nav }
+    - { t: alpha1, s: "auto-layer", h: nav }
   func:
     - [
         { t: $$mdi:bluetooth$$, h: $$mdi:arrow-left$$ },
@@ -558,7 +537,7 @@ layers:
         { s: previous, h: error, t: $$mdi:page-previous-outline$$ },
         { s: next, h: error, t: $$mdi:page-next-outline$$ },
       ]
-    - { h: nav, t: plain1, s: sticky }
+    - { h: nav, t: alpha1, s: sticky }
     - {
         h: $$mdi:apple-keyboard-command$$,
         t: $$mdi:apple-keyboard-command$$,
@@ -569,7 +548,7 @@ layers:
         t: $$mdi:apple-keyboard-command$$,
         s: sticky,
       }
-    - { h: nav, t: plain1, s: sticky }
+    - { h: nav, t: alpha1, s: sticky }
   coding-hyper:
     - [
         { s: select in, t: $$mdi:form-select$$ },
@@ -597,10 +576,10 @@ layers:
         { s: previous, h: bookmark, t: $$mdi:page-previous$$ },
         { s: next, h: bookmark, t: $$mdi:page-next$$ },
       ]
-    - { h: nav, t: plain1, s: sticky }
+    - { h: nav, t: alpha1, s: sticky }
     - null
     - null
-    - { h: nav, t: plain1, s: sticky }
+    - { h: nav, t: alpha1, s: sticky }
   fusion360-meh:
     - [
         null,
@@ -635,7 +614,7 @@ layers:
         t: $$mdi:apple-keyboard-command$$,
         s: sticky,
       }
-    - { h: nav, t: plain1, s: sticky }
+    - { h: nav, t: alpha1, s: sticky }
   fusion360-hyper:
     - [
         null,
@@ -666,7 +645,7 @@ layers:
     - null
     - null
     - null
-    - { h: nav, t: plain1, s: sticky }
+    - { h: nav, t: alpha1, s: sticky }
   desktop-management:
     - [
         null,
@@ -740,10 +719,7 @@ combos:
           alpha2,
           shifted1,
           shifted2,
-          plain1,
-          plain2,
           ç-extension,
-          vim,
           mehs,
         ],
     }
@@ -757,8 +733,6 @@ combos:
           alpha2,
           shifted1,
           shifted2,
-          plain1,
-          plain2,
           ç-extension,
           nav,
           media,
@@ -780,36 +754,22 @@ combos:
       k: "alpha1",
       a: top,
       w: 48,
-      layers: [alpha1, alpha2, numbers, mehs, nav, media, plain1, func, vim],
-    }
-  - {
-      p: [ 4, 5],
-      k: "save ⎋",
-      a: mid,
-      w: 48,
-      layers: [shortcuts],
-    }
-  - {
-      p: [ 11, 12],
-      k: "alpha1",
-      a: mid,
-      w: 48,
-      layers: [shortcuts],
+      layers: [alpha1, alpha2, numbers, mehs, nav, media, func, vim],
     }
 
-  - { p: [1, 2], k: "k", a: mid, layers: [alpha1, plain1] }
-  - { p: [3, 4], k: "x", a: mid, layers: [alpha1, plain1] }
-  - { p: [7, 8], k: "q", a: mid, layers: [alpha1, plain1] }
-  - { p: [8, 9], k: "w", a: mid, layers: [alpha1, plain1] }
-  - { p: [10, 11], k: "z", a: mid, layers: [alpha1, plain1] }
-  - { p: [11, 12], k: "y", a: mid, layers: [alpha1, plain1] }
-  - { p: [15, 16], k: "v", a: mid, layers: [alpha1, plain1] }
-  - { p: [17, 18], k: "j", a: mid, layers: [alpha1, plain1] }
+  - { p: [1, 2],   k: "k", a: mid, layers: [alpha1] }
+  - { p: [3, 4],   k: "x", a: mid, layers: [alpha1] }
+  - { p: [7, 8],   k: "q", a: mid, layers: [alpha1] }
+  - { p: [8, 9],   k: "w", a: mid, layers: [alpha1] }
+  - { p: [10, 11], k: "z", a: mid, layers: [alpha1] }
+  - { p: [11, 12], k: "y", a: mid, layers: [alpha1] }
+  - { p: [15, 16], k: "v", a: mid, layers: [alpha1] }
+  - { p: [17, 18], k: "j", a: mid, layers: [alpha1] }
   - {
       p: [18, 19],
       k: { t: ";", h: "⇥ ;" },
       a: mid,
-      layers: [alpha1, plain1, numbers],
+      layers: [alpha1, numbers],
     }
 
   - { p: [1, 2], k: "K", a: mid, layers: [shifted1] }
@@ -823,44 +783,53 @@ combos:
   - { p: [18, 19], k: { t: ":", h: "⇥ :" }, a: mid, layers: [shifted1] }
 
   - {
+      p: [0, 1],
+      k: { t: "⎋", s: normal },
+      a: mid,
+      layers:
+        [
+          vim,
+        ],
+    }
+  - {
       p: [1, 2],
-      k: { t: "`" },
+      k: { t: "`", h: go to },
       a: mid,
       layers: [vim],
     }
   - {
       p: [3, 4],
-      k: { t: "x" },
+      k: { t: "x", h: delete },
       a: mid,
       layers: [vim],
     }
   - {
       p: [4, 5],
-      k: { t: "d" },
+      k: { t: "d", h: delete },
       a: mid,
       layers: [vim],
     }
   - {
       p: [7, 8],
-      k: { t: "z" },
+      k: { t: "z", h: viewport },
       a: mid,
       layers: [vim],
     }
   - {
       p: [8, 9],
-      k: { t: "m" },
+      k: { t: "m", h: mark },
       a: mid,
       layers: [vim],
     }
   - {
       p: [10, 11],
-      k: { t: "p" },
+      k: { t: "p", h: paste },
       a: mid,
       layers: [vim],
     }
   - {
       p: [11, 12],
-      k: { t: "y" },
+      k: { t: "y", h: yank },
       a: mid,
       layers: [vim],
     }
@@ -873,34 +842,34 @@ combos:
     }
   - {
       p: [15, 16],
-      k: { t: "@" },
+      k: { t: "@", h: play },
       a: mid,
       layers: [vim],
     }
   - {
       p: [17, 18],
-      k: { t: "v" },
+      k: { t: "v", h: visual },
       a: mid,
       layers: [vim],
     }
   - {
       p: [18, 19],
-      k: { t: ";" },
+    k: { t: ";", s: ",", h: next/prev },
       a: mid,
       layers: [vim],
     }
 
-  - { p: [1, 2], k: 'dead "', a: mid, layers: [alpha2, plain2, shifted2] }
-  - { p: [3, 4], k: "-", a: mid, layers: [alpha2, plain2, shifted2] }
-  - { p: [7, 8], k: "dead ^", a: mid, layers: [alpha2, plain2, shifted2] }
-  - { p: [8, 9], k: "dead '", a: mid, layers: [alpha2, plain2, shifted2] }
-  - { p: [10, 11], k: "?", a: mid, layers: [alpha2, plain2, shifted2] }
-  - { p: [11, 12], k: "à", a: mid, layers: [alpha2, plain2] }
-  - { p: [11, 12], k: "À", a: mid, layers: [shifted2] }
-  - { p: [14, 15], k: "dead `", a: mid, layers: [alpha2, plain2, shifted2] }
-  - { p: [15, 16], k: "dead ~", a: mid, layers: [alpha2, plain2, shifted2] }
-  - { p: [17, 18], k: "!", a: mid, layers: [alpha2, plain2, shifted2] }
-  - { p: [18, 19], k: ":", a: mid, layers: [alpha2, plain2, shifted2] }
+  - { p: [1, 2], k: 'dead "',   a: mid, layers: [alpha2, shifted2] }
+  - { p: [3, 4], k: "-",        a: mid, layers: [alpha2, shifted2] }
+  - { p: [7, 8], k: "dead ^",   a: mid, layers: [alpha2, shifted2] }
+  - { p: [8, 9], k: "dead '",   a: mid, layers: [alpha2, shifted2] }
+  - { p: [10, 11], k: "?",      a: mid, layers: [alpha2, shifted2] }
+  - { p: [11, 12], k: "à",      a: mid, layers: [alpha2] }
+  - { p: [11, 12], k: "À",      a: mid, layers: [shifted2] }
+  - { p: [14, 15], k: "dead `", a: mid, layers: [alpha2, shifted2] }
+  - { p: [15, 16], k: "dead ~", a: mid, layers: [alpha2, shifted2] }
+  - { p: [17, 18], k: "!",      a: mid, layers: [alpha2, shifted2] }
+  - { p: [18, 19], k: ":",      a: mid, layers: [alpha2, shifted2] }
 
   - {
       p: [14, 15],
