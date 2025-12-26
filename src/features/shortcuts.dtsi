@@ -101,40 +101,6 @@
         TAPHOLD_TP(th_paste,      &mc_paste,    &mc_shift_paste)
         TAPHOLD_TP(th_selpaste,   &mc_selpaste, &mc_shift_selpaste)
 
-        // Vim home home
-
-        MACRO(mc_spc_esc,         &kp A &macro_press &kp SPACE &macro_pause_for_release &macro_release &kp SPACE &macro_tap &kp ESC)
-        MACRO(mc_dqt0p,           &kp DQT &kp SPACE &kp N0 &kp P)
-        MACRO(mc_dqtplusp,        &kp DQT &kp SPACE &kp PLUS &kp P)
-        MACRO(mc_dqtplusy,        &kp DQT &kp SPACE &kp PLUS &kp Y)
-        MACRO(mc_vim_replace,     &kp COLON &kp PERCENT &kp S &kp SLASH &to ALPHA1)
-
-        mc_caret: mc_caret {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings = <&macro_tap &kp CARET &kp SPACE>;
-        };
-
-        mc_zero: mc_zero {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings = <&macro_tap &kp N0>;
-        };
-
-        vim_home: vim_home {
-            compatible = "zmk,behavior-adaptive-key";
-            #binding-cells = <0>;
-            bindings = <&mc_caret>;
-
-            ADAPTIVE(caret_zero, &mc_zero, SPACE)
-        };
-
-        TAPHOLD_TP(th_caret_z, &vim_home, &mc_zero)
-
         MACRO(mc_leader, &leader &to ALPHA1)
         
 
@@ -154,7 +120,7 @@
         OS_MORPH(mc_selpaste,          &macro_tap &kp LG(A) &kp LG(V),                                                              &macro_tap &kp LC(A) &kp LC(V))
         OS_MORPH(mc_shift_selpaste,    &macro_tap &kp LS(LG(A)) &kp LS(LG(V)),                                                      &macro_tap &kp LS(LC(A)) &kp LS(LC(V)))
         OS_MORPH(mc_save,              &macro_tap &kp LG(S),                                                                        &macro_tap &kp LC(S))
-        OS_MORPH(mc_save_esc,          &macro_tap &kp LG(S) &kp ESC &to VIM,                                                        &macro_tap &kp LC(S) &kp ESC &to VIM)
+        OS_MORPH(mc_save_esc,          &macro_tap &kp LG(S) &kp ESC,                                                                &macro_tap &kp LC(S) &kp ESC)
         OS_MORPH(mc_comment,           &macro_tap &kp LG(SLASH),                                                                    &macro_tap &kp LC(SLASH))
                                                                                                                              
         // Custom                                                                                                            
