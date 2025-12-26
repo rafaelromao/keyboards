@@ -41,36 +41,58 @@
         TAPHOLD_TP(th_caret_z, &vim_home, &mc_zero)
 
 
-        MACRO(mc_o_esc,     &macro_tap &kp O &kp ESC)
-        MACRO(mc_sft_o_esc, &macro_tap &kp LS(O) &kp ESC)
+        MACRO(mc_o_esc,         &macro_tap &kp O &kp ESC)
+        MACRO(mc_sft_o_esc,     &macro_tap &kp LS(O) &kp ESC)
 
-        MACRO(mc_colon_a1,  &tog_off VIM &kp COLON)
-        MACRO(mc_slash_a1,  &tog_off VIM &kp SLASH)
-        MACRO(mc_qmark_a1,  &tog_off VIM &kp QMARK)
 
-        MACRO(mc_left_a1,   &tog_off VIM &kp LEFT )
-        MACRO(mc_right_a1,  &tog_off VIM &kp RIGHT)
-        MACRO(mc_enter_a1,  &tog_off VIM &kp ENTER)
-        MACRO(mc_esc_a1,    &tog_off VIM &kp ESC  )
+        /* Vim Mode */
+                                
+        MACRO(mc_vim_off,       &tog_off VIM_NORMAL &tog_off VIM_VISUAL &tog_off VIM_INSERT &tog_off VIM_REPLACE)
+                                
+        MACRO(mc_slash_vim,     &mc_vim_off &tog_on VIM_INSERT &kp SLASH)
+        MACRO(mc_qmark_vim,     &mc_vim_off &tog_on VIM_INSERT &kp QMARK)
 
-        MOD_MORPH_KM(mm_left_a1 , MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL|MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_RGUI, &mc_left_a1, &kp LEFT)
-        MOD_MORPH_KM(mm_right_a1, MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL|MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_RGUI, &mc_right_a1, &kp RIGHT)
-        MOD_MORPH_KM(mm_enter_a1, MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL|MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_RGUI, &mc_enter_a1, &kp ENTER)
-        MOD_MORPH_KM(mm_esc_a1  , MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL|MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_RGUI, &mc_esc_a1, &kp ESC)
+        MACRO(mc_colon_vim            , &mc_vim_off &tog_on VIM_INSERT &mc_colon)
+        MACRO(mc_end_colon_vim        , &mc_vim_off &tog_on VIM_INSERT &mc_end_colon)
+        LAYER_MORPH(lm_colon_vim      , VIM_NORMAL, &mc_colon_vim      , &mc_colon)
+        LAYER_MORPH(lm_end_colon_vim  , VIM_NORMAL, &mc_end_colon_vim  , &mc_end_colon_vim)
+        TAPHOLD_TP(th_colon_vim       , &lm_colon_vim, &lm_end_colon_vim)
 
-        MACRO(mc_esc_vim,   &macro_tap &kp ESC &to VIM)
-        MACRO(mc_ent_vim,   &macro_tap &kp ENTER &to VIM)
+        MACRO(mc_qmark_vim            , &mc_vim_off &tog_on VIM_INSERT &mc_qmark)
+        MACRO(mc_end_qmark_vim        , &mc_vim_off &tog_on VIM_INSERT &mc_end_qmark)
+        LAYER_MORPH(lm_qmark_vim      , VIM_NORMAL, &mc_qmark_vim      , &mc_qmark)
+        LAYER_MORPH(lm_end_qmark_vim  , VIM_NORMAL, &mc_end_qmark_vim  , &mc_end_qmark_vim)
+        TAPHOLD_TP(th_qmark_vim       , &lm_qmark_vim, &lm_end_qmark_vim)
+                                
+        MACRO(mc_ent_vim,       &mc_vim_off &tog_on VIM_NORMAL &kp ENTER)
+        MACRO(mc_esc_vim,       &mc_vim_off &tog_on VIM_NORMAL &kp ESC  )
+        MACRO(mc_end_ent_vim,   &mc_vim_off &tog_on VIM_NORMAL &mc_end_ent)
+        MACRO(mc_save_esc_vim,  &mc_vim_off &tog_on VIM_NORMAL &mc_save_asc)
 
-        MACRO(mc_o_a1,  &kp O &tog_off VIM)
-        MACRO(mc_a_a1,  &kp A &tog_off VIM)
-        MACRO(mc_i_a1,  &kp I &tog_off VIM)
-        MACRO(mc_c_a1,  &kp C &tog_off VIM &fsl VIM)
-        MACRO(mc_s_a1,  &kp S &tog_off VIM)
-        MACRO(mc_r_p1,  &kp R &sl PLAIN1)
+        LAYER_MORPH(lm_ent_vim      , VIM_INSERT, &mc_ent_vim      , &kp ENTER)
+        LAYER_MORPH(lm_esc_vim      , VIM_INSERT, &mc_esc_vim      , &kp ESC)
+        LAYER_MORPH(lm_end_ent_vim  , VIM_INSERT, &mc_end_ent_vim  , &mc_end_ent)
+        LAYER_MORPH(lm_save_esc_vim , VIM_INSERT, &mc_save_esc_vim , &mc_save_esc)
 
-        MODTAP_TP(mt_i_a1, &mc_i_a1)
-        MODTAP_TP(mt_c_a1, &mc_c_a1)
-        MODTAP_TP(mt_s_a1, &mc_s_a1)
-        MODTAP_TP(mt_r_p1, &mc_r_p1)
+        MACRO(mc_o_vim,  &kp O &tog_off VIM_NORMAL &tog_on VIM_INSERT)
+        MACRO(mc_a_vim,  &kp A &tog_off VIM_NORMAL &tog_on VIM_INSERT)
+        MACRO(mc_i_vim,  &kp I &tog_off VIM_NORMAL &tog_on VIM_INSERT)
+        MACRO(mc_c_vim,  &kp C &tog_off VIM &fsl VIM)
+        MACRO(mc_s_vim,  &kp S &tog_off VIM_NORMAL &tog_on VIM_INSERT)
+        MACRO(mc_r_vim,  &kp R &sl VIM_REPLACE)
+
+        MODTAP_TP(mt_i_vim, &mc_i_vim)
+        MODTAP_TP(mt_c_vim, &mc_c_vim)
+        MODTAP_TP(mt_s_vim, &mc_s_vim)
+        MODTAP_TP(mt_r_vim, &mc_r_vim)
+
+        MACRO(mc_left_vim,      &mc_vim_off &kp LEFT )
+        MACRO(mc_right_vim,     &mc_vim_off &kp RIGHT)
+                                
+        MOD_MORPH_KM(mm_left_vim  , MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL|MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_RGUI, &mc_left_vim  , &kp LEFT)
+        MOD_MORPH_KM(mm_right_vim , MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL|MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_RGUI, &mc_right_vim , &kp RIGHT)
+        MOD_MORPH_KM(mm_ent_vim   , MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL|MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_RGUI, &mc_ent_vim   , &kp ENTER)
+        MOD_MORPH_KM(mm_esc_vim   , MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL|MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_RGUI, &mc_esc_vim   , &kp ESC)
+
     };
 };

@@ -21,20 +21,21 @@
     #define NUM_LAYERS                  NUM NUM_CP
     #define SYM_LAYERS                  SYM SYM_CP
     #define NAV_LAYERS                  NAV NAV_CP
+    #define VIM_LAYERS                  VIM_NORMAL VIM_INSERT VIM_VISUAL VIM_REPLACE
     #define FIXABLE_LAYERS              ALPHA1_LAYERS CPLK_A1 CASE_A1 NUM_LAYERS MEDIA NAV_LAYERS MEHS FUN VIM_NORMAL
-    #define ALL_LAYERS                  ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS MEDIA TEXT SHORTS VIM_NORMAL
-    #define ALL_LAYERS_WITH_ENTER       ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS MEDIA TEXT
-    #define ALL_LAYERS_WITH_BACKSPACE   ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS
-    #define ALL_LAYERS_WITH_ESC         ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS VIM_NORMAL MEHS
+    #define ALL_LAYERS                  ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS MEDIA TEXT SHORTS VIM_NORMAL VIM_INSERT VIM_REPLACE VIM_VISUAL
+    #define ALL_LAYERS_WITH_ENTER       ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS MEDIA TEXT                   VIM_INSERT VIM_REPLACE
+    #define ALL_LAYERS_WITH_BACKSPACE   ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS                              VIM_INSERT VIM_REPLACE
+    #define ALL_LAYERS_WITH_ESC         ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS VIM_NORMAL VIM_INSERT VIM_REPLACE MEHS             VIM_NORMAL VIM_INSERT VIM_REPLACE VIM_VISUAL 
 
     combos {
         compatible = "zmk,combos";
 
-        COMBO(cb_enter,         RHM RHR R0,      &kp ENTER,              ALL_LAYERS_WITH_ENTER)
+        COMBO(cb_enter,         RHM RHR R0,      &lm_ent_vim,            ALL_LAYERS_WITH_ENTER)
         COMBO(cb_backspace,     RTM RTR,         &kp BACKSPACE,          ALL_LAYERS_WITH_BACKSPACE)
-        COMBO(cb_esc,           LTR LTM,         &none,                  ALL_LAYERS_WITH_ESC) // temporaritly disabled until I get used to the vim layer
+        COMBO(cb_esc,           LTR LTM,         &lm_esc_vim,            ALL_LAYERS_WITH_ESC)
 
-        COMBO(cb_esc_save,      LTR LTM L0,      &mc_save_esc,           ALL_LAYERS)
+        COMBO(cb_esc_save,      LTR LTM L0,      &lm_save_esc_vim,       ALL_LAYERS)
 
         COMBO(cb_toggles_l,     LHI LHR,         &mo TOGS,               SHORTS)
         COMBO(cb_toggles_r,     RHI RHR,         &mo TOGS,               SHORTS)
