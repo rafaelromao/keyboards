@@ -128,7 +128,7 @@ layers:
       ]
     - [
         { h: shortcuts, t: q, s: record },
-        { h: $$mdi:apple-keyboard-control$$, t: n, s: next },
+        { h: $$mdi:apple-keyboard-control$$, t: n, s: next/prev },
         { h: $$mdi:apple-keyboard-option$$, t: s, s: substitute },
         { h: $$mdi:apple-keyboard-shift$$, t: r, s: replace },
         { h: $$mdi:apple-keyboard-shift$$, t: h, s: left },
@@ -784,53 +784,58 @@ combos:
 
   - {
       p: [0, 1],
-      k: { t: "⎋", s: normal },
+      k: { t: "⎋", h: normal },
       a: mid,
-      layers:
-        [
-          vim,
-        ],
+      w: 48,
+      layers: [vim],
     }
   - {
       p: [1, 2],
-      k: { t: "`", h: go to },
+      k: { t: "`", h: get mark },
       a: mid,
+      w: 48,
       layers: [vim],
     }
   - {
       p: [3, 4],
-      k: { t: "x", h: delete },
+      k: { t: "x", h: cut },
       a: mid,
+      w: 48,
       layers: [vim],
     }
   - {
       p: [4, 5],
       k: { t: "d", h: delete },
       a: mid,
+      w: 48,
       layers: [vim],
     }
   - {
       p: [7, 8],
-      k: { t: "z", h: viewport },
+      k: { t: "z", h: view port },
       a: mid,
+      w: 48,
       layers: [vim],
     }
   - {
       p: [8, 9],
-      k: { t: "m", h: mark },
+      k: { t: "m", h: set mark },
       a: mid,
+      w: 48,
       layers: [vim],
     }
   - {
       p: [10, 11],
       k: { t: "p", h: paste },
       a: mid,
+      w: 48,
       layers: [vim],
     }
   - {
       p: [11, 12],
       k: { t: "y", h: yank },
       a: mid,
+      w: 48,
       layers: [vim],
     }
   - {
@@ -844,18 +849,21 @@ combos:
       p: [15, 16],
       k: { t: "@", h: play },
       a: mid,
+      w: 48,
       layers: [vim],
     }
   - {
       p: [17, 18],
       k: { t: "v", h: visual },
       a: mid,
+      w: 48,
       layers: [vim],
     }
   - {
       p: [18, 19],
     k: { t: ";", s: ",", h: next/prev },
       a: mid,
+      w: 48,
       layers: [vim],
     }
 
@@ -905,30 +913,30 @@ combos:
       draw_separate: true,
     }
 
-  - { p: [0, 1, 21], k: { h: "vim", t: ⎋, s: "save" }, layers: [shortcuts], draw_separate: true }
-  - { p: [7, 8, 21], k: "save", layers: [shortcuts], draw_separate: true }
+  - { p: [0, 1, 21], k: { t: $$mdi:content-save-check$$, h: "esc save" }, layers: [shortcuts], draw_separate: true }
+  - { p: [7, 8, 21], k: { t: $$mdi:content-save$$, h: "save" }, layers: [shortcuts], draw_separate: true }
 
-  - { p: [4, 5, 22], k: { t: "↹", s: "tab" }, layers: [shortcuts], draw_separate: true }
-  - { p: [11, 12, 22], k: { t: "⏎", s: "enter" }, layers: [shortcuts], draw_separate: true }
+  - { p: [4, 5, 22], k: { t: $$mdi:keyboard-tab$$, h: "tab" }, layers: [shortcuts], draw_separate: true }
+  - { p: [11, 12, 22], k: { t: $$mdi:keyboard-return$$, h: "enter" }, layers: [shortcuts], draw_separate: true }
 
-  - { p: [14, 15, 21], k: "undo", layers: [shortcuts], draw_separate: true }
-  - { p: [8, 9, 21], k: "full screen", layers: [shortcuts], draw_separate: true }
+  - { p: [14, 15, 21], k: { t: $$mdi:undo$$, h: "undo" }, layers: [shortcuts], draw_separate: true }
+  - { p: [8, 9, 21], k: { t: $$mdi:fullscreen$$, h: "full screen" }, layers: [shortcuts], draw_separate: true }
 
-  - { p: [10, 11, 22], k: { t: "copy", h: "⇧ copy" }, layers: [shortcuts], draw_separate: true }
-  - { p: [17, 18, 22], k: { t: "paste", h: "⇧ paste" }, layers: [shortcuts], draw_separate: true }
+  - { p: [10, 11, 22], k: { t: $$mdi:content-copy$$, h: "copy" }, layers: [shortcuts], draw_separate: true }
+  - { p: [17, 18, 22], k: { t: $$mdi:content-paste$$, h: "paste" }, layers: [shortcuts], draw_separate: true }
 
-  - { p: [15, 16, 21], k: "find", layers: [shortcuts], draw_separate: true }
-  - { p: [18, 19, 22], k: "select all", layers: [shortcuts], draw_separate: true }
+  - { p: [15, 16, 21], k: { t: $$mdi:magnify$$, h: "find" }, layers: [shortcuts], draw_separate: true }
+  - { p: [18, 19, 22], k: { t: $$mdi:select-all$$, h: "select all" }, layers: [shortcuts], draw_separate: true }
 
   - {
       p: [10, 11, 12, 22],
-      k: "select all copy",
+      k: { s: $$mdi:select-all$$, t: $$mdi:content-copy$$, h: sel. copy },
       layers: [shortcuts],
       draw_separate: true,
     }
   - {
       p: [17, 18, 19, 22],
-      k: "select all paste",
+      k: { s: $$mdi:select-all$$, t: $$mdi:content-paste$$, h: sel. paste },
       layers: [shortcuts],
       draw_separate: true,
     }

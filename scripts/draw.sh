@@ -31,7 +31,6 @@ yq -i 'del(.combos[] | select(.layers | contains(["media"]) | not))' tmp/keymap-
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml alphas alpha1 alpha2
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml cedil ç-extension
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml boot --2cols func macros
-./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml plain plain1 plain2
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml shifted shifted1 shifted2
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml vim alpha1 shortcuts vim
 
