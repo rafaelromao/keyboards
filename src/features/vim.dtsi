@@ -54,7 +54,6 @@
         LAYERTAP_TP(lt_lead_vim , &mc_spc_lead_vim)
 
         MACRO(mc_slash_vim,     &mc_vim_off &tog_on VIM_INSERT &kp SLASH)
-        MACRO(mc_qmark_vim,     &mc_vim_off &tog_on VIM_INSERT &kp QMARK)
 
         MACRO(mc_colon_vim            , &mc_vim_off &tog_on VIM_INSERT &mc_colon)
         MACRO(mc_end_colon_vim        , &mc_vim_off &tog_on VIM_INSERT &mc_end_colon)
