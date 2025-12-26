@@ -199,3 +199,6 @@
         MACRO(mc_otask, &kp MINUS &kp SPACE &kp LBKT &kp SPACE &kp RBKT &kp SPACE)
         MACRO(mc_oref,  &kp LBKT &kp LBKT)
         MACRO(mc_end_do_ent, &kp END &kp D &kp O &kp ENTER)
+
+    };
+};
