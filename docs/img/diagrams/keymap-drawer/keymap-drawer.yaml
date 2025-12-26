@@ -422,8 +422,8 @@ layers:
         { t: "[[", s: "open ref" },
         { t: "-␣[␣]␣", s: "new task" },
         { t: "⇧v", s: visual, h: line },
-        { t: "", s: vim },
-        { t: "", s: vim },
+        { t: '"0p', s: paste, h: last yank },
+        { t: '"1p', s: paste, h: last delete },
         { type: held },
       ]
     - [
@@ -431,8 +431,8 @@ layers:
         { t: "⌘/|⌃/", s: "comment" },
         { t: "haha", s: "laugh" },
         { t: "⌃v", s: visual, h: block },
-        { t: '', s: vim },
-        { t: '', s: vim },
+        { t: '"+p', s: paste, h: clipboard },
+        { t: '"+y', s: yank, h: clipboard },
       ]
     - { t: $$mdi:repeat$$, s: repeat  }
     - { t: $$mdi:keyboard-space$$, h: normal, s: vim }
@@ -867,7 +867,7 @@ combos:
     }
   - {
       p: [18, 19],
-    k: { t: ";", s: ",", h: next/prev },
+      k: { t: ";", s: ",", h: next/prev },
       a: mid,
       w: 48,
       layers: [vim],
@@ -1051,10 +1051,6 @@ combos:
 
   - { p: [3, 4], k: { s: enter, t: vim, h: mode }, a: mid, layers: [macros] }
   - { p: [4, 5], k: { s: leave, t: vim, h: mode }, a: mid, layers: [macros] }
-  - { p: [10, 11], k: { t: '"0p', s: paste, h: yank }, a: mid, layers: [macros] }
-  - { p: [11, 12], k: { t: '"1p', s: paste, h: delete }, a: mid, layers: [macros] }
-  - { p: [17, 18], k: { t: '"+p', s: paste, h: clip }, a: mid, layers: [macros] }
-  - { p: [18, 19], k: { t: '"+y', s: yank, h: clip }, a: mid, layers: [macros] }
 
   - { p: [4, 5], k: "⎋", a: mid, layers: [mehs] }
   - { p: [1, 2], k: meh k, a: mid, layers: [mehs] }
