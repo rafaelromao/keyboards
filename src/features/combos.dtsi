@@ -112,7 +112,7 @@
         COMBO(cb_grv_vim,       LTM LTI,         &kp GRAVE,              VIM_NORMAL)
         COMBO(cb_x_vim,         RTI RTM,         &kp X,                  VIM_NORMAL)
         COMBO(cb_d_vim,         RTM RTR,         &kp D,                  VIM_NORMAL)
-        COMBO(cb_z_vim,         LHR LHM,         &kp Q,                  VIM_NORMAL)
+        COMBO(cb_z_vim,         LHR LHM,         &kp Z,                  VIM_NORMAL)
         COMBO(cb_m_vim,         LHM LHI,         &kp M,                  VIM_NORMAL)
         COMBO(cb_p_vim,         RHI RHM,         &kp P,                  VIM_NORMAL)
         COMBO(cb_y_vim,         RHM RHR,         &kp Y,                  VIM_NORMAL)
@@ -199,10 +199,8 @@
         COMBO(cb_shiftv,        RBM RBR,         &kp LS(V),              TEXT)
         COMBO(cb_ctrlv,         RBI RBM,         &kp LC(V),              TEXT)
 
-        COMBO(cb_vim_q,         RTI RTM,         &kp Q,                  MACROS)
-        COMBO(cb_vim_atat,      RTM RTR,         &mc_atat,               MACROS)
-        COMBO(cb_vim_qr,        RHI RHM,         &mc_qr,                 MACROS)
-        COMBO(cb_vim_atr,       RHM RHR,         &mc_atr,                MACROS)
+        COMBO(cb_enter_vim,     RTI RTM,         &tog VIM_NORMAL,        MACROS)
+        COMBO(cb_leave_vim,     RTM RTR,         &tc_cancel,             MACROS)
 
         COMBO(cb_numbers_nav,   LBR LBM,         &mo NUM_CP,             NAV_LAYERS)
         COMBO(cd_ca,            LHR LHM,         &kp LC(LALT),           NAV_LAYERS)
