@@ -10,43 +10,43 @@
 #define ALPHA1 0
 #define ALT_OS 1
 
-#define CASE_A1 2
-#define CPLK_A1 3
+#define MEHS 2
 
-#define ALPHA2 4
+#define VIM_NORMAL 3
+#define VIM_INSERT 4
+#define VIM_VISUAL 5
+#define VIM_REPLACE 6
 
-#define VIM 5
+#define CASE_A1 7
+#define CPLK_A1 8
 
-#define NUM 6
-#define SYM 7
+#define ALPHA2 9
 
-#define SEN_CASE 8
-#define CCEDIL 9
-#define SFT_A2 10
-#define CASE_A2 11
-#define CASE_CCEDIL 12
+#define NUM 10
+#define SYM 11
 
-#define SHORTS 13
-#define TOGS 14
-#define MEHS 15
+#define SEN_CASE 12
+#define CCEDIL 13
+#define SFT_A2 14
+#define CASE_A2 15
+#define CASE_CCEDIL 16
 
-#define PLAIN1 16
-#define SFT_PLAIN1 17
-#define PLAIN2 18
-#define SFT_PLAIN2 19
-#define ALTREP2 20
+#define SHORTS 17
+#define TOGS 18
 
-#define NAV 21
+#define ALTREP2 19
 
-#define NUM_CP 22
-#define SYM_CP 23
+#define NAV 20
 
-#define MEDIA 24
-#define NAV_CP 25
+#define NUM_CP 21
+#define SYM_CP 22
 
-#define TEXT 26
-#define FUN 27
-#define MACROS 28
+#define MEDIA 23
+#define NAV_CP 24
+
+#define TEXT 25
+#define FUN 26
+#define MACROS 27
 
 
 // Settings
