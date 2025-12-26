@@ -73,7 +73,7 @@
         COMBO(cb_mrclk,         LTI L0,          &mkp RCLK,              ALL_LAYERS)
         COMBO(cb_mrclk2,        RTC R2,          &mkp RCLK,              ALL_LAYERS)
 
-        COMBO(cb_numword,       LBR LBM,         &lt_num_word NAV 0,     ALPHA1_LAYERS VIM_NORMAL)
+        COMBO(cb_numword,       LBR LBM,         &lt_num_word NAV 0,     ALPHA1_LAYERS VIM_INSERT VIM_REPLACE)
         COMBO(cd_ca_nav,        LHR LHM L1,      &mc_ca_nav,             ALPHA1_LAYERS)
         COMBO(cd_gcs_nav,       LBR LHM LHI L1,  &mc_gcs_nav,            ALPHA1_LAYERS)
         COMBO(cd_cag_nav,       LHR LHM LBI L1,  &mc_cag_nav,            ALPHA1_LAYERS)
@@ -84,8 +84,8 @@
         COMBO(cb_meh_ent,       RHI RHM RHR,     &ht_meh_ent 0 0,        ALPHA1_LAYERS)
         COMBO(cb_hyp_ent,       RBI RBM RBR,     &th_hyper_enter 0 0,    ALPHA1_LAYERS)
 
-        COMBO(cb_semi,          RBM RBR,         &th_semi 0 0,           ALPHA1_LAYERS NUM_LAYERS VIM_NORMAL)
-        COMBO(cb_sent,          RBI RBM RBR,     &mc_end_semi_ent,       NUM_LAYERS)
+        COMBO(cb_semi,          RBM RBR,         &th_semi 0 0,           ALPHA1_LAYERS NUM_LAYERS VIM_NORMAL VIM_INSERT VIM_REPLACE)
+        COMBO(cb_sent,          RBI RBM RBR,     &mc_end_semi_ent_vim,   NUM_LAYERS)
 
         COMBO(cb_k,             LTM LTI,         &kp K,                  ALPHA1)
         COMBO(cb_w,             LHM LHI,         &ht_w 0 0,              ALPHA1)
@@ -109,7 +109,6 @@
         COMBO(cb_dc,            RTI RTM RTR,     &kp LS(D),              CASE_A1 CPLK_A1)
         COMBO(cb_pc,            RHI RHM RHR,     &kp LS(P),              CASE_A1 CPLK_A1)
 
-        COMBO(cb_alpha1_vim,    LTR LTM,         &to ALPHA1,             VIM_NORMAL)
         COMBO(cb_grv_vim,       LTM LTI,         &kp GRAVE,              VIM_NORMAL)
         COMBO(cb_x_vim,         RTI RTM,         &kp X,                  VIM_NORMAL)
         COMBO(cb_d_vim,         RTM RTR,         &kp D,                  VIM_NORMAL)
@@ -184,7 +183,7 @@
         COMBO(cb_bti_s,         LBM LBR,         &kp GRAVE,              ALPHA2_LAYERS)
         COMBO(cb_caret_s,       LHR LHM,         &kp CARET,              ALPHA2_LAYERS)
         COMBO(cb_tilde_s,       LBI LBM,         &kp TILDE,              ALPHA2_LAYERS)
-        COMBO(cb_ques,          RHI RHM,         &mc_qmark_a1,           ALPHA2_LAYERS)
+        COMBO(cb_ques,          RHI RHM,         &mc_qmark_vim,          ALPHA2_LAYERS)
         COMBO(cb_excl,          RBI RBM,         &mc_excl,               ALPHA2_LAYERS)
         COMBO(cb_colon,         RBM RBR,         &kp COLON,              ALPHA2_LAYERS)
 
