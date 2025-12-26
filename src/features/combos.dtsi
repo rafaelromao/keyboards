@@ -36,9 +36,6 @@
         COMBO(cb_esc,           LTR LTM,         &none,                  ALL_LAYERS_WITH_ESC) // temporaritly disabled until I get used to the vim layer
 
         COMBO(cb_esc_save,      LTR LTM L0,      &mc_save_esc,           ALL_LAYERS_WITH_ESC_VIM)
-        COMBO(cb_esc_save_vim,  RTM RTR,         &mc_save_esc,           SHORTS)
-        COMBO(cb_cancel_vim,    RHM RHR,         &tc_cancel,             SHORTS)
-        COMBO(cb_enter_vim,     RHM RHR R0,      &mc_ent_vim,            SHORTS)
 
         COMBO(cb_toggles_l,     LHI LHR,         &mo TOGS,               SHORTS)
         COMBO(cb_toggles_r,     RHI RHR,         &mo TOGS,               SHORTS)
