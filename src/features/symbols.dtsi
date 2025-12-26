@@ -163,7 +163,7 @@
         MACRO(mc_colon,               &kp COLON )
         MACRO(mc_end_colon,           &kp END &mc_colon)
 
-        MACRO(mc_end_excl,            &kp END &mc_excl )
+        MACRO(mc_end_excl,            &kp END &kp EXCL)
         TAPHOLD_TP(th_excl,           &mc_excl, &mc_end_excl)
 
         MACRO(mc_eql,                 &kp EQUAL)
