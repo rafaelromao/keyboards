@@ -152,6 +152,8 @@
         OS_MORPH(mc_browser,           &macro_tap &kp LC(LA(B)),                                                                    &macro_tap &kp LC(LA(B)))
         OS_MORPH(mc_editor,            &macro_tap &kp LC(LA(N)),                                                                    &macro_tap &kp LC(LA(N)))
         OS_MORPH(mc_ai,                &macro_tap &kp LC(LA(I)),                                                                    &macro_tap &kp LC(LA(I)))
+        OS_MORPH(mc_activities,        &macro_tap &kp LC(LA(A)),                                                                    &macro_tap &kp LC(LA(A)))
+        OS_MORPH(mc_system,            &macro_tap &kp LC(SPACE),                                                                    &macro_tap &kp LC(SPACE))
                                                                                                                              
         // Navigation                                                                                                        
                                                                                                                              
