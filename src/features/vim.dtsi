@@ -9,6 +9,7 @@
     vim {
         MACRO(mc_spc_esc,         &kp A &macro_press &kp SPACE &macro_pause_for_release &macro_release &kp SPACE &macro_tap &kp ESC)
         MACRO(mc_dqt0p,           &kp DQT &kp SPACE &kp N0 &kp P)
+        MACRO(mc_dqt1p,           &kp DQT &kp SPACE &kp N1 &kp P)
         MACRO(mc_dqtplusp,        &kp DQT &kp SPACE &kp PLUS &kp P)
         MACRO(mc_dqtplusy,        &kp DQT &kp SPACE &kp PLUS &kp Y)
         MACRO(mc_vim_replace,     &kp COLON &kp PERCENT &kp S &kp SLASH &to ALPHA1)
