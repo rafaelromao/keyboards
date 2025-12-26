@@ -93,9 +93,6 @@
             bindings = <&macro_press &kp LS(LC(LA(LGUI))) &macro_pause_for_release &macro_release &kp LS(LC(LA(LGUI)))>;
         };
 
-        MACRO(mc_end_ent,         &kp END &kp ENTER)
-        MACRO(mc_home_tab,        &kp HOME &kp TAB)
-
         TAPHOLD_TP(th_copy,       &mc_copy,     &mc_shift_copy)
         TAPHOLD_TP(th_selcopy,    &mc_selcopy,  &mc_shift_selcopy)
         TAPHOLD_TP(th_paste,      &mc_paste,    &mc_shift_paste)
@@ -103,7 +100,8 @@
 
         MACRO(mc_leader, &leader &to ALPHA1)
         
-
+        MACRO(mc_home_tab,  &kp HOME &kp TAB)
+        MACRO(mc_end_ent,   &kp END &kp ENTER)
 
         // Common
 
