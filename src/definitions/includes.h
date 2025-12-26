@@ -15,6 +15,7 @@
 #include "../features/accents.dtsi"
 #include "../features/shortcuts.dtsi"
 #include "../features/select.dtsi"
+#include "../features/vim.dtsi"
 
 #include "../features/sentence.dtsi"
 #include "../features/smart.dtsi"

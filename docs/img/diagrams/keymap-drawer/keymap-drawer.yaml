@@ -123,7 +123,7 @@ layers:
         { t: w, h: word },
         { t: e, h: end },
         { t: g, h: go to },
-        { t: o, h: new line },
+        { t: o, h: newline },
         { t: u, h: undo },
       ]
     - [
@@ -203,8 +203,8 @@ layers:
         { t: $$mdi:magnify-minus-outline$$, s: zoom -, h: toggles },
         { t: $$mdi:magnify-plus-outline$$, s: zoom +},
         { t: $$mdi:loupe$$, s: 100% },
-        { t: $$mdi:numeric$$, h: "numbers", s: auto-layer },
-        { t: $$mdi:arch$$, s: omarchy},
+        { t: $$mdi:numeric$$, h: numbers, s: auto-layer },
+        { t: $$mdi:arch$$, s: system},
         { t: "$$mdi:emoticon-happy-outline$$", s: emojis, h: toggles },
         { type: held alternate, t: $$mdi:ray-start-arrow$$, s: leader-key },
       ]
@@ -227,25 +227,25 @@ layers:
         { t: nav },
         { t: nav },
         { t: func },
+        { t: CAPS LOCK },
+      ]
+    - [
+        { type: held, t: def OS },
+        { type: held, t: alt OS },
+        { t: media },
+        { t: numbers },
+        { t: numbers },
+        { t: media },
+        { type: held alternate, t: alt OS },
+        { type: held alternate, t: def OS },
+      ]
+    - [
         { t: NUM LOCK },
-      ]
-    - [
-        { type: held, t: OS toggle },
-        { type: held, t: alpha1 },
-        { t: media },
-        { t: numbers },
-        { t: numbers },
-        { t: media },
-        { type: held alternate, t: alpha1 },
-        { type: held alternate, t: OS toggle },
-      ]
-    - [
-        null,
         { t: mehs },
         { t: vim },
         { t: vim },
         { t: mehs },
-        null,
+        { t: NUM LOCK },
       ]
     - { t: $$mdi:power-sleep$$, s: "sleep"}
     - { t: $$mdi:lock$$, s: "lock" }
@@ -412,27 +412,27 @@ layers:
         { t: "~/" },
         { t: "./" },
         { t: "../" },
-        { t: ":%s/", s: vim },
-        { t: "o⎋", s: vim },
-        { t: 'O⎋', s: vim },
+        { t: ":%s/", s: search, h: replace },
+        { t: "o⎋", s: newline, h: below },
+        { t: 'O⎋', s: newline, h: above },
       ]
     - [
         { t: "exit⏎", s: "terminal"},
         { t: "[]'s", s: "hugs" },
         { t: "[[", s: "open ref" },
         { t: "-␣[␣]␣", s: "new task" },
-        { t: "⇧v", s: vim },
-        { t: "v", s: vim },
-        { t: "⌃v", s: vim },
+        { t: "⇧v", s: visual, h: line },
+        { t: "", s: vim },
+        { t: "", s: vim },
         { type: held },
       ]
     - [
         { t: "Print OS" },
         { t: "⌘/|⌃/", s: "comment" },
         { t: "haha", s: "laugh" },
-        { t: '"0p', s: vim },
-        { t: '"+p', s: vim },
-        { t: '"+y', s: vim },
+        { t: "⌃v", s: visual, h: block },
+        { t: '', s: vim },
+        { t: '', s: vim },
       ]
     - { t: $$mdi:repeat$$, s: repeat  }
     - { t: $$mdi:keyboard-space$$, h: normal, s: vim }
@@ -751,10 +751,10 @@ combos:
     }
   - {
       p: [3, 4, 5],
-      k: "alpha1",
+      k: "layer off",
       a: top,
       w: 48,
-      layers: [alpha1, alpha2, numbers, mehs, nav, media, func, vim],
+      layers: [alpha1, numbers, mehs, nav, media, func, vim],
     }
 
   - { p: [1, 2],   k: "k", a: mid, layers: [alpha1] }
@@ -782,6 +782,12 @@ combos:
   - { p: [17, 18], k: "J", a: mid, layers: [shifted1] }
   - { p: [18, 19], k: { t: ":", h: "⇥ :" }, a: mid, layers: [shifted1] }
 
+  - {
+      p: [0, 1, 2],
+      k: { s: enter, t: vim, h: mode },
+      a: top,
+      layers: [alpha1, vim],
+    }
   - {
       p: [0, 1],
       k: { t: "⎋", h: normal },
@@ -1043,10 +1049,12 @@ combos:
   - { p: [17, 18], k: "↓ ⇥", a: mid, layers: [nav] }
   - { p: [18, 19], k: { t: $$mdi:numeric$$, h: numbers }, a: mid, layers: [nav] }
 
-  - { p: [3, 4], k: { t: "q", s: vim }, a: mid, layers: [macros] }
-  - { p: [4, 5], k: { t: "@@", s: vim }, a: mid, layers: [macros] }
-  - { p: [10, 11], k: { t: "qr", s: vim }, a: mid, layers: [macros] }
-  - { p: [11, 12], k: { t: "@r", s: vim }, a: mid, layers: [macros] }
+  - { p: [3, 4], k: { s: enter, t: vim, h: mode }, a: mid, layers: [macros] }
+  - { p: [4, 5], k: { s: leave, t: vim, h: mode }, a: mid, layers: [macros] }
+  - { p: [10, 11], k: { t: '"0p', s: paste, h: yank }, a: mid, layers: [macros] }
+  - { p: [11, 12], k: { t: '"1p', s: paste, h: delete }, a: mid, layers: [macros] }
+  - { p: [17, 18], k: { t: '"+p', s: paste, h: clip }, a: mid, layers: [macros] }
+  - { p: [18, 19], k: { t: '"+y', s: yank, h: clip }, a: mid, layers: [macros] }
 
   - { p: [4, 5], k: "⎋", a: mid, layers: [mehs] }
   - { p: [1, 2], k: meh k, a: mid, layers: [mehs] }
