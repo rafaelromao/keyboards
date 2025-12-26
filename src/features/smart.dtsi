@@ -19,39 +19,6 @@
         };
         LAYERTAP_TP(lt_cancel,     &tc_cancel)
 
-        // ********************** SMART PLAIN ALPHAS ********************** //
-
-        smart_plain1: smart_plain1 {
-            compatible = "zmk,behavior-auto-layer";
-            ignore-alphas;
-            ignore-modifiers;
-            #binding-cells = <1>;
-            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT TILDE CARET GRAVE SPACE>;
-        };
-
-        MACRO(tc_smart_plain1, &smart_plain1 PLAIN1)
-
-        MACRO(mc_plain2, &sl PLAIN2)
-        MACRO(mc_shifted_plain2, &sl SFT_PLAIN2)
- 
-        msl_p2: msl_p2 {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <QUICK_TAP_TERM>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <0>;
-            bindings = <&mo>, <&mc_plain2>;
-        };
-
-        msl_sf_p2: msl_sf_p2 {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <QUICK_TAP_TERM>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <0>;
-            bindings = <&mo>, <&mc_shifted_plain2>;
-        };
-
         // ********************** NUM WORD ********************** //
 
         smart_num: smart_num {
@@ -200,8 +167,6 @@
             quick-tap-ms = <0>;
             bindings = <&mm_hold_alt_num_gui>, <&mm_tap_alt_space_gui>;
         };
-
-        MACRO(mc_sft_p1, &sl SFT_PLAIN1)
 
         ht_sft_p1: ht_sft_p1 {
             compatible = "zmk,behavior-hold-tap";
