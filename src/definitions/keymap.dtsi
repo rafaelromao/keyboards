@@ -202,9 +202,9 @@
                 toggles_layer {
                      display-name = "TOGGLES";
                      bindings = <
-   &none              &kp CAPS             &to FUN             &to NAV             &none               &none               &to NAV             &to FUN             &kp KP_NUM          &none     
+   &none              &kp CAPS             &to FUN             &to NAV             &none               &none               &to NAV             &to FUN             &kp CAPS            &none     
    &tog_off ALT_OS    &to ALT_OS           &to MEDIA           &to NUM             &none               &none               &to NUM             &to MEDIA           &to ALT_OS          &tog_off ALT_OS   
-   &none              &to PLAIN1           &to MEHS            &to VIM             &none               &none               &to VIM             &to MEHS            &to PLAIN1          &none  
+   &none              &kp KP_NUM           &to MEHS            &to VIM             &none               &none               &to VIM             &to MEHS            &kp KP_NUM          &none  
                                            &none               &mc_lock            &mc_sleep           &mc_lock            &mc_sleep           &none
                         >;
                 };
