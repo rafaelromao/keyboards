@@ -13,41 +13,42 @@
 #define MEHS 2
 
 #define VIM_NORMAL 3
-#define VIM_INSERT 4
-#define VIM_VISUAL 5
-#define VIM_LEADER 6
-#define VIM_REPLACE 7
+#define VIM_CHANGE 4
+#define VIM_INSERT 5
+#define VIM_VISUAL 6
+#define VIM_LEADER 7
+#define VIM_REPLACE 8
 
-#define CASE_A1 8
-#define CPLK_A1 9
+#define CASE_A1 9
+#define CPLK_A1 10
 
-#define ALPHA2 10
+#define ALPHA2 11
 
-#define NUM 11
-#define SYM 12
+#define NUM 12
+#define SYM 13
 
-#define SEN_CASE 13
-#define CCEDIL 14
-#define SFT_A2 15
-#define CASE_A2 16
-#define CASE_CCEDIL 17
+#define SEN_CASE 14
+#define CCEDIL 15
+#define SFT_A2 16
+#define CASE_A2 17
+#define CASE_CCEDIL 18
 
-#define SHORTS 18
-#define TOGS 19
+#define SHORTS 19
+#define TOGS 20
 
-#define ALTREP2 20
+#define ALTREP2 21
 
-#define NAV 21
+#define NAV 22
 
-#define NUM_CP 22
-#define SYM_CP 23
+#define NUM_CP 23
+#define SYM_CP 24
 
-#define MEDIA 24
-#define NAV_CP 25
+#define MEDIA 25
+#define NAV_CP 26
 
-#define TEXT 26
-#define FUN 27
-#define MACROS 28
+#define TEXT 27
+#define FUN 28
+#define MACROS 29
 
 
 // Settings

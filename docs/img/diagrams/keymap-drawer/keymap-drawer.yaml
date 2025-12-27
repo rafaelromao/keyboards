@@ -129,7 +129,7 @@ layers:
     - [
         { h: shortcuts, t: q, s: record },
         { h: $$mdi:apple-keyboard-control$$, t: n, s: next/prev },
-        { h: $$mdi:apple-keyboard-option$$, t: s, s: substitute },
+        { h: $$mdi:apple-keyboard-option$$, t: s, s: surround },
         { h: $$mdi:apple-keyboard-shift$$, t: r, s: replace },
         { h: $$mdi:apple-keyboard-shift$$, t: h, s: left },
         { h: $$mdi:apple-keyboard-option$$, t: j, s: down },
