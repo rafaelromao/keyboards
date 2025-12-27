@@ -185,7 +185,7 @@
         COMBO(cb_bti_s,         LBM LBR,         &kp GRAVE,              ALPHA2_LAYERS)
         COMBO(cb_caret_s,       LHR LHM,         &kp CARET,              ALPHA2_LAYERS)
         COMBO(cb_tilde_s,       LBI LBM,         &kp TILDE,              ALPHA2_LAYERS)
-        COMBO(cb_ques,          RHI RHM,         &mc_qmark_vim,          ALPHA2_LAYERS)
+        COMBO(cb_ques,          RHI RHM,         &mc_qmark,              ALPHA2_LAYERS)
         COMBO(cb_excl,          RBI RBM,         &mc_excl,               ALPHA2_LAYERS)
         COMBO(cb_colon,         RBM RBR,         &kp COLON,              ALPHA2_LAYERS)
 
