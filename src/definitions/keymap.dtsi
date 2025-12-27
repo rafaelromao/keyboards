@@ -99,7 +99,7 @@
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp SEMICOLON
    &lt SHORTS D        &mt LCTL N          &mt LALT S          &mt LSFT T          &kp W               &kp Z               &mt LSFT R          &mt LALT A          &mt LCTL E          &lt SHORTS I
    &kp Y               &mt LGUI F          &mt LGUI C          &mt LGUI P          &kp V               &kp J               &ht_magic LGUI 0    &th_comma 0 0       &th_dot 0 0         &kp SLASH
-                                           &mkp RCLK           &ht_repeat NAV 0    &ltn_num_spc 0 0    &msl_sym_a2 0 0     &ht_shift MEDIA 0   &mkp LCLK
+                                           &mkp RCLK           &ht_repeat NAV 0    &ltn_num_spc 0 0    &msl_sym_a2 0 0     &ht_sft_vim MEDIA 0 &mkp LCLK
                         >;
                 };
 
