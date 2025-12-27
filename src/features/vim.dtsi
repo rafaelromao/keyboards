@@ -77,7 +77,7 @@
         MACRO(mc_i_vim,  &kp I &tog_off VIM_NORMAL &tog_on VIM_INSERT)
         MACRO(mc_c_vim,  &kp C &tog_off VIM_NORMAL &fsl VIM_NORMAL &tog_on VIM_INSERT)
         MACRO(mc_s_vim,  &kp S &tog_off VIM_NORMAL &tog_on VIM_INSERT)
-        MACRO(mc_r_vim,  &kp R &tog_off VIM_NORMAL &sl VIM_REPLACE)
+        MACRO(mc_r_vim,  &kp R &sl VIM_REPLACE)
 
         MODTAP_TP(mt_i_vim, &mc_i_vim)
         MODTAP_TP(mt_c_vim, &mc_c_vim)
