@@ -82,13 +82,14 @@
         MACRO(mc_r_vim,  &kp R &sl VIM_REPLACE)
 
         MACRO(mc_sft_c_vim,  &kp C &tog_off VIM_NORMAL &tog_on VIM_INSERT)
+        MOD_MORPH_KM(mm_sft_c_vim , MOD_LSFT|MOD_RSFT, &mc_sft_c_vim, &mc_c_vim)
 
         MOD_MORPH_KM(mm_a_vim , MOD_LCTL|MOD_RCTL, &kp A, &mc_a_vim)
         MOD_MORPH_KM(mm_i_vim , MOD_LCTL|MOD_RCTL, &kp I, &mc_i_vim)
         MOD_MORPH_KM(mm_s_vim , MOD_LCTL|MOD_RCTL, &kp S, &mc_s_vim)
         MOD_MORPH_KM(mm_r_vim , MOD_LCTL|MOD_RCTL, &kp R, &mc_r_vim)
         MOD_MORPH_KM(mm_o_vim , MOD_LCTL|MOD_RCTL, &kp O, &mc_o_vim)
-        MOD_MORPH_KM(mm_c_vim , MOD_LCTL|MOD_RCTL|MOD_LSFT|MOD_RSFT, &mc_sft_c_vim, &mc_c_vim)
+        MOD_MORPH_KM(mm_c_vim , MOD_LCTL|MOD_RCTL, &kp C, &mm_sft_c_vim)
 
         MODTAP_TP(mt_i_vim, &mc_i_vim)
         MODTAP_TP(mt_c_vim, &mc_c_vim)
