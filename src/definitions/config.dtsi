@@ -162,10 +162,10 @@
             toggle-mode = "off";
         };
 
-        fsl: fast-stick-layer {
+        ntsl: fast-stick-layer {
             compatible = "zmk,behavior-sticky-key";
             #binding-cells = <1>;
-            release-after-ms = <200>;
+            release-after-ms = <20000>;
             bindings = <&mo>;
             quick-release;
             display-name = "Fast Sticky Layer";
