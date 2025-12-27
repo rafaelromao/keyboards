@@ -46,9 +46,8 @@
 
 
         /* Vim Mode */
-                                
         MACRO(mc_vim_off        , &tog_off VIM_NORMAL &tog_off VIM_VISUAL &tog_off VIM_INSERT &tog_off VIM_REPLACE &tog_off VIM_LEADER)
-                                
+
         // MACRO(mc_spc_lead_vim   , &kp SPACE &sl VIM_LEADER)
         MACRO(mc_spc_lead_vim   , &kp SPACE)
         LAYERTAP_TP(lt_lead_vim , &mc_spc_lead_vim)
@@ -75,8 +74,11 @@
         MACRO(mc_o_vim,  &kp O &tog_off VIM_NORMAL &tog_on VIM_INSERT)
         MACRO(mc_a_vim,  &kp A &tog_off VIM_NORMAL &tog_on VIM_INSERT)
         MACRO(mc_i_vim,  &kp I &tog_off VIM_NORMAL &tog_on VIM_INSERT)
-        MACRO(mc_c_vim,  &kp C &tog_off VIM_NORMAL &fsl VIM_NORMAL &tog_on VIM_INSERT)
-        MACRO(mc_s_vim,  &kp S &tog_off VIM_NORMAL &tog_on VIM_INSERT)
+        MACRO(mc_c_vim,  &kp C &tog_off VIM_NORMAL &tog_on VIM_INSERT &sl VIM_CHANGE)
+        MACRO(mc_ca_vim, &kp A &sl VIM_CHANGE)
+        MACRO(mc_ci_vim, &kp I &sl VIM_CHANGE)
+        MACRO(mc_ce_vim, &kp E &none) // reset antecedent key for magic keys
+        MACRO(mc_s_vim,  &kp S &tog_off VIM_NORMAL &fsl VIM_NORMAL &tog_on VIM_INSERT)
         MACRO(mc_r_vim,  &kp R &sl VIM_REPLACE)
 
         MODTAP_TP(mt_i_vim, &mc_i_vim)

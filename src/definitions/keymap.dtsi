@@ -53,16 +53,6 @@
                         >;
                 };
 
-                vim_change_layer {
-                     display-name = "CHANGE";
-                     bindings = <
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
-                                           &trans              &trans              &trans              &trans              &trans              &trans
-                        >;
-                };
-
                 vim_insert_layer {
                      display-name = "INSERT";
                      bindings = <
@@ -89,6 +79,16 @@
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
+                                           &trans              &trans              &trans              &trans              &trans              &trans
+                        >;
+                };
+
+                vim_change_layer {
+                     display-name = "CHANGE";
+                     bindings = <
+   &none               &kp B               &kp W               &mc_ce_vim          &none               &none               &none               &none               &none               &none
+   &none               &none               &none               &none               &none               &none               &kp H               &kp J               &kp K               &kp L
+   &none               &kp F               &kp C               &kp T               &none               &none               &mc_ci_vim          &mc_ca_vim          &none               &none
                                            &trans              &trans              &trans              &trans              &trans              &trans
                         >;
                 };

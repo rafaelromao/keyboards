@@ -13,10 +13,10 @@
 #define MEHS 2
 
 #define VIM_NORMAL 3
-#define VIM_CHANGE 4
-#define VIM_INSERT 5
-#define VIM_VISUAL 6
-#define VIM_LEADER 7
+#define VIM_INSERT 4
+#define VIM_VISUAL 5
+#define VIM_LEADER 6
+#define VIM_CHANGE 7
 #define VIM_REPLACE 8
 
 #define CASE_A1 9
