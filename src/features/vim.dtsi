@@ -48,7 +48,7 @@
         /* Vim Mode */
 
         MACRO(mc_vim_off        , &tog_off VIM_NORMAL &tog_off VIM_CHANGE &tog_off VIM_VISUAL &tog_off VIM_INSERT &tog_off VIM_REPLACE &tog_off VIM_LEADER)
-        MACRO(mc_vim_on         , &mc_vim_off &tog_on VIM_NORMAL &kp ESC)
+        MACRO(mc_vim_reset      , &mc_vim_off &tog_on VIM_NORMAL &kp ESC)
 
         MACRO(mc_spc_lead_vim   , &kp SPACE &ntsl VIM_LEADER)
         LAYERTAP_TP(lt_lead_vim , &mc_spc_lead_vim)
@@ -93,8 +93,11 @@
         MACRO(mc_r_vim,  &kp R &ntsl VIM_REPLACE)
 
         MACRO(mc_v_vim,  &kp V &tog_on VIM_VISUAL)
-        LAYER_MORPH(lm_sft_v_vim  , &mc_vim_on &tog_on VIM_VISUAL &kp LS(V))
-        LAYER_MORPH(lm_ctl_v_vim  , &mc_vim_on &tog_on VIM_VISUAL &kp LC(V))
+        MACRO(mc_sft_v_vim  , &mc_vim_reset &tog_on VIM_VISUAL &kp LS(V))
+        MACRO(mc_ctl_v_vim  , &mc_vim_reset &tog_on VIM_VISUAL &kp LC(V))
+        LAYER_MORPH(lm_v_vim     , VIM_VISUAL, &mc_vim_reset , &mc_v_vim)
+        LAYER_MORPH(lm_sft_v_vim , VIM_VISUAL, &mc_vim_reset , &mc_sft_v_vim)
+        LAYER_MORPH(lm_ctl_v_vim , VIM_VISUAL, &mc_vim_reset , &mc_ctl_v_vim)
 
         MACRO(mc_sft_c_vim,  &kp C &tog_off VIM_NORMAL &tog_on VIM_INSERT)
         MOD_MORPH_KM(mm_sft_c_vim , MOD_LSFT|MOD_RSFT, &mc_sft_c_vim, &mc_c_vim)
@@ -104,7 +107,7 @@
         MOD_MORPH_KM(mm_s_vim , MOD_LCTL|MOD_RCTL, &kp S, &mc_s_vim)
         MOD_MORPH_KM(mm_r_vim , MOD_LCTL|MOD_RCTL, &kp R, &mc_r_vim)
         MOD_MORPH_KM(mm_o_vim , MOD_LCTL|MOD_RCTL, &kp O, &mc_o_vim)
-        MOD_MORPH_KM(mm_c_vim , MOD_LCTL|MOD_RCTL, &kp C, &mm_sft_c_vim)
+        MOD_MORPH_KM(mm_c_vim , MOD_LCTL|MOD_RCTL, &kp C &mc_vim_reset, &mm_sft_c_vim)
 
         MODTAP_TP(mt_i_vim, &mm_i_vim)
         MODTAP_TP(mt_c_vim, &mm_c_vim)

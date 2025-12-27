@@ -107,18 +107,8 @@
         MACRO(mc_sft_a2, &sl SFT_A2)
         MOD_MORPH(mm_alpha2_shifted2, MOD_LSFT|MOD_RSFT, &mc_sft_a2, &mc_alpha2)
 
-        MACRO(mc_sl_vim_replace, &sl VIM_REPLACE)
         MACRO(mc_case_a2, &sl CASE_A2)
         LAYERTAP_TP(lt_sft_a2, &mc_sft_a2)
-
-        msl_a1cp: msl_a1cp {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <QUICK_TAP_TERM>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <0>;
-            bindings = <&mo>, <&mc_sl_vim_replace>;
-        };
 
         msl_case2: msl_sym_case2 {
             compatible = "zmk,behavior-hold-tap";
