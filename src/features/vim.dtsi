@@ -13,7 +13,7 @@
         MACRO(mc_dqt1p,           &kp DQT &kp SPACE &kp N1 &kp P)
         MACRO(mc_dqtplusp,        &kp DQT &kp SPACE &kp PLUS &kp P)
         MACRO(mc_dqtplusy,        &kp DQT &kp SPACE &kp PLUS &kp Y)
-        MACRO(mc_vim_replace,     &kp COLON &kp PERCENT &kp S &kp SLASH &to ALPHA1)
+        MACRO(mc_colpercsslash,   &kp COLON &kp PERCENT &kp S &kp SLASH &to ALPHA1)
 
         mc_caret: mc_caret {
             compatible = "zmk,behavior-macro";
@@ -47,10 +47,21 @@
 
         /* Vim Mode */
 
-        MACRO(mc_vim_off        , &tog_off VIM_NORMAL &tog_off VIM_VISUAL &tog_off VIM_INSERT &tog_off VIM_REPLACE &tog_off VIM_LEADER)
+        MACRO(mc_vim_off        , &tog_off VIM_NORMAL &tog_off VIM_CHANGE &tog_off VIM_VISUAL &tog_off VIM_INSERT &tog_off VIM_REPLACE &tog_off VIM_LEADER)
+        MACRO(mc_vim_on         , &mc_vim_off &tog_on VIM_NORMAL &kp ESC)
 
-        MACRO(mc_spc_lead_vim   , &kp SPACE &sl VIM_LEADER)
+        MACRO(mc_spc_lead_vim   , &kp SPACE &ntsl VIM_LEADER)
         LAYERTAP_TP(lt_lead_vim , &mc_spc_lead_vim)
+
+        MACRO(mc_sl_vim_replace, &sl VIM_REPLACE)
+        msl_a1cp: msl_a1cp {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <QUICK_TAP_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <0>;
+            bindings = <&mo>, <&mc_sl_vim_replace>;
+        };
 
         MACRO(mc_slash_vim            , &mc_vim_off &tog_on VIM_INSERT &kp SLASH)
         MACRO(mc_end_semi_ent_vim     , &mc_vim_off &tog_on VIM_INSERT &mc_end_semi_ent)
@@ -80,6 +91,10 @@
         MACRO(mc_ce_vim, &kp E &kp F24) // reset antecedent key for magic keys
         MACRO(mc_s_vim,  &kp S &tog_off VIM_NORMAL &ntsl VIM_NORMAL &tog_on VIM_INSERT)
         MACRO(mc_r_vim,  &kp R &ntsl VIM_REPLACE)
+
+        MACRO(mc_v_vim,  &kp V &tog_on VIM_VISUAL)
+        LAYER_MORPH(lm_sft_v_vim  , &mc_vim_on &tog_on VIM_VISUAL &kp LS(V))
+        LAYER_MORPH(lm_ctl_v_vim  , &mc_vim_on &tog_on VIM_VISUAL &kp LC(V))
 
         MACRO(mc_sft_c_vim,  &kp C &tog_off VIM_NORMAL &tog_on VIM_INSERT)
         MOD_MORPH_KM(mm_sft_c_vim , MOD_LSFT|MOD_RSFT, &mc_sft_c_vim, &mc_c_vim)

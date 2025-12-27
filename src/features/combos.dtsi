@@ -31,7 +31,7 @@
     combos {
         compatible = "zmk,combos";
 
-        COMBO(cb_vim_mode,      LTR LTM LTI,     &tog_on VIM_NORMAL,     ALPHA1_LAYERS VIM_LAYERS)
+        COMBO(cb_vim_mode,      LTR LTM LTI,     &mc_vim_on              ALPHA1_LAYERS VIM_LAYERS)
 
         COMBO(cb_enter,         RHM RHR R0,      &lm_ent_vim,            ALL_LAYERS_WITH_ENTER)
         COMBO(cb_backspace,     RTM RTR,         &kp BACKSPACE,          ALL_LAYERS_WITH_BACKSPACE)
@@ -91,7 +91,8 @@
 
         COMBO(cb_k,             LTM LTI,         &kp K,                  ALPHA1 VIM_INSERT VIM_REPLACE)
         COMBO(cb_w,             LHM LHI,         &ht_w 0 0,              ALPHA1 VIM_INSERT VIM_REPLACE)
-        COMBO(cb_v,             LBI LBM,         &kp V,                  ALPHA1 VIM_INSERT VIM_REPLACE)
+        COMBO(cb_v,             LBI LBM,         &kp V,                  ALPHA1)
+        COMBO(cb_v,             LBI LBM,         &mc_v_vim,              VIM_INSERT VIM_REPLACE)
         COMBO(cb_q,             LHR LHM,         &ht_q 0 0,              ALPHA1 VIM_INSERT VIM_REPLACE)
 
         COMBO(cb_kc,            LTM LTI,         &kp LS(K),              CASE_A1 CPLK_A1)
