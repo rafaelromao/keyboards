@@ -91,10 +91,10 @@
         MOD_MORPH_KM(mm_o_vim , MOD_LCTL|MOD_RCTL, &kp O, &mc_o_vim)
         MOD_MORPH_KM(mm_c_vim , MOD_LCTL|MOD_RCTL, &kp C, &mm_sft_c_vim)
 
-        MODTAP_TP(mt_i_vim, &mc_i_vim)
-        MODTAP_TP(mt_c_vim, &mc_c_vim)
-        MODTAP_TP(mt_s_vim, &mc_s_vim)
-        MODTAP_TP(mt_r_vim, &mc_r_vim)
+        MODTAP_TP(mt_i_vim, &mm_i_vim)
+        MODTAP_TP(mt_c_vim, &mm_c_vim)
+        MODTAP_TP(mt_s_vim, &mm_s_vim)
+        MODTAP_TP(mt_r_vim, &mm_r_vim)
 
         MACRO(mc_left_vim,      &mc_vim_off &kp LEFT )
         MACRO(mc_right_vim,     &mc_vim_off &kp RIGHT)
