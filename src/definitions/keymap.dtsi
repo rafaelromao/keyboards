@@ -299,9 +299,9 @@
                 macros_layer {
                      display-name = "MACROS";
                      bindings = <
-   &none               &mc_tisl            &mc_ds              &mc_dds             &none               &none               &mc_vim_replace     &mc_o_esc           &mc_sft_o_esc     &none 
-   &mc_exit            &mc_hugs            &mc_oref            &mc_otask           &none               &none               &kp LS(V)           &mc_dqt0p           &mc_dqt1p         &none
-   &none               &lm_os              &mc_comment         &mc_haha            &none               &none               &kp LC(V)           &mc_dqtplusp        &mc_dqtplusy      &none
+   &none               &mc_tisl            &mc_ds              &mc_dds             &none               &none               &mc_colpercsslash   &mc_o_esc           &mc_sft_o_esc     &none 
+   &mc_exit            &mc_hugs            &mc_oref            &mc_otask           &none               &none               &lm_sft_v_vim       &mc_dqt0p           &mc_dqt1p         &none
+   &none               &lm_os              &mc_comment         &mc_haha            &none               &none               &lm_ctl_v_vim       &mc_dqtplusp        &mc_dqtplusy      &none
                                            &none               &key_repeat         &mc_spc_esc         &none               &bootloader         &none
                         >;
                 };
