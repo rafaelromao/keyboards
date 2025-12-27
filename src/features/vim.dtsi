@@ -46,10 +46,10 @@
 
 
         /* Vim Mode */
+
         MACRO(mc_vim_off        , &tog_off VIM_NORMAL &tog_off VIM_VISUAL &tog_off VIM_INSERT &tog_off VIM_REPLACE &tog_off VIM_LEADER)
 
-        // MACRO(mc_spc_lead_vim   , &kp SPACE &sl VIM_LEADER)
-        MACRO(mc_spc_lead_vim   , &kp SPACE)
+        MACRO(mc_spc_lead_vim   , &kp SPACE &sl VIM_LEADER)
         LAYERTAP_TP(lt_lead_vim , &mc_spc_lead_vim)
 
         MACRO(mc_slash_vim            , &mc_vim_off &tog_on VIM_INSERT &kp SLASH)
@@ -74,12 +74,20 @@
         MACRO(mc_o_vim,  &kp O &kp F24 &tog_off VIM_NORMAL &tog_on VIM_INSERT) // reset antecedent key for magic keys 
         MACRO(mc_a_vim,  &kp A &kp F24 &tog_off VIM_NORMAL &tog_on VIM_INSERT) // reset antecedent key for magic keys 
         MACRO(mc_i_vim,  &kp I &kp F24 &tog_off VIM_NORMAL &tog_on VIM_INSERT) // reset antecedent key for magic keys 
+        MACRO(mc_C_vim,  &kp C &tog_off VIM_NORMAL &tog_on VIM_INSERT)
         MACRO(mc_c_vim,  &kp C &tog_off VIM_NORMAL &tog_on VIM_INSERT &sl VIM_CHANGE)
         MACRO(mc_ca_vim, &kp A &kp F24 &sl VIM_CHANGE) // reset antecedent key for magic keys 
         MACRO(mc_ci_vim, &kp I &kp F24 &sl VIM_CHANGE) // reset antecedent key for magic keys 
         MACRO(mc_ce_vim, &kp E &kp F24) // reset antecedent key for magic keys
         MACRO(mc_s_vim,  &kp S &tog_off VIM_NORMAL &sl VIM_NORMAL &tog_on VIM_INSERT)
         MACRO(mc_r_vim,  &kp R &sl VIM_REPLACE)
+
+        MOD_MORPH_KM(mm_a_vim , MOD_LCTL|MOD_RCTL, &kp A, &mc_a_vim)
+        MOD_MORPH_KM(mm_i_vim , MOD_LCTL|MOD_RCTL, &kp I, &mc_i_vim)
+        MOD_MORPH_KM(mm_s_vim , MOD_LCTL|MOD_RCTL, &kp S, &mc_s_vim)
+        MOD_MORPH_KM(mm_r_vim , MOD_LCTL|MOD_RCTL, &kp R, &mc_r_vim)
+        MOD_MORPH_KM(mm_o_vim , MOD_LCTL|MOD_RCTL, &kp O, &mc_o_vim)
+        MOD_MORPH_KM(mm_c_vim , MOD_LCTL|MOD_RCTL|MOD_LSFT|MOD_RSFT, &mc_C_vim, &mc_c_vim)
 
         MODTAP_TP(mt_i_vim, &mc_i_vim)
         MODTAP_TP(mt_c_vim, &mc_c_vim)
@@ -89,10 +97,10 @@
         MACRO(mc_left_vim,      &mc_vim_off &kp LEFT )
         MACRO(mc_right_vim,     &mc_vim_off &kp RIGHT)
                                 
-        MOD_MORPH_KM(mm_left_vim  , MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL|MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_RGUI, &mc_left_vim  , &kp LEFT)
-        MOD_MORPH_KM(mm_right_vim , MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL|MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_RGUI, &mc_right_vim , &kp RIGHT)
-        MOD_MORPH_KM(mm_ent_vim   , MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL|MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_RGUI, &mc_ent_vim   , &kp ENTER)
-        MOD_MORPH_KM(mm_esc_vim   , MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL|MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_RGUI, &mc_esc_vim   , &kp ESC)
+        MOD_MORPH_KM(mm_left_vim  , MOD_ALL, &mc_left_vim  , &kp LEFT)
+        MOD_MORPH_KM(mm_right_vim , MOD_ALL, &mc_right_vim , &kp RIGHT)
+        MOD_MORPH_KM(mm_ent_vim   , MOD_ALL, &mc_ent_vim   , &kp ENTER)
+        MOD_MORPH_KM(mm_esc_vim   , MOD_ALL, &mc_esc_vim   , &kp ESC)
 
         MACRO(mm_shift_vim_replace, &mm_shift &sl VIM_REPLACE)
 
