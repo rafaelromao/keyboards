@@ -74,7 +74,6 @@
         MACRO(mc_o_vim,  &kp O &kp F24 &tog_off VIM_NORMAL &tog_on VIM_INSERT) // reset antecedent key for magic keys 
         MACRO(mc_a_vim,  &kp A &kp F24 &tog_off VIM_NORMAL &tog_on VIM_INSERT) // reset antecedent key for magic keys 
         MACRO(mc_i_vim,  &kp I &kp F24 &tog_off VIM_NORMAL &tog_on VIM_INSERT) // reset antecedent key for magic keys 
-        MACRO(mc_C_vim,  &kp C &tog_off VIM_NORMAL &tog_on VIM_INSERT)
         MACRO(mc_c_vim,  &kp C &tog_off VIM_NORMAL &tog_on VIM_INSERT &sl VIM_CHANGE)
         MACRO(mc_ca_vim, &kp A &kp F24 &sl VIM_CHANGE) // reset antecedent key for magic keys 
         MACRO(mc_ci_vim, &kp I &kp F24 &sl VIM_CHANGE) // reset antecedent key for magic keys 
@@ -82,12 +81,14 @@
         MACRO(mc_s_vim,  &kp S &tog_off VIM_NORMAL &sl VIM_NORMAL &tog_on VIM_INSERT)
         MACRO(mc_r_vim,  &kp R &sl VIM_REPLACE)
 
+        MACRO(mc_sft_c_vim,  &kp C &tog_off VIM_NORMAL &tog_on VIM_INSERT)
+
         MOD_MORPH_KM(mm_a_vim , MOD_LCTL|MOD_RCTL, &kp A, &mc_a_vim)
         MOD_MORPH_KM(mm_i_vim , MOD_LCTL|MOD_RCTL, &kp I, &mc_i_vim)
         MOD_MORPH_KM(mm_s_vim , MOD_LCTL|MOD_RCTL, &kp S, &mc_s_vim)
         MOD_MORPH_KM(mm_r_vim , MOD_LCTL|MOD_RCTL, &kp R, &mc_r_vim)
         MOD_MORPH_KM(mm_o_vim , MOD_LCTL|MOD_RCTL, &kp O, &mc_o_vim)
-        MOD_MORPH_KM(mm_c_vim , MOD_LCTL|MOD_RCTL|MOD_LSFT|MOD_RSFT, &mc_C_vim, &mc_c_vim)
+        MOD_MORPH_KM(mm_c_vim , MOD_LCTL|MOD_RCTL|MOD_LSFT|MOD_RSFT, &mc_sft_c_vim, &mc_c_vim)
 
         MODTAP_TP(mt_i_vim, &mc_i_vim)
         MODTAP_TP(mt_c_vim, &mc_c_vim)
