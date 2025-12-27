@@ -21,8 +21,8 @@
     #define NUM_LAYERS                  NUM NUM_CP
     #define SYM_LAYERS                  SYM SYM_CP
     #define NAV_LAYERS                  NAV NAV_CP
-    #define VIM_LAYERS                  VIM_NORMAL VIM_INSERT VIM_VISUAL VIM_REPLACE VIM_LEADER
-    #define FIXABLE_LAYERS              ALPHA1_LAYERS CPLK_A1 CASE_A1 NUM_LAYERS MEDIA NAV_LAYERS MEHS FUN VIM_NORMAL
+    #define VIM_LAYERS                  VIM_NORMAL VIM_CHANGE VIM_INSERT VIM_VISUAL VIM_REPLACE VIM_LEADER
+    #define FIXABLE_LAYERS              ALPHA1_LAYERS CPLK_A1 CASE_A1 NUM_LAYERS MEDIA NAV_LAYERS MEHS FUN VIM_LAYERS
     #define ALL_LAYERS                  ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS MEDIA TEXT SHORTS VIM_LAYERS
     #define ALL_LAYERS_WITH_ENTER       ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS MEDIA TEXT        VIM_INSERT VIM_REPLACE
     #define ALL_LAYERS_WITH_BACKSPACE   ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS                   VIM_INSERT VIM_REPLACE
@@ -89,20 +89,20 @@
         COMBO(cb_semi,          RBM RBR,         &th_semi 0 0,           ALPHA1_LAYERS NUM_LAYERS VIM_NORMAL VIM_INSERT VIM_REPLACE)
         COMBO(cb_sent,          RBI RBM RBR,     &mc_end_semi_ent_vim,   NUM_LAYERS)
 
-        COMBO(cb_k,             LTM LTI,         &kp K,                  ALPHA1)
-        COMBO(cb_w,             LHM LHI,         &ht_w 0 0,              ALPHA1)
-        COMBO(cb_v,             LBI LBM,         &kp V,                  ALPHA1)
-        COMBO(cb_q,             LHR LHM,         &ht_q 0 0,              ALPHA1)
+        COMBO(cb_k,             LTM LTI,         &kp K,                  ALPHA1 VIM_INSERT VIM_REPLACE)
+        COMBO(cb_w,             LHM LHI,         &ht_w 0 0,              ALPHA1 VIM_INSERT VIM_REPLACE)
+        COMBO(cb_v,             LBI LBM,         &kp V,                  ALPHA1 VIM_INSERT VIM_REPLACE)
+        COMBO(cb_q,             LHR LHM,         &ht_q 0 0,              ALPHA1 VIM_INSERT VIM_REPLACE)
 
         COMBO(cb_kc,            LTM LTI,         &kp LS(K),              CASE_A1 CPLK_A1)
         COMBO(cb_wc,            LHM LHI,         &kp LS(W),              CASE_A1 CPLK_A1)
         COMBO(cb_vc,            LBI LBM,         &kp LS(V),              CASE_A1 CPLK_A1)
         COMBO(cb_qc,            LHR LHM,         &kp LS(Q),              CASE_A1 CPLK_A1)
 
-        COMBO(cb_x,             RTI RTM,         &kp X,                  ALPHA1)
-        COMBO(cb_z,             RHI RHM,         &ht_z 0 0,              ALPHA1)
-        COMBO(cb_j,             RBI RBM,         &kp J,                  ALPHA1)
-        COMBO(cb_y,             RHM RHR,         &ht_y 0 0,              ALPHA1)
+        COMBO(cb_x,             RTI RTM,         &kp X,                  ALPHA1 VIM_INSERT VIM_REPLACE)
+        COMBO(cb_z,             RHI RHM,         &ht_z 0 0,              ALPHA1 VIM_INSERT VIM_REPLACE)
+        COMBO(cb_j,             RBI RBM,         &kp J,                  ALPHA1 VIM_INSERT VIM_REPLACE)
+        COMBO(cb_y,             RHM RHR,         &ht_y 0 0,              ALPHA1 VIM_INSERT VIM_REPLACE)
 
         COMBO(cb_xc,            RTI RTM,         &kp LS(X),              CASE_A1 CPLK_A1)
         COMBO(cb_zc,            RHI RHM,         &kp LS(Z),              CASE_A1 CPLK_A1)
@@ -111,15 +111,15 @@
         COMBO(cb_dc,            RTI RTM RTR,     &kp LS(D),              CASE_A1 CPLK_A1)
         COMBO(cb_pc,            RHI RHM RHR,     &kp LS(P),              CASE_A1 CPLK_A1)
 
-        COMBO(cb_grv_vim,       LTM LTI,         &kp GRAVE,              VIM_NORMAL)
-        COMBO(cb_x_vim,         RTI RTM,         &kp X,                  VIM_NORMAL)
-        COMBO(cb_d_vim,         RTM RTR,         &kp D,                  VIM_NORMAL)
-        COMBO(cb_z_vim,         LHR LHM,         &kp Z,                  VIM_NORMAL)
-        COMBO(cb_m_vim,         LHM LHI,         &kp M,                  VIM_NORMAL)
-        COMBO(cb_p_vim,         RHI RHM,         &kp P,                  VIM_NORMAL)
-        COMBO(cb_y_vim,         RHM RHR,         &kp Y,                  VIM_NORMAL)
-        COMBO(cb_at_vim,        LBM LBI,         &kp AT,                 VIM_NORMAL)
-        COMBO(cb_v_vim,         RBI RBM,         &kp V,                  VIM_NORMAL)
+        COMBO(cb_grv_vim,       LTM LTI,         &kp GRAVE,              VIM_NORMAL VIM_VISUAL)
+        COMBO(cb_x_vim,         RTI RTM,         &kp X,                  VIM_NORMAL VIM_VISUAL)
+        COMBO(cb_d_vim,         RTM RTR,         &kp D,                  VIM_NORMAL VIM_VISUAL)
+        COMBO(cb_z_vim,         LHR LHM,         &kp Z,                  VIM_NORMAL VIM_VISUAL)
+        COMBO(cb_m_vim,         LHM LHI,         &kp M,                  VIM_NORMAL VIM_VISUAL)
+        COMBO(cb_p_vim,         RHI RHM,         &kp P,                  VIM_NORMAL VIM_VISUAL)
+        COMBO(cb_y_vim,         RHM RHR,         &kp Y,                  VIM_NORMAL VIM_VISUAL)
+        COMBO(cb_at_vim,        LBM LBI,         &kp AT,                 VIM_NORMAL VIM_VISUAL)
+        COMBO(cb_v_vim,         RBI RBM,         &kp V,                  VIM_NORMAL VIM_VISUAL)
 
         COMBO(cb_meh_k,         LTI LTM,         &mc_meh_k,              MEHS)
         COMBO(cb_meh_w,         LHI LHM,         &mc_meh_w,              MEHS)

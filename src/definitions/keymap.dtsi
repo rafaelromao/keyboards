@@ -53,6 +53,16 @@
                         >;
                 };
 
+                vim_change_layer {
+                     display-name = "CHANGE";
+                     bindings = <
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
+                                           &trans              &trans              &trans              &trans              &trans              &trans
+                        >;
+                };
+
                 vim_insert_layer {
                      display-name = "INSERT";
                      bindings = <
