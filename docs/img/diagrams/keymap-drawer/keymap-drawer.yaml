@@ -797,7 +797,7 @@ combos:
     }
   - {
       p: [1, 2],
-      k: { t: "`", h: get mark },
+      k: { t: "`", h: jump },
       a: mid,
       w: 48,
       layers: [vim],
@@ -818,14 +818,14 @@ combos:
     }
   - {
       p: [7, 8],
-      k: { t: "z", h: view port },
+      k: { t: "z", h: viewport },
       a: mid,
       w: 48,
       layers: [vim],
     }
   - {
       p: [8, 9],
-      k: { t: "m", h: set mark },
+      k: { t: "m", h: mark },
       a: mid,
       w: 48,
       layers: [vim],

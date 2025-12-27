@@ -62,12 +62,6 @@
         LAYER_MORPH(lm_end_colon_vim  , VIM_NORMAL, &mc_end_colon_vim  , &mc_end_colon_vim)
         TAPHOLD_TP(th_colon_vim       , &lm_colon_vim, &lm_end_colon_vim)
 
-        MACRO(mc_qmark_vim            , &mc_vim_off &tog_on VIM_INSERT &mc_qmark)
-        MACRO(mc_end_qmark_vim        , &mc_vim_off &tog_on VIM_INSERT &mc_end_qmark)
-        LAYER_MORPH(lm_qmark_vim      , VIM_NORMAL, &mc_qmark_vim      , &mc_qmark)
-        LAYER_MORPH(lm_end_qmark_vim  , VIM_NORMAL, &mc_end_qmark_vim  , &mc_end_qmark_vim)
-        TAPHOLD_TP(th_qmark_vim       , &lm_qmark_vim, &lm_end_qmark_vim)
-                                
         MACRO(mc_ent_vim,       &mc_vim_off &tog_on VIM_NORMAL &kp ENTER)
         MACRO(mc_esc_vim,       &mc_vim_off &tog_on VIM_NORMAL &kp ESC  )
         MACRO(mc_end_ent_vim,   &mc_vim_off &tog_on VIM_NORMAL &mc_end_ent)

@@ -159,6 +159,7 @@
 
         MACRO(mc_qmark,               &kp QMARK )
         MACRO(mc_end_qmark,           &kp END &mc_qmark )
+        TAPHOLD_TP(th_qmark,          &mc_qmark, &mc_end_qmark)
 
         MACRO(mc_colon,               &kp COLON )
         MACRO(mc_end_colon,           &kp END &mc_colon)
