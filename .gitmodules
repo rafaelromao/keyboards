@@ -28,3 +28,6 @@
 [submodule "modules/rafaelromao/zmk-layer-morph"]
 	path = modules/rafaelromao/zmk-layer-morph
 	url = git@github.com:rafaelromao/zmk-layer-morph
+[submodule "modules/ssbb/zmk-listeners"]
+	path = modules/ssbb/zmk-listeners
+	url = git@github.com:ssbb/zmk-listeners

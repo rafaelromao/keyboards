@@ -14,7 +14,7 @@ EXTRA_SHIELDS=()
 FLAGS=()
 MODULES=()
 SNIPPETS=()
-DEF_MODULES=(urob/zmk-leader-key,urob/zmk-auto-layer,urob/zmk-adaptive-key,rafaelromao/zmk-layer-morph)
+DEF_MODULES=(urob/zmk-leader-key,urob/zmk-auto-layer,urob/zmk-adaptive-key,rafaelromao/zmk-layer-morph,ssbb/zmk-listeners)
 
 # Function to display usage
 usage() {
