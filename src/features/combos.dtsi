@@ -15,7 +15,7 @@
           ╰─────────────╯ ╰─────────────╯ */
 
 / {
-    #define ALPHA1_LAYERS               ALPHA1 ALT_OS CASE_A1 CPLK_A1 ALTREP2 VIM_INSERT VIM_REPLACE
+    #define ALPHA1_LAYERS               ALPHA1 ALT_OS CASE_A1 CPLK_A1 ALTREP2 SEN_CASE VIM_INSERT VIM_REPLACE
     #define CCEDIL_LAYERS               CCEDIL CASE_CCEDIL
     #define ALPHA2_LAYERS               ALPHA2 CASE_A2 SFT_A2
     #define NUM_LAYERS                  NUM NUM_CP
