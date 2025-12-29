@@ -4,8 +4,8 @@
     hid_listeners {
         compatible = "zmk,hid-listeners";
 
-        scroll_lock {           
-            indicator = <HID_USAGE_LED_SCROLL_LOCK>;
+        num_lock {           
+            indicator = <HID_USAGE_LED_NUM_LOCK>;
             bindings = <&mc_vim_reset &mc_vim_off>;
         };
     };
