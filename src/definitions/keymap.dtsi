@@ -53,16 +53,6 @@
                         >;
                 };
 
-                vim_insert_layer {
-                     display-name = "INSERT";
-                     bindings = <
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
-                                           &trans              &trans              &trans              &trans              &trans              &trans
-                        >;
-                };
-
                 vim_visual_layer {
                      display-name = "VISUAL";
                      bindings = <
@@ -83,6 +73,26 @@
                         >;
                 };
 
+                vim_leader_layer {
+                     display-name = "LEADER";
+                     bindings = <
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
+                                           &trans              &trans              &trans              &trans              &trans              &trans
+                        >;
+                };
+
+                vim_insert_layer {
+                     display-name = "INSERT";
+                     bindings = <
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
+                                           &trans              &trans              &trans              &trans              &trans              &trans
+                        >;
+                };
+
                 vim_replace_layer {
                      display-name = "REPLACE";
                      bindings = <
@@ -93,8 +103,8 @@
                         >;
                 };
 
-                vim_leader_layer {
-                     display-name = "LEADER";
+                vim_cmdline_layer {
+                     display-name = "CMDLINE";
                      bindings = <
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  

@@ -5,6 +5,79 @@
 *
 */
 
+    /*  TEMPLATES  */
+
+    #define VIM_MACRO(NAME, BINDINGS) \
+        NAME: NAME { \
+            compatible = "zmk,behavior-macro"; \
+            #binding-cells = <0>; \
+            wait-ms = <5>; \
+            tap-ms = <5>; \
+            bindings = <BINDINGS>; \
+        };
+
+    #define VIM_BINDING(NAME, \
+            NORMAL_BINDING, \
+            VISUAL_BINDING, \
+            CHANGE_BINDING, \
+            LEADER_BINDING, \
+            INSERT_BINDING, \
+            REPLACE_BINDING, \
+            CMDLINE_BINDING) \
+        NAME##_visual: NAME##_visual { \
+            compatible = "zmk,behavior-layer-morph"; \
+            #binding-cells = <0>; \
+            layer = <VIM_VISUAL>; \
+            bindings \
+                = <&VISUAL_BINDING> \
+                , <&NORMAL_BINDING> \
+                ; \
+        }; \
+        NAME##_change: NAME##_change { \
+            compatible = "zmk,behavior-layer-morph"; \
+            #binding-cells = <0>; \
+            layer = <VIM_CHANGE>; \
+            bindings \
+                = <&CHANGE_BINDING> \
+                , <&NAME##_visual> \
+                ; \
+        }; \
+        NAME##_leader: NAME##_leader { \
+            compatible = "zmk,behavior-layer-morph"; \
+            #binding-cells = <0>; \
+            layer = <VIM_LEADER>; \
+            bindings \
+                = <&LEADER_BINDING> \
+                , <&NAME##_change> \
+                ; \
+        }; \
+        NAME##_insert: NAME##_insert { \
+            compatible = "zmk,behavior-layer-morph"; \
+            #binding-cells = <0>; \
+            layer = <VIM_CHANGE>; \
+            bindings \
+                = <&INSERT_BINDING> \
+                , <&NAME##_leader> \
+                ; \
+        }; \
+        NAME##_replace: NAME##_replace { \
+            compatible = "zmk,behavior-layer-morph"; \
+            #binding-cells = <0>; \
+            layer = <VIM_REPLACE>; \
+            bindings \
+                = <&REPLACE_BINDING> \
+                , <&NAME##_insert> \
+                ; \
+        }; \
+        NAME: NAME { \
+            compatible = "zmk,behavior-layer-morph"; \
+            #binding-cells = <0>; \
+            layer = <VIM_CMDLINE>; \
+            bindings \
+                = <&CMDLINE_BINDING> \
+                , <&NAME##_replace> \
+                ; \
+        };
 / {
     vim {
 
@@ -47,40 +120,48 @@
 
         /* Vim Mode */
 
-        MACRO(mc_vim_off        , &tog_off VIM_NORMAL &tog_off VIM_CHANGE &tog_off VIM_VISUAL &tog_off VIM_INSERT &tog_off VIM_REPLACE &tog_off VIM_LEADER)
-        MACRO(mc_vim_reset      , &mc_vim_off &tog_on VIM_NORMAL &kp ESC)
+        VIM_MACRO(mc_vim_off            , &tog_off VIM_NORMAL &tog_off VIM_CHANGE &tog_off VIM_VISUAL &tog_off VIM_INSERT &tog_off VIM_REPLACE &tog_off VIM_LEADER)
+        VIM_MACRO(mc_vim_reset          , &mc_vim_off &tog_on VIM_NORMAL &kp ESC)
+        VIM_MACRO(mc_vim_insert         , &mc_vim_off &tog_on VIM_INSERT)
+        VIM_MACRO(mc_vim_cmd_line       , &mc_vim_off &tog_on VIM_CMDLINE)
 
-        MACRO(mc_spc_lead_vim   , &kp SPACE &ntsl VIM_LEADER)
-        LAYERTAP_TP(lt_lead_vim , &mc_spc_lead_vim)
+        VIM_MACRO(mc_spc_lead_vim       , &kp SPACE &ntsl VIM_LEADER)
 
-        MACRO(mc_sl_vim_replace, &sl VIM_REPLACE)
-        msl_a1cp: msl_a1cp {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <QUICK_TAP_TERM>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <0>;
-            bindings = <&mo>, <&mc_sl_vim_replace>;
-        };
+        VIM_MACRO(mc_slash_vim          , &kp SLASH &mc_vim_cmdline)
 
-        MACRO(mc_slash_vim            , &mc_vim_off &tog_on VIM_INSERT &kp SLASH)
-        MACRO(mc_end_semi_ent_vim     , &mc_vim_off &tog_on VIM_INSERT &mc_end_semi_ent)
+        VIM_MACRO(mc_colon_vim          , &mc_colon &mc_vim_cmdline)
+        VIM_BINDING(
+          &lm_colon_vim,
+          &mc_colon_vim, // normal
+          &mc_colon_vim, // visual
+          &mc_colon_vim, // change
+          &mc_colon_vim, // leader
+          &mc_colon,     // insert
+          &mc_colon,     // replace
+          &mc_colon,     // cmdline
+        )
 
-        MACRO(mc_colon_vim            , &mc_vim_off &tog_on VIM_INSERT &mc_colon)
-        MACRO(mc_end_colon_vim        , &mc_vim_off &tog_on VIM_INSERT &mc_end_colon)
-        LAYER_MORPH(lm_colon_vim      , VIM_NORMAL, &mc_colon_vim      , &mc_colon)
-        LAYER_MORPH(lm_end_colon_vim  , VIM_NORMAL, &mc_end_colon_vim  , &mc_end_colon_vim)
-        TAPHOLD_TP(th_colon_vim       , &lm_colon_vim, &lm_end_colon_vim)
+        VIM_MACRO(mc_enter               , &kp ENTER)
+        VIM_MACRO(mc_enter_vim           , &mc_enter &mc_vim_reset)
+        VIM_BINDING(
+          &lm_ent_vim,
+          &mc_enter,     // normal
+          &mc_enter,     // visual
+          &mc_enter,     // change
+          &mc_enter,     // leader
+          &mc_enter,     // insert
+          &mc_enter,     // replace
+          &mc_enter_vim, // cmdline
+        )
 
-        MACRO(mc_ent_vim,       &mc_vim_off &tog_on VIM_NORMAL &kp ENTER)
         MACRO(mc_esc_vim,       &mc_vim_off &tog_on VIM_NORMAL &kp ESC  )
         MACRO(mc_end_ent_vim,   &mc_vim_off &tog_on VIM_NORMAL &mc_end_ent)
         MACRO(mc_save_esc_vim,  &mc_vim_off &tog_on VIM_NORMAL &mc_save_esc)
 
-        LAYER_MORPH(lm_ent_vim      , VIM_INSERT, &mc_ent_vim      , &kp ENTER)
-        LAYER_MORPH(lm_esc_vim      , VIM_INSERT, &mc_esc_vim      , &kp ESC)
-        LAYER_MORPH(lm_end_ent_vim  , VIM_INSERT, &mc_end_ent_vim  , &mc_end_ent)
-        LAYER_MORPH(lm_save_esc_vim , VIM_INSERT, &mc_save_esc_vim , &mc_save_esc)
+        LAYER_MORPH(lm_ent_vim      , VIM_CMDLINE, &mc_ent_vim      , &kp ENTER)
+        LAYER_MORPH(lm_esc_vim      , VIM_INSERT , &mc_esc_vim      , &kp ESC)
+        LAYER_MORPH(lm_end_ent_vim  , VIM_INSERT , &mc_end_ent_vim  , &mc_end_ent)
+        LAYER_MORPH(lm_save_esc_vim , VIM_INSERT , &mc_save_esc_vim , &mc_save_esc)
 
         MACRO(mc_o_vim,  &kp O &kp F24 &tog_off VIM_NORMAL &tog_on VIM_INSERT) // reset antecedent key for magic keys 
         MACRO(mc_a_vim,  &kp A &kp F24 &tog_off VIM_NORMAL &tog_on VIM_INSERT) // reset antecedent key for magic keys 
@@ -119,8 +200,8 @@
                                 
         MOD_MORPH_KM(mm_left_vim  , MOD_ALL, &mc_left_vim  , &kp LEFT)
         MOD_MORPH_KM(mm_right_vim , MOD_ALL, &mc_right_vim , &kp RIGHT)
-        MOD_MORPH_KM(mm_ent_vim   , MOD_ALL, &mc_ent_vim   , &kp ENTER)
-        MOD_MORPH_KM(mm_esc_vim   , MOD_ALL, &mc_esc_vim   , &kp ESC)
+        MOD_MORPH_KM(mm_ent_vim   , MOD_ALL, &lm_ent_vim   , &kp ENTER)
+        MOD_MORPH_KM(mm_esc_vim   , MOD_ALL, &lm_esc_vim   , &kp ESC)
 
         MACRO(mm_shift_vim_replace, &mm_shift &ntsl VIM_REPLACE)
 
