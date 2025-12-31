@@ -205,13 +205,13 @@
 
         // Mehs
 
-        MACRO(mc_sl_vim_replace     , &sl VIM_REPLACE)
-        LAYERTAP_TP(msl_a1cp           , &mc_sl_vim_replace)
+        MACRO(mc_sl_vim_replace       , &sl VIM_REPLACE)
+        LAYERTAP_TP(msl_a1cp          , &mc_sl_vim_replace)
 
         // Vim
 
         LAYERTAP_TP(lt_lead_vim       , &mc_spc_lead_vim)
         TAPHOLD_TP(th_colon_vim       , &lm_colon_vim, &mc_end_colon)
-        MACRO(mc_end_ent              ,             &kp END &lm_ent_vim)
+        MACRO(mc_end_enter_vim        , &kp END &lm_enter_vim)
     };
 };
