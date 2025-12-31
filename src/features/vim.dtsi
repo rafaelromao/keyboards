@@ -17,6 +17,7 @@
         };
 
     #define VIM_BINDING(NAME, \
+            VIMOFF_BINDING, \
             NORMAL_BINDING, \
             VISUAL_BINDING, \
             CHANGE_BINDING, \
@@ -24,13 +25,22 @@
             INSERT_BINDING, \
             REPLACE_BINDING, \
             CMDLINE_BINDING) \
+        NAME##_normal: NAME##_normal { \
+            compatible = "zmk,behavior-layer-morph"; \
+            #binding-cells = <0>; \
+            layer = <VIM_NORMAL>; \
+            bindings \
+                = <&NORMAL_BINDING> \
+                , <&VIMOFF_BINDING> \
+                ; \
+        }; \
         NAME##_visual: NAME##_visual { \
             compatible = "zmk,behavior-layer-morph"; \
             #binding-cells = <0>; \
             layer = <VIM_VISUAL>; \
             bindings \
                 = <&VISUAL_BINDING> \
-                , <&NORMAL_BINDING> \
+                , <&NAME##_normal> \
                 ; \
         }; \
         NAME##_change: NAME##_change { \
@@ -132,6 +142,7 @@
         VIM_MACRO(mc_colon_vim          , &mc_colon &mc_vim_cmdline)
         VIM_BINDING(
           &lm_colon_vim,
+          &mc_colon,     // vim off
           &mc_colon_vim, // normal
           &mc_colon_vim, // visual
           &mc_colon_vim, // change
@@ -142,9 +153,10 @@
         )
 
         VIM_MACRO(mc_enter               , &kp ENTER)
-        VIM_MACRO(mc_enter_vim           , &mc_enter &mc_vim_reset)
+        VIM_MACRO(lm_enter_vim           , &mc_enter &mc_vim_reset)
         VIM_BINDING(
           &lm_ent_vim,
+          &mc_enter,     // vim off
           &mc_enter,     // normal
           &mc_enter,     // visual
           &mc_enter,     // change
@@ -155,12 +167,9 @@
         )
 
         MACRO(mc_esc_vim,       &mc_vim_off &tog_on VIM_NORMAL &kp ESC  )
-        MACRO(mc_end_ent_vim,   &mc_vim_off &tog_on VIM_NORMAL &mc_end_ent)
         MACRO(mc_save_esc_vim,  &mc_vim_off &tog_on VIM_NORMAL &mc_save_esc)
 
-        LAYER_MORPH(lm_ent_vim      , VIM_CMDLINE, &mc_ent_vim      , &kp ENTER)
         LAYER_MORPH(lm_esc_vim      , VIM_INSERT , &mc_esc_vim      , &kp ESC)
-        LAYER_MORPH(lm_end_ent_vim  , VIM_INSERT , &mc_end_ent_vim  , &mc_end_ent)
         LAYER_MORPH(lm_save_esc_vim , VIM_INSERT , &mc_save_esc_vim , &mc_save_esc)
 
         MACRO(mc_o_vim,  &kp O &kp F24 &tog_off VIM_NORMAL &tog_on VIM_INSERT) // reset antecedent key for magic keys 
