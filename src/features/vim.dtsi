@@ -46,11 +46,11 @@
 
         VIM_MACRO(mc_colon,               &kp COLON )
         VIM_MACRO(mc_colon_vim          , &mc_colon &mc_vim_cmdline)
-        VIM_BINDING(lm_colon_vim        , VIM_NORMAL VIM_VISUAL VIM_CHANGE VIM_LEADER, &mc_enter_vim, &mc_enter)
+        VIM_BINDING(lm_colon_vim        , VIM_NORMAL VIM_VISUAL VIM_CHANGE VIM_LEADER, &mc_colon_vim, &mc_colon)
 
         VIM_MACRO(mc_enter              , &kp ENTER)
         VIM_MACRO(mc_enter_vim          , &mc_enter &mc_vim_reset)
-        VIM_BINDING(lm_ent_vim          , VIM_CMDLINE, &mc_colon_vim, &mc_colon)
+        VIM_BINDING(lm_ent_vim          , VIM_CMDLINE, &mc_enter_vim, &mc_enter)
 
         VIM_MACRO(mc_esc                , &kp ESC)
         VIM_MACRO(mc_esc_vim            , &mc_esc &mc_vim_reset)
