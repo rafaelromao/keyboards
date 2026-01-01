@@ -36,10 +36,10 @@
     vim {
 
         VIM_MACRO(mc_vim_off            , &tog_off VIM_NORMAL &tog_off VIM_CHANGE &tog_off VIM_VISUAL &tog_off VIM_INSERT &tog_off VIM_REPLACE &tog_off VIM_LEADER &tog_off VIM_CMDLINE)
-        VIM_MACRO(mc_vim_reset          , &mc_vim_off &to VIM_NORMAL &kp ESC)
-        VIM_MACRO(mc_vim_normal         , &mc_vim_off &to VIM_NORMAL)
-        VIM_MACRO(mc_vim_insert         , &mc_vim_off &to VIM_INSERT)
-        VIM_MACRO(mc_vim_cmdline        , &mc_vim_off &to VIM_CMDLINE)
+        VIM_MACRO(mc_vim_reset          , &mc_vim_off &tog_on VIM_NORMAL &kp ESC)
+        VIM_MACRO(mc_vim_normal         , &mc_vim_off &tog_on VIM_NORMAL)
+        VIM_MACRO(mc_vim_insert         , &mc_vim_off &tog_on VIM_INSERT)
+        VIM_MACRO(mc_vim_cmdline        , &mc_vim_off &tog_on VIM_CMDLINE)
 
         VIM_MACRO(mc_spc_lead_vim       , &kp SPACE &ntsl VIM_LEADER)
 
