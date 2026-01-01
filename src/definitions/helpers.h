@@ -60,11 +60,11 @@
 
     /* LAYER_MORPH */
 
-    #define LAYER_MORPH(NAME, LAYER, MODDED, UNMODDED) \
+    #define LAYER_MORPH(NAME, LAYERS, MODDED, UNMODDED) \
         NAME##: NAME## { \
             compatible = "zmk,behavior-layer-morph"; \
             #binding-cells = <0>; \
-            layers = <LAYER>; \
+            layers = <LAYERS>; \
             bindings \
                 = <UNMODDED> \
                 , <MODDED> \

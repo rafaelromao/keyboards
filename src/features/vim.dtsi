@@ -5,7 +5,7 @@
 *
 */
 
-    /*  TEMPLATES  */
+    /*  HELPER MACROS  */
 
     #define VIM_MACRO(NAME, BINDINGS) \
         NAME: NAME { \
@@ -32,9 +32,17 @@
                 ; \
         };
 
+    #define VIM_MOD_MORPH(NAME, MODS, MODDED, UNMODDED) \
+        NAME: NAME { \
+            compatible = "zmk,behavior-mod-morph"; \
+            #binding-cells = <0>; \
+            bindings = <UNMODDED>, <MODDED>; \
+            mods = <(MODS)>; \
+            keep-mods = <(MODS)>; \
+        };
+
 / {
     vim {
-
 
         VIM_MACRO(mc_vim_off            , &tog_off VIM_NORMAL &tog_off VIM_CHANGE &tog_off VIM_VISUAL &tog_off VIM_INSERT &tog_off VIM_REPLACE &tog_off VIM_LEADER &tog_off VIM_CMDLINE)
         VIM_MACRO(mc_vim_reset          , &mc_vim_off &tog_on VIM_NORMAL &kp ESC)
@@ -70,47 +78,28 @@
         VIM_MACRO(vim_i                 , &kp I &tog_off VIM_NORMAL &tog_on VIM_INSERT)
         VIM_MACRO(vim_ca                , &kp A &ntsl VIM_CHANGE)
         VIM_MACRO(vim_ci                , &kp I &ntsl VIM_CHANGE)
-        VIM_MACRO(mc_c_vim              , &kp C &tog_off VIM_NORMAL &tog_on VIM_INSERT &ntsl VIM_CHANGE)
-        VIM_MACRO(mc_s_vim              , &kp S &tog_off VIM_NORMAL &ntsl VIM_NORMAL &tog_on VIM_INSERT)
-        VIM_MACRO(mc_r_vim              , &kp R &ntsl VIM_REPLACE)
+        VIM_MACRO(vim_c                 , &kp C &tog_off VIM_NORMAL &tog_on VIM_INSERT &ntsl VIM_CHANGE)
+        VIM_MACRO(vim_s                 , &kp S &tog_off VIM_NORMAL &ntsl VIM_NORMAL &tog_on VIM_INSERT)
+        VIM_MACRO(vim_r                 , &kp R &ntsl VIM_REPLACE)
 
-        VIM_MACRO(mc_sft_c_vim          ,  &kp C &tog_off VIM_NORMAL &tog_on VIM_INSERT)
+        VIM_MACRO(mc_sft_c_vim          , &kp C &tog_off VIM_NORMAL &tog_on VIM_INSERT)
+        VIM_MOD_MORPH(mm_sft_c_vim      , MOD_LSFT|MOD_RSFT, &mc_sft_c_vim, &vim_c)
 
+        VIM_MOD_MORPH(vim_a_ctrl_a      , MOD_LCTL|MOD_RCTL, &kp A, &vim_a)
+        VIM_MOD_MORPH(vim_i_ctrl_i      , MOD_LCTL|MOD_RCTL, &kp I, &vim_i)
+        VIM_MOD_MORPH(vim_o_ctrl_o      , MOD_LCTL|MOD_RCTL, &kp O, &vim_o)
+        VIM_MOD_MORPH(vim_s_ctrl_s      , MOD_LCTL|MOD_RCTL, &kp S, &vim_s)
+        VIM_MOD_MORPH(vim_r_ctrl_r      , MOD_LCTL|MOD_RCTL, &kp R, &vim_r)
+        VIM_MOD_MORPH(vim_c_ctrl_c      , MOD_LCTL|MOD_RCTL, &kp C &mc_vim_reset, &mm_sft_c_vim)
 
-
-
-        MOD_MORPH_KM(mm_sft_c_vim , MOD_LSFT|MOD_RSFT, &mc_sft_c_vim, &mc_c_vim)
-
-        MOD_MORPH_KM(mm_a_vim , MOD_LCTL|MOD_RCTL, &kp A, &mc_a_vim)
-        MOD_MORPH_KM(mm_i_vim , MOD_LCTL|MOD_RCTL, &kp I, &mc_i_vim)
-        MOD_MORPH_KM(mm_s_vim , MOD_LCTL|MOD_RCTL, &kp S, &mc_s_vim)
-        MOD_MORPH_KM(mm_r_vim , MOD_LCTL|MOD_RCTL, &kp R, &mc_r_vim)
-        MOD_MORPH_KM(mm_o_vim , MOD_LCTL|MOD_RCTL, &kp O, &mc_o_vim)
-        MOD_MORPH_KM(mm_c_vim , MOD_LCTL|MOD_RCTL, &kp C &mc_vim_reset, &mm_sft_c_vim)
-
-        MODTAP_TP(mt_i_vim, &mm_i_vim)
-        MODTAP_TP(mt_c_vim, &mm_c_vim)
-        MODTAP_TP(mt_s_vim, &mm_s_vim)
-        MODTAP_TP(mt_r_vim, &mm_r_vim)
-
-        MACRO(mc_left_vim,      &mc_vim_off &kp LEFT )
-        MACRO(mc_right_vim,     &mc_vim_off &kp RIGHT)
+        VIM_MACRO(mc_left_vim           , &mc_vim_off &kp LEFT )
+        VIM_MACRO(mc_right_vim          , &mc_vim_off &kp RIGHT)
                                 
-        MOD_MORPH_KM(mm_left_vim  , MOD_ALL, &mc_left_vim  , &kp LEFT)
-        MOD_MORPH_KM(mm_right_vim , MOD_ALL, &mc_right_vim , &kp RIGHT)
-        MOD_MORPH_KM(mm_ent_vim   , MOD_ALL, &lm_ent_vim   , &kp ENTER)
-        MOD_MORPH_KM(mm_esc_vim   , MOD_ALL, &lm_esc_vim   , &kp ESC)
+        VIM_MOD_MORPH(mm_left_vim       , MOD_ALL, &mc_left_vim  , &kp LEFT)
+        VIM_MOD_MORPH(mm_right_vim      , MOD_ALL, &mc_right_vim , &kp RIGHT)
+        VIM_MOD_MORPH(mm_ent_vim        , MOD_ALL, &lm_ent_vim   , &kp ENTER)
+        VIM_MOD_MORPH(mm_esc_vim        , MOD_ALL, &lm_esc_vim   , &kp ESC)
 
-        MACRO(mm_shift_vim_replace, &mm_shift &ntsl VIM_REPLACE)
-
-        ht_sft_vim: ht_sft_vim {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <QUICK_TAP_TERM>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <0>;
-            bindings = <&mo>, <&mm_shift_vim_replace>;
-        };
-
+        // TODO - VISUAL exits, like x, d, etc
     };
 };
