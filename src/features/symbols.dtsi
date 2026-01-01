@@ -247,7 +247,7 @@
 
         LAYERTAP_TP(lt_lead_vim       , &mc_spc_lead_vim)
         TAPHOLD_TP(th_colon_vim       , &lm_colon_vim, &mc_end_colon)
-        MACRO(mc_end_enter_vim        , &kp END &lm_enter_vim)
+        MACRO(mc_end_enter_vim        , &kp END &lm_ent_vim)
         MACRO(mc_save_esc_vim         , &mc_save &lm_esc_vim)
 
     };

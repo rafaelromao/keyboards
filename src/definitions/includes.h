@@ -12,6 +12,7 @@
 
 #include "../features/listeners.dtsi"
 #include "../features/mouse.dtsi"
+#include "../features/vim.dtsi"
 
 #include "../features/accents.dtsi"
 #include "../features/shortcuts.dtsi"
@@ -21,7 +22,6 @@
 #include "../features/smart.dtsi"
 #include "../features/adaptive.dtsi"
 #include "../features/symbols.dtsi"
-#include "../features/vim.dtsi"
 
 #include "../features/combos.dtsi"
 #include "../features/leader.dtsi"
