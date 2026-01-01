@@ -250,5 +250,11 @@
         MACRO(mc_end_enter_vim        , &kp END &lm_ent_vim)
         MACRO(mc_save_esc_vim         , &mc_save &lm_esc_vim)
 
+        MACRO(mc_o_vim,  &vim_o  &kp F24) // reset antecedent key for magic keys 
+        MACRO(mc_a_vim,  &vim_a  &kp F24) // reset antecedent key for magic keys 
+        MACRO(mc_i_vim,  &vim_i  &kp F24) // reset antecedent key for magic keys 
+        MACRO(mc_ca_vim, &vim_ca &kp F24) // reset antecedent key for magic keys 
+        MACRO(mc_ci_vim, &vim_ci &kp F24) // reset antecedent key for magic keys 
+        MACRO(mc_ce_vim, &kp E   &kp F24) // reset antecedent key for magic keys
     };
 };
