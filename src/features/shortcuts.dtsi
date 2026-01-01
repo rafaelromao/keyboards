@@ -118,7 +118,6 @@
         OS_MORPH(mc_selpaste,          &macro_tap &kp LG(A) &kp LG(V),                                                              &macro_tap &kp LC(A) &kp LC(V))
         OS_MORPH(mc_shift_selpaste,    &macro_tap &kp LS(LG(A)) &kp LS(LG(V)),                                                      &macro_tap &kp LS(LC(A)) &kp LS(LC(V)))
         OS_MORPH(mc_save,              &macro_tap &kp LG(S),                                                                        &macro_tap &kp LC(S))
-        OS_MORPH(mc_save_esc,          &macro_tap &kp LG(S) &kp ESC,                                                                &macro_tap &kp LC(S) &kp ESC)
         OS_MORPH(mc_comment,           &macro_tap &kp LG(SLASH),                                                                    &macro_tap &kp LC(SLASH))
                                                                                                                              
         // Custom                                                                                                            

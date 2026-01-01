@@ -39,7 +39,7 @@
         COMBO(cb_backspace,     RTM RTR,         &kp BACKSPACE,          ALL_LAYERS_WITH_BACKSPACE)
         COMBO(cb_esc,           LTR LTM,         &lm_esc_vim,            ALL_LAYERS_WITH_ESC)
 
-        COMBO(cb_esc_save,      LTR LTM L0,      &lm_save_esc_vim,       ALL_LAYERS)
+        COMBO(cb_esc_save,      LTR LTM L0,      &mc_save_esc_vim,       ALL_LAYERS)
 
         COMBO(cb_toggles_l,     LHI LHR,         &mo TOGS,               SHORTS)
         COMBO(cb_toggles_r,     RHI RHR,         &mo TOGS,               SHORTS)
