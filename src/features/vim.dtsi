@@ -32,8 +32,8 @@
             #binding-cells = <0>; \
             layer = <VIM_NORMAL>; \
             bindings \
-                = <NORMAL_BINDING> \
-                , <VIMOFF_BINDING> \
+                = <VIMOFF_BINDING> \
+                , <NORMAL_BINDING> \
                 ; \
         }; \
         NAME##_visual: NAME##_visual { \
@@ -41,8 +41,8 @@
             #binding-cells = <0>; \
             layer = <VIM_VISUAL>; \
             bindings \
-                = <VISUAL_BINDING> \
-                , <&NAME##_normal> \
+                = <&NAME##_normal> \
+                , <VISUAL_BINDING> \
                 ; \
         }; \
         NAME##_change: NAME##_change { \
@@ -50,8 +50,8 @@
             #binding-cells = <0>; \
             layer = <VIM_CHANGE>; \
             bindings \
-                = <CHANGE_BINDING> \
-                , <&NAME##_visual> \
+                = <&NAME##_visual> \
+                , <CHANGE_BINDING> \
                 ; \
         }; \
         NAME##_leader: NAME##_leader { \
@@ -59,17 +59,17 @@
             #binding-cells = <0>; \
             layer = <VIM_LEADER>; \
             bindings \
-                = <LEADER_BINDING> \
-                , <&NAME##_change> \
+                = <&NAME##_change> \
+                , <LEADER_BINDING> \
                 ; \
         }; \
         NAME##_insert: NAME##_insert { \
             compatible = "zmk,behavior-layer-morph"; \
             #binding-cells = <0>; \
-            layer = <VIM_CHANGE>; \
+            layer = <VIM_INSERT>; \
             bindings \
-                = <INSERT_BINDING> \
-                , <&NAME##_leader> \
+                = <&NAME##_leader> \
+                , <INSERT_BINDING> \
                 ; \
         }; \
         NAME##_replace: NAME##_replace { \
@@ -77,8 +77,8 @@
             #binding-cells = <0>; \
             layer = <VIM_REPLACE>; \
             bindings \
-                = <REPLACE_BINDING> \
-                , <&NAME##_insert> \
+                = <&NAME##_insert> \
+                , <REPLACE_BINDING> \
                 ; \
         }; \
         NAME: NAME { \
@@ -86,8 +86,8 @@
             #binding-cells = <0>; \
             layer = <VIM_CMDLINE>; \
             bindings \
-                = <CMDLINE_BINDING> \
-                , <&NAME##_replace> \
+                = <&NAME##_replace> \
+                , <CMDLINE_BINDING> \
                 ; \
         };
 
