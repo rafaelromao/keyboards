@@ -46,7 +46,7 @@
 
         VIM_MACRO(mc_slash_vim          , &mc_vim_cmdline &kp SLASH)
 
-        VIM_MACRO(mc_colon,               &kp COLON )
+        VIM_MACRO(mc_colon              , &kp COLON )
         VIM_MACRO(mc_colon_vim          , &mc_vim_cmdline &mc_colon)
         VIM_BINDING(lm_colon_vim        , VIM_NORMAL VIM_VISUAL VIM_CHANGE VIM_LEADER, &mc_colon_vim, &mc_colon)
 
