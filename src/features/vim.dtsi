@@ -35,8 +35,9 @@
 / {
     vim {
 
-        VIM_MACRO(mc_vim_off            , &tog_off VIM_NORMAL &tog_off VIM_CHANGE &tog_off VIM_VISUAL &tog_off VIM_INSERT &tog_off VIM_REPLACE &tog_off VIM_LEADER)
+        VIM_MACRO(mc_vim_off            , &tog_off VIM_NORMAL &tog_off VIM_CHANGE &tog_off VIM_VISUAL &tog_off VIM_INSERT &tog_off VIM_REPLACE &tog_off VIM_LEADER &tog_off VIM_CMDLINE)
         VIM_MACRO(mc_vim_reset          , &mc_vim_off &tog_on VIM_NORMAL &kp ESC)
+        VIM_MACRO(mc_vim_normal         , &mc_vim_off &tog_on VIM_NORMAL)
         VIM_MACRO(mc_vim_insert         , &mc_vim_off &tog_on VIM_INSERT)
         VIM_MACRO(mc_vim_cmdline        , &mc_vim_off &tog_on VIM_CMDLINE)
 
@@ -49,11 +50,11 @@
         VIM_BINDING(lm_colon_vim        , VIM_NORMAL VIM_VISUAL VIM_CHANGE VIM_LEADER, &mc_colon_vim, &mc_colon)
 
         VIM_MACRO(mc_enter              , &kp ENTER)
-        VIM_MACRO(mc_enter_vim          , &mc_enter &mc_vim_reset)
+        VIM_MACRO(mc_enter_vim          , &mc_enter &mc_vim_normal)
         VIM_BINDING(lm_ent_vim          , VIM_CMDLINE, &mc_enter_vim, &mc_enter)
 
         VIM_MACRO(mc_esc                , &kp ESC)
-        VIM_MACRO(mc_esc_vim            , &mc_esc &mc_vim_reset)
+        VIM_MACRO(mc_esc_vim            , &mc_esc &mc_vim_normal)
         VIM_BINDING(lm_esc_vim          , VIM_VISUAL VIM_CHANGE VIM_LEADER VIM_INSERT VIM_REPLACE VIM_CMDLINE, &mc_esc_vim, &mc_esc)
 
 
