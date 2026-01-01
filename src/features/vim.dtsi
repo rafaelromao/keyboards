@@ -16,78 +16,19 @@
             bindings = <BINDINGS>; \
         };
 
-    #define VIM_BINDING(     \
-            NAME,            \
-            VIMOFF_BINDING,  \
-            NORMAL_BINDING,  \
-            VISUAL_BINDING,  \
-            CHANGE_BINDING,  \
-            LEADER_BINDING,  \
-            INSERT_BINDING,  \
-            REPLACE_BINDING, \
-            CMDLINE_BINDING  \
+    #define VIM_BINDING( \
+            NAME, \
+            LAYERS, \
+            LAYERS_BINDING, \
+            REGULAR_BINDING \
         ) \
-        NAME##_normal: NAME##_normal { \
-            compatible = "zmk,behavior-layer-morph"; \
-            #binding-cells = <0>; \
-            layer = <VIM_NORMAL>; \
-            bindings \
-                = <VIMOFF_BINDING> \
-                , <NORMAL_BINDING> \
-                ; \
-        }; \
-        NAME##_visual: NAME##_visual { \
-            compatible = "zmk,behavior-layer-morph"; \
-            #binding-cells = <0>; \
-            layer = <VIM_VISUAL>; \
-            bindings \
-                = <&NAME##_normal> \
-                , <VISUAL_BINDING> \
-                ; \
-        }; \
-        NAME##_change: NAME##_change { \
-            compatible = "zmk,behavior-layer-morph"; \
-            #binding-cells = <0>; \
-            layer = <VIM_CHANGE>; \
-            bindings \
-                = <&NAME##_visual> \
-                , <CHANGE_BINDING> \
-                ; \
-        }; \
-        NAME##_leader: NAME##_leader { \
-            compatible = "zmk,behavior-layer-morph"; \
-            #binding-cells = <0>; \
-            layer = <VIM_LEADER>; \
-            bindings \
-                = <&NAME##_change> \
-                , <LEADER_BINDING> \
-                ; \
-        }; \
-        NAME##_insert: NAME##_insert { \
-            compatible = "zmk,behavior-layer-morph"; \
-            #binding-cells = <0>; \
-            layer = <VIM_INSERT>; \
-            bindings \
-                = <&NAME##_leader> \
-                , <INSERT_BINDING> \
-                ; \
-        }; \
-        NAME##_replace: NAME##_replace { \
-            compatible = "zmk,behavior-layer-morph"; \
-            #binding-cells = <0>; \
-            layer = <VIM_REPLACE>; \
-            bindings \
-                = <&NAME##_insert> \
-                , <REPLACE_BINDING> \
-                ; \
-        }; \
         NAME: NAME { \
             compatible = "zmk,behavior-layer-morph"; \
             #binding-cells = <0>; \
-            layer = <VIM_CMDLINE>; \
+            layers = <LAYERS>; \
             bindings \
-                = <&NAME##_replace> \
-                , <CMDLINE_BINDING> \
+                = <REGULAR_BINDING> \
+                , <LAYERS_BINDING> \
                 ; \
         };
 
@@ -105,45 +46,18 @@
 
         VIM_MACRO(mc_colon,               &kp COLON )
         VIM_MACRO(mc_colon_vim          , &mc_colon &mc_vim_cmdline)
-        VIM_BINDING(
-          lm_colon_vim,
-          &mc_colon,     // vim off
-          &mc_colon_vim, // normal
-          &mc_colon_vim, // visual
-          &mc_colon_vim, // change
-          &mc_colon_vim, // leader
-          &mc_colon,     // insert
-          &mc_colon,     // replace
-          &mc_colon      // cmrline
-        )
+        VIM_BINDING(lm_colon_vim        , VIM_NORMAL VIM_VISUAL VIM_CHANGE VIM_LEADER, &mc_enter_vim, &mc_enter)
 
-        VIM_MACRO(mc_enter               , &kp ENTER)
-        VIM_MACRO(mc_enter_vim           , &mc_enter &mc_vim_reset)
-        VIM_BINDING(
-          lm_ent_vim,
-          &mc_enter,     // vim off
-          &mc_enter,     // normal
-          &mc_enter,     // visual
-          &mc_enter,     // change
-          &mc_enter,     // leader
-          &mc_enter,     // insert
-          &mc_enter,     // replace
-          &mc_enter_vim  // cmdline
-        )
+        VIM_MACRO(mc_enter              , &kp ENTER)
+        VIM_MACRO(mc_enter_vim          , &mc_enter &mc_vim_reset)
+        VIM_BINDING(lm_ent_vim          , VIM_CMDLINE, &mc_colon_vim, &mc_colon)
 
-        VIM_MACRO(mc_esc                 , &kp ESC)
-        VIM_MACRO(mc_esc_vim             , &mc_esc &mc_vim_reset)
-        VIM_BINDING(
-          lm_esc_vim,
-          &mc_esc,       // vim off
-          &mc_esc,       // normal
-          &mc_esc_vim,   // visual
-          &mc_esc_vim,   // change
-          &mc_esc_vim,   // leader
-          &mc_esc_vim,   // insert
-          &mc_esc_vim,   // replace
-          &mc_esc_vim    // cmdline
-        )
+        VIM_MACRO(mc_esc                , &kp ESC)
+        VIM_MACRO(mc_esc_vim            , &mc_esc &mc_vim_reset)
+        VIM_BINDING(lm_esc_vim          , VIM_VISUAL VIM_CHANGE VIM_LEADER VIM_INSERT VIM_REPLACE VIM_CMDLINE, &mc_esc_vim, &mc_esc)
+
+
+
 
         MACRO(mc_o_vim,  &kp O &kp F24 &tog_off VIM_NORMAL &tog_on VIM_INSERT) // reset antecedent key for magic keys 
         MACRO(mc_a_vim,  &kp A &kp F24 &tog_off VIM_NORMAL &tog_on VIM_INSERT) // reset antecedent key for magic keys 

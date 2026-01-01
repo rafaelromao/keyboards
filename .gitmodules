@@ -31,3 +31,6 @@
 [submodule "modules/ssbb/zmk-listeners"]
 	path = modules/ssbb/zmk-listeners
 	url = git@github.com:ssbb/zmk-listeners
+[submodule "modules/rafaelromao/zmk-dongle-display"]
+	path = modules/rafaelromao/zmk-dongle-display
+	url = git@github.com:rafaelromao/zmk-dongle-display

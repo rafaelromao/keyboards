@@ -64,7 +64,7 @@
         NAME##: NAME## { \
             compatible = "zmk,behavior-layer-morph"; \
             #binding-cells = <0>; \
-            layer = <LAYER>; \
+            layers = <LAYER>; \
             bindings \
                 = <UNMODDED> \
                 , <MODDED> \
@@ -95,7 +95,7 @@
         NAME: NAME { \
             compatible = "zmk,behavior-layer-morph"; \
             #binding-cells = <0>; \
-            layer = <ALT_OS>; \
+            layers = <ALT_OS VIM_NORMAL>; \
             bindings \
                 = <&NAME##_d> \
                 , <&NAME##_a> \
