@@ -95,7 +95,7 @@
         NAME: NAME { \
             compatible = "zmk,behavior-layer-morph"; \
             #binding-cells = <0>; \
-            layers = <ALT_OS VIM_NORMAL>; \
+            layers = <ALT_OS>; \
             bindings \
                 = <&NAME##_d> \
                 , <&NAME##_a> \

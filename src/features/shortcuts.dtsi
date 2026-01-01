@@ -7,7 +7,7 @@
 
 / {
     shortcuts {
-        OS_MORPH(lm_os, &kp L, &kp M)
+        OS_MORPH(lm_os, &kp A, &kp D)
 
         MACRO(mc_sleep,                  &macro_tap_time 400 &macro_tap &kp C_SLEEP)
 
