@@ -138,6 +138,8 @@ if [[ -n "$SHIELD" && -n "$CONFIG" ]]; then
 fi
 
 # Add default modules
+MODULES="$ZMK"
+
 for DEF_MODULE in "${DEF_MODULES[@]}"; do
     if [[ -n "$MODULES" ]]; then
         MODULES+=","
