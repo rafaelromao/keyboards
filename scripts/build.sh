@@ -137,19 +137,6 @@ if [[ -n "$SHIELD" && -n "$CONFIG" ]]; then
     fi 
 fi
 
-# Define zmk module
-ZMK_MODULE=modules/$ZMK
-ZMK_HOME="$PROJECT_DIR/$ZMK_MODULE"
-
-# Init West
-if [[ ! -d "$ZMK_HOME/.west" ]]
-then
-    echo "Initializing West..."
-    cd $ZMK_HOME
-    west init -l app/
-    cd $PROJECT_DIR
-fi
-
 # Add default modules
 for DEF_MODULE in "${DEF_MODULES[@]}"; do
     if [[ -n "$MODULES" ]]; then
@@ -177,25 +164,6 @@ OUTPUT_FILE="$PROJECT_DIR/src/definitions/flags.h"
 [ -f "$OUTPUT_FILE" ] && rm "$OUTPUT_FILE"
 touch "$OUTPUT_FILE"
 echo "#define $OPERATING_SYSTEM" >> "$OUTPUT_FILE"
-
-# Clean ZMK build directory
-echo 'Cleaning zmk...'
-rm -rf "$PROJECT_DIR/$ZMK_MODULE/build"
-
-# Check out the main ZMK revision
-echo 'Checking out zmk...'
-cd "$PROJECT_DIR/$ZMK_MODULE"
-git fetch
-git checkout -f $REVISION
-git pull
-
-cd "$PROJECT_DIR"
-
-if [ -z "$CONFIG" ]; then
-    ARTIFACT="$BOARD-$SHIELD-$OPERATING_SYSTEM"
-else
-    ARTIFACT="${SHIELD:-$BOARD}-$OPERATING_SYSTEM"
-fi
 
 # Rewrite the modules list
 
@@ -243,6 +211,38 @@ for ITEM in "${ADDR[@]}"; do
 done
 TEMP="${TEMP%,}"
 MODULES=$TEMP
+
+# Define zmk module
+ZMK_MODULE=modules/$ZMK
+ZMK_HOME="$PROJECT_DIR/$ZMK_MODULE"
+
+# Clean ZMK build directory
+echo 'Cleaning zmk...'
+rm -rf "$PROJECT_DIR/$ZMK_MODULE/build"
+
+# Check out the main ZMK revision
+echo 'Checking out zmk...'
+cd "$PROJECT_DIR/$ZMK_MODULE"
+git fetch
+git checkout -f $REVISION
+git pull
+
+cd "$PROJECT_DIR"
+
+# Init West
+if [[ ! -d "$ZMK_HOME/.west" ]]
+then
+    echo "Initializing West..."
+    cd $ZMK_HOME
+    west init -l app/
+    cd $PROJECT_DIR
+fi
+
+if [ -z "$CONFIG" ]; then
+    ARTIFACT="$BOARD-$SHIELD-$OPERATING_SYSTEM"
+else
+    ARTIFACT="${SHIELD:-$BOARD}-$OPERATING_SYSTEM"
+fi
 
 # Build the project
 cd "$PROJECT_DIR/$ZMK_MODULE"
