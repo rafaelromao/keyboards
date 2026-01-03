@@ -49,6 +49,11 @@ build_dilemma() {
     ./scripts/build.sh "bastardkb/dilemma" "l" "LINUX" "-e" "dongle_display" "-m" "rafaelromao/zmk-dongle-display" "$@"
 }
 
+# Building Corneish Zen peripherals
+# build lowprokb.ca/corneish-zen -b corneish_zen_v2_left -o LINUX -z caksoylar/zmk -r caksoylar/zen-v1+v2
+# build lowprokb.ca/corneish-zen-with-dongle -b corneish_zen_v2_left -o LINUX -z caksoylar/zmk -r caksoylar/zen-v1+v2
+# build lowprokb.ca/corneish-zen-with-dongle -b corneish_zen_v2_right -o LINUX -z caksoylar/zmk -r caksoylar/zen-v1+v2
+
 # --- Main Script ---
 
 if [[ $# -lt 1 || "$1" == "-h" || "$1" == "--help" ]]; then
