@@ -10,7 +10,6 @@
 #include "helpers.h"
 #include "config.dtsi"
 
-#include "../features/listeners.dtsi"
 #include "../features/mouse.dtsi"
 #include "../features/vim.dtsi"
 
