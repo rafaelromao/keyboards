@@ -161,16 +161,6 @@
         MACRO(mc_end_qmark,           &kp END &mc_qmark )
         TAPHOLD_TP(th_qmark,          &mc_qmark, &mc_end_qmark)
 
-        MACRO(mc_end_colon,           &kp END &mc_colon)
-
-        MACRO(mc_excl,                &kp EXCL )
-        MACRO(mc_end_excl,            &kp END &mc_excl)
-        TAPHOLD_TP(th_excl,           &mc_excl, &mc_end_excl)
-
-        MACRO(mc_eql,                 &kp EQUAL)
-        MACRO(mc_end_eql,             &kp END &kp EQUAL)
-        TAPHOLD_TP(th_eql,            &mc_eql, &mc_end_eql)
-
         MACRO(mc_eqeq,                &kp EQUAL &kp EQUAL)
         MACRO(mc_end_eqeq,            &kp END &kp EQUAL &kp EQUAL)
         TAPHOLD_TP(th_eqeq,           &mc_eqeq, &mc_end_eqeq)
@@ -208,6 +198,14 @@
         LAYERTAP_TP(msl_a1cp          , &mc_sl_vim_replace)
 
         // Vim
+
+        MACRO(mc_end_colon,           &kp END &kp COLON)
+
+        MACRO(mc_end_excl,            &kp END &kp EXCL)
+        TAPHOLD_TP(th_excl,           &lm_excl_vim, &mc_end_excl)
+
+        MACRO(mc_end_eql,             &kp END &kp EQUAL)
+        TAPHOLD_TP(th_eql,            &lm_eql_vim, &mc_end_eql)
 
         MACRO(mm_shift_vim_replace    , &mm_shift &ntsl VIM_REPLACE)
         LAYERTAP_TP(ht_sft_vim        , &mm_shift_vim_replace)
