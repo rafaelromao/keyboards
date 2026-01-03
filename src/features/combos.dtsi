@@ -21,8 +21,8 @@
     #define NUM_LAYERS                  NUM NUM_CP
     #define SYM_LAYERS                  SYM SYM_CP
     #define NAV_LAYERS                  NAV NAV_CP
-    #define VIM_LAYERS_BASE             VIM_INSERT VIM_REPLACE VIM_CMDLINE
-    #define VIM_LAYERS_VIM              VIM_NORMAL VIM_VISUAL VIM_CHANGE VIM_LEADER
+    #define VIM_LAYERS_BASE             VIM_INSERT VIM_REPLACE VIM_CMDLINE VIM_LEADER
+    #define VIM_LAYERS_VIM              VIM_NORMAL VIM_VISUAL VIM_CHANGE
     #define VIM_LAYERS                  VIM_LAYERS_BASE VIM_LAYERS_VIM
     #define FIXABLE_LAYERS              ALPHA1_LAYERS CPLK_A1 CASE_A1 NUM_LAYERS MEDIA NAV_LAYERS MEHS FUN                           VIM_LAYERS
     #define ALL_LAYERS                  ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS MEDIA TEXT SHORTS VIM_LAYERS
@@ -114,12 +114,12 @@
         COMBO(cb_pc,            RHI RHM RHR,     &kp LS(P),              CASE_A1 CPLK_A1)
 
         COMBO(cb_grv_vim,       LTM LTI,         &kp GRAVE,              VIM_LAYERS_VIM)
-        COMBO(cb_x_vim,         RTI RTM,         &kp X,                  VIM_LAYERS_VIM)
-        COMBO(cb_d_vim,         RTM RTR,         &kp D,                  VIM_LAYERS_VIM)
+        COMBO(cb_x_vim,         RTI RTM,         &lm_x_vim,              VIM_LAYERS_VIM)
+        COMBO(cb_d_vim,         RTM RTR,         &lm_d_vim,              VIM_LAYERS_VIM)
         COMBO(cb_z_vim,         LHR LHM,         &kp Z,                  VIM_LAYERS_VIM)
         COMBO(cb_m_vim,         LHM LHI,         &kp M,                  VIM_LAYERS_VIM)
-        COMBO(cb_p_vim,         RHI RHM,         &kp P,                  VIM_LAYERS_VIM)
-        COMBO(cb_y_vim,         RHM RHR,         &kp Y,                  VIM_LAYERS_VIM)
+        COMBO(cb_p_vim,         RHI RHM,         &lm_p_vim,              VIM_LAYERS_VIM)
+        COMBO(cb_y_vim,         RHM RHR,         &lm_y_vim,              VIM_LAYERS_VIM)
         COMBO(cb_at_vim,        LBM LBI,         &kp AT,                 VIM_LAYERS_VIM)
         COMBO(cb_v_vim,         RBI RBM,         &lm_v_vim,              VIM_LAYERS_VIM)
 
@@ -187,8 +187,8 @@
         COMBO(cb_bti_s,         LBM LBR,         &kp GRAVE,              ALPHA2_LAYERS)
         COMBO(cb_caret_s,       LHR LHM,         &kp CARET,              ALPHA2_LAYERS)
         COMBO(cb_tilde_s,       LBI LBM,         &kp TILDE,              ALPHA2_LAYERS)
-        COMBO(cb_ques,          RHI RHM,         &mc_qmark,              ALPHA2_LAYERS)
-        COMBO(cb_excl,          RBI RBM,         &mc_excl,               ALPHA2_LAYERS)
+        COMBO(cb_ques,          RHI RHM,         &kp QMARK,              ALPHA2_LAYERS)
+        COMBO(cb_excl,          RBI RBM,         &kp EXCL,               ALPHA2_LAYERS)
         COMBO(cb_colon,         RBM RBR,         &kp COLON,              ALPHA2_LAYERS)
 
         COMBO(cb_grva,          RHM RHR,         &ac_agrv,               ALPHA2)
