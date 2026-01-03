@@ -144,7 +144,6 @@ for DEF_MODULE in "${DEF_MODULES[@]}"; do
     fi
     MODULES+="${DEF_MODULE}"
 done
-MODULES+=",${ZMK}"
 
 # Print the parameters for verification
 echo "Config: $CONFIG"
@@ -190,6 +189,10 @@ MODULES=$TEMP
 # Define zmk module
 ZMK_MODULE=modules/$ZMK
 ZMK_HOME="$PROJECT_DIR/$ZMK_MODULE"
+
+# Add the sub-module for ZMK
+echo "Add git sub-module: $ZMK"
+git submodule add -f "git@github.com:$ZMK" "modules/$ZMK"
 
 # Clean ZMK build directory
 echo 'Cleaning zmk...'
