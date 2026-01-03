@@ -100,28 +100,28 @@
 
         // VISUAL MODE EXITS
 
-        VIM_MACRO(vim_x                 , &kp X &mc_vim_reset)
+        VIM_MACRO(vim_x                 , &mc_vim_normal &kp X)
         VIM_BINDING(lm_x_vim            , VIM_VISUAL, &vim_x, &kp X)
 
-        VIM_MACRO(vim_d                 , &kp D &mc_vim_reset)
+        VIM_MACRO(vim_d                 , &mc_vim_normal &kp D)
         VIM_BINDING(lm_d_vim            , VIM_VISUAL, &vim_d, &kp D)
 
-        VIM_MACRO(vim_y                 , &kp Y &mc_vim_reset)
+        VIM_MACRO(vim_y                 , &mc_vim_normal &kp Y)
         VIM_BINDING(lm_y_vim            , VIM_VISUAL, &vim_y, &kp Y)
 
-        VIM_MACRO(vim_p                 , &kp P &mc_vim_reset)
+        VIM_MACRO(vim_p                 , &mc_vim_normal &kp P)
         VIM_BINDING(lm_p_vim            , VIM_VISUAL, &vim_p, &kp P)
 
-        VIM_MACRO(vim_sft_j             , &kp J &mc_vim_reset)
+        VIM_MACRO(vim_sft_j             , &mc_vim_normal &kp J)
         VIM_MOD_MORPH(mm_sft_j_vim      , MOD_LSFT|MOD_RSFT, &vim_sft_j, &kp J)
 
-        VIM_MACRO(vim_eql               , &kp EQUAL &mc_vim_reset)
+        VIM_MACRO(vim_eql               , &mc_vim_normal &kp EQUAL)
         VIM_BINDING(lm_eql_vim          , VIM_VISUAL, &vim_eql, &kp EQUAL)
 
-        VIM_MACRO(vim_tilde             , &kp TILDE &mc_vim_reset)
+        VIM_MACRO(vim_tilde             , &mc_vim_normal &kp TILDE)
         VIM_BINDING(lm_tilde_vim        , VIM_VISUAL, &vim_tilde, &kp TILDE)
 
-        VIM_MACRO(vim_excl              , &kp EXCL &mc_vim_cmdline)
+        VIM_MACRO(vim_excl              , &mc_vim_cmdline &kp EXCL)
         VIM_BINDING(lm_excl_vim         , VIM_VISUAL, &vim_excl, &kp EXCL)
     };
 };
