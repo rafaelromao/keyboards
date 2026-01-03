@@ -5,71 +5,78 @@
 *
 */
 
-    /*  HELPER MACROS  */
+#include <dt-bindings/zmk/hid_usage.h>
 
-    #define VIM_MACRO(NAME, BINDINGS) \
-        NAME: NAME { \
-            compatible = "zmk,behavior-macro"; \
-            #binding-cells = <0>; \
-            wait-ms = <5>; \
-            tap-ms = <5>; \
-            bindings = <BINDINGS>; \
-        };
 
-    #define VIM_BINDING( \
-            NAME, \
-            LAYERS, \
-            MORPHED_BINDING, \
-            DEFAULT_BINDING \
-        ) \
-        NAME: NAME { \
-            compatible = "zmk,behavior-layer-morph"; \
-            #binding-cells = <0>; \
-            layers = <LAYERS>; \
-            bindings \
-                = <DEFAULT_BINDING> \
-                , <MORPHED_BINDING> \
-                ; \
-        };
+/ {
+    hid_listeners {
+        compatible = "zmk,hid-listeners";
 
-    #define VIM_MOD_MORPH(NAME, MODS, MODDED, UNMODDED) \
-        NAME: NAME { \
-            compatible = "zmk,behavior-mod-morph"; \
-            #binding-cells = <0>; \
-            bindings = <UNMODDED>, <MODDED>; \
-            mods = <(MODS)>; \
-            keep-mods = <(MODS)>; \
+        num_lock {           
+            indicator = <HID_USAGE_LED_NUM_LOCK>;
+            bindings = <&vim_off &vim_reset>; // vim mode on if num lock is off
         };
+    };
+};
+
+/*  HELPER MACROS  */
+
+#define VIM_MACRO(NAME, BINDINGS) \
+    NAME: NAME { \
+        compatible = "zmk,behavior-macro"; \
+        #binding-cells = <0>; \
+        wait-ms = <5>; \
+        tap-ms = <5>; \
+        bindings = <BINDINGS>; \
+    };
+
+#define VIM_BINDING( \
+        NAME, \
+        LAYERS, \
+        MORPHED_BINDING, \
+        DEFAULT_BINDING \
+    ) \
+    NAME: NAME { \
+        compatible = "zmk,behavior-layer-morph"; \
+        #binding-cells = <0>; \
+        layers = <LAYERS>; \
+        bindings \
+            = <DEFAULT_BINDING> \
+            , <MORPHED_BINDING> \
+            ; \
+    };
+
+#define VIM_MOD_MORPH(NAME, MODS, MODDED, UNMODDED) \
+    NAME: NAME { \
+        compatible = "zmk,behavior-mod-morph"; \
+        #binding-cells = <0>; \
+        bindings = <UNMODDED>, <MODDED>; \
+        mods = <(MODS)>; \
+        keep-mods = <(MODS)>; \
+    };
 
 / {
     vim {
 
-        VIM_MACRO(mc_vim_off            , &tog_off VIM_NORMAL &tog_off VIM_CHANGE &tog_off VIM_VISUAL &tog_off VIM_INSERT &tog_off VIM_REPLACE &tog_off VIM_LEADER &tog_off VIM_CMDLINE)
-        VIM_MACRO(mc_vim_reset          , &mc_vim_off &tog_on VIM_NORMAL &kp ESC)
-        VIM_MACRO(mc_vim_normal         , &mc_vim_off &tog_on VIM_NORMAL)
-        VIM_MACRO(mc_vim_insert         , &mc_vim_off &tog_on VIM_INSERT)
-        VIM_MACRO(mc_vim_cmdline        , &mc_vim_off &tog_on VIM_CMDLINE)
-        VIM_MACRO(mc_vim_leader         , &mc_vim_off &tog_on VIM_LEADER)
+        VIM_MACRO(vim_off               , &tog_off VIM_NORMAL &tog_off VIM_CHANGE &tog_off VIM_VISUAL &tog_off VIM_INSERT &tog_off VIM_REPLACE &tog_off VIM_LEADER &tog_off VIM_CMDLINE)
+        VIM_MACRO(vim_reset             , &vim_off &tog_on VIM_NORMAL &kp ESC)
+        VIM_MACRO(vim_normal            , &vim_off &tog_on VIM_NORMAL)
+        VIM_MACRO(vim_insert            , &vim_off &tog_on VIM_INSERT)
+        VIM_MACRO(vim_cmdline           , &vim_off &tog_on VIM_CMDLINE)
+        VIM_MACRO(vim_leader            , &vim_off &tog_on VIM_LEADER)
 
-        VIM_MACRO(mc_spc_lead_vim       , &mc_vim_leader &kp SPACE)
+        VIM_MACRO(vim_space_lead        , &vim_leader &kp SPACE)
 
-        VIM_MACRO(mc_slash_vim          , &mc_vim_cmdline &kp SLASH)
+        VIM_MACRO(vim_slash             , &vim_cmdline &kp SLASH)
 
-        VIM_MACRO(mc_colon_vim          , &mc_vim_cmdline &kp COLON)
-        VIM_BINDING(lm_colon_vim        , VIM_NORMAL VIM_VISUAL VIM_CHANGE, &mc_colon_vim, &kp COLON)
+        VIM_MACRO(vim_colon             , &vim_cmdline &kp COLON)
+        VIM_BINDING(lm_colon_vim        , VIM_NORMAL VIM_VISUAL VIM_CHANGE, &vim_colon, &kp COLON)
 
-        VIM_MACRO(mc_enter_vim          , &mc_vim_normal &kp ENTER)
-        VIM_BINDING(lm_ent_vim          , VIM_CMDLINE, &mc_enter_vim, &kp ENTER)
+        VIM_MACRO(vim_enter             , &vim_normal &kp ENTER)
+        VIM_BINDING(lm_ent_vim          , VIM_CMDLINE, &vim_enter, &kp ENTER)
 
-        VIM_MACRO(mc_esc_vim            , &mc_vim_normal &kp ESC)
-        VIM_BINDING(lm_esc_vim          , VIM_VISUAL VIM_CHANGE VIM_LEADER VIM_INSERT VIM_REPLACE VIM_CMDLINE, &mc_esc_vim, &kp ESC)
-
-        VIM_MACRO(mc_v_vim              , &kp V &tog_on VIM_VISUAL)
-        VIM_MACRO(mc_sft_v_vim          , &mc_vim_reset &tog_on VIM_VISUAL &kp LS(V))
-        VIM_MACRO(mc_ctl_v_vim          , &mc_vim_reset &tog_on VIM_VISUAL &kp LC(V))
-        VIM_BINDING(lm_v_vim            , VIM_VISUAL, &mc_vim_normal , &mc_v_vim)
-        VIM_BINDING(lm_sft_v_vim        , VIM_VISUAL, &mc_vim_normal , &mc_sft_v_vim)
-        VIM_BINDING(lm_ctl_v_vim        , VIM_VISUAL, &mc_vim_normal , &mc_ctl_v_vim)
+        VIM_MACRO(vim_esc               , &vim_normal &kp ESC)
+        VIM_BINDING(lm_esc_vim          , VIM_VISUAL VIM_CHANGE VIM_LEADER VIM_INSERT VIM_REPLACE VIM_CMDLINE, &vim_esc, &kp ESC)
 
         VIM_MACRO(vim_o                 , &kp O &tog_off VIM_NORMAL &tog_on VIM_INSERT)
         VIM_MACRO(vim_a                 , &kp A &tog_off VIM_NORMAL &tog_on VIM_INSERT)
@@ -88,40 +95,49 @@
         VIM_MOD_MORPH(vim_o_ctrl_o      , MOD_LCTL|MOD_RCTL, &kp O, &vim_o)
         VIM_MOD_MORPH(vim_s_ctrl_s      , MOD_LCTL|MOD_RCTL, &kp S, &vim_s)
         VIM_MOD_MORPH(vim_r_ctrl_r      , MOD_LCTL|MOD_RCTL, &kp R, &vim_r)
-        VIM_MOD_MORPH(vim_c_ctrl_c      , MOD_LCTL|MOD_RCTL, &kp C &mc_vim_reset, &mm_sft_c_vim)
+        VIM_MOD_MORPH(vim_c_ctrl_c      , MOD_LCTL|MOD_RCTL, &kp C &vim_reset, &mm_sft_c_vim)
 
-        VIM_MACRO(mc_left_vim           , &mc_vim_off &kp LEFT )
-        VIM_MACRO(mc_right_vim          , &mc_vim_off &kp RIGHT)
+        VIM_MACRO(vim_left              , &vim_off &kp LEFT )
+        VIM_MACRO(vim_right             , &vim_off &kp RIGHT)
                                 
-        VIM_MOD_MORPH(mm_left_vim       , MOD_ALL, &mc_left_vim  , &kp LEFT)
-        VIM_MOD_MORPH(mm_right_vim      , MOD_ALL, &mc_right_vim , &kp RIGHT)
-        VIM_MOD_MORPH(mm_ent_vim        , MOD_ALL, &lm_ent_vim   , &kp ENTER)
-        VIM_MOD_MORPH(mm_esc_vim        , MOD_ALL, &lm_esc_vim   , &kp ESC)
+        VIM_MOD_MORPH(mm_left_vim       , MOD_ALL, &vim_left   , &kp LEFT)
+        VIM_MOD_MORPH(mm_right_vim      , MOD_ALL, &vim_right  , &kp RIGHT)
+        VIM_MOD_MORPH(mm_ent_vim        , MOD_ALL, &lm_ent_vim , &kp ENTER)
+        VIM_MOD_MORPH(mm_esc_vim        , MOD_ALL, &lm_esc_vim , &kp ESC)
 
         // VISUAL MODE EXITS
 
-        VIM_MACRO(vim_x                 , &mc_vim_normal &kp X)
+        VIM_MACRO(mc_v_vim              , &kp V &tog_on VIM_VISUAL)
+        VIM_BINDING(lm_v_vim            , VIM_VISUAL, &vim_normal , &mc_v_vim)
+
+        VIM_MACRO(mc_sft_v_vim          , &vim_reset &tog_on VIM_VISUAL &kp LS(V))
+        VIM_BINDING(lm_sft_v_vim        , VIM_VISUAL, &vim_normal , &mc_sft_v_vim)
+
+        VIM_MACRO(mc_ctl_v_vim          , &vim_reset &tog_on VIM_VISUAL &kp LC(V))
+        VIM_BINDING(lm_ctl_v_vim        , VIM_VISUAL, &vim_normal , &mc_ctl_v_vim)
+
+        VIM_MACRO(vim_x                 , &vim_normal &kp X)
         VIM_BINDING(lm_x_vim            , VIM_VISUAL, &vim_x, &kp X)
 
-        VIM_MACRO(vim_d                 , &mc_vim_normal &kp D)
+        VIM_MACRO(vim_d                 , &vim_normal &kp D)
         VIM_BINDING(lm_d_vim            , VIM_VISUAL, &vim_d, &kp D)
 
-        VIM_MACRO(vim_y                 , &mc_vim_normal &kp Y)
+        VIM_MACRO(vim_y                 , &vim_normal &kp Y)
         VIM_BINDING(lm_y_vim            , VIM_VISUAL, &vim_y, &kp Y)
 
-        VIM_MACRO(vim_p                 , &mc_vim_normal &kp P)
+        VIM_MACRO(vim_p                 , &vim_normal &kp P)
         VIM_BINDING(lm_p_vim            , VIM_VISUAL, &vim_p, &kp P)
 
-        VIM_MACRO(vim_sft_j             , &mc_vim_normal &kp J)
+        VIM_MACRO(vim_sft_j             , &vim_normal &kp J)
         VIM_MOD_MORPH(mm_sft_j_vim      , MOD_LSFT|MOD_RSFT, &vim_sft_j, &kp J)
 
-        VIM_MACRO(vim_eql               , &mc_vim_normal &kp EQUAL)
+        VIM_MACRO(vim_eql               , &vim_normal &kp EQUAL)
         VIM_BINDING(lm_eql_vim          , VIM_VISUAL, &vim_eql, &kp EQUAL)
 
-        VIM_MACRO(vim_tilde             , &mc_vim_normal &kp TILDE)
+        VIM_MACRO(vim_tilde             , &vim_normal &kp TILDE)
         VIM_BINDING(lm_tilde_vim        , VIM_VISUAL, &vim_tilde, &kp TILDE)
 
-        VIM_MACRO(vim_excl              , &mc_vim_cmdline &kp EXCL)
+        VIM_MACRO(vim_excl              , &vim_cmdline &kp EXCL)
         VIM_BINDING(lm_excl_vim         , VIM_VISUAL, &vim_excl, &kp EXCL)
     };
 };
