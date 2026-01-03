@@ -53,9 +53,6 @@
         MACRO(mc_end_bti,             &kp END &mc_bti)
         TAPHOLD_TP(th_bti,            &mc_bti, &mc_end_bti)
 
-        MACRO(mc_tilde,               &kp TILDE &kp SPACE)
-        LAYERTAP_TP(lt_tilde,         &mc_tilde)
-
         MACRO(mc_and,                 &kp AMPS &kp AMPS)
         MACRO(mc_right_and,           &kp RIGHT &kp AMPS &kp AMPS)
         TAPHOLD_TP(th_and,            &mc_and, &mc_right_and)
@@ -206,6 +203,9 @@
 
         MACRO(mc_end_eql,             &kp END &kp EQUAL)
         TAPHOLD_TP(th_eql,            &lm_eql_vim, &mc_end_eql)
+
+        MACRO(mc_tilde,               &lm_tilde_vim &kp SPACE)
+        LAYERTAP_TP(lt_tilde,         &mc_tilde)
 
         MACRO(mm_shift_vim_replace    , &mm_shift &ntsl VIM_REPLACE)
         LAYERTAP_TP(ht_sft_vim        , &mm_shift_vim_replace)
