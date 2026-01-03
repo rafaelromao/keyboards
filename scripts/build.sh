@@ -138,14 +138,13 @@ if [[ -n "$SHIELD" && -n "$CONFIG" ]]; then
 fi
 
 # Add default modules
-MODULES="$ZMK"
-
 for DEF_MODULE in "${DEF_MODULES[@]}"; do
     if [[ -n "$MODULES" ]]; then
         MODULES+=","
     fi
     MODULES+="${DEF_MODULE}"
 done
+MODULES+=",${ZMK}"
 
 # Print the parameters for verification
 echo "Config: $CONFIG"
