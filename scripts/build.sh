@@ -237,6 +237,7 @@ then
     echo "Initializing West..."
     cd $ZMK_HOME
     west init -l app/
+    west update
     cd $PROJECT_DIR
 fi
 
