@@ -36,7 +36,7 @@ build_choc_diamond() {
 
 build_zen() {
     echo "--- Building Corneish Zen ---"
-    ./scripts/build.sh "lowprokb.ca/corneish-zen" "-b corneish_zen_v2_left" "-o LINUX" "-z caksoylar/zmk" "-r caksoylar/zen-v1+v2" "$@"
+    ./scripts/build.sh "lowprokb.ca/corneish-zen" "-b" "corneish_zen_v2_left" "-o" "LINUX" "-z" "caksoylar/zmk" "-r" "caksoylar/zen-v1+v2" "$@"
 }
 
 build_zen_dongle() {
