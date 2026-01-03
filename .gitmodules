@@ -12,7 +12,7 @@
 	url = https://github.com/urob/zmk
 [submodule "modules/zmkfirmware/zmk"]
 	path = modules/zmkfirmware/zmk
-	url = https://github.com/zmkfirmware/zmk
+	url = git@github.com:zmkfirmware/zmk
 [submodule "modules/urob/zmk-adaptive-key"]
 	path = modules/urob/zmk-adaptive-key
 	url = git@github.com:urob/zmk-adaptive-key
