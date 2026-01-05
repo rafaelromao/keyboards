@@ -31,3 +31,6 @@
 [submodule "modules/rafaelromao/zmk-dongle-display"]
 	path = modules/rafaelromao/zmk-dongle-display
 	url = git@github.com:rafaelromao/zmk-dongle-display
+[submodule "modules/zmkfirmware/zmk"]
+	path = modules/zmkfirmware/zmk
+	url = git@github.com:zmkfirmware/zmk

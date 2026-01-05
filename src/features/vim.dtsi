@@ -97,11 +97,6 @@
         VIM_MOD_MORPH(vim_r_ctrl_r      , MOD_LCTL|MOD_RCTL, &kp R, &vim_r)
         VIM_MOD_MORPH(vim_c_ctrl_c      , MOD_LCTL|MOD_RCTL, &kp C &vim_reset, &mm_sft_c_vim)
 
-        VIM_MACRO(vim_left              , &vim_off &kp LEFT )
-        VIM_MACRO(vim_right             , &vim_off &kp RIGHT)
-                                
-        VIM_MOD_MORPH(mm_left_vim       , MOD_ALL, &vim_left   , &kp LEFT)
-        VIM_MOD_MORPH(mm_right_vim      , MOD_ALL, &vim_right  , &kp RIGHT)
         VIM_MOD_MORPH(mm_ent_vim        , MOD_ALL, &lm_ent_vim , &kp ENTER)
         VIM_MOD_MORPH(mm_esc_vim        , MOD_ALL, &lm_esc_vim , &kp ESC)
 
