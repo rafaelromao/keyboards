@@ -243,7 +243,8 @@
                      display-name = "NAVIGATION";
                      bindings = <
    &none               &mc_swapper         &mc_tabs            &mc_launcher        &none               &none               &kp TAB             &lm_ent_vim         &lm_esc_vim         &none
-   &lt TEXT INS        &kp LCTL            &kp LALT            &kp LSFT            &none               &none               &mm_left_vim        &kp DOWN            &kp UP              &mm_right_vim   &none               &kp LGUI            &kp LGUI            &kp LGUI            &none               &none               &kp DEL             &kp HOME            &kp END             &none 
+   &lt TEXT INS        &kp LCTL            &kp LALT            &kp LSFT            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &none               &kp LGUI            &kp LGUI            &kp LGUI            &none               &none               &kp DEL             &kp HOME            &kp END             &none 
                                            &none               &trans              &none               &hlt SYM_CP SPACE   &mo MEDIA           &none 
                         >;
                 };
