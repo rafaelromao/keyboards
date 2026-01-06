@@ -14,7 +14,7 @@
 
         num_lock {           
             indicator = <HID_USAGE_LED_NUM_LOCK>;
-            bindings = <&vim_off &vim_reset>; // vim mode on if num lock is off
+            bindings = <&vim_reset &vim_off>; // num lock on -> vim mode on
         };
     };
 };
