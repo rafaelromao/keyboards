@@ -213,7 +213,7 @@
                 shortcuts_layer {
                      display-name = "SHORTCUTS";
                      bindings = <
-   &none              &mc_calc             &mc_files           &mc_ai              &none               &none               &mc_browser         &mc_editor          &mc_activities      &none    
+   &none              &mc_calc             &mc_files           &mc_browser         &none               &none               &mc_ai              &mc_editor          &mc_activities      &none    
    &mc_leader         &lt_zoom_out TOGS 0  &mc_zoom_in         &mc_reset_zoom      &none               &none               &tc_num_word        &mc_system          &lt_emoji TOGS 0    &mc_leader
    &none              &mc_close            &mc_refresh         &mc_reopen          &none               &none               &mc_screenshot      &mc_notes           &mc_term            &none 
                                            &none               &ht_repeat TEXT 0   &lt FUN SPACE       &lt MACROS SPACE    &ht_repeat TEXT 0   &none 
