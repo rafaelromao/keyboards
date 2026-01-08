@@ -120,8 +120,8 @@ layers:
   vim:
     - [
         { t: b, h: begin },
-        { t: w, h: word },
         { t: e, h: end },
+        { t: w, h: word },
         { t: g, h: go to },
         { t: o, h: newline },
         { t: u, h: undo },
