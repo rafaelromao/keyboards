@@ -302,7 +302,7 @@
    &none               &bt BT_PRV          &bt BT_NXT          &bt BT_SEL 0        &none               &none               &kp F7              &kp F8              &kp F9             &none 
    &none               &hsk RCTL LCTL      &hsk RALT LALT      &hsk RSFT LSFT      &none               &none               &kp F4              &kp F5              &kp F6             &kp F12      
    &none               &hsk RGUI LGUI      &hsk RGUI LGUI      &hsk RGUI LGUI      &none               &none               &kp F1              &kp F2              &kp F3             &none
-                                           &none               &bootloader         &none               &none               &kp F10             &kp F11
+                                           &none               &bootloader         &none               &kp F10             &kp F11             &none
                         >;
                 };
 
