@@ -64,6 +64,7 @@
         VIM_MACRO(vim_insert            , &vim_off &tog_on VIM_INSERT)
         VIM_MACRO(vim_cmdline           , &vim_off &tog_on VIM_CMDLINE)
         VIM_MACRO(vim_leader            , &vim_off &tog_on VIM_LEADER)
+        VIM_MACRO(vim_replace           , &ntsl VIM_REPLACE)
 
         VIM_MACRO(vim_space_lead        , &vim_leader &kp SPACE)
 
@@ -78,14 +79,14 @@
         VIM_MACRO(vim_esc               , &vim_normal &kp ESC)
         VIM_BINDING(lm_esc_vim          , VIM_VISUAL VIM_CHANGE VIM_LEADER VIM_INSERT VIM_REPLACE VIM_CMDLINE, &vim_esc, &kp ESC)
 
-        VIM_MACRO(vim_o                 , &kp O &tog_off VIM_NORMAL &tog_on VIM_INSERT)
-        VIM_MACRO(vim_a                 , &kp A &tog_off VIM_NORMAL &tog_on VIM_INSERT)
-        VIM_MACRO(vim_i                 , &kp I &tog_off VIM_NORMAL &tog_on VIM_INSERT)
+        VIM_MACRO(vim_o                 , &kp O &vim_insert)
+        VIM_MACRO(vim_a                 , &kp A &vim_insert)
+        VIM_MACRO(vim_i                 , &kp I &vim_insert)
         VIM_MACRO(vim_ca                , &kp A &ntsl VIM_CHANGE)
         VIM_MACRO(vim_ci                , &kp I &ntsl VIM_CHANGE)
-        VIM_MACRO(vim_c                 , &kp C &tog_off VIM_NORMAL &tog_on VIM_INSERT &ntsl VIM_CHANGE)
-        VIM_MACRO(vim_s                 , &kp S &tog_off VIM_NORMAL &ntsl VIM_NORMAL &tog_on VIM_INSERT)
-        VIM_MACRO(vim_r                 , &kp R &ntsl VIM_REPLACE)
+        VIM_MACRO(vim_c                 , &kp C &vim_off &tog_on VIM_INSERT &ntsl VIM_CHANGE)
+        VIM_MACRO(vim_s                 , &kp S &vim_off &ntsl VIM_NORMAL &tog_on VIM_INSERT)
+        VIM_MACRO(vim_r                 , &kp R &vim_replace)
 
         VIM_MACRO(vim_sft_c             , &kp C &tog_off VIM_NORMAL &tog_on VIM_INSERT)
         VIM_MOD_MORPH(mm_sft_c_vim      , MOD_LSFT|MOD_RSFT, &vim_sft_c, &vim_c)
@@ -99,8 +100,12 @@
 
         VIM_MOD_MORPH(mm_ent_vim        , MOD_ALL, &lm_ent_vim , &kp ENTER)
         VIM_MOD_MORPH(mm_esc_vim        , MOD_ALL, &lm_esc_vim , &kp ESC)
+        
 
         // VISUAL MODE EXITS
+
+        VIM_MACRO(mc_c_visual_vim       , &kp C &vim_insert)
+        VIM_BINDING(lm_c_vim            , VIM_VISUAL, &mc_c_visual_vim , &vim_c_ctrl_c)
 
         VIM_MACRO(mc_v_vim              , &kp V &tog_on VIM_VISUAL)
         VIM_BINDING(lm_v_vim            , VIM_VISUAL, &vim_normal , &mc_v_vim)
@@ -134,5 +139,11 @@
 
         VIM_MACRO(vim_excl              , &vim_cmdline &kp EXCL)
         VIM_BINDING(lm_excl_vim         , VIM_VISUAL, &vim_excl, &kp EXCL)
+
+        VIM_MACRO(vim_q                 , &kp Q &vim_replace)
+        VIM_BINDING(lm_q_vim            , VIM_NORMAL VIM_VISUAL, &vim_q, &kp Q)
+
+        VIM_MACRO(vim_at                , &kp AT &vim_replace)
+        VIM_BINDING(lm_at_vim           , VIM_NORMAL VIM_VISUAL, &vim_at, &kp AT)
     };
 };

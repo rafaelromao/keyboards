@@ -121,7 +121,7 @@
         COMBO(cb_p_vim,         RHI RHM,         &lm_p_vim,              VIM_LAYERS_VIM)
         COMBO(cb_y_vim,         RHM RHR,         &lm_y_vim,              VIM_LAYERS_VIM)
         COMBO(cb_at_at_vim,     LBR LBM,         &mc_at_at,              VIM_LAYERS_VIM)
-        COMBO(cb_at_vim,        LBM LBI,         &kp AT,                 VIM_LAYERS_VIM)
+        COMBO(cb_at_vim,        LBM LBI,         &lm_at_vim,             VIM_LAYERS_VIM)
         COMBO(cb_v_vim,         RBI RBM,         &lm_v_vim,              VIM_LAYERS_VIM)
 
         COMBO(cb_meh_k,         LTI LTM,         &mc_meh_k,              MEHS)
