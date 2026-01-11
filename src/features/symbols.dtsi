@@ -216,6 +216,7 @@
         MACRO(mc_dqtplusp,        &kp DQT &kp SPACE &kp PLUS &kp P)
         MACRO(mc_dqtplusy,        &kp DQT &kp SPACE &kp PLUS &kp Y)
         MACRO(mc_colpercsslash,   &kp COLON &kp PERCENT &kp S &kp SLASH &to ALPHA1)
+        MACRO(mc_at_at,           &kp AT &kp AT)
 
         mc_caret: mc_caret {
             compatible = "zmk,behavior-macro";

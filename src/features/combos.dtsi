@@ -15,7 +15,7 @@
           ╰─────────────╯ ╰─────────────╯ */
 
 / {
-    #define ALPHA1_LAYERS               ALPHA1 ALT_OS CASE_A1 CPLK_A1 ALTREP2 SEN_CASE VIM_INSERT VIM_REPLACE
+    #define ALPHA1_LAYERS               ALPHA1 ALT_OS CASE_A1 CPLK_A1 ALTREP2 SEN_CASE
     #define CCEDIL_LAYERS               CCEDIL CASE_CCEDIL
     #define ALPHA2_LAYERS               ALPHA2 CASE_A2 SFT_A2
     #define NUM_LAYERS                  NUM NUM_CP
@@ -77,16 +77,16 @@
         COMBO(cb_mrclk,         LTI L0,          &mkp RCLK,              ALL_LAYERS)
         COMBO(cb_mrclk2,        RTC R2,          &mkp RCLK,              ALL_LAYERS)
 
-        COMBO(cb_numword,       LBR LBM,         &lt_num_word NAV 0,     ALPHA1_LAYERS VIM_LAYERS_BASE)
+        COMBO(cb_numword,       LBR LBM,         &lt_num_word NAV 0,     ALPHA1_LAYERS)
         COMBO(cd_ca_nav,        LHR LHM L1,      &mc_ca_nav,             ALPHA1_LAYERS VIM_LAYERS)
         COMBO(cd_gcs_nav,       LBR LHM LHI L1,  &mc_gcs_nav,            ALPHA1_LAYERS VIM_LAYERS)
         COMBO(cd_cag_nav,       LHR LHM LBI L1,  &mc_cag_nav,            ALPHA1_LAYERS VIM_LAYERS)
         COMBO(cd_cas_spc,       LHR LHM LHI L0,  &mc_cas_spc,            ALPHA1_LAYERS)
 
-        COMBO(cd_meh_spc,       LHR LHM LHI,     &ht_meh_spc 0 0,        ALPHA1_LAYERS)
-        COMBO(cd_hyp_spc,       LBR LBM LBI,     &th_hyper_space 0 0,    ALPHA1_LAYERS)
-        COMBO(cb_meh_ent,       RHI RHM RHR,     &ht_meh_ent 0 0,        ALPHA1_LAYERS)
-        COMBO(cb_hyp_ent,       RBI RBM RBR,     &th_hyper_enter 0 0,    ALPHA1_LAYERS)
+        COMBO(cd_meh_spc,       LHR LHM LHI,     &ht_meh_spc 0 0,        ALPHA1_LAYERS VIM_LAYERS_BASE)
+        COMBO(cd_hyp_spc,       LBR LBM LBI,     &th_hyper_space 0 0,    ALPHA1_LAYERS VIM_LAYERS_BASE)
+        COMBO(cb_meh_ent,       RHI RHM RHR,     &ht_meh_ent 0 0,        ALPHA1_LAYERS VIM_LAYERS_BASE)
+        COMBO(cb_hyp_ent,       RBI RBM RBR,     &th_hyper_enter 0 0,    ALPHA1_LAYERS VIM_LAYERS_BASE)
 
         COMBO(cb_semi,          RBM RBR,         &th_semi 0 0,           ALPHA1_LAYERS NUM_LAYERS VIM_LAYERS)
         COMBO(cb_sent,          RBI RBM RBR,     &mc_end_semi_ent,       NUM_LAYERS)
@@ -120,6 +120,7 @@
         COMBO(cb_m_vim,         LHM LHI,         &kp M,                  VIM_LAYERS_VIM)
         COMBO(cb_p_vim,         RHI RHM,         &lm_p_vim,              VIM_LAYERS_VIM)
         COMBO(cb_y_vim,         RHM RHR,         &lm_y_vim,              VIM_LAYERS_VIM)
+        COMBO(cb_at_at_vim,     LBR LBM,         &mc_at_at,              VIM_LAYERS_VIM)
         COMBO(cb_at_vim,        LBM LBI,         &kp AT,                 VIM_LAYERS_VIM)
         COMBO(cb_v_vim,         RBI RBM,         &lm_v_vim,              VIM_LAYERS_VIM)
 
