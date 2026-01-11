@@ -47,5 +47,6 @@ yq -i 'del(.combos[] | select(.layers | contains(["media"]) | not))' tmp/keymap-
 
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml toggles toggles 
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml coding-mehs coding-meh coding-hyper
+./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml 3d-design-mehs 3d-design-meh 3d-design-hyper
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml meh-morphs --2cols left-meh-morphs right-meh-morphs
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml window desktop-management window-management
