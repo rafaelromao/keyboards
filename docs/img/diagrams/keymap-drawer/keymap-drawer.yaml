@@ -393,7 +393,7 @@ layers:
         "F4",
         "F5",
         "F6",
-        null
+        "F12" 
       ]
     - [
         { t: $$mdi:apple-keyboard-command$$, s: sticky, h: right },
@@ -405,8 +405,8 @@ layers:
       ]
     - { t: $$mdi:flash$$, s: "boot" }
     - type: held
-    - null
-    - { t: $$mdi:repeat$$, s: repeat  }
+    - "F10"
+    - "F11"
   macros:
     - [
         { t: "~/" },
@@ -580,7 +580,7 @@ layers:
     - null
     - null
     - { h: nav, t: alpha1, s: sticky }
-  fusion360-meh:
+  3d-design-meh:
     - [
         null,
         null,
@@ -615,7 +615,7 @@ layers:
         s: sticky,
       }
     - { h: nav, t: alpha1, s: sticky }
-  fusion360-hyper:
+  3d-design-hyper:
     - [
         null,
         null,
@@ -1104,15 +1104,15 @@ combos:
       slide: -0.5,
       layers: [coding-meh],
     }
-  - { p: [11, 12], k: orbit, a: mid, w: 40, layers: [fusion360-meh] }
+  - { p: [11, 12], k: orbit, a: mid, w: 40, layers: [3d-design-meh] }
   - {
       p: [18, 19],
       k: { t: "numbers", s: auto-layer },
       a: mid,
       w: 48,
-      layers: [fusion360-meh],
+      layers: [3d-design-meh],
     }
-  - { p: [4, 5], k: esc, a: mid, w: 40, layers: [fusion360-meh] }
-  - { p: [10, 11], k: pan, a: mid, w: 40, layers: [fusion360-meh] }
-  - { p: [3, 4], k: mode, a: mid, w: 40, layers: [fusion360-meh] }
-  - { p: [17, 18], k: show hide, a: mid, w: 40, layers: [fusion360-meh] }
+  - { p: [4, 5], k: esc, a: mid, w: 40, layers: [3d-design-meh] }
+  - { p: [10, 11], k: pan, a: mid, w: 40, layers: [3d-design-meh] }
+  - { p: [3, 4], k: mode, a: mid, w: 40, layers: [3d-design-meh] }
+  - { p: [17, 18], k: show hide, a: mid, w: 40, layers: [3d-design-meh] }

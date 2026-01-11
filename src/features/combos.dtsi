@@ -77,7 +77,7 @@
         COMBO(cb_mrclk,         LTI L0,          &mkp RCLK,              ALL_LAYERS)
         COMBO(cb_mrclk2,        RTC R2,          &mkp RCLK,              ALL_LAYERS)
 
-        COMBO(cb_numword,       LBR LBM,         &lt_num_word NAV 0,     ALPHA1_LAYERS)
+        COMBO(cb_numword,       LBR LBM,         &lt_num_word NAV 0,     ALPHA1_LAYERS VIM_LAYERS_BASE)
         COMBO(cd_ca_nav,        LHR LHM L1,      &mc_ca_nav,             ALPHA1_LAYERS VIM_LAYERS)
         COMBO(cd_gcs_nav,       LBR LHM LHI L1,  &mc_gcs_nav,            ALPHA1_LAYERS VIM_LAYERS)
         COMBO(cd_cag_nav,       LHR LHM LBI L1,  &mc_cag_nav,            ALPHA1_LAYERS VIM_LAYERS)

@@ -357,11 +357,17 @@ The *func* layer will also have *right side* versions of the modifiers, in their
 
 ### VIM
 
-I have used VIM since 2017, and it is an essential plugin for all my text editors. I do not use advanced features though, and I could easily remap my keybindings to work well with my custom layout.
+I have used VIM since 2017, and it is an essential plugin for all my text editors.
+
+#### VIM Mode
+
+After a few years remapping my VIM bindings to work well with my alpha layout, I've decided to implement a VIM Mode into my keymap. It is composed by a set of layers that mimic the vim modes in the keyboard, so that it changes between VIM optimized layers, for normal and visual modes, for example, and typing layers, for insert and replace modes, for example.
+
+There is also a listener that activates or deactivates this VIM Mode when NUM_LOCK is toggled on or off, respectively.
+
+In the host side, I have scripts that toggle NUM_LOCK when I enter or leave VIM to allow a seamless integration between VIM and my keyboard VIM Mode.
 
 ![img](img/diagrams/vim.png)
-
-I also make use of base layer combos to trigger some keybindings easier, like `y`, `p`, `x`, and `d`, as well as `r`, `i`, and `a`, which would not be so easy otherwise, due to how my layout and remaps place them.
 
 In my *numbers* layer, I also have some combos to make it easier to move between rows and columns without changing the layer.
 
@@ -386,9 +392,9 @@ Most of my *symbols* and *numbers* layers were designed with Java and Elixir in 
 ![img](img/diagrams/symbols.png)
 ![img](img/diagrams/numbers.png)
 
-### IntelliJ IDEA
+### IDEs
 
-My most used shortcuts in IntelliJ IDEA were remapped to use Meh and Hyper shortcuts too.
+My most used shortcuts in IntelliJ IDEA and other IDEs were remapped to use Meh and Hyper shortcuts too.
 
 ![img](img/diagrams/coding-mehs.png)
 
