@@ -846,7 +846,7 @@ combos:
     }
   - {
       p: [14, 15],
-      k: { t: "numbers", s: auto-layer, h: nav },
+      k: { t: "@@", h: play again },
       a: mid,
       w: 48,
       layers: [vim],
