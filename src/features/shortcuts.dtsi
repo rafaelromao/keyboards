@@ -153,6 +153,10 @@
         OS_MORPH(mc_ai,                &macro_tap &kp LC(LA(I)),                                                                    &macro_tap &kp LC(LA(I)))
         OS_MORPH(mc_activities,        &macro_tap &kp LC(LA(A)),                                                                    &macro_tap &kp LC(LA(A)))
         OS_MORPH(mc_system,            &macro_tap &kp LC(SPACE),                                                                    &macro_tap &kp LC(SPACE))
+        OS_MORPH(mc_containers,        &macro_tap &kp LC(LA(R)),                                                                    &macro_tap &kp LC(LA(R)))
+
+        LAYERTAP_TP(lt_system,         &mc_system)
+
                                                                                                                              
         // Navigation                                                                                                        
                                                                                                                              
@@ -168,5 +172,21 @@
 
         MODTAP_TP(mt_meh_comm,         &mc_meh_comma)
         MODTAP_TP(mt_meh_dot,          &mc_meh_dot)
+
+        sl_num: sl_num {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1>, <&sk MACRO_PLACEHOLDER>, <&smart_num NUM_CP>;
+        };
+
+        mod_num: mod_num {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <QUICK_TAP_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <0>;
+            bindings = <&kp>, <&sl_num>;
+        };
+
    };
 };
