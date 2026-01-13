@@ -204,7 +204,7 @@ layers:
         { t: $$mdi:magnify-plus-outline$$, s: zoom +},
         { t: $$mdi:loupe$$, s: 100% },
         { t: $$mdi:numeric$$, h: numbers, s: auto-layer },
-        { t: $$mdi:arch$$, s: system},
+        { t: $$mdi:docker$$, s: containers},
         { t: "$$mdi:emoticon-happy-outline$$", s: emojis, h: toggles },
         { type: held alternate, t: $$mdi:ray-start-arrow$$, s: leader-key },
       ]
@@ -261,19 +261,19 @@ layers:
         { t: "⎋" },
       ]
     - [
-        { t: "⎀", s: insert, h: text},
-        { t: $$mdi:apple-keyboard-control$$ },
-        { t: $$mdi:apple-keyboard-option$$ },
-        { t: $$mdi:apple-keyboard-shift$$ },
+        { t: $$mdi:arch$$, s: system, h: text},
+        { s: sticky, t: $$mdi:numeric$$, h: $$mdi:apple-keyboard-control$$ },
+        { s: sticky, t: $$mdi:numeric$$, h: $$mdi:apple-keyboard-option$$ },
+        { s: sticky, t: $$mdi:numeric$$, h: $$mdi:apple-keyboard-shift$$ },
         { t: $$mdi:arrow-left$$, s: left },
         { t: $$mdi:arrow-down$$, s: down },
         { t: $$mdi:arrow-up$$, s: up },
         { t: $$mdi:arrow-right$$, s: right },
       ]
     - [
-        { t: $$mdi:apple-keyboard-command$$ },
-        { t: $$mdi:apple-keyboard-command$$ },
-        { t: $$mdi:apple-keyboard-command$$ },
+        { s: sticky, t: $$mdi:numeric$$, h: $$mdi:apple-keyboard-command$$ },
+        { s: sticky, t: $$mdi:numeric$$, h: $$mdi:apple-keyboard-command$$ },
+        { s: sticky, t: $$mdi:numeric$$, h: $$mdi:apple-keyboard-command$$ },
         { t: $$mdi:backspace-reverse-outline$$, s: del },
         { t: $$mdi:format-horizontal-align-left$$, s: home },
         { t: $$mdi:format-horizontal-align-right$$, s: end },
@@ -281,7 +281,7 @@ layers:
     - { t: ▽, type: held }
     - null
     - { t: $$mdi:keyboard-space$$, h: symbols }
-    - { h: media, type: held alternate }
+    - { t: "⎀", s: insert, h: media, type: held alternate }
   media:
     - [
         { t: $$mdi:mouse-scroll-wheel$$, s: middle },
@@ -324,18 +324,18 @@ layers:
       ]
     - [
         { type: held },
-        { t: $$mdi:apple-keyboard-control$$, s: sticky },
-        { t: $$mdi:apple-keyboard-option$$, s: sticky },
-        { t: $$mdi:apple-keyboard-shift$$, s: sticky },
+        { t: $$mdi:apple-keyboard-control$$},
+        { t: $$mdi:apple-keyboard-option$$},
+        { t: $$mdi:apple-keyboard-shift$$},
         { t: ← ⓦ , s: word},
         { t: $$mdi:arrow-down$$, s: line },
         { t: $$mdi:arrow-up$$, s: line },
         { t: → ⓦ , s: word, type: held alternate },
       ]
     - [
-        { t: $$mdi:apple-keyboard-command$$, s: sticky },
-        { t: $$mdi:apple-keyboard-command$$, s: sticky },
-        { t: $$mdi:apple-keyboard-command$$, s: sticky },
+        { t: $$mdi:apple-keyboard-command$$},
+        { t: $$mdi:apple-keyboard-command$$},
+        { t: $$mdi:apple-keyboard-command$$},
         { t: ⌦ ⓦ, s: delete, h: word },
         { t: $$mdi:format-horizontal-align-left$$, s: home },
         { t: $$mdi:format-horizontal-align-right$$, s: end },
@@ -387,18 +387,18 @@ layers:
       ]
     - [
         { type: held },
-        { t: $$mdi:apple-keyboard-control$$, s: sticky, h: right },
-        { t: $$mdi:apple-keyboard-option$$, s: sticky, h: right },
-        { t: $$mdi:apple-keyboard-shift$$, s: sticky, h: right },
+        { t: $$mdi:apple-keyboard-control$$, s: sticky},
+        { t: $$mdi:apple-keyboard-option$$, s: sticky},
+        { t: $$mdi:apple-keyboard-shift$$, s: sticky},
         "F4",
         "F5",
         "F6",
         "F12" 
       ]
     - [
-        { t: $$mdi:apple-keyboard-command$$, s: sticky, h: right },
-        { t: $$mdi:apple-keyboard-command$$, s: sticky, h: right },
-        { t: $$mdi:apple-keyboard-command$$, s: sticky, h: right },
+        { t: $$mdi:apple-keyboard-command$$, s: sticky},
+        { t: $$mdi:apple-keyboard-command$$, s: sticky},
+        { t: $$mdi:apple-keyboard-command$$, s: sticky},
         "F1",
         "F2",
         "F3",
@@ -751,7 +751,7 @@ combos:
     }
   - {
       p: [3, 4, 5],
-      k: "layer off",
+      k: "cancel",
       a: top,
       w: 48,
       layers: [alpha1, numbers, mehs, nav, media, func, vim],

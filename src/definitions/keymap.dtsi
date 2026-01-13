@@ -214,7 +214,7 @@
                      display-name = "SHORTCUTS";
                      bindings = <
    &none              &mc_calc             &mc_files           &mc_browser         &none               &none               &mc_ai              &mc_editor          &mc_activities      &none    
-   &mc_leader         &lt_zoom_out TOGS 0  &mc_zoom_in         &mc_reset_zoom      &none               &none               &tc_num_word        &mc_system          &lt_emoji TOGS 0    &mc_leader
+   &mc_leader         &lt_zoom_out TOGS 0  &mc_zoom_in         &mc_reset_zoom      &none               &none               &tc_num_word        &mc_containers      &lt_emoji TOGS 0    &mc_leader
    &none              &mc_close            &mc_refresh         &mc_reopen          &none               &none               &mc_screenshot      &mc_notes           &mc_term            &none 
                                            &none               &ht_repeat TEXT 0   &lt FUN SPACE       &lt MACROS SPACE    &ht_repeat TEXT 0   &none 
                         >;
@@ -243,9 +243,9 @@
                      display-name = "NAVIGATION";
                      bindings = <
    &none               &mc_swapper         &mc_tabs            &mc_launcher        &none               &none               &kp TAB             &lm_ent_vim         &lm_esc_vim         &none
-   &lt TEXT INS        &kp LCTL            &kp LALT            &kp LSFT            &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
-   &none               &kp LGUI            &kp LGUI            &kp LGUI            &none               &none               &kp DEL             &kp HOME            &kp END             &none 
-                                           &none               &trans              &none               &hlt SYM_CP SPACE   &mo MEDIA           &none 
+   &lt_system TEXT 0   &mod_num LCTL LCTL  &mod_num LALT LALT  &mod_num LSFT LSFT  &none               &none               &sl_num LEFT            &sl_num DOWN            &sl_num UP              &sl_num RIGHT
+   &none               &mod_num LGUI LGUI  &mod_num LGUI LGUI  &mod_num LGUI LGUI  &none               &none               &sl_num DEL             &sl_num HOME            &sl_num END             &none 
+                                           &none               &trans              &none               &hlt SYM_CP SPACE   &lt MEDIA INS       &none 
                         >;
                 };
 
@@ -281,9 +281,9 @@
                      display-name = "NAVIGATION";
                      bindings = <
    &none               &mc_swapper         &mc_tabs            &mc_launcher        &none               &none               &kp TAB             &lm_ent_vim         &lm_esc_vim        &none
-   &kp INS             &kp LCTL            &kp LALT            &kp LSFT            &none               &none               &kp LEFT            &kp DOWN            &kp UP             &kp RIGHT
-   &none               &kp LGUI            &kp LGUI            &kp LGUI            &none               &none               &kp DEL             &kp HOME            &kp END            &none 
-                                           &none               &trans              &trans              &trans              &trans              &none 
+   &mc_system          &kp LCTL            &kp LALT            &kp LSFT            &none               &none               &sl_num LEFT            &sl_num DOWN            &sl_num UP             &sl_num RIGHT
+   &none               &kp LGUI            &kp LGUI            &kp LGUI            &none               &none               &sl_num DEL             &sl_num HOME            &sl_num END            &none 
+                                           &none               &trans              &trans              &trans              &kp INS             &none 
                         >;
                 };
 
@@ -291,8 +291,8 @@
                      display-name = "TEXT NAVIGATION";
                      bindings = <
    &none               &select_home        &select_word        &select_line        &trans              &trans              &kp TAB             &lm_ent_vim         &lm_esc_vim        &none
-   &none               &hsk LCTL RCTL      &hsk LALT RALT      &hsk LSFT RSFT      &trans              &trans              &mc_prev_word       &kp DOWN            &kp UP             &mc_next_word
-   &none               &hsk LGUI RGUI      &hsk LGUI RGUI      &hsk LGUI RGUI      &trans              &trans              &mc_del_word        &kp HOME            &kp END            &none 
+   &none               &kp LCTL            &kp LALT            &kp LSFT            &trans              &trans              &mc_prev_word       &kp DOWN            &kp UP             &mc_next_word
+   &none               &kp LGUI            &kp LGUI            &kp LGUI            &trans              &trans              &mc_del_word        &kp HOME            &kp END            &none 
                                            &none               &key_repeat         &none               &none               &key_repeat         &none 
                         >;
                 };
@@ -300,8 +300,8 @@
                      display-name = "FUNCTIONS";
                      bindings = <
    &none               &bt BT_PRV          &bt BT_NXT          &bt BT_SEL 0        &none               &none               &kp F7              &kp F8              &kp F9             &none 
-   &none               &hsk RCTL LCTL      &hsk RALT LALT      &hsk RSFT LSFT      &none               &none               &kp F4              &kp F5              &kp F6             &kp F12      
-   &none               &hsk RGUI LGUI      &hsk RGUI LGUI      &hsk RGUI LGUI      &none               &none               &kp F1              &kp F2              &kp F3             &none
+   &none               &hsk LCTL LCTL      &hsk LALT LALT      &hsk LSFT LSFT      &none               &none               &kp F4              &kp F5              &kp F6             &kp F12      
+   &none               &hsk LGUI LGUI      &hsk LGUI LGUI      &hsk LGUI LGUI      &none               &none               &kp F1              &kp F2              &kp F3             &none
                                            &none               &bootloader         &none               &kp F10             &kp F11             &none
                         >;
                 };
