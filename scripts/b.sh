@@ -21,7 +21,7 @@ build_wired_rommana() {
 
 build_diamond() {
     echo "--- Building Diamond ---"
-    ./scripts/build.sh "rafaelromao/diamond" "cl" "$@"
+    ./scripts/build.sh "rafaelromao/diamond" "cl" "LINUX" "$@"
 }
 
 build_wired_diamond() {
