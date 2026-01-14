@@ -176,7 +176,7 @@
         sl_num: sl_num {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1>, <&sk MACRO_PLACEHOLDER>, <&smart_num NUM_CP>;
+            bindings = <&macro_param_1to1>, <&sk MACRO_PLACEHOLDER>, <&sl NUM_CP>;
         };
 
         mod_num: mod_num {

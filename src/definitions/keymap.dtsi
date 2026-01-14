@@ -243,8 +243,8 @@
                      display-name = "NAVIGATION";
                      bindings = <
    &none               &mc_swapper         &mc_tabs            &mc_launcher        &none               &none               &kp TAB             &lm_ent_vim         &lm_esc_vim         &none
-   &lt_system TEXT 0   &mod_num LCTL LCTL  &mod_num LALT LALT  &mod_num LSFT LSFT  &none               &none               &sl_num LEFT            &sl_num DOWN            &sl_num UP              &sl_num RIGHT
-   &none               &mod_num LGUI LGUI  &mod_num LGUI LGUI  &mod_num LGUI LGUI  &none               &none               &sl_num DEL             &sl_num HOME            &sl_num END             &none 
+   &lt_system TEXT 0   &mod_num LCTL LCTL  &mod_num LALT LALT  &mod_num LSFT LSFT  &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
+   &none               &mod_num LGUI LGUI  &mod_num LGUI LGUI  &mod_num LGUI LGUI  &none               &none               &kp DEL             &kp HOME            &kp END             &none 
                                            &none               &trans              &none               &hlt SYM_CP SPACE   &lt MEDIA INS       &none 
                         >;
                 };
@@ -281,8 +281,8 @@
                      display-name = "NAVIGATION";
                      bindings = <
    &none               &mc_swapper         &mc_tabs            &mc_launcher        &none               &none               &kp TAB             &lm_ent_vim         &lm_esc_vim        &none
-   &mc_system          &kp LCTL            &kp LALT            &kp LSFT            &none               &none               &sl_num LEFT            &sl_num DOWN            &sl_num UP             &sl_num RIGHT
-   &none               &kp LGUI            &kp LGUI            &kp LGUI            &none               &none               &sl_num DEL             &sl_num HOME            &sl_num END            &none 
+   &mc_system          &kp LCTL            &kp LALT            &kp LSFT            &none               &none               &kp LEFT            &kp DOWN            &kp UP             &kp RIGHT
+   &none               &kp LGUI            &kp LGUI            &kp LGUI            &none               &none               &kp DEL             &kp HOME            &kp END            &none 
                                            &none               &trans              &trans              &trans              &kp INS             &none 
                         >;
                 };
