@@ -127,6 +127,7 @@
         OS_MORPH(mc_refresh,           &macro_tap &kp LG(R),                                                                        &macro_tap &kp F5)
         OS_MORPH(mc_close,             &macro_tap &kp LG(W),                                                                        &macro_tap &kp LC(W))
         OS_MORPH(mc_reopen,            &macro_tap &kp LG(LS(T)),                                                                    &macro_tap &kp LC(LS(T)))
+        OS_MORPH(mc_new,               &macro_tap &kp LG(T),                                                                        &macro_tap &kp LC(T))
                                                                                                                              
         OS_MORPH(mc_zoom_out,          &macro_tap &kp LG(MINUS),                                                                    &macro_tap &kp LC(MINUS))
         OS_MORPH(mc_zoom_in,           &macro_tap &kp LG(PLUS),                                                                     &macro_tap &kp LC(PLUS))

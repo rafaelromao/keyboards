@@ -124,6 +124,8 @@
         COMBO(cb_at_vim,        LBM LBI,         &lm_at_vim,             VIM_LAYERS_VIM)
         COMBO(cb_v_vim,         RBI RBM,         &lm_v_vim,              VIM_LAYERS_VIM)
 
+        COMBO(cb_reset_zoom,    LHR LHM,         &mc_reset_zoom,         SHORTS)
+
         COMBO(cb_meh_k,         LTI LTM,         &mc_meh_k,              MEHS)
         COMBO(cb_meh_w,         LHI LHM,         &mc_meh_w,              MEHS)
         COMBO(cb_meh_v,         LBI LBM,         &mc_meh_v,              MEHS)
