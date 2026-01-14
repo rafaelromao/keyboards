@@ -31,12 +31,12 @@ build_wired_diamond() {
 
 build_choc_diamond() {
     echo "--- Building Choc Diamond ---"
-    ./scripts/build.sh "rafaelromao/choc_diamond" "cd" "LINUX" "-e" "dongle_display" "-m" "rafaelromao/zmk-dongle-display" "$@"
+    ./scripts/build.sh "rafaelromao/choc_diamond" "cd" "LINUX" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
 }
 
 build_zen() {
     echo "--- Building Corneish Zen ---"
-    ./scripts/build.sh "lowprokb.ca/corneish-zen" "-b" "corneish_zen_v2_left" "-o" "LINUX" "-z" "caksoylar/zmk" "-r" "caksoylar/zen-v1+v2" "$@"
+    ./scripts/build.sh "lowprokb.ca/corneish-zen" "-b" "corneish_zen_left" "-o" "LINUX" "-z" "caksoylar/zmk" "-r" "caksoylar/zen-v1+v2" "$@"
 }
 
 build_zen_dongle() {
@@ -46,7 +46,7 @@ build_zen_dongle() {
 
 build_dilemma() {
     echo "--- Building Dilemma ---"
-    ./scripts/build.sh "bastardkb/dilemma" "l" "LINUX" "-e" "dongle_display" "-m" "rafaelromao/zmk-dongle-display" "$@"
+    ./scripts/build.sh "bastardkb/dilemma" "l" "LINUX" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
 }
 
 build_dilemma_right() {

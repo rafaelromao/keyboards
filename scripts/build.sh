@@ -218,7 +218,7 @@ ZMK_HOME="$PROJECT_DIR/$ZMK_MODULE"
 
 # Add the sub-module for ZMK
 echo "Add git sub-module: $ZMK"
-git submodule add -f "git@github.com:$ZMK" "modules/$ZMK"
+git submodule add -f "git@github.com:$ZMK" "$ZMK_MODULE"
 
 # Clean ZMK build directory
 echo 'Cleaning zmk...'
@@ -226,7 +226,7 @@ rm -rf "$PROJECT_DIR/$ZMK_MODULE/build"
 
 # Check out the main ZMK revision
 echo 'Checking out zmk...'
-cd "$PROJECT_DIR/$ZMK_MODULE"
+cd $ZMK_HOME
 git fetch
 git checkout -f $REVISION
 git pull
