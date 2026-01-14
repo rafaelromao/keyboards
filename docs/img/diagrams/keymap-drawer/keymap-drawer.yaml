@@ -202,9 +202,9 @@ layers:
         { type: held, t: $$mdi:ray-start-arrow$$, s: leader-key },
         { t: $$mdi:magnify-minus-outline$$, s: zoom -, h: toggles },
         { t: $$mdi:magnify-plus-outline$$, s: zoom +},
-        { t: $$mdi:loupe$$, s: 100% },
+        { t: $$mdi:open-in-new$$, s: new },
         { t: $$mdi:numeric$$, h: numbers, s: auto-layer },
-        { t: $$mdi:docker$$, s: containers},
+        { t: $$mdi:docker$$, s: docker},
         { t: "$$mdi:emoticon-happy-outline$$", s: emojis, h: toggles },
         { type: held alternate, t: $$mdi:ray-start-arrow$$, s: leader-key },
       ]
@@ -885,6 +885,13 @@ combos:
   - { p: [17, 18], k: "!",      a: mid, layers: [alpha2, shifted2] }
   - { p: [18, 19], k: ":",      a: mid, layers: [alpha2, shifted2] }
 
+  - {
+      p: [7, 8],
+      k: { t: $$mdi:loupe$$, s: 100% },
+      w: 48,
+      a: mid,
+      layers: [shortcuts],
+    }
   - {
       p: [14, 15],
       k: { t: "numbers", s: "auto-layer", h: "nav" },
