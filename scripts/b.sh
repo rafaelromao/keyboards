@@ -4,6 +4,11 @@ set -euo pipefail
 
 # --- Build Functions ---
 
+build_reset() {
+    echo "--- Building Reset ---"
+    ./scripts/build.sh "-s" "settings_reset" "$@"
+}
+
 build_rommana() {
     echo "--- Building Rommana ---"
     ./scripts/build.sh "mabroum/rommana" "cl" "$@"
@@ -11,27 +16,27 @@ build_rommana() {
 
 build_wired_rommana() {
     echo "--- Building Wired Rommana ---"
-    ./scripts/build.sh "mabroum/wired_rommana" "l" "LINUX" "-b" "seeeduino_xiao_rp2040" "$@"
+    ./scripts/build.sh "mabroum/wired_rommana" "l" "LINUX" "-b" "xiao_rp2040" "$@"
 }
 
 build_diamond() {
     echo "--- Building Diamond ---"
-    ./scripts/build.sh "rafaelromao/diamond" "cl" "$@"
+    ./scripts/build.sh "rafaelromao/diamond" "cl" "LINUX" "$@"
 }
 
 build_wired_diamond() {
     echo "--- Building Wired Diamond ---"
-    ./scripts/build.sh "rafaelromao/wired_diamond" "l" "LINUX" "-b" "seeeduino_xiao_rp2040" "$@"
+    ./scripts/build.sh "rafaelromao/wired_diamond" "l" "LINUX" "-b" "xiao_rp2040" "$@"
 }
 
 build_choc_diamond() {
     echo "--- Building Choc Diamond ---"
-    ./scripts/build.sh "rafaelromao/choc_diamond" "cd" "MACOS" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
+    ./scripts/build.sh "rafaelromao/choc_diamond" "cd" "LINUX" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
 }
 
 build_zen() {
     echo "--- Building Corneish Zen ---"
-    ./scripts/build.sh "lowprokb.ca/corneish-zen" "-b corneish_zen_v2_left" "-o LINUX" "-z caksoylar/zmk" "-r caksoylar/zen-v1+v2" "$@"
+    ./scripts/build.sh "lowprokb.ca/corneish-zen" "-b" "corneish_zen_left" "-o" "LINUX" "-z" "caksoylar/zmk" "-r" "caksoylar/zen-v1+v2" "$@"
 }
 
 build_zen_dongle() {
@@ -43,6 +48,19 @@ build_dilemma() {
     echo "--- Building Dilemma ---"
     ./scripts/build.sh "bastardkb/dilemma" "l" "LINUX" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
 }
+
+build_dilemma_right() {
+    echo "--- Building Dilemma Right Side ---"
+    ./scripts/build.sh "bastardkb/dilemma" "r" "LINUX" "$@"
+}
+
+# Building Corneish Zen peripherals
+# build lowprokb.ca/corneish-zen -b corneish_zen_v2_left -o LINUX -z caksoylar/zmk -r caksoylar/zen-v1+v2
+# build lowprokb.ca/corneish-zen-with-dongle -b corneish_zen_v2_left -o LINUX -z caksoylar/zmk -r caksoylar/zen-v1+v2
+# build lowprokb.ca/corneish-zen-with-dongle -b corneish_zen_v2_right -o LINUX -z caksoylar/zmk -r caksoylar/zen-v1+v2
+#
+# Building Dilemma peripherals
+# build bastardkb/dilemma r LINUX -m petejohanson/cirque-input-module
 
 # --- Main Script ---
 
@@ -66,6 +84,7 @@ shift # The rest of the arguments are passed to build.sh
 
 case "$KEYBOARD" in
     all|a)
+        build_reset "$@"
         build_rommana "$@"
         build_wired_rommana "$@"
         build_diamond "$@"
@@ -74,6 +93,10 @@ case "$KEYBOARD" in
         build_zen "$@"
         build_zen_dongle "$@"
         build_dilemma "$@"
+        build_dilemma_right "$@"
+        ;;
+    rommana|s)
+        build_reset "$@"
         ;;
     rommana|r)
         build_rommana "$@"
@@ -98,6 +121,9 @@ case "$KEYBOARD" in
         ;;
     dilemma|m)
         build_dilemma "$@"
+        ;;
+    dilemma_right|mr)
+        build_dilemma_right "$@"
         ;;
     *)
         echo "Unknown Keyboard: '$KEYBOARD'"

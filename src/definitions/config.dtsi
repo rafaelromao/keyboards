@@ -8,41 +8,53 @@
  // Layers
 
 #define ALPHA1 0
+#define ALT_OS 1
 
-#define CASE_A1 1
-#define CPLK_A1 2
+#define MEHS 2
 
-#define ALPHA2 3
+#define VIM_NORMAL 3
+#define VIM_VISUAL 4
+#define VIM_CHANGE 5
+#define VIM_LEADER 6
+#define VIM_INSERT 7
+#define VIM_REPLACE 8
+#define VIM_CMDLINE 9
 
-#define NUM 4
-#define SYM 5
+#define CASE_A1 10
+#define CPLK_A1 11
 
-#define SEN_CASE 6
-#define CCEDIL 7
-#define SFT_A2 8
-#define CASE_A2 9
-#define CASE_CCEDIL 10
+#define ALPHA2 12
 
-#define SHORTS 11
-#define TOGS 12
-#define MEHS 13
+#define NUM 13
+#define SYM 14
 
-#define PLAIN1 14
-#define PLAIN2 15
-#define SFT_PLAIN2 16
-#define ALTREP2 17
+#define SEN_CASE 15
+#define CCEDIL 16
+#define SFT_A2 17
+#define CASE_A2 18
+#define CASE_CCEDIL 19
 
-#define NAV 18
+#define SHORTS 20
+#define TOGS 21
 
-#define NUM_CP 19
-#define SYM_CP 20
+#define ALTREP2 22
 
-#define MEDIA 21
-#define NAV_CP 22
+#define NAV 23
 
-#define TEXT 23
-#define FUN 24
-#define MACROS 25
+#define NUM_CP 24
+#define SYM_CP 25
+
+#define MEDIA 26
+#define NAV_CP 27
+
+#define TEXT 28
+#define FUN 29
+#define MACROS 30
+
+
+// Mod morphs
+
+#define MOD_ALL MOD_LALT|MOD_RALT|MOD_LCTL|MOD_RCTL|MOD_LSFT|MOD_RSFT|MOD_LGUI|MOD_RGUI
 
 // Settings
 
@@ -135,7 +147,30 @@
 };
 
 / {
-    custom_hold_taps {
+    custom_behaviors {
+
+        tog_on: toggle_layer_on_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer On";
+            toggle-mode = "on";
+        };
+
+        tog_off: toggle_layer_off_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer Off";
+            toggle-mode = "off";
+        };
+
+        ntsl: fast-stick-layer {
+            compatible = "zmk,behavior-sticky-key";
+            #binding-cells = <1>;
+            release-after-ms = <20000>;
+            bindings = <&mo>;
+            quick-release;
+            display-name = "Fast Sticky Layer";
+        };
 
         hlt: layer-tap-with-hold-preferred {
             compatible = "zmk,behavior-hold-tap";

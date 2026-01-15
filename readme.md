@@ -63,6 +63,8 @@ This keymap is implemented using ZMK, with the following external modules:
 - [Auto Layer](https://github.com/urob/zmk-auto-layer)
 - [Adaptive Key](https://github.com/urob/zmk-adaptive-key)
 - [Leader Key](https://github.com/urob/zmk-leader-key)
+- [Listeners](https://github.com/ssbb/zmk-listeners)
+- [Layer Morph](https://github.com/rafaelromao/zmk-layer-morph)
 
 ## Local Build
 

@@ -51,12 +51,64 @@
     
     #define MACRO(NAME, BINDINGS) \
         NAME: NAME { \
-			compatible = "zmk,behavior-macro"; \
+            compatible = "zmk,behavior-macro"; \
             #binding-cells = <0>; \
             wait-ms = <5>; \
             tap-ms = <5>; \
             bindings = <BINDINGS>; \
         };
+
+    /* LAYER_MORPH */
+
+    #define LAYER_MORPH(NAME, LAYERS, MODDED, UNMODDED) \
+        NAME##: NAME## { \
+            compatible = "zmk,behavior-layer-morph"; \
+            #binding-cells = <0>; \
+            layers = <LAYERS>; \
+            bindings \
+                = <UNMODDED> \
+                , <MODDED> \
+                ; \
+        };
+
+    /* OS_MORPH */
+
+    #define OS_MORPH_IMPL(NAME, ALT_BINDING, DEF_BINDING) \
+        NAME##_d: NAME##_d { \
+            wait-ms = <0>; \
+            tap-ms = <0>; \
+            compatible = "zmk,behavior-macro"; \
+            #binding-cells = <0>; \
+            bindings \
+                = <DEF_BINDING> \
+                ; \
+        }; \
+        NAME##_a: NAME##_a { \
+            wait-ms = <0>; \
+            tap-ms = <0>; \
+            compatible = "zmk,behavior-macro"; \
+            #binding-cells = <0>; \
+            bindings \
+                = <ALT_BINDING> \
+                ; \
+        }; \
+        NAME: NAME { \
+            compatible = "zmk,behavior-layer-morph"; \
+            #binding-cells = <0>; \
+            layers = <ALT_OS>; \
+            bindings \
+                = <&NAME##_d> \
+                , <&NAME##_a> \
+                ; \
+        };
+
+    #ifdef LINUX
+    #define OS_MORPH(NAME, ALT_BINDING, DEF_BINDING) \
+        OS_MORPH_IMPL(NAME, ALT_BINDING, DEF_BINDING)
+    #else
+    #define OS_MORPH(NAME, ALT_BINDING, DEF_BINDING) \
+        OS_MORPH_IMPL(NAME, DEF_BINDING, ALT_BINDING)
+    #endif
 
     /*  MOD MORPHS  */
 

@@ -1,9 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const fetchAndRender = (lang) => {
+  const fetchAndRender = () => {
     let file = 'index.md';
-    if (lang === 'pt') {
-      file = 'index.pt.md';
-    }
 
     fetch(file)
       .then(response => response.text())
@@ -117,50 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
   };
-
-  const languageToggle = document.getElementById('language-toggle');
-  const langEn = document.getElementById('lang-en');
-  const langPt = document.getElementById('lang-pt');
-
-  const setLanguage = (lang) => {
-    localStorage.setItem('language', lang);
-    if (lang === 'pt') {
-      langEn.classList.remove('active');
-      langPt.classList.add('active');
-    } else {
-      langPt.classList.remove('active');
-      langEn.classList.add('active');
-    }
-    const url = new URL(window.location);
-    url.searchParams.set('lang', lang);
-    history.pushState({}, '', url);
-    fetchAndRender(lang);
-  };
-
-  const toggleLanguage = () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const currentLang = urlParams.get('lang') || localStorage.getItem('language') || 'en';
-    const newLang = currentLang === 'en' ? 'pt' : 'en';
-    setLanguage(newLang);
-  };
-
-  // Set initial language based on localStorage or browser settings
-  const urlParams = new URLSearchParams(window.location.search);
-  const urlLang = urlParams.get('lang');
-  const savedLang = localStorage.getItem('language');
-  const browserLang = navigator.language.split('-')[0];
-
-  if (urlLang) {
-    setLanguage(urlLang);
-  } else if (savedLang) {
-    setLanguage(savedLang);
-  } else if (browserLang === 'pt') {
-    setLanguage('pt');
-  } else {
-    setLanguage('en');
-  }
-
-  languageToggle.addEventListener('click', toggleLanguage);
 
   // Sidebar toggle logic
   const sidebarToggle = document.getElementById('sidebar-toggle');

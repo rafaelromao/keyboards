@@ -1,21 +1,9 @@
 [submodule "modules/englmaxi/zmk-dongle-display"]
 	path = modules/englmaxi/zmk-dongle-display
 	url = git@github.com:englmaxi/zmk-dongle-display
-[submodule "modules/urob/zmk-leader-key"]
-	path = modules/urob/zmk-leader-key
-	url = git@github.com:urob/zmk-leader-key
-[submodule "modules/urob/zmk-auto-layer"]
-	path = modules/urob/zmk-auto-layer
-	url = git@github.com:urob/zmk-auto-layer
 [submodule "modules/urob/zmk"]
 	path = modules/urob/zmk
 	url = https://github.com/urob/zmk
-[submodule "modules/zmkfirmware/zmk"]
-	path = modules/zmkfirmware/zmk
-	url = https://github.com/zmkfirmware/zmk
-[submodule "modules/urob/zmk-adaptive-key"]
-	path = modules/urob/zmk-adaptive-key
-	url = git@github.com:urob/zmk-adaptive-key
 [submodule "modules/petejohanson/cirque-input-module"]
 	path = modules/petejohanson/cirque-input-module
 	url = git@github.com:petejohanson/cirque-input-module
@@ -24,4 +12,25 @@
 	url = https://github.com/rafaelromao/zmk
 [submodule "modules/caksoylar/zmk"]
 	path = modules/caksoylar/zmk
-	url = https://github.com/caksoylar/zmk
+	url = git@github.com:caksoylar/zmk
+[submodule "modules/rafaelromao/zmk-dongle-display"]
+	path = modules/rafaelromao/zmk-dongle-display
+	url = git@github.com:rafaelromao/zmk-dongle-display
+[submodule "modules/urob/zmk-leader-key"]
+	path = modules/urob/zmk-leader-key
+	url = git@github.com:urob/zmk-leader-key
+[submodule "modules/urob/zmk-auto-layer"]
+	path = modules/urob/zmk-auto-layer
+	url = git@github.com:urob/zmk-auto-layer
+[submodule "modules/urob/zmk-adaptive-key"]
+	path = modules/urob/zmk-adaptive-key
+	url = git@github.com:urob/zmk-adaptive-key
+[submodule "modules/rafaelromao/zmk-layer-morph"]
+	path = modules/rafaelromao/zmk-layer-morph
+	url = git@github.com:rafaelromao/zmk-layer-morph
+[submodule "modules/ssbb/zmk-listeners"]
+	path = modules/ssbb/zmk-listeners
+	url = git@github.com:ssbb/zmk-listeners
+[submodule "modules/zmkfirmware/zmk"]
+	path = modules/zmkfirmware/zmk
+	url = git@github.com:zmkfirmware/zmk

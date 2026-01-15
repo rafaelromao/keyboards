@@ -5,16 +5,16 @@ PROJECT_DIR="$(pwd)"
 CONFIG=""
 SHIELD=""
 OPERATING_SYSTEM="MACOS"
-BOARD="nice_nano_v2"
+BOARD="nice_nano"
 VERBOSE=""
 PRISTINE=""
 ZMK="zmkfirmware/zmk"
-REVISION="v0.3"
+REVISION="main"
 EXTRA_SHIELDS=()
 FLAGS=()
 MODULES=()
 SNIPPETS=()
-DEF_MODULES=(urob/zmk-leader-key,urob/zmk-auto-layer,urob/zmk-adaptive-key)
+DEF_MODULES=(urob/zmk-leader-key,urob/zmk-auto-layer,urob/zmk-adaptive-key,rafaelromao/zmk-layer-morph,ssbb/zmk-listeners)
 
 # Function to display usage
 usage() {
@@ -137,9 +137,6 @@ if [[ -n "$SHIELD" && -n "$CONFIG" ]]; then
     fi 
 fi
 
-# Define zmk module
-ZMK_MODULE=modules/$ZMK
-
 # Add default modules
 for DEF_MODULE in "${DEF_MODULES[@]}"; do
     if [[ -n "$MODULES" ]]; then
@@ -162,42 +159,26 @@ echo "Extra Shields: ${EXTRA_SHIELDS[*]}"
 echo "Flags: ${FLAGS[*]}"
 echo "Modules: ${MODULES[*]}"
 
-# Init the zmk repo 
-export ZMK_HOME="$PROJECT_DIR/$ZMK_MODULE"
-echo "Initializing zmk..."
-source ./scripts/init.sh $ZMK
-
 # Create a new flags.h file
 OUTPUT_FILE="$PROJECT_DIR/src/definitions/flags.h"
 [ -f "$OUTPUT_FILE" ] && rm "$OUTPUT_FILE"
 touch "$OUTPUT_FILE"
 echo "#define $OPERATING_SYSTEM" >> "$OUTPUT_FILE"
 
-# Clean ZMK build directory
-echo 'Cleaning zmk...'
-rm -rf "$PROJECT_DIR/$ZMK_MODULE/build"
-
-# Check out the main ZMK revision
-echo 'Checking out zmk...'
-cd "$PROJECT_DIR/$ZMK_MODULE"
-git fetch
-git checkout -f $REVISION
-git pull
-
-cd "$PROJECT_DIR"
-
-if [ -z "$CONFIG" ]; then
-    ARTIFACT="$BOARD-$SHIELD-$OPERATING_SYSTEM"
-else
-    ARTIFACT="${SHIELD:-$BOARD}-$OPERATING_SYSTEM"
-fi
-
 # Rewrite the modules list
 
 PREFIX="$PROJECT_DIR/modules/"
 TEMP=""
 IFS=',' read -ra ADDR <<< "$MODULES"
-for MODULE in "${ADDR[@]}"; do
+for ITEM in "${ADDR[@]}"; do
+    # separate module and revision
+    MODULE_REVISION=""
+    if [[ "$ITEM" == *":"* ]]; then
+        MODULE="$(echo "$ITEM" | cut -d':' -f1)"
+        MODULE_REVISION="$(echo "$ITEM" | cut -d':' -f2)"
+    else
+        MODULE="$ITEM"
+    fi
 
     MODULE_HOME=${PREFIX}${MODULE}
     # Download the module if necessary
@@ -205,6 +186,24 @@ for MODULE in "${ADDR[@]}"; do
     then
         echo "Add git sub-module: $MODULE"
         git submodule add -f "git@github.com:$MODULE" "modules/$MODULE"
+        # If submodule was just added, we need to cd into it to checkout the revision
+        # and then return to PROJECT_DIR before the main script proceeds.
+        if [ -n "$MODULE_REVISION" ]; then
+            echo "Checking out revision $MODULE_REVISION of $MODULE"
+            cd "$MODULE_HOME"
+            git fetch
+            git checkout -f "$MODULE_REVISION"
+            cd "$PROJECT_DIR"
+        fi
+    else
+        # If the module already exists and a revision is specified, check it out
+        if [ -n "$MODULE_REVISION" ]; then
+            echo "Module $MODULE already exists. Checking out revision $MODULE_REVISION."
+            cd "$MODULE_HOME"
+            git fetch
+            git checkout -f "$MODULE_REVISION"
+            cd "$PROJECT_DIR"
+        fi
     fi
 
     # Prefix the module name with the path
@@ -212,6 +211,43 @@ for MODULE in "${ADDR[@]}"; do
 done
 TEMP="${TEMP%,}"
 MODULES=$TEMP
+
+# Define zmk module
+ZMK_MODULE=modules/$ZMK
+ZMK_HOME="$PROJECT_DIR/$ZMK_MODULE"
+
+# Add the sub-module for ZMK
+echo "Add git sub-module: $ZMK"
+git submodule add -f "git@github.com:$ZMK" "$ZMK_MODULE"
+
+# Clean ZMK build directory
+echo 'Cleaning zmk...'
+rm -rf "$PROJECT_DIR/$ZMK_MODULE/build"
+
+# Check out the main ZMK revision
+echo 'Checking out zmk...'
+cd $ZMK_HOME
+git fetch
+git checkout -f $REVISION
+git pull
+
+cd "$PROJECT_DIR"
+
+# Init West
+if [[ ! -d "$ZMK_HOME/.west" ]]
+then
+    echo "Initializing West..."
+    cd $ZMK_HOME
+    west init -l app/
+    west update
+    cd $PROJECT_DIR
+fi
+
+if [ -z "$CONFIG" ]; then
+    ARTIFACT="$BOARD-$SHIELD-$OPERATING_SYSTEM"
+else
+    ARTIFACT="${SHIELD:-$BOARD}-$OPERATING_SYSTEM"
+fi
 
 # Build the project
 cd "$PROJECT_DIR/$ZMK_MODULE"

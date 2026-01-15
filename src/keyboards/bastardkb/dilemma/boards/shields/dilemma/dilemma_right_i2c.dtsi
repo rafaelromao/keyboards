@@ -49,10 +49,9 @@ cirque_pinnacle_i2c: &i2c0 {
         // Pin marked as Serial in the Dilemma PCB (008/D0) is connected to the S pin in the TRRS footprint, 
         // so connecting this S pin to the DR pin in the Cirque, 
         // will make the MCU be notified when there is data ready in the cirque
-        dr-gpios = <&pro_micro 0 (GPIO_ACTIVE_HIGH)>;
+        data-ready-gpios = <&pro_micro 0 (GPIO_ACTIVE_HIGH)>;
         sensitivity = "2x";
-        sleep; 
-        no-taps;
+        sleep-mode-enabled; 
     };
 };
 
