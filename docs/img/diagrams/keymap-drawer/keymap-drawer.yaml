@@ -261,7 +261,7 @@ layers:
         { t: "⎋" },
       ]
     - [
-        { t: $$mdi:arch$$, s: system, h: text},
+        { t: $$mdi:cog$$, s: system, h: text},
         { s: sticky, t: $$mdi:numeric$$, h: $$mdi:apple-keyboard-control$$ },
         { s: sticky, t: $$mdi:numeric$$, h: $$mdi:apple-keyboard-option$$ },
         { s: sticky, t: $$mdi:numeric$$, h: $$mdi:apple-keyboard-shift$$ },
@@ -403,7 +403,7 @@ layers:
         "F2",
         "F3",
       ]
-    - { t: $$mdi:flash$$, s: "boot" }
+    - null
     - type: held
     - "F10"
     - "F11"
@@ -434,10 +434,10 @@ layers:
         { t: '"+p', s: paste, h: clipboard },
         { t: '"+y', s: yank, h: clipboard },
       ]
-    - { t: $$mdi:repeat$$, s: repeat  }
+    - null
     - { t: $$mdi:keyboard-space$$, h: normal, s: vim }
     - type: held
-    - { t: $$mdi:flash$$, s: "boot" }
+    - null
   left-meh-morphs:
     - [
         { type: ghost },
@@ -784,7 +784,7 @@ combos:
 
   - {
       p: [0, 1, 2],
-      k: { s: enter, t: vim, h: mode },
+      k: { t: vim mode },
       a: top,
       layers: [alpha1, vim],
     }
