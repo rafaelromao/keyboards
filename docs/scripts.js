@@ -115,6 +115,9 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   };
 
+  // Render the index.md
+  fetchAndRender();
+
   // Sidebar toggle logic
   const sidebarToggle = document.getElementById('sidebar-toggle');
   const sidebar = document.getElementById('sidebar');

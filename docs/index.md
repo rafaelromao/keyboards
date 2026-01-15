@@ -127,9 +127,9 @@ Due to a limitation of ZMK, a *sticky layer* does not work well in conjunction w
 
 ### CAPS word and CAPS LINE
 
-*CAPS word* is a behavior that works like traditional Caps Lock, but it will be automatically deactivated when the current word ends. It can be activated by double-tapping the Sticky Shift key or through the *shortcuts* Layer.
+*CAPS word* is a behavior that works like traditional Caps Lock, but it will be automatically deactivated when the current word ends. It can be activated by double-tapping the Sticky Shift key.
 
-*CAPS LINE* is between *CAPS word* and the traditional Caps Lock, since it will also be automatically deactivated but only when the current line ends, usually with the Return key.
+*CAPS LINE* is between *CAPS word* and the traditional Caps Lock, since it will also be automatically deactivated but only when the current line ends, usually with the Return key. It is activated tapping the Repeat key after the Sticky Shift key.
 
 ### Punctuation
 
@@ -150,7 +150,7 @@ The *numbers* layer contains not only numbers but also some symbols commonly use
 
 Numbers are arranged as a classic numpad, with 0 in the thumb. It might not be the optimal configuration, considering which numbers are the most frequent, but it allows me to use my 20+ years of muscle memory.
 
-The *numbers* layer can be toggled on permanently using the *shortcuts* layer.
+The *numbers* layer can be toggled on permanently using the *toggles* layer.
 
 ### NumWord
 
@@ -178,15 +178,9 @@ In the *symbols* layer, there are also combos to type the 3 most common currency
 
 ![img](img/diagrams/alpha1.png)
 
-[Home Row Mods](https://precondition.github.io/home-row-mods) are well known by most keyboard enthusiasts and are also available in this keymap. Their disposition is: Ctrl, Alt, and Shift in the home row, and Gui (Command / Windows) in the bottom row index key, mirrored on the right side.
+[Home Row Mods](https://precondition.github.io/home-row-mods) are well known by most keyboard enthusiasts and are also available in this keymap. Their disposition is: Ctrl, Alt, and Shift in the home row, and Gui (Command / Super) in the bottom row index key, mirrored on the right side.
 
 To make combinations of Ctrl, Alt, and/or Shift with Gui easier, Gui is replicated for the middle and ring fingers on the left side.
-
-#### Plain Layers
-
-For the rare cases when Home Row Mods cause problems, there is a pair of alpha layers called *plain1* and *plain2* that do not have home row mods or any other tap-hold behaviors. These layers are also used for bringing an alpha layer on top of the *mehs* layer, for inputting text while this layer is fixed.
-
-![img](img/diagrams/plain.png)
 
 ### Meh and Hyper
 
@@ -220,7 +214,7 @@ They allow actions like copy, paste, select all, enter, tab, among others.
 
 ### Navigation Shortcuts
 
-There are three special navigation shortcuts, available in the *nav* layer to allow me to use the arrow keys along with them.
+There are some special navigation shortcuts, available in the *nav* layer to allow me to use the arrow keys along with them.
 
 ![img](img/diagrams/nav.png)
 
@@ -228,7 +222,9 @@ The first one is usually known as swapper, and it allows switching between the c
 
 The second navigation shortcut allows me to open a new app by searching for its name. I also use Raycast to implement it in MacOS.
 
-The third navigation shortcut depends on the context of the currently running app. It will list the currently open files or tabs and allow me to search and switch between them. It is implemented for apps like Microsoft Edge, VS Code, IntelliJ, and Obsidian.
+The third navigation shortcut depends on the context of the currently running app. It will list the currently open files or tabs and allow me to search and switch between them. It is implemented for apps like Brave, VS Code, IntelliJ, and Obsidian.
+
+There is also a shortcut to open the system menu.
 
 ### Shortcut Redirection
 
@@ -248,7 +244,7 @@ The *Leader Key* is placed in the *shortcuts* layer.
 
 From the *shortcuts* layer, the *toggles* layer can be activated. It allows some layers to be toggled on permanently, like the *numbers*, *nav*, and *media* layers.
 
-Here we also have convenient shortcuts to *lock* the computer or put it to *sleep*.
+Here we also have convenient shortcuts to *lock* the computer or put it to *sleep*, as well as *Bluetooth* controls, *num lock* and *caps lock*.
 
 ![img](img/diagrams/toggles.png)
 
@@ -264,9 +260,14 @@ Arrow keys are available in the 4 home row keys on the right side, in the *navig
 
 ![img](img/diagrams/nav.png)
 
-On the left side, there are modifier keys, the rarely useful Insert key, and the *navigation shortcuts* mentioned before.
+The *navigation* layer can also be toggled on permanently using the *toggles* layer.
 
-The *navigation* layer can also be toggled on permanently using the *shortcuts* layer.
+### One Shot Modified Numbers
+
+In the *nav* layer, holding the modifier keys work as expected, and they are normally used for Window Management along with arrow key, but if I tap them instead, it will activate the tapped mod for one shot, along with the *numbers* layer, also for one shot. This means, for example, that if I hold the *nav* layer activation key, tap `Command` and then the key where `4` would be in my *numbers* layer, it will send `LG(4)`. This is quite useful for fast tool window activation, in IDEs, or workspace navigation.
+
+![img](img/diagrams/nav.png)
+![img](img/diagrams/numbers.png)
 
 #### Navigation Combos
 
@@ -288,7 +289,7 @@ Text Navigation is an extremely important workflow. Navigating between words, se
 
 #### Sticky Mods
 
-The same modifiers available in the *navigation* layer are also available in the *text* layer, but in their *sticky* version. They also work as standard modifiers if held.
+The same modifiers available as home how mods are activation in the *func* layer, but in their *sticky* version. It makes the use of modified function keys easier, and they also work as standard modifiers when held.
 
 ### Mouse Emulation
 
@@ -308,9 +309,10 @@ On the right side of the *media* layer, I have my media controls, which include 
 
 ## Programming
 
-Although I'm not a software developer anymore, I spent 20+ years of my life programming, and I still do some coding eventually, so having my keyboard optimized for that was also one of my goals.
+Most of my keymap was designed to allow an easy workflow for programming, with languages like Java and Elixir.
 
 ![img](img/diagrams/numbers.png)
+![img](img/diagrams/symbols.png)
 
 ### Brackets
 
@@ -331,13 +333,17 @@ Holding these two keys will append it to the current line, which also works in t
 
 On the left side of the *numbers* layer are the two symbols used for conditional operators, `&` and `|`. Combing the keys that type them with their neighbor key will add a pair of these symbols instead. Holding the combo will append the pair to the current line.
 
-### Strings and Arrows
+### Strings
+
+Quotes are available on the left side of the *symbols* layer, along with other text related symbols, like `"""`, used to delimit text blocks in Java.
 
 ![img](img/diagrams/symbols.png)
 
-Quotes are available on the left side of the *symbols* layer, and there are combos for typing a pair of them, moving the cursor to the middle. There is also a combo for `"""`, used to delimit text blocks in Java.
+### Ligatures
 
-Conditional operators are also placed in this layer, as well as combos for typing `->` and `=>`, used in lambda expressions in Java and C# respectively.
+A lot of common programming ligatures are also available as combos, like `==`, `!=`, `->`, `=>`, `::`, `|>`, `<-`, `${`, `#{`, and `%{`.
+
+![img](img/diagrams/symbols.png)
 
 ### Markdown
 
@@ -349,11 +355,7 @@ Macros are used to complement, typing symbols like `- [ ] ` and `[[]]`, commonly
 
 ![img](img/diagrams/functions.png)
 
-Function keys are commonly used for debugging, and they are available in a dedicated layer, but since most IDE shortcuts will be mapped to Meh and Hyper shortcuts, function keys are rarely necessary.
-
-#### Sticky Right Mods
-
-The *func* layer will also have *right side* versions of the modifiers, in their sticky variant, in case they are eventually needed.
+Function keys are commonly used for debugging, and they are available in a dedicated layer, but since most IDE shortcuts will be mapped to Meh and Hyper shortcuts, function keys are rarely necessary in my workflows.
 
 ### VIM
 
@@ -385,13 +387,6 @@ And finally, there are a few macros defined specifically for VIM in my *macros* 
 
 In the *macros* layer, there are also some macros used to navigate directories in a terminal shell, like `~/`, `./` and `../`.
 
-### Programming Symbols
-
-Most of my *symbols* and *numbers* layers were designed with Java and Elixir in mind, but works well also for C#, Python and JavaScript, including combos for `==`, `!=`, `->`, `=>`, `::`, `|>`, `<-`, `${`, `#{`, and `%{` for example.
-
-![img](img/diagrams/symbols.png)
-![img](img/diagrams/numbers.png)
-
 ### IDEs
 
 My most used shortcuts in IntelliJ IDEA and other IDEs were remapped to use Meh and Hyper shortcuts too.
@@ -400,23 +395,23 @@ My most used shortcuts in IntelliJ IDEA and other IDEs were remapped to use Meh 
 
 # General
 
-## Panic Mode
+## Cancel
 
-A combo with the 3 top row keys on the right side can be used anytime to return to the base layer.
+A combo with the 3 top row keys on the right side can be used anytime to cancel the active mode or layers and return to the base.
 
 ## Bluetooth
 
-Bluetooth controls are available in the functions layer and allow swapping between profiles, returning to the first one, and clearing the current one.
+Bluetooth controls are available in the *toggles* layer and allow swapping between profiles, returning to the first one, and clearing the current one.
 
-![img](img/diagrams/functions.png)
+![img](img/diagrams/toggles.png)
 
 ## Bootloader
 
-Most of my boards have an easily accessible physical reset button, but not all of them. And even for those, sometimes it will be easier to use a shortcut to put the board in bootloader mode to update its keymap (something I do a few times a week).
+Most of my boards have an easily accessible physical reset button, but not all of them. And even for those, sometimes it will be easier to use a shortcut to put the board in bootloader mode to update its keymap.
 
-This bootloader shortcut must be available independently in both halves of the board and should not be easy to trigger by accident, so I put them in a second thumb of a layer that is activated by holding both the other thumb and the pinky key on the same side. Those layers are the *func* and *macros* layers.
+This bootloader shortcut must be available independently in both halves of the board and should not be easy to trigger by accident, so I put them in a hard to reach position in the *toggles* layer.
 
-![img](img/diagrams/boot.png)
+![img](img/diagrams/toggles.png)
 
 ## Operating System
 
