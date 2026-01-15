@@ -216,39 +216,39 @@ layers:
         { t: $$mdi:note-multiple-outline$$, s: notes },
         { t: $$mdi:console-line$$, s: term },
       ]
-    - { h: text, s: repeat, t: $$mdi:repeat$$ }
+    - { h: text }
     - { t: $$mdi:keyboard-space$$, h: func }
     - { t: $$mdi:keyboard-space$$, h: macros }
-    - { h: text, s: repeat, t: $$mdi:repeat$$ }
+    - { h: text }
   toggles:
     - [
-        { t: CAPS LOCK },
-        { t: func },
+        null,
+        { t: $$mdi:bluetooth$$, h: 0 },
+        { t: $$mdi:bluetooth-off$$, h: $$mdi:delete$$ },
         { t: nav },
-        { t: nav },
         { t: func },
-        { t: CAPS LOCK },
+        null,
       ]
     - [
-        { type: held, t: def OS },
-        { type: held, t: alt OS },
-        { t: media },
+        { type: held },
+        { type: held },
+        { t: $$mdi:bluetooth$$, h: $$mdi:arrow-left$$ },
+        { t: $$mdi:bluetooth$$, h: $$mdi:arrow-right$$ },
         { t: numbers },
-        { t: numbers },
         { t: media },
-        { type: held alternate, t: alt OS },
-        { type: held alternate, t: def OS },
+        { type: held alternate },
+        { type: held alternate },
       ]
     - [
-        { t: NUM LOCK },
-        { t: mehs },
+        { t: $$mdi:flash$$, s: "boot" },
+        { t: def OS },
+        { t: alt OS },
         { t: vim },
-        { t: vim },
         { t: mehs },
-        { t: NUM LOCK },
+        { t: $$mdi:flash$$, s: "boot" },
       ]
-    - { t: $$mdi:power-sleep$$, s: "sleep"}
-    - { t: $$mdi:lock$$, s: "lock" }
+    - { t: CAPS LOCK }
+    - { t: NUM LOCK }
     - { t: $$mdi:lock$$, s: "lock" }
     - { t: $$mdi:power-sleep$$, s: "sleep"}
   nav:
@@ -340,10 +340,10 @@ layers:
         { t: $$mdi:format-horizontal-align-left$$, s: home },
         { t: $$mdi:format-horizontal-align-right$$, s: end },
       ]
-    - { s: repeat, t: $$mdi:repeat$$, type: held }
+    - { type: held }
     - null
     - null
-    - { s: repeat, t: $$mdi:repeat$$, type: held alternate }
+    - { type: held alternate }
   mehs:
     - [meh b, meh m, meh g, meh l, meh o, meh u]
     - [
@@ -378,9 +378,9 @@ layers:
     - { t: alpha1, s: "auto-layer", h: nav }
   func:
     - [
-        { t: $$mdi:bluetooth$$, h: $$mdi:arrow-left$$ },
-        { t: $$mdi:bluetooth$$, h: $$mdi:arrow-right$$ },
-        { t: $$mdi:bluetooth$$, h: 0 },
+        "F13",
+        "F14",
+        "F15",
         "F7",
         "F8",
         "F9",
@@ -1030,7 +1030,6 @@ combos:
   - { p: [10, 11, 12], k: { t: "R$", h: "BRL" }, a: bottom, layers: [symbols] }
   - { p: [17, 18, 19], k: { t: "€", h: "EUR" }, a: bottom, layers: [symbols] }
 
-  - { p: [0, 1], k: { t: $$mdi:bluetooth-off$$, h: $$mdi:delete$$ }, a: top, layers: [func] }
   - { p: [3, 4], k: "F12", a: mid, layers: [func] }
   - { p: [10, 11], k: "F11", a: mid, layers: [func] }
   - { p: [11, 12], k: "F14", a: mid, layers: [func] }

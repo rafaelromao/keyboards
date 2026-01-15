@@ -216,16 +216,16 @@
    &none              &mc_calc             &mc_files           &mc_browser         &none               &none               &mc_ai              &mc_editor          &mc_activities      &none    
    &mc_leader         &lt_zoom_out TOGS 0  &mc_zoom_in         &mc_new             &none               &none               &tc_num_word        &mc_containers      &lt_emoji TOGS 0    &mc_leader
    &none              &mc_close            &mc_refresh         &mc_reopen          &none               &none               &mc_screenshot      &mc_notes           &mc_term            &none 
-                                           &none               &ht_repeat TEXT 0   &lt FUN SPACE       &lt MACROS SPACE    &ht_repeat TEXT 0   &none 
+                                           &none               &mo TEXT            &lt FUN SPACE       &lt MACROS SPACE    &mo TEXT            &none 
                         >;
                 };
                 toggles_layer {
                      display-name = "TOGGLES";
                      bindings = <
-   &none              &kp CAPS             &to FUN             &to NAV             &none               &none               &to NAV             &to FUN             &kp CAPS            &none     
-   &tog_off ALT_OS    &to ALT_OS           &to MEDIA           &to NUM             &none               &none               &to NUM             &to MEDIA           &to ALT_OS          &tog_off ALT_OS   
-   &none              &kp KP_NUM           &to MEHS            &to VIM_NORMAL      &none               &none               &to VIM_NORMAL      &to MEHS            &kp KP_NUM          &none  
-                                           &none               &mc_lock            &mc_sleep           &mc_lock            &mc_sleep           &none
+   &none              &none                &bt BT_SEL 0        &bt BT_CLR          &none               &none               &to NAV             &to FUN             &none               &none     
+   &none              &none                &bt BT_PRV          &bt BT_NXT          &none               &none               &to NUM             &to MEDIA           &none               &none    
+   &none              &bootloader          &tog_off ALT_OS     &to ALT_OS          &none               &none               &to VIM_NORMAL      &to MEHS            &bootloader         &none  
+                                           &none               &kp CAPS            &kp KP_NUM          &mc_lock            &mc_sleep           &none
                         >;
                 };
 
@@ -293,16 +293,16 @@
    &none               &select_home        &select_word        &select_line        &trans              &trans              &kp TAB             &lm_ent_vim         &lm_esc_vim        &none
    &none               &kp LCTL            &kp LALT            &kp LSFT            &trans              &trans              &mc_prev_word       &kp DOWN            &kp UP             &mc_next_word
    &none               &kp LGUI            &kp LGUI            &kp LGUI            &trans              &trans              &mc_del_word        &kp HOME            &kp END            &none 
-                                           &none               &key_repeat         &none               &none               &key_repeat         &none 
+                                           &none               &none               &none               &none               &none               &none 
                         >;
                 };
                 functions_layer {
                      display-name = "FUNCTIONS";
                      bindings = <
-   &none               &bt BT_PRV          &bt BT_NXT          &bt BT_SEL 0        &none               &none               &kp F7              &kp F8              &kp F9             &none 
+   &none               &kp F13             &kp F14             &kp F15             &none               &none               &kp F7              &kp F8              &kp F9             &none 
    &none               &hsk LCTL LCTL      &hsk LALT LALT      &hsk LSFT LSFT      &none               &none               &kp F4              &kp F5              &kp F6             &kp F12      
    &none               &hsk LGUI LGUI      &hsk LGUI LGUI      &hsk LGUI LGUI      &none               &none               &kp F1              &kp F2              &kp F3             &none
-                                           &none               &bootloader         &none               &kp F10             &kp F11             &none
+                                           &none               &none               &none               &kp F10             &kp F11             &none
                         >;
                 };
 
@@ -313,7 +313,7 @@
    &none               &mc_tisl            &mc_ds              &mc_dds             &none               &none               &mc_colpercsslash   &mc_o_esc           &mc_sft_o_esc     &none 
    &mc_exit            &mc_hugs            &mc_oref            &mc_otask           &none               &none               &lm_sft_v_vim       &mc_dqt0p           &mc_dqt1p         &none
    &none               &lm_os              &mc_comment         &mc_haha            &none               &none               &lm_ctl_v_vim       &mc_dqtplusp        &mc_dqtplusy      &none
-                                           &none               &key_repeat         &mc_spc_esc         &none               &bootloader         &none
+                                           &none               &none               &mc_spc_esc         &none               &none               &none
                         >;
                 };
 
