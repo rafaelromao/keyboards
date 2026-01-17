@@ -54,11 +54,11 @@
         TAPHOLD_TP(th_bti,            &mc_bti, &mc_end_bti)
 
         MACRO(mc_and,                 &kp AMPS &kp AMPS)
-        MACRO(mc_right_and,           &kp RIGHT &kp AMPS &kp AMPS)
+        MACRO(mc_right_and,           &kp RIGHT &kp SPACE &kp AMPS &kp AMPS)
         TAPHOLD_TP(th_and,            &mc_and, &mc_right_and)
 
         MACRO(mc_or,                  &kp PIPE &kp PIPE)
-        MACRO(mc_right_or,            &kp RIGHT &kp PIPE &kp PIPE)
+        MACRO(mc_right_or,            &kp RIGHT &kp SPACE &kp PIPE &kp PIPE)
         TAPHOLD_TP(th_or,             &mc_or, &mc_right_or)
 
         MACRO(mc_rpar,                &kp RPAR)
@@ -78,11 +78,11 @@
         TAPHOLD_TP(th_lbkt,           &mc_lbkt, &mc_end_lbkt)
 
         MACRO(mc_rbrc,                &kp RBRC)
-        MACRO(mc_end_rbrc,            &kp END &kp RBRC)
+        MACRO(mc_end_rbrc,            &kp END &kp SPACE &kp RBRC)
         TAPHOLD_TP(th_rbrc,           &mc_rbrc, &mc_end_rbrc)
 
         MACRO(mc_lbrc,                &kp LBRC)
-        MACRO(mc_end_lbrc,            &kp END &kp LBRC)
+        MACRO(mc_end_lbrc,            &kp END &kp SPACE &kp LBRC)
         TAPHOLD_TP(th_lbrc,           &mc_lbrc, &mc_end_lbrc)
 
         MACRO(mc_pars,                &kp LPAR &kp RPAR)
@@ -152,7 +152,28 @@
         TAPHOLD_TP(th_perc,           &mc_perc, &mc_end_perc)
 
         MACRO(mc_lt,                  &kp LT)
+        MACRO(mc_end_lt,              &kp RIGHT &kp SPACE &mc_lt )
+        TAPHOLD_TP(th_lt,             &mc_lt, &mc_end_lt)
+
         MACRO(mc_gt,                  &kp GT)
+        MACRO(mc_end_gt,              &kp RIGHT &kp SPACE &mc_gt )
+        TAPHOLD_TP(th_gt,             &mc_gt, &mc_end_gt)
+
+        MACRO(mc_plus,                &kp PLUS)
+        MACRO(mc_end_plus,            &kp RIGHT &kp SPACE &mc_plus )
+        TAPHOLD_TP(th_plus,           &mc_plus, &mc_end_plus)
+
+        MACRO(mc_minus,               &kp MINUS)
+        MACRO(mc_end_minus,           &kp RIGHT &kp SPACE &mc_minus )
+        TAPHOLD_TP(th_minus,          &mc_minus, &mc_end_minus)
+
+        MACRO(mc_slash,               &kp SLASH)
+        MACRO(mc_end_slash,           &kp RIGHT &kp SPACE &mc_slash )
+        TAPHOLD_TP(th_slash,          &vim_slash, &mc_end_slash)
+
+        MACRO(mc_star,                &kp STAR)
+        MACRO(mc_end_star,            &kp RIGHT &kp SPACE &mc_star )
+        TAPHOLD_TP(th_star,           &mc_star, &mc_end_star)
 
         MACRO(mc_qmark,               &kp QMARK )
         MACRO(mc_end_qmark,           &kp END &mc_qmark )

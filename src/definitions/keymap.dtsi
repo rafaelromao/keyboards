@@ -157,9 +157,9 @@
                      display-name = "SYMBOLS";
                      bindings = <
    &none               &mc_tilde           &kp HASH            &th_sqo 0 0         &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon_vim 0 0   &none
-   &kp AT              &th_caret_z 0 0     &kp DOLLAR          &th_dqo 0 0         &none               &none               &th_qmark 0 0       &kp MINUS           &kp PLUS            &lt MACROS COMMA
-   &none               &mc_lt              &mc_gt              &th_bti 0 0         &none               &none               &th_excl 0 0        &vim_slash          &kp STAR            &none 
-                                           &none               &trans              &hlt NUM_CP SPACE   &none               &trans              &none        
+   &kp AT              &th_caret_z 0 0     &kp DOLLAR          &th_dqo 0 0         &none               &none               &th_qmark 0 0       &th_minus 0 0       &th_plus 0 0        &lt MACROS COMMA
+   &none               &th_lt 0 0          &th_gt 0 0          &th_bti 0 0         &none               &none               &th_excl 0 0        &th_slash 0 0       &th_star 0 0        &none 
+                                           &none               &key_repeat         &hlt NUM_CP SPACE   &none               &trans              &none        
                         >;
                 };
 
@@ -262,8 +262,8 @@
                      display-name = "SYMBOLS";
                      bindings = <
    &none               &mc_tilde           &kp HASH            &th_sqo 0 0         &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon_vim 0 0   &none
-   &kp AT              &th_caret_z 0 0     &kp DOLLAR          &th_dqo 0 0         &none               &none               &th_qmark 0 0       &kp MINUS           &kp PLUS            &kp STAR  
-   &none               &mc_lt              &mc_gt              &th_bti 0 0         &none               &none               &th_excl 0 0        &kp SLASH           &kp STAR            &none 
+   &kp AT              &th_caret_z 0 0     &kp DOLLAR          &th_dqo 0 0         &none               &none               &th_qmark 0 0       &th_minus 0 0       &th_plus 0 0        &kp COMMA  
+   &none               &th_lt 0 0          &th_gt 0 0          &th_bti 0 0         &none               &none               &th_excl 0 0        &th_slash 0 0       &th_star 0 0    &none 
                                            &none               &trans              &kp SPACE           &kp SPACE           &trans              &none 
                         >;
                 };
@@ -271,7 +271,7 @@
                 media_layer {
                     display-name = "MOUSE";
                     bindings = <
-   &none               &mkp MCLK           &mkp LCLK           &mkp RCLK           &none               &none               &mc_home_tab        &mc_end_enter_vim   &lm_esc_vim        &none
+   &none               &none               &mkp LCLK           &mkp RCLK           &none               &none               &mc_home_tab        &mc_end_enter_vim   &lm_esc_vim        &none
    &none               &mmv MOVE_LEFT      &mmv MOVE_UP        &mmv MOVE_RIGHT     &none               &none               &mc_mic             &mt C_MUTE C_VOL_DN &kp C_VOL_UP       &lt_cam TEXT 0
    &none               &msc SCRL_DOWN      &mmv MOVE_DOWN      &msc SCRL_UP        &none               &none               &kp C_PP            &kp C_PREV          &kp C_NEXT         &none 
                                            &none               &mo NAV_CP          &kp SPACE           &none               &trans              &none 
