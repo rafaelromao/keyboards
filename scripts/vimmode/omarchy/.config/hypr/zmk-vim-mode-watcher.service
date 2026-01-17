@@ -1,0 +1,13 @@
+[Unit]
+Description=ZMK Vim Mode Watcher for Hyprland
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=%h/.config/hypr/zmk-vim-mode-watcher.sh --daemon
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=graphical-session.target
