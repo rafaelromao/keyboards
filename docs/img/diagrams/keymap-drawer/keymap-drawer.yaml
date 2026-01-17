@@ -18,8 +18,8 @@ layers:
         { t: c, h: $$mdi:apple-keyboard-command$$ },
         { h: $$mdi:apple-keyboard-command$$, t: p },
         { h: $$mdi:apple-keyboard-command$$, t: "h|v", s: magic },
-        { t: ",", h: "⇥ ,"  },
-        { t: ., h: "⇥ ." },
+        { t: ",", h: "→ ,"  },
+        { t: ., h: "→ ." },
       ]
     - { t: $$mdi:repeat$$, s: repeat, h: nav }
     - { t: $$mdi:keyboard-space$$, h: numbers }
@@ -64,8 +64,8 @@ layers:
         { t: C, h: $$mdi:apple-keyboard-command$$, type: ghost },
         { h: $$mdi:apple-keyboard-command$$, t: P, type: ghost },
         { h: $$mdi:apple-keyboard-command$$, t: "H|V", s: magic, type: ghost },
-        { t: ",", h: "⇥ ,", type: ghost },
-        { t: ., h: "⇥ .", type: ghost },
+        { t: ",", h: "→ ,", type: ghost },
+        { t: ., h: "→ .", type: ghost },
       ]
     - { t: CAPS LINE, h: nav, type: ghost }
     - { t: $$mdi:keyboard-space$$, h: numbers, type: ghost }
@@ -1013,19 +1013,19 @@ combos:
   - { p: [10, 11, 12], k: "⇥(); ⏎", layers: [numbers], a: bottom }
   - { p: [17, 18, 19], k: "⇥; ⏎", layers: [numbers], a: bottom }
 
-  - { p: [0, 1], k: { t: '=>', h: "⇥ =>" }, a: mid, layers: [symbols] }
-  - { p: [7, 8], k: { t: "->", h: "⇥ ->" }, a: mid, layers: [symbols] }
-  - { p: [14, 15], k: { t: "<>", h: "⇥ <>" }, a: mid, layers: [symbols] }
+  - { p: [0, 1], k: { t: '=>', h: "→ =>" }, a: mid, layers: [symbols] }
+  - { p: [7, 8], k: { t: "->", h: "→ ->" }, a: mid, layers: [symbols] }
+  - { p: [14, 15], k: { t: "<>", h: "→ <>" }, a: mid, layers: [symbols] }
   - { p: [8, 9], k: "${", a: mid, layers: [symbols] }
   - { p: [1, 2], k: "#{", a: mid, layers: [symbols] }
   - { p: [7, 8, 9], k: '"""', a: top, layers: [symbols] }
   - { p: [15, 16], k: { t: "|>", h: "⇥ ⏎ |>" }, a: mid, layers: [symbols] }
   - { p: [14, 15, 16], k: "```", a: top, layers: [symbols] }
   - { p: [3, 4], k: "%{", a: mid, layers: [symbols] }
-  - { p: [10, 11], k: { t: "<-", h: "⇥ <-" }, a: mid, layers: [symbols] }
-  - { p: [11, 12], k: { t: "==", h: "⇥ ==" }, a: mid, layers: [symbols] }
-  - { p: [17, 18], k: { t: "::", h: "⇥ ::" }, a: mid, layers: [symbols] }
-  - { p: [18, 19], k: { t: "!=", h: "⇥ !=" }, a: mid, layers: [symbols] }
+  - { p: [10, 11], k: { t: "<-", h: "→ <-" }, a: mid, layers: [symbols] }
+  - { p: [11, 12], k: { t: "==", h: "→ ==" }, a: mid, layers: [symbols] }
+  - { p: [17, 18], k: { t: "::", h: "→ ::" }, a: mid, layers: [symbols] }
+  - { p: [18, 19], k: { t: "!=", h: "→ !=" }, a: mid, layers: [symbols] }
   - { p: [3, 4, 5], k: { t: "US$", h: "USD" }, a: top, layers: [symbols] }
   - { p: [10, 11, 12], k: { t: "R$", h: "BRL" }, a: bottom, layers: [symbols] }
   - { p: [17, 18, 19], k: { t: "€", h: "EUR" }, a: bottom, layers: [symbols] }
