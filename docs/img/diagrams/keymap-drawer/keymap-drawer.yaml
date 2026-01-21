@@ -975,24 +975,6 @@ combos:
       layers: [media],
     }
 
-  - { p: [7, 20],  k: { t: $$mdi:arrow-left-circle$$,         s: mouse,  h: left  }, layers: [media], draw_separate: true }
-  - { p: [15, 20], k: { t: $$mdi:arrow-down-circle$$,         s: mouse,  h: down  }, layers: [media], draw_separate: true }
-  - { p: [8, 20],  k: { t: $$mdi:arrow-up-circle$$,           s: mouse,  h: up    }, layers: [media], draw_separate: true }
-  - { p: [9, 20],  k: { t: $$mdi:arrow-right-circle$$,        s: mouse,  h: right }, layers: [media], draw_separate: true }
-  - { p: [1, 20],  k: { t: $$mdi:mouse-left-click$$,          s: left,   h: click }, layers: [media], draw_separate: true }
-  - { p: [2, 20],  k: { t: $$mdi:mouse-right-click$$,         s: right,  h: click }, layers: [media], draw_separate: true }
-  - { p: [14, 20], k: { t: $$mdi:arrow-down-circle-outline$$, s: scroll, h: down  }, layers: [media], draw_separate: true }
-  - { p: [16, 20], k: { t: $$mdi:arrow-up-circle-outline$$,   s: scroll, h: up    }, layers: [media], draw_separate: true }
-
-  - { p: [10, 23], k: { t: $$mdi:arrow-left$$,                           h: left  }, layers: [nav], draw_separate: true }
-  - { p: [11, 23], k: { t: $$mdi:arrow-down$$,                           h: down  }, layers: [nav], draw_separate: true }
-  - { p: [12, 23], k: { t: $$mdi:arrow-up$$,                             h: up    }, layers: [nav], draw_separate: true }
-  - { p: [13, 23], k: { t: $$mdi:arrow-right$$,                          h: right }, layers: [nav], draw_separate: true }
-  - { p: [17, 23], k: { t: $$mdi:backspace-reverse-outline$$,            h: del   }, layers: [nav], draw_separate: true }
-  - { p: [18, 23], k: { t: $$mdi:format-horizontal-align-left$$,         h: home  }, layers: [nav], draw_separate: true }
-  - { p: [19, 23], k: { t: $$mdi:format-horizontal-align-right$$,        h: end   }, layers: [nav], draw_separate: true }
-
-  - { p: [13, 22], k: { h: "macros" }, layers: [alpha1], draw_separate: true }
   - { p: [23, 22], k: { t: "0" }, layers: [numbers], draw_separate: true }
   - { p: [17, 22], k: { t: "1" }, layers: [numbers], draw_separate: true }
   - { p: [18, 22], k: { t: "2" }, layers: [numbers], draw_separate: true }
@@ -1010,6 +992,14 @@ combos:
   - { p: [8, 21],  k: { t: ")", h: "⇥ )" }, layers: [numbers], draw_separate: true }
   - { p: [14, 21], k: { t: "[", h: "⇥ [" }, layers: [numbers], draw_separate: true }
   - { p: [15, 21], k: { t: "]", h: "⇥ ]" }, layers: [numbers], draw_separate: true }
+
+  - { p: [10, 23], k: { t: $$mdi:arrow-left$$,                           h: left  }, layers: [nav], draw_separate: true }
+  - { p: [11, 23], k: { t: $$mdi:arrow-down$$,                           h: down  }, layers: [nav], draw_separate: true }
+  - { p: [12, 23], k: { t: $$mdi:arrow-up$$,                             h: up    }, layers: [nav], draw_separate: true }
+  - { p: [13, 23], k: { t: $$mdi:arrow-right$$,                          h: right }, layers: [nav], draw_separate: true }
+  - { p: [17, 23], k: { t: $$mdi:backspace-reverse-outline$$,            h: del   }, layers: [nav], draw_separate: true }
+  - { p: [18, 23], k: { t: $$mdi:format-horizontal-align-left$$,         h: home  }, layers: [nav], draw_separate: true }
+  - { p: [19, 23], k: { t: $$mdi:format-horizontal-align-right$$,        h: end   }, layers: [nav], draw_separate: true }
 
   - { p: [0, 1],   k: "⇥{ ⏎", a: mid, layers: [numbers] }
   - { p: [1, 2],   k: "⇥do ⏎", a: mid, layers: [numbers] }

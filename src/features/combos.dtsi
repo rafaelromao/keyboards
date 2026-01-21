@@ -74,15 +74,6 @@
         COMBO(cb_lbkt,          LBR L0,          &th_lbkt 0 0,           ALL_LAYERS)
         COMBO(cb_rbkt,          LBM L0,          &th_rbkt 0 0,           ALL_LAYERS)
 
-        COMBO(cb_mlclk,         LTM L1,          &mkp LCLK,              ALL_LAYERS)
-        COMBO(cb_mrclk,         LTI L1,          &mkp RCLK,              ALL_LAYERS)
-        COMBO(cb_mleft,         LHR L1,          &mmv MOVE_LEFT,         ALL_LAYERS)
-        COMBO(cb_mup,           LHM L1,          &mmv MOVE_UP,           ALL_LAYERS)
-        COMBO(cb_mright,        LHI L1,          &mmv MOVE_RIGHT,        ALL_LAYERS)
-        COMBO(cb_mdown,         LBM L1,          &mmv MOVE_DOWN,         ALL_LAYERS)
-        COMBO(cb_sdown,         LBR L1,          &msc SCRL_DOWN,         ALL_LAYERS)
-        COMBO(cb_sup,           LBI L1,          &msc SCRL_UP,           ALL_LAYERS)
-
         COMBO(cb_n7,            RTI R0,          &mc_n7,                 ALL_LAYERS)
         COMBO(cb_n8,            RTM R0,          &mc_n8,                 ALL_LAYERS)
         COMBO(cb_n9,            RTR R0,          &mc_n9,                 ALL_LAYERS)
