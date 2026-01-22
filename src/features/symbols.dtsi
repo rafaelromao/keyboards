@@ -244,7 +244,7 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-            bindings = <&macro_tap &kp CARET &kp SPACE>;
+            bindings = <&macro_tap &kp CARET &kp SPACE &kp F24>;
         };
 
         mc_zero: mc_zero {
@@ -260,7 +260,7 @@
             #binding-cells = <0>;
             bindings = <&mc_caret>;
 
-            ADAPTIVE(caret_zero, &mc_zero, SPACE)
+            ADAPTIVE(caret_zero, &mc_zero, F24)
         };
 
         TAPHOLD_TP(th_caret_z, &vim_home, &mc_zero)
