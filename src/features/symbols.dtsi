@@ -167,10 +167,6 @@
         MACRO(mc_end_minus,           &kp RIGHT &kp SPACE &mc_minus )
         TAPHOLD_TP(th_minus,          &mc_minus, &mc_end_minus)
 
-        MACRO(mc_slash,               &kp SLASH)
-        MACRO(mc_end_slash,           &kp RIGHT &kp SPACE &mc_slash )
-        TAPHOLD_TP(th_slash,          &vim_slash, &mc_end_slash)
-
         MACRO(mc_star,                &kp STAR)
         MACRO(mc_end_star,            &kp RIGHT &kp SPACE &mc_star )
         TAPHOLD_TP(th_star,           &mc_star, &mc_end_star)
@@ -217,7 +213,11 @@
 
         // Vim
 
+        MACRO(mc_end_slash,           &kp RIGHT &kp SPACE &kp SLASH)
+        TAPHOLD_TP(th_slash,          &lm_slash_vim, &mc_end_slash)
+
         MACRO(mc_end_colon,           &kp END &kp COLON)
+        TAPHOLD_TP(th_colon_vim,      &lm_colon_vim, &mc_end_colon)
 
         MACRO(mc_end_excl,            &kp END &kp EXCL)
         TAPHOLD_TP(th_excl,           &lm_excl_vim, &mc_end_excl)
@@ -269,7 +269,6 @@
         MACRO(mc_sft_o_esc,     &macro_tap &kp LS(O) &kp ESC)
 
         LAYERTAP_TP(lt_lead_vim       , &vim_space_lead)
-        TAPHOLD_TP(th_colon_vim       , &lm_colon_vim, &mc_end_colon)
         MACRO(mc_end_enter_vim        , &kp END &lm_ent_vim)
         MACRO(mc_save_esc_vim         , &mc_save &lm_esc_vim)
 

@@ -69,6 +69,7 @@
         VIM_MACRO(vim_space_lead        , &vim_leader &kp SPACE)
 
         VIM_MACRO(vim_slash             , &vim_cmdline &kp SLASH)
+        VIM_BINDING(lm_slash_vim        , VIM_NORMAL VIM_VISUAL VIM_CHANGE, &vim_slash, &kp SLASH)
 
         VIM_MACRO(vim_colon             , &vim_cmdline &kp COLON)
         VIM_BINDING(lm_colon_vim        , VIM_NORMAL VIM_VISUAL VIM_CHANGE, &vim_colon, &kp COLON)
