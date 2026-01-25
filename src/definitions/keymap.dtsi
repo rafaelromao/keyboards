@@ -157,7 +157,7 @@
                      display-name = "SYMBOLS";
                      bindings = <
    &none               &mc_tilde           &kp HASH            &th_sqo 0 0         &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon_vim 0 0   &none
-   &kp AT              &th_caret_z 0 0     &kp DOLLAR          &th_dqo 0 0         &none               &none               &th_qmark 0 0       &th_minus 0 0       &th_plus 0 0        &lt MACROS COMMA
+   &kp AT              &th_caret_z 0 0     &kp DOLLAR          &th_dqo 0 0         &none               &none               &th_qmark 0 0       &th_minus 0 0       &th_plus 0 0        &lt MACROS UNDER
    &none               &th_lt 0 0          &th_gt 0 0          &th_bti 0 0         &none               &none               &th_excl 0 0        &th_slash 0 0       &th_star 0 0        &none 
                                            &none               &key_repeat         &hlt NUM_CP SPACE   &none               &trans              &none        
                         >;
@@ -253,7 +253,7 @@
                      display-name = "NUMBERS";
                      bindings = <
    &none               &th_lbrc 0 0        &th_rbrc 0 0        &kp BSLH            &none               &none               &mc_n7              &mc_n8              &mc_n9              &none
-   &mc_deg             &th_lpar 0 0        &th_rpar 0 0        &kp AMPS            &none               &none               &mc_n4              &mc_n5              &mc_n6              &mt COMMA DOT  
+   &mc_deg             &th_lpar 0 0        &th_rpar 0 0        &kp AMPS            &none               &none               &mc_n4              &mc_n5              &mc_n6              &mt COMMA DOT
    &none               &th_lbkt 0 0        &th_rbkt 0 0        &kp PIPE            &none               &none               &mc_n1              &mc_n2              &mc_n3              &none 
                                            &none               &trans              &trans              &hlt SYM_CP SPACE   &lt_n0 MEDIA 0      &none 
                         >;
@@ -262,8 +262,8 @@
                      display-name = "SYMBOLS";
                      bindings = <
    &none               &mc_tilde           &kp HASH            &th_sqo 0 0         &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon_vim 0 0   &none
-   &kp AT              &th_caret_z 0 0     &kp DOLLAR          &th_dqo 0 0         &none               &none               &th_qmark 0 0       &th_minus 0 0       &th_plus 0 0        &kp COMMA  
-   &none               &th_lt 0 0          &th_gt 0 0          &th_bti 0 0         &none               &none               &th_excl 0 0        &th_slash 0 0       &th_star 0 0    &none 
+   &kp AT              &th_caret_z 0 0     &kp DOLLAR          &th_dqo 0 0         &none               &none               &th_qmark 0 0       &th_minus 0 0       &th_plus 0 0        &kp UNDER  
+   &none               &th_lt 0 0          &th_gt 0 0          &th_bti 0 0         &none               &none               &th_excl 0 0        &th_slash 0 0       &th_star 0 0        &none 
                                            &none               &trans              &kp SPACE           &kp SPACE           &trans              &none 
                         >;
                 };
