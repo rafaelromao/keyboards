@@ -15,7 +15,7 @@
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
-            bindings = <&macro_tap &kp K_CANCEL &to ALPHA1>;
+            bindings = <&macro_tap &kp K_CANCEL &to ALPHA1 &vim_mode_off>;
         };
         LAYERTAP_TP(lt_cancel,     &tc_cancel)
 

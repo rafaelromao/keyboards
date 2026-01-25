@@ -33,7 +33,7 @@
     combos {
         compatible = "zmk,combos";
 
-        COMBO(cb_vim_mode,      LTR LTM LTI,     &vim_reset,             ALPHA1_LAYERS VIM_LAYERS)
+        COMBO(cb_vim_mode,      LTR LTM LTI,     &vim_mode_on,           ALPHA1_LAYERS VIM_LAYERS)
 
         COMBO(cb_enter,         RHM RHR R0,      &lm_ent_vim,            ALL_LAYERS_WITH_ENTER)
         COMBO(cb_backspace,     RTM RTR,         &kp BACKSPACE,          ALL_LAYERS_WITH_BACKSPACE)
