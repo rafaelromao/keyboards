@@ -189,12 +189,15 @@
 
         MACRO(mc_ord_o,               &kp LA(N0))
         MACRO(mc_ord_a,               &kp LA(N9))
-        TAPHOLD_TP(th_ord_o,          &mc_ord_o, &mc_meh)
-        TAPHOLD_TP(th_ord_a,          &mc_ord_a, &mc_hyper)
+        TAPHOLD_TP(th_ord_oa,         &mc_ord_o, &mc_ord_a)
 
         MACRO(mc_qr,                  &kp Q &kp R)
         MACRO(mc_atr,                 &kp AT &kp R)
         MACRO(mc_atat,                &kp AT &kp AT)
+
+        MACRO(mc_ltgtlprp,            &kp LT &kp GT &kp LPAR &kp RPAR &kp SEMI)
+        MACRO(mc_end_ltgtlprp,        &kp END &kp LT &kp GT &kp LPAR &kp RPAR &kp SEMI &kp ENTER)
+        TAPHOLD_TP(th_ltgtlprp,       &mc_ltgtlprp, &mc_end_ltgtlprp)
 
         // Macros
 
