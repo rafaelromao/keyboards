@@ -107,7 +107,7 @@
         MACRO(mc_eur,                 &kp LS(E) &kp LS(U) &kp LS(R))
         TAPHOLD_TP(th_eur,            &mc_euro, &mc_eur)
 
-        MACRO(mc_pars_semi_ent,       &kp END &kp LPAR &kp RPAR &kp SEMI &kp ENTER)
+        MACRO(mc_pars_semi,           &kp END &kp LPAR &kp RPAR &kp SEMI)
 
         MACRO(mc_tdqo,                &mc_dqo &mc_dqo &mc_dqo)
         MACRO(mc_tdqo_ent,            &mc_tdqo &kp ENTER)
@@ -195,9 +195,7 @@
         MACRO(mc_atr,                 &kp AT &kp R)
         MACRO(mc_atat,                &kp AT &kp AT)
 
-        MACRO(mc_ltgtlprp,            &kp LT &kp GT &kp LPAR &kp RPAR &kp SEMI)
-        MACRO(mc_end_ltgtlprp,        &kp END &kp LT &kp GT &kp LPAR &kp RPAR &kp SEMI &kp ENTER)
-        TAPHOLD_TP(th_ltgtlprp,       &mc_ltgtlprp, &mc_end_ltgtlprp)
+        MACRO(mc_ltgtlprp,            &kp END &kp LT &kp GT &kp LPAR &kp RPAR &kp SEMI)
 
         // Macros
 
