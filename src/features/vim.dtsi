@@ -14,7 +14,7 @@
 
         num_lock {           
             indicator = <HID_USAGE_LED_NUM_LOCK>;
-            bindings = <&vim_reset &vim_off>; // num lock on -> vim mode on
+            bindings = <&vim_mode_on &vim_off>; // num lock on -> vim mode on
         };
     };
 };
@@ -57,8 +57,10 @@
 
 / {
     vim {
-        VIM_MACRO(vim_mode_on           , &vim_reset &kp LG(LC(LA(LS(F3)))))
-        VIM_MACRO(vim_mode_off          , &vim_off &kp LC(LA(LS(F3))))
+        VIM_MACRO(vim_reset_notify      , &vim_reset &kp LG(LC(LA(LS(ESC)))))
+        VIM_MACRO(vim_mode_off          , &vim_off &kp LC(LA(LS(ESC))))
+        
+        VIM_BINDING(vim_mode_on         , VIM_NORMAL VIM_VISUAL VIM_CHANGE VIM_LEADER VIM_INSERT VIM_REPLACE VIM_CMDLINE, &none, &vim_reset_notify)
 
         VIM_MACRO(vim_off               , &tog_off VIM_NORMAL &tog_off VIM_CHANGE &tog_off VIM_VISUAL &tog_off VIM_INSERT &tog_off VIM_REPLACE &tog_off VIM_LEADER &tog_off VIM_CMDLINE)
         VIM_MACRO(vim_reset             , &vim_off &tog_on VIM_NORMAL &kp ESC)
