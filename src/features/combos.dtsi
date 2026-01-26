@@ -214,8 +214,8 @@
         COMBO(cb_shiftv,        RBM RBR,         &kp LS(V),              TEXT)
         COMBO(cb_ctrlv,         RBI RBM,         &kp LC(V),              TEXT)
 
-        COMBO(cb_enter_vim,     RTI RTM,         &tog VIM_NORMAL,        MACROS)
-        COMBO(cb_leave_vim,     RTM RTR,         &tc_cancel,             MACROS)
+        COMBO(cb_enter_vim,     RTI RTM,         &vim_mode_on,           MACROS)
+        COMBO(cb_leave_vim,     RTM RTR,         &vim_mode_off,          MACROS)
 
         COMBO(cb_numbers_nav,   LBR LBM,         &mo NUM_CP,             NAV_LAYERS)
         COMBO(cd_ca,            LHR LHM,         &kp LC(LALT),           NAV_LAYERS)
