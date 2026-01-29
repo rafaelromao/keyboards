@@ -195,7 +195,7 @@
         MACRO(mc_atr,                 &kp AT &kp R)
         MACRO(mc_atat,                &kp AT &kp AT)
 
-        MACRO(mc_ltgtlprp,            &kp END &kp LT &kp GT &kp LPAR &kp RPAR &kp SEMI)
+        MACRO(mc_ltgtlprp,            &kp LT &kp GT &kp LPAR &kp RPAR)
 
         // Macros
 

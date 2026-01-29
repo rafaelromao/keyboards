@@ -1010,7 +1010,7 @@ combos:
   - { p: [17, 18], k: { t: "|", s: "vim" }, a: mid, layers: [numbers] }
   - {
       p: [7, 8, 9],
-      k: { t: "⇥ <>();" },
+      k: { t: "⇥();" },
       a: bottom,
       slide: -0.5,
       layers: [numbers],
@@ -1025,7 +1025,7 @@ combos:
       slide: -0.5,
       layers: [numbers],
     }
-  - { p: [10, 11, 12], k: "⇥();", layers: [numbers], a: bottom }
+  - { p: [10, 11, 12], k: "<>()", layers: [numbers], a: bottom }
   - { p: [17, 18, 19], k: "⇥; ⏎", layers: [numbers], a: bottom }
 
   - { p: [0, 1], k: { t: '=>', h: "→ =>" }, a: mid, layers: [symbols] }

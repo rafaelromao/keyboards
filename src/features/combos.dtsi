@@ -161,10 +161,9 @@
         COMBO(cb_enddoent,      LTM LTI,         &mc_end_do_ent,         NUM_LAYERS)
         COMBO(cb_and,           LHI LHM,         &th_and 0 0,            NUM_LAYERS)
         COMBO(cb_or,            LBI LBM,         &th_or 0 0,             NUM_LAYERS)
-        COMBO(cb_par_semi,      RHR RHM RHI,     &mc_pars_semi,          NUM_LAYERS)
-
-        COMBO(cd_ltgtlprp,      LHR LHM LHI,     &mc_ltgtlprp,           NUM_LAYERS)
+        COMBO(cb_par_semi,      LHR LHM LHI,     &mc_pars_semi,          NUM_LAYERS)
         COMBO(cd_th_ord_oa,     LBR LBM LBI,     &th_ord_oa 0 0,         NUM_LAYERS)
+        COMBO(cd_ltgtlprp,      RHR RHM RHI,     &mc_ltgtlprp,           NUM_LAYERS)
 
         COMBO(cb_darrow,        LTR LTM,         &th_darrow 0 0,         SYM_LAYERS)
         COMBO(cb_sarrow,        LHR LHM,         &th_sarrow 0 0,         SYM_LAYERS)
