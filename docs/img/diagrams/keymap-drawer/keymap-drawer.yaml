@@ -1008,26 +1008,17 @@ combos:
   - { p: [10, 11], k: { t: "j", s: "vim" }, a: mid, layers: [numbers] }
   - { p: [11, 12], k: { t: "k", s: "vim" }, a: mid, layers: [numbers] }
   - { p: [17, 18], k: { t: "|", s: "vim" }, a: mid, layers: [numbers] }
-  - {
-      p: [7, 8, 9],
-      k: { t: "⇥();" },
-      a: bottom,
-      slide: -0.5,
-      layers: [numbers],
-    }
   - { p: [7, 8], k: { t: "()", h: "⇥ ()" }, a: mid, layers: [numbers] }
   - { p: [8, 9], k: { t: "&&", h: "→ &&" }, a: mid, layers: [numbers] }
   - { p: [15, 16], k: { t: "||", h: "→ ||" }, a: mid, layers: [numbers] }
-  - {
-      p: [14, 15, 16],
-      k: { t: "º", h: "ª" },
-      a: bottom,
-      slide: -0.5,
-      layers: [numbers],
-    }
-  - { p: [10, 11, 12], k: "<>()", layers: [numbers], a: bottom }
-  - { p: [17, 18, 19], k: "⇥; ⏎", layers: [numbers], a: bottom }
+  - { p: [0, 1, 2], k: { t: "€", h: "EUR" }, a: top, slide: -0.5, layers: [numbers] }
+  - { p: [7, 8, 9], k: { t: "R$", h: "BRL" }, a: bottom, slide: -0.5, layers: [numbers] }
+  - { p: [14, 15, 16], k: { t: "US$", h: "USD" }, a: bottom, slide: -0.5, layers: [numbers] }
 
+  - { p: [10, 11, 12], k: "⇥();", a: bottom, layers: [numbers] }
+  - { p: [17, 18, 19], k: "<>()", a: bottom, layers: [numbers] }
+
+  - { p: [3, 4, 5], k: { t: "º", h: "ª" }, a: top, layers: [symbols], }
   - { p: [0, 1], k: { t: '=>', h: "→ =>" }, a: mid, layers: [symbols] }
   - { p: [7, 8], k: { t: "->", h: "→ ->" }, a: mid, layers: [symbols] }
   - { p: [14, 15], k: { t: "<>", h: "→ <>" }, a: mid, layers: [symbols] }
@@ -1041,9 +1032,7 @@ combos:
   - { p: [11, 12], k: { t: "==", h: "→ ==" }, a: mid, layers: [symbols] }
   - { p: [17, 18], k: { t: "::", h: "→ ::" }, a: mid, layers: [symbols] }
   - { p: [18, 19], k: { t: "!=", h: "→ !=" }, a: mid, layers: [symbols] }
-  - { p: [3, 4, 5], k: { t: "US$", h: "USD" }, a: top, layers: [symbols] }
-  - { p: [10, 11, 12], k: { t: "R$", h: "BRL" }, a: bottom, layers: [symbols] }
-  - { p: [17, 18, 19], k: { t: "€", h: "EUR" }, a: bottom, layers: [symbols] }
+
 
   - { p: [3, 4], k: "F12", a: mid, layers: [func] }
   - { p: [10, 11], k: "F11", a: mid, layers: [func] }

@@ -13,8 +13,6 @@
         MACRO(mc_end_semi,            &kp END &kp SEMI)
         TAPHOLD_TP(th_semi,           &mm_semi, &mc_end_semi)
 
-        MACRO(mc_end_semi_ent,        &kp END &kp SEMI &kp ENTER)
-
         MACRO(mc_h,                   &kp H)
         TAPHOLD_TP(th_hyper_h,        &mc_h, &mc_hyper)
 

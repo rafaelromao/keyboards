@@ -97,7 +97,6 @@
         COMBO(cb_hyp_ent,       RBI RBM RBR,     &th_hyper_enter 0 0,    ALPHA1_LAYERS VIM_LAYERS_BASE)
 
         COMBO(cb_semi,          RBM RBR,         &th_semi 0 0,           ALPHA1_LAYERS NUM_LAYERS VIM_LAYERS)
-        COMBO(cb_sent,          RBI RBM RBR,     &mc_end_semi_ent,       NUM_LAYERS)
 
         COMBO(cb_k,             LTM LTI,         &kp K,                  ALPHA1 VIM_LAYERS_BASE)
         COMBO(cb_w,             LHM LHI,         &ht_w 0 0,              ALPHA1 VIM_LAYERS_BASE)
@@ -161,9 +160,13 @@
         COMBO(cb_enddoent,      LTM LTI,         &mc_end_do_ent,         NUM_LAYERS)
         COMBO(cb_and,           LHI LHM,         &th_and 0 0,            NUM_LAYERS)
         COMBO(cb_or,            LBI LBM,         &th_or 0 0,             NUM_LAYERS)
-        COMBO(cb_par_semi,      LHR LHM LHI,     &mc_pars_semi,          NUM_LAYERS)
-        COMBO(cd_th_ord_oa,     LBR LBM LBI,     &th_ord_oa 0 0,         NUM_LAYERS)
-        COMBO(cd_ltgtlprp,      RHR RHM RHI,     &mc_ltgtlprp,           NUM_LAYERS)
+
+        COMBO(cb_eu,            LTR LTM LTI,     &th_eur 0 0,            NUM_LAYERS)
+        COMBO(cb_br,            LHR LHM LHI,     &th_br 0 0,             NUM_LAYERS)
+        COMBO(cb_us,            LBR LBM LBI,     &th_us 0 0,             NUM_LAYERS)
+
+        COMBO(cb_par_semi,      RHR RHM RHI,     &mc_pars_semi,          NUM_LAYERS)
+        COMBO(cd_ltgtlprp,      RBR RBM RBI,     &mc_ltgtlprp,           NUM_LAYERS)
 
         COMBO(cb_darrow,        LTR LTM,         &th_darrow 0 0,         SYM_LAYERS)
         COMBO(cb_sarrow,        LHR LHM,         &th_sarrow 0 0,         SYM_LAYERS)
@@ -173,9 +176,7 @@
         COMBO(cb_forward,       LBM LBI,         &th_forward 0 0,        SYM_LAYERS)
         COMBO(cb_tdqo,          LHR LHM LHI,     &th_tdqo 0 0,           SYM_LAYERS)
         COMBO(cb_tbti,          LBR LBM LBI,     &th_tbti 0 0,           SYM_LAYERS)
-        COMBO(cb_us,            RTR RTM RTI,     &th_us 0 0,             SYM_LAYERS)
-        COMBO(cb_br,            RHR RHM RHI,     &th_br 0 0,             SYM_LAYERS)
-        COMBO(cb_eu,            RBR RBM RBI,     &th_eur 0 0,            SYM_LAYERS)
+        COMBO(cd_th_ord_oa,     RTR RTM RTI,     &th_ord_oa 0 0,         SYM_LAYERS)
 
         COMBO(cb_pcurly,        RTI RTM,         &mc_pcurly,             SYM_LAYERS)
         COMBO(cb_eqeq,          RHM RHR,         &th_eqeq 0 0,           SYM_LAYERS)
