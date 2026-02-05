@@ -166,7 +166,7 @@
         COMBO(cb_us,            LBR LBM LBI,     &th_us 0 0,             NUM_LAYERS)
 
         COMBO(cb_par_semi,      RHR RHM RHI,     &mc_pars_semi,          NUM_LAYERS)
-        COMBO(cd_ltgtlprp,      RBR RBM RBI,     &mc_ltgtlprp,           NUM_LAYERS)
+        COMBO(cd_ltgtlprp,      RBR RBM RBI,     &th_ltgtlprp 0 0,       NUM_LAYERS)
 
         COMBO(cb_darrow,        LTR LTM,         &th_darrow 0 0,         SYM_LAYERS)
         COMBO(cb_sarrow,        LHR LHM,         &th_sarrow 0 0,         SYM_LAYERS)
@@ -176,7 +176,9 @@
         COMBO(cb_forward,       LBM LBI,         &th_forward 0 0,        SYM_LAYERS)
         COMBO(cb_tdqo,          LHR LHM LHI,     &th_tdqo 0 0,           SYM_LAYERS)
         COMBO(cb_tbti,          LBR LBM LBI,     &th_tbti 0 0,           SYM_LAYERS)
-        COMBO(cd_th_ord_oa,     RTR RTM RTI,     &th_ord_oa 0 0,         SYM_LAYERS)
+        COMBO(cd_deg,           RTR RTM RTI,     &mc_deg,                SYM_LAYERS)
+        COMBO(cb_ord_o,         RHR RHM RHI,     &mc_ord_o,              SYM_LAYERS)
+        COMBO(cd_ord_a,         RBR RBM RBI,     &mc_ord_a,              SYM_LAYERS)
 
         COMBO(cb_pcurly,        RTI RTM,         &mc_pcurly,             SYM_LAYERS)
         COMBO(cb_eqeq,          RHM RHR,         &th_eqeq 0 0,           SYM_LAYERS)

@@ -151,14 +151,14 @@ layers:
   numbers:
     - [{ t: "{", h: "⇥ {" }, { t: "}", h: "⇥ }" }, "\\", 7, 8, 9]
     - [
-        { t: "°", h: func },
+        { t: ",", h: func },
         { t: "(", h: "⇥ (" },
         { t: ")", h: "⇥ )" },
         "&",
         4,
         5,
         6,
-        { t: ".", h: "," },
+        { t: "." },
       ]
     - [{ t: "[", h: "⇥ [" }, { t: "]", h: "⇥ ]" }, "|", 1, 2, 3]
     - { t: ▽ }
@@ -1016,9 +1016,11 @@ combos:
   - { p: [14, 15, 16], k: { t: "US$", h: "USD" }, a: bottom, slide: -0.5, layers: [numbers] }
 
   - { p: [10, 11, 12], k: "⇥();", a: bottom, layers: [numbers] }
-  - { p: [17, 18, 19], k: "<>()", a: bottom, layers: [numbers] }
+  - { p: [17, 18, 19], k: { t: "<>()", h: "⇥<>();" }, a: bottom, layers: [numbers] }
 
-  - { p: [3, 4, 5], k: { t: "º", h: "ª" }, a: top, layers: [symbols], }
+  - { p: [3, 4, 5], k: "°", a: top, layers: [symbols], }
+  - { p: [10, 11, 12], k: "º", a: top, layers: [symbols], }
+  - { p: [17, 18, 19], k: "ª", a: top, layers: [symbols], }
   - { p: [0, 1], k: { t: '=>', h: "→ =>" }, a: mid, layers: [symbols] }
   - { p: [7, 8], k: { t: "->", h: "→ ->" }, a: mid, layers: [symbols] }
   - { p: [14, 15], k: { t: "<>", h: "→ <>" }, a: mid, layers: [symbols] }

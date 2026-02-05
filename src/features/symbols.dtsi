@@ -19,6 +19,7 @@
         MACRO(mc_comma,               &kp COMMA)
         MACRO(mc_end_comma,           &kp RIGHT &kp COMMA )
         TAPHOLD_TP(th_comma,          &mc_comma, &mc_end_comma)
+        LAYERTAP_TP(lt_comma,         &mc_comma)
 
         MACRO(mc_dot,                 &kp DOT )
         MACRO(mc_end_dot,             &kp RIGHT &kp DOT )
@@ -187,13 +188,14 @@
 
         MACRO(mc_ord_o,               &kp LA(N0))
         MACRO(mc_ord_a,               &kp LA(N9))
-        TAPHOLD_TP(th_ord_oa,         &mc_ord_o, &mc_ord_a)
 
         MACRO(mc_qr,                  &kp Q &kp R)
         MACRO(mc_atr,                 &kp AT &kp R)
         MACRO(mc_atat,                &kp AT &kp AT)
 
         MACRO(mc_ltgtlprp,            &kp LT &kp GT &kp LPAR &kp RPAR)
+        MACRO(mc_end_ltgtlprp_semi,   &kp END &kp LT &kp GT &kp LPAR &kp RPAR &kp SEMI)
+        TAPHOLD_TP(th_ltgtlprp,       &mc_ltgtlprp, &mc_end_ltgtlprp_semi)
 
         // Macros
 
