@@ -36,7 +36,7 @@ layers:
         â,
         ê,
       ]
-    - "'"
+    - { t: $$mdi:repeat$$, s: repeat }
     - { t: _ }
     - { t: $$mdi:keyboard-space$$ }
     - "'"
@@ -160,7 +160,7 @@ layers:
         6,
         { t: "." },
       ]
-    - [{ t: "[", h: "⇥ [" }, { t: "]", h: "⇥ ]" }, "|", 1, 2, 3]
+    - [{ t: "[", h: "→ [" }, { t: "]", h: "→ ]" }, "|", 1, 2, 3]
     - { t: ▽ }
     - { t: ▽, type: held }
     - { t: $$mdi:keyboard-space$$, h: symbols }
@@ -192,7 +192,7 @@ layers:
         { t: "/", h: "→ /" },
         { t: "*", h: "→ *" },
       ]
-    - { t: $$mdi:repeat$$, s: repeat }
+    - { t: ▽ }
     - { t: $$mdi:keyboard-space$$, h: numbers }
     - { type: held }
     - { t: ▽ }
@@ -286,7 +286,7 @@ layers:
         { t: $$mdi:format-horizontal-align-right$$, s: end },
       ]
     - { t: ▽, type: held }
-    - null
+    - { t: ▽ }
     - { t: $$mdi:keyboard-space$$, h: symbols }
     - { t: "⎀", s: insert, h: media, type: held alternate }
   media:

@@ -60,33 +60,33 @@
         MACRO(mc_right_or,            &kp RIGHT &kp SPACE &kp PIPE &kp PIPE)
         TAPHOLD_TP(th_or,             &mc_or, &mc_right_or)
 
-        MACRO(mc_rpar,                &kp RPAR)
-        MACRO(mc_end_rpar,            &kp END &kp RPAR)
-        TAPHOLD_TP(th_rpar,           &mc_rpar, &mc_end_rpar)
-
-        MACRO(mc_lpar,                &kp LPAR)
-        MACRO(mc_end_lpar,            &kp END &kp LPAR)
-        TAPHOLD_TP(th_lpar,           &mc_lpar, &mc_end_lpar)
-
-        MACRO(mc_rbkt,                &kp RBKT)
-        MACRO(mc_end_rbkt,            &kp END &kp RBKT)
-        TAPHOLD_TP(th_rbkt,           &mc_rbkt, &mc_end_rbkt)
-
-        MACRO(mc_lbkt,                &kp LBKT)
-        MACRO(mc_end_lbkt,            &kp END &kp LBKT)
-        TAPHOLD_TP(th_lbkt,           &mc_lbkt, &mc_end_lbkt)
+        MACRO(mc_lbrc,                &kp LBRC)
+        MACRO(mc_end_lbrc,            &kp END &kp SPACE &kp LBRC)
+        TAPHOLD_TP(th_lbrc,           &mc_lbrc, &mc_end_lbrc)
 
         MACRO(mc_rbrc,                &kp RBRC)
         MACRO(mc_end_rbrc,            &kp END &kp SPACE &kp RBRC)
         TAPHOLD_TP(th_rbrc,           &mc_rbrc, &mc_end_rbrc)
 
-        MACRO(mc_lbrc,                &kp LBRC)
-        MACRO(mc_end_lbrc,            &kp END &kp SPACE &kp LBRC)
-        TAPHOLD_TP(th_lbrc,           &mc_lbrc, &mc_end_lbrc)
+        MACRO(mc_lpar,                &kp LPAR)
+        MACRO(mc_end_lpar,            &kp END &kp LPAR)
+        TAPHOLD_TP(th_lpar,           &mc_lpar, &mc_end_lpar)
+
+        MACRO(mc_rpar,                &kp RPAR)
+        MACRO(mc_end_rpar,            &kp END &kp RPAR)
+        TAPHOLD_TP(th_rpar,           &mc_rpar, &mc_end_rpar)
 
         MACRO(mc_pars,                &kp LPAR &kp RPAR)
         MACRO(mc_end_pars,            &kp END &kp LPAR &kp RPAR)
         TAPHOLD_TP(th_pars,           &mc_pars, &mc_end_pars)
+
+        MACRO(mc_lbkt,                &kp LBKT)
+        MACRO(mc_end_lbkt,            &kp RIGHT &kp LBKT)
+        TAPHOLD_TP(th_lbkt,           &mc_lbkt, &mc_end_lbkt)
+
+        MACRO(mc_rbkt,                &kp RBKT)
+        MACRO(mc_end_rbkt,            &kp RIGHT &kp RBKT)
+        TAPHOLD_TP(th_rbkt,           &mc_rbkt, &mc_end_rbkt)
 
         MACRO(mc_brackets,            &kp LBKT &kp RBKT)
         LAYERTAP_TP(lt_brackets,      &mc_brackets)

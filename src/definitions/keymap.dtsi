@@ -140,7 +140,7 @@
    &none               &kp Q               &mc_qu              &kp K               &none               &none               &ac_ocir            &ac_oacu            &ac_uacu            &none
    &kp Y               &kp Z               &kp X               &kp W               &none               &none               &ac_atil            &ac_aacu            &ac_eacu            &ac_iacu 
    &none               &kp J               &mc_ced             &reversed_magic     &none               &none               &ac_otil            &ac_acir            &ac_ecir            &none 
-                                           &none               &mc_sqo             &kp UNDER           &kp SPACE           &mc_sqo             &none
+                                           &none               &key_repeat         &kp UNDER           &kp SPACE           &mc_sqo             &none
                         >;
                 };
 
@@ -159,7 +159,7 @@
    &none               &mc_tilde           &kp HASH            &th_sqo 0 0         &none               &none               &th_perc 0 0        &th_eql 0 0         &th_colon_vim 0 0   &none
    &kp AT              &th_caret_z 0 0     &kp DOLLAR          &th_dqo 0 0         &none               &none               &th_qmark 0 0       &th_minus 0 0       &th_plus 0 0        &lt MACROS UNDER
    &none               &th_lt 0 0          &th_gt 0 0          &th_bti 0 0         &none               &none               &th_excl 0 0        &th_slash 0 0       &th_star 0 0        &none 
-                                           &none               &key_repeat         &hlt NUM_CP SPACE   &none               &trans              &none        
+                                           &none               &trans              &hlt NUM_CP SPACE   &none               &trans              &none        
                         >;
                 };
 
@@ -196,7 +196,7 @@
    &none               &kp RS(Q)           &mc_qu_c            &kp RS(K)           &none               &none               &ac_ocir_c          &ac_oacu_c          &ac_uacu_c          &none
    &kp RS(Y)           &kp RS(Z)           &kp RS(X)           &kp RS(W)           &none               &none               &ac_atil_c          &ac_aacu_c          &ac_eacu_c          &ac_iacu_c 
    &none               &kp RS(J)           &mc_ced_c           &reversed_magic_c   &none               &none               &ac_otil_c          &ac_acir_c          &ac_ecir_c          &none 
-                                           &none               &mc_sqo             &kp UNDER           &kp SPACE           &mc_sqo             &none 
+                                           &none               &key_repeat         &kp UNDER           &kp SPACE           &mc_sqo             &none 
                         >;
                 };
                 case_ccedil_layer {
@@ -245,7 +245,7 @@
    &none               &mc_swapper         &mc_tabs            &mc_launcher        &none               &none               &kp TAB             &lm_ent_vim         &lm_esc_vim         &none
    &lt_system TEXT 0   &mod_num LCTL LCTL  &mod_num LALT LALT  &mod_num LSFT LSFT  &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
    &none               &mod_num LGUI LGUI  &mod_num LGUI LGUI  &mod_num LGUI LGUI  &none               &none               &kp DEL             &kp HOME            &kp END             &none 
-                                           &none               &trans              &none               &hlt SYM_CP SPACE   &lt MEDIA INS       &none 
+                                           &none               &trans              &mo NUM_CP          &hlt SYM_CP SPACE   &lt MEDIA INS       &none 
                         >;
                 };
 
