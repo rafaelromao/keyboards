@@ -51,7 +51,6 @@ cirque_pinnacle_i2c: &i2c0 {
         // will make the MCU be notified when there is data ready in the cirque
         data-ready-gpios = <&pro_micro 0 (GPIO_ACTIVE_HIGH)>;
         sensitivity = "2x";
-        sleep-mode-enabled; 
     };
 };
 
