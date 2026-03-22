@@ -16,7 +16,7 @@ build_rommana() {
 
 build_wired_rommana() {
     echo "--- Building Wired Rommana ---"
-    ./scripts/build.sh "mabroum/wired_rommana" "l" "LINUX" "-b" "xiao_rp2040" "$@"
+    ./scripts/build.sh "mabroum/wired_rommana" "l" "LINUX" "-b" "xiao_rp2040//zmk" "$@"
 }
 
 build_diamond() {
@@ -26,7 +26,7 @@ build_diamond() {
 
 build_wired_diamond() {
     echo "--- Building Wired Diamond ---"
-    ./scripts/build.sh "rafaelromao/wired_diamond" "l" "LINUX" "-b" "xiao_rp2040" "$@"
+    ./scripts/build.sh "rafaelromao/wired_diamond" "l" "LINUX" "-b" "xiao_rp2040//zmk" "$@"
 }
 
 build_choc_diamond() {
