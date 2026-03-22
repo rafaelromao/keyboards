@@ -9,6 +9,7 @@ BOARD="nice_nano"
 VERBOSE=""
 PRISTINE=""
 ZMK="zmkfirmware/zmk"
+#REVISION="ac7f75b"
 REVISION="main"
 EXTRA_SHIELDS=()
 FLAGS=()
