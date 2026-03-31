@@ -67,12 +67,12 @@
         COMBO(cb_home,          RBM R1,          &kp HOME,               ALL_LAYERS)
         COMBO(cb_end,           RBR R1,          &kp END,                ALL_LAYERS)
 
-        COMBO(cb_lbrc,          LTR L0,          &th_lbrc 0 0,           ALL_LAYERS)
-        COMBO(cb_rbrc,          LTM L0,          &th_rbrc 0 0,           ALL_LAYERS)
-        COMBO(cb_lpar,          LHR L0,          &th_lpar 0 0,           ALL_LAYERS)
-        COMBO(cb_rpar,          LHM L0,          &th_rpar 0 0,           ALL_LAYERS)
-        COMBO(cb_lbkt,          LBR L0,          &th_lbkt 0 0,           ALL_LAYERS)
-        COMBO(cb_rbkt,          LBM L0,          &th_rbkt 0 0,           ALL_LAYERS)
+        COMBO(cb_lbrc,          LTM L0,          &th_lbrc 0 0,           ALL_LAYERS)
+        COMBO(cb_rbrc,          LTI L0,          &th_rbrc 0 0,           ALL_LAYERS)
+        COMBO(cb_lpar,          LHM L0,          &th_lpar 0 0,           ALL_LAYERS)
+        COMBO(cb_rpar,          LHI L0,          &th_rpar 0 0,           ALL_LAYERS)
+        COMBO(cb_lbkt,          LBM L0,          &th_lbkt 0 0,           ALL_LAYERS)
+        COMBO(cb_rbkt,          LBI L0,          &th_rbkt 0 0,           ALL_LAYERS)
 
         COMBO(cb_n7,            RTI R0,          &mc_n7,                 ALL_LAYERS)
         COMBO(cb_n8,            RTM R0,          &mc_n8,                 ALL_LAYERS)
@@ -85,7 +85,7 @@
         COMBO(cb_n3,            RBR R0,          &mc_n3,                 ALL_LAYERS)
         COMBO(cb_n0,            R1 R0,           &mc_n0,                 ALL_LAYERS)
 
-        COMBO(cb_numword,       LBR LBM,         &lt_num_word NAV 0,     ALPHA1_LAYERS VIM_LAYERS_BASE)
+        COMBO(cb_numword,       LBR LBM,         &tc_num_word,           ALPHA1_LAYERS VIM_LAYERS_BASE)
         COMBO(cd_ca_nav,        LHR LHM L1,      &mc_ca_nav,             ALPHA1_LAYERS VIM_LAYERS)
         COMBO(cd_gcs_nav,       LBR LHM LHI L1,  &mc_gcs_nav,            ALPHA1_LAYERS VIM_LAYERS)
         COMBO(cd_cag_nav,       LHR LHM LBI L1,  &mc_cag_nav,            ALPHA1_LAYERS VIM_LAYERS)
@@ -155,11 +155,11 @@
         COMBO(cb_pipev,         RBI RBM,         &kp PIPE,               NUM_LAYERS)
 
         COMBO(cb_braces_new,    LTR LTM,         &mc_braces_new,         NUM_LAYERS)
-        COMBO(cb_pars,          LHR LHM,         &th_pars 0 0,           NUM_LAYERS)
-        COMBO(cb_brackets,      LBR LBM,         &lt_brackets NAV 0,     NUM_LAYERS)
-        COMBO(cb_enddoent,      LTM LTI,         &mc_end_do_ent,         NUM_LAYERS)
-        COMBO(cb_and,           LHI LHM,         &th_and 0 0,            NUM_LAYERS)
-        COMBO(cb_or,            LBI LBM,         &th_or 0 0,             NUM_LAYERS)
+        COMBO(cb_braces,        LTM LTI,         &th_braces 0 0,         NUM_LAYERS)
+        COMBO(cb_pars,          LHM LHI,         &th_pars 0 0,           NUM_LAYERS)
+        COMBO(cb_brackets,      LBM LBI,         &th_brackets 0 0,       NUM_LAYERS)
+        COMBO(cb_and,           LHR LHM,         &th_and 0 0,            NUM_LAYERS)
+        COMBO(cb_or,            LBR LBM,         &th_or 0 0,             NUM_LAYERS)
 
         COMBO(cb_eu,            LTR LTM LTI,     &th_eur 0 0,            NUM_LAYERS)
         COMBO(cb_br,            LHR LHM LHI,     &th_br 0 0,             NUM_LAYERS)
@@ -174,6 +174,7 @@
         COMBO(cb_hcurly,        LTM LTI,         &mc_hcurly,             SYM_LAYERS)
         COMBO(cb_dcurly,        LHM LHI,         &mc_dcurly,             SYM_LAYERS)
         COMBO(cb_forward,       LBM LBI,         &th_forward 0 0,        SYM_LAYERS)
+        COMBO(cb_enddoent,      LTR LTM LTI,     &mc_end_do_ent,         SYM_LAYERS)
         COMBO(cb_tdqo,          LHR LHM LHI,     &th_tdqo 0 0,           SYM_LAYERS)
         COMBO(cb_tbti,          LBR LBM LBI,     &th_tbti 0 0,           SYM_LAYERS)
         COMBO(cd_deg,           RTR RTM RTI,     &mc_deg,                SYM_LAYERS)
@@ -219,7 +220,6 @@
         COMBO(cb_enter_vim,     RTI RTM,         &vim_mode_on,           MACROS)
         COMBO(cb_leave_vim,     RTM RTR,         &vim_mode_off,          MACROS)
 
-        COMBO(cb_numbers_nav,   LBR LBM,         &mo NUM_CP,             NAV_LAYERS)
         COMBO(cd_ca,            LHR LHM,         &kp LC(LALT),           NAV_LAYERS)
 
         COMBO(cb_down_end,      RBI RBM,         &mc_down_end,           NAV_LAYERS)

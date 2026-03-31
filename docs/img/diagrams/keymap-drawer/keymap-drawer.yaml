@@ -149,18 +149,18 @@ layers:
     - { t: ▽ }
     - { t: ▽ }
   numbers:
-    - [{ t: "{", h: "⇥ {" }, { t: "}", h: "⇥ }" }, "\\", 7, 8, 9]
+    - [ "\\", { t: "{", h: "⇥ {" }, { t: "}", h: "⇥ }" }, 7, 8, 9]
     - [
         { t: ",", h: func },
+        "&",
         { t: "(", h: "⇥ (" },
         { t: ")", h: "⇥ )" },
-        "&",
         4,
         5,
         6,
         { t: "." },
       ]
-    - [{ t: "[", h: "→ [" }, { t: "]", h: "→ ]" }, "|", 1, 2, 3]
+    - [ "|", { t: "[", h: "→ [" }, { t: "]", h: "→ ]" }, 1, 2, 3]
     - { t: ▽ }
     - { t: ▽, type: held }
     - { t: $$mdi:keyboard-space$$, h: symbols }
@@ -901,7 +901,7 @@ combos:
     }
   - {
       p: [14, 15],
-      k: { t: "numbers", s: "auto-layer", h: "nav" },
+      k: { t: "numbers", s: "auto-layer" },
       w: 48,
       a: mid,
       layers: [alpha1, shifted1],
@@ -986,12 +986,12 @@ combos:
   - { p: [4, 22],  k: { t: "8" }, layers: [numbers], draw_separate: true }
   - { p: [5, 22],  k: { t: "9" }, layers: [numbers], draw_separate: true }
 
-  - { p: [0, 21],  k: { t: "{", h: "⇥ {" }, layers: [numbers], draw_separate: true }
-  - { p: [1, 21],  k: { t: "}", h: "⇥ }" }, layers: [numbers], draw_separate: true }
-  - { p: [7, 21],  k: { t: "(", h: "⇥ (" }, layers: [numbers], draw_separate: true }
-  - { p: [8, 21],  k: { t: ")", h: "⇥ )" }, layers: [numbers], draw_separate: true }
-  - { p: [14, 21], k: { t: "[", h: "⇥ [" }, layers: [numbers], draw_separate: true }
-  - { p: [15, 21], k: { t: "]", h: "⇥ ]" }, layers: [numbers], draw_separate: true }
+  - { p: [1, 21],  k: { t: "{", h: "⇥ {" }, layers: [numbers], draw_separate: true }
+  - { p: [2, 21],  k: { t: "}", h: "⇥ }" }, layers: [numbers], draw_separate: true }
+  - { p: [8, 21],  k: { t: "(", h: "⇥ (" }, layers: [numbers], draw_separate: true }
+  - { p: [9, 21],  k: { t: ")", h: "⇥ )" }, layers: [numbers], draw_separate: true }
+  - { p: [15, 21], k: { t: "[", h: "⇥ [" }, layers: [numbers], draw_separate: true }
+  - { p: [16, 21], k: { t: "]", h: "⇥ ]" }, layers: [numbers], draw_separate: true }
 
   - { p: [10, 23], k: { t: $$mdi:arrow-left$$,                           h: left  }, layers: [nav], draw_separate: true }
   - { p: [11, 23], k: { t: $$mdi:arrow-down$$,                           h: down  }, layers: [nav], draw_separate: true }
@@ -1001,29 +1001,30 @@ combos:
   - { p: [18, 23], k: { t: $$mdi:format-horizontal-align-left$$,         h: home  }, layers: [nav], draw_separate: true }
   - { p: [19, 23], k: { t: $$mdi:format-horizontal-align-right$$,        h: end   }, layers: [nav], draw_separate: true }
 
-  - { p: [0, 1],   k: "⇥{ ⏎", a: mid, layers: [numbers] }
-  - { p: [1, 2],   k: "⇥do ⏎", a: mid, layers: [numbers] }
+  - { p: [0, 1],   k: { t: "⇥{ ⏎" }, a: mid, layers: [numbers] }
+  - { p: [1, 2],   k: { t: "{}", h: "⇥ {}" }, a: mid, layers: [numbers] }
   - { p: [3, 4],   k: { t: "G", s: "vim" }, a: mid, layers: [numbers] }
-  - { p: [14, 15], k: { t: "[]", h: "nav" }, a: mid, layers: [numbers] }
+  - { p: [15, 16], k: { t: "[]", h: "⇥ []" }, a: mid, layers: [numbers] }
   - { p: [10, 11], k: { t: "j", s: "vim" }, a: mid, layers: [numbers] }
   - { p: [11, 12], k: { t: "k", s: "vim" }, a: mid, layers: [numbers] }
   - { p: [17, 18], k: { t: "|", s: "vim" }, a: mid, layers: [numbers] }
-  - { p: [7, 8], k: { t: "()", h: "⇥ ()" }, a: mid, layers: [numbers] }
-  - { p: [8, 9], k: { t: "&&", h: "→ &&" }, a: mid, layers: [numbers] }
-  - { p: [15, 16], k: { t: "||", h: "→ ||" }, a: mid, layers: [numbers] }
-  - { p: [0, 1, 2], k: { t: "€", h: "EUR" }, a: top, slide: -0.5, layers: [numbers] }
-  - { p: [7, 8, 9], k: { t: "R$", h: "BRL" }, a: bottom, slide: -0.5, layers: [numbers] }
-  - { p: [14, 15, 16], k: { t: "US$", h: "USD" }, a: bottom, slide: -0.5, layers: [numbers] }
+  - { p: [8, 9], k: { t: "()", h: "⇥ ()" }, a: mid, layers: [numbers] }
+  - { p: [7, 8], k: { t: "&&", h: "→ &&" }, a: mid, layers: [numbers] }
+  - { p: [14, 15], k: { t: "||", h: "→ ||" }, a: mid, layers: [numbers] }
+  - { p: [0, 1, 2], k: { t: "€", h: "EUR" }, a: top, slide: -1, layers: [numbers] }
+  - { p: [7, 8, 9], k: { t: "R$", h: "BRL" }, a: top, slide: -1, layers: [numbers] }
+  - { p: [14, 15, 16], k: { t: "US$", h: "USD" }, a: top, slide: -1, layers: [numbers] }
 
   - { p: [10, 11, 12], k: "⇥();", a: bottom, layers: [numbers] }
   - { p: [17, 18, 19], k: { t: "<>()", h: "⇥<>();" }, a: bottom, layers: [numbers] }
 
-  - { p: [3, 4, 5], k: "°", a: top, layers: [symbols], }
-  - { p: [10, 11, 12], k: "º", a: top, layers: [symbols], }
-  - { p: [17, 18, 19], k: "ª", a: top, layers: [symbols], }
-  - { p: [0, 1], k: { t: '=>', h: "→ =>" }, a: mid, layers: [symbols] }
+  - { p: [3, 4, 5], k: "°", a: top, layers: [symbols] }
+  - { p: [10, 11, 12], k: "º", a: top, layers: [symbols] }
+  - { p: [17, 18, 19], k: "ª", a: top, layers: [symbols] }
+  - { p: [0, 1], k: { t: "=>", h: "→ =>" }, a: mid, layers: [symbols] }
   - { p: [7, 8], k: { t: "->", h: "→ ->" }, a: mid, layers: [symbols] }
   - { p: [14, 15], k: { t: "<>", h: "→ <>" }, a: mid, layers: [symbols] }
+  - { p: [0, 1, 2], k: "⇥do ⏎", a: top, layers: [symbols] }
   - { p: [8, 9], k: "${", a: mid, layers: [symbols] }
   - { p: [1, 2], k: "#{", a: mid, layers: [symbols] }
   - { p: [7, 8, 9], k: '"""', a: top, layers: [symbols] }
@@ -1043,8 +1044,6 @@ combos:
   - { p: [17, 18], k: "F10", a: mid, layers: [func] }
   - { p: [18, 19], k: "F13", a: mid, layers: [func] }
 
-  - { p: [14, 15], k: { t: $$mdi:numeric$$, h: numbers }, a: mid, layers: [nav] }
-
   - { p: [3, 4], k: "↑⇥ ⌦", a: mid, layers: [nav] }
   - {
       p: [10, 11],
@@ -1059,6 +1058,7 @@ combos:
       layers: [nav],
     }
   - { p: [17, 18], k: "↓ ⇥", a: mid, layers: [nav] }
+
   - { p: [18, 19], k: { t: $$mdi:numeric$$, h: numbers }, a: mid, layers: [nav] }
 
   - { p: [3, 4], k: { s: enter, t: vim, h: mode }, a: mid, layers: [macros] }

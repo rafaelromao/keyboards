@@ -37,8 +37,6 @@
             bindings = <&macro_tap &to ALPHA1 &smart_num NUM>;
         };
 
-        LAYERTAP_TP(lt_num_word, &tc_num_word)
-
         smart_num_cp: smart_num_cp {
             compatible = "zmk,behavior-auto-layer";
             ignore-numbers;

@@ -68,6 +68,10 @@
         MACRO(mc_end_rbrc,            &kp END &kp SPACE &kp RBRC)
         TAPHOLD_TP(th_rbrc,           &mc_rbrc, &mc_end_rbrc)
 
+        MACRO(mc_braces,              &kp LBRC &kp RBRC)
+        MACRO(mc_end_braces,          &kp END &kp LBRC &kp RBRC)
+        TAPHOLD_TP(th_braces,         &mc_braces, &mc_end_braces)
+
         MACRO(mc_lpar,                &kp LPAR)
         MACRO(mc_end_lpar,            &kp END &kp LPAR)
         TAPHOLD_TP(th_lpar,           &mc_lpar, &mc_end_lpar)
@@ -89,7 +93,8 @@
         TAPHOLD_TP(th_rbkt,           &mc_rbkt, &mc_end_rbkt)
 
         MACRO(mc_brackets,            &kp LBKT &kp RBKT)
-        LAYERTAP_TP(lt_brackets,      &mc_brackets)
+        MACRO(mc_end_brackets,        &kp END &kp LBKT &kp RBKT)
+        TAPHOLD_TP(th_brackets,       &mc_brackets, &mc_end_brackets)
 
         MACRO(mc_deg,                 &kp LS(LA(N8)))
         LAYERTAP_TP(lt_deg,           &mc_deg)
