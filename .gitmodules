@@ -10,9 +10,6 @@
 [submodule "modules/rafaelromao/zmk"]
 	path = modules/rafaelromao/zmk
 	url = https://github.com/rafaelromao/zmk
-[submodule "modules/caksoylar/zmk"]
-	path = modules/caksoylar/zmk
-	url = git@github.com:caksoylar/zmk
 [submodule "modules/rafaelromao/zmk-dongle-display"]
 	path = modules/rafaelromao/zmk-dongle-display
 	url = git@github.com:rafaelromao/zmk-dongle-display
@@ -31,6 +28,3 @@
 [submodule "modules/ssbb/zmk-listeners"]
 	path = modules/ssbb/zmk-listeners
 	url = git@github.com:ssbb/zmk-listeners
-[submodule "modules/zmkfirmware/zmk"]
-	path = modules/zmkfirmware/zmk
-	url = git@github.com:zmkfirmware/zmk

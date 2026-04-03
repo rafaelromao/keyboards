@@ -24,6 +24,11 @@ build_diamond() {
     ./scripts/build.sh "rafaelromao/diamond" "cl" "LINUX" "$@"
 }
 
+build_diamond_dongle() {
+    echo "--- Building Diamond Dongle ---"
+    ./scripts/build.sh "rafaelromao/diamond" "cd" "LINUX" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
+}
+
 build_wired_diamond() {
     echo "--- Building Wired Diamond ---"
     ./scripts/build.sh "rafaelromao/wired_diamond" "l" "LINUX" "-b" "xiao_rp2040//zmk" "$@"
@@ -36,7 +41,7 @@ build_choc_diamond() {
 
 build_zen() {
     echo "--- Building Corneish Zen ---"
-    ./scripts/build.sh "lowprokb.ca/corneish-zen" "-b" "corneish_zen_left" "-o" "LINUX" "-z" "caksoylar/zmk" "-r" "caksoylar/zen-v1+v2" "$@"
+    ./scripts/build.sh "lowprokb.ca/corneish-zen" "-b" "corneish_zen_left//zmk" "-o" "LINUX" "$@"
 }
 
 build_zen_dongle() {
@@ -88,6 +93,7 @@ case "$KEYBOARD" in
         build_rommana "$@"
         build_wired_rommana "$@"
         build_diamond "$@"
+        build_diamond_dongle "$@"
         build_wired_diamond "$@"
         build_choc_diamond "$@"
         build_zen "$@"
@@ -103,6 +109,9 @@ case "$KEYBOARD" in
         ;;
     wired_rommana|wr)
         build_wired_rommana "$@"
+        ;;
+    diamond_dongle|dd)
+        build_diamond_dongle "$@"
         ;;
     diamond|d)
         build_diamond "$@"

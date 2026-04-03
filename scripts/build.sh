@@ -249,6 +249,8 @@ else
     ARTIFACT="${SHIELD:-$BOARD}-$OPERATING_SYSTEM"
 fi
 
+ARTIFACT="${ARTIFACT//\/\/zmk/}"
+
 # Build the project
 cd "$PROJECT_DIR/$ZMK_MODULE"
 
