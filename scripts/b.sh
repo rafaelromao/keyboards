@@ -12,65 +12,76 @@ build_reset() {
 build_rommana() {
     echo "--- Building Rommana ---"
     ./scripts/build.sh "mabroum/rommana" "cl" "$@"
+    if [[ "$complete" == "true" ]]; then
+        ./scripts/build.sh "mabroum/rommana" "pr" "$@"
+        ./scripts/build.sh "mabroum/rommana" "pl" "$@"
+        ./scripts/build.sh "mabroum/rommana" "cd" "$@"
+    fi
 }
 
 build_wired_rommana() {
     echo "--- Building Wired Rommana ---"
     ./scripts/build.sh "mabroum/wired_rommana" "l" "LINUX" "-b" "xiao_rp2040//zmk" "$@"
+    if [[ "$complete" == "true" ]]; then
+        ./scripts/build.sh "mabroum/wired_rommana" "r" "LINUX" "-b" "xiao_rp2040//zmk" "$@"
+    fi
 }
 
 build_diamond() {
     echo "--- Building Diamond ---"
     ./scripts/build.sh "rafaelromao/diamond" "cl" "LINUX" "$@"
-}
-
-build_diamond_dongle() {
-    echo "--- Building Diamond Dongle ---"
-    ./scripts/build.sh "rafaelromao/diamond" "cd" "LINUX" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
+    if [[ "$complete" == "true" ]]; then
+        ./scripts/build.sh "rafaelromao/diamond" "pr" "LINUX" "$@"
+        ./scripts/build.sh "rafaelromao/diamond" "pl" "LINUX" "$@"
+        ./scripts/build.sh "rafaelromao/diamond" "cd" "LINUX" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
+    fi
 }
 
 build_wired_diamond() {
     echo "--- Building Wired Diamond ---"
     ./scripts/build.sh "rafaelromao/wired_diamond" "l" "LINUX" "-b" "xiao_rp2040//zmk" "$@"
+    if [[ "$complete" == "true" ]]; then
+        ./scripts/build.sh "rafaelromao/wired_diamond" "r" "LINUX" "-b" "xiao_rp2040//zmk" "$@"
+    fi
 }
 
 build_choc_diamond() {
     echo "--- Building Choc Diamond ---"
-    ./scripts/build.sh "rafaelromao/choc_diamond" "cd" "LINUX" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
+    ./scripts/build.sh "rafaelromao/choc_diamond" "cl" "$@"
+    if [[ "$complete" == "true" ]]; then
+        ./scripts/build.sh "rafaelromao/choc_diamond" "pr" "$@"
+        ./scripts/build.sh "rafaelromao/choc_diamond" "pl" "$@"
+        ./scripts/build.sh "rafaelromao/choc_diamond" "cd" "LINUX" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
+    fi
 }
 
 build_zen() {
     echo "--- Building Corneish Zen ---"
     ./scripts/build.sh "lowprokb.ca/corneish-zen" "-b" "corneish_zen_left//zmk" "-o" "LINUX" "$@"
-}
-
-build_zen_dongle() {
-    echo "--- Building Corneish Zen Dongle ---"
-    ./scripts/build.sh "lowprokb.ca/corneish-zen-with-dongle" "corneish_zen_dongle" "LINUX" "$@"
+    if [[ "$complete" == "true" ]]; then
+        ./scripts/build.sh "lowprokb.ca/corneish-zen" "-b" "corneish_zen_right//zmk" "-o" "LINUX" "$@"
+        ./scripts/build.sh "lowprokb.ca/corneish-zen-with-dongle" "corneish_zen_dongle" "LINUX" "$@"
+        ./scripts/build.sh "lowprokb.ca/corneish-zen-with-dongle" "corneish_zen_v2_left" "LINUX" "$@"
+        ./scripts/build.sh "lowprokb.ca/corneish-zen-with-dongle" "corneish_zen_v2_right" "LINUX" "$@"
+    fi
 }
 
 build_dilemma() {
     echo "--- Building Dilemma ---"
-    ./scripts/build.sh "bastardkb/dilemma" "l" "LINUX" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
+    ./scripts/build.sh "bastardkb/dilemma" "cl" "LINUX" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
+    if [[ "$complete" == "true" ]]; then
+        ./scripts/build.sh "bastardkb/dilemma" "pr" "LINUX" "$@"
+        ./scripts/build.sh "bastardkb/dilemma" "pl" "LINUX" "$@"
+        ./scripts/build.sh "bastardkb/dilemma" "cd" "LINUX" "$@"
+    fi
 }
-
-build_dilemma_right() {
-    echo "--- Building Dilemma Right Side ---"
-    ./scripts/build.sh "bastardkb/dilemma" "r" "LINUX" "$@"
-}
-
-# Building Corneish Zen peripherals
-# build lowprokb.ca/corneish-zen -b corneish_zen_v2_left -o LINUX -z caksoylar/zmk -r caksoylar/zen-v1+v2
-# build lowprokb.ca/corneish-zen-with-dongle -b corneish_zen_v2_left -o LINUX -z caksoylar/zmk -r caksoylar/zen-v1+v2
-# build lowprokb.ca/corneish-zen-with-dongle -b corneish_zen_v2_right -o LINUX -z caksoylar/zmk -r caksoylar/zen-v1+v2
-#
-# Building Dilemma peripherals
-# build bastardkb/dilemma r LINUX -m petejohanson/cirque-input-module
 
 # --- Main Script ---
 
-if [[ $# -lt 1 || "$1" == "-h" || "$1" == "--help" ]]; then
-    echo "Usage: $(basename "$0") <keyboard> [build.sh options]"
+complete=false
+
+if [[ -z "${1:-}" || "${1:-}" == "-h" || "${1:-}" == "--help" ]]; then
+    echo "Usage: $(basename "$0") <keyboard> [-c|--complete] [build.sh options]"
     echo
     echo "This script builds the firmware for a given keyboard, calling the underlying"
     echo "build.sh script with the correct parameters."
@@ -80,12 +91,19 @@ if [[ $# -lt 1 || "$1" == "-h" || "$1" == "--help" ]]; then
     echo
     echo "Examples:"
     echo "  $(basename "$0") rommana"
-    echo "  $(basename "$0") all -v"
+    echo "  $(basename "$0") rommana -c"
+    echo "  $(basename "$0") rommana -c -v"
     exit 1
 fi
 
-KEYBOARD="$1"
-shift # The rest of the arguments are passed to build.sh
+if [[ "${2:-}" == "-c" || "${2:-}" == "--complete" ]]; then
+    complete=true
+    KEYBOARD="$1"
+    shift 2
+else
+    KEYBOARD="$1"
+    shift 1
+fi
 
 case "$KEYBOARD" in
     all|a)
@@ -93,13 +111,10 @@ case "$KEYBOARD" in
         build_rommana "$@"
         build_wired_rommana "$@"
         build_diamond "$@"
-        build_diamond_dongle "$@"
         build_wired_diamond "$@"
         build_choc_diamond "$@"
         build_zen "$@"
-        build_zen_dongle "$@"
         build_dilemma "$@"
-        build_dilemma_right "$@"
         ;;
     rommana|s)
         build_reset "$@"
@@ -110,9 +125,6 @@ case "$KEYBOARD" in
     wired_rommana|wr)
         build_wired_rommana "$@"
         ;;
-    diamond_dongle|dd)
-        build_diamond_dongle "$@"
-        ;;
     diamond|d)
         build_diamond "$@"
         ;;
@@ -122,17 +134,11 @@ case "$KEYBOARD" in
     choc_diamond|cd|c)
         build_choc_diamond "$@"
         ;;
-    zen_dongle|zd)
-        build_zen_dongle "$@"
-        ;;
     zen|z)
         build_zen "$@"
         ;;
     dilemma|m)
         build_dilemma "$@"
-        ;;
-    dilemma_right|mr)
-        build_dilemma_right "$@"
         ;;
     *)
         echo "Unknown Keyboard: '$KEYBOARD'"

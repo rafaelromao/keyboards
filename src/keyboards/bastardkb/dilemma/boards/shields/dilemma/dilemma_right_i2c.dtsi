@@ -4,8 +4,6 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <input/processors.dtsi>
-#include <dt-bindings/zmk/input_transform.h>
 #include "dilemma.dtsi"
 
 // Configure custom i2c for the Right side
@@ -65,14 +63,3 @@ cirque_pinnacle_i2c: &i2c0 {
 &glidepoint_split {
 	device = <&glidepoint>;
 };
-
-// Cirque Trackpad, if the Right side is central, comment otherwise
-
-// / {
-// 	glidepoint_listener: glidepoint_listener {
-// 		compatible = "zmk,input-listener";
-// 		status = "okay";
-// 		device = <&glidepoint>;
-//         input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 3 2>;
-// 	};
-// };

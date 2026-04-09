@@ -5,6 +5,7 @@
  */
 
 #include "dilemma.dtsi"
+#include "dilemma_split_input.dtsi"
 #include "dilemma_right_i2c.dtsi"
 
 &default_transform {

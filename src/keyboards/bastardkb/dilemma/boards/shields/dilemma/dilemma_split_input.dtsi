@@ -1,0 +1,13 @@
+// Define the split input (only applicable to those halves that must know about the cirque: the right and the central (left or dongle))
+
+/ {
+    split_inputs {
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        glidepoint_split: glidepoint_split@0 {
+            compatible = "zmk,input-split";
+            reg = <0>;
+        };
+    };
+};

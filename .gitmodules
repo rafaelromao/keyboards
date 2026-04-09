@@ -28,3 +28,6 @@
 [submodule "modules/ssbb/zmk-listeners"]
 	path = modules/ssbb/zmk-listeners
 	url = git@github.com:ssbb/zmk-listeners
+[submodule "modules/zmkfirmware/zmk"]
+	path = modules/zmkfirmware/zmk
+	url = git@github.com:zmkfirmware/zmk

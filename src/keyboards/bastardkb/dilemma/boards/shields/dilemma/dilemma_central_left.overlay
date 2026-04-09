@@ -5,6 +5,8 @@
  */
 
 #include "dilemma.dtsi"
+#include "dilemma_split_input.dtsi"
+#include "dilemma_glidepoint_listener.dtsi"
 #include "dilemma_left_i2c.dtsi"
 
 &default_kscan {
