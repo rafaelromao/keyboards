@@ -1011,22 +1011,22 @@ combos:
   - { p: [8, 9], k: { t: "()", h: "⇥ ()" }, a: mid, layers: [numbers] }
   - { p: [7, 8], k: { t: "&&", h: "→ &&" }, a: mid, layers: [numbers] }
   - { p: [14, 15], k: { t: "||", h: "→ ||" }, a: mid, layers: [numbers] }
-  - { p: [0, 1, 2], k: { t: "€", h: "EUR" }, a: top, slide: -1, layers: [numbers] }
-  - { p: [7, 8, 9], k: { t: "R$", h: "BRL" }, a: top, slide: -1, layers: [numbers] }
-  - { p: [14, 15, 16], k: { t: "US$", h: "USD" }, a: top, slide: -1, layers: [numbers] }
+  - { p: [0, 1, 2],    k: "⇥do ⏎", a: top, slide: -1, layers: [numbers] }
+  - { p: [7, 8, 9],    k: { t: "⇥();", h: "⇥();⏎" }, a: top, slide: -1, layers: [numbers] }
+  - { p: [14, 15, 16], k: { t: "<>()", h: "⇥<>();" }, a: top, slide: -1, layers: [numbers] }
 
-  - { p: [10, 11, 12], k: "⇥();", a: bottom, layers: [numbers] }
-  - { p: [17, 18, 19], k: { t: "<>()", h: "⇥<>();" }, a: bottom, layers: [numbers] }
+  - { p: [10, 11, 12], k: { t: "º", h: "ª" }, a: top, layers: [numbers] }
+  - { p: [17, 18, 19], k: "°", a: top, layers: [numbers] }
 
-  - { p: [3, 4, 5], k: "°", a: top, layers: [symbols] }
-  - { p: [10, 11, 12], k: "º", a: top, layers: [symbols] }
-  - { p: [17, 18, 19], k: "ª", a: top, layers: [symbols] }
+  - { p: [3, 4, 5],    k: { t: "€",   h: "EUR" }, a: top, layers: [symbols] }
+  - { p: [10, 11, 12], k: { t: "R$",  h: "BRL" }, a: top, layers: [symbols] }
+  - { p: [17, 18, 19], k: { t: "US$", h: "USD" }, a: top, layers: [symbols] }
   - { p: [0, 1], k: { t: "=>", h: "→ =>" }, a: mid, layers: [symbols] }
   - { p: [7, 8], k: { t: "->", h: "→ ->" }, a: mid, layers: [symbols] }
   - { p: [14, 15], k: { t: "<>", h: "→ <>" }, a: mid, layers: [symbols] }
-  - { p: [0, 1, 2], k: "⇥do ⏎", a: top, layers: [symbols] }
   - { p: [8, 9], k: "${", a: mid, layers: [symbols] }
   - { p: [1, 2], k: "#{", a: mid, layers: [symbols] }
+  - { p: [0, 1, 2],    k: { t: '\"', h: "\\'" }, a: top, layers: [symbols] }
   - { p: [7, 8, 9], k: '"""', a: top, layers: [symbols] }
   - { p: [15, 16], k: { t: "|>", h: "⇥ ⏎ |>" }, a: mid, layers: [symbols] }
   - { p: [14, 15, 16], k: "```", a: top, layers: [symbols] }

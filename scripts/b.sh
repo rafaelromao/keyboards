@@ -29,11 +29,11 @@ build_wired_rommana() {
 
 build_diamond() {
     echo "--- Building Diamond ---"
-    ./scripts/build.sh "rafaelromao/diamond" "cl" "LINUX" "$@"
+    ./scripts/build.sh "rafaelromao/diamond" "cd" "LINUX" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
     if [[ "$complete" == "true" ]]; then
         ./scripts/build.sh "rafaelromao/diamond" "pr" "LINUX" "$@"
         ./scripts/build.sh "rafaelromao/diamond" "pl" "LINUX" "$@"
-        ./scripts/build.sh "rafaelromao/diamond" "cd" "LINUX" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
+        ./scripts/build.sh "rafaelromao/diamond" "cl" "LINUX" "$@"
     fi
 }
 
