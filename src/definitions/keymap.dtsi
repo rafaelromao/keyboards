@@ -16,7 +16,7 @@
                      bindings = <
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp SEMICOLON
    &lt SHORTS D        &mt LCTL N          &mt LALT S          &mt LSFT T          &kp W               &kp Z               &mt LSFT R          &mt LALT A          &mt LCTL E          &lt SHORTS I
-   &kp Y               &mt LGUI F          &mt LGUI C          &mt LGUI P          &kp V               &kp J               &ht_magic LGUI 0    &th_comma 0 0       &th_dot 0 0         &kp SLASH
+   &kp Y               &mt LS(LGUI) F      &mt LS(LGUI) C      &mt LGUI P          &kp V               &kp J               &ht_magic LGUI 0    &th_comma 0 0       &th_dot 0 0         &kp SLASH
                                            &mkp RCLK           &ht_repeat NAV 0    &ltn_num_spc 0 0    &msl_sym_a2 0 0     &ht_shift MEDIA 0   &mkp LCLK
                         >;
                 };
@@ -48,7 +48,7 @@
                      bindings = <
    &none               &kp B               &kp E               &kp W               &none               &none               &kp G               &mc_o_vim           &kp U               &none
    &lt_q_vim SHORTS 0  &mt LCTL N          &mt_s_vim LALT 0    &mt_r_vim LSFT 0    &none               &none               &mt LSFT H          &mt LALT J          &mt LCTL K          &lt SHORTS L
-   &none               &mt LGUI F          &mt_c_vim LGUI 0    &mt LGUI T          &none               &none               &mt_i_vim LGUI 0    &mc_a_vim           &kp DOT             &none
+   &none               &mt LS(LGUI) F     &mt_c_vim LS(LGUI) 0 &mt LGUI T          &none               &none               &mt_i_vim LGUI 0    &mc_a_vim           &kp DOT             &none
                                            &none               &ht_repeat NAV 0    &lt_lead_vim NUM 0  &msl_sym_a2 0 0     &ht_shift MEDIA 0   &none
                         >;
                 };
@@ -98,7 +98,7 @@
                      bindings = <
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp SEMICOLON
    &lt SHORTS D        &mt LCTL N          &mt LALT S          &mt LSFT T          &kp W               &kp Z               &mt LSFT R          &mt LALT A          &mt LCTL E          &lt SHORTS I
-   &kp Y               &mt LGUI F          &mt LGUI C          &mt LGUI P          &kp V               &kp J               &ht_magic LGUI 0    &th_comma 0 0       &th_dot 0 0         &kp SLASH
+   &kp Y               &mt LS(LGUI) F      &mt LS(LGUI) C      &mt LGUI P          &kp V               &kp J               &ht_magic LGUI 0    &th_comma 0 0       &th_dot 0 0         &kp SLASH
                                            &mkp RCLK           &ht_repeat NAV 0    &ltn_num_spc 0 0    &msl_sym_a2 0 0     &ht_sft_vim MEDIA 0 &mkp LCLK
                         >;
                 };
@@ -119,7 +119,7 @@
                      bindings = <
    &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &trans
    &lt SHORTS RS(D)    &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt LSFT RS(R)      &mt LALT RS(A)      &mt LCTL RS(E)      &lt SHORTS RS(I) 
-   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma 0 0       &th_dot 0 0         &trans
+   &mc_qu_c            &mt LS(LGUI) RS(F)  &mt LS(LGUI) RS(C)  &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma 0 0       &th_dot 0 0         &trans
                                            &trans              &trans              &msk_spc NUM 0      &msl_case2 SYM 0    &lt_cancel MEDIA 0  &trans
                         >;
                 };
@@ -128,7 +128,7 @@
                      bindings = <
    &kp RS(Q)           &kp RS(B)           &kp RS(M)           &kp RS(G)           &kp RS(K)           &kp RS(X)           &kp RS(L)           &kp RS(O)           &kp RS(U)           &trans
    &lt SHORTS RS(D)    &mt LCTL RS(N)      &mt LALT RS(S)      &mt LSFT RS(T)      &kp RS(W)           &kp RS(Z)           &mt LSFT RS(R)      &mt LALT RS(A)      &mt LCTL RS(E)      &lt SHORTS RS(I) 
-   &mc_qu_c            &mt LGUI RS(F)      &mt LGUI RS(C)      &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma 0 0       &th_dot 0 0         &trans
+   &mc_qu_c            &mt LS(LGUI) RS(F)  &mt LS(LGUI) RS(C)  &mt LGUI RS(P)      &kp RS(V)           &kp RS(J)           &ht_magic_c LGUI 0  &th_comma 0 0       &th_dot 0 0         &trans
                                            &trans              &trans              &trans              &msl_case2 SYM 0    &lt_cancel MEDIA 0  &trans
                                            
                         >;
@@ -168,7 +168,7 @@
                      bindings = <
    &kp LS(Q)           &kp LS(B)           &kp LS(M)           &kp LS(G)           &kp LS(K)           &kp LS(X)           &kp LS(L)           &kp LS(O)           &kp LS(U)           &trans
    &kp LS(D)           &mt LCTL LS(N)      &mt LALT LS(S)      &mt LSFT LS(T)      &kp LS(W)           &kp LS(Z)           &mt LSFT LS(R)      &mt LALT LS(A)      &mt LCTL LS(E)      &kp LS(I) 
-   &kp LS(Y)           &mt LGUI LS(F)      &mt LGUI LS(C)      &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c LGUI 0  &th_comma 0 0       &th_dot 0 0         &trans
+   &kp LS(Y)           &mt LS(LGUI) LS(F)  &mt LS(LGUI) LS(C)  &mt LGUI LS(P)      &kp LS(V)           &kp LS(J)           &ht_magic_c LGUI 0  &th_comma 0 0       &th_dot 0 0         &trans
                                            &trans              &trans              &trans              &lt_sft_a2 SYM_CP 0 &trans              &trans
                         >;
                 };
@@ -244,7 +244,7 @@
                      bindings = <
    &none               &mc_swapper         &mc_tabs            &mc_launcher        &none               &none               &kp TAB             &lm_ent_vim         &lm_esc_vim         &none
    &lt_system TEXT 0   &mod_num LCTL LCTL  &mod_num LALT LALT  &mod_num LSFT LSFT  &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
-   &none               &mod_num LGUI LGUI  &mod_num LGUI LGUI  &mod_num LGUI LGUI  &none               &none               &kp DEL             &kp HOME            &kp END             &none 
+   &none       &mod_num LS(LGUI) LS(LGUI)  &mod_num LS(LGUI) LS(LGUI)  &mod_num LGUI LGUI  &none       &none               &kp DEL             &kp HOME            &kp END             &none 
                                            &none               &trans              &mo NUM_CP          &hlt SYM_CP SPACE   &lt MEDIA INS       &none 
                         >;
                 };
@@ -282,7 +282,7 @@
                      bindings = <
    &none               &mc_swapper         &mc_tabs            &mc_launcher        &none               &none               &kp TAB             &lm_ent_vim         &lm_esc_vim        &none
    &mc_system          &kp LCTL            &kp LALT            &kp LSFT            &none               &none               &kp LEFT            &kp DOWN            &kp UP             &kp RIGHT
-   &none               &kp LGUI            &kp LGUI            &kp LGUI            &none               &none               &kp DEL             &kp HOME            &kp END            &none 
+   &none               &kp LS(LGUI)        &kp LS(LGUI)        &kp LGUI            &none               &none               &kp DEL             &kp HOME            &kp END            &none 
                                            &none               &trans              &trans              &trans              &kp INS             &none 
                         >;
                 };
@@ -292,7 +292,7 @@
                      bindings = <
    &none               &select_home        &select_word        &select_line        &trans              &trans              &kp TAB             &lm_ent_vim         &lm_esc_vim        &none
    &none               &kp LCTL            &kp LALT            &kp LSFT            &trans              &trans              &mc_prev_word       &kp DOWN            &kp UP             &mc_next_word
-   &none               &kp LGUI            &kp LGUI            &kp LGUI            &trans              &trans              &mc_del_word        &kp HOME            &kp END            &none 
+   &none               &kp LS(LGUI)        &kp LS(LGUI)        &kp LGUI            &trans              &trans              &mc_del_word        &kp HOME            &kp END            &none 
                                            &none               &none               &none               &none               &none               &none 
                         >;
                 };
@@ -301,7 +301,7 @@
                      bindings = <
    &none               &kp F13             &kp F14             &kp F15             &none               &none               &kp F7              &kp F8              &kp F9             &none 
    &none               &hsk LCTL LCTL      &hsk LALT LALT      &hsk LSFT LSFT      &none               &none               &kp F4              &kp F5              &kp F6             &kp F12      
-   &none               &hsk LGUI LGUI      &hsk LGUI LGUI      &hsk LGUI LGUI      &none               &none               &kp F1              &kp F2              &kp F3             &none
+   &none   &hsk LS(LGUI) LS(LGUI)      &hsk LS(LGUI) LS(LGUI)  &hsk LGUI LGUI      &none               &none               &kp F1              &kp F2              &kp F3             &none
                                            &none               &none               &none               &kp F10             &kp F11             &none
                         >;
                 };

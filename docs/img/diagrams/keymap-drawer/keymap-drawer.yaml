@@ -14,8 +14,8 @@ layers:
         { t: i, h: shortcuts },
       ]
     - [
-        { h: $$mdi:apple-keyboard-command$$, t: f },
-        { t: c, h: $$mdi:apple-keyboard-command$$ },
+        { h: "$$shift_command$$", t: f },
+        { h: "$$shift_command$$", t: c },
         { h: $$mdi:apple-keyboard-command$$, t: p },
         { h: $$mdi:apple-keyboard-command$$, t: "h|v", s: magic },
         { t: ",", h: "→ ,"  },
@@ -60,12 +60,12 @@ layers:
         { t: I, h: shortcuts, type: ghost },
       ]
     - [
-        { h: $$mdi:apple-keyboard-command$$, t: F, type: ghost },
-        { t: C, h: $$mdi:apple-keyboard-command$$, type: ghost },
+        { h: "$$shift_command$$", t: F, type: ghost },
+        { h: "$$shift_command$$", t: C, type: ghost },
         { h: $$mdi:apple-keyboard-command$$, t: P, type: ghost },
         { h: $$mdi:apple-keyboard-command$$, t: "H|V", s: magic, type: ghost },
-        { t: ",", h: "→ ,", type: ghost },
-        { t: ., h: "→ .", type: ghost },
+        { t: ",", h: "→ ,"  },
+        { t: ., h: "→ ." },
       ]
     - { t: CAPS LINE, h: nav, type: ghost }
     - { t: $$mdi:keyboard-space$$, h: numbers, type: ghost }
@@ -137,8 +137,8 @@ layers:
         { h: shortcuts, t: l, s: right},
       ]
     - [
-        { h: $$mdi:apple-keyboard-command$$, t: f, s: find },
-        { h: $$mdi:apple-keyboard-command$$, t: c, s: change },
+        { h: "$$shift_command$$", t: f, s: find },
+        { h: "$$shift_command$$", t: c, s: change },
         { h: $$mdi:apple-keyboard-command$$, t: t, s: till},
         { h: $$mdi:apple-keyboard-command$$, t: i, s: insert },
         { t: a, s: append },
@@ -278,8 +278,8 @@ layers:
         { t: $$mdi:arrow-right$$, s: right },
       ]
     - [
-        { s: sticky, t: $$mdi:numeric$$, h: $$mdi:apple-keyboard-command$$ },
-        { s: sticky, t: $$mdi:numeric$$, h: $$mdi:apple-keyboard-command$$ },
+        { s: sticky, t: $$mdi:numeric$$, h: "$$shift_command$$" },
+        { s: sticky, t: $$mdi:numeric$$, h: "$$shift_command$$" },
         { s: sticky, t: $$mdi:numeric$$, h: $$mdi:apple-keyboard-command$$ },
         { t: $$mdi:backspace-reverse-outline$$, s: del },
         { t: $$mdi:format-horizontal-align-left$$, s: home },
@@ -340,8 +340,8 @@ layers:
         { t: → ⓦ , s: word, type: held alternate },
       ]
     - [
-        { t: $$mdi:apple-keyboard-command$$},
-        { t: $$mdi:apple-keyboard-command$$},
+        { t: "$$shift_command$$" },
+        { t: "$$shift_command$$" },
         { t: $$mdi:apple-keyboard-command$$},
         { t: ⌦ ⓦ, s: delete, h: word },
         { t: $$mdi:format-horizontal-align-left$$, s: home },
@@ -403,8 +403,8 @@ layers:
         "F12" 
       ]
     - [
-        { t: $$mdi:apple-keyboard-command$$, s: sticky},
-        { t: $$mdi:apple-keyboard-command$$, s: sticky},
+        { t: "$$shift_command$$", s: sticky },
+        { t: "$$shift_command$$", s: sticky },
         { t: $$mdi:apple-keyboard-command$$, s: sticky},
         "F1",
         "F2",
@@ -712,6 +712,37 @@ layers:
         { s: expand, h: vertical, t: $$mdi:arrow-up-bold-outline$$ },
       ]
     - type: held
+    - null
+    - null
+    - null
+  gui:
+    - [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+      ]
+    - [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ] 
+    - [
+        { h: $$mdi:apple-keyboard-shift$$ },
+        { h: $$mdi:apple-keyboard-shift$$ },
+        null,
+        null,
+        { h: $$mdi:apple-keyboard-shift$$ },
+        { h: $$mdi:apple-keyboard-shift$$ },
+      ]
+    - null
     - null
     - null
     - null
