@@ -38,7 +38,7 @@
    &none              &mc_meh_b            &mc_meh_m           &mc_meh_g           &none               &none               &mc_meh_l           &mc_meh_o           &mc_meh_u           &none    
    &mc_meh_d          &mc_meh_n            &mc_meh_s           &mc_meh_t           &none               &none               &mc_meh_r           &mc_meh_a           &mc_meh_e           &mc_meh_i
    &none              &mt_meh_f LGUI 0     &mt_meh_c LGUI 0    &mt_meh_p LGUI 0    &none               &none               &mt_meh_h LGUI 0    &mt_meh_comm LGUI 0 &mt_meh_dot LGUI 0  &none
-                                           &none               &msl_a1cp NAV 0     &hsk LGUI LGUI      &hsk LGUI LGUI      &msl_a1cp NAV 0     &none 
+                                           &none               &msl_a1cp NAV 0     &mt_meh_spc LGUI 0  &mt_meh_ent LGUI 0  &msl_a1cp NAV 0     &none 
                         >;
                 };
 

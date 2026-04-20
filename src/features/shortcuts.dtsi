@@ -173,6 +173,8 @@
 
         MODTAP_TP(mt_meh_comm,         &mc_meh_comma)
         MODTAP_TP(mt_meh_dot,          &mc_meh_dot)
+        MODTAP_TP(mt_meh_spc,          &mc_meh_space)
+        MODTAP_TP(mt_meh_ent,          &mc_meh_enter)
 
         sl_num: sl_num {
             compatible = "zmk,behavior-macro-one-param";
