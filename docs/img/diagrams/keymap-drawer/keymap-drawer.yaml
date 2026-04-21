@@ -206,14 +206,14 @@ layers:
         { t: $$mdi:poll$$, s: activities},
       ]
     - [
-        { type: held, t: $$mdi:ray-start-arrow$$, s: leader-key },
+        { type: held },
         { t: $$mdi:magnify-minus-outline$$, s: zoom -, h: toggles },
         { t: $$mdi:magnify-plus-outline$$, s: zoom +},
         { t: $$mdi:open-in-new$$, s: new },
-        { t: $$mdi:numeric$$, h: numbers, s: auto-layer },
+        { t: $$mdi:ray-start-arrow$$, s: leader-key },
         { t: $$mdi:docker$$, s: docker},
         { t: "$$mdi:emoticon-happy-outline$$", s: emojis, h: toggles },
-        { type: held alternate, t: $$mdi:ray-start-arrow$$, s: leader-key },
+        { type: held alternate },
       ]
     - [
         { t: $$mdi:close$$, s: close},
@@ -250,8 +250,8 @@ layers:
         { t: $$mdi:flash$$, s: "boot" },
         { t: def OS },
         { t: alt OS },
-        { t: vim },
         { t: mehs },
+        null,
         { t: $$mdi:flash$$, s: "boot" },
       ]
     - { t: CAPS LOCK }
@@ -544,7 +544,7 @@ layers:
         { s: previous, h: error, t: $$mdi:page-previous-outline$$ },
         { s: next, h: error, t: $$mdi:page-next-outline$$ },
       ]
-    - { h: nav, t: alpha1, s: sticky }
+    - { t: ▽ }
     - {
         h: $$mdi:apple-keyboard-command$$,
         s: ai chat,
@@ -555,7 +555,7 @@ layers:
         s: actions,
         t: $$mdi:gesture-tap$$
       }
-    - { h: nav, t: alpha1, s: sticky }
+    - { t: ▽ }
   coding-hyper:
     - [
         { s: select in, t: $$mdi:form-select$$ },
@@ -583,74 +583,10 @@ layers:
         { s: previous, h: bookmark, t: $$mdi:page-previous$$ },
         { s: next, h: bookmark, t: $$mdi:page-next$$ },
       ]
-    - { h: nav, t: alpha1, s: sticky }
+    - { t: ▽ }
     - null
     - null
-    - { h: nav, t: alpha1, s: sticky }
-  3d-design-meh:
-    - [
-        null,
-        null,
-        null,
-        { s: line, t: $$mdi:vector-line$$ },
-        { s: offset, t: $$mdi:tally-mark-2$$ },
-        { s: draft, t: $$mdi:angle-obtuse$$ },
-      ]
-    - [
-        null,
-        null,
-        null,
-        null,
-        { s: rectangle, t: $$mdi:rectangle-outline$$ },
-        { s: search, t: $$mdi:magnify$$ },
-        { s: extrude, t: $$mdi:cube-outline$$ },
-        { s: measure, t: $$mdi:ruler$$ },
-      ]
-    - [
-        null,
-        null,
-        null,
-        { s: hole, t: $$mdi:music-note-whole$$ },
-        { s: circle, t: $$mdi:circle-outline$$ },
-        { s: fillet, t: $$mdi:rounded-corner$$ },
-      ]
-    - null
-    - null
-    - {
-        h: $$mdi:apple-keyboard-command$$,
-      }
-    - { h: nav, t: alpha1, s: sticky }
-  3d-design-hyper:
-    - [
-        null,
-        null,
-        null,
-        { s: loft, t: $$mdi:bridge$$ },
-        { s: move, t: $$mdi:arrow-all$$ },
-        { s: colors, t: $$mdi:palette$$ },
-      ]
-    - [
-        null,
-        null,
-        null,
-        null,
-        { s: trim, t: $$mdi:box-cutter$$ },
-        { s: appearance, t: $$mdi:invert-colors$$ },
-        { s: press pull, t: $$mdi:cube$$ },
-        { s: sketch, h: dimensions, t: $$mdi:pencil-ruler$$ },
-      ]
-    - [
-        null,
-        null,
-        null,
-        { s: project, t: $$mdi:projector$$ },
-        { s: chamfer, t: $$mdi:triangle$$ },
-        { s: joint, t: $$mdi:set-all$$ },
-      ]
-    - null
-    - null
-    - null
-    - { h: nav, t: alpha1, s: sticky }
+    - { t: ▽ }
   desktop-management:
     - [
         null,
@@ -1097,15 +1033,3 @@ combos:
       k: { t: go to },
       layers: [coding-hyper],
     }
-  - { p: [11, 12], k: orbit, a: mid, w: 40, layers: [3d-design-meh] }
-  - {
-      p: [18, 19],
-      k: { t: "numbers", s: auto-layer },
-      a: mid,
-      w: 48,
-      layers: [3d-design-meh],
-    }
-  - { p: [4, 5], k: esc, a: mid, w: 40, layers: [3d-design-meh] }
-  - { p: [10, 11], k: pan, a: mid, w: 40, layers: [3d-design-meh] }
-  - { p: [3, 4], k: mode, a: mid, w: 40, layers: [3d-design-meh] }
-  - { p: [17, 18], k: show hide, a: mid, w: 40, layers: [3d-design-meh] }

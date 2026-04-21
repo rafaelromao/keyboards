@@ -10,32 +10,31 @@
 #define ALPHA1 0
 #define ALT_OS 1
 
-#define MEHS 2
+#define VIM_NORMAL 2
+#define VIM_VISUAL 3
+#define VIM_CHANGE 4
+#define VIM_LEADER 5
+#define VIM_INSERT 6
+#define VIM_REPLACE 7
+#define VIM_CMDLINE 8
 
-#define VIM_NORMAL 3
-#define VIM_VISUAL 4
-#define VIM_CHANGE 5
-#define VIM_LEADER 6
-#define VIM_INSERT 7
-#define VIM_REPLACE 8
-#define VIM_CMDLINE 9
+#define CASE_A1 9
+#define CPLK_A1 10
 
-#define CASE_A1 10
-#define CPLK_A1 11
+#define SHORTS 11
+#define TOGS 12
+#define MEHS 13
 
-#define ALPHA2 12
+#define ALPHA2 14
 
-#define NUM 13
-#define SYM 14
+#define NUM 15
+#define SYM 16
 
-#define SEN_CASE 15
-#define CCEDIL 16
-#define SFT_A2 17
-#define CASE_A2 18
-#define CASE_CCEDIL 19
-
-#define SHORTS 20
-#define TOGS 21
+#define SEN_CASE 17
+#define CCEDIL 18
+#define SFT_A2 19
+#define CASE_A2 20
+#define CASE_CCEDIL 21
 
 #define ALTREP2 22
 
