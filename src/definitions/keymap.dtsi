@@ -7,6 +7,8 @@
 
 #include "includes.h"
 
+#define SGUI LS(LGUI) 
+
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -37,7 +39,7 @@
                      bindings = <
    &none               &kp B               &kp E               &kp W               &none               &none               &kp G               &mc_o_vim           &kp U               &none
    &lt_q_vim SHORTS 0  &mt LCTL N          &mt_s_vim LALT 0    &mt_r_vim LSFT 0    &none               &none               &mt LSFT H          &mt LALT J          &mt LCTL K          &lt SHORTS L
-   &none               &mt LS(LGUI) F     &mt_c_vim LS(LGUI) 0 &mt LGUI T          &none               &none               &mt_i_vim LGUI 0    &mc_a_vim           &kp DOT             &none
+   &none               &mt LS(LGUI) F      &mt_c_vim SGUI 0    &mt LGUI T          &none               &none               &mt_i_vim LGUI 0    &mc_a_vim           &kp DOT             &none
                                            &none               &ht_repeat NAV 0    &lt_lead_vim NUM 0  &msl_sym_a2 0 0     &ht_shift MEDIA 0   &none
                         >;
                 };
@@ -248,7 +250,7 @@
                      bindings = <
    &none               &mc_swapper         &mc_tabs            &mc_launcher        &none               &none               &kp TAB             &lm_ent_vim         &lm_esc_vim         &none
    &lt_system TEXT 0   &mod_num LCTL LCTL  &mod_num LALT LALT  &mod_num LSFT LSFT  &none               &none               &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT
-   &none       &mod_num LS(LGUI) LS(LGUI)  &mod_num LS(LGUI) LS(LGUI)  &mod_num LGUI LGUI  &none       &none               &kp DEL             &kp HOME            &kp END             &none 
+   &none               &mod_num SGUI SGUI  &mod_num SGUI SGUI  &mod_num LGUI LGUI  &none               &none               &kp DEL             &kp HOME            &kp END             &none 
                                            &none               &trans              &mo NUM_CP          &hlt SYM_CP SPACE   &lt MEDIA INS       &none 
                         >;
                 };
@@ -305,7 +307,7 @@
                      bindings = <
    &none               &kp F13             &kp F14             &kp F15             &none               &none               &kp F7              &kp F8              &kp F9             &none 
    &none               &hsk LCTL LCTL      &hsk LALT LALT      &hsk LSFT LSFT      &none               &none               &kp F4              &kp F5              &kp F6             &kp F12      
-   &none   &hsk LS(LGUI) LS(LGUI)      &hsk LS(LGUI) LS(LGUI)  &hsk LGUI LGUI      &none               &none               &kp F1              &kp F2              &kp F3             &none
+   &none               &hsk SGUI SGUI      &hsk SGUI SGUI      &hsk LGUI LGUI      &none               &none               &kp F1              &kp F2              &kp F3             &none
                                            &none               &none               &none               &kp F10             &kp F11             &none
                         >;
                 };
