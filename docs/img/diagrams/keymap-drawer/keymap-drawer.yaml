@@ -371,18 +371,16 @@ layers:
         { t: "meh '" },
         { t: "meh \\" },
       ]
-    - { t: alpha1, s: "auto-layer", h: nav }
+    - { t: ▽ }
     - {
-        t: $$mdi:apple-keyboard-command$$,
-        s: sticky,
+        t: meh ␣,
         h: $$mdi:apple-keyboard-command$$,
       }
     - {
-        t: $$mdi:apple-keyboard-command$$,
-        s: sticky,
+        t: meh ↵,
         h: $$mdi:apple-keyboard-command$$,
       }
-    - { t: alpha1, s: "auto-layer", h: nav }
+    - { t: ▽ }
   func:
     - [
         "F13",
