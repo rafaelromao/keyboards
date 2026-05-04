@@ -100,8 +100,13 @@
 
         MACRO(mc_leader, &leader &to ALPHA1)
         
-        MACRO(mc_home_tab,  &kp HOME &kp TAB)
-        MACRO(mc_end_ent,   &kp END &kp ENTER)
+        MACRO(mc_tab,             &kp TAB)
+        MACRO(mc_shift_tab,       &kp LS(TAB))
+        MACRO(mc_home_tab,        &kp HOME &kp TAB)
+        TAPHOLD_TP(th_home_tab,   &mc_tab, &mc_home_tab)
+        TAPHOLD_TP(th_shift_tab,  &mc_tab, &mc_shift_tab)
+
+        MACRO(mc_end_ent,         &kp END &kp ENTER)
 
         // Common
 

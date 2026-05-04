@@ -294,8 +294,8 @@ layers:
         null,
         { t: $$mdi:mouse-left-click$$, s: left },
         { t: $$mdi:mouse-right-click$$, s: right },
-        { t: "⇤ ↹" },
-        { t: "⇥ ↵" },
+        { t: "↹", h: "⇧ ↹" },
+        { t: "↵", h: "⇥ ↵" },
         { t: "⎋" },
       ]
     - [
@@ -325,8 +325,8 @@ layers:
         { s: select, h: home, t: $$mdi:select-compare$$ },
         { s: select, h: word, t: $$mdi:select-compare$$ },
         { s: select, h: line, t: $$mdi:select-compare$$ },
-        { t: "↹", s: tab },
-        { t: $$mdi:keyboard-return$$, s: enter },
+        { s: tab, t: "↹", h: "⇤ ↹" },
+        { s: enter, t: "↵", h: "⇥ ↵" },
         { t: "⎋", s: esc },
       ]
     - [
