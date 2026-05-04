@@ -180,7 +180,7 @@ In the *symbols* layer, there are also combos to type the 3 most common currency
 
 [Home Row Mods](https://precondition.github.io/home-row-mods) are well known by most keyboard enthusiasts and are also available in this keymap. Their disposition is: Ctrl, Alt, and Shift in the home row, and Gui (Command / Super) in the bottom row index key, mirrored on the right side.
 
-To make combinations of Ctrl, Alt, and/or Shift with Gui easier, Gui is replicated for the middle and ring fingers on the left side.
+To make combinations of Ctrl, Alt, and/or Shift with Gui easier, Shift + Gui is placed in the middle and ring fingers on the left side.
 
 ### Meh and Hyper
 
@@ -316,18 +316,16 @@ Most of my keymap was designed to allow an easy workflow for programming, with l
 
 ### Brackets
 
-On the left side of my *numbers* layer, I have parentheses, square brackets, and curly braces, and there are many optimizations on how they can be used:
+On the left side of my *numbers* layer, I have parentheses, square brackets, and curly braces, and there are many optimizations on how they can be used, like:
 - Holding any of them will append it to the current line.
-- A combo of open and close curly braces will append the opening one and add a new row, which is used to add a new block of code.
-- A combo of open and close parenthesis or brackets will add both symbols in order.
-- Holding the combo for open and close parenthesis will append both symbols to the current line.
-- A combo with the index, middle, and ring fingers in the home row of the right side will append open and close parenthesis to the current line and add a new line.
+- There are combos for inserting and appending bracket pairs.
+- There is also a combo to append an open curly brace in the end of the line and them break the line.
 
 ### Semicolon
 
 Semicolon is extremely important in C-like languages, and it is available as a primary combo in the base layer, tapping both comma and dot at the same time.
 
-Holding these two keys will append it to the current line, which also works in the *numbers* layer. Also in the *numbers* layer, a combo with the 3 bottom row keys of the right side will append a semicolon and add a new line.
+Holding these two keys will append it to the current line, which also works in the *numbers* layer.
 
 ### Conditional Operators
 
