@@ -201,7 +201,7 @@ layers:
         { t: $$mdi:calculator$$, s: calc },
         { t: $$mdi:folder-open$$, s: files},
         { t: $$mdi:web$$, s: browser },
-        { t: $$mdi:chat-processing-outline$$, s: ai },
+        { t: $$mdi:chat-processing-outline$$, s: voxtype },
         { t: $$mdi:microsoft-visual-studio-code$$, s: editor },
         { t: $$mdi:poll$$, s: activities},
       ]
