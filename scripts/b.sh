@@ -39,9 +39,9 @@ build_diamond() {
 
 build_wired_diamond() {
     echo "--- Building Wired Diamond ---"
-    ./scripts/build.sh "rafaelromao/wired_diamond" "l" "LINUX" "-b" "xiao_rp2040//zmk" "$@"
+    ./scripts/build.sh "rafaelromao/wired_diamond" "l" "MACOS" "-b" "xiao_rp2040//zmk" "$@"
     if [[ "$complete" == "true" ]]; then
-        ./scripts/build.sh "rafaelromao/wired_diamond" "r" "LINUX" "-b" "xiao_rp2040//zmk" "$@"
+        ./scripts/build.sh "rafaelromao/wired_diamond" "r" "MACOS" "-b" "xiao_rp2040//zmk" "$@"
     fi
 }
 
