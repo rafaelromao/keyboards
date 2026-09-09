@@ -63,8 +63,10 @@ This keymap is implemented using ZMK, with the following external modules:
 - [Auto Layer](https://github.com/urob/zmk-auto-layer)
 - [Adaptive Key](https://github.com/urob/zmk-adaptive-key)
 - [Leader Key](https://github.com/urob/zmk-leader-key)
-- [Listeners](https://github.com/ssbb/zmk-listeners)
 - [Layer Morph](https://github.com/rafaelromao/zmk-layer-morph)
+- [Vim Mode](https://github.com/rafaelromao/zmk-vim-mode)
+
+[Vim Mode](https://github.com/rafaelromao/zmk-vim-mode) is my own project, and it has three parts: a ZMK module that keeps the vim layers in sync with the editor, a daemon that runs on the host, and a NeoVim plugin. The editor state travels to the keyboard as a small number encoded in the HID LED indicator report. See [VIM Mode](https://rafaelromao.github.io/keyboards/#vim-mode) for the details.
 
 ## Local Build
 

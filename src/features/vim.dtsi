@@ -20,25 +20,28 @@
      * them, so a stray lock keypress would otherwise change the vim state.
      *
      * The old num_lock listener that toggled vim mode lived here and has been
-     * removed for exactly that reason. Vim mode can still be entered by hand
-     * with the cb_vim_mode combo, &to VIM_NORMAL on the TOGGLES layer, or
-     * `zmk-vim-mode set legacy` from the host.
+     * removed for exactly that reason.
+     *
+     * Only what every path needs lives in this file. Everything that exists
+     * solely for legacy mode -- codes 4 and 7, the enter/leave combos and the
+     * Hyper+Esc / Meh+Esc notifications -- is in vim_legacy.dtsi.
      */
-    vim_sync {
+    vim_sync: vim_sync {
         compatible = "zmk,hid-indicator-code-listener";
         indicators = <HID_USAGE_LED_COMPOSE HID_USAGE_LED_KANA HID_USAGE_LED_SCROLL_LOCK>;
-        managed-layers = <VIM_NORMAL VIM_VISUAL VIM_CHANGE VIM_LEADER VIM_INSERT VIM_REPLACE VIM_CMDLINE>;
+        managed-layers = <VIM_NORMAL VIM_VISUAL VIM_CHANGE VIM_INSERT VIM_REPLACE VIM_CMDLINE>;
         off-delay-ms = <60>;
         local-guard-ms = <150>;
 
         normal        { code = <1>; layers = <VIM_NORMAL>; };
         insert        { code = <2>; layers = <VIM_INSERT>; };
         visual        { code = <3>; layers = <VIM_NORMAL VIM_VISUAL>; };
-        legacy        { code = <4>; bindings = <&vim_mode_on>; };
         cmdline       { code = <5>; layers = <VIM_CMDLINE>; };
         raw           { code = <6>; };
-        legacy_silent { code = <7>; layers = <VIM_NORMAL>; };
-        /* code 0 is implicit: every managed layer off */
+        /*
+         * code 0 is implicit: every managed layer off.
+         * codes 4 and 7 (legacy) are added to this node by vim_legacy.dtsi.
+         */
     };
 };
 
@@ -80,20 +83,12 @@
 
 / {
     vim {
-        VIM_MACRO(vim_reset_notify      , &vim_reset &kp LG(LC(LA(LS(ESC)))))
-        VIM_MACRO(vim_mode_off          , &vim_off &kp LC(LA(LS(ESC))))
-        
-        VIM_BINDING(vim_mode_on         , VIM_NORMAL VIM_VISUAL VIM_CHANGE VIM_LEADER VIM_INSERT VIM_REPLACE VIM_CMDLINE, &none, &vim_reset_notify)
-
-        VIM_MACRO(vim_off               , &tog_off VIM_NORMAL &tog_off VIM_CHANGE &tog_off VIM_VISUAL &tog_off VIM_INSERT &tog_off VIM_REPLACE &tog_off VIM_LEADER &tog_off VIM_CMDLINE)
+        VIM_MACRO(vim_off               , &tog_off VIM_NORMAL &tog_off VIM_CHANGE &tog_off VIM_VISUAL &tog_off VIM_INSERT &tog_off VIM_REPLACE &tog_off VIM_CMDLINE)
         VIM_MACRO(vim_reset             , &vim_off &tog_on VIM_NORMAL &kp ESC)
         VIM_MACRO(vim_normal            , &vim_off &tog_on VIM_NORMAL)
         VIM_MACRO(vim_insert            , &vim_off &tog_on VIM_INSERT)
         VIM_MACRO(vim_cmdline           , &vim_off &tog_on VIM_CMDLINE)
-        VIM_MACRO(vim_leader            , &vim_off &tog_on VIM_LEADER)
         VIM_MACRO(vim_replace           , &ntsl VIM_REPLACE)
-
-        VIM_MACRO(vim_space_lead        , &vim_leader &kp SPACE)
 
         VIM_MACRO(vim_slash             , &vim_cmdline &kp SLASH)
         VIM_BINDING(lm_slash_vim        , VIM_NORMAL VIM_VISUAL VIM_CHANGE, &vim_slash, &kp SLASH)
@@ -105,7 +100,7 @@
         VIM_BINDING(lm_ent_vim          , VIM_CMDLINE, &vim_enter, &kp ENTER)
 
         VIM_MACRO(vim_esc               , &vim_normal &kp ESC)
-        VIM_BINDING(lm_esc_vim          , VIM_VISUAL VIM_CHANGE VIM_LEADER VIM_INSERT VIM_REPLACE VIM_CMDLINE, &vim_esc, &kp ESC)
+        VIM_BINDING(lm_esc_vim          , VIM_VISUAL VIM_CHANGE VIM_INSERT VIM_REPLACE VIM_CMDLINE, &vim_esc, &kp ESC)
 
         VIM_MACRO(vim_o                 , &kp O &tog_off VIM_NORMAL &tog_off VIM_VISUAL &tog_on VIM_INSERT)
         VIM_MACRO(vim_a                 , &kp A &tog_off VIM_NORMAL &tog_off VIM_VISUAL &tog_on VIM_INSERT)

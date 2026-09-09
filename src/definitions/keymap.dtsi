@@ -40,7 +40,7 @@
    &none               &kp B               &kp E               &kp W               &none               &none               &kp G               &mc_o_vim           &kp U               &none
    &lt_q_vim SHORTS 0  &mt LCTL N          &mt_s_vim LALT 0    &mt_r_vim LSFT 0    &none               &none               &mt LSFT H          &mt LALT J          &mt LCTL K          &lt SHORTS L
    &none               &mt LS(LGUI) F      &mt_c_vim SGUI 0    &mt LGUI T          &none               &none               &mt_i_vim LGUI 0    &mc_a_vim           &kp DOT             &none
-                                           &none               &ht_repeat NAV 0    &lt_lead_vim NUM 0  &msl_sym_a2 0 0     &ht_shift MEDIA 0   &none
+                                           &none               &ht_repeat NAV 0    &lt_spc_vim NUM 0   &msl_sym_a2 0 0     &ht_shift MEDIA 0   &none
                         >;
                 };
 
@@ -60,16 +60,6 @@
    &none               &kp B               &kp W               &mc_ce_vim          &none               &none               &none               &none               &none               &none
    &none               &none               &none               &none               &none               &none               &kp H               &kp J               &kp K               &kp L
    &none               &kp F               &kp C               &kp T               &none               &none               &mc_ci_vim          &mc_ca_vim          &none               &none
-                                           &trans              &trans              &trans              &trans              &trans              &trans
-                        >;
-                };
-
-                vim_leader_layer {
-                     display-name = "LEADER";
-                     bindings = <
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
                                            &trans              &trans              &trans              &trans              &trans              &trans
                         >;
                 };

@@ -359,13 +359,17 @@ Function keys are commonly used for debugging, and they are available in a dedic
 
 I have used VIM since 2017, and it is an essential plugin for all my text editors.
 
-#### VIM Mode
+### VIM Mode
 
-After a few years remapping my VIM bindings to work well with my alpha layout, I've decided to implement a VIM Mode into my keymap. It is composed by a set of layers that mimic the vim modes in the keyboard, so that it changes between VIM optimized layers, for normal and visual modes, for example, and typing layers, for insert and replace modes, for example.
+After a few years remapping my VIM bindings to work well with my alpha layout, I've decided to implement a VIM Mode into my keymap. It is composed by a set of layers that mimic the vim modes in the keyboard, so that it changes between VIM optimized layers, for normal and visual modes, for example, and typing layers, for insert mode.
 
-There is also a listener that activates or deactivates this VIM Mode when NUM_LOCK is toggled on or off, respectively.
+The host tells the keyboard which mode I am in. It encodes the editor state as a small number and sends it inside the HID LED indicator report, using the *compose*, *kana* and *scroll lock* bits, which no operating system drives on its own. A listener in my keymap decodes that number and activates the matching layers. NUM LOCK and CAPS LOCK are deliberately left alone, because the operating system owns them, and a stray lock keypress would otherwise change my vim state.
 
-In the host side, I have scripts that toggle NUM_LOCK when I enter or leave VIM to allow a seamless integration between VIM and my keyboard VIM Mode.
+This is done by [zmk-vim-mode](https://github.com/rafaelromao/zmk-vim-mode), a project of mine with three parts: a ZMK module with the listener, a daemon that runs on the host, and a NeoVim plugin. The plugin reports the real mode from NeoVim itself, instead of guessing from the window title as my old scripts did, so the keyboard follows *normal*, *insert*, *visual* and *cmdline* exactly as they happen.
+
+It also reports a *raw* state, for the moments when my keys must reach the editor untouched: plugin windows where the letters are commands, like the dashboard or the file explorer, the terminal, and while a leader sequence is pending. Without it my normal layer would remap those letters and those windows would be unusable.
+
+For the editors where I don't have the plugin, like VSCode and Obsidian, the host only says that a VIM-like editor is focused, and the keyboard infers the mode by itself, watching the keys I press, exactly as it always did. The same happens when I toggle VIM Mode by hand, with a combo. I call this *legacy mode*, and everything that exists only for it lives in a separate file, so it will be easy to remove once every editor I use reports its mode.
 
 ![img](img/diagrams/vim.png)
 

@@ -15,7 +15,10 @@
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
-            bindings = <&macro_tap &kp K_CANCEL &to ALPHA1 &vim_mode_off>;
+            // Clears the vim layers locally only. Cancel must not notify the
+            // host (Meh+Esc), or it would toggle a sticky "off" override on
+            // every press.
+            bindings = <&macro_tap &kp K_CANCEL &to ALPHA1 &vim_off>;
         };
         LAYERTAP_TP(lt_cancel,     &tc_cancel)
 

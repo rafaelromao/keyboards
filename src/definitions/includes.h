@@ -25,6 +25,9 @@
 #include "../features/combos.dtsi"
 #include "../features/leader.dtsi"
 
+// Must come after vim.dtsi and combos.dtsi: it extends their labelled nodes.
+#include "../features/vim_legacy.dtsi"
+
 #if __has_include("../secret.dtsi")
 #include "../secret.dtsi"
 #endif
