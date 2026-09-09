@@ -9,13 +9,36 @@
 
 
 / {
-    hid_listeners {
-        compatible = "zmk,hid-listeners";
+    /*
+     * The host (zmk-vim-mode) encodes the editor's state as a 3-bit code in
+     * the HID LED indicator report and this node decodes it into layers.
+     *
+     * Compose, Kana and Scroll Lock carry the code because no operating system
+     * drives them on its own: Linux compositors write all five indicators on
+     * every LED change but never *set* these three, and macOS never touches
+     * them. Num Lock and Caps Lock are deliberately not used -- the OS owns
+     * them, so a stray lock keypress would otherwise change the vim state.
+     *
+     * The old num_lock listener that toggled vim mode lived here and has been
+     * removed for exactly that reason. Vim mode can still be entered by hand
+     * with the cb_vim_mode combo, &to VIM_NORMAL on the TOGGLES layer, or
+     * `zmk-vim-mode set legacy` from the host.
+     */
+    vim_sync {
+        compatible = "zmk,hid-indicator-code-listener";
+        indicators = <HID_USAGE_LED_COMPOSE HID_USAGE_LED_KANA HID_USAGE_LED_SCROLL_LOCK>;
+        managed-layers = <VIM_NORMAL VIM_VISUAL VIM_CHANGE VIM_LEADER VIM_INSERT VIM_REPLACE VIM_CMDLINE>;
+        off-delay-ms = <60>;
+        local-guard-ms = <150>;
 
-        num_lock {           
-            indicator = <HID_USAGE_LED_NUM_LOCK>;
-            bindings = <&vim_mode_on &vim_off>; // num lock on -> vim mode on
-        };
+        normal        { code = <1>; layers = <VIM_NORMAL>; };
+        insert        { code = <2>; layers = <VIM_INSERT>; };
+        visual        { code = <3>; layers = <VIM_NORMAL VIM_VISUAL>; };
+        legacy        { code = <4>; bindings = <&vim_mode_on>; };
+        cmdline       { code = <5>; layers = <VIM_CMDLINE>; };
+        raw           { code = <6>; };
+        legacy_silent { code = <7>; layers = <VIM_NORMAL>; };
+        /* code 0 is implicit: every managed layer off */
     };
 };
 

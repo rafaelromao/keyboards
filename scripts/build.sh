@@ -14,7 +14,7 @@ EXTRA_SHIELDS=()
 FLAGS=()
 MODULES=()
 SNIPPETS=()
-DEF_MODULES=(urob/zmk-leader-key,urob/zmk-auto-layer,urob/zmk-adaptive-key,rafaelromao/zmk-layer-morph,ssbb/zmk-listeners)
+DEF_MODULES=(urob/zmk-leader-key,urob/zmk-auto-layer,urob/zmk-adaptive-key,rafaelromao/zmk-layer-morph,rafaelromao/zmk-vim-mode)
 
 # Function to display usage
 usage() {
@@ -181,10 +181,25 @@ for ITEM in "${ADDR[@]}"; do
     fi
 
     MODULE_HOME=${PREFIX}${MODULE}
-    # Download the module if necessary
-    if [[ ! -d "$MODULE_HOME" ]]
+    # Download the module if it is not already a usable Zephyr module.
+    #
+    # The test is for zephyr/module.yml rather than for the directory, because
+    # that file is exactly what cmake requires: without it the build fails much
+    # later, and far less obviously, with "is not a valid zephyr module".
+    # A `git submodule add` that fails part way leaves a directory behind --
+    # sometimes empty, sometimes holding only a .git gitlink -- and a mere
+    # existence check treats all of those as "already cloned" forever.
+    if [[ ! -f "$MODULE_HOME/zephyr/module.yml" ]]
     then
         echo "Add git sub-module: $MODULE"
+        # Clear partial state so `git submodule add` gets a clean path. Guarded
+        # to stay inside modules/ so a malformed name cannot escape.
+        if [[ -d "$MODULE_HOME" && "$MODULE_HOME" == "$PREFIX"*/* ]]; then
+            echo "  (clearing incomplete clone at $MODULE_HOME)"
+            rm -rf "$MODULE_HOME"
+            git submodule deinit -f "modules/$MODULE" 2>/dev/null
+            rm -rf "$PROJECT_DIR/.git/modules/modules/$MODULE"
+        fi
         git submodule add -f "git@github.com:$MODULE" "modules/$MODULE"
         # If submodule was just added, we need to cd into it to checkout the revision
         # and then return to PROJECT_DIR before the main script proceeds.
