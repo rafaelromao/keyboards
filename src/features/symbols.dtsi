@@ -276,9 +276,12 @@
         MACRO(mc_o_esc,         &macro_tap &kp O &kp ESC)
         MACRO(mc_sft_o_esc,     &macro_tap &kp LS(O) &kp ESC)
 
-        // Plain &mo NUM on hold: the DEFAULT layer's ltn_num_spc ends in
-        // &to ALPHA1 (num word), which would drop the vim layers.
-        LAYERTAP_TP(lt_spc_vim        , &kp SPACE)
+        // Space on tap, plain &mo NUM on hold: the DEFAULT layer's ltn_num_spc
+        // ends in &to ALPHA1 (num word), which would drop the vim layers.
+        // A hold-tap's bindings are phandles, so the tap must be a behavior
+        // taking no parameter of its own -- hence the macro.
+        MACRO(mc_space_vim            , &kp SPACE)
+        LAYERTAP_TP(lt_spc_vim        , &mc_space_vim)
 
         MACRO(mc_end_enter_vim        , &kp END &lm_ent_vim)
         TAPHOLD_TP(th_end_ent_vim     , &lm_ent_vim, &mc_end_enter_vim)
