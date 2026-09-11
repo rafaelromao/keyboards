@@ -23,10 +23,20 @@
  * It is left by hand with cb_leave_vim (MACROS), which sends Meh+Esc, bound
  * on the host to `set off --sticky`.
  *
- * Once every editor reports its mode, delete this file, its #include in
- * definitions/includes.h and the two bindings in the host's
- * contrib/hyprland-bind.conf. Nothing else references what is defined here;
- * the build will tell you if that ever changes.
+ * Manual activation lives here too, and is the same feature seen from the
+ * other side: the combos below enter and leave exactly this mode. So deleting
+ * the file removes them as well -- it is not merely a fallback for editors
+ * that cannot report.
+ *
+ * It stops being needed only when all of these are true:
+ *   - every editor you use reports its mode (VSCode and Obsidian now do);
+ *   - you never run vim over SSH, where the remote has no plugin and the host
+ *     recognises it only by the window title (`zmk-vim-mode` codes it legacy);
+ *   - you never want to force vim layers by hand in an app the host cannot
+ *     classify -- a game, a remote desktop, a VM.
+ * The last two are what keeps it alive today. When the day comes, delete this
+ * file, its #include in definitions/includes.h, and the two bindings in the
+ * host's contrib/hyprland-bind.conf; the build will point out anything else.
  *
  * This file must be included last: it extends the vim_sync and combos nodes,
  * whose labels have to exist before they can be referenced.
