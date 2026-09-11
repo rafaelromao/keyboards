@@ -22,9 +22,12 @@
      * The old num_lock listener that toggled vim mode lived here and has been
      * removed for exactly that reason.
      *
-     * Only what every path needs lives in this file. Everything that exists
-     * solely for legacy mode -- codes 4 and 7, the enter/leave combos and the
-     * Hyper+Esc / Meh+Esc notifications -- is in vim_legacy.dtsi.
+     * Codes 4 and 7 are "legacy": the host says a vim-like editor is focused
+     * but cannot say which mode it is in, so the keyboard infers modes itself
+     * by watching the keys pressed, as it always did. That covers editors
+     * without a plugin, vim over SSH (recognised by the window title alone),
+     * and the manual combos below -- entering vim mode by hand is the same
+     * thing seen from the other side.
      */
     vim_sync: vim_sync {
         compatible = "zmk,hid-indicator-code-listener";
@@ -36,12 +39,11 @@
         normal        { code = <1>; layers = <VIM_NORMAL>; };
         insert        { code = <2>; layers = <VIM_INSERT>; };
         visual        { code = <3>; layers = <VIM_NORMAL VIM_VISUAL>; };
+        legacy        { code = <4>; layers = <VIM_NORMAL>; bindings = <&vim_mode_on_host>; };
         cmdline       { code = <5>; layers = <VIM_CMDLINE>; };
         raw           { code = <6>; };
-        /*
-         * code 0 is implicit: every managed layer off.
-         * codes 4 and 7 (legacy) are added to this node by vim_legacy.dtsi.
-         */
+        legacy_silent { code = <7>; layers = <VIM_NORMAL>; };
+        /* code 0 is implicit: every managed layer off. */
     };
 };
 
@@ -83,6 +85,29 @@
 
 / {
     vim {
+        /*
+         * ENTERING AND LEAVING VIM MODE BY HAND (legacy, codes 4 and 7)
+         *
+         * The combos cb_vim_mode, cb_enter_vim and cb_leave_vim bind these.
+         * Both notifications are chords the host binds to `zmk-vim-mode set
+         * legacy --sticky` and `set off --sticky`, so the daemon follows a
+         * decision made on the keyboard.
+         *
+         * vim_mode_on is a layer-morph so that pressing the combo while
+         * already in vim mode does nothing, instead of injecting a second Esc.
+         *
+         * Code 4 must NOT reuse it: the listener clears every managed layer
+         * before running a code's bindings, so the morph would always find no
+         * vim layer active and always send Hyper+Esc -- which the host reads
+         * as the combo, toggling off the override it had just set. Hence the
+         * separate vim_mode_on_host, a plain Esc that puts the editor's own
+         * vim into normal mode to match the NORMAL layer code 4 selects.
+         */
+        VIM_MACRO(vim_reset_notify      , &vim_reset &kp LG(LC(LA(LS(ESC)))))
+        VIM_MACRO(vim_mode_off          , &vim_off &kp LC(LA(LS(ESC))))
+        VIM_BINDING(vim_mode_on         , VIM_NORMAL VIM_VISUAL VIM_CHANGE VIM_INSERT VIM_REPLACE VIM_CMDLINE, &none, &vim_reset_notify)
+        VIM_MACRO(vim_mode_on_host      , &kp ESC)
+
         VIM_MACRO(vim_off               , &tog_off VIM_NORMAL &tog_off VIM_CHANGE &tog_off VIM_VISUAL &tog_off VIM_INSERT &tog_off VIM_REPLACE &tog_off VIM_CMDLINE)
         VIM_MACRO(vim_reset             , &vim_off &tog_on VIM_NORMAL &kp ESC)
         VIM_MACRO(vim_normal            , &vim_off &tog_on VIM_NORMAL)
