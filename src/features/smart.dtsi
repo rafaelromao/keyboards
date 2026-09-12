@@ -18,7 +18,25 @@
             // Clears the vim layers locally only. Cancel must not notify the
             // host (Meh+Esc), or it would toggle a sticky "off" override on
             // every press.
-            bindings = <&macro_tap &kp K_CANCEL &to ALPHA1 &vim_off>;
+            bindings = <&macro_tap &kp K_CANCEL &mc_base_reset>;
+        };
+
+        /*
+         * Everything a cancel should drop, named one by one.
+         *
+         * &to ALPHA1 would be shorter, but it means "this layer and the
+         * default one, nothing else" -- and ALT_OS is a second base, held on
+         * by &tog_on, so &to silently switches it off. Layer toggles carry no
+         * keystrokes, hence no pacing.
+         */
+        mc_base_reset: mc_base_reset {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&vim_off &tog_off NUM &tog_off NUM_CP &tog_off CASE_A1 &tog_off CPLK_A1
+                        &tog_off ALPHA2 &tog_off SFT_A2 &tog_off CASE_A2 &tog_off CCEDIL
+                        &tog_off CASE_CCEDIL &tog_off SEN_CASE &tog_off ALTREP2 &tog_off MEHS>;
         };
         LAYERTAP_TP(lt_cancel,     &tc_cancel)
 
@@ -37,7 +55,9 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-            bindings = <&macro_tap &to ALPHA1 &smart_num NUM>;
+            // &vim_off rather than &to ALPHA1: num word must type digits on
+            // the base layout, but ALT_OS is a base too (see mc_base_reset).
+            bindings = <&macro_tap &vim_off &smart_num NUM>;
         };
 
         smart_num_cp: smart_num_cp {
@@ -53,7 +73,7 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-            bindings = <&macro_tap &to ALPHA1 &smart_num NUM_CP>;
+            bindings = <&macro_tap &vim_off &smart_num NUM_CP>;
         };
 
         // ******************* CAPS LINE ******************* //
@@ -159,7 +179,8 @@
             bindings = <&mm_hold_alt_num_gui>, <&mm_tap_alt_space_gui>;
         };
 
-        MACRO(mc_msk_space, &kp SPACE &to ALPHA1)
+        // Ends num word: drop the number layers, leave the bases alone.
+        MACRO(mc_msk_space, &kp SPACE &tog_off NUM &tog_off NUM_CP)
 
         msk_spc: msk_spc {
             compatible = "zmk,behavior-hold-tap";

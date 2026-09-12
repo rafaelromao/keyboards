@@ -33,7 +33,7 @@
         compatible = "zmk,hid-indicator-code-listener";
         indicators = <HID_USAGE_LED_COMPOSE HID_USAGE_LED_KANA HID_USAGE_LED_SCROLL_LOCK>;
         managed-layers = <VIM_NORMAL VIM_VISUAL VIM_CHANGE VIM_INSERT VIM_REPLACE VIM_CMDLINE>;
-        off-delay-ms = <60>;
+        off-delay-ms = <100>;
         local-guard-ms = <150>;
 
         normal        { code = <1>; layers = <VIM_NORMAL>; };
@@ -55,6 +55,18 @@
         #binding-cells = <0>; \
         wait-ms = <5>; \
         tap-ms = <5>; \
+        bindings = <BINDINGS>; \
+    };
+
+// Layer-only macro: no keystrokes, so no reason to pace the bindings. A vim
+// mode switch is six or seven toggles; at 5 ms each that delay is felt on
+// every Esc.
+#define VIM_LAYER_MACRO(NAME, BINDINGS) \
+    NAME: NAME { \
+        compatible = "zmk,behavior-macro"; \
+        #binding-cells = <0>; \
+        wait-ms = <0>; \
+        tap-ms = <0>; \
         bindings = <BINDINGS>; \
     };
 
@@ -108,11 +120,11 @@
         VIM_BINDING(vim_mode_on         , VIM_NORMAL VIM_VISUAL VIM_CHANGE VIM_INSERT VIM_REPLACE VIM_CMDLINE, &none, &vim_reset_notify)
         VIM_MACRO(vim_mode_on_host      , &kp ESC)
 
-        VIM_MACRO(vim_off               , &tog_off VIM_NORMAL &tog_off VIM_CHANGE &tog_off VIM_VISUAL &tog_off VIM_INSERT &tog_off VIM_REPLACE &tog_off VIM_CMDLINE)
+        VIM_LAYER_MACRO(vim_off         , &tog_off VIM_NORMAL &tog_off VIM_CHANGE &tog_off VIM_VISUAL &tog_off VIM_INSERT &tog_off VIM_REPLACE &tog_off VIM_CMDLINE)
+        VIM_LAYER_MACRO(vim_normal      , &vim_off &tog_on VIM_NORMAL)
+        VIM_LAYER_MACRO(vim_insert      , &vim_off &tog_on VIM_INSERT)
+        VIM_LAYER_MACRO(vim_cmdline     , &vim_off &tog_on VIM_CMDLINE)
         VIM_MACRO(vim_reset             , &vim_off &tog_on VIM_NORMAL &kp ESC)
-        VIM_MACRO(vim_normal            , &vim_off &tog_on VIM_NORMAL)
-        VIM_MACRO(vim_insert            , &vim_off &tog_on VIM_INSERT)
-        VIM_MACRO(vim_cmdline           , &vim_off &tog_on VIM_CMDLINE)
         VIM_MACRO(vim_replace           , &ntsl VIM_REPLACE)
 
         VIM_MACRO(vim_slash             , &vim_cmdline &kp SLASH)
@@ -120,6 +132,10 @@
 
         VIM_MACRO(vim_colon             , &vim_cmdline &kp COLON)
         VIM_BINDING(lm_colon_vim        , VIM_NORMAL VIM_VISUAL VIM_CHANGE, &vim_colon, &kp COLON)
+
+        // ? opens the command line exactly as / does, searching backwards.
+        VIM_MACRO(vim_qmark             , &vim_cmdline &kp QMARK)
+        VIM_BINDING(lm_qmark_vim        , VIM_NORMAL VIM_VISUAL VIM_CHANGE, &vim_qmark, &mc_qmark)
 
         VIM_MACRO(vim_enter             , &vim_normal &kp ENTER)
         VIM_BINDING(lm_ent_vim          , VIM_CMDLINE, &vim_enter, &kp ENTER)
@@ -133,8 +149,14 @@
         VIM_MACRO(vim_ca                , &kp A &ntsl VIM_CHANGE)
         VIM_MACRO(vim_ci                , &kp I &ntsl VIM_CHANGE)
         VIM_MACRO(vim_c                 , &kp C &tog_off VIM_NORMAL &tog_off VIM_VISUAL &tog_on VIM_INSERT &ntsl VIM_CHANGE)
-        VIM_MACRO(vim_s                 , &kp S &tog_off VIM_NORMAL &tog_off VIM_VISUAL &ntsl VIM_NORMAL &tog_on VIM_INSERT)
+        VIM_MACRO(vim_s                 , &kp S &tog_off VIM_NORMAL &tog_off VIM_VISUAL &tog_on VIM_INSERT)
+
+        // r waits for one character, so a one-shot layer fits it; R replaces
+        // until Esc, which is INSERT's shape -- and what the host reports for
+        // Neovim's R (code 2).
         VIM_MACRO(vim_r                 , &kp R &vim_replace)
+        VIM_MACRO(vim_sft_r             , &kp R &vim_insert)
+        VIM_MOD_MORPH(mm_sft_r_vim      , MOD_LSFT|MOD_RSFT, &vim_sft_r, &vim_r)
 
         VIM_MACRO(vim_sft_c             , &kp C &tog_off VIM_NORMAL &tog_on VIM_INSERT)
         VIM_MOD_MORPH(mm_sft_c_vim      , MOD_LSFT|MOD_RSFT, &vim_sft_c, &vim_c)
@@ -143,26 +165,40 @@
         VIM_MOD_MORPH(vim_i_ctrl_i      , MOD_LCTL|MOD_RCTL, &kp I, &vim_i)
         VIM_MOD_MORPH(vim_o_ctrl_o      , MOD_LCTL|MOD_RCTL, &kp O, &vim_o)
         VIM_MOD_MORPH(vim_s_ctrl_s      , MOD_LCTL|MOD_RCTL, &kp S, &vim_s)
-        VIM_MOD_MORPH(vim_r_ctrl_r      , MOD_LCTL|MOD_RCTL, &kp R, &vim_r)
-        VIM_MOD_MORPH(vim_c_ctrl_c      , MOD_LCTL|MOD_RCTL, &kp C &vim_reset, &mm_sft_c_vim)
+        VIM_MOD_MORPH(vim_r_ctrl_r      , MOD_LCTL|MOD_RCTL, &kp R, &mm_sft_r_vim)
 
-        VIM_MOD_MORPH(mm_ent_vim        , MOD_ALL, &lm_ent_vim , &kp ENTER)
-        VIM_MOD_MORPH(mm_esc_vim        , MOD_ALL, &lm_esc_vim , &kp ESC)
-        
+        // Ctrl+C leaves insert or visual just as Esc does, so it must return
+        // the keyboard to NORMAL. The layer change has to be wrapped in a
+        // macro: a mod-morph takes exactly two bindings, and a third one here
+        // was silently ignored. No Esc is sent -- Ctrl+C already said it.
+        VIM_MACRO(vim_ctrl_c            , &kp C &vim_normal)
+        VIM_MOD_MORPH(vim_c_ctrl_c      , MOD_LCTL|MOD_RCTL, &vim_ctrl_c, &mm_sft_c_vim)
 
         // VISUAL MODE EXITS
 
         VIM_MACRO(mc_c_visual_vim       , &kp C &tog_off VIM_VISUAL &tog_on VIM_INSERT)
         VIM_BINDING(lm_c_vim            , VIM_VISUAL, &mc_c_visual_vim , &vim_c_ctrl_c)
 
+        /*
+         * v in visual leaves visual -- but only if the editor is told, so the
+         * key must be sent, not just the layer changed. Without it the editor
+         * stays in visual while the keyboard goes to normal; with the Neovim
+         * plugin connected the host then puts VISUAL back and the key looks
+         * dead, and in a legacy app the two simply disagree until Esc.
+         *
+         * V and ^V are different: inside visual they switch sub-mode rather
+         * than leave, so they send the key and stay on the layer. There is one
+         * VIM_VISUAL layer for all three sub-modes, which is enough.
+         */
         VIM_MACRO(mc_v_vim              , &kp V &tog_on VIM_VISUAL)
-        VIM_BINDING(lm_v_vim            , VIM_VISUAL, &vim_normal , &mc_v_vim)
+        VIM_MACRO(mc_v_exit_vim         , &vim_normal &kp V)
+        VIM_BINDING(lm_v_vim            , VIM_VISUAL, &mc_v_exit_vim , &mc_v_vim)
 
         VIM_MACRO(mc_sft_v_vim          , &vim_reset &tog_on VIM_VISUAL &kp LS(V))
-        VIM_BINDING(lm_sft_v_vim        , VIM_VISUAL, &vim_normal , &mc_sft_v_vim)
+        VIM_BINDING(lm_sft_v_vim        , VIM_VISUAL, &kp LS(V) , &mc_sft_v_vim)
 
         VIM_MACRO(mc_ctl_v_vim          , &vim_reset &tog_on VIM_VISUAL &kp LC(V))
-        VIM_BINDING(lm_ctl_v_vim        , VIM_VISUAL, &vim_normal , &mc_ctl_v_vim)
+        VIM_BINDING(lm_ctl_v_vim        , VIM_VISUAL, &kp LC(V) , &mc_ctl_v_vim)
 
         VIM_MACRO(vim_x                 , &vim_normal &kp X)
         VIM_BINDING(lm_x_vim            , VIM_VISUAL, &vim_x, &kp X)

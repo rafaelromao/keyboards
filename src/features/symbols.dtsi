@@ -183,7 +183,7 @@
 
         MACRO(mc_qmark,               &kp QMARK )
         MACRO(mc_end_qmark,           &kp END &mc_qmark )
-        TAPHOLD_TP(th_qmark,          &mc_qmark, &mc_end_qmark)
+        TAPHOLD_TP(th_qmark,          &lm_qmark_vim, &mc_end_qmark)
 
         MACRO(mc_eqeq,                &kp EQUAL &kp EQUAL)
         MACRO(mc_end_eqeq,            &kp RIGHT &kp SPACE &kp EQUAL &kp EQUAL)
@@ -234,7 +234,6 @@
         TAPHOLD_TP(th_eql,            &lm_eql_vim, &mc_end_eql)
 
         MACRO(mc_tilde,               &lm_tilde_vim &kp SPACE)
-        LAYERTAP_TP(lt_tilde,         &mc_tilde)
 
         MACRO(mm_shift_vim_replace    , &mm_shift &ntsl VIM_REPLACE)
         LAYERTAP_TP(ht_sft_vim        , &mm_shift_vim_replace)
@@ -276,10 +275,11 @@
         MACRO(mc_o_esc,         &macro_tap &kp O &kp ESC)
         MACRO(mc_sft_o_esc,     &macro_tap &kp LS(O) &kp ESC)
 
-        // Space on tap, plain &mo NUM on hold: the DEFAULT layer's ltn_num_spc
-        // ends in &to ALPHA1 (num word), which would drop the vim layers.
-        // A hold-tap's bindings are phandles, so the tap must be a behavior
-        // taking no parameter of its own -- hence the macro.
+        // Space on tap, plain &mo NUM on hold. The DEFAULT layer's thumb
+        // (ltn_num_spc) carries num-word and the mod-morph chain, none of
+        // which belongs in normal mode. A hold-tap's bindings are phandles,
+        // so the tap must be a behavior taking no parameter of its own --
+        // hence the macro.
         MACRO(mc_space_vim            , &kp SPACE)
         LAYERTAP_TP(lt_spc_vim        , &mc_space_vim)
 

@@ -98,7 +98,9 @@
         TAPHOLD_TP(th_paste,      &mc_paste,    &mc_shift_paste)
         TAPHOLD_TP(th_selpaste,   &mc_selpaste, &mc_shift_selpaste)
 
-        MACRO(mc_leader, &leader &to ALPHA1)
+        // &vim_off, not &to ALPHA1: the sequence must be typed on the base
+        // layout, but ALT_OS is a base too and &to would switch it off.
+        MACRO(mc_leader, &leader &vim_off)
         
         MACRO(mc_tab,             &kp TAB)
         MACRO(mc_shift_tab,       &kp LS(TAB))
