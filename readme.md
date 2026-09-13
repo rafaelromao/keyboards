@@ -99,6 +99,21 @@ b wd # builds the left side of the wired diamond keyboard for Linux, equivalent 
 build rafaelromao/wired_diamond l LINUX -b seeeduino_xiao_rp2040 -z rafaelromao/zmk
 ```
 
+## Editors
+
+The MEHS layer emits Meh (`Ctrl+Alt+Shift`) and Hyper (`Ctrl+Alt+Shift+Gui`) chords whose meanings are IDE actions: go to symbol, toggle breakpoint, find usages. The firmware only sends the chords; something on the host has to bind them.
+
+That is [`editors/`](editors), with one install script per editor:
+
+```sh
+cd editors
+./vscode/install.sh
+./intellij/install.sh
+./nvim/install.sh
+```
+
+They symlink out of the repo, so editing a keymap here takes effect without reinstalling, and they work on macOS and Linux. [`editors/README.md`](editors/README.md) has the full mapping, the default shortcuts it takes over, and the places where VSCode has no equivalent.
+
 ## Diagram
 
 The diagrams for my keymap were created using [Keymap Drawer](https://github.com/caksoylar/keymap-drawer).

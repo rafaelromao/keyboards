@@ -395,6 +395,8 @@ My most used shortcuts in IntelliJ IDEA and other IDEs were remapped to use Meh 
 
 ![img](img/diagrams/coding-mehs.png)
 
+The diagram above is the intent; `editors/` in this repo is the implementation. It holds the real keymaps for VSCode, IntelliJ and Neovim, each with its own install script, so the layer actually does something once the firmware is flashed. See [editors/README.md](https://github.com/rafaelromao/keyboards/tree/main/editors) for the full mapping, the shortcuts it takes over, and where VSCode has no equivalent.
+
 # General
 
 ## Cancel

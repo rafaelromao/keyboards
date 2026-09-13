@@ -1,0 +1,66 @@
+// Coding shortcuts for the MEHS layer of rafaelromao/keyboards.
+//
+//   Meh   = Ctrl+Alt+Shift
+//   Hyper = Meh + Gui  (Cmd on macOS, Super on Linux — 'meta' means both)
+//
+// One file serves macOS and Linux. The only chords that differ are the
+// keyboard's , and . keys, which are OS-morphed in firmware because macOS
+// cannot take Ctrl+Alt+Shift+comma: macOS sends ' and \, Linux sends , and .
+// Both variants are bound; the unused one is simply unreachable.
+//
+// Every command id here was verified against the installed VSCode.
+[
+
+  // Meh  — Ctrl+Alt+Shift
+  { "key": "ctrl+alt+shift+b", "command": "workbench.view.explorer" },  // project tool window
+  { "key": "ctrl+alt+shift+m", "command": "workbench.action.tasks.build" },  // build
+  { "key": "ctrl+alt+shift+g", "command": "editor.action.formatDocument", "when": "editorTextFocus" },  // format code
+  { "key": "ctrl+alt+shift+l", "command": "workbench.action.debug.stepOut" },  // step out
+  { "key": "ctrl+alt+shift+o", "command": "workbench.action.debug.stepOver" },  // step over
+  { "key": "ctrl+alt+shift+u", "command": "workbench.action.debug.stepInto" },  // step into
+  { "key": "ctrl+alt+shift+n", "command": "editor.action.triggerSuggest", "when": "editorTextFocus" },  // type match
+  { "key": "ctrl+alt+shift+s", "command": "editor.action.insertLineAfter", "when": "editorTextFocus" },  // complete statement
+  { "key": "ctrl+alt+shift+t", "command": "workbench.action.showAllEditorsByMostRecentlyUsed" },  // recent files
+  { "key": "ctrl+alt+shift+r", "command": "workbench.action.debug.run" },  // run
+  { "key": "ctrl+alt+shift+a", "command": "workbench.action.debug.start" },  // debug
+  { "key": "ctrl+alt+shift+e", "command": "editor.debug.action.toggleBreakpoint", "when": "editorTextFocus" },  // toggle breakpoint
+  { "key": "ctrl+alt+shift+f", "command": "editor.debug.action.selectionToRepl", "when": "editorTextFocus" },  // evaluate expression
+  { "key": "ctrl+alt+shift+c", "command": "editor.action.commentLine", "when": "editorTextFocus" },  // comment line
+  { "key": "ctrl+alt+shift+p", "command": "editor.action.peekDefinition", "when": "editorTextFocus" },  // quick def
+  { "key": "ctrl+alt+shift+h", "command": "editor.action.showHover", "when": "editorTextFocus" },  // quick docs
+  { "key": "ctrl+alt+shift+y", "command": "editor.action.goToImplementation", "when": "editorTextFocus" },  // go to implementation
+  { "key": "ctrl+alt+shift+space", "command": "workbench.action.chat.open" },  // ai chat
+  { "key": "ctrl+alt+shift+enter", "command": "editor.action.quickFix", "when": "editorTextFocus" },  // context actions
+  { "key": "ctrl+alt+shift+'", "command": "editor.action.marker.prev", "when": "editorTextFocus" },  // previous error
+  { "key": "ctrl+alt+shift+,", "command": "editor.action.marker.prev", "when": "editorTextFocus" },  // previous error
+  { "key": "ctrl+alt+shift+\\", "command": "editor.action.marker.next", "when": "editorTextFocus" },  // next error
+  { "key": "ctrl+alt+shift+.", "command": "editor.action.marker.next", "when": "editorTextFocus" },  // next error
+
+  // Hyper — Ctrl+Alt+Shift+Gui
+  { "key": "ctrl+alt+shift+meta+b", "command": "workbench.files.action.showActiveFileInExplorer" },  // select in
+
+  //  rebuild: no VSCode equivalent — intentionally unbound
+
+  //  analyze code: no VSCode equivalent — intentionally unbound
+  { "key": "ctrl+alt+shift+meta+l", "command": "workbench.action.quickOpen" },  // search everywhere
+  { "key": "ctrl+alt+shift+meta+o", "command": "workbench.action.showAllSymbols" },  // go to symbol
+  { "key": "ctrl+alt+shift+meta+u", "command": "workbench.action.showCommands" },  // find action
+  { "key": "ctrl+alt+shift+meta+n", "command": "editor.action.triggerSuggest", "when": "editorTextFocus" },  // code complete
+  { "key": "ctrl+alt+shift+meta+s", "command": "editor.action.refactor", "when": "editorTextFocus" },  // refactor this
+
+  //  switch scheme: no VSCode equivalent — intentionally unbound
+  { "key": "ctrl+alt+shift+meta+r", "command": "workbench.action.debug.stop" },  // stop
+  { "key": "ctrl+alt+shift+meta+a", "command": "workbench.action.debug.continue" },  // resume
+  { "key": "ctrl+alt+shift+meta+e", "command": "workbench.debug.action.focusBreakpointsView" },  // view breakpoints
+
+  //  generate code: no VSCode equivalent — intentionally unbound
+  { "key": "ctrl+alt+shift+meta+c", "command": "editor.action.blockComment", "when": "editorTextFocus" },  // comment block
+  { "key": "ctrl+alt+shift+meta+p", "command": "references-view.findReferences", "when": "editorTextFocus" },  // find usages
+
+  //  toggle bookmark: no VSCode equivalent — intentionally unbound
+  { "key": "ctrl+alt+shift+meta+y", "command": "editor.action.revealDefinition", "when": "editorTextFocus" }   // go to declaration
+
+  //  previous bookmark: no VSCode equivalent — intentionally unbound
+
+  //  next bookmark: no VSCode equivalent — intentionally unbound
+]
