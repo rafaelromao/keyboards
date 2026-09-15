@@ -16,3 +16,6 @@
 [submodule "modules/zmkfirmware/zmk"]
 	path = modules/zmkfirmware/zmk
 	url = git@github.com:zmkfirmware/zmk
+[submodule "modules/rafaelromao/zmk-vim-mode"]
+	path = modules/rafaelromao/zmk-vim-mode
+	url = git@github.com:rafaelromao/zmk-vim-mode

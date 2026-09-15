@@ -55,6 +55,12 @@ What are the workflows that I need to execute with my keyboards?
     <td><a href="docs/img/builds/Wired%20Rommana.jpeg"><img src="docs/img/builds/Wired%20Rommana.jpeg" width="150" /></a></td>
     <td><a href="docs/img/builds/Corne-ish%20Zen.jpeg"><img src="docs/img/builds/Corne-ish%20Zen.jpeg" width="150" /></a></td>
   </tr>
+  <tr>
+    <td><a href="https://github.com/dixls/Dilemma-3mod">Dilemma</a></td>
+  </tr>
+  <tr>
+    <td><a href="docs/img/builds/Dilemma 26.jpeg"><img src="docs/img/builds/Dilemma 26.jpeg" width="150" /></a></td>
+  </tr>
 </table>
 
 ## ZMK

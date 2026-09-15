@@ -8,3 +8,4 @@ build.log
 .gemini/
 tmp/
 modules/
+token-optimizer/
