@@ -61,11 +61,17 @@ fi
 # which take precedence over any file:
 #   safe.directory  - /workdir is a bind mount whose ownership git may distrust
 #   user.*          - harmless, and avoids surprises if a step ever commits
+#   url.insteadOf   - build.sh and .gitmodules name modules as git@github.com:…;
+#                     without agent forwarding (macOS, see above) those clones
+#                     fail with "correct access rights", so rewrite them to
+#                     HTTPS inside the container. Public repos need no
+#                     credentials; a private module would need a token here.
 GIT_ENV=(
-    -e GIT_CONFIG_COUNT=3
+    -e GIT_CONFIG_COUNT=4
     -e GIT_CONFIG_KEY_0=safe.directory -e "GIT_CONFIG_VALUE_0=*"
     -e GIT_CONFIG_KEY_1=user.name      -e "GIT_CONFIG_VALUE_1=$(git config user.name || echo 'ZMK Build')"
     -e GIT_CONFIG_KEY_2=user.email     -e "GIT_CONFIG_VALUE_2=$(git config user.email || echo 'zmk@localhost')"
+    -e GIT_CONFIG_KEY_3=url.https://github.com/.insteadOf -e "GIT_CONFIG_VALUE_3=git@github.com:"
 )
 
 echo "🚀 Starting ZMK Interactive Session..."

@@ -19,3 +19,18 @@
 [submodule "modules/rafaelromao/zmk-vim-mode"]
 	path = modules/rafaelromao/zmk-vim-mode
 	url = git@github.com:rafaelromao/zmk-vim-mode
+[submodule "modules/urob/zmk-leader-key"]
+	path = modules/urob/zmk-leader-key
+	url = git@github.com:urob/zmk-leader-key
+[submodule "modules/urob/zmk-auto-layer"]
+	path = modules/urob/zmk-auto-layer
+	url = git@github.com:urob/zmk-auto-layer
+[submodule "modules/urob/zmk-adaptive-key"]
+	path = modules/urob/zmk-adaptive-key
+	url = git@github.com:urob/zmk-adaptive-key
+[submodule "modules/rafaelromao/zmk-layer-morph"]
+	path = modules/rafaelromao/zmk-layer-morph
+	url = git@github.com:rafaelromao/zmk-layer-morph
+[submodule "modules/rafaelromao/zmk-layer-hud"]
+	path = modules/rafaelromao/zmk-layer-hud
+	url = git@github.com:rafaelromao/zmk-layer-hud

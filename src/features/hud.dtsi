@@ -1,0 +1,28 @@
+/*
+*
+* Copyright (c) 2026 Rafael Romão
+* SPDX-License-Identifier: MIT
+*
+*/
+
+/ {
+    /*
+     * Keyboard -> host: announce the active layers (rafaelromao/zmk-layer-hud).
+     *
+     * On every layer change the module writes usage 0xC0 + layer id for each
+     * active layer plus a commit usage 0xDF into the keyboard HID report and
+     * releases them 10 ms later. Those usages are reserved in the HID spec: no
+     * OS maps them to a key, so applications never see them; the HUD's host
+     * reads them from the raw report. Layer 0 is never sent. With the
+     * heartbeat the set is repeated while idle, so a host started mid-session
+     * converges within 2 s.
+     *
+     * Needs CONFIG_ZMK_HID_KEYBOARD_REPORT_SIZE=12 on the central/dongle so the
+     * announcement fits next to held keys.
+     */
+    layer_signal {
+        compatible = "zmk,layer-signal";
+        heartbeat-ms = <2000>;
+        positions;   /* announce the position of every key press too: exact highlighting */
+    };
+};
