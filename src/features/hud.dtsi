@@ -9,20 +9,36 @@
     /*
      * Keyboard -> host: announce the active layers (rafaelromao/zmk-layer-hud).
      *
-     * On every layer change the module writes usage 0xC0 + layer id for each
-     * active layer plus a commit usage 0xDF into the keyboard HID report and
-     * releases them 10 ms later. Those usages are reserved in the HID spec: no
-     * OS maps them to a key, so applications never see them; the HUD's host
-     * reads them from the raw report. Layer 0 is never sent. With the
-     * heartbeat the set is repeated while idle, so a host started mid-session
-     * converges within 2 s.
+     * Not included: the announcement rides in the keyboard report, and the host
+     * reads it as a key. Turn it back on once the signal has its own report.
      *
-     * Needs CONFIG_ZMK_HID_KEYBOARD_REPORT_SIZE=12 on the central/dongle so the
-     * announcement fits next to held keys.
+     * The premise was that 0xA5-0xDF are reserved and no OS maps them. Linux
+     * does. Every unmapped slot in the kernel's hid_keyboard[] table holds the
+     * macro `unk`, which is KEY_UNKNOWN (240), not zero -- so the "if unmapped,
+     * ignore" branch never fires and the whole range arrives as keycode 240.
+     * Measured with evtest on the Diamond:
+     *
+     *   MSC_SCAN 700d6 -> KEY_UNKNOWN (240)   NAV, 0xC0 + 22
+     *   MSC_SCAN 700df -> KEY_UNKNOWN (240)   the commit usage
+     *
+     * So every layer change emits a phantom key press carrying whatever
+     * modifiers are held. Holding Gui and touching the nav layer was enough to
+     * make Hyprland change workspace, no digit involved. It also breaks host
+     * auto-repeat, which the module's own comment already noted.
+     *
+     * There is no base-usage that dodges this -- the only keyboard-page usages
+     * Linux really ignores are 0x00-0x03, the error and rollover codes.
+     *
+     * `positions` is separately unusable here: it costs two blocking
+     * zmk_endpoint_send_report calls per key press on the system work queue,
+     * which is the queue ZMK scans the matrix on. The next press is timestamped
+     * late and combo.c measures the combo term from those timestamps; against
+     * COMBO_TERM of 30 ms, combos stop firing. A dedicated queue does not fix
+     * it while the report is shared with real keys -- two threads writing one
+     * report race, which broke combos a second way. Its own report fixes both.
      */
     layer_signal {
         compatible = "zmk,layer-signal";
         heartbeat-ms = <2000>;
-        positions;   /* announce the position of every key press too: exact highlighting */
     };
 };

@@ -12,7 +12,8 @@
 
 #include "../features/mouse.dtsi"
 #include "../features/vim.dtsi"
-#include "../features/hud.dtsi"
+// Off until the announcement stops riding in the keyboard report -- see hud.dtsi.
+// #include "../features/hud.dtsi"
 #include "../features/persist.dtsi"
 #include "../features/os.dtsi"
 
