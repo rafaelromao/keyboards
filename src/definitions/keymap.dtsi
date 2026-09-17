@@ -131,7 +131,7 @@
                      bindings = <
    &none              &none                &bt BT_SEL 0        &bt BT_CLR          &none               &none               &tog NAV            &tog FUN            &none               &none     
    &none              &none                &bt BT_PRV          &bt BT_NXT          &none               &none               &tog NUM            &tog MEDIA          &none               &none    
-   &none              &bootloader          &tog_off ALT_OS     &tog_on ALT_OS      &none               &none               &tog MEHS           &none               &bootloader         &none  
+   &none              &bootloader          &lock_off ALT_OS    &lock_on ALT_OS     &none               &none               &tog MEHS           &none               &bootloader         &none  
                                            &none               &kp CAPS            &kp KP_NUM          &mc_lock            &mc_sleep           &none
                         >;
                 };

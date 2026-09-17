@@ -413,11 +413,21 @@ Bluetooth controls are available in the *toggles* layer and allow swapping betwe
 
 Most of my boards have an easily accessible physical reset button, but not all of them. And even for those, sometimes it will be easier to use a shortcut to put the board in bootloader mode to update its keymap.
 
-This bootloader shortcut must be available independently in both halves of the board and should not be easy to trigger by accident, so I put them in a hard to reach position in the *toggles* layer.
+This bootloader shortcut must be available independently in both halves of the board and should not be easy to trigger by accident. It exists in two forms.
+
+Each half has a key in a hard to reach position in the *toggles* layer:
 
 ![img](img/diagrams/toggles.png)
 
+And each half has a combo — the ring finger on the top row together with the index finger on the bottom row — that works on every layer. Reaching the *toggles* layer is itself a chord away, and a board I want to reflash is often a board that is stuck in some state I would rather not have to navigate out of first, so this one deliberately ignores which layers are active. The diagonal two-finger stretch is awkward enough that I never hit it while typing.
+
 ## Operating System
 
-All shortcuts and macros in this keymap are Operating System aware, but a different version of the firmware must be built for MACOS and LINUX. The LINUX version can also be used for ANDROID and WINDOWS.
+All shortcuts and macros in this keymap are Operating System aware. Each build has a default OS, chosen at compile time with the `MACOS` or `LINUX` flag, and the LINUX version also covers ANDROID and WINDOWS.
+
+The other OS is one key away. The *toggles* layer carries a *def OS* and an *alt OS* key, and *alt OS* switches every shortcut to the other operating system's form without reflashing: `Cmd+S` becomes `Ctrl+S`, the cedilla goes from a macOS dead key to `AltGr+,`, word motions swap Alt for Ctrl, and so on. It is useful when the same keyboard follows me to a different machine, or when I pair a second Bluetooth profile with a host that is not the one the firmware was built for.
+
+This is a mode, not a momentary layer, so it stays on until I press *def OS*. It is held with ZMK's layer locking, which makes the firmware refuse every ordinary attempt to switch it off: *cancel*, the vim mode transitions, the number and caps word layers, and anything the host asks for all leave it alone. The one thing that still clears it is a restart, since ZMK does not keep layer state across a reboot — so reflashing, changing a battery or using the bootloader shortcut drops back to the build's default. Deep sleep is disabled on the central for the same reason, so simply walking away no longer resets it.
+
+![img](img/diagrams/toggles.png)
 

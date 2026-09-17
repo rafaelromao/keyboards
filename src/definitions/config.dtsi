@@ -161,6 +161,38 @@
             toggle-mode = "off";
         };
 
+        /*
+         * Locking variants. ZMK refuses a non-locking deactivation of a locked
+         * layer (set_layer_state, app/src/keymap.c), so a layer held with
+         * &lock_on survives every &tog_off, every &mo release, an auto-layer
+         * exit and a host-driven clear -- only &lock_off takes it back off.
+         *
+         * ALT_OS is a mode rather than a transient layer, so it is held this
+         * way. &lock_off doubles as the force-off the reset macros need: the
+         * stock &tog and urob's auto-layer both activate *with* locking, and a
+         * plain &tog_off against one of those is silently ignored.
+         *
+         * Not folded into tog_on/tog_off above: those are shared with the vim
+         * layers, which the host clears with a non-locking deactivation, and
+         * locking them would break vim sync.
+         */
+
+        lock_on: toggle_layer_on_locking {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Lock Layer On";
+            toggle-mode = "on";
+            locking;
+        };
+
+        lock_off: toggle_layer_off_locking {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Lock Layer Off";
+            toggle-mode = "off";
+            locking;
+        };
+
         ntsl: fast-stick-layer {
             compatible = "zmk,behavior-sticky-key";
             #binding-cells = <1>;

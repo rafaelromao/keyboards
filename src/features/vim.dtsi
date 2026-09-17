@@ -120,6 +120,12 @@
         VIM_BINDING(vim_mode_on         , VIM_NORMAL VIM_VISUAL VIM_CHANGE VIM_INSERT VIM_REPLACE VIM_CMDLINE, &none, &vim_reset_notify)
         VIM_MACRO(vim_mode_on_host      , &kp ESC)
 
+        /*
+         * &tog_off, not the locking &lock_off used by mc_base_reset: nothing
+         * ever locks a vim layer (&tog_on, &ntsl and the host listener all act
+         * without locking), and the host clears them with a non-locking
+         * deactivation, which a lock would refuse. Leave these as they are.
+         */
         VIM_LAYER_MACRO(vim_off         , &tog_off VIM_NORMAL &tog_off VIM_CHANGE &tog_off VIM_VISUAL &tog_off VIM_INSERT &tog_off VIM_REPLACE &tog_off VIM_CMDLINE)
         VIM_LAYER_MACRO(vim_normal      , &vim_off &tog_on VIM_NORMAL)
         VIM_LAYER_MACRO(vim_insert      , &vim_off &tog_on VIM_INSERT)

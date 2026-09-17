@@ -25,18 +25,25 @@
          * Everything a cancel should drop, named one by one.
          *
          * &to ALPHA1 would be shorter, but it means "this layer and the
-         * default one, nothing else" -- and ALT_OS is a second base, held on
-         * by &tog_on, so &to silently switches it off. Layer toggles carry no
-         * keystrokes, hence no pacing.
+         * default one, nothing else", and &to is itself a locking behavior:
+         * it would clear ALT_OS -- a second base, held on by &lock_on -- in
+         * spite of the lock. ALT_OS is deliberately absent from the list.
+         *
+         * &lock_off rather than &tog_off: the stock &tog on the toggles layer
+         * and urob's auto-layer both activate *with* locking, and a non-locking
+         * &tog_off against a locked layer is silently ignored, so MEHS and the
+         * number layers would simply stay on. For an unlocked layer the two
+         * behave identically. Layer toggles carry no keystrokes, hence no
+         * pacing.
          */
         mc_base_reset: mc_base_reset {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-            bindings = <&vim_off &tog_off NUM &tog_off NUM_CP &tog_off CASE_A1 &tog_off CPLK_A1
-                        &tog_off ALPHA2 &tog_off SFT_A2 &tog_off CASE_A2 &tog_off CCEDIL
-                        &tog_off CASE_CCEDIL &tog_off SEN_CASE &tog_off ALTREP2 &tog_off MEHS>;
+            bindings = <&vim_off &lock_off NUM &lock_off NUM_CP &lock_off CASE_A1 &lock_off CPLK_A1
+                        &lock_off ALPHA2 &lock_off SFT_A2 &lock_off CASE_A2 &lock_off CCEDIL
+                        &lock_off CASE_CCEDIL &lock_off SEN_CASE &lock_off ALTREP2 &lock_off MEHS>;
         };
         LAYERTAP_TP(lt_cancel,     &tc_cancel)
 
@@ -180,7 +187,8 @@
         };
 
         // Ends num word: drop the number layers, leave the bases alone.
-        MACRO(mc_msk_space, &kp SPACE &tog_off NUM &tog_off NUM_CP)
+        // &lock_off, because auto-layer holds its layer locked (see mc_base_reset).
+        MACRO(mc_msk_space, &kp SPACE &lock_off NUM &lock_off NUM_CP)
 
         msk_spc: msk_spc {
             compatible = "zmk,behavior-hold-tap";
