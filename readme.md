@@ -92,8 +92,8 @@ Here are some usage examples:
 # Builds the central left side shield of the Rommana, assuming nice_nano_v2 as board and MACOS as target operating system
 build mabroum/rommana cl
 
-# Builds the left side shield of the Wired Diamond, specifying the board and ZMK fork to be used instead of the default
-build rafaelromao/wired_diamond l LINUX -b seeeduino_xiao_rp2040 -z rafaelromao/zmk
+# Builds the left side shield of the Wired Diamond, specifying the board to be used instead of the default
+build rafaelromao/wired_diamond l LINUX -b xiao_rp2040//zmk
 
 # Builds the central dongle shield of the Choc Diamond, specifying an extra shield and an external module to handle the display
 build rafaelromao/choc_diamond cd MACOS -e dongle_display -m englmaxi/zmk-dongle-display
@@ -104,9 +104,9 @@ To make it even simpler, I have a [b](scripts/b.sh) script that can be used to b
 Example:
 
 ```sh
-b wd # builds the left side of the wired diamond keyboard for Linux, equivalent to the command below
+b wd # builds the left side of the wired diamond keyboard, equivalent to the command below
 
-build rafaelromao/wired_diamond l LINUX -b seeeduino_xiao_rp2040 -z rafaelromao/zmk
+build rafaelromao/wired_diamond l MACOS -b xiao_rp2040//zmk
 ```
 
 ## Editors
