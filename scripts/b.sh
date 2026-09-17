@@ -87,7 +87,7 @@ if [[ -z "${1:-}" || "${1:-}" == "-h" || "${1:-}" == "--help" ]]; then
     echo "build.sh script with the correct parameters."
     echo "Additional arguments are passed to the underlying build.sh script."
     echo
-    echo "Available keyboards: all, rommana, wired_rommana, diamond, wired_diamond, choc_diamond, zen, dilemma"
+    echo "Available keyboards: all, reset, rommana, wired_rommana, diamond, wired_diamond, choc_diamond, zen, dilemma"
     echo
     echo "Examples:"
     echo "  $(basename "$0") rommana"
@@ -116,7 +116,7 @@ case "$KEYBOARD" in
         build_zen "$@"
         build_dilemma "$@"
         ;;
-    rommana|s)
+    reset|s)
         build_reset "$@"
         ;;
     rommana|r)
