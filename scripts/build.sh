@@ -14,7 +14,7 @@ EXTRA_SHIELDS=()
 FLAGS=()
 MODULES=()
 SNIPPETS=()
-DEF_MODULES=(urob/zmk-leader-key,urob/zmk-auto-layer,urob/zmk-adaptive-key,rafaelromao/zmk-layer-morph,rafaelromao/zmk-vim-mode,rafaelromao/zmk-layer-hud)
+DEF_MODULES=(urob/zmk-leader-key,urob/zmk-auto-layer,urob/zmk-adaptive-key,rafaelromao/zmk-layer-morph,rafaelromao/zmk-vim-mode,rafaelromao/zmk-layer-hud,rafaelromao/zmk-persistent-layers)
 
 # Function to display usage
 usage() {
