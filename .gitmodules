@@ -34,3 +34,6 @@
 [submodule "modules/rafaelromao/zmk-layer-hud"]
 	path = modules/rafaelromao/zmk-layer-hud
 	url = git@github.com:rafaelromao/zmk-layer-hud
+[submodule "modules/rafaelromao/zmk-persistent-layers"]
+	path = modules/rafaelromao/zmk-persistent-layers
+	url = git@github.com:rafaelromao/zmk-persistent-layers
