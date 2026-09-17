@@ -74,6 +74,8 @@ This keymap is implemented using ZMK, with the following external modules:
 
 [Vim Mode](https://github.com/rafaelromao/zmk-vim-mode) is my own project, and it has three parts: a ZMK module that keeps the vim layers in sync with the editor, a daemon that runs on the host, and a NeoVim plugin. The editor state travels to the keyboard as a small number encoded in the HID LED indicator report. See [VIM Mode](https://rafaelromao.github.io/keyboards/#vim-mode) for the details.
 
+![img](docs/img/vim-mode.gif)
+
 ## Local Build
 
 Unlike most ZMK users, I don't use GitHub Actions to build the firmware for my keyboards, and since I come from a legacy repo structure, from the time I used QMK and when they didn't even support external userspaces, I use git submodules to import ZMK and everything else I need into my repo, then I build the firmware using a custom script. 
