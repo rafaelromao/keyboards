@@ -13,9 +13,15 @@
      * ALT_OS says "this host is not the one this firmware was built for", which
      * is a fact about whichever machine is currently selected -- so the module
      * records it against the endpoint and replays it whenever that endpoint
-     * comes back, including after a restart. Teach each host once with the
-     * def OS / alt OS keys on the toggles layer and &bt BT_SEL carries the OS
-     * with it from then on.
+     * comes back, including after a restart. A host teaches itself on connect
+     * (rafaelromao/zmk-os-detection, os.dtsi) and the def OS / alt OS keys on
+     * the toggles layer override it; either way &bt BT_SEL carries the OS with
+     * it from then on.
+     *
+     * The replay is still what makes the mode feel instant. Detection cannot
+     * answer until the host has finished identifying itself, which is a
+     * fraction of a second after the endpoint is selected -- this fills that
+     * gap, and records whatever detection settles on afterwards.
      *
      * Only ALT_OS belongs here. It is held on by &lock_on, and a restore locks
      * it the same way, which is what makes a mode layer safe to replay. The vim

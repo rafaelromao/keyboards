@@ -14,6 +14,7 @@
 #include "../features/vim.dtsi"
 #include "../features/hud.dtsi"
 #include "../features/persist.dtsi"
+#include "../features/os.dtsi"
 
 #include "../features/accents.dtsi"
 #include "../features/shortcuts.dtsi"

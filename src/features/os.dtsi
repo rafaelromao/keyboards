@@ -1,0 +1,38 @@
+/*
+*
+* Copyright (c) 2026 Rafael Romão
+* SPDX-License-Identifier: MIT
+*
+*/
+
+/ {
+    /*
+     * Ask the host which OS it is, instead of being told
+     * (rafaelromao/zmk-os-detection).
+     *
+     * ALT_OS means "this host is not the one this firmware was built for", so
+     * the mapping is relative to flags.h -- the same swap OS_MORPH does, spelled
+     * out. The module cannot see the build flag, so the keymap hands it over:
+     * flags.h is already included by the time this file is read.
+     *
+     * This is the def OS / alt OS keys, done automatically. Those keys stay:
+     * they are the answer when detection is wrong or silent, and the module
+     * never contests a host it could not identify. What changes is that a host
+     * is usually right the first time it is plugged in, instead of the second.
+     *
+     * Nothing here replaces persist.dtsi. That restores the mode the instant an
+     * endpoint is selected, which is well before a fingerprint can settle; this
+     * corrects it afterwards, and the correction is recorded in turn.
+     */
+    os_detection {
+        compatible = "zmk,os-detection";
+        layer = <ALT_OS>;
+#ifdef LINUX
+        activate-for = "macos";
+        deactivate-for = "linux";
+#else
+        activate-for = "linux";
+        deactivate-for = "macos";
+#endif
+    };
+};
