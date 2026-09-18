@@ -15,6 +15,11 @@ FLAGS=()
 MODULES=()
 SNIPPETS=()
 DEF_MODULES=(urob/zmk-leader-key,urob/zmk-auto-layer,urob/zmk-adaptive-key,rafaelromao/zmk-layer-morph,rafaelromao/zmk-vim-mode,rafaelromao/zmk-layer-hud,rafaelromao/zmk-persistent-layers,rafaelromao/zmk-os-detection)
+# The layer signal's USB carrier is a CDC-ACM interface that exists only if this
+# snippet adds it, so a build without it reaches the HUD over BLE or not at all.
+# zmk-layer-hud is in DEF_MODULES, which are appended to whatever -m gives, so
+# the snippet is always on the search path. -n replaces this, it does not add.
+DEF_SNIPPETS=(layer-hud-usb-uart)
 
 # Function to display usage
 usage() {
@@ -135,6 +140,11 @@ if [[ -n "$SHIELD" && -n "$CONFIG" ]]; then
     if [[ "$SHIELD" == "cd" ]]; then
         SHIELD="${BASENAME}_central_dongle"
     fi 
+fi
+
+# Add the default snippets, unless the caller named their own.
+if [ ${#SNIPPETS[@]} -eq 0 ]; then
+    SNIPPETS=("${DEF_SNIPPETS[@]}")
 fi
 
 # Add default modules
@@ -275,9 +285,11 @@ command="west build -s app -b \$BOARD "
 if [ -n "$PRISTINE" ]; then
     command+=" -p "
 fi
-if [ -n "$SNIPPETS" ]; then
-    command+=" -S \"\$SNIPPETS\" "
-fi
+# One -S each: "$SNIPPETS" is ${SNIPPETS[0]} in bash, so a comma-separated list
+# passed to -n used to reach west as its first element alone.
+for snippet in "${SNIPPETS[@]}"; do
+    command+=" -S $snippet "
+done
 command+="--build-dir build/\"\$ARTIFACT\" --"
 for flag in "${FLAGS[@]}"; do
     command+=" -D$flag"
