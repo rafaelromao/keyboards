@@ -15,7 +15,7 @@ build_rommana() {
     if [[ "$complete" == "true" ]]; then
         ./scripts/build.sh "mabroum/rommana" "pr" "$@"
         ./scripts/build.sh "mabroum/rommana" "pl" "$@"
-        ./scripts/build.sh "mabroum/rommana" "cd" "$@"
+        ./scripts/build.sh "mabroum/rommana" "cd" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
     fi
 }
 
