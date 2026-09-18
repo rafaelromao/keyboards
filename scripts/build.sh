@@ -9,7 +9,13 @@ BOARD="nice_nano//zmk"
 VERBOSE=""
 PRISTINE=""
 ZMK="zmkfirmware/zmk"
-REVISION="main"
+# Pinned rather than "main". Tracking a branch meant two boards built a week
+# apart ran different ZMK, and "what changed since it worked?" had no answer.
+# This is the commit today's working builds used. v0.3, the latest release, is
+# still on Zephyr 3.x and will not build this tree. Moving the pin is a
+# deliberate act: bump it, rebuild everything, and check the modules still
+# compile, since they track main. -r overrides it for a one-off.
+REVISION="9ebbeff0a8b69a42f14aec022cdf16c7a107b9e0"
 EXTRA_SHIELDS=()
 FLAGS=()
 MODULES=()
@@ -249,12 +255,18 @@ git submodule add -f "git@github.com:$ZMK" "$ZMK_MODULE"
 echo 'Cleaning zmk...'
 rm -rf "$PROJECT_DIR/$ZMK_MODULE/build"
 
-# Check out the main ZMK revision
+# Check out the ZMK revision
 echo 'Checking out zmk...'
 cd $ZMK_HOME
-git fetch
+ZMK_WAS="$(git rev-parse HEAD 2>/dev/null || true)"
+git fetch --tags --force
 git checkout -f $REVISION
-git pull
+# Only a branch needs fast-forwarding. A tag or a SHA leaves a detached HEAD,
+# where `git pull` fails outright, and is already at the exact revision asked for.
+if git symbolic-ref -q HEAD >/dev/null; then
+    git pull --ff-only
+fi
+ZMK_NOW="$(git rev-parse HEAD)"
 
 cd "$PROJECT_DIR"
 
@@ -264,6 +276,15 @@ then
     echo "Initializing West..."
     cd $ZMK_HOME
     west init -l app/
+    west update
+    cd $PROJECT_DIR
+elif [[ "$ZMK_WAS" != "$ZMK_NOW" ]]
+then
+    # ZMK pins its own Zephyr in west.yml, so a revision change that skips this
+    # builds the new ZMK against the old Zephyr -- and it fails somewhere far
+    # from the cause, if it fails at all.
+    echo "ZMK moved ${ZMK_WAS:0:8} -> ${ZMK_NOW:0:8}, updating west modules..."
+    cd $ZMK_HOME
     west update
     cd $PROJECT_DIR
 fi

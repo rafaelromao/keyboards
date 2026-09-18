@@ -32,14 +32,21 @@
      * and rollover codes. Nothing on the new carriers can be read as a key, and
      * the raised CONFIG_ZMK_HID_KEYBOARD_REPORT_SIZE they needed is gone.
      *
-     * `positions` is safe again for the same reason, but stays off until the
-     * transport is proven on hardware: it was what made combos stop firing, by
-     * blocking the system work queue ZMK scans the matrix on until the next
-     * press was timestamped past COMBO_TERM. The carriers drop instead of
-     * blocking, so a press can no longer be delayed.
+     * `positions` is back on. It was what made combos stop firing: two blocking
+     * zmk_endpoint_send_report calls per key press on the system work queue,
+     * which is the queue ZMK scans the matrix on, so the next press was
+     * timestamped past COMBO_TERM. Both carriers drop a frame rather than wait
+     * for one, so a press can no longer be delayed. The Diamond has since run
+     * the CDC-ACM carrier with combos working, which is the evidence that was
+     * missing when this was last commented out.
+     *
+     * Without it the HUD lights keys by guessing from the characters typed; with
+     * it the keyboard names the position, so chords, combos, macros and modifier
+     * keys light the key actually pressed.
      */
     layer_signal {
         compatible = "zmk,layer-signal";
         heartbeat-ms = <2000>;
+        positions;
     };
 };
