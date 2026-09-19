@@ -429,7 +429,7 @@ The other OS is one key away. The *toggles* layer carries a *def OS* and an *alt
 
 This is a mode, not a momentary layer, so it stays on until I press *def OS*. It is held with ZMK's layer locking, which makes the firmware refuse every ordinary attempt to switch it off: *cancel*, the vim mode transitions, the number and caps word layers, and anything the host asks for all leave it alone. Deep sleep is disabled on the central for the same reason, since waking from it is really a reboot.
 
-Better still, I only have to say it once per machine. The OS is a property of the host, so [zmk-persistent-layers](https://github.com/rafaelromao/zmk-persistent-layers) records the mode against whichever endpoint is selected and brings it back whenever that endpoint returns — after a profile switch, and after a restart. Pressing *alt OS* on the Bluetooth profile paired with my Linux box teaches it that host; from then on `&bt` is the OS switch, and the two keys are only for teaching a new machine or correcting one. Nothing is recorded while no host is connected, so the mode does not flicker when a profile drops.
+Better still, I usually do not have to say it at all. [zmk-os-detection](https://github.com/rafaelromao/zmk-os-detection) asks the host which operating system it is and sets the mode to match on connect, so plugging into a machine the firmware was not built for is right the first time rather than the second. The two keys stay, because they are the answer when detection is wrong or silent — the module never contests a host it could not identify.
 
 ![img](img/diagrams/toggles.png)
 

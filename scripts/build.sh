@@ -20,7 +20,7 @@ EXTRA_SHIELDS=()
 FLAGS=()
 MODULES=()
 SNIPPETS=()
-DEF_MODULES=(urob/zmk-leader-key,urob/zmk-auto-layer,urob/zmk-adaptive-key,rafaelromao/zmk-layer-morph,rafaelromao/zmk-vim-mode,rafaelromao/zmk-layer-hud,rafaelromao/zmk-persistent-layers,rafaelromao/zmk-os-detection)
+DEF_MODULES=(urob/zmk-leader-key,urob/zmk-auto-layer,urob/zmk-adaptive-key,rafaelromao/zmk-layer-morph,rafaelromao/zmk-vim-mode,rafaelromao/zmk-layer-hud,rafaelromao/zmk-os-detection)
 # The layer signal's USB carrier is a CDC-ACM interface that exists only if this
 # snippet adds it, so a build without it reaches the HUD over BLE or not at all.
 # zmk-layer-hud is in DEF_MODULES, which are appended to whatever -m gives, so

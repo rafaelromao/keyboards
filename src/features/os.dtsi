@@ -20,9 +20,10 @@
      * never contests a host it could not identify. What changes is that a host
      * is usually right the first time it is plugged in, instead of the second.
      *
-     * Nothing here replaces persist.dtsi. That restores the mode the instant an
-     * endpoint is selected, which is well before a fingerprint can settle; this
-     * corrects it afterwards, and the correction is recorded in turn.
+     * A per-endpoint replay used to cover the fraction of a second between the
+     * endpoint being selected and a fingerprint settling. Detection turned out
+     * to be quick enough on its own, so that came back out again -- this is the
+     * only thing driving ALT_OS now.
      */
     os_detection {
         compatible = "zmk,os-detection";

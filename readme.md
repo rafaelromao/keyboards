@@ -71,7 +71,7 @@ This keymap is implemented using ZMK, with the following external modules:
 - [Leader Key](https://github.com/urob/zmk-leader-key)
 - [Layer Morph](https://github.com/rafaelromao/zmk-layer-morph)
 - [Layer HUD](https://github.com/rafaelromao/zmk-layer-hud)
-- [Persistent Layers](https://github.com/rafaelromao/zmk-persistent-layers)
+- [OS Detection](https://github.com/rafaelromao/zmk-os-detection)
 - [Vim Mode](https://github.com/rafaelromao/zmk-vim-mode)
 
 [Vim Mode](https://github.com/rafaelromao/zmk-vim-mode) is my own project, and it has three parts: a ZMK module that keeps the vim layers in sync with the editor, a daemon that runs on the host, and a NeoVim plugin. The editor state travels to the keyboard as a small number encoded in the HID LED indicator report. See [VIM Mode](https://rafaelromao.github.io/keyboards/#vim-mode) for the details.
