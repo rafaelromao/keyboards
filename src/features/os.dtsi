@@ -10,12 +10,12 @@
      * Ask the host which OS it is, instead of being told
      * (rafaelromao/zmk-os-detection).
      *
-     * ALT_OS means "this host is not the one this firmware was built for", so
-     * the mapping is relative to flags.h -- the same swap OS_MORPH does, spelled
-     * out. The module cannot see the build flag, so the keymap hands it over:
-     * flags.h is already included by the time this file is read.
+     * Every build targets Linux, so ALT_OS means "this host is a Mac" -- the
+     * same thing OS_MORPH reads it as. This used to be stated relative to a
+     * build flag, and the mapping was flipped to match whichever OS the flag
+     * named; there is one firmware per board now, so it is just written out.
      *
-     * This is the def OS / alt OS keys, done automatically. Those keys stay:
+     * This is the omarchy / macos keys, done automatically. Those keys stay:
      * they are the answer when detection is wrong or silent, and the module
      * never contests a host it could not identify. What changes is that a host
      * is usually right the first time it is plugged in, instead of the second.
@@ -28,12 +28,7 @@
     os_detection {
         compatible = "zmk,os-detection";
         layer = <ALT_OS>;
-#ifdef LINUX
         activate-for = "macos";
         deactivate-for = "linux";
-#else
-        activate-for = "linux";
-        deactivate-for = "macos";
-#endif
     };
 };

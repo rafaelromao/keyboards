@@ -3,10 +3,6 @@
 #include <dt-bindings/zmk/modifiers.h>
 #include <dt-bindings/zmk/mouse.h>
 
-#if __has_include("flags.h")
-#include "flags.h"
-#endif
-
 #include "helpers.h"
 #include "config.dtsi"
 

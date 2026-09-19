@@ -89,14 +89,14 @@ Into the container, I can use my custom [build](scripts/build.sh) script to buil
 Here are some usage examples:
 
 ```bash
-# Builds the central left side shield of the Rommana, assuming nice_nano_v2 as board and MACOS as target operating system
+# Builds the central left side shield of the Rommana, assuming nice_nano_v2 as board
 build mabroum/rommana cl
 
 # Builds the left side shield of the Wired Diamond, specifying the board to be used instead of the default
-build rafaelromao/wired_diamond l LINUX -b xiao_rp2040//zmk
+build rafaelromao/wired_diamond l -b xiao_rp2040//zmk
 
 # Builds the central dongle shield of the Choc Diamond, specifying an extra shield and an external module to handle the display
-build rafaelromao/choc_diamond cd MACOS -e dongle_display -m englmaxi/zmk-dongle-display
+build rafaelromao/choc_diamond cd -e dongle_display -m englmaxi/zmk-dongle-display
 ```
 
 To make it even simpler, I have a [b](scripts/b.sh) script that can be used to build the central sides using default configurations. 
@@ -106,7 +106,7 @@ Example:
 ```sh
 b wd # builds the left side of the wired diamond keyboard, equivalent to the command below
 
-build rafaelromao/wired_diamond l MACOS -b xiao_rp2040//zmk
+build rafaelromao/wired_diamond l -b xiao_rp2040//zmk
 ```
 
 ## Editors

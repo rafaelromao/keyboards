@@ -14,7 +14,7 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-                     display-name = "DEFAULT";
+                     display-name = "OMARCHY";
                      bindings = <
    &kp Q               &kp B               &kp M               &kp G               &kp K               &kp X               &kp L               &kp O               &kp U               &kp SEMICOLON
    &lt SHORTS D        &mt LCTL N          &mt LALT S          &mt LSFT T          &kp W               &kp Z               &mt LSFT R          &mt LALT A          &mt LCTL E          &lt SHORTS I
@@ -24,7 +24,7 @@
                 };
 
                 alt_os_layer {
-                     display-name = "ALT OS";
+                     display-name = "MACOS";
                      bindings = <
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  

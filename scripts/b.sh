@@ -21,27 +21,27 @@ build_rommana() {
 
 build_wired_rommana() {
     echo "--- Building Wired Rommana ---"
-    ./scripts/build.sh "mabroum/wired_rommana" "l" "LINUX" "-b" "xiao_rp2040//zmk" "$@"
+    ./scripts/build.sh "mabroum/wired_rommana" "l" "-b" "xiao_rp2040//zmk" "$@"
     if [[ "$complete" == "true" ]]; then
-        ./scripts/build.sh "mabroum/wired_rommana" "r" "LINUX" "-b" "xiao_rp2040//zmk" "$@"
+        ./scripts/build.sh "mabroum/wired_rommana" "r" "-b" "xiao_rp2040//zmk" "$@"
     fi
 }
 
 build_diamond() {
     echo "--- Building Diamond ---"
-    ./scripts/build.sh "rafaelromao/diamond" "cd" "LINUX" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
+    ./scripts/build.sh "rafaelromao/diamond" "cd" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
     if [[ "$complete" == "true" ]]; then
-        ./scripts/build.sh "rafaelromao/diamond" "pr" "LINUX" "$@"
-        ./scripts/build.sh "rafaelromao/diamond" "pl" "LINUX" "$@"
-        ./scripts/build.sh "rafaelromao/diamond" "cl" "LINUX" "$@"
+        ./scripts/build.sh "rafaelromao/diamond" "pr" "$@"
+        ./scripts/build.sh "rafaelromao/diamond" "pl" "$@"
+        ./scripts/build.sh "rafaelromao/diamond" "cl" "$@"
     fi
 }
 
 build_wired_diamond() {
     echo "--- Building Wired Diamond ---"
-    ./scripts/build.sh "rafaelromao/wired_diamond" "l" "MACOS" "-b" "xiao_rp2040//zmk" "$@"
+    ./scripts/build.sh "rafaelromao/wired_diamond" "l" "-b" "xiao_rp2040//zmk" "$@"
     if [[ "$complete" == "true" ]]; then
-        ./scripts/build.sh "rafaelromao/wired_diamond" "r" "MACOS" "-b" "xiao_rp2040//zmk" "$@"
+        ./scripts/build.sh "rafaelromao/wired_diamond" "r" "-b" "xiao_rp2040//zmk" "$@"
     fi
 }
 
@@ -51,28 +51,28 @@ build_choc_diamond() {
     if [[ "$complete" == "true" ]]; then
         ./scripts/build.sh "rafaelromao/choc_diamond" "pr" "$@"
         ./scripts/build.sh "rafaelromao/choc_diamond" "pl" "$@"
-        ./scripts/build.sh "rafaelromao/choc_diamond" "cd" "LINUX" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
+        ./scripts/build.sh "rafaelromao/choc_diamond" "cd" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
     fi
 }
 
 build_zen() {
     echo "--- Building Corneish Zen ---"
-    ./scripts/build.sh "lowprokb.ca/corneish-zen" "-b" "corneish_zen_left//zmk" "-o" "LINUX" "$@"
+    ./scripts/build.sh "lowprokb.ca/corneish-zen" "-b" "corneish_zen_left//zmk" "$@"
     if [[ "$complete" == "true" ]]; then
-        ./scripts/build.sh "lowprokb.ca/corneish-zen" "-b" "corneish_zen_right//zmk" "-o" "LINUX" "$@"
-        ./scripts/build.sh "lowprokb.ca/corneish-zen-with-dongle" "corneish_zen_dongle" "LINUX" "$@"
-        ./scripts/build.sh "lowprokb.ca/corneish-zen-with-dongle" "corneish_zen_v2_left" "LINUX" "$@"
-        ./scripts/build.sh "lowprokb.ca/corneish-zen-with-dongle" "corneish_zen_v2_right" "LINUX" "$@"
+        ./scripts/build.sh "lowprokb.ca/corneish-zen" "-b" "corneish_zen_right//zmk" "$@"
+        ./scripts/build.sh "lowprokb.ca/corneish-zen-with-dongle" "corneish_zen_dongle" "$@"
+        ./scripts/build.sh "lowprokb.ca/corneish-zen-with-dongle" "corneish_zen_v2_left" "$@"
+        ./scripts/build.sh "lowprokb.ca/corneish-zen-with-dongle" "corneish_zen_v2_right" "$@"
     fi
 }
 
 build_dilemma() {
     echo "--- Building Dilemma ---"
-    ./scripts/build.sh "bastardkb/dilemma" "cl" "LINUX" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
+    ./scripts/build.sh "bastardkb/dilemma" "cl" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
     if [[ "$complete" == "true" ]]; then
-        ./scripts/build.sh "bastardkb/dilemma" "pr" "LINUX" "$@"
-        ./scripts/build.sh "bastardkb/dilemma" "pl" "LINUX" "$@"
-        ./scripts/build.sh "bastardkb/dilemma" "cd" "LINUX" "$@"
+        ./scripts/build.sh "bastardkb/dilemma" "pr" "$@"
+        ./scripts/build.sh "bastardkb/dilemma" "pl" "$@"
+        ./scripts/build.sh "bastardkb/dilemma" "cd" "$@"
     fi
 }
 

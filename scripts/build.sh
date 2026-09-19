@@ -4,7 +4,6 @@ PROJECT_DIR="$(pwd)"
 # Initialize default values
 CONFIG=""
 SHIELD=""
-OPERATING_SYSTEM="MACOS"
 BOARD="nice_nano//zmk"
 VERBOSE=""
 PRISTINE=""
@@ -29,15 +28,13 @@ DEF_SNIPPETS=(layer-hud-usb-uart)
 
 # Function to display usage
 usage() {
-    echo "Usage: build [<config> <shield> <operating_system=$OPERATING_SYSTEM>] [-k <config>] [-s <shield>] [-b <board=$BOARD>] [-z <zmk=$ZMK>] [-r <revision=$REVISION>] [-v <verbose>] [-p <pristine>] [-e <extra_shield1,extra_shield2,...>] [-d <flag1,flag2,...>] [-m <module1,module2,...>] [-n <snippet1,snippet2,...>] [-h | --help]"
+    echo "Usage: build [<config> <shield>] [-k <config>] [-s <shield>] [-b <board=$BOARD>] [-z <zmk=$ZMK>] [-r <revision=$REVISION>] [-v <verbose>] [-p <pristine>] [-e <extra_shield1,extra_shield2,...>] [-d <flag1,flag2,...>] [-m <module1,module2,...>] [-n <snippet1,snippet2,...>] [-h | --help]"
     echo
     echo "Parameters:"
     echo "  <config>               Specify the zmk config."
     echo "  <shield>               Specify the shield."
-    echo "  <operating_system>     Specify the operating system."
     echo "  -k, --config           Specify the zmk config."
     echo "  -s, --shield           Specify the shield."
-    echo "  -o, --operating_system Specify the operating system (default: $OPERATING_SYSTEM)."
     echo "  -b, --board            Specify the board (default: $BOARD)."
     echo "  -z, --zmk              Specify the zmk repo (default: $ZMK)."
     echo "  -r, --revision         Specify the zmk revision (default: $REVISION)."
@@ -67,21 +64,13 @@ if [[ $# -gt 0 ]] && [[ ! $1 =~ ^- ]]; then
     shift
 fi
 
-if [[ $# -gt 0 ]] && [[ ! $1 =~ ^- ]]; then
-    OPERATING_SYSTEM="$1"
-    shift
-fi
-
-while getopts "k:s:o:b:z:r:n:e:d:m:pv" opt; do
+while getopts "k:s:b:z:r:n:e:d:m:pv" opt; do
     case $opt in
         k)
             CONFIG="$OPTARG"
             ;;
         s)
             SHIELD="$OPTARG"
-            ;;
-        o)
-            OPERATING_SYSTEM="$OPTARG"
             ;;
         b)
             BOARD="$OPTARG"
@@ -118,6 +107,19 @@ done
 
 # Shift processed options away
 shift $((OPTIND - 1))
+
+# The operating system used to be a third positional argument. getopts stops at
+# the first non-option, so a leftover "MACOS" here would swallow every flag that
+# followed it -- including -b -- and the build would quietly use the default
+# board and report success. Say so instead.
+if [[ $# -gt 0 ]]; then
+    echo "Unexpected argument: $1"
+    echo
+    echo "The operating system argument was removed. Every build targets Linux;"
+    echo "macOS lives on the ALT_OS layer, set by os-detection or the toggles layer."
+    echo
+    usage
+fi
 
 if [[ -n "$SHIELD" && -n "$CONFIG" ]]; then
     if [[ "$CONFIG" == */* ]]; then
@@ -164,7 +166,6 @@ done
 # Print the parameters for verification
 echo "Config: $CONFIG"
 echo "Shield: $SHIELD"
-echo "Operating System: $OPERATING_SYSTEM"
 echo "Board: $BOARD"
 echo "Verbose: $VERBOSE"
 echo "Pristine: $PRISTINE"
@@ -174,12 +175,6 @@ echo "Snippets: ${SNIPPETS[*]}"
 echo "Extra Shields: ${EXTRA_SHIELDS[*]}"
 echo "Flags: ${FLAGS[*]}"
 echo "Modules: ${MODULES[*]}"
-
-# Create a new flags.h file
-OUTPUT_FILE="$PROJECT_DIR/src/definitions/flags.h"
-[ -f "$OUTPUT_FILE" ] && rm "$OUTPUT_FILE"
-touch "$OUTPUT_FILE"
-echo "#define $OPERATING_SYSTEM" >> "$OUTPUT_FILE"
 
 # Rewrite the modules list
 
@@ -290,9 +285,9 @@ then
 fi
 
 if [ -z "$CONFIG" ]; then
-    ARTIFACT="$BOARD-$SHIELD-$OPERATING_SYSTEM"
+    ARTIFACT="$BOARD-$SHIELD"
 else
-    ARTIFACT="${SHIELD:-$BOARD}-$OPERATING_SYSTEM"
+    ARTIFACT="${SHIELD:-$BOARD}"
 fi
 
 ARTIFACT="${ARTIFACT//\/\/zmk/}"

@@ -248,8 +248,8 @@ layers:
       ]
     - [
         { t: $$mdi:flash$$, s: "boot" },
-        { t: def OS },
-        { t: alt OS },
+        { t: omarchy },
+        { t: macos },
         { t: mehs },
         null,
         { t: $$mdi:flash$$, s: "boot" },

@@ -7,7 +7,13 @@
 
 / {
     shortcuts {
-        OS_MORPH(lm_os, &kp A, &kp D)
+        // Types the name of the OS this host is running. Routed through two
+        // macros rather than inlined: OS_MORPH gives the nodes it builds
+        // wait-ms/tap-ms of 0, which is no pacing at all for a word.
+        MACRO(mc_os_macos,   &kp RS(M) &kp A &kp C &kp RS(O) &kp RS(S))
+        MACRO(mc_os_omarchy, &kp RS(O) &kp M &kp A &kp R &kp C &kp H &kp Y)
+
+        OS_MORPH(lm_os, &mc_os_macos, &mc_os_omarchy)
 
         MACRO(mc_sleep,                  &macro_tap_time 400 &macro_tap &kp C_SLEEP)
 

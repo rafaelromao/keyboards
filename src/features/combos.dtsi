@@ -16,14 +16,14 @@
 
 / {
     /*
-     * ALT_OS is the base layer wearing the other OS's modifiers, so it belongs
-     * to every base-layer set. Spelling it out matters more than it looks:
-     * ALT_OS is 1 and every other layer is 2 or above, so it is the highest
-     * active layer exactly when the base layer is the one you are on -- and ZMK
+     * ALT_OS is the base layer wearing the Mac's modifiers, so it belongs to
+     * every base-layer set. Spelling it out matters more than it looks: ALT_OS
+     * is 1 and every other layer is 2 or above, so it is the highest active
+     * layer exactly when the base layer is the one you are on -- and ZMK
      * matches a combo against the highest active layer alone, not against every
      * active one. A base-layer combo that lists ALPHA1 without ALT_OS therefore
-     * stops firing the moment os-detection decides this host is the other kind,
-     * and keeps working everywhere else, which is a miserable thing to debug.
+     * stops firing the moment os-detection decides this host is a Mac, and
+     * keeps working everywhere else, which is a miserable thing to debug.
      * Use ALPHA1_BASE, never a bare ALPHA1.
      */
     #define ALPHA1_BASE                 ALPHA1 ALT_OS

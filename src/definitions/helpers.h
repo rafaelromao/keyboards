@@ -71,16 +71,24 @@
                 ; \
         };
 
-    /* OS_MORPH */
+    /* OS_MORPH
+     *
+     * Every build targets Linux, so LINUX_BINDING is what fires by default and
+     * MACOS_BINDING is what ALT_OS morphs to -- a layer that is on exactly when
+     * the host is a Mac, raised by os-detection (features/os.dtsi) or by the two
+     * keys on the toggles layer. This used to be a pair of definitions chosen by
+     * a build flag, which swapped the two arguments; the argument order was the
+     * same at every call site either way, and now it is simply this.
+     */
 
-    #define OS_MORPH_IMPL(NAME, ALT_BINDING, DEF_BINDING) \
+    #define OS_MORPH(NAME, MACOS_BINDING, LINUX_BINDING) \
         NAME##_d: NAME##_d { \
             wait-ms = <0>; \
             tap-ms = <0>; \
             compatible = "zmk,behavior-macro"; \
             #binding-cells = <0>; \
             bindings \
-                = <DEF_BINDING> \
+                = <LINUX_BINDING> \
                 ; \
         }; \
         NAME##_a: NAME##_a { \
@@ -89,7 +97,7 @@
             compatible = "zmk,behavior-macro"; \
             #binding-cells = <0>; \
             bindings \
-                = <ALT_BINDING> \
+                = <MACOS_BINDING> \
                 ; \
         }; \
         NAME: NAME { \
@@ -101,14 +109,6 @@
                 , <&NAME##_a> \
                 ; \
         };
-
-    #ifdef LINUX
-    #define OS_MORPH(NAME, ALT_BINDING, DEF_BINDING) \
-        OS_MORPH_IMPL(NAME, ALT_BINDING, DEF_BINDING)
-    #else
-    #define OS_MORPH(NAME, ALT_BINDING, DEF_BINDING) \
-        OS_MORPH_IMPL(NAME, DEF_BINDING, ALT_BINDING)
-    #endif
 
     /*  MOD MORPHS  */
 

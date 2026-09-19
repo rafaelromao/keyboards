@@ -423,13 +423,13 @@ And each half has a combo — the ring finger on the top row together with the i
 
 ## Operating System
 
-All shortcuts and macros in this keymap are Operating System aware. Each build has a default OS, chosen at compile time with the `MACOS` or `LINUX` flag, and the LINUX version also covers ANDROID and WINDOWS.
+All shortcuts and macros in this keymap are Operating System aware. Every build targets Linux, which also covers Android and Windows, and macOS is the alternative. This used to be a compile-time choice, so each board had two firmwares; it is one now.
 
-The other OS is one key away. The *toggles* layer carries a *def OS* and an *alt OS* key, and *alt OS* switches every shortcut to the other operating system's form without reflashing: `Cmd+S` becomes `Ctrl+S`, the cedilla goes from a macOS dead key to `AltGr+,`, word motions swap Alt for Ctrl, and so on. It is useful when the same keyboard follows me to a different machine, or when I pair a second Bluetooth profile with a host that is not the one the firmware was built for.
+macOS is one key away. The *toggles* layer carries an *omarchy* and a *macos* key, and *macos* switches every shortcut to the Mac form without reflashing: `Ctrl+S` becomes `Cmd+S`, the cedilla goes from `AltGr+,` to a macOS dead key, word motions swap Ctrl for Alt, and so on. It is useful when the same keyboard follows me to a different machine, or when I pair a second Bluetooth profile with a Mac.
 
-This is a mode, not a momentary layer, so it stays on until I press *def OS*. It is held with ZMK's layer locking, which makes the firmware refuse every ordinary attempt to switch it off: *cancel*, the vim mode transitions, the number and caps word layers, and anything the host asks for all leave it alone. Deep sleep is disabled on the central for the same reason, since waking from it is really a reboot.
+This is a mode, not a momentary layer, so it stays on until I press *omarchy*. It is held with ZMK's layer locking, which makes the firmware refuse every ordinary attempt to switch it off: *cancel*, the vim mode transitions, the number and caps word layers, and anything the host asks for all leave it alone. Deep sleep is disabled on the central for the same reason, since waking from it is really a reboot.
 
-Better still, I usually do not have to say it at all. [zmk-os-detection](https://github.com/rafaelromao/zmk-os-detection) asks the host which operating system it is and sets the mode to match on connect, so plugging into a machine the firmware was not built for is right the first time rather than the second. The two keys stay, because they are the answer when detection is wrong or silent — the module never contests a host it could not identify.
+Better still, I usually do not have to say it at all. [zmk-os-detection](https://github.com/rafaelromao/zmk-os-detection) asks the host which operating system it is and sets the mode to match on connect, so plugging into a Mac is right the first time rather than the second. The two keys stay, because they are the answer when detection is wrong or silent — the module never contests a host it could not identify.
 
 ![img](img/diagrams/toggles.png)
 
