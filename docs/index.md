@@ -33,6 +33,12 @@ This keymap is the result of a few years of iterative improvements with my keybo
     <td><a href="img/builds/Wired%20Rommana.jpeg"><img src="img/builds/Wired%20Rommana.jpeg" width="150" /></a></td>
     <td><a href="img/builds/Corne-ish%20Zen.jpeg"><img src="img/builds/Corne-ish%20Zen.jpeg" width="150" /></a></td>
   </tr>
+  <tr>
+    <td><a href="https://github.com/dixls/Dilemma-3mod">Dilemma</a></td>
+  </tr>
+  <tr>
+    <td><a href="img/builds/Dilemma 26.jpeg"><img src="img/builds/Dilemma 26.jpeg" width="150" /></a></td>
+  </tr>
 </table>
 
 # Directives

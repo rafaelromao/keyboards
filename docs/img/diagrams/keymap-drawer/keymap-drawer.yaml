@@ -943,9 +943,9 @@ combos:
   - { p: [8, 9], k: { t: "()", h: "⇥ ()" }, a: mid, layers: [numbers] }
   - { p: [7, 8], k: { t: "&&", h: "→ &&" }, a: mid, layers: [numbers] }
   - { p: [14, 15], k: { t: "||", h: "→ ||" }, a: mid, layers: [numbers] }
-  - { p: [0, 1, 2],    k: "⇥do ⏎", a: top, slide: -1, layers: [numbers] }
-  - { p: [7, 8, 9],    k: { t: "⇥();", h: "⇥();⏎" }, a: top, slide: -1, layers: [numbers] }
-  - { p: [14, 15, 16], k: { t: "<>()", h: "⇥<>();" }, a: top, slide: -1, layers: [numbers] }
+  - { p: [0, 1, 2],    k: "⇥do ⏎", a: top, w: 48, slide: -1, layers: [numbers] }
+  - { p: [7, 8, 9],    k: { t: "⇥();", h: "⇥();⏎" }, w: 48, a: top, slide: -1, layers: [numbers] }
+  - { p: [14, 15, 16], k: { t: "⇥<>();", h: "⇥<>();⏎" }, w: 48, a: top, slide: -1, layers: [numbers] }
 
   - { p: [10, 11, 12], k: { t: "º", h: "ª" }, a: top, layers: [numbers] }
   - { p: [17, 18, 19], k: "°", a: top, layers: [numbers] }
