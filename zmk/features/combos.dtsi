@@ -110,27 +110,44 @@
 
         COMBO(cb_semi,          RBM RBR,         &th_semi 0 0,           ALPHA1_LAYERS NUM_LAYERS VIM_LAYERS)
 
-        COMBO(cb_k,             LTM LTI,         &kp K,                  ALPHA1_BASE SEN_CASE VIM_LAYERS_BASE)
-        COMBO(cb_w,             LHM LHI,         &ht_w 0 0,              ALPHA1_BASE SEN_CASE VIM_LAYERS_BASE)
-        COMBO(cb_v,             LBI LBM,         &kp V,                  ALPHA1_BASE SEN_CASE VIM_LAYERS_BASE)
-        COMBO(cb_q,             LHR LHM,         &ht_q 0 0,              ALPHA1_BASE SEN_CASE VIM_LAYERS_BASE)
+        /*
+         * The letter chords come in three groups because the layers spell their
+         * letters differently: the bases and ALTREP2 (armed for a second after
+         * every accent, and the highest layer while it is) type plain letters,
+         * sentence case types LS(), and the caps layers type RS() -- the adaptive
+         * keys tell the two apart. cb_dc and cb_pc used to sit here too; they
+         * shared their keys with cb_cancel and cb_meh_ent on the caps layers and
+         * ZMK only ever fired the earlier combo.
+         */
+        COMBO(cb_k,             LTM LTI,         &kp K,                  ALPHA1_BASE ALTREP2 VIM_LAYERS_BASE)
+        COMBO(cb_w,             LHM LHI,         &ht_w 0 0,              ALPHA1_BASE ALTREP2 VIM_LAYERS_BASE)
+        COMBO(cb_v,             LBI LBM,         &kp V,                  ALPHA1_BASE ALTREP2 VIM_LAYERS_BASE)
+        COMBO(cb_q,             LHR LHM,         &ht_q 0 0,              ALPHA1_BASE ALTREP2 VIM_LAYERS_BASE)
 
-        COMBO(cb_kc,            LTM LTI,         &kp LS(K),              CASE_A1 CPLK_A1)
-        COMBO(cb_wc,            LHM LHI,         &kp LS(W),              CASE_A1 CPLK_A1)
-        COMBO(cb_vc,            LBI LBM,         &kp LS(V),              CASE_A1 CPLK_A1)
-        COMBO(cb_qc,            LHR LHM,         &kp LS(Q),              CASE_A1 CPLK_A1)
+        COMBO(cb_ks,            LTM LTI,         &kp LS(K),              SEN_CASE)
+        COMBO(cb_ws,            LHM LHI,         &kp LS(W),              SEN_CASE)
+        COMBO(cb_vs,            LBI LBM,         &kp LS(V),              SEN_CASE)
+        COMBO(cb_qs,            LHR LHM,         &kp LS(Q),              SEN_CASE)
 
-        COMBO(cb_x,             RTI RTM,         &kp X,                  ALPHA1_BASE SEN_CASE VIM_LAYERS_BASE)
-        COMBO(cb_z,             RHI RHM,         &ht_z 0 0,              ALPHA1_BASE SEN_CASE VIM_LAYERS_BASE)
-        COMBO(cb_j,             RBI RBM,         &kp J,                  ALPHA1_BASE SEN_CASE VIM_LAYERS_BASE)
-        COMBO(cb_y,             RHM RHR,         &ht_y 0 0,              ALPHA1_BASE SEN_CASE VIM_LAYERS_BASE)
+        COMBO(cb_kc,            LTM LTI,         &kp RS(K),              CASE_A1 CPLK_A1)
+        COMBO(cb_wc,            LHM LHI,         &kp RS(W),              CASE_A1 CPLK_A1)
+        COMBO(cb_vc,            LBI LBM,         &kp RS(V),              CASE_A1 CPLK_A1)
+        COMBO(cb_qc,            LHR LHM,         &kp RS(Q),              CASE_A1 CPLK_A1)
 
-        COMBO(cb_xc,            RTI RTM,         &kp LS(X),              CASE_A1 CPLK_A1)
-        COMBO(cb_zc,            RHI RHM,         &kp LS(Z),              CASE_A1 CPLK_A1)
-        COMBO(cb_jc,            RBI RBM,         &kp LS(J),              CASE_A1 CPLK_A1)
-        COMBO(cb_yc,            RHM RHR,         &kp LS(Y),              CASE_A1 CPLK_A1)
-        COMBO(cb_dc,            RTI RTM RTR,     &kp LS(D),              CASE_A1 CPLK_A1)
-        COMBO(cb_pc,            RHI RHM RHR,     &kp LS(P),              CASE_A1 CPLK_A1)
+        COMBO(cb_x,             RTI RTM,         &kp X,                  ALPHA1_BASE ALTREP2 VIM_LAYERS_BASE)
+        COMBO(cb_z,             RHI RHM,         &ht_z 0 0,              ALPHA1_BASE ALTREP2 VIM_LAYERS_BASE)
+        COMBO(cb_j,             RBI RBM,         &kp J,                  ALPHA1_BASE ALTREP2 VIM_LAYERS_BASE)
+        COMBO(cb_y,             RHM RHR,         &ht_y 0 0,              ALPHA1_BASE ALTREP2 VIM_LAYERS_BASE)
+
+        COMBO(cb_xs,            RTI RTM,         &kp LS(X),              SEN_CASE)
+        COMBO(cb_zs,            RHI RHM,         &kp LS(Z),              SEN_CASE)
+        COMBO(cb_js,            RBI RBM,         &kp LS(J),              SEN_CASE)
+        COMBO(cb_ys,            RHM RHR,         &kp LS(Y),              SEN_CASE)
+
+        COMBO(cb_xc,            RTI RTM,         &kp RS(X),              CASE_A1 CPLK_A1)
+        COMBO(cb_zc,            RHI RHM,         &kp RS(Z),              CASE_A1 CPLK_A1)
+        COMBO(cb_jc,            RBI RBM,         &kp RS(J),              CASE_A1 CPLK_A1)
+        COMBO(cb_yc,            RHM RHR,         &kp RS(Y),              CASE_A1 CPLK_A1)
 
         COMBO(cb_grv_vim,       LTM LTI,         &kp GRAVE,              VIM_LAYERS_VIM)
         COMBO(cb_x_vim,         RTI RTM,         &lm_x_vim,              VIM_LAYERS_VIM)
