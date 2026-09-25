@@ -35,9 +35,13 @@ This keymap is the result of a few years of iterative improvements with my keybo
   </tr>
   <tr>
     <td><a href="https://github.com/dixls/Dilemma-3mod">Dilemma</a></td>
+    <td><a href="https://github.com/qmk/qmk_firmware/tree/master/keyboards/kprepublic/bm40hsrgb">BM40 (QMK)</a></td>
+    <td><a href="https://github.com/qmk/qmk_firmware/tree/master/keyboards/xiudi/xd75">XD75 (QMK)</a></td>
   </tr>
   <tr>
     <td><a href="img/builds/Dilemma 26.jpeg"><img src="img/builds/Dilemma 26.jpeg" width="150" /></a></td>
+    <td><a href="img/builds/BM40.jpg"><img src="img/builds/BM40.jpg" width="150" /></a></td>
+    <td><a href="img/builds/XD75.jpeg"><img src="img/builds/XD75.jpeg" width="150" /></a></td>
   </tr>
 </table>
 
@@ -140,7 +144,7 @@ Due to a limitation of ZMK, a *sticky layer* does not work well in conjunction w
 ### Punctuation
 
 `.` and `,` are available in the base layer, while `?`, `!`, and `:` are easily reachable in the *symbols* layer, accessed only with the right hand. `;` is available in a combo of `,` and `.`.
-There are also combos in the secondary alpha layer for `_`, `?`, `!`, and `-` too. Brackets are available in the *numbers* layer. More on that later.
+There are also combos in the secondary alpha layer for `?`, `!`, and `-`, and `_` is on one of its thumb keys. Brackets are available in the *numbers* layer. More on that later.
 
 ### Sentence Case
 
@@ -305,9 +309,7 @@ On the left side of the *media* layer, I can control the mouse movement, scroll,
 
 #### Mouse Emulation Combos
 
-All mouse emulation bindings can be activated from any layer using the same key combined with the left home thumb key.
-
-![img](img/diagrams/mediacombos.png)
+In the *media* layer, the clicks are also available as combos on the right hand: the middle and index fingers together for the left click, and the middle and ring fingers for the right click.
 
 ### Media Controls
 
@@ -375,7 +377,7 @@ This is done by [zmk-vim-mode](https://github.com/rafaelromao/zmk-vim-mode), a p
 
 It also reports a *raw* state, for the moments when my keys must reach the editor untouched: plugin windows where the letters are commands, like the dashboard or the file explorer, the terminal, and while a leader sequence is pending. Without it my normal layer would remap those letters and those windows would be unusable.
 
-For the editors where I don't have the plugin, like VSCode and Obsidian, the host only says that a VIM-like editor is focused, and the keyboard infers the mode by itself, watching the keys I press, exactly as it always did. The same happens when I toggle VIM Mode by hand, with a combo. I call this *legacy mode*, and everything that exists only for it lives in a separate file, so it will be easy to remove once every editor I use reports its mode.
+For the editors where I don't have the plugin, like VSCode and Obsidian, the host only says that a VIM-like editor is focused, and the keyboard infers the mode by itself, watching the keys I press, exactly as it always did. The same happens when I toggle VIM Mode by hand, with a combo. I call this *legacy mode*.
 
 ![img](img/diagrams/vim.png)
 
@@ -403,6 +405,17 @@ My most used shortcuts in IntelliJ IDEA and other IDEs were remapped to use Meh 
 
 The diagram above is the intent; `editors/` in this repo is the implementation. It holds the real keymaps for VSCode, IntelliJ and Neovim, each with its own install script, so the layer actually does something once the firmware is flashed. See [editors/README.md](https://github.com/rafaelromao/keyboards/tree/main/editors) for the full mapping, the shortcuts it takes over, and where VSCode has no equivalent.
 
+Each editor is installed with its own script:
+
+```sh
+cd editors
+./vscode/install.sh
+./intellij/install.sh
+./nvim/install.sh
+```
+
+They symlink out of the repo, so editing a keymap there takes effect without reinstalling, and they work on macOS and Linux.
+
 # General
 
 ## Cancel
@@ -425,7 +438,7 @@ Each half has a key in a hard to reach position in the *toggles* layer:
 
 ![img](img/diagrams/toggles.png)
 
-And each half has a combo — the ring finger on the top row together with the index finger on the bottom row — that works on every layer. Reaching the *toggles* layer is itself a chord away, and a board I want to reflash is often a board that is stuck in some state I would rather not have to navigate out of first, so this one deliberately ignores which layers are active. The diagonal two-finger stretch is awkward enough that I never hit it while typing.
+And each half has a combo — the ring finger on the top row together with the index finger on the bottom row — that works on almost every layer: all of them except *toggles*, which has the keys above, and the *mehs*, *func* and *macros* layers. Reaching the *toggles* layer is itself a chord away, and a board I want to reflash is often a board that is stuck in some state I would rather not have to navigate out of first, so this one works from nearly anywhere. The diagonal two-finger stretch is awkward enough that I never hit it while typing.
 
 ## Operating System
 
@@ -438,4 +451,39 @@ This is a mode, not a momentary layer, so it stays on until I press *omarchy*. I
 Better still, I usually do not have to say it at all. [zmk-os-detection](https://github.com/rafaelromao/zmk-os-detection) asks the host which operating system it is and sets the mode to match on connect, so plugging into a Mac is right the first time rather than the second. The two keys stay, because they are the answer when detection is wrong or silent — the module never contests a host it could not identify.
 
 ![img](img/diagrams/toggles.png)
+
+# QMK
+
+Two of my keyboards cannot run ZMK: the BM40 and the XD75 are wired ortholinear boards on an ATmega32U4. For them the same keymap is implemented in QMK, in the [qmk](https://github.com/rafaelromao/keyboards/tree/main/qmk) folder, as a QMK [External Userspace](https://docs.qmk.fm/newbs_external_userspace) that reads the layout from the same 36 positions the ZMK keymap in [zmk](https://github.com/rafaelromao/keyboards/tree/main/zmk) uses. QMK itself is a git submodule at `modules/qmk/qmk_firmware`, pinned to `0.34.4`, next to the ZMK one.
+
+The two hands sit on the left and right blocks of the ortholinear grid, with the thumbs on the bottom row, so the extra columns and the fourth row of the XD75 are unused. Every layer, combo, tap-hold, macro, accent and adaptive key of the ZMK keymap is there, including vim mode, the MEHS layer and the MACROS layer. The layout needs the host on US-International with dead keys, like the ZMK one.
+
+The [toolchain container](https://github.com/rafaelromao/keyboards#local-build) carries the QMK toolchain next to the ZMK one, so both boards build with the same [b](https://github.com/rafaelromao/keyboards/blob/main/scripts/b.sh) script as the ZMK boards, and `b all` includes them:
+
+```bash
+b bm40   # kprepublic/bm40hsrgb/rev1
+b xd75   # xiudi/xd75; -p for a pristine build
+```
+
+Without that container, the [qmk](https://github.com/rafaelromao/keyboards/blob/main/scripts/qmk.sh) script builds them from the host with the official QMK CLI image, through podman and on the same modules volume: `scripts/qmk.sh bm40`, `scripts/qmk.sh xd75` or `scripts/qmk.sh all`.
+
+The `.hex` files land in `build/artifacts/`, ready for `qmk flash` or QMK Toolbox. Both firmwares fill about 90% of the 28 KB flash.
+
+## What the QMK builds do not have
+
+These are the parts of the ZMK keymap that have no counterpart in QMK, or that only make sense on the wireless boards:
+
+- **Bluetooth, dongles and displays**: the toggles-layer Bluetooth keys are empty, and there is no battery reporting, deep sleep or dongle display.
+- **Layer HUD**: nothing is signalled to the host over serial or Bluetooth, so the [layer HUD](https://github.com/rafaelromao/zmk-layer-hud) does not work with these boards.
+- **Vim mode sync with the host**: the vim layers exist and the mode changes the keyboard infers from what it types (`i`, `a`, `o`, `v`, `:`, `Esc`, ...) all work, but the editor state is not read back from the host. Vim mode is turned on with the top-row ring+middle+index chord and off with the MACROS-layer chord, cancel or num word.
+- **Leader key**: not ported; its slot on the shortcuts layer is empty.
+- **Meh + comma / Meh + dot**: always `Ctrl+Alt+Shift+,` and `Ctrl+Alt+Shift+.`, without the macOS variants.
+- **Persistent layers**: the OS mode chosen on the toggles layer is kept until the board is unplugged, not stored.
+
+And a few things work differently:
+
+- **OS detection** uses QMK's USB fingerprinting. Linux is the default, macOS is detected or forced from the toggles layer, and a forced choice survives a later detection.
+- **Mouse emulation** uses QMK's mouse keys instead of the ZMK pointing module, with QMK's acceleration curve.
+- **One-shot timing**: sticky shift lasts 1.5 s and the sticky layers 1 s, as in ZMK; a pending sticky shift is spent by the next key press, so rolled keys behave the same way.
+- **Home-row mods**: tap-preferred with a 250 ms tapping term, no permissive hold, as in ZMK. The symbol tap-holds and the Meh mod-taps use QMK's Flow Tap for the ZMK `require-prior-idle` behaviour.
 

@@ -8,6 +8,8 @@ A split keyboard layout optimized for Portuguese, English, working with numbers 
 
 The image above shows just the most relevant layers. You can see the full diagram [here](docs/img/diagrams/all.png).
 
+![img](docs/img/vim-mode.gif)
+
 ## How this layout works?
 
 The ratiaonale behind the decisions that led to this keymap can be found in [this page](https://rafaelromao.github.io/keyboards), but here is a summary:
@@ -78,44 +80,9 @@ This keymap is implemented using ZMK, with the following external modules:
 - [OS Detection](https://github.com/rafaelromao/zmk-os-detection)
 - [Vim Mode](https://github.com/rafaelromao/zmk-vim-mode)
 
-[Vim Mode](https://github.com/rafaelromao/zmk-vim-mode) is my own project, and it has three parts: a ZMK module that keeps the vim layers in sync with the editor, a daemon that runs on the host, and a NeoVim plugin. The editor state travels to the keyboard as a small number encoded in the HID LED indicator report. See [VIM Mode](https://rafaelromao.github.io/keyboards/#vim-mode) for the details.
-
-![img](docs/img/vim-mode.gif)
-
 ## QMK
 
-Two of my keyboards cannot run ZMK: the BM40 and the XD75 are wired ortholinear boards on an ATmega32U4. For them the same keymap is implemented in QMK, in [qmk](qmk), as a QMK [External Userspace](https://docs.qmk.fm/newbs_external_userspace) that reads the layout from the same 36 positions the ZMK keymap in [zmk](zmk) uses. QMK itself is a git submodule at `modules/qmk/qmk_firmware`, pinned to `0.34.4`, next to the ZMK one.
-
-The two hands sit on the left and right blocks of the ortholinear grid, with the thumbs on the bottom row, so the extra columns and the fourth row of the XD75 are unused. Every layer, combo, tap-hold, macro, accent and adaptive key of the ZMK keymap is there, including vim mode, the MEHS layer and the MACROS layer. The layout needs the host on US-International with dead keys, like the ZMK one.
-
-The toolchain container carries the QMK toolchain next to the ZMK one, so both boards build with the same [b](scripts/b.sh) script as the ZMK boards, and `b all` includes them:
-
-```bash
-b bm40   # kprepublic/bm40hsrgb/rev1
-b xd75   # xiudi/xd75; -p for a pristine build
-```
-
-Without that container, the [qmk](scripts/qmk.sh) script builds them from the host with the official QMK CLI image, through podman and on the same modules volume: `scripts/qmk.sh bm40`, `scripts/qmk.sh xd75` or `scripts/qmk.sh all`.
-
-The `.hex` files land in `build/artifacts/`, ready for `qmk flash` or QMK Toolbox. Both firmwares fill about 90% of the 28 KB flash.
-
-### What the QMK builds do not have
-
-These are the parts of the ZMK keymap that have no counterpart in QMK, or that only make sense on the wireless boards:
-
-- **Bluetooth, dongles and displays**: the toggles-layer Bluetooth keys are empty, and there is no battery reporting, deep sleep or dongle display.
-- **Layer HUD**: nothing is signalled to the host over serial or Bluetooth, so the [layer HUD](https://github.com/rafaelromao/zmk-layer-hud) does not work with these boards.
-- **Vim mode sync with the host**: the vim layers exist and the mode changes the keyboard infers from what it types (`i`, `a`, `o`, `v`, `:`, `Esc`, ...) all work, but the editor state is not read back from the host. Vim mode is turned on with the top-row ring+middle+index chord and off with the MACROS-layer chord, cancel or num word.
-- **Leader key**: not ported; its slot on the shortcuts layer is empty.
-- **Meh + comma / Meh + dot**: always `Ctrl+Alt+Shift+,` and `Ctrl+Alt+Shift+.`, without the macOS variants.
-- **Persistent layers**: the OS mode chosen on the toggles layer is kept until the board is unplugged, not stored.
-
-And a few things work differently:
-
-- **OS detection** uses QMK's USB fingerprinting. Linux is the default, macOS is detected or forced from the toggles layer, and a forced choice survives a later detection.
-- **Mouse emulation** uses QMK's mouse keys instead of the ZMK pointing module, with QMK's acceleration curve.
-- **One-shot timing**: sticky shift lasts 1.5 s and the sticky layers 1 s, as in ZMK; a pending sticky shift is spent by the next key press, so rolled keys behave the same way.
-- **Home-row mods**: tap-preferred with a 250 ms tapping term, no permissive hold, as in ZMK. The symbol tap-holds and the Meh mod-taps use QMK's Flow Tap for the ZMK `require-prior-idle` behaviour.
+A [limited port](https://rafaelromao.github.io/keyboards/#qmk) of this keymap is available in the [qmk](qmk) folder, for the BM40 and XD75 keyboards.
 
 ## Local Build
 
@@ -149,21 +116,6 @@ zmk rafaelromao/wired_diamond l -b xiao_rp2040//zmk
 
 b bm40 # builds the BM40 with QMK, see QMK above
 ```
-
-## Editors
-
-The MEHS layer emits Meh (`Ctrl+Alt+Shift`) and Hyper (`Ctrl+Alt+Shift+Gui`) chords whose meanings are IDE actions: go to symbol, toggle breakpoint, find usages. The firmware only sends the chords; something on the host has to bind them.
-
-That is [`editors/`](editors), with one install script per editor:
-
-```sh
-cd editors
-./vscode/install.sh
-./intellij/install.sh
-./nvim/install.sh
-```
-
-They symlink out of the repo, so editing a keymap here takes effect without reinstalling, and they work on macOS and Linux. [`editors/README.md`](editors/README.md) has the full mapping, the default shortcuts it takes over, and the places where VSCode has no equivalent.
 
 ## Diagram
 
