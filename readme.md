@@ -8,6 +8,8 @@ A split keyboard layout optimized for Portuguese, English, working with numbers 
 
 The image above shows just the most relevant layers. You can see the full diagram [here](docs/img/diagrams/all.png).
 
+![img](docs/img/vim-mode.gif)
+
 ## How this layout works?
 
 The ratiaonale behind the decisions that led to this keymap can be found in [this page](https://rafaelromao.github.io/keyboards), but here is a summary:
@@ -57,9 +59,13 @@ What are the workflows that I need to execute with my keyboards?
   </tr>
   <tr>
     <td><a href="https://github.com/dixls/Dilemma-3mod">Dilemma</a></td>
+    <td><a href="https://github.com/qmk/qmk_firmware/tree/master/keyboards/kprepublic/bm40hsrgb">BM40 (QMK)</a></td>
+    <td><a href="https://github.com/qmk/qmk_firmware/tree/master/keyboards/xiudi/xd75">XD75 (QMK)</a></td>
   </tr>
   <tr>
     <td><a href="docs/img/builds/Dilemma 26.jpeg"><img src="docs/img/builds/Dilemma 26.jpeg" width="150" /></a></td>
+    <td><a href="docs/img/builds/BM40.jpg"><img src="docs/img/builds/BM40.jpg" width="150" /></a></td>
+    <td><a href="docs/img/builds/XD75.jpeg"><img src="docs/img/builds/XD75.jpeg" width="150" /></a></td>
   </tr>
 </table>
 
@@ -74,55 +80,40 @@ This keymap is implemented using ZMK, with the following external modules:
 - [OS Detection](https://github.com/rafaelromao/zmk-os-detection)
 - [Vim Mode](https://github.com/rafaelromao/zmk-vim-mode)
 
-[Vim Mode](https://github.com/rafaelromao/zmk-vim-mode) is my own project, and it has three parts: a ZMK module that keeps the vim layers in sync with the editor, a daemon that runs on the host, and a NeoVim plugin. The editor state travels to the keyboard as a small number encoded in the HID LED indicator report. See [VIM Mode](https://rafaelromao.github.io/keyboards/#vim-mode) for the details.
+## QMK
 
-![img](docs/img/vim-mode.gif)
+A limited port of this keymap is available in the [qmk](qmk) folder, for the BM40 and XD75 keyboards.
 
 ## Local Build
 
 Unlike most ZMK users, I don't use GitHub Actions to build the firmware for my keyboards, and since I come from a legacy repo structure, from the time I used QMK and when they didn't even support external userspaces, I use git submodules to import ZMK and everything else I need into my repo, then I build the firmware using a custom script. 
 
-To make the local build setup easier, I have a [Containerfile](Containerfile) that installs all the toolchain into a Ubuntu container. The [init](init.sh) script is then used to run this container.
+To make the local build setup easier, I have a [Containerfile](Containerfile) that installs all the toolchain into a Ubuntu container, the ZMK one and the QMK one. The [init](init.sh) script is then used to run this container. It builds the image only when there is none, so after a change to the Containerfile rebuild it with `podman build -t zmk-toolchain:0.17.0 .`.
 
-Into the container, I can use my custom [build](scripts/build.sh) script to build the firmware for all my keyboards.
+Into the container, I can use my custom [zmk](scripts/zmk.sh) script to build the ZMK firmware for all my keyboards.
 
 Here are some usage examples:
 
 ```bash
 # Builds the central left side shield of the Rommana, assuming nice_nano_v2 as board
-build mabroum/rommana cl
+zmk mabroum/rommana cl
 
 # Builds the left side shield of the Wired Diamond, specifying the board to be used instead of the default
-build rafaelromao/wired_diamond l -b xiao_rp2040//zmk
+zmk rafaelromao/wired_diamond l -b xiao_rp2040//zmk
 
 # Builds the central dongle shield of the Choc Diamond, specifying an extra shield and an external module to handle the display
-build rafaelromao/choc_diamond cd -e dongle_display -m englmaxi/zmk-dongle-display
+zmk rafaelromao/choc_diamond cd -e dongle_display -m englmaxi/zmk-dongle-display
 ```
 
-To make it even simpler, I have a [b](scripts/b.sh) script that can be used to build the central sides using default configurations. 
+To make it even simpler, I have a [b](scripts/b.sh) script that can be used to build the central sides using default configurations, and the two QMK boards.
 
 Example:
 
 ```sh
 b wd # builds the left side of the wired diamond keyboard, equivalent to the command below
 
-build rafaelromao/wired_diamond l -b xiao_rp2040//zmk
+zmk rafaelromao/wired_diamond l -b xiao_rp2040//zmk
 ```
-
-## Editors
-
-The MEHS layer emits Meh (`Ctrl+Alt+Shift`) and Hyper (`Ctrl+Alt+Shift+Gui`) chords whose meanings are IDE actions: go to symbol, toggle breakpoint, find usages. The firmware only sends the chords; something on the host has to bind them.
-
-That is [`editors/`](editors), with one install script per editor:
-
-```sh
-cd editors
-./vscode/install.sh
-./intellij/install.sh
-./nvim/install.sh
-```
-
-They symlink out of the repo, so editing a keymap here takes effect without reinstalling, and they work on macOS and Linux. [`editors/README.md`](editors/README.md) has the full mapping, the default shortcuts it takes over, and the places where VSCode has no equivalent.
 
 ## Diagram
 

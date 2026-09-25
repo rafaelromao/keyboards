@@ -35,7 +35,7 @@ done
 # starts with "statfs /var/run/com.apple.launchd.*/Listeners: no such file or
 # directory", even though the socket is perfectly valid on the host.
 #
-# Nothing is lost, because build.sh clones every module over HTTPS and they are
+# Nothing is lost, because zmk.sh clones every module over HTTPS and they are
 # all public repositories, so the container needs no credentials. Forwarding is
 # still used on native Linux, where the socket really is reachable, and can be
 # forced anywhere with ZMK_FORWARD_SSH_AGENT=1.
@@ -61,7 +61,7 @@ fi
 # which take precedence over any file:
 #   safe.directory  - /workdir is a bind mount whose ownership git may distrust
 #   user.*          - harmless, and avoids surprises if a step ever commits
-#   url.insteadOf   - build.sh and .gitmodules name modules as git@github.com:…;
+#   url.insteadOf   - zmk.sh and .gitmodules name modules as git@github.com:…;
 #                     without agent forwarding (macOS, see above) those clones
 #                     fail with "correct access rights", so rewrite them to
 #                     HTTPS inside the container. Public repos need no

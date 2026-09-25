@@ -93,7 +93,7 @@ no recorded editor intent, so nothing binds them.
 
 Every Meh chord is identical on macOS and Linux except `,` and `.`, which the
 firmware OS-morphs because macOS cannot take `Ctrl+Alt+Shift+comma`
-(`src/features/shortcuts.dtsi:190-191`):
+(`zmk/features/shortcuts.dtsi:190-191`):
 
 | | macOS | Linux |
 |---|---|---|
