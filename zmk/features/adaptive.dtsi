@@ -39,8 +39,8 @@
             bindings = <&alternate_repeat_key>;
 
             ADAPTIVE(aeo_x    , &kp X      , A E O             )
-            ADAPTIVE(aeo_x_s  , &kp LS(X)  , LS(A) RS(A) LS(E) )
-            ADAPTIVE(aeo_x_c  , &kp RS(X)  , RS(E) LS(O) RS(O) )
+            ADAPTIVE(aeo_x_s  , &kp LS(X)  , LS(A) LS(E) LS(O) )
+            ADAPTIVE(aeo_x_c  , &kp RS(X)  , RS(A) RS(E) RS(O) )
             ADAPTIVE(i_e      , &kp E      , I                 )
             ADAPTIVE(i_e_s    , &kp LS(E)  , LS(I)             )
             ADAPTIVE(i_e_c    , &kp RS(E)  , RS(I)             )

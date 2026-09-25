@@ -43,7 +43,8 @@
             tap-ms = <0>;
             bindings = <&vim_off &lock_off NUM &lock_off NUM_CP &lock_off CASE_A1 &lock_off CPLK_A1
                         &lock_off ALPHA2 &lock_off SFT_A2 &lock_off CASE_A2 &lock_off CCEDIL
-                        &lock_off CASE_CCEDIL &lock_off SEN_CASE &lock_off ALTREP2 &lock_off MEHS>;
+                        &lock_off CASE_CCEDIL &lock_off SEN_CASE &lock_off ALTREP2 &lock_off MEHS
+                        &lock_off NAV &lock_off NAV_CP &lock_off MEDIA &lock_off FUN>;
         };
         LAYERTAP_TP(lt_cancel,     &tc_cancel)
 
@@ -170,12 +171,15 @@
         MACRO(mc_sk_lgui, &sk LGUI)
         MACRO(mc_hold_numbers, &macro_press &mo NUM &macro_pause_for_release &macro_release &mo NUM)
         MACRO(mc_hold_lgui, &macro_press &kp LGUI &macro_pause_for_release &macro_release &kp LGUI)
-        MOD_MORPH_KM(mm_hold_sft_num_gui, MOD_RSFT, &mc_hold_lgui, &mc_hold_numbers)
-        MOD_MORPH_KM(mm_hold_ctl_num_gui, MOD_RCTL, &mm_hold_sft_num_gui, &mc_hold_numbers)
-        MOD_MORPH_KM(mm_hold_alt_num_gui, MOD_RALT, &mm_hold_ctl_num_gui, &mc_hold_numbers)
-        MOD_MORPH_KM(mm_tap_sft_space_gui, MOD_RSFT, &mc_sk_lgui, &mc_space)
-        MOD_MORPH_KM(mm_tap_ctl_space_gui, MOD_RCTL, &mm_tap_sft_space_gui, &mc_space)
-        MOD_MORPH_KM(mm_tap_alt_space_gui, MOD_RALT, &mm_tap_ctl_space_gui, &mc_space)
+        // Left-side modifiers, like the right thumb's chain above: the right
+        // hand's home-row mods send LSFT/LALT/LCTL too (RALT would be AltGr on
+        // Linux), so a chain keyed on MOD_R* could never fire.
+        MOD_MORPH_KM(mm_hold_sft_num_gui, MOD_LSFT, &mc_hold_lgui, &mc_hold_numbers)
+        MOD_MORPH_KM(mm_hold_ctl_num_gui, MOD_LCTL, &mm_hold_sft_num_gui, &mc_hold_numbers)
+        MOD_MORPH_KM(mm_hold_alt_num_gui, MOD_LALT, &mm_hold_ctl_num_gui, &mc_hold_numbers)
+        MOD_MORPH_KM(mm_tap_sft_space_gui, MOD_LSFT, &mc_sk_lgui, &mc_space)
+        MOD_MORPH_KM(mm_tap_ctl_space_gui, MOD_LCTL, &mm_tap_sft_space_gui, &mc_space)
+        MOD_MORPH_KM(mm_tap_alt_space_gui, MOD_LALT, &mm_tap_ctl_space_gui, &mc_space)
 
         ltn_num_spc: ltn_num_spc {
             compatible = "zmk,behavior-hold-tap";

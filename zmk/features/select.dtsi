@@ -44,10 +44,15 @@
             ADAPTIVE(cont_sel_word_l, &mc_selpw, LC(LS(LEFT)))
         };
 
-        OS_MORPH(select_word, \
-            &mc_selword_m,    \
-            &mc_selword_l     \
-        )
+        // A layer-morph rather than OS_MORPH: OS_MORPH wraps its sides in tap
+        // macros, which released the adaptive key at once, so holding the key
+        // could not keep extending the selection.
+        select_word: select_word {
+            compatible = "zmk,behavior-layer-morph";
+            #binding-cells = <0>;
+            layers = <ALT_OS>;
+            bindings = <&mc_selword_l>, <&mc_selword_m>;
+        };
 
         //Select Line
 

@@ -5,10 +5,15 @@
 *
 */
 
-#undef zmk_mouse_default_move_val
-#undef zmk_mouse_default_scrl_val
-#define zmk_mouse_default_move_val 1000  // 600
-#define zmk_mouse_default_scrl_val 20    // 10
+// MOVE_* and SCRL_* in dt-bindings/zmk/pointing.h expand these where the
+// keymap uses them, so redefining after the include is what makes them apply.
+// The lowercase zmk_mouse_default_* names they replaced belong to the
+// pre-merge mouse branch and ZMK never read them, so the keyboard ran at the
+// defaults (600 and 10).
+#undef ZMK_POINTING_DEFAULT_MOVE_VAL
+#undef ZMK_POINTING_DEFAULT_SCRL_VAL
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1000  // 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // 10
 
 &mmv {
   acceleration-exponent = <1>;      // 1
