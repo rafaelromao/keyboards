@@ -68,14 +68,6 @@
             bindings = <&macro_tap &vim_off &smart_num NUM>;
         };
 
-        smart_num_cp: smart_num_cp {
-            compatible = "zmk,behavior-auto-layer";
-            ignore-numbers;
-            #binding-cells = <1>;
-            continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL AMPS PIPE HASH TILDE CARET
-                             LBRC RBRC BACKSLASH DOLLAR AT LPAR RPAR DQT SQT LBKT RBKT QMARK GRAVE>;
-        };
-
         tc_num_word_cp: tc_num_word_cp {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -119,15 +111,6 @@
             flavor = "tap-preferred";
             quick-tap-ms = <0>;
             bindings = <&mo>, <&mm_shift>;
-        };
-
-        ht_caps: ht_caps {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <QUICK_TAP_TERM>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <0>;
-            bindings = <&mo>, <&tc_smart_word>;
         };
 
         // ******************** SMART THUMBS ******************** //

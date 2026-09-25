@@ -13,6 +13,6 @@
         leader: leader {
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
-//            ld_exit    { sequence = <B> ; bindings = <&md_exit>; };
+//            ld_exit    { sequence = <B> ; bindings = <&mc_exit>; };
         };
 };

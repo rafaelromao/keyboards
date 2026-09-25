@@ -13,9 +13,6 @@
         MACRO(mc_end_semi,            &kp END &kp SEMI)
         TAPHOLD_TP(th_semi,           &mm_semi, &mc_end_semi)
 
-        MACRO(mc_h,                   &kp H)
-        TAPHOLD_TP(th_hyper_h,        &mc_h, &mc_hyper)
-
         MACRO(mc_comma,               &kp COMMA)
         MACRO(mc_end_comma,           &kp RIGHT &kp COMMA )
         TAPHOLD_TP(th_comma,          &mm_comma_meh_lalt, &mc_end_comma)
@@ -101,7 +98,6 @@
 
         // Alt sequences are macOS; Linux uses the US-International AltGr keys.
         OS_MORPH(mc_deg,              &macro_tap &kp LS(LA(N8)),                    &macro_tap &kp RA(LS(SEMI)))
-        LAYERTAP_TP(lt_deg,           &mc_deg)
 
         // Symbols
 
@@ -207,10 +203,6 @@
         OS_MORPH(mc_ord_a,            &macro_tap &kp LA(N9),                        &macro_tap &none)
         TAPHOLD_TP(th_ord_o_a,        &mc_ord_o, &mc_ord_a)
 
-        MACRO(mc_qr,                  &kp Q &kp R)
-        MACRO(mc_atr,                 &kp AT &kp R)
-        MACRO(mc_atat,                &kp AT &kp AT)
-
         MACRO(mc_end_ltgtlprp,        &kp END &kp LT &kp GT &kp LPAR &kp RPAR &kp SEMI)
         MACRO(mc_end_ltgtlprp_ent,    &kp END &kp LT &kp GT &kp LPAR &kp RPAR &kp SEMI &kp ENTER)
         TAPHOLD_TP(th_end_ltgtlprp,   &mc_end_ltgtlprp, &mc_end_ltgtlprp_ent)
@@ -241,8 +233,8 @@
 
         MACRO(mc_tilde,               &lm_tilde_vim &kp SPACE)
 
-        MACRO(mm_shift_vim_replace    , &mm_shift &ntsl VIM_REPLACE)
-        LAYERTAP_TP(ht_sft_vim        , &mm_shift_vim_replace)
+        MACRO(mc_shift_vim_replace    , &mm_shift &ntsl VIM_REPLACE)
+        LAYERTAP_TP(ht_sft_vim        , &mc_shift_vim_replace)
 
         MACRO(mc_spc_esc,         &kp I &macro_press &kp SPACE &macro_pause_for_release &macro_release &kp SPACE &macro_tap &kp ESC)
         MACRO(mc_dqt0p,           &kp DQT &kp SPACE &kp N0 &kp P)
