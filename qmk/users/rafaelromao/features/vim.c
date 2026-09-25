@@ -67,11 +67,13 @@ static bool in_command_layers(void) {
     return vim.mode == VIM_MODE_NORMAL || vim.mode == VIM_MODE_VISUAL || vim.change_pending;
 }
 
-// key, then insert mode, then the F24 the ^ key reads as "just went home"
+// key, then insert mode, then a neutral F23 that resets the adaptive
+// antecedent. Not F24: that is what the ^ key reads as "just went home", so
+// ^ typed after o/a/i became 0.
 static void key_then_insert(uint16_t key, bool sentinel) {
     execute_keycode(key);
     set_literal(VIM_MODE_INSERT);
-    if (sentinel) execute_keycode(KC_F24);
+    if (sentinel) execute_keycode(KC_F23);
 }
 
 // The taps of the NORMAL layer mod-taps and of lt_q_vim. With Ctrl held the

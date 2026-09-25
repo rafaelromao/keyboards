@@ -35,7 +35,7 @@
 enum taphold_ids {
     TH_SEMI,        // th_semi:       ; / end ;
     TH_COMMA,       // th_comma:      , / right ,
-    TH_DOT,         // th_dot:        . (shift: Meh .) / right .
+    TH_DOT,         // th_dot:        . / right .
     TH_SQO,         // th_sqo:        ' / end '
     TH_DQO,         // th_dqo:        " / end "
     TH_BTI,         // th_bti:        ` / end `
@@ -52,7 +52,7 @@ enum taphold_ids {
     TH_BRACKETS,    // th_brackets:   [] / end []
     TH_US,          // th_us:         US$ / USD
     TH_BR,          // th_br:         R$ / BRL
-    TH_EUR,         // th_eur:        euro / EUR
+    TH_EUR,         // th_eur:        euro (Option on macOS, AltGr on Linux) / EUR
     TH_BSLASH_QUO,  // th_bslash_quo: \" / \'
     TH_PARS_SEMI,   // th_pars_semi:  end (); / end (); enter
     TH_TDQO,        // th_tdqo:       """ / """ enter
@@ -60,7 +60,7 @@ enum taphold_ids {
     TH_SARROW,      // th_sarrow:     -> / right space ->
     TH_DARROW,      // th_darrow:     => / right space =>
     TH_FORWARD,     // th_forward:    |> / end space enter |>
-    TH_BACKWARD,    // th_backward:   <- / right enter |>  (as in ZMK)
+    TH_BACKWARD,    // th_backward:   <- / right space <-
     TH_CONCAT,      // th_concat:     <> / right space <>
     TH_DCOLON,      // th_dcolon:     :: / right space ::
     TH_PERC,        // th_perc:       % / end space %
@@ -191,7 +191,7 @@ enum custom_keycodes {
     MC_PCURLY,             // %{
     MC_BRACES_NEW,         // end, space, {, enter
     MC_END_DO_ENT,         // end, space, do, enter
-    MC_DEG,                // ° (mac option chord, as in ZMK)
+    MC_DEG,                // ° (Option chord on macOS, AltGr+Shift+; on Linux)
     MC_AT_AT,              // @@
     MC_TISL,               // ~/
     MC_DS,                 // ./

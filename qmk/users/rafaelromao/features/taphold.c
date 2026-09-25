@@ -4,6 +4,7 @@
 #include "features/adaptive.h"
 #include "features/thumbs.h"
 #include "features/vim.h"
+#include "features/shortcuts.h"
 
 // ---------------------------------------------------------------------------
 // The th_* table
@@ -44,7 +45,7 @@ static const taphold_t taphold_table[TH_COUNT] PROGMEM = {
     [TH_BRACKETS]   = {SEQ(SEQ_BRACKETS),        SAME,                        PFX_END},
     [TH_US]         = {SEQ(SEQ_US),              SEQ(SEQ_USD),                PFX_NONE},
     [TH_BR]         = {SEQ(SEQ_BR),              SEQ(SEQ_BRL),                PFX_NONE},
-    [TH_EUR]        = {LSA(KC_2),                SEQ(SEQ_EUR),                PFX_NONE},
+    [TH_EUR]        = {LSA(KC_2),                SEQ(SEQ_EUR),                PFX_NONE},   // macOS; Linux in taphold_tap
     [TH_BSLASH_QUO] = {SEQ(SEQ_BSLASH_DQO),      SEQ(SEQ_BSLASH_SQO),         PFX_NONE},
     [TH_PARS_SEMI]  = {SEQ(SEQ_END_PARS_SEMI),   SEQ(SEQ_END_PARS_SEMI_ENT),  PFX_NONE},
     [TH_TDQO]       = {SEQ(SEQ_TDQO),            SEQ(SEQ_TDQO_ENT),           PFX_NONE},
@@ -52,7 +53,7 @@ static const taphold_t taphold_table[TH_COUNT] PROGMEM = {
     [TH_SARROW]     = {SEQ(SEQ_SARROW),          SAME,                        PFX_RIGHT_SPC},
     [TH_DARROW]     = {SEQ(SEQ_DARROW),          SAME,                        PFX_RIGHT_SPC},
     [TH_FORWARD]    = {SEQ(SEQ_FORWARD),         SEQ(SEQ_ENT_FORWARD),        PFX_END_SPC},
-    [TH_BACKWARD]   = {SEQ(SEQ_BACKWARD),        SEQ(SEQ_ENT_FORWARD),        PFX_RIGHT},
+    [TH_BACKWARD]   = {SEQ(SEQ_BACKWARD),        SAME,                        PFX_RIGHT_SPC},
     [TH_CONCAT]     = {SEQ(SEQ_CONCAT),          SAME,                        PFX_RIGHT_SPC},
     [TH_DCOLON]     = {SEQ(SEQ_DCOLON),          SAME,                        PFX_RIGHT_SPC},
     [TH_PERC]       = {KC_PERC,                  SAME,                        PFX_END_SPC},
@@ -64,7 +65,7 @@ static const taphold_t taphold_table[TH_COUNT] PROGMEM = {
     [TH_QMARK]      = {KC_QUES,                  SAME,                        PFX_END},
     [TH_EQEQ]       = {SEQ(SEQ_EQEQ),            SAME,                        PFX_RIGHT_SPC},
     [TH_NOTEQ]      = {SEQ(SEQ_NOTEQ),           SAME,                        PFX_RIGHT_SPC},
-    [TH_ORD_O_A]    = {LALT(KC_0),               LALT(KC_9),                  PFX_NONE},
+    [TH_ORD_O_A]    = {LALT(KC_0),               LALT(KC_9),                  PFX_NONE},   // macOS only, see taphold_tap
     [TH_LTGTLPRP]   = {SEQ(SEQ_END_LTGTLPRP),    SEQ(SEQ_END_LTGTLPRP_ENT),   PFX_NONE},
     [TH_SLASH]      = {KC_SLSH,                  SAME,                        PFX_RIGHT_SPC},
     [TH_COLON]      = {KC_COLN,                  SAME,                        PFX_END},
@@ -131,20 +132,26 @@ static void before_action(uint16_t action) {
 static void taphold_tap(uint8_t idx) {
     uint16_t tap    = pgm_read_word(&taphold_table[idx].tap);
     uint16_t symbol = (tap & 0x8000) ? KC_NO : tap;
+    // Meh + , and Meh + . need no special case: the held Ctrl+Alt+Shift reach
+    // the host with the plain key (the comma/dot Meh chords carry no OS
+    // override, by decision). The old shift-only morph made Shift+. send the
+    // Meh chord instead of '>'.
     switch (idx) {
-        case TH_DOT:
-            // mm_dot_meh: with shift held, Meh + . (comma/dot Meh chords carry
-            // no OS override, by decision); otherwise a plain dot.
-            if ((get_mods() | get_oneshot_mods()) & MOD_MASK_SHIFT) {
-                clear_oneshot_mods();
-                tap_code16(MEH(KC_DOT));
-                adaptive_track(KC_DOT);
+        case TH_EUR:
+            // Option chord on macOS; US-International has it on AltGr+5.
+            if (!shortcuts_is_mac()) {
+                execute_keycode(RALT(KC_5));
                 return;
             }
             break;
+        case TH_ORD_O_A:
+            // TODO: no direct º on US-International; pick a compose sequence.
+            if (!shortcuts_is_mac()) return;
+            break;
         case TH_CARET_Z:
             // vim_home: 0 when the previous key was the F24 that the ^ key
-            // itself (and the vim insert transitions) leave behind, else ^.
+            // itself leaves behind, else ^. The vim insert transitions reset
+            // the antecedent with F23 so that they do not trigger this.
             if (adaptive_last_is(KC_F24)) {
                 execute_keycode(KC_0);
                 return;
@@ -157,6 +164,8 @@ static void taphold_tap(uint8_t idx) {
 }
 
 static void taphold_hold(uint8_t idx) {
+    // TODO: no direct ª on US-International either.
+    if (idx == TH_ORD_O_A && !shortcuts_is_mac()) return;
     uint16_t hold = pgm_read_word(&taphold_table[idx].hold);
     if (hold == SAME) hold = pgm_read_word(&taphold_table[idx].tap);
     before_action(hold);
