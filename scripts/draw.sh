@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Create temporary directory
 mkdir -p ./tmp
 

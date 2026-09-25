@@ -17,9 +17,9 @@ ZMK="zmkfirmware/zmk"
 REVISION="9ebbeff0a8b69a42f14aec022cdf16c7a107b9e0"
 EXTRA_SHIELDS=()
 FLAGS=()
-MODULES=()
+MODULES=""
 SNIPPETS=()
-DEF_MODULES=(urob/zmk-leader-key,urob/zmk-auto-layer,urob/zmk-adaptive-key,rafaelromao/zmk-layer-morph,rafaelromao/zmk-vim-mode,rafaelromao/zmk-layer-hud,rafaelromao/zmk-os-detection)
+DEF_MODULES=(urob/zmk-leader-key urob/zmk-auto-layer urob/zmk-adaptive-key rafaelromao/zmk-layer-morph rafaelromao/zmk-vim-mode rafaelromao/zmk-layer-hud rafaelromao/zmk-os-detection)
 # The layer signal's USB carrier is a CDC-ACM interface that exists only if this
 # snippet adds it, so a build without it reaches the HUD over BLE or not at all.
 # zmk-layer-hud is in DEF_MODULES, which are appended to whatever -m gives, so
@@ -28,22 +28,22 @@ DEF_SNIPPETS=(layer-hud-usb-uart)
 
 # Function to display usage
 usage() {
-    echo "Usage: zmk [<config> <shield>] [-k <config>] [-s <shield>] [-b <board=$BOARD>] [-z <zmk=$ZMK>] [-r <revision=$REVISION>] [-v <verbose>] [-p <pristine>] [-e <extra_shield1,extra_shield2,...>] [-d <flag1,flag2,...>] [-m <module1,module2,...>] [-n <snippet1,snippet2,...>] [-h | --help]"
+    echo "Usage: zmk [<config> <shield>] [-k <config>] [-s <shield>] [-b <board=$BOARD>] [-z <zmk=$ZMK>] [-r <revision=$REVISION>] [-v] [-p] [-e <extra_shield1,extra_shield2,...>] [-d <flag1,flag2,...>] [-m <module1,module2,...>] [-n <snippet1,snippet2,...>] [-h | --help]"
     echo
     echo "Parameters:"
     echo "  <config>               Specify the zmk config."
     echo "  <shield>               Specify the shield."
-    echo "  -k, --config           Specify the zmk config."
-    echo "  -s, --shield           Specify the shield."
-    echo "  -b, --board            Specify the board (default: $BOARD)."
-    echo "  -z, --zmk              Specify the zmk repo (default: $ZMK)."
-    echo "  -r, --revision         Specify the zmk revision (default: $REVISION)."
-    echo "  -v, --verbose          Enable verbose mode."
-    echo "  -p, --pristine         Enable pristine mode."
-    echo "  -n, --snippets         Specify a comma-separated list of snippets (default: empty)."
-    echo "  -e, --extra_shields    Specify a comma-separated list of additional shields (default: empty)."
-    echo "  -d, --flags            Specify a comma-separated list of extra flags (default: empty)."
-    echo "  -m, --modules          Specify a comma-separated list of modules (default: empty)."
+    echo "  -k <config>            Specify the zmk config."
+    echo "  -s <shield>            Specify the shield."
+    echo "  -b <board>             Specify the board (default: $BOARD)."
+    echo "  -z <zmk>               Specify the zmk repo (default: $ZMK)."
+    echo "  -r <revision>          Specify the zmk revision (default: $REVISION)."
+    echo "  -v                     Enable verbose mode (dump the applied Kconfig)."
+    echo "  -p                     Pristine build: wipe the zmk build directory first."
+    echo "  -n <snippets>          Comma-separated list of snippets (replaces the default: ${DEF_SNIPPETS[*]})."
+    echo "  -e <extra_shields>     Comma-separated list of additional shields (default: empty)."
+    echo "  -d <flags>             Comma-separated list of extra -D flags (default: empty)."
+    echo "  -m <modules>           Comma-separated list of modules, added to the defaults (${DEF_MODULES[*]})."
     echo "  -h, --help             Display this help message."
     exit 1
 }
@@ -91,7 +91,7 @@ while getopts "k:s:b:z:r:n:e:d:m:pv" opt; do
             IFS=',' read -r -a FLAGS <<< "$OPTARG"
             ;;
         m)
-            IFS=',' read -r -a MODULES <<< "$OPTARG"
+            MODULES="$OPTARG"
             ;;
         v)
             VERBOSE="true"
@@ -216,26 +216,26 @@ for ITEM in "${ADDR[@]}"; do
         # and then return to PROJECT_DIR before the main script proceeds.
         if [ -n "$MODULE_REVISION" ]; then
             echo "Checking out revision $MODULE_REVISION of $MODULE"
-            cd "$MODULE_HOME"
+            cd "$MODULE_HOME" || exit 1
             git fetch
             git checkout -f "$MODULE_REVISION"
-            cd "$PROJECT_DIR"
+            cd "$PROJECT_DIR" || exit 1
         fi
     else
         # If the module already exists and a revision is specified, check it out
         if [ -n "$MODULE_REVISION" ]; then
             echo "Module $MODULE already exists. Checking out revision $MODULE_REVISION."
-            cd "$MODULE_HOME"
+            cd "$MODULE_HOME" || exit 1
             git fetch
             git checkout -f "$MODULE_REVISION"
-            cd "$PROJECT_DIR"
+            cd "$PROJECT_DIR" || exit 1
         fi
     fi
 
     # Prefix the module name with the path
     TEMP+="${MODULE_HOME};"
 done
-TEMP="${TEMP%,}"
+TEMP="${TEMP%;}"
 MODULES=$TEMP
 
 # Define zmk module
@@ -246,16 +246,19 @@ ZMK_HOME="$PROJECT_DIR/$ZMK_MODULE"
 echo "Add git sub-module: $ZMK"
 git submodule add -f "git@github.com:$ZMK" "$ZMK_MODULE"
 
-# Clean ZMK build directory
-echo 'Cleaning zmk...'
-rm -rf "$PROJECT_DIR/$ZMK_MODULE/build"
+# Clean the ZMK build directory only when asked: every artifact has its own
+# build dir under it, and wiping them all on every run made -p meaningless.
+if [ -n "$PRISTINE" ]; then
+    echo 'Cleaning zmk...'
+    rm -rf "$PROJECT_DIR/$ZMK_MODULE/build"
+fi
 
 # Check out the ZMK revision
 echo 'Checking out zmk...'
-cd $ZMK_HOME
+cd "$ZMK_HOME" || exit 1
 ZMK_WAS="$(git rev-parse HEAD 2>/dev/null || true)"
 git fetch --tags --force
-git checkout -f $REVISION
+git checkout -f "$REVISION"
 # Only a branch needs fast-forwarding. A tag or a SHA leaves a detached HEAD,
 # where `git pull` fails outright, and is already at the exact revision asked for.
 if git symbolic-ref -q HEAD >/dev/null; then
@@ -263,37 +266,41 @@ if git symbolic-ref -q HEAD >/dev/null; then
 fi
 ZMK_NOW="$(git rev-parse HEAD)"
 
-cd "$PROJECT_DIR"
+cd "$PROJECT_DIR" || exit 1
 
 # Init West
 if [[ ! -d "$ZMK_HOME/.west" ]]
 then
     echo "Initializing West..."
-    cd $ZMK_HOME
+    cd "$ZMK_HOME" || exit 1
     west init -l app/
     west update
-    cd $PROJECT_DIR
+    cd "$PROJECT_DIR" || exit 1
 elif [[ "$ZMK_WAS" != "$ZMK_NOW" ]]
 then
     # ZMK pins its own Zephyr in west.yml, so a revision change that skips this
     # builds the new ZMK against the old Zephyr -- and it fails somewhere far
     # from the cause, if it fails at all.
     echo "ZMK moved ${ZMK_WAS:0:8} -> ${ZMK_NOW:0:8}, updating west modules..."
-    cd $ZMK_HOME
+    cd "$ZMK_HOME" || exit 1
     west update
-    cd $PROJECT_DIR
+    cd "$PROJECT_DIR" || exit 1
 fi
 
+# Board-only builds (the Zen halves) are named after the config too, since the
+# same board is built from more than one config directory.
 if [ -z "$CONFIG" ]; then
     ARTIFACT="$BOARD-$SHIELD"
+elif [ -z "$SHIELD" ]; then
+    ARTIFACT="${CONFIG##*/}-$BOARD"
 else
-    ARTIFACT="${SHIELD:-$BOARD}"
+    ARTIFACT="$SHIELD"
 fi
 
 ARTIFACT="${ARTIFACT//\/\/zmk/}"
 
 # Build the project
-cd "$PROJECT_DIR/$ZMK_MODULE"
+cd "$PROJECT_DIR/$ZMK_MODULE" || exit 1
 
 # Build the west command
 
@@ -311,7 +318,7 @@ for flag in "${FLAGS[@]}"; do
     command+=" -D$flag"
 done
 if [ -n "$SHIELD" ]; then
-    command+=" -DSHIELD=\"\$SHIELD \$EXTRA_SHIELDS\""
+    command+=" -DSHIELD=\"\$SHIELD ${EXTRA_SHIELDS[*]}\""
 fi
 if [ -n "$CONFIG" ]; then
     command+=" -DZMK_CONFIG=\"\$PROJECT_DIR/zmk/keyboards/\$CONFIG\""
@@ -323,7 +330,11 @@ fi
 echo "Executing West:"
 echo "$command"
 echo ""
+# A stale artifact from an earlier run looks exactly like a fresh one, so drop
+# it before building rather than after.
+rm -f "$PROJECT_DIR/build/artifacts/$ARTIFACT-zmk.uf2"
 eval "$command"
+STATUS=$?
 
 if [[ -n "$VERBOSE" ]]; then
     # Show applied KConfig
@@ -343,5 +354,7 @@ mkdir -p "$PROJECT_DIR/build/artifacts"
 [ -f build/$ARTIFACT/zephyr/zmk.uf2 ] && \
     mv -f build/"$ARTIFACT"/zephyr/zmk.uf2 "$PROJECT_DIR/build/artifacts/$ARTIFACT-zmk.uf2"
 
-# Return to the keyboards directory
-cd "$PROJECT_DIR"
+# Return to the keyboards directory, and report the build's own status: b.sh
+# runs under set -e and used to see a success even when west had failed.
+cd "$PROJECT_DIR" || true
+exit $STATUS
