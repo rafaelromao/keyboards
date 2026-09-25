@@ -24,14 +24,16 @@ One script per editor, each self-contained and idempotent:
 ./nvim/install.sh
 ```
 
-They symlink out of this directory rather than copying, so editing a keymap
-here takes effect without reinstalling. Anything real already sitting at the
-target is moved to `~/.keyboards-backup/<timestamp>/` first.
+VS Code and IntelliJ are symlinked out of this directory rather than copied,
+so editing a keymap here takes effect without reinstalling; anything real
+already sitting at the target is moved to `~/.keyboards-backup/<timestamp>/`
+first. Neovim gets a small lazy.nvim spec that points back here, which amounts
+to the same thing.
 
 | Editor | Installed to |
 |---|---|
 | VS Code | `Code`, `Code - OSS` and `VSCodium` profiles, whichever exist |
-| IntelliJ | every `IntelliJIdea*/keymaps/` config directory found |
+| IntelliJ | every `IntelliJIdea*/keymaps/` and `IdeaIC*/keymaps/` config directory found |
 | Neovim | a lazy.nvim spec at `~/.config/nvim/lua/plugins/coding-mehs.lua` |
 
 IntelliJ needs one manual step the script cannot do: **Settings → Keymap →
@@ -93,7 +95,7 @@ no recorded editor intent, so nothing binds them.
 
 Every Meh chord is identical on macOS and Linux except `,` and `.`, which the
 firmware OS-morphs because macOS cannot take `Ctrl+Alt+Shift+comma`
-(`zmk/features/shortcuts.dtsi:190-191`):
+(`mc_meh_comma` / `mc_meh_dot` in `zmk/features/shortcuts.dtsi`):
 
 | | macOS | Linux |
 |---|---|---|
@@ -219,9 +221,9 @@ that tmux can carry, rather than relying on native Super.
 To check what actually arrives, run `sed -n l` in the terminal and press the
 chord: a CSI-u sequence means it got through, a bare letter means it did not.
 
-## Regenerating
+## Changing a binding
 
-The keymaps were generated from one table so the editors cannot drift. If you
-change a binding, change it in `../docs/img/diagrams/keymap-drawer/keymap-drawer.yaml`
-first — that file is the source of intent, and `scripts/draw.sh` builds the
-diagram from it.
+`../docs/img/diagrams/keymap-drawer/keymap-drawer.yaml` is the source of
+intent and `scripts/draw.sh` renders the diagram from it; the three keymaps
+here are maintained by hand. Change the YAML first, then each keymap and the
+tables above, so the editors do not drift from the diagram.

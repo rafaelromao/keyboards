@@ -4,13 +4,13 @@
 --
 -- Only the Meh layer is bound here. Hyper adds Cmd/Super, which Ghostty on
 -- macOS and Hyprland on Linux may swallow before the terminal sees it; see
--- ~/dotfiles/keymaps/README.md for how to probe that before extending this.
+-- editors/README.md for how to probe that before extending this.
 --
 -- REQUIREMENTS: these chords are inexpressible in legacy terminal encoding.
 -- They need the Kitty keyboard protocol (CSI-u), which means Ghostty (or any
--- kitty-protocol terminal) and, inside tmux, `extended-keys on`.
+-- kitty-protocol terminal) and, inside tmux, `extended-keys always`.
 
--- Inside vscode-neovim, VSCode owns these chords via keymaps/vscode/keybindings.json.
+-- Inside vscode-neovim, VSCode owns these chords via editors/vscode/keybindings.json.
 if vim.g.vscode then
   return
 end
@@ -32,7 +32,8 @@ map("h", vim.lsp.buf.hover, "quick docs")
 map("p", vim.lsp.buf.definition, "quick def")
 map("y", vim.lsp.buf.implementation, "go to implementation")
 map("CR", vim.lsp.buf.code_action, "context actions")
-map("c", "gcc", "comment line")
+-- gcc is itself a mapping, not a command, so this one has to be recursive.
+vim.keymap.set("n", "<C-M-S-c>", "gcc", { desc = "meh: comment line", silent = true, remap = true })
 
 map(PREV, function() vim.diagnostic.jump({ count = -1, float = true }) end, "previous error")
 map(NEXT, function() vim.diagnostic.jump({ count = 1, float = true }) end, "next error")

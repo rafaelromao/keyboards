@@ -559,7 +559,7 @@ layers:
         { s: select in, t: $$mdi:form-select$$ },
         { s: rebuild, t: $$mdi:wrench-outline$$ },
         { s: analyze, h: code, t: $$mdi:sine-wave$$ },
-        { s: search, h: everything, t: $$mdi:database-search-outline$$l },
+        { s: search, h: everywhere, t: $$mdi:database-search-outline$$ },
         { s: go to, h: symbol, t: $$mdi:text-box-search-outline$$ },
         { s: find, h: action, t: $$mdi:feature-search-outline$$ },
       ]
