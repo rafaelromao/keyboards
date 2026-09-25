@@ -82,7 +82,7 @@ This keymap is implemented using ZMK, with the following external modules:
 
 ## QMK
 
-A [limited port](https://rafaelromao.github.io/keyboards/#qmk) of this keymap is available in the [qmk](qmk) folder, for the BM40 and XD75 keyboards.
+A limited port of this keymap is available in the [qmk](qmk) folder, for the BM40 and XD75 keyboards.
 
 ## Local Build
 
@@ -113,8 +113,6 @@ Example:
 b wd # builds the left side of the wired diamond keyboard, equivalent to the command below
 
 zmk rafaelromao/wired_diamond l -b xiao_rp2040//zmk
-
-b bm40 # builds the BM40 with QMK, see QMK above
 ```
 
 ## Diagram
