@@ -3,7 +3,7 @@
 #include "rafaelromao.h"
 
 // Last-key tracking and the adaptive keys (ZMK urob/zmk-adaptive-key rules
-// in src/features/adaptive.dtsi): alternate repeat, alpha2 alternate repeat,
+// in zmk/features/adaptive.dtsi): alternate repeat, alpha2 alternate repeat,
 // magic key, reversed magic key and key repeat. A rule only applies while
 // the previous key is younger than ADAPTIVE_TIMEOUT.
 #define ADAPTIVE_TIMEOUT 2000

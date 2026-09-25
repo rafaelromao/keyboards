@@ -1,6 +1,6 @@
 # rafaelromao's QMK userspace
 
-The QMK implementation of [my keymap](https://github.com/rafaelromao/keyboards), for the boards that cannot run ZMK. It is a port of the ZMK keymap in `src/definitions` and `src/features`, position for position, and it is built as a QMK External Userspace (see `src/qmk/qmk.json` and `scripts/qmk.sh`).
+The QMK implementation of [my keymap](https://github.com/rafaelromao/keyboards), for the boards that cannot run ZMK. It is a port of the ZMK keymap in `zmk/definitions` and `zmk/features`, position for position, and it is built as a QMK External Userspace (see `qmk/qmk.json`, `scripts/b.sh` and `scripts/qmk-build.sh`).
 
 - `definitions/layers.h`: the layers, in the ZMK order.
 - `definitions/keycodes.h`: the custom keycodes and the aliases used by the keymap.

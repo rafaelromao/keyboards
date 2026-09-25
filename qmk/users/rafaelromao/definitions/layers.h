@@ -1,6 +1,6 @@
 #pragma once
 
-// Layer order mirrors the ZMK keymap (src/definitions/config.dtsi): the highest
+// Layer order mirrors the ZMK keymap (zmk/definitions/config.dtsi): the highest
 // active layer wins in both firmwares, so the relative order is what matters.
 // The *_CP layers are copies that ZMK keeps above NAV/MEDIA for that reason,
 // and they are kept here for the same reason. The ZMK index is in the comment.

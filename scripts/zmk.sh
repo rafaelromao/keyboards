@@ -28,7 +28,7 @@ DEF_SNIPPETS=(layer-hud-usb-uart)
 
 # Function to display usage
 usage() {
-    echo "Usage: build [<config> <shield>] [-k <config>] [-s <shield>] [-b <board=$BOARD>] [-z <zmk=$ZMK>] [-r <revision=$REVISION>] [-v <verbose>] [-p <pristine>] [-e <extra_shield1,extra_shield2,...>] [-d <flag1,flag2,...>] [-m <module1,module2,...>] [-n <snippet1,snippet2,...>] [-h | --help]"
+    echo "Usage: zmk [<config> <shield>] [-k <config>] [-s <shield>] [-b <board=$BOARD>] [-z <zmk=$ZMK>] [-r <revision=$REVISION>] [-v <verbose>] [-p <pristine>] [-e <extra_shield1,extra_shield2,...>] [-d <flag1,flag2,...>] [-m <module1,module2,...>] [-n <snippet1,snippet2,...>] [-h | --help]"
     echo
     echo "Parameters:"
     echo "  <config>               Specify the zmk config."
@@ -314,7 +314,7 @@ if [ -n "$SHIELD" ]; then
     command+=" -DSHIELD=\"\$SHIELD \$EXTRA_SHIELDS\""
 fi
 if [ -n "$CONFIG" ]; then
-    command+=" -DZMK_CONFIG=\"\$PROJECT_DIR/src/keyboards/\$CONFIG\""
+    command+=" -DZMK_CONFIG=\"\$PROJECT_DIR/zmk/keyboards/\$CONFIG\""
 fi
 if [ -n "$MODULES" ]; then
     command+=" -DZMK_EXTRA_MODULES=\"\$MODULES\""

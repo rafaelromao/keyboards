@@ -84,17 +84,18 @@ This keymap is implemented using ZMK, with the following external modules:
 
 ## QMK
 
-Two of my keyboards cannot run ZMK: the BM40 and the XD75 are wired ortholinear boards on an ATmega32U4. For them the same keymap is implemented in QMK, in [src/qmk](src/qmk), as a QMK [External Userspace](https://docs.qmk.fm/newbs_external_userspace) that reads the layout from the same 36 positions the ZMK keymap uses. QMK itself is a git submodule at `modules/qmk/qmk_firmware`, pinned to `0.34.4`, next to the ZMK one.
+Two of my keyboards cannot run ZMK: the BM40 and the XD75 are wired ortholinear boards on an ATmega32U4. For them the same keymap is implemented in QMK, in [qmk](qmk), as a QMK [External Userspace](https://docs.qmk.fm/newbs_external_userspace) that reads the layout from the same 36 positions the ZMK keymap in [zmk](zmk) uses. QMK itself is a git submodule at `modules/qmk/qmk_firmware`, pinned to `0.34.4`, next to the ZMK one.
 
 The two hands sit on the left and right blocks of the ortholinear grid, with the thumbs on the bottom row, so the extra columns and the fourth row of the XD75 are unused. Every layer, combo, tap-hold, macro, accent and adaptive key of the ZMK keymap is there, including vim mode, the MEHS layer and the MACROS layer. The layout needs the host on US-International with dead keys, like the ZMK one.
 
-Build both with the [qmk](scripts/qmk.sh) script, which runs the official QMK CLI container through podman and shares the modules volume with the ZMK toolchain:
+The toolchain container carries the QMK toolchain next to the ZMK one, so both boards build with the same [b](scripts/b.sh) script as the ZMK boards, and `b all` includes them:
 
 ```bash
-scripts/qmk.sh bm40   # kprepublic/bm40hsrgb/rev1
-scripts/qmk.sh xd75   # xiudi/xd75
-scripts/qmk.sh all    # both; -p for a pristine build
+b bm40   # kprepublic/bm40hsrgb/rev1
+b xd75   # xiudi/xd75; -p for a pristine build
 ```
+
+Without that container, the [qmk](scripts/qmk.sh) script builds them from the host with the official QMK CLI image, through podman and on the same modules volume: `scripts/qmk.sh bm40`, `scripts/qmk.sh xd75` or `scripts/qmk.sh all`.
 
 The `.hex` files land in `build/artifacts/`, ready for `qmk flash` or QMK Toolbox. Both firmwares fill about 90% of the 28 KB flash.
 
@@ -120,34 +121,34 @@ And a few things work differently:
 
 Unlike most ZMK users, I don't use GitHub Actions to build the firmware for my keyboards, and since I come from a legacy repo structure, from the time I used QMK and when they didn't even support external userspaces, I use git submodules to import ZMK and everything else I need into my repo, then I build the firmware using a custom script. 
 
-To make the local build setup easier, I have a [Containerfile](Containerfile) that installs all the toolchain into a Ubuntu container. The [init](init.sh) script is then used to run this container.
+To make the local build setup easier, I have a [Containerfile](Containerfile) that installs all the toolchain into a Ubuntu container, the ZMK one and the QMK one. The [init](init.sh) script is then used to run this container. It builds the image only when there is none, so after a change to the Containerfile rebuild it with `podman build -t zmk-toolchain:0.17.0 .`.
 
-Into the container, I can use my custom [build](scripts/build.sh) script to build the firmware for all my keyboards.
+Into the container, I can use my custom [zmk](scripts/zmk.sh) script to build the ZMK firmware for all my keyboards.
 
 Here are some usage examples:
 
 ```bash
 # Builds the central left side shield of the Rommana, assuming nice_nano_v2 as board
-build mabroum/rommana cl
+zmk mabroum/rommana cl
 
 # Builds the left side shield of the Wired Diamond, specifying the board to be used instead of the default
-build rafaelromao/wired_diamond l -b xiao_rp2040//zmk
+zmk rafaelromao/wired_diamond l -b xiao_rp2040//zmk
 
 # Builds the central dongle shield of the Choc Diamond, specifying an extra shield and an external module to handle the display
-build rafaelromao/choc_diamond cd -e dongle_display -m englmaxi/zmk-dongle-display
+zmk rafaelromao/choc_diamond cd -e dongle_display -m englmaxi/zmk-dongle-display
 ```
 
-To make it even simpler, I have a [b](scripts/b.sh) script that can be used to build the central sides using default configurations. 
+To make it even simpler, I have a [b](scripts/b.sh) script that can be used to build the central sides using default configurations, and the two QMK boards.
 
 Example:
 
 ```sh
 b wd # builds the left side of the wired diamond keyboard, equivalent to the command below
 
-build rafaelromao/wired_diamond l -b xiao_rp2040//zmk
-```
+zmk rafaelromao/wired_diamond l -b xiao_rp2040//zmk
 
-The QMK boards are built from the host with [qmk](scripts/qmk.sh), see [QMK](#qmk) above.
+b bm40 # builds the BM40 with QMK, see QMK above
+```
 
 ## Editors
 

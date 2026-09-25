@@ -1,6 +1,6 @@
 #pragma once
 
-// The 36 ZMK key positions (src/definitions/config.dtsi) as the keycodes they
+// The 36 ZMK key positions (zmk/definitions/config.dtsi) as the keycodes they
 // hold on ALPHA1. Combos are written with these and combo_ref_from_layer()
 // always answers ALPHA1, which makes a QMK combo the same physical chord on
 // every layer, the way ZMK's position-based combos are.

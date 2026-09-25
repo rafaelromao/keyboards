@@ -3,7 +3,7 @@
 #include "features/macros.h"
 
 // ---------------------------------------------------------------------------
-// Combos (ZMK src/features/combos.dtsi)
+// Combos (ZMK zmk/features/combos.dtsi)
 //
 // ZMK matches a combo by key position and by the highest active layer. Here
 // the keys are the ALPHA1 keycodes of the positions (positions.h) resolved

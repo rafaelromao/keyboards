@@ -1,3 +1,20 @@
+# 0. The QMK AVR toolchain, taken from the official QMK CLI image
+#
+# That image ships QMK's own toolchains (qmk/qmk_toolchains, avr-gcc 15 today)
+# under /opt/qmk, for ARM and RISC-V too, 1.7 GiB in all. Only the AVR part is
+# needed here, ~370 MiB, so it is gathered into one directory to copy below.
+# It is the same compiler scripts/qmk.sh builds with, which keeps the firmware
+# sizes of the two build paths identical; Ubuntu's gcc-avr 5.4 made the XD75
+# build some 1.3 KB bigger. The binaries need glibc 2.27 at most, which this
+# Ubuntu base has.
+FROM ghcr.io/qmk/qmk_cli:latest AS qmk_toolchain
+RUN mkdir -p /avr/bin /avr/lib/gcc /avr/libexec/gcc \
+    && cp -a /opt/qmk/bin/avr-* /avr/bin/ \
+    && cp -a /opt/qmk/avr /avr/ \
+    && cp -a /opt/qmk/lib/gcc/avr /avr/lib/gcc/ \
+    && cp -a /opt/qmk/lib/bfd-plugins /avr/lib/ \
+    && cp -a /opt/qmk/libexec/gcc/avr /avr/libexec/gcc/
+
 FROM ubuntu:22.04
 
 # Prevent interactive prompts
@@ -83,14 +100,26 @@ WORKDIR /opt/zephyr-sdk-${SDK_VERSION}
 RUN ./setup.sh -c \
     && /opt/zephyr-sdk-${SDK_VERSION}/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc --version
 
-# 7. Add Aliases to .bashrc
-RUN echo "alias build='/workdir/scripts/build.sh'" >> /root/.bashrc && \
+# 7. Install the QMK toolchain, for the boards that cannot run ZMK
+#
+# The BM40 and the XD75 are ATmega32U4 boards, so this is the AVR toolchain
+# from step 0 plus the qmk CLI. QMK itself is the modules/qmk/qmk_firmware
+# submodule, which scripts/qmk-build.sh clones into the modules volume and
+# pins. This comes after the Zephyr SDK so that changing it does not download
+# the SDK again.
+COPY --from=qmk_toolchain /avr /opt/qmk
+RUN pip3 install qmk \
+    && /opt/qmk/bin/avr-gcc --version \
+    && qmk --version
+
+# 8. Add Aliases to .bashrc
+RUN echo "alias zmk='/workdir/scripts/zmk.sh'" >> /root/.bashrc && \
     echo "alias b='/workdir/scripts/b.sh'" >> /root/.bashrc && \
     echo "alias draw='/workdir/scripts/draw.sh'" >> /root/.bashrc
 
-# 8. Environment Variables
+# 9. Environment Variables
 ENV ZEPHYR_SDK_INSTALL_DIR=/opt/zephyr-sdk-${SDK_VERSION}
-ENV PATH="${PATH}:/root/.local/bin"
+ENV PATH="${PATH}:/root/.local/bin:/opt/qmk/bin"
 
 WORKDIR /workdir
 CMD ["/bin/bash"]

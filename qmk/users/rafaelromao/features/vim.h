@@ -3,7 +3,7 @@
 #include "rafaelromao.h"
 #include "definitions/process_record.h"
 
-// Vim mode without the host sync (ZMK src/features/vim.dtsi minus the
+// Vim mode without the host sync (ZMK zmk/features/vim.dtsi minus the
 // zmk-vim-mode listener): the NORMAL and CHANGE layers, and the mode the
 // keyboard infers on its own from the keys it types. Entered with the
 // top-row ring+middle+index chord (which also taps Esc), left with the

@@ -1,6 +1,6 @@
 #pragma once
 
-// The 36-position layout of the ZMK keymap (src/definitions/keymap.dtsi),
+// The 36-position layout of the ZMK keymap (zmk/definitions/keymap.dtsi),
 // one block per row and hand, in the order the boards' LAYER() wrappers take
 // them: L1 R1 L2 R2 L3 R3 L4 R4. Rows are 5 keys per hand, thumbs 3 per hand
 // (L2 L1 L0 | R0 R1 R2, innermost thumbs L0/R0). Every binding mirrors the

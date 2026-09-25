@@ -6,74 +6,105 @@ set -euo pipefail
 
 build_reset() {
     echo "--- Building Reset ---"
-    ./scripts/build.sh "-s" "settings_reset" "$@"
+    ./scripts/zmk.sh "-s" "settings_reset" "$@"
 }
 
 build_rommana() {
     echo "--- Building Rommana ---"
-    ./scripts/build.sh "mabroum/rommana" "cl" "$@"
+    ./scripts/zmk.sh "mabroum/rommana" "cl" "$@"
     if [[ "$complete" == "true" ]]; then
-        ./scripts/build.sh "mabroum/rommana" "pr" "$@"
-        ./scripts/build.sh "mabroum/rommana" "pl" "$@"
-        ./scripts/build.sh "mabroum/rommana" "cd" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
+        ./scripts/zmk.sh "mabroum/rommana" "pr" "$@"
+        ./scripts/zmk.sh "mabroum/rommana" "pl" "$@"
+        ./scripts/zmk.sh "mabroum/rommana" "cd" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
     fi
 }
 
 build_wired_rommana() {
     echo "--- Building Wired Rommana ---"
-    ./scripts/build.sh "mabroum/wired_rommana" "l" "-b" "xiao_rp2040//zmk" "$@"
+    ./scripts/zmk.sh "mabroum/wired_rommana" "l" "-b" "xiao_rp2040//zmk" "$@"
     if [[ "$complete" == "true" ]]; then
-        ./scripts/build.sh "mabroum/wired_rommana" "r" "-b" "xiao_rp2040//zmk" "$@"
+        ./scripts/zmk.sh "mabroum/wired_rommana" "r" "-b" "xiao_rp2040//zmk" "$@"
     fi
 }
 
 build_diamond() {
     echo "--- Building Diamond ---"
-    ./scripts/build.sh "rafaelromao/diamond" "cd" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
+    ./scripts/zmk.sh "rafaelromao/diamond" "cd" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
     if [[ "$complete" == "true" ]]; then
-        ./scripts/build.sh "rafaelromao/diamond" "pr" "$@"
-        ./scripts/build.sh "rafaelromao/diamond" "pl" "$@"
-        ./scripts/build.sh "rafaelromao/diamond" "cl" "$@"
+        ./scripts/zmk.sh "rafaelromao/diamond" "pr" "$@"
+        ./scripts/zmk.sh "rafaelromao/diamond" "pl" "$@"
+        ./scripts/zmk.sh "rafaelromao/diamond" "cl" "$@"
     fi
 }
 
 build_wired_diamond() {
     echo "--- Building Wired Diamond ---"
-    ./scripts/build.sh "rafaelromao/wired_diamond" "l" "-b" "xiao_rp2040//zmk" "$@"
+    ./scripts/zmk.sh "rafaelromao/wired_diamond" "l" "-b" "xiao_rp2040//zmk" "$@"
     if [[ "$complete" == "true" ]]; then
-        ./scripts/build.sh "rafaelromao/wired_diamond" "r" "-b" "xiao_rp2040//zmk" "$@"
+        ./scripts/zmk.sh "rafaelromao/wired_diamond" "r" "-b" "xiao_rp2040//zmk" "$@"
     fi
 }
 
 build_choc_diamond() {
     echo "--- Building Choc Diamond ---"
-    ./scripts/build.sh "rafaelromao/choc_diamond" "cl" "$@"
+    ./scripts/zmk.sh "rafaelromao/choc_diamond" "cl" "$@"
     if [[ "$complete" == "true" ]]; then
-        ./scripts/build.sh "rafaelromao/choc_diamond" "pr" "$@"
-        ./scripts/build.sh "rafaelromao/choc_diamond" "pl" "$@"
-        ./scripts/build.sh "rafaelromao/choc_diamond" "cd" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
+        ./scripts/zmk.sh "rafaelromao/choc_diamond" "pr" "$@"
+        ./scripts/zmk.sh "rafaelromao/choc_diamond" "pl" "$@"
+        ./scripts/zmk.sh "rafaelromao/choc_diamond" "cd" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
     fi
 }
 
 build_zen() {
     echo "--- Building Corneish Zen ---"
-    ./scripts/build.sh "lowprokb.ca/corneish-zen" "-b" "corneish_zen_left//zmk" "$@"
+    ./scripts/zmk.sh "lowprokb.ca/corneish-zen" "-b" "corneish_zen_left//zmk" "$@"
     if [[ "$complete" == "true" ]]; then
-        ./scripts/build.sh "lowprokb.ca/corneish-zen" "-b" "corneish_zen_right//zmk" "$@"
-        ./scripts/build.sh "lowprokb.ca/corneish-zen-with-dongle" "corneish_zen_dongle" "$@"
-        ./scripts/build.sh "lowprokb.ca/corneish-zen-with-dongle" "corneish_zen_v2_left" "$@"
-        ./scripts/build.sh "lowprokb.ca/corneish-zen-with-dongle" "corneish_zen_v2_right" "$@"
+        ./scripts/zmk.sh "lowprokb.ca/corneish-zen" "-b" "corneish_zen_right//zmk" "$@"
+        ./scripts/zmk.sh "lowprokb.ca/corneish-zen-with-dongle" "corneish_zen_dongle" "$@"
+        ./scripts/zmk.sh "lowprokb.ca/corneish-zen-with-dongle" "corneish_zen_v2_left" "$@"
+        ./scripts/zmk.sh "lowprokb.ca/corneish-zen-with-dongle" "corneish_zen_v2_right" "$@"
     fi
 }
 
 build_dilemma() {
     echo "--- Building Dilemma ---"
-    ./scripts/build.sh "bastardkb/dilemma" "cl" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
+    ./scripts/zmk.sh "bastardkb/dilemma" "cl" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
     if [[ "$complete" == "true" ]]; then
-        ./scripts/build.sh "bastardkb/dilemma" "pr" "$@"
-        ./scripts/build.sh "bastardkb/dilemma" "pl" "$@"
-        ./scripts/build.sh "bastardkb/dilemma" "cd" "$@"
+        ./scripts/zmk.sh "bastardkb/dilemma" "pr" "$@"
+        ./scripts/zmk.sh "bastardkb/dilemma" "pl" "$@"
+        ./scripts/zmk.sh "bastardkb/dilemma" "cd" "$@"
     fi
+}
+
+# The QMK boards build with the QMK toolchain that the image carries next to
+# the ZMK one. qmk-build.sh takes only -p (pristine), so the zmk.sh options
+# that `b all -v` or similar pass along are dropped here rather than rejected.
+build_qmk() {
+    local board="$1"
+    shift
+    if ! command -v qmk >/dev/null 2>&1; then
+        echo "The qmk CLI is not in this image. Rebuild it from the Containerfile:"
+        echo "  podman build -t zmk-toolchain:0.17.0 ."
+        echo "or build from the host with: scripts/qmk.sh $board"
+        exit 1
+    fi
+    local args=()
+    for arg in "$@"; do
+        if [[ "$arg" == "-p" ]]; then
+            args+=("-p")
+        fi
+    done
+    ./scripts/qmk-build.sh "$board" ${args[@]+"${args[@]}"}
+}
+
+build_bm40() {
+    echo "--- Building BM40 (QMK) ---"
+    build_qmk "bm40" "$@"
+}
+
+build_xd75() {
+    echo "--- Building XD75 (QMK) ---"
+    build_qmk "xd75" "$@"
 }
 
 # --- Main Script ---
@@ -81,18 +112,20 @@ build_dilemma() {
 complete=false
 
 if [[ -z "${1:-}" || "${1:-}" == "-h" || "${1:-}" == "--help" ]]; then
-    echo "Usage: $(basename "$0") <keyboard> [-c|--complete] [build.sh options]"
+    echo "Usage: $(basename "$0") <keyboard> [-c|--complete] [zmk.sh options]"
     echo
     echo "This script builds the firmware for a given keyboard, calling the underlying"
-    echo "build.sh script with the correct parameters."
-    echo "Additional arguments are passed to the underlying build.sh script."
+    echo "zmk.sh script (ZMK boards) or qmk-build.sh script (QMK boards) with the"
+    echo "correct parameters."
+    echo "Additional arguments are passed to zmk.sh; the QMK boards only take -p."
     echo
-    echo "Available keyboards: all, reset, rommana, wired_rommana, diamond, wired_diamond, choc_diamond, zen, dilemma"
+    echo "Available keyboards: all, reset, rommana, wired_rommana, diamond, wired_diamond, choc_diamond, zen, dilemma, bm40, xd75"
     echo
     echo "Examples:"
     echo "  $(basename "$0") rommana"
     echo "  $(basename "$0") rommana -c"
     echo "  $(basename "$0") rommana -c -v"
+    echo "  $(basename "$0") bm40 -p"
     exit 1
 fi
 
@@ -115,6 +148,8 @@ case "$KEYBOARD" in
         build_choc_diamond "$@"
         build_zen "$@"
         build_dilemma "$@"
+        build_bm40 "$@"
+        build_xd75 "$@"
         ;;
     reset|s)
         build_reset "$@"
@@ -139,6 +174,12 @@ case "$KEYBOARD" in
         ;;
     dilemma|m)
         build_dilemma "$@"
+        ;;
+    bm40|bm)
+        build_bm40 "$@"
+        ;;
+    xd75|xd)
+        build_xd75 "$@"
         ;;
     *)
         echo "Unknown Keyboard: '$KEYBOARD'"

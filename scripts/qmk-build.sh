@@ -1,14 +1,15 @@
 #!/bin/bash
 #
 # Builds the QMK firmware for the boards that cannot run ZMK. Runs inside the
-# QMK CLI container started by scripts/qmk.sh (it only needs git, make and the
-# qmk CLI, so it also works on a host that has those installed).
+# toolchain container (through b.sh, as `b bm40` / `b xd75`) or inside the QMK
+# CLI container started by scripts/qmk.sh. It only needs git, make, the AVR
+# toolchain and the qmk CLI, so it also works on a host that has those.
 #
 #   qmk-build.sh <bm40|xd75|all> [-p]
 #
 # QMK is a git submodule at modules/qmk/qmk_firmware, cloned on first use into
-# the modules volume and pinned to REVISION the way build.sh pins ZMK. The
-# keymaps and the shared userspace live in src/qmk, which QMK reads as an
+# the modules volume and pinned to REVISION the way zmk.sh pins ZMK. The
+# keymaps and the shared userspace live in qmk/, which QMK reads as an
 # External Userspace (qmk.json), so nothing is symlinked into the submodule.
 
 set -euo pipefail
@@ -16,9 +17,9 @@ set -euo pipefail
 PROJECT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 QMK_MODULE="modules/qmk/qmk_firmware"
 QMK_HOME="$PROJECT_DIR/$QMK_MODULE"
-QMK_USERSPACE="$PROJECT_DIR/src/qmk"
+QMK_USERSPACE="$PROJECT_DIR/qmk"
 ARTIFACTS="$PROJECT_DIR/build/artifacts"
-# Pinned, like ZMK in build.sh. Moving it is a deliberate act: bump it, rebuild
+# Pinned, like ZMK in zmk.sh. Moving it is a deliberate act: bump it, rebuild
 # both boards, and check the userspace still compiles. Keep the gitlink that is
 # committed for modules/qmk/qmk_firmware in sync with it.
 REVISION="0.34.4"
@@ -57,7 +58,7 @@ cd "$PROJECT_DIR"
 # --- QMK submodule ---
 # The test is for the Makefile rather than the directory: a clone that failed
 # part way leaves a directory behind, and a mere existence check would treat
-# it as "already cloned" forever (same guard as build.sh).
+# it as "already cloned" forever (same guard as zmk.sh).
 if [[ ! -f "$QMK_HOME/Makefile" ]]; then
     echo "Add git sub-module: qmk/qmk_firmware"
     if [[ -d "$QMK_HOME" ]]; then
