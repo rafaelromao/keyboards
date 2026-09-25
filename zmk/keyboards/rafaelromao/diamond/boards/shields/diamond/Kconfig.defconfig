@@ -12,6 +12,10 @@ config ZMK_SPLIT_ROLE_CENTRAL
 endif
 
 
+# The display is the dongle's; without this guard the LVGL defaults below
+# competed with the dongle-display module's own on every other build.
+if SHIELD_DIAMOND_CENTRAL_DONGLE
+
 if ZMK_DISPLAY
 
 config I2C
@@ -41,6 +45,8 @@ config LV_Z_BITS_PER_PIXEL
 choice LV_COLOR_DEPTH
     default LV_COLOR_DEPTH_1
 endchoice
+
+endif
 
 endif
 

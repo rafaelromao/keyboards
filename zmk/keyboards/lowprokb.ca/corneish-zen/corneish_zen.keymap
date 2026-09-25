@@ -15,4 +15,15 @@
     };
 };
 
+/*
+ * The board's five_column_transform declares columns = <10> but maps columns
+ * 1-10 and still receives column 0 and 11 from the outer switches. ZMK
+ * indexes its lookup table as row * columns + col, so those unmapped outer
+ * keys landed on real positions (left SW7 -> position 9). Twelve columns
+ * keep every pair in its own slot.
+ */
+&five_column_transform {
+    columns = <12>;
+};
+
 #include "../../../definitions/keymap.dtsi"
