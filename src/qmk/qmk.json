@@ -1,0 +1,7 @@
+{
+    "userspace_version": "1.1",
+    "build_targets": [
+        ["kprepublic/bm40hsrgb/rev1", "rafaelromao"],
+        ["xiudi/xd75", "rafaelromao"]
+    ]
+}

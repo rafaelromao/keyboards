@@ -34,3 +34,6 @@
 [submodule "modules/rafaelromao/zmk-os-detection"]
 	path = modules/rafaelromao/zmk-os-detection
 	url = git@github.com:rafaelromao/zmk-os-detection
+[submodule "modules/qmk/qmk_firmware"]
+	path = modules/qmk/qmk_firmware
+	url = https://github.com/qmk/qmk_firmware
