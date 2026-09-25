@@ -61,8 +61,8 @@ build_zen() {
     if [[ "$complete" == "true" ]]; then
         ./scripts/zmk.sh "lowprokb.ca/corneish-zen" "-b" "corneish_zen_right//zmk" "$@"
         ./scripts/zmk.sh "lowprokb.ca/corneish-zen-with-dongle" "corneish_zen_dongle" "$@"
-        ./scripts/zmk.sh "lowprokb.ca/corneish-zen-with-dongle" "corneish_zen_v2_left" "$@"
-        ./scripts/zmk.sh "lowprokb.ca/corneish-zen-with-dongle" "corneish_zen_v2_right" "$@"
+        ./scripts/zmk.sh "lowprokb.ca/corneish-zen-with-dongle" "-b" "corneish_zen_left//zmk" "$@"
+        ./scripts/zmk.sh "lowprokb.ca/corneish-zen-with-dongle" "-b" "corneish_zen_right//zmk" "$@"
     fi
 }
 
