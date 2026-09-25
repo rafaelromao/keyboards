@@ -46,10 +46,8 @@ void post_process_record_user(uint16_t keycode, keyrecord_t *record) {
     } else if (IS_QK_LAYER_TAP(keycode)) {
         if (!record->tap.count) return;
         tap = QK_LAYER_TAP_GET_TAP_KEYCODE(keycode);
-    } else if (keycode > QK_MODS_MAX) {
-        return;
     }
-    adaptive_track(tap);
+    if (tap <= QK_MODS_MAX) adaptive_track(tap);
     smart_after_press(keycode, record, false);
     vim_after_press(keycode, record);
 }

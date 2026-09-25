@@ -13,6 +13,12 @@ static struct {
     uint16_t altrep2_time;
     uint8_t  num_word_layer;  // 0 = off
     bool     oneshot_set;
+    // Layers spent by the key being pressed. They are turned off only after
+    // the key is processed: QMK resolves a plain key against the layer state
+    // again in process_action, after process_record_user, so switching the
+    // layer off early would type the key underneath.
+    bool osl_release;
+    bool num_word_release;
 } st;
 
 // --- one-shot layers ---------------------------------------------------------
@@ -20,8 +26,9 @@ static struct {
 void smart_osl_on(uint8_t layer) {
     if (st.osl_layer && st.osl_layer != layer) layer_off(st.osl_layer);
     layer_on(layer);
-    st.osl_layer = layer;
-    st.osl_time  = timer_read();
+    st.osl_layer   = layer;
+    st.osl_time    = timer_read();
+    st.osl_release = false;
 }
 
 void smart_osl_off(void) {
@@ -92,7 +99,8 @@ void caps_word_set_user(bool active) {
 void smart_num_word_on(uint8_t layer) {
     vim_off();
     layer_on(layer);
-    st.num_word_layer = layer;
+    st.num_word_layer   = layer;
+    st.num_word_release = false;
 }
 
 void smart_num_word_off(void) {
@@ -227,23 +235,32 @@ void smart_before_press(uint16_t keycode, keyrecord_t *record) {
     st.oneshot_set = false;
     if (is_modifier_press(keycode, record)) return;
 
-    // ZMK &sl quick-release: the layer goes on the next key press, after the
-    // key was resolved on it (QMK remembers the source layer for the release).
-    if (st.osl_layer) smart_osl_off();
+    // ZMK &sl quick-release: the layer goes on the next key press, once that
+    // key has been resolved on it (see smart_after_press).
+    if (st.osl_layer) st.osl_release = true;
 
     // The ALT REP 2 window is read by the L1 tap and cleared by anything else.
     if (st.altrep2 && keycode != L1_KEY) st.altrep2 = false;
 
     if (st.num_word_layer) {
         uint16_t logical = logical_keycode(keycode, record);
-        if (logical != KC_NO && !num_word_continues(logical)) smart_num_word_off();
+        if (logical != KC_NO && !num_word_continues(logical)) st.num_word_release = true;
     }
 }
 
-// ZMK sticky keys with quick-release are spent by the next key press. QMK
-// keeps one-shot mods until that key is released, which would also shift a
-// rolled second key, so they are cleared here once the press is through.
+// Runs once the press is through: releases the layers it spent, and the
+// one-shot mods. ZMK sticky keys with quick-release are spent by the next key
+// press, while QMK keeps one-shot mods until that key is released, which
+// would also shift a rolled second key.
 void smart_after_press(uint16_t keycode, keyrecord_t *record, bool intercepted) {
+    if (st.osl_release) {
+        st.osl_release = false;
+        smart_osl_off();
+    }
+    if (st.num_word_release) {
+        st.num_word_release = false;
+        smart_num_word_off();
+    }
     if (st.oneshot_set || is_modifier_press(keycode, record)) return;
     if (get_oneshot_mods()) {
         clear_oneshot_mods();
