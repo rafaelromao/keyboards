@@ -2,6 +2,7 @@
 #include "features/adaptive.h"
 #include "features/smart.h"
 #include "features/vim.h"
+#include "features/shortcuts.h"
 
 // clang-format off
 static const uint16_t seq_sqo[]               PROGMEM = {KC_QUOT, KC_SPC, 0};
@@ -185,6 +186,11 @@ static void tap_digit(uint8_t n) {
 bool process_macros(uint16_t keycode, bool pressed) {
     if (keycode >= MC_N0 && keycode <= MC_N9) {
         if (pressed) tap_digit(keycode - MC_N0);
+        return true;
+    }
+    if (keycode == MC_DEG && !shortcuts_is_mac()) {
+        // The Option chord is macOS; US-International has ° on AltGr+Shift+;
+        if (pressed) execute_keycode(RALT(S(KC_SCLN)));
         return true;
     }
     if (keycode >= SEQ_FIRST && keycode <= SEQ_LAST) {

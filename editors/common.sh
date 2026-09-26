@@ -1,3 +1,4 @@
+# shellcheck shell=bash
 # Shared helpers for the editor install scripts. Sourced, never run directly.
 
 info() { printf '\033[1;34m==>\033[0m %s\n' "$1"; }
@@ -11,7 +12,12 @@ link() {
   [ -e "$src" ] || { warn "missing $src"; return 1; }
   mkdir -p "$(dirname "$dst")"
   if [ -e "$dst" ] && [ ! -L "$dst" ]; then
-    local backup="$HOME/.keyboards-backup/$(date +%Y%m%d-%H%M%S)"
+    # One directory per destination: with the timestamp alone, Code's and
+    # VSCodium's keybindings.json landed on the same name and the second
+    # backup silently replaced the first.
+    local rel backup
+    rel="${dst#$HOME/}"
+    backup="$HOME/.keyboards-backup/$(date +%Y%m%d-%H%M%S)/$(dirname "$rel" | tr '/ ' '--')"
     mkdir -p "$backup"
     mv "$dst" "$backup/"
     warn "moved the existing $(basename "$dst") to $backup/"

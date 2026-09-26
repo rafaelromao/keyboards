@@ -43,7 +43,8 @@
             tap-ms = <0>;
             bindings = <&vim_off &lock_off NUM &lock_off NUM_CP &lock_off CASE_A1 &lock_off CPLK_A1
                         &lock_off ALPHA2 &lock_off SFT_A2 &lock_off CASE_A2 &lock_off CCEDIL
-                        &lock_off CASE_CCEDIL &lock_off SEN_CASE &lock_off ALTREP2 &lock_off MEHS>;
+                        &lock_off CASE_CCEDIL &lock_off SEN_CASE &lock_off ALTREP2 &lock_off MEHS
+                        &lock_off NAV &lock_off NAV_CP &lock_off MEDIA &lock_off FUN>;
         };
         LAYERTAP_TP(lt_cancel,     &tc_cancel)
 
@@ -67,14 +68,6 @@
             bindings = <&macro_tap &vim_off &smart_num NUM>;
         };
 
-        smart_num_cp: smart_num_cp {
-            compatible = "zmk,behavior-auto-layer";
-            ignore-numbers;
-            #binding-cells = <1>;
-            continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL AMPS PIPE HASH TILDE CARET
-                             LBRC RBRC BACKSLASH DOLLAR AT LPAR RPAR DQT SQT LBKT RBKT QMARK GRAVE>;
-        };
-
         tc_num_word_cp: tc_num_word_cp {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -92,7 +85,8 @@
             #binding-cells = <1>;  
             continue-list = <UNDERSCORE MINUS COMMA BACKSPACE DELETE SQT TILDE CARET GRAVE LEFT RIGHT SPACE>;
         };
-        MACRO(tc_smart_line, &smart_line CPLK_A1)
+        // Lets go of the shift that armed it, as tc_smart_word does.
+        MACRO(tc_smart_line, &smart_line CPLK_A1 &macro_release &kp LSHFT)
 
         // ******************* CAPS WORD ******************* //
 
@@ -103,7 +97,17 @@
             #binding-cells = <1>;  
             continue-list = <UNDERSCORE MINUS COMMA BACKSPACE DELETE SQT TILDE CARET GRAVE LEFT RIGHT>;
         };
-        MACRO(tc_smart_word, &smart_word CASE_A1)
+        // Caps word is armed by a shift: the sticky one from the first tap on
+        // the shift thumb, or a held home-row shift (see mm_shift). Only a key
+        // press spends a sticky shift, so it used to still be down for the
+        // first letter, which went out as Left Shift plus this layer's RS()
+        // and then lost both shifts while it was still held. Linux typed that
+        // letter lowercase, and the adaptive keys, which compare modifiers
+        // strictly, missed their RS() triggers after it. The letters carry
+        // their own shift, so let go of the one that armed the layer, as QMK's
+        // caps word does. The sticky key is still spent by the first letter;
+        // the shift it then releases is already up, and ZMK ignores that.
+        MACRO(tc_smart_word, &smart_word CASE_A1 &macro_release &kp LSHFT)
 
         // ******************* SMART SHIFT ******************* //
 
@@ -118,15 +122,6 @@
             flavor = "tap-preferred";
             quick-tap-ms = <0>;
             bindings = <&mo>, <&mm_shift>;
-        };
-
-        ht_caps: ht_caps {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <QUICK_TAP_TERM>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <0>;
-            bindings = <&mo>, <&tc_smart_word>;
         };
 
         // ******************** SMART THUMBS ******************** //
@@ -170,12 +165,15 @@
         MACRO(mc_sk_lgui, &sk LGUI)
         MACRO(mc_hold_numbers, &macro_press &mo NUM &macro_pause_for_release &macro_release &mo NUM)
         MACRO(mc_hold_lgui, &macro_press &kp LGUI &macro_pause_for_release &macro_release &kp LGUI)
-        MOD_MORPH_KM(mm_hold_sft_num_gui, MOD_RSFT, &mc_hold_lgui, &mc_hold_numbers)
-        MOD_MORPH_KM(mm_hold_ctl_num_gui, MOD_RCTL, &mm_hold_sft_num_gui, &mc_hold_numbers)
-        MOD_MORPH_KM(mm_hold_alt_num_gui, MOD_RALT, &mm_hold_ctl_num_gui, &mc_hold_numbers)
-        MOD_MORPH_KM(mm_tap_sft_space_gui, MOD_RSFT, &mc_sk_lgui, &mc_space)
-        MOD_MORPH_KM(mm_tap_ctl_space_gui, MOD_RCTL, &mm_tap_sft_space_gui, &mc_space)
-        MOD_MORPH_KM(mm_tap_alt_space_gui, MOD_RALT, &mm_tap_ctl_space_gui, &mc_space)
+        // Left-side modifiers, like the right thumb's chain above: the right
+        // hand's home-row mods send LSFT/LALT/LCTL too (RALT would be AltGr on
+        // Linux), so a chain keyed on MOD_R* could never fire.
+        MOD_MORPH_KM(mm_hold_sft_num_gui, MOD_LSFT, &mc_hold_lgui, &mc_hold_numbers)
+        MOD_MORPH_KM(mm_hold_ctl_num_gui, MOD_LCTL, &mm_hold_sft_num_gui, &mc_hold_numbers)
+        MOD_MORPH_KM(mm_hold_alt_num_gui, MOD_LALT, &mm_hold_ctl_num_gui, &mc_hold_numbers)
+        MOD_MORPH_KM(mm_tap_sft_space_gui, MOD_LSFT, &mc_sk_lgui, &mc_space)
+        MOD_MORPH_KM(mm_tap_ctl_space_gui, MOD_LCTL, &mm_tap_sft_space_gui, &mc_space)
+        MOD_MORPH_KM(mm_tap_alt_space_gui, MOD_LALT, &mm_tap_ctl_space_gui, &mc_space)
 
         ltn_num_spc: ltn_num_spc {
             compatible = "zmk,behavior-hold-tap";

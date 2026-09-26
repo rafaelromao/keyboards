@@ -40,8 +40,8 @@ static void accent(uint8_t idx, bool shifted) {
 
 static void cedilla(bool shifted) {
     if (shortcuts_is_mac()) {
-        // As in ZMK: the macOS ç has no shifted form, every variant is ' c.
-        tap_accent(KC_QUOT, KC_C, false);
+        // The dead key then C, shifted for Ç like every other accent.
+        tap_accent(KC_QUOT, KC_C, shifted);
     } else {
         uint8_t mods = get_mods();
         del_mods(MOD_MASK_SHIFT);

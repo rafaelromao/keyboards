@@ -28,15 +28,22 @@ RUN apt-get update && apt-get install -y \
     libsdl2-dev libmagic1 inkscape \
     && rm -rf /var/lib/apt/lists/*
 
-# 2. Install yq
-RUN wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/bin/yq \
+# 2. Install yq, for the host architecture: the image is arm64 on Apple
+# Silicon, where an x86_64 yq cannot run and draw.sh fails before it starts.
+ARG YQ_VERSION=v4.53.6
+RUN case "$(uname -m)" in \
+      x86_64)  YQ_ARCH=amd64 ;; \
+      aarch64|arm64) YQ_ARCH=arm64 ;; \
+      *) echo "No yq build for $(uname -m)" >&2; exit 1 ;; \
+    esac \
+    && wget -q "https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/yq_linux_${YQ_ARCH}" -O /usr/bin/yq \
     && chmod +x /usr/bin/yq
 
 # 3. Upgrade core Python tools
 RUN pip3 install --upgrade pip setuptools wheel
 
-# 4. Install West and Keymap-drawer
-RUN pip3 install west keymap-drawer
+# 4. Install West and Keymap-drawer, pinned like everything else in the image
+RUN pip3 install west==1.5.0 keymap-drawer==0.23.0
 
 # 5. Install ZMK/Zephyr Python requirements
 #
@@ -46,7 +53,10 @@ RUN pip3 install west keymap-drawer
 # "certificate verify failed: unable to get local issuer certificate".
 # Those are licence-compliance tools that a firmware build never uses, and
 # requirements-base.txt is what ZMK's own build documentation installs.
-RUN git clone --depth 1 https://github.com/zephyrproject-rtos/zephyr.git /tmp/zephyr \
+# The Zephyr revision is the one ZMK's app/west.yml pins for the ZMK commit in
+# scripts/zmk.sh, so the Python requirements match the tree that gets built
+# rather than whatever upstream main asks for this week.
+RUN git clone --depth 1 --branch v4.1.0+zmk-fixes https://github.com/zmkfirmware/zephyr.git /tmp/zephyr \
     && pip3 install -r /tmp/zephyr/scripts/requirements-base.txt \
     && rm -rf /tmp/zephyr
 

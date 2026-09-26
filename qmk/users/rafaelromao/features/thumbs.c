@@ -23,8 +23,14 @@ static void tap_space(void) {
     if (sentence) smart_sentence_shift();
 }
 
-// L0 tap. Under caps word (CASE_A1 msk_spc) the space also ends num word.
+// L0 tap. With Meh held a sticky left GUI so the chord becomes Hyper
+// (mm_tap_*_space_gui); under caps word (CASE_A1 msk_spc) the space also
+// ends num word.
 static void l0_tap(void) {
+    if (meh_held()) {
+        smart_oneshot_set(MOD_BIT(KC_LGUI));
+        return;
+    }
     if (is_caps_word_on() && !smart_caps_line()) {
         caps_word_off();
         smart_num_word_off();
@@ -83,6 +89,7 @@ void thumbs_magic(void) {
 
 static bool r0_gui_held;
 static bool r0_symcp_held;
+static bool l0_gui_held;
 
 process_record_result_t process_thumbs(uint16_t keycode, keyrecord_t *record) {
     bool    pressed = record->event.pressed;
@@ -113,6 +120,24 @@ process_record_result_t process_thumbs(uint16_t keycode, keyrecord_t *record) {
         if (r0_symcp_held) {
             layer_off(_SYM_CP);
             r0_symcp_held = false;
+            return PROCESS_RECORD_RETURN_FALSE;
+        }
+        return PROCESS_RECORD_CONTINUE;
+    }
+
+    if (keycode == L0_KEY && !tapped) {
+        // ltn_num_spc hold: LGUI with Meh held (Hyper), otherwise the native NUM.
+        if (pressed) {
+            if (meh_held()) {
+                register_mods(MOD_BIT(KC_LGUI));
+                l0_gui_held = true;
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+            return PROCESS_RECORD_CONTINUE;
+        }
+        if (l0_gui_held) {
+            unregister_mods(MOD_BIT(KC_LGUI));
+            l0_gui_held = false;
             return PROCESS_RECORD_RETURN_FALSE;
         }
         return PROCESS_RECORD_CONTINUE;

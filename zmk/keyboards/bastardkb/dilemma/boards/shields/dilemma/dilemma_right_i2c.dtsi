@@ -58,7 +58,7 @@ cirque_pinnacle_i2c: &i2c0 {
 	status = "okay";
 };
 
-// Cirque Trackpad, if the Left side is central, comment otherwise
+// Cirque Trackpad, forwarded to whichever side is central (the left half or the dongle)
 
 &glidepoint_split {
 	device = <&glidepoint>;

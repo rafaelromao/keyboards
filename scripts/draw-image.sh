@@ -19,7 +19,10 @@ if [ "$3" == "--combos-only" ]; then
     shift 1
 fi
 
-config="docs/img/diagrams/keymap-drawer/keymap-drawer-config.yaml"
+# Work on a copy: the yq edits below used to land in the tracked config file,
+# so whatever the last image needed got committed.
+config="tmp/keymap-drawer-config.yaml"
+cp docs/img/diagrams/keymap-drawer/keymap-drawer-config.yaml "$config"
 
 # Check if --2cols is provided
 yq eval '.draw_config.n_columns = 1' -i $config
@@ -39,7 +42,7 @@ fi
 source_param=""
 if [ ! -z "$3" ]; then
     shift 2
-    source_param="-s $@"
+    source_param="-s $*"
 fi
 
 # Execute the command

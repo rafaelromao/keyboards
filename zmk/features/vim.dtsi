@@ -182,8 +182,13 @@
 
         // VISUAL MODE EXITS
 
-        VIM_MACRO(mc_c_visual_vim       , &kp C &tog_off VIM_VISUAL &tog_on VIM_INSERT)
-        VIM_BINDING(lm_c_vim            , VIM_VISUAL, &mc_c_visual_vim , &vim_c_ctrl_c)
+        // NORMAL stays on under VISUAL (code 3 lists both), so leaving VISUAL for
+        // INSERT has to drop it too, or typing falls through INSERT's &trans
+        // keys into NORMAL's bindings. Ctrl+C returns to NORMAL, as on the
+        // other layers.
+        VIM_MACRO(mc_c_visual_vim       , &kp C &tog_off VIM_NORMAL &tog_off VIM_VISUAL &tog_on VIM_INSERT)
+        VIM_MOD_MORPH(mm_c_visual_vim   , MOD_LCTL|MOD_RCTL, &vim_ctrl_c, &mc_c_visual_vim)
+        VIM_BINDING(lm_c_vim            , VIM_VISUAL, &mm_c_visual_vim , &vim_c_ctrl_c)
 
         /*
          * v in visual leaves visual -- but only if the editor is told, so the

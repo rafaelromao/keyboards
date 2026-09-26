@@ -39,7 +39,7 @@ This keymap is the result of a few years of iterative improvements with my keybo
     <td><a href="https://github.com/qmk/qmk_firmware/tree/master/keyboards/xiudi/xd75">XD75 (QMK)</a></td>
   </tr>
   <tr>
-    <td><a href="img/builds/Dilemma 26.jpeg"><img src="img/builds/Dilemma 26.jpeg" width="150" /></a></td>
+    <td><a href="img/builds/Dilemma%2026.jpeg"><img src="img/builds/Dilemma%2026.jpeg" width="150" /></a></td>
     <td><a href="img/builds/BM40.jpg"><img src="img/builds/BM40.jpg" width="150" /></a></td>
     <td><a href="img/builds/XD75.jpeg"><img src="img/builds/XD75.jpeg" width="150" /></a></td>
   </tr>
@@ -57,7 +57,7 @@ The following directives guided my choices when defining how this keymap should 
 
 **No lateral movements or uncomfortable stretches**: The main objective of this keymap, and the keyboards I've built to use with it, is comfort when typing. Lateral movements with the pinky or index fingers are not comfortable for me, as well as using the pinky finger to reach keys in the top or bottom rows. As a result, such keys were removed and the keyboards, layout, and keymap evolved to have only 24 keys, in the format 1333+2.
 
-## Easy of Use
+## Ease of Use
 
 **If it is frequent, it should be easy**: Symbols and commands that are frequently used should be easy to type. This also applies to sequences of symbols or commands. Combos and macros can be used to facilitate this. For example, a macro can be created to type `:%s/`, or a combo can be used to type `~/`.
 
@@ -414,7 +414,7 @@ cd editors
 ./nvim/install.sh
 ```
 
-They symlink out of the repo, so editing a keymap there takes effect without reinstalling, and they work on macOS and Linux.
+VS Code and IntelliJ are symlinked out of the repo, and Neovim gets a spec that points back into it, so editing a keymap there takes effect without reinstalling; they work on macOS and Linux.
 
 # General
 

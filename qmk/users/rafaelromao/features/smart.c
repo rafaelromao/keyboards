@@ -198,6 +198,12 @@ void smart_cancel(void) {
     layer_off(_NUM_CP);
     layer_off(_ALPHA2);
     layer_off(_CCEDIL);
+    // The toggles layer can lock these on; without this a toggled FUN, which
+    // reaches neither SHORTS nor TOGGLES, had no way back.
+    layer_off(_NAV);
+    layer_off(_NAV_CP);
+    layer_off(_MEDIA);
+    layer_off(_FUN);
 #ifdef RR_MEHS_ENABLE
     layer_off(_MEHS);
 #endif

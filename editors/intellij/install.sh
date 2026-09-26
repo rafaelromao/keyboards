@@ -21,7 +21,7 @@ root="$(config_root)/JetBrains"
 info "IntelliJ IDEA keymap"
 
 found=0
-for cfg in "$root"/IntelliJIdea*/; do
+for cfg in "$root"/IntelliJIdea*/ "$root"/IdeaIC*/; do
   [ -d "$cfg" ] || continue
   link "$src" "${cfg}keymaps/Mehs.xml"
   found=1

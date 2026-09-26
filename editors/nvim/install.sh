@@ -39,4 +39,4 @@ echo "  Restart Neovim; :Lazy lists coding-mehs as a local plugin."
 echo
 echo "  These chords cannot be expressed in legacy terminal encoding. They need"
 echo "  a terminal that speaks the kitty keyboard protocol (Ghostty, Kitty,"
-echo "  WezTerm) and, inside tmux, extended-keys on. See ../README.md."
+echo "  WezTerm) and, inside tmux, extended-keys always. See ../README.md."

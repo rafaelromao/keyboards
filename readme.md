@@ -12,7 +12,7 @@ The image above shows just the most relevant layers. You can see the full diagra
 
 ## How this layout works?
 
-The ratiaonale behind the decisions that led to this keymap can be found in [this page](https://rafaelromao.github.io/keyboards), but here is a summary:
+The rationale behind the decisions that led to this keymap can be found in [this page](https://rafaelromao.github.io/keyboards), but here is a summary:
 
 ### Directives
 
@@ -20,7 +20,7 @@ What are the directives that drive most of my decisions?
 
 - **Ergonomics**: Split and Columnar Stagger.
 - **Finger Effort**: No lateral movements or uncomfortable stretches.
-- **Easy of Use**: If it is frequent, it should be easy.
+- **Ease of Use**: If it is frequent, it should be easy.
 - **Handness**: Trackball in the left hand, heavy load in the right hand.
 - **Workflows**: English, but also Portuguese, plus VIM and Spreadsheets.
 
@@ -63,7 +63,7 @@ What are the workflows that I need to execute with my keyboards?
     <td><a href="https://github.com/qmk/qmk_firmware/tree/master/keyboards/xiudi/xd75">XD75 (QMK)</a></td>
   </tr>
   <tr>
-    <td><a href="docs/img/builds/Dilemma 26.jpeg"><img src="docs/img/builds/Dilemma 26.jpeg" width="150" /></a></td>
+    <td><a href="docs/img/builds/Dilemma%2026.jpeg"><img src="docs/img/builds/Dilemma%2026.jpeg" width="150" /></a></td>
     <td><a href="docs/img/builds/BM40.jpg"><img src="docs/img/builds/BM40.jpg" width="150" /></a></td>
     <td><a href="docs/img/builds/XD75.jpeg"><img src="docs/img/builds/XD75.jpeg" width="150" /></a></td>
   </tr>
@@ -95,7 +95,7 @@ Into the container, I can use my custom [zmk](scripts/zmk.sh) script to build th
 Here are some usage examples:
 
 ```bash
-# Builds the central left side shield of the Rommana, assuming nice_nano_v2 as board
+# Builds the central left side shield of the Rommana, assuming nice_nano//zmk as board
 zmk mabroum/rommana cl
 
 # Builds the left side shield of the Wired Diamond, specifying the board to be used instead of the default
@@ -119,7 +119,7 @@ zmk rafaelromao/wired_diamond l -b xiao_rp2040//zmk
 
 The diagrams for my keymap were created using [Keymap Drawer](https://github.com/caksoylar/keymap-drawer).
 
-Here are some examples of the commands I use to draw the `svg` files and convert them to `png`:
+[draw](scripts/draw.sh) renders every diagram from the container (`draw` alias); underneath it runs commands like these to draw the `svg` files and convert them to `png`:
 
 ```bash
 keymap -c keymap-drawer-config.yaml draw keymap-drawer.yaml > overview.svg

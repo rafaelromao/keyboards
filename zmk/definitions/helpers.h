@@ -10,17 +10,6 @@
             bindings = <&mo>, <BINDINGS>; \
         };
     
-    #define LAYERTAP_HP(NAME, BINDINGS) \
-         NAME: NAME { \
-            compatible = "zmk,behavior-hold-tap"; \
-            flavor = "hold-preferred"; \
-            #binding-cells = <2>; \
-            tapping-term-ms = <TAPPING_TERM>; \
-            quick-tap-ms = <QUICK_TAP_TERM>; \
-            bindings = <&mo>, <BINDINGS>; \
-        };
-
-
     /*  MOD TAPS  */
 
     #define MODTAP_TP(NAME, BINDINGS) \
@@ -56,19 +45,6 @@
             wait-ms = <5>; \
             tap-ms = <5>; \
             bindings = <BINDINGS>; \
-        };
-
-    /* LAYER_MORPH */
-
-    #define LAYER_MORPH(NAME, LAYERS, MODDED, UNMODDED) \
-        NAME##: NAME## { \
-            compatible = "zmk,behavior-layer-morph"; \
-            #binding-cells = <0>; \
-            layers = <LAYERS>; \
-            bindings \
-                = <UNMODDED> \
-                , <MODDED> \
-                ; \
         };
 
     /* OS_MORPH
@@ -235,7 +211,7 @@
             mods = <(MOD_LSFT)>; \
             keep-mods = <(MOD_LSFT)>; \
         }; \
-        NAME##ctl_meh: NAME##clt_meh { \
+        NAME##ctl_meh: NAME##ctl_meh { \
             compatible = "zmk,behavior-mod-morph"; \
             #binding-cells = <0>; \
             bindings = <&NAME##sft>, <&NAME##sft_meh>; \

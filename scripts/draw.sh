@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Create temporary directory
 mkdir -p ./tmp
 
@@ -11,11 +13,9 @@ yq -i 'del(.combos[] | select(.draw_separate != true))' tmp/keymap-drawer-onlyse
 
 cp tmp/keymap-drawer-onlyseparatecombos.yaml tmp/keymap-drawer-onlyshortcutcombos.yaml
 cp tmp/keymap-drawer-onlyseparatecombos.yaml tmp/keymap-drawer-onlynavcombos.yaml
-cp tmp/keymap-drawer-onlyseparatecombos.yaml tmp/keymap-drawer-onlymediacombos.yaml
 
 yq -i 'del(.combos[] | select(.layers | contains(["shortcuts"]) | not))' tmp/keymap-drawer-onlyshortcutcombos.yaml
 yq -i 'del(.combos[] | select(.layers | contains(["nav"]) | not))' tmp/keymap-drawer-onlynavcombos.yaml
-yq -i 'del(.combos[] | select(.layers | contains(["media"]) | not))' tmp/keymap-drawer-onlymediacombos.yaml
 
 # Generate SVG files using keymap
 
@@ -25,7 +25,6 @@ yq -i 'del(.combos[] | select(.layers | contains(["media"]) | not))' tmp/keymap-
 
 ./scripts/draw-image.sh keymap-drawer-onlyshortcutcombos.yaml shortcutcombos --combos-only --2cols shortcuts
 ./scripts/draw-image.sh keymap-drawer-onlynavcombos.yaml navcombos --combos-only --2cols nav
-./scripts/draw-image.sh keymap-drawer-onlymediacombos.yaml mediacombos --combos-only --2cols media
 
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml overview --2cols --footernote alpha1 alpha2 ç-extension vim numbers symbols shortcuts mehs nav media text macros func toggles 
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml alphas alpha1 alpha2
@@ -45,7 +44,6 @@ yq -i 'del(.combos[] | select(.layers | contains(["media"]) | not))' tmp/keymap-
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml media media 
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml macros macros 
 
-./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml toggles toggles 
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml coding-mehs coding-meh coding-hyper
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml meh-morphs --2cols left-meh-morphs right-meh-morphs
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml window desktop-management window-management

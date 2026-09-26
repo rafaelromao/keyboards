@@ -7,20 +7,11 @@ VOL_MODULES="zmk-modules-cache"
 VOL_ZEPHYR="zmk-zephyr-data"
 
 # --- 1. Auto-Build Logic ---
+# Only when the tag is missing: after a Containerfile change, rebuild by hand
+# with `podman build -t zmk-toolchain:0.17.0 .` (see readme.md).
 if ! podman image exists "$IMAGE_NAME"; then
     echo "📦 Image $IMAGE_NAME not found. Building the image now..."
     podman build -t "$IMAGE_NAME" .
-fi
-
-# --- 2. SSH Agent Self-Heal ---
-# -S, not -z: the variable is often set but pointing at a socket that no longer
-# exists. macOS hands out a per-session launchd path, so a value inherited from
-# an older login looks valid but is dead.
-if [ ! -S "$SSH_AUTH_SOCK" ]; then
-    [ -n "$SSH_AUTH_SOCK" ] && echo "🔑 SSH_AUTH_SOCK is stale ($SSH_AUTH_SOCK)."
-    echo "🔑 Starting ssh-agent..."
-    eval "$(ssh-agent -s)"
-    [ -f "$HOME/.ssh/id_ed25519" ] && ssh-add "$HOME/.ssh/id_ed25519"
 fi
 
 # --- 3. Persistent Volumes ---
@@ -35,17 +26,29 @@ done
 # starts with "statfs /var/run/com.apple.launchd.*/Listeners: no such file or
 # directory", even though the socket is perfectly valid on the host.
 #
-# Nothing is lost, because zmk.sh clones every module over HTTPS and they are
-# all public repositories, so the container needs no credentials. Forwarding is
-# still used on native Linux, where the socket really is reachable, and can be
-# forced anywhere with ZMK_FORWARD_SSH_AGENT=1.
+# Nothing is lost, because zmk.sh names every module as git@github.com:… and
+# the url.insteadOf rewrite below turns that into HTTPS inside the container;
+# they are all public repositories, so no credentials are needed. Forwarding is
+# still offered on native Linux, where the socket really is reachable, and can
+# be forced anywhere with ZMK_FORWARD_SSH_AGENT=1.
 SSH_MOUNT=""
 if [ "$(uname -s)" = "Darwin" ] && [ "${ZMK_FORWARD_SSH_AGENT:-0}" != "1" ]; then
     echo "🔑 macOS: skipping ssh-agent forwarding (podman runs in a VM); clones use HTTPS."
-elif [ -S "$SSH_AUTH_SOCK" ]; then
-    SSH_MOUNT="-v $SSH_AUTH_SOCK:/run/ssh-agent:Z -e SSH_AUTH_SOCK=/run/ssh-agent"
 else
-    echo "⚠️  No usable ssh-agent socket; continuing without agent forwarding."
+    # -S, not -z: the variable is often set but pointing at a socket that no
+    # longer exists, so a value inherited from an older login looks valid but
+    # is dead. Only worth healing where the socket will actually be forwarded.
+    if [ ! -S "$SSH_AUTH_SOCK" ]; then
+        [ -n "$SSH_AUTH_SOCK" ] && echo "🔑 SSH_AUTH_SOCK is stale ($SSH_AUTH_SOCK)."
+        echo "🔑 Starting ssh-agent..."
+        eval "$(ssh-agent -s)"
+        [ -f "$HOME/.ssh/id_ed25519" ] && ssh-add "$HOME/.ssh/id_ed25519"
+    fi
+    if [ -S "$SSH_AUTH_SOCK" ]; then
+        SSH_MOUNT="-v $SSH_AUTH_SOCK:/run/ssh-agent:Z -e SSH_AUTH_SOCK=/run/ssh-agent"
+    else
+        echo "⚠️  No usable ssh-agent socket; continuing without agent forwarding."
+    fi
 fi
 
 # The host gitconfig is deliberately NOT mounted. It is written for a much
