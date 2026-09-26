@@ -85,7 +85,8 @@
             #binding-cells = <1>;  
             continue-list = <UNDERSCORE MINUS COMMA BACKSPACE DELETE SQT TILDE CARET GRAVE LEFT RIGHT SPACE>;
         };
-        MACRO(tc_smart_line, &smart_line CPLK_A1)
+        // Lets go of the shift that armed it, as tc_smart_word does.
+        MACRO(tc_smart_line, &smart_line CPLK_A1 &macro_release &kp LSHFT)
 
         // ******************* CAPS WORD ******************* //
 
@@ -96,7 +97,17 @@
             #binding-cells = <1>;  
             continue-list = <UNDERSCORE MINUS COMMA BACKSPACE DELETE SQT TILDE CARET GRAVE LEFT RIGHT>;
         };
-        MACRO(tc_smart_word, &smart_word CASE_A1)
+        // Caps word is armed by a shift: the sticky one from the first tap on
+        // the shift thumb, or a held home-row shift (see mm_shift). Only a key
+        // press spends a sticky shift, so it used to still be down for the
+        // first letter, which went out as Left Shift plus this layer's RS()
+        // and then lost both shifts while it was still held. Linux typed that
+        // letter lowercase, and the adaptive keys, which compare modifiers
+        // strictly, missed their RS() triggers after it. The letters carry
+        // their own shift, so let go of the one that armed the layer, as QMK's
+        // caps word does. The sticky key is still spent by the first letter;
+        // the shift it then releases is already up, and ZMK ignores that.
+        MACRO(tc_smart_word, &smart_word CASE_A1 &macro_release &kp LSHFT)
 
         // ******************* SMART SHIFT ******************* //
 
