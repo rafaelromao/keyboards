@@ -165,6 +165,12 @@ static void tap_digit(uint8_t n) {
     uint16_t keypad = (n == 0) ? KC_KP_0 : (KC_KP_1 + n - 1);
     uint8_t  mods   = get_mods() | get_oneshot_mods();
     if (is_caps_word_on()) caps_word_off();
+    // The sentence-case shift is a layer in ZMK, not a modifier: a digit
+    // right after ". " is a plain digit and spends it.
+    if (smart_sentence_pending() && !(get_mods() & MOD_MASK_SHIFT)) {
+        clear_oneshot_mods();
+        mods = get_mods();
+    }
     if (mods & MOD_MASK_SHIFT) {
         bool meh = (mods & MOD_MASK_CTRL) && (mods & MOD_MASK_ALT);
         if (!meh) {

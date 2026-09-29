@@ -101,7 +101,9 @@
         COMBO(cb_n3,            RBR R0,          &mc_n3,                 ALL_LAYERS)
         COMBO(cb_n0,            R1 R0,           &mc_n0,                 ALL_LAYERS)
 
-        COMBO(cb_numword,       LBR LBM,         &tc_num_word,           ALPHA1_LAYERS VIM_LAYERS_BASE)
+        // Sentence case sits above NUM, so num word there takes the copy.
+        COMBO(cb_numword,       LBR LBM,         &tc_num_word,           ALPHA1_BASE CASE_A1 CPLK_A1 ALTREP2 VIM_LAYERS_BASE)
+        COMBO(cb_numword_sc,    LBR LBM,         &tc_num_word_cp,        SEN_CASE)
         COMBO(cb_ca_nav,        LHR LHM L1,      &mc_ca_nav,             ALPHA1_LAYERS VIM_LAYERS)
         COMBO(cb_gcs_nav,       LBR LHM LHI L1,  &mc_gcs_nav,            ALPHA1_LAYERS VIM_LAYERS)
         COMBO(cb_cag_nav,       LHR LHM LBI L1,  &mc_cag_nav,            ALPHA1_LAYERS VIM_LAYERS)

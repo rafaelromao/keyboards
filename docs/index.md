@@ -150,6 +150,8 @@ There are also combos in the secondary alpha layer for `?`, `!`, and `-`, and `_
 
 *Sentence Case* is a feature that automatically capitalizes the next word after `space` if it is preceded by `.`, `?`, or `!`. If the *Sticky Shift* is tapped after this `space`, it will be ignored. This feature makes it much easier to start new sentences and reduces the use of the *Sticky Shift* key a lot. This feature is implemented using adaptive keys to trigger it and a layer to execute the capitalization.
 
+A number typed right after that `space`, from the *numbers* layer or *Num Word*, is typed as a number and ends the sentence case, so the word after it is not capitalized.
+
 ## Numbers
 
 The *numbers* layer contains not only numbers but also some symbols commonly used along with numbers.

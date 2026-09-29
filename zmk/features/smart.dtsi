@@ -197,5 +197,18 @@
             bindings = <&mo>, <&mc_msk_space>;
         };
 
+        // The L0 thumb under sentence case. SEN_CASE sits above NUM, and a
+        // layer hold sends no keycode, so the sticky layer outlived &mo NUM
+        // and its capitals shadowed the digits. NUM_CP sits above it; the
+        // first digit then releases SEN_CASE (quick-release).
+        ltn_numcp_spc: ltn_numcp_spc {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <QUICK_TAP_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <0>;
+            bindings = <&mo>, <&mm_tap_alt_space_gui>;
+        };
+
     };
 };
