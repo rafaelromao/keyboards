@@ -94,8 +94,11 @@
         TAPHOLD_TP(th_selpaste,   &mc_selpaste, &mc_shift_selpaste)
 
         // &vim_off, not &to ALPHA1: the sequence must be typed on the base
-        // layout, but ALT_OS is a base too and &to would switch it off.
-        MACRO(mc_leader, &leader &vim_off)
+        // layout, but ALT_OS is a base too and &to would switch it off. That
+        // leaves vim mode, so the host is told first (vim_leave_notify, which
+        // only speaks while a vim layer is on): after &leader, the chord
+        // would be read as the first key of the sequence.
+        MACRO(mc_leader, &vim_leave_notify &leader &vim_off)
         
         MACRO(mc_tab,             &kp TAB)
         MACRO(mc_shift_tab,       &kp LS(TAB))

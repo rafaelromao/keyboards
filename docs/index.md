@@ -381,6 +381,8 @@ It also reports a *raw* state, for the moments when my keys must reach the edito
 
 For the editors where I don't have the plugin, like VSCode and Obsidian, the host only says that a VIM-like editor is focused, and the keyboard infers the mode by itself, watching the keys I press, exactly as it always did. The same happens when I toggle VIM Mode by hand, with a combo. I call this *legacy mode*.
 
+Entering and leaving it by hand is announced to the host with two chords: *Hyper+Esc* when the combo turns it on, *Meh+Esc* when I leave it, with *cancel* or the leave combo. Hyprland binds them on Omarchy, and the zmk-vim-mode Spoon for Hammerspoon on macOS, so the host follows a decision made on the keyboard instead of undoing it at its next one, and its status bar shows it.
+
 ![img](img/diagrams/vim.png)
 
 In my *numbers* layer, I also have some combos to make it easier to move between rows and columns without changing the layer.
@@ -422,7 +424,7 @@ VS Code and IntelliJ are symlinked out of the repo, and Neovim gets a spec that 
 
 ## Cancel
 
-A combo with the 3 top row keys on the right side can be used anytime to cancel the active mode or layers and return to the base.
+A combo with the 3 top row keys on the right side can be used anytime to cancel the active mode or layers and return to the base. When that includes VIM Mode, it tells the host too, so a VIM Mode entered by hand ends there as well.
 
 ## Bluetooth
 

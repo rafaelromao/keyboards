@@ -100,24 +100,37 @@
         /*
          * ENTERING AND LEAVING VIM MODE BY HAND (legacy, codes 4 and 7)
          *
-         * The combos cb_vim_mode, cb_enter_vim and cb_leave_vim bind these.
-         * Both notifications are chords the host binds to `zmk-vim-mode set
-         * legacy --sticky` and `set off --sticky`, so the daemon follows a
-         * decision made on the keyboard.
+         * The combos cb_vim_mode, cb_enter_vim and cb_leave_vim bind these,
+         * and cancel and the leader key leave through vim_leave_notify. Both
+         * notifications are chords the host binds (Hyprland on Omarchy, the
+         * zmk-vim-mode Spoon on macOS), so the daemon follows a decision made
+         * on the keyboard instead of overruling it at its next one:
+         *
+         *   Hyper+Esc  entered  zmk-vim-mode set legacy --sticky --no-toggle
+         *   Meh+Esc    left     zmk-vim-mode set auto
+         *
+         * Neither toggles, so a chord sent twice confirms the state instead of
+         * flipping it. That is what lets cancel tell the host too. It used to
+         * stay silent, because Meh+Esc toggled a sticky "off" on every press,
+         * and a vim mode entered by hand then outlived the cancel on the host.
          *
          * vim_mode_on is a layer-morph so that pressing the combo while
          * already in vim mode does nothing, instead of injecting a second Esc.
+         * vim_leave_notify is its mirror: it only speaks while a vim layer is
+         * on, so a cancel outside vim mode sends nothing that a host without
+         * the binding would pass on to the focused app.
          *
-         * Code 4 must NOT reuse it: the listener clears every managed layer
-         * before running a code's bindings, so the morph would always find no
-         * vim layer active and always send Hyper+Esc -- which the host reads
-         * as the combo, toggling off the override it had just set. Hence the
-         * separate vim_mode_on_host, a plain Esc that puts the editor's own
-         * vim into normal mode to match the NORMAL layer code 4 selects.
+         * Code 4 must NOT reuse vim_mode_on: the listener clears every managed
+         * layer before running a code's bindings, so the morph would always
+         * find no vim layer active and always send Hyper+Esc back to the host.
+         * Hence the separate vim_mode_on_host, a plain Esc that puts the
+         * editor's own vim into normal mode to match the NORMAL layer code 4
+         * selects.
          */
         VIM_MACRO(vim_reset_notify      , &vim_reset &kp LG(LC(LA(LS(ESC)))))
         VIM_MACRO(vim_mode_off          , &vim_off &kp LC(LA(LS(ESC))))
         VIM_BINDING(vim_mode_on         , VIM_NORMAL VIM_VISUAL VIM_CHANGE VIM_INSERT VIM_REPLACE VIM_CMDLINE, &none, &vim_reset_notify)
+        VIM_BINDING(vim_leave_notify    , VIM_NORMAL VIM_VISUAL VIM_CHANGE VIM_INSERT VIM_REPLACE VIM_CMDLINE, &kp LC(LA(LS(ESC))), &none)
         VIM_MACRO(vim_mode_on_host      , &kp ESC)
 
         /*
