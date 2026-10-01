@@ -47,9 +47,9 @@
                 vim_visual_layer {
                      display-name = "VISUAL";
                      bindings = <
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
+   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &kp O               &mm_u_visual_vim    &trans
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &mm_sft_j_vim       &trans              &trans  
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
+   &trans              &trans              &trans              &trans              &trans              &trans              &mt_i_visual_vim LGUI 0 &mm_a_visual_vim    &trans              &trans
                                            &trans              &trans              &trans              &trans              &trans              &trans
                         >;
                 };
@@ -59,7 +59,7 @@
                      bindings = <
    &none               &kp B               &kp W               &mc_ce_vim          &none               &none               &none               &none               &none               &none
    &none               &none               &none               &none               &none               &none               &kp H               &kp J               &kp K               &kp L
-   &none               &kp F               &kp C               &kp T               &none               &none               &mc_ci_vim          &mc_ca_vim          &none               &none
+   &none               &kp F               &mm_c_ins_vim       &kp T               &none               &none               &mc_ci_vim          &mc_ca_vim          &none               &none
                                            &trans              &trans              &trans              &trans              &trans              &trans
                         >;
                 };
@@ -69,7 +69,7 @@
                      bindings = <
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
+   &trans              &trans              &mt_c_ins_vim SGUI 0 &trans              &trans              &trans              &trans              &trans              &trans              &trans
                                            &trans              &trans              &trans              &trans              &trans              &trans
                         >;
                 };
@@ -89,7 +89,7 @@
                      bindings = <
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans    
    &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans  
-   &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans              &trans 
+   &trans              &trans              &mt_c_ins_vim SGUI 0 &trans              &trans              &trans              &trans              &trans              &trans              &trans
                                            &trans              &trans              &trans              &trans              &trans              &trans
                         >;
                 };

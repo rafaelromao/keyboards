@@ -11,6 +11,7 @@ static struct {
     bool     change_pending;   // the sticky CHANGE layer is on
     bool     replace_pending;  // the sticky REPLACE: back to NORMAL after one key
     bool     release_after;    // this press spends a sticky layer
+    bool     ctrl_held;        // Ctrl was down when this key was pressed
     uint16_t sticky_time;
 } vim;
 
@@ -110,7 +111,13 @@ void vim_modtap_tap(uint8_t tap) {
             }
             break;
         case KC_I:
-            key_then_insert(KC_I, true);
+            // In visual, i starts a text object (viw) and visual goes on; I
+            // inserts at the selection's edge.
+            if (vim.mode == VIM_MODE_VISUAL && !(mods & MOD_MASK_SHIFT)) {
+                execute_keycode(KC_I);
+            } else {
+                key_then_insert(KC_I, true);
+            }
             break;
         case KC_Q:
             execute_keycode(KC_Q);
@@ -157,7 +164,11 @@ bool process_vim_kc(uint16_t keycode, bool pressed) {
         case VIM_I:
         case VIM_S: {
             uint8_t key = (keycode == VIM_O) ? KC_O : (keycode == VIM_A) ? KC_A : (keycode == VIM_I) ? KC_I : KC_S;
-            if (mods & MOD_MASK_CTRL) {
+            // In visual, o swaps the selection's ends and i/a start a text
+            // object (viw, va"): visual goes on. Shifted, I and A insert at
+            // its edges, and s substitutes it -- both are insert.
+            bool stays_visual = vim.mode == VIM_MODE_VISUAL && keycode != VIM_S && (keycode == VIM_O || !(mods & MOD_MASK_SHIFT));
+            if (mods & MOD_MASK_CTRL || stays_visual) {
                 execute_keycode(key);
             } else {
                 key_then_insert(key, keycode != VIM_S);
@@ -237,10 +248,30 @@ process_record_result_t process_vim(uint16_t keycode, keyrecord_t *record) {
     bool hold = (IS_QK_MOD_TAP(keycode) || IS_QK_LAYER_TAP(keycode)) && !record->tap.count;
     if (hold || IS_QK_MOMENTARY(keycode) || IS_MODIFIER_KEYCODE(keycode & 0xFF)) return PROCESS_RECORD_CONTINUE;
     vim.release_after = vim.replace_pending || vim.change_pending;
+    vim.ctrl_held     = (get_mods() | get_oneshot_mods()) & MOD_MASK_CTRL;
     return PROCESS_RECORD_CONTINUE;
 }
 
+// The key a press typed: the keycode itself, or the tap of a tapped mod-tap or
+// layer-tap.
+static uint16_t typed_key(uint16_t keycode, keyrecord_t *record) {
+    if (IS_QK_MOD_TAP(keycode)) return record->tap.count ? QK_MOD_TAP_GET_TAP_KEYCODE(keycode) : KC_NO;
+    if (IS_QK_LAYER_TAP(keycode)) return record->tap.count ? QK_LAYER_TAP_GET_TAP_KEYCODE(keycode) : KC_NO;
+    return keycode;
+}
+
 void vim_after_press(uint16_t keycode, keyrecord_t *record) {
+    // Keys the base and NORMAL layers type as they are, read after the fact:
+    // Ctrl+C leaves insert and the command line just as Esc does, and u/U
+    // change the selection's case, which ends visual mode (Ctrl+U scrolls,
+    // and the selection goes on).
+    uint16_t key = typed_key(keycode, record);
+    if (key == KC_C && vim.ctrl_held && (vim.mode == VIM_MODE_INSERT || vim.mode == VIM_MODE_CMDLINE)) {
+        set_normal();
+    } else if (key == KC_U && !vim.ctrl_held && vim.mode == VIM_MODE_VISUAL) {
+        set_normal();
+    }
+
     if (!vim.release_after) return;
     vim.release_after = false;
     if (vim.replace_pending) set_normal();

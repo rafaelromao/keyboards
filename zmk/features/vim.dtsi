@@ -186,12 +186,31 @@
         VIM_MOD_MORPH(vim_s_ctrl_s      , MOD_LCTL|MOD_RCTL, &kp S, &vim_s)
         VIM_MOD_MORPH(vim_r_ctrl_r      , MOD_LCTL|MOD_RCTL, &kp R, &mm_sft_r_vim)
 
-        // Ctrl+C leaves insert or visual just as Esc does, so it must return
-        // the keyboard to NORMAL. The layer change has to be wrapped in a
-        // macro: a mod-morph takes exactly two bindings, and a third one here
-        // was silently ignored. No Esc is sent -- Ctrl+C already said it.
+        // Ctrl+C leaves insert, visual and the command line just as Esc does,
+        // so it must return the keyboard to NORMAL. The layer change has to be
+        // wrapped in a macro: a mod-morph takes exactly two bindings, and a
+        // third one here was silently ignored. No Esc is sent -- Ctrl+C
+        // already said it.
+        //
+        // vim_c_ctrl_c is NORMAL's C key, so it also serves VISUAL, which sits
+        // on NORMAL. INSERT and CMDLINE are transparent and a pending change
+        // types a plain C, so none of them ever reached it: they carry
+        // mm_c_ins_vim at that position instead.
         VIM_MACRO(vim_ctrl_c            , &kp C &vim_normal)
         VIM_MOD_MORPH(vim_c_ctrl_c      , MOD_LCTL|MOD_RCTL, &vim_ctrl_c, &mm_sft_c_vim)
+        VIM_MOD_MORPH(mm_c_ins_vim      , MOD_LCTL|MOD_RCTL, &vim_ctrl_c, &kp C)
+
+        // The base layer's &mt LS(LGUI) C, with mm_c_ins_vim as its tap. The
+        // timing is &mt's own (definitions/config.dtsi) and there is no
+        // require-prior-idle, so typing in INSERT feels exactly as on the base.
+        mt_c_ins_vim: mt_c_ins_vim {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <QUICK_TAP_TERM>;
+            bindings = <&kp>, <&mm_c_ins_vim>;
+        };
 
         // VISUAL MODE EXITS
 
@@ -203,12 +222,26 @@
         VIM_MOD_MORPH(mm_c_visual_vim   , MOD_LCTL|MOD_RCTL, &vim_ctrl_c, &mc_c_visual_vim)
         VIM_BINDING(lm_c_vim            , VIM_VISUAL, &mm_c_visual_vim , &vim_c_ctrl_c)
 
+        // u and U change the case of the selection, which ends visual mode;
+        // Ctrl+U scrolls, and the selection goes on.
+        VIM_MACRO(vim_u                 , &vim_normal &kp U)
+        VIM_MOD_MORPH(mm_u_visual_vim   , MOD_LCTL|MOD_RCTL, &kp U, &vim_u)
+
+        // Keys that stay in visual: i and a start a text object (viw, va"),
+        // and o swaps the selection's ends, so VISUAL carries them as plain
+        // keys. Left transparent, they fell through to NORMAL's vim_i, vim_a
+        // and vim_o, and the keyboard went to INSERT while vim stayed in
+        // visual. Shifted, I and A insert at the edges of the selection: that
+        // is INSERT, through NORMAL's own macros.
+        VIM_MOD_MORPH(mm_i_visual_vim   , MOD_LSFT|MOD_RSFT, &mc_i_vim, &kp I)
+        VIM_MOD_MORPH(mm_a_visual_vim   , MOD_LSFT|MOD_RSFT, &mc_a_vim, &kp A)
+
         /*
          * v in visual leaves visual -- but only if the editor is told, so the
          * key must be sent, not just the layer changed. Without it the editor
-         * stays in visual while the keyboard goes to normal; with the Neovim
-         * plugin connected the host then puts VISUAL back and the key looks
-         * dead, and in a legacy app the two simply disagree until Esc.
+         * stays in visual while the keyboard goes to normal, and the two
+         * disagree until the editor's mode next changes: the host's code has
+         * not moved, so it has nothing to correct.
          *
          * V and ^V are different: inside visual they switch sub-mode rather
          * than leave, so they send the key and stay on the layer. There is one
