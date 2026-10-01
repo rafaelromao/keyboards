@@ -479,7 +479,7 @@ These are the parts of the ZMK keymap that have no counterpart in QMK, or that o
 
 - **Bluetooth, dongles and displays**: the toggles-layer Bluetooth keys are empty, and there is no battery reporting, deep sleep or dongle display.
 - **Layer HUD**: nothing is signalled to the host over serial or Bluetooth, so the [layer HUD](https://github.com/rafaelromao/zmk-layer-hud) does not work with these boards.
-- **Vim mode sync with the host**: the vim layers exist and the mode changes the keyboard infers from what it types (`i`, `a`, `o`, `v`, `:`, `Esc`, ...) all work, but the editor state is not read back from the host. Vim mode is turned on with the top-row ring+middle+index chord and off with the MACROS-layer chord, cancel or num word.
+- **Vim mode sync with the host**: the vim layers exist and the mode changes the keyboard infers from what it types (`i`, `a`, `o`, `v`, `:`, `Esc`, ...) all work, but the editor state is not read back from the host. Vim mode is turned on with the top-row ring+middle+index chord or its MACROS-layer twin, and off with the other MACROS-layer chord or cancel; num word keeps it. Neither is announced to the host.
 - **Leader key**: not ported; its slot on the shortcuts layer is empty.
 - **Meh + comma / Meh + dot**: always `Ctrl+Alt+Shift+,` and `Ctrl+Alt+Shift+.`, without the macOS variants.
 - **Persistent layers**: the OS mode chosen on the toggles layer is kept until the board is unplugged, not stored.

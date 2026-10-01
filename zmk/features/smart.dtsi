@@ -65,9 +65,12 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-            // &vim_off rather than &to ALPHA1: num word must type digits on
-            // the base layout, but ALT_OS is a base too (see mc_base_reset).
-            bindings = <&macro_tap &vim_off &smart_num NUM>;
+            // Vim mode stays on. NUM sits above every vim layer, and the ones
+            // num word starts from (INSERT, CMDLINE, the one-key REPLACE) type
+            // the base layout anyway, so the digits are the same. Dropping
+            // them instead left vim mode for good: after the number, Esc found
+            // no vim layer to return to NORMAL from.
+            bindings = <&macro_tap &smart_num NUM>;
         };
 
         tc_num_word_cp: tc_num_word_cp {
@@ -75,7 +78,7 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-            bindings = <&macro_tap &vim_off &smart_num NUM_CP>;
+            bindings = <&macro_tap &smart_num NUM_CP>;
         };
 
         // ******************* CAPS LINE ******************* //

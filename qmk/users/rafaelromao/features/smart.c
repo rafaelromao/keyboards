@@ -96,8 +96,9 @@ void caps_word_set_user(bool active) {
 
 // --- num word ----------------------------------------------------------------------
 
+// Vim mode stays on, as in ZMK: the number layers sit above the vim ones, and
+// num word starts from INSERT or the command line, which type the base layout.
 void smart_num_word_on(uint8_t layer) {
-    vim_off();
     layer_on(layer);
     st.num_word_layer   = layer;
     st.num_word_release = false;
