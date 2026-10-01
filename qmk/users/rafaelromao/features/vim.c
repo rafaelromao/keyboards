@@ -186,11 +186,15 @@ bool process_vim_kc(uint16_t keycode, bool pressed) {
             }
             break;
         case VIM_SFT_V:
-            execute_keycode(S(KC_V));
-            if (vim.mode != VIM_MODE_OFF) set_visual();
-            break;
         case VIM_CTL_V:
-            execute_keycode(C(KC_V));
+            // From insert, the command line or a pending r, go through normal
+            // first, as ZMK's vim_reset does: otherwise the V is typed. Outside
+            // vim mode these are only the keys.
+            if (vim.mode == VIM_MODE_INSERT || vim.mode == VIM_MODE_CMDLINE || vim.mode == VIM_MODE_REPLACE) {
+                execute_keycode(KC_ESC);
+                set_normal();
+            }
+            execute_keycode(keycode == VIM_SFT_V ? S(KC_V) : C(KC_V));
             if (vim.mode != VIM_MODE_OFF) set_visual();
             break;
         case VIM_X:

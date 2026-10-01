@@ -204,6 +204,8 @@ bool process_macros(uint16_t keycode, bool pressed) {
             seq_play(pgm_read_byte(&macro_seqs[keycode - SEQ_FIRST]));
             // lm_tilde_vim: ~ ends visual mode
             if (keycode == MC_TILDE) vim_after_symbol(KC_TILD);
+            // lm_colon_vim: :%s/ opens the command line, from the command layers only
+            if (keycode == MC_COLPERCSSLASH) vim_after_symbol(KC_COLN);
         }
         return true;
     }

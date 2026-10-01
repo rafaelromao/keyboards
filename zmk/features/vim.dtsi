@@ -218,11 +218,18 @@
         VIM_MACRO(mc_v_exit_vim         , &vim_normal &kp V)
         VIM_BINDING(lm_v_vim            , VIM_VISUAL, &mc_v_exit_vim , &mc_v_vim)
 
+        // ⇧V and ⌃V on the MACROS layer. Inside visual they switch sub-mode;
+        // from another vim layer they go through normal (vim_reset's Esc) and
+        // select. Outside vim mode they are only the keys: turning vim layers
+        // on from here would skip the Hyper+Esc the combos send, and with the
+        // host's code unchanged nothing would ever turn them off again.
         VIM_MACRO(mc_sft_v_vim          , &vim_reset &tog_on VIM_VISUAL &kp LS(V))
-        VIM_BINDING(lm_sft_v_vim        , VIM_VISUAL, &kp LS(V) , &mc_sft_v_vim)
+        VIM_BINDING(lm_sft_v_on_vim     , VIM_NORMAL VIM_CHANGE VIM_INSERT VIM_REPLACE VIM_CMDLINE, &mc_sft_v_vim, &kp LS(V))
+        VIM_BINDING(lm_sft_v_vim        , VIM_VISUAL, &kp LS(V) , &lm_sft_v_on_vim)
 
         VIM_MACRO(mc_ctl_v_vim          , &vim_reset &tog_on VIM_VISUAL &kp LC(V))
-        VIM_BINDING(lm_ctl_v_vim        , VIM_VISUAL, &kp LC(V) , &mc_ctl_v_vim)
+        VIM_BINDING(lm_ctl_v_on_vim     , VIM_NORMAL VIM_CHANGE VIM_INSERT VIM_REPLACE VIM_CMDLINE, &mc_ctl_v_vim, &kp LC(V))
+        VIM_BINDING(lm_ctl_v_vim        , VIM_VISUAL, &kp LC(V) , &lm_ctl_v_on_vim)
 
         VIM_MACRO(vim_x                 , &vim_normal &kp X)
         VIM_BINDING(lm_x_vim            , VIM_VISUAL, &vim_x, &kp X)
