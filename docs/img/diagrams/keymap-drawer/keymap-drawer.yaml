@@ -515,76 +515,6 @@ layers:
       }
     - { type: ghost, t: ▽ }
     - { type: ghost }
-  coding-meh:
-    - [
-        { s: project, t: $$mdi:file-multiple$$ },
-        { s: build, t: $$mdi:wrench$$ },
-        { s: format, h: code, t: $$mdi:format-indent-increase$$ },
-        { s: step, h: out, t: $$mdi:debug-step-out$$ },
-        { s: step, h: over, t: $$mdi:debug-step-over$$ },
-        { s: step, h: into, t: $$mdi:debug-step-into$$ },
-      ]
-    - [
-        null,
-        { s: type, h: match, t: $$mdi:code-block-braces$$ },
-        { s: complete, h: statement, t: "()" },
-        { s: recent, h: files, t: $$mdi:history$$ },
-        { h: run, t: $$mdi:play$$ },
-        { h: debug, t: $$mdi:bug-play$$ },
-        { s: toggle, h: breakpoint, t: $$mdi:circle$$ },
-        null,
-      ]
-    - [
-        { s: evaluate, h: expression, t: $$mdi:variable$$ },
-        { s: comment, h: line, t: "//" },
-        { s: quick, h: def, t: $$mdi:feather$$ },
-        { s: quick, h: docs, t: $$mdi:book-open-outline$$ },
-        { s: previous, h: error, t: $$mdi:page-previous-outline$$ },
-        { s: next, h: error, t: $$mdi:page-next-outline$$ },
-      ]
-    - { t: ▽ }
-    - {
-        h: $$mdi:apple-keyboard-command$$,
-        s: ai chat,
-        t: $$mdi:brain$$
-      }
-    - {
-        h: $$mdi:apple-keyboard-command$$,
-        s: actions,
-        t: $$mdi:gesture-tap$$
-      }
-    - { t: ▽ }
-  coding-hyper:
-    - [
-        { s: select in, t: $$mdi:form-select$$ },
-        { s: rebuild, t: $$mdi:wrench-outline$$ },
-        { s: analyze, h: code, t: $$mdi:sine-wave$$ },
-        { s: search, h: everywhere, t: $$mdi:database-search-outline$$ },
-        { s: go to, h: symbol, t: $$mdi:text-box-search-outline$$ },
-        { s: find, h: action, t: $$mdi:feature-search-outline$$ },
-      ]
-    - [
-        null,
-        { s: code, h: complete, t: $$mdi:code-block-parentheses$$ },
-        { s: refactor, h: this, t: $$mdi:file-code-outline$$ },
-        { s: switch, h: scheme, t: $$mdi:view-compact$$ },
-        { s: stop, t: $$mdi:stop$$ },
-        { s: resume, t: $$mdi:play-pause$$ },
-        { s: view, h: breakpoints, t: $$mdi:circle-multiple$$ },
-        null,
-      ]
-    - [
-        { s: generate, h: code, t: $$mdi:code-array$$ },
-        { s: comment, h: block, t: "/**/" },
-        { s: find, h: usages, t: $$mdi:book-open-variant-outline$$ },
-        { s: toggle, h: bookmark, t: $$mdi:bookmark-box$$ },
-        { s: previous, h: bookmark, t: $$mdi:page-previous$$ },
-        { s: next, h: bookmark, t: $$mdi:page-next$$ },
-      ]
-    - { t: ▽ }
-    - null
-    - null
-    - { t: ▽ }
   desktop-management:
     - [
         null,
@@ -647,6 +577,177 @@ layers:
     - null
     - null
     - null
+  intellij-meh:
+    - [
+        { s: project, t: $$mdi:file-multiple$$ },
+        { s: build, h: project, t: $$mdi:wrench$$ },
+        { s: reformat, h: code, t: $$mdi:format-indent-increase$$ },
+        { s: step, h: out, t: $$mdi:debug-step-out$$ },
+        { s: step, h: over, t: $$mdi:debug-step-over$$ },
+        { s: step, h: into, t: $$mdi:debug-step-into$$ },
+      ]
+    - [
+        null,
+        { s: type, h: matching, t: $$mdi:code-block-braces$$ },
+        { s: complete, h: statement, t: "()" },
+        { s: recent, h: files, t: $$mdi:history$$ },
+        { h: run, t: $$mdi:play$$ },
+        { h: debug, t: $$mdi:bug-play$$ },
+        { s: toggle, h: breakpoint, t: $$mdi:circle$$ },
+        null,
+      ]
+    - [
+        { s: evaluate, h: expression, t: $$mdi:variable$$ },
+        { s: comment, h: line, t: "//" },
+        { s: quick, h: definition, t: $$mdi:feather$$ },
+        { s: quick, h: docs, t: $$mdi:book-open-outline$$ },
+        { s: previous, h: error, t: $$mdi:page-previous-outline$$ },
+        { s: next, h: error, t: $$mdi:page-next-outline$$ },
+      ]
+    - { t: ▽ }
+    - {
+        h: $$mdi:apple-keyboard-command$$,
+        s: assistant,
+        t: $$mdi:brain$$
+      }
+    - {
+        h: $$mdi:apple-keyboard-command$$,
+        s: actions,
+        t: $$mdi:gesture-tap$$
+      }
+    - { t: ▽ }
+  intellij-hyper:
+    - [
+        { s: select in, t: $$mdi:form-select$$ },
+        { s: rebuild, h: project, t: $$mdi:wrench-outline$$ },
+        { s: inspect, h: code, t: $$mdi:sine-wave$$ },
+        { s: search, h: everywhere, t: $$mdi:database-search-outline$$ },
+        { s: go to, h: symbol, t: $$mdi:text-box-search-outline$$ },
+        { s: find, h: action, t: $$mdi:feature-search-outline$$ },
+      ]
+    - [
+        null,
+        { s: basic, h: completion, t: $$mdi:code-block-parentheses$$ },
+        { s: refactor, h: this, t: $$mdi:file-code-outline$$ },
+        { s: switch, h: scheme, t: $$mdi:view-compact$$ },
+        { s: stop, t: $$mdi:stop$$ },
+        { s: resume, t: $$mdi:play-pause$$ },
+        { s: view, h: breakpoints, t: $$mdi:circle-multiple$$ },
+        null,
+      ]
+    - [
+        { s: generate, h: code, t: $$mdi:code-array$$ },
+        { s: comment, h: block, t: "/**/" },
+        { s: find, h: usages, t: $$mdi:book-open-variant-outline$$ },
+        { s: toggle, h: bookmark, t: $$mdi:bookmark-box$$ },
+        { s: previous, h: bookmark, t: $$mdi:page-previous$$ },
+        { s: next, h: bookmark, t: $$mdi:page-next$$ },
+      ]
+    - { t: ▽ }
+    - null
+    - null
+    - { t: ▽ }
+  vscode-meh:
+    - [
+        { s: explorer, t: $$mdi:file-multiple$$ },
+        { s: build, h: task, t: $$mdi:wrench$$ },
+        { s: format, h: document, t: $$mdi:format-indent-increase$$ },
+        { s: step, h: out, t: $$mdi:debug-step-out$$ },
+        { s: step, h: over, t: $$mdi:debug-step-over$$ },
+        { s: step, h: into, t: $$mdi:debug-step-into$$ },
+      ]
+    - [
+        null,
+        { s: trigger, h: suggest, t: $$mdi:code-block-parentheses$$ },
+        { s: insert, h: line below, t: $$mdi:table-row-plus-after$$ },
+        { s: recent, h: editors, t: $$mdi:history$$ },
+        { h: run, t: $$mdi:play$$ },
+        { h: debug, t: $$mdi:bug-play$$ },
+        { s: toggle, h: breakpoint, t: $$mdi:circle$$ },
+        null,
+      ]
+    - [
+        { s: evaluate, h: in console, t: $$mdi:variable$$ },
+        { s: comment, h: line, t: "//" },
+        { s: peek, h: definition, t: $$mdi:feather$$ },
+        { s: show, h: hover, t: $$mdi:book-open-outline$$ },
+        { s: previous, h: problem, t: $$mdi:page-previous-outline$$ },
+        { s: next, h: problem, t: $$mdi:page-next-outline$$ },
+      ]
+    - { t: ▽ }
+    - {
+        h: $$mdi:apple-keyboard-command$$,
+        s: chat,
+        t: $$mdi:brain$$
+      }
+    - {
+        h: $$mdi:apple-keyboard-command$$,
+        s: quick fix,
+        t: $$mdi:gesture-tap$$
+      }
+    - { t: ▽ }
+  vscode-hyper:
+    - [
+        { s: reveal in, h: explorer, t: $$mdi:form-select$$ },
+        { type: ghost },
+        { type: ghost },
+        { s: quick, h: open, t: $$mdi:file-search-outline$$ },
+        { s: go to, h: symbol, t: $$mdi:text-box-search-outline$$ },
+        { s: command, h: palette, t: $$mdi:feature-search-outline$$ },
+      ]
+    - [
+        null,
+        { s: trigger, h: suggest, t: $$mdi:code-block-parentheses$$ },
+        { s: refactor, t: $$mdi:file-code-outline$$ },
+        { type: ghost },
+        { s: stop, t: $$mdi:stop$$ },
+        { s: continue, t: $$mdi:play-pause$$ },
+        { s: view, h: breakpoints, t: $$mdi:circle-multiple$$ },
+        null,
+      ]
+    - [
+        { type: ghost },
+        { s: comment, h: block, t: "/**/" },
+        { s: find, h: references, t: $$mdi:book-open-variant-outline$$ },
+        { type: ghost },
+        { type: ghost },
+        { type: ghost },
+      ]
+    - { t: ▽ }
+    - null
+    - null
+    - { t: ▽ }
+  nvim-meh:
+    - [
+        { s: explorer, t: $$mdi:file-multiple$$ },
+        { s: make, t: $$mdi:wrench$$ },
+        { s: lsp, h: format, t: $$mdi:format-indent-increase$$ },
+        { s: step, h: out, t: $$mdi:debug-step-out$$ },
+        { s: step, h: over, t: $$mdi:debug-step-over$$ },
+        { s: step, h: into, t: $$mdi:debug-step-into$$ },
+      ]
+    - [
+        null,
+        { s: omni, h: complete, t: $$mdi:code-block-parentheses$$ },
+        { type: ghost },
+        { s: recent, h: files, t: $$mdi:history$$ },
+        { s: continue, t: $$mdi:play-pause$$ },
+        { s: continue, t: $$mdi:play-pause$$ },
+        { s: toggle, h: breakpoint, t: $$mdi:circle$$ },
+        null,
+      ]
+    - [
+        { s: evaluate, h: hover, t: $$mdi:variable$$ },
+        { s: comment, h: gcc, t: "//" },
+        { s: go to, h: definition, t: $$mdi:location-enter$$ },
+        { s: lsp, h: hover, t: $$mdi:book-open-outline$$ },
+        { s: previous, h: diagnostic, t: $$mdi:page-previous-outline$$ },
+        { s: next, h: diagnostic, t: $$mdi:page-next-outline$$ },
+      ]
+    - { t: ▽ }
+    - { type: ghost }
+    - { s: code action, t: $$mdi:gesture-tap$$ }
+    - { t: ▽ }
 combos:
   - {
       p: [0, 1],
@@ -1024,10 +1125,16 @@ combos:
       p: [11, 12],
       k: { t: to impl },
       w: 48,
-      layers: [coding-meh],
+      layers: [intellij-meh, vscode-meh, nvim-meh],
     }
   - {
       p: [11, 12],
       k: { t: go to },
-      layers: [coding-hyper],
+      layers: [intellij-hyper],
+    }
+  - {
+      p: [11, 12],
+      k: { t: to def },
+      w: 48,
+      layers: [vscode-hyper],
     }

@@ -9,10 +9,11 @@ Meh   = Ctrl + Alt + Shift
 Hyper = Meh + Gui          (Cmd on macOS, Super on Linux)
 ```
 
-The intent map is `../docs/img/diagrams/keymap-drawer/keymap-drawer.yaml`
-(`coding-meh:` / `coding-hyper:`, rendered to
-`../docs/img/diagrams/coding-mehs.png`). The vocabulary is IntelliJ's, so
-**IntelliJ is the reference** and VSCode gets the nearest equivalent.
+The vocabulary is IntelliJ's, so **IntelliJ is the reference** and VSCode gets
+the nearest equivalent. Each editor's bindings are drawn from its own layers in
+`../docs/img/diagrams/keymap-drawer/keymap-drawer.yaml` (`intellij-meh:` /
+`intellij-hyper:`, `vscode-meh:` / `vscode-hyper:` and `nvim-meh:`), rendered
+to the [diagrams](#diagrams) below.
 
 ## Installing
 
@@ -90,6 +91,27 @@ listed.
 
 Meh+D, Meh+I and the K/W/V/X/Z/J/Q combos are emitted by the keyboard but have
 no recorded editor intent, so nothing binds them.
+
+## Diagrams
+
+The keys each editor binds, with that editor's names for the actions. A dashed
+key is a chord the editor leaves unbound; an empty key is a chord no editor
+binds.
+
+**IntelliJ** binds every chord.
+
+![IntelliJ](../docs/img/diagrams/intellij.png)
+
+**VS Code** runs the nearest native command; see
+[Where VSCode falls short](#where-vscode-falls-short) for the substitutes and
+the gaps.
+
+![VS Code](../docs/img/diagrams/vscode.png)
+
+**Neovim** binds Meh only; see [Neovim](#neovim) for why, and for what the
+terminal has to support.
+
+![Neovim](../docs/img/diagrams/nvim.png)
 
 ## The two chords that differ per OS
 
@@ -223,7 +245,9 @@ chord: a CSI-u sequence means it got through, a bare letter means it did not.
 
 ## Changing a binding
 
-`../docs/img/diagrams/keymap-drawer/keymap-drawer.yaml` is the source of
-intent and `scripts/draw.sh` renders the diagram from it; the three keymaps
-here are maintained by hand. Change the YAML first, then each keymap and the
-tables above, so the editors do not drift from the diagram.
+`../docs/img/diagrams/keymap-drawer/keymap-drawer.yaml` draws each editor's
+diagram, and its IntelliJ layers are the reference; `../scripts/draw.sh`
+renders them (run it from the repo root, or `draw` in the toolchain
+container). The three keymaps here are maintained by hand. Change the IntelliJ
+layers first, then each keymap, the other editors' layers and the tables above,
+so the editors and their diagrams do not drift apart.

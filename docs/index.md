@@ -405,9 +405,9 @@ In the *macros* layer, there are also some macros used to navigate directories i
 
 My most used shortcuts in IntelliJ IDEA and other IDEs were remapped to use Meh and Hyper shortcuts too.
 
-![img](img/diagrams/coding-mehs.png)
+`editors/` in this repo holds the real keymaps for VSCode, IntelliJ and Neovim, each with its own install script, so the layer actually does something once the firmware is flashed. See [editors/README.md](https://github.com/rafaelromao/keyboards/tree/main/editors) for the full mapping, the shortcuts it takes over, and where VSCode has no equivalent.
 
-The diagram above is the intent; `editors/` in this repo is the implementation. It holds the real keymaps for VSCode, IntelliJ and Neovim, each with its own install script, so the layer actually does something once the firmware is flashed. See [editors/README.md](https://github.com/rafaelromao/keyboards/tree/main/editors) for the full mapping, the shortcuts it takes over, and where VSCode has no equivalent.
+The diagrams below show what each editor binds, with that editor's names for the actions. A dashed key is a chord the editor leaves unbound, and an empty key is a chord no editor binds.
 
 Each editor is installed with its own script:
 
@@ -419,6 +419,24 @@ cd editors
 ```
 
 VS Code and IntelliJ are symlinked out of the repo, and Neovim gets a spec that points back into it, so editing a keymap there takes effect without reinstalling; they work on macOS and Linux.
+
+#### IntelliJ
+
+IntelliJ is the reference: the chords follow its actions, and its keymap binds every one of them.
+
+![img](img/diagrams/intellij.png)
+
+#### VS Code
+
+In VS Code, each chord runs the nearest native command. Nothing native comes close to rebuild, analyze code, switch scheme, generate code or the bookmarks, so those are left unbound.
+
+![img](img/diagrams/vscode.png)
+
+#### Neovim
+
+In Neovim, only the Meh chords are bound, because tmux cannot carry the Super bit that Hyper needs. Complete statement and AI chat have no Neovim equivalent, the debug keys need nvim-dap, and type match becomes omni-completion, which only works in insert mode.
+
+![img](img/diagrams/nvim.png)
 
 # General
 
