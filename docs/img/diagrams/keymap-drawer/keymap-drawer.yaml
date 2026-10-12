@@ -1,5 +1,5 @@
 layout:
-  cols_thumbs_notation: "1333+2> 2<+3331"
+  qmk_info_json: docs/img/diagrams/keymap-drawer/diamond-layout.json
 layers:
   alpha1:
     - [b, m, g, l, o, u]
