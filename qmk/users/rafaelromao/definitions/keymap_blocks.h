@@ -52,7 +52,7 @@
 #define SHORTS_R2     XXXXXXX,     XXXXXXX,      MC_CONTAINERS,  LT_EMOJI,       XXXXXXX
 #define SHORTS_L3     XXXXXXX,     MC_CLOSE,     MC_REFRESH,     MC_REOPEN,      XXXXXXX
 #define SHORTS_R3     XXXXXXX,     MC_SCREENSHOT,MC_NOTES,       MC_TERM,        XXXXXXX
-#define SHORTS_L4     XXXXXXX,     MO(_TEXT),    LT(_FUN, KC_SPC)
+#define SHORTS_L4     XXXXXXX,     MO(_TEXT),    LT_FUN_SPC
 #define SHORTS_R4     LT_MACROS_SPC, MO(_TEXT),  XXXXXXX
 
 // --- TOGGLES --------------------------------------------------------------

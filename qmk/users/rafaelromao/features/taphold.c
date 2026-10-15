@@ -214,6 +214,23 @@ static uint8_t source_layer(keyrecord_t *record) {
     return layer_switch_get_layer(record->event.key);
 }
 
+// The layer a FUN or MACROS layer-tap holds, which its LT() cannot carry
+// (keycodes.h); 0 for every other key.
+static uint8_t high_layer(uint16_t keycode) {
+    switch (keycode) {
+        case LT_COMMA:
+        case LT_FUN_SPC:
+            return _FUN;
+#ifdef RR_MACROS_ENABLE
+        case LT_MACROS_SPC:
+        case LT_UNDER:
+        case LT_RIGHT:
+            return _MACROS;
+#endif
+    }
+    return 0;
+}
+
 static bool is_prior_idle_key(uint16_t keycode, keyrecord_t *record) {
     if (IS_TH(keycode)) return true;
     if (!IS_QK_MOD_TAP(keycode)) return false;
@@ -340,6 +357,22 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
             // Either pinky held: the base, for shortcuts (ZMK &mo VIM_REPLACE)
             if ((keycode == VLT_Q || keycode == VLT_L) && !tapped) {
                 vim_base_hold(pressed);
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+#endif
+            // FUN and MACROS layer-taps: the hold is done here, on the real layer
+            uint8_t layer = high_layer(keycode);
+            if (layer && !tapped) {
+                if (pressed) {
+                    layer_on(layer);
+                } else {
+                    layer_off(layer);
+                }
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
+#ifdef RR_MACROS_ENABLE
+            if (keycode == LT_UNDER && tapped) {
+                if (pressed) execute_keycode(KC_UNDS);
                 return PROCESS_RECORD_RETURN_FALSE;
             }
 #endif
