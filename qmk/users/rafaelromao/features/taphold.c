@@ -337,6 +337,11 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
                 if (pressed) vim_modtap_tap(KC_Q);
                 return PROCESS_RECORD_RETURN_FALSE;
             }
+            // Either pinky held: the base, for shortcuts (ZMK &mo VIM_REPLACE)
+            if ((keycode == VLT_Q || keycode == VLT_L) && !tapped) {
+                vim_base_hold(pressed);
+                return PROCESS_RECORD_RETURN_FALSE;
+            }
 #endif
             return PROCESS_RECORD_CONTINUE;
         }

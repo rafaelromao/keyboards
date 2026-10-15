@@ -250,8 +250,11 @@ enum custom_keycodes {
 #define LT_D LT(_SHORTS, KC_D)
 #define LT_I LT(_SHORTS, KC_I)
 
-// Vim normal layer keys whose tap gets the vim meaning (resolved by layer)
-#define VLT_Q   LT(_SHORTS, KC_Q)  // lt_q_vim SHORTS
+// Vim normal layer keys whose tap gets the vim meaning (resolved by layer).
+// The pinkies' hold is intercepted (vim_base_hold), so layer 0 is never
+// actually toggled by them.
+#define VLT_Q   LT(_ALPHA1, KC_Q)  // lt_q_vim VIM_REPLACE
+#define VLT_L   LT(_ALPHA1, KC_L)  // &lt VIM_REPLACE L
 #define VMT_I   LGUI_T(KC_I)       // mt_i_vim LGUI
 #define VLT_SPC LT(_NUM, KC_SPC)   // lt_spc_vim NUM: plain space
 

@@ -29,7 +29,7 @@
 #define VIM_NORMAL_L1 XXXXXXX,     KC_B,         KC_E,           KC_W,           XXXXXXX
 #define VIM_NORMAL_R1 XXXXXXX,     KC_G,         VIM_O,          KC_U,           XXXXXXX
 #define VIM_NORMAL_L2 VLT_Q,       HRM_N,        HRM_S,          HRM_R,          XXXXXXX
-#define VIM_NORMAL_R2 XXXXXXX,     LSFT_T(KC_H), LALT_T(KC_J),   LCTL_T(KC_K),   LT(_SHORTS, KC_L)
+#define VIM_NORMAL_R2 XXXXXXX,     LSFT_T(KC_H), LALT_T(KC_J),   LCTL_T(KC_K),   VLT_L
 #define VIM_NORMAL_L3 XXXXXXX,     HRM_F,        HRM_C,          LGUI_T(KC_T),   XXXXXXX
 #define VIM_NORMAL_R3 XXXXXXX,     VMT_I,        VIM_A,          KC_DOT,         XXXXXXX
 #define VIM_NORMAL_L4 XXXXXXX,     L1_KEY,       VLT_SPC
