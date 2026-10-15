@@ -48,6 +48,17 @@ static void set_change_pending(void) {
     vim.sticky_time    = timer_read();
 }
 
+// A NORMAL pinky held: NORMAL off, so Ctrl/Alt/Gui shortcuts take their keys
+// from the base (ZMK holds VIM_REPLACE, a copy of it). NORMAL comes back on
+// release only if the mode still wants it; a key typed meanwhile may have left.
+void vim_base_hold(bool pressed) {
+    if (pressed) {
+        layer_off(_VIM_NORMAL);
+    } else if (vim.mode == VIM_MODE_NORMAL || vim.mode == VIM_MODE_VISUAL) {
+        layer_on(_VIM_NORMAL);
+    }
+}
+
 void vim_off(void) {
     layer_off(_VIM_NORMAL);
     layer_off(_VIM_CHANGE);
