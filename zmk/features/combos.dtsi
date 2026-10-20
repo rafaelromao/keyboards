@@ -49,7 +49,10 @@
     combos {
         compatible = "zmk,combos";
 
-        COMBO(cb_vim_mode,      LTR LTM LTI,     &vim_mode_on,           ALPHA1_LAYERS VIM_LAYERS)
+        /* B+M+G holds both Esc (B+M) and K (M+G), so a sloppy Esc or K typed
+           in a shell turned vim mode on, which tells the host to lock legacy
+           in every app. A pause before the chord tells them apart. */
+        COMBO_IDLE(cb_vim_mode, LTR LTM LTI,     &vim_mode_on,           ALPHA1_LAYERS VIM_LAYERS, 150)
 
         COMBO(cb_enter,         RHM RHR R0,      &lm_ent_vim,            ALL_LAYERS_WITH_ENTER)
         COMBO(cb_backspace,     RTM RTR,         &kp BACKSPACE,          ALL_LAYERS_WITH_BACKSPACE)

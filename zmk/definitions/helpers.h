@@ -168,6 +168,17 @@
             bindings = <BINDINGS>; \
         };
 
+    /* A combo that only starts after IDLE ms without a key press, so it never
+       fires from inside a typing roll. */
+    #define COMBO_IDLE(NAME, KEYS, BINDINGS, LAYERS, IDLE) \
+        NAME { \
+            timeout-ms = <COMBO_TERM>; \
+            require-prior-idle-ms = <IDLE>; \
+            layers = <LAYERS>; \
+            key-positions = <KEYS>; \
+            bindings = <BINDINGS>; \
+        };
+
     #define COMBO_MUST_TAP(NAME, HOLD, TAP) \
         NAME##hold: NAME##hold { \
             compatible = "zmk,behavior-macro"; \
