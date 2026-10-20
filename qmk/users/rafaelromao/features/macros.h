@@ -40,7 +40,7 @@ enum seq_ids {
     SEQ_NOTEQ,             // !=
     SEQ_END_LTGTLPRP,      // end <>();
     SEQ_END_LTGTLPRP_ENT,  // end <>(); enter
-    SEQ_CARET,             // ^ space F24 (F24 marks "just went home" for the ^ key)
+    SEQ_CARET,             // ^ space (TH_CARET_Z then records the F24 "just went home" mark, unsent)
     SEQ_DCURLY,            // ${
     SEQ_HCURLY,            // #{
     SEQ_PCURLY,            // %{
