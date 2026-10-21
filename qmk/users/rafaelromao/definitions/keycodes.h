@@ -250,8 +250,11 @@ enum custom_keycodes {
 #define LT_D LT(_SHORTS, KC_D)
 #define LT_I LT(_SHORTS, KC_I)
 
-// Vim normal layer keys whose tap gets the vim meaning (resolved by layer)
-#define VLT_Q   LT(_SHORTS, KC_Q)  // lt_q_vim SHORTS
+// Vim normal layer keys whose tap gets the vim meaning (resolved by layer).
+// The pinkies' hold is intercepted (vim_base_hold), so layer 0 is never
+// actually toggled by them.
+#define VLT_Q   LT(_ALPHA1, KC_Q)  // lt_q_vim VIM_REPLACE
+#define VLT_L   LT(_ALPHA1, KC_L)  // &lt VIM_REPLACE L
 #define VMT_I   LGUI_T(KC_I)       // mt_i_vim LGUI
 #define VLT_SPC LT(_NUM, KC_SPC)   // lt_spc_vim NUM: plain space
 
@@ -273,13 +276,23 @@ enum custom_keycodes {
 #define LT_CAM      LT(_TEXT, ID_CAM)       // lt_cam TEXT
 #define LT_SYSTEM   LT(_TEXT, ID_SYSTEM)    // lt_system TEXT
 #define LT_N0       LT(_MEDIA, ID_N0)       // lt_n0 MEDIA
-#define LT_COMMA    LT(_FUN, KC_COMM)       // lt_comma FUN
 
-// Keys that reach the MACROS layer, plain keys when that layer is cut
+// Layer-taps to FUN and MACROS. LT() holds layers 0-15 only, and with every
+// optional part on FUN is 16 and MACROS 17. Their LT() carries a stand-in
+// instead, never toggled: taphold.c intercepts the hold and turns the real
+// layer on (high_layer). A stand-in is only an id, and there are two because
+// both SHORTS thumbs tap space.
+#define FUN_STANDIN    0
+#define MACROS_STANDIN 1
+#define LT_COMMA    LT(FUN_STANDIN, KC_COMM)  // lt_comma FUN
+#define LT_FUN_SPC  LT(FUN_STANDIN, KC_SPC)   // &lt FUN SPACE
+
+// Keys that reach the MACROS layer, plain keys when that layer is cut.
+// LT() taps basic keys only, so LT_UNDER carries - and taphold.c types _.
 #ifdef RR_MACROS_ENABLE
-#    define LT_MACROS_SPC LT(_MACROS, KC_SPC)  // &lt MACROS SPACE
-#    define LT_UNDER      LT(_MACROS, KC_UNDS) // &lt MACROS UNDER
-#    define LT_RIGHT      LT(_MACROS, KC_RGHT) // lt_right MACROS (combo)
+#    define LT_MACROS_SPC LT(MACROS_STANDIN, KC_SPC)  // &lt MACROS SPACE
+#    define LT_UNDER      LT(MACROS_STANDIN, KC_MINS) // &lt MACROS UNDER
+#    define LT_RIGHT      LT(MACROS_STANDIN, KC_RGHT) // lt_right MACROS (combo)
 #else
 #    define LT_MACROS_SPC KC_SPC
 #    define LT_UNDER      KC_UNDS

@@ -127,14 +127,14 @@ layers:
         { t: u, h: undo },
       ]
     - [
-        { h: shortcuts, t: q, s: record },
+        { h: alpha1, t: q, s: record },
         { h: $$mdi:apple-keyboard-control$$, t: n, s: next/prev },
         { h: $$mdi:apple-keyboard-option$$, t: s, s: surround },
         { h: $$mdi:apple-keyboard-shift$$, t: r, s: replace },
         { h: $$mdi:apple-keyboard-shift$$, t: h, s: left },
         { h: $$mdi:apple-keyboard-option$$, t: j, s: down },
         { h: $$mdi:apple-keyboard-control$$, t: k, s: up },
-        { h: shortcuts, t: l, s: right},
+        { h: alpha1, t: l, s: right},
       ]
     - [
         { h: $$shift_command$$, t: f, s: find },

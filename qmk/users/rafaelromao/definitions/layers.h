@@ -9,6 +9,10 @@
 // SENTENCE CASE, SHIFTED/CASE ALPHA2, CASE Ç, ALT REP 2) are flags in QMK,
 // see features/smart.h. The vim modes VISUAL/INSERT/REPLACE/CMDLINE are a mode
 // variable in features/vim.h; only NORMAL and CHANGE rebind keys.
+//
+// LT() holds layers 0-15 only. A layer-tap to a layer that may land past 15
+// needs a stand-in and an intercepted hold, as FUN and MACROS have
+// (keycodes.h, high_layer in features/taphold.c).
 enum layers {
     _ALPHA1,      // 0  OMARCHY
 #ifdef RR_VIM_ENABLE
