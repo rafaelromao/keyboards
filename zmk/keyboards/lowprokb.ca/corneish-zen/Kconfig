@@ -1,0 +1,5 @@
+config ZMK_CORNEISH_ZEN_CENTRAL_LOGO
+    bool "Show the Corne-ish Zen logo on the central display"
+    depends on BOARD_CORNEISH_ZEN_LEFT && ZMK_SPLIT_ROLE_CENTRAL
+    depends on ZMK_DISPLAY && ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
+    depends on !CUSTOM_WIDGET_LAYER_STATUS

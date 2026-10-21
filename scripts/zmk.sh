@@ -238,6 +238,12 @@ done
 TEMP="${TEMP%;}"
 MODULES=$TEMP
 
+# A keyboard config can also provide local code, without a separate git module.
+CONFIG_MODULE="$PROJECT_DIR/zmk/keyboards/$CONFIG"
+if [[ -n "$CONFIG" && -f "$CONFIG_MODULE/zephyr/module.yml" ]]; then
+    MODULES+=";$CONFIG_MODULE"
+fi
+
 # Define zmk module
 ZMK_MODULE=modules/$ZMK
 ZMK_HOME="$PROJECT_DIR/$ZMK_MODULE"
