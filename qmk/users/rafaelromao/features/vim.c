@@ -12,11 +12,12 @@ static struct {
     bool     replace_pending;  // the sticky REPLACE: back to NORMAL after one key
     bool     release_after;    // this press spends a sticky layer
     bool     ctrl_held;        // Ctrl was down when this key was pressed
+    uint8_t  base_holds;       // held pinkies override command-layer activation
     uint16_t sticky_time;
 } vim;
 
 static void set_normal(void) {
-    layer_on(_VIM_NORMAL);
+    if (!vim.base_holds) layer_on(_VIM_NORMAL);
     layer_off(_VIM_CHANGE);
     vim.mode            = VIM_MODE_NORMAL;
     vim.change_pending  = false;
@@ -31,7 +32,7 @@ static void set_literal(uint8_t mode) {
 }
 
 static void set_visual(void) {
-    layer_on(_VIM_NORMAL);
+    if (!vim.base_holds) layer_on(_VIM_NORMAL);
     vim.mode = VIM_MODE_VISUAL;
 }
 
@@ -53,9 +54,13 @@ static void set_change_pending(void) {
 // release only if the mode still wants it; a key typed meanwhile may have left.
 void vim_base_hold(bool pressed) {
     if (pressed) {
+        vim.base_holds++;
         layer_off(_VIM_NORMAL);
-    } else if (vim.mode == VIM_MODE_NORMAL || vim.mode == VIM_MODE_VISUAL) {
-        layer_on(_VIM_NORMAL);
+    } else {
+        if (vim.base_holds) vim.base_holds--;
+        if (!vim.base_holds && (vim.mode == VIM_MODE_NORMAL || vim.mode == VIM_MODE_VISUAL)) {
+            layer_on(_VIM_NORMAL);
+        }
     }
 }
 
@@ -273,11 +278,11 @@ static uint16_t typed_key(uint16_t keycode, keyrecord_t *record) {
 
 void vim_after_press(uint16_t keycode, keyrecord_t *record) {
     // Keys the base and NORMAL layers type as they are, read after the fact:
-    // Ctrl+C leaves insert and the command line just as Esc does, and u/U
+    // Ctrl+C leaves visual, insert and the command line just as Esc does, and u/U
     // change the selection's case, which ends visual mode (Ctrl+U scrolls,
     // and the selection goes on).
     uint16_t key = typed_key(keycode, record);
-    if (key == KC_C && vim.ctrl_held && (vim.mode == VIM_MODE_INSERT || vim.mode == VIM_MODE_CMDLINE)) {
+    if (key == KC_C && vim.ctrl_held && (vim.mode == VIM_MODE_VISUAL || vim.mode == VIM_MODE_INSERT || vim.mode == VIM_MODE_CMDLINE)) {
         set_normal();
     } else if (key == KC_U && !vim.ctrl_held && vim.mode == VIM_MODE_VISUAL) {
         set_normal();
