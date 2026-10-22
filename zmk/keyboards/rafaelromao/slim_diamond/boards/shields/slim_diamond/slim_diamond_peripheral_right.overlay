@@ -7,18 +7,18 @@
 
 &default_kscan {
     input-gpios
-            = <&xiao_d 3    (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   //  0 pinky
-            , <&xiao_d 10   (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   //  1 ring top
-            , <&xiao_d 1    (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   //  2 ring home
-            , <&xiao_d 0    (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   //  3 ring bottom
-            , <&xiao_d 9    (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   //  4 middle top
-            , <&xiao_d 8    (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   //  5 middle home
-            , <&xiao_d 2    (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   //  6 middle bottom
-            , <&xiao_d 7    (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   //  7 index top
-            , <&gpio0 9     (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   //  8 index home
-            , <&xiao_d 6    (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   //  9 index bottom
-            , <&xiao_d 5    (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // 10 thumb outer
-            , <&xiao_d 4    (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // 11 thumb inner
+            = <&xiao_d 0    (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   //  0 pinky
+            , <&xiao_d 9    (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   //  1 ring top
+            , <&xiao_d 10   (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   //  2 ring home
+            , <&xiao_d 1    (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   //  3 ring bottom
+            , <&xiao_d 8    (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   //  4 middle top
+            , <&xiao_d 2    (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   //  5 middle home
+            , <&xiao_d 7    (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   //  6 middle bottom
+            , <&gpio0 9     (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   //  7 index top
+            , <&xiao_d 6    (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   //  8 index home
+            , <&xiao_d 5    (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   //  9 index bottom
+            , <&xiao_d 4    (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // 10 thumb outer
+            , <&xiao_d 3    (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>   // 11 thumb inner
             ;
 };
 
