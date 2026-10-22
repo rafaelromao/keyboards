@@ -1,0 +1,27 @@
+/*
+ * Copyright (c) 2026 Rafael Romão
+ * SPDX-License-Identifier: MIT
+ *
+ * One reversible PCB for both halves, so the Xiao sits on opposite faces and
+ * its pins land mirrored: each half has its own pin list (left/right overlays).
+ * Diodeless: one pin per key, pulled up, the switch shorts it to ground.
+ */
+
+#include "slim_diamond_transform.dtsi"
+
+/ {
+    chosen {
+        zmk,kscan = &default_kscan;
+        zmk,matrix_transform = &default_transform;
+    };
+
+    default_kscan: kscan_0 {
+        compatible = "zmk,kscan-gpio-direct";
+        wakeup-source;
+    };
+};
+
+/* The 12th key is on NFC1 (P0.09): free the NFC pins for GPIO. */
+&uicr {
+    nfct-pins-as-gpios;
+};

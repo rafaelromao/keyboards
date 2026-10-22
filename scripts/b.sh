@@ -55,6 +55,16 @@ build_choc_diamond() {
     fi
 }
 
+build_slim_diamond() {
+    echo "--- Building Slim Diamond ---"
+    ./scripts/zmk.sh "rafaelromao/slim_diamond" "cl" "-b" "xiao_ble//zmk" "$@"
+    if [[ "$complete" == "true" ]]; then
+        ./scripts/zmk.sh "rafaelromao/slim_diamond" "pr" "-b" "xiao_ble//zmk" "$@"
+        ./scripts/zmk.sh "rafaelromao/slim_diamond" "pl" "-b" "xiao_ble//zmk" "$@"
+        ./scripts/zmk.sh "rafaelromao/slim_diamond" "cd" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
+    fi
+}
+
 build_zen() {
     echo "--- Building Corneish Zen ---"
     ./scripts/zmk.sh "lowprokb.ca/corneish-zen" "-b" "corneish_zen_left//zmk" "$@"
@@ -119,7 +129,7 @@ if [[ -z "${1:-}" || "${1:-}" == "-h" || "${1:-}" == "--help" ]]; then
     echo "correct parameters."
     echo "Additional arguments are passed to zmk.sh; the QMK boards only take -p."
     echo
-    echo "Available keyboards: all, reset, rommana, wired_rommana, diamond, wired_diamond, choc_diamond, zen, dilemma, bm40, xd75"
+    echo "Available keyboards: all, reset, rommana, wired_rommana, diamond, wired_diamond, choc_diamond, slim_diamond, zen, dilemma, bm40, xd75"
     echo
     echo "Examples:"
     echo "  $(basename "$0") rommana"
@@ -146,6 +156,7 @@ case "$KEYBOARD" in
         build_diamond "$@"
         build_wired_diamond "$@"
         build_choc_diamond "$@"
+        build_slim_diamond "$@"
         build_zen "$@"
         build_dilemma "$@"
         build_bm40 "$@"
@@ -168,6 +179,9 @@ case "$KEYBOARD" in
         ;;
     choc_diamond|cd|c)
         build_choc_diamond "$@"
+        ;;
+    slim_diamond|sd)
+        build_slim_diamond "$@"
         ;;
     zen|z)
         build_zen "$@"

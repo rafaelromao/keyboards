@@ -1,0 +1,59 @@
+# Copyright (c) 2021 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if SHIELD_SLIM_DIAMOND_CENTRAL_DONGLE || SHIELD_SLIM_DIAMOND_CENTRAL_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "Slim Diamond"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+
+# The display is the dongle's; without this guard the LVGL defaults below
+# competed with the dongle-display module's own on every other build.
+if SHIELD_SLIM_DIAMOND_CENTRAL_DONGLE
+
+if ZMK_DISPLAY
+
+config I2C
+    default y
+
+config SSD1306
+    default y
+
+choice ZMK_DISPLAY_WORK_QUEUE
+    default ZMK_DISPLAY_WORK_QUEUE_DEDICATED
+endchoice
+
+endif
+
+
+if LVGL
+
+config LV_Z_VDB_SIZE
+    default 64
+
+config LV_DPI_DEF
+    default 148
+
+config LV_Z_BITS_PER_PIXEL
+    default 1
+
+choice LV_COLOR_DEPTH
+    default LV_COLOR_DEPTH_1
+endchoice
+
+endif
+
+endif
+
+
+if SHIELD_SLIM_DIAMOND_CENTRAL_DONGLE || SHIELD_SLIM_DIAMOND_CENTRAL_LEFT || SHIELD_SLIM_DIAMOND_PERIPHERAL_LEFT || SHIELD_SLIM_DIAMOND_PERIPHERAL_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif
