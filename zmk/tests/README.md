@@ -10,6 +10,9 @@ These validate every layer's 36 positions, layer numbering, combo key positions
 and layer references, sentence-case wiring, snapshot coverage, inert bindings,
 and the expected HID letter/case for every direct letter binding.
 
+Initialize the public sentence-case module before running tests on a fresh clone:
+`git submodule update --init -- zmk/modules/zmk-sentence-case`.
+
 ## Native ZMK integration
 
 Inside the existing `init.sh` toolchain container, after its module cache has

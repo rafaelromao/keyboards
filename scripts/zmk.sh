@@ -238,9 +238,10 @@ done
 TEMP="${TEMP%;}"
 MODULES=$TEMP
 
-# Standalone local module, kept outside modules/ because init.sh mounts the
+# Pinned public submodule, kept outside modules/ because init.sh mounts the
 # downloaded-module cache over that directory. Load it before adaptive-key so
 # observers remember the sentence-shifted character, not the unshifted binding.
+git submodule update --init -- zmk/modules/zmk-sentence-case || exit 1
 MODULES="$PROJECT_DIR/zmk/modules/zmk-sentence-case;$MODULES"
 
 # A keyboard config can also provide local code, without a separate git module.
