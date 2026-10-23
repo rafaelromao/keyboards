@@ -129,6 +129,20 @@
             bindings = <&mo>, <&mm_shift>;
         };
 
+        // Sentence case already shifts the next letter. Do not arm a sticky
+        // shift too: its quick-release clears that letter's implicit shift.
+        // No keycode on tap, so SEN_CASE stays armed; keep the Media hold and
+        // the normal shift thumb's timing. Caps word/line still release their
+        // arming shift in tc_smart_word/tc_smart_line.
+        ht_sentence: ht_sentence {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <QUICK_TAP_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <0>;
+            bindings = <&mo>, <&none>;
+        };
+
         // ******************** SMART THUMBS ******************** //
 
         MACRO(mc_alpha2, &sl ALPHA2)
