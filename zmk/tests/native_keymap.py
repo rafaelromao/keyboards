@@ -168,7 +168,7 @@ def main():
     config = build / "config"
     cases, focused = fixture(config)
     defaults = re.search(r"^DEF_MODULES=\((.*?)\)$", (ROOT / "scripts/zmk.sh").read_text(), re.M)[1].split()
-    modules = [ROOT / "zmk/modules/zmk-sentence-case", ROOT / "zmk/tests/native"] + [args.modules_dir.resolve() / name for name in defaults]
+    modules = [args.modules_dir.resolve() / name for name in defaults] + [ROOT / "zmk/tests/native"]
     command = ["west", "build", "-s", str(app), "-d", str(build / "firmware"), "-b", "native_sim//zmk_test_mock", "--", f"-DZMK_CONFIG={config}", f"-DZMK_EXTRA_MODULES={';'.join(map(str, modules))}", "-DCONFIG_ASSERT=y"]
     with (build / "build.log").open("w") as log:
         result = subprocess.run(command, cwd=app, stdout=log, stderr=subprocess.STDOUT)

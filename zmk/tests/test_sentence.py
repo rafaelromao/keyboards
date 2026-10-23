@@ -66,10 +66,12 @@ class SentenceCaseTests(unittest.TestCase):
 
     def test_module_is_loaded_before_adaptive_key_observers(self):
         script = (ROOT / "scripts/zmk.sh").read_text()
-        self.assertIn('MODULES="$PROJECT_DIR/zmk/modules/zmk-sentence-case;$MODULES"', script)
-        module = ROOT / "zmk/modules/zmk-sentence-case"
-        for filename in ("zephyr/module.yml", "CMakeLists.txt", "Kconfig"):
-            self.assertTrue((module / filename).is_file())
+        self.assertRegex(script, r"DEF_MODULES=\(rafaelromao/zmk-sentence-case\s")
+        self.assertNotIn("zmk/modules/zmk-sentence-case", script)
+        self.assertNotIn('if [[ "$MODULE" == "rafaelromao/zmk-sentence-case" ]]', script)
+        submodules = (ROOT / ".gitmodules").read_text()
+        self.assertIn('path = modules/rafaelromao/zmk-sentence-case', submodules)
+        self.assertIn('url = https://github.com/rafaelromao/zmk-sentence-case.git', submodules)
 
 
 if __name__ == "__main__":

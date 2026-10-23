@@ -11,7 +11,7 @@ and layer references, sentence-case wiring, snapshot coverage, inert bindings,
 and the expected HID letter/case for every direct letter binding.
 
 Initialize the public sentence-case module before running tests on a fresh clone:
-`git submodule update --init -- zmk/modules/zmk-sentence-case`.
+`git submodule update --init -- modules/rafaelromao/zmk-sentence-case`.
 
 ## Native ZMK integration
 

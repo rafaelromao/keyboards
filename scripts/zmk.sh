@@ -19,7 +19,7 @@ EXTRA_SHIELDS=()
 FLAGS=()
 MODULES=""
 SNIPPETS=()
-DEF_MODULES=(urob/zmk-leader-key urob/zmk-auto-layer urob/zmk-adaptive-key rafaelromao/zmk-layer-morph rafaelromao/zmk-vim-mode rafaelromao/zmk-layer-hud rafaelromao/zmk-os-detection)
+DEF_MODULES=(rafaelromao/zmk-sentence-case urob/zmk-leader-key urob/zmk-auto-layer urob/zmk-adaptive-key rafaelromao/zmk-layer-morph rafaelromao/zmk-vim-mode rafaelromao/zmk-layer-hud rafaelromao/zmk-os-detection)
 # The layer signal's USB carrier is a CDC-ACM interface that exists only if this
 # snippet adds it, so a build without it reaches the HUD over BLE or not at all.
 # zmk-layer-hud is in DEF_MODULES, which are appended to whatever -m gives, so
@@ -237,12 +237,6 @@ for ITEM in "${ADDR[@]}"; do
 done
 TEMP="${TEMP%;}"
 MODULES=$TEMP
-
-# Pinned public submodule, kept outside modules/ because init.sh mounts the
-# downloaded-module cache over that directory. Load it before adaptive-key so
-# observers remember the sentence-shifted character, not the unshifted binding.
-git submodule update --init -- zmk/modules/zmk-sentence-case || exit 1
-MODULES="$PROJECT_DIR/zmk/modules/zmk-sentence-case;$MODULES"
 
 # A keyboard config can also provide local code, without a separate git module.
 CONFIG_MODULE="$PROJECT_DIR/zmk/keyboards/$CONFIG"
