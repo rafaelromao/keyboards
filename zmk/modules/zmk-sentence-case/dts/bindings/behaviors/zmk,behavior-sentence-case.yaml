@@ -1,0 +1,13 @@
+description: Space with a lazy, letter-only sentence-case one-shot shift
+compatible: "zmk,behavior-sentence-case"
+include: zero_param.yaml
+
+properties:
+  prior-idle-ms:
+    type: int
+    default: 2000
+    description: Maximum time between sentence-ending punctuation and space
+  release-after-ms:
+    type: int
+    default: 1000
+    description: Time after space during which the one-shot is armed

@@ -1,0 +1,11 @@
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    behaviors {
+        sentence_space: sentence_space {
+            compatible = "zmk,behavior-sentence-case";
+            #binding-cells = <0>;
+            display-name = "Sentence Space";
+        };
+    };
+};

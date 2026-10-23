@@ -19,7 +19,7 @@
    &kp Q                     &kp B                     &kp M                     &kp G                     &kp K                     &kp X                     &kp L                     &kp O                     &kp U                     &kp SEMICOLON
    &lt SHORTS D              &mt LCTL N                &mt LALT S                &mt LSFT T                &kp W                     &kp Z                     &mt LSFT R                &mt LALT A                &mt LCTL E                &lt SHORTS I
    &lt SHORTS D              &mt LS(LGUI) F            &mt LS(LGUI) C            &mt LGUI P                &kp V                     &kp J                     &ht_magic LGUI 0          &th_comma 0 0             &th_dot 0 0               &lt SHORTS I
-                                                       &mkp RCLK                 &ht_repeat NAV 0          &ltn_num_spc 0 0          &msl_sym_a2 0 0           &ht_shift MEDIA 0         &mkp LCLK
+                                                       &mkp RCLK                 &ht_repeat NAV 0          &ltn_num_spc 0 0          &sentence_alpha2          &ht_shift MEDIA 0         &mkp LCLK
                         >;
                 };
 
@@ -40,7 +40,7 @@
    &none                     &kp B                     &kp E                     &kp W                     &none                     &none                     &kp G                     &mc_o_vim                 &kp U                     &none
    &lt_q_vim VIM_REPLACE 0   &mt LCTL N                &mt_s_vim LALT 0          &mt_r_vim LSFT 0          &none                     &none                     &mt LSFT H                &mt LALT J                &mt LCTL K                &lt VIM_REPLACE L
    &lt_q_vim VIM_REPLACE 0   &mt LS(LGUI) F            &mt_c_vim SGUI 0          &mt LGUI T                &none                     &none                     &mt_i_vim LGUI 0          &mc_a_vim                 &kp DOT                   &lt VIM_REPLACE L
-                                                       &none                     &ht_repeat NAV 0          &lt_spc_vim NUM 0         &msl_sym_a2 0 0           &ht_shift MEDIA 0         &none
+                                                       &none                     &ht_repeat NAV 0          &lt_spc_vim NUM 0         &sentence_alpha2          &ht_shift MEDIA 0         &none
                         >;
                 };
 
@@ -85,7 +85,7 @@
    &kp Q                     &kp B                     &kp M                     &kp G                     &kp K                     &kp X                     &kp L                     &kp O                     &kp U                     &kp SEMICOLON
    &kp D                     &mt LCTL N                &mt LALT S                &mt LSFT T                &kp W                     &kp Z                     &mt LSFT R                &mt LALT A                &mt LCTL E                &kp I
    &kp D                     &mt LS(LGUI) F            &mt LS(LGUI) C            &mt LGUI P                &kp V                     &kp J                     &ht_magic LGUI 0          &th_comma 0 0             &th_dot 0 0               &kp I
-                                                       &mkp RCLK                 &ht_repeat NAV 0          &ltn_num_spc 0 0          &msl_sym_a2 0 0           &ht_sft_vim MEDIA 0       &mkp LCLK
+                                                       &mkp RCLK                 &ht_repeat NAV 0          &ltn_num_spc 0 0          &sentence_alpha2          &ht_sft_vim MEDIA 0       &mkp LCLK
                         >;
                 };
 
@@ -182,15 +182,6 @@
                         >;
                 };
 
-                sentence_case_layer {
-                     display-name = "SENTENCE CASE";
-                     bindings = <
-   &kp LS(Q)                 &kp LS(B)                 &kp LS(M)                 &kp LS(G)                 &kp LS(K)                 &kp LS(X)                 &kp LS(L)                 &kp LS(O)                 &kp LS(U)                 &trans
-   &kp LS(D)                 &mt LCTL LS(N)            &mt LALT LS(S)            &mt LSFT LS(T)            &kp LS(W)                 &kp LS(Z)                 &mt LSFT LS(R)            &mt LALT LS(A)            &mt LCTL LS(E)            &kp LS(I)
-   &kp LS(D)                 &mt LS(LGUI) LS(F)        &mt LS(LGUI) LS(C)        &mt LGUI LS(P)            &kp LS(V)                 &kp LS(J)                 &ht_magic_c LGUI 0        &th_comma 0 0             &th_dot 0 0               &kp LS(I)
-                                                       &trans                    &trans                    &ltn_numcp_spc NUM_CP 0   &lt_sft_a2 SYM_CP 0       &ht_sentence MEDIA 0     &trans
-                        >;
-                };
                 ccedil_layer {
                      display-name = "Ç EXTENSION";
                      bindings = <

@@ -1,0 +1,9 @@
+description: Select a binding depending on whether sentence capitalization is pending
+compatible: "zmk,behavior-sentence-morph"
+include: zero_param.yaml
+
+properties:
+  bindings:
+    type: phandle-array
+    required: true
+    description: Normal binding followed by the binding to use while sentence case is armed

@@ -1,0 +1,4 @@
+config ZMK_BEHAVIOR_SENTENCE_CASE
+    bool
+    default y
+    depends on DT_HAS_ZMK_BEHAVIOR_SENTENCE_CASE_ENABLED

@@ -5,18 +5,30 @@
 *
 */
 
+#include <behaviors/sentence_case.dtsi>
+
 / {
     sentence_case {
 
-        MACRO(mc_space_sentence, &kp SPACE &sl SEN_CASE)
-        
-        ak_space: ak_space {
-            compatible = "zmk,behavior-adaptive-key";
+        // A redundant sticky-shift tap must not spend the sentence one-shot
+        // or enter caps word. The surrounding hold-tap still opens Media.
+        sentence_shift: sentence_shift {
+            compatible = "zmk,behavior-sentence-morph";
             #binding-cells = <0>;
-            bindings = <&kp SPACE>;
-
-            ADAPTIVE(punct_space , &mc_space_sentence , QMARK EXCL DOT)
+            bindings = <&mm_shift>, <&none>;
         };
 
+        // Reuse the manually shifted accent layer: its macros shift the vowel,
+        // not the dead key. Numbers need no special layer with a lazy one-shot.
+        sentence_alpha2: sentence_alpha2 {
+            compatible = "zmk,behavior-sentence-morph";
+            #binding-cells = <0>;
+            bindings = <&msl_sym_a2 0 0>, <&lt_sft_a2 SYM_CP 0>;
+        };
     };
+};
+
+&sentence_space {
+    prior-idle-ms = <ADAPTIVE_KEY_TIMEOUT>;
+    release-after-ms = <1000>;
 };

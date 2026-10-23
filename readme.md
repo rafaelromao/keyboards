@@ -78,6 +78,7 @@ This keymap is implemented using ZMK, with the following external modules:
 - [Layer Morph](https://github.com/rafaelromao/zmk-layer-morph)
 - [Layer HUD](https://github.com/rafaelromao/zmk-layer-hud)
 - [OS Detection](https://github.com/rafaelromao/zmk-os-detection)
+- [Sentence Case](zmk/modules/zmk-sentence-case) (standalone local module)
 - [Vim Mode](https://github.com/rafaelromao/zmk-vim-mode)
 
 ## QMK
