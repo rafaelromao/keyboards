@@ -140,7 +140,7 @@ def main():
         result = subprocess.run(command, cwd=app, stdout=log, stderr=subprocess.STDOUT)
     if result.returncode:
         raise SystemExit(f"Native build failed; see {build / 'build.log'}")
-    result = subprocess.run([str(build / "firmware/zephyr/zmk.exe")], text=True, capture_output=True, check=True)
+    result = subprocess.run([str(build / "firmware/zephyr/zmk.exe"), "-no-rt"], text=True, capture_output=True, check=True, timeout=120)
     (build / "events.log").write_text(result.stdout + result.stderr)
     groups, held = [], {}
     for state, page, code, mods in re.findall(r"hid_listener_keycode_(pressed|released): usage_page 0x([0-9A-Fa-f]+) keycode 0x([0-9A-Fa-f]+) implicit_mods 0x([0-9A-Fa-f]+)", result.stdout):
