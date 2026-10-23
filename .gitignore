@@ -6,6 +6,6 @@ build.log
 .venv/
 .gemini/
 tmp/
-modules/
+/modules/
 token-optimizer/
 .sandman/

@@ -1,0 +1,26 @@
+name: ZMK keymap contracts
+
+on:
+  pull_request:
+    paths:
+      - "zmk/**"
+      - "scripts/zmk.sh"
+      - "scripts/test-zmk.sh"
+      - ".github/workflows/zmk-tests.yml"
+  push:
+    branches: [main]
+    paths:
+      - "zmk/**"
+      - "scripts/zmk.sh"
+      - "scripts/test-zmk.sh"
+      - ".github/workflows/zmk-tests.yml"
+
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python3 -m unittest discover -s zmk/tests -v

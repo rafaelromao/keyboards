@@ -31,7 +31,7 @@
      * Use ALPHA1_BASE, never a bare ALPHA1.
      */
     #define ALPHA1_BASE                 ALPHA1 ALT_OS
-    #define ALPHA1_LAYERS               ALPHA1_BASE CASE_A1 CPLK_A1 ALTREP2 SEN_CASE
+    #define ALPHA1_LAYERS               ALPHA1_BASE CASE_A1 CPLK_A1 ALTREP2
     #define CCEDIL_LAYERS               CCEDIL CASE_CCEDIL
     #define ALPHA2_LAYERS               ALPHA2 CASE_A2 SFT_A2
     #define NUM_LAYERS                  NUM NUM_CP
@@ -101,9 +101,7 @@
         COMBO(cb_n3,            RBR R0,          &mc_n3,                 ALL_LAYERS)
         COMBO(cb_n0,            R1 R0,           &mc_n0,                 ALL_LAYERS)
 
-        // Sentence case sits above NUM, so num word there takes the copy.
         COMBO(cb_numword,       LBR LBM,         &tc_num_word,           ALPHA1_BASE CASE_A1 CPLK_A1 ALTREP2 VIM_LAYERS_BASE)
-        COMBO(cb_numword_sc,    LBR LBM,         &tc_num_word_cp,        SEN_CASE)
         COMBO(cb_ca_nav,        LHR LHM L1,      &mc_ca_nav,             ALPHA1_LAYERS VIM_LAYERS)
         COMBO(cb_gcs_nav,       LBR LHM LHI L1,  &mc_gcs_nav,            ALPHA1_LAYERS VIM_LAYERS)
         COMBO(cb_cag_nav,       LHR LHM LBI L1,  &mc_cag_nav,            ALPHA1_LAYERS VIM_LAYERS)
@@ -117,10 +115,10 @@
         COMBO(cb_semi,          RBM RBR,         &th_semi 0 0,           ALPHA1_LAYERS NUM_LAYERS VIM_LAYERS)
 
         /*
-         * The letter chords come in three groups because the layers spell their
+         * The letter chords come in two groups because the layers spell their
          * letters differently: the bases and ALTREP2 (armed for a second after
          * every accent, and the highest layer while it is) type plain letters,
-         * sentence case types LS(), and the caps layers type RS() -- the adaptive
+         * and the caps layers type RS() -- the adaptive
          * keys tell the two apart. cb_dc and cb_pc used to sit here too; they
          * shared their keys with cb_cancel and cb_meh_ent on the caps layers and
          * ZMK only ever fired the earlier combo.
@@ -129,11 +127,6 @@
         COMBO(cb_w,             LHM LHI,         &ht_w 0 0,              ALPHA1_BASE ALTREP2 VIM_LAYERS_BASE)
         COMBO(cb_v,             LBI LBM,         &kp V,                  ALPHA1_BASE ALTREP2 VIM_LAYERS_BASE)
         COMBO(cb_q,             LHR LHM,         &ht_q 0 0,              ALPHA1_BASE ALTREP2 VIM_LAYERS_BASE)
-
-        COMBO(cb_ks,            LTM LTI,         &kp LS(K),              SEN_CASE)
-        COMBO(cb_ws,            LHM LHI,         &kp LS(W),              SEN_CASE)
-        COMBO(cb_vs,            LBI LBM,         &kp LS(V),              SEN_CASE)
-        COMBO(cb_qs,            LHR LHM,         &kp LS(Q),              SEN_CASE)
 
         COMBO(cb_kc,            LTM LTI,         &kp RS(K),              CASE_A1 CPLK_A1)
         COMBO(cb_wc,            LHM LHI,         &kp RS(W),              CASE_A1 CPLK_A1)
@@ -144,11 +137,6 @@
         COMBO(cb_z,             RHI RHM,         &ht_z 0 0,              ALPHA1_BASE ALTREP2 VIM_LAYERS_BASE)
         COMBO(cb_j,             RBI RBM,         &kp J,                  ALPHA1_BASE ALTREP2 VIM_LAYERS_BASE)
         COMBO(cb_y,             RHM RHR,         &ht_y 0 0,              ALPHA1_BASE ALTREP2 VIM_LAYERS_BASE)
-
-        COMBO(cb_xs,            RTI RTM,         &kp LS(X),              SEN_CASE)
-        COMBO(cb_zs,            RHI RHM,         &kp LS(Z),              SEN_CASE)
-        COMBO(cb_js,            RBI RBM,         &kp LS(J),              SEN_CASE)
-        COMBO(cb_ys,            RHM RHR,         &kp LS(Y),              SEN_CASE)
 
         COMBO(cb_xc,            RTI RTM,         &kp RS(X),              CASE_A1 CPLK_A1)
         COMBO(cb_zc,            RHI RHM,         &kp RS(Z),              CASE_A1 CPLK_A1)

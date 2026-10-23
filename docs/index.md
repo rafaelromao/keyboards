@@ -148,7 +148,7 @@ There are also combos in the secondary alpha layer for `?`, `!`, and `-`, and `_
 
 ### Sentence Case
 
-*Sentence Case* is a feature that automatically capitalizes the next word after `space` if it is preceded by `.`, `?`, or `!`. If the *Sticky Shift* is tapped after this `space`, it will be ignored. This feature makes it much easier to start new sentences and reduces the use of the *Sticky Shift* key a lot. This feature is implemented using adaptive keys to trigger it and a layer to execute the capitalization.
+*Sentence Case* is a feature that automatically capitalizes the next word after `space` if it is preceded by `.`, `?`, or `!`. If the *Sticky Shift* is tapped after this `space`, it will be ignored. This feature makes it much easier to start new sentences and reduces the use of the *Sticky Shift* key a lot. The standalone [Sentence Case module](https://github.com/rafaelromao/zmk-sentence-case) supplies `&sentence_space` in place of `&kp SPACE`: punctuation must be within 2 seconds, and its lazy, letter-only one-shot shift expires after 1 second. No sentence-case layer is needed, and accented sentence starts still use the existing shifted-accent macros.
 
 A number typed right after that `space`, from the *numbers* layer or *Num Word*, is typed as a number and ends the sentence case, so the word after it is not capitalized.
 
@@ -508,4 +508,3 @@ And a few things work differently:
 - **Mouse emulation** uses QMK's mouse keys instead of the ZMK pointing module, with QMK's acceleration curve.
 - **One-shot timing**: sticky shift lasts 1.5 s and the sticky layers 1 s, as in ZMK; a pending sticky shift is spent by the next key press, so rolled keys behave the same way.
 - **Home-row mods**: tap-preferred with a 250 ms tapping term, no permissive hold, as in ZMK. The symbol tap-holds and the Meh mod-taps use QMK's Flow Tap for the ZMK `require-prior-idle` behaviour.
-

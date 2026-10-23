@@ -37,3 +37,6 @@
 [submodule "modules/qmk/qmk_firmware"]
 	path = modules/qmk/qmk_firmware
 	url = https://github.com/qmk/qmk_firmware
+[submodule "modules/rafaelromao/zmk-sentence-case"]
+	path = modules/rafaelromao/zmk-sentence-case
+	url = https://github.com/rafaelromao/zmk-sentence-case.git
