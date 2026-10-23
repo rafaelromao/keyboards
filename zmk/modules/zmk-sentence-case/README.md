@@ -49,6 +49,11 @@ while capitalization is pending. It remembers the chosen binding through
 release, even if that press consumes the one-shot. Both child bindings include
 their own parameters; the morph itself takes none.
 
+Concurrent keys sharing an instance retain independent branches, matched by
+position (and split source). `CONFIG_ZMK_BEHAVIOR_SENTENCE_MORPH_MAX_HELD`
+sets the per-instance capacity (default 8). If capacity is exhausted, only that
+new press is rejected; releasing it cannot release another position's binding.
+
 For example, ignore a redundant sticky-shift tap without losing a Media hold:
 
 ```dts

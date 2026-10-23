@@ -16,37 +16,74 @@ struct sentence_morph_config {
     struct zmk_behavior_binding bindings[2];
 };
 
-struct sentence_morph_data {
+struct active_morph {
     struct zmk_behavior_binding pressed;
+    uint32_t position;
+#if IS_ENABLED(CONFIG_ZMK_SPLIT)
+    uint8_t source;
+#endif
     bool active;
 };
+
+struct sentence_morph_data {
+    struct active_morph positions[CONFIG_ZMK_BEHAVIOR_SENTENCE_MORPH_MAX_HELD];
+};
+
+static struct active_morph *find_morph(struct sentence_morph_data *data,
+                                       struct zmk_behavior_binding_event event) {
+    for (int i = 0; i < ARRAY_SIZE(data->positions); i++) {
+        struct active_morph *active = &data->positions[i];
+        if (!active->active || active->position != event.position) {
+            continue;
+        }
+#if IS_ENABLED(CONFIG_ZMK_SPLIT)
+        if (active->source != event.source) {
+            continue;
+        }
+#endif
+        return active;
+    }
+    return NULL;
+}
 
 static int on_morph_pressed(struct zmk_behavior_binding *binding,
                             struct zmk_behavior_binding_event event) {
     const struct device *dev = zmk_behavior_get_binding(binding->behavior_dev);
     const struct sentence_morph_config *config = dev->config;
     struct sentence_morph_data *data = dev->data;
-    if (data->active) {
+    if (find_morph(data, event)) {
         return -EBUSY;
     }
-    data->pressed = config->bindings[zmk_sentence_case_pending(event.timestamp)];
-    data->active = true;
-    int err = zmk_behavior_invoke_binding(&data->pressed, event, true);
-    if (err < 0) {
-        data->active = false;
+    for (int i = 0; i < ARRAY_SIZE(data->positions); i++) {
+        struct active_morph *active = &data->positions[i];
+        if (active->active) {
+            continue;
+        }
+        active->pressed = config->bindings[zmk_sentence_case_pending(event.timestamp)];
+        active->position = event.position;
+#if IS_ENABLED(CONFIG_ZMK_SPLIT)
+        active->source = event.source;
+#endif
+        active->active = true;
+        int err = zmk_behavior_invoke_binding(&active->pressed, event, true);
+        if (err < 0) {
+            active->active = false;
+        }
+        return err;
     }
-    return err;
+    return -ENOMEM;
 }
 
 static int on_morph_released(struct zmk_behavior_binding *binding,
                              struct zmk_behavior_binding_event event) {
     const struct device *dev = zmk_behavior_get_binding(binding->behavior_dev);
     struct sentence_morph_data *data = dev->data;
-    if (!data->active) {
+    struct active_morph *active = find_morph(data, event);
+    if (!active) {
         return ZMK_BEHAVIOR_OPAQUE;
     }
-    struct zmk_behavior_binding pressed = data->pressed;
-    data->active = false;
+    struct zmk_behavior_binding pressed = active->pressed;
+    active->active = false;
     return zmk_behavior_invoke_binding(&pressed, event, false);
 }
 

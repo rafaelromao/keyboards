@@ -14,6 +14,7 @@ from pathlib import Path
 MODULE = Path(__file__).resolve().parents[1]
 # Matrix positions in behaviors.dtsi.
 SPACE, DOT, QUESTION, EXCL, A, B, SHIFT, HRM, NUM, RAW_SHIFT, ONE, GT, COMMA, BSPC, LEFT, CTRL, LSHIFT, RSHIFT, MEDIA, QUOTE, QU, ALPHA2, K, CAPS_A, MORPH, REPEAT, SHIFT_THUMB, SPACE_THUMB, ESC, SHIFT_DOT, ALTGR, MARKER = range(32)
+MORPH2, MORPH3 = 32, 33
 
 
 def tap(key, delay=10):
@@ -39,6 +40,15 @@ dot, space, a, b = key(0x37), key(0x2C), key(4), key(5)
 capital_a, capital_b = key(4, 2), key(5, 2)
 prefix = tap(DOT) + tap(SPACE)
 prefix_output = [dot, space]
+
+# Releases must follow their own position's selected branch, not merely leave
+# the same final collection of keys up after both keys have been released.
+morph_down = [("pressed", key(7, 2)), ("pressed", key(6))]
+morph_release_orders = {
+    "shared morph reverse release": morph_down + [("released", key(6)), ("released", key(7))],
+    "shared morph forward release": morph_down + [("released", key(7)), ("released", key(6))],
+    "shared morph overflow release": morph_down + [("released", key(6)), ("released", key(7))],
+}
 
 
 def scenarios():
@@ -89,6 +99,11 @@ def scenarios():
     yield "repeat remembers capital", prefix + tap(A) + tap(REPEAT), prefix_output + [capital_a, capital_a]
     yield "morph release follows press branch", prefix + tap(MORPH) + tap(A), prefix_output + [key(7, 2), a]
     yield "morph normal branch", tap(MORPH) + tap(A), [key(6), a]
+    shared = prefix + down(MORPH) + down(MORPH2)
+    yield "shared morph reverse release", shared + up(MORPH2) + up(MORPH), prefix_output + [key(7, 2), key(6)]
+    yield "shared morph forward release", shared + up(MORPH) + up(MORPH2), prefix_output + [key(7, 2), key(6)]
+    yield "shared morph overflow release", shared + down(MORPH3) + up(MORPH3) + up(MORPH2) + up(MORPH), prefix_output + [key(7, 2), key(6)]
+    yield "shared morph slot reuse", shared + up(MORPH2) + tap(MORPH3) + up(MORPH), prefix_output + [key(7, 2), key(6), key(6)]
     yield "letter combo", prefix + down(A) + down(B) + up(A) + up(B) + tap(A), prefix_output + [key(0x0E, 2), a]
     yield "accented sentence start", prefix + tap(ALPHA2) + tap(A) + tap(B), prefix_output + [key(0x34), key(0xE1), a, b]
     yield "ordinary accent", tap(ALPHA2) + tap(A), [key(0x34), a]
@@ -133,8 +148,9 @@ def main():
     scan = "\n".join(f"ZMK_MOCK_{'PRESS' if state else 'RELEASE'}(0,{position},{delay})" for position, state, delay in events)
     (config / "native_sim.keymap").write_text(
         defines + f'#include "{MODULE / "tests/behaviors.dtsi"}"\n'
-        f'&kscan {{ rows = <1>; columns = <32>; events = <{scan}>; }};\n'
+        f'&kscan {{ rows = <1>; columns = <34>; events = <{scan}>; }};\n'
     )
+    (config / "native_sim.conf").write_text("CONFIG_ZMK_BEHAVIOR_SENTENCE_MORPH_MAX_HELD=2\n")
     command = ["west", "build", "-s", str(app), "-d", str(build / "firmware"), "-b", "native_sim//zmk_test_mock", "--", f"-DZMK_CONFIG={config}", f"-DZMK_EXTRA_MODULES={';'.join(modules)}", "-DCONFIG_ASSERT=y"]
     with (build / "build.log").open("w") as log:
         result = subprocess.run(command, cwd=app, stdout=log, stderr=subprocess.STDOUT)
@@ -142,14 +158,16 @@ def main():
         raise SystemExit(f"Native build failed; see {build / 'build.log'}")
     result = subprocess.run([str(build / "firmware/zephyr/zmk.exe"), "-no-rt"], text=True, capture_output=True, check=True, timeout=120)
     (build / "events.log").write_text(result.stdout + result.stderr)
-    groups, held = [], {}
+    groups, all_events, held = [], [], {}
     for state, page, code, mods in re.findall(r"hid_listener_keycode_(pressed|released): usage_page 0x([0-9A-Fa-f]+) keycode 0x([0-9A-Fa-f]+) implicit_mods 0x([0-9A-Fa-f]+)", result.stdout):
         event = tuple(int(value, 16) for value in (page, code, mods))
         if event == key(0x73):  # F24 separates cases and clears any pending state.
             if state == "pressed":
                 assert not held, f"Unreleased keys before case {len(groups)}: {held}"
                 groups.append([])
+                all_events.append([])
         elif groups:
+            all_events[-1].append((state, event))
             if not (event[0] == 7 and 0xE0 <= event[1] <= 0xE7):
                 usage = event[:2]
                 if state == "pressed":
@@ -164,7 +182,13 @@ def main():
     failures = []
     if len(groups) != len(cases):
         raise SystemExit(f"Expected {len(cases)} case markers, got {len(groups)}; see {build / 'events.log'}")
-    for (name, _, expected), actual in zip(cases, groups):
+    for (name, _, expected), actual, event_sequence in zip(cases, groups, all_events):
+        if name in morph_release_orders:
+            actual_order = [(state, event) for state, event in event_sequence if event[:2] in ((7, 6), (7, 7))]
+            if actual_order != morph_release_orders[name]:
+                failures.append(name)
+                print(f"FAIL {name} release order\n  expected {morph_release_orders[name]}\n  actual   {actual_order}")
+                continue
         if expected != actual:
             failures.append(name)
             print(f"FAIL {name}\n  expected {expected}\n  actual   {actual}")

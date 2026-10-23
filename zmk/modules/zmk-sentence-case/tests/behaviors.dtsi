@@ -117,6 +117,7 @@
                 &kp RS(A)
                 &morph &key_repeat &ht_shift 4 0 &ht_space 1 0
                 &kp ESC &kp LS(DOT) &kp RALT &kp F24
+                &morph &morph
             >;
         };
         numbers {

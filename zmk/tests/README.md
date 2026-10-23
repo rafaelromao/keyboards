@@ -30,7 +30,8 @@ layers and delimit scenarios without emitting marker keycodes. Private
 layer transitions (including locks), and mouse button/movement/scroll output.
 Focused scenarios independently assert sentence starts, redundant sticky shift,
 numbers/Num Word, accented capitals, adaptive/repeat, caps word and Media/Nav
-holds. The standalone sentence module additionally runs 53 edge-case scenarios.
+holds. The standalone sentence module additionally runs 57 edge-case scenarios,
+including shared-behavior concurrency, release ordering and capacity overflow.
 Native time runs uncoupled from wall time, so long timeouts remain fast.
 
 For an intentional keymap change, regenerate snapshots with the same command
