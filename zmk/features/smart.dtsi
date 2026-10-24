@@ -132,7 +132,10 @@
         // ******************** SMART THUMBS ******************** //
 
         MACRO(mc_alpha2, &sl ALPHA2)
-        MACRO(mc_sft_a2, &sl SFT_A2)
+        // Same as tc_smart_word: a sticky shift is not spent by &sl, so it
+        // was still down for the first SFT_A2 key and released mid-press,
+        // dropping that key's RS() too. Let go of it; the layer shifts.
+        MACRO(mc_sft_a2, &sl SFT_A2 &macro_release &kp LSHFT)
         MOD_MORPH(mm_alpha2_shifted2, MOD_LSFT|MOD_RSFT, &mc_sft_a2, &mc_alpha2)
 
         MACRO(mc_case_a2, &sl CASE_A2)

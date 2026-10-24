@@ -107,6 +107,12 @@ def fixture(directory):
     for position in [6, 32, 17]:
         tap(position)
     finish()
+    # A sticky shift is not spent by the Alpha 2 thumb, so it used to be
+    # released while the shifted layer's RS(V) was still down.
+    start("sticky shift alpha2 magic", [(7, 0xE1, 0), (7, 0x19, 0x20)] * 2)
+    for position in [34, 33, 23] * 2:
+        tap(position)
+    finish()
     start("magic vowel", [a, (7, 0x19, 0)])
     tap(17)
     tap(26)
@@ -155,6 +161,19 @@ def fixture(directory):
     (directory / "native_sim.keymap").write_text(text)
     (directory / "native_sim.conf").write_text("CONFIG_ZMK_POINTING=y\n")
     return cases, focused
+
+
+def shift_kept(group):
+    """Hosts may type a shifted key lowercase if its shift drops mid-press."""
+    held = set()
+    for event in group:
+        if event[0] == "pressed" and event[3] & 0x22 and event[2] < 0xE0:
+            held.add(event[2])
+        elif event[0] == "released":
+            held.discard(event[2])
+        elif event[0] == "mods" and held and not event[1] & 0x22:
+            return False
+    return True
 
 
 def main():
@@ -207,6 +226,9 @@ def main():
             if pressed != focused[name]:
                 failures.append(name)
                 print(f"FAIL {name}\n  expected {focused[name]}\n  actual   {pressed}")
+            elif not shift_kept(group):
+                failures.append(name)
+                print(f"FAIL {name}\n  a shifted key lost its shift while still held")
     if failures:
         raise SystemExit(f"{len(failures)} focused keymap scenarios failed; see {build / 'events.log'}")
     actual = "".join(json.dumps({"case": name, "events": events}, ensure_ascii=False) + "\n" for name, events in zip(cases, groups))
