@@ -149,14 +149,23 @@ static void taphold_tap(uint8_t idx) {
             if (!shortcuts_is_mac()) return;
             break;
         case TH_CARET_Z:
-            // vim_home: 0 when the previous key was the F24 that the ^ key
-            // itself leaves behind, else ^. The vim insert transitions reset
-            // the antecedent with F23 so that they do not trigger this.
+            // vim_home: 0 when the previous key was the F24 mark that the ^
+            // key itself leaves behind, else ^. The mark is only recorded,
+            // never sent: as a key, Linux handed it to Neovim as a literal
+            // <F24>. ZMK makes it a dead key, which its auto-layer still sees,
+            // so caps word ends here as it did when F24 was in the sequence.
+            // The vim insert transitions clear the antecedent so that they do
+            // not trigger this.
             if (adaptive_last_is(KC_F24)) {
                 execute_keycode(KC_0);
                 return;
             }
-            break;
+            before_action(tap);
+            run_action(tap);
+            vim_after_symbol(symbol);
+            if (is_caps_word_on() && !smart_caps_continues(KC_F24)) caps_word_off();
+            adaptive_track(KC_F24);
+            return;
     }
     before_action(tap);
     run_action(tap);
