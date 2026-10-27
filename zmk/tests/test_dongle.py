@@ -63,10 +63,12 @@ class DongleTests(unittest.TestCase):
     def test_peripheral_preserves_small_display_widget_selection(self):
         central = (DILEMMA / "dilemma_central_left.conf").read_text()
         peripheral = (DILEMMA / "dilemma_peripheral_left.conf").read_text()
-        for widget in ("BONGO_CAT", "MODIFIERS", "LAYER"):
+        for widget in ("BONGO_CAT", "MODIFIERS"):
             setting = f"CONFIG_ZMK_DONGLE_DISPLAY_{widget}=n"
             self.assertIn(setting, central)
             self.assertIn(setting, peripheral)
+        self.assertIn("CONFIG_ZMK_DONGLE_DISPLAY_LAYER=n", central)
+        self.assertIn("CONFIG_ZMK_DONGLE_DISPLAY_LAYER=y", peripheral)
         self.assertNotIn("CONFIG_ZMK_DONGLE_DISPLAY_STATUS_SCREEN=y", peripheral)
 
     def test_receiver_has_no_local_battery_or_display(self):

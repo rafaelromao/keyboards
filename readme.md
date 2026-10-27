@@ -138,9 +138,9 @@ widget screen and layout remain the default on both 128x32 and 128x64, including
 on a peripheral OLED. The dongle relays host connectivity, all half batteries,
 layer/name, modifiers, lock indicators and WPM; Bongo Cat animates on the OLED
 half from that WPM. All original widget configuration options remain available.
-Dilemma's peripheral-left keeps the same smaller widget selection as
-central-left (Bongo Cat, modifiers and layer disabled), but these can still be
-enabled individually, even on 128x32. The compact text screen is opt-in only via
+Dilemma's peripheral-left shows the layer name with Bongo Cat and modifiers
+disabled; these widgets can still be enabled individually, even on 128x32.
+The compact text screen is opt-in only via
 `CONFIG_ZMK_DONGLE_DISPLAY_STATUS_SCREEN=y`.
 The Dilemma dongle uses `dongle_display_relay`, not `dongle_display`: no display
 or local battery sampling is enabled on it. The Zen's separate optional dongle
