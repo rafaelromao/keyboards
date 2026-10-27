@@ -37,8 +37,11 @@ the other half's battery merely by enabling the built-in widgets.
 ## Selected fallback
 
 Extend `~/projects/zmk-dongle-display` and migrate the existing OLED build entry
-points to that fork. Keep the original animated central screen selectable, but
-default to a compact battery/connectivity screen that fits both resolutions.
+points to that fork. Preserve the original widget screen and configuration
+options as the default on central and peripheral OLEDs at both resolutions.
+The compact battery/connectivity text screen is an opt-in diagnostic view only.
+The initial implementation changed the default unnecessarily; this was corrected
+after the user clarified that existing widget appearance must not change.
 
 - `dongle_display`: OLED screen on central or peripheral.
 - `dongle_display_relay`: headless central, no display/LVGL or battery sampling.
@@ -49,6 +52,10 @@ default to a compact battery/connectivity screen that fits both resolutions.
   upstream ZMK patch is needed.
 - Separate connected, unknown battery, valid 0%, and battery-less central states;
   keep the local battery authoritative while receiving relayed records.
+- Relay layer/name, explicit modifiers, host lock indicators and WPM as atomic
+  widget snapshots. Reuse the original icon assets, positions and local Bongo Cat
+  animations. Keep all widgets available on 128x32; respect configured omissions
+  rather than disabling them based on display dimensions.
 - Coalesce changes, pace records, resend infrequent heartbeats, expire stale
   remote values, and preserve normal display blanking and peripheral sleep.
 - Pair the OLED half first, or change the receiver source-ID mask. Source IDs

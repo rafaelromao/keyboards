@@ -51,6 +51,24 @@ class DongleTests(unittest.TestCase):
         self.assertEqual(len(builds), 1)
         self.assertEqual(builds[0][:2], ["bastardkb/dilemma", "cl"])
 
+    def test_complete_dilemma_alias_builds_all_four_shields(self):
+        builds = self.builds("m", "-c")
+        self.assertEqual([build[:2] for build in builds], [
+            ["bastardkb/dilemma", "cl"],
+            ["bastardkb/dilemma", "pr"],
+            ["bastardkb/dilemma", "pl"],
+            ["bastardkb/dilemma", "cd"],
+        ])
+
+    def test_peripheral_preserves_small_display_widget_selection(self):
+        central = (DILEMMA / "dilemma_central_left.conf").read_text()
+        peripheral = (DILEMMA / "dilemma_peripheral_left.conf").read_text()
+        for widget in ("BONGO_CAT", "MODIFIERS", "LAYER"):
+            setting = f"CONFIG_ZMK_DONGLE_DISPLAY_{widget}=n"
+            self.assertIn(setting, central)
+            self.assertIn(setting, peripheral)
+        self.assertNotIn("CONFIG_ZMK_DONGLE_DISPLAY_STATUS_SCREEN=y", peripheral)
+
     def test_receiver_has_no_local_battery_or_display(self):
         config = (DILEMMA / "dilemma_central_dongle.conf").read_text()
         for setting in ("ZMK_BATTERY", "ZMK_BATTERY_REPORTING", "BT_BAS", "ZMK_DISPLAY"):

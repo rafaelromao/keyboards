@@ -133,9 +133,15 @@ central, where the existing pointer transforms and scaling run. `b dilemma -c`
 also includes these optional artifacts. Flash all three matching roles; the
 normal central-left firmware cannot be used as a dongle peripheral.
 
-All OLED builds now use the `rafaelromao/zmk-dongle-display` fork. Its compact
-screen fits both 128x32 and 128x64: host USB/Bluetooth connectivity, central
-battery (or USB-only status), and connection/battery status for every peripheral.
+All OLED builds now use the `rafaelromao/zmk-dongle-display` fork. The original
+widget screen and layout remain the default on both 128x32 and 128x64, including
+on a peripheral OLED. The dongle relays host connectivity, all half batteries,
+layer/name, modifiers, lock indicators and WPM; Bongo Cat animates on the OLED
+half from that WPM. All original widget configuration options remain available.
+Dilemma's peripheral-left keeps the same smaller widget selection as
+central-left (Bongo Cat, modifiers and layer disabled), but these can still be
+enabled individually, even on 128x32. The compact text screen is opt-in only via
+`CONFIG_ZMK_DONGLE_DISPLAY_STATUS_SCREEN=y`.
 The Dilemma dongle uses `dongle_display_relay`, not `dongle_display`: no display
 or local battery sampling is enabled on it. The Zen's separate optional dongle
 setup and board-specific e-paper screens are unchanged.
@@ -144,7 +150,7 @@ alternatives and why the fork was extended.
 
 **Pairing:** when changing central roles, reset settings on the dongle and both
 halves, then pair the **left/OLED first** (power the right off until the left
-has connected). `P1`/`P2` denote pairing order, not physical sides. If the OLED
+has connected). Battery rows follow pairing order, not physical sides. If the OLED
 is already source 1 instead, set
 `CONFIG_ZMK_DONGLE_DISPLAY_STATUS_RECEIVERS=0x2` in
 `dilemma_central_dongle.conf`. Resetting settings clears host bonds too, so
