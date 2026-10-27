@@ -280,18 +280,15 @@
          * here does that, as each marker follows a real key.
          *
          * The module matches a dead key's modifiers exactly, counting the
-         * held ones too: a mod-morph's masking does not hide them. NORMAL's
-         * Ctrl+O, Ctrl+A and Ctrl+I (vim.dtsi's vim_*_ctrl_*) leave F23 with
-         * Ctrl held, and a held Shift would go with it the same way, so those
-         * variants are listed as well. The sticky shift lets go before the
-         * marker (quick-release, config.dtsi).
+         * held ones too: a mod-morph's masking does not hide them. Cover all
+         * 256 states, including combined and Alt/GUI modifiers, so both the
+         * press and release are swallowed without changing held modifiers.
          */
         vim_home: vim_home {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             bindings = <&mc_caret>;
-            dead-keys = <F23 LC(F23) RC(F23) LS(F23) RS(F23)
-                         F24 LC(F24) RC(F24) LS(F24) RS(F24)>;
+            dead-keys = <KEY_ALL_MODS(F23) KEY_ALL_MODS(F24)>;
 
             ADAPTIVE(caret_zero, &mc_zero, F24)
         };

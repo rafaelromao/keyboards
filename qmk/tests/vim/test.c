@@ -8,6 +8,8 @@ static uint32_t layers;
 static uint8_t mods;
 static uint8_t oneshot_mods;
 static uint16_t last_key;
+static unsigned adaptive_clear_count;
+static unsigned key_count;
 
 void layer_on(uint8_t layer) { layers |= 1UL << layer; }
 void layer_off(uint8_t layer) { layers &= ~(1UL << layer); }
@@ -15,8 +17,9 @@ uint8_t get_mods(void) { return mods; }
 uint8_t get_oneshot_mods(void) { return oneshot_mods; }
 uint16_t timer_read(void) { return 0; }
 uint16_t timer_elapsed(uint16_t start) { return 0 - start; }
-void tap_code(uint8_t keycode) { last_key = keycode; }
-void execute_keycode(uint16_t keycode) { last_key = keycode; }
+void tap_code(uint8_t keycode) { last_key = keycode; ++key_count; }
+void execute_keycode(uint16_t keycode) { last_key = keycode; ++key_count; }
+void adaptive_clear(void) { ++adaptive_clear_count; }
 
 static bool normal_layer(void) { return layers & (1UL << _VIM_NORMAL); }
 
@@ -41,12 +44,30 @@ static void base_ctrl_c(bool modtap, bool oneshot) {
 }
 
 static void assert_i_enters_insert(void) {
+    unsigned clears = adaptive_clear_count;
+    unsigned keys = key_count;
     vim_modtap_tap(KC_I);
     assert(!normal_layer());
-    assert(last_key == KC_F23);
+    assert(last_key == KC_I);
+    assert(key_count == keys + 1);
+    assert(adaptive_clear_count == clears + 1);
 }
 
 int main(void) {
+    // Insert and change macros clear the antecedent without sending F23.
+    const uint16_t commands[] = {VIM_O, VIM_A, VIM_I, VIM_CE, VIM_CI, VIM_CA};
+    const uint16_t expected[] = {KC_O, KC_A, KC_I, KC_E, KC_I, KC_A};
+    for (unsigned i = 0; i < sizeof(commands) / sizeof(commands[0]); ++i) {
+        assert(process_vim_kc(VIM_ON, true));
+        unsigned clears = adaptive_clear_count;
+        unsigned keys = key_count;
+        assert(process_vim_kc(commands[i], true));
+        assert(!normal_layer());
+        assert(last_key == expected[i]);
+        assert(key_count == keys + 1);
+        assert(adaptive_clear_count == clears + 1);
+    }
+
     // Existing Ctrl+C behavior when a NORMAL mod-tap handles the tap.
     enter_visual();
     mods = MOD_MASK_CTRL;
@@ -95,5 +116,5 @@ int main(void) {
     vim_base_hold(false);
     assert(!normal_layer());
 
-    puts("PASS: base Ctrl+C exits VISUAL, preserves held overrides, and i enters INSERT");
+    puts("PASS: insert/change clear the antecedent without markers; base Ctrl+C exits VISUAL and preserves held overrides");
 }

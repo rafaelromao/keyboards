@@ -1,4 +1,14 @@
-    /* LAYER TAPS */    
+    /* All 256 HID modifier combinations, for adaptive-key's exact dead-key matcher. */
+    #define KEY_MODS_LC(KEY) KEY LC(KEY)
+    #define KEY_MODS_LS(KEY) KEY_MODS_LC(KEY) KEY_MODS_LC(LS(KEY))
+    #define KEY_MODS_LA(KEY) KEY_MODS_LS(KEY) KEY_MODS_LS(LA(KEY))
+    #define KEY_MODS_LG(KEY) KEY_MODS_LA(KEY) KEY_MODS_LA(LG(KEY))
+    #define KEY_MODS_RC(KEY) KEY_MODS_LG(KEY) KEY_MODS_LG(RC(KEY))
+    #define KEY_MODS_RS(KEY) KEY_MODS_RC(KEY) KEY_MODS_RC(RS(KEY))
+    #define KEY_MODS_RA(KEY) KEY_MODS_RS(KEY) KEY_MODS_RS(RA(KEY))
+    #define KEY_ALL_MODS(KEY) KEY_MODS_RA(KEY) KEY_MODS_RA(RG(KEY))
+
+    /* LAYER TAPS */
 
     #define LAYERTAP_TP(NAME, BINDINGS) \
          NAME: NAME { \
