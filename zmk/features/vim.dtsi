@@ -103,7 +103,7 @@
          * zmk-vim-mode Spoon on macOS), so the daemon follows a decision made
          * on the keyboard instead of overruling it at its next one:
          *
-         * Hyper+Esc returns to auto and Meh+Esc sets sticky raw on both
+         * Hyper+Esc returns to auto and Meh+Esc sets sticky off on both
          * Hyprland and the macOS Spoon.
          *
          * Neither toggles, so a chord sent twice confirms the state instead of

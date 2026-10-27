@@ -381,7 +381,7 @@ They also report a *raw* state, for the moments when my keys must reach the edit
 
 For the editors that report nothing, like an IDE without its plugin or vim over SSH, the host only says that a VIM-like editor is focused, and the keyboard infers the mode by itself, watching the keys I press, exactly as it always did. I call this *legacy mode*.
 
-Entering and leaving it by hand is announced to the host with two chords: *Hyper+Esc* when the combo turns it on, *Meh+Esc* when I leave it, with *cancel* or the leave combo. On Omarchy these return to automatic editor tracking and force sticky raw respectively; the zmk-vim-mode Spoon handles the chords on macOS.
+Entering and leaving it by hand is announced to the host with two chords: *Hyper+Esc* when the combo turns it on, *Meh+Esc* when I leave it, with *cancel* or the leave combo. On Omarchy and macOS these return to automatic editor tracking and force sticky off respectively. Disabling hides the status bar indicator until vim mode is enabled again.
 
 ![img](img/diagrams/vim.png)
 
