@@ -263,10 +263,32 @@
             bindings = <&macro_tap &kp N0>;
         };
 
+        /*
+         * F24 and F23 are markers for the adaptive keys, never keys for the
+         * host: mc_caret leaves F24 behind so that a second ^ types 0, and the
+         * vim insert macros below leave F23 so that the vowel they typed is no
+         * longer the antecedent. Sent as keys, Linux handed them to Neovim as
+         * literal <F24> and <F23>.
+         *
+         * As dead keys, urob's adaptive-key records them as the last key and
+         * swallows them. Modules link ahead of ZMK's own listeners, so the
+         * HID listener never sees them, and neither do the sticky layers or
+         * &key_repeat. Auto-layer, a module listed before adaptive-key in
+         * scripts/zmk.sh, still does: caps word ends at ^ as before.
+         * Dead keys are global to all adaptive keys, so this one list covers
+         * them all. A dead key straight after another one is sent; no macro
+         * here does that, as each marker follows a real key.
+         *
+         * The module matches a dead key's modifiers exactly, counting the
+         * held ones too: a mod-morph's masking does not hide them. Cover all
+         * 256 states, including combined and Alt/GUI modifiers, so both the
+         * press and release are swallowed without changing held modifiers.
+         */
         vim_home: vim_home {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             bindings = <&mc_caret>;
+            dead-keys = <KEY_ALL_MODS(F23) KEY_ALL_MODS(F24)>;
 
             ADAPTIVE(caret_zero, &mc_zero, F24)
         };
@@ -289,13 +311,18 @@
 
         MACRO(mc_save_esc_vim         , &mc_save &lm_esc_vim)
 
-        MACRO(mc_o_vim,  &vim_o_ctrl_o &kp F23) // reset antecedent key for magic keys (F23: F24 is caret_zero's trigger) 
-        MACRO(mc_a_vim,  &vim_a_ctrl_a &kp F23) // reset antecedent key for magic keys 
-        MACRO(mc_i_vim,  &vim_i_ctrl_i &kp F23) // reset antecedent key for magic keys 
+        // F23 resets the magic keys' antecedent, so the vowel typed here does
+        // not make them adapt (F24 would: it is caret_zero's trigger). It is a
+        // dead key (vim_home), so it never reaches the host, and it no longer
+        // spends the CHANGE sticky that vim_ca and vim_ci re-arm: the text
+        // object's key is read on CHANGE, as those macros intend.
+        MACRO(mc_o_vim,  &vim_o_ctrl_o &kp F23)
+        MACRO(mc_a_vim,  &vim_a_ctrl_a &kp F23)
+        MACRO(mc_i_vim,  &vim_i_ctrl_i &kp F23)
         MACRO(mc_c_vim,  &lm_c_vim)
-        MACRO(mc_ca_vim, &vim_ca       &kp F23) // reset antecedent key for magic keys 
-        MACRO(mc_ci_vim, &vim_ci       &kp F23) // reset antecedent key for magic keys 
-        MACRO(mc_ce_vim, &kp E         &kp F23) // reset antecedent key for magic keys
+        MACRO(mc_ca_vim, &vim_ca       &kp F23)
+        MACRO(mc_ci_vim, &vim_ci       &kp F23)
+        MACRO(mc_ce_vim, &kp E         &kp F23)
 
         MODTAP_TP(mt_i_vim, &mc_i_vim)
         MODTAP_TP(mt_i_visual_vim, &mm_i_visual_vim)
