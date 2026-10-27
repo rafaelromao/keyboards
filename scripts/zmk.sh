@@ -43,7 +43,8 @@ usage() {
     echo "  -n <snippets>          Comma-separated list of snippets (replaces the default: ${DEF_SNIPPETS[*]})."
     echo "  -e <extra_shields>     Comma-separated list of additional shields (default: empty)."
     echo "  -d <flags>             Comma-separated list of extra -D flags (default: empty)."
-    echo "  -m <modules>           Comma-separated list of modules, added to the defaults (${DEF_MODULES[*]})."
+    echo "  -m <modules>           Comma-separated repos[:revision] or absolute local module paths."
+    echo "                         Added to the defaults (${DEF_MODULES[*]})."
     echo "  -h, --help             Display this help message."
     exit 1
 }
@@ -182,6 +183,14 @@ PREFIX="$PROJECT_DIR/modules/"
 TEMP=""
 IFS=',' read -ra ADDR <<< "$MODULES"
 for ITEM in "${ADDR[@]}"; do
+    if [[ "$ITEM" == /* ]]; then
+        if [[ ! -f "$ITEM/zephyr/module.yml" ]]; then
+            echo "Not a Zephyr module: $ITEM" >&2
+            exit 1
+        fi
+        TEMP+="$ITEM;"
+        continue
+    fi
     # separate module and revision
     MODULE_REVISION=""
     if [[ "$ITEM" == *":"* ]]; then

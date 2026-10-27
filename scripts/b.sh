@@ -2,6 +2,9 @@
 
 set -euo pipefail
 
+# The fork supports the OLED on a split peripheral and the headless relay.
+DISPLAY_MODULE="${ZMK_DONGLE_DISPLAY_MODULE:-rafaelromao/zmk-dongle-display}"
+
 # --- Build Functions ---
 
 build_reset() {
@@ -15,7 +18,7 @@ build_rommana() {
     if [[ "$complete" == "true" ]]; then
         ./scripts/zmk.sh "mabroum/rommana" "pr" "$@"
         ./scripts/zmk.sh "mabroum/rommana" "pl" "$@"
-        ./scripts/zmk.sh "mabroum/rommana" "cd" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
+        ./scripts/zmk.sh "mabroum/rommana" "cd" "-e" "dongle_display" "-m" "$DISPLAY_MODULE" "$@"
     fi
 }
 
@@ -29,7 +32,7 @@ build_wired_rommana() {
 
 build_diamond() {
     echo "--- Building Diamond ---"
-    ./scripts/zmk.sh "rafaelromao/diamond" "cd" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
+    ./scripts/zmk.sh "rafaelromao/diamond" "cd" "-e" "dongle_display" "-m" "$DISPLAY_MODULE" "$@"
     if [[ "$complete" == "true" ]]; then
         ./scripts/zmk.sh "rafaelromao/diamond" "pr" "$@"
         ./scripts/zmk.sh "rafaelromao/diamond" "pl" "$@"
@@ -51,7 +54,7 @@ build_choc_diamond() {
     if [[ "$complete" == "true" ]]; then
         ./scripts/zmk.sh "rafaelromao/choc_diamond" "pr" "$@"
         ./scripts/zmk.sh "rafaelromao/choc_diamond" "pl" "$@"
-        ./scripts/zmk.sh "rafaelromao/choc_diamond" "cd" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
+        ./scripts/zmk.sh "rafaelromao/choc_diamond" "cd" "-e" "dongle_display" "-m" "$DISPLAY_MODULE" "$@"
     fi
 }
 
@@ -68,11 +71,11 @@ build_zen() {
 
 build_dilemma() {
     echo "--- Building Dilemma ---"
-    ./scripts/zmk.sh "bastardkb/dilemma" "cl" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
+    ./scripts/zmk.sh "bastardkb/dilemma" "cl" "-e" "dongle_display" "-m" "$DISPLAY_MODULE" "$@"
     if [[ "$complete" == "true" ]]; then
         ./scripts/zmk.sh "bastardkb/dilemma" "pr" "$@"
-        ./scripts/zmk.sh "bastardkb/dilemma" "pl" "$@"
-        ./scripts/zmk.sh "bastardkb/dilemma" "cd" "$@"
+        ./scripts/zmk.sh "bastardkb/dilemma" "pl" "-e" "dongle_display" "-m" "$DISPLAY_MODULE" "$@"
+        ./scripts/zmk.sh "bastardkb/dilemma" "cd" "-e" "dongle_display_relay" "-m" "$DISPLAY_MODULE" "$@"
     fi
 }
 
