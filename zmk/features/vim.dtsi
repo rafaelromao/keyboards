@@ -103,13 +103,11 @@
          * zmk-vim-mode Spoon on macOS), so the daemon follows a decision made
          * on the keyboard instead of overruling it at its next one:
          *
-         *   Hyper+Esc  entered  zmk-vim-mode set legacy --sticky --no-toggle
-         *   Meh+Esc    left     zmk-vim-mode set auto
+         * On Linux Hyper+Esc returns to auto and Meh+Esc sets sticky raw.
+         * On macOS the Spoon may use different mappings.
          *
          * Neither toggles, so a chord sent twice confirms the state instead of
-         * flipping it. That is what lets cancel tell the host too. It used to
-         * stay silent, because Meh+Esc toggled a sticky "off" on every press,
-         * and a vim mode entered by hand then outlived the cancel on the host.
+         * flipping it. That is what lets cancel tell the host too.
          *
          * vim_mode_on is a layer-morph so that pressing the combo while
          * already in vim mode does nothing, instead of injecting a second Esc.

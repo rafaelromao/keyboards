@@ -18,8 +18,8 @@
             // Leaving vim mode is part of cancelling, and the host must hear
             // of it, or a vim mode entered by hand outlives the cancel there.
             // vim_leave_notify goes first, while the vim layers it checks are
-            // still on; its Meh+Esc means `set auto`, which is harmless to
-            // repeat (features/vim.dtsi).
+            // still on; its Meh+Esc notification is harmless to repeat
+            // (features/vim.dtsi).
             bindings = <&macro_tap &vim_leave_notify &kp K_CANCEL &mc_base_reset>;
         };
 

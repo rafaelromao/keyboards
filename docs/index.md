@@ -379,9 +379,9 @@ This is done by [zmk-vim-mode](https://github.com/rafaelromao/zmk-vim-mode), a p
 
 They also report a *raw* state, for the moments when my keys must reach the editor untouched: plugin windows where the letters are commands, like the dashboard or the file explorer, the terminal, and while a leader sequence is pending. Without it my normal layer would remap those letters and those windows would be unusable.
 
-For the editors that report nothing, like an IDE without its plugin or vim over SSH, the host only says that a VIM-like editor is focused, and the keyboard infers the mode by itself, watching the keys I press, exactly as it always did. The same happens when I toggle VIM Mode by hand, with a combo. I call this *legacy mode*.
+For the editors that report nothing, like an IDE without its plugin or vim over SSH, the host only says that a VIM-like editor is focused, and the keyboard infers the mode by itself, watching the keys I press, exactly as it always did. I call this *legacy mode*.
 
-Entering and leaving it by hand is announced to the host with two chords: *Hyper+Esc* when the combo turns it on, *Meh+Esc* when I leave it, with *cancel* or the leave combo. Hyprland binds them on Omarchy, and the zmk-vim-mode Spoon for Hammerspoon on macOS, so the host follows a decision made on the keyboard instead of undoing it at its next one, and its status bar shows it.
+Entering and leaving it by hand is announced to the host with two chords: *Hyper+Esc* when the combo turns it on, *Meh+Esc* when I leave it, with *cancel* or the leave combo. On Omarchy these return to automatic editor tracking and force sticky raw respectively; the zmk-vim-mode Spoon handles the chords on macOS.
 
 ![img](img/diagrams/vim.png)
 
