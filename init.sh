@@ -77,6 +77,22 @@ GIT_ENV=(
     -e GIT_CONFIG_KEY_3=url.https://github.com/.insteadOf -e "GIT_CONFIG_VALUE_3=git@github.com:"
 )
 
+# Prefer the local display fork while developing it. Absolute local modules are
+# consumed as-is by zmk.sh, so unpublished changes are not replaced by a clone.
+DISPLAY_MOUNT=()
+DISPLAY_MODULE_PATH="${ZMK_DONGLE_DISPLAY_MODULE:-$HOME/projects/zmk-dongle-display}"
+if [[ -f "$DISPLAY_MODULE_PATH/zephyr/module.yml" ]]; then
+    DISPLAY_MOUNT=(
+        -v "$DISPLAY_MODULE_PATH:/display-module:ro,Z"
+        -e ZMK_DONGLE_DISPLAY_MODULE=/display-module
+    )
+elif [[ "$DISPLAY_MODULE_PATH" == /* && -n "${ZMK_DONGLE_DISPLAY_MODULE:-}" ]]; then
+    echo "Not a Zephyr module: $DISPLAY_MODULE_PATH" >&2
+    exit 1
+elif [[ -n "${ZMK_DONGLE_DISPLAY_MODULE:-}" ]]; then
+    DISPLAY_MOUNT=(-e "ZMK_DONGLE_DISPLAY_MODULE=$ZMK_DONGLE_DISPLAY_MODULE")
+fi
+
 echo "🚀 Starting ZMK Interactive Session..."
 
 # --- 5. Run Container ---
@@ -88,6 +104,7 @@ podman run --rm -it \
     -v "$VOL_MODULES:/workdir/modules:Z" \
     -v "$VOL_ZEPHYR:/root/.zephyr:Z" \
     "${GIT_ENV[@]}" \
+    "${DISPLAY_MOUNT[@]}" \
     $SSH_MOUNT \
     -e CCACHE_DIR=/root/.cache/ccache \
     "$IMAGE_NAME" \

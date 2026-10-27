@@ -1,6 +1,3 @@
-[submodule "modules/englmaxi/zmk-dongle-display"]
-	path = modules/englmaxi/zmk-dongle-display
-	url = git@github.com:englmaxi/zmk-dongle-display
 [submodule "modules/urob/zmk"]
 	path = modules/urob/zmk
 	url = https://github.com/urob/zmk

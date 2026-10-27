@@ -2,6 +2,12 @@
 
 set -euo pipefail
 
+# Override with an absolute path to test the module's working tree before publishing.
+DISPLAY_MODULE="${ZMK_DONGLE_DISPLAY_MODULE:-rafaelromao/zmk-dongle-display}"
+if [[ -z "${ZMK_DONGLE_DISPLAY_MODULE:-}" && -f "$HOME/projects/zmk-dongle-display/zephyr/module.yml" ]]; then
+    DISPLAY_MODULE="$HOME/projects/zmk-dongle-display"
+fi
+
 # --- Build Functions ---
 
 build_reset() {
@@ -15,7 +21,7 @@ build_rommana() {
     if [[ "$complete" == "true" ]]; then
         ./scripts/zmk.sh "mabroum/rommana" "pr" "$@"
         ./scripts/zmk.sh "mabroum/rommana" "pl" "$@"
-        ./scripts/zmk.sh "mabroum/rommana" "cd" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
+        ./scripts/zmk.sh "mabroum/rommana" "cd" "-e" "dongle_display" "-m" "$DISPLAY_MODULE" "$@"
     fi
 }
 
@@ -29,7 +35,7 @@ build_wired_rommana() {
 
 build_diamond() {
     echo "--- Building Diamond ---"
-    ./scripts/zmk.sh "rafaelromao/diamond" "cd" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
+    ./scripts/zmk.sh "rafaelromao/diamond" "cd" "-e" "dongle_display" "-m" "$DISPLAY_MODULE" "$@"
     if [[ "$complete" == "true" ]]; then
         ./scripts/zmk.sh "rafaelromao/diamond" "pr" "$@"
         ./scripts/zmk.sh "rafaelromao/diamond" "pl" "$@"
@@ -51,7 +57,7 @@ build_choc_diamond() {
     if [[ "$complete" == "true" ]]; then
         ./scripts/zmk.sh "rafaelromao/choc_diamond" "pr" "$@"
         ./scripts/zmk.sh "rafaelromao/choc_diamond" "pl" "$@"
-        ./scripts/zmk.sh "rafaelromao/choc_diamond" "cd" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
+        ./scripts/zmk.sh "rafaelromao/choc_diamond" "cd" "-e" "dongle_display" "-m" "$DISPLAY_MODULE" "$@"
     fi
 }
 
@@ -68,12 +74,20 @@ build_zen() {
 
 build_dilemma() {
     echo "--- Building Dilemma ---"
-    ./scripts/zmk.sh "bastardkb/dilemma" "cl" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
+    ./scripts/zmk.sh "bastardkb/dilemma" "cl" "-e" "dongle_display" "-m" "$DISPLAY_MODULE" "$@"
     if [[ "$complete" == "true" ]]; then
         ./scripts/zmk.sh "bastardkb/dilemma" "pr" "$@"
-        ./scripts/zmk.sh "bastardkb/dilemma" "pl" "$@"
-        ./scripts/zmk.sh "bastardkb/dilemma" "cd" "$@"
+        ./scripts/zmk.sh "bastardkb/dilemma" "pl" "-e" "dongle_display" "-m" "$DISPLAY_MODULE" "$@"
+        ./scripts/zmk.sh "bastardkb/dilemma" "cd" "-e" "dongle_display_relay" "-m" "$DISPLAY_MODULE" "$@"
     fi
+}
+
+# The optional three-device setup leaves the normal left-central build intact.
+build_dilemma_dongle() {
+    echo "--- Building Dilemma with dongle ---"
+    ./scripts/zmk.sh "bastardkb/dilemma" "cd" "-e" "dongle_display_relay" "-m" "$DISPLAY_MODULE" "$@"
+    ./scripts/zmk.sh "bastardkb/dilemma" "pl" "-e" "dongle_display" "-m" "$DISPLAY_MODULE" "$@"
+    ./scripts/zmk.sh "bastardkb/dilemma" "pr" "$@"
 }
 
 # The QMK boards build with the QMK toolchain that the image carries next to
@@ -119,13 +133,14 @@ if [[ -z "${1:-}" || "${1:-}" == "-h" || "${1:-}" == "--help" ]]; then
     echo "correct parameters."
     echo "Additional arguments are passed to zmk.sh; the QMK boards only take -p."
     echo
-    echo "Available keyboards: all, reset, rommana, wired_rommana, diamond, wired_diamond, choc_diamond, zen, dilemma, bm40, xd75"
+    echo "Available keyboards: all, reset, rommana, wired_rommana, diamond, wired_diamond, choc_diamond, zen, dilemma, dilemma-dongle, bm40, xd75"
     echo
     echo "Examples:"
     echo "  $(basename "$0") rommana"
     echo "  $(basename "$0") rommana -c"
     echo "  $(basename "$0") rommana -c -v"
     echo "  $(basename "$0") bm40 -p"
+    echo "  $(basename "$0") dilemma-dongle"
     exit 1
 fi
 
@@ -174,6 +189,9 @@ case "$KEYBOARD" in
         ;;
     dilemma|m)
         build_dilemma "$@"
+        ;;
+    dilemma-dongle|md)
+        build_dilemma_dongle "$@"
         ;;
     bm40|bm)
         build_bm40 "$@"

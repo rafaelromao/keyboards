@@ -80,6 +80,7 @@ This keymap is implemented using ZMK, with the following external modules:
 - [OS Detection](https://github.com/rafaelromao/zmk-os-detection)
 - [Sentence Case](https://github.com/rafaelromao/zmk-sentence-case)
 - [Vim Mode](https://github.com/rafaelromao/zmk-vim-mode)
+- [Dongle Display](https://github.com/rafaelromao/zmk-dongle-display) (OLED status and peripheral relay)
 
 ## QMK
 
@@ -103,7 +104,7 @@ zmk mabroum/rommana cl
 zmk rafaelromao/wired_diamond l -b xiao_rp2040//zmk
 
 # Builds the central dongle shield of the Choc Diamond, specifying an extra shield and an external module to handle the display
-zmk rafaelromao/choc_diamond cd -e dongle_display -m englmaxi/zmk-dongle-display
+zmk rafaelromao/choc_diamond cd -e dongle_display -m rafaelromao/zmk-dongle-display
 ```
 
 To make it even simpler, I have a [b](scripts/b.sh) script that can be used to build the central sides using default configurations, and the two QMK boards.
@@ -115,6 +116,64 @@ b wd # builds the left side of the wired diamond keyboard, equivalent to the com
 
 zmk rafaelromao/wired_diamond l -b xiao_rp2040//zmk
 ```
+
+### Dilemma: optional headless dongle
+
+The normal `b dilemma` build keeps the left half as central. To move the central
+role to a USB-powered nice!nano dongle without a battery or OLED, build all
+three devices with:
+
+```sh
+b dilemma-dongle
+```
+
+This builds `dilemma_central_dongle`, `dilemma_peripheral_left` (OLED), and
+`dilemma_peripheral_right` (Cirque). The right's input is still forwarded to the
+central, where the existing pointer transforms and scaling run. `b dilemma -c`
+also includes these optional artifacts. Flash all three matching roles; the
+normal central-left firmware cannot be used as a dongle peripheral.
+
+All OLED builds now use the `rafaelromao/zmk-dongle-display` fork. Its compact
+screen fits both 128x32 and 128x64: host USB/Bluetooth connectivity, central
+battery (or USB-only status), and connection/battery status for every peripheral.
+The Dilemma dongle uses `dongle_display_relay`, not `dongle_display`: no display
+or local battery sampling is enabled on it. The Zen's separate optional dongle
+setup and board-specific e-paper screens are unchanged.
+The [module comparison](docs/zmk-display-module-research.md) records the reviewed
+alternatives and why the fork was extended.
+
+**Pairing:** when changing central roles, reset settings on the dongle and both
+halves, then pair the **left/OLED first** (power the right off until the left
+has connected). `P1`/`P2` denote pairing order, not physical sides. If the OLED
+is already source 1 instead, set
+`CONFIG_ZMK_DONGLE_DISPLAY_STATUS_RECEIVERS=0x2` in
+`dilemma_central_dongle.conf`. Resetting settings clears host bonds too, so
+remove old host pairings and re-pair them. To switch back, flash central-left
+plus peripheral-right, reset their settings, and pair again.
+`b reset` builds the nice!nano settings-reset image; flash that before the
+matching role firmware when clearing device settings.
+
+`init.sh` automatically mounts `~/projects/zmk-dongle-display` read-only and
+uses that local working tree when present, so unpublished module changes are
+included. For another container setup, mount it manually and select it with:
+
+```sh
+# Mount ~/projects/zmk-dongle-display as /display-module in the build container.
+ZMK_DONGLE_DISPLAY_MODULE=/display-module bash scripts/b.sh dilemma-dongle
+```
+
+`scripts/zmk.sh -m` accepts absolute local module paths without fetching or
+checking them out. For an initialized toolchain/module cache, run
+`ZMK_DONGLE_DISPLAY_MODULE=/display-module bash scripts/validate-displays.sh`
+inside the container to build all seven affected OLED/receiver targets and
+verify generated Dilemma roles. This does not flash devices or measure battery
+life; OLED blanking and both peripheral sleep settings remain enabled.
+
+After flashing, verify that both halves report batteries, powering the right
+off changes `P2` to disconnected, the Cirque still moves/scrolls correctly,
+and host output/profile changes appear on the left OLED. Also check that the
+OLED blanks after a minute idle and wakes on a left key. Battery-life gains
+and physical OLED/BLE operation still need testing on the actual hardware.
 
 ## Diagram
 

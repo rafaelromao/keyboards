@@ -9,3 +9,4 @@ tmp/
 /modules/
 token-optimizer/
 .sandman/
+__pycache__/
