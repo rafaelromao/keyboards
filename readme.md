@@ -80,7 +80,7 @@ This keymap is implemented using ZMK, with the following external modules:
 - [OS Detection](https://github.com/rafaelromao/zmk-os-detection)
 - [Sentence Case](https://github.com/rafaelromao/zmk-sentence-case)
 - [Vim Mode](https://github.com/rafaelromao/zmk-vim-mode)
-- [Dongle Display](https://github.com/rafaelromao/zmk-dongle-display) (OLED status and peripheral relay)
+- [Dongle Display](https://github.com/rafaelromao/zmk-dongle-display)
 
 ## QMK
 
