@@ -214,7 +214,7 @@
         MACRO(mc_hugs,  &kp LBKT &kp RBKT &kp SQT &kp S)
         MACRO(mc_otask, &kp MINUS &kp SPACE &kp LBKT &kp SPACE &kp RBKT &kp SPACE)
         MACRO(mc_oref,  &kp LBKT &kp LBKT)
-        MACRO(mc_end_do_ent, &kp END &kp SPACE &kp D &kp O &kp ENTER)
+        MACRO(mc_pars_brace_new, &kp LPAR &kp RPAR &kp LBRC &kp ENTER)
 
 
         // Vim

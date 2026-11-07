@@ -45,7 +45,7 @@ enum seq_ids {
     SEQ_HCURLY,            // #{
     SEQ_PCURLY,            // %{
     SEQ_BRACES_NEW,        // end space { enter
-    SEQ_END_DO_ENT,        // end space do enter
+    SEQ_PARS_BRACE_NEW,    // ( ) { enter
     SEQ_DEG,               // ° (shift+option+8, macOS)
     SEQ_AT_AT,             // @@
     SEQ_TISL,              // ~/

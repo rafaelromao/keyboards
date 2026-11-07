@@ -187,7 +187,7 @@
         COMBO(cb_and,           LHR LHM,         &th_and 0 0,            NUM_LAYERS)
         COMBO(cb_or,            LBR LBM,         &th_or 0 0,             NUM_LAYERS)
 
-        COMBO(cb_enddoent,      LTR LTM LTI,     &mc_end_do_ent,         NUM_LAYERS)
+        COMBO(cb_pars_brace,    LTR LTM LTI,     &mc_pars_brace_new,     NUM_LAYERS)
         COMBO(cb_par_semi,      LHR LHM LHI,     &th_pars_semi 0 0,      NUM_LAYERS)
         COMBO(cb_ltgtlprp,      LBR LBM LBI,     &th_end_ltgtlprp 0 0,   NUM_LAYERS)
 

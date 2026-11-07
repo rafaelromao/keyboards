@@ -62,7 +62,7 @@
 #define COMBO_LIST \
     /* --- global chords --- */ \
     VIMX(vim_on,        ALPHA1_L | VIM_CMD,           VIM_ON,               P_LTR, P_LTM, P_LTI) \
-    X(end_do_ent,       NUM_L,                        MC_END_DO_ENT,        P_LTR, P_LTM, P_LTI) \
+    X(pars_brace_new,   NUM_L,                        MC_PARS_BRACE_NEW,    P_LTR, P_LTM, P_LTI) \
     X(bslash_quo,       SYM_L,                        TH(TH_BSLASH_QUO),    P_LTR, P_LTM, P_LTI) \
     X(enter,            WITH_ENTER_L,                 VIM_ENT,              P_RHM, P_RHR, P_R0) \
     X(backspace,        WITH_BSPC_L,                  KC_BSPC,              P_RTM, P_RTR) \

@@ -190,7 +190,7 @@ enum custom_keycodes {
     MC_HCURLY,             // #{
     MC_PCURLY,             // %{
     MC_BRACES_NEW,         // end, space, {, enter
-    MC_END_DO_ENT,         // end, space, do, enter
+    MC_PARS_BRACE_NEW,     // ( ) { enter
     MC_DEG,                // ° (Option chord on macOS, AltGr+Shift+; on Linux)
     MC_AT_AT,              // @@
     MC_TISL,               // ~/
