@@ -1,10 +1,10 @@
 # Copyright (c) 2021 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_SLIM_DIAMOND_CENTRAL_DONGLE || SHIELD_SLIM_DIAMOND_CENTRAL_LEFT
+if SHIELD_PRISMA_CENTRAL_DONGLE || SHIELD_PRISMA_CENTRAL_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Slim Diamond"
+    default "Prisma"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
@@ -14,7 +14,7 @@ endif
 
 # The display is the dongle's; without this guard the LVGL defaults below
 # competed with the dongle-display module's own on every other build.
-if SHIELD_SLIM_DIAMOND_CENTRAL_DONGLE
+if SHIELD_PRISMA_CENTRAL_DONGLE
 
 if ZMK_DISPLAY
 
@@ -51,7 +51,7 @@ endif
 endif
 
 
-if SHIELD_SLIM_DIAMOND_CENTRAL_DONGLE || SHIELD_SLIM_DIAMOND_CENTRAL_LEFT || SHIELD_SLIM_DIAMOND_PERIPHERAL_LEFT || SHIELD_SLIM_DIAMOND_PERIPHERAL_RIGHT
+if SHIELD_PRISMA_CENTRAL_DONGLE || SHIELD_PRISMA_CENTRAL_LEFT || SHIELD_PRISMA_PERIPHERAL_LEFT || SHIELD_PRISMA_PERIPHERAL_RIGHT
 
 config ZMK_SPLIT
     default y

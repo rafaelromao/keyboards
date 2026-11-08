@@ -2,7 +2,7 @@
  * Copyright (c) 2026 Rafael Romão
  * SPDX-License-Identifier: MIT
  *
- * The Slim Diamond reads each key on its own pin. A half's direct kscan
+ * Prisma reads each key on its own pin. A half's direct kscan
  * reports key i as RC(0,i), in the PCB's key order:
  *
  *   0 pinky   1 ring top    2 ring home    3 ring bottom

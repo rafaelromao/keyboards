@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: MIT
  */
-#include "slim_diamond_transform.dtsi"
+#include "prisma_transform.dtsi"
 
 / {
     chosen {
@@ -37,4 +37,4 @@
         inversion-on;
         prechargep = <0x22>;
     };
-}; 
+};
