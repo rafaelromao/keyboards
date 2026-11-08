@@ -1,0 +1,5 @@
+name: keymap-test-controls
+build:
+  cmake: .
+  settings:
+    dts_root: .

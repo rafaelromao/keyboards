@@ -38,12 +38,12 @@ static const uint16_t seq_eqeq[]              PROGMEM = {KC_EQL, KC_EQL, 0};
 static const uint16_t seq_noteq[]             PROGMEM = {KC_EXLM, KC_EQL, 0};
 static const uint16_t seq_end_ltgtlprp[]      PROGMEM = {KC_END, KC_LT, KC_GT, KC_LPRN, KC_RPRN, KC_SCLN, 0};
 static const uint16_t seq_end_ltgtlprp_ent[]  PROGMEM = {KC_END, KC_LT, KC_GT, KC_LPRN, KC_RPRN, KC_SCLN, KC_ENT, 0};
-static const uint16_t seq_caret[]             PROGMEM = {KC_CIRC, KC_SPC, KC_F24, 0};
+static const uint16_t seq_caret[]             PROGMEM = {KC_CIRC, KC_SPC, 0};
 static const uint16_t seq_dcurly[]            PROGMEM = {KC_DLR, KC_LCBR, 0};
 static const uint16_t seq_hcurly[]            PROGMEM = {KC_HASH, KC_LCBR, 0};
 static const uint16_t seq_pcurly[]            PROGMEM = {KC_PERC, KC_LCBR, 0};
 static const uint16_t seq_braces_new[]        PROGMEM = {KC_END, KC_SPC, KC_LCBR, KC_ENT, 0};
-static const uint16_t seq_end_do_ent[]        PROGMEM = {KC_END, KC_SPC, KC_D, KC_O, KC_ENT, 0};
+static const uint16_t seq_pars_brace_new[]    PROGMEM = {KC_LPRN, KC_RPRN, KC_LCBR, KC_ENT, 0};
 static const uint16_t seq_deg[]               PROGMEM = {LSA(KC_8), 0};
 static const uint16_t seq_at_at[]             PROGMEM = {KC_AT, KC_AT, 0};
 static const uint16_t seq_tisl[]              PROGMEM = {KC_TILD, KC_SPC, KC_SLSH, 0};
@@ -103,7 +103,7 @@ static const uint16_t *const seqs[SEQ_COUNT] PROGMEM = {
     [SEQ_HCURLY] = seq_hcurly,
     [SEQ_PCURLY] = seq_pcurly,
     [SEQ_BRACES_NEW] = seq_braces_new,
-    [SEQ_END_DO_ENT] = seq_end_do_ent,
+    [SEQ_PARS_BRACE_NEW] = seq_pars_brace_new,
     [SEQ_DEG] = seq_deg,
     [SEQ_AT_AT] = seq_at_at,
     [SEQ_TISL] = seq_tisl,
@@ -127,7 +127,7 @@ static const uint16_t *const seqs[SEQ_COUNT] PROGMEM = {
 
 // MC_TILDE .. MC_DQTPLUSY, in the order of the keycode enum.
 static const uint8_t macro_seqs[] PROGMEM = {
-    SEQ_TILDE, SEQ_DCURLY, SEQ_HCURLY, SEQ_PCURLY, SEQ_BRACES_NEW, SEQ_END_DO_ENT,
+    SEQ_TILDE, SEQ_DCURLY, SEQ_HCURLY, SEQ_PCURLY, SEQ_BRACES_NEW, SEQ_PARS_BRACE_NEW,
     SEQ_DEG, SEQ_AT_AT, SEQ_TISL, SEQ_DS, SEQ_DDS, SEQ_EXIT, SEQ_HUGS, SEQ_OREF,
     SEQ_OTASK, SEQ_HAHA, SEQ_COLPERCSSLASH, SEQ_O_ESC, SEQ_SFT_O_ESC, SEQ_DQT0P,
     SEQ_DQT1P, SEQ_DQTPLUSP, SEQ_DQTPLUSY,

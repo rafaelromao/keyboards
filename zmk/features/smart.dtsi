@@ -18,8 +18,8 @@
             // Leaving vim mode is part of cancelling, and the host must hear
             // of it, or a vim mode entered by hand outlives the cancel there.
             // vim_leave_notify goes first, while the vim layers it checks are
-            // still on; its Meh+Esc means `set auto`, which is harmless to
-            // repeat (features/vim.dtsi).
+            // still on; its Meh+Esc notification is harmless to repeat
+            // (features/vim.dtsi).
             bindings = <&macro_tap &vim_leave_notify &kp K_CANCEL &mc_base_reset>;
         };
 
@@ -45,7 +45,7 @@
             tap-ms = <0>;
             bindings = <&vim_off &lock_off NUM &lock_off NUM_CP &lock_off CASE_A1 &lock_off CPLK_A1
                         &lock_off ALPHA2 &lock_off SFT_A2 &lock_off CASE_A2 &lock_off CCEDIL
-                        &lock_off CASE_CCEDIL &lock_off SEN_CASE &lock_off ALTREP2 &lock_off MEHS
+                        &lock_off CASE_CCEDIL &lock_off ALTREP2 &lock_off MEHS
                         &lock_off NAV &lock_off NAV_CP &lock_off MEDIA &lock_off FUN>;
         };
         LAYERTAP_TP(lt_cancel,     &tc_cancel)
@@ -126,13 +126,16 @@
             tapping-term-ms = <QUICK_TAP_TERM>;
             flavor = "tap-preferred";
             quick-tap-ms = <0>;
-            bindings = <&mo>, <&mm_shift>;
+            bindings = <&mo>, <&sentence_shift>;
         };
 
         // ******************** SMART THUMBS ******************** //
 
         MACRO(mc_alpha2, &sl ALPHA2)
-        MACRO(mc_sft_a2, &sl SFT_A2)
+        // Same as tc_smart_word: a sticky shift is not spent by &sl, so it
+        // was still down for the first SFT_A2 key and released mid-press,
+        // dropping that key's RS() too. Let go of it; the layer shifts.
+        MACRO(mc_sft_a2, &sl SFT_A2 &macro_release &kp LSHFT)
         MOD_MORPH(mm_alpha2_shifted2, MOD_LSFT|MOD_RSFT, &mc_sft_a2, &mc_alpha2)
 
         MACRO(mc_case_a2, &sl CASE_A2)
@@ -166,7 +169,7 @@
             bindings = <&mm_hold_alt_gui>, <&mm_tap_alt_a2_gui>;
         };
 
-        MACRO(mc_space, &ak_space)
+        MACRO(mc_space, &sentence_space)
         MACRO(mc_sk_lgui, &sk LGUI)
         MACRO(mc_hold_numbers, &macro_press &mo NUM &macro_pause_for_release &macro_release &mo NUM)
         MACRO(mc_hold_lgui, &macro_press &kp LGUI &macro_pause_for_release &macro_release &kp LGUI)
@@ -200,19 +203,6 @@
             flavor = "tap-preferred";
             quick-tap-ms = <0>;
             bindings = <&mo>, <&mc_msk_space>;
-        };
-
-        // The L0 thumb under sentence case. SEN_CASE sits above NUM, and a
-        // layer hold sends no keycode, so the sticky layer outlived &mo NUM
-        // and its capitals shadowed the digits. NUM_CP sits above it; the
-        // first digit then releases SEN_CASE (quick-release).
-        ltn_numcp_spc: ltn_numcp_spc {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <QUICK_TAP_TERM>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <0>;
-            bindings = <&mo>, <&mm_tap_alt_space_gui>;
         };
 
     };

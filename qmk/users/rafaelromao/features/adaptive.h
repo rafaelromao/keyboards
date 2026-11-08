@@ -9,8 +9,11 @@
 #define ADAPTIVE_TIMEOUT 2000
 
 // Records a key that was just typed. Takes a 16-bit keycode: the basic key
-// and whether it was shifted are what the rules look at.
+// and whether it was shifted are what the rules look at. It sends nothing,
+// so it can also record a mark the host never sees (KC_F24 after ^).
 void adaptive_track(uint16_t keycode);
+// Forgets the previous key, as if none had been typed: no rule applies.
+void adaptive_clear(void);
 // True when the previous key was `keycode` (basic key and shift state both
 // matching) and is still within ADAPTIVE_TIMEOUT.
 bool adaptive_last_is(uint16_t keycode);

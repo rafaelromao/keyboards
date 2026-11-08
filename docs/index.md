@@ -148,7 +148,7 @@ There are also combos in the secondary alpha layer for `?`, `!`, and `-`, and `_
 
 ### Sentence Case
 
-*Sentence Case* is a feature that automatically capitalizes the next word after `space` if it is preceded by `.`, `?`, or `!`. If the *Sticky Shift* is tapped after this `space`, it will be ignored. This feature makes it much easier to start new sentences and reduces the use of the *Sticky Shift* key a lot. This feature is implemented using adaptive keys to trigger it and a layer to execute the capitalization.
+*Sentence Case* is a feature that automatically capitalizes the next word after `space` if it is preceded by `.`, `?`, or `!`. If the *Sticky Shift* is tapped after this `space`, it will be ignored. This feature makes it much easier to start new sentences and reduces the use of the *Sticky Shift* key a lot. The standalone [Sentence Case module](https://github.com/rafaelromao/zmk-sentence-case) supplies `&sentence_space` in place of `&kp SPACE`: punctuation must be within 2 seconds, and its lazy, letter-only one-shot shift expires after 1 second. No sentence-case layer is needed, and accented sentence starts still use the existing shifted-accent macros.
 
 A number typed right after that `space`, from the *numbers* layer or *Num Word*, is typed as a number and ends the sentence case, so the word after it is not capitalized.
 
@@ -379,9 +379,11 @@ This is done by [zmk-vim-mode](https://github.com/rafaelromao/zmk-vim-mode), a p
 
 They also report a *raw* state, for the moments when my keys must reach the editor untouched: plugin windows where the letters are commands, like the dashboard or the file explorer, the terminal, and while a leader sequence is pending. Without it my normal layer would remap those letters and those windows would be unusable.
 
-For the editors that report nothing, like an IDE without its plugin or vim over SSH, the host only says that a VIM-like editor is focused, and the keyboard infers the mode by itself, watching the keys I press, exactly as it always did. The same happens when I toggle VIM Mode by hand, with a combo. I call this *legacy mode*.
+For the editors that report nothing, like an IDE without its plugin or vim over SSH, the host only says that a VIM-like editor is focused, and the keyboard infers the mode by itself, watching the keys I press, exactly as it always did. I call this *legacy mode*.
 
-Entering and leaving it by hand is announced to the host with two chords: *Hyper+Esc* when the combo turns it on, *Meh+Esc* when I leave it, with *cancel* or the leave combo. Hyprland binds them on Omarchy, and the zmk-vim-mode Spoon for Hammerspoon on macOS, so the host follows a decision made on the keyboard instead of undoing it at its next one, and its status bar shows it.
+Entering and leaving it by hand is announced to the host with two chords: *Hyper+F20* when the combo turns it on, *Meh+Esc* when I leave it, with *cancel* or the leave combo. On Omarchy and macOS the enable chord follows an editor that reports its mode and otherwise falls back to legacy, so a plain terminal still shows *VIM*; the leave chord forces sticky off. Disabling hides the status bar indicator until vim mode is enabled again or a new Neovim process connects, which restores automatic tracking. Reconnecting the same Neovim process does not clear manual disable. The enable chord avoids Esc because macOS reserves Cmd+Opt+Esc for Force Quit and drops it before the host sees it, and avoids F13 because it is used for brightness control on my Mac.
+
+The complete host transition contract and macOS validation handoff live in [zmk-vim-mode's state machine](https://github.com/rafaelromao/zmk-vim-mode/blob/main/docs/manual-state-machine.md).
 
 ![img](img/diagrams/vim.png)
 
@@ -508,4 +510,3 @@ And a few things work differently:
 - **Mouse emulation** uses QMK's mouse keys instead of the ZMK pointing module, with QMK's acceleration curve.
 - **One-shot timing**: sticky shift lasts 1.5 s and the sticky layers 1 s, as in ZMK; a pending sticky shift is spent by the next key press, so rolled keys behave the same way.
 - **Home-row mods**: tap-preferred with a 250 ms tapping term, no permissive hold, as in ZMK. The symbol tap-holds and the Meh mod-taps use QMK's Flow Tap for the ZMK `require-prior-idle` behaviour.
-

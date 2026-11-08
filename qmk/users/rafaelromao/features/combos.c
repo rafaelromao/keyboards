@@ -62,7 +62,7 @@
 #define COMBO_LIST \
     /* --- global chords --- */ \
     VIMX(vim_on,        ALPHA1_L | VIM_CMD,           VIM_ON,               P_LTR, P_LTM, P_LTI) \
-    X(end_do_ent,       NUM_L,                        MC_END_DO_ENT,        P_LTR, P_LTM, P_LTI) \
+    X(pars_brace_new,   NUM_L,                        MC_PARS_BRACE_NEW,    P_LTR, P_LTM, P_LTI) \
     X(bslash_quo,       SYM_L,                        TH(TH_BSLASH_QUO),    P_LTR, P_LTM, P_LTI) \
     X(enter,            WITH_ENTER_L,                 VIM_ENT,              P_RHM, P_RHR, P_R0) \
     X(backspace,        WITH_BSPC_L,                  KC_BSPC,              P_RTM, P_RTR) \
@@ -254,9 +254,41 @@ uint8_t combo_ref_from_layer(uint8_t layer) {
     return _ALPHA1;
 }
 
+#ifdef RR_VIM_ENABLE
+// ZMK's require-prior-idle-ms on cb_vim_mode. vim_on is a superset of esc and
+// k, so a sloppy Esc or K mid-typing would turn vim mode on; the chord only
+// starts after this long without a key press.
+#    define VIM_ON_PRIOR_IDLE 150
+
+// Keys held for a combo, without the flag bits (process_combo.c COMBO_STATE)
+#    ifdef EXTRA_SHORT_COMBOS
+#        define COMBO_KEYS_DOWN(combo) ((combo)->state & 0x3F)
+#    else
+#        define COMBO_KEYS_DOWN(combo) ((combo)->state)
+#    endif
+
+static uint16_t last_press_time, prior_press_time;
+
+// Runs once per physical key event, before the combo engine buffers it, so
+// prior_press_time is the press before the one being processed.
+bool pre_process_record_user(uint16_t keycode, keyrecord_t *record) {
+    if (record->event.pressed) {
+        prior_press_time = last_press_time;
+        last_press_time  = record->event.time;
+    }
+    return true;
+}
+#endif
+
 bool combo_should_trigger(uint16_t combo_index, combo_t *combo, uint16_t keycode, keyrecord_t *record) {
     uint8_t layer = get_highest_layer(layer_state | default_layer_state);
-    return (pgm_read_dword(&combo_layers[combo_index]) >> layer) & 1;
+    if (!((pgm_read_dword(&combo_layers[combo_index]) >> layer) & 1)) return false;
+#ifdef RR_VIM_ENABLE
+    // Checked on the chord's first key only: its other keys follow it within
+    // COMBO_TERM.
+    if (combo_index == CB_vim_on && record->event.pressed && !COMBO_KEYS_DOWN(combo) && TIMER_DIFF_16(record->event.time, prior_press_time) < VIM_ON_PRIOR_IDLE) return false;
+#endif
+    return true;
 }
 
 // mc_ca_nav and friends: hold some modifiers and a layer for as long as the

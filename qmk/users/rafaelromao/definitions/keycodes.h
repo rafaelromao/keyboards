@@ -78,7 +78,7 @@ enum taphold_ids {
     TH_COLON,       // th_colon_vim:  : / end :
     TH_EXCL,        // th_excl:       ! / end !
     TH_EQL,         // th_eql:        = / end space =
-    TH_CARET_Z,     // th_caret_z:    ^ (0 right after F24) / 0
+    TH_CARET_Z,     // th_caret_z:    ^ (0 right after ^) / 0
     TH_END_ENT,     // th_end_ent_vim: enter / end enter
     TH_COPY,        // th_copy:       copy / shift copy
     TH_SELCOPY,     // th_selcopy:    select all + copy / shifted
@@ -190,7 +190,7 @@ enum custom_keycodes {
     MC_HCURLY,             // #{
     MC_PCURLY,             // %{
     MC_BRACES_NEW,         // end, space, {, enter
-    MC_END_DO_ENT,         // end, space, do, enter
+    MC_PARS_BRACE_NEW,     // ( ) { enter
     MC_DEG,                // ° (Option chord on macOS, AltGr+Shift+; on Linux)
     MC_AT_AT,              // @@
     MC_TISL,               // ~/

@@ -22,6 +22,10 @@ void adaptive_track(uint16_t keycode) {
     last.time    = timer_read();
 }
 
+void adaptive_clear(void) {
+    last.key = KC_NO;
+}
+
 bool adaptive_last_is(uint16_t keycode) {
     if (!last_valid()) return false;
     bool shifted = (keycode & QK_LSFT) || (keycode & QK_RSFT);
@@ -48,7 +52,8 @@ static void tap_letter(uint8_t key) {
 
 void adaptive_repeat(void) {
     uint8_t key = adaptive_last_key();
-    if (key == KC_NO) return;
+    // KC_F24 is the mark ^ leaves (taphold.c), not a key that was typed.
+    if (key == KC_NO || key == KC_F24) return;
     execute_keycode(adaptive_last_shifted() ? S(key) : key);
 }
 

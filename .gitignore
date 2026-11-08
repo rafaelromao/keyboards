@@ -6,6 +6,7 @@ build.log
 .venv/
 .gemini/
 tmp/
-modules/
+/modules/
 token-optimizer/
 .sandman/
+__pycache__/
