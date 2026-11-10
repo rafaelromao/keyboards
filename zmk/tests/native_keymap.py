@@ -136,6 +136,34 @@ def fixture(directory):
     events.append("ZMK_MOCK_RELEASE(0,31,10)")
     finish()
 
+    # Arm BASE from SHORTS, release both pinkies, then hold a modifier through
+    # the letter. The modifier press must not spend the sticky layer. ALT_OS
+    # selects the macOS branch of the same BASE layer's mod-tap.
+    for name, macos, modifier_position, modifier in (
+        ("base one-shot Linux Ctrl hold", False, 11, 0x01),
+        ("base one-shot macOS Command hold", True, 11, 0x08),
+        ("base one-shot Linux Shift+Ctrl hold", False, 21, 0x03),
+        ("base one-shot macOS Shift+Command hold", True, 21, 0x0A),
+        ("base one-shot Linux Ctrl hold from E", False, 18, 0x01),
+        ("base one-shot macOS Command hold from E", True, 18, 0x08),
+        ("base one-shot Linux Shift+Ctrl hold from C", False, 22, 0x03),
+        ("base one-shot macOS Shift+Command hold from C", True, 22, 0x0A),
+    ):
+        start(name, {
+            "letter": (7, 0x14),
+            "held_mod": modifier,
+        })  # Ctrl/Command+Q
+        tap(38)  # VIM_NORMAL: Q exists only while BASE is active
+        if macos:
+            tap(37)  # ALT_OS
+        events.append("ZMK_MOCK_PRESS(0,10,350)")  # hold left pinky for SHORTS
+        events.extend(("ZMK_MOCK_PRESS(0,19,10)", "ZMK_MOCK_RELEASE(0,19,10)"))  # arm BASE
+        events.append("ZMK_MOCK_RELEASE(0,10,10)")  # release SHORTS pinky
+        events.append(f"ZMK_MOCK_PRESS(0,{modifier_position},350)")
+        events.extend(("ZMK_MOCK_PRESS(0,0,10)", "ZMK_MOCK_RELEASE(0,0,10)"))  # Q on BASE
+        events.append(f"ZMK_MOCK_RELEASE(0,{modifier_position},10)")
+        finish()
+
     for index, (name, _, bindings) in enumerate(all_layers):
         for position, binding in enumerate(bindings):
             behavior = binding.split()[0].removeprefix("&")
@@ -222,10 +250,27 @@ def main():
     failures = []
     for name, group in zip(cases, groups):
         if name in focused:
+            expected = focused[name]
             pressed = [tuple(event[1:4]) for event in group if event[0] == "pressed"]
-            if pressed != focused[name]:
+            if isinstance(expected, dict):
+                active_mods = 0
+                modifier_held_for_letter = False
+                for event in group:
+                    if event[0] == "mods":
+                        active_mods = event[1]
+                    elif event[0] == "pressed" and tuple(event[1:3]) == expected["letter"]:
+                        modifier_held_for_letter = (
+                            active_mods & expected["held_mod"] == expected["held_mod"]
+                        )
+                if not modifier_held_for_letter:
+                    failures.append(name)
+                    print(
+                        f"FAIL {name}\n  expected Q with modifier "
+                        f"0x{expected['held_mod']:02x}; presses were {pressed}"
+                    )
+            elif pressed != expected:
                 failures.append(name)
-                print(f"FAIL {name}\n  expected {focused[name]}\n  actual   {pressed}")
+                print(f"FAIL {name}\n  expected {expected}\n  actual   {pressed}")
             elif not shift_kept(group):
                 failures.append(name)
                 print(f"FAIL {name}\n  a shifted key lost its shift while still held")

@@ -48,6 +48,9 @@
 #define FUN 27
 #define MACROS 28
 
+// The base letters, one-shot above SHORTCUTS.
+#define BASE 29
+
 
 // Settings
 
@@ -195,6 +198,49 @@
             bindings = <&mo>;
             quick-release;
             display-name = "Fast Sticky Layer";
+        };
+
+        /*
+         * Arm BASE from SHORTS and keep it through held modifiers. Modifier
+         * key events do not spend the one-shot; the next non-modifier key does.
+         * No quick-release means BASE remains active until that key is released.
+         */
+        sticky_base: sticky-base-layer {
+            compatible = "zmk,behavior-sticky-key";
+            #binding-cells = <1>;
+            release-after-ms = <20000>;
+            bindings = <&mo>;
+            ignore-modifiers;
+            display-name = "Sticky Base Layer";
+        };
+
+        /* Linux is the default branch; ALT_OS selects the macOS hold-tap. */
+        base_mod_n: base-mod-n {
+            compatible = "zmk,behavior-layer-morph";
+            #binding-cells = <0>;
+            layers = <ALT_OS>;
+            bindings = <&mt LCTL N>, <&mt LGUI N>;
+        };
+
+        base_mod_e: base-mod-e {
+            compatible = "zmk,behavior-layer-morph";
+            #binding-cells = <0>;
+            layers = <ALT_OS>;
+            bindings = <&mt LCTL E>, <&mt LGUI E>;
+        };
+
+        base_mod_f: base-mod-f {
+            compatible = "zmk,behavior-layer-morph";
+            #binding-cells = <0>;
+            layers = <ALT_OS>;
+            bindings = <&mt LS(LCTL) F>, <&mt LS(LGUI) F>;
+        };
+
+        base_mod_c: base-mod-c {
+            compatible = "zmk,behavior-layer-morph";
+            #binding-cells = <0>;
+            layers = <ALT_OS>;
+            bindings = <&mt LS(LCTL) C>, <&mt LS(LGUI) C>;
         };
 
         hlt: layer-tap-with-hold-preferred {

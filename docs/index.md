@@ -212,7 +212,9 @@ In this layer, or while holding *meh* in the base layer, accessing the Hyper ver
 
 ### Common Apps Shortcuts
 
-Holding any of the pinky keys will activate the *shortcuts* layer, which gives access to common shortcuts like opening the file explorer, taking a screenshot, and managing zoom and tabs in a browser.
+Holding any pinky opens the *shortcuts* layer, which gives access to common shortcuts like opening the file explorer, taking a screenshot, and managing zoom and tabs in a browser. This works in the VIM *normal* layer too.
+
+In ZMK, while *shortcuts* is active, tap a pinky to arm the *base* layer for one key. You can release the pinkies, hold a modifier, then press the letter: modifier presses do not spend BASE, and it stays active until the letter is released. The BASE copy uses Ctrl on Omarchy and Command on macOS, including the Shift+Ctrl/Shift+Command holds, so one layer works on both systems.
 
 ![img](img/diagrams/shortcuts.png)
 
@@ -382,6 +384,8 @@ They also report a *raw* state, for the moments when my keys must reach the edit
 For the editors that report nothing, like an IDE without its plugin or vim over SSH, the host only says that a VIM-like editor is focused, and the keyboard infers the mode by itself, watching the keys I press, exactly as it always did. I call this *legacy mode*.
 
 Entering and leaving it by hand is announced to the host with two chords: *Hyper+F20* when the combo turns it on, *Meh+Esc* when I leave it, with *cancel* or the leave combo. On Omarchy and macOS the enable chord follows an editor that reports its mode and otherwise falls back to legacy, so a plain terminal still shows *VIM*; the leave chord forces sticky off. Disabling hides the status bar indicator until vim mode is enabled again or a new Neovim process connects, which restores automatic tracking. Reconnecting the same Neovim process does not clear manual disable. The enable chord avoids Esc because macOS reserves Cmd+Opt+Esc for Force Quit and drops it before the host sees it, and avoids F13 because it is used for brightness control on my Mac.
+
+In ZMK's *normal* layer, letters are replaced with commands, so shortcuts that need the plain letters, like Ctrl+D, use the same sequence: hold a pinky to open *shortcuts*, tap a pinky to arm BASE, then hold the modifier and press the letter. Releasing the first pinky does not cancel BASE, and modifier holds do not spend it. The one-shot base that follows `r`, `q` and `@` is unchanged.
 
 The complete host transition contract and macOS validation handoff live in [zmk-vim-mode's state machine](https://github.com/rafaelromao/zmk-vim-mode/blob/main/docs/manual-state-machine.md).
 
