@@ -12,12 +12,11 @@ static struct {
     bool     replace_pending;  // the sticky REPLACE: back to NORMAL after one key
     bool     release_after;    // this press spends a sticky layer
     bool     ctrl_held;        // Ctrl was down when this key was pressed
-    uint8_t  base_holds;       // held pinkies override command-layer activation
     uint16_t sticky_time;
 } vim;
 
 static void set_normal(void) {
-    if (!vim.base_holds) layer_on(_VIM_NORMAL);
+    layer_on(_VIM_NORMAL);
     layer_off(_VIM_CHANGE);
     vim.mode            = VIM_MODE_NORMAL;
     vim.change_pending  = false;
@@ -32,7 +31,7 @@ static void set_literal(uint8_t mode) {
 }
 
 static void set_visual(void) {
-    if (!vim.base_holds) layer_on(_VIM_NORMAL);
+    layer_on(_VIM_NORMAL);
     vim.mode = VIM_MODE_VISUAL;
 }
 
@@ -47,21 +46,6 @@ static void set_change_pending(void) {
     layer_on(_VIM_CHANGE);
     vim.change_pending = true;
     vim.sticky_time    = timer_read();
-}
-
-// A NORMAL pinky held: NORMAL off, so Ctrl/Alt/Gui shortcuts take their keys
-// from the base (ZMK holds VIM_REPLACE, a copy of it). NORMAL comes back on
-// release only if the mode still wants it; a key typed meanwhile may have left.
-void vim_base_hold(bool pressed) {
-    if (pressed) {
-        vim.base_holds++;
-        layer_off(_VIM_NORMAL);
-    } else {
-        if (vim.base_holds) vim.base_holds--;
-        if (!vim.base_holds && (vim.mode == VIM_MODE_NORMAL || vim.mode == VIM_MODE_VISUAL)) {
-            layer_on(_VIM_NORMAL);
-        }
-    }
 }
 
 void vim_off(void) {

@@ -1,5 +1,6 @@
 SRC += rafaelromao.c
 SRC += features/taphold.c
+SRC += features/base.c
 SRC += features/thumbs.c
 SRC += features/smart.c
 SRC += features/adaptive.c

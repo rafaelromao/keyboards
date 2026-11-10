@@ -36,7 +36,8 @@ enum layers {
     _TEXT,        // 27 TEXT NAVIGATION
     _FUN,         // 28 FUNCTIONS
 #ifdef RR_MACROS_ENABLE
-    _MACROS,      // 29 MACROS
+    _MACROS,      // 28 MACROS
 #endif
+    _BASE,        // BASE one-shot (above SHORTCUTS)
     _LAYER_COUNT
 };

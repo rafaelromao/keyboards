@@ -75,46 +75,15 @@ int main(void) {
     mods = 0;
     assert_i_enters_insert();
 
+    // Ctrl+C on a base key or a home-row mod-tap leaves VISUAL for NORMAL.
     for (unsigned modtap = 0; modtap < 2; ++modtap) {
         for (unsigned oneshot = 0; oneshot < 2; ++oneshot) {
             enter_visual();
-            vim_base_hold(true);
-            assert(!normal_layer());
             base_ctrl_c(modtap, oneshot);
-            assert(!normal_layer());  // Ctrl+C must not drop the base override.
-            vim_base_hold(false);
             assert(normal_layer());
-            assert_i_enters_insert();  // Stale VISUAL instead leaves NORMAL on.
+            assert_i_enters_insert();
         }
     }
 
-    // Releasing one pinky must not cancel a second held pinky's override.
-    enter_visual();
-    vim_base_hold(true);
-    vim_base_hold(true);
-    base_ctrl_c(true, false);
-    vim_base_hold(false);
-    assert(!normal_layer());
-    vim_base_hold(false);
-    assert(normal_layer());
-    assert_i_enters_insert();
-
-    // Other mode transitions that want NORMAL also respect the held base.
-    enter_visual();
-    vim_base_hold(true);
-    process_vim_kc(VIM_CTL_V, true);
-    assert(!normal_layer());
-    vim_base_hold(false);
-    assert(normal_layer());
-    vim_modtap_tap(KC_I);  // Still VISUAL: i is a text object, not insert.
-    assert(normal_layer());
-    assert(last_key == KC_I);
-
-    // A hold release must not re-enable NORMAL after Vim has been disabled.
-    vim_base_hold(true);
-    vim_off();
-    vim_base_hold(false);
-    assert(!normal_layer());
-
-    puts("PASS: insert/change clear the antecedent without markers; base Ctrl+C exits VISUAL and preserves held overrides");
+    puts("PASS: insert/change clear the antecedent without markers; base Ctrl+C exits VISUAL");
 }

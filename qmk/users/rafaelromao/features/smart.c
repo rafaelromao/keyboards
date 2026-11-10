@@ -13,11 +13,13 @@ static struct {
     uint16_t altrep2_time;
     uint8_t  num_word_layer;  // 0 = off
     bool     oneshot_set;
-    // Layers spent by the key being pressed. They are turned off only after
-    // the key is processed: QMK resolves a plain key against the layer state
-    // again in process_action, after process_record_user, so switching the
-    // layer off early would type the key underneath.
+    // Quick-release layers spent by a key press. They are turned off only
+    // after the key is processed: QMK resolves plain keys against the layer
+    // state after process_record_user. BASE instead waits for that key's up.
     bool osl_release;
+    bool osl_release_on_keyup;
+    uint8_t osl_release_row;
+    uint8_t osl_release_col;
     bool num_word_release;
 } st;
 
@@ -29,11 +31,14 @@ void smart_osl_on(uint8_t layer) {
     st.osl_layer   = layer;
     st.osl_time    = timer_read();
     st.osl_release = false;
+    st.osl_release_on_keyup = false;
 }
 
 void smart_osl_off(void) {
     if (st.osl_layer) layer_off(st.osl_layer);
     st.osl_layer = 0;
+    st.osl_release = false;
+    st.osl_release_on_keyup = false;
 }
 
 uint8_t smart_osl_layer(void) {
@@ -242,9 +247,10 @@ void smart_before_press(uint16_t keycode, keyrecord_t *record) {
     st.oneshot_set = false;
     if (is_modifier_press(keycode, record)) return;
 
-    // ZMK &sl quick-release: the layer goes on the next key press, once that
-    // key has been resolved on it (see smart_after_press).
-    if (st.osl_layer) st.osl_release = true;
+    // ZMK &sl quick-release layers go on the next non-modifier press, once
+    // that key has been resolved on them (see smart_after_press). BASE waits
+    // through key-up, matching its sticky-key behavior in ZMK.
+    if (st.osl_layer && !st.osl_release_on_keyup) st.osl_release = true;
 
     // The ALT REP 2 window is read by the L1 tap and cleared by anything else.
     if (st.altrep2 && keycode != L1_KEY) st.altrep2 = false;
@@ -262,7 +268,13 @@ void smart_before_press(uint16_t keycode, keyrecord_t *record) {
 void smart_after_press(uint16_t keycode, keyrecord_t *record, bool intercepted) {
     if (st.osl_release) {
         st.osl_release = false;
-        smart_osl_off();
+        if (st.osl_layer == _BASE) {
+            st.osl_release_on_keyup = true;
+            st.osl_release_row = record->event.key.row;
+            st.osl_release_col = record->event.key.col;
+        } else {
+            smart_osl_off();
+        }
     }
     if (st.num_word_release) {
         st.num_word_release = false;
@@ -275,8 +287,20 @@ void smart_after_press(uint16_t keycode, keyrecord_t *record, bool intercepted) 
     }
 }
 
+// BASE has no quick-release in ZMK: let the key-up be processed on BASE too,
+// then turn it off. Match the physical position so a modifier release or a
+// different overlapping key cannot spend it.
+void smart_after_release(keyrecord_t *record) {
+    if (!st.osl_release_on_keyup || record->event.key.row != st.osl_release_row ||
+        record->event.key.col != st.osl_release_col) {
+        return;
+    }
+    smart_osl_off();
+}
+
 void smart_housekeeping(void) {
-    if (st.osl_layer && timer_elapsed(st.osl_time) > OSL_TIMEOUT) smart_osl_off();
+    uint16_t osl_timeout = st.osl_layer == _BASE ? BASE_OSL_TIMEOUT : OSL_TIMEOUT;
+    if (st.osl_layer && timer_elapsed(st.osl_time) > osl_timeout) smart_osl_off();
     if (st.altrep2 && timer_elapsed(st.altrep2_time) > ALTREP2_TIMEOUT) st.altrep2 = false;
     if (st.sentence_shift && timer_elapsed(st.sentence_time) > SENTENCE_TIMEOUT) {
         st.sentence_shift = false;
@@ -299,6 +323,12 @@ bool process_smart(uint16_t keycode, bool pressed) {
             if (pressed) {
                 smart_keep_oneshot();
                 smart_osl_on(_ALPHA2);
+            }
+            return true;
+        case OSL_BASE:
+            if (pressed) {
+                smart_keep_oneshot();
+                smart_osl_on(_BASE);
             }
             return true;
     }

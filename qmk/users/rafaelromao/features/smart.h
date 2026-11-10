@@ -8,14 +8,16 @@
 // window (ALT REP 2) and the cancel/reset behaviour.
 
 #define OSL_TIMEOUT 1000       // ZMK &sl release-after-ms
+#define BASE_OSL_TIMEOUT 20000 // ZMK sticky BASE release-after-ms
 #define SENTENCE_TIMEOUT 1000  // the SENTENCE CASE sticky layer
 #define ALTREP2_TIMEOUT 1000   // the ALT REP 2 sticky layer
 
-// Custom one-shot layers (ZMK &sl with quick-release: gone on the next key
-// press, or after OSL_TIMEOUT).
+// Custom one-shot layers (ZMK &sl: quick-release layers go on the next key
+// press; BASE stays through that key's release. Each also has a timeout).
 void    smart_osl_on(uint8_t layer);
 void    smart_osl_off(void);
 uint8_t smart_osl_layer(void);
+void    smart_after_release(keyrecord_t *record);
 
 // Caps word (ZMK smart_word) and caps line (smart_line: also survives spaces)
 void smart_caps_word_on(void);

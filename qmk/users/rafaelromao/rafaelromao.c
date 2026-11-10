@@ -31,14 +31,19 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     if (pressed && result == PROCESS_RECORD_RETURN_FALSE) {
         smart_after_press(keycode, record, true);
         vim_after_press(keycode, record);
+    } else if (!pressed && result == PROCESS_RECORD_RETURN_FALSE) {
+        smart_after_release(record);
     }
     return result != PROCESS_RECORD_RETURN_FALSE;
 }
 
-// Native keys: remember what was typed for the adaptive keys, and spend a
-// pending one-shot the way ZMK's sticky keys are spent, on the press.
+// Native keys: remember what was typed for adaptive keys, and finish quick
+// one-shots on the press. BASE's non-quick sticky behavior finishes on key-up.
 void post_process_record_user(uint16_t keycode, keyrecord_t *record) {
-    if (!record->event.pressed) return;
+    if (!record->event.pressed) {
+        smart_after_release(record);
+        return;
+    }
     uint16_t tap = keycode;
     if (IS_QK_MOD_TAP(keycode)) {
         if (!record->tap.count) return;

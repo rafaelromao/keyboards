@@ -152,6 +152,7 @@ enum custom_keycodes {
     MC_NUMWORD,    // tc_num_word
     MC_NUMWORD_CP, // tc_num_word_cp
     OSL_A2,        // &sl ALPHA2 (caps variant under caps word)
+    OSL_BASE,      // modifier-safe one-shot BASE
     MC_REPEAT,     // &key_repeat (' on the shifted alpha2)
     MC_RMAGIC,     // reversed_magic (and its caps variant)
 
@@ -247,14 +248,21 @@ enum custom_keycodes {
 #define HRM_R LSFT_T(KC_R)
 #define HRM_A LALT_T(KC_A)
 #define HRM_E LCTL_T(KC_E)
+// BASE mod-taps use unused Right-Ctrl encodings as tags. taphold.c intercepts
+// them and selects Ctrl/GUI at runtime from the detected host OS; RCtrl is
+// never registered by these keys.
+#define BASE_HRM_N RCTL_T(KC_N)
+#define BASE_HRM_E RCTL_T(KC_E)
+#define BASE_HRM_F RCTL_T(KC_F)
+#define BASE_HRM_C RCTL_T(KC_C)
 #define LT_D LT(_SHORTS, KC_D)
 #define LT_I LT(_SHORTS, KC_I)
 
 // Vim normal layer keys whose tap gets the vim meaning (resolved by layer).
-// The pinkies' hold is intercepted (vim_base_hold), so layer 0 is never
-// actually toggled by them.
-#define VLT_Q   LT(_ALPHA1, KC_Q)  // lt_q_vim VIM_REPLACE
-#define VLT_L   LT(_ALPHA1, KC_L)  // &lt VIM_REPLACE L
+// The pinkies hold SHORTCUTS, as on ALPHA1; a tap on SHORTS arms BASE for one
+// key.
+#define VLT_Q   LT(_SHORTS, KC_Q)  // lt_q_vim SHORTS
+#define VLT_L   LT(_SHORTS, KC_L)  // &lt SHORTS L
 #define VMT_I   LGUI_T(KC_I)       // mt_i_vim LGUI
 #define VLT_SPC LT(_NUM, KC_SPC)   // lt_spc_vim NUM: plain space
 

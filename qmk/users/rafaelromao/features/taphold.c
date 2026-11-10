@@ -5,6 +5,7 @@
 #include "features/thumbs.h"
 #include "features/vim.h"
 #include "features/shortcuts.h"
+#include "features/base.h"
 
 // ---------------------------------------------------------------------------
 // The th_* table
@@ -314,6 +315,9 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
     }
 
     if (IS_QK_MOD_TAP(keycode)) {
+        process_record_result_t base_result = process_base_modtap(keycode, record);
+        if (base_result != PROCESS_RECORD_CONTINUE) return base_result;
+
         uint8_t tap = QK_MOD_TAP_GET_TAP_KEYCODE(keycode);
 
         // Layer-dependent taps of otherwise native mod-taps
@@ -361,11 +365,6 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
             // lt_q_vim: q + sticky replace, on the vim normal layer only
             if (keycode == VLT_Q && tapped && source_layer(record) == _VIM_NORMAL) {
                 if (pressed) vim_modtap_tap(KC_Q);
-                return PROCESS_RECORD_RETURN_FALSE;
-            }
-            // Either pinky held: the base, for shortcuts (ZMK &mo VIM_REPLACE)
-            if ((keycode == VLT_Q || keycode == VLT_L) && !tapped) {
-                vim_base_hold(pressed);
                 return PROCESS_RECORD_RETURN_FALSE;
             }
 #endif

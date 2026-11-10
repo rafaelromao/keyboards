@@ -48,10 +48,10 @@
 // --- SHORTCUTS ------------------------------------------------------------
 #define SHORTS_L1     XXXXXXX,     MC_CALC,      MC_FILES,       MC_BROWSER,     XXXXXXX
 #define SHORTS_R1     XXXXXXX,     MC_AI,        MC_EDITOR,      MC_ACTIVITIES,  XXXXXXX
-#define SHORTS_L2     XXXXXXX,     LT_ZOOM_OUT,  MC_ZOOM_IN,     MC_NEW,         XXXXXXX
-#define SHORTS_R2     XXXXXXX,     XXXXXXX,      MC_CONTAINERS,  LT_EMOJI,       XXXXXXX
-#define SHORTS_L3     XXXXXXX,     MC_CLOSE,     MC_REFRESH,     MC_REOPEN,      XXXXXXX
-#define SHORTS_R3     XXXXXXX,     MC_SCREENSHOT,MC_NOTES,       MC_TERM,        XXXXXXX
+#define SHORTS_L2     OSL_BASE,    LT_ZOOM_OUT,  MC_ZOOM_IN,     MC_NEW,         XXXXXXX
+#define SHORTS_R2     XXXXXXX,     XXXXXXX,      MC_CONTAINERS,  LT_EMOJI,       OSL_BASE
+#define SHORTS_L3     OSL_BASE,    MC_CLOSE,     MC_REFRESH,     MC_REOPEN,      XXXXXXX
+#define SHORTS_R3     XXXXXXX,     MC_SCREENSHOT,MC_NOTES,       MC_TERM,        OSL_BASE
 #define SHORTS_L4     XXXXXXX,     MO(_TEXT),    LT_FUN_SPC
 #define SHORTS_R4     LT_MACROS_SPC, MO(_TEXT),  XXXXXXX
 
@@ -194,5 +194,17 @@
 #define MACROS_R3     XXXXXXX,     VIM_CTL_V,    MC_DQTPLUSP,    MC_DQTPLUSY,    XXXXXXX
 #define MACROS_L4     XXXXXXX,     XXXXXXX,      MC_SPC_ESC
 #define MACROS_R4     XXXXX_3
+
+// --- BASE -----------------------------------------------------------------
+// ALPHA1 for one key above SHORTCUTS. Its N/E/F/C mod-taps are OS-aware.
+// The pinkies stay plain d/i/y/slash here.
+#define BASE_L1       ALPHA1_L1
+#define BASE_R1       ALPHA1_R1
+#define BASE_L2       KC_D,        BASE_HRM_N,   HRM_S,          HRM_T,          KC_W
+#define BASE_R2       KC_Z,        HRM_R,        HRM_A,          BASE_HRM_E,     KC_I
+#define BASE_L3       KC_Y,        BASE_HRM_F,   BASE_HRM_C,     HRM_P,          KC_V
+#define BASE_R3       KC_J,        MAGIC_KEY,    TH(TH_COMMA),   TH(TH_DOT),     KC_SLSH
+#define BASE_L4       ALPHA1_L4
+#define BASE_R4       ALPHA1_R4
 
 // clang-format on

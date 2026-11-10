@@ -43,5 +43,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #ifdef RR_MACROS_ENABLE
     [_MACROS]     = LAYER(MACROS),
 #endif
+    [_BASE]       = LAYER(BASE),
 };
 // clang-format on
