@@ -1,14 +1,21 @@
 #!/bin/bash
 
 # Configuration
-IMAGE_NAME="zmk-toolchain:0.17.0"
+# Fully qualified with localhost/: podman 5 and later no longer resolve a
+# short name like "zmk-toolchain:0.17.0" for run/pull unless a
+# containers-registries.conf lists a search registry, and some installs (this
+# one included) have no such file at all: "short-name ... did not resolve to
+# an alias and no containers-registries.conf(5) was found". A locally built
+# image is tagged under localhost/ anyway, so name it that way everywhere;
+# `podman build -t localhost/zmk-toolchain:0.17.0 .` stores the same image.
+IMAGE_NAME="localhost/zmk-toolchain:0.17.0"
 VOL_CCACHE="zmk-ccache-data"
 VOL_MODULES="zmk-modules-cache"
 VOL_ZEPHYR="zmk-zephyr-data"
 
 # --- 1. Auto-Build Logic ---
 # Only when the tag is missing: after a Containerfile change, rebuild by hand
-# with `podman build -t zmk-toolchain:0.17.0 .` (see readme.md).
+# with `podman build -t localhost/zmk-toolchain:0.17.0 .` (see readme.md).
 if ! podman image exists "$IMAGE_NAME"; then
     echo "📦 Image $IMAGE_NAME not found. Building the image now..."
     podman build -t "$IMAGE_NAME" .

@@ -43,7 +43,15 @@ RUN case "$(uname -m)" in \
 RUN pip3 install --upgrade pip setuptools wheel
 
 # 4. Install West and Keymap-drawer, pinned like everything else in the image
-RUN pip3 install west==1.5.0 keymap-drawer==0.23.0
+#
+# keymap-drawer 0.22 and later require Python >= 3.12, and Ubuntu 22.04 ships
+# 3.10, so pip refuses to install them ("Could not find a version that
+# satisfies the requirement"). 0.21.0 is the last release that supports 3.10,
+# and it already has every field the config files use (draw_separate,
+# separate_combo_diagrams, qmk_info_json). Bump it only together with the base
+# image, and note that 24.04 marks system Python as externally managed, so
+# pip3 would then need --break-system-packages or a venv.
+RUN pip3 install west==1.5.0 keymap-drawer==0.21.0
 
 # 5. Install ZMK/Zephyr Python requirements
 #

@@ -90,7 +90,7 @@ A limited port of this keymap is available in the [qmk](qmk) folder, for the BM4
 
 Unlike most ZMK users, I don't use GitHub Actions to build the firmware for my keyboards, and since I come from a legacy repo structure, from the time I used QMK and when they didn't even support external userspaces, I use git submodules to import ZMK and everything else I need into my repo, then I build the firmware using a custom script. 
 
-To make the local build setup easier, I have a [Containerfile](Containerfile) that installs all the toolchain into a Ubuntu container, the ZMK one and the QMK one. The [init](init.sh) script is then used to run this container. It builds the image only when there is none, so after a change to the Containerfile rebuild it with `podman build -t zmk-toolchain:0.17.0 .`.
+To make the local build setup easier, I have a [Containerfile](Containerfile) that installs all the toolchain into a Ubuntu container, the ZMK one and the QMK one. The [init](init.sh) script is then used to run this container. It builds the image only when there is none, so after a change to the Containerfile rebuild it with `podman build -t localhost/zmk-toolchain:0.17.0 .`.
 
 Into the container, I can use my custom [zmk](scripts/zmk.sh) script to build the ZMK firmware for all my keyboards.
 

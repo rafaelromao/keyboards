@@ -108,7 +108,7 @@ build_qmk() {
     shift
     if ! command -v qmk >/dev/null 2>&1; then
         echo "The qmk CLI is not in this image. Rebuild it from the Containerfile:"
-        echo "  podman build -t zmk-toolchain:0.17.0 ."
+        echo "  podman build -t localhost/zmk-toolchain:0.17.0 ."
         echo "or build from the host with: scripts/qmk.sh $board"
         exit 1
     fi
