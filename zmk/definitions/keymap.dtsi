@@ -318,8 +318,8 @@
                      display-name = "BASE";
                      bindings = <
    &kp Q                     &kp B                     &kp M                     &kp G                     &kp K                     &kp X                     &kp L                     &kp O                     &kp U                     &kp SEMICOLON
-   &kp D                     &base_mod_n               &mt LALT S                &mt LSFT T                &kp W                     &kp Z                     &mt LSFT R                &mt LALT A                &base_mod_e               &kp I
-   &kp D                     &base_mod_f               &base_mod_c               &mt LGUI P                &kp V                     &kp J                     &ht_magic LGUI 0          &th_comma 0 0             &th_dot 0 0               &kp I
+   &kp D                     &mt LCTL N                &mt LALT S                &mt LSFT T                &kp W                     &kp Z                     &mt LSFT R                &mt LALT A                &mt LCTL E                &kp I
+   &kp D                     &mt LS(LGUI) F            &mt LS(LGUI) C            &mt LGUI P                &kp V                     &kp J                     &ht_magic LGUI 0          &th_comma 0 0             &th_dot 0 0               &kp I
                                                        &mkp RCLK                 &ht_repeat NAV 0          &ltn_num_spc 0 0          &sentence_alpha2          &ht_shift MEDIA 0         &mkp LCLK
                         >;
                 };

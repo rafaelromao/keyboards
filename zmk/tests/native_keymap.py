@@ -137,17 +137,17 @@ def fixture(directory):
     finish()
 
     # Arm BASE from SHORTS, release both pinkies, then hold a modifier through
-    # the letter. The modifier press must not spend the sticky layer. ALT_OS
-    # selects the macOS branch of the same BASE layer's mod-tap.
+    # the letter. The modifier press must not spend the sticky layer. BASE's
+    # mod positions must stay the same regardless of ALT_OS.
     for name, macos, modifier_position, modifier in (
-        ("base one-shot Linux Ctrl hold", False, 11, 0x01),
-        ("base one-shot macOS Command hold", True, 11, 0x08),
-        ("base one-shot Linux Shift+Ctrl hold", False, 21, 0x03),
-        ("base one-shot macOS Shift+Command hold", True, 21, 0x0A),
-        ("base one-shot Linux Ctrl hold from E", False, 18, 0x01),
-        ("base one-shot macOS Command hold from E", True, 18, 0x08),
-        ("base one-shot Linux Shift+Ctrl hold from C", False, 22, 0x03),
-        ("base one-shot macOS Shift+Command hold from C", True, 22, 0x0A),
+        ("base one-shot Linux Ctrl hold on N", False, 11, 0x01),
+        ("base one-shot macOS Ctrl hold on N", True, 11, 0x01),
+        ("base one-shot Linux Shift+GUI hold on F", False, 21, 0x0A),
+        ("base one-shot macOS Shift+GUI hold on F", True, 21, 0x0A),
+        ("base one-shot Linux Ctrl hold on E", False, 18, 0x01),
+        ("base one-shot macOS Ctrl hold on E", True, 18, 0x01),
+        ("base one-shot Linux Shift+GUI hold on C", False, 22, 0x0A),
+        ("base one-shot macOS Shift+GUI hold on C", True, 22, 0x0A),
     ):
         start(name, {
             "letter": (7, 0x14),

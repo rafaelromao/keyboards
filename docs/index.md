@@ -214,7 +214,7 @@ In this layer, or while holding *meh* in the base layer, accessing the Hyper ver
 
 Holding any pinky opens the *shortcuts* layer, which gives access to common shortcuts like opening the file explorer, taking a screenshot, and managing zoom and tabs in a browser. This works in the VIM *normal* layer too.
 
-In ZMK and QMK, while *shortcuts* is active, tap a pinky to arm the *base* layer for one key. You can release the pinkies, hold a modifier, then press the letter: modifier presses do not spend BASE, and it stays active until the letter is released. The BASE copy uses Ctrl on Omarchy and Command on macOS, including the Shift+Ctrl/Shift+Command holds, so one layer works on both systems.
+In ZMK and QMK, while *shortcuts* is active, tap a pinky to arm the *base* layer for one key. You can release the pinkies, hold a modifier, then press the letter: modifier presses do not spend BASE, and it stays active until the letter is released. BASE keeps the same mods as the base layout on either OS: Ctrl on N/E and Shift+GUI on F/C.
 
 ![img](img/diagrams/shortcuts.png)
 

@@ -1,81 +1,24 @@
 #include <assert.h>
 #include <stdio.h>
 
-#include "features/base.h"
-#include "features/shortcuts.h"
+#include "rafaelromao.h"
 
-static bool host_mac;
-static uint8_t active_mods;
-static uint16_t tapped_key;
-static unsigned tap_count;
-
-bool shortcuts_is_mac(void) {
-    return host_mac;
-}
-
-void register_mods(uint8_t mods) {
-    active_mods |= mods;
-}
-
-void unregister_mods(uint8_t mods) {
-    active_mods &= (uint8_t)~mods;
-}
-
-void execute_keycode(uint16_t keycode) {
-    tapped_key = keycode;
-    ++tap_count;
-}
-
-static void test_hold(uint16_t keycode, uint8_t expected_mods, bool change_os_before_release) {
-    bool initial_os = host_mac;
-    keyrecord_t record = {.event.pressed = true, .tap.count = 0};
-    assert(process_base_modtap(keycode, &record) == PROCESS_RECORD_RETURN_FALSE);
-    assert(active_mods == expected_mods);
-
-    if (change_os_before_release) host_mac = !initial_os;
-    record.event.pressed = false;
-    assert(process_base_modtap(keycode, &record) == PROCESS_RECORD_RETURN_FALSE);
-    assert(active_mods == 0);
-    host_mac = initial_os;
-}
-
-static void test_tap(uint16_t keycode, uint8_t expected_key) {
-    keyrecord_t record = {.event.pressed = true, .tap.count = 1};
-    unsigned previous_taps = tap_count;
-    assert(process_base_modtap(keycode, &record) == PROCESS_RECORD_RETURN_FALSE);
-    assert(tap_count == previous_taps + 1);
-    assert(tapped_key == expected_key);
-    assert(active_mods == 0);
-
-    record.event.pressed = false;
-    assert(process_base_modtap(keycode, &record) == PROCESS_RECORD_RETURN_FALSE);
-    assert(tap_count == previous_taps + 1);
-}
+static const uint16_t alpha1_l2[] = {ALPHA1_L2};
+static const uint16_t alpha1_r2[] = {ALPHA1_R2};
+static const uint16_t alpha1_l3[] = {ALPHA1_L3};
+static const uint16_t base_l2[] = {BASE_L2};
+static const uint16_t base_r2[] = {BASE_R2};
+static const uint16_t base_l3[] = {BASE_L3};
 
 int main(void) {
-    const uint8_t ctrl = MOD_BIT(KC_LCTL);
-    const uint8_t command = MOD_BIT(KC_LGUI);
-    const uint8_t shift = MOD_BIT(KC_LSFT);
+    assert(alpha1_l2[1] == LCTL_T(KC_N));
+    assert(alpha1_r2[3] == LCTL_T(KC_E));
+    assert(alpha1_l3[1] == LSG_T(KC_F));
+    assert(alpha1_l3[2] == LSG_T(KC_C));
+    assert(base_l2[1] == alpha1_l2[1]);  // N stays Ctrl
+    assert(base_r2[3] == alpha1_r2[3]);  // E stays Ctrl
+    assert(base_l3[1] == alpha1_l3[1]);  // F stays Shift+GUI
+    assert(base_l3[2] == alpha1_l3[2]);  // C stays Shift+GUI
 
-    host_mac = false;
-    test_hold(BASE_HRM_N, ctrl, true);
-    test_hold(BASE_HRM_E, ctrl, false);
-    test_hold(BASE_HRM_F, ctrl | shift, false);
-    test_hold(BASE_HRM_C, ctrl | shift, false);
-
-    host_mac = true;
-    test_hold(BASE_HRM_N, command, false);
-    test_hold(BASE_HRM_E, command, false);
-    test_hold(BASE_HRM_F, command | shift, false);
-    test_hold(BASE_HRM_C, command | shift, false);
-
-    test_tap(BASE_HRM_N, KC_N);
-    test_tap(BASE_HRM_E, KC_E);
-    test_tap(BASE_HRM_F, KC_F);
-    test_tap(BASE_HRM_C, KC_C);
-
-    keyrecord_t record = {.event.pressed = true, .tap.count = 1};
-    assert(process_base_modtap(KC_N, &record) == PROCESS_RECORD_CONTINUE);
-
-    puts("PASS: BASE mod-taps emit the right taps and OS-specific held modifiers");
+    puts("PASS: BASE reuses the base layout's N/E/F/C mod-taps");
 }

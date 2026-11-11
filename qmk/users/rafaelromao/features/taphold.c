@@ -5,7 +5,6 @@
 #include "features/thumbs.h"
 #include "features/vim.h"
 #include "features/shortcuts.h"
-#include "features/base.h"
 
 // ---------------------------------------------------------------------------
 // The th_* table
@@ -315,9 +314,6 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
     }
 
     if (IS_QK_MOD_TAP(keycode)) {
-        process_record_result_t base_result = process_base_modtap(keycode, record);
-        if (base_result != PROCESS_RECORD_CONTINUE) return base_result;
-
         uint8_t tap = QK_MOD_TAP_GET_TAP_KEYCODE(keycode);
 
         // Layer-dependent taps of otherwise native mod-taps

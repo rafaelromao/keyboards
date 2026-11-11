@@ -214,35 +214,6 @@
             display-name = "Sticky Base Layer";
         };
 
-        /* Linux is the default branch; ALT_OS selects the macOS hold-tap. */
-        base_mod_n: base-mod-n {
-            compatible = "zmk,behavior-layer-morph";
-            #binding-cells = <0>;
-            layers = <ALT_OS>;
-            bindings = <&mt LCTL N>, <&mt LGUI N>;
-        };
-
-        base_mod_e: base-mod-e {
-            compatible = "zmk,behavior-layer-morph";
-            #binding-cells = <0>;
-            layers = <ALT_OS>;
-            bindings = <&mt LCTL E>, <&mt LGUI E>;
-        };
-
-        base_mod_f: base-mod-f {
-            compatible = "zmk,behavior-layer-morph";
-            #binding-cells = <0>;
-            layers = <ALT_OS>;
-            bindings = <&mt LS(LCTL) F>, <&mt LS(LGUI) F>;
-        };
-
-        base_mod_c: base-mod-c {
-            compatible = "zmk,behavior-layer-morph";
-            #binding-cells = <0>;
-            layers = <ALT_OS>;
-            bindings = <&mt LS(LCTL) C>, <&mt LS(LGUI) C>;
-        };
-
         hlt: layer-tap-with-hold-preferred {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;

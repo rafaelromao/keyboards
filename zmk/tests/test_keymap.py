@@ -47,6 +47,14 @@ class KeymapTests(unittest.TestCase):
             checked += 1
         self.assertGreaterEqual(checked, 26)
 
+    def test_base_modtap_modifiers_match_the_unmorphed_base_layout(self):
+        base = next(bindings for name, _, bindings in self.layers if name == "held_base_layer")
+        self.assertEqual(base[11].strip(), "&mt LCTL N")
+        self.assertEqual(base[18].strip(), "&mt LCTL E")
+        self.assertEqual(base[21].strip(), "&mt LS(LGUI) F")
+        self.assertEqual(base[22].strip(), "&mt LS(LGUI) C")
+        self.assertFalse(any(binding.strip().startswith("&base_mod_") for binding in base))
+
     def test_none_bindings_are_inert_on_every_layer(self):
         for name, events in self.records.items():
             if name.endswith(" &none"):

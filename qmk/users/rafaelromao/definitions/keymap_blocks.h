@@ -200,10 +200,10 @@
 // The pinkies stay plain d/i/y/slash here.
 #define BASE_L1       ALPHA1_L1
 #define BASE_R1       ALPHA1_R1
-#define BASE_L2       KC_D,        BASE_HRM_N,   HRM_S,          HRM_T,          KC_W
-#define BASE_R2       KC_Z,        HRM_R,        HRM_A,          BASE_HRM_E,     KC_I
-#define BASE_L3       KC_Y,        BASE_HRM_F,   BASE_HRM_C,     HRM_P,          KC_V
-#define BASE_R3       KC_J,        MAGIC_KEY,    TH(TH_COMMA),   TH(TH_DOT),     KC_SLSH
+#define BASE_L2       KC_D,        HRM_N,        HRM_S,          HRM_T,          KC_W
+#define BASE_R2       KC_Z,        HRM_R,        HRM_A,          HRM_E,          KC_I
+#define BASE_L3       ALPHA1_L3
+#define BASE_R3       ALPHA1_R3
 #define BASE_L4       ALPHA1_L4
 #define BASE_R4       ALPHA1_R4
 

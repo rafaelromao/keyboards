@@ -248,13 +248,6 @@ enum custom_keycodes {
 #define HRM_R LSFT_T(KC_R)
 #define HRM_A LALT_T(KC_A)
 #define HRM_E LCTL_T(KC_E)
-// BASE mod-taps use unused Right-Ctrl encodings as tags. taphold.c intercepts
-// them and selects Ctrl/GUI at runtime from the detected host OS; RCtrl is
-// never registered by these keys.
-#define BASE_HRM_N RCTL_T(KC_N)
-#define BASE_HRM_E RCTL_T(KC_E)
-#define BASE_HRM_F RCTL_T(KC_F)
-#define BASE_HRM_C RCTL_T(KC_C)
 #define LT_D LT(_SHORTS, KC_D)
 #define LT_I LT(_SHORTS, KC_I)
 
