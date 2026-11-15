@@ -142,7 +142,7 @@ def fixture(directory):
         events.extend(f"ZMK_MOCK_PRESS(0,{position},10)" for position in positions)
         events.extend(f"ZMK_MOCK_RELEASE(0,{position},10)" for position in positions)
 
-    excalidraw = 36 + 2  # the &to control for EXCALIDRAW
+    excalidraw = 36 + 11  # the &to control for EXCALIDRAW
     start("excalidraw combos", [(7, 0x1B, 2), (7, 0x14, 0), (7, 0x08, 0), (7, 0x19, 0), (7, 0x0E, 0)])
     tap(excalidraw)
     for keys in ((2, 3), (11, 12), (12, 13), (22, 23), (21, 22)):  # Shift+X, Q, E, V, K
@@ -196,25 +196,34 @@ def fixture(directory):
     events.append("ZMK_MOCK_RELEASE(0,31,10)")
     tap(2)  # O: the copy is gone
     finish()
-    # Tapping R1 with a pinky held toggles the layer, from either pinky.
-    start("excalidraw toggles from shortcuts", [o, m])
+    # Tapping R1 toggles the layer while either pinky keeps SHORTS active;
+    # Excalidraw must be above SHORTS or its tools stay hidden.
+    for side, pinky in (("left", 10), ("right", 19)):
+        start(f"excalidraw toggles from {side} shortcuts", [o, m])
+        events.append(f"ZMK_MOCK_PRESS(0,{pinky},350)")
+        tap(34)  # toggle Excalidraw on
+        tap(2)  # O while SHORTS is still held
+        tap(34)  # toggle it off through Excalidraw's transparent R1
+        events.append(f"ZMK_MOCK_RELEASE(0,{pinky},10)")
+        tap(2)  # M on the base
+        finish()
+    # Holding R1 + either pinky momentarily opens Excalidraw while SHORTS
+    # remains active underneath it.
+    for side, pinky in (("left", 10), ("right", 19)):
+        start(f"excalidraw hold from {side} shortcuts", [o])
+        events.append(f"ZMK_MOCK_PRESS(0,{pinky},350)")
+        events.append("ZMK_MOCK_PRESS(0,34,350)")
+        tap(2)  # O while both the pinky and R1 are still held
+        events.append("ZMK_MOCK_RELEASE(0,34,10)")
+        events.append(f"ZMK_MOCK_RELEASE(0,{pinky},10)")
+        finish()
+    # The other shortcut thumb still opens TEXT NAVIGATION.
+    start("shortcuts still opens text navigation", [(7, 0x51, 0)])
     events.append("ZMK_MOCK_PRESS(0,10,350)")
-    tap(34)
+    events.append("ZMK_MOCK_PRESS(0,31,350)")
+    tap(17)  # Down on TEXT
+    events.append("ZMK_MOCK_RELEASE(0,31,10)")
     events.append("ZMK_MOCK_RELEASE(0,10,10)")
-    tap(2)  # O
-    events.append("ZMK_MOCK_PRESS(0,19,350)")
-    tap(34)
-    events.append("ZMK_MOCK_RELEASE(0,19,10)")
-    tap(2)  # M
-    finish()
-    # Holding it only opens the layer for as long as it is held.
-    start("excalidraw hold from shortcuts", [o, m])
-    events.append("ZMK_MOCK_PRESS(0,10,350)")
-    events.append("ZMK_MOCK_PRESS(0,34,350)")
-    events.append("ZMK_MOCK_RELEASE(0,10,10)")
-    tap(2)  # O
-    events.append("ZMK_MOCK_RELEASE(0,34,10)")
-    tap(2)  # M
     finish()
 
     # Arm BASE from SHORTS, release both pinkies, then hold a modifier through
@@ -234,7 +243,7 @@ def fixture(directory):
             "letter": (7, 0x14),
             "held_mod": modifier,
         })  # Ctrl/Command+Q
-        tap(40)  # VIM_NORMAL: Q exists only while BASE is active
+        tap(38)  # VIM_NORMAL: Q exists only while BASE is active
         if macos:
             tap(37)  # ALT_OS
         events.append("ZMK_MOCK_PRESS(0,10,350)")  # hold left pinky for SHORTS

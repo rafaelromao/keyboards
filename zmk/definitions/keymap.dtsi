@@ -34,38 +34,6 @@
                 };
 
 
-                /*
-                 * Excalidraw's tool shortcuts, left hand only; the right hand
-                 * falls through to the base. The letters are the tools, and
-                 * the combos in features/combos.dtsi add the ones that do not
-                 * fit: X with Shift, Q, E, V and K. T and N open EXCAL_TEXT
-                 * for what is typed next.
-                 */
-                excalidraw_layer {
-                     display-name = "EXCALIDRAW";
-                     bindings = <
-   &none                     &kp B                     &kp O                     &kp L                     &none                     &trans                    &trans                    &trans                    &trans                    &trans
-   &kp D                     &mc_excal_n               &kp H                     &mc_excal_text            &none                     &trans                    &trans                    &trans                    &trans                    &trans
-   &none                     &kp F                     &kp R                     &kp P                     &none                     &trans                    &trans                    &trans                    &trans                    &trans
-                                                       &trans                    &trans                    &trans                    &trans                    &trans                    &trans
-                        >;
-                };
-
-                /*
-                 * The base, from T on EXCALIDRAW until Enter or Esc. A copy of
-                 * the base layer, like REPLACE: the pinkies hold nothing, so they stay
-                 * plain d and i.
-                 */
-                excal_text_layer {
-                     display-name = "EXCAL TEXT";
-                     bindings = <
-   &kp Q                     &kp B                     &kp M                     &kp G                     &kp K                     &kp X                     &kp L                     &kp O                     &kp U                     &kp SEMICOLON
-   &kp D                     &mt LCTL N                &mt LALT S                &mt LSFT T                &kp W                     &kp Z                     &mt LSFT R                &mt LALT A                &mt LCTL E                &kp I
-   &kp D                     &mt LS(LGUI) F            &mt LS(LGUI) C            &mt LGUI P                &kp V                     &kp J                     &ht_magic LGUI 0          &th_comma 0 0             &th_dot 0 0               &kp I
-                                                       &mkp RCLK                 &ht_repeat NAV 0          &ltn_num_spc 0 0          &sentence_alpha2          &ht_shift MEDIA 0         &mkp LCLK
-                        >;
-                };
-
                 vim_normal_layer {
                      display-name = "NORMAL";
                      bindings = <
@@ -163,6 +131,38 @@
                                                        &none                     &mo TEXT                  &lt FUN SPACE             &lt MACROS SPACE          &lt_tog EXCALIDRAW EXCALIDRAW &none
                         >;
                 };
+                /*
+                 * Excalidraw's tool shortcuts, left hand only; the right hand
+                 * falls through to the base. The letters are the tools, and
+                 * the combos in features/combos.dtsi add the ones that do not
+                 * fit: X with Shift, Q, E, V and K. T and N open EXCAL_TEXT
+                 * for what is typed next.
+                 */
+                excalidraw_layer {
+                     display-name = "EXCALIDRAW";
+                     bindings = <
+   &none                     &kp B                     &kp O                     &kp L                     &none                     &trans                    &trans                    &trans                    &trans                    &trans
+   &kp D                     &mc_excal_n               &kp H                     &mc_excal_text            &none                     &trans                    &trans                    &trans                    &trans                    &trans
+   &none                     &kp F                     &kp R                     &kp P                     &none                     &trans                    &trans                    &trans                    &trans                    &trans
+                                                       &trans                    &trans                    &trans                    &trans                    &trans                    &trans
+                        >;
+                };
+
+                /*
+                 * The base, from T on EXCALIDRAW until Enter or Esc. A copy of
+                 * the base layer, like REPLACE: the pinkies hold nothing, so they stay
+                 * plain d and i.
+                 */
+                excal_text_layer {
+                     display-name = "EXCAL TEXT";
+                     bindings = <
+   &kp Q                     &kp B                     &kp M                     &kp G                     &kp K                     &kp X                     &kp L                     &kp O                     &kp U                     &kp SEMICOLON
+   &kp D                     &mt LCTL N                &mt LALT S                &mt LSFT T                &kp W                     &kp Z                     &mt LSFT R                &mt LALT A                &mt LCTL E                &kp I
+   &kp D                     &mt LS(LGUI) F            &mt LS(LGUI) C            &mt LGUI P                &kp V                     &kp J                     &ht_magic LGUI 0          &th_comma 0 0             &th_dot 0 0               &kp I
+                                                       &mkp RCLK                 &ht_repeat NAV 0          &ltn_num_spc 0 0          &sentence_alpha2          &ht_shift MEDIA 0         &mkp LCLK
+                        >;
+                };
+
                 toggles_layer {
                      display-name = "TOGGLES";
                      bindings = <

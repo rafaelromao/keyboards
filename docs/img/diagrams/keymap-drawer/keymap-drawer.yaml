@@ -227,6 +227,23 @@ layers:
     - { t: $$mdi:keyboard-space$$, h: func }
     - { t: $$mdi:keyboard-space$$, h: macros }
     - { t: toggle, h: excalidraw }
+  excalidraw:
+    - [b, o, l, ▽, ▽, ▽]
+    - [
+        d,
+        { t: n, s: text },
+        h,
+        { t: t, s: text },
+        ▽,
+        ▽,
+        ▽,
+        ▽,
+      ]
+    - [f, r, p, ▽, ▽, ▽]
+    - { t: ▽ }
+    - { t: ▽ }
+    - { t: ▽ }
+    - { t: ▽ }
   toggles:
     - [
         null,
@@ -258,23 +275,6 @@ layers:
     - { t: NUM LOCK }
     - { t: $$mdi:lock$$, s: "lock" }
     - { t: $$mdi:power-sleep$$, s: "sleep"}
-  excalidraw:
-    - [b, o, l, ▽, ▽, ▽]
-    - [
-        d,
-        { t: n, s: text },
-        h,
-        { t: t, s: text },
-        ▽,
-        ▽,
-        ▽,
-        ▽,
-      ]
-    - [f, r, p, ▽, ▽, ▽]
-    - { t: ▽ }
-    - { t: ▽ }
-    - { t: ▽ }
-    - { t: ▽ }
   nav:
     - [
         { t: $$mdi:apps$$, s: swapper },

@@ -20,6 +20,38 @@ class KeymapTests(unittest.TestCase):
             with self.subTest(layer=name):
                 self.assertEqual(len(bindings), 36)
 
+    def test_excalidraw_order_preserves_shortcuts_and_sits_above_them(self):
+        names = [name for name, _, _ in self.layers]
+        self.assertEqual(
+            names[:15],
+            [
+                "default_layer",
+                "alt_os_layer",
+                "vim_normal_layer",
+                "vim_visual_layer",
+                "vim_change_layer",
+                "vim_insert_layer",
+                "vim_replace_layer",
+                "vim_cmdline_layer",
+                "capsword_layer",
+                "capsline_layer",
+                "shortcuts_layer",
+                "excalidraw_layer",
+                "excal_text_layer",
+                "toggles_layer",
+                "mehs_layer",
+            ],
+        )
+        config = (ROOT / "zmk/definitions/config.dtsi").read_text()
+        layer_ids = {
+            name: int(index)
+            for name, index in re.findall(r"^#define (\w+) (\d+)$", config, re.M)
+        }
+        self.assertEqual(
+            [layer_ids[name] for name in ("SHORTS", "EXCALIDRAW", "EXCAL_TEXT", "TOGS", "MEHS", "TEXT")],
+            [10, 11, 12, 13, 14, 28],
+        )
+
     def test_every_safe_binding_has_exactly_one_native_tap_snapshot(self):
         expected = set()
         for name, _, bindings in self.layers:

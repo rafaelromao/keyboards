@@ -10,24 +10,23 @@
 #define ALPHA1 0
 #define ALT_OS 1
 
-// Excalidraw's tools on the left hand, and the base copy that its text tool
-// opens on top of it. Both sit at the bottom, like the vim layers, so every
-// hold layer (NAV, NUM, SYM, ALPHA2, MEDIA, the caps layers) stays above the
-// copy and keeps its keys and combos while text is typed.
-#define EXCALIDRAW 2
-#define EXCAL_TEXT 3
+#define VIM_NORMAL 2
+#define VIM_VISUAL 3
+#define VIM_CHANGE 4
+#define VIM_INSERT 5
+#define VIM_REPLACE 6
+#define VIM_CMDLINE 7
 
-#define VIM_NORMAL 4
-#define VIM_VISUAL 5
-#define VIM_CHANGE 6
-#define VIM_INSERT 7
-#define VIM_REPLACE 8
-#define VIM_CMDLINE 9
+#define CASE_A1 8
+#define CPLK_A1 9
 
-#define CASE_A1 10
-#define CPLK_A1 11
+#define SHORTS 10
 
-#define SHORTS 12
+// Above SHORTS so R1 + either pinky can activate the layer, but below the
+// existing toggles, MEHS, navigation, number and symbol layers.
+#define EXCALIDRAW 11
+#define EXCAL_TEXT 12
+
 #define TOGS 13
 #define MEHS 14
 
