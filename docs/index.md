@@ -264,7 +264,7 @@ Here we also have convenient shortcuts to *lock* the computer or put it to *slee
 
 ## Excalidraw
 
-Excalidraw picks its tools with single letters, so there is a layer that puts them under the left hand and leaves the right hand as it is in the base layer, with its combos, arrows, numbers and the pinky that opens *shortcuts*. The left pinky is a plain `d` here, and `t` and `n` open the text copy described below.
+Excalidraw picks its tools with single letters, so there is a layer that puts them under the left hand and leaves the right hand as it is in the base layer, with its arrows, numbers and the pinky that opens *shortcuts*. `Esc` is not a combo there, because it would collide with the `b`/`o` tools: use the one on *nav*. The left pinky is a plain `d` here, and `t` and `n` open the text copy described below.
 
 ![img](img/diagrams/excalidraw.png)
 
@@ -272,7 +272,7 @@ The tools that did not fit on the layer are combos on the same positions as the 
 
 The layer can be toggled with the *excalidraw* key in the *toggles* layer, or from the *shortcuts* layer, with the *R1* thumb key (the *text* layer is on the opposite one): tap it to toggle the layer on or off, hold it to have the layer only while it is held. With the layer on, the left pinky no longer opens *shortcuts*, so use the right one to toggle it off. Cancel turns it off too.
 
-`t` and `n` type themselves and also open a copy of the base layout on top of the layer, so what comes next is typed with the usual letters and combos. `Enter` or `Esc` types itself and closes the copy, back to the tools. It is a layer of its own, not the one `r` opens in VIM mode, because that one belongs to the host's vim mode and its `Esc` leaves for *normal*.
+`t` and `n` type themselves and also open a copy of the base layout on top of the layer, so what comes next is typed with the usual letters and combos, and the hold layers (*nav*, *numbers*, *symbols*...) still work on top of it. `Enter` or `Esc` types itself and closes the copy, back to the tools. It is a layer of its own, not the one `r` opens in VIM mode, because that one belongs to the host's vim mode and its `Esc` leaves for *normal*.
 
 ## Macros
 

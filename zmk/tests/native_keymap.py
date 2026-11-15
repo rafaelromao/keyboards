@@ -142,7 +142,7 @@ def fixture(directory):
         events.extend(f"ZMK_MOCK_PRESS(0,{position},10)" for position in positions)
         events.extend(f"ZMK_MOCK_RELEASE(0,{position},10)" for position in positions)
 
-    excalidraw = 36 + 30  # the &to control for EXCALIDRAW
+    excalidraw = 36 + 2  # the &to control for EXCALIDRAW
     start("excalidraw combos", [(7, 0x1B, 2), (7, 0x14, 0), (7, 0x08, 0), (7, 0x19, 0), (7, 0x0E, 0)])
     tap(excalidraw)
     for keys in ((2, 3), (11, 12), (12, 13), (22, 23), (21, 22)):  # Shift+X, Q, E, V, K
@@ -163,6 +163,14 @@ def fixture(directory):
             chord(*close)
             tap(2)  # O again: the copy is gone
             finish()
+    # A hold layer stays above the text copy: Left on NAV, not M's neighbour.
+    start("excalidraw text keeps nav", [(7, 0x17, 0), (7, 0x50, 0)])
+    tap(excalidraw)
+    tap(13)  # T opens the copy
+    events.append("ZMK_MOCK_PRESS(0,31,200)")
+    tap(16)  # Left on NAV
+    events.append("ZMK_MOCK_RELEASE(0,31,10)")
+    finish()
     # Tapping R1 with a pinky held toggles the layer, from either pinky.
     start("excalidraw toggles from shortcuts", [o, m])
     events.append("ZMK_MOCK_PRESS(0,10,350)")
@@ -201,7 +209,7 @@ def fixture(directory):
             "letter": (7, 0x14),
             "held_mod": modifier,
         })  # Ctrl/Command+Q
-        tap(38)  # VIM_NORMAL: Q exists only while BASE is active
+        tap(40)  # VIM_NORMAL: Q exists only while BASE is active
         if macos:
             tap(37)  # ALT_OS
         events.append("ZMK_MOCK_PRESS(0,10,350)")  # hold left pinky for SHORTS

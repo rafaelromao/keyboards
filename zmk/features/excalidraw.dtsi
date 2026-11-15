@@ -18,8 +18,9 @@
      * editor's state changes) and Esc on them goes to NORMAL, and BASE is the
      * one-shot that SHORTCUTS arms, whose combos should not change.
      *
-     * &tog_on / &tog_off do not lock, so the host and a cancel can still drop
-     * it, and mc_base_reset clears both layers with the locking variants.
+     * Both layers sit at the bottom, below every hold layer, so NAV, NUM and
+     * the rest still win over the copy. EXCALIDRAW is held by the locking
+     * &tog, so mc_base_reset clears both with &lock_off.
      */
     excalidraw {
         MACRO(mc_excal_text,    &kp T &tog_on EXCAL_TEXT)
