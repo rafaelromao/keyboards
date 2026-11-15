@@ -171,6 +171,21 @@ def fixture(directory):
     tap(16)  # Left on NAV
     events.append("ZMK_MOCK_RELEASE(0,31,10)")
     finish()
+    # Save, undo and Esc + save work on the tools and in the text copy alike.
+    save, undo = (7, 0x16, 1), (7, 0x1D, 1)
+    for where, opening in (("tools", []), ("text", [13])):
+        for name, keys, expected in (
+            ("save", (11, 12, 32), [save]),
+            ("undo", (21, 22, 32), [undo]),
+            ("esc + save", (1, 2, 32), [save, (7, 0x29, 0)]),
+        ):
+            typed = [(7, 0x17, 0)] if opening else []
+            start(f"excalidraw {where} {name}", typed + expected)
+            tap(excalidraw)
+            for position in opening:
+                tap(position)
+            chord(*keys)
+            finish()
     # Esc from another layer ends the text too: it is the auto-layer that
     # listens, not the Esc binding.
     start("excalidraw text ends on nav esc", [(7, 0x17, 0), (7, 0x29, 0), (7, 0x12, 0)])
