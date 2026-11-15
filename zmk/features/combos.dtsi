@@ -30,7 +30,7 @@
      * keeps working everywhere else, which is a miserable thing to debug.
      * Use ALPHA1_BASE, never a bare ALPHA1.
      */
-    #define ALPHA1_BASE                 ALPHA1 ALT_OS
+    #define ALPHA1_BASE                 ALPHA1 ALT_OS EXCAL_TEXT
     #define ALPHA1_LAYERS               ALPHA1_BASE CASE_A1 CPLK_A1 ALTREP2
     #define CCEDIL_LAYERS               CCEDIL CASE_CCEDIL
     #define ALPHA2_LAYERS               ALPHA2 CASE_A2 SFT_A2
@@ -40,11 +40,11 @@
     #define VIM_LAYERS_BASE             VIM_INSERT VIM_REPLACE VIM_CMDLINE
     #define VIM_LAYERS_VIM              VIM_NORMAL VIM_VISUAL VIM_CHANGE
     #define VIM_LAYERS                  VIM_LAYERS_BASE VIM_LAYERS_VIM
-    #define FIXABLE_LAYERS              ALPHA1_LAYERS NUM_LAYERS MEDIA NAV_LAYERS MEHS FUN                                           VIM_LAYERS
-    #define ALL_LAYERS                  ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS MEDIA TEXT SHORTS VIM_LAYERS
-    #define ALL_LAYERS_WITH_ENTER       ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS MEDIA TEXT        VIM_LAYERS_BASE
-    #define ALL_LAYERS_WITH_BACKSPACE   ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS                   VIM_LAYERS_BASE
-    #define ALL_LAYERS_WITH_ESC         ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS                 MEHS                               VIM_LAYERS
+    #define FIXABLE_LAYERS              ALPHA1_LAYERS NUM_LAYERS MEDIA NAV_LAYERS MEHS FUN EXCALIDRAW                              VIM_LAYERS
+    #define ALL_LAYERS                  ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS MEDIA TEXT SHORTS EXCALIDRAW VIM_LAYERS
+    #define ALL_LAYERS_WITH_ENTER       ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS MEDIA TEXT EXCALIDRAW VIM_LAYERS_BASE
+    #define ALL_LAYERS_WITH_BACKSPACE   ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS EXCALIDRAW         VIM_LAYERS_BASE
+    #define ALL_LAYERS_WITH_ESC         ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS                 MEHS EXCALIDRAW                    VIM_LAYERS
 
     combos {
         compatible = "zmk,combos";
@@ -158,6 +158,14 @@
         COMBO(cb_v_vim,         RBI RBM,         &lm_v_vim,              VIM_LAYERS_VIM)
 
         COMBO(cb_reset_zoom,    LHR LHM,         &mc_reset_zoom,         SHORTS)
+
+        /* Excalidraw's tools that have no key of their own on its layer. They
+           sit on the positions of the base layer's own letter chords. */
+        COMBO(cb_excal_x,       LTM LTI,         &kp LS(X),              EXCALIDRAW)
+        COMBO(cb_excal_q,       LHR LHM,         &kp Q,                  EXCALIDRAW)
+        COMBO(cb_excal_e,       LHM LHI,         &kp E,                  EXCALIDRAW)
+        COMBO(cb_excal_v,       LBM LBI,         &kp V,                  EXCALIDRAW)
+        COMBO(cb_excal_k,       LBR LBM,         &kp K,                  EXCALIDRAW)
 
         COMBO(cb_meh_k,         LTI LTM,         &mc_meh_k,              MEHS)
         COMBO(cb_meh_w,         LHI LHM,         &mc_meh_w,              MEHS)

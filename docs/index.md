@@ -256,11 +256,23 @@ The *Leader Key* is placed in the *shortcuts* layer.
 
 ## Toggles
 
-From the *shortcuts* layer, the *toggles* layer can be activated. It allows some layers to be toggled on permanently, like the *numbers*, *nav*, and *media* layers.
+From the *shortcuts* layer, the *toggles* layer can be activated. It allows some layers to be toggled on permanently, like the *numbers*, *nav*, *media* and *excalidraw* layers.
 
 Here we also have convenient shortcuts to *lock* the computer or put it to *sleep*, as well as *Bluetooth* controls, *num lock* and *caps lock*.
 
 ![img](img/diagrams/toggles.png)
+
+## Excalidraw
+
+Excalidraw picks its tools with single letters, so there is a layer that puts them under the left hand and leaves the right hand as it is in the base layer, with its combos, arrows, numbers and the pinky that opens *shortcuts*. The left pinky is a plain `d` here, and `t` and `n` open the text copy described below.
+
+![img](img/diagrams/excalidraw.png)
+
+The tools that did not fit on the layer are combos on the same positions as the base layer's own letter combos: `o` + `l` is `Shift+x`, `n` + `h` is `q`, `h` + `t` is `e`, `r` + `p` is `v` and `f` + `r` is `k`.
+
+The layer can be toggled with the *excalidraw* key in the *toggles* layer, or from the *shortcuts* layer, with the *R1* thumb key (the *text* layer is on the opposite one): tap it to toggle the layer on or off, hold it to have the layer only while it is held. With the layer on, the left pinky no longer opens *shortcuts*, so use the right one to toggle it off. Cancel turns it off too.
+
+`t` and `n` type themselves and also open a copy of the base layout on top of the layer, so what comes next is typed with the usual letters and combos. `Enter` or `Esc` types itself and closes the copy, back to the tools. It is a layer of its own, not the one `r` opens in VIM mode, because that one belongs to the host's vim mode and its `Esc` leaves for *normal*.
 
 ## Macros
 
@@ -505,6 +517,7 @@ These are the parts of the ZMK keymap that have no counterpart in QMK, or that o
 - **Layer HUD**: nothing is signalled to the host over serial or Bluetooth, so the [layer HUD](https://github.com/rafaelromao/zmk-layer-hud) does not work with these boards.
 - **Vim mode sync with the host**: the vim layers exist and the mode changes the keyboard infers from what it types (`i`, `a`, `o`, `v`, `:`, `Esc`, ...) all work, but the editor state is not read back from the host. Vim mode is turned on with the top-row ring+middle+index chord or its MACROS-layer twin, and off with the other MACROS-layer chord or cancel; num word keeps it. Neither is announced to the host.
 - **Leader key**: not ported; its slot on the shortcuts layer is empty.
+- **Excalidraw**: the *excalidraw* layer, its text copy and the shortcuts and toggles keys that reach it are ZMK only.
 - **Meh + comma / Meh + dot**: always `Ctrl+Alt+Shift+,` and `Ctrl+Alt+Shift+.`, without the macOS variants.
 - **Persistent layers**: the OS mode chosen on the toggles layer is kept until the board is unplugged, not stored.
 

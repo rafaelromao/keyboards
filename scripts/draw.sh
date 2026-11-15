@@ -30,6 +30,7 @@ yq -i 'del(.combos[] | select(.layers | contains(["nav"]) | not))' tmp/keymap-dr
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml alphas alpha1 alpha2
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml cedil ç-extension
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml toggles toggles
+./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml excalidraw excalidraw
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml shifted shifted1 shifted2
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml vim alpha1 vim
 

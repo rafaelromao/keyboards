@@ -1,0 +1,47 @@
+/*
+*
+* Copyright (c) 2026 Rafael Romão
+* SPDX-License-Identifier: MIT
+*
+*/
+
+/ {
+    /*
+     * EXCALIDRAW puts the editor's one-letter tool shortcuts on the left hand
+     * and leaves the right hand transparent. Its text tool is typed with T, so
+     * T also opens EXCAL_TEXT, a copy of the base layout, for the words that
+     * follow, and N does the same. Enter and Esc end the text and close that
+     * copy again.
+     *
+     * Two things make this a layer of its own instead of VIM_REPLACE:
+     * the vim layers belong to the host (zmk-vim-mode clears them whenever the
+     * editor's state changes) and Esc on them goes to NORMAL, and BASE is the
+     * one-shot that SHORTCUTS arms, whose combos should not change.
+     *
+     * &tog_on / &tog_off do not lock, so the host and a cancel can still drop
+     * it, and mc_base_reset clears both layers with the locking variants.
+     */
+    excalidraw {
+        MACRO(mc_excal_text,    &kp T &tog_on EXCAL_TEXT)
+        MACRO(mc_excal_n,       &kp N &tog_on EXCAL_TEXT)
+        MACRO(mc_excal_enter,   &kp ENTER &tog_off EXCAL_TEXT)
+        MACRO(mc_excal_esc,     &kp ESC &tog_off EXCAL_TEXT)
+
+        // The default bindings of lm_ent_vim and lm_esc_vim, which every
+        // Enter and Esc in the layout goes through, so the combos and the
+        // navigation layer's keys all end the text.
+        ent_excal: ent_excal {
+            compatible = "zmk,behavior-layer-morph";
+            #binding-cells = <0>;
+            layers = <EXCAL_TEXT>;
+            bindings = <&kp ENTER>, <&mc_excal_enter>;
+        };
+
+        esc_excal: esc_excal {
+            compatible = "zmk,behavior-layer-morph";
+            #binding-cells = <0>;
+            layers = <EXCAL_TEXT>;
+            bindings = <&kp ESC>, <&mc_excal_esc>;
+        };
+    };
+};

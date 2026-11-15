@@ -15,7 +15,7 @@ class KeymapTests(unittest.TestCase):
         cls.records = {record["case"]: record["events"] for record in cls.snapshots}
 
     def test_every_layer_has_all_36_positions(self):
-        self.assertEqual(len(self.layers), 30)
+        self.assertEqual(len(self.layers), 32)
         for name, _, bindings in self.layers:
             with self.subTest(layer=name):
                 self.assertEqual(len(bindings), 36)

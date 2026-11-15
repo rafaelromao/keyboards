@@ -8,6 +8,7 @@
 
 #include "../features/mouse.dtsi"
 #include "../features/vim.dtsi"
+#include "../features/excalidraw.dtsi"
 #include "../features/hud.dtsi"
 #include "../features/os.dtsi"
 

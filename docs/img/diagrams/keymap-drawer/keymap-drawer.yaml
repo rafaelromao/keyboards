@@ -226,7 +226,7 @@ layers:
     - { h: text }
     - { t: $$mdi:keyboard-space$$, h: func }
     - { t: $$mdi:keyboard-space$$, h: macros }
-    - { h: text }
+    - { t: toggle, h: excalidraw }
   toggles:
     - [
         null,
@@ -251,13 +251,30 @@ layers:
         { t: omarchy },
         { t: macos },
         { t: mehs },
-        null,
+        { t: excalidraw },
         { t: $$mdi:flash$$, s: "boot" },
       ]
     - { t: CAPS LOCK }
     - { t: NUM LOCK }
     - { t: $$mdi:lock$$, s: "lock" }
     - { t: $$mdi:power-sleep$$, s: "sleep"}
+  excalidraw:
+    - [b, o, l, ▽, ▽, ▽]
+    - [
+        d,
+        { t: n, s: text },
+        h,
+        { t: t, s: text },
+        ▽,
+        ▽,
+        ▽,
+        ▽,
+      ]
+    - [f, r, p, ▽, ▽, ▽]
+    - { t: ▽ }
+    - { t: ▽ }
+    - { t: ▽ }
+    - { t: ▽ }
   nav:
     - [
         { t: $$mdi:apps$$, s: swapper },
@@ -811,6 +828,12 @@ combos:
       a: mid,
       layers: [alpha1, numbers],
     }
+
+  - { p: [1, 2],   k: "⇧ x", a: mid, layers: [excalidraw] }
+  - { p: [7, 8],   k: "q", a: mid, layers: [excalidraw] }
+  - { p: [8, 9],   k: "e", a: mid, layers: [excalidraw] }
+  - { p: [15, 16], k: "v", a: mid, layers: [excalidraw] }
+  - { p: [14, 15], k: "k", a: mid, layers: [excalidraw] }
 
   - { p: [1, 2], k: "K", a: mid, layers: [shifted1] }
   - { p: [3, 4], k: "X", a: mid, layers: [shifted1] }

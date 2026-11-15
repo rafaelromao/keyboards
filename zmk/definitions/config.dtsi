@@ -51,6 +51,11 @@
 // The base letters, one-shot above SHORTCUTS.
 #define BASE 29
 
+// Excalidraw's tools on the left hand, and the base copy that its text tool
+// opens on top of it. The copy has to be the higher of the two.
+#define EXCALIDRAW 30
+#define EXCAL_TEXT 31
+
 
 // Settings
 
@@ -212,6 +217,20 @@
             bindings = <&mo>;
             ignore-modifiers;
             display-name = "Sticky Base Layer";
+        };
+
+        /*
+         * Hold for a layer, tap to toggle it: &lt_tog EXCALIDRAW EXCALIDRAW.
+         * Both cells carry the layer, because the hold-tap hands the same two
+         * parameters to whichever of its bindings wins, and &tog takes one.
+         */
+        lt_tog: lt_tog {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <QUICK_TAP_TERM>;
+            bindings = <&mo>, <&tog>;
         };
 
         hlt: layer-tap-with-hold-preferred {

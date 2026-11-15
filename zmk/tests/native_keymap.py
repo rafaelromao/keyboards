@@ -33,7 +33,7 @@ def layers():
 
 def hold_taps():
     features = "\n".join(path.read_text() for path in (ROOT / "zmk/features").glob("*.dtsi"))
-    names = {"mt", "lt", "hlt", "hsk", "sentence_alpha2"}
+    names = {"mt", "lt", "hlt", "hsk", "lt_tog", "sentence_alpha2"}
     names.update(re.findall(r"(?:LAYERTAP_TP|MODTAP_TP|TAPHOLD_TP|COMBO_MUST_TAP)\(\s*(\w+)", features))
     names.update(re.findall(r'(\w+):\s*\w+\s*\{\s*compatible\s*=\s*"zmk,behavior-hold-tap"', features))
     return names
@@ -134,6 +134,54 @@ def fixture(directory):
     events.append("ZMK_MOCK_PRESS(0,31,200)")
     tap(16)  # Left on NAV
     events.append("ZMK_MOCK_RELEASE(0,31,10)")
+    finish()
+
+    # Excalidraw: the chords on its layer, the text copy that T opens and that
+    # Enter or Esc close, and the pinky + R1 toggle from SHORTS.
+    def chord(*positions):
+        events.extend(f"ZMK_MOCK_PRESS(0,{position},10)" for position in positions)
+        events.extend(f"ZMK_MOCK_RELEASE(0,{position},10)" for position in positions)
+
+    excalidraw = 36 + 30  # the &to control for EXCALIDRAW
+    start("excalidraw combos", [(7, 0x1B, 2), (7, 0x14, 0), (7, 0x08, 0), (7, 0x19, 0), (7, 0x0E, 0)])
+    tap(excalidraw)
+    for keys in ((2, 3), (11, 12), (12, 13), (22, 23), (21, 22)):  # Shift+X, Q, E, V, K
+        chord(*keys)
+        tap(wait, release_delay=300)  # let each combo window close
+    finish()
+    # T and N type themselves and open the base copy; Enter and Esc type
+    # themselves and close it. O (position 2) is a tool on EXCALIDRAW and M on
+    # the copy.
+    o, m, a, enter, esc = (7, 0x12, 0), (7, 0x10, 0), (7, 0x04, 0), (7, 0x28, 0), (7, 0x29, 0)
+    for starter, position, opener in (("t", 13, (7, 0x17, 0)), ("n", 11, (7, 0x11, 0))):
+        for name, close, ending in (("enter", (17, 18, 33), enter), ("esc", (1, 2), esc)):
+            start(f"excalidraw {starter} opens text, ends on {name}", [opener, m, a, ending, o])
+            tap(excalidraw)
+            tap(position)  # T or N
+            tap(2)  # M, on the copy
+            tap(17)  # A
+            chord(*close)
+            tap(2)  # O again: the copy is gone
+            finish()
+    # Tapping R1 with a pinky held toggles the layer, from either pinky.
+    start("excalidraw toggles from shortcuts", [o, m])
+    events.append("ZMK_MOCK_PRESS(0,10,350)")
+    tap(34)
+    events.append("ZMK_MOCK_RELEASE(0,10,10)")
+    tap(2)  # O
+    events.append("ZMK_MOCK_PRESS(0,19,350)")
+    tap(34)
+    events.append("ZMK_MOCK_RELEASE(0,19,10)")
+    tap(2)  # M
+    finish()
+    # Holding it only opens the layer for as long as it is held.
+    start("excalidraw hold from shortcuts", [o, m])
+    events.append("ZMK_MOCK_PRESS(0,10,350)")
+    events.append("ZMK_MOCK_PRESS(0,34,350)")
+    events.append("ZMK_MOCK_RELEASE(0,10,10)")
+    tap(2)  # O
+    events.append("ZMK_MOCK_RELEASE(0,34,10)")
+    tap(2)  # M
     finish()
 
     # Arm BASE from SHORTS, release both pinkies, then hold a modifier through
