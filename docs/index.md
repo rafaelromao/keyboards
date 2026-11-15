@@ -264,7 +264,7 @@ Here we also have convenient shortcuts to *lock* the computer or put it to *slee
 
 ## Excalidraw
 
-Excalidraw picks its tools with single letters, so there is a layer that puts them under the left hand and leaves the right hand as it is in the base layer, with its arrows, numbers and the pinky that opens *shortcuts*. `Esc` is not a combo there, because it would collide with the `b`/`o` tools: use the one on *nav*. The left pinky is a plain `d` here, and `t` and `n` open the text copy described below.
+Excalidraw picks its tools with single letters, so there is a layer that puts them under the left hand and leaves the right hand as it is in the base layer, with its arrows, numbers and the pinky that opens *shortcuts*. `Esc` is still the `b` + `o` combo. The left pinky is a plain `d` here, and `t` and `n` open the text copy described below.
 
 ![img](img/diagrams/excalidraw.png)
 
