@@ -155,10 +155,10 @@
         VIM_BINDING(lm_qmark_vim        , VIM_NORMAL VIM_VISUAL VIM_CHANGE, &vim_qmark, &mc_qmark)
 
         VIM_MACRO(vim_enter             , &vim_normal &kp ENTER)
-        VIM_BINDING(lm_ent_vim          , VIM_CMDLINE, &vim_enter, &ent_excal)
+        VIM_BINDING(lm_ent_vim          , VIM_CMDLINE, &vim_enter, &kp ENTER)
 
         VIM_MACRO(vim_esc               , &vim_normal &kp ESC)
-        VIM_BINDING(lm_esc_vim          , VIM_VISUAL VIM_CHANGE VIM_INSERT VIM_REPLACE VIM_CMDLINE, &vim_esc, &esc_excal)
+        VIM_BINDING(lm_esc_vim          , VIM_VISUAL VIM_CHANGE VIM_INSERT VIM_REPLACE VIM_CMDLINE, &vim_esc, &kp ESC)
 
         VIM_MACRO(vim_o                 , &kp O &tog_off VIM_NORMAL &tog_off VIM_VISUAL &tog_on VIM_INSERT)
         VIM_MACRO(vim_a                 , &kp A &tog_off VIM_NORMAL &tog_off VIM_VISUAL &tog_on VIM_INSERT)

@@ -171,6 +171,16 @@ def fixture(directory):
     tap(16)  # Left on NAV
     events.append("ZMK_MOCK_RELEASE(0,31,10)")
     finish()
+    # Esc from another layer ends the text too: it is the auto-layer that
+    # listens, not the Esc binding.
+    start("excalidraw text ends on nav esc", [(7, 0x17, 0), (7, 0x29, 0), (7, 0x12, 0)])
+    tap(excalidraw)
+    tap(13)  # T opens the copy
+    events.append("ZMK_MOCK_PRESS(0,31,200)")
+    tap(8)  # Esc on NAV
+    events.append("ZMK_MOCK_RELEASE(0,31,10)")
+    tap(2)  # O: the copy is gone
+    finish()
     # Tapping R1 with a pinky held toggles the layer, from either pinky.
     start("excalidraw toggles from shortcuts", [o, m])
     events.append("ZMK_MOCK_PRESS(0,10,350)")
