@@ -17,9 +17,10 @@
      * turns it off -- which is to say Enter and Esc, from whichever macro,
      * combo or layer they come. Nothing has to be wired into them.
      *
-     * Both layers sit at the bottom, below every hold layer, so NAV, NUM and
-     * the rest still win over the copy. Auto-layer activates with locking, so
-     * mc_base_reset clears both with &lock_off.
+     * SHORTS and MEDIA sit below the tools so their hold activations reveal
+     * Excalidraw. Its base copy is below ALPHA2, NAV, NUM and SYM so typing
+     * still has both alphabets and editing layers. Auto-layer activates with
+     * locking, so mc_base_reset clears both with &lock_off.
      */
     excalidraw {
         smart_excal: smart_excal {

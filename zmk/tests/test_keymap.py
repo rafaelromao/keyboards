@@ -36,10 +36,10 @@ class KeymapTests(unittest.TestCase):
                 "capsword_layer",
                 "capsline_layer",
                 "shortcuts_layer",
+                "media_layer",
                 "excalidraw_layer",
                 "excal_text_layer",
                 "toggles_layer",
-                "mehs_layer",
             ],
         )
         config = (ROOT / "zmk/definitions/config.dtsi").read_text()
@@ -49,7 +49,7 @@ class KeymapTests(unittest.TestCase):
         }
         self.assertEqual(
             [layer_ids[name] for name in ("SHORTS", "EXCALIDRAW", "EXCAL_TEXT", "TOGS", "MEHS", "TEXT")],
-            [10, 11, 12, 13, 14, 28],
+            [10, 12, 13, 14, 15, 28],
         )
 
     def test_every_safe_binding_has_exactly_one_native_tap_snapshot(self):

@@ -142,7 +142,7 @@ def fixture(directory):
         events.extend(f"ZMK_MOCK_PRESS(0,{position},10)" for position in positions)
         events.extend(f"ZMK_MOCK_RELEASE(0,{position},10)" for position in positions)
 
-    excalidraw = 36 + 11  # the &to control for EXCALIDRAW
+    excalidraw = 36 + 12  # the &to control for EXCALIDRAW
     start("excalidraw combos", [(7, 0x1B, 2), (7, 0x14, 0), (7, 0x08, 0), (7, 0x19, 0), (7, 0x0E, 0)])
     tap(excalidraw)
     for keys in ((2, 3), (11, 12), (12, 13), (22, 23), (21, 22)):  # Shift+X, Q, E, V, K
@@ -172,6 +172,33 @@ def fixture(directory):
     events.append("ZMK_MOCK_RELEASE(0,31,10)")
     finish()
     # Save, undo and Esc + save work on the tools and in the text copy alike.
+    start("excalidraw text keeps alpha2", [(7, 0x17, 0), (7, 0x14, 0)])
+    tap(excalidraw)
+    tap(13)
+    tap(33)  # usual one-shot ALPHA2
+    tap(1)  # Q on ALPHA2, not B on the typing copy
+    finish()
+    for pinky in (19, 29):
+        start(f"media hold excalidraw {pinky}", [o])
+        events.append("ZMK_MOCK_PRESS(0,34,200)")  # MEDIA remains held
+        events.append(f"ZMK_MOCK_PRESS(0,{pinky},350)")
+        tap(2)  # O on Excalidraw, not MEDIA's mouse click
+        events.append(f"ZMK_MOCK_RELEASE(0,{pinky},10)")
+        events.append("ZMK_MOCK_RELEASE(0,34,10)")
+        finish()
+        start(f"media toggle excalidraw {pinky}", [o])
+        events.append("ZMK_MOCK_PRESS(0,34,200)")
+        tap(pinky)
+        tap(2)
+        tap(pinky)
+        events.append("ZMK_MOCK_RELEASE(0,34,10)")
+        finish()
+    start("media previous next play pause", [(12, 0xCD, 0)])
+    events.append("ZMK_MOCK_PRESS(0,34,200)")
+    chord(27, 28)
+    events.append("ZMK_MOCK_RELEASE(0,34,10)")
+    finish()
+
     save, undo = (7, 0x16, 1), (7, 0x1D, 1)
     for where, opening in (("tools", []), ("text", [13])):
         for name, keys, expected in (

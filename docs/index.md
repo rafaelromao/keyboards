@@ -272,7 +272,9 @@ The tools that did not fit on the layer are combos on the same positions as the 
 
 The layer can be toggled with the *excalidraw* key in the *toggles* layer, or from the *shortcuts* layer, with the *R1* thumb key (the *text* layer is on the opposite one): tap it to toggle the layer on or off, hold it to have the layer only while it is held. With the layer on, the left pinky no longer opens *shortcuts*, so use the right one to toggle it off. Cancel turns it off too.
 
-`t` and `n` type themselves and also open a copy of the base layout on top of the layer, so what comes next is typed with the usual letters and combos, and the hold layers (*nav*, *numbers*, *symbols*...) still work on top of it. `Enter` or `Esc` types itself and closes the copy, back to the tools. It is a layer of its own, not the one `r` opens in VIM mode, because that one belongs to the host's vim mode and its `Esc` leaves for *normal*.
+`t` and `n` type themselves and open a copy of the base layout above Excalidraw—not the TEXT navigation layer. The existing ALPHA2 sits above this base copy and is reached with the usual thumb key, so both typing layouts remain available. Navigation, numbers and symbols remain above it too. The copy uses auto-layer: `Enter` or `Esc` from any binding closes it, returning to the tools.
+
+On *media*, RHP and its RBP duplicate also tap-toggle or hold Excalidraw. Its tools override MEDIA even while MEDIA's activation key remains held. RBI now sends the camera shortcut; previous + next sends Play/Pause.
 
 ## Macros
 

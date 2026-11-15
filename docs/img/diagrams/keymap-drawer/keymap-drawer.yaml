@@ -226,7 +226,7 @@ layers:
     - { h: text }
     - { t: $$mdi:keyboard-space$$, h: func }
     - { t: $$mdi:keyboard-space$$, h: macros }
-    - { t: toggle, h: excalidraw }
+    - { t: $$mdi:draw$$, h: excalidraw }
   excalidraw:
     - [b, o, l, ▽, ▽, ▽]
     - [
@@ -323,13 +323,13 @@ layers:
         { t: $$mdi:microphone$$, s: mic},
         { t: $$mdi:volume-medium$$, s: vol- },
         { t: $$mdi:volume-high$$, s: vol+ },
-        { t: $$mdi:camera$$, h: text, s: cam},
+        { t: $$mdi:draw$$, h: excalidraw },
       ]
     - [
         { t: $$mdi:arrow-down-circle-outline$$, s: scroll },
         { t: $$mdi:arrow-down-circle$$, s: mouse },
         { t: $$mdi:arrow-up-circle-outline$$, s: scroll },
-        { t: $$mdi:play-pause$$, s: play },
+        { t: $$mdi:camera$$, s: cam },
         { t: $$mdi:skip-backward$$, s: previous },
         { t: $$mdi:skip-forward$$, s: next },
       ]
@@ -766,6 +766,7 @@ layers:
     - { s: code action, t: $$mdi:gesture-tap$$ }
     - { t: ▽ }
 combos:
+  - { p: [18, 19], k: "$$mdi:play-pause$$", a: mid, layers: [media] }
   - {
       p: [0, 1],
       k: "⎋",

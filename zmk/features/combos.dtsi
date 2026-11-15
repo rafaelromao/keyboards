@@ -264,6 +264,7 @@
         COMBO(cb_page_up,       RHM RHR,         &kp PAGE_UP,            NAV_LAYERS)
 
         COMBO(cb_hand,          RTM RTI,         &mc_hand,               MEDIA)
+        COMBO(cb_media_play,    RBM RBR,         &kp C_PP,               MEDIA)
         COMBO(cb_lclick,        RHM RHI,         &mkp LCLK,              MEDIA)
         COMBO(cb_rclick,        RHM RHR,         &mkp RCLK,              MEDIA)
     };

@@ -22,32 +22,32 @@
 
 #define SHORTS 10
 
-// Above SHORTS so R1 + either pinky can activate the layer, but below the
-// existing toggles, MEHS, navigation, number and symbol layers.
-#define EXCALIDRAW 11
-#define EXCAL_TEXT 12
+// MEDIA and SHORTS stay below Excalidraw so their hold activations can reveal
+// its tools. The typing copy stays below ALPHA2 and the editing layers.
+#define MEDIA 11
+#define EXCALIDRAW 12
+#define EXCAL_TEXT 13
 
-#define TOGS 13
-#define MEHS 14
+#define TOGS 14
+#define MEHS 15
 
-#define ALPHA2 15
+#define ALPHA2 16
 
-#define NUM 16
-#define SYM 17
+#define NUM 17
+#define SYM 18
 
-#define CCEDIL 18
-#define SFT_A2 19
-#define CASE_A2 20
-#define CASE_CCEDIL 21
+#define CCEDIL 19
+#define SFT_A2 20
+#define CASE_A2 21
+#define CASE_CCEDIL 22
 
-#define ALTREP2 22
+#define ALTREP2 23
 
-#define NAV 23
+#define NAV 24
 
-#define NUM_CP 24
-#define SYM_CP 25
+#define NUM_CP 25
+#define SYM_CP 26
 
-#define MEDIA 26
 #define NAV_CP 27
 
 #define TEXT 28

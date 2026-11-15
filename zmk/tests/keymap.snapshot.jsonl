@@ -2,32 +2,38 @@
 {"case": "behavior/sentence ignores shift", "events": [["pressed", 7, 55, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 55, 0, 0], ["mods", 0], ["pressed", 7, 44, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0], ["pressed", 7, 4, 2, 0], ["mods", 2], ["released", 7, 4, 0, 0], ["mods", 0], ["pressed", 7, 5, 0, 0], ["mods", 0], ["released", 7, 5, 0, 0], ["mods", 0]]}
 {"case": "behavior/sentence ignores repeated shift", "events": [["pressed", 7, 55, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 55, 0, 0], ["mods", 0], ["pressed", 7, 44, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0], ["pressed", 7, 4, 2, 0], ["mods", 2], ["released", 7, 4, 0, 0], ["mods", 0], ["pressed", 7, 5, 0, 0], ["mods", 0], ["released", 7, 5, 0, 0], ["mods", 0]]}
 {"case": "behavior/sentence repeat", "events": [["pressed", 7, 55, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 55, 0, 0], ["mods", 0], ["pressed", 7, 44, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0], ["pressed", 7, 4, 2, 0], ["mods", 2], ["released", 7, 4, 0, 0], ["mods", 0], ["pressed", 7, 11, 0, 0], ["mods", 0], ["released", 7, 11, 0, 0], ["mods", 0], ["mods", 0]]}
-{"case": "behavior/sentence number hold", "events": [["pressed", 7, 55, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 55, 0, 0], ["mods", 0], ["pressed", 7, 44, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0], ["layer", 16, 1, 0], ["pressed", 7, 36, 0, 0], ["mods", 0], ["released", 7, 36, 0, 0], ["mods", 0], ["mods", 0], ["mods", 0], ["layer", 16, 0, 0], ["mods", 0], ["pressed", 7, 4, 0, 0], ["mods", 0], ["released", 7, 4, 0, 0], ["mods", 0]]}
-{"case": "behavior/sentence accent", "events": [["pressed", 7, 55, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 55, 0, 0], ["mods", 0], ["pressed", 7, 44, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0], ["layer", 19, 1, 0], ["released", 7, 225, 0, 0], ["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 52, 0, 0], ["mods", 0], ["layer", 19, 0, 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["pressed", 7, 4, 0, 0], ["mods", 2], ["released", 7, 4, 0, 0], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0], ["layer", 22, 1, 0], ["pressed", 7, 5, 0, 0], ["mods", 0], ["layer", 22, 0, 0], ["released", 7, 5, 0, 0], ["mods", 0]]}
-{"case": "behavior/sentence num word", "events": [["pressed", 7, 55, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 55, 0, 0], ["mods", 0], ["pressed", 7, 44, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0], ["layer", 16, 1, 1], ["pressed", 7, 36, 0, 0], ["mods", 0], ["released", 7, 36, 0, 0], ["mods", 0], ["mods", 0], ["mods", 0], ["layer", 16, 0, 1], ["pressed", 7, 44, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0], ["pressed", 7, 4, 0, 0], ["mods", 0], ["released", 7, 4, 0, 0], ["mods", 0]]}
-{"case": "behavior/sticky shift alpha2 magic", "events": [["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["mods", 2], ["mods", 0], ["layer", 19, 1, 0], ["mods", 2], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0], ["pressed", 7, 25, 32, 0], ["mods", 32], ["released", 7, 225, 0, 0], ["layer", 19, 0, 0], ["released", 7, 25, 32, 0], ["mods", 0], ["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["mods", 2], ["mods", 0], ["layer", 19, 1, 0], ["mods", 2], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0], ["pressed", 7, 25, 32, 0], ["mods", 32], ["released", 7, 225, 0, 0], ["layer", 19, 0, 0], ["released", 7, 25, 32, 0], ["mods", 0]]}
+{"case": "behavior/sentence number hold", "events": [["pressed", 7, 55, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 55, 0, 0], ["mods", 0], ["pressed", 7, 44, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0], ["layer", 17, 1, 0], ["pressed", 7, 36, 0, 0], ["mods", 0], ["released", 7, 36, 0, 0], ["mods", 0], ["mods", 0], ["mods", 0], ["layer", 17, 0, 0], ["mods", 0], ["pressed", 7, 4, 0, 0], ["mods", 0], ["released", 7, 4, 0, 0], ["mods", 0]]}
+{"case": "behavior/sentence accent", "events": [["pressed", 7, 55, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 55, 0, 0], ["mods", 0], ["pressed", 7, 44, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0], ["layer", 20, 1, 0], ["released", 7, 225, 0, 0], ["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 52, 0, 0], ["mods", 0], ["layer", 20, 0, 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["pressed", 7, 4, 0, 0], ["mods", 2], ["released", 7, 4, 0, 0], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0], ["layer", 23, 1, 0], ["pressed", 7, 5, 0, 0], ["mods", 0], ["layer", 23, 0, 0], ["released", 7, 5, 0, 0], ["mods", 0]]}
+{"case": "behavior/sentence num word", "events": [["pressed", 7, 55, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 55, 0, 0], ["mods", 0], ["pressed", 7, 44, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0], ["layer", 17, 1, 1], ["pressed", 7, 36, 0, 0], ["mods", 0], ["released", 7, 36, 0, 0], ["mods", 0], ["mods", 0], ["mods", 0], ["layer", 17, 0, 1], ["pressed", 7, 44, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0], ["pressed", 7, 4, 0, 0], ["mods", 0], ["released", 7, 4, 0, 0], ["mods", 0]]}
+{"case": "behavior/sticky shift alpha2 magic", "events": [["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["mods", 2], ["mods", 0], ["layer", 20, 1, 0], ["mods", 2], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0], ["pressed", 7, 25, 32, 0], ["mods", 32], ["released", 7, 225, 0, 0], ["layer", 20, 0, 0], ["released", 7, 25, 32, 0], ["mods", 0], ["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["mods", 2], ["mods", 0], ["layer", 20, 1, 0], ["mods", 2], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0], ["pressed", 7, 25, 32, 0], ["mods", 32], ["released", 7, 225, 0, 0], ["layer", 20, 0, 0], ["released", 7, 25, 32, 0], ["mods", 0]]}
 {"case": "behavior/magic vowel", "events": [["pressed", 7, 4, 0, 0], ["mods", 0], ["released", 7, 4, 0, 0], ["mods", 0], ["pressed", 7, 25, 0, 0], ["mods", 0], ["released", 7, 25, 0, 0], ["mods", 0]]}
 {"case": "behavior/alternate repeat", "events": [["pressed", 7, 4, 0, 0], ["mods", 0], ["released", 7, 4, 0, 0], ["mods", 0], ["pressed", 7, 11, 0, 0], ["mods", 0], ["released", 7, 11, 0, 0], ["mods", 0], ["mods", 0]]}
 {"case": "behavior/caps word", "events": [["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["mods", 2], ["mods", 0], ["layer", 8, 1, 1], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0], ["pressed", 7, 4, 32, 0], ["mods", 32], ["released", 7, 225, 0, 0], ["released", 7, 4, 32, 0], ["mods", 0], ["pressed", 7, 5, 32, 0], ["mods", 32], ["released", 7, 5, 32, 0], ["mods", 0]]}
-{"case": "behavior/media hold", "events": [["layer", 26, 1, 0], ["pressed", 7, 43, 0, 0], ["mods", 0], ["released", 7, 43, 0, 0], ["mods", 0], ["layer", 26, 0, 0]]}
-{"case": "behavior/navigation hold", "events": [["layer", 23, 1, 0], ["pressed", 7, 80, 0, 0], ["mods", 0], ["released", 7, 80, 0, 0], ["mods", 0], ["layer", 23, 0, 0]]}
-{"case": "behavior/excalidraw combos", "events": [["layer", 11, 1, 1], ["pressed", 7, 27, 2, 0], ["mods", 2], ["released", 7, 27, 2, 0], ["mods", 0], ["pressed", 7, 20, 0, 0], ["mods", 0], ["released", 7, 20, 0, 0], ["mods", 0], ["pressed", 7, 8, 0, 0], ["mods", 0], ["released", 7, 8, 0, 0], ["mods", 0], ["pressed", 7, 25, 0, 0], ["mods", 0], ["released", 7, 25, 0, 0], ["mods", 0], ["pressed", 7, 14, 0, 0], ["mods", 0], ["released", 7, 14, 0, 0], ["mods", 0]]}
-{"case": "behavior/excalidraw t opens text, ends on enter", "events": [["layer", 11, 1, 1], ["pressed", 7, 23, 0, 0], ["mods", 0], ["released", 7, 23, 0, 0], ["mods", 0], ["layer", 12, 1, 1], ["pressed", 7, 16, 0, 0], ["mods", 0], ["released", 7, 16, 0, 0], ["mods", 0], ["pressed", 7, 4, 0, 0], ["mods", 0], ["released", 7, 4, 0, 0], ["mods", 0], ["layer", 12, 0, 1], ["pressed", 7, 40, 0, 0], ["mods", 0], ["released", 7, 40, 0, 0], ["mods", 0], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0]]}
-{"case": "behavior/excalidraw t opens text, ends on esc", "events": [["layer", 11, 1, 1], ["pressed", 7, 23, 0, 0], ["mods", 0], ["released", 7, 23, 0, 0], ["mods", 0], ["layer", 12, 1, 1], ["pressed", 7, 16, 0, 0], ["mods", 0], ["released", 7, 16, 0, 0], ["mods", 0], ["pressed", 7, 4, 0, 0], ["mods", 0], ["released", 7, 4, 0, 0], ["mods", 0], ["layer", 12, 0, 1], ["pressed", 7, 41, 0, 0], ["mods", 0], ["released", 7, 41, 0, 0], ["mods", 0], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0]]}
-{"case": "behavior/excalidraw n opens text, ends on enter", "events": [["layer", 11, 1, 1], ["pressed", 7, 17, 0, 0], ["mods", 0], ["released", 7, 17, 0, 0], ["mods", 0], ["layer", 12, 1, 1], ["pressed", 7, 16, 0, 0], ["mods", 0], ["released", 7, 16, 0, 0], ["mods", 0], ["pressed", 7, 4, 0, 0], ["mods", 0], ["released", 7, 4, 0, 0], ["mods", 0], ["layer", 12, 0, 1], ["pressed", 7, 40, 0, 0], ["mods", 0], ["released", 7, 40, 0, 0], ["mods", 0], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0]]}
-{"case": "behavior/excalidraw n opens text, ends on esc", "events": [["layer", 11, 1, 1], ["pressed", 7, 17, 0, 0], ["mods", 0], ["released", 7, 17, 0, 0], ["mods", 0], ["layer", 12, 1, 1], ["pressed", 7, 16, 0, 0], ["mods", 0], ["released", 7, 16, 0, 0], ["mods", 0], ["pressed", 7, 4, 0, 0], ["mods", 0], ["released", 7, 4, 0, 0], ["mods", 0], ["layer", 12, 0, 1], ["pressed", 7, 41, 0, 0], ["mods", 0], ["released", 7, 41, 0, 0], ["mods", 0], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0]]}
-{"case": "behavior/excalidraw text keeps nav", "events": [["layer", 11, 1, 1], ["pressed", 7, 23, 0, 0], ["mods", 0], ["released", 7, 23, 0, 0], ["mods", 0], ["layer", 12, 1, 1], ["layer", 23, 1, 0], ["pressed", 7, 80, 0, 0], ["mods", 0], ["released", 7, 80, 0, 0], ["mods", 0], ["layer", 23, 0, 0]]}
-{"case": "behavior/excalidraw tools save", "events": [["layer", 11, 1, 1], ["pressed", 7, 22, 1, 0], ["mods", 1], ["released", 7, 22, 1, 0], ["mods", 0]]}
-{"case": "behavior/excalidraw tools undo", "events": [["layer", 11, 1, 1], ["pressed", 7, 29, 1, 0], ["mods", 1], ["released", 7, 29, 1, 0], ["mods", 0]]}
-{"case": "behavior/excalidraw tools esc + save", "events": [["layer", 11, 1, 1], ["pressed", 7, 22, 1, 0], ["mods", 1], ["released", 7, 22, 1, 0], ["mods", 0], ["pressed", 7, 41, 0, 0], ["mods", 0], ["released", 7, 41, 0, 0], ["mods", 0]]}
-{"case": "behavior/excalidraw text save", "events": [["layer", 11, 1, 1], ["pressed", 7, 23, 0, 0], ["mods", 0], ["released", 7, 23, 0, 0], ["mods", 0], ["layer", 12, 1, 1], ["pressed", 7, 22, 1, 0], ["mods", 1], ["released", 7, 22, 1, 0], ["mods", 0]]}
-{"case": "behavior/excalidraw text undo", "events": [["layer", 11, 1, 1], ["pressed", 7, 23, 0, 0], ["mods", 0], ["released", 7, 23, 0, 0], ["mods", 0], ["layer", 12, 1, 1], ["pressed", 7, 29, 1, 0], ["mods", 1], ["released", 7, 29, 1, 0], ["mods", 0]]}
-{"case": "behavior/excalidraw text esc + save", "events": [["layer", 11, 1, 1], ["pressed", 7, 23, 0, 0], ["mods", 0], ["released", 7, 23, 0, 0], ["mods", 0], ["layer", 12, 1, 1], ["pressed", 7, 22, 1, 0], ["mods", 1], ["released", 7, 22, 1, 0], ["mods", 0], ["layer", 12, 0, 1], ["pressed", 7, 41, 0, 0], ["mods", 0], ["released", 7, 41, 0, 0], ["mods", 0]]}
-{"case": "behavior/excalidraw text ends on nav esc", "events": [["layer", 11, 1, 1], ["pressed", 7, 23, 0, 0], ["mods", 0], ["released", 7, 23, 0, 0], ["mods", 0], ["layer", 12, 1, 1], ["layer", 23, 1, 0], ["layer", 12, 0, 1], ["pressed", 7, 41, 0, 0], ["mods", 0], ["released", 7, 41, 0, 0], ["mods", 0], ["layer", 23, 0, 0], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0]]}
-{"case": "behavior/excalidraw toggles from left shortcuts", "events": [["layer", 10, 1, 0], ["layer", 11, 1, 1], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0], ["layer", 11, 0, 1], ["layer", 10, 0, 0], ["pressed", 7, 16, 0, 0], ["mods", 0], ["released", 7, 16, 0, 0], ["mods", 0]]}
-{"case": "behavior/excalidraw toggles from right shortcuts", "events": [["layer", 10, 1, 0], ["layer", 11, 1, 1], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0], ["layer", 11, 0, 1], ["layer", 10, 0, 0], ["pressed", 7, 16, 0, 0], ["mods", 0], ["released", 7, 16, 0, 0], ["mods", 0]]}
-{"case": "behavior/excalidraw hold from left shortcuts", "events": [["layer", 10, 1, 0], ["layer", 11, 1, 0], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0], ["layer", 11, 0, 0], ["layer", 10, 0, 0]]}
-{"case": "behavior/excalidraw hold from right shortcuts", "events": [["layer", 10, 1, 0], ["layer", 11, 1, 0], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0], ["layer", 11, 0, 0], ["layer", 10, 0, 0]]}
+{"case": "behavior/media hold", "events": [["layer", 11, 1, 0], ["pressed", 7, 43, 0, 0], ["mods", 0], ["released", 7, 43, 0, 0], ["mods", 0], ["layer", 11, 0, 0]]}
+{"case": "behavior/navigation hold", "events": [["layer", 24, 1, 0], ["pressed", 7, 80, 0, 0], ["mods", 0], ["released", 7, 80, 0, 0], ["mods", 0], ["layer", 24, 0, 0]]}
+{"case": "behavior/excalidraw combos", "events": [["layer", 12, 1, 1], ["pressed", 7, 27, 2, 0], ["mods", 2], ["released", 7, 27, 2, 0], ["mods", 0], ["pressed", 7, 20, 0, 0], ["mods", 0], ["released", 7, 20, 0, 0], ["mods", 0], ["pressed", 7, 8, 0, 0], ["mods", 0], ["released", 7, 8, 0, 0], ["mods", 0], ["pressed", 7, 25, 0, 0], ["mods", 0], ["released", 7, 25, 0, 0], ["mods", 0], ["pressed", 7, 14, 0, 0], ["mods", 0], ["released", 7, 14, 0, 0], ["mods", 0]]}
+{"case": "behavior/excalidraw t opens text, ends on enter", "events": [["layer", 12, 1, 1], ["pressed", 7, 23, 0, 0], ["mods", 0], ["released", 7, 23, 0, 0], ["mods", 0], ["layer", 13, 1, 1], ["pressed", 7, 16, 0, 0], ["mods", 0], ["released", 7, 16, 0, 0], ["mods", 0], ["pressed", 7, 4, 0, 0], ["mods", 0], ["released", 7, 4, 0, 0], ["mods", 0], ["layer", 13, 0, 1], ["pressed", 7, 40, 0, 0], ["mods", 0], ["released", 7, 40, 0, 0], ["mods", 0], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0]]}
+{"case": "behavior/excalidraw t opens text, ends on esc", "events": [["layer", 12, 1, 1], ["pressed", 7, 23, 0, 0], ["mods", 0], ["released", 7, 23, 0, 0], ["mods", 0], ["layer", 13, 1, 1], ["pressed", 7, 16, 0, 0], ["mods", 0], ["released", 7, 16, 0, 0], ["mods", 0], ["pressed", 7, 4, 0, 0], ["mods", 0], ["released", 7, 4, 0, 0], ["mods", 0], ["layer", 13, 0, 1], ["pressed", 7, 41, 0, 0], ["mods", 0], ["released", 7, 41, 0, 0], ["mods", 0], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0]]}
+{"case": "behavior/excalidraw n opens text, ends on enter", "events": [["layer", 12, 1, 1], ["pressed", 7, 17, 0, 0], ["mods", 0], ["released", 7, 17, 0, 0], ["mods", 0], ["layer", 13, 1, 1], ["pressed", 7, 16, 0, 0], ["mods", 0], ["released", 7, 16, 0, 0], ["mods", 0], ["pressed", 7, 4, 0, 0], ["mods", 0], ["released", 7, 4, 0, 0], ["mods", 0], ["layer", 13, 0, 1], ["pressed", 7, 40, 0, 0], ["mods", 0], ["released", 7, 40, 0, 0], ["mods", 0], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0]]}
+{"case": "behavior/excalidraw n opens text, ends on esc", "events": [["layer", 12, 1, 1], ["pressed", 7, 17, 0, 0], ["mods", 0], ["released", 7, 17, 0, 0], ["mods", 0], ["layer", 13, 1, 1], ["pressed", 7, 16, 0, 0], ["mods", 0], ["released", 7, 16, 0, 0], ["mods", 0], ["pressed", 7, 4, 0, 0], ["mods", 0], ["released", 7, 4, 0, 0], ["mods", 0], ["layer", 13, 0, 1], ["pressed", 7, 41, 0, 0], ["mods", 0], ["released", 7, 41, 0, 0], ["mods", 0], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0]]}
+{"case": "behavior/excalidraw text keeps nav", "events": [["layer", 12, 1, 1], ["pressed", 7, 23, 0, 0], ["mods", 0], ["released", 7, 23, 0, 0], ["mods", 0], ["layer", 13, 1, 1], ["layer", 24, 1, 0], ["pressed", 7, 80, 0, 0], ["mods", 0], ["released", 7, 80, 0, 0], ["mods", 0], ["layer", 24, 0, 0]]}
+{"case": "behavior/excalidraw text keeps alpha2", "events": [["layer", 12, 1, 1], ["pressed", 7, 23, 0, 0], ["mods", 0], ["released", 7, 23, 0, 0], ["mods", 0], ["layer", 13, 1, 1], ["mods", 0], ["mods", 0], ["layer", 16, 1, 0], ["pressed", 7, 20, 0, 0], ["mods", 0], ["layer", 16, 0, 0], ["released", 7, 20, 0, 0], ["mods", 0]]}
+{"case": "behavior/media hold excalidraw 19", "events": [["layer", 11, 1, 0], ["layer", 12, 1, 0], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0], ["layer", 12, 0, 0], ["layer", 11, 0, 0]]}
+{"case": "behavior/media toggle excalidraw 19", "events": [["layer", 11, 1, 0], ["layer", 12, 1, 1], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0], ["layer", 12, 0, 1], ["layer", 11, 0, 0]]}
+{"case": "behavior/media hold excalidraw 29", "events": [["layer", 11, 1, 0], ["layer", 12, 1, 0], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0], ["layer", 12, 0, 0], ["layer", 11, 0, 0]]}
+{"case": "behavior/media toggle excalidraw 29", "events": [["layer", 11, 1, 0], ["layer", 12, 1, 1], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0], ["layer", 12, 0, 1], ["layer", 11, 0, 0]]}
+{"case": "behavior/media previous next play pause", "events": [["layer", 11, 1, 0], ["pressed", 12, 205, 0, 0], ["mods", 0], ["released", 12, 205, 0, 0], ["mods", 0], ["layer", 11, 0, 0]]}
+{"case": "behavior/excalidraw tools save", "events": [["layer", 12, 1, 1], ["pressed", 7, 22, 1, 0], ["mods", 1], ["released", 7, 22, 1, 0], ["mods", 0]]}
+{"case": "behavior/excalidraw tools undo", "events": [["layer", 12, 1, 1], ["pressed", 7, 29, 1, 0], ["mods", 1], ["released", 7, 29, 1, 0], ["mods", 0]]}
+{"case": "behavior/excalidraw tools esc + save", "events": [["layer", 12, 1, 1], ["pressed", 7, 22, 1, 0], ["mods", 1], ["released", 7, 22, 1, 0], ["mods", 0], ["pressed", 7, 41, 0, 0], ["mods", 0], ["released", 7, 41, 0, 0], ["mods", 0]]}
+{"case": "behavior/excalidraw text save", "events": [["layer", 12, 1, 1], ["pressed", 7, 23, 0, 0], ["mods", 0], ["released", 7, 23, 0, 0], ["mods", 0], ["layer", 13, 1, 1], ["pressed", 7, 22, 1, 0], ["mods", 1], ["released", 7, 22, 1, 0], ["mods", 0]]}
+{"case": "behavior/excalidraw text undo", "events": [["layer", 12, 1, 1], ["pressed", 7, 23, 0, 0], ["mods", 0], ["released", 7, 23, 0, 0], ["mods", 0], ["layer", 13, 1, 1], ["pressed", 7, 29, 1, 0], ["mods", 1], ["released", 7, 29, 1, 0], ["mods", 0]]}
+{"case": "behavior/excalidraw text esc + save", "events": [["layer", 12, 1, 1], ["pressed", 7, 23, 0, 0], ["mods", 0], ["released", 7, 23, 0, 0], ["mods", 0], ["layer", 13, 1, 1], ["pressed", 7, 22, 1, 0], ["mods", 1], ["released", 7, 22, 1, 0], ["mods", 0], ["layer", 13, 0, 1], ["pressed", 7, 41, 0, 0], ["mods", 0], ["released", 7, 41, 0, 0], ["mods", 0]]}
+{"case": "behavior/excalidraw text ends on nav esc", "events": [["layer", 12, 1, 1], ["pressed", 7, 23, 0, 0], ["mods", 0], ["released", 7, 23, 0, 0], ["mods", 0], ["layer", 13, 1, 1], ["layer", 24, 1, 0], ["layer", 13, 0, 1], ["pressed", 7, 41, 0, 0], ["mods", 0], ["released", 7, 41, 0, 0], ["mods", 0], ["layer", 24, 0, 0], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0]]}
+{"case": "behavior/excalidraw toggles from left shortcuts", "events": [["layer", 10, 1, 0], ["layer", 12, 1, 1], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0], ["layer", 12, 0, 1], ["layer", 10, 0, 0], ["pressed", 7, 16, 0, 0], ["mods", 0], ["released", 7, 16, 0, 0], ["mods", 0]]}
+{"case": "behavior/excalidraw toggles from right shortcuts", "events": [["layer", 10, 1, 0], ["layer", 12, 1, 1], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0], ["layer", 12, 0, 1], ["layer", 10, 0, 0], ["pressed", 7, 16, 0, 0], ["mods", 0], ["released", 7, 16, 0, 0], ["mods", 0]]}
+{"case": "behavior/excalidraw hold from left shortcuts", "events": [["layer", 10, 1, 0], ["layer", 12, 1, 0], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0], ["layer", 12, 0, 0], ["layer", 10, 0, 0]]}
+{"case": "behavior/excalidraw hold from right shortcuts", "events": [["layer", 10, 1, 0], ["layer", 12, 1, 0], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0], ["layer", 12, 0, 0], ["layer", 10, 0, 0]]}
 {"case": "behavior/shortcuts still opens text navigation", "events": [["layer", 10, 1, 0], ["layer", 28, 1, 0], ["pressed", 7, 81, 0, 0], ["mods", 0], ["released", 7, 81, 0, 0], ["mods", 0], ["layer", 28, 0, 0], ["layer", 10, 0, 0]]}
 {"case": "behavior/base one-shot Linux Ctrl hold on N", "events": [["layer", 2, 1, 1], ["layer", 10, 1, 0], ["layer", 31, 1, 0], ["layer", 10, 0, 0], ["pressed", 7, 224, 0, 0], ["mods", 1], ["mods", 1], ["pressed", 7, 20, 0, 0], ["mods", 1], ["released", 7, 20, 0, 0], ["mods", 1], ["layer", 31, 0, 0], ["released", 7, 224, 0, 0], ["mods", 0], ["mods", 0]]}
 {"case": "behavior/base one-shot macOS Ctrl hold on N", "events": [["layer", 2, 1, 1], ["layer", 2, 0, 1], ["layer", 1, 1, 1], ["layer", 10, 1, 0], ["layer", 31, 1, 0], ["layer", 10, 0, 0], ["pressed", 7, 224, 0, 0], ["mods", 1], ["mods", 1], ["pressed", 7, 20, 0, 0], ["mods", 1], ["released", 7, 20, 0, 0], ["mods", 1], ["layer", 31, 0, 0], ["released", 7, 224, 0, 0], ["mods", 0], ["mods", 0]]}
@@ -85,13 +91,13 @@
 {"case": "default_layer/29 hold &lt SHORTS I", "events": [["layer", 10, 1, 0], ["layer", 10, 0, 0]]}
 {"case": "default_layer/30 &mkp RCLK", "events": [["mouse", "buttons", "0x02"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"], ["mouse", "buttons", "0x00"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"]]}
 {"case": "default_layer/31 &ht_repeat NAV 0", "events": [["pressed", 7, 114, 0, 0], ["mods", 0], ["released", 7, 114, 0, 0], ["mods", 0], ["mods", 0]]}
-{"case": "default_layer/31 hold &ht_repeat NAV 0", "events": [["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
+{"case": "default_layer/31 hold &ht_repeat NAV 0", "events": [["layer", 24, 1, 0], ["layer", 24, 0, 0]]}
 {"case": "default_layer/32 &ltn_num_spc 0 0", "events": [["pressed", 7, 44, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0]]}
-{"case": "default_layer/32 hold &ltn_num_spc 0 0", "events": [["layer", 16, 1, 0], ["layer", 16, 0, 0], ["mods", 0]]}
-{"case": "default_layer/33 &sentence_alpha2", "events": [["layer", 15, 1, 0], ["mods", 0], ["mods", 0], ["layer", 15, 0, 0]]}
-{"case": "default_layer/33 hold &sentence_alpha2", "events": [["layer", 17, 1, 0], ["layer", 17, 0, 0], ["mods", 0]]}
+{"case": "default_layer/32 hold &ltn_num_spc 0 0", "events": [["layer", 17, 1, 0], ["layer", 17, 0, 0], ["mods", 0]]}
+{"case": "default_layer/33 &sentence_alpha2", "events": [["layer", 16, 1, 0], ["mods", 0], ["mods", 0], ["layer", 16, 0, 0]]}
+{"case": "default_layer/33 hold &sentence_alpha2", "events": [["layer", 18, 1, 0], ["layer", 18, 0, 0], ["mods", 0]]}
 {"case": "default_layer/34 &ht_shift MEDIA 0", "events": [["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0]]}
-{"case": "default_layer/34 hold &ht_shift MEDIA 0", "events": [["layer", 26, 1, 0], ["layer", 26, 0, 0]]}
+{"case": "default_layer/34 hold &ht_shift MEDIA 0", "events": [["layer", 11, 1, 0], ["layer", 11, 0, 0]]}
 {"case": "default_layer/35 &mkp LCLK", "events": [["mouse", "buttons", "0x01"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"], ["mouse", "buttons", "0x00"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"]]}
 {"case": "alt_os_layer/00 &trans", "events": [["pressed", 7, 20, 0, 0], ["mods", 0], ["released", 7, 20, 0, 0], ["mods", 0]]}
 {"case": "alt_os_layer/01 &trans", "events": [["pressed", 7, 5, 0, 0], ["mods", 0], ["released", 7, 5, 0, 0], ["mods", 0]]}
@@ -126,7 +132,7 @@
 {"case": "alt_os_layer/30 &trans", "events": [["mouse", "buttons", "0x02"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"], ["mouse", "buttons", "0x00"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"]]}
 {"case": "alt_os_layer/31 &trans", "events": [["mods", 0]]}
 {"case": "alt_os_layer/32 &trans", "events": [["pressed", 7, 44, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0]]}
-{"case": "alt_os_layer/33 &trans", "events": [["layer", 15, 1, 0], ["mods", 0], ["mods", 0], ["layer", 15, 0, 0]]}
+{"case": "alt_os_layer/33 &trans", "events": [["layer", 16, 1, 0], ["mods", 0], ["mods", 0], ["layer", 16, 0, 0]]}
 {"case": "alt_os_layer/34 &trans", "events": [["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0]]}
 {"case": "alt_os_layer/35 &trans", "events": [["mouse", "buttons", "0x01"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"], ["mouse", "buttons", "0x00"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"]]}
 {"case": "vim_normal_layer/00 &none", "events": []}
@@ -175,13 +181,13 @@
 {"case": "vim_normal_layer/29 hold &lt SHORTS L", "events": [["layer", 10, 1, 0], ["layer", 10, 0, 0]]}
 {"case": "vim_normal_layer/30 &none", "events": []}
 {"case": "vim_normal_layer/31 &ht_repeat NAV 0", "events": [["pressed", 7, 114, 0, 0], ["mods", 0], ["released", 7, 114, 0, 0], ["mods", 0], ["mods", 0]]}
-{"case": "vim_normal_layer/31 hold &ht_repeat NAV 0", "events": [["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
+{"case": "vim_normal_layer/31 hold &ht_repeat NAV 0", "events": [["layer", 24, 1, 0], ["layer", 24, 0, 0]]}
 {"case": "vim_normal_layer/32 &lt_spc_vim NUM 0", "events": [["pressed", 7, 44, 0, 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0]]}
-{"case": "vim_normal_layer/32 hold &lt_spc_vim NUM 0", "events": [["layer", 16, 1, 0], ["layer", 16, 0, 0]]}
-{"case": "vim_normal_layer/33 &sentence_alpha2", "events": [["layer", 15, 1, 0], ["mods", 0], ["mods", 0], ["layer", 15, 0, 0]]}
-{"case": "vim_normal_layer/33 hold &sentence_alpha2", "events": [["layer", 17, 1, 0], ["layer", 17, 0, 0], ["mods", 0]]}
+{"case": "vim_normal_layer/32 hold &lt_spc_vim NUM 0", "events": [["layer", 17, 1, 0], ["layer", 17, 0, 0]]}
+{"case": "vim_normal_layer/33 &sentence_alpha2", "events": [["layer", 16, 1, 0], ["mods", 0], ["mods", 0], ["layer", 16, 0, 0]]}
+{"case": "vim_normal_layer/33 hold &sentence_alpha2", "events": [["layer", 18, 1, 0], ["layer", 18, 0, 0], ["mods", 0]]}
 {"case": "vim_normal_layer/34 &ht_shift MEDIA 0", "events": [["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0]]}
-{"case": "vim_normal_layer/34 hold &ht_shift MEDIA 0", "events": [["layer", 26, 1, 0], ["layer", 26, 0, 0]]}
+{"case": "vim_normal_layer/34 hold &ht_shift MEDIA 0", "events": [["layer", 11, 1, 0], ["layer", 11, 0, 0]]}
 {"case": "vim_normal_layer/35 &none", "events": []}
 {"case": "vim_visual_layer/00 &trans", "events": [["pressed", 7, 20, 0, 0], ["mods", 0], ["released", 7, 20, 0, 0], ["mods", 0]]}
 {"case": "vim_visual_layer/01 &trans", "events": [["pressed", 7, 5, 0, 0], ["mods", 0], ["released", 7, 5, 0, 0], ["mods", 0]]}
@@ -217,7 +223,7 @@
 {"case": "vim_visual_layer/30 &trans", "events": [["mouse", "buttons", "0x02"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"], ["mouse", "buttons", "0x00"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"]]}
 {"case": "vim_visual_layer/31 &trans", "events": [["mods", 0]]}
 {"case": "vim_visual_layer/32 &trans", "events": [["pressed", 7, 44, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0]]}
-{"case": "vim_visual_layer/33 &trans", "events": [["layer", 15, 1, 0], ["mods", 0], ["mods", 0], ["layer", 15, 0, 0]]}
+{"case": "vim_visual_layer/33 &trans", "events": [["layer", 16, 1, 0], ["mods", 0], ["mods", 0], ["layer", 16, 0, 0]]}
 {"case": "vim_visual_layer/34 &trans", "events": [["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0]]}
 {"case": "vim_visual_layer/35 &trans", "events": [["mouse", "buttons", "0x01"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"], ["mouse", "buttons", "0x00"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"]]}
 {"case": "vim_change_layer/00 &none", "events": []}
@@ -253,7 +259,7 @@
 {"case": "vim_change_layer/30 &trans", "events": [["mouse", "buttons", "0x02"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"], ["mouse", "buttons", "0x00"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"]]}
 {"case": "vim_change_layer/31 &trans", "events": [["mods", 0]]}
 {"case": "vim_change_layer/32 &trans", "events": [["pressed", 7, 44, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0]]}
-{"case": "vim_change_layer/33 &trans", "events": [["layer", 15, 1, 0], ["mods", 0], ["mods", 0], ["layer", 15, 0, 0]]}
+{"case": "vim_change_layer/33 &trans", "events": [["layer", 16, 1, 0], ["mods", 0], ["mods", 0], ["layer", 16, 0, 0]]}
 {"case": "vim_change_layer/34 &trans", "events": [["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0]]}
 {"case": "vim_change_layer/35 &trans", "events": [["mouse", "buttons", "0x01"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"], ["mouse", "buttons", "0x00"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"]]}
 {"case": "vim_insert_layer/00 &trans", "events": [["pressed", 7, 20, 0, 0], ["mods", 0], ["released", 7, 20, 0, 0], ["mods", 0]]}
@@ -290,7 +296,7 @@
 {"case": "vim_insert_layer/30 &trans", "events": [["mouse", "buttons", "0x02"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"], ["mouse", "buttons", "0x00"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"]]}
 {"case": "vim_insert_layer/31 &trans", "events": [["mods", 0]]}
 {"case": "vim_insert_layer/32 &trans", "events": [["pressed", 7, 44, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0]]}
-{"case": "vim_insert_layer/33 &trans", "events": [["layer", 15, 1, 0], ["mods", 0], ["mods", 0], ["layer", 15, 0, 0]]}
+{"case": "vim_insert_layer/33 &trans", "events": [["layer", 16, 1, 0], ["mods", 0], ["mods", 0], ["layer", 16, 0, 0]]}
 {"case": "vim_insert_layer/34 &trans", "events": [["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0]]}
 {"case": "vim_insert_layer/35 &trans", "events": [["mouse", "buttons", "0x01"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"], ["mouse", "buttons", "0x00"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"]]}
 {"case": "vim_replace_layer/00 &kp Q", "events": [["pressed", 7, 20, 0, 0], ["mods", 0], ["released", 7, 20, 0, 0], ["mods", 0]]}
@@ -337,13 +343,13 @@
 {"case": "vim_replace_layer/29 &kp I", "events": [["pressed", 7, 12, 0, 0], ["mods", 0], ["released", 7, 12, 0, 0], ["mods", 0]]}
 {"case": "vim_replace_layer/30 &mkp RCLK", "events": [["mouse", "buttons", "0x02"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"], ["mouse", "buttons", "0x00"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"]]}
 {"case": "vim_replace_layer/31 &ht_repeat NAV 0", "events": [["mods", 0]]}
-{"case": "vim_replace_layer/31 hold &ht_repeat NAV 0", "events": [["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
+{"case": "vim_replace_layer/31 hold &ht_repeat NAV 0", "events": [["layer", 24, 1, 0], ["layer", 24, 0, 0]]}
 {"case": "vim_replace_layer/32 &ltn_num_spc 0 0", "events": [["pressed", 7, 44, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0]]}
-{"case": "vim_replace_layer/32 hold &ltn_num_spc 0 0", "events": [["layer", 16, 1, 0], ["layer", 16, 0, 0], ["mods", 0]]}
-{"case": "vim_replace_layer/33 &sentence_alpha2", "events": [["layer", 15, 1, 0], ["mods", 0], ["mods", 0], ["layer", 15, 0, 0]]}
-{"case": "vim_replace_layer/33 hold &sentence_alpha2", "events": [["layer", 17, 1, 0], ["layer", 17, 0, 0], ["mods", 0]]}
+{"case": "vim_replace_layer/32 hold &ltn_num_spc 0 0", "events": [["layer", 17, 1, 0], ["layer", 17, 0, 0], ["mods", 0]]}
+{"case": "vim_replace_layer/33 &sentence_alpha2", "events": [["layer", 16, 1, 0], ["mods", 0], ["mods", 0], ["layer", 16, 0, 0]]}
+{"case": "vim_replace_layer/33 hold &sentence_alpha2", "events": [["layer", 18, 1, 0], ["layer", 18, 0, 0], ["mods", 0]]}
 {"case": "vim_replace_layer/34 &ht_sft_vim MEDIA 0", "events": [["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0]]}
-{"case": "vim_replace_layer/34 hold &ht_sft_vim MEDIA 0", "events": [["layer", 26, 1, 0], ["layer", 26, 0, 0]]}
+{"case": "vim_replace_layer/34 hold &ht_sft_vim MEDIA 0", "events": [["layer", 11, 1, 0], ["layer", 11, 0, 0]]}
 {"case": "vim_replace_layer/35 &mkp LCLK", "events": [["mouse", "buttons", "0x01"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"], ["mouse", "buttons", "0x00"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"]]}
 {"case": "vim_cmdline_layer/00 &trans", "events": [["pressed", 7, 20, 0, 0], ["mods", 0], ["released", 7, 20, 0, 0], ["mods", 0]]}
 {"case": "vim_cmdline_layer/01 &trans", "events": [["pressed", 7, 5, 0, 0], ["mods", 0], ["released", 7, 5, 0, 0], ["mods", 0]]}
@@ -379,7 +385,7 @@
 {"case": "vim_cmdline_layer/30 &trans", "events": [["mouse", "buttons", "0x02"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"], ["mouse", "buttons", "0x00"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"]]}
 {"case": "vim_cmdline_layer/31 &trans", "events": [["mods", 0]]}
 {"case": "vim_cmdline_layer/32 &trans", "events": [["pressed", 7, 44, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0]]}
-{"case": "vim_cmdline_layer/33 &trans", "events": [["layer", 15, 1, 0], ["mods", 0], ["mods", 0], ["layer", 15, 0, 0]]}
+{"case": "vim_cmdline_layer/33 &trans", "events": [["layer", 16, 1, 0], ["mods", 0], ["mods", 0], ["layer", 16, 0, 0]]}
 {"case": "vim_cmdline_layer/34 &trans", "events": [["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0]]}
 {"case": "vim_cmdline_layer/35 &trans", "events": [["mouse", "buttons", "0x01"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"], ["mouse", "buttons", "0x00"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"]]}
 {"case": "capsword_layer/00 &kp RS(Q)", "events": [["pressed", 7, 20, 32, 0], ["mods", 32], ["released", 7, 20, 32, 0], ["mods", 0]]}
@@ -431,11 +437,11 @@
 {"case": "capsword_layer/30 &trans", "events": [["mouse", "buttons", "0x02"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"], ["mouse", "buttons", "0x00"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"]]}
 {"case": "capsword_layer/31 &trans", "events": [["pressed", 7, 114, 0, 0], ["mods", 0], ["released", 7, 114, 0, 0], ["mods", 0], ["mods", 0]]}
 {"case": "capsword_layer/32 &msk_spc NUM 0", "events": [["pressed", 7, 44, 0, 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0]]}
-{"case": "capsword_layer/32 hold &msk_spc NUM 0", "events": [["layer", 16, 1, 0], ["layer", 16, 0, 0]]}
-{"case": "capsword_layer/33 &msl_case2 SYM 0", "events": [["layer", 20, 1, 0], ["layer", 20, 0, 0]]}
-{"case": "capsword_layer/33 hold &msl_case2 SYM 0", "events": [["layer", 17, 1, 0], ["layer", 17, 0, 0]]}
+{"case": "capsword_layer/32 hold &msk_spc NUM 0", "events": [["layer", 17, 1, 0], ["layer", 17, 0, 0]]}
+{"case": "capsword_layer/33 &msl_case2 SYM 0", "events": [["layer", 21, 1, 0], ["layer", 21, 0, 0]]}
+{"case": "capsword_layer/33 hold &msl_case2 SYM 0", "events": [["layer", 18, 1, 0], ["layer", 18, 0, 0]]}
 {"case": "capsword_layer/34 &lt_cancel MEDIA 0", "events": [["pressed", 7, 155, 0, 0], ["mods", 0], ["released", 7, 155, 0, 0], ["mods", 0], ["layer", 8, 0, 1]]}
-{"case": "capsword_layer/34 hold &lt_cancel MEDIA 0", "events": [["layer", 26, 1, 0], ["layer", 26, 0, 0]]}
+{"case": "capsword_layer/34 hold &lt_cancel MEDIA 0", "events": [["layer", 11, 1, 0], ["layer", 11, 0, 0]]}
 {"case": "capsword_layer/35 &trans", "events": [["mouse", "buttons", "0x01"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"], ["mouse", "buttons", "0x00"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"]]}
 {"case": "capsline_layer/00 &kp RS(Q)", "events": [["pressed", 7, 20, 32, 0], ["mods", 32], ["released", 7, 20, 32, 0], ["mods", 0]]}
 {"case": "capsline_layer/01 &kp RS(B)", "events": [["pressed", 7, 5, 32, 0], ["mods", 32], ["released", 7, 5, 32, 0], ["mods", 0]]}
@@ -486,10 +492,10 @@
 {"case": "capsline_layer/30 &trans", "events": [["mouse", "buttons", "0x02"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"], ["mouse", "buttons", "0x00"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"]]}
 {"case": "capsline_layer/31 &trans", "events": [["pressed", 7, 114, 0, 0], ["mods", 0], ["released", 7, 114, 0, 0], ["mods", 0], ["mods", 0]]}
 {"case": "capsline_layer/32 &trans", "events": [["pressed", 7, 44, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0]]}
-{"case": "capsline_layer/33 &msl_case2 SYM 0", "events": [["layer", 20, 1, 0], ["layer", 20, 0, 0]]}
-{"case": "capsline_layer/33 hold &msl_case2 SYM 0", "events": [["layer", 17, 1, 0], ["layer", 17, 0, 0]]}
+{"case": "capsline_layer/33 &msl_case2 SYM 0", "events": [["layer", 21, 1, 0], ["layer", 21, 0, 0]]}
+{"case": "capsline_layer/33 hold &msl_case2 SYM 0", "events": [["layer", 18, 1, 0], ["layer", 18, 0, 0]]}
 {"case": "capsline_layer/34 &lt_cancel MEDIA 0", "events": [["pressed", 7, 155, 0, 0], ["mods", 0], ["released", 7, 155, 0, 0], ["mods", 0], ["layer", 9, 0, 1]]}
-{"case": "capsline_layer/34 hold &lt_cancel MEDIA 0", "events": [["layer", 26, 1, 0], ["layer", 26, 0, 0]]}
+{"case": "capsline_layer/34 hold &lt_cancel MEDIA 0", "events": [["layer", 11, 1, 0], ["layer", 11, 0, 0]]}
 {"case": "capsline_layer/35 &trans", "events": [["mouse", "buttons", "0x01"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"], ["mouse", "buttons", "0x00"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"]]}
 {"case": "shortcuts_layer/00 &none", "events": []}
 {"case": "shortcuts_layer/01 &mc_calc", "events": [["pressed", 7, 20, 9, 0], ["mods", 9], ["released", 7, 20, 9, 0], ["mods", 0]]}
@@ -503,7 +509,7 @@
 {"case": "shortcuts_layer/09 &none", "events": []}
 {"case": "shortcuts_layer/10 &sticky_base BASE", "events": [["layer", 31, 1, 0]]}
 {"case": "shortcuts_layer/11 &lt_zoom_out TOGS 0", "events": [["pressed", 7, 45, 1, 0], ["mods", 1], ["released", 7, 45, 1, 0], ["mods", 0]]}
-{"case": "shortcuts_layer/11 hold &lt_zoom_out TOGS 0", "events": [["layer", 13, 1, 0], ["layer", 13, 0, 0]]}
+{"case": "shortcuts_layer/11 hold &lt_zoom_out TOGS 0", "events": [["layer", 14, 1, 0], ["layer", 14, 0, 0]]}
 {"case": "shortcuts_layer/12 &mc_zoom_in", "events": [["pressed", 7, 46, 3, 0], ["mods", 3], ["released", 7, 46, 3, 0], ["mods", 0]]}
 {"case": "shortcuts_layer/13 &mc_new", "events": [["pressed", 7, 23, 1, 0], ["mods", 1], ["released", 7, 23, 1, 0], ["mods", 0]]}
 {"case": "shortcuts_layer/14 &none", "events": []}
@@ -511,7 +517,7 @@
 {"case": "shortcuts_layer/16 &mc_leader", "events": []}
 {"case": "shortcuts_layer/17 &mc_containers", "events": [["pressed", 7, 7, 10, 0], ["mods", 10], ["released", 7, 7, 10, 0], ["mods", 0]]}
 {"case": "shortcuts_layer/18 &lt_emoji TOGS 0", "events": [["pressed", 7, 8, 9, 0], ["mods", 9], ["released", 7, 8, 9, 0], ["mods", 0]]}
-{"case": "shortcuts_layer/18 hold &lt_emoji TOGS 0", "events": [["layer", 13, 1, 0], ["layer", 13, 0, 0]]}
+{"case": "shortcuts_layer/18 hold &lt_emoji TOGS 0", "events": [["layer", 14, 1, 0], ["layer", 14, 0, 0]]}
 {"case": "shortcuts_layer/19 &sticky_base BASE", "events": [["layer", 31, 1, 0]]}
 {"case": "shortcuts_layer/20 &sticky_base BASE", "events": [["layer", 31, 1, 0]]}
 {"case": "shortcuts_layer/21 &mc_close", "events": [["pressed", 7, 26, 1, 0], ["mods", 1], ["released", 7, 26, 1, 0], ["mods", 0]]}
@@ -529,9 +535,50 @@
 {"case": "shortcuts_layer/32 hold &lt FUN SPACE", "events": [["layer", 29, 1, 0], ["layer", 29, 0, 0]]}
 {"case": "shortcuts_layer/33 &lt MACROS SPACE", "events": [["pressed", 7, 44, 0, 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0]]}
 {"case": "shortcuts_layer/33 hold &lt MACROS SPACE", "events": [["layer", 30, 1, 0], ["layer", 30, 0, 0]]}
-{"case": "shortcuts_layer/34 &lt_tog EXCALIDRAW EXCALIDRAW", "events": [["layer", 11, 1, 1]]}
-{"case": "shortcuts_layer/34 hold &lt_tog EXCALIDRAW EXCALIDRAW", "events": [["layer", 11, 1, 0], ["layer", 11, 0, 0]]}
+{"case": "shortcuts_layer/34 &lt_tog EXCALIDRAW EXCALIDRAW", "events": [["layer", 12, 1, 1]]}
+{"case": "shortcuts_layer/34 hold &lt_tog EXCALIDRAW EXCALIDRAW", "events": [["layer", 12, 1, 0], ["layer", 12, 0, 0]]}
 {"case": "shortcuts_layer/35 &none", "events": []}
+{"case": "media_layer/00 &none", "events": []}
+{"case": "media_layer/01 &none", "events": []}
+{"case": "media_layer/02 &mkp LCLK", "events": [["mouse", "buttons", "0x01"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"], ["mouse", "buttons", "0x00"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"]]}
+{"case": "media_layer/03 &mkp RCLK", "events": [["mouse", "buttons", "0x02"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"], ["mouse", "buttons", "0x00"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"]]}
+{"case": "media_layer/04 &none", "events": []}
+{"case": "media_layer/05 &none", "events": []}
+{"case": "media_layer/06 &th_shift_tab 0 0", "events": [["pressed", 7, 43, 0, 0], ["mods", 0], ["released", 7, 43, 0, 0], ["mods", 0]]}
+{"case": "media_layer/06 hold &th_shift_tab 0 0", "events": [["pressed", 7, 43, 2, 0], ["mods", 2], ["released", 7, 43, 2, 0], ["mods", 0]]}
+{"case": "media_layer/07 &th_end_ent_vim 0 0", "events": [["pressed", 7, 40, 0, 0], ["mods", 0], ["released", 7, 40, 0, 0], ["mods", 0]]}
+{"case": "media_layer/07 hold &th_end_ent_vim 0 0", "events": [["pressed", 7, 77, 0, 0], ["mods", 0], ["released", 7, 77, 0, 0], ["mods", 0], ["pressed", 7, 40, 0, 0], ["mods", 0], ["released", 7, 40, 0, 0], ["mods", 0]]}
+{"case": "media_layer/08 &lm_esc_vim", "events": [["pressed", 7, 41, 0, 0], ["mods", 0], ["released", 7, 41, 0, 0], ["mods", 0]]}
+{"case": "media_layer/09 &none", "events": []}
+{"case": "media_layer/10 &none", "events": []}
+{"case": "media_layer/11 &mmv MOVE_LEFT", "events": []}
+{"case": "media_layer/12 &mmv MOVE_UP", "events": []}
+{"case": "media_layer/13 &mmv MOVE_RIGHT", "events": []}
+{"case": "media_layer/14 &none", "events": []}
+{"case": "media_layer/15 &none", "events": []}
+{"case": "media_layer/16 &mc_mic", "events": [["pressed", 7, 7, 5, 0], ["mods", 5], ["released", 7, 7, 5, 0], ["mods", 0]]}
+{"case": "media_layer/17 &mt C_MUTE C_VOL_DN", "events": [["pressed", 12, 234, 0, 0], ["mods", 0], ["released", 12, 234, 0, 0], ["mods", 0]]}
+{"case": "media_layer/17 hold &mt C_MUTE C_VOL_DN", "events": [["pressed", 12, 226, 0, 0], ["mods", 0], ["released", 12, 226, 0, 0], ["mods", 0]]}
+{"case": "media_layer/18 &kp C_VOL_UP", "events": [["pressed", 12, 233, 0, 0], ["mods", 0], ["released", 12, 233, 0, 0], ["mods", 0]]}
+{"case": "media_layer/19 &lt_tog EXCALIDRAW EXCALIDRAW", "events": [["layer", 12, 1, 1]]}
+{"case": "media_layer/19 hold &lt_tog EXCALIDRAW EXCALIDRAW", "events": [["layer", 12, 1, 0], ["layer", 12, 0, 0]]}
+{"case": "media_layer/20 &none", "events": []}
+{"case": "media_layer/21 &msc SCRL_DOWN", "events": []}
+{"case": "media_layer/22 &mmv MOVE_DOWN", "events": []}
+{"case": "media_layer/23 &msc SCRL_UP", "events": []}
+{"case": "media_layer/24 &none", "events": []}
+{"case": "media_layer/25 &none", "events": []}
+{"case": "media_layer/26 &mc_cam", "events": [["pressed", 7, 8, 5, 0], ["mods", 5], ["released", 7, 8, 5, 0], ["mods", 0]]}
+{"case": "media_layer/27 &kp C_PREV", "events": [["pressed", 12, 182, 0, 0], ["mods", 0], ["released", 12, 182, 0, 0], ["mods", 0]]}
+{"case": "media_layer/28 &kp C_NEXT", "events": [["pressed", 12, 181, 0, 0], ["mods", 0], ["released", 12, 181, 0, 0], ["mods", 0]]}
+{"case": "media_layer/29 &lt_tog EXCALIDRAW EXCALIDRAW", "events": [["layer", 12, 1, 1]]}
+{"case": "media_layer/29 hold &lt_tog EXCALIDRAW EXCALIDRAW", "events": [["layer", 12, 1, 0], ["layer", 12, 0, 0]]}
+{"case": "media_layer/30 &none", "events": []}
+{"case": "media_layer/31 &mo NAV_CP", "events": [["layer", 27, 1, 0], ["layer", 27, 0, 0]]}
+{"case": "media_layer/32 &kp SPACE", "events": [["pressed", 7, 44, 0, 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0]]}
+{"case": "media_layer/33 &none", "events": []}
+{"case": "media_layer/34 &trans", "events": [["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0]]}
+{"case": "media_layer/35 &none", "events": []}
 {"case": "excalidraw_layer/00 &none", "events": []}
 {"case": "excalidraw_layer/01 &kp B", "events": [["pressed", 7, 5, 0, 0], ["mods", 0], ["released", 7, 5, 0, 0], ["mods", 0]]}
 {"case": "excalidraw_layer/02 &kp O", "events": [["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0]]}
@@ -543,9 +590,9 @@
 {"case": "excalidraw_layer/08 &trans", "events": [["pressed", 7, 24, 0, 0], ["mods", 0], ["released", 7, 24, 0, 0], ["mods", 0]]}
 {"case": "excalidraw_layer/09 &trans", "events": [["pressed", 7, 51, 0, 0], ["mods", 0], ["released", 7, 51, 0, 0], ["mods", 0]]}
 {"case": "excalidraw_layer/10 &kp D", "events": [["pressed", 7, 7, 0, 0], ["mods", 0], ["released", 7, 7, 0, 0], ["mods", 0]]}
-{"case": "excalidraw_layer/11 &mc_excal_n", "events": [["pressed", 7, 17, 0, 0], ["mods", 0], ["released", 7, 17, 0, 0], ["mods", 0], ["layer", 12, 1, 1]]}
+{"case": "excalidraw_layer/11 &mc_excal_n", "events": [["pressed", 7, 17, 0, 0], ["mods", 0], ["released", 7, 17, 0, 0], ["mods", 0], ["layer", 13, 1, 1]]}
 {"case": "excalidraw_layer/12 &kp H", "events": [["pressed", 7, 11, 0, 0], ["mods", 0], ["released", 7, 11, 0, 0], ["mods", 0]]}
-{"case": "excalidraw_layer/13 &mc_excal_text", "events": [["pressed", 7, 23, 0, 0], ["mods", 0], ["released", 7, 23, 0, 0], ["mods", 0], ["layer", 12, 1, 1]]}
+{"case": "excalidraw_layer/13 &mc_excal_text", "events": [["pressed", 7, 23, 0, 0], ["mods", 0], ["released", 7, 23, 0, 0], ["mods", 0], ["layer", 13, 1, 1]]}
 {"case": "excalidraw_layer/14 &none", "events": []}
 {"case": "excalidraw_layer/15 &trans", "events": [["pressed", 7, 29, 0, 0], ["mods", 0], ["released", 7, 29, 0, 0], ["mods", 0]]}
 {"case": "excalidraw_layer/16 &trans", "events": [["pressed", 7, 21, 0, 0], ["mods", 0], ["released", 7, 21, 0, 0], ["mods", 0]]}
@@ -565,7 +612,7 @@
 {"case": "excalidraw_layer/30 &trans", "events": [["mouse", "buttons", "0x02"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"], ["mouse", "buttons", "0x00"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"]]}
 {"case": "excalidraw_layer/31 &trans", "events": [["mods", 0]]}
 {"case": "excalidraw_layer/32 &trans", "events": [["pressed", 7, 44, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0]]}
-{"case": "excalidraw_layer/33 &trans", "events": [["layer", 15, 1, 0], ["mods", 0], ["mods", 0], ["layer", 15, 0, 0]]}
+{"case": "excalidraw_layer/33 &trans", "events": [["layer", 16, 1, 0], ["mods", 0], ["mods", 0], ["layer", 16, 0, 0]]}
 {"case": "excalidraw_layer/34 &trans", "events": [["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0]]}
 {"case": "excalidraw_layer/35 &trans", "events": [["mouse", "buttons", "0x01"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"], ["mouse", "buttons", "0x00"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"]]}
 {"case": "excal_text_layer/00 &kp Q", "events": [["pressed", 7, 20, 0, 0], ["mods", 0], ["released", 7, 20, 0, 0], ["mods", 0]]}
@@ -612,13 +659,13 @@
 {"case": "excal_text_layer/29 &kp I", "events": [["pressed", 7, 12, 0, 0], ["mods", 0], ["released", 7, 12, 0, 0], ["mods", 0]]}
 {"case": "excal_text_layer/30 &mkp RCLK", "events": [["mouse", "buttons", "0x02"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"], ["mouse", "buttons", "0x00"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"]]}
 {"case": "excal_text_layer/31 &ht_repeat NAV 0", "events": [["mods", 0]]}
-{"case": "excal_text_layer/31 hold &ht_repeat NAV 0", "events": [["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
+{"case": "excal_text_layer/31 hold &ht_repeat NAV 0", "events": [["layer", 24, 1, 0], ["layer", 24, 0, 0]]}
 {"case": "excal_text_layer/32 &ltn_num_spc 0 0", "events": [["pressed", 7, 44, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0]]}
-{"case": "excal_text_layer/32 hold &ltn_num_spc 0 0", "events": [["layer", 16, 1, 0], ["layer", 16, 0, 0], ["mods", 0]]}
-{"case": "excal_text_layer/33 &sentence_alpha2", "events": [["layer", 15, 1, 0], ["mods", 0], ["mods", 0], ["layer", 15, 0, 0]]}
-{"case": "excal_text_layer/33 hold &sentence_alpha2", "events": [["layer", 17, 1, 0], ["layer", 17, 0, 0], ["mods", 0]]}
+{"case": "excal_text_layer/32 hold &ltn_num_spc 0 0", "events": [["layer", 17, 1, 0], ["layer", 17, 0, 0], ["mods", 0]]}
+{"case": "excal_text_layer/33 &sentence_alpha2", "events": [["layer", 16, 1, 0], ["mods", 0], ["mods", 0], ["layer", 16, 0, 0]]}
+{"case": "excal_text_layer/33 hold &sentence_alpha2", "events": [["layer", 18, 1, 0], ["layer", 18, 0, 0], ["mods", 0]]}
 {"case": "excal_text_layer/34 &ht_shift MEDIA 0", "events": [["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0]]}
-{"case": "excal_text_layer/34 hold &ht_shift MEDIA 0", "events": [["layer", 26, 1, 0], ["layer", 26, 0, 0]]}
+{"case": "excal_text_layer/34 hold &ht_shift MEDIA 0", "events": [["layer", 11, 1, 0], ["layer", 11, 0, 0]]}
 {"case": "excal_text_layer/35 &mkp LCLK", "events": [["mouse", "buttons", "0x01"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"], ["mouse", "buttons", "0x00"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"]]}
 {"case": "toggles_layer/00 &none", "events": []}
 {"case": "toggles_layer/01 &none", "events": []}
@@ -626,7 +673,7 @@
 {"case": "toggles_layer/03 &bt BT_CLR", "events": [["pressed", 7, 10, 0, 0], ["mods", 0], ["released", 7, 10, 0, 0], ["mods", 0]]}
 {"case": "toggles_layer/04 &none", "events": []}
 {"case": "toggles_layer/05 &none", "events": []}
-{"case": "toggles_layer/06 &tog NAV", "events": [["layer", 23, 1, 1]]}
+{"case": "toggles_layer/06 &tog NAV", "events": [["layer", 24, 1, 1]]}
 {"case": "toggles_layer/07 &tog FUN", "events": [["layer", 29, 1, 1]]}
 {"case": "toggles_layer/08 &none", "events": []}
 {"case": "toggles_layer/09 &none", "events": []}
@@ -636,8 +683,8 @@
 {"case": "toggles_layer/13 &bt BT_NXT", "events": [["pressed", 7, 23, 0, 0], ["mods", 0], ["released", 7, 23, 0, 0], ["mods", 0]]}
 {"case": "toggles_layer/14 &none", "events": []}
 {"case": "toggles_layer/15 &none", "events": []}
-{"case": "toggles_layer/16 &tog NUM", "events": [["layer", 16, 1, 1]]}
-{"case": "toggles_layer/17 &tog MEDIA", "events": [["layer", 26, 1, 1]]}
+{"case": "toggles_layer/16 &tog NUM", "events": [["layer", 17, 1, 1]]}
+{"case": "toggles_layer/17 &tog MEDIA", "events": [["layer", 11, 1, 1]]}
 {"case": "toggles_layer/18 &none", "events": []}
 {"case": "toggles_layer/19 &none", "events": []}
 {"case": "toggles_layer/20 &none", "events": []}
@@ -645,8 +692,8 @@
 {"case": "toggles_layer/23 &lock_on ALT_OS", "events": [["layer", 1, 1, 1]]}
 {"case": "toggles_layer/24 &none", "events": []}
 {"case": "toggles_layer/25 &none", "events": []}
-{"case": "toggles_layer/26 &tog MEHS", "events": [["layer", 14, 1, 1]]}
-{"case": "toggles_layer/27 &tog EXCALIDRAW", "events": [["layer", 11, 1, 1]]}
+{"case": "toggles_layer/26 &tog MEHS", "events": [["layer", 15, 1, 1]]}
+{"case": "toggles_layer/27 &tog EXCALIDRAW", "events": [["layer", 12, 1, 1]]}
 {"case": "toggles_layer/29 &none", "events": []}
 {"case": "toggles_layer/30 &none", "events": []}
 {"case": "toggles_layer/31 &kp CAPS", "events": [["pressed", 7, 57, 0, 0], ["mods", 0], ["released", 7, 57, 0, 0], ["mods", 0]]}
@@ -700,13 +747,13 @@
 {"case": "mehs_layer/35 &none", "events": []}
 {"case": "alpha2_layer/00 &none", "events": []}
 {"case": "alpha2_layer/01 &kp Q", "events": [["pressed", 7, 20, 0, 0], ["mods", 0], ["released", 7, 20, 0, 0], ["mods", 0]]}
-{"case": "alpha2_layer/02 &mc_qu", "events": [["pressed", 7, 20, 0, 0], ["mods", 0], ["released", 7, 20, 0, 0], ["mods", 0], ["pressed", 7, 24, 0, 0], ["mods", 0], ["released", 7, 24, 0, 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
+{"case": "alpha2_layer/02 &mc_qu", "events": [["pressed", 7, 20, 0, 0], ["mods", 0], ["released", 7, 20, 0, 0], ["mods", 0], ["pressed", 7, 24, 0, 0], ["mods", 0], ["released", 7, 24, 0, 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
 {"case": "alpha2_layer/03 &kp K", "events": [["pressed", 7, 14, 0, 0], ["mods", 0], ["released", 7, 14, 0, 0], ["mods", 0]]}
 {"case": "alpha2_layer/04 &none", "events": []}
 {"case": "alpha2_layer/05 &none", "events": []}
-{"case": "alpha2_layer/06 &ac_ocir", "events": [["pressed", 7, 35, 2, 0], ["mods", 2], ["released", 7, 35, 2, 0], ["mods", 0], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
-{"case": "alpha2_layer/07 &ac_oacu", "events": [["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
-{"case": "alpha2_layer/08 &ac_uacu", "events": [["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 24, 0, 0], ["mods", 0], ["released", 7, 24, 0, 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
+{"case": "alpha2_layer/06 &ac_ocir", "events": [["pressed", 7, 35, 2, 0], ["mods", 2], ["released", 7, 35, 2, 0], ["mods", 0], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
+{"case": "alpha2_layer/07 &ac_oacu", "events": [["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
+{"case": "alpha2_layer/08 &ac_uacu", "events": [["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 24, 0, 0], ["mods", 0], ["released", 7, 24, 0, 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
 {"case": "alpha2_layer/09 &none", "events": []}
 {"case": "alpha2_layer/10 &kp Y", "events": [["pressed", 7, 28, 0, 0], ["mods", 0], ["released", 7, 28, 0, 0], ["mods", 0]]}
 {"case": "alpha2_layer/11 &kp Z", "events": [["pressed", 7, 29, 0, 0], ["mods", 0], ["released", 7, 29, 0, 0], ["mods", 0]]}
@@ -714,20 +761,20 @@
 {"case": "alpha2_layer/13 &kp W", "events": [["pressed", 7, 26, 0, 0], ["mods", 0], ["released", 7, 26, 0, 0], ["mods", 0]]}
 {"case": "alpha2_layer/14 &none", "events": []}
 {"case": "alpha2_layer/15 &none", "events": []}
-{"case": "alpha2_layer/16 &ac_atil", "events": [["pressed", 7, 53, 2, 0], ["mods", 2], ["released", 7, 53, 2, 0], ["mods", 0], ["pressed", 7, 4, 0, 0], ["mods", 0], ["released", 7, 4, 0, 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
-{"case": "alpha2_layer/17 &ac_aacu", "events": [["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 4, 0, 0], ["mods", 0], ["released", 7, 4, 0, 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
-{"case": "alpha2_layer/18 &ac_eacu", "events": [["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 8, 0, 0], ["mods", 0], ["released", 7, 8, 0, 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
-{"case": "alpha2_layer/19 &ac_iacu", "events": [["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 12, 0, 0], ["mods", 0], ["released", 7, 12, 0, 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
+{"case": "alpha2_layer/16 &ac_atil", "events": [["pressed", 7, 53, 2, 0], ["mods", 2], ["released", 7, 53, 2, 0], ["mods", 0], ["pressed", 7, 4, 0, 0], ["mods", 0], ["released", 7, 4, 0, 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
+{"case": "alpha2_layer/17 &ac_aacu", "events": [["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 4, 0, 0], ["mods", 0], ["released", 7, 4, 0, 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
+{"case": "alpha2_layer/18 &ac_eacu", "events": [["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 8, 0, 0], ["mods", 0], ["released", 7, 8, 0, 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
+{"case": "alpha2_layer/19 &ac_iacu", "events": [["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 12, 0, 0], ["mods", 0], ["released", 7, 12, 0, 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
 {"case": "alpha2_layer/20 &kp Y", "events": [["pressed", 7, 28, 0, 0], ["mods", 0], ["released", 7, 28, 0, 0], ["mods", 0]]}
 {"case": "alpha2_layer/21 &kp J", "events": [["pressed", 7, 13, 0, 0], ["mods", 0], ["released", 7, 13, 0, 0], ["mods", 0]]}
-{"case": "alpha2_layer/22 &mc_ced", "events": [["pressed", 7, 54, 64, 0], ["mods", 64], ["released", 7, 54, 64, 0], ["mods", 0], ["layer", 18, 1, 0], ["layer", 18, 0, 0]]}
+{"case": "alpha2_layer/22 &mc_ced", "events": [["pressed", 7, 54, 64, 0], ["mods", 64], ["released", 7, 54, 64, 0], ["mods", 0], ["layer", 19, 1, 0], ["layer", 19, 0, 0]]}
 {"case": "alpha2_layer/23 &reversed_magic", "events": [["pressed", 7, 25, 0, 0], ["mods", 0], ["released", 7, 25, 0, 0], ["mods", 0]]}
 {"case": "alpha2_layer/24 &none", "events": []}
 {"case": "alpha2_layer/25 &none", "events": []}
-{"case": "alpha2_layer/26 &ac_otil", "events": [["pressed", 7, 53, 2, 0], ["mods", 2], ["released", 7, 53, 2, 0], ["mods", 0], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
-{"case": "alpha2_layer/27 &ac_acir", "events": [["pressed", 7, 35, 2, 0], ["mods", 2], ["released", 7, 35, 2, 0], ["mods", 0], ["pressed", 7, 4, 0, 0], ["mods", 0], ["released", 7, 4, 0, 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
-{"case": "alpha2_layer/28 &ac_ecir", "events": [["pressed", 7, 35, 2, 0], ["mods", 2], ["released", 7, 35, 2, 0], ["mods", 0], ["pressed", 7, 8, 0, 0], ["mods", 0], ["released", 7, 8, 0, 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
-{"case": "alpha2_layer/29 &ac_iacu", "events": [["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 12, 0, 0], ["mods", 0], ["released", 7, 12, 0, 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
+{"case": "alpha2_layer/26 &ac_otil", "events": [["pressed", 7, 53, 2, 0], ["mods", 2], ["released", 7, 53, 2, 0], ["mods", 0], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
+{"case": "alpha2_layer/27 &ac_acir", "events": [["pressed", 7, 35, 2, 0], ["mods", 2], ["released", 7, 35, 2, 0], ["mods", 0], ["pressed", 7, 4, 0, 0], ["mods", 0], ["released", 7, 4, 0, 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
+{"case": "alpha2_layer/28 &ac_ecir", "events": [["pressed", 7, 35, 2, 0], ["mods", 2], ["released", 7, 35, 2, 0], ["mods", 0], ["pressed", 7, 8, 0, 0], ["mods", 0], ["released", 7, 8, 0, 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
+{"case": "alpha2_layer/29 &ac_iacu", "events": [["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 12, 0, 0], ["mods", 0], ["released", 7, 12, 0, 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
 {"case": "alpha2_layer/30 &none", "events": []}
 {"case": "alpha2_layer/31 &key_repeat", "events": []}
 {"case": "alpha2_layer/32 &kp UNDER", "events": [["pressed", 7, 45, 2, 0], ["mods", 2], ["released", 7, 45, 2, 0], ["mods", 0]]}
@@ -776,9 +823,9 @@
 {"case": "numbers_layer/31 &trans", "events": [["mods", 0]]}
 {"case": "numbers_layer/32 &trans", "events": [["pressed", 7, 44, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0]]}
 {"case": "numbers_layer/33 &hlt SYM SPACE", "events": [["pressed", 7, 44, 0, 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0]]}
-{"case": "numbers_layer/33 hold &hlt SYM SPACE", "events": [["layer", 17, 1, 0], ["layer", 17, 0, 0]]}
+{"case": "numbers_layer/33 hold &hlt SYM SPACE", "events": [["layer", 18, 1, 0], ["layer", 18, 0, 0]]}
 {"case": "numbers_layer/34 &lt_n0 MEDIA 0", "events": [["pressed", 7, 39, 0, 0], ["mods", 0], ["released", 7, 39, 0, 0], ["mods", 0], ["mods", 0], ["mods", 0]]}
-{"case": "numbers_layer/34 hold &lt_n0 MEDIA 0", "events": [["layer", 26, 1, 0], ["layer", 26, 0, 0]]}
+{"case": "numbers_layer/34 hold &lt_n0 MEDIA 0", "events": [["layer", 11, 1, 0], ["layer", 11, 0, 0]]}
 {"case": "numbers_layer/35 &none", "events": []}
 {"case": "symbols_layer/00 &none", "events": []}
 {"case": "symbols_layer/01 &mc_tilde", "events": [["pressed", 7, 53, 2, 0], ["mods", 2], ["pressed", 7, 44, 0, 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0], ["released", 7, 53, 2, 0], ["mods", 0]]}
@@ -830,7 +877,7 @@
 {"case": "symbols_layer/30 &none", "events": []}
 {"case": "symbols_layer/31 &trans", "events": [["pressed", 7, 114, 0, 0], ["mods", 0], ["released", 7, 114, 0, 0], ["mods", 0], ["mods", 0]]}
 {"case": "symbols_layer/32 &hlt NUM_CP SPACE", "events": [["pressed", 7, 44, 0, 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0]]}
-{"case": "symbols_layer/32 hold &hlt NUM_CP SPACE", "events": [["layer", 24, 1, 0], ["layer", 24, 0, 0]]}
+{"case": "symbols_layer/32 hold &hlt NUM_CP SPACE", "events": [["layer", 25, 1, 0], ["layer", 25, 0, 0]]}
 {"case": "symbols_layer/33 &none", "events": []}
 {"case": "symbols_layer/34 &trans", "events": [["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0]]}
 {"case": "symbols_layer/35 &none", "events": []}
@@ -847,38 +894,38 @@
 {"case": "ccedil_layer/10 &none", "events": []}
 {"case": "ccedil_layer/11 &none", "events": []}
 {"case": "ccedil_layer/12 &none", "events": []}
-{"case": "ccedil_layer/13 &mc_aotil", "events": [["pressed", 7, 53, 2, 0], ["mods", 2], ["released", 7, 53, 2, 0], ["mods", 0], ["pressed", 7, 4, 0, 0], ["mods", 0], ["released", 7, 4, 0, 0], ["mods", 0], ["layer", 22, 1, 0], ["pressed", 7, 18, 0, 0], ["mods", 0], ["layer", 22, 0, 0], ["released", 7, 18, 0, 0], ["mods", 0]]}
+{"case": "ccedil_layer/13 &mc_aotil", "events": [["pressed", 7, 53, 2, 0], ["mods", 2], ["released", 7, 53, 2, 0], ["mods", 0], ["pressed", 7, 4, 0, 0], ["mods", 0], ["released", 7, 4, 0, 0], ["mods", 0], ["layer", 23, 1, 0], ["pressed", 7, 18, 0, 0], ["mods", 0], ["layer", 23, 0, 0], ["released", 7, 18, 0, 0], ["mods", 0]]}
 {"case": "ccedil_layer/14 &none", "events": []}
 {"case": "ccedil_layer/15 &none", "events": []}
-{"case": "ccedil_layer/16 &ac_atil", "events": [["pressed", 7, 53, 2, 0], ["mods", 2], ["released", 7, 53, 2, 0], ["mods", 0], ["pressed", 7, 4, 0, 0], ["mods", 0], ["released", 7, 4, 0, 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
+{"case": "ccedil_layer/16 &ac_atil", "events": [["pressed", 7, 53, 2, 0], ["mods", 2], ["released", 7, 53, 2, 0], ["mods", 0], ["pressed", 7, 4, 0, 0], ["mods", 0], ["released", 7, 4, 0, 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
 {"case": "ccedil_layer/17 &trans", "events": [["pressed", 7, 4, 0, 0], ["mods", 0], ["released", 7, 4, 0, 0], ["mods", 0]]}
 {"case": "ccedil_layer/18 &none", "events": []}
 {"case": "ccedil_layer/19 &none", "events": []}
 {"case": "ccedil_layer/20 &none", "events": []}
 {"case": "ccedil_layer/21 &none", "events": []}
 {"case": "ccedil_layer/22 &none", "events": []}
-{"case": "ccedil_layer/23 &mc_otiles", "events": [["pressed", 7, 53, 2, 0], ["mods", 2], ["released", 7, 53, 2, 0], ["mods", 0], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0], ["layer", 22, 1, 0], ["pressed", 7, 8, 0, 0], ["mods", 0], ["layer", 22, 0, 0], ["released", 7, 8, 0, 0], ["mods", 0], ["pressed", 7, 22, 0, 0], ["mods", 0], ["released", 7, 22, 0, 0], ["mods", 0]]}
+{"case": "ccedil_layer/23 &mc_otiles", "events": [["pressed", 7, 53, 2, 0], ["mods", 2], ["released", 7, 53, 2, 0], ["mods", 0], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0], ["layer", 23, 1, 0], ["pressed", 7, 8, 0, 0], ["mods", 0], ["layer", 23, 0, 0], ["released", 7, 8, 0, 0], ["mods", 0], ["pressed", 7, 22, 0, 0], ["mods", 0], ["released", 7, 22, 0, 0], ["mods", 0]]}
 {"case": "ccedil_layer/24 &none", "events": []}
 {"case": "ccedil_layer/25 &none", "events": []}
-{"case": "ccedil_layer/26 &ac_otil", "events": [["pressed", 7, 53, 2, 0], ["mods", 2], ["released", 7, 53, 2, 0], ["mods", 0], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
+{"case": "ccedil_layer/26 &ac_otil", "events": [["pressed", 7, 53, 2, 0], ["mods", 2], ["released", 7, 53, 2, 0], ["mods", 0], ["pressed", 7, 18, 0, 0], ["mods", 0], ["released", 7, 18, 0, 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
 {"case": "ccedil_layer/27 &trans", "events": [["pressed", 7, 54, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 54, 0, 0], ["mods", 0]]}
 {"case": "ccedil_layer/28 &trans", "events": [["pressed", 7, 55, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 55, 0, 0], ["mods", 0]]}
 {"case": "ccedil_layer/29 &none", "events": []}
 {"case": "ccedil_layer/30 &none", "events": []}
-{"case": "ccedil_layer/31 &sl ALPHA2", "events": [["layer", 15, 1, 0], ["layer", 15, 0, 0]]}
+{"case": "ccedil_layer/31 &sl ALPHA2", "events": [["layer", 16, 1, 0], ["layer", 16, 0, 0]]}
 {"case": "ccedil_layer/32 &trans", "events": [["pressed", 7, 44, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0]]}
-{"case": "ccedil_layer/33 &trans", "events": [["layer", 15, 1, 0], ["mods", 0], ["mods", 0], ["layer", 15, 0, 0]]}
+{"case": "ccedil_layer/33 &trans", "events": [["layer", 16, 1, 0], ["mods", 0], ["mods", 0], ["layer", 16, 0, 0]]}
 {"case": "ccedil_layer/34 &trans", "events": [["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0]]}
 {"case": "ccedil_layer/35 &none", "events": []}
 {"case": "shifted_alpha2_layer/00 &none", "events": []}
 {"case": "shifted_alpha2_layer/01 &kp LS(Q)", "events": [["pressed", 7, 20, 2, 0], ["mods", 2], ["released", 7, 20, 2, 0], ["mods", 0]]}
-{"case": "shifted_alpha2_layer/02 &mc_qu_s", "events": [["pressed", 7, 20, 2, 0], ["mods", 2], ["released", 7, 20, 2, 0], ["mods", 0], ["pressed", 7, 24, 0, 0], ["mods", 0], ["released", 7, 24, 0, 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
+{"case": "shifted_alpha2_layer/02 &mc_qu_s", "events": [["pressed", 7, 20, 2, 0], ["mods", 2], ["released", 7, 20, 2, 0], ["mods", 0], ["pressed", 7, 24, 0, 0], ["mods", 0], ["released", 7, 24, 0, 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
 {"case": "shifted_alpha2_layer/03 &kp LS(K)", "events": [["pressed", 7, 14, 2, 0], ["mods", 2], ["released", 7, 14, 2, 0], ["mods", 0]]}
 {"case": "shifted_alpha2_layer/04 &none", "events": []}
 {"case": "shifted_alpha2_layer/05 &none", "events": []}
-{"case": "shifted_alpha2_layer/06 &ac_ocir_s", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 35, 2, 0], ["mods", 2], ["released", 7, 35, 2, 0], ["mods", 0], ["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["pressed", 7, 18, 0, 0], ["mods", 2], ["released", 7, 18, 0, 0], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
-{"case": "shifted_alpha2_layer/07 &ac_oacu_s", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["pressed", 7, 18, 0, 0], ["mods", 2], ["released", 7, 18, 0, 0], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
-{"case": "shifted_alpha2_layer/08 &ac_uacu_s", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["pressed", 7, 24, 0, 0], ["mods", 2], ["released", 7, 24, 0, 0], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
+{"case": "shifted_alpha2_layer/06 &ac_ocir_s", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 35, 2, 0], ["mods", 2], ["released", 7, 35, 2, 0], ["mods", 0], ["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["pressed", 7, 18, 0, 0], ["mods", 2], ["released", 7, 18, 0, 0], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
+{"case": "shifted_alpha2_layer/07 &ac_oacu_s", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["pressed", 7, 18, 0, 0], ["mods", 2], ["released", 7, 18, 0, 0], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
+{"case": "shifted_alpha2_layer/08 &ac_uacu_s", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["pressed", 7, 24, 0, 0], ["mods", 2], ["released", 7, 24, 0, 0], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
 {"case": "shifted_alpha2_layer/09 &none", "events": []}
 {"case": "shifted_alpha2_layer/10 &kp LS(Y)", "events": [["pressed", 7, 28, 2, 0], ["mods", 2], ["released", 7, 28, 2, 0], ["mods", 0]]}
 {"case": "shifted_alpha2_layer/11 &kp LS(Z)", "events": [["pressed", 7, 29, 2, 0], ["mods", 2], ["released", 7, 29, 2, 0], ["mods", 0]]}
@@ -886,20 +933,20 @@
 {"case": "shifted_alpha2_layer/13 &kp LS(W)", "events": [["pressed", 7, 26, 2, 0], ["mods", 2], ["released", 7, 26, 2, 0], ["mods", 0]]}
 {"case": "shifted_alpha2_layer/14 &none", "events": []}
 {"case": "shifted_alpha2_layer/15 &none", "events": []}
-{"case": "shifted_alpha2_layer/16 &ac_atil_s", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 53, 2, 0], ["mods", 2], ["released", 7, 53, 2, 0], ["mods", 0], ["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["pressed", 7, 4, 0, 0], ["mods", 2], ["released", 7, 4, 0, 0], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
-{"case": "shifted_alpha2_layer/17 &ac_aacu_s", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["pressed", 7, 4, 0, 0], ["mods", 2], ["released", 7, 4, 0, 0], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
-{"case": "shifted_alpha2_layer/18 &ac_eacu_s", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["pressed", 7, 8, 0, 0], ["mods", 2], ["released", 7, 8, 0, 0], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
-{"case": "shifted_alpha2_layer/19 &ac_iacu_s", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["pressed", 7, 12, 0, 0], ["mods", 2], ["released", 7, 12, 0, 0], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
+{"case": "shifted_alpha2_layer/16 &ac_atil_s", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 53, 2, 0], ["mods", 2], ["released", 7, 53, 2, 0], ["mods", 0], ["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["pressed", 7, 4, 0, 0], ["mods", 2], ["released", 7, 4, 0, 0], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
+{"case": "shifted_alpha2_layer/17 &ac_aacu_s", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["pressed", 7, 4, 0, 0], ["mods", 2], ["released", 7, 4, 0, 0], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
+{"case": "shifted_alpha2_layer/18 &ac_eacu_s", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["pressed", 7, 8, 0, 0], ["mods", 2], ["released", 7, 8, 0, 0], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
+{"case": "shifted_alpha2_layer/19 &ac_iacu_s", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["pressed", 7, 12, 0, 0], ["mods", 2], ["released", 7, 12, 0, 0], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
 {"case": "shifted_alpha2_layer/20 &kp LS(Y)", "events": [["pressed", 7, 28, 2, 0], ["mods", 2], ["released", 7, 28, 2, 0], ["mods", 0]]}
 {"case": "shifted_alpha2_layer/21 &kp LS(J)", "events": [["pressed", 7, 13, 2, 0], ["mods", 2], ["released", 7, 13, 2, 0], ["mods", 0]]}
-{"case": "shifted_alpha2_layer/22 &mc_ced_s", "events": [["pressed", 7, 54, 96, 0], ["mods", 96], ["released", 7, 54, 96, 0], ["mods", 0], ["layer", 18, 1, 0], ["layer", 18, 0, 0]]}
+{"case": "shifted_alpha2_layer/22 &mc_ced_s", "events": [["pressed", 7, 54, 96, 0], ["mods", 96], ["released", 7, 54, 96, 0], ["mods", 0], ["layer", 19, 1, 0], ["layer", 19, 0, 0]]}
 {"case": "shifted_alpha2_layer/23 &reversed_magic_c", "events": [["pressed", 7, 25, 32, 0], ["mods", 32], ["released", 7, 25, 32, 0], ["mods", 0]]}
 {"case": "shifted_alpha2_layer/24 &none", "events": []}
 {"case": "shifted_alpha2_layer/25 &none", "events": []}
-{"case": "shifted_alpha2_layer/26 &ac_otil_s", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 53, 2, 0], ["mods", 2], ["released", 7, 53, 2, 0], ["mods", 0], ["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["pressed", 7, 18, 0, 0], ["mods", 2], ["released", 7, 18, 0, 0], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
-{"case": "shifted_alpha2_layer/27 &ac_acir_s", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 35, 2, 0], ["mods", 2], ["released", 7, 35, 2, 0], ["mods", 0], ["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["pressed", 7, 4, 0, 0], ["mods", 2], ["released", 7, 4, 0, 0], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
-{"case": "shifted_alpha2_layer/28 &ac_ecir_s", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 35, 2, 0], ["mods", 2], ["released", 7, 35, 2, 0], ["mods", 0], ["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["pressed", 7, 8, 0, 0], ["mods", 2], ["released", 7, 8, 0, 0], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
-{"case": "shifted_alpha2_layer/29 &ac_iacu_s", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["pressed", 7, 12, 0, 0], ["mods", 2], ["released", 7, 12, 0, 0], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
+{"case": "shifted_alpha2_layer/26 &ac_otil_s", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 53, 2, 0], ["mods", 2], ["released", 7, 53, 2, 0], ["mods", 0], ["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["pressed", 7, 18, 0, 0], ["mods", 2], ["released", 7, 18, 0, 0], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
+{"case": "shifted_alpha2_layer/27 &ac_acir_s", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 35, 2, 0], ["mods", 2], ["released", 7, 35, 2, 0], ["mods", 0], ["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["pressed", 7, 4, 0, 0], ["mods", 2], ["released", 7, 4, 0, 0], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
+{"case": "shifted_alpha2_layer/28 &ac_ecir_s", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 35, 2, 0], ["mods", 2], ["released", 7, 35, 2, 0], ["mods", 0], ["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["pressed", 7, 8, 0, 0], ["mods", 2], ["released", 7, 8, 0, 0], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
+{"case": "shifted_alpha2_layer/29 &ac_iacu_s", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["pressed", 7, 12, 0, 0], ["mods", 2], ["released", 7, 12, 0, 0], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
 {"case": "shifted_alpha2_layer/30 &none", "events": []}
 {"case": "shifted_alpha2_layer/31 &key_repeat", "events": []}
 {"case": "shifted_alpha2_layer/32 &kp UNDER", "events": [["pressed", 7, 45, 2, 0], ["mods", 2], ["released", 7, 45, 2, 0], ["mods", 0]]}
@@ -908,13 +955,13 @@
 {"case": "shifted_alpha2_layer/35 &none", "events": []}
 {"case": "case_alpha2_layer/00 &none", "events": []}
 {"case": "case_alpha2_layer/01 &kp RS(Q)", "events": [["pressed", 7, 20, 32, 0], ["mods", 32], ["released", 7, 20, 32, 0], ["mods", 0]]}
-{"case": "case_alpha2_layer/02 &mc_qu_c", "events": [["pressed", 7, 20, 32, 0], ["mods", 32], ["released", 7, 20, 32, 0], ["mods", 0], ["pressed", 7, 24, 32, 0], ["mods", 32], ["released", 7, 24, 32, 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
+{"case": "case_alpha2_layer/02 &mc_qu_c", "events": [["pressed", 7, 20, 32, 0], ["mods", 32], ["released", 7, 20, 32, 0], ["mods", 0], ["pressed", 7, 24, 32, 0], ["mods", 32], ["released", 7, 24, 32, 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
 {"case": "case_alpha2_layer/03 &kp RS(K)", "events": [["pressed", 7, 14, 32, 0], ["mods", 32], ["released", 7, 14, 32, 0], ["mods", 0]]}
 {"case": "case_alpha2_layer/04 &none", "events": []}
 {"case": "case_alpha2_layer/05 &none", "events": []}
-{"case": "case_alpha2_layer/06 &ac_ocir_c", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 35, 2, 0], ["mods", 2], ["released", 7, 35, 2, 0], ["mods", 0], ["pressed", 7, 229, 0, 0], ["mods", 32], ["mods", 32], ["pressed", 7, 18, 0, 0], ["mods", 32], ["released", 7, 18, 0, 0], ["mods", 32], ["released", 7, 229, 0, 0], ["mods", 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
-{"case": "case_alpha2_layer/07 &ac_oacu_c", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 229, 0, 0], ["mods", 32], ["mods", 32], ["pressed", 7, 18, 0, 0], ["mods", 32], ["released", 7, 18, 0, 0], ["mods", 32], ["released", 7, 229, 0, 0], ["mods", 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
-{"case": "case_alpha2_layer/08 &ac_uacu_c", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 229, 0, 0], ["mods", 32], ["mods", 32], ["pressed", 7, 24, 0, 0], ["mods", 32], ["released", 7, 24, 0, 0], ["mods", 32], ["released", 7, 229, 0, 0], ["mods", 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
+{"case": "case_alpha2_layer/06 &ac_ocir_c", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 35, 2, 0], ["mods", 2], ["released", 7, 35, 2, 0], ["mods", 0], ["pressed", 7, 229, 0, 0], ["mods", 32], ["mods", 32], ["pressed", 7, 18, 0, 0], ["mods", 32], ["released", 7, 18, 0, 0], ["mods", 32], ["released", 7, 229, 0, 0], ["mods", 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
+{"case": "case_alpha2_layer/07 &ac_oacu_c", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 229, 0, 0], ["mods", 32], ["mods", 32], ["pressed", 7, 18, 0, 0], ["mods", 32], ["released", 7, 18, 0, 0], ["mods", 32], ["released", 7, 229, 0, 0], ["mods", 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
+{"case": "case_alpha2_layer/08 &ac_uacu_c", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 229, 0, 0], ["mods", 32], ["mods", 32], ["pressed", 7, 24, 0, 0], ["mods", 32], ["released", 7, 24, 0, 0], ["mods", 32], ["released", 7, 229, 0, 0], ["mods", 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
 {"case": "case_alpha2_layer/09 &none", "events": []}
 {"case": "case_alpha2_layer/10 &kp RS(Y)", "events": [["pressed", 7, 28, 32, 0], ["mods", 32], ["released", 7, 28, 32, 0], ["mods", 0]]}
 {"case": "case_alpha2_layer/11 &kp RS(Z)", "events": [["pressed", 7, 29, 32, 0], ["mods", 32], ["released", 7, 29, 32, 0], ["mods", 0]]}
@@ -922,20 +969,20 @@
 {"case": "case_alpha2_layer/13 &kp RS(W)", "events": [["pressed", 7, 26, 32, 0], ["mods", 32], ["released", 7, 26, 32, 0], ["mods", 0]]}
 {"case": "case_alpha2_layer/14 &none", "events": []}
 {"case": "case_alpha2_layer/15 &none", "events": []}
-{"case": "case_alpha2_layer/16 &ac_atil_c", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 53, 2, 0], ["mods", 2], ["released", 7, 53, 2, 0], ["mods", 0], ["pressed", 7, 229, 0, 0], ["mods", 32], ["mods", 32], ["pressed", 7, 4, 0, 0], ["mods", 32], ["released", 7, 4, 0, 0], ["mods", 32], ["released", 7, 229, 0, 0], ["mods", 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
-{"case": "case_alpha2_layer/17 &ac_aacu_c", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 229, 0, 0], ["mods", 32], ["mods", 32], ["pressed", 7, 4, 0, 0], ["mods", 32], ["released", 7, 4, 0, 0], ["mods", 32], ["released", 7, 229, 0, 0], ["mods", 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
-{"case": "case_alpha2_layer/18 &ac_eacu_c", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 229, 0, 0], ["mods", 32], ["mods", 32], ["pressed", 7, 8, 0, 0], ["mods", 32], ["released", 7, 8, 0, 0], ["mods", 32], ["released", 7, 229, 0, 0], ["mods", 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
-{"case": "case_alpha2_layer/19 &ac_iacu_c", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 229, 0, 0], ["mods", 32], ["mods", 32], ["pressed", 7, 12, 0, 0], ["mods", 32], ["released", 7, 12, 0, 0], ["mods", 32], ["released", 7, 229, 0, 0], ["mods", 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
+{"case": "case_alpha2_layer/16 &ac_atil_c", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 53, 2, 0], ["mods", 2], ["released", 7, 53, 2, 0], ["mods", 0], ["pressed", 7, 229, 0, 0], ["mods", 32], ["mods", 32], ["pressed", 7, 4, 0, 0], ["mods", 32], ["released", 7, 4, 0, 0], ["mods", 32], ["released", 7, 229, 0, 0], ["mods", 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
+{"case": "case_alpha2_layer/17 &ac_aacu_c", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 229, 0, 0], ["mods", 32], ["mods", 32], ["pressed", 7, 4, 0, 0], ["mods", 32], ["released", 7, 4, 0, 0], ["mods", 32], ["released", 7, 229, 0, 0], ["mods", 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
+{"case": "case_alpha2_layer/18 &ac_eacu_c", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 229, 0, 0], ["mods", 32], ["mods", 32], ["pressed", 7, 8, 0, 0], ["mods", 32], ["released", 7, 8, 0, 0], ["mods", 32], ["released", 7, 229, 0, 0], ["mods", 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
+{"case": "case_alpha2_layer/19 &ac_iacu_c", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 229, 0, 0], ["mods", 32], ["mods", 32], ["pressed", 7, 12, 0, 0], ["mods", 32], ["released", 7, 12, 0, 0], ["mods", 32], ["released", 7, 229, 0, 0], ["mods", 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
 {"case": "case_alpha2_layer/20 &kp RS(Y)", "events": [["pressed", 7, 28, 32, 0], ["mods", 32], ["released", 7, 28, 32, 0], ["mods", 0]]}
 {"case": "case_alpha2_layer/21 &kp RS(J)", "events": [["pressed", 7, 13, 32, 0], ["mods", 32], ["released", 7, 13, 32, 0], ["mods", 0]]}
-{"case": "case_alpha2_layer/22 &mc_ced_c", "events": [["pressed", 7, 54, 96, 0], ["mods", 96], ["released", 7, 54, 96, 0], ["mods", 0], ["layer", 21, 1, 0], ["layer", 21, 0, 0]]}
+{"case": "case_alpha2_layer/22 &mc_ced_c", "events": [["pressed", 7, 54, 96, 0], ["mods", 96], ["released", 7, 54, 96, 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
 {"case": "case_alpha2_layer/23 &reversed_magic_c", "events": [["pressed", 7, 25, 32, 0], ["mods", 32], ["released", 7, 25, 32, 0], ["mods", 0]]}
 {"case": "case_alpha2_layer/24 &none", "events": []}
 {"case": "case_alpha2_layer/25 &none", "events": []}
-{"case": "case_alpha2_layer/26 &ac_otil_c", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 53, 2, 0], ["mods", 2], ["released", 7, 53, 2, 0], ["mods", 0], ["pressed", 7, 229, 0, 0], ["mods", 32], ["mods", 32], ["pressed", 7, 18, 0, 0], ["mods", 32], ["released", 7, 18, 0, 0], ["mods", 32], ["released", 7, 229, 0, 0], ["mods", 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
-{"case": "case_alpha2_layer/27 &ac_acir_c", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 35, 2, 0], ["mods", 2], ["released", 7, 35, 2, 0], ["mods", 0], ["pressed", 7, 229, 0, 0], ["mods", 32], ["mods", 32], ["pressed", 7, 4, 0, 0], ["mods", 32], ["released", 7, 4, 0, 0], ["mods", 32], ["released", 7, 229, 0, 0], ["mods", 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
-{"case": "case_alpha2_layer/28 &ac_ecir_c", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 35, 2, 0], ["mods", 2], ["released", 7, 35, 2, 0], ["mods", 0], ["pressed", 7, 229, 0, 0], ["mods", 32], ["mods", 32], ["pressed", 7, 8, 0, 0], ["mods", 32], ["released", 7, 8, 0, 0], ["mods", 32], ["released", 7, 229, 0, 0], ["mods", 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
-{"case": "case_alpha2_layer/29 &ac_iacu_c", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 229, 0, 0], ["mods", 32], ["mods", 32], ["pressed", 7, 12, 0, 0], ["mods", 32], ["released", 7, 12, 0, 0], ["mods", 32], ["released", 7, 229, 0, 0], ["mods", 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
+{"case": "case_alpha2_layer/26 &ac_otil_c", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 53, 2, 0], ["mods", 2], ["released", 7, 53, 2, 0], ["mods", 0], ["pressed", 7, 229, 0, 0], ["mods", 32], ["mods", 32], ["pressed", 7, 18, 0, 0], ["mods", 32], ["released", 7, 18, 0, 0], ["mods", 32], ["released", 7, 229, 0, 0], ["mods", 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
+{"case": "case_alpha2_layer/27 &ac_acir_c", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 35, 2, 0], ["mods", 2], ["released", 7, 35, 2, 0], ["mods", 0], ["pressed", 7, 229, 0, 0], ["mods", 32], ["mods", 32], ["pressed", 7, 4, 0, 0], ["mods", 32], ["released", 7, 4, 0, 0], ["mods", 32], ["released", 7, 229, 0, 0], ["mods", 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
+{"case": "case_alpha2_layer/28 &ac_ecir_c", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 35, 2, 0], ["mods", 2], ["released", 7, 35, 2, 0], ["mods", 0], ["pressed", 7, 229, 0, 0], ["mods", 32], ["mods", 32], ["pressed", 7, 8, 0, 0], ["mods", 32], ["released", 7, 8, 0, 0], ["mods", 32], ["released", 7, 229, 0, 0], ["mods", 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
+{"case": "case_alpha2_layer/29 &ac_iacu_c", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 52, 0, 0], ["mods", 0], ["released", 7, 52, 0, 0], ["mods", 0], ["pressed", 7, 229, 0, 0], ["mods", 32], ["mods", 32], ["pressed", 7, 12, 0, 0], ["mods", 32], ["released", 7, 12, 0, 0], ["mods", 32], ["released", 7, 229, 0, 0], ["mods", 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
 {"case": "case_alpha2_layer/30 &none", "events": []}
 {"case": "case_alpha2_layer/31 &key_repeat", "events": []}
 {"case": "case_alpha2_layer/32 &kp UNDER", "events": [["pressed", 7, 45, 2, 0], ["mods", 2], ["released", 7, 45, 2, 0], ["mods", 0]]}
@@ -955,27 +1002,27 @@
 {"case": "case_ccedil_layer/10 &none", "events": []}
 {"case": "case_ccedil_layer/11 &none", "events": []}
 {"case": "case_ccedil_layer/12 &none", "events": []}
-{"case": "case_ccedil_layer/13 &mc_aotil_c", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 53, 2, 0], ["mods", 2], ["released", 7, 53, 2, 0], ["mods", 0], ["pressed", 7, 229, 0, 0], ["mods", 32], ["mods", 32], ["pressed", 7, 4, 0, 0], ["mods", 32], ["released", 7, 4, 0, 0], ["mods", 32], ["released", 7, 229, 0, 0], ["mods", 0], ["mods", 0], ["layer", 22, 1, 0], ["pressed", 7, 18, 32, 0], ["mods", 32], ["layer", 22, 0, 0], ["released", 7, 18, 32, 0], ["mods", 0]]}
+{"case": "case_ccedil_layer/13 &mc_aotil_c", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 53, 2, 0], ["mods", 2], ["released", 7, 53, 2, 0], ["mods", 0], ["pressed", 7, 229, 0, 0], ["mods", 32], ["mods", 32], ["pressed", 7, 4, 0, 0], ["mods", 32], ["released", 7, 4, 0, 0], ["mods", 32], ["released", 7, 229, 0, 0], ["mods", 0], ["mods", 0], ["layer", 23, 1, 0], ["pressed", 7, 18, 32, 0], ["mods", 32], ["layer", 23, 0, 0], ["released", 7, 18, 32, 0], ["mods", 0]]}
 {"case": "case_ccedil_layer/14 &none", "events": []}
 {"case": "case_ccedil_layer/15 &none", "events": []}
-{"case": "case_ccedil_layer/16 &ac_atil_c", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 53, 2, 0], ["mods", 2], ["released", 7, 53, 2, 0], ["mods", 0], ["pressed", 7, 229, 0, 0], ["mods", 32], ["mods", 32], ["pressed", 7, 4, 0, 0], ["mods", 32], ["released", 7, 4, 0, 0], ["mods", 32], ["released", 7, 229, 0, 0], ["mods", 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
+{"case": "case_ccedil_layer/16 &ac_atil_c", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 53, 2, 0], ["mods", 2], ["released", 7, 53, 2, 0], ["mods", 0], ["pressed", 7, 229, 0, 0], ["mods", 32], ["mods", 32], ["pressed", 7, 4, 0, 0], ["mods", 32], ["released", 7, 4, 0, 0], ["mods", 32], ["released", 7, 229, 0, 0], ["mods", 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
 {"case": "case_ccedil_layer/17 &trans", "events": [["pressed", 7, 4, 0, 0], ["mods", 0], ["released", 7, 4, 0, 0], ["mods", 0]]}
 {"case": "case_ccedil_layer/18 &none", "events": []}
 {"case": "case_ccedil_layer/19 &none", "events": []}
 {"case": "case_ccedil_layer/20 &none", "events": []}
 {"case": "case_ccedil_layer/21 &none", "events": []}
 {"case": "case_ccedil_layer/22 &none", "events": []}
-{"case": "case_ccedil_layer/23 &mc_otiles_c", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 53, 2, 0], ["mods", 2], ["released", 7, 53, 2, 0], ["mods", 0], ["pressed", 7, 229, 0, 0], ["mods", 32], ["mods", 32], ["pressed", 7, 18, 0, 0], ["mods", 32], ["released", 7, 18, 0, 0], ["mods", 32], ["released", 7, 229, 0, 0], ["mods", 0], ["mods", 0], ["layer", 22, 1, 0], ["pressed", 7, 8, 32, 0], ["mods", 32], ["layer", 22, 0, 0], ["released", 7, 8, 32, 0], ["mods", 0], ["pressed", 7, 22, 32, 0], ["mods", 32], ["released", 7, 22, 32, 0], ["mods", 0]]}
+{"case": "case_ccedil_layer/23 &mc_otiles_c", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 53, 2, 0], ["mods", 2], ["released", 7, 53, 2, 0], ["mods", 0], ["pressed", 7, 229, 0, 0], ["mods", 32], ["mods", 32], ["pressed", 7, 18, 0, 0], ["mods", 32], ["released", 7, 18, 0, 0], ["mods", 32], ["released", 7, 229, 0, 0], ["mods", 0], ["mods", 0], ["layer", 23, 1, 0], ["pressed", 7, 8, 32, 0], ["mods", 32], ["layer", 23, 0, 0], ["released", 7, 8, 32, 0], ["mods", 0], ["pressed", 7, 22, 32, 0], ["mods", 32], ["released", 7, 22, 32, 0], ["mods", 0]]}
 {"case": "case_ccedil_layer/24 &none", "events": []}
 {"case": "case_ccedil_layer/25 &none", "events": []}
-{"case": "case_ccedil_layer/26 &ac_otil_c", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 53, 2, 0], ["mods", 2], ["released", 7, 53, 2, 0], ["mods", 0], ["pressed", 7, 229, 0, 0], ["mods", 32], ["mods", 32], ["pressed", 7, 18, 0, 0], ["mods", 32], ["released", 7, 18, 0, 0], ["mods", 32], ["released", 7, 229, 0, 0], ["mods", 0], ["mods", 0], ["layer", 22, 1, 0], ["layer", 22, 0, 0]]}
+{"case": "case_ccedil_layer/26 &ac_otil_c", "events": [["released", 7, 225, 0, 0], ["released", 7, 229, 0, 0], ["pressed", 7, 53, 2, 0], ["mods", 2], ["released", 7, 53, 2, 0], ["mods", 0], ["pressed", 7, 229, 0, 0], ["mods", 32], ["mods", 32], ["pressed", 7, 18, 0, 0], ["mods", 32], ["released", 7, 18, 0, 0], ["mods", 32], ["released", 7, 229, 0, 0], ["mods", 0], ["mods", 0], ["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
 {"case": "case_ccedil_layer/27 &trans", "events": [["pressed", 7, 54, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 54, 0, 0], ["mods", 0]]}
 {"case": "case_ccedil_layer/28 &trans", "events": [["pressed", 7, 55, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 55, 0, 0], ["mods", 0]]}
 {"case": "case_ccedil_layer/29 &none", "events": []}
 {"case": "case_ccedil_layer/30 &none", "events": []}
-{"case": "case_ccedil_layer/31 &sl CASE_A2", "events": [["layer", 20, 1, 0], ["layer", 20, 0, 0]]}
+{"case": "case_ccedil_layer/31 &sl CASE_A2", "events": [["layer", 21, 1, 0], ["layer", 21, 0, 0]]}
 {"case": "case_ccedil_layer/32 &trans", "events": [["pressed", 7, 44, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0]]}
-{"case": "case_ccedil_layer/33 &trans", "events": [["layer", 15, 1, 0], ["mods", 0], ["mods", 0], ["layer", 15, 0, 0]]}
+{"case": "case_ccedil_layer/33 &trans", "events": [["layer", 16, 1, 0], ["mods", 0], ["mods", 0], ["layer", 16, 0, 0]]}
 {"case": "case_ccedil_layer/34 &trans", "events": [["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0]]}
 {"case": "case_ccedil_layer/35 &none", "events": []}
 {"case": "secondary_alternate_repeat_layer/00 &trans", "events": [["pressed", 7, 20, 0, 0], ["mods", 0], ["released", 7, 20, 0, 0], ["mods", 0]]}
@@ -1010,9 +1057,9 @@
 {"case": "secondary_alternate_repeat_layer/29 &trans", "events": [["pressed", 7, 12, 0, 0], ["mods", 0], ["released", 7, 12, 0, 0], ["mods", 0]]}
 {"case": "secondary_alternate_repeat_layer/30 &trans", "events": [["mouse", "buttons", "0x02"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"], ["mouse", "buttons", "0x00"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"]]}
 {"case": "secondary_alternate_repeat_layer/31 &ht_alt_rep NAV 0", "events": []}
-{"case": "secondary_alternate_repeat_layer/31 hold &ht_alt_rep NAV 0", "events": [["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
+{"case": "secondary_alternate_repeat_layer/31 hold &ht_alt_rep NAV 0", "events": [["layer", 24, 1, 0], ["layer", 24, 0, 0]]}
 {"case": "secondary_alternate_repeat_layer/32 &trans", "events": [["pressed", 7, 44, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0]]}
-{"case": "secondary_alternate_repeat_layer/33 &trans", "events": [["layer", 15, 1, 0], ["mods", 0], ["mods", 0], ["layer", 15, 0, 0]]}
+{"case": "secondary_alternate_repeat_layer/33 &trans", "events": [["layer", 16, 1, 0], ["mods", 0], ["mods", 0], ["layer", 16, 0, 0]]}
 {"case": "secondary_alternate_repeat_layer/34 &trans", "events": [["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0]]}
 {"case": "secondary_alternate_repeat_layer/35 &trans", "events": [["mouse", "buttons", "0x01"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"], ["mouse", "buttons", "0x00"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"]]}
 {"case": "navigation_layer/00 &none", "events": []}
@@ -1027,11 +1074,11 @@
 {"case": "navigation_layer/09 &none", "events": []}
 {"case": "navigation_layer/10 &lt_system TEXT 0", "events": [["pressed", 7, 44, 12, 0], ["mods", 12], ["released", 7, 44, 12, 0], ["mods", 0]]}
 {"case": "navigation_layer/10 hold &lt_system TEXT 0", "events": [["layer", 28, 1, 0], ["layer", 28, 0, 0]]}
-{"case": "navigation_layer/11 &mod_num LCTL LCTL", "events": [["pressed", 7, 224, 0, 0], ["mods", 1], ["mods", 1], ["layer", 24, 1, 0], ["layer", 24, 0, 0], ["released", 7, 224, 0, 0], ["mods", 0], ["mods", 0]]}
+{"case": "navigation_layer/11 &mod_num LCTL LCTL", "events": [["pressed", 7, 224, 0, 0], ["mods", 1], ["mods", 1], ["layer", 25, 1, 0], ["layer", 25, 0, 0], ["released", 7, 224, 0, 0], ["mods", 0], ["mods", 0]]}
 {"case": "navigation_layer/11 hold &mod_num LCTL LCTL", "events": [["pressed", 7, 224, 0, 0], ["mods", 1], ["mods", 1], ["released", 7, 224, 0, 0], ["mods", 0], ["mods", 0]]}
-{"case": "navigation_layer/12 &mod_num LALT LALT", "events": [["pressed", 7, 226, 0, 0], ["mods", 4], ["mods", 4], ["layer", 24, 1, 0], ["layer", 24, 0, 0], ["released", 7, 226, 0, 0], ["mods", 0], ["mods", 0]]}
+{"case": "navigation_layer/12 &mod_num LALT LALT", "events": [["pressed", 7, 226, 0, 0], ["mods", 4], ["mods", 4], ["layer", 25, 1, 0], ["layer", 25, 0, 0], ["released", 7, 226, 0, 0], ["mods", 0], ["mods", 0]]}
 {"case": "navigation_layer/12 hold &mod_num LALT LALT", "events": [["pressed", 7, 226, 0, 0], ["mods", 4], ["mods", 4], ["released", 7, 226, 0, 0], ["mods", 0], ["mods", 0]]}
-{"case": "navigation_layer/13 &mod_num LSFT LSFT", "events": [["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["layer", 24, 1, 0], ["layer", 24, 0, 0], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0]]}
+{"case": "navigation_layer/13 &mod_num LSFT LSFT", "events": [["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["layer", 25, 1, 0], ["layer", 25, 0, 0], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0]]}
 {"case": "navigation_layer/13 hold &mod_num LSFT LSFT", "events": [["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0]]}
 {"case": "navigation_layer/14 &none", "events": []}
 {"case": "navigation_layer/15 &none", "events": []}
@@ -1041,11 +1088,11 @@
 {"case": "navigation_layer/19 &kp RIGHT", "events": [["pressed", 7, 79, 0, 0], ["mods", 0], ["released", 7, 79, 0, 0], ["mods", 0]]}
 {"case": "navigation_layer/20 &lt_system TEXT 0", "events": [["pressed", 7, 44, 12, 0], ["mods", 12], ["released", 7, 44, 12, 0], ["mods", 0]]}
 {"case": "navigation_layer/20 hold &lt_system TEXT 0", "events": [["layer", 28, 1, 0], ["layer", 28, 0, 0]]}
-{"case": "navigation_layer/21 &mod_num SGUI SGUI", "events": [["pressed", 7, 227, 0, 2], ["mods", 8], ["mods", 10], ["mods", 10], ["layer", 24, 1, 0], ["layer", 24, 0, 0], ["released", 7, 227, 0, 2], ["mods", 2], ["mods", 0], ["mods", 0]]}
+{"case": "navigation_layer/21 &mod_num SGUI SGUI", "events": [["pressed", 7, 227, 0, 2], ["mods", 8], ["mods", 10], ["mods", 10], ["layer", 25, 1, 0], ["layer", 25, 0, 0], ["released", 7, 227, 0, 2], ["mods", 2], ["mods", 0], ["mods", 0]]}
 {"case": "navigation_layer/21 hold &mod_num SGUI SGUI", "events": [["pressed", 7, 227, 0, 2], ["mods", 8], ["mods", 10], ["mods", 10], ["released", 7, 227, 0, 2], ["mods", 2], ["mods", 0], ["mods", 0]]}
-{"case": "navigation_layer/22 &mod_num SGUI SGUI", "events": [["pressed", 7, 227, 0, 2], ["mods", 8], ["mods", 10], ["mods", 10], ["layer", 24, 1, 0], ["layer", 24, 0, 0], ["released", 7, 227, 0, 2], ["mods", 2], ["mods", 0], ["mods", 0]]}
+{"case": "navigation_layer/22 &mod_num SGUI SGUI", "events": [["pressed", 7, 227, 0, 2], ["mods", 8], ["mods", 10], ["mods", 10], ["layer", 25, 1, 0], ["layer", 25, 0, 0], ["released", 7, 227, 0, 2], ["mods", 2], ["mods", 0], ["mods", 0]]}
 {"case": "navigation_layer/22 hold &mod_num SGUI SGUI", "events": [["pressed", 7, 227, 0, 2], ["mods", 8], ["mods", 10], ["mods", 10], ["released", 7, 227, 0, 2], ["mods", 2], ["mods", 0], ["mods", 0]]}
-{"case": "navigation_layer/23 &mod_num LGUI LGUI", "events": [["pressed", 7, 227, 0, 0], ["mods", 8], ["mods", 8], ["layer", 24, 1, 0], ["layer", 24, 0, 0], ["released", 7, 227, 0, 0], ["mods", 0], ["mods", 0]]}
+{"case": "navigation_layer/23 &mod_num LGUI LGUI", "events": [["pressed", 7, 227, 0, 0], ["mods", 8], ["mods", 8], ["layer", 25, 1, 0], ["layer", 25, 0, 0], ["released", 7, 227, 0, 0], ["mods", 0], ["mods", 0]]}
 {"case": "navigation_layer/23 hold &mod_num LGUI LGUI", "events": [["pressed", 7, 227, 0, 0], ["mods", 8], ["mods", 8], ["released", 7, 227, 0, 0], ["mods", 0], ["mods", 0]]}
 {"case": "navigation_layer/24 &none", "events": []}
 {"case": "navigation_layer/25 &none", "events": []}
@@ -1055,11 +1102,11 @@
 {"case": "navigation_layer/29 &kp RIGHT", "events": [["pressed", 7, 79, 0, 0], ["mods", 0], ["released", 7, 79, 0, 0], ["mods", 0]]}
 {"case": "navigation_layer/30 &none", "events": []}
 {"case": "navigation_layer/31 &trans", "events": [["mods", 0]]}
-{"case": "navigation_layer/32 &mo NUM_CP", "events": [["layer", 24, 1, 0], ["layer", 24, 0, 0]]}
+{"case": "navigation_layer/32 &mo NUM_CP", "events": [["layer", 25, 1, 0], ["layer", 25, 0, 0]]}
 {"case": "navigation_layer/33 &hlt SYM_CP SPACE", "events": [["pressed", 7, 44, 0, 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0]]}
-{"case": "navigation_layer/33 hold &hlt SYM_CP SPACE", "events": [["layer", 25, 1, 0], ["layer", 25, 0, 0]]}
+{"case": "navigation_layer/33 hold &hlt SYM_CP SPACE", "events": [["layer", 26, 1, 0], ["layer", 26, 0, 0]]}
 {"case": "navigation_layer/34 &lt MEDIA INS", "events": [["pressed", 7, 73, 0, 0], ["mods", 0], ["released", 7, 73, 0, 0], ["mods", 0]]}
-{"case": "navigation_layer/34 hold &lt MEDIA INS", "events": [["layer", 26, 1, 0], ["layer", 26, 0, 0]]}
+{"case": "navigation_layer/34 hold &lt MEDIA INS", "events": [["layer", 11, 1, 0], ["layer", 11, 0, 0]]}
 {"case": "navigation_layer/35 &none", "events": []}
 {"case": "numbers_copy_layer/00 &none", "events": []}
 {"case": "numbers_copy_layer/01 &kp BSLH", "events": [["pressed", 7, 49, 0, 0], ["mods", 0], ["released", 7, 49, 0, 0], ["mods", 0]]}
@@ -1101,9 +1148,9 @@
 {"case": "numbers_copy_layer/31 &trans", "events": [["mods", 0]]}
 {"case": "numbers_copy_layer/32 &trans", "events": [["pressed", 7, 44, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0]]}
 {"case": "numbers_copy_layer/33 &hlt SYM_CP SPACE", "events": [["pressed", 7, 44, 0, 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0]]}
-{"case": "numbers_copy_layer/33 hold &hlt SYM_CP SPACE", "events": [["layer", 25, 1, 0], ["layer", 25, 0, 0]]}
+{"case": "numbers_copy_layer/33 hold &hlt SYM_CP SPACE", "events": [["layer", 26, 1, 0], ["layer", 26, 0, 0]]}
 {"case": "numbers_copy_layer/34 &lt_n0 MEDIA 0", "events": [["pressed", 7, 39, 0, 0], ["mods", 0], ["released", 7, 39, 0, 0], ["mods", 0], ["mods", 0], ["mods", 0]]}
-{"case": "numbers_copy_layer/34 hold &lt_n0 MEDIA 0", "events": [["layer", 26, 1, 0], ["layer", 26, 0, 0]]}
+{"case": "numbers_copy_layer/34 hold &lt_n0 MEDIA 0", "events": [["layer", 11, 1, 0], ["layer", 11, 0, 0]]}
 {"case": "numbers_copy_layer/35 &none", "events": []}
 {"case": "symbols_copy_layer/00 &none", "events": []}
 {"case": "symbols_copy_layer/01 &mc_tilde", "events": [["pressed", 7, 53, 2, 0], ["mods", 2], ["pressed", 7, 44, 0, 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0], ["released", 7, 53, 2, 0], ["mods", 0]]}
@@ -1156,47 +1203,6 @@
 {"case": "symbols_copy_layer/33 &kp SPACE", "events": [["pressed", 7, 44, 0, 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0]]}
 {"case": "symbols_copy_layer/34 &trans", "events": [["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0]]}
 {"case": "symbols_copy_layer/35 &none", "events": []}
-{"case": "media_layer/00 &none", "events": []}
-{"case": "media_layer/01 &none", "events": []}
-{"case": "media_layer/02 &mkp LCLK", "events": [["mouse", "buttons", "0x01"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"], ["mouse", "buttons", "0x00"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"]]}
-{"case": "media_layer/03 &mkp RCLK", "events": [["mouse", "buttons", "0x02"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"], ["mouse", "buttons", "0x00"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"]]}
-{"case": "media_layer/04 &none", "events": []}
-{"case": "media_layer/05 &none", "events": []}
-{"case": "media_layer/06 &th_shift_tab 0 0", "events": [["pressed", 7, 43, 0, 0], ["mods", 0], ["released", 7, 43, 0, 0], ["mods", 0]]}
-{"case": "media_layer/06 hold &th_shift_tab 0 0", "events": [["pressed", 7, 43, 2, 0], ["mods", 2], ["released", 7, 43, 2, 0], ["mods", 0]]}
-{"case": "media_layer/07 &th_end_ent_vim 0 0", "events": [["pressed", 7, 40, 0, 0], ["mods", 0], ["released", 7, 40, 0, 0], ["mods", 0]]}
-{"case": "media_layer/07 hold &th_end_ent_vim 0 0", "events": [["pressed", 7, 77, 0, 0], ["mods", 0], ["released", 7, 77, 0, 0], ["mods", 0], ["pressed", 7, 40, 0, 0], ["mods", 0], ["released", 7, 40, 0, 0], ["mods", 0]]}
-{"case": "media_layer/08 &lm_esc_vim", "events": [["pressed", 7, 41, 0, 0], ["mods", 0], ["released", 7, 41, 0, 0], ["mods", 0]]}
-{"case": "media_layer/09 &none", "events": []}
-{"case": "media_layer/10 &none", "events": []}
-{"case": "media_layer/11 &mmv MOVE_LEFT", "events": []}
-{"case": "media_layer/12 &mmv MOVE_UP", "events": []}
-{"case": "media_layer/13 &mmv MOVE_RIGHT", "events": []}
-{"case": "media_layer/14 &none", "events": []}
-{"case": "media_layer/15 &none", "events": []}
-{"case": "media_layer/16 &mc_mic", "events": [["pressed", 7, 7, 5, 0], ["mods", 5], ["released", 7, 7, 5, 0], ["mods", 0]]}
-{"case": "media_layer/17 &mt C_MUTE C_VOL_DN", "events": [["pressed", 12, 234, 0, 0], ["mods", 0], ["released", 12, 234, 0, 0], ["mods", 0]]}
-{"case": "media_layer/17 hold &mt C_MUTE C_VOL_DN", "events": [["pressed", 12, 226, 0, 0], ["mods", 0], ["released", 12, 226, 0, 0], ["mods", 0]]}
-{"case": "media_layer/18 &kp C_VOL_UP", "events": [["pressed", 12, 233, 0, 0], ["mods", 0], ["released", 12, 233, 0, 0], ["mods", 0]]}
-{"case": "media_layer/19 &lt_cam TEXT 0", "events": [["pressed", 7, 8, 5, 0], ["mods", 5], ["released", 7, 8, 5, 0], ["mods", 0]]}
-{"case": "media_layer/19 hold &lt_cam TEXT 0", "events": [["layer", 28, 1, 0], ["layer", 28, 0, 0]]}
-{"case": "media_layer/20 &none", "events": []}
-{"case": "media_layer/21 &msc SCRL_DOWN", "events": []}
-{"case": "media_layer/22 &mmv MOVE_DOWN", "events": []}
-{"case": "media_layer/23 &msc SCRL_UP", "events": []}
-{"case": "media_layer/24 &none", "events": []}
-{"case": "media_layer/25 &none", "events": []}
-{"case": "media_layer/26 &kp C_PP", "events": [["pressed", 12, 205, 0, 0], ["mods", 0], ["released", 12, 205, 0, 0], ["mods", 0]]}
-{"case": "media_layer/27 &kp C_PREV", "events": [["pressed", 12, 182, 0, 0], ["mods", 0], ["released", 12, 182, 0, 0], ["mods", 0]]}
-{"case": "media_layer/28 &kp C_NEXT", "events": [["pressed", 12, 181, 0, 0], ["mods", 0], ["released", 12, 181, 0, 0], ["mods", 0]]}
-{"case": "media_layer/29 &lt_cam TEXT 0", "events": [["pressed", 7, 8, 5, 0], ["mods", 5], ["released", 7, 8, 5, 0], ["mods", 0]]}
-{"case": "media_layer/29 hold &lt_cam TEXT 0", "events": [["layer", 28, 1, 0], ["layer", 28, 0, 0]]}
-{"case": "media_layer/30 &none", "events": []}
-{"case": "media_layer/31 &mo NAV_CP", "events": [["layer", 27, 1, 0], ["layer", 27, 0, 0]]}
-{"case": "media_layer/32 &kp SPACE", "events": [["pressed", 7, 44, 0, 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0]]}
-{"case": "media_layer/33 &none", "events": []}
-{"case": "media_layer/34 &trans", "events": [["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0]]}
-{"case": "media_layer/35 &none", "events": []}
 {"case": "navigation_copy_layer/00 &none", "events": []}
 {"case": "navigation_copy_layer/01 &mc_swapper", "events": [["pressed", 7, 43, 4, 0], ["mods", 4], ["released", 7, 43, 4, 0], ["mods", 0]]}
 {"case": "navigation_copy_layer/02 &mc_tabs", "events": [["pressed", 7, 4, 3, 0], ["mods", 3], ["released", 7, 4, 3, 0], ["mods", 0]]}
@@ -1230,7 +1236,7 @@
 {"case": "navigation_copy_layer/30 &none", "events": []}
 {"case": "navigation_copy_layer/31 &trans", "events": [["mods", 0]]}
 {"case": "navigation_copy_layer/32 &trans", "events": [["pressed", 7, 44, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0]]}
-{"case": "navigation_copy_layer/33 &trans", "events": [["layer", 15, 1, 0], ["mods", 0], ["mods", 0], ["layer", 15, 0, 0]]}
+{"case": "navigation_copy_layer/33 &trans", "events": [["layer", 16, 1, 0], ["mods", 0], ["mods", 0], ["layer", 16, 0, 0]]}
 {"case": "navigation_copy_layer/34 &kp INS", "events": [["pressed", 7, 73, 0, 0], ["mods", 0], ["released", 7, 73, 0, 0], ["mods", 0]]}
 {"case": "navigation_copy_layer/35 &none", "events": []}
 {"case": "text_layer/00 &none", "events": []}
@@ -1393,11 +1399,11 @@
 {"case": "held_base_layer/29 &kp I", "events": [["pressed", 7, 12, 0, 0], ["mods", 0], ["released", 7, 12, 0, 0], ["mods", 0]]}
 {"case": "held_base_layer/30 &mkp RCLK", "events": [["mouse", "buttons", "0x02"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"], ["mouse", "buttons", "0x00"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"]]}
 {"case": "held_base_layer/31 &ht_repeat NAV 0", "events": [["mods", 0]]}
-{"case": "held_base_layer/31 hold &ht_repeat NAV 0", "events": [["layer", 23, 1, 0], ["layer", 23, 0, 0]]}
+{"case": "held_base_layer/31 hold &ht_repeat NAV 0", "events": [["layer", 24, 1, 0], ["layer", 24, 0, 0]]}
 {"case": "held_base_layer/32 &ltn_num_spc 0 0", "events": [["pressed", 7, 44, 0, 0], ["mods", 0], ["mods", 0], ["released", 7, 44, 0, 0], ["mods", 0]]}
-{"case": "held_base_layer/32 hold &ltn_num_spc 0 0", "events": [["layer", 16, 1, 0], ["layer", 16, 0, 0], ["mods", 0]]}
-{"case": "held_base_layer/33 &sentence_alpha2", "events": [["layer", 15, 1, 0], ["mods", 0], ["mods", 0], ["layer", 15, 0, 0]]}
-{"case": "held_base_layer/33 hold &sentence_alpha2", "events": [["layer", 17, 1, 0], ["layer", 17, 0, 0], ["mods", 0]]}
+{"case": "held_base_layer/32 hold &ltn_num_spc 0 0", "events": [["layer", 17, 1, 0], ["layer", 17, 0, 0], ["mods", 0]]}
+{"case": "held_base_layer/33 &sentence_alpha2", "events": [["layer", 16, 1, 0], ["mods", 0], ["mods", 0], ["layer", 16, 0, 0]]}
+{"case": "held_base_layer/33 hold &sentence_alpha2", "events": [["layer", 18, 1, 0], ["layer", 18, 0, 0], ["mods", 0]]}
 {"case": "held_base_layer/34 &ht_shift MEDIA 0", "events": [["pressed", 7, 225, 0, 0], ["mods", 2], ["mods", 2], ["mods", 2], ["released", 7, 225, 0, 0], ["mods", 0], ["mods", 0]]}
-{"case": "held_base_layer/34 hold &ht_shift MEDIA 0", "events": [["layer", 26, 1, 0], ["layer", 26, 0, 0]]}
+{"case": "held_base_layer/34 hold &ht_shift MEDIA 0", "events": [["layer", 11, 1, 0], ["layer", 11, 0, 0]]}
 {"case": "held_base_layer/35 &mkp LCLK", "events": [["mouse", "buttons", "0x01"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"], ["mouse", "buttons", "0x00"], ["mouse", "scroll", "0/0"], ["mouse", "movement", "0/0"]]}
