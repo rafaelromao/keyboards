@@ -49,7 +49,7 @@ class KeymapTests(unittest.TestCase):
         }
         self.assertEqual(
             [layer_ids[name] for name in ("SHORTS", "EXCALIDRAW", "EXCAL_TEXT", "TOGS", "MEHS", "TEXT")],
-            [10, 12, 13, 14, 15, 28],
+            [10, 12, 13, 14, 15, 29],
         )
 
     def test_every_safe_binding_has_exactly_one_native_tap_snapshot(self):
@@ -80,12 +80,25 @@ class KeymapTests(unittest.TestCase):
         self.assertGreaterEqual(checked, 26)
 
     def test_base_modtap_modifiers_match_the_unmorphed_base_layout(self):
-        base = next(bindings for name, _, bindings in self.layers if name == "held_base_layer")
+        base = next(bindings for name, _, bindings in self.layers if name == "excal_text_layer")
         self.assertEqual(base[11].strip(), "&mt LCTL N")
         self.assertEqual(base[18].strip(), "&mt LCTL E")
         self.assertEqual(base[21].strip(), "&mt LS(LGUI) F")
         self.assertEqual(base[22].strip(), "&mt LS(LGUI) C")
         self.assertFalse(any(binding.strip().startswith("&base_mod_") for binding in base))
+
+    def test_shared_base_thumbs_match_base_with_higher_media_target(self):
+        bindings = {name: [key.strip() for key in keys] for name, _, keys in self.layers}
+        original = bindings["default_layer"][30:]
+        shared = bindings["excal_text_layer"][30:]
+        self.assertEqual(
+            [key.replace("MEDIA_CP", "MEDIA") for key in shared],
+            original,
+        )
+        self.assertEqual(shared[4], "&ht_shift MEDIA_CP 0")
+        self.assertEqual(bindings["media_copy_layer"], bindings["media_layer"])
+        config = (ROOT / "zmk/definitions/config.dtsi").read_text()
+        self.assertIn("#define BASE EXCAL_TEXT", config)
 
     def test_none_bindings_are_inert_on_every_layer(self):
         for name, events in self.records.items():

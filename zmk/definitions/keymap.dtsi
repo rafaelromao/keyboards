@@ -158,17 +158,17 @@
                 };
 
                 /*
-                 * The base, from T on EXCALIDRAW until Enter or Esc. A copy of
-                 * the base layer, like REPLACE: the pinkies hold nothing, so they stay
-                 * plain d and i.
+                 * Shared base letters: sticky from SHORTS, or auto-layer from
+                 * T/N on EXCALIDRAW until Enter or Esc. MEDIA_CP sits above this
+                 * copy so its MEDIA thumb can expose Esc and other media keys.
                  */
                 excal_text_layer {
-                     display-name = "EXCAL BASE";
+                     display-name = "BASE";
                      bindings = <
    &kp Q                     &kp B                     &kp M                     &kp G                     &kp K                     &kp X                     &kp L                     &kp O                     &kp U                     &kp SEMICOLON
    &kp D                     &mt LCTL N                &mt LALT S                &mt LSFT T                &kp W                     &kp Z                     &mt LSFT R                &mt LALT A                &mt LCTL E                &kp I
    &kp D                     &mt LS(LGUI) F            &mt LS(LGUI) C            &mt LGUI P                &kp V                     &kp J                     &ht_magic LGUI 0          &th_comma 0 0             &th_dot 0 0               &kp I
-                                                       &mkp RCLK                 &ht_repeat NAV 0          &ltn_num_spc 0 0          &sentence_alpha2          &ht_shift MEDIA 0         &mkp LCLK
+                                                       &mkp RCLK                 &ht_repeat NAV 0          &ltn_num_spc 0 0          &sentence_alpha2          &ht_shift MEDIA_CP 0      &mkp LCLK
                         >;
                 };
 
@@ -301,6 +301,17 @@
                         >;
                 };
 
+                /* Same MEDIA actions, above the typing base; NAV_CP above it
+                 * keeps MEDIA's navigation thumb functional too. */
+                media_copy_layer {
+                    display-name = "MOUSE";
+                    bindings = <
+   &none                     &none                     &mkp LCLK                 &mkp RCLK                 &none                     &none                     &th_shift_tab 0 0         &th_end_ent_vim 0 0       &lm_esc_vim               &none
+   &none                     &mmv MOVE_LEFT            &mmv MOVE_UP              &mmv MOVE_RIGHT           &none                     &none                     &mc_mic                   &mt C_MUTE C_VOL_DN       &kp C_VOL_UP              &lt_tog EXCALIDRAW EXCALIDRAW
+   &none                     &msc SCRL_DOWN            &mmv MOVE_DOWN            &msc SCRL_UP              &none                     &none                     &mc_cam                   &kp C_PREV                &kp C_NEXT                &lt_tog EXCALIDRAW EXCALIDRAW
+                                                       &none                     &mo NAV_CP                &kp SPACE                 &none                     &trans                    &none
+                        >;
+                };
                 navigation_copy_layer {
                      display-name = "NAVIGATION";
                      bindings = <
@@ -340,22 +351,6 @@
                                                        &none                     &none                     &mc_spc_esc               &none                     &none                     &none
                         >;
                 };
-
-                /*
-                 * The base letters, one-shot on top of SHORTCUTS. Modifier holds
-                 * are OS-aware so shortcuts get their letters while a vim layer
-                 * is on, without keeping separate Linux and macOS base layers.
-                 */
-                held_base_layer {
-                     display-name = "BASE";
-                     bindings = <
-   &kp Q                     &kp B                     &kp M                     &kp G                     &kp K                     &kp X                     &kp L                     &kp O                     &kp U                     &kp SEMICOLON
-   &kp D                     &mt LCTL N                &mt LALT S                &mt LSFT T                &kp W                     &kp Z                     &mt LSFT R                &mt LALT A                &mt LCTL E                &kp I
-   &kp D                     &mt LS(LGUI) F            &mt LS(LGUI) C            &mt LGUI P                &kp V                     &kp J                     &ht_magic LGUI 0          &th_comma 0 0             &th_dot 0 0               &kp I
-                                                       &mkp RCLK                 &ht_repeat NAV 0          &ltn_num_spc 0 0          &sentence_alpha2          &ht_shift MEDIA 0         &mkp LCLK
-                        >;
-                };
-
 
         };
 };

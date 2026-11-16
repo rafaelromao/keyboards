@@ -27,6 +27,8 @@
 #define MEDIA 11
 #define EXCALIDRAW 12
 #define EXCAL_TEXT 13
+// One base-layout copy: sticky from SHORTS, auto-layer from Excalidraw.
+#define BASE EXCAL_TEXT
 
 #define TOGS 14
 #define MEHS 15
@@ -48,14 +50,12 @@
 #define NUM_CP 25
 #define SYM_CP 26
 
-#define NAV_CP 27
+#define MEDIA_CP 27
+#define NAV_CP 28
 
-#define TEXT 28
-#define FUN 29
-#define MACROS 30
-
-// The base letters, one-shot above SHORTCUTS.
-#define BASE 31
+#define TEXT 29
+#define FUN 30
+#define MACROS 31
 
 
 // Settings

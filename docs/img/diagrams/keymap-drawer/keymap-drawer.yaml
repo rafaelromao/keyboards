@@ -231,9 +231,9 @@ layers:
     - [b, o, l, ▽, ▽, ▽]
     - [
         d,
-        { t: n, s: text },
+        { t: n, s: base },
         h,
-        { t: t, s: text },
+        { t: t, s: base },
         ▽,
         ▽,
         ▽,

@@ -46,7 +46,7 @@
             bindings = <&vim_off &lock_off NUM &lock_off NUM_CP &lock_off CASE_A1 &lock_off CPLK_A1
                         &lock_off ALPHA2 &lock_off SFT_A2 &lock_off CASE_A2 &lock_off CCEDIL
                         &lock_off CASE_CCEDIL &lock_off ALTREP2 &lock_off MEHS
-                        &lock_off NAV &lock_off NAV_CP &lock_off MEDIA &lock_off FUN
+                        &lock_off NAV &lock_off NAV_CP &lock_off MEDIA &lock_off MEDIA_CP &lock_off FUN
                         &lock_off EXCAL_TEXT &lock_off EXCALIDRAW>;
         };
         LAYERTAP_TP(lt_cancel,     &tc_cancel)

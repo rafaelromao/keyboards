@@ -274,6 +274,8 @@ The layer can be toggled with the *excalidraw* key in the *toggles* layer, or fr
 
 `t` and `n` type themselves and open a copy of the base layout above Excalidraw—not the TEXT navigation layer. The existing ALPHA2 sits above this base copy and is reached with the usual thumb key, so both typing layouts remain available. Navigation, numbers and symbols remain above it too. The copy uses auto-layer: `Enter` or `Esc` from any binding closes it, returning to the tools.
 
+This is also the BASE copy used for the one-shot from SHORTCUTS. Its thumbs have the base layout's repeat/navigation, Space/numbers, ALPHA2/symbols and Shift/media behaviors. The Shift/media thumb reaches a higher MEDIA copy, so its Esc really sends Esc and closes the typing base instead of typing U. Both MEDIA copies share the same actions and combos.
+
 On *media*, RHP and its RBP duplicate also tap-toggle or hold Excalidraw. Its tools override MEDIA even while MEDIA's activation key remains held. RBI now sends the camera shortcut; previous + next sends Play/Pause.
 
 ## Macros

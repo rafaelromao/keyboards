@@ -178,6 +178,52 @@ def fixture(directory):
     tap(33)  # usual one-shot ALPHA2
     tap(1)  # Q on ALPHA2, not B on the typing copy
     finish()
+    # Use the base layer's MEDIA thumb to reach Esc while typing a label.
+    start("excalidraw base media thumb esc", [(7, 0x17, 0), (7, 0x29, 0), o])
+    events.append("ZMK_MOCK_PRESS(0,10,350)")
+    tap(34)  # toggle Excalidraw through SHORTS
+    events.append("ZMK_MOCK_RELEASE(0,10,10)")
+    tap(13)  # T, opens the typing base
+    events.append("ZMK_MOCK_PRESS(0,34,200)")
+    tap(8)  # Esc on MEDIA, not U on the typing base
+    events.append("ZMK_MOCK_RELEASE(0,34,10)")
+    tap(2)  # O after Esc closes the typing copy
+    finish()
+    for starter, position, opener in (("t", 13, (7, 0x17, 0)), ("n", 11, (7, 0x11, 0))):
+        for name, key, ending in (("esc", 8, esc), ("enter", 7, enter)):
+            start(f"excalidraw {starter} media thumb {name}", [opener, ending, o])
+            tap(excalidraw)
+            tap(position)
+            events.append("ZMK_MOCK_PRESS(0,34,200)")
+            tap(key)
+            events.append("ZMK_MOCK_RELEASE(0,34,10)")
+            tap(2)
+            finish()
+    start("excalidraw media thumb keeps typing on tab", [(7, 0x17, 0), (7, 0x2B, 0), m])
+    tap(excalidraw)
+    tap(13)
+    events.append("ZMK_MOCK_PRESS(0,34,200)")
+    tap(6)
+    events.append("ZMK_MOCK_RELEASE(0,34,10)")
+    tap(2)  # Tab did not close the typing copy
+    finish()
+    start("excalidraw media thumb navigation", [(7, 0x17, 0), (7, 0x50, 0)])
+    tap(excalidraw)
+    tap(13)
+    events.append("ZMK_MOCK_PRESS(0,34,200)")
+    events.append("ZMK_MOCK_PRESS(0,31,200)")
+    tap(16)
+    events.append("ZMK_MOCK_RELEASE(0,31,10)")
+    events.append("ZMK_MOCK_RELEASE(0,34,10)")
+    finish()
+    start("excalidraw number thumb", [(7, 0x17, 0), (7, 0x24, 0), m])
+    tap(excalidraw)
+    tap(13)
+    events.append("ZMK_MOCK_PRESS(0,32,200)")
+    tap(6)
+    events.append("ZMK_MOCK_RELEASE(0,32,10)")
+    tap(2)
+    finish()
     for pinky in (19, 29):
         start(f"media hold excalidraw {pinky}", [o])
         events.append("ZMK_MOCK_PRESS(0,34,200)")  # MEDIA remains held

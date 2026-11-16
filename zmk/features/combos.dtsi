@@ -37,12 +37,13 @@
     #define NUM_LAYERS                  NUM NUM_CP
     #define SYM_LAYERS                  SYM SYM_CP
     #define NAV_LAYERS                  NAV NAV_CP
+    #define MEDIA_LAYERS                MEDIA MEDIA_CP
     #define VIM_LAYERS_BASE             VIM_INSERT VIM_REPLACE VIM_CMDLINE
     #define VIM_LAYERS_VIM              VIM_NORMAL VIM_VISUAL VIM_CHANGE
     #define VIM_LAYERS                  VIM_LAYERS_BASE VIM_LAYERS_VIM
-    #define FIXABLE_LAYERS              ALPHA1_LAYERS NUM_LAYERS MEDIA NAV_LAYERS MEHS FUN EXCALIDRAW                              VIM_LAYERS
-    #define ALL_LAYERS                  ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS MEDIA TEXT SHORTS EXCALIDRAW VIM_LAYERS
-    #define ALL_LAYERS_WITH_ENTER       ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS MEDIA TEXT EXCALIDRAW VIM_LAYERS_BASE
+    #define FIXABLE_LAYERS              ALPHA1_LAYERS NUM_LAYERS MEDIA_LAYERS NAV_LAYERS MEHS FUN EXCALIDRAW                              VIM_LAYERS
+    #define ALL_LAYERS                  ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS MEDIA_LAYERS TEXT SHORTS EXCALIDRAW VIM_LAYERS
+    #define ALL_LAYERS_WITH_ENTER       ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS MEDIA_LAYERS TEXT EXCALIDRAW VIM_LAYERS_BASE
     #define ALL_LAYERS_WITH_BACKSPACE   ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS EXCALIDRAW         VIM_LAYERS_BASE
     #define ALL_LAYERS_WITH_ESC         ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS                 MEHS EXCALIDRAW                    VIM_LAYERS
 
@@ -263,10 +264,10 @@
         COMBO(cb_page_down,     RHM RHI,         &kp PAGE_DOWN,          NAV_LAYERS)
         COMBO(cb_page_up,       RHM RHR,         &kp PAGE_UP,            NAV_LAYERS)
 
-        COMBO(cb_hand,          RTM RTI,         &mc_hand,               MEDIA)
-        COMBO(cb_media_play,    RBM RBR,         &kp C_PP,               MEDIA)
-        COMBO(cb_lclick,        RHM RHI,         &mkp LCLK,              MEDIA)
-        COMBO(cb_rclick,        RHM RHR,         &mkp RCLK,              MEDIA)
+        COMBO(cb_hand,          RTM RTI,         &mc_hand,               MEDIA_LAYERS)
+        COMBO(cb_media_play,    RBM RBR,         &kp C_PP,               MEDIA_LAYERS)
+        COMBO(cb_lclick,        RHM RHI,         &mkp LCLK,              MEDIA_LAYERS)
+        COMBO(cb_rclick,        RHM RHR,         &mkp RCLK,              MEDIA_LAYERS)
     };
 
     combo_must_tap {
