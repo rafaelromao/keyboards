@@ -87,7 +87,8 @@
          * ALPHA1_CP is the base layout above MEHS, for typing between Meh
          * shortcuts. It is an auto-layer that stays on for everything typed
          * and any key press outside the list below turns it off -- which is
-         * Enter and Esc, from whichever key, macro or combo sends them.
+         * Esc, from whichever key, macro or combo sends it. Enter is listed:
+         * it ends a line, not the typing.
          * Letters, numbers (the digits, the shifted symbols on them and the
          * keypad) and modifiers are ignored by the module; the rest of what
          * the base, symbol, navigation and media layers send is listed.
@@ -102,7 +103,7 @@
             ignore-numbers;
             ignore-modifiers;
             #binding-cells = <1>;
-            continue-list = <SPACE TAB BSPC DEL INS CAPS LEFT RIGHT UP DOWN HOME END PG_UP PG_DN
+            continue-list = <SPACE ENTER TAB BSPC DEL INS CAPS LEFT RIGHT UP DOWN HOME END PG_UP PG_DN
                              DOT COMMA SEMI SQT GRAVE MINUS EQUAL FSLH BSLH LBKT RBKT
                              F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12 F13 F14 F15
                              C_VOL_UP C_VOL_DN C_MUTE C_PP C_PREV C_NEXT>;

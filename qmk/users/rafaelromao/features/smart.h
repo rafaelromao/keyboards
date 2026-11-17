@@ -30,11 +30,11 @@ void smart_num_word_on(uint8_t layer);
 void smart_num_word_off(void);
 
 // ALPHA1_CP (ZMK smart_alpha1_cp): the base layout over MEHS, on from the MEHS
-// outer thumbs and off on Enter or Esc, whichever key, macro or combo sends it.
+// outer thumbs and off on Esc, whichever key, macro or combo sends it.
 void smart_alpha1_cp_on(void);
 void smart_alpha1_cp_off(void);
 bool smart_alpha1_cp_active(void);
-// Every Enter and Esc goes through here: ends the copy, now.
+// Every Esc goes through here: ends the copy, now.
 void smart_alpha1_cp_key(uint16_t keycode);
 
 // Sentence case: a one-shot shift that lasts SENTENCE_TIMEOUT

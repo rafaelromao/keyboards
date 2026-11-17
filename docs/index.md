@@ -210,7 +210,7 @@ In this layer, or while holding *meh* in the base layer, accessing the Hyper ver
 
 ![img](img/diagrams/meh-morphs.png)
 
-Between shortcuts there is often a word to type, and leaving the *mehs* layer for that would mean toggling it off and on again. Tapping either outer thumb (the ones that hold *nav* and *media*, which they still do) turns on a copy of the base layer above *mehs*, as an auto-layer. It types normally, with every combo of the base layer and the *symbols*, *numbers*, *nav* and *media* layers one hold away, and it turns itself off on Enter or Esc, back into *mehs*. On the right side of the layer, the o + u combo is Backspace, so correcting a typo does not end the copy.
+Between shortcuts there is often a word to type, and leaving the *mehs* layer for that would mean toggling it off and on again. Tapping either outer thumb (the ones that hold *nav* and *media*, which they still do) turns on a copy of the base layer above *mehs*, as an auto-layer. It types normally, with every combo of the base layer and the *symbols*, *numbers*, *nav* and *media* layers one hold away, and it turns itself off on Esc, back into *mehs* (Enter does not end it). On the right side of the layer, the o + u combo is Backspace, so correcting a typo does not end the copy.
 
 ### Common Apps Shortcuts
 

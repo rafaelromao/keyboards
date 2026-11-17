@@ -160,8 +160,9 @@ static bool num_word_continues(uint16_t keycode) {
 // --- ALPHA1_CP ------------------------------------------------------------------
 
 // The copy is a layer in both firmwares. ZMK's auto-layer turns it off for any
-// key outside its continue-list; the keymap only has Enter and Esc outside it,
-// so those are the only keys that end it here.
+// key outside its continue-list; the keymap only has Esc outside it (Enter is
+// listed, it ends a line, not the typing), so Esc is the only key that ends it
+// here.
 void smart_alpha1_cp_on(void) {
 #ifdef RR_MEHS_ENABLE
     layer_on(_ALPHA1_CP);
@@ -185,7 +186,7 @@ bool smart_alpha1_cp_active(void) {
 void smart_alpha1_cp_key(uint16_t keycode) {
     if (!st.alpha1_cp || keycode > QK_MODS_MAX) return;
     uint8_t basic = keycode & 0xFF;
-    if (basic == KC_ENT || basic == KC_ESC) smart_alpha1_cp_off();
+    if (basic == KC_ESC) smart_alpha1_cp_off();
 }
 
 // --- sentence case ---------------------------------------------------------------
@@ -291,7 +292,7 @@ void smart_before_press(uint16_t keycode, keyrecord_t *record) {
 
     if (st.alpha1_cp) {
         uint16_t logical = logical_keycode(keycode, record);
-        if (logical != KC_NO && logical <= QK_MODS_MAX && ((logical & 0xFF) == KC_ENT || (logical & 0xFF) == KC_ESC)) st.alpha1_cp_release = true;
+        if (logical != KC_NO && logical <= QK_MODS_MAX && (logical & 0xFF) == KC_ESC) st.alpha1_cp_release = true;
     }
 
     if (st.num_word_layer) {

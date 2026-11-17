@@ -179,7 +179,7 @@ def fixture(directory):
     events.append("ZMK_MOCK_RELEASE(0,31,10)")
     tap(17)
     finish()
-    start("mehs typing copy ends on Enter", [a, enter, meh_a])
+    start("mehs typing copy survives Enter", [a, enter, a])
     for position in [mehs, 31, 17]:
         tap(position)
     chord(17, 18, 33)
