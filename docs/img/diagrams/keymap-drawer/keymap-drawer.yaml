@@ -371,7 +371,7 @@ layers:
         { t: "meh '" },
         { t: "meh \\" },
       ]
-    - { t: ▽ }
+    - { t: alpha1, s: auto-layer, h: nav }
     - {
         t: meh ␣,
         h: $$mdi:apple-keyboard-command$$,
@@ -380,7 +380,7 @@ layers:
         t: meh ↵,
         h: $$mdi:apple-keyboard-command$$,
       }
-    - { t: ▽ }
+    - { t: alpha1, s: auto-layer, h: media }
   func:
     - [
         "F13",
@@ -748,6 +748,37 @@ layers:
     - { type: ghost }
     - { s: code action, t: $$mdi:gesture-tap$$ }
     - { t: ▽ }
+  mehs_excalidraw:
+    - [
+        { t: b, s: bucket },
+        { t: o, s: ellipse },
+        { t: l, s: line },
+        null,
+        null,
+        null,
+      ]
+    - [
+        { t: d, s: diamond },
+        { t: n, s: sticky note },
+        { t: X },
+        { t: t, s: text },
+        null,
+        null,
+        null,
+        null,
+      ]
+    - [
+        { t: f, s: frame },
+        { t: r, s: rectangle },
+        { t: p, s: draw },
+        null,
+        null,
+        null,
+      ]
+    - null
+    - { t: a, s: arrow }
+    - null
+    - null
 combos:
   - {
       p: [0, 1],
@@ -1097,7 +1128,7 @@ combos:
   - { p: [3, 4], k: { s: enter, t: vim, h: mode }, a: mid, layers: [macros] }
   - { p: [4, 5], k: { s: leave, t: vim, h: mode }, a: mid, layers: [macros] }
 
-  - { p: [4, 5], k: "⎋", a: mid, layers: [mehs] }
+  - { p: [4, 5], k: $$mdi:backspace-outline$$, a: mid, layers: [mehs] }
   - { p: [1, 2], k: meh k, a: mid, layers: [mehs] }
   - { p: [3, 4], k: meh x, a: mid, layers: [mehs] }
   - {
@@ -1120,6 +1151,11 @@ combos:
   - { p: [10, 11], k: meh z, a: mid, layers: [mehs] }
   - { p: [7, 8], k: meh q, a: mid, layers: [mehs] }
   - { p: [11, 12], k: meh y, a: mid, layers: [mehs] }
+
+  - { p: [1, 2], k: { t: k, s: laser }, a: mid, layers: [mehs_excalidraw] }
+  - { p: [7, 8], k: { t: q, s: lock }, a: mid, layers: [mehs_excalidraw] }
+  - { p: [8, 9], k: { t: e, s: eraser }, a: mid, layers: [mehs_excalidraw] }
+  - { p: [15, 16], k: { t: v, s: select }, a: mid, layers: [mehs_excalidraw] }
 
   - {
       p: [11, 12],
