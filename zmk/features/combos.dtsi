@@ -29,8 +29,12 @@
      * stops firing the moment os-detection decides this host is a Mac, and
      * keeps working everywhere else, which is a miserable thing to debug.
      * Use ALPHA1_BASE, never a bare ALPHA1.
+     *
+     * ALPHA1_CP, the base layout over MEHS, is in the set for the same reason:
+     * it is the highest active layer while it is on, so it needs every base
+     * combo, and the MEHS combos stop matching until it turns itself off.
      */
-    #define ALPHA1_BASE                 ALPHA1 ALT_OS
+    #define ALPHA1_BASE                 ALPHA1 ALT_OS ALPHA1_CP
     #define ALPHA1_LAYERS               ALPHA1_BASE CASE_A1 CPLK_A1 ALTREP2
     #define CCEDIL_LAYERS               CCEDIL CASE_CCEDIL
     #define ALPHA2_LAYERS               ALPHA2 CASE_A2 SFT_A2
@@ -43,7 +47,7 @@
     #define FIXABLE_LAYERS              ALPHA1_LAYERS NUM_LAYERS MEDIA NAV_LAYERS MEHS FUN                                           VIM_LAYERS
     #define ALL_LAYERS                  ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS MEDIA TEXT SHORTS VIM_LAYERS
     #define ALL_LAYERS_WITH_ENTER       ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS MEDIA TEXT        VIM_LAYERS_BASE
-    #define ALL_LAYERS_WITH_BACKSPACE   ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS                   VIM_LAYERS_BASE
+    #define ALL_LAYERS_WITH_BACKSPACE   ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS NUM_LAYERS NAV_LAYERS SYM_LAYERS MEHS              VIM_LAYERS_BASE
     #define ALL_LAYERS_WITH_ESC         ALPHA1_LAYERS ALPHA2_LAYERS CCEDIL_LAYERS                 MEHS                               VIM_LAYERS
 
     combos {

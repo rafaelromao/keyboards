@@ -136,6 +136,66 @@ def fixture(directory):
     events.append("ZMK_MOCK_RELEASE(0,31,10)")
     finish()
 
+    # The typing copy of the base layout above MEHS (ALPHA1_CP). MEHS is layer
+    # 8, so &to MEHS is position 36 + 8. On MEHS a is Meh+A; on the copy it is
+    # a plain a, which tells the two layers apart.
+    mehs, nav_left, meh_a, enter, esc = 44, (7, 0x50, 0), (7, 4, 7), (7, 40, 0), (7, 41, 0)
+
+    def chord(*positions):
+        events.extend(f"ZMK_MOCK_PRESS(0,{position},10)" for position in positions)
+        events.extend(f"ZMK_MOCK_RELEASE(0,{position},10)" for position in positions)
+
+    for name, thumb in (("left", 31), ("right", 34)):
+        start(f"mehs {name} outer thumb tap opens the typing copy", [a, b])
+        for position in [mehs, thumb, 17, 1]:
+            tap(position)
+        finish()
+    start("mehs typing copy keeps NUM", [(7, 0x24, 0), a])
+    for position in [mehs, 31]:
+        tap(position)
+    events.append("ZMK_MOCK_PRESS(0,32,200)")
+    tap(6)  # N7 on NUM
+    events.append("ZMK_MOCK_RELEASE(0,32,10)")
+    tap(17)
+    finish()
+    start("mehs typing copy keeps NAV", [nav_left, a])
+    for position in [mehs, 31]:
+        tap(position)
+    events.append("ZMK_MOCK_PRESS(0,31,200)")
+    tap(16)  # Left on NAV
+    events.append("ZMK_MOCK_RELEASE(0,31,10)")
+    tap(17)
+    finish()
+    start("mehs typing copy keeps base combos", [(7, 0x0E, 0), a])
+    for position in [mehs, 31]:
+        tap(position)
+    chord(2, 3)  # K
+    tap(17)
+    finish()
+    start("mehs outer thumb hold opens NAV, not the copy", [nav_left, meh_a])
+    tap(mehs)
+    events.append("ZMK_MOCK_PRESS(0,31,200)")
+    tap(16)
+    events.append("ZMK_MOCK_RELEASE(0,31,10)")
+    tap(17)
+    finish()
+    start("mehs typing copy ends on Enter", [a, enter, meh_a])
+    for position in [mehs, 31, 17]:
+        tap(position)
+    chord(17, 18, 33)
+    tap(17)
+    finish()
+    start("mehs typing copy ends on Esc", [a, esc, meh_a])
+    for position in [mehs, 31, 17]:
+        tap(position)
+    chord(1, 2)
+    tap(17)
+    finish()
+    start("mehs o+u is Backspace", [(7, 0x2A, 0)])
+    tap(mehs)
+    chord(7, 8)
+    finish()
+
     # Arm BASE from SHORTS, release both pinkies, then hold a modifier through
     # the letter. The modifier press must not spend the sticky layer. BASE's
     # mod positions must stay the same regardless of ALT_OS.

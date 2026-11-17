@@ -100,6 +100,32 @@
                 };
 
 
+                mehs_layer {
+                     display-name = "MEHS";
+                     bindings = <
+   &none                     &mc_meh_b                 &mc_meh_m                 &mc_meh_g                 &none                     &none                     &mc_meh_l                 &mc_meh_o                 &mc_meh_u                 &none
+   &mc_meh_d                 &mc_meh_n                 &mc_meh_s                 &mc_meh_t                 &none                     &none                     &mc_meh_r                 &mc_meh_a                 &mc_meh_e                 &mc_meh_i
+   &mc_meh_d                 &mt_meh_f LGUI 0          &mt_meh_c LGUI 0          &mt_meh_p LGUI 0          &none                     &none                     &mt_meh_h LGUI 0          &mt_meh_comm LGUI 0       &mt_meh_dot LGUI 0        &mc_meh_i
+                                                       &none                     &ht_alpha1_cp NAV 0       &mt_meh_spc LGUI 0        &mt_meh_ent LGUI 0        &ht_alpha1_cp MEDIA 0     &none
+                        >;
+                };
+
+                /*
+                 * MEHS typing copy: the base layout, switched on from the outer
+                 * thumbs of MEHS (an auto-layer, see features/smart.dtsi) and off
+                 * by Enter or Esc.
+                 */
+                alpha1_cp_layer {
+                     display-name = "ALPHA1 CP";
+                     bindings = <
+   &kp Q                     &kp B                     &kp M                     &kp G                     &kp K                     &kp X                     &kp L                     &kp O                     &kp U                     &kp SEMICOLON
+   &lt SHORTS D              &mt LCTL N                &mt LALT S                &mt LSFT T                &kp W                     &kp Z                     &mt LSFT R                &mt LALT A                &mt LCTL E                &lt SHORTS I
+   &lt SHORTS D              &mt LS(LGUI) F            &mt LS(LGUI) C            &mt LGUI P                &kp V                     &kp J                     &ht_magic LGUI 0          &th_comma 0 0             &th_dot 0 0               &lt SHORTS I
+                                                       &mkp RCLK                 &ht_repeat NAV 0          &ltn_num_spc 0 0          &sentence_alpha2          &ht_shift MEDIA 0         &mkp LCLK
+                        >;
+                };
+
+
                 capsword_layer {
                      display-name = "CAPSWORD";
                      bindings = <
@@ -138,15 +164,6 @@
    &none                     &none                     &bt BT_PRV                &bt BT_NXT                &none                     &none                     &tog NUM                  &tog MEDIA                &none                     &none
    &none                     &bootloader               &lock_off ALT_OS          &lock_on ALT_OS           &none                     &none                     &tog MEHS                 &none                     &bootloader               &none
                                                        &none                     &kp CAPS                  &kp KP_NUM                &mc_lock                  &mc_sleep                 &none
-                        >;
-                };
-                mehs_layer {
-                     display-name = "MEHS";
-                     bindings = <
-   &none                     &mc_meh_b                 &mc_meh_m                 &mc_meh_g                 &none                     &none                     &mc_meh_l                 &mc_meh_o                 &mc_meh_u                 &none
-   &mc_meh_d                 &mc_meh_n                 &mc_meh_s                 &mc_meh_t                 &none                     &none                     &mc_meh_r                 &mc_meh_a                 &mc_meh_e                 &mc_meh_i
-   &mc_meh_d                 &mt_meh_f LGUI 0          &mt_meh_c LGUI 0          &mt_meh_p LGUI 0          &none                     &none                     &mt_meh_h LGUI 0          &mt_meh_comm LGUI 0       &mt_meh_dot LGUI 0        &mc_meh_i
-                                                       &none                     &trans                    &mt_meh_spc LGUI 0        &mt_meh_ent LGUI 0        &trans                    &none
                         >;
                 };
 
