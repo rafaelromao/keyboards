@@ -11,22 +11,26 @@
 // variable in features/vim.h; only NORMAL and CHANGE rebind keys.
 //
 // LT() holds layers 0-15 only. A layer-tap to a layer that may land past 15
-// needs a stand-in and an intercepted hold, as FUN and MACROS have
+// needs a stand-in and an intercepted hold, as TEXT, FUN and MACROS have
 // (keycodes.h, high_layer in features/taphold.c).
+//
+// ALPHA1_CP sits above MEHS and below every layer a base key can turn on, so
+// the copy behaves like the base layer (ZMK config.dtsi).
 enum layers {
     _ALPHA1,      // 0  OMARCHY
 #ifdef RR_VIM_ENABLE
     _VIM_NORMAL,  // 2  NORMAL
     _VIM_CHANGE,  // 4  CHANGE
 #endif
-    _SHORTS,      // 10 SHORTCUTS
-    _TOGS,        // 11 TOGGLES
 #ifdef RR_MEHS_ENABLE
-    _MEHS,        // 12 MEHS
+    _MEHS,        // 8  MEHS
+    _ALPHA1_CP,   // 9  ALPHA1 CP (the base layout above MEHS)
 #endif
-    _ALPHA2,      // 13 ALPHA2
-    _NUM,         // 14 NUMBERS
-    _SYM,         // 15 SYMBOLS
+    _SHORTS,      // 12 SHORTCUTS
+    _TOGS,        // 13 TOGGLES
+    _ALPHA2,      // 14 ALPHA2
+    _NUM,         // 15 NUMBERS
+    _SYM,         // 16 SYMBOLS
     _CCEDIL,      // 17 Ç EXTENSION
     _NAV,         // 22 NAVIGATION
     _NUM_CP,      // 23 NUMBERS (copy above NAV)
@@ -36,7 +40,7 @@ enum layers {
     _TEXT,        // 27 TEXT NAVIGATION
     _FUN,         // 28 FUNCTIONS
 #ifdef RR_MACROS_ENABLE
-    _MACROS,      // 28 MACROS
+    _MACROS,      // 29 MACROS
 #endif
     _BASE,        // BASE one-shot (above SHORTCUTS)
     _LAYER_COUNT

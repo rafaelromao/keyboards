@@ -1,6 +1,7 @@
 #include "features/vim.h"
 #include "features/macros.h"
 #include "features/adaptive.h"
+#include "features/smart.h"
 
 #ifdef RR_VIM_ENABLE
 
@@ -62,6 +63,7 @@ static void vim_on(void) {
     if (vim.mode != VIM_MODE_OFF) return;
     set_normal();
     tap_code(KC_ESC);
+    smart_alpha1_cp_key(KC_ESC);
 }
 
 static bool in_command_layers(void) {

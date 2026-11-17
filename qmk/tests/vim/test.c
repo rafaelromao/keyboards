@@ -20,6 +20,7 @@ uint16_t timer_elapsed(uint16_t start) { return 0 - start; }
 void tap_code(uint8_t keycode) { last_key = keycode; ++key_count; }
 void execute_keycode(uint16_t keycode) { last_key = keycode; ++key_count; }
 void adaptive_clear(void) { ++adaptive_clear_count; }
+void smart_alpha1_cp_key(uint16_t keycode) { (void)keycode; }
 
 static bool normal_layer(void) { return layers & (1UL << _VIM_NORMAL); }
 

@@ -72,8 +72,19 @@
 #define MEHS_R2       XXXXXXX,     MEH(KC_R),    MEH(KC_A),      MEH(KC_E),      MEH(KC_I)
 #define MEHS_L3       XXXXXXX,     MEH_MT(KC_F), MEH_MT(KC_C),   MEH_MT(KC_P),   XXXXXXX
 #define MEHS_R3       XXXXXXX,     MEH_MT(KC_H), MEH_MT(KC_COMM),MEH_MT(KC_DOT), XXXXXXX
-#define MEHS_L4       XXXXXXX,     _______,      MEH_MT(KC_SPC)
-#define MEHS_R4       MEH_MT(KC_ENT), _______,   XXXXXXX
+#define MEHS_L4       XXXXXXX,     LT_CP_NAV,    MEH_MT(KC_SPC)
+#define MEHS_R4       MEH_MT(KC_ENT), LT_CP_MEDIA, XXXXXXX
+
+// --- ALPHA1 CP ------------------------------------------------------------
+// The base layout again, over MEHS (ZMK alpha1_cp_layer).
+#define ALPHA1_CP_L1  ALPHA1_L1
+#define ALPHA1_CP_R1  ALPHA1_R1
+#define ALPHA1_CP_L2  ALPHA1_L2
+#define ALPHA1_CP_R2  ALPHA1_R2
+#define ALPHA1_CP_L3  ALPHA1_L3
+#define ALPHA1_CP_R3  ALPHA1_R3
+#define ALPHA1_CP_L4  ALPHA1_L4
+#define ALPHA1_CP_R4  ALPHA1_R4
 
 // --- ALPHA2 ---------------------------------------------------------------
 #define ALPHA2_L1     XXXXXXX,     KC_Q,         MC_QU,          KC_K,           XXXXXXX

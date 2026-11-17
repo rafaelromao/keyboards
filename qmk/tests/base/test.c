@@ -9,6 +9,7 @@ static const uint16_t alpha1_l3[] = {ALPHA1_L3};
 static const uint16_t base_l2[] = {BASE_L2};
 static const uint16_t base_r2[] = {BASE_R2};
 static const uint16_t base_l3[] = {BASE_L3};
+static const uint16_t cp_l2[] = {ALPHA1_CP_L2};
 
 int main(void) {
     assert(alpha1_l2[1] == LCTL_T(KC_N));
@@ -19,6 +20,8 @@ int main(void) {
     assert(base_r2[3] == alpha1_r2[3]);  // E stays Ctrl
     assert(base_l3[1] == alpha1_l3[1]);  // F stays Shift+GUI
     assert(base_l3[2] == alpha1_l3[2]);  // C stays Shift+GUI
+
+    assert(cp_l2[1] == alpha1_l2[1]);  // ALPHA1_CP is the base layout
 
     puts("PASS: BASE reuses the base layout's N/E/F/C mod-taps");
 }

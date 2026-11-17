@@ -12,6 +12,8 @@ static struct {
     bool     altrep2;
     uint16_t altrep2_time;
     uint8_t  num_word_layer;  // 0 = off
+    bool     alpha1_cp;       // ALPHA1_CP is on (it is a flag here, as in ZMK)
+    bool     alpha1_cp_release;
     bool     oneshot_set;
     // Quick-release layers spent by a key press. They are turned off only
     // after the key is processed: QMK resolves plain keys against the layer
@@ -155,6 +157,37 @@ static bool num_word_continues(uint16_t keycode) {
     return false;
 }
 
+// --- ALPHA1_CP ------------------------------------------------------------------
+
+// The copy is a layer in both firmwares. ZMK's auto-layer turns it off for any
+// key outside its continue-list; the keymap only has Enter and Esc outside it,
+// so those are the only keys that end it here.
+void smart_alpha1_cp_on(void) {
+#ifdef RR_MEHS_ENABLE
+    layer_on(_ALPHA1_CP);
+    st.alpha1_cp         = true;
+    st.alpha1_cp_release = false;
+#endif
+}
+
+void smart_alpha1_cp_off(void) {
+#ifdef RR_MEHS_ENABLE
+    layer_off(_ALPHA1_CP);
+#endif
+    st.alpha1_cp         = false;
+    st.alpha1_cp_release = false;
+}
+
+bool smart_alpha1_cp_active(void) {
+    return st.alpha1_cp;
+}
+
+void smart_alpha1_cp_key(uint16_t keycode) {
+    if (!st.alpha1_cp || keycode > QK_MODS_MAX) return;
+    uint8_t basic = keycode & 0xFF;
+    if (basic == KC_ENT || basic == KC_ESC) smart_alpha1_cp_off();
+}
+
 // --- sentence case ---------------------------------------------------------------
 
 void smart_sentence_shift(void) {
@@ -200,6 +233,7 @@ void smart_cancel(void) {
     vim_off();
     smart_num_word_off();
     smart_osl_off();
+    smart_alpha1_cp_off();
     layer_off(_NUM);
     layer_off(_NUM_CP);
     layer_off(_ALPHA2);
@@ -255,6 +289,11 @@ void smart_before_press(uint16_t keycode, keyrecord_t *record) {
     // The ALT REP 2 window is read by the L1 tap and cleared by anything else.
     if (st.altrep2 && keycode != L1_KEY) st.altrep2 = false;
 
+    if (st.alpha1_cp) {
+        uint16_t logical = logical_keycode(keycode, record);
+        if (logical != KC_NO && logical <= QK_MODS_MAX && ((logical & 0xFF) == KC_ENT || (logical & 0xFF) == KC_ESC)) st.alpha1_cp_release = true;
+    }
+
     if (st.num_word_layer) {
         uint16_t logical = logical_keycode(keycode, record);
         if (logical != KC_NO && !num_word_continues(logical)) st.num_word_release = true;
@@ -280,6 +319,7 @@ void smart_after_press(uint16_t keycode, keyrecord_t *record, bool intercepted) 
         st.num_word_release = false;
         smart_num_word_off();
     }
+    if (st.alpha1_cp_release) smart_alpha1_cp_off();
     if (st.oneshot_set || is_modifier_press(keycode, record)) return;
     if (get_oneshot_mods()) {
         clear_oneshot_mods();
