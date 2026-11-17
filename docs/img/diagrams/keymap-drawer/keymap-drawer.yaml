@@ -760,7 +760,7 @@ layers:
     - [
         { t: d, s: diamond },
         { t: n, s: sticky note },
-        { t: X },
+        { t: X, s: draw shape },
         { t: t, s: text },
         null,
         null,
