@@ -24,11 +24,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_VIM_NORMAL] = LAYER(VIM_NORMAL),
     [_VIM_CHANGE] = LAYER(VIM_CHANGE),
 #endif
-    [_SHORTS]     = LAYER(SHORTS),
-    [_TOGS]       = LAYER(TOGS),
 #ifdef RR_MEHS_ENABLE
     [_MEHS]       = LAYER(MEHS),
+    [_ALPHA1_CP]  = LAYER(ALPHA1_CP),
 #endif
+    [_SHORTS]     = LAYER(SHORTS),
+    [_TOGS]       = LAYER(TOGS),
     [_ALPHA2]     = LAYER(ALPHA2),
     [_NUM]        = LAYER(NUM),
     [_SYM]        = LAYER(SYM),

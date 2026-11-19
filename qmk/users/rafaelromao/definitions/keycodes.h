@@ -21,6 +21,7 @@
 #define ID_CAM      KC_LNG1  // lt_cam
 #define ID_SYSTEM   KC_LNG2  // lt_system
 #define ID_N0       KC_LNG3  // lt_n0: tap = mc_n0
+#define ID_ALPHA1_CP KC_LNG4 // ht_alpha1_cp: MEHS L1/R1 tap = the ALPHA1_CP typing copy
 
 // ---------------------------------------------------------------------------
 // Tap/hold symbol keys (ZMK th_*): LT(0, id), id = TH_BASE + index into the
@@ -274,15 +275,26 @@ enum custom_keycodes {
 // Layer-taps with a custom tap
 #define LT_EMOJI    LT(_TOGS, ID_EMOJI)     // lt_emoji TOGS
 #define LT_ZOOM_OUT LT(_TOGS, ID_ZOOM_OUT)  // lt_zoom_out TOGS
-#define LT_CAM      LT(_TEXT, ID_CAM)       // lt_cam TEXT
-#define LT_SYSTEM   LT(_TEXT, ID_SYSTEM)    // lt_system TEXT
+#define LT_CAM      LT(TEXT_STANDIN, ID_CAM)    // lt_cam TEXT
+#define LT_SYSTEM   LT(TEXT_STANDIN, ID_SYSTEM) // lt_system TEXT
 #define LT_N0       LT(_MEDIA, ID_N0)       // lt_n0 MEDIA
+// MEHS outer thumbs (ht_alpha1_cp): tap the ALPHA1_CP typing copy, hold NAV or
+// MEDIA. Without MEHS there is nothing to type over, so they are plain thumbs.
+#ifdef RR_MEHS_ENABLE
+#    define LT_CP_NAV   LT(_NAV, ID_ALPHA1_CP)
+#    define LT_CP_MEDIA LT(_MEDIA, ID_ALPHA1_CP)
+#else
+#    define LT_CP_NAV   _______
+#    define LT_CP_MEDIA _______
+#endif
 
-// Layer-taps to FUN and MACROS. LT() holds layers 0-15 only, and with every
-// optional part on FUN is 16 and MACROS 17. Their LT() carries a stand-in
-// instead, never toggled: taphold.c intercepts the hold and turns the real
-// layer on (high_layer). A stand-in is only an id, and there are two because
-// both SHORTS thumbs tap space.
+// Layer-taps to TEXT, FUN and MACROS. LT() holds layers 0-15 only, and with
+// every optional part on TEXT is 16, FUN 17 and MACROS 18. Their LT() carries a
+// stand-in instead, never toggled: taphold.c intercepts the hold and turns the
+// real layer on (high_layer). A stand-in is only an id, and there are two
+// because both SHORTS thumbs tap space. TEXT's taps are custom ids, so it
+// shares the first one.
+#define TEXT_STANDIN   0
 #define FUN_STANDIN    0
 #define MACROS_STANDIN 1
 #define LT_COMMA    LT(FUN_STANDIN, KC_COMM)  // lt_comma FUN

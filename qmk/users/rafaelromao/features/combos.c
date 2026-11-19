@@ -40,7 +40,12 @@
 
 // ZMK's ALPHA1_LAYERS (the base plus its flag layers) and VIM_LAYERS_BASE
 // (INSERT/REPLACE/CMDLINE, all transparent) are all "ALPHA1 on top" here.
-#define ALPHA1_L L(_ALPHA1)
+#ifdef RR_MEHS_ENABLE
+// ALPHA1_CP, the base layout over MEHS, is the highest layer while it is on
+#    define ALPHA1_L (L(_ALPHA1) | L(_ALPHA1_CP))
+#else
+#    define ALPHA1_L L(_ALPHA1)
+#endif
 #define ALPHA2_L L(_ALPHA2)
 #define CCEDIL_L L(_CCEDIL)
 #define NUM_L (L(_NUM) | L(_NUM_CP))
@@ -53,7 +58,7 @@
 // ALL_LAYERS: everything but TOGGLES, MEHS, FUNCTIONS, MACROS
 #define ALL_L (ALPHA1_L | VIM_CMD | SHORTS_L | ALPHA2_L | NUM_L | SYM_L | CCEDIL_L | NAV_L | MEDIA_L | TEXT_L)
 #define WITH_ENTER_L (ALL_L & ~(SHORTS_L | VIM_CMD))
-#define WITH_BSPC_L (ALL_L & ~(SHORTS_L | MEDIA_L | TEXT_L | VIM_CMD))
+#define WITH_BSPC_L ((ALL_L & ~(SHORTS_L | MEDIA_L | TEXT_L | VIM_CMD)) | MEHS_L)
 #define WITH_ESC_L (ALPHA1_L | ALPHA2_L | CCEDIL_L | MEHS_L | VIM_CMD)
 #define FIXABLE_L (ALPHA1_L | VIM_CMD | MEHS_L | NUM_L | NAV_L | MEDIA_L | FUN_L)
 

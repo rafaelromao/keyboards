@@ -47,5 +47,6 @@ yq -i 'del(.combos[] | select(.layers | contains(["nav"]) | not))' tmp/keymap-dr
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml intellij intellij-meh intellij-hyper
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml vscode vscode-meh vscode-hyper
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml nvim nvim-meh
+./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml mehs_excalidraw mehs_excalidraw
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml meh-morphs --2cols left-meh-morphs right-meh-morphs
 ./scripts/draw-image.sh keymap-drawer-noseparatecombos.yaml window desktop-management window-management

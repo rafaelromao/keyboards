@@ -192,6 +192,10 @@ static bool is_thumb(uint16_t keycode) {
         case R0_KEY:
         case R1_KEY:
         case MAGIC_KEY:
+#ifdef RR_MEHS_ENABLE
+        case LT_CP_NAV:
+        case LT_CP_MEDIA:
+#endif
             return true;
     }
     return false;
@@ -388,12 +392,27 @@ process_record_result_t process_taphold(uint16_t keycode, keyrecord_t *record) {
             case ID_A2:
             case ID_SHIFT:
                 return process_thumbs(keycode, record);
+            case ID_ALPHA1_CP:  // ht_alpha1_cp: tap = the typing copy, hold = NAV / MEDIA
+                if (!tapped) return PROCESS_RECORD_CONTINUE;
+                if (pressed) smart_alpha1_cp_on();
+                return PROCESS_RECORD_RETURN_FALSE;
             case ID_EMOJI:
             case ID_ZOOM_OUT:
             case ID_CAM:
             case ID_SYSTEM:
             case ID_N0:
-                if (!tapped) return PROCESS_RECORD_CONTINUE;
+                if (!tapped) {
+                    // lt_cam and lt_system hold TEXT, which LT() cannot reach
+                    if (tap == ID_CAM || tap == ID_SYSTEM) {
+                        if (pressed) {
+                            layer_on(_TEXT);
+                        } else {
+                            layer_off(_TEXT);
+                        }
+                        return PROCESS_RECORD_RETURN_FALSE;
+                    }
+                    return PROCESS_RECORD_CONTINUE;
+                }
                 if (pressed) {
                     switch (tap) {
                         case ID_EMOJI:    execute_keycode(MC_EMOJI); break;

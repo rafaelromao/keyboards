@@ -210,6 +210,8 @@ In this layer, or while holding *meh* in the base layer, accessing the Hyper ver
 
 ![img](img/diagrams/meh-morphs.png)
 
+Between shortcuts there is often a word to type, and leaving the *mehs* layer for that would mean toggling it off and on again. Tapping either outer thumb (the ones that hold *nav* and *media*, which they still do) turns on a copy of the base layer above *mehs*, as an auto-layer. It types normally, with every combo of the base layer and the *symbols*, *numbers*, *nav* and *media* layers one hold away, and it turns itself off on Esc, back into *mehs* (Enter does not end it). On the right side of the layer, the o + u combo is Backspace, so correcting a typo does not end the copy.
+
 ### Common Apps Shortcuts
 
 Holding any pinky opens the *shortcuts* layer, which gives access to common shortcuts like opening the file explorer, taking a screenshot, and managing zoom and tabs in a browser. This works in the VIM *normal* layer too.
@@ -443,6 +445,12 @@ In VS Code, each chord runs the nearest native command. Nothing native comes clo
 In Neovim, only the Meh chords are bound, because tmux cannot carry the Super bit that Hyper needs. Complete statement and AI chat have no Neovim equivalent, the debug keys need nvim-dap, and type match becomes omni-completion, which only works in insert mode.
 
 ![img](img/diagrams/nvim.png)
+
+#### Excalidraw
+
+In Excalidraw, the left-hand Meh chords of the *mehs* layer are the editor's one-key tool shortcuts, so a tool is one chord away while the layer stays on. The text tool is followed by words, and for them the typing copy above is a thumb tap away.
+
+![img](img/diagrams/mehs_excalidraw.png)
 
 # General
 

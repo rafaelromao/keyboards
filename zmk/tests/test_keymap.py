@@ -15,7 +15,7 @@ class KeymapTests(unittest.TestCase):
         cls.records = {record["case"]: record["events"] for record in cls.snapshots}
 
     def test_every_layer_has_all_36_positions(self):
-        self.assertEqual(len(self.layers), 30)
+        self.assertEqual(len(self.layers), 31)
         for name, _, bindings in self.layers:
             with self.subTest(layer=name):
                 self.assertEqual(len(bindings), 36)
@@ -54,6 +54,20 @@ class KeymapTests(unittest.TestCase):
         self.assertEqual(base[21].strip(), "&mt LS(LGUI) F")
         self.assertEqual(base[22].strip(), "&mt LS(LGUI) C")
         self.assertFalse(any(binding.strip().startswith("&base_mod_") for binding in base))
+
+    def test_mehs_typing_copy_is_the_base_layout_above_mehs(self):
+        by_name = {name: bindings for name, _, bindings in self.layers}
+        names = [name for name, _, _ in self.layers]
+        self.assertEqual(by_name["alpha1_cp_layer"], by_name["default_layer"])
+        self.assertEqual(names.index("mehs_layer"), 8)
+        self.assertEqual(names.index("alpha1_cp_layer"), 9)
+        # Everything a base key can open must sit above the copy.
+        for above in ("capsword_layer", "capsline_layer", "shortcuts_layer", "alpha2_layer",
+                      "numbers_layer", "symbols_layer", "navigation_layer", "media_layer"):
+            self.assertGreater(names.index(above), 9, above)
+        mehs = by_name["mehs_layer"]
+        self.assertEqual(mehs[31].strip(), "&ht_alpha1_cp NAV 0")
+        self.assertEqual(mehs[34].strip(), "&ht_alpha1_cp MEDIA 0")
 
     def test_none_bindings_are_inert_on_every_layer(self):
         for name, events in self.records.items():

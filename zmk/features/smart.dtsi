@@ -45,7 +45,7 @@
             tap-ms = <0>;
             bindings = <&vim_off &lock_off NUM &lock_off NUM_CP &lock_off CASE_A1 &lock_off CPLK_A1
                         &lock_off ALPHA2 &lock_off SFT_A2 &lock_off CASE_A2 &lock_off CCEDIL
-                        &lock_off CASE_CCEDIL &lock_off ALTREP2 &lock_off MEHS
+                        &lock_off CASE_CCEDIL &lock_off ALTREP2 &lock_off MEHS &lock_off ALPHA1_CP
                         &lock_off NAV &lock_off NAV_CP &lock_off MEDIA &lock_off FUN>;
         };
         LAYERTAP_TP(lt_cancel,     &tc_cancel)
@@ -79,6 +79,47 @@
             wait-ms = <0>;
             tap-ms = <0>;
             bindings = <&macro_tap &smart_num NUM_CP>;
+        };
+
+        // ******************* MEHS TYPING COPY ******************* //
+
+        /*
+         * ALPHA1_CP is the base layout above MEHS, for typing between Meh
+         * shortcuts. It is an auto-layer that stays on for everything typed
+         * and any key press outside the list below turns it off -- which is
+         * Esc, from whichever key, macro or combo sends it. Enter is listed:
+         * it ends a line, not the typing.
+         * Letters, numbers (the digits, the shifted symbols on them and the
+         * keypad) and modifiers are ignored by the module; the rest of what
+         * the base, symbol, navigation and media layers send is listed.
+         *
+         * ALPHA1_CP is above MEHS and below every layer a base key opens, so
+         * NUM, SYM, NAV, MEDIA, ALPHA2 and the caps layers work as on the base.
+         * &lock_off in mc_base_reset takes it down, as auto-layer holds it locked.
+         */
+        smart_alpha1_cp: smart_alpha1_cp {
+            compatible = "zmk,behavior-auto-layer";
+            ignore-alphas;
+            ignore-numbers;
+            ignore-modifiers;
+            #binding-cells = <1>;
+            continue-list = <SPACE ENTER TAB BSPC DEL INS CAPS LEFT RIGHT UP DOWN HOME END PG_UP PG_DN
+                             DOT COMMA SEMI SQT GRAVE MINUS EQUAL FSLH BSLH LBKT RBKT
+                             F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12 F13 F14 F15
+                             C_VOL_UP C_VOL_DN C_MUTE C_PP C_PREV C_NEXT>;
+        };
+
+        MACRO(mc_alpha1_cp, &smart_alpha1_cp ALPHA1_CP)
+
+        // Tap the outer thumbs of MEHS for the typing copy, hold them for the
+        // layer they carry on the base layer.
+        ht_alpha1_cp: ht_alpha1_cp {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <QUICK_TAP_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <0>;
+            bindings = <&mo>, <&mc_alpha1_cp>;
         };
 
         // ******************* CAPS LINE ******************* //

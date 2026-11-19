@@ -140,6 +140,7 @@ void seq_play(uint8_t seq) {
     while ((kc = pgm_read_word(p++)) != 0) {
         if (is_caps_word_on() && !smart_caps_continues(kc)) caps_word_off();
         tap_code16(kc);
+        smart_alpha1_cp_key(kc);
         adaptive_track(kc);
         // ZMK's sticky shift is spent by the first key of a macro.
         clear_oneshot_mods();
@@ -155,6 +156,7 @@ void execute_keycode(uint16_t keycode) {
     } else {
         tap_code16(keycode);
         adaptive_track(keycode);
+        smart_alpha1_cp_key(keycode);
     }
 }
 
@@ -221,6 +223,7 @@ bool process_macros(uint16_t keycode, bool pressed) {
             } else {
                 unregister_code(KC_SPC);
                 tap_code(KC_ESC);
+                smart_alpha1_cp_key(KC_ESC);
             }
             return true;
     }
