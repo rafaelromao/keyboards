@@ -45,11 +45,13 @@
 #define NO_MUSIC_MODE
 #undef LOCKING_SUPPORT_ENABLE
 #undef LOCKING_RESYNC_ENABLE
-// 16 layers without the two vim layers, 18 with them. QMK defaults to a
-// 16-bit layer state, so the vim build has to ask for the wider one. LT()
-// still holds layers 0-15 only: the layer-taps to FUN and MACROS, which can
-// sit above that, hold their layer in taphold.c (see keycodes.h).
-#ifdef RR_VIM_ENABLE
+// QMK defaults to a 16-bit layer state. With every optional part on the layout
+// has 20 layers, and MEHS alone (its typing copy is a layer too) already takes
+// it past 16, so the build asks for the wider state unless both vim mode and
+// MEHS are cut. LT() still holds layers 0-15 only: the layer-taps to TEXT, FUN
+// and MACROS, which can sit above that, hold their layer in taphold.c (see
+// keycodes.h).
+#if defined(RR_VIM_ENABLE) || defined(RR_MEHS_ENABLE)
 #    define LAYER_STATE_32BIT
 #else
 #    define LAYER_STATE_16BIT
