@@ -15,3 +15,15 @@ config SHIELD_PRISMA_PERIPHERAL_RIGHT
 
 config SHIELD_PRISMA_CENTRAL_DONGLE_OLED
     def_bool $(shields_list_contains,prisma_central_dongle_oled)
+
+config SHIELD_PRISMA_CENTRAL_TRACKBALL_XIAO
+    def_bool $(shields_list_contains,prisma_central_trackball_xiao)
+
+config SHIELD_PRISMA_CENTRAL_TRACKBALL_NANO
+    def_bool $(shields_list_contains,prisma_central_trackball_nano)
+
+config SHIELD_PRISMA_CENTRAL_TRACKPAD_XIAO
+    def_bool $(shields_list_contains,prisma_central_trackpad_xiao)
+
+config SHIELD_PRISMA_CENTRAL_TRACKPAD_NANO
+    def_bool $(shields_list_contains,prisma_central_trackpad_nano)

@@ -1,0 +1,75 @@
+/* XIAO nRF52840 pin assignments; validate on the selected controller. SPDX-License-Identifier: MIT */
+
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <input/processors.dtsi>
+#include "prisma_pointing_transform.dtsi"
+
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+        zmk,matrix_transform = &default_transform;
+    };
+
+    kscan0: kscan {
+        compatible = "zmk,kscan-gpio-direct";
+        wakeup-source;
+        input-gpios
+            = <&gpio1 12 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&gpio1 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            ;
+    };
+
+    glidepoint_listener: glidepoint_listener {
+        compatible = "zmk,input-listener";
+        device = <&glidepoint>;
+
+        /* layer 30 (the right key held): the pad scrolls */
+        scroller {
+            layers = <30>;
+            input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 8>;
+        };
+    };
+};
+
+/* I2C on D4 and D5, as the board has it, with SCL and SDA swapped to land on the CK and IO pads. */
+
+/* DR and K1 are on the board's serial pins, K2 on its default SPI. */
+&spi2 { status = "disabled"; };
+&uart0 { status = "disabled"; };
+
+&pinctrl {
+    i2c1_default: i2c1_default {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 0, 5)>,
+                    <NRF_PSEL(TWIM_SCL, 0, 4)>;
+        };
+    };
+
+    i2c1_sleep: i2c1_sleep {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 0, 5)>,
+                    <NRF_PSEL(TWIM_SCL, 0, 4)>;
+            low-power-enable;
+        };
+    };
+};
+
+&i2c1 {
+    status = "okay";
+    compatible = "nordic,nrf-twim";
+    clock-frequency = <100000>;
+    pinctrl-0 = <&i2c1_default>;
+    pinctrl-1 = <&i2c1_sleep>;
+    pinctrl-names = "default", "sleep";
+
+    glidepoint: glidepoint@2a {
+        compatible = "cirque,pinnacle";
+        reg = <0x2a>;
+        status = "okay";
+        data-ready-gpios = <&gpio1 11 GPIO_ACTIVE_HIGH>;
+        sensitivity = "4x";
+        sleep-mode-enable;
+        primary-tap-enable;
+        /* Validate orientation and tap/sleep behaviour on the actual pad. */
+    };
+};

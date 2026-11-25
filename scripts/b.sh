@@ -63,6 +63,10 @@ build_prisma() {
         ./scripts/zmk.sh "rafaelromao/prisma" "pl" "-b" "xiao_ble//zmk" "$@"
         ./scripts/zmk.sh "rafaelromao/prisma" "cd" "-b" "xiao_ble//zmk" "$@"
         ./scripts/zmk.sh "-k" "rafaelromao/prisma" "-s" "prisma_central_dongle_oled" "-b" "xiao_ble//zmk" "$@"
+        ./scripts/zmk.sh "-k" "rafaelromao/prisma" "-s" "prisma_central_trackball_xiao" "-b" "xiao_ble//zmk" "-m" "badjeff/zmk-pmw3610-driver:44b4a76b74d293a93cec4ccb7e04cb8d29c10f93" "$@"
+        ./scripts/zmk.sh "-k" "rafaelromao/prisma" "-s" "prisma_central_trackball_nano" "-b" "nice_nano//zmk" "-m" "badjeff/zmk-pmw3610-driver:44b4a76b74d293a93cec4ccb7e04cb8d29c10f93" "$@"
+        ./scripts/zmk.sh "-k" "rafaelromao/prisma" "-s" "prisma_central_trackpad_xiao" "-b" "xiao_ble//zmk" "$@"
+        ./scripts/zmk.sh "-k" "rafaelromao/prisma" "-s" "prisma_central_trackpad_nano" "-b" "nice_nano//zmk" "$@"
     fi
 }
 
