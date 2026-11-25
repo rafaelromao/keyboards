@@ -1,0 +1,15 @@
+/* SPDX-License-Identifier: MIT */
+#include "prisma_transform.dtsi"
+
+/ {
+    chosen {
+        zmk,kscan = &mock_kscan;
+        zmk,matrix_transform = &default_transform;
+    };
+    mock_kscan: kscan_0 {
+        compatible = "zmk,kscan-mock";
+        columns = <0>;
+        rows = <0>;
+        events = <0>;
+    };
+};

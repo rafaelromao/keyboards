@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "slim_diamond.dtsi"
+#include "prisma.dtsi"
 
 &default_kscan {
     input-gpios

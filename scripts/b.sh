@@ -61,7 +61,8 @@ build_prisma() {
     if [[ "$complete" == "true" ]]; then
         ./scripts/zmk.sh "rafaelromao/prisma" "pr" "-b" "xiao_ble//zmk" "$@"
         ./scripts/zmk.sh "rafaelromao/prisma" "pl" "-b" "xiao_ble//zmk" "$@"
-        ./scripts/zmk.sh "rafaelromao/prisma" "cd" "-e" "dongle_display" "-m" "englmaxi/zmk-dongle-display" "$@"
+        ./scripts/zmk.sh "rafaelromao/prisma" "cd" "-b" "xiao_ble//zmk" "$@"
+        ./scripts/zmk.sh "-k" "rafaelromao/prisma" "-s" "prisma_central_dongle_oled" "-b" "xiao_ble//zmk" "$@"
     fi
 }
 
