@@ -7,7 +7,7 @@
  * Diodeless: one pin per key, pulled up, the switch shorts it to ground.
  */
 
-#include "slim_diamond_transform.dtsi"
+#include "prisma_transform.dtsi"
 
 / {
     chosen {

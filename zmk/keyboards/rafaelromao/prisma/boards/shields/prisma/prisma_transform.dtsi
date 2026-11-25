@@ -2,7 +2,7 @@
  * Copyright (c) 2026 Rafael Romão
  * SPDX-License-Identifier: MIT
  *
- * The Slim Diamond reads each key on its own pin. A half's direct kscan
+ * The Prisma reads each key on its own pin. A half's direct kscan
  * reports key i as RC(0,i), in the PCB's key order:
  *
  *   0 pinky   1 ring top    2 ring home    3 ring bottom
@@ -11,7 +11,7 @@
  *            10 thumb outer 11 thumb inner
  *
  * The right half adds 12 (col-offset). The shared keymap has 36 positions;
- * the 12 the Diamond doesn't have point at row 1, which nothing reports.
+ * the 12 Prisma doesn't have point at row 1, which nothing reports.
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>

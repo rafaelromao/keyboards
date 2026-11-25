@@ -1,0 +1,33 @@
+/* SPDX-License-Identifier: MIT */
+#define PRISMA_SCROLL 30
+#define PRISMA_LOCAL_BASE &mkp LCLK &prisma_scroll_or_right PRISMA_SCROLL RCLK
+#define PRISMA_LOCAL_TRANSPARENT &trans &trans
+#include "prisma.keymap"
+/ {
+    behaviors {
+        prisma_scroll_or_right: prisma_scroll_or_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&mkp>;
+        };
+    };
+    combos {
+        compatible = "zmk,combos";
+        prisma_middle {
+            timeout-ms = <50>;
+            key-positions = <36 37>;
+            bindings = <&mkp MCLK>;
+        };
+    };
+    keymap {
+        prisma_scroll_layer {
+            display-name = "SCROLL";
+            bindings = <
+                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+                &mkp MCLK &trans
+            >;
+        };
+    };
+};
