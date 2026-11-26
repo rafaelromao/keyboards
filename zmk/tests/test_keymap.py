@@ -106,6 +106,14 @@ class KeymapTests(unittest.TestCase):
             self.assertTrue(all(0 <= value < 36 for value in keys), name)
             self.assertTrue(all(0 <= value < len(self.layers) for value in indices), name)
 
+    def test_meh_space_and_enter_combos_cover_every_vim_layer(self):
+        combos = (ROOT / "zmk/features/combos.dtsi").read_text()
+        for name in ("cb_meh_spc", "cb_meh_ent"):
+            match = re.search(rf"COMBO\({name},.*?,\s*([^)]*)\)", combos)
+            self.assertIsNotNone(match, name)
+            self.assertIn("VIM_LAYERS", match[1], name)
+        self.assertRegex(combos, r"#define VIM_LAYERS\s+VIM_LAYERS_BASE VIM_LAYERS_VIM")
+
 
 if __name__ == "__main__":
     unittest.main()
